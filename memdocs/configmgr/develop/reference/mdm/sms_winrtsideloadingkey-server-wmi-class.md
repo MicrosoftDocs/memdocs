@@ -1,16 +1,18 @@
 ---
-title: "SMS_WinRTSideLoadingKey Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: Learn how to create, modify, and delete sideloading keys using SMS_WinRTSideLoadingKey class in Configuration Manager.
+title: SMS_WinRTSideLoadingKey Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c91c3fbc-b267-428d-99fe-1782873c6aef
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_WinRTSideLoadingKey Server WMI Class
 The `SMS_WinRTSideLoadingKey` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, to create, modify and delete sideloading keys. These keys enable sideloaded Windows 8 applications on WinRT devices managed by Hybrid Mobile Device Management.  
@@ -32,7 +34,7 @@ Class SMS_WinRTSideLoadingKey : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_WinRTSideLoadingKey` class does not define any methods.  
+ The `SMS_WinRTSideLoadingKey` class doesn't define any methods.  
 
 ## Properties  
  `Description`  

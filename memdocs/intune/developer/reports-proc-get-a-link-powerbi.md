@@ -7,12 +7,11 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2021
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 
 # optional metadata
@@ -24,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Connect to the Data Warehouse with Power BI
@@ -72,18 +73,18 @@ The Power BI [Intune Compliance (Data Warehouse)](https://aka.ms/intune/dataware
 9. To view all the available reports, click the **Reports** tab, then click the **Compliance V1.0** report. Browse through the report pages by clicking on the tabs at the bottom.
 10. To make it easy to navigate back to these reports later, click the star next to the **Compliance V1.0** report. This will add the report to your Power BI favorites.
 
-Alternatively, you can install the app from the Microsoft Endpoint Manager admin center:
+Alternatively, you can install the app from the Microsoft Intune admin center:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Intune Data warehouse** > **Data warehouse**.
 3. Select **Get Power BI App** to access and share pre-created Power BI reports for your tenant in the browser.
 4. Follow steps 2-10 above.
 
 ## Load the data in Power BI using the OData link
 
-With a client authenticated to Azure AD, the OData URL connects to the RESTful endpoint in the Data Warehouse API that exposes the data model to your reporting client. Follow these instructions to use Power BI Desktop to connect and create your own reports. You are not limited to Power BI Desktop, but can use your favorite analytic tool with the OData URL provided the client supports OAUTH2.0 authentication and the OData v4.0 standard.
+With a client authenticated to Microsoft Entra ID, the OData URL connects to the RESTful endpoint in the Data Warehouse API that exposes the data model to your reporting client. Follow these instructions to use Power BI Desktop to connect and create your own reports. You are not limited to Power BI Desktop, but can use your favorite analytic tool with the OData URL provided the client supports OAUTH2.0 authentication and the OData v4.0 standard.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Intune Data warehouse** > **Data warehouse**.
 3. Retrieve the custom feed URL from the reporting blade, for example:<br>
     `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
@@ -92,7 +93,7 @@ With a client authenticated to Azure AD, the OData URL connects to the RESTful e
 6. Choose **Basic**.
 7. Type or paste the **OData URL** into the URL box.
 8. Select **OK**.
-9. If you have not authenticated to Azure AD for your tenant from the Power BI desktop client, type your credentials. To gain access to your data, you must authorize with Azure Active Directory (Azure AD) using OAuth 2.0.  
+9. If you have not authenticated to Microsoft Entra ID for your tenant from the Power BI desktop client, type your credentials. To gain access to your data, you must authorize with Microsoft Entra ID using OAuth 2.0.  
     1. Select **Organizational account**.  
     2. Type your username and password.  
     3. Select **Sign In.**  
@@ -101,7 +102,7 @@ With a client authenticated to Azure AD, the OData URL connects to the RESTful e
 
 ## Next steps
 
-You can find the answers to questions about your environment such as the number of devices enrolled by day over the last week. You can gain insight into your Intune tenant and client population using the Intune Data Warehouse Power BI reports retrieved from the blade in the Microsoft Endpoint Management admin center. However, Intune provides a number of additional ways to extend or reuse the data. Power BI and the Intune Data Warehouse API provide additional functionality, for example:
+You can find the answers to questions about your environment such as the number of devices enrolled by day over the last week. You can gain insight into your Intune tenant and client population using the Intune Data Warehouse Power BI reports retrieved from the blade in the Microsoft Intune admin center. However, Intune provides a number of additional ways to extend or reuse the data. Power BI and the Intune Data Warehouse API provide additional functionality, for example:
 
 <!-- - You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
 - Your tenant data is organized to help you pull insight from your data. For more information about how the data is organized, see [Data Warehouse Data Model](reports-ref-data-model.md).

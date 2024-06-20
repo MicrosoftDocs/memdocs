@@ -3,13 +3,16 @@ title: Technical preview 2102
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2102.
 ms.date: 02/19/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 114013be-2538-4b60-ba3e-b4bc0457df8d
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ROBOTS: NOINDEX
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Features in Configuration Manager technical preview version 2102

@@ -3,13 +3,15 @@ title: Install site system roles
 titleSuffix: Configuration Manager
 description: Add site system roles to an existing or new site system server in the site.
 ms.date: 04/01/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Install site system roles for Configuration Manager

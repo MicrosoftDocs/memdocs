@@ -1,21 +1,24 @@
 ---
-title: "Maintain Mac clients"
-titleSuffix: "Configuration Manager"
+title: Maintain Mac clients
+titleSuffix: Configuration Manager
 description: Maintenance tasks for Configuration Manager Mac clients.
-ms.date: 04/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.date: 01/05/2022
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Maintain Mac clients
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in January 2022, this feature of Configuration Manager is deprecated.<!-- 12927803 --> For more information, see [Mac computers](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 Here are procedures for uninstalling Mac clients and for renewing their certificates.
 
@@ -30,7 +33,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
     > [!NOTE]  
     >  The **-c** property instructs the client uninstall to also remove  client crash logs and log files. We recommend this to avoid confusion if you later reinstall the client.  
 
-3.  If required, manually remove the client authentication certificate that Configuration Manager was using, or revoke it. CMUnistall does not remove or revoke this certificate.  
+3.  If required, manually remove the client authentication certificate that Configuration Manager was using, or revoke it. CMUnistall doesn't remove or revoke this certificate.  
 
 ##  Renewing the Mac client certificate  
  Use one of the following methods to renew the Mac client certificate:  
@@ -63,7 +66,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
    >  If the wizard does not open, or if you accidentally close the wizard, click **Renew** from the **Configuration Manager** preference page to open the wizard.  
 
 ###  Renew certificate manually  
- A typical validity period for the Mac client certificate is 1 year. Configuration Manager does not automatically renew the user certificate that it requests during enrollment, so you must use the following procedure to renew the certificate manually.  
+ A typical validity period for the Mac client certificate is 1 year. Configuration Manager doesn't automatically renew the user certificate that it requests during enrollment, so you must use the following procedure to renew the certificate manually.  
 
 > [!IMPORTANT]  
 >  If the certificate expires, you must uninstall, reinstall and then re-enroll the Mac client.  
@@ -103,7 +106,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 8.  Choose **OK** to close the **Edit Discovery Script** dialog box.  
 
-9. In the **Create Setting** dialog box, for **Remediation script (optional)**, choose **Add script** to specify a script that removes the SMSID when it is found on Mac computers.  
+9. In the **Create Setting** dialog box, for **Remediation script (optional)**, choose **Add script** to specify a script that removes the SMSID when it's found on Mac computers.  
 
 10. In the **Create Remediation Script** dialog box, enter the following Shell Script:  
 

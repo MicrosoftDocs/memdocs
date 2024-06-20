@@ -1,16 +1,18 @@
 ---
-title: "Diagnostic data for 1702"
-titleSuffix: "Configuration Manager"
-description: "Learn about the levels of diagnostics and usage data that Configuration Manager version 1702 collects."
+title: Diagnostic data for 1702
+titleSuffix: Configuration Manager
+description: Learn about the levels of diagnostics and usage data that Configuration Manager version 1702 collects.
 ms.date: 03/27/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Levels of diagnostic usage data collection for version 1702 of Configuration Manager
@@ -48,7 +50,7 @@ For Configuration Manager version 1702, this level includes the following:
 
 - Basic database configuration (processors, cluster configuration, and configuration of distributed views)
 
-- ***[Updated]*** Basic discovery statistics (discovery count and minimum/maximum/average group sizes) including when the site is running entirely with Azure Active Directory Services.
+- ***[Updated]*** Basic discovery statistics (discovery count and minimum/maximum/average group sizes) including when the site is running entirely with Microsoft Entra services.
 
 - Basic Endpoint Protection information (antimalware client versions)
 
@@ -192,7 +194,7 @@ For Configuration Manager version 1702, this level includes the following:
 
   - Configuration and usage statistics of Cloud Management Gateway
 
-  - ***[New]*** Count of clients joined to Azure Active Directory Services
+  - ***[New]*** Count of clients joined to Microsoft Entra services
 
   - Count of collections synced to Operations Management Suite
 

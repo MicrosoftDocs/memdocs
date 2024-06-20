@@ -1,30 +1,30 @@
 ---
 # required metadata
 
-title: Windows Holographic Business device settings - Microsoft Intune - Azure | Microsoft Docs
+title: Windows Holographic Business device settings - Microsoft Intune
 description: Read about and configure device restriction settings in Microsoft Intune for Windows Holographic for Business. Control unenrollment, geolocation, passwords, install apps from app store, cookies, and pop ups in Microsoft Edge, Microsoft Defender, search, cloud and storage, bluetooth connectivity, system time, and usage data.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 10/17/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.ms.reviewer: mikedano
+ms.reviewer: mikedano
 suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Windows Holographic for Business device settings to allow or restrict features using Intune
@@ -35,9 +35,9 @@ As an Intune administrator, you can create and assign these settings to your dev
 
 ## Before you begin
 
-[Create a Windows 10 device restrictions configuration profile](device-restrictions-configure.md#create-the-profile).
+[Create a Windows 10/11 device restrictions configuration profile](device-restrictions-configure.md#create-the-profile).
 
-When you create a Windows 10 device restrictions configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
+When you create a Windows 10/11 device restrictions configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
 ## App Store
 
@@ -99,6 +99,8 @@ When you create a Windows 10 device restrictions configuration profile, there ar
 
   [Experience/AllowCortana CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
 
+  [!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
+
 ## Microsoft Edge Browser
 
 - **Start experience** > **Allow pop-ups**: **Yes** (default) allows pop-ups in the web browser. **No** prevents pop-up windows in the browser.
@@ -132,7 +134,7 @@ When you create a Windows 10 device restrictions configuration profile, there ar
 
 ## Password
 
-- **Password**: **Require** forces users to enter a password to access the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to devices without a password. Applies to local accounts only. Domain account passwords remain configured by Active Directory (AD) and Azure AD.
+- **Password**: **Require** forces users to enter a password to access the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to devices without a password. Applies to local accounts only. Domain account passwords remain configured by Active Directory (AD) and Microsoft Entra ID.
 
   [DeviceLock/DevicePasswordEnabled CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
 

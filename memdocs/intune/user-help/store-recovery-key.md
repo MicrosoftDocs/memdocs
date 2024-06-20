@@ -9,10 +9,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 07/17/2020
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid:
 
 searchScope:
@@ -27,10 +25,13 @@ ms.reviewer: annochiva
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
-# Store your personal FileVault key 
+# Store your personal FileVault key   
+
+*Applies to macOS*  
 
 Store a FileVault key for your personally encrypted macOS device. In addition to satisfying encryption requirements, storing your key in Intune enables you to: 
 

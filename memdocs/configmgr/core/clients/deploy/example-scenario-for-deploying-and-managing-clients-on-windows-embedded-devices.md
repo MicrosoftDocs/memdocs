@@ -1,17 +1,17 @@
 ---
-title: "Example scenario - deploy Windows Embedded clients"
-titleSuffix: "Configuration Manager"
-description: "See an example scenario for deploying and managing Configuration Manager clients on Windows Embedded devices."
+title: Example scenario - deploy Windows Embedded clients
+titleSuffix: Configuration Manager
+description: See an example scenario for deploying and managing Configuration Manager clients on Windows Embedded devices.
 ms.date: 04/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Example scenario for deploying and managing Configuration Manager clients on Windows Embedded devices
 

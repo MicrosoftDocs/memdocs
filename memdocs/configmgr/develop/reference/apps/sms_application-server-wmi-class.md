@@ -1,16 +1,18 @@
 ---
-title: "SMS_Application Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_Application Class
+description: The SMS_Application Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: acf26163-06c6-4108-8916-f8c37be34cea
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_Application Server WMI Class
 The `SMS_Application` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application.  

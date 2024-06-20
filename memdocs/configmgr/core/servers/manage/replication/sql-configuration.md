@@ -3,13 +3,15 @@ title: SQL Server configuration
 titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL Server configuration for Configuration Manager
 ms.date: 08/09/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 95ab8cbd-0807-4422-823a-f5f9314ba623
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # SQL Server configuration

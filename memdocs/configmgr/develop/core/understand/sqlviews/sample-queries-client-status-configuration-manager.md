@@ -1,17 +1,19 @@
-﻿---
+---
 title: Sample queries for client status
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join common client status views to other views.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
 ms.assetid: fe4dafee-8ea7-4829-884b-960cc09f6444
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
 ---
 
 # Sample queries for client status in Configuration Manager

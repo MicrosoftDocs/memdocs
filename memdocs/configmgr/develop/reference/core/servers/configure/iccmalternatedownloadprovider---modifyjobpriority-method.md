@@ -1,16 +1,18 @@
 ---
 title: "ICcmAlternateDownloadProvider : ModifyJobPriority"
-titleSuffix: "Configuration Manager"
-ms.date: "07/25/2017"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+titleSuffix: Configuration Manager
+description: A method that tells the provider to modify the priority for a given job.
+ms.date: 07/25/2017
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a9dd8eee-87cc-48cd-b59f-6424d3e6dc4a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICcmAlternateDownloadProvider : ModifyJobPriority Method
 The **ICcmAlternateDownloadProvider::ModifyJobPriority** method, in Configuration Manager, instructs the provider to modify the priority for a given job.  
@@ -41,7 +43,7 @@ HRESULT ModifyJobPriority(
  The new priority.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully. All other return values indicate failure.  

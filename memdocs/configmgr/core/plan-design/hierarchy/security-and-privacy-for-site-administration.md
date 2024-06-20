@@ -2,14 +2,16 @@
 title: Site administration security and privacy
 titleSuffix: Configuration Manager
 description: Optimize security and privacy for site administration in Configuration Manager
-ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 04/05/2024
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Security and privacy for site administration in Configuration Manager
@@ -175,6 +177,10 @@ The security of Active Directory domain controllers can be improved by configuri
 
 Use the following guidance to help you secure the Configuration Manager site server.  
 
+> [!WARNING]  
+> Network access account - Don't grant interactive sign-in rights to this account on SQL Servers.
+Don't grant this account the right to join computers to the domain. If you must join computers to the domain during a task sequence, use the Task sequence domain join account..
+
 ### Install Configuration Manager on a member server instead of a domain controller
 
 The Configuration Manager site server and site systems don't require installation on a domain controller. Domain controllers don't have a local Security Accounts Management (SAM) database other than the domain database. When you install Configuration Manager on a member server, you can maintain Configuration Manager accounts in the local SAM database rather than in the domain database.  
@@ -187,7 +193,7 @@ When you run setup and create a secondary site, don't select the option to copy 
 
 Instead of copying the files over the network, on the secondary site server, copy the source files from media folder to a local folder. Then, when you run setup to create a secondary site, on the **Installation Source Files** page, select **Use the source files at the following location on the secondary site computer (most secure)**, and specify this folder.  
 
-For more information, see [Install a secondary site](../../servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_secondary).
+For more information, see [Install a secondary site](../../servers/deploy/install/setup-wizard-secondary.md).
 
 ### Site role installation inherits permissions from drive root
 
@@ -257,7 +263,7 @@ Site system roles:
 
 A CTL is a defined list of trusted root certification authorities (CAs). When you use a CTL with group policy and a public key infrastructure (PKI) deployment, a CTL enables you to supplement the existing trusted root CAs that are configured on your network. For example, CAs that are automatically installed with Microsoft Windows or added through Windows enterprise root CAs. When a CTL is configured in IIS, it defines a subset of those trusted root CAs.  
 
-This subset provides you with more control over security. The CTL restricts the client certificates that are accepted to only those certificates that are issued from the list of CAs in the CTL. For example, Windows comes with a number of well-known, third-party CA certificates, such as VeriSign and Thawte.
+This subset provides you with more control over security. The CTL restricts the client certificates that are accepted to only those certificates that are issued from the list of CAs in the CTL. For example, Windows comes with a number of well-known, third-party CA certificates.
 
 By default, the computer that runs IIS trusts certificates that chain to these well-known CAs. When you don't configure IIS with a CTL for the listed site system roles, the site accepts as a valid client any device that has a certificate issued from these CAs. If you configure IIS with a CTL that didn't include these CAs, the site refuses client connections, if the certificate chains to these CAs. For Configuration Manager clients to be accepted for the listed site system roles, you must configure IIS with a CTL that specifies the CAs that are used by Configuration Manager clients.  
 

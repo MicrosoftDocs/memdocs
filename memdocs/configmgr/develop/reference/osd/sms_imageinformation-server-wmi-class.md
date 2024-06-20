@@ -1,16 +1,18 @@
 ---
-title: "SMS_ImageInformation Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: Learn how to represent all image information in boot image, operating system image, and operating system installer using SMS_ImageInformation.
+title: SMS_ImageInformation Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 90235fe7-fbcd-4fd0-a76c-fa7b389bd5b8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ImageInformation Server WMI Class
 The `SMS_ImageInformation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all image information in boot image, operating system image, and operating system installer.  

@@ -3,14 +3,16 @@ title: Technical preview 2101
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2101.
 ms.date: 01/29/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 71dae79a-8b12-4d73-a574-c2846efff570
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Features in Configuration Manager technical preview version 2101
@@ -27,7 +29,7 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [Console extension installation](includes/2101/3555909.md)]
 [!INCLUDE [Deploy a feature update with a task sequence](includes/2101/3555906.md)]
-[!INCLUDE [Tenant Attach: Required application deployments display in Microsoft Endpoint Manager admin center](includes/2101/8795301.md)]      
+[!INCLUDE [Tenant Attach: Required application deployments display in Microsoft Intune admin center](includes/2101/8795301.md)]      
 [!INCLUDE [Client setting for displaying Software Center custom tabs](includes/2101/9142301.md)]
 [!INCLUDE [Simplified CMPivot permissions requirements](includes/2101/7898885.md)]
 [!INCLUDE [Allow exclusion of organizational units (OU) from Active Directory User Discovery](includes/2101/5193509.md)]

@@ -1,10 +1,11 @@
 ---
-author: aczechowski
-ms.author: aaroncz
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+author: banreet
+ms.author: banreetkaur
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: include
 ms.date: 05/04/2021
+ms.localizationpriority: medium
 ---
 
 <!--1357013-->

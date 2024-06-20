@@ -3,13 +3,15 @@ title: SQL Server performance
 titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL Server performance for Configuration Manager
 ms.date: 08/09/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 9930a8a4-4d7f-47a4-bf6b-4c36d0ed5528
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # SQL Server performance

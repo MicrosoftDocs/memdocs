@@ -3,15 +3,15 @@ title: Prepare for OS deployment
 titleSuffix: Configuration Manager
 description: Learn about how to prepare for operating system deployments in Configuration Manager
 ms.date: 02/22/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
-ms.assetid: 8d27e5ac-4f19-4b3d-85c7-fa34eb5d5e7e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Prepare for OS deployment in Configuration Manager
@@ -42,7 +42,7 @@ OS images are large in size. For example, the image size for Windows 7 is 3 GB o
 
 Also make sure that you plan for sufficient disk storage space on the distribution points that host the OS images.  
 
-For more information, see [Additional planning considerations for distribution points](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_AdditionalPlanning).
+For more information, see [Additional planning considerations for distribution points](prepare-site-system-roles-for-operating-system-deployments.md#additional-planning-considerations-for-distribution-points).
 
 
 ### Client cache size  
@@ -53,6 +53,4 @@ When a Configuration Manager client must download an OS image, but there isn't e
 
 The default cache size on Configuration Manager clients might not be large enough for most OS image deployments. If you plan to download the full image to the client cache, adjust the client cache size on the destination computers to accommodate the size of the image that you're deploying.  
 
-For more information, see [Configure the client cache](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
-
-
+For more information, see [Configure the client cache](../../core/clients/manage/configure-client-cache.md).

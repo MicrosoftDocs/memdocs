@@ -9,10 +9,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 08/14/2019
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: ba593c08-1a78-4013-8525-b45a948772ec
 searchScope:
  - User help
@@ -26,7 +24,8 @@ ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Device encrypted but apps say otherwise
@@ -48,7 +47,7 @@ This section only applies to the Company Portal app. Some devices will give you 
 
 ## Downgrade your version of Android
 
-This section only applies to the Company Portal app. If your device offers you the option to downgrade to Android 6.0 and later, then do so. There is a risk of data loss if you try to downgrade your device. Otherwise, we recommend that you contact your company support to resolve this issue. Get contact information for your company support on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+This section only applies to the Company Portal app. If your device offers you the option to downgrade to Android 8.0 or later, then do so. There is a risk of data loss if you try to downgrade your device. Otherwise, we recommend that you contact your company support to resolve this issue. Get contact information for your company support on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 ## Specific manufacturer issues
 

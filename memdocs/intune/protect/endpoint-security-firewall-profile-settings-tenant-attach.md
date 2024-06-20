@@ -7,13 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 11/14/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -23,15 +21,17 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
-ms.reviewer: aanavath
+ms.collection:
+- tier3
+- M365-identity-device-management
+ms.reviewer: laarrizz
 
 ---
 # Firewall policy settings for tenant attached devices in Microsoft Intune
 
-View the Microsoft Windows Defender Firewall settings you can manage with the **Microsoft Defender Firewall (ConfigMgr) (preview)** profile from Intune. The profile is available when you configure Intune [Firewall policy](../protect/endpoint-security-firewall-policy.md), and the policy deploys to devices you manage with Configuration Manager when you've configured the [tenant attach](../protect/tenant-attach-intune.md) scenario.
+View the Microsoft Windows Firewall settings you can manage with the **Windows Firewall (ConfigMgr)** profile from Intune. The profile is available when you configure Intune [Firewall policy](../protect/endpoint-security-firewall-policy.md), and the policy deploys to devices you manage with Configuration Manager when you've configured the [tenant attach](../protect/tenant-attach-intune.md) scenario.
 
-## Microsoft Defender Firewall
+## Windows Firewall
 
 - **Certificate revocation list verification (Device)**  
   CSP: [MdmStore/Global/CRLcheck](/windows/client-management/mdm/firewall-csp#crlcheck)
@@ -94,7 +94,7 @@ View the Microsoft Windows Defender Firewall settings you can manage with the **
   CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
-  - **True** - The Microsoft Defender Firewall for the network type of **domain** is turned on and enforced.
+  - **True** - The Windows Firewall for the network type of **domain** is turned on and enforced.
   - **False** - Disable the firewall.
 
   When set to *True*, you can then configure the following settings for this firewall profile type:
@@ -174,7 +174,7 @@ View the Microsoft Windows Defender Firewall settings you can manage with the **
   CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
-  - **True** - The Microsoft Defender Firewall for the network type of **private** is turned on and enforced.
+  - **True** - The Windows Firewall for the network type of **private** is turned on and enforced.
   - **False** - Disable the firewall.
 
   When set to *True*, you can then configure the following settings for this firewall profile type:
@@ -254,7 +254,7 @@ View the Microsoft Windows Defender Firewall settings you can manage with the **
   CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
-  - **True** - The Microsoft Defender Firewall for the network type of **public** is turned on and enforced.
+  - **True** - The Windows Firewall for the network type of **public** is turned on and enforced.
   - **False** - Disable the firewall.
 
   When set to *True*, you can then configure the following settings for this firewall profile type:

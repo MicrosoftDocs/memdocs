@@ -1,15 +1,17 @@
-﻿---
+---
 title: WMI namespaces and classes for reports
 titleSuffix: Configuration Manager
 description: Configuration Manager WMI namespaces and classes for Configuration Manager reports
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b687399a-b750-42f7-949a-4c757d269d58
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
 ---
 
 # Configuration Manager WMI namespaces and classes for Configuration Manager reports
@@ -57,7 +59,7 @@ The following WMI namespaces are created by Configuration Manager:
 
 ## How to retrieve Configuration Manager WMI namespaces and classes by using a Visual Basic script
 
-An easy way to list the Configuration Manager–related classes that have been created on your site is to run a Microsoft Visual Basic script. The following script will scan all of the classes within each of the WMI namespaces listed above and output the results to a text file.
+An easy way to list the Configuration Manager�related classes that have been created on your site is to run a Microsoft Visual Basic script. The following script will scan all of the classes within each of the WMI namespaces listed above and output the results to a text file.
 
 ### To run the script to scan the WMI namespaces and classes
 
@@ -68,7 +70,7 @@ An easy way to list the Configuration Manager–related classes that have been c
         ' 
         ' NAME: WMIScan.vbs 
         ' 
-        ' AUTHOR: Dougeby , Microsoft Corporation 
+        ' AUTHOR:  Microsoft Corporation 
         ' DATE  : 10/24/2013 (Revised for System Center 2012 Configuration Manager by Rob Stack) 
         ' 
         ' COMMENT: Script to scan Configuration Manager WMI classes. 

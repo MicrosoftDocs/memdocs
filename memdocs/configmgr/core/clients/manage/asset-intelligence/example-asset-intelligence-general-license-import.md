@@ -1,17 +1,17 @@
 ---
-title: "Example Asset Intelligence general license import file"
-titleSuffix: "Configuration Manager"
-description: "Use a sample Asset Intelligence general license file to help import software licenses in Configuration Manager."
+title: Example Asset Intelligence general license import file
+titleSuffix: Configuration Manager
+description: Use a sample Asset Intelligence general license file to help import software licenses in Configuration Manager.
 ms.date: 02/22/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: e6258333-a783-440b-b1af-f8023b782fbc
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 # Example Asset Intelligence general license import file in Configuration Manager
 

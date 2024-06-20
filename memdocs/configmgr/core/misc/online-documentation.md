@@ -3,13 +3,15 @@ title: Online Documentation
 titleSuffix: Configuration Manager
 ms.date: 02/17/2021
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.subservice: other
+ms.service: configuration-manager
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 description: Additional links for Configuration Manager help documentation
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Online documentation for Configuration Manager
@@ -22,7 +24,7 @@ Welcome to the Configuration Manager documentation library. Find the documentati
 
 ### Online documentation
 
-View the online documentation for the current branch of Configuration Manager at [docs.microsoft.com/configmgr](/configmgr):  
+View the online documentation for the current branch of Configuration Manager in [Microsoft Configuration Manager documentation](/configmgr):  
 
 - [Introduction to Configuration Manager](../understand/introduction.md)  
 

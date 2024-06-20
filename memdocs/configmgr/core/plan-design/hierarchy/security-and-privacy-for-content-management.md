@@ -2,14 +2,16 @@
 title: Content management security and privacy
 titleSuffix: Configuration Manager
 description: Optimize security and privacy for content management in Configuration Manager.
-ms.date: 05/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 07/15/2021
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 5f38b726-dc00-433a-ba05-5b7dbb0d8e99
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Security and privacy for content management in Configuration Manager
@@ -28,7 +30,7 @@ For distribution points on the intranet, consider the advantages and disadvantag
 
 - When you use _HTTP_ for a distribution point: You can use package access accounts for authorization. The content isn't encrypted when it's transferred over the network.
 
-Consider enabling **Enhanced HTTP** for the site. This feature allows clients to use Azure Active Directory (Azure AD) authentication to securely communicate with an HTTP distribution point. For more information, see [Enhanced HTTP](enhanced-http.md).
+Consider enabling **Enhanced HTTP** for the site. This feature allows clients to use Microsoft Entra authentication to securely communicate with an HTTP distribution point. For more information, see [Enhanced HTTP](enhanced-http.md).
 
 > [!IMPORTANT]
 > Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
@@ -45,7 +47,7 @@ By default, Configuration Manager setup installs a distribution point on the sit
 
 ### Secure content at the package access level
 
-The distribution point share allows read access to all users. To restrict which users can access the content, use package access accounts when the distribution point is configured for HTTP. This configuration doesn't apply to cloud distribution points and content-enabled cloud management gateways, which don't support package access accounts.
+The distribution point share allows read access to all users. To restrict which users can access the content, use package access accounts when the distribution point is configured for HTTP. This configuration doesn't apply to content-enabled cloud management gateways, which don't support package access accounts.
 
 For more information, see [Package access accounts](accounts.md#package-access-account).
 
@@ -53,7 +55,7 @@ For more information, see [Package access accounts](accounts.md#package-access-a
 
 If Configuration Manager installs IIS when you add a distribution point site system role, remove **HTTP redirection** and **IIS Management Scripts and Tools** when the distribution point installation is complete. The distribution point doesn't require these components. To reduce the attack surface, remove these role services for the web server role.
 
-For more information about the role services for the web server role for distribution points, see [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md#bkmk_2012dppreq).
+For more information about the role services for the web server role for distribution points, see [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md#distribution-point).
 
 ### Set package access permissions when you create the package
 
@@ -87,18 +89,19 @@ If you change the site configuration option to use a custom website rather than 
 
 For more information about using a custom website, see [Websites for site system servers](../network/websites-for-site-system-servers.md).
 
-### For cloud distribution points, protect your Azure subscription details and certificates
+### For content-enabled cloud management gateways, protect your Azure subscription details and certificates
 
-When you use cloud distribution points and content-enabled cloud management gateways, protect the following high-value items:
+When you use content-enabled cloud management gateways (CMGs), protect the following high-value items:
 
 - The user name and password for your Azure subscription
-- The cloud distribution point service certificate
+- The secret keys for Azure app registrations
+- The server authentication certificate
 
-Store the certificates securely. If you browse to them over the network when you configure the cloud distribution point, use IPsec or SMB signing between the site system server and the source location.
+Store the certificates securely. If you browse to them over the network when you configure the CMG, use IPsec or SMB signing between the site system server and the source location.
 
-### For service continuity, monitor the expiry date of the cloud distribution point certificates
+### For service continuity, monitor the expiry date of the CMG certificates
 
-Configuration Manager doesn't warn you when the imported certificates for the cloud distribution point are about to expire. Monitor the expiry dates independently from Configuration Manager. Make sure that you renew and then import the new certificates before the expiry date. This action is important if you acquire a server authentication certificate from an external, public provider, because you might need more time to acquire a renewed certificate.
+Configuration Manager doesn't warn you when the imported certificates for the CMG are about to expire. Monitor the expiry dates independently from Configuration Manager. Make sure that you renew and then import the new certificates before the expiry date. This action is important if you acquire a server authentication certificate from an external, public provider, because you might need more time to acquire a renewed certificate.
 
 If a certificate expires, the Configuration Manager cloud services manager generates a status message with ID **9425**. The CloudMgr.log file contains an entry to indicate that the certificate _is in expired state_, with the expiry date also logged in UTC.
 
@@ -106,13 +109,13 @@ If a certificate expires, the Configuration Manager cloud services manager gener
 
 - Clients don't validate content until after it's downloaded. Configuration Manager clients validate the hash on content only after it's downloaded to their client cache. If an attacker tampers with the list of files to download or with the content itself, the download process can take up considerable network bandwidth. Then the client discards the content when it finds the invalid hash.
 
-- When you use cloud distribution points or content-enabled cloud management gateways:
+- When you use content-enabled cloud management gateways:
 
   - It automatically restricts access to the content to your organization. You can't restrict it further to selected users or groups.
 
   - The management point first authenticates the client. Then the client uses a Configuration Manager token to access cloud storage. The token is valid for eight hours. This behavior means that if you block a client because it's no longer trusted, it can continue to download content from cloud storage until this token expires. The management point won't issue another token for the client because it's blocked.
 
-    To avoid a blocked client from downloading content within this eight-hour window, stop the cloud service. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Distribution Points** node.
+    To avoid a blocked client from downloading content within this eight-hour window, stop the cloud service. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.
 
 ## Privacy information
 

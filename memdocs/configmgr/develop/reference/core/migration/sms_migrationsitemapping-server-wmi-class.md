@@ -3,13 +3,16 @@ title: SMS_MigrationSiteMapping class
 titleSuffix: Configuration Manager
 description: The technical details of the SMS_MigrationSiteMapping server WMI class.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ac9084b4-13fd-4c95-a183-86508a2e1e07
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # SMS_MigrationSiteMapping server WMI class

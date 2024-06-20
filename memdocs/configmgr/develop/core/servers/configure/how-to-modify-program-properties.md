@@ -1,16 +1,18 @@
 ---
-title: "Modify Program Properties"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: Learn how the following will modify a program, in Configuration Manager, by using the SMS_Package and SMS_Program classes and properties.
+title: Modify Program Properties
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 7e4018e2-f4df-426a-b3f1-b6837aee7fa8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Modify Program Properties
 The following example shows how to modify a program, in Configuration Manager, by using the `SMS_Package` and `SMS_Program` classes and properties.  

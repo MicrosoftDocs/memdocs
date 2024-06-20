@@ -3,13 +3,16 @@ title: SMS_CollectionInfoInIncrementalEvaluationQueue class
 titleSuffix: Configuration Manager
 description: Show collection info from incremental evaluation queue.
 ms.date: 11/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9807ade7-dc2d-41de-98f3-8ed15c3ac3f7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # SMS_CollectionInfoInIncrementalEvaluationQueue server WMI class

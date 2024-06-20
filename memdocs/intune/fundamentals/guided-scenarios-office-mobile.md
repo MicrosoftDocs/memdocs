@@ -6,18 +6,20 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 03/28/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.technology:
+ms.localizationpriority: medium
 
-ms.reviewer: dagerrit
+ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
+- intune-scenario
 ---
 
 # Guided scenario - Secure Microsoft Office mobile apps
@@ -37,11 +39,11 @@ The app protection that you enable will enforce the following actions:
 
 ## Background
 
-Office mobile apps, as well as Microsoft Edge for Mobile, support dual identity. Dual identity allows the apps to manage work files separately from personal files. 
+Office mobile apps, and Microsoft Edge for Mobile, support dual identity. Dual identity allows the apps to manage work files separately from personal files. 
 
 ![Image of corporate data versus personal data](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-01.png)
 
-[Intune app protection policies](../apps/app-protection-policy.md) help protect your work files on devices that are enrolled into Intune. You can also use app protection policies on employee owned devices that are not enrolled for management in Intune. In this case, even though your company doesn't manage the device, you still need to make sure that work files and resources are protected.
+[Intune app protection policies](../apps/app-protection-policy.md) help protect your work files on devices that are enrolled into Intune. You can also use app protection policies on employee owned devices that aren't enrolled for management in Intune. In this case, even though your company doesn't manage the device, you still need to make sure that work files and resources are protected.
 
 You can use App protection policies to prevent users from saving work files in unprotected locations. You can also restrict data movement to other apps that aren't protected by App protection policies. App protection policy settings include:
 
@@ -66,9 +68,9 @@ You'll need the follow Intune admin permissions:
 
 ## Step 1 - Introduction
 
-By following the **Intune App Protection** guided scenario, you will prevent data from being shared or leaked outside of your organization. 
+By following the **Intune App Protection** guided scenario, you'll prevent data from being shared or leaked outside of your organization. 
 
-Assigned iOS/iPadOS and Android users must enter a PIN each time they open an Office app. After 5 failed PIN attempts, users must reset their PIN. If you already require a device PIN, users won't be impacted.​
+Assigned iOS/iPadOS and Android users must enter a PIN each time they open an Office app. After five failed PIN attempts, users must reset their PIN. If you already require a device PIN, users won't be impacted.​
 
 ### What you will need to continue
 
@@ -106,24 +108,23 @@ When you've selected the apps, click **Next**.
 
 In this step, you must configure the requirements for accessing and sharing the corporate files and emails in these apps. By default, users can save data to your organization's OneDrive and SharePoint accounts.
 
-| Setting | Description | Default Value |
+:::image type="content" border="true" source="./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-03.png" alt-text="Screenshot of the App protection settings.":::
+
+The following settings are applied when using the **Enhanced data protection** setting shown above.
+
+| Setting | Description | Value |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| PIN type | Numeric PINs are made up of all numbers. Passcodes are made up of alphanumeric characters and special characters.  On iOS/iPadOS, to configure "Passcode" type, it requires the app to have Intune SDK version 7.1.12 or above. Numeric type has no Intune SDK version restriction. | Numeric |
-| Select minimum PIN length | Specify the minimum number of digits in a PIN sequence. | 6 |
-| Recheck the access requirements after (minutes of inactivity) | If the policy-managed app is inactive for longer than the number of minutes of inactivity specified, the app will prompt the access requirements (i.e PIN, conditional launch settings) to be rechecked after the app is launched. | 30 |
-| Printing org data | If blocked, the app cannot print protected data. | Block |
-| Open policy-managed app links in unmanaged browsers | If blocked, policy-managed app links must be opened a managed browser. | Block |
-| Copy data to unmanaged apps | If blocked, managed data will remain in managed apps. | Allow |
+|Timeout (minutes of inactivity) |Specify a time in minutes after which either a passcode or numeric (as configured) PIN will override the use of a biometric. This timeout value should be greater than the value specified under 'Recheck the access requirements after (minutes of inactivity)'. Default value: 30 | 720
 
 ## Step 5 - Assignments
 
 In this step, you can choose the user groups that you want to include to ensure that they have access to your corporate data. App protection is assigned to users, and not devices, so your corporate data will be secure regardless of the device used and its enrollment status.
 
-Users without app protection policies and conditional access settings assigned will be able to save data from their corporate profile to personal apps and nonmanged local storage on their mobile devices. They could also connect to corporate data services, such as Microsoft Exchange, with personal apps.
+Users without app protection policies and conditional access settings assigned will be able to save data from their corporate profile to personal apps and nonmanaged local storage on their mobile devices. They could also connect to corporate data services, such as Microsoft Exchange, with personal apps.
 
 ## Step 6 - Review + create
 
-The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices click **Create** to complete the guided scenario. Once the guided scenario is complete, a table of resources is displayed. You can edit these resources later, however once you leave the summary view, the table will not be saved.
+The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices click **Create** to complete the guided scenario. Once the guided scenario is complete, a table of resources is displayed. You can edit these resources later, however once you leave the summary view, the table won't be saved.
 
 > [!IMPORTANT]
 > Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resources will not be saved.

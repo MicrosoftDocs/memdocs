@@ -2,15 +2,16 @@
 title: Get support for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Get online and telephone support for Desktop Analytics paid and trial subscriptions.
-ms.date: 01/16/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.date: 11/10/2021
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: d56742bc-a060-4714-a359-48f594c3eaff
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
+ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # Get support for Desktop Analytics
@@ -26,7 +27,7 @@ Microsoft provides global technical, pre-sales, billing, and subscription suppor
 
 ## Help and support
 
-To request help for Desktop Analytics, use the **Help and Support** option in the portal under **Troubleshooting + support**. This action files an online support ticket for Desktop Analytics. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the action **microsoft.office365.supportTickets/tickets/manage**. For more information, see [administrator roles in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
+To request help for Desktop Analytics, use the **Help and Support** option in the portal under **Troubleshooting + support**. This action files an online support ticket for Desktop Analytics. To create and manage a support incident, your account must have a Microsoft Entra role that includes the action **microsoft.office365.supportTickets/tickets/manage**. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
 If the issue is more broadly for Configuration Manager than just analytics, go to [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request. Use the **Desktop Analytics** category.
 
@@ -36,7 +37,7 @@ If the issue is more broadly for Configuration Manager than just analytics, go t
 
 To share your feedback about Desktop Analytics, select the **Send a Smile** icon at the top of the portal on the right side.
 
-![Send a Smile icon in the Microsoft Endpoint Manager admin center portal](media/5451636-portal-feedback.png)
+![Send a Smile icon in the Microsoft Intune admin center.](media/5451636-portal-feedback.png)
 
 Choose one of the following options:
 
@@ -45,7 +46,7 @@ Choose one of the following options:
 - I have a suggestion
 - Contact support
 
-The first three options currently take you to the [UserVoice site](https://configurationmanager.uservoice.com/forums/300492-ideas?category_id=366805) for Desktop Analytics.
+The first three options currently take you to the product feedback site for Configuration Manager.
 
 The fourth option opens the **Help and Support** option in the portal.
 

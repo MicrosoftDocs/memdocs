@@ -3,13 +3,15 @@ title: Manage apps for on-premises MDM
 titleSuffix: Configuration Manager
 description: Manage applications for on-premises mobile device management (MDM) in Configuration Manager.
 ms.date: 01/13/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-mdm
+ms.subservice: mdm
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Manage apps for on-premises MDM in Configuration Manager

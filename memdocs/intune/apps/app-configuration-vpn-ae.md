@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 12/12/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
-ms.technology:
+ms.localizationpriority: medium
 ms.assetid: 
 
 # optional metadata
@@ -25,8 +24,11 @@ ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
+- Android
+- FocusArea_Apps_Configure
 ---
 
 # Use a VPN and per-app VPN policy on Android Enterprise devices in Microsoft Intune
@@ -66,7 +68,7 @@ This article shows you how to create a per-app VPN and VPN app configuration pol
 
 - The Configuration designer and JSON data can successfully use certificate-based authentication. If VPN authentication requires client certificates, then create the certificate profiles before you create the VPN policy. The VPN app configuration policies use the values from the certificate profiles.
 
-  Android Enterprise personally-owned work profile devices support SCEP and PKCS certificates. Android Enterprise fully managed, dedicated, and corporate-owned work profile devices only support SCEP certificates. For more information, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
+  Android Enterprise personally owned work profile devices support SCEP and PKCS certificates. Android Enterprise fully managed, dedicated, and corporate-owned work profile devices only support SCEP certificates. For more information, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 
 ## Per-app VPN overview
 
@@ -103,7 +105,7 @@ If you’re not familiar with creating app configuration policies, see [Add app 
 
 ## Use the Configuration Designer
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 3. In **Basics**, enter the following properties:
 
@@ -164,7 +166,7 @@ Use this option if you don't have, or don't know all the required VPN settings u
 
 In these steps, create a temporary policy. The policy won't be saved. The intent is to copy the certificate token. You'll use this token when creating the VPN policy using JSON (next section).
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 2. In **Basics**, enter the following properties:
 
     - **Name**: Enter any name. This policy is temporary, and won't be saved.
@@ -194,7 +196,7 @@ In these steps, create a temporary policy. The policy won't be saved. The intent
 
 ### Create the VPN policy using JSON
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 
 2. In **Basics**, enter the following properties:
 

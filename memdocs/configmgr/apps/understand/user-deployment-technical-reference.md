@@ -3,15 +3,15 @@ title: App deployment to users technical reference
 titleSuffix: Configuration Manager
 description: Troubleshooting application deployments to users technical reference for Configuration Manager.
 ms.date: 11/04/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: troubleshooting
-ms.assetid: b8e9dbfe-a046-4e06-8dec-cf0bc41ba095
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Application Deployment Policy for Users

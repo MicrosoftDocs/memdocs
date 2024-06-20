@@ -1,25 +1,24 @@
 ---
 title: Troubleshoot CMPivot for devices uploaded to the admin center
 titleSuffix: Configuration Manager
-description: "Troubleshooting CMPivot for Configuration Manager tenant attach"
-ms.date: 12/03/2020
+description: Troubleshooting CMPivot for Intune tenant attach
+ms.date: 07/11/2022
 ms.topic: troubleshooting
-ms.prod: configuration-manager
-ms.technology: configmgr-core
-ms.assetid: 86f97154-c9fc-4efd-9d49-4a253cef5953
-manager: dougeby
-author: mestew
-ms.author: mstewart
+ms.subservice: core-infra
+ms.service: configuration-manager
+manager: apoorvseth
+author: Banreet
+ms.author: banreetkaur
+ms.localizationpriority: high
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
-# Troubleshoot CMPivot (preview) for devices uploaded to the admin center
+# Troubleshoot CMPivot for devices uploaded to the admin center
 <!--6024392-->
 *Applies to: Configuration Manager (current branch)*
 
-Use the following to troubleshoot CMPivot in the Microsoft Endpoint Manager admin center:
-
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+Use the following to troubleshoot CMPivot in the Microsoft Intune admin center:
 
 ## Common issues
 
@@ -31,23 +30,23 @@ Use the following to troubleshoot CMPivot in the Microsoft Endpoint Manager admi
 
 ### <a name="bkmk_noinfo"></a> Unable to get device information
 
-**Error message 1:** Unable to get device information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+**Error message 1:** Unable to get device information. Make sure Microsoft Entra ID and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
 **Possible causes:** Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
-1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Intune admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 
 1. Verify the discovery data. Select your user account. In the ribbon, on the **Home** tab select **Properties**. In the properties window, confirm the following discovery data:
 
-    - **Azure Active Directory Tenant ID**: This value should be a GUID for the Azure AD tenant.
-    - **Azure Active Directory User ID**: This value should be a GUID for this account in Azure AD.
+    - **Microsoft Entra tenant ID**: This value should be a GUID for the Microsoft Entra tenant.
+    - **Microsoft Entra user ID**: This value should be a GUID for this account in Microsoft Entra ID.
     - **User Principal Name**: The format of this value is user@domain. For example, `jqpublic@contoso.com`.
 
-    If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
+    If the Microsoft Entra properties are empty, check the configuration of the site's [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 
 ### <a name="bkmk_rbac"></a> Not authorized to view query results
@@ -66,28 +65,12 @@ Unexpected errors are typically caused by either [service connection point](../c
 
 ## Known issues
 
-### Inconsistent results for some operators with Configuration Manager version 2002
-<!--7784718, 7884272-->
-When using CMPivot from the Microsoft Endpoint Manager admin center with Configuration Manager version 2002, you may get inconsistent results for the following operators:
-
-- Summarize by
-- Take
-- Order by
-- Top
-- Count
-- Distinct
-
-**Resolution**: Install [KB4578123 - CMPivot queries return unexpected results in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4578123).
 
 ### <a name="bkmk_dblhop"></a> When the SMS provider is remote from the CAS, you may encounter an internal server error from the admin console
 
 **Error message:** On-prem error code: 500 internal server error
 
-**Scenario 1:** When running Configuration Manager version 2002 and there is a remote provider for the CAS, then you may encounter an internal server error from the admin console.
-
-**Scenario 2:** When running Configuration Manager version 2006, you may also encounter this error if the service connection point fails to connect to the provider on the primary site and falls back to the provider for the CAS. 
-
-**Scenario 3:** If the CAS has been upgraded to version 2006 but the primary site hasn't been upgraded yet, then the requests will be routed through the CAS provider. If the provider is remote, you may encounter an internal server error from the admin console. 
+**Possible scenario:** If the CAS has been upgraded to a new version but the primary site hasn't been upgraded yet, then the requests will be routed through the CAS provider. If the provider is remote, you may encounter an internal server error from the admin console. 
 
 **Workaround:** Follow the instructions for the [CAS has a remote provider](../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) scenario in the CMPivot article to work around this "double hop" scenario.
 

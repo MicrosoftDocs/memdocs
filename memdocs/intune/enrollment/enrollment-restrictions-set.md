@@ -1,19 +1,18 @@
 ---
 # required metadata
 
-title: Set enrollment restrictions in Microsoft Intune
-titleSuffix:
-description: Restrict enrollment by platform and set a device enrollment limit in Intune.
+title: Overview of enrollment restrictions  
+titleSuffix: Microsoft Intune 
+description: Learn about the enrollment restrictions available in Microsoft Intune. 
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 02/11/2021
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 
 # optional metadata
@@ -21,176 +20,152 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 #ROBOTS:
 #audience:
 
-ms.reviewer: dagerrit
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
+- ContentEnagagementFY23
 ---
 
-# Set enrollment restrictions
+# What are enrollment restrictions?      
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+**Applies to**
+* Android  
+* iOS
+* macOS
+* Windows 10
+* Windows 11
 
-As an Intune administrator, you can create and manage enrollment restrictions that define what devices can enroll into management with Intune, including the:
-- Number of devices.
-- Operating systems and versions.
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-You can create multiple restrictions and apply them to different user groups. You can set the [priority order](#change-enrollment-restriction-priority) for your different restrictions.
+Device enrollment restrictions let you restrict devices from enrolling in Intune based on certain device attributes. There are two types of device enrollment restrictions you can configure in Microsoft Intune:   
 
->[!NOTE]
->Enrollment restrictions are not security features. Compromised devices can misrepresent their character. These restrictions are a best-effort barrier for non-malicious users.
+* **Device platform restrictions**: Restrict devices based on device platform, version, manufacturer, or ownership type.     
+* **Device limit restrictions**: Restrict the number of devices a user can enroll in Intune.  
 
-The specific enrollment restrictions that you can create include:
+Each restriction type comes with one default policy that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
 
-- Maximum number of enrolled devices.
-- Device platforms that can enroll:
-  - Android device administrator
-  - Android Enterprise work profile
-  - iOS/iPadOS
-  - macOS
-  - Windows
-- Platform operating system version for iOS/iPadOS, Android device administrator, Android Enterprise work profile, and Windows.
-  - Minimum version.
-  - Maximum version.
-- Restrict [personally owned devices](device-enrollment.md#bring-your-own-device) (iOS, Android device administrator, Android Enterprise work profile, macOS, and Windows).
+This article provides an overview of the available enrollment restrictions, and feature limitations. To start creating restrictions, skip to [Next steps](enrollment-restrictions-set.md#next-steps) (in this article).   
 
-## Default restrictions
+## Available restrictions  
+You can configure the following restrictions in the admin center: 
 
-Default restrictions are automatically provided for both device type and device limit enrollment restrictions. You can change the options for the defaults. Default restrictions apply to all user and userless enrollments. You can override these defaults by creating new restrictions with higher priorities.
+* Device limit 
+* Device platform  
+* OS version  
+* Device manufacturer
+* Device ownership (personally owned devices)    
 
-## Create a device type restriction
+### Device limit 
+Put a limit on the number of devices a person can enroll. You can set the device limit from 1 to 15.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enroll Devices** > **Enrollment restrictions** > **Create restriction** > **Device type restriction**.
-2. On the **Basics** page, give the restriction a **Name** and optional **Description**.
-3. Choose **Next** to go to the **Platform settings** page.
-4. Under **Platform**, choose **Allow** for the platforms that you want this restriction to allow.
-:::image type="content" source="./media/enrollment-restrictions-set/choose-platform-settings.png" alt-text="Device type restriction platform settings blade":::
-5. Under **Versions**, choose the minimum and maximum versions that you want the allowable platforms to support. For iOS and Android, version restrictions only apply to devices enrolled with the Company Portal.
-     Supported version formats include:
-    - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
-    - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
-    - Windows supports major.minor.build.rev for Windows 10 only.
-    
-    > [!IMPORTANT]
-    > Android Enterprise work profile and Android device administrator platforms have the following behavior:
-    > - If both platforms are allowed for the same group, then users will be enrolled with a work profile if their device supports it, otherwise they will enroll as device administrator. 
-    > - If both platforms are allowed for the group and refined for specific and non-overlapping versions, then users will receive the enrollment flow defined for their OS version. 
-    > - If both platforms are allowed, but blocked for the same versions, then users on devices with the blocked versions will be taken down the Android device administrator enrollment flow and then get blocked from enrollment and prompted to sign out. 
-    >
-    > Worth noting that neither work profile or device administrator enrollment will work unless the appropriate prequisites have been completed in Android Enrollment. 
-    
-   > [!Note]
-   > Windows 10 does not provide the rev number during enrollment so for instance if you enter in 10.0.17134.100 and the device is 10.0.17134.174 it will be blocked during enrollment.
+This configuration is in the admin center under **Enrollment device limit restrictions**. 
 
-6. Under **Personally owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
-7. Under **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.
-8. Choose **Next** to go to the **Scope tags** page.
-9. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
-10. Choose **Next** to go to the **Assignments** page.
-11. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
-    ![Screen cap for choosing platform settings](./media/enrollment-restrictions-set/select-groups.png)
-12. Select **Next** to go to the **Review + create** page.
-13. Select **Create** to create the restriction.
-14. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
+### Device platform  
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
+Block devices running on a specific device platform. You can apply this restriction to devices running: 
 
+   * Android device administrator
+   * Android Enterprise work profile
+   * iOS/iPadOS
+   * macOS
+   * Windows 10/11  
 
-## Create a device limit restriction
+In groups where both Android platforms are allowed, devices that support work profile will enroll with a work profile. Devices that don't support work profile will enroll on the Android device administrator platform. Neither work profile nor device administrator enrollment will work until you complete all prerequisites for Android enrollment.   
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction** > **Device limit restriction**.
-2. On the **Basics** page, give the restriction a **Name** and optional **Description**.
-3. Choose **Next** to go to the **Device limit** page.
-4. For **Device limit**, select the maximum number of devices that a user can enroll.
-    ![Screen cap for choosing device limit](./media/enrollment-restrictions-set/choose-device-limit.png)
-5. Choose **Next** to go to the **Scope tags** page.
-6. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
-7. Choose **Next** to go to the **Assignments** page.
-8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
-    ![Screen cap for selecting groups](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-9. Select **Next** to go to the **Review + create** page.
-10. Select **Create** to create the restriction.
-11. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
+This restriction is in the admin center under **Enrollment device platform restrictions**.  
 
-During BYOD enrollments, users see a notification that tells them when they've met their limit of enrolled devices. For example, on iOS:
+### OS version 
+This restriction enforces your maximum and minimum OS version requirements. This type of restriction works with the following operating systems: 
 
-![iOS device limit notification](./media/enrollment-restrictions-set/enrollment-restrictions-ios-set-limit-notification.png)
+   * Android device administrator\*
+   * Android Enterprise work profile\*  
+   * iOS/iPadOS\*
+   * Windows  
 
-> [!IMPORTANT]
-> Device limit restrictions don't apply for the following Windows enrollment types:
-> - Co-managed enrollments
-> - GPO enrollments
-> - Azure Active Directory joined enrollments
-> - Bulk Azure Active Directory joined enrollments
-> - Autopilot enrollments
-> - Device Enrollment Manager enrollments
->
-> Device limit restrictions are not enforced for these enrollment types because they're considered shared device scenarios.
-> You can set hard limits for these enrollment types [in Azure Active Directory](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
+\* Version restrictions are supported on these operating systems for devices enrolled via Intune Company Portal only.    
+
+This restriction is in the admin center under **Enrollment device platform restrictions**.  
+
+### Device manufacturer  
+This restriction blocks devices made by specific manufacturers, and is applicable to Android devices only. It is in the admin center under **Enrollment device platform restrictions**.    
+
+### Personally owned devices  
+This restriction helps prevent device users from accidentally enrolling their personal devices, and applies to devices running:  
+
+* Android
+* iOS/iPad OS
+* macOS
+* Windows 10/11 
+
+This restriction is in the admin center under **Enrollment device platform restrictions**.  
+
+#### Blocking personal Android devices  
+By default, until you manually make changes in the admin center, your Android Enterprise work profile device settings and Android device administrator device settings are the same. 
+
+If you block Android Enterprise work profile enrollment on personal devices, only corporate-owned devices can enroll with [personally owned work profiles](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles).  
 
 
-## Change enrollment restrictions
-
-You can change the settings for an enrollment restriction by following the steps below. These restrictions don't effect devices that have already been enrolled. 
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > choose the restriction that you want to change > **Properties**.
-2. Choose **Edit** next to the settings that you want to change.
-3. On the **Edit** page, make the changes that you want and proceed to the **Review + save** page, then choose **Save**.
-
-
-## Blocking personal Android devices
-- If you block personally owned Android device administrator devices from enrollment, personally-owned Android Enterprise work profile devices can still enroll.
-- By default, your Android Enterprise work profile devices settings are the same as your settings for your Android device administrator devices. After you change your Android Enterprise personally-owned work profile or your Android device administrator settings, that's no longer the case.
-- If you block Android Enterprise personal work profile enrollment, only corporate-owned Android devices can enroll with Android Enterprise personally-owned work profiles.
-
-## Blocking personal Windows devices
-If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized as a corporate enrollment. Unauthorized enrollments will be blocked.
-
-The following methods qualify as being authorized as a Windows corporate enrollment:
-- The enrolling user is using a [device enrollment manager account]( device-enrollment-manager-enroll.md).
-- The device enrolls through [Windows Autopilot](../../autopilot/enrollment-autopilot.md).
-- The device is registered with Windows Autopilot but isn't an MDM enrollment only option from Windows Settings.
-- The device's IMEI number is listed in **Device enrollment** > **[Corporate device identifiers](corporate-identifiers-add.md)**.
-- The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
-- The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths#bkmk_path1).
- 
-The following enrollments are marked as corporate by Intune. But since they don't offer the Intune administrator per-device control, they'll be blocked:
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment) with [Azure Active Directory join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment) with [Azure Active Directory join from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network)*.
- 
-The following personal enrollment methods will also be blocked:
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network)\*.
-- [MDM enrollment only]( /windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.
-
-\* These won't be blocked if registered with Autopilot.
-
-
-## Blocking personal iOS/iPadOS devices
-By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
-- [Registered with a serial number](corporate-identifiers-add.md).
-- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
+#### Blocking personal iOS/iPadOS devices  
+By default, Intune classifies iOS/iPadOS devices as personally owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
+- [Registered with a serial number or IMEI](corporate-identifiers-add.md).
+- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program).
 
 > [!NOTE]
-> An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).
->
+> An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).  
 
+#### Blocking personal Macs  
+By default, Intune classifies macOS devices as personally owned. To be classified as corporate-owned, a Mac must fulfill one of the following conditions:
+- [Registered with a serial number](corporate-identifiers-add.md).
+- Enrolled via Apple Automated Device Enrollment (ADE).  
 
-## Change enrollment restriction priority
+#### Blocking personal Windows devices  
+If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized for corporate enrollment. Unauthorized enrollments are blocked.  
 
-Priority is used when a user exists in multiple groups that are assigned restrictions. Users are subject only to the highest priority restriction assigned to a group that they are in. For example, Joe is in group A assigned to priority 5 restrictions and also in group B assigned to priority 2 restrictions. Joe is subject only to the priority 2 restrictions.
+The following enrollment methods are authorized for corporate enrollment:  
+- The device enrolls through [Windows Autopilot](/autopilot/enrollment-autopilot).
+- The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths#bkmk_path1).
+- The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
+- The enrolling user is using a [device enrollment manager account](device-enrollment-manager-enroll.md).
 
-When you create a restriction, it's added to the list just above the default.
+> [!NOTE]
+> Since a co-managed device enrolls in the Microsoft Intune service based on its Microsoft Entra device token, and not a user token, only the default Intune enrollment restriction will apply to it.
 
-Device enrollment includes default restrictions for both device type and device limit restrictions. These two restrictions apply to all users unless they're overridden by higher-priority restrictions.
+Intune marks devices going through the following types of enrollments as corporate-owned, and blocks them from enrolling (unless registered with Autopilot) because these methods don't offer the Intune administrator per-device control:  
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Microsoft Entra join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx).  
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Microsoft Entra join from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network).  
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with Microsoft Entra join or hybrid Entra join via [Windows Autopilot for existing devices](/autopilot/existing-devices).  
 
->[!NOTE]
->Enrollment restrictions are applied to users. In enrollment scenarios that are not user-driven (e.g. Windows Autopilot self-deploying mode or white glove provisioning), only the Default priority restrictions (targeted to "All Users") will be enforced.
+Intune also blocks personal devices using these enrollment methods:  
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network).
+- [MDM enrollment only](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.
+- [Enrollment using the Intune Company Portal app](../user-help/enroll-windows-10-device.md).  
+- Enrollment via a Microsoft 365 app, which occurs when users select the **Allow my organization to manage my device** option during app sign-in. 
 
+> [!IMPORTANT] 
+> Devices joined by Workplace Join could be blocked from enrolling if they were ever previously Microsoft Entra joined to the tenant. To avoid being blocked, deregister and remove the device's associated object in Microsoft Entra ID before attempting to join the device by Workplace Join.  
 
-You can change the priority of any non-default restriction.
+## Limitations  
 
-1. Sign in to the Azure portal.
-2. Select **More Services**, search for **Intune**, and then choose **Intune**.
-3. Select **Device enrollment** > **Enrollment restrictions**.
-4. Hover over the restriction in the priority list.
-5. Using the three vertical dots, drag the priority to the desired position in the list.
+* Enrollment restrictions are applied to users. For enrollment scenarios that aren't user-driven, such as Windows Autopilot self-deploying mode and Autopilot for pre-provisioned deployment, bulk enrollment (WCD), Azure Virtual desktop, or userless Apple Automated device enrollment (ADE without user device affinity), Intune enforces the default policy.  
+
+* Device limit restrictions can't be applied to devices in the following Windows enrollment scenarios, because these scenarios utilize shared device mode:  
+
+  * Co-managed enrollments  
+  * Group Policy (GPO) enrollments  
+  * Microsoft Entra joined enrollments, including bulk enrollments  
+  * Windows Autopilot enrollments  
+  * Device enrollment manager enrollments
+
+  Instead, you can configure a hard limit for these enrollment types in Microsoft Entra ID. For more information, see [Manage device identities by using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).  
+
+## Next steps  
+Select the type of enrollment restriction you want to apply and create the profile:   
+ * [Create device platform enrollment restrictions](create-device-platform-restrictions.md)    
+ * [Create device limit enrollment restrictions](create-device-limit-restrictions.md)  

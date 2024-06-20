@@ -6,13 +6,15 @@ _site/
 Tools/NuGet/
 .optemp/
 _themes/
-
+.ds_store
 
 # Visual Studio and VS Code files
 .vscode/*
+**/.vscode/**
 
 
 
 .openpublishing.build.mdproj
 .openpublishing.buildcore.ps1
 packages.config
+.DS_Store

@@ -2,14 +2,16 @@
 title: Create bootable media
 titleSuffix: Configuration Manager
 description: Use bootable media in Configuration Manager to install a new version of Windows or replace a computer.
-ms.date: 08/11/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.date: 12/14/2023
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
-ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Create bootable media
@@ -42,7 +44,7 @@ Because the task sequence isn't on the media, you can change the task sequence o
 
 The packages on bootable media aren't encrypted. To make sure that the package contents are secured from unauthorized users, take appropriate security measures. For example, add a password to the media.
 
-Starting in version 2006, bootable media can download cloud-based content. The device still needs an intranet connection to the management point. It can get content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
+Starting in version 2006, bootable media can download cloud-based content. The device still needs an intranet connection to the management point. It can get content from a content-enabled cloud management gateway (CMG).<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
 
 ## Prerequisites
 
@@ -76,7 +78,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 ## Process
 
 > [!NOTE]
-> For PKI environments, since you specify the root certificate authority (CA) at the primary site, make sure to create the bootable media at the primary site. The central administration site (CAS) doesn't have the root CA information to properly create the bootable media.
+> For PKI environments, since you specify the root certificate authority (CA) at the primary site, make sure to create the bootable media at the primary site. The central administration site (CAS) doesn't have the root CA information to properly create the bootable media. For more technical information on this issue, see [Sending with winhttp failed 80072f8f error in Smsts.log during OS deployment by using bootable or prestaged media](/troubleshoot/mem/configmgr/sending-with-winhttp-failed-80072f8f-error).
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node.
 
@@ -123,7 +125,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
         - Configuration Manager writes a text file called `MediaLabel.txt` to the root of the media. By default, the file includes a single line of text: `label=Configuration Manager`. If you customize the label for media, this line uses your custom label instead of the default value.
 
-    - **Include autorun.inf file on media**<!-- 4090666 -->: Starting in version 1906, Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.
+    - **Include autorun.inf file on media**<!-- 4090666 -->: Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.
 
 1. On the **Security** page, specify the following options:
 
@@ -131,8 +133,10 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
     - **Protect media with a password**: Enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the bootable media.
 
-        > [!IMPORTANT]
-        > As a security best practice, always assign a password to help protect the bootable media.
+        > [!IMPORTANT]  
+        > As a security best practice, always assign a password to help protect the bootable media. Assigning a password to the media not only prevents someone without the password from running a task sequence when using the media, but it also properly encrypts the task sequence environment on the media. The task sequence environment includes the task sequence steps and their variables.
+        >
+        > Using a password doesn't encrypt the remaining content of the bootable media such as packages. Don't include any sensitive information in task sequence packages such as scripts. Store and implement all sensitive information by using task sequence variables.
 
     - For HTTP communications, select **Create self-signed media certificate**. Then specify the start and expiration date for the certificate.
 

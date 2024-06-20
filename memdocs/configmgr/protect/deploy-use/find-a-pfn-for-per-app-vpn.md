@@ -1,30 +1,30 @@
 ---
-title: "Find a package family name (PFN) for per-app VPN"
-titleSuffix: "Configuration Manager"
-description: "Learn about the two ways to find a package family name so that you can configure a per-app VPN."
-ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+title: Find a package family name (PFN) for per-app VPN
+titleSuffix: Configuration Manager
+description: Learn about the two ways to find a package family name so that you can configure a per-app VPN.
+ms.date: 03/29/2022
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
-ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 # Find a package family name (PFN) for per-app VPN
 
 *Applies to: Configuration Manager (current branch)*
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
+> Starting in version 2203, this company resource access feature is no longer supported.<!-- 9315387 --> For more information, see [Frequently asked questions about resource access deprecation](../plan-design/resource-access-deprecation-faq.yml).
 
 There are two ways to find a PFN so that you can configure a per-app VPN.
 
 ## Find a PFN for an app that's installed on a Windows 10 computer
 
-If the app you are working with is already installed on a Windows 10 computer, you can use the [Get-AppxPackage](/powershell/module/appx/get-appxpackage) PowerShell cmdlet to get the PFN.
+If the app you're working with is already installed on a Windows 10 computer, you can use the [Get-AppxPackage](/powershell/module/appx/get-appxpackage) PowerShell cmdlet to get the PFN.
 
 The syntax for Get-AppxPackage is:
 
@@ -40,7 +40,7 @@ For example, to get info on all the universal apps installed on the computer use
 To get info on an app you know the name of, or part of the name of, use `Get-AppxPackage *<app_name>`. Note the use of the wildcard character, particularly helpful if you're not sure of the full name of the app. For example to get the info for OneNote, use `Get-AppxPackage *OneNote`.
 
 
-Here is the information retrieved for OneNote:
+Here's the information retrieved for OneNote:
 
 `Name                   : Microsoft.Office.OneNote`
 
@@ -70,11 +70,11 @@ Here is the information retrieved for OneNote:
 
 1. Go to https://www.microsoft.com/store/apps
 2. Enter the name of the app in the search bar. In our example, search for OneNote.
-3. Click the link to the app. Note that the URL that you access has a series of letters at the end. In our example, the URL looks like this:
+3. Click the link to the app. The URL that you access has a series of letters at the end. In our example, the URL looks like this:
 `https://www.microsoft.com/store/apps/onenote/9wzdncrfhvjl`
-4. In a different tab, paste the following URL, `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`,  replacing `<app id>` with the app id you obtained from https://www.microsoft.com/store/apps - that series of letters at the end of the URL in step 3. In our example, example of OneNote, you'd paste: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+4. In a different tab, paste the following URL, `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`,  replacing `<app id>` with the app ID you obtained from https://www.microsoft.com/store/apps - that series of letters at the end of the URL in step 3. In our example, example of OneNote, you'd paste: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
-In Edge, the information you want is displayed; in Internet Explorer, click **Open** to see the information. The PFN value is given on the first line. Here's how the results look for our example:
+In Microsoft Edge, the information you want is displayed; in Internet Explorer, click **Open** to see the information. The PFN value is given on the first line. Here's how the results look for our example:
 
 ``` JSON
 {

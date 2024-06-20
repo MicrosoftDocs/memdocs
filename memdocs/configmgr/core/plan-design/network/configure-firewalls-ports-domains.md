@@ -3,15 +3,15 @@ title: Network infrastructure
 titleSuffix: Configuration Manager
 description: Set up firewalls, ports, and domains to prepare for Configuration Manager communications.
 ms.date: 06/19/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: d6993bba-f6bd-4639-adbf-efc1c638b2f3
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Network infrastructure considerations for Configuration Manager

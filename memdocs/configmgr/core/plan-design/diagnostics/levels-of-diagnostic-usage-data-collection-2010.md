@@ -3,13 +3,16 @@ title: Diagnostic and usage data for 2010
 titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2010.
 ms.date: 11/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 1f776c95-fb48-4c55-a10b-b98b4ce9556d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ROBOTS: NOINDEX
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Diagnostic and usage data for version 2010
@@ -43,7 +46,7 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Count of Windows 10 devices by branch, build, and unique Active Directory forest
 
-- Count of clients joined to Azure Active Directory
+- Count of clients joined to Microsoft Entra ID
 
 - Count of extended interoperability clients
 
@@ -53,7 +56,7 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Use of the bulk registration token
 
-- ***[New]*** Count of clients by identity source and registration method. For example, Active Directory, Azure Active Directory, or PKI client authentication certificate.
+- ***[New]*** Count of clients by identity source and registration method. For example, Active Directory, Microsoft Entra ID, or PKI client authentication certificate.
 
 ### Cloud services (Level 1)
 
@@ -63,7 +66,7 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Aggregated usage statistics of co-management: number of clients ever enrolled, number of enrolled clients, number of clients pending enrollment, clients receiving policy, workload states, pilot/exclusion collection sizes, and enrollment errors
 
-- Count of Azure Active Directory applications and services connected to Configuration Manager
+- Count of Microsoft Entra applications and services connected to Configuration Manager
 
 - Cloud attach and detach actions
 
@@ -127,7 +130,7 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Basic Configuration Manager site hierarchy data: site list, type, version, status, client count, time zone, and health status
 
-- Basic discovery statistics: discovery count, minimum/maximum/average group sizes, and when the site is running entirely with Azure Active Directory Services
+- Basic discovery statistics: discovery count, minimum/maximum/average group sizes, and when the site is running entirely with Microsoft Entra services
 
 - Basic site system server information: site system roles used, internet and SSL status, OS, processors, physical or virtual machine, and usage of site server high availability
 
@@ -321,7 +324,7 @@ For Configuration Manager version 2010, this level includes the following data:
 
 ### Cloud services (Level 2)
 
-- Azure Active Directory discovery statistics
+- Microsoft Entra discovery statistics
 
 - Count of collections synced to Azure Log Analytics
 
@@ -357,7 +360,7 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Collections without a deployment
 
-- Count of collections synchronized to Azure Active Directory
+- Count of collections synchronized to Microsoft Entra ID
 
 ### Compliance settings (Level 2)
 

@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
-ms.technology:
+ms.localizationpriority: medium
 ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 
 # optional metadata
@@ -21,12 +20,16 @@ ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
+ms.collection:
+- tier2
+- M365-identity-device-management
+- Android
+- FocusArea_Apps_Store
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
 ---
 
 # Add Android store apps to Microsoft Intune
@@ -39,7 +42,7 @@ Before you assign an app to a device or a group of users, you must first add the
 
 You can add an Android store app to Intune from the portal by doing the following:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Android store app**.
 4. Click **Select**.<br>
@@ -71,3 +74,7 @@ The **Overview** blade of the app you've created is displayed.
 ## Next steps
 
 - [Assign apps to groups](apps-deploy.md)
+
+## Related topics
+
+- [Add Managed Google Play apps to Android Enterprise devices with Intune](./apps-add-android-for-work.md)

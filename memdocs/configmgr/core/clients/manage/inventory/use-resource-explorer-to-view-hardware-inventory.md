@@ -3,15 +3,15 @@ title: How to use Resource Explorer
 titleSuffix: Configuration Manager
 description: Use Resource Explorer to view hardware inventory in Configuration Manager.
 ms.date: 07/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to use Resource Explorer to view hardware inventory in Configuration Manager

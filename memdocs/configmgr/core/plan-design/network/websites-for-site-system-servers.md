@@ -3,13 +3,15 @@ title: Websites for site systems
 titleSuffix: Configuration Manager
 description: Learn about default and custom websites for site system servers in Configuration Manager.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Websites for site system servers in Configuration Manager

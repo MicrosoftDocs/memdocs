@@ -2,14 +2,16 @@
 title: Find help
 titleSuffix: Configuration Manager
 description: Find resources for additional information about Configuration Manager.
-ms.date: 11/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 11/10/2021
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Find help for using Configuration Manager
@@ -28,19 +30,19 @@ There are several resources that you can use to find help with Configuration Man
 
 For help with product accessibility, see [Accessibility features](accessibility-features.md).
 
-To get support for co-management, tenant attach, and analytics features, see [How to get support in Microsoft Endpoint Manager admin center](../../../get-support.md).
+To get support for co-management, tenant attach, and analytics features, see [How to get support in Microsoft Intune admin center](../../../get-support.md).
 
 ## Product feedback
 
 From the Configuration Manager console, you can share feedback directly to the Microsoft product group. In the upper right corner of the console, select the smiley face icon.  There are three types of feedback:
 
-![Submit feedback in Configuration Manager](media/console-share-feedback.png)
+:::image type="content" source="media/console-share-feedback.png" alt-text="Submit feedback in Configuration Manager.":::
 
 - **Send a smile**: Send feedback on what you liked.
 
 - **Send a frown**: Send feedback on what you didn't like, and how Microsoft can improve it.
 
-- **Send a suggestion**: Open the [Configuration Manager UserVoice website](https://configurationmanager.uservoice.com/) to share your idea.
+- **Send a suggestion**: Open the Configuration Manager product feedback site to share your idea.
 
 For more information, see [Product feedback](product-feedback.md).
 
@@ -76,4 +78,4 @@ The following links provide information about support options and community reso
 
 [Software Center user guide](software-center.md)
 
-[How to get support in Microsoft Endpoint Manager admin center](../../../get-support.md)
+[How to get support in Microsoft Intune admin center](../../../get-support.md)

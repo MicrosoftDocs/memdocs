@@ -5,15 +5,14 @@ title: Data security and sharing in Intune
 titleSuffix: Microsoft Intune
 description: Learn how personal data is secured and shared in Intune.
 keywords: privacy, data
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/01/2020
+ms.date: 12/07/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 68921fd6-5f50-456c-a3af-83d7bc4b134b
 
 # optional metadata
@@ -26,11 +25,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
+- privacy
+- essentials-privacy
 ---
 
 # Data security and sharing in Intune
-
 
 ## Data security
 
@@ -64,9 +66,9 @@ For information about data shared with certain third parties, see the following 
 - [Data Google sends to Intune](data-google-sends-to-intune.md)
 - [Data Jamf Pro sends to Intune](data-jamf-sends-to-intune.md)
 
-### Microsoft Endpoint Configuration Manager data sharing
+### Microsoft Configuration Manager data sharing
 
-Microsoft Intune does not share any data with Configuration Manager. Configuration Manager is an on-premise product deployed, managed, and operated directly by the customer. The diagnostics and usage data that is collected by Configuration Manager are only to improve the installation experience, quality, and security of future releases.
+Microsoft Intune doesn't share any data with Configuration Manager. Configuration Manager is an on-premise product deployed, managed, and operated directly by the customer. The diagnostics and usage data that is collected by Configuration Manager are only to improve the installation experience, quality, and security of future releases.
 
 To learn more, see [Diagnostics and usage data for Configuration Manager](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
 

@@ -1,16 +1,18 @@
 ---
-title: "Release a Lock on a SEDO-Enabled Object"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: Release a Lock on a SEDO-Enabled Object
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 064a7248-6a42-4dbc-b937-9be7e3454cd4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+description: Learn about how to release a locked SEDO-enabled object using its object path by creating a ReleaseLock method.
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Release a Lock on a SEDO-Enabled Object
 ### To Release an Explicit Lock on a SEDO-enabled Object  
@@ -68,7 +70,7 @@ class Program
 |AssignedUser|Indicates the currently assigned user of the requested lock.|  
 |AssignedObjectLockContext|Indicates ObjectLockContext the lock is currently assigned to.|  
 |AssignedMachine|Indicates the currently assigned computer of the requested lock.|  
-|AssignedSiteCode|Indicates the currently site of the requested lock.|  
+|AssignedSiteCode|Indicates the current site of the requested lock.|  
 |AssignedTimeUTC|Indicates the time at which the requested lock was assigned.|  
 
  RequestState  

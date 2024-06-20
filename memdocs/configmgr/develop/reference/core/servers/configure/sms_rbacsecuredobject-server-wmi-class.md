@@ -1,16 +1,18 @@
 ---
-title: "SMS_RbacSecuredObject Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: Learn how to use SMS_RbacSecuredObject class, in Configuration Manager, that represents the RBAC Security Object.
+title: SMS_RbacSecuredObject Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5e6e53ef-623c-479d-91d3-35b5710a0541
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_RbacSecuredObject Server WMI Class
 The `SMS_RbacSecuredObject` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the RBAC Security Object.  

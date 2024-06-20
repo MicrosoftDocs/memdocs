@@ -3,13 +3,16 @@ title: Diagnostic and usage data for 2006
 titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2006.
 ms.date: 10/06/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ae8b48f8-391e-49d6-bb1a-9205378acef8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ROBOTS: NOINDEX
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Diagnostic and usage data for version 2006
@@ -35,7 +38,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Basic database configuration: processors, memory size, memory settings, Configuration Manager database configuration, Configuration Manager database size, cluster configuration, configuration of distributed views, and change tracking version  
 
-- Basic discovery statistics: discovery count, minimum/maximum/average group sizes, and when the site is running entirely with Azure Active Directory Services
+- Basic discovery statistics: discovery count, minimum/maximum/average group sizes, and when the site is running entirely with Microsoft Entra services
 
 - Basic Endpoint Protection information about antimalware client versions
 
@@ -83,7 +86,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Whether network discovery is enabled or disabled  
 
-- Count of clients joined to Azure Active Directory  
+- Count of clients joined to Microsoft Entra ID  
 
 - Count of phased deployments created by type  
 
@@ -121,7 +124,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Count of Microsoft Edge installations
 
-- Count of Azure Active Directory applications and services connected to Configuration Manager
+- Count of Microsoft Entra applications and services connected to Configuration Manager
 
 - Site health information
 
@@ -291,7 +294,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 ### Cloud services  
 
-- Azure Active Directory discovery statistics  
+- Microsoft Entra discovery statistics  
 
 - Count of collections synced to Azure Log Analytics  
 
@@ -327,7 +330,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Collections without a deployment  
 
-- Count of collections synchronized to Azure Active Directory
+- Count of collections synchronized to Microsoft Entra ID
 
 ### Compliance settings  
 

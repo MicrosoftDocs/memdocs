@@ -3,13 +3,15 @@ title: Create an image for an OEM in factory or a local depot
 titleSuffix: Configuration Manager
 description: Use prestaged media deployments to reduce network traffic while you deploy an OS to a computer that isn't fully provisioned.
 ms.date: 08/11/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
-ms.assetid: a7d3df90-062d-4d57-9e9d-e137d3e7cd7f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Create an image for an OEM in factory or a local depot with Configuration Manager

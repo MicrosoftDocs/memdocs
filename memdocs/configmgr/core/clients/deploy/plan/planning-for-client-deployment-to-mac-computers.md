@@ -1,21 +1,24 @@
 ---
-title: "Planning client deployment to Mac computers"
-titleSuffix: "Configuration Manager"
-description: "Plan for client deployment to Mac computers in Configuration Manager."
-ms.date: 04/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+title: Planning client deployment to Mac computers
+titleSuffix: Configuration Manager
+description: Plan for client deployment to Mac computers in Configuration Manager.
+ms.date: 01/05/2022
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 8d15ae3f-de42-461f-a907-c43873da22d2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Planning for client deployment to Mac computers in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in January 2022, this feature of Configuration Manager is deprecated.<!-- 12927803 --> For more information, see [Mac computers](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 You can install the Configuration Manager client on Mac computers that run macOS X and use the following management capabilities:  
 

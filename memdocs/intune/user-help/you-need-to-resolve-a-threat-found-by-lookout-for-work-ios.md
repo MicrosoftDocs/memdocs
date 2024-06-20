@@ -10,10 +10,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 10/05/2018
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: dd6aec3a-4063-4054-8d0f-d2f2034f0d3d
 
 searchScope:
@@ -24,11 +22,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: natgreen
+ms.reviewer: natgreen
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Resolve a threat found by Lookout for Work on iOS
@@ -62,4 +61,3 @@ If you install an app that Lookout for Work identifies as a threat, you'll recei
 Select the app name shown at the top of your screen. Then follow the instructions to remove and uninstall the app. As long as the app is on your device, you'll be unable to access company resources.    
 
 Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).    
-

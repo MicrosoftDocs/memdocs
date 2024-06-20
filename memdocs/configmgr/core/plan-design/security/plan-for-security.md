@@ -2,13 +2,18 @@
 title: Plan for security
 titleSuffix: Configuration Manager
 description: Get best practices and other information about security in Configuration Manager.
-ms.date: 05/04/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 08/02/2021
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: 
+    - tier3
+    - essentials-security
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Plan for security in Configuration Manager
@@ -25,7 +30,7 @@ This article describes the following concepts for you to consider when planning 
 
 - Role-based administration
 
-- Azure Active Directory
+- Microsoft Entra ID
 
 - SMS Provider authentication
 
@@ -66,6 +71,11 @@ To help protect the data that clients send to management points, you can require
 
 While signing helps protect the data from tampering, encryption helps protect the data from information disclosure. You can enable encryption for the inventory data and state messages that clients send to management points in the site. You don't have to install any updates on clients to support this option. Clients and management points require more CPU usage for encryption and decryption.
 
+> [!NOTE]
+> To encrypt the data, the client uses the public key of the management point's encryption certificate. Only the management point has the corresponding private key, so only it can decrypt the data.
+>
+> The client bootstraps this certificate with the management point's signing certificate, which it bootstraps with the site's trusted root key. Make sure to securely provision the trusted root key on clients. For more information, see [The trusted root key](#the-trusted-root-key).
+
 For more information about how to configure the settings for signing and encryption, see [Configure signing and encryption](configure-security.md#signing-and-encryption).
 
 For more information on the cryptographic algorithms used for signing and encryption, see [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md).
@@ -78,13 +88,15 @@ With the combination of security roles, security scopes, and collections, you se
 
 For more information, see [Fundamentals of role-based administration](../../understand/fundamentals-of-role-based-administration.md).
 
-## Azure Active Directory
+<a name='azure-active-directory'></a>
 
-Configuration Manager integrates with Azure Active Directory (Azure AD) to enable the site and clients to use modern authentication.
+## Microsoft Entra ID
 
-For more information about Azure AD, see [Azure Active Directory documentation](/azure/active-directory/).
+Configuration Manager integrates with Microsoft Entra ID to enable the site and clients to use modern authentication.
 
-Onboarding your site with Azure AD supports the following Configuration Manager scenarios:
+For more information about Microsoft Entra ID, see [Microsoft Entra documentation](/entra/).
+
+Onboarding your site with Microsoft Entra ID supports the following Configuration Manager scenarios:
 
 ### Client scenarios
 
@@ -112,8 +124,6 @@ Onboarding your site with Azure AD supports the following Configuration Manager 
 
 - [Community Hub](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)
 
-- [Cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md)
-
 - [User discovery](../../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)
 
 ## SMS Provider authentication
@@ -122,7 +132,9 @@ Onboarding your site with Azure AD supports the following Configuration Manager 
 
 ## Next steps
 
-- [Plan for certificates](plan-for-certificates.md)
+- [Certificates in Configuration Manager](certificates-overview.md)
+
+- [Plan for PKI certificates](plan-for-certificates.md)
 
 - [Configure security](configure-security.md)
 

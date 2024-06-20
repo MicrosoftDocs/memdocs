@@ -1,16 +1,18 @@
 ---
-title: "SMS_BulkEnrollmentProfiles Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_BulkEnrollmentProfiles Class
+titleSuffix: Configuration Manager
+description: The  SMS_BulkEnrollmentProfiles Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents bulk enrollment profiles for Windows Embedded handheld devices.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b958ac99-cf9a-4dd3-aa52-0235cf6033b0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_BulkEnrollmentProfiles Server WMI Class
 The  `SMS_BulkEnrollmentProfiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents bulk enrollment profiles for Windows Embedded handheld devices.  

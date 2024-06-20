@@ -1,18 +1,18 @@
 ---
-title: "Technical Preview 1801 | Microsoft Docs"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1801 for Configuration Manager."
+title: Technical Preview 1801 | Microsoft Docs
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview version 1801 for Configuration Manager.
 ms.date: 01/19/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 5a352ae0-355f-4fcf-b863-fb0654f51c52
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Capabilities in Technical Preview 1801 for Configuration Manager
 
@@ -81,8 +81,8 @@ If you are using the [co-management](../../comanage/overview.md) capabilities, y
     > [!NOTE] 
     > Windows 10, version 1709 and later, is a prerequisite for co-management
 - **Co-management status**: the breakdown of device success or failure in the following categories:
-   - Success, hybrid Azure AD Joined
-   - Success, Azure AD Joined
+   - Success, Microsoft Entra hybrid joined
+   - Success, Microsoft Entra joined
    - Failure: Auto-enrollment failed
 - **Workload transition**: a bar chart showing the number of devices that you transitioned to Microsoft Intune for the three available workloads: 
    - Compliance Policies
@@ -96,7 +96,7 @@ If you are using the [co-management](../../comanage/overview.md) capabilities, y
 
 ## Improvements to automatic deployment rule evaluation schedule
 <!-- 1357133 -->
-Based upon your [user voice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8819518-software-update-patch-tuesday-scheduling), you can now schedule automatic deployment rule (ADR) evaluation to be offset from a base day. For example, an offset of two days after the second Tuesday of the month evaluates the rule on Thursday. 
+Based upon your feedback, you can now schedule automatic deployment rule (ADR) evaluation to be offset from a base day. For example, an offset of two days after the second Tuesday of the month evaluates the rule on Thursday. 
 
 ### Try it out!  
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked. <br/>

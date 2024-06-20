@@ -1,22 +1,23 @@
-﻿---
+---
 title: Endpoint protection views
 titleSuffix: Configuration Manager
 description: Information about the status of Endpoint Protection clients and malware activity in your Configuration Manager site.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
-
-
 ms.assetid: 5f6b3676-b5d8-48f7-92c7-35366169a855
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Endpoint protection views in Configuration Manager
 
-The Configuration Manager Endpoint Protection views provide information about the status of Endpoint Protection clients and malware activity in your Configuration Manager site.
+The Configuration�Manager�Endpoint�Protection views provide information about the status of Endpoint Protection clients and malware activity in your Configuration Manager site.
 
 The following sections provide detailed information about the Endpoint Protection views.
 
@@ -40,17 +41,17 @@ This view can be joined to other views by using the **CollectionID** column.
 
 ### v_EndpointProtectionCollections
 
-Contains the collection ID and collection name of all collections that have the option **View this collection in the Endpoint Protection dashboard** checked on the **Alerts** tab of the *collection name* **Properties** dialog box.
+Contains the collection ID and collection name of all collections that have the option **View this collection in the Endpoint Protection dashboard** checked on the **Alerts** tab of the *collection name*�**Properties** dialog box.
 This view can be joined to other views by using the **CollectionID** and **CollectionName** columns.
 
 ### v_EndpointProtectionHealthStatus
 
-Lists the collections protected by Endpoint Protection with information about the number of clients in each collection, clients that are considered at risk, clients that have not been installed yet, clients that are not supported and more.
+Lists the collections protected by Endpoint Protection with information about the number of clients in each collection, clients that are considered at risk, clients that haven't been installed yet, clients that aren't supported and more.
 This view can be joined to other views by using the **CollectionID** column.
 
 ### v_EndpointProtectionHealthStatus_History
 
-Lists historical information about the collections protected by Endpoint Protection with information about the number of clients in each collection, clients that are considered at risk, clients that have not been installed yet, clients that are not supported and more.
+Lists historical information about the collections protected by Endpoint Protection with information about the number of clients in each collection, clients that are considered at risk, clients that haven't been installed yet, clients that aren't supported and more.
 This view can be joined to other views by using the **CollectionID** column.
 
 ### v_GS_AntimalwareHealthStatus
@@ -60,12 +61,12 @@ This view can be joined to other views by using the **ResourceID** column.
 
 ### v_GS_AntimalwareInfectionStatus
 
-Lists information about the status of clients protected by Endpoint Protection, such as the status of the computer, whether it is pending a full scan or a restart, whether manual steps are required to resolve a malware infection, and more.
+Lists information about the status of clients protected by Endpoint Protection, such as the status of the computer, whether it's pending a full scan or a restart, whether manual steps are required to resolve a malware infection, and more.
 This view can be joined to other views by using the **ResourceID** column.
 
 ### v_EndpointProtectionStatus
 
-Provides an overall summary of the status of Endpoint Protection clients for each computer, sorted by resource ID. This includes whether the client is protected, whether it is considered at risk, whether it supports Endpoint Protection, whether it requires a restart, and more.
+Provides an overall summary of the status of Endpoint Protection clients for each computer, sorted by resource ID. This includes whether the client is protected, whether it's considered at risk, whether it supports Endpoint Protection, whether it requires a restart, and more.
 This view can be joined to other views by using the **ResourceID** column.
 
 ### v_GS_Threats
@@ -81,22 +82,22 @@ This view can be joined to other views by using the **CollectionID** column.
 ### v_ThreatSummary
 
 Lists the possible descriptions of each malware threat that can be detected by Endpoint Protection.
-It is unlikely that this view will be joined to other views.
+It's unlikely that this view will be joined to other views.
 
 ### v_ThreatSeverities
 
 Lists the threat severities, by severity ID that can be displayed in the Endpoint Protection dashboard to indicate the severity of discovered malware.
-It is unlikely that this view will be joined to other views.
+It's unlikely that this view will be joined to other views.
 
 ### v_ThreatDefaultActions
 
 Lists the default actions, by default action ID that can be taken when malware is discovered on client computers.
-It is unlikely that this view will be joined to other views.
+It's unlikely that this view will be joined to other views.
 
 ### v_ThreatCategories
 
 Lists the available threat categories, by category ID, that malware can be sorted into, such as trojans and spyware.
-It is unlikely that this view will be joined to other views.
+It's unlikely that this view will be joined to other views.
 
 ### v_ThreatCatalog
 

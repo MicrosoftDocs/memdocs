@@ -1,17 +1,17 @@
 ---
-title: "Software inventory"
-titleSuffix: "Configuration Manager"
-description: "Get an introduction to software inventory in Configuration Manager."
+title: Software inventory
+titleSuffix: Configuration Manager
+description: Get an introduction to software inventory in Configuration Manager.
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Introduction to software inventory in Configuration Manager
 

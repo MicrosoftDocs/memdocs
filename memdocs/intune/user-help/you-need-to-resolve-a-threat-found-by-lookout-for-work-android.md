@@ -10,10 +10,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 08/28/2018
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 5656b3e6-e812-4264-a170-b17c9c03e4d4
 
 searchScope:
@@ -24,11 +22,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: natgreen
+ms.reviewer: natgreen
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Resolve a threat found by Lookout for Work on Android

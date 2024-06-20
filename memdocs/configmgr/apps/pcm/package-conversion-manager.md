@@ -1,15 +1,17 @@
 ---
 title: Package Conversion Manager
 titleSuffix: Configuration Manager
-description: Learn about Package Conversion Manager to convert packages to applications in Configuration Manager. 
+description: Learn about Package Conversion Manager to convert packages to applications in Configuration Manager.
 ms.date: 11/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: overview
-ms.assetid: f053fa73-c553-4522-a6b9-f885f23fe57c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Package Conversion Manager

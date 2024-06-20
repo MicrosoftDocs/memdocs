@@ -2,37 +2,34 @@
 title: Windows Hello for Business settings
 titleSuffix: Configuration Manager
 description: Learn how to integrate Windows Hello for Business with Configuration Manager.
-ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.date: 03/29/2022
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
-ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Windows Hello for Business settings in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-> [!IMPORTANT]
-> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
-
 <!--1245704-->
-Configuration Manager integrates with Windows Hello for Business. (This feature was formerly known as Microsoft Passport for Work.) Windows Hello for Business is an alternative sign-in method for Windows 10 devices. It uses Active Directory or an Azure Active Directory (Azure AD) account to replace a password, smart card, or virtual smart card. Hello for Business lets you use a *user gesture* to sign in instead of a password. A user gesture might be a PIN, biometric authentication, or an external device such as a fingerprint reader.
+Configuration Manager integrates with Windows Hello for Business. (This feature was formerly known as Microsoft Passport for Work.) Windows Hello for Business is an alternative sign-in method for Windows 10 devices. It uses Active Directory or a Microsoft Entra account to replace a password, smart card, or virtual smart card. Hello for Business lets you use a *user gesture* to sign in instead of a password. A user gesture might be a PIN, biometric authentication, or an external device such as a fingerprint reader.
 
-> [!Important]  
-> Starting in version 1910, certificate-based authentication with Windows Hello for Business settings in Configuration Manager isn't supported. For more information, see [deprecated features](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md). Key-based authentication is still valid.
+> [!IMPORTANT]
+> Starting in version 2203, this company resource access feature is no longer supported.<!-- 9315387 --> For more information, see [Frequently asked questions about resource access deprecation](../plan-design/resource-access-deprecation-faq.yml).
 >
 > Active Directory Federation Services Registration Authority (ADFS RA) deployment is simpler, provides a better user experience, and has a more deterministic certificate enrollment experience. Use ADFS RA for certificate-based authentication with Windows Hello for Business.
 
 For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
 > [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->  
 
 Configuration Manager integrates with Windows Hello for Business in the following ways:  
 

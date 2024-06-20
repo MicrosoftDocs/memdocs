@@ -1,16 +1,18 @@
 ---
 title: Configure a software update point to use TLS/SSL with a PKI certificate tutorial
-titleSuffix: "Configuration Manager"
-description: "Tutorial - Configure Windows Server Update Services (WSUS) servers and the software update points to use TLS/SSL with a PKI certificate."
-author: mestew 
-ms.author: mstewart
-manager: dougeby
-ms.date: 04/05/2021
+titleSuffix: Configuration Manager
+description: Tutorial - Configure Windows Server Update Services (WSUS) servers and the software update points to use TLS/SSL with a PKI certificate.
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.date: 01/14/2022
 ms.topic: tutorial
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
-ms.assetid: bd9989b8-ccaf-4d51-8262-b4a99b600d12
+ms.service: configuration-manager
+ms.subservice: software-updates
 # Customer intent: As a Configuration Manager admin, I want to enable my WSUS servers and software update points to use TLS/SSL to reduce the ability of a potential attacker to remotely compromise a client and elevate privileges.
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Tutorial: Configure a software update point to use TLS/SSL with a PKI certificate
@@ -238,14 +240,14 @@ When you change the software update point to require SSL, Configuration Manager 
    Write-Host "CurrentSUP- $current"
    ```
    > [!TIP]
-   > [Open this script](https://communityhub.microsoft.com/item/8267) in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
+   > Open this script in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
 1. Run a software update scan cycle on your test client. You can force a scan with the following PowerShell script:
 
    ```powershell
    Invoke-WMIMethod -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000113}"
    ```
    > [!TIP]
-   > [Open this script](https://communityhub.microsoft.com/item/8268) in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
+   > Open this script in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
 
 1. Review the client's **ScanAgent.log** to verify the message to scan against the software update point was received.
 
@@ -289,9 +291,11 @@ Starting in Configuration Manager 2103, you can further increase the security of
 - Configuration Manager version 2103
 - Ensure your WSUS servers and software update points are configured to use TLS/SSL
 - Add the certificates for your WSUS servers to the new `WindowsServerUpdateServices` certificate store on your clients
+   - When using certificate pinning with a cloud management gateway (CMG), the `WindowsServerUpdateServices` store needs the CMG certificate. If clients switch from internet to VPN both the CMG and WSUS server certificates are needed in the `WindowsServerUpdateServices` store. <!--12590425-->
 
 > [!Note]
 > Software update scans for devices will continue to run successfully using the default value of **Yes** for the **Enforce TLS certificate pinning for Windows Update client for detecting updates** client setting. This includes scans over both HTTP and HTTPS. The certificate pinning doesn't take effect until a certificate is in the client's `WindowsServerUpdateServices` store and the WSUS server is configured to use TLS/SSL.
+
 
 
 ### Enable or disable TLS certificate pinning for devices scanning HTTPS-configured WSUS servers

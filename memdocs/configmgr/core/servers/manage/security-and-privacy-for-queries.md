@@ -1,17 +1,17 @@
 ---
-title: "Security and privacy for queries"
-titleSuffix: "Configuration Manager"
-description: "Understand best practices for security and privacy when you query for information from the site database."
+title: Security and privacy for queries
+titleSuffix: Configuration Manager
+description: Understand best practices for security and privacy when you query for information from the site database.
 ms.date: 05/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 30080620-20d3-4c38-b8dd-db5516e1acae
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
-
-
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Security and privacy for queries in Configuration Manager
 

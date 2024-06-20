@@ -1,19 +1,21 @@
 ---
-title: "CheckPackageShareForTaskSequenceDeployment Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: Learn how to use the Configuration Manager with the CheckPackageShareForTaskSequenceDeployment Windows Management Instrumentation (WMI) class method to verify that the package share type meets the requirements of a task sequence deployment.
+title: CheckPackageShareForTaskSequenceDeployment Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 94d247a9-c862-433d-84b5-d19d7ca39a0e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CheckPackageShareForTaskSequenceDeployment Method in Class SMS_Package
-The `CheckPackageShareForTaskSequenceDeployment` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks whether the package share type meets the requirements of a task sequence deployment.  
+The `CheckPackageShareForTaskSequenceDeployment` Windows Management Instrumentation (WMI) class method in Configuration Manager that checks whether the package share type meets the requirements of a task sequence deployment.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -49,14 +51,14 @@ uint32 CheckPackageShareForTaskSequenceDeployment
 
  Qualifiers: [id("2"), out]  
 
- Identifiers of task sequence deployments that are invalid because this package is not valid for task sequence use.  
+ Identifiers of task sequence deployments that are invalid because this package isn't valid for task sequence use.  
 
  `InvalidTaskSequenceDeploymentNames`  
  Data type: `String Array`  
 
  Qualifiers: [id("3"), out]  
 
- Names of task sequence deployments that are invalid because this package is not valid for task sequence use.  
+ Names of task sequence deployments that are invalid because this package isn't valid for task sequence use.  
 
 ## Remarks  
 

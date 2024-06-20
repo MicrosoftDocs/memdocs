@@ -1,16 +1,18 @@
 ---
+description: "Learn how to get the excluded file list for application content used to support selective file download with IAppContentExt::GetExcludedFileList method."
 title: "IAppContentExt::GetExcludedFileList"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: cff72c0f-e94e-4047-aa6d-f92c5e9cdcac
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # IAppContentExt::GetExcludedFileList
 The `IAppContentExt::GetExcludedFileList` method, in Configuration Manager, gets the excluded file list for application content. This is used to support selective file download.  
@@ -39,17 +41,17 @@ HRESULT GetExcludedFileList(
 
  Qualifiers: [out]  
 
- The exclude file list is a single string separated by the ':' character. For example, "File1.txt:File2.exe".  
+ The exclude file list is a single string separated by the ':' character. For example, "File1.txt:File2.exe."  
 
  `pbForceFileExclusion`  
  Data type: `BOOL`  
 
  Qualifiers: [out]  
 
- `True` to force exclusion of files. If `False`, content framework will decide whether or not excluding them based on network condition and content configuration.  
+ `True` to force exclusion of files. If `False`, content framework decides whether or not excluding them based on network condition and content configuration.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Discovery was triggered successfully. All other return values indicate failure.  

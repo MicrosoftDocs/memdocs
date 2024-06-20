@@ -2,14 +2,16 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 05/13/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 04/08/2022
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Internet access requirements
@@ -50,10 +52,19 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `download.windowsupdate.com`  
 
+- `download.visualstudio.microsoft.com`  
+
 - `sccmconnected-a01.cloudapp.net`  
 
-- `configmgrbits.azureedge.net`  
+- `definitionupdates.microsoft.com`
 
+- `configmgrbits.azureedge.net`
+
+    > [!IMPORTANT]
+    > This Azure endpoint only supports TLS 1.2 with specific cipher suites.<!-- 10424111 --> Make sure your environment supports these Azure configurations. For more information, see [Azure Front Door: TLS configuration FAQ](/azure/frontdoor/front-door-faq#tls-configuration).
+
+- `cmbitsstore.blob.core.windows.net`
+  
 - `ceuswatcab01.blob.core.windows.net`
 
 - `ceuswatcab02.blob.core.windows.net`
@@ -66,13 +77,13 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `weus2watcab02.blob.core.windows.net`
 
+- `cmbitsstore.blob.core.windows.net`
+
 - `umwatsonc.events.data.microsoft.com`
 
 - `*-umwatsonc.events.data.microsoft.com`
 
-- `cmupdatepackppe.blob.core.windows.net` (technical preview branch version 2104 and earlier)<!-- 9287396 -->
-
-## Windows 10 servicing
+## Windows servicing
 
 For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).
 
@@ -91,7 +102,7 @@ For more information, see [Configure Azure services for use with Configuration M
 
 ## Co-management
 
-If you enroll Windows 10 devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/intune/intune-endpoints).
+If you enroll Windows devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/intune/intune-endpoints).
 
 ## Microsoft Store for Business
 
@@ -173,6 +184,8 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 
 - `config.office.com` to create custom configurations for Microsoft 365 Apps for enterprise deployments
 
+-  `https://clients.config.office.net` and `https://go.microsoft.com/fwlink/?linkid=2190568` to support deploying updates for Microsoft 365 Apps for enterprise
+
 - `contentstorage.osi.office.net` to support the evaluation of Office add-in readiness<!-- MEMDocs#410 -->
 
 Your top-level site server needs access to the following endpoint to download the Microsoft Apps 365 readiness file:
@@ -243,6 +256,18 @@ If you use [asset intelligence](../../clients/manage/asset-intelligence/introduc
 ## Deploy Microsoft Edge
 
 [!INCLUDE [Internet endpoints for deploying Microsoft Edge](includes/internet-endpoints-deploy-microsoft-edge.md)]
+
+## External notifications
+
+For more information, see [External notifications](../../servers/manage/external-notifications.md).
+
+The service connection point needs to communicate with the notification service, for example Azure Logic Apps. The access endpoint for the logic app typically has the following format: `https://*.<RegionName>.logic.azure.com:443`. For example: `https://prod1.westus2.logic.azure.com:443`
+
+To get the access endpoint for the logic app, as well as the associated IP addresses, use the following process:
+
+1. In the Azure portal, under **Logic Apps**, select the logic app for your notification. For more information, see [Manage logic apps in the Azure portal](/azure/logic-apps/manage-logic-apps-with-azure-portal).
+1. In the app's menu, in the **Settings** section, select **Properties**.
+1. View or copy the values for the **Access endpoint** and the **Access endpoint IP addresses**.
 
 ## Microsoft public IP addresses
 

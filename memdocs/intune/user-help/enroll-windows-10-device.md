@@ -1,18 +1,16 @@
 ---
 # required metadata
 
-title: Enroll Windows 10 device in Intune | Microsoft Docs
-description: Enroll your Windows 10 device in Intune to get remote access to work or school.  
+title: Enroll Windows 10/11 devices in Intune | Microsoft Docs
+description: Set up your Windows 10/11 device in Intune Company Portal to get remote access to work or school.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 2/12/2021
+ms.date: 07/25/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 812e82df-76df-402b-bfe9-29302838f40e
 searchScope:
  - User help
@@ -22,58 +20,62 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: amanh
+ms.reviewer: madekeva
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
-# Enroll Windows 10 devices in Intune  
+# Enroll Windows 10/11 devices in Intune    
 
-Enroll your Windows 10 device in Intune to get mobile access to work or school apps, email, and Wi-Fi. This article describes how to set up devices running on Windows 10, version 1607 and later; and Windows 10, version 1511 and earlier. Before you begin, make sure you [verify the version on your device](using-your-windows-device-with-intune.md) so that you can follow the correct set of instructions.  
+**Applies to**  
+- Windows 10  
+- Windows 11  
 
-Windows 10 is supported across various device types including desktop, laptop, and tablet. The enrollment steps are the same on all device types but your screen may look a little different from the images shown in this article.  
+Enroll your Windows 10/11 device in Intune to get mobile access to work or school apps, email, and Wi-Fi. 
+
+To identify the version of Windows running on your device, see [Which version of Windows operating system am I running?](https://go.microsoft.com/fwlink/?linkid=2166188).  
 </br>
-> [!VIDEO https://www.youtube.com/embed/TKQxEckBHiE?rel=0]
+> [!VIDEO https://www.youtube.com/embed/TKQxEckBHiE?rel=0]  
+
+## Get Company Portal
+You can enroll Windows 10/11 devices through the Intune Company Portal website or app. Devices running Windows 7 or 8.1 must enroll through the Company Portal website. To access Company Portal: 
+
+* Install the app from the [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2141417).    
+* [Sign on to the Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school credentials.  
 
 ## Enroll Windows 10, version 1607 and later device 
-These steps describe how to enroll a device that runs on Windows 10, version 1607 and later.  
+Use Intune Company Portal to enroll devices running on Windows 10, version 1607 and later, and Windows 11.   
+1. Open Company Portal and sign in with your work or school account.  
 
-1. Go to **Start**. 
+2. On the **Home** screen, select **Next** to set up your device. 
 
-2. Open the **Settings** app. If the app isn't readily available in your apps list, go to the search bar and type "settings."
+    ![Example image of Company Portal > Set up your device screen, showing that the device needs to be set up to connect to work and highlighting the Next button.](./media/set-up-your-device-company-portal-2107.png)  
 
-3. Select **Accounts** > **Access work or school** > **Connect**.  
+3. Select **Connect**.  
 
+    ![Example image of Company Portal > Connect to work screen highlighting the Connect button.](./media/connect-to-work-company-portal-2107.png)  
 
-    ![Select Access work school account](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
+4. Sign in with your work or school account again. If you're using the Company Portal website, the sign-in prompt may open in a new window. 
 
-4. To get to your organization's Intune sign-in page, enter your work or school email address. Then select **Next**.  
+    ![Example image of Microsoft authentication screen that prompts user to "Enter password."](./media/enter-password-prompt-company-portal-2107.png)  
 
+5. On the **Setting up your device** screen, select **Go**.  
+6. After setup is complete, return to the Company Portal app. Select **Next**.  
+7. Select **Done** to exit setup.  
 
-   ![Enter your work or school-account](./media/w10-enroll-rs1-set-up-work-or-school-account.png)  
+    ![Example image of Company Portal > You're all set screen, highlighting the Done button.](./media/youre-all-set-company-portal-2107.png)  
 
-5. Sign in to Intune with your work or school account.  
+## Sync device to fix connection problems  
 
-
-    ![Add a work or school account](./media/w10-enroll-rs1-enter-your-credentials.png)  
-
-    You'll eventually see a message that your company or school is registering your device.
-
-6. If your organization requires you to set up a PIN for Windows Hello, you'll be prompted to enter a verification code. Enter the code and continue through the on-screen steps to create a PIN.  
-
-7. On the **You're all set!** screen, select **Done**. Your device is now enrolled.  
-
-8. To double-check your connection, go back to **Settings** > **Accounts** > **Access work or school**.  Your account should now be listed.  
-
+After enrolling, if you have trouble accessing work or school things, try syncing your device. For more information about syncing, see [Sync device](sync-your-device-manually-windows.md).     
 
 ## Enroll Windows 10, version 1511 and earlier device  
-These steps describe how to enroll a device that runs on Windows 10, version 1511 and earlier.  
+Enroll devices running Windows 10, version 1511 and earlier. Company Portal doesn't support these versions, so setup is done in the Settings app.  
 
-1. Go to **Start**. 
-
-2. Open the **Settings** app. If the app isn't readily available in your apps list, go to the search bar and type "settings."
+1. Go to **Start** and open the **Settings** app. 
 
 3. Select **Accounts** > **Your account**.  
 
@@ -92,15 +94,14 @@ These steps describe how to enroll a device that runs on Windows 10, version 151
 
 
 ## Troubleshooting 
-For a non-exhaustive list of error messages and other connection remedies, see [Troubleshoot Windows 10 device access](troubleshoot-your-windows-10-device-windows.md).  
+For a non-exhaustive list of error messages and resolutions, see [Troubleshoot Windows 10/11 device access](troubleshoot-your-windows-10-device-windows.md).  
 
+## Support for IT administrators    
 
-## IT administrator support   
-
-If you're an IT administrator and run in to problems while enrolling devices, see [Troubleshooting Windows device enrollment problems in Microsoft Intune](https://support.microsoft.com/help/4469913). This article lists common errors, their causes, and steps to resolve them. 
+If you're an IT administrator and run into problems while enrolling devices, see [Troubleshooting Windows device enrollment problems in Microsoft Intune](https://support.microsoft.com/help/4469913). This article lists common errors, their causes, and steps to resolve them. 
 
 ## Next steps  
-If you need help setting up your device or using Company Portal, contact your organization's IT support team. Sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your help desk information.  
+If you need more help setting up your device or using Company Portal, contact your support person. Sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's contact information.   
 
  
 

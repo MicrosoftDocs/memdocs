@@ -1,18 +1,17 @@
 ---
 # required metadata
 
-title: Microsoft Endpoint Manager overview - Azure | Microsoft Docs
-description: Endpoint Manager includes Intune, Configuration Manager, co-management, Desktop Analytics, Windows Autopilot, and the admin center to manage all devices, including on-premises.
+title: Endpoint management services and solutions at Microsoft
+description: Microsoft Intune is a family of on-premises products and cloud services. It includes Intune, Configuration Manager, co-management, Endpoint Analytics, Windows Autopilot, and the admin center to manage cloud devices and on on-premises.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 11/03/2023
 ms.topic: overview
-ms.service: mem
-ms.subservice: fundamentals
+ms.service: microsoft-intune
+ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -23,99 +22,166 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.custom: 
+  - get-started
+  - intro-overview
+ms.collection:
+  - M365-identity-device-management
+  - tier1
 ---
 
-# Microsoft Endpoint Manager overview
+# Endpoint management at Microsoft
 
-Microsoft Endpoint Manager helps deliver the modern workplace and modern management to keep your data secure, in the cloud and on-premises. Endpoint Manager includes the services and tools you use to manage and monitor mobile devices, desktop computers, virtual machines, embedded devices, and servers.
+This article provides an overview of endpoint management solutions at Microsoft.
 
-Endpoint Manager combines services you may know and already be using, including Microsoft Intune, Configuration Manager, Desktop Analytics, co-management, and Windows Autopilot. These services are part of the Microsoft 365 stack to help secure access, protect data, and respond and manage risk.
+:::image type="content" source="./media/endpoint-management-microsoft.png" alt-text="Endpoint management for Microsoft includes Microsoft Intune, Windows Autopilot and Endpoint analytics. It also integrates with Microsoft Entra ID, on-premises Configuration Manager, mobile threat defense partners, Security Copilot, Microsoft 365 apps and more." lightbox="./media/endpoint-management-microsoft.png":::
 
-Start by watching the following two-minute video from Brad Anderson, Microsoft corporate vice president for Microsoft 365:
+## Microsoft Intune
 
-> [!VIDEO https://www.youtube.com/embed/GS7oNPInFuw]
+Microsoft Intune is a family of products and services. The Intune family includes:
 
-## What you get
+- Microsoft Intune service
+- Configuration Manager and co-management
+- Endpoint Analytics
+- Windows Autopilot
+- Intune admin center
 
-Endpoint Manager includes the following services:
+These products and services offer a **cloud-based unified endpoint management** solution. It simplifies management across multiple operating systems, cloud, on-premises, mobile, desktop, and virtualized endpoints. It also:
 
-- **Microsoft Intune**: Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices. It lets you control features and settings on Android, Android Enterprise, iOS/iPadOS, macOS, and Windows 10 devices. It integrates with other services, including Azure Active Directory (AD), mobile threat defenders, ADMX templates, Win32 and custom LOB apps, and more.
+- **Supports data protection on company-owned and bring your own devices** through non-intrusive mobile application management.
+- Empowers organizations to **provide data protection and endpoint compliance** that support a Zero Trust security model.
+- Brings together **device visibility, endpoint security, and data-driven insights** to increase IT efficiency. In hybrid work environments, admin tasks and end user experiences are improved.
 
-  If you have on-premises infrastructure, such as Exchange or an Active Directory, the Intune connectors are also available:
+Intune integrates with other services, including Azure Active Directory (AD), on-premises Configuration Manager, mobile threat defense (MTD) apps & services, Win32 & custom LOB apps, and more.
 
-  - The **Intune Connector for Active Directory** adds entries to your on-premises Active Directory domain for computers that enroll using Windows Autopilot. For more information, see [Deploy hybrid Azure AD-joined devices](./autopilot/windows-autopilot-hybrid.md).
-  - The **Intune certificate connector** processes certificate requests from devices that use certificates for authentication and S/MIME email encryption. For more information, see [Use certificates for authentication](./intune/protect/certificates-configure.md).
+If you're moving to the cloud or are adopting more cloud-based services, Intune is a great place to start.
 
-  As part of Endpoint Manager, use Intune to create and check for compliance, and deploy apps, features, and settings to your devices using the cloud.
+For more information, go to:
 
-  For more information, see [What is Microsoft Intune](/intune/fundamentals/what-is-intune).
+- [What is Microsoft Intune?](./intune/fundamentals/what-is-intune.md)
+- [Get started with Microsoft Intune](./intune/fundamentals/get-started-with-intune.md)
 
-- **Configuration Manager**: Configuration Manager is an on-premises management solution to manage desktops, servers, and laptops that are on your network or internet-based. You can cloud-enable it to integrate with Intune, Azure Active Directory (AD), Microsoft Defender for Endpoint, and other cloud services. Use Configuration Manager to deploy apps, software updates, and operating systems. You can also monitor compliance, query and act on clients in real time, and much more.
+## Configuration Manager and co-management
 
-  As part of Endpoint Manager, continue to use Configuration Manager as you always have. If you're ready to move some tasks to the cloud, consider [co-management](/configmgr/comanage/).
+Configuration Manager is an on-premises management solution that can **manage desktops, Windows servers, and laptops** that are on your network or are internet-based. You can use Configuration Manager to manage data centers, apps, software updates, and operating systems.
 
-  For more information, see [What is Configuration Manager?](/configmgr/core/understand/introduction).
+To benefit from all that's happening in Microsoft Intune, connect to the cloud with co-management. Co-management combines your existing on-premises Configuration Manager investment with some of the cloud-based features in Intune, including using the web-based Microsoft Intune admin center.
 
-- **Co-management**: Co-management combines your existing on-premises Configuration Manager investment with the cloud using Intune and other Microsoft 365 cloud services. You choose whether Configuration Manager or Intune is the management authority for the seven different workload groups.
+Co-management is a great way to get started with Intune and to start moving some workloads to the cloud.
 
-  As part of Endpoint Manager, co-management uses cloud features, including conditional access. You keep some tasks on-premises, while running other tasks in the cloud with Intune.
+For more information, go to:
 
-  For more information, see [What is co-management?](/configmgr/comanage/overview).
+- [What is Configuration Manager?](./configmgr/core/understand/introduction.md)
+- [What is co-management?](./configmgr/comanage/overview.md)
+- [Tenant attach: Prerequisites](./configmgr/tenant-attach/prerequisites.md)
 
-- **Desktop Analytics**: Desktop Analytics is a cloud-based service that integrates with Configuration Manager. It provides insight and intelligence for you to make more informed decisions about the update readiness of your Windows clients. The service combines data from your organization with data aggregated from millions of devices connected to the Microsoft cloud. It provides information on security updates, apps, and devices in your organization, and identifies compatibility issues with apps and drivers. Create a pilot for devices most likely to provide the best insights for assets across your organization.
+## Intune Suite
 
-  As part of Endpoint Manager, use the cloud-powered insights of Desktop Analytics to keep Windows 10 devices current.
+The Intune Suite is a collection of add-on features that are available in Intune. The suite includes features that **expand device management capabilities**, including:
 
-  For more information, see [What is Desktop Analytics?](/configmgr/desktop-analytics/overview).
+- Remote help for secure help desk connections
+- Microsoft Tunnel VPN for mobile application management of devices that aren't enrolled in Intune
+- Endpoint Privilege Management (EPM) so standard non-admin users can complete tasks that require elevated privileges
+- Manage specialty devices, like AR/VR headsets, large smart-screen devices, and select conference room meeting devices
+- And more
 
-- **Windows Autopilot**: Windows Autopilot sets up and pre-configures new devices, getting them ready for use. It's designed to simplify the lifecycle of Windows devices, for both IT and end users, from initial deployment through end of life.
+The suite and its individual features are available as add-ons to your existing licenses and are also licensed individually.
 
-  As part of Endpoint Manager, use Autopilot to preconfigure devices, and automatically enroll devices in Intune. You can also integrate Autopilot with Configuration Manager and co-management for more complex device configurations (in preview).
+There's also a free trial to help you determine if these features can help your organization.
 
-  For more information, see [Windows Autopilot overview](/windows/deployment/windows-autopilot/windows-autopilot) and [Enroll Windows devices in Intune](./autopilot/enrollment-autopilot.md).
+For more information, go to:
 
-- **Azure Active Directory (AD)**: Azure AD is used by Endpoint Manager for identity of devices, users, groups, and multi-factor authentication (MFA). **Azure AD Premium**, which may be an additional cost, has [additional features](https://azure.microsoft.com/pricing/details/active-directory/) to help protect devices, apps, and data, including dynamic groups, auto-enrollment, and conditional access.
+- [Intune Suite add-on capabilities](./intune/fundamentals/intune-add-ons.md)
 
-  For more information, see [add users](./intune/fundamentals/users-add.md), [set up auto-enrollment](./intune/enrollment/windows-enroll.md), and [about conditional access](./intune/protect/conditional-access.md).
+## Intune admin center
 
-- **Endpoint Manager admin center**: The [admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is a one-stop web site to create policies and manage your devices. It plugs-in other key device management services, including groups, security, conditional access, and reporting. This admin center also shows devices managed by Configuration Manager and Intune (in preview).
+The [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is a **one-stop web site**. Use the admin center to add users & groups, create & manage policies, and monitor your policies using report data. If you use Configuration Manager tenant-attach or co-management, you can see your on-premises devices and run some actions on these devices.
 
-## Choose what's right for you
+The admin center also plugs-in other key device management services, including:
 
-There are a few ways to determine what's right for your organization. Your next steps depend on what your organization does. Consider what you're trying to achieve.
+- [**Azure AD Privileged Identity Management** to monitor access to important resources](/azure/active-directory/privileged-identity-management/pim-configure)
+- [**Microsoft Tunnel** VPN gateway solution that runs on Linux](./intune/protect/microsoft-tunnel-overview.md)
+- [**Mobile threat defense** partners](./intune/protect/mobile-threat-defense.md)
+- [**Remote Help** for remote assistance](/mem/intune/fundamentals/remote-help)
+- [**TeamViewer** for remote administration](./intune/remote-actions/teamviewer-support.md)
+- [**Windows 365** for your Windows virtual machines](/windows-365/overview)
+- [**Windows Autopatch** to automate updates](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 
-For example:
+## Microsoft Entra ID
 
-- If you constantly provision new devices, then start with Windows Autopilot.
-- If you add rules and control settings for your users, apps, and devices, then start with Intune.
-- If you currently use Configuration Manager to deploy apps, and want to use conditional access based on security requirements, then start with co-management.
-- If you currently use Configuration Manager and are responsible for keeping Windows 10 devices up-to-date, then start with Desktop Analytics.
-- If you're getting started with MDM and MAM, or use ADMX templates to control Office, Microsoft Edge, and Windows settings, then start with Intune.
+Microsoft Entra ID, previously known as Azure Active Directory (Azure AD), is a cloud-native service that's used by Intune to **manage the identities of users, devices, and groups**. The Intune policies you create are assigned to these users, devices, and groups. When devices are enrolled in Intune, your users sign in to their devices with their Azure AD accounts (`user@contoso.com`).
 
-You can also think of Endpoint Manager in three parts: cloud, on-premises, and cloud + on-premises:
+**Azure AD Premium**, which may be an extra cost, has [more features](https://azure.microsoft.com/pricing/details/active-directory/) to help protect devices, apps, and data, including dynamic groups, automatic enrollment in Intune, and conditional access.
 
-- **Cloud**: All data is stored in Azure. And, no more data centers. This approach gives you the mobility benefits of the cloud, and the security benefits of Azure.
+For more information, go to:
 
-- **On-premises**: If you have an on-premises infrastructure that includes Configuration Manager, or aren't ready to use the cloud, then you can keep your existing systems.
+- [Add users](./intune/fundamentals/users-add.md)
+- [Set up auto enrollment](./intune/enrollment/windows-enroll.md)
+- [Learn about conditional access and Intune](./intune/protect/conditional-access.md)
 
-- **Cloud + on-premises**: Many environments are mixed, and use a cloud-attach approach. Meaning they use a combination of cloud and on-premises. For new devices, use the benefits of Intune to access and protect data. If you use Configuration Manager, connect to the cloud for additional functionality and analytics. If you want to move some workloads to the cloud, then co-management is a good option.
+## Windows Autopilot
 
-## What you need to get started
+Windows Autopilot is a cloud-native service that **sets up and preconfigures devices**, getting them ready for use. It can also reset and repurpose existing devices. It's designed to simplify the lifecycle of Windows devices from initial deployment through end of life, benefitting IT and end users.
 
-Microsoft Endpoint Manager is a solution platform that unifies several technologies. It's not a new license. The services are licensed according to their individual licenses terms. For more information, see the [product licensing terms](https://www.microsoft.com/licensing/product-licensing/products).
+Use Windows Autopilot to preconfigure devices, automatically join devices to Azure AD, automatically enroll the devices in Intune, customize the out of box experience (OOBE), and more. You can also integrate Windows Autopilot with Configuration Manager and co-management for more device configurations.
 
-If you currently use Configuration Manager, you also get Microsoft Intune to co-manage your Windows devices. For other platforms, such as iOS/iPadOS and Android, then you'll need a separate Intune license.
+If you constantly provision new devices or repurpose existing devices, then use Windows Autopilot.
 
-In most scenarios, Microsoft 365 may be the best option, as it gives you Endpoint Manager and Office. For more information, see [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
+For more information, go to:
 
-## Next steps
+- [Windows Autopilot overview](/autopilot/windows-autopilot)
+- [Enroll Windows devices in Intune](/autopilot/enrollment-autopilot)
 
-[Use the power of cloud intelligence to simplify and accelerate IT and the move to a modern workplace](https://www.microsoft.com/microsoft-365/blog/2019/11/04/use-the-power-of-cloud-intelligence-to-simplify-and-accelerate-it-and-the-move-to-a-modern-workplace/)
+## Windows 365
 
-[Microsoft Endpoint Manager](https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager)
+Windows 365 Cloud PCs are **virtual machines that are hosted in the cloud-native Windows 365 service**. They're accessible from anywhere and from any device that has internet access. Cloud PCs include a Windows desktop experience and are associated with a user.
 
-[Tutorial: Walkthrough Intune in Microsoft Endpoint Manager](/intune/fundamentals/tutorial-walkthrough-endpoint-manager)
+You enroll and manage these devices with Intune, just like any other device. On these Cloud PCs, you can use Intune to deploy apps, configure settings, install updates, and more.
 
-[What is Microsoft 365? learn module](/learn/modules/what-is-m365/index)
+If you have remote workers, want to provide a secure way for your users to access corporate resources, and/or looking for a way to provide a Windows desktop experience, then Windows 365 is a great solution.
+
+For more information, go to:
+
+- [Windows 365 Cloud PC overview - Enterprise](/windows-365/enterprise/overview)
+- [Windows 365 Cloud PC overview - Business](/windows-365/business/)
+
+## Windows Autopatch
+
+Windows Autopatch is a cloud-native service that **automates patching** of Windows devices and Microsoft 365 apps, including Microsoft Teams & Microsoft Edge. To use Windows Autopatch, devices must be enrolled in Intune or managed using co-management (Intune + Configuration Manager).
+
+When you're planning your update strategy, you can use the update policies in Intune, or use Windows Autopatch. Intune gives more granular control, including when updates are installed. Windows Autopatch automatically applies updates as soon as they're available and lets admins focus on other tasks.
+
+For more information, go to:
+
+- [Windows Autopatch overview](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
+- [Windows Autopatch prerequisites](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites)
+- [Windows Autopatch FAQ](/windows/deployment/windows-autopatch/overview/windows-autopatch-faq)
+
+## Endpoint analytics
+
+Endpoint analytics is a cloud-native service that provides **metrics and recommendations on the health and performance** of your Windows client devices. If you use Configuration Manager, you can benefit from Endpoint Analytics insights by connecting to the cloud.
+
+You can get data on:
+
+- Startup performance
+- How frequently devices restart
+- A list of apps that affect end-user productivity
+- Recommendations on how to improve performance
+
+This information and more is shown in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+You can use Endpoint Analytics on devices that are managed with Intune or Configuration Manager connected to the cloud.
+
+For more information, go to:
+
+- [What is Endpoint analytics?](./analytics/overview.md)
+- [Endpoint analytics scores, baselines, and insights](./analytics/scores.md)
+- [Tutorial: Walkthrough the Microsoft Intune admin center](./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md)
+- [Quickstart - Enroll Configuration Manager devices](./analytics/enroll-configmgr.md)
+
+## Learn more
+
+- [Learn more about cloud-native endpoints](./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
+- [Microsoft 365 Feature comparison and licensing](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise)
+- [Microsoft Intune licensing](./intune/fundamentals/licenses.md)
+- [Get started with Microsoft Intune](./intune/fundamentals/get-started-with-intune.md)

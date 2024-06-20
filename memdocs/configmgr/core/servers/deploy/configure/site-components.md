@@ -2,14 +2,16 @@
 title: Site components
 titleSuffix: Configuration Manager
 description: Learn how to configure site components to modify the behavior of site system roles and site status reporting.
-ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 03/28/2024
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Site components for Configuration Manager
@@ -41,6 +43,9 @@ Most options for the various site components are self-explanatory when viewed in
 
 On the **General** tab, specify settings that modify how the site server transfers content to its distribution points. When you increase the values you use for concurrent distribution settings, content distribution can use more network bandwidth.
 
+> [!NOTE]
+> Don't increase Maximum number of packages 3 (default) in concurrent distribution settings when the content are distributed to CMG CDP. 
+
 #### Pull distribution point
 
 For more information, see [Use a pull-distribution point](../../../plan-design/hierarchy/use-a-pull-distribution-point.md).
@@ -49,13 +54,27 @@ For more information, see [Use a pull-distribution point](../../../plan-design/h
 
 For more information, see [Network access account](../../../plan-design/hierarchy/accounts.md#network-access-account).
 
+#### Automate software distribution site component with PowerShell
+
+To programmatically view and configure the **Software distribution** site component, use the following PowerShell cmdlets:
+
+- [Get-CMSoftwareDistributionComponent](/powershell/module/configurationmanager/get-cmsoftwaredistributioncomponent)
+- [Set-CMSoftwareDistributionComponent](/powershell/module/configurationmanager/set-cmsoftwaredistributioncomponent)
+
 ### Software update point
 
 For more information, see [Install a software update point](../../../../sum/get-started/install-a-software-update-point.md).
 
+#### Automate software update point site component with PowerShell
+
+To programmatically view and configure the **Software update point** site component, use the following PowerShell cmdlets:
+
+- [Get-CMSoftwareUpdatePointComponent](/powershell/module/configurationmanager/get-cmsoftwareupdatepointcomponent)
+- [Set-CMSoftwareUpdatePointComponent](/powershell/module/configurationmanager/set-cmsoftwareupdatepointcomponent)
+
 ### OS deployment
 
-For more information, see [Specify the drive for offline OS image servicing](../../../../osd/get-started/manage-operating-system-images.md#bkmk_servicing-drive).
+For more information, see [Specify the drive for offline OS image servicing](../../../../osd/get-started/manage-operating-system-images.md#specify-the-drive-for-offline-os-image-servicing).
 
 ### Management point
 
@@ -74,9 +93,23 @@ When clients on the intranet can't use Active Directory Domain Services to find 
 
 For general information about service location, see [Understand how clients find site resources and services](../../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).
 
+#### Automate management point site component with PowerShell
+
+To programmatically view and configure the **Management point** site component, use the following PowerShell cmdlets:
+
+- [Get-CMManagementPointComponent](/powershell/module/configurationmanager/get-cmmanagementpointcomponent)
+- [Set-CMManagementPointComponent](/powershell/module/configurationmanager/set-cmmanagementpointcomponent)
+
 ### Status reporting
 
 These settings directly set up the level of detail that's included in status reports from sites and clients.
+
+#### Automate status reporting site component with PowerShell
+
+To programmatically view and configure the **Status reporting** site component, use the following PowerShell cmdlets:
+
+- [Get-CMStatusReportingComponent](/powershell/module/configurationmanager/get-cmstatusreportingcomponent)
+- [Set-CMStatusReportingComponent](/powershell/module/configurationmanager/set-cmstatusreportingcomponent)
 
 ### Email notification
 
@@ -84,11 +117,25 @@ Specify account and email server details to enable Configuration Manager to send
 
 For more information, see [Configure alerts](../../manage/configure-alerts.md#configure-email-notification-for-alerts).
 
+#### Automate email notification site component with PowerShell
+
+To programmatically view and configure the **Email notification** site component, use the following PowerShell cmdlets:
+
+- [Get-CMEmailNotificationComponent](/powershell/module/configurationmanager/get-cmemailnotificationcomponent)
+- [Set-CMEmailNotificationComponent](/powershell/module/configurationmanager/set-cmemailnotificationcomponent)
+
 ### <a name="bkmk_colleval"></a> Collection membership evaluation
 
 Use this component to set how often collection membership is incrementally evaluated. Incremental evaluation updates a collection membership with only new or changed resources.
 
 For more information, see [Best practices for collections](../../../clients/manage/collections/best-practices-for-collections.md).
+
+#### Automate collection membership evaluation site component with PowerShell
+
+To programmatically view and configure the **Collection membership evaluation** site component, use the following PowerShell cmdlets:
+
+- [Get-CMCollectionMembershipEvaluationComponent](/powershell/module/configurationmanager/get-cmcollectionmembershipevaluationcomponent)
+- [Set-CMCollectionMembershipEvaluationComponent](/powershell/module/configurationmanager/set-cmcollectionmembershipevaluationcomponent)
 
 ## Configuration Manager Service Manager
 

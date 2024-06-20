@@ -3,13 +3,15 @@ title: Language packs
 titleSuffix: Configuration Manager
 description: Learn about the language support available in Configuration Manager.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Language packs in Configuration Manager

@@ -1,16 +1,18 @@
 ---
-title: "SMS_Client Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: Article describing the use of SMS_CLient class in Configuration Manager to represent the client and facilitate manipulation and retrieval of client information.
+title: SMS_Client Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f5101684-bce9-4752-8742-31f01f36ff0c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # SMS_Client Client WMI Class

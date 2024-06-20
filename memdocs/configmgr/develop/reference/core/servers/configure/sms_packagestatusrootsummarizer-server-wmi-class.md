@@ -1,16 +1,18 @@
 ---
-title: "SMS_PackageStatusRootSummarizer Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: The SMS_PackageStatusRootSummarizer Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that lists the distribution summary for a given package.
+title: SMS_PackageStatusRootSummarizer Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7899997c-7846-44f5-882c-add161280dca
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_PackageStatusRootSummarizer Server WMI Class
 The `SMS_PackageStatusRootSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists the distribution summary for a given package for all sites in a hierarchy.  
@@ -37,7 +39,7 @@ Class SMS_PackageStatusRootSummarizer : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_PackageStatusRootSummarizer` class does not define any methods.  
+ The `SMS_PackageStatusRootSummarizer` class doesn't define any methods.  
 
 ## Properties  
  `Failed`  
@@ -83,7 +85,7 @@ Class SMS_PackageStatusRootSummarizer : SMS_BaseClass
 
  Qualifiers: None  
 
- Total number of distribution points for this package that have had at least one failure during an installation or removal operation but have not yet exceeded the number of retries allowed and are currently in a state of installation-retrying or removal-retrying.  
+ Total number of distribution points for this package that have had at least one failure during an installation or removal operation but haven't yet exceeded the number of retries allowed and are currently in a state of installation-retrying or removal-retrying.  
 
  `SourceCompressedSize`  
  Data type: `UInt32`  
@@ -137,7 +139,7 @@ Class SMS_PackageStatusRootSummarizer : SMS_BaseClass
 
  Qualifiers: None  
 
- Total number of distribution points (including child sites) that are specified to have a copy of the package. A distribution point remains targeted until it is specified for removal.  
+ Total number of distribution points (including child sites) that are specified to have a copy of the package. A distribution point remains targeted until it's specified for removal.  
 
 ## Remarks  
  Class qualifiers for this class include:  

@@ -3,13 +3,15 @@ title: Configure client settings
 titleSuffix: Configuration Manager
 description: Learn how to configure client settings in Configuration Manager.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to configure client settings in Configuration Manager
@@ -32,7 +34,7 @@ For information about each client setting, see [About client settings](about-cli
 1. View and configure the client settings for each group of settings in the navigation pane.
 
 > [!TIP]
-> Configuration Manager configures clients with these settings when they next download policy. To start policy retrieval for a single client, see [Start policy retrieval for a Configuration Manager client](../manage/manage-clients.md#BKMK_PolicyRetrieval).
+> Configuration Manager configures clients with these settings when they next download policy. To start policy retrieval for a single client, see [Start policy retrieval for a Configuration Manager client](../manage/manage-clients.md#start-policy-retrieval).
 
 ## Create and deploy custom client settings
 
@@ -55,7 +57,7 @@ When you deploy these custom settings, they override the default client settings
 1. View the order of the custom client setting that you created. When you have multiple custom client settings, they're applied according to their order number. If there are any conflicts between settings, the setting that has the lowest order number overrides the other settings. To change the order number, on the **Home** tab of the ribbon, in the **Client Settings** group, choose **Move Item Up** or **Move Item Down**.
 
 > [!TIP]
-> Configuration Manage configures clients with these settings when they next download policy. To start policy retrieval for a single client, see [Start policy retrieval for a Configuration Manager client](../manage/manage-clients.md#BKMK_PolicyRetrieval).
+> Configuration Manage configures clients with these settings when they next download policy. To start policy retrieval for a single client, see [Start policy retrieval for a Configuration Manager client](../manage/manage-clients.md#start-policy-retrieval).
 
 ## View client settings
 

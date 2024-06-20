@@ -1,20 +1,18 @@
 ---
 # required metadata
 
-title: Remove SCEP or PKCS certificates in Microsoft Intune - Azure | Microsoft Docs
+title: Remove SCEP or PKCS certificates in Microsoft Intune
 titleSuffix:
 description: Learn about the actions that can remove, revoke, or leave untouched the certificates on a device that were provisioned by Intune certificate profiles. Actions include tasks to wipe or retire a managed device, to unenroll a device, manage the certificate profile assignment, and more.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 05/13/2021
+ms.date: 04/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -24,7 +22,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
+- certificates
 ms.reviewer: lacranda
 ---
 
@@ -32,19 +33,25 @@ ms.reviewer: lacranda
 
 In Microsoft Intune, you can use Simple Certificate Enrollment Protocol (SCEP) and Public Key Cryptography Standards (PKCS) certificate profiles to add certificates to devices.
 
-These certificates can be removed when you [wipe](../remote-actions/devices-wipe.md#wipe) or [retire](../remote-actions/devices-wipe.md#retire) the device. There are also scenarios where certificates are automatically removed, and scenarios where certificates stay on the device. This article lists some common scenarios and their effect on PKCS and SCEP certificates.
+These certificates can be removed when you [wipe](../remote-actions/devices-wipe.md#wipe) or [retire](../remote-actions/devices-wipe.md#retire) the device. Certificates that were provisioned by Intune are also removed when the profile that provisioned the certificate no longer targets the device or user. There are other scenarios where certificates are automatically removed, and scenarios where certificates stay on the device. This article lists some common scenarios and their effect on PKCS and SCEP certificates.
 
 > [!NOTE]
-> To remove and revoke certificates for a user who's being removed from on-premises Active Directory or Azure Active Directory (Azure AD), follow these steps in order:
+> To remove and revoke certificates for a user who's being removed from on-premises Active Directory or Microsoft Entra ID, follow these steps in order:
 >
 > 1. Wipe or retire the user's device.
-> 2. Remove the user from on-premises Active Directory or Azure AD.
+> 2. Remove the user from on-premises Active Directory or Microsoft Entra ID.
+
+The majority of this article applies to SCEP and PKCS certificate profiles, but not to imported PKCS certificates. Imported PKCS certificates are removed by Intune when company data is removed from the device or when a device is unenrolled from management.
+
 
 ## Manually deleted certificates
 
 Manual deletion of a certificate is a scenario that applies across platforms and certificates provisioned by SCEP or PKCS certificate profiles. For example, a user might delete a certificate from a device, when the device remains targeted by a certificate policy.
 
 In this scenario, after the certificate is deleted, the next time the device checks in with Intune it's found to be out of compliance as it is missing the expected certificate. Intune then issues a new certificate to restore the device to compliance. No other action is needed to restore the certificate.
+
+> [!NOTE]
+> SCEP certificates are [removed but not revoked](certificate-authority-add-scep-overview.md#removing-certificates) when using a third-party certification authority.
 
 ## Windows devices
 
@@ -55,7 +62,7 @@ A SCEP certificate is revoked *and* removed when:
 - A user unenrolls.
 - An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
 - An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
-- The device is removed from an Azure AD group.
+- The device is removed from a Microsoft Entra group.
 - A certificate profile is removed from the group assignment.
 
 A SCEP certificate is revoked when:
@@ -67,12 +74,13 @@ A root certificate is removed when:
 - A user unenrolls.
 - An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
 - An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+- A certificate profile is removed from the group assignment.
 
 SCEP certificates *stay* on the device (certificates aren't revoked or removed) when:
 
 - A user loses the Intune license.
 - An administrator withdraws the Intune license.
-- An administrator removes the user or group from Azure AD.
+- An administrator removes the user or group from Microsoft Entra ID.
 
 ### PKCS certificates
 
@@ -96,7 +104,7 @@ PKCS certificates *stay* on the device (certificates aren't revoked or removed) 
 
 - A user loses the Intune license.
 - An administrator withdraws the Intune license.
-- An administrator removes the user or group from Azure AD.
+- An administrator removes the user or group from Microsoft Entra ID.
 - An administrator changes or updates the PKCS profile.
 
 ## iOS devices
@@ -108,7 +116,7 @@ A SCEP certificate is revoked *and* removed when:
 - A user unenrolls.
 - An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
 - An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
-- The device is removed from the Azure AD group.
+- The device is removed from the Microsoft Entra group.
 - A certificate profile is removed from the group assignment.
 
 A SCEP certificate is revoked when:
@@ -125,7 +133,7 @@ SCEP certificates *stay* on the device (certificates aren't revoked or removed) 
 
 - A user loses the Intune license.
 - An administrator withdraws the Intune license.
-- An administrator removes the user or group from Azure AD.
+- An administrator removes the user or group from Microsoft Entra ID.
 
 ### PKCS certificates
 
@@ -149,7 +157,7 @@ PKCS certificates *stay* on the device (certificates aren't revoked or removed) 
 
 - A user loses the Intune license.
 - An administrator withdraws the Intune license.
-- An administrator removes the user or group from Azure AD.
+- An administrator removes the user or group from Microsoft Entra ID.
 - An administrator changes or updates the PKCS profile.
 
 ## Android KNOX devices
@@ -164,9 +172,9 @@ A SCEP certificate is revoked *and* removed when:
 A SCEP certificate is revoked when:
 
 - An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
-- The device is removed from an Azure AD group.
+- The device is removed from a Microsoft Entra group.
 - A certificate profile is removed from the group assignment.
-- An administrator removes the user or group from Azure AD.
+- An administrator removes the user or group from Microsoft Entra ID.
 - An administrator changes or updates the SCEP profile.
 
 A root certificate is removed when:
@@ -179,7 +187,7 @@ SCEP certificates *stay* on the device (certificates aren't revoked or removed) 
 
 - A user loses the Intune license.
 - An administrator withdraws the Intune license.
-- An administrator removes the user or group from Azure AD.
+- An administrator removes the user or group from Microsoft Entra ID.
 
 ### PKCS certificates
 
@@ -199,7 +207,7 @@ PKCS certificates *stay* on the device (certificates aren't revoked or removed) 
 
 - A user loses the Intune license.
 - An administrator withdraws the Intune license.
-- An administrator removes the user or group from Azure AD.
+- An administrator removes the user or group from Microsoft Entra ID.
 - An administrator changes or updates the PKCS profile.
 - A certificate profile is removed from the group assignment.
 
@@ -216,7 +224,7 @@ A SCEP certificate is revoked *and* removed when:
 
 - A user unenrolls.
 - An administrator runs a [retire](../remote-actions/devices-wipe.md#retire) action.
-- The device is removed from an Azure AD group.
+- The device is removed from a Microsoft Entra group.
 - A certificate profile is removed from the group assignment.
 
 A SCEP certificate is revoked when:
@@ -227,7 +235,7 @@ SCEP certificates *stay* on the device (certificates aren't revoked or removed) 
 
 - A user loses the Intune license.
 - An administrator withdraws the Intune license.
-- An administrator removes the user or group from Azure AD.
+- An administrator removes the user or group from Microsoft Entra ID.
 
 > [!NOTE]
 > Using the [wipe](../remote-actions/devices-wipe.md#wipe) action to factory reset macOS devices is not supported.
@@ -249,9 +257,9 @@ PKCS certificates stay on the device (certificates aren't revoked or removed) wh
 - A user loses the Intune license.
 - An administrator withdraws the Intune license.
 - A certificate profile is removed from the group assignment. (The Profile is removed.)
-- An administrator removes the user or group from Azure AD.
+- An administrator removes the user or group from Microsoft Entra ID.
 - An administrator changes or updates the PKCS profile.
 
 ## Next steps
 
-[Use certificates for authentication](certificates-configure.md)
+[Use certificates for authentication](certificates-configure.md)  <!-- Test for second -->

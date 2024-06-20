@@ -3,16 +3,16 @@ title: Technical preview 1807
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1807.
 ms.date: 07/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: bcde47a7-433e-4944-964b-539b17d15d64
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Capabilities in Configuration Manager technical preview version 1807 
@@ -72,7 +72,7 @@ The **Community** workspace also includes the following nodes:
 
 - **Documentation**: Displays the Configuration Manager [documentation library](/sccm/)  
 
-- **Feedback**: Displays the Configuration Manager [UserVoice site](https://configurationmanager.uservoice.com/)  
+- **Feedback**: Displays the Configuration Manager product feedback site
 
 
 ### Prerequisites
@@ -96,7 +96,7 @@ Contributing items to the hub isn't currently available in this version.
 ## <a name="bkmk_osd"></a> Specify the drive for offline OS image servicing  
 <!--1358924-->
 
-Based on your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/33506009-gui-option-for-offline-os-image-servicing-drive), now specify the drive that Configuration Manager uses during offline servicing of OS images. This process can consume a large amount of disk space with temporary files, so this option gives you flexibility to select the drive to use. 
+Based on your feedback, now specify the drive that Configuration Manager uses during offline servicing of OS images. This process can consume a large amount of disk space with temporary files, so this option gives you flexibility to select the drive to use.
 
 
 ### Try it out!
@@ -140,7 +140,7 @@ For more information about enabling co-management, see [Co-management for Window
 ## <a name="bkmk_app-repair"></a> Repair applications
 <!--1357866-->
 
-Based on your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8365071-force-reinstall-of-application), now specify a repair command line for Windows Installer and Script Installer deployment types. 
+Based on your feedback, now specify a repair command line for Windows Installer and Script Installer deployment types.
 
 
 ### Try it out!
@@ -169,7 +169,7 @@ Configure email notifications for application approval requests. When a user req
 ### Prerequisites
 
 #### To send email notifications
-- Enable the [optional feature](../servers/manage/install-in-console-updates.md#bkmk_options) **Approve application requests for users per device**.  
+- Enable the [optional feature](../servers/manage/optional-features.md) **Approve application requests for users per device**.  
 
 - Configure [email notification for alerts](../servers/manage/configure-alerts.md#configure-email-notification-for-alerts).  
 
@@ -184,9 +184,9 @@ If you don't configure these prerequisites, the site sends email notification fo
 
 - Onboard the site to [Azure services](../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**  
 
-    - Enable [Azure AD User Discovery](../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
+    - Enable [Microsoft Entra user Discovery](../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
 
-    - Manually configure the following settings for this native app in Azure AD:  
+    - Manually configure the following settings for this native app in Microsoft Entra ID:  
 
         - **Redirect URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Use the fully qualified domain name (FQDN) of the cloud management gateway (CMG) service, for example, GraniteFalls.Contoso.com.   
 
@@ -200,7 +200,7 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 1. In the Configuration Manager console, deploy an application as available to a user collection. On the **Deployment Settings** page, enable it for approval. Then enter a *single* email address to receive notification.  
 
      > [!Note]  
-     > Anyone in your Azure AD organization who receives the email can approve the request. Don't forward the email to others unless you want them to take action.  
+     > Anyone in your Microsoft Entra organization who receives the email can approve the request. Don't forward the email to others unless you want them to take action.  
 
 2. As a user, request the application in Software Center.  
 

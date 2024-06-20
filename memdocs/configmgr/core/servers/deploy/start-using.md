@@ -2,14 +2,18 @@
 title: Deploy servers and roles
 titleSuffix: Configuration Manager
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 description: Links to articles to install Configuration Manager site servers and roles.
+ms.localizationpriority: medium
+ms.collection: 
+    - tier3
+    - essentials-get-started
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Deploy servers and roles

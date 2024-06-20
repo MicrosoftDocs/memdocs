@@ -1,15 +1,17 @@
 ---
-title: Pre-release content under construction 
+title: Pre-release content under construction
 description: Content under construction
-ms.author: mstewart
-author: mestew
+ms.author: banreetkaur
+author: Banreet
 ms.date: 01/10/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.subservice: other
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: ef7c06ad-c73c-4c36-bc52-fb516eaebb86
 localization_priority: low
 robots: NOINDEX, NOFOLLOW
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Content under construction

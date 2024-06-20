@@ -7,12 +7,11 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2021
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 
 # optional metadata
@@ -24,19 +23,21 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 # Intune Data Warehouse API endpoint
 
-You can use the Intune Data Warehouse API with an account with specific role-based access controls and Azure AD credentials. You will then authorize your REST client with Azure AD using OAuth 2.0. And finally, you will form a meaningful URL to call a data warehouse resource.
+You can use the Intune Data Warehouse API with an account with specific role-based access controls and Microsoft Entra credentials. You will then authorize your REST client with Microsoft Entra ID using OAuth 2.0. And finally, you will form a meaningful URL to call a data warehouse resource.
 
 [!INCLUDE [reports-credential-reqs](../includes/reports-credential-reqs.md)]
 
 ## Authorization
 
-Azure Active Directory (Azure AD) uses OAuth 2.0 to enable you to authorize access to web applications and web APIs in your Azure AD tenant. This guide is language independent, and describes how to send and receive HTTP messages without using any open-source libraries. The OAuth 2.0 authorization code flow is described in [section 4.1](https://tools.ietf.org/html/rfc6749#section-4.1) of the OAuth 2.0 specification.
+Microsoft Entra ID uses OAuth 2.0 to enable you to authorize access to web applications and web APIs in your Microsoft Entra tenant. This guide is language independent, and describes how to send and receive HTTP messages without using any open-source libraries. The OAuth 2.0 authorization code flow is described in [section 4.1](https://tools.ietf.org/html/rfc6749#section-4.1) of the OAuth 2.0 specification.
 
-For more information, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
+For more information, see [Authorize access to web applications using OAuth 2.0 and Microsoft Entra ID](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 ## API URL structure
 
@@ -52,7 +53,7 @@ The URL contains the following elements:
 
 | Element | Example | Description |
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
-| location | msua06 | The base URL can be found by viewing the Data Warehouse API blade in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). |
+| location | msua06 | The base URL can be found by viewing the Data Warehouse API blade in the [Microsoft Intune admin center](https://intune.microsoft.com/#blade/Microsoft_Intune_Enrollment/ReportingMenu/dataWarehouse). |
 | entity-collection | devicePropertyHistories | The name of the OData entity collection. For more information on collections and entities in the data model, see [Data Model](reports-ref-data-model.md). |
 | api-version | beta | Version is the version of the API to access. For more information, see [Version](reports-api-url.md#api-version-information). |
 | maxhistorydays | 7 | (Optional) The maximum number of days of history to retrieve. This parameter can be supplied to any collection, but will only take effect for collections that include `dateKey` as a part of their key property. See [DateKey Range Filters](reports-api-url.md#datekey-range-filters) for more information. |
@@ -77,7 +78,7 @@ The current version supports the following OData query parameters: `$filter`, `$
 ## Filter examples
 
 > [!NOTE]
-> The filter examples assume today is 2/21/2019.
+> The filter examples assume today is 2/21/2018.
 
 |                             Filter                             |           Performance Optimization           |                                          Description                                          |
 |----------------------------------------------------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------|

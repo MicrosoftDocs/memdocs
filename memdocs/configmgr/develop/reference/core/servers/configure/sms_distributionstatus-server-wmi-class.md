@@ -1,19 +1,21 @@
 ---
-title: "SMS_DistributionStatus Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: The SMS_DistributionStatus WMI class is an SMS Provider server class, in Configuration Manager, that represents the status of a package that has been assigned to a distribution point.
+title: SMS_DistributionStatus Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 25f4054e-d371-498f-8feb-c1f1cc8688c0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_DistributionStatus Server WMI Class
-The `SMS_DistributionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the status of a package that has been assigned to a distribution point.  
+The `SMS_DistributionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents the status of a package that has been assigned to a distribution point.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -33,7 +35,7 @@ Class SMS_DistributionStatus : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_DistributionStatus` class does not define any methods.  
+ The `SMS_DistributionStatus` class doesn't define any methods.  
 
 ## Properties  
  `Assets`  

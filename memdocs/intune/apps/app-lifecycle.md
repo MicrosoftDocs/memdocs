@@ -7,12 +7,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 12/12/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
-ms.technology:
+ms.localizationpriority: medium
 ms.assetid: 60347012-bc3f-4b9a-a4f4-6d3c5021a6e6
 
 # optional metadata
@@ -20,12 +19,14 @@ ms.assetid: 60347012-bc3f-4b9a-a4f4-6d3c5021a6e6
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: apps; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # Overview of the app lifecycle in Microsoft Intune

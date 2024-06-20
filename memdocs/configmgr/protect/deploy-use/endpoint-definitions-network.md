@@ -3,15 +3,15 @@ title: Download definitions from a network share
 titleSuffix: Configuration Manager
 description: Learn how to manually download the latest definition updates from Microsoft and then configure clients to download these definitions.
 ms.date: 11/18/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
-ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Enable Endpoint Protection malware definitions to download from a network share

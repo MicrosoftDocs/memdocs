@@ -3,15 +3,16 @@ title: What's new in version 1910
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1910 of Configuration Manager current branch.
 ms.date: 01/22/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
-author: mestew
-ms.author: mstewart
-manager: dougeby 
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ROBOTS: NOINDEX
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 1910 of Configuration Manager current branch
@@ -24,21 +25,17 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1910+-+Configuration+Manager%22&locale=en-us`
-
-## <a name="bkmk_mem"></a> Microsoft Endpoint Configuration Manager
+## <a name="bkmk_mem"></a> Microsoft Configuration Manager
 
 <!--4960084-->
 
-Configuration Manager is now part of Microsoft Endpoint Manager.
+Configuration Manager is now part of the Microsoft Intune family of products.
 
-![Microsoft Endpoint Configuration Manager](media/4960084-endpoint-manager-logo.png)
+![Microsoft Configuration Manager](media/4960084-endpoint-manager-logo.png)
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to make use of your existing Configuration Manager investments while you take advantage of the power of the Microsoft cloud at your own pace.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to make use of your existing Configuration Manager investments while you take advantage of the power of the Microsoft cloud at your own pace.
 
-The following Microsoft management solutions are all now part of the Microsoft Endpoint Manager brand:
+The following Microsoft management solutions are all now part of the Microsoft Intune family of products:
 
 - [Configuration Manager](/configmgr)
 - [Intune](/intune)
@@ -52,7 +49,7 @@ For more information, see the following posts from Brad Anderson, Microsoft corp
 - [Vision paper](https://aka.ms/MEMVisionPaper)
 - [Announcement summary video](https://youtu.be/GS7oNPInFuw)
 
-### What things change in Configuration Manager with Microsoft Endpoint Manager?
+### What things change in Configuration Manager?
 
 In version 1910, aside from the name change, Configuration Manager still functions the same. Some of the name changes might impact your use of the following components:
 
@@ -60,7 +57,7 @@ In version 1910, aside from the name change, Configuration Manager still functio
 
 - **Software Center**: Find the Software Center shortcut under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
 
-![Microsoft Endpoint Manager Start menu icons](media/microsoft-endpoint-manager-start-menu.png)
+![Microsoft Intune Start menu icons](media/microsoft-endpoint-manager-start-menu.png)
 
 Make sure to update any internal documentation that you maintain to include these new locations.
 
@@ -118,7 +115,7 @@ This release also includes several [other enhancements](../../servers/manage/cmp
 
 When you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can now serve Microsoft Intune Win32 apps to co-managed clients.
 
-For more information, see [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md#bkmk_intune).
+For more information, see [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md#support-for-intune-win32-apps).
 
 > [!NOTE]
 > Configuration Manager current branch version 1906 included [Delivery Optimization In-Network Cache](../hierarchy/microsoft-connected-cache.md), an application installed on Windows Server that's still in development. Starting in current branch version 1910, this feature is now called Microsoft Connected Cache.
@@ -140,7 +137,7 @@ For more information, see [Include custom configuration baselines as part of com
 
 <!--4737447-->
 
-Configuration Manager current branch version 1906 introduced support for [Windows Virtual Desktop](../configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop). This Microsoft Azure environment supports several OS versions, some of which allow multiple concurrent active user sessions. For example, Windows 10 Enterprise multi-session is one of these OS versions.
+Configuration Manager current branch version 1906 introduced support for [Azure Virtual Desktop](../configs/supported-operating-systems-for-clients-and-devices.md#azure-virtual-desktop). This Microsoft Azure environment supports several OS versions, some of which allow multiple concurrent active user sessions. For example, Windows 10 Enterprise multi-session is one of these OS versions.
 
 If you require user policy on these multi-session devices and accept any potential performance impact, you can now configure a client setting to enable user policy. In the **Client Policy** group, configure the **Enable user policy for multiple user sessions** setting.
 
@@ -187,7 +184,7 @@ For more information, see the new article on how to [use the task sequence edito
 
 You can now run a task sequence with the high-performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high-performance power plan, which delivers maximum performance at the expense of higher power consumption.
 
-For more information, see [Performance improvements for power plans](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_perf).
+For more information, see [Task sequence performance](../../../osd/deploy-use/task-sequence-performance.md).
 
 ### Task sequence download on demand over the internet
 
@@ -197,7 +194,7 @@ You can use the task sequence to deploy a Windows 10 in-place upgrade via the cl
 
 Starting in this release, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.
 
-For more information, see [Deploy Windows 10 in-place upgrade via CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg).
+For more information, see [Deploy Windows 10 in-place upgrade via CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-in-place-upgrade-via-cmg).
 
 ### Improvements to OS deployment
 
@@ -217,7 +214,7 @@ For more information, see [Manage boot images](../../../osd/get-started/manage-b
 
 When you import an OS upgrade package, you can use the **Extract a specific image index from install.wim file of selected upgrade package** option. This behavior is similar as with [OS images](../../../osd/get-started/manage-operating-system-images.md#BKMK_AddOSImages), except that it overwrites the existing install.wim in the OS upgrade package. It extracts the image index to a temporary location and then moves it into the original source directory.
 
-For more information, see [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#BKMK_AddOSUpgradePkgs).
+For more information, see [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#add-an-os-upgrade-package).
 
 #### Output the results of a Run Command Line step to a variable during a task sequence
 
@@ -268,7 +265,7 @@ For more information, see [Task sequence variables - SetupCompletePause](../../.
 <!--4469002-->
 You now have more granular controls over synchronization of third-party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When you use catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to Windows Server Update Services (WSUS).
 
-For more information, see [Enable third-party updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_1910).
+For more information, see [Enable third-party updates](../../../sum/deploy-use/third-party-software-updates.md).
 
 ### Use Delivery Optimization for all Windows updates
 <!--4699118-->

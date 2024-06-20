@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Windows 10 education settings in Microsoft Intune - Azure | Microsoft Docs
+title: Windows 10 education settings in Microsoft Intune
 description: See a list of all the education settings for Windows 10 devices. Use these settings in a device configuration profile with the Take a Test app, choose how users or students sign in, monitor the screen during the test, and more in Intune.
 keywords:
 author: lenewsad
@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 6f4de4bd-3dde-4a8d-8e22-46c5d06c3eea
 
 # optional metadata
@@ -25,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Configure the Take a Test app on Windows 10 devices using Intune
@@ -46,7 +47,7 @@ Create a [Windows 10 secure assessment education device configuration profile](e
 ## Take a test settings
 
 - **Account type**: Choose how users sign in to the test. Your options:
-  - Azure AD account
+  - Azure AD account (Microsoft Entra account)
   - Domain account
   - Local account
   - Local guest account: Only available on devices running Windows 10, version 1903 and later.

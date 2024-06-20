@@ -7,12 +7,10 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 12/10/2021
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid:
 
 searchScope:
@@ -27,11 +25,19 @@ ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
----
+ms.collection:
+- tier2
+---  
 
-# Manage apps from the Company Portal website 
-Visit the [Company Portal website](https://portal.manage.microsoft.com) to view and manage apps from your organization. 
+# Manage apps from the Company Portal website  
+
+**Applies to:** 
+* Android   
+* iOS/iPadOS   
+* macOS   
+* Windows 10/11     
+
+Sign in to the [Company Portal website](https://portal.manage.microsoft.com) to view and manage apps from your organization. 
 
 ## View all apps  
 From the menu, select **Apps** to see all apps made available by your organization. 
@@ -102,13 +108,16 @@ Apps are assigned to you by your organization, and labeled as either available o
 
 * Required apps: Your organization might deploy necessary work and school apps directly to your device. These apps are automatically installed for you without intervention. 
 
-Apps are also made available to you based on your device type. For example, if you're using the Company Portal website on a Windows device, you'll have access to Windows apps, but not iOS apps.  
+Apps are made available to you based on your device type. For example, if you're using the Company Portal website on a Windows device, you'll have access to Windows apps, but not iOS apps.  
 
 ## View app details  
 Select an app on the **Apps** or **Installed apps** page to view its details. You'll be taken to **App details**, where you'll find the app's description and requirements. If an app isn't already installed on your device, you can install it from this page. 
 
 
    ![Screenshot of Company Portal website, App details page.](./media/intune-app-details-1907.png)  
+
+## Device compliance status
+View the compliance status of your devices from the Company Portal website. You can navigate to the [Company Portal](https://portal.manage.microsoft.com/devices) website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**.
 
 ## Next steps
 Need more help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

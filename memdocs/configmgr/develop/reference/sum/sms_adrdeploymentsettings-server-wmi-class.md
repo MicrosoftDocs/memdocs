@@ -1,16 +1,18 @@
 ---
-title: "SMS_ADRDeploymentSettings Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: Learn how to represent Automatic Deployment Rule (ADR) deployment settings in Configuration Manager.
+title: SMS_ADRDeploymentSettings Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9069bd1c-693c-4235-866c-b9376af2929c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ADRDeploymentSettings Server WMI Class
 The `SMS_ADRDeploymentSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Automatic Deployment Rule (ADR) deployment settings.  

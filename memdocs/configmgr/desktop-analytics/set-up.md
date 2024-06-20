@@ -2,27 +2,31 @@
 title: Set up Desktop Analytics
 titleSuffix: Configuration Manager
 description: A how-to guide for setting up and onboarding to Desktop Analytics.
-ms.date: 02/06/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.date: 11/03/2021
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 7ff8d453-f24d-4230-a116-585190a663fc
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
+ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # How to set up Desktop Analytics
 
-Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
+> [!IMPORTANT]
+> Desktop Analytics is deprecated and will be retired on November 30, 2022. For more information, see [What's new](whats-new.md).<!-- 10946169 -->
 
-> [!Important]  
-> For information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](overview.md#prerequisites).  
+Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.
+
+> [!NOTE]
+> For information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](overview.md#prerequisites).
 
 ## Initial onboarding
 
-1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with the **Global Admin** role. Select **Start**. Alternatively, on the Configuration Manager console, go to the **Software Library** workspace, select the **Desktop Analytics Servicing** node, and select **Plan deployments**.
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in the Microsoft Intune admin center as a user with the **Global Admin** role. Select **Start**. Alternatively, on the Configuration Manager console, go to the **Software Library** workspace, select the **Desktop Analytics Servicing** node, and select **Plan deployments**.
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
@@ -34,9 +38,9 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         If you don't select this option, Desktop Analytics still adds users as members of the security group. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.
 
-        For more information about assigning administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Azure Active Directory](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        For more information about assigning administrator role permissions in Microsoft Entra ID and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Microsoft Entra ID](/entra/identity/role-based-access-control/permissions-reference).  
 
-    - Desktop Analytics preconfigures the **Workspace Owners** security group in Azure Active Directory to create and manage workspaces and deployment plans.
+    - Desktop Analytics preconfigures the **Workspace Owners** security group in Microsoft Entra ID to create and manage workspaces and deployment plans.
 
         To add a user to the group, type their name or e-mail address in the **Enter name or email address** section. When finished, select **Next**.
 
@@ -48,7 +52,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 
         > [!TIP]  
-        > You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.  
+        > You can only have one Desktop Analytics workspace per Microsoft Entra tenant. Devices can only send diagnostic data to one workspace.  
 
     - To create a workspace for Desktop Analytics, select **Add workspace**.  
 
@@ -71,7 +75,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 9. On the **Last steps** page, select **Go to Desktop Analytics**.
 
-The Azure portal shows the Desktop Analytics **Home** page.
+The admin center shows the Desktop Analytics **Home** page.
 
 ## Next steps
 

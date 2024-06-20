@@ -2,14 +2,16 @@
 title: Use of diagnostics data
 titleSuffix: Configuration Manager
 description: Learn about how Microsoft uses the diagnostics and usage data that Configuration Manager collects.
-ms.date: 12/23/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 08/10/2021
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: a8021bc8-2799-41f4-83c2-e27d1242028c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How Microsoft uses Configuration Manager diagnostics and usage data
@@ -38,7 +40,9 @@ Microsoft uses available data to improve the product. For example:
 
 - The initial support offered by the current branch of Configuration Manager limited the support timeline for Windows Server 2008 R2. Microsoft examined the usage data from customers who had upgraded to the Configuration Manager current branch. They then identified the need to revise and extend this timeline to support customers who still use this OS.
 
-- Microsoft improved the prerequisite checks for installing an update. They removed obsolete rules, accounted for additional cases, and automatically remediated some issues.  
+- Microsoft improved the prerequisite checks for installing an update. They removed obsolete rules, accounted for additional cases, and automatically remediated some issues.
+
+Next, learn about how Configuration Manager collects diagnostics and usage data about itself:
 
 > [!div class="nextstepaction"]
 > [How Configuration Manager collects data](how-diagnostics-and-usage-data-is-collected.md)

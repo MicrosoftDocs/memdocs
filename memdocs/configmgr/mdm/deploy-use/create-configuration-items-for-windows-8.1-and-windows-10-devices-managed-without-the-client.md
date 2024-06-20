@@ -3,13 +3,15 @@ title: Create configuration items for Windows
 titleSuffix: Configuration Manager
 description: Create configuration items to manage settings for Windows 10 computers with on-premises mobile device management (MDM) in Configuration Manager.
 ms.date: 01/14/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-mdm
+ms.subservice: mdm
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Create configuration items for Windows devices with on-premises MDM in Configuration Manager

@@ -1,17 +1,17 @@
 ---
-title: "Flowchart - Update replication"
-titleSuffix: "Configuration Manager"
-description: "See the process by which an in-console update you select to install replicates to additional sites."
+title: Flowchart - Update replication
+titleSuffix: Configuration Manager
+description: See the process by which an in-console update you select to install replicates to additional sites.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: d38ea401-4695-4b4c-bd8d-95bdc2c67f5a
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Flowchart - Update replication for Configuration Manager
 

@@ -1,16 +1,18 @@
 ---
-title: "SMS_DirFullCollMem Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: Learn how to represent the full collection membership of directly assigned collections with SMS_DirFullCollMem.
+title: SMS_DirFullCollMem Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 1203863b-8971-4ef9-b3a6-2f394b80b839
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_DirFullCollMem Server WMI Class
 The `SMS_DirFullCollMem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the full collection membership of directly assigned collections.  
@@ -28,7 +30,7 @@ Class SMS_DirFullCollMem : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_DirFullCollMem` class does not define any methods.  
+ The `SMS_DirFullCollMem` class doesn't define any methods.  
 
 ## Properties  
  `CollectionID`  

@@ -1,16 +1,18 @@
 ---
-title: "Diagnostic data for 1710 | Configuration Manager"
-titleSuffix: "Configuration Manager"
-description: "Learn about the levels of diagnostics and usage data that Configuration Manager version 1710 collects."
+title: Diagnostic data for 1710 | Configuration Manager
+titleSuffix: Configuration Manager
+description: Learn about the levels of diagnostics and usage data that Configuration Manager version 1710 collects.
 ms.date: 11/20/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 8fce5391-8e75-4f99-813a-76f8842be5bc
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Levels of diagnostic usage data collection for version 1710 of Configuration Manager
@@ -48,7 +50,7 @@ For Configuration Manager version 1710, this level includes the following:
 
 - Basic database configuration (processors, cluster configuration, and configuration of distributed views)
 
-- Basic discovery statistics (discovery count and minimum/maximum/average group sizes) including when the site is running entirely with Azure Active Directory Services.
+- Basic discovery statistics (discovery count and minimum/maximum/average group sizes) including when the site is running entirely with Microsoft Entra services.
 
 - Basic Endpoint Protection information (antimalware client versions)
 
@@ -204,13 +206,13 @@ For Configuration Manager version 1710, this level includes the following:
 
 - **Cloud services:**
 
-  - Azure Active Directory discovery statistics
+  - Microsoft Entra discovery statistics
 
   - Configuration and usage statistics of Cloud Management Gateway, including counts of regions and environments, and authentication/authorization statistics
 
-  - Count of Azure Active Directory applications and services connected to Configuration Manager
+  - Count of Microsoft Entra applications and services connected to Configuration Manager
 
-  - Count of clients joined to Azure Active Directory Services
+  - Count of clients joined to Microsoft Entra services
 
   - Count of collections synced to Azure Log Analytics
 

@@ -1,14 +1,17 @@
 ---
+description: Learn how to utilize Configuration Manager's ability to be aware of system resources state and act accordingly using the LaunchConditions class.
 title: "Client Resource Conditions"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: a17b4116-4491-4775-9d80-dea6e071801d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
 
 
 ---

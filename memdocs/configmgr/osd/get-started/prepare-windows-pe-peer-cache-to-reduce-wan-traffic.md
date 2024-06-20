@@ -1,17 +1,17 @@
 ---
 title: Prepare Windows PE peer cache to reduce WAN traffic
-titleSuffix: "Configuration Manager"
-description: "The Windows PE Peer Cache works in the Windows PE to get content from a local peer and minimize WAN traffic when there's no local distribution point."
+titleSuffix: Configuration Manager
+description: The Windows PE Peer Cache works in the Windows PE to get content from a local peer and minimize WAN traffic when there's no local distribution point.
 ms.date: 06/18/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
-ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 # Prepare Windows PE peer cache to reduce WAN traffic in Configuration Manager
 
@@ -68,7 +68,7 @@ Use the following sections to manage Peer Cache.
         > [!TIP]  
         >  Clients will use HTTPS to download content when it is available. However, the same port number is used for either HTTP or HTTPS.  
 
--   [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) on clients to ensure they have enough space to hold and store the images you deploy. Windows PE Peer Cache does not affect the configuration or behavior of the client cache.  
+-   [Configure the client cache](../../core/clients/manage/configure-client-cache.md) on clients to ensure they have enough space to hold and store the images you deploy. Windows PE Peer Cache does not affect the configuration or behavior of the client cache.  
 
 -   The deployment options for the  task sequence deployment must be configured as Download content locally when needed by task sequence.  
 

@@ -1,14 +1,17 @@
 ---
+description: Learn how to connect to the Configuration Manager client Windows Management Instrumentation (WMI) provider, you create a ManagementScope object in the \\\Client\root\ccm namespace.
 title: "Connect to the Client WMI Namespace"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: dc9ff31d-249a-40e6-83d3-db2e7bd1d6db
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
 
 
 ---

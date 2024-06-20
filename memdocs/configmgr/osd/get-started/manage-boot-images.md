@@ -2,14 +2,16 @@
 title: Manage boot images
 titleSuffix: Configuration Manager
 description: In Configuration Manager, learn to manage the Windows PE boot images that you use during an OS deployment.
-ms.date: 04/19/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.date: 12/01/2021
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
-ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Manage boot images with Configuration Manager
@@ -44,7 +46,7 @@ Consider the following behaviors for any of the actions described for default bo
 When you upgrade the Windows Assessment and Deployment Kit (ADK) version, and then use updates and servicing to install the latest version of Configuration Manager, the site regenerates the default boot images. This update includes the new WinPE version from the updated Windows ADK, the new version of the Configuration Manager client, drivers, and customizations. The site doesn't modify custom boot images.
 
 > [!NOTE]
-> The site always uses the production version of the Configuration Manager client in default boot images. Even ff you configure automatic client upgrades to use a [pre-production collection](../../core/clients/manage/upgrade/test-client-upgrades.md), that feature doesn't apply to boot images.<!-- 9616354 -->
+> The site always uses the production version of the Configuration Manager client in default boot images. Even if you configure automatic client upgrades to use a [pre-production collection](../../core/clients/manage/upgrade/test-client-upgrades.md), that feature doesn't apply to boot images.<!-- 9616354 -->
 
 ### Upgrade from Configuration Manager 2012 to current branch
 
@@ -78,28 +80,15 @@ When a boot image is based on a different version of the Windows ADK installed o
 
 ## Add a boot image
 
-During site installation, Configuration Manager automatically adds boot images that are based on a WinPE version from the supported version of the Windows ADK. Depending on the version of Configuration Manager, you can add boot images based on a different WinPE version from the supported version the Windows ADK. An error occurs when you try to add a boot image that contains an unsupported version of WinPE. The following list is the currently supported Windows ADK and WinPE versions:
+During site installation, Configuration Manager automatically adds boot images that are based on a WinPE version from the [supported version of the Windows ADK](../../core/plan-design/configs/support-for-windows-adk.md). Depending on the version of Configuration Manager, you can add boot images based on a different WinPE version from the supported version the Windows ADK. An error occurs when you try to add a boot image that contains an unsupported version of WinPE.
 
-- Windows ADK version: Windows ADK for Windows 10
+Configuration Manager also supports Windows PE versions for boot images that aren't customizable from the Configuration Manager console. For example, you install the Windows ADK and WinPE add-on for Windows 11 on the site server. For x64 boot images based on WinPE version 11 from the WinPE add-on for Windows 11, you can customize them from the Configuration Manager console. However, while x86 boot images based on WinPE version 10 are supported, you need to manually customize them from a different computer. Use the version of DISM that's installed with the Windows ADK for Windows 10. Then, you can add the boot image to the Configuration Manager console.
 
-- Windows PE versions for boot images customizable from the Configuration Manager console: Windows PE 10
-
-- Supported Windows PE versions for boot images *not customizable* from the Configuration Manager console
-
-  - Windows PE 3.1<sup>[Note 1](#bkmk_note1)</sup>
-
-For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 3.1, customize it from a different computer using the version of DISM from the Windows AIK for Windows 7. Then add the custom boot image to the Configuration Manager console. For more information, see the following articles:
+For more information, see the following articles:
 
 - [Customize boot images](customize-boot-images.md)
-- [Support for Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
+- [Support for the Windows ADK](../../core/plan-design/configs/support-for-windows-adk.md)
 - [DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms)
-
-<a name="bkmk_note1"></a>
-
-> [!NOTE]
-> **Note 1: Support for Windows PE 3.1**
->
-> Only add a boot image to Configuration Manager based on Windows PE *version 3.1*. Upgrade the Windows AIK for Windows 7 (based on Windows PE 3.0) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). Download the Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
 
 Use the following process to add a boot image in Configuration Manager:
 
@@ -307,6 +296,6 @@ Use the following procedure to set the WinPE language for PXE or media-initiated
 
 ## Next steps
 
-[Customize boot images for Windows PE 3.1](customize-boot-images.md)
+[Customize boot images](customize-boot-images.md)
 
 [Manage OS images](manage-operating-system-images.md)

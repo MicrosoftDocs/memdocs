@@ -1,16 +1,18 @@
 ---
-title: "Delete a Driver Package"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: Delete a Driver Package
+titleSuffix: Configuration Manager
+description: Delete an operating system deployment driver package, in Configuration Manager, by deleting its SMS_DriverPackage.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 74397fd4-f479-44d9-9400-b45ab32f07c7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Delete a Driver Package in Configuration Manager
 You delete an operating system deployment driver package, in Configuration Manager, by deleting its [SMS_DriverPackage](../../develop/reference/osd/sms_driverpackage-server-wmi-class.md) object.  

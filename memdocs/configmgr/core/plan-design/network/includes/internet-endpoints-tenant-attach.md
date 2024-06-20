@@ -1,15 +1,18 @@
 ---
-author: mestew
-ms.author: mstewart
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+author: banreet
+ms.author: banreetkaur
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: include
-ms.date: 12/18/2020
+ms.date: 08/02/2021
+ms.localizationpriority: medium
 ---
 
 - `https://aka.ms/configmgrgateway`
 
-- `https://*.manage.microsoft.com` <!--7424742-->
+- `https://*.manage.microsoft.com` <!--7424742--> _for Azure public cloud customers_
+
+- `https://*.manage.microsoft.us` <!-- 8353823 --> _for US Government cloud customers on version 2107 or later_
 
 - `https://dc.services.visualstudio.com` <!--7541816-->
 
@@ -27,4 +30,4 @@ If your environment has proxy rules to allow only specific certificate revocatio
 - `http://ocsp.msocsp.com`
 - `http://www.microsoft.com/pkiops`
 
-<!-- list from https://docs.microsoft.com/azure/security/fundamentals/tls-certificate-changes#will-this-change-affect-me -->
+<!-- list from https://learn.microsoft.com/azure/security/fundamentals/tls-certificate-changes#will-this-change-affect-me -->

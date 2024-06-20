@@ -2,14 +2,16 @@
 title: Configure security
 titleSuffix: Configuration Manager
 description: How to configure security-related options for Configuration Manager.
-ms.date: 05/04/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 12/21/2021
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configure security in Configuration Manager
@@ -62,7 +64,7 @@ For more information on the trusted root key, see [Plan for security](plan-for-s
 
 ### Pre-provision a client with the trusted root key by using a file
 
-1. On the site server, browse to the Configuration Manager installation directory. Open the following file in a text editor: `\bin\mobileclient.tcf`
+1. On the site server, browse to the Configuration Manager installation directory. In the `\bin\<platform>` subfolder, open the following file in a text editor: `mobileclient.tcf`
 
 1. Locate the entry, `SMSPublicRootKey`. Copy the value from that line, and close the file without saving any changes.
 
@@ -77,7 +79,7 @@ For more information on the trusted root key, see [Plan for security](plan-for-s
 
 ### Pre-provision a client with the trusted root key without using a file
 
-1. On the site server, browse to the Configuration Manager installation directory. Open the following file in a text editor: `\bin\mobileclient.tcf`
+1. On the site server, browse to the Configuration Manager installation directory. In the `\bin\<platform>` subfolder, open the following file in a text editor: `mobileclient.tcf`
 
 1. Locate the entry, `SMSPublicRootKey`. Copy the value from that line, and close the file without saving any changes.
 
@@ -167,9 +169,11 @@ Configuration Manager supports Windows accounts for many different tasks and use
 
 For more information, see [Accounts used in Configuration Manager](../hierarchy/accounts.md).
 
-## Azure Active Directory
+<a name='azure-active-directory'></a>
 
-Integrate Configuration Manager with Azure Active Directory (Azure AD) to simplify and cloud-enable your environment. Enable the site and clients to authenticate by using Azure AD.
+## Microsoft Entra ID
+
+Integrate Configuration Manager with Microsoft Entra ID to simplify and cloud-enable your environment. Enable the site and clients to authenticate by using Microsoft Entra ID.
 
 For more information, see the **Cloud Management** service in [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md).
 

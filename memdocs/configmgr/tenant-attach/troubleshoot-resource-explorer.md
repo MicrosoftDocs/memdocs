@@ -1,27 +1,26 @@
 ---
 title: Troubleshooting resource explorer
 titleSuffix: Configuration Manager
-description: "Troubleshooting resource explorer for Configuration Manager tenant attach"
-ms.date: 12/03/2020
+description: Troubleshooting resource explorer for Intune tenant attach
+ms.date: 01/25/2022
 ms.topic: troubleshooting
-ms.prod: configuration-manager
-ms.technology: configmgr-core
-ms.assetid: 05829d36-2cbf-4921-bf4b-cfcdef4cfcc1
-manager: dougeby
-author: mestew
-ms.author: mstewart
+ms.subservice: core-infra
+ms.service: configuration-manager
+manager: apoorvseth
+author: Banreet
+ms.author: banreetkaur
+ms.localizationpriority: high
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
-# Troubleshoot resource explorer for devices uploaded to the admin center (preview)
+# Troubleshoot resource explorer for devices uploaded to the admin center
 <!--6479284-->
 *Applies to: Configuration Manager (current branch)*
 
-Use the following to troubleshoot resource explorer for ConfigMgr devices in the Microsoft Endpoint Manager admin center:
+Use the following to troubleshoot resource explorer for ConfigMgr devices in the Microsoft Intune admin center:
 
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
-## Common errors from the Microsoft Endpoint Manager admin center
+## Common errors from the Microsoft Intune admin center
 
 ### <a name="bkmk_intune"></a> You don’t have access to view this information
 <!--7980141-->
@@ -30,27 +29,27 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 **Possible cause:** The user account needs an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information and it resolves without intervention after a few minutes.
 ### <a name="bkmk_noinfo"></a> Unable to get resource information
 
-**Error message 1:** Unable to get resource information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+**Error message 1:** Unable to get resource information. Make sure Microsoft Entra ID and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
 **Possible causes:** Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
-1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Intune admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 
 1. Verify the discovery data. Select your user account. In the ribbon, on the **Home** tab select **Properties**. In the properties window, confirm the following discovery data:
 
-    - **Azure Active Directory Tenant ID**: This value should be a GUID for the Azure AD tenant.
-    - **Azure Active Directory User ID**: This value should be a GUID for this account in Azure AD.
+    - **Microsoft Entra tenant ID**: This value should be a GUID for the Microsoft Entra tenant.
+    - **Microsoft Entra user ID**: This value should be a GUID for this account in Microsoft Entra ID.
     - **User Principal Name**: The format of this value is user@domain. For example, `jqpublic@contoso.com`.
 
-    If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
+    If the Microsoft Entra properties are empty, check the configuration of the site's [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 ### <a name="bkmk_sync"></a> The site information hasn't yet synchronized
 
-**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Endpoint Manager admin center. 
+**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Intune admin center. 
 
 **Possible causes:**
 - This error typically occurs when newly onboarding to tenant attach. Wait an hour for the information to synchronize.
@@ -63,7 +62,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 **Possible causes:**
 
 - The list of entities may not have been uploaded from on-premises. Wait an hour then see if the error persists.
-- An invalid **Tenant ID** or **Hierarchy ID** may have been specified. Check the service connection point and make sure it's functioning.
+- An invalid **Tenant ID** or **Support ID** may have been specified. Check the service connection point and make sure it's functioning.
 - Unable to successfully execute query to get classes. Wait 15 minutes to see if the error persists.
 
 ### <a name="bkmk_get"></a> Failed to get inventory classes with data
@@ -92,7 +91,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 
 ### <a name="bkmk_import"></a> Newly imported inventory classes fail to load
 <!--9391319, -->
-**Scenario:** New hardware inventory classes are imported. You can see the newly imported classes in **Resource Explorer** from the Configuration Manager console. When you open **Resource explorer** from Microsoft Endpoint Manager admin center, the newly imported class doesn't have data and **Failed** appears at the bottom of the results pane.
+**Scenario:** New hardware inventory classes are imported. You can see the newly imported classes in **Resource Explorer** from the Configuration Manager console. When you open **Resource explorer** from Microsoft Intune admin center, the newly imported class doesn't have data and **Failed** appears at the bottom of the results pane.
 
 **Workaround:** The current workaround is to restart the `SMS_Executive` service on the provider machine for which the [administration service](../develop/adminservice/overview.md) handles service requests. You can determine where your administration service is by reviewing the **CMGatewayNotification.log** and looking for your server in the URL.
 

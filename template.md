@@ -3,15 +3,12 @@
 
 title: [ARTICLE TITLE | SERVICE NAME]
 description:
-keywords:
 author: [GITHUB USERNAME]
 manager: [ALIAS]
 ms.date: 04/28/2016
-ms.topic: article
-ms.prod:
+ms.topic: conceptual #reference troubleshooting how-to end-user-help overview
 ms.service:
-ms.technology:
-ms.assetid: [GET ONE FROM guidgenerator.com]
+ms.localizationpriority: medium #high null
 
 # optional metadata
 
@@ -28,12 +25,11 @@ ms.assetid: [GET ONE FROM guidgenerator.com]
 # Metadata and Markdown Template
 
 This docs.ms template contains examples of markdown syntax, as well as guidance on setting the metadata. It is available in the root directory of each EM Pilot repository (e.g. ~/Azure-RMSDocs-pr
-/template.md) and is meant to be read as a markdown file, although you can refer to [the published version](https://stage.docs.microsoft.com/en-us/rights-management/template) to see how the markdown examples rendeer.
+/template.md) and is meant to be read as a markdown file, although you can refer to [the published version](https://stage.learn.microsoft.com/rights-management/template) to see how the markdown examples render.
 
-When creating a markdown file you shluld copy the template to a new file, fill out the metadata as specified below, set the H1 heading above to the title of the article, and delete the content. 
+When creating a markdown file you should copy the template to a new file, fill out the metadata as specified below, set the H1 heading above to the title of the article, and delete the content.
 
-
-## Metadata 
+## Metadata
 
 The full metadata block is above, divided into required fields and optional fields; see the [OPS metadata cheatsheet](https://ppe.msdn.microsoft.com/en-us/ce-csi-docs/ops/ops-onboarding/managing-content/content-meta-data) for more details. Some key notes:
 
@@ -77,7 +73,7 @@ Second-level headings will generate the on-page TOC that appears in the "In this
 
 ## Links
 
-To link to a markdown file in the same repo, use [relative links](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2). 
+To link to a markdown file in the same repo, use [relative links](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2).
 
 - Example: [What is Azure Rights Management](./understand-explore/what-is-azure-rights-management.md)
 
@@ -96,6 +92,16 @@ To link to an external file, use the full URL as the link.
 If a URL appears in a markdown file, it will be transformed into a clickable link.
 
 - Example: http://www.github.com
+
+### Link priorities and examples
+
+| Link type | Priority | Example | Lay example |
+|-|-|-|-|
+| File relative path | 1<sup>st</sup> | `another-file.md` |
+| Root relative path | 2<sup>nd</sup> | `~/different-directory/another-file.md` or `../different-directory/another-file.md` |
+| Site relative URL | 3<sup>rd</sup> | `/windows/uwp/get-started/get-set-up` |
+| FQDN / Full URL | Avoid | `https://doc.microsoft.com/help/contribute/links-how-to` |
+
 
 ## Lists
 
@@ -160,11 +166,14 @@ If a URL appears in a markdown file, it will be transformed into a clickable lin
 
 ### Codeblock
 
-    function fancyAlert(arg) {
-      if(arg) {
-        $.docs({div:'#foo'})
-      }
-    }
+```json
+{
+   "aggregator": {
+   "batchSize": 1000,
+   flushTimeout": "00:00:30"
+   }
+}
+ ```
 
 ### In-line code
 
@@ -178,15 +187,15 @@ This is an example of `in-line code`.
 
 ### Static Image
 
-![this is the alt text](./media/AzRMS_elements.png)
+:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This is the alt text.":::
 
-### Linked Image
+### Image with lightbox
 
-[![alt text for linked image](./media/AzRMS_elements.png)](https://azure.microsoft.com) 
+:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This is the alt text." lightbox="memdocs/media/docs-github-edit.png":::
 
 ### Animated gif
 
-![animated gif](./media/hololens.gif)
+:::image type="content" source="memdocs/media/docs-filter-toc.gif" alt-text="This is the alt text.":::
 
 ## Alerts
 
@@ -205,6 +214,11 @@ This is an example of `in-line code`.
 > [!TIP]
 > This is TIP
 
+### Caution
+
+> [!CAUTION]
+> This is CAUTION
+
 ### Important
 
 > [!IMPORTANT]
@@ -214,12 +228,12 @@ This is an example of `in-line code`.
 
 ### Channel 9
 
-<iframe src="http://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-Active-Directory-Connect-Express-Settings/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+> [!VIDEO http://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-Active-Directory-Connect-Express-Settings/player]
 
 
 ### Youtube
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/R6_eWWfNB54" frameborder="0" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/R6_eWWfNB54]
 
 ## docs.ms extensions
 

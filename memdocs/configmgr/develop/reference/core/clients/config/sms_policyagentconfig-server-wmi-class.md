@@ -1,16 +1,18 @@
 ---
 title: SMS_PolicyAgentConfig class
 titleSuffix: Configuration Manager
+description: Details of the SMS_PolicyAgentConfig server WMI class
 ms.date: 07/26/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 56f1a21f-3f6d-47b9-924a-ebb47ff49bd5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # SMS_PolicyAgentConfig server WMI class
@@ -110,7 +112,7 @@ Access type: Read/Write
 
 Qualifiers: none  
 
-Starting in version 1906, set to `true` to enable user policy on a terminal server, such as Windows Virtual Desktop. User policy is disabled by default on these devices to help client performance. If you enable this property, you accept any potential performance impact to these devices.
+Set to `true` to enable user policy on a terminal server, such as Azure Virtual Desktop. User policy is disabled by default on these devices to help client performance. If you enable this property, you accept any potential performance impact to these devices.
 
 If PolicyEnableUserPolicyPolling is false, this property is ignored.
 

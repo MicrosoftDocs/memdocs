@@ -1,19 +1,21 @@
 ---
-title: "SMS_CollectionRuleIncludeCollection Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_CollectionRuleIncludeCollection Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that represents an inclusion rule that's added as a rule to the `SMS_Collection` instance.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 27193c49-d811-4f93-b119-f2faf39fffea
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CollectionRuleIncludeCollection Server WMI Class
-The `SMS_CollectionRuleIncludeCollection` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, represents an inclusion rule that is added as a rule to the `SMS_Collection` instance. Any members of a collection defined by this rule will be included in the collection.  
+The `SMS_CollectionRuleIncludeCollection` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an inclusion rule that's added as a rule to the `SMS_Collection` instance. Any members of a collection defined by this rule will be included in the collection.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -28,7 +30,7 @@ Class SMS_ CollectionRuleIncludeCollection : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_ CollectionRuleIncludeCollection` class does not define any methods.  
+ The `SMS_ CollectionRuleIncludeCollection` class doesn't define any methods.  
 
 ## Properties  
  `IncludeCollectionID`  

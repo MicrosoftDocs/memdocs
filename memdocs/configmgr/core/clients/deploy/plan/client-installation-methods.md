@@ -2,17 +2,18 @@
 title: Client installation methods
 titleSuffix: Configuration Manager
 description: Learn about the methods of installing the Configuration Manager client.
-ms.date: 03/22/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.date: 10/01/2021
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
+
 # Client installation methods in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -151,7 +152,7 @@ For more information about how to manually install the client on each of platfor
 
 ## Microsoft Intune MDM installation
 
-**Supported client platforms**: Windows 10
+**Supported client platforms**: Windows 10 or later
 
 #### Advantages  
 
@@ -159,21 +160,20 @@ For more information about how to manually install the client on each of platfor
 
 -   Doesn't require you to configure and maintain an installation account for the intended client computer.  
 
--   Can use modern authentication with Azure Active Directory.  
+-   Can use modern authentication with Microsoft Entra ID.  
 
 -   Can install and assign computers on the internet.  
 
--   Can automate with Windows AutoPilot and Microsoft Intune for co-management.  
+-   Can automate with Windows Autopilot and Microsoft Intune for co-management.  
 
-#### Disadvantages  
+#### Disadvantages
 
--   Requires additional technologies outside of Configuration Manager.  
+- Requires additional technologies outside of Configuration Manager.
 
--   Requires the device have access to the internet, even if it is not internet-based.  
+- Requires the device have access to the internet, even if it is not internet-based.
 
-For more information, see the following articles:  
+For more information, see the following articles:
 
--   [How to install clients to Intune MDM-managed Windows devices](../deploy-clients-to-windows-computers.md#bkmk_mdm)  
+- [How to install clients to Intune MDM-managed Windows devices](../deploy-clients-to-windows-computers.md#bkmk_mdm)
 
--   [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](../deploy-clients-cmg-azure.md)  
-
+- [Install and assign Configuration Manager clients using Microsoft Entra ID for authentication](../deploy-clients-cmg-azure.md)

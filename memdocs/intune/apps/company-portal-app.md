@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/11/2021
+ms.date: 06/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 
 # optional metadata
@@ -21,12 +20,16 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 #ROBOTS:
 #audience:
 
-ms.reviewer: esthermsft
+ms.reviewer: abstarr
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- FocusArea_Apps_SpecificApp
 ---
 
 # How to configure the Intune Company Portal apps, Company Portal website, and Intune app
@@ -35,10 +38,12 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 
 > [!NOTE]
 > The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
+>
+> The minimum supported version of the iOS Company Portal app is v5.2311.1. If users are running an older version, they will be prompted for an update at login.
 
 ## Customizing the user experience
 
-By customizing the end-user experience, you will help provide a familiar and helpful experience for your end users. To do this, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and select **Tenant Administration** > **Customization**, where you can either edit the default policy or create up to 10 group targeted policies. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
+By customizing the end-user experience, you will help to provide a familiar and helpful experience for your end users. To do this, sign in as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant Administration** > **Customization** where you can either edit the default policy or create up to 10 user group targeted policies. Note that targeting policies to device groups is not supported. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
 
 ## Branding
 
@@ -50,8 +55,8 @@ The following table provides the branding customization details for the end-user
 | **Color** | Choose **Standard** to choose from five standard colors. Choose **Custom** to select a specific color   based on a hex code value. |
 | **Theme color** | Set theme color to show across end-user experience. We'll   automatically set the text color to black or white so that it's most visible   on top of your selected theme color. |
 | **Show in header** | Select whether the header in the end-user experiences   should display the **Organization logo and name**, the **Organization logo only**, or the **Organization name only**. The preview boxes below will only show the logos, not the   name.  |
-| **Upload logo for theme color background** | Upload the logo you want to show on top of your selected   theme color. For the best appearance, upload a logo with a transparent   background. You can see how this will look in the preview box below the   setting.<p>Maximum image size: 400 x 400 px<br>Maximum file size:   750KB<br>File type: PNG, JPG, or JPEG |
-| **Upload logo for white or light background** | Upload the logo you want to show on top of white or light-colored backgrounds. For the best appearance, upload a logo with a   transparent background. You can see how this will look on a white background   in the preview box below the setting.<p>Maximum image size: 400 x 400   px<br>Maximum file size: 750KB<br>File type: PNG, JPG, or JPEG |
+| **Upload logo for theme color background** | Upload the logo you want to show on top of your selected   theme color. For the best appearance, upload a logo with a transparent   background. You can see how this will look in the preview box below the   setting.<p>Recommended image height: Greater than 72 px<br>Maximum file size:   750KB<br>File type: PNG, JPG, or JPEG |
+| **Upload logo for white or light background** | Upload the logo you want to show on top of white or light-colored backgrounds. For the best appearance, upload a logo with a   transparent background. You can see how this will look on a white background   in the preview box below the setting.<p>Recommended image height: Greater than 72 px<br>Maximum file size: 750KB<br>File type: PNG, JPG, or JPEG |
 | **Upload brand image** | Upload an image that reflects   your organization's brand.<p><ul><li>Recommended image   width: Greater than 1125 px</li><li>Maximum image size: 1.3 MB</li><li>File   type: PNG, JPG, or JPEG</li><li>It is displayed in these   locations:</li><ul><li>iOS/iPadOS Company Portal: Background image on   the user's profile page.</li><li>Windows Company Portal: Background image on the user's profile page.</li><li>Company Portal website:   Background image on the user's profile page.</li><li>Android   Intune app: In the drawer and as a background image on the user's profile   page.</li></ul></ul> |
 
 > [!NOTE]
@@ -93,7 +98,7 @@ Enter your organization's support information, so employees can reach out with q
 
 ## Configuration
 
-You can configure the Company Portal experience specifically for enrollment, privacy, notifications, app sources, and self-service actions.
+You can configure the Company Portal experience specifically for enrollment, privacy, notifications, device categories, app sources, and self-service actions.
 
 ### Enrollment
 
@@ -105,15 +110,16 @@ The following table provides enrollment-specific configuration details:
 
 #### Device enrollment setting options
 
-> [!NOTE]
-> Support for the device enrollment setting requires end users have these Company Portal versions:
-> - Company Portal on iOS/iPadOS: version 4.4 or later
-> - Company Portal on Android: version 5.0.4715.0 or later 
+Support for the device enrollment setting requires end users have these Company Portal versions:
+- Company Portal on iOS/iPadOS: version 4.4 or later
+- Company Portal on Android: version 5.0.4715.0 or later 
 
 > [!IMPORTANT]
 > The following settings do not apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md). Regardless of how these setting are configured, iOS/iPadOS devices configured to enroll with Automated Device Enrollment will enroll during the out of box flow and users will be prompted to sign in when they launch the Company Portal.
 > 
 > The following settings do apply to Android devices configured with [Samsung Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md) (KME). If a device has been configured for KME and device enrollment is set to Unavailable, the device will not be able to enroll during the out of box flow.
+>
+> For the Android Company Portal app, if Intune detects that the user's device is set up for [app protection policies without enrollment](../fundamentals/deployment-guide-enrollment-mamwe.md), the user will not get prompted to enroll in the Company Portal, even if the device enrollment setting is configured to prompt enrollment. This applies to all Android device types except Surface Duo devices.
 
 |    Device enrollment   options    |    Description    |    Checklist prompts    |    Notification    |    Device details status    |    App visibility (for an app that requires enrollment)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
@@ -131,13 +137,15 @@ The following table provides privacy-specific configuration details:
 | Privacy message about what support can't see or do (iOS/iPadOS) | 520 | Keep the default message or customize the message to list the items that your organization can't see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links.  |
 | Privacy message about what support can see or do (iOS/iPadOS) | 520 | Keep the default message or customize the message to list the items that your organization can see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links.  |
 
-### Device ownership notification
+For related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).  
 
-The following table provides notification-specific configuration details:
+### Device categories  
+
+You can allow or block the device category prompt in Intune Company Portal.  
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Send a push notification to users when their device ownership type changes from personal to corporate (Android and iOS/iPadOS only)​ | N/A | Send a push notification to both your Android and iOS Company Portal users when their device ownership type has been changed from personal to corporate. By default, this push notification is set to off. When device ownership is set to corporate ownership, Intune has greater access to the device, which includes the full app inventory, FileVault key rotation, phone number retrieval, and a select few remote actions. For more information, see [Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Let users select device categories in the Company Portal| N/A | If your tenant has device categories set up, users on targeted devices are prompted to choose a category when they sign in to Company Portal. Select **Block** to hide the prompt across all platforms. Select **Allow** to show the prompt.   <br> <br> The category selection prompt goes away once someone chooses a category, and doesn't reappear. This setting is intended to be used with device categories. If there are no device categories in your tenant, no selection prompt will appear. For more information about creating device categories, see [Categorize devices into groups](../enrollment/device-group-mapping.md).  
 
 ### App sources
 
@@ -150,28 +158,34 @@ The following table provides app source specific configuration details:
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Azure AD Enterprise Applications | N/A | Select **Hide** or **Show** to display **Azure AD Enterprise applications** in the Company Portal for each end user. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). |
+| Microsoft Entra Enterprise Applications | N/A | Select **Hide** or **Show** to display **Microsoft Entra Enterprise applications** in the Company Portal for each end user. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). |
 | Office Online Applications | N/A | Select **Hide** or **Show** to display **Office Online applications** in the Company Portal for each end user. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). |
+| Configuration Manager Applications | N/A | Select **Hide** or **Show** to display **Configuration Manager applications** in the Company Portal for each end user. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). |
 
 #### App source setting options
 
 > [!NOTE]
-> The display of apps from other Microsoft services is only supported in the Windows Company Portal and the Company Portal website.
+> The display of apps from the **Configuration Manager Applications** app source is only displayed in the Windows Company Portal. However, the display of apps from either the **Microsoft Entra Enterprise Applications** app source or the **Office Online Applications** app source are displayed in the Windows Company Portal and the Company Portal website.
 
-You can hide or show **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
+You can hide or show **Microsoft Entra Enterprise applications**, **Office Online applications**, and **Configuration Manager applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Microsoft Entra Enterprise applications** are registered and assigned via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
 
-### Customizing user self-service actions for the Company Portal
+### Customizing Remove and Reset device actions 
 
-You can customize the available self-service device actions that are shown to end users in the Company Portal app and website. To help prevent unintended device actions, you can configure settings for the Company Portal app by selecting **Tenant Administration** > **Customization**.
+You can customize visibility of the **Remove** and **Reset** self-service device actions for Windows and iOS devices that are shown to end users across platforms in the Company Portal app, Company Portal website, and Intune app on Android. To prevent users from removing or resetting corporate Windows and iOS devices, you can hide these actions in **Tenant Administration** > **Customization**.
 
 The following actions are available:
-- Hide **Remove** button on corporate Windows devices.
+- Hide **Remove** button on corporate Windows devices. (This setting will always show as disabled because the **Remove** button for corporate Windows devices is always hidden.)
 - Hide **Reset** button on corporate Windows devices.
 - Hide **Remove** button on corporate iOS/iPadOS devices.
 - Hide **Reset** button on corporate iOS/iPadOS devices.
 
 > [!NOTE]
 > These actions can be used to restrict device actions in the Company Portal app and website and do not implement any device restriction policies. To restrict users from performing factory reset or MDM removal from settings, you must configure device restriction policies.
+> 
+> Also, these customizations are only available in the default Customization policy, not in the group targeted Customization policies.
+
+### Device compliance status in Company Portal website
+End users can see the compliance status of their devices from the Company Portal website. End users can navigate to the [Company Portal](https://portal.manage.microsoft.com/devices) website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**. For related information, see [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md).
 
 ## Opening Web Company Portal applications
 For Web Company Portal applications, if the end user has the Company Portal application installed, the end users will see a dialog box asking how they want to open the application when opening outside of the browser. If the app is not in the path of the Company Portal, then the Company Portal will open the homepage. If the app is in the path, then the Company Portal will open the specific app. 
@@ -187,11 +201,13 @@ If the user does not have the Company Portal app installed, the user will be tak
 > [!NOTE]
 > To improve page load performance on the Company Portal website, app icons will now load in batches. End users may temporarily see a placeholder icon for some of their applications while loading the Company Portal website. 
 
+For feedback related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
+
 ## Company Portal and Apple Setup Assistant for iOS/iPadOS
 
-For iOS/iPadOS devices running 13.0 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication (preview)**.  This method provides all the security from authenticating with the Company Portal but avoids the issue of leaving end users stuck on a device that they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD credentials during the setup assistant screens. This will require an additional Azure AD login post-enrollment in in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS, which we recommend choosing a VPP token for from the enrollment profile.
+For iOS/iPadOS devices running 13.0 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from authenticating with the Company Portal but avoids the issue of leaving end users stuck on a device that they can't use while the Company Portal installs on the device. The user has to authenticate using Microsoft Entra credentials during the setup assistant screens. This will require an additional Microsoft Entra login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS, which we recommend choosing a VPP token for from the enrollment profile.
 
-Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when users complete the additional Azure AD login into the Company Portal app on the device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during enrollment during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed. 
+Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when users complete the additional Microsoft Entra login into the Company Portal app on the device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during enrollment during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed. 
 
 ## Company Portal derived credentials for iOS/iPadOS devices
 
@@ -217,9 +233,10 @@ The following keyboard shortcuts are available in the Windows Company Portal app
 | Navigation menu | Navigation | Alt+M |
 |  | Home | Alt+H |
 |  | All apps | Alt+A |
-|  | Installed apps | Alt+I |
+|  | All devices | Alt+D |
+|  | Downloads & updates | Alt+U |
 |  | Send feedback | Alt+F |
-|  | My profile | Alt+U |
+|  | My profile | Alt+P |
 |  | Settings | Alt+T |
 | Device tile | Rename | F2 |
 |  | Remove | Ctrl+D or Delete |
@@ -249,7 +266,7 @@ Available self-service device actions include the following:
 - **Reset Passcode** – This action is used to reset device passcode. On iOS/iPadOS devices the passcode will be removed and the end user will be required to enter a new code in settings. On supported Android devices, a new passcode is generated by Intune and temporarily displayed in the Company Portal.
 - **Key Recovery** – This action is used to recover a personal recovery key for encrypted macOS devices from the Company Portal website. 
 
-To customize the available user self-service actions, see [Customizing user self-service actions for the Company Portal](../apps/company-portal-app.md#customizing-user-self-service-actions-for-the-company-portal).
+To customize the available user self-service actions, see [Customizing user self-service actions for the Company Portal](../apps/company-portal-app.md#customizing-remove-and-reset-device-actions).
 
 ### Self-Service Actions
 
@@ -263,7 +280,7 @@ Some platforms and configurations do not allow self-service device actions. This
 | Sync | Available | Available | Available | Available |
 | Key Recovery | NA | NA | Available<sup>(2)</sup> | NA |
 
-<sup>(1)</sup> **Retire** is always blocked on Azure AD Joined Windows devices.<br>
+<sup>(1)</sup> **Retire** is always blocked on Microsoft Entra joined Windows devices.<br>
 <sup>(2)</sup> **Key Recovery** for macOS is only available via the Web Portal.<br>
 <sup>(3)</sup> All remote actions are disabled if using a Device Enrollment Manager enrollment.<br>
 <sup>(4)</sup> **Rename** only changes the device name in the Company Portal app or Web Portal, not on the device.<br>
@@ -273,16 +290,50 @@ Some platforms and configurations do not allow self-service device actions. This
 <sup>(8)</sup> **Reset Passcode** is not supported on User Enrolled iOS/iPadOS devices.<br>
 <sup>(9)</sup>All iOS/iPadOS Automated Device Enrollment devices (formerly known as DEP)  have **Retire** and **Wipe** options disabled.
 
-### App logs
+### App logs  
 
-If you are using Azure Government, app logs are offered to the end user to decide how they will share when they initiate the process to get help with an issue. However, if you are not using Azure Government, the Company Portal will send app logs directly to Microsoft when the user initiates the process to get help with an issue. Sending the app logs to Microsoft will make it easier to troubleshoot and resolve issues.
+App users can share their logs with you when requesting help through the Intune Company Portal app or Microsoft Intune app. If you're using Azure Government, users get to select their sharing preference when they initiate the sharing process. If you're not using Azure Government, user-submitted logs are sent directly to Microsoft support or the admin center.
+
+You can download user-submitted mobile app diagnostics in the admin center for the Android, AOSP, and Windows versions of the Company Portal app. To download user-submitted logs, go to **Troubleshooting + support** > **Diagnostics**. For more information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).   
 
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
 
 ## Company Portal app notifications
 
-The Company Portal app can store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal.
+The Company Portal app can store, as well as display, push notifications sent to your users' devices from the Microsoft Intune admin center. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal.
+
+> [!NOTE]
+> Users must updated to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) to receive custom notifications on Android devices. If users do not update prior to Intune's November (2111) service release and they are sent a custom notification, they will instead receive a notification telling them to update their app to view the notification. Once they update their app, they will see the message sent by your organization in the Notifications section in the app.
+
+Notifications from the iOS/iPadOS Company Portal app are now delivered to devices using the default Apple sound, rather than being delivered silently. To turn the notification sound off from the iOS/iPadOS Company Portal app, select **Settings** > **Notifications** > **Comp Portal** and select the **Sound** toggle.
+
+For more information about notifications, see [Receive a custom notification](../remote-actions/custom-notifications.md#receive-a-custom-notification).
+
+## Configure feedback settings for Company Portal and Microsoft Intune apps
+
+There are a number of M365 enterprise policies which affect whether feedback must be enabled or disabled for currently logged users. These policies are available via the [Microsoft 365 Apps admin center](https://config.office.com/). In relation to Microsoft Intune, these policies affect feedback and surveys for the Intune Company Portal app, the Web Company Portal, and Microsoft Intune app.
+
+M365 feedback policies include the following policies:
+
+| Policy   Name | Default State | Policy Summary |
+|---|---|---|
+| Allow the use of connected experiences in Office | Enabled | Controls whether clients can use the suite of connected experiences, including feedback. |
+| Allow users to submit feedback to Microsoft | Enabled | Controls the feedback entry points across applications. |
+| Allow users to receive and respond to in-product surveys from Microsoft | Enabled | Controls the survey prompts within the product. |
+| Allow users to include screenshots and attachments when they submit feedback to Microsoft | Disabled | Controls the metadata the user can decide to submit with the feedback and survey. |
+| Allow Microsoft to follow up on feedback submitted by users | Disabled | Controls whether the user can share contact info with the feedback and survey. |
+| Allow users to include log files and content samples when feedback is submitted to Microsoft | Disabled | Controls the metadata the user can decide to submit with the feedback and survey. |
+
+To configure feedback policy settings:
+
+1. Go to [Microsoft 365 Apps admin center](https://config.office.com/) and login.
+2. Select **Customization** > **Policy Management** > **Create**.
+3. Enter **name** and **description**.
+4. Choose the type of user that this policy will apply.
+5. Choose the group for your tenant that this policy will apply.
+6. Search for **Feedback** and **Survey** to find and select the policies.
+7. For each policy listed, set the value to either **Enabled** or **Disabled**.
 
 ## Next steps
 

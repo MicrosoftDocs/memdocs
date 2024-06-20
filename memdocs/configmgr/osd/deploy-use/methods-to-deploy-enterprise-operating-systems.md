@@ -3,13 +3,15 @@ title: OS deployment methods
 titleSuffix: Configuration Manager
 description: Learn about the methods that you can use to deploy operating systems in your Configuration Manager environment.
 ms.date: 08/11/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
-ms.assetid: 3646d62d-355a-43fc-8569-c08dc2257ee5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # OS deployment methods with Configuration Manager

@@ -3,13 +3,15 @@ title: Install Windows on a new computer
 titleSuffix: Configuration Manager
 description: Use Configuration Manager to install an operating system on a new computer (bare metal) by using PXE, OEM, or stand-alone media.
 ms.date: 01/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
-ms.assetid: f5ad22d5-7df1-49c6-8a0f-db1c3f0cda19
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Install a new version of Windows on a new computer (bare metal) with Configuration Manager

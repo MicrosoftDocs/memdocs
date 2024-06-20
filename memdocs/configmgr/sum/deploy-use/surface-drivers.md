@@ -2,14 +2,16 @@
 title: Managing Surface driver updates
 titleSuffix: Configuration Manager
 description: Configuration Manager synchronizes Surface driver updates for deployment to Surface devices.
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.date: 04/15/2021
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
-ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
+ms.service: configuration-manager
+ms.subservice: software-updates
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Manage Surface drivers with Configuration Manager
@@ -22,7 +24,7 @@ Configuration Manager allows you to synchronize drivers for Surface devices and 
 
 - An internet connected top-level software update point.
 - All software update points must run Windows Server 2016 with cumulative update KB4025339 or later installed.
-- In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
+- In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->  
 
 ## Enable sync for Surface drivers
 

@@ -1,16 +1,18 @@
 ---
-title: "Close Method in Class SMS_Alert"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: Close Method in Class SMS_Alert
+description: Learn how the Close Windows Management Instrumentation (WMI) class method, in Configuration Manager, postpones the alert.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ca06cc95-40e6-4a18-b560-c94555d4aac1
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Close Method in Class SMS_Alert
 The `Close` Windows Management Instrumentation (WMI) class method, in Configuration Manager, postpones the alert.  
@@ -39,7 +41,7 @@ sint32 Close(
 
  Qualifiers: `[out, optional]`  
 
- Do not start the evaluation until the specified time.  
+ Don't start the evaluation until the specified time.  
 
 ## Return Values  
  An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

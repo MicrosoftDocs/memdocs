@@ -3,13 +3,15 @@ title: How to bulk-enroll devices
 titleSuffix: Configuration Manager
 description: Bulk-enroll devices in an automated way with on-premises mobile device management (MDM) in Configuration Manager.
 ms.date: 01/13/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-mdm
+ms.subservice: mdm
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # How to bulk-enroll devices with on-premises MDM in Configuration Manager

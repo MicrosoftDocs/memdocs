@@ -1,17 +1,17 @@
 ---
-title: "Choose what to migrate"
-titleSuffix: "Configuration Manager"
-description: "Learn which data you can migrate and which data you can't migrate to Configuration Manager current branch."
+title: Choose what to migrate
+titleSuffix: Configuration Manager
+description: Learn which data you can migrate and which data you can't migrate to Configuration Manager current branch.
 ms.date: 12/29/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Determine whether to migrate data to Configuration Manager current branch
 

@@ -1,17 +1,17 @@
 ---
-title: "Client management fundamentals"
-titleSuffix: "Configuration Manager"
-description: "Learn about tasks that you run to manage Configuration Manager clients."
+title: Client management fundamentals
+titleSuffix: Configuration Manager
+description: Learn about tasks that you run to manage Configuration Manager clients.
 ms.date: 12/30/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 8d4e5641-354e-4439-8b4f-620a760e233d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Fundamentals of client management tasks for Configuration Manager
 

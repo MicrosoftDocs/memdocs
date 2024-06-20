@@ -1,19 +1,21 @@
 ---
-title: "SMS_StateMigrationUserNames Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_StateMigrationUserNames Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class in Configuration Manager that represents a localized username during state migration.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 26d7ad7d-e8e6-41f4-9300-a4a4359dba31
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_StateMigrationUserNames Server WMI Class
-The `SMS_StateMigrationUserNames` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a localized user name during state migration.  
+The `SMS_StateMigrationUserNames` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a localized user name during state migration.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -28,7 +30,7 @@ Class SMS_StateMigrationUserNames
 ```  
 
 ## Methods  
- The `SMS_StateMigrationUserNames` class does not define any methods.  
+ The `SMS_StateMigrationUserNames` class doesn't define any methods.  
 
 ## Properties  
  `LocaleID`  

@@ -1,16 +1,18 @@
 ---
-title: "SMS_LastCategoryObject Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_LastCategoryObject Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that represents the object that has this assignment as the last category assignment.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7d777ba2-006e-4b23-9f14-cfdd05ba16d5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_LastCategoryObject Server WMI Class
 The `SMS_LastCategoryObject` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the object that has this assignment as the last category assignment.  

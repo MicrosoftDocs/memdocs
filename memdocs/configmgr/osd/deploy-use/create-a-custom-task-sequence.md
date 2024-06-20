@@ -3,13 +3,15 @@ title: Create a custom task sequence
 titleSuffix: Configuration Manager
 description: Edit a custom task sequence in Configuration Manager to add steps to the task sequence.
 ms.date: 04/01/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
-ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Create a custom task sequence with Configuration Manager

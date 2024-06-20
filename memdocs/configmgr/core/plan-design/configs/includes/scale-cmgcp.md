@@ -1,11 +1,13 @@
 ---
-author: aczechowski
-ms.author: aaroncz
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+author: banreet
+ms.author: banreetkaur
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: include
-ms.date: 09/17/2020
+ms.date: 08/02/2021
 ---
+
+This guidance is the same for all deployment models and VM sizes.
 
 - You can install multiple instances of the CMG connection point at primary sites.
 

@@ -2,17 +2,15 @@
 # required metadata
 
 title: Enable code integrity - Microsoft Intune | Microsoft Docs
-description: Learn how to make your device compliant again when code integrity is disabled. 
+description: Learn how to make your work or school device compliant again when code integrity is disabled. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/23/2020
+ms.date: 11/29/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 84892bbc-f888-417b-bbeb-978cc7e10028
 searchScope:
  - User help
@@ -26,12 +24,19 @@ ms.reviewer: scottduf
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
-# Enable code integrity
+# Enable code integrity  
 
-If you receive a message that you need to enable code integrity, contact your IT support person. Your support person will help you enable Secure Boot, which will trigger code integrity the next time you start up your device. 
+**Applies to**  
+
+- Windows 10  
+- Windows 11  
+
+
+If you receive a message that you need to enable code integrity on your work or school device, contact your support person. They can help you enable Secure Boot, which will trigger code integrity the next time you start up your device. 
 
 If you're using a PC and consider yourself an advanced user, you can enable Secure Boot through the PC BIOS menu. For instructions, see [Re-enable Secure Boot](/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).  
 
@@ -40,10 +45,10 @@ If you're using a PC and consider yourself an advanced user, you can enable Secu
 Code integrity is a threat protection feature that checks the drivers and system files on your device for signs of corruption or malicious software. For code integrity to work on your device, another security feature called Secure Boot must be enabled.  
 
 
-## IT pro support  
+## Microsoft Learn resources for IT administrators   
 
-If you're an Intune administrator and want to learn more about Intune's device health compliance settings, see [Add a device compliance policy for Windows 10 devices in Intune](../protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+If you're a Microsoft Intune administrator and want to learn more about Intune's device health compliance settings, see [Add Windows 10/11 device compliance policy](../protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
 ## Next steps
 
-Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

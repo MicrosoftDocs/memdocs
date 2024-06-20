@@ -8,28 +8,34 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
-ms.technology:
+ms.localizationpriority: medium
 ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 
 # optional metadata
 
-#ROBOTS:
+ROBOTS: NOINDEX,NOFOLLOW
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: mattcall
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
+- Windows
+- FocusArea_Apps_Protect
 ---
 
 # Create and deploy Windows Information Protection (WIP) policy with Intune
+
+[!INCLUDE [wip-deprecation](../../includes/wip-deprecation.md)]
+<!-- MAXADO-6010051 -->
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -47,7 +53,7 @@ You must understand a few concepts when adding a WIP policy:
 
 ### Types of apps
 
-- **Recommended apps:** A pre-populated list of (mostly Microsoft Office) apps that allow you easily import into policy.
+- **Recommended apps:** A pre-populated list of (mostly Microsoft 365 (Office)) apps that allow you to easily import into the policy.
 - **Store apps:** You can add any app from the Windows store to the policy.
 - **Windows desktop apps:** You can add any traditional Windows desktop apps to the policy (for example, .exe, .dll)
 
@@ -60,22 +66,21 @@ You must configure the MAM provider before you can create a WIP policy. Learn mo
 
 Additionally, you need to have the following license and update:
 
-- [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) license
+- [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) license
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
-
-
-
-
 
 ## To add a WIP policy
 
 After you set up Intune in your organization, you can create a WIP-specific policy.
 
+>[!IMPORTANT]
+> Windows Information Protection (WIP) policies without enrollment has been deprecated. You can no longer create WIP policies for unenrolled devices.
+
 > [!TIP]  
 > For related information about creating WIP policies for Intune, including available settings and how to configure them, see [Create a Windows Information Protection (WIP) policy with MAM using the portal for Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) in the Windows Security documentation library. 
 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies** > **Create policy**.
 3. Add the following values:
     - **Name:** Type a name (required) for your new policy.
@@ -86,7 +91,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 
 ## To add recommended apps to your protected apps list
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies**.
 3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.
@@ -99,7 +104,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 
 **To add a Store app**
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies**.
 3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.
@@ -112,7 +117,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 ## Add a desktop app to your protected apps list
 
 **To add a desktop app**
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies**.
 3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.
@@ -167,6 +172,8 @@ When the policy is enabled, WIP protected items are indexed and the metadata abo
 
 When the policy is disabled, the WIP protected items are not indexed and do not show up in the results in Cortana or file explorer. There may also be a performance impact on photos and Groove apps if there are many WIP protected media files on the device.
 
+[!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
+
 ## Add encrypted file extensions
 
 In addition to setting the **Allow Windows Search Indexer to search encrypted items** option, you can specify a list of file extensions. Files with these extensions are encrypted when copying from a Server Message Block (SMB) share within the corporate boundary as defined in the network location list. When this policy is not specified, the existing auto-encryption behavior is applied. When this policy is configured, only files with the extensions in the list will be encrypted.
@@ -180,7 +187,7 @@ After you created your WIP app protection policy, you need to deploy it to your 
 
 1. On the **App policy** pane, choose your newly created app protection policy, choose **User groups** > **Add user group**.
 
-    A list of user groups, made up of all the security groups in your Azure Active Directory, opens in the **Add user group** pane.
+    A list of user groups, made up of all the security groups in your Microsoft Entra ID, opens in the **Add user group** pane.
 
 2. Choose the group you want your policy to apply to, then choose **Select** to deploy the policy.
 

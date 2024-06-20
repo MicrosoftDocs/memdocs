@@ -9,10 +9,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 08/28/2018
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 9ffbb656-93cd-4e0b-96c0-c5038cd2cf31
 searchScope:
  - User help
@@ -22,11 +20,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: heenamac
+ms.reviewer: heenamac
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Resolve a threat found by Zimperium zIPS on Android

@@ -3,13 +3,15 @@ title: Collection evaluation
 titleSuffix: Configuration Manager
 description: Learn about the collection evaluation process, types, and triggers. Understand the collection evaluation graph and hierarchy.
 ms.date: 06/05/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Collection evaluation in Configuration Manager
@@ -30,16 +32,10 @@ At a high level, each individual collection evaluation and update follows these 
 
 1. Execute the collection query.
 1. Add any systems that are direct members.
-1. Evaluate all *include* collections.
-
-   If the include collections also have query rules, or have include or exclude collections, evaluate them also. If the include collections themselves are limiting collections, evaluate any collections below them. After fully evaluating the tree, return the results to the calling collection.
-
+1. Add members specified in the *Include* collections.
 1. Perform a logical `AND` between the returned results and the limiting collection.
-1. Evaluate the *exclude* collections.
-
-   If the exclude collections also have query rules, or have include or exclude collections, evaluate them also. If these collections themselves are limiting collections, evaluate any collections below them. After fully evaluating the tree, return the results to the calling collection.
-
-1. Compare the result set from evaluating the direct members and include collections with the results of evaluating the exclude collections.
+1. Remove members specified in the *exclude* collections.
+1. Compare the result set from evaluating the direct members and include collections with the results of the exclude collections.
 1. Write the changes to the database and perform updates.
 1. Trigger any dependent collections to update as well. Dependent collections are collections that the current collection limits, or that refer to the current collection using include or exclude rules.
 
@@ -106,4 +102,3 @@ In the following example, installing DNS on the existing server makes it a membe
 - [Best practices for collections](best-practices-for-collections.md)
 - [View collection evaluation (starting in version 2010)](collection-evaluation-view.md)
 - [Collection Evaluation Viewer](../../../support/ceviewer.md)
-- [ConfigMgrDogs Troubleshoot ConfigMgr 2012](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411) session at TechEd Australia

@@ -7,13 +7,15 @@ metadata:
   title: Desktop Analytics documentation
   titleSuffix: Configuration Manager
   description: Desktop Analytics is a cloud service that integrates with Configuration Manager. It provides insights to help you update your Windows clients.
-  ms.prod: configuration-manager
-  ms.technology: configmgr-analytics
+  ms.subservice: desktop-analytics
+  ms.service: configuration-manager
   ms.topic: landing-page
-  author: aczechowski
-  ms.author: aaroncz
+  author: banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
   ms.reviewer: acabello
-  ms.date: 01/28/2020
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
 
 landingContent:
   - title: About Desktop Analytics

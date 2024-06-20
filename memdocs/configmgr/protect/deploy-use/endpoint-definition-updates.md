@@ -2,16 +2,16 @@
 title: Configure definition updates
 titleSuffix: Configuration Manager
 description: Learn how to select and configure methods with Endpoint Protection in Configuration Manager to keep antimalware definitions up to date on client computers.
-ms.date: 11/18/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.date: 10/05/2021
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
-ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Configure definition updates for Endpoint Protection  
@@ -35,7 +35,7 @@ manager: dougeby
   You can configure multiple definition update sources and control the order in which they are assessed and applied. This is done in the **Configure Definition Update Sources** dialog box when you create an antimalware policy.
 
 > [!IMPORTANT]
->  For Windows 10 PCs, you must configure Endpoint Protection to update malware definitions for Windows Defender.
+>  For Windows 10 or later PCs, you must configure Endpoint Protection to update malware definitions for Windows Defender.
 
 ## How to Configure Definition Update Sources
  Use the following procedure to configure the definition update sources to use for each antimalware policy.

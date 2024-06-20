@@ -1,17 +1,17 @@
 ---
-title: "Client deployment planning"
-titleSuffix: "Configuration Manager"
-description: "Plan to deploy clients and prepare the infrastructure in Configuration Manager."
+title: Client deployment planning
+titleSuffix: Configuration Manager
+description: Plan to deploy clients and prepare the infrastructure in Configuration Manager.
 ms.date: 04/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 518f9882-ce71-48c3-9f47-cd968cfb658d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Planning considerations for deploying clients in Configuration Manager
 

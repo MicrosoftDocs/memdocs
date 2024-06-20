@@ -2,14 +2,16 @@
 title: Service connection point
 titleSuffix: Configuration Manager
 description: Learn about this Configuration Manager site system role, and understand and plan for its range of uses.
-ms.date: 04/13/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 10/12/2021
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
-author: mestew
-ms.author: mstewart
-manager: dougeby
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # About the service connection point in Configuration Manager
@@ -26,7 +28,7 @@ The service connection point is a site system role that provides several importa
 
 - Synchronize apps from the [Microsoft Store for Business and Education](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)
 
-- Discover users and groups in [Azure Active Directory (Azure AD)](about-discovery-methods.md#azureaddisc)
+- Discover users and groups in [Microsoft Entra ID](about-discovery-methods.md#azureaddisc)
 
 - Use [Desktop Analytics](../../../../desktop-analytics/overview.md) to gain insights on Windows 10 update and app readiness
 
@@ -128,10 +130,13 @@ There are several scenarios in which you may need to move the service connection
 
 - [Recovery](../../manage/recover-sites.md)
 - [Site server high availability](site-server-high-availability.md)
-- [Site expansion](../install/use-the-setup-wizard-to-install-sites.md#bkmk_expand)
+- [Site expansion](../install/setup-wizard-central-primary.md#expand-a-stand-alone-primary-site)
 
-After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Azure Active Directory (Azure AD) tenants. For more information, see [Renew secret key](azure-services-wizard.md#bkmk_renew).
+After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Microsoft Entra tenants. For more information, see [Renew secret key](azure-services-wizard.md#bkmk_renew).
 
+## <a name="bkmk_notifications"></a> Console notifications for the service connection point
+<!--11047451-->
+Occasionally, the Configuration Manager console may give you a [notification](../../manage/admin-console-notifications.md) about your service connection point. The notification asks you to restart the SMS_EXECUTIVE service on the server that hosts the service connection point. This notification occurs  because a configuration change was made by Microsoft on the services that your service connection point connects to. Features of Configuration Manager that rely on these services may not function for your site properly until the SMS_EXECUTIVE service is restarted.
 ## Log files
 
 To view information about uploads to Microsoft, view the **Dmpuploader.log** on the server that runs the service connection point. For download progress of updates, view the **Dmpdownloader.log**. For the complete list of logs related to the service connection point, see [Log files - Service connection point](../../../plan-design/hierarchy/log-files.md#BKMK_WITLog).

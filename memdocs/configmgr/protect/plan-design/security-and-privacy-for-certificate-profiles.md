@@ -2,14 +2,16 @@
 title: Certificate profile security and privacy
 titleSuffix: Configuration Manager
 description: Learn about the security guidance for managing certificate profiles for users and devices in Configuration Manager.
-ms.date: 05/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.date: 03/29/2022
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
-ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Security and privacy for certificate profiles in Configuration Manager
@@ -17,7 +19,7 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
+> Starting in version 2203, this company resource access feature is no longer supported.<!-- 9315387 --> For more information, see [Frequently asked questions about resource access deprecation](resource-access-deprecation-faq.yml).
 
 ## Security guidance
 

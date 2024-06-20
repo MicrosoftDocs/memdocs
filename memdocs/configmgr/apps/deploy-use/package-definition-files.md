@@ -3,15 +3,15 @@ title: Package definition files
 titleSuffix: Configuration Manager
 description: Learn about using package definition files to create packages and programs in Configuration Manager
 ms.date: 07/26/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 2de963d7-ffb9-43c3-9e1d-fc992b67bebd
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
-
-
+author: baladelli
+manager: apoorvseth
+ms.author: baladell
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Package definition files

@@ -1,17 +1,19 @@
 ---
-title: "CCM_NetworkSettings Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: CCM_NetworkSettings Class
+titleSuffix: Configuration Manager
+description: Details of the CCM_NetworkSettings Client WMI Class
+ms.date: 08/02/2021
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 89c57d32-bb17-470a-82d5-93415fef6bfc
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
+
 # CCM_NetworkSettings Client WMI Class
 The `CCM_NetworkSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents how clients behave on metered Internet connections.   
 
@@ -37,13 +39,14 @@ Class CCM_NetworkSettings :
 
  Qualifiers: none  
 
- Client communications on metered Internet connections. Possible values are:   
+ Client communications on metered connections. Default is **Block**. Possible values are:   
 
-|Value|Metered network usage policy|  
-|-|-|  
-|0|Allow|  
-|1|Limit|  
-|2|Block|  
+|Value|Metered network usage policy|
+|-|-|
+|0|Unknown|
+|1|Allow|
+|2|Limit|
+|4|Block|
 
 ## Remarks  
 

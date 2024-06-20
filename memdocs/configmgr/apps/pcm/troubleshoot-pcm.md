@@ -3,13 +3,15 @@ title: Troubleshoot Package Conversion Manager
 titleSuffix: Configuration Manager
 description: Learn how to troubleshoot problems with the Package Conversion Manager in Configuration Manager.
 ms.date: 08/24/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: troubleshooting
-ms.assetid: cb616925-bb94-4b7c-a867-b3d95aef4d5e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Troubleshoot Package Conversion Manager

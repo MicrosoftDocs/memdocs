@@ -7,12 +7,10 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/07/2019
+ms.date: 01/19/2022
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 searchScope:
  - User help
@@ -26,13 +24,14 @@ ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 
 # Enroll your corporate device with the Microsoft Intune app
 
-Enroll your corporate-owned Android device to get secure access to company email, apps, and other data that your organization makes available. The Microsoft Intune app supports corporate-owned devices running Android 6.0 and later. It will be automatically installed on new and factory-reset devices during enrollment. 
+Enroll your corporate-owned Android device to get secure access to work email, apps, and other data that your organization makes available. The Microsoft Intune app supports corporate-owned devices running Android 8.0 and later. It will be automatically installed on new and factory-reset devices during enrollment. 
 
 There are four ways to enroll. Your organization should let you know which option to use.
  

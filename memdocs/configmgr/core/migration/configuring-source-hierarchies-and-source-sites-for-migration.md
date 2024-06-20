@@ -1,17 +1,17 @@
 ---
-title: "Migration source hierarchies"
-titleSuffix: "Configuration Manager"
-description: "Configure a source hierarchy and source sites so you can migrate data to your Configuration Manager current branch environment."
+title: Migration source hierarchies
+titleSuffix: Configuration Manager
+description: Configure a source hierarchy and source sites so you can migrate data to your Configuration Manager current branch environment.
 ms.date: 12/29/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configure source hierarchies and source sites for migration to Configuration Manager current branch
 

@@ -2,16 +2,16 @@
 title: Deploy software updates
 titleSuffix: Configuration Manager
 description: Learn how to manually or automatically deploy software updates in the Configuration Manager console.
-author: mestew
-ms.author: mstewart
-manager: dougeby
-ms.date: 11/27/2018
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.date: 04/08/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
-ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-
-
+ms.service: configuration-manager
+ms.subservice: software-updates
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Deploy software updates  
@@ -29,7 +29,7 @@ After you create the deployment, the site sends an associated software update po
 >  If a distribution point isn't available, clients on the intranet can also download software updates from Microsoft Update.  
 
 > [!NOTE]  
->  Unlike other deployment types, software updates are all downloaded to the client cache. This is regardless of the maximum cache size setting on the client. For more information about the client cache setting, see [Configure the client cache for Configuration Manager clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
+>  Unlike other deployment types, software updates are all downloaded to the client cache. This is regardless of the maximum cache size setting on the client. For more information about the client cache setting, see [Configure the client cache](../../core/clients/manage/configure-client-cache.md).
 
 If you configure a required software update deployment, the software updates are automatically installed at the scheduled deadline. Alternatively, the user on the client computer can schedule or initiate the software update installation prior to the deadline. After the attempted installation, client computers send state messages back to the site server to report whether the software update installation was successful. For more information about software update deployments, see [Software update deployment workflows](../understand/software-updates-introduction.md#BKMK_DeploymentWorkflows).  
 
@@ -110,7 +110,20 @@ For more information and detailed steps, see [Automatically deploy software upda
 ## <a name="bkmk_phased"></a> Deploy software updates in phases
 
 <!--1358146-->
-Starting in version 1810, create phased deployments for software updates. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups.
+Create phased deployments for software updates. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups.
 
 For more information, see [Create phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
+
+## <a name="bkmk_folder"></a> Folder support for software update nodes
+<!--3601129-->
+
+Starting in version 2203, you can organize software update groups and packages by using folders. This change allows for better categorization and management of software updates.
+
+1. Open the Configuration Manager console and go to the **Software Library** workspace.
+1. From the ribbon or right-click menu, in the **Software Updates Groups** or **Deployment Packages** nodes, select from the following options:
+   - **Create Folder**
+   - **Delete Folder**
+   - **Rename Folder**
+   - **Move Folders**
+   - **Set Security Scopes**

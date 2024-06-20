@@ -1,16 +1,18 @@
 ---
-title: "Configure an Advertisement to Override a Maintenance Window"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: Configure an Advertisement to Override a Maintenance Window
+titleSuffix: Configuration Manager
+description: Configure an advertisement to override maintenance windows using the SMS_Advertisement class and the AdvertFlags class property in Configuration Manager.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 19a052b3-ace5-439a-9480-d54e3e030829
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure an Advertisement to Override a Maintenance Window
 The following example shows how to configure an advertisement to override service windows using the `SMS_Advertisement` class and the `AdvertFlags` class property in Configuration Manager.  

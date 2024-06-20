@@ -3,13 +3,15 @@ title: Use Software Center to deploy Windows over the network
 titleSuffix: Configuration Manager
 description: Deploy an OS from Software Center to refresh an existing computer with a new version of Windows or to upgrade Windows to the latest version.
 ms.date: 08/11/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
-ms.assetid: 919e3636-53fe-4119-ad14-2d03702b391b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Use Software Center to deploy Windows over the network with Configuration Manager
@@ -43,6 +45,9 @@ Also configure whether the deployment is required or available:
 - Available deployment: The task sequence is available in Software Center, and a user can install it on demand.
 
 After you create the deployment, clients in the target collection will show the task sequence in Software Center.
+    
+> [!NOTE]
+> If multiple users are signed in on the device, task sequence deployments might not appear in Software Center until other users are signed out.
 
 ## Next steps
 

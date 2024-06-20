@@ -3,14 +3,15 @@ title: How to reset your account
 titleSuffix: Configuration Manager
 description: Learn how to reset your Desktop Analytics account.
 ms.date: 08/16/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 884d4864-950b-4139-b778-d5368e1f6ef2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
+ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # How to reset your account
@@ -25,7 +26,7 @@ Only a **Global Administrator** can reset the account in the Azure portal.
 
 ## Behaviors
 
-- This process doesn't change any existing Azure AD users, apps, or permissions
+- This process doesn't change any existing Microsoft Entra users, apps, or permissions
 
 - If you choose to add a new workspace, none of the following user inputs on assets are kept:
     - Importance

@@ -3,18 +3,18 @@ metadata:
   title: FAQ for Desktop Analytics
   titleSuffix: Configuration Manager
   description: Frequently asked questions for Desktop Analytics.
-  ms.date: 04/16/2021
-  ms.prod: configuration-manager
-  ms.technology: configmgr-analytics
-  ms.topic: conceptual
-  ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
-  author: aczechowski
-  ms.author: aaroncz
-  manager: dougeby
+  ms.date: 11/03/2021
+  ms.subservice: desktop-analytics
+  ms.service: configuration-manager
+  ms.topic: faq
+  author: banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
   ms.reviewer: acabello
-    
 title: Desktop Analytics FAQ
 summary: |
+  > [!IMPORTANT]
+  > Desktop Analytics is deprecated and will be retired on November 30, 2022. For more information, see [What's new](whats-new.md).<!-- 10946169 -->
 
 sections:
   - name: Prerequisites
@@ -33,7 +33,7 @@ sections:
           
           - To confirm that active devices are properly configured, use the [Connection Health dashboard](monitor-connection-health.md). This dashboard doesn't update in real time.
           - Make sure devices are sending diagnostic data to the Desktop Analytics service. For more information, see [Enable data sharing](enable-data-sharing.md).
-          - Provision [Azure AD applications](troubleshooting.md#bkmk_AzureADApps) on your Azure AD.
+          - Provision [Microsoft Entra applications](troubleshooting.md#bkmk_AzureADApps) on your Microsoft Entra ID.
           
           If devices are properly configured, and you're still not seeing data in your workspace, [contact Microsoft support](https://support.serviceshub.microsoft.com/supportforbusiness).
           
@@ -99,7 +99,7 @@ sections:
       - question: |
           Where is my organization's data stored?
         answer: |
-          Windows diagnostic data from your computers is encrypted, sent to, and processed at Microsoft-managed secure data centers located in the United States. Microsoft provides the analysis of the Desktop Analytics-related data to you through the Desktop Analytics solution in the Azure portal. Desktop Analytics is supported in most regions where [Log Analytics is available](https://azure.microsoft.com/global-infrastructure/services/?products=monitor&regions=all). If you select an international Azure region, your diagnostic data is still sent to and processed in Microsoft's secure data centers in the United States.
+          Windows diagnostic data from your computers is encrypted, sent to, and processed at Microsoft-managed secure data centers located in the United States. Microsoft provides the analysis of the Desktop Analytics-related data to you through the Desktop Analytics solution in the Microsoft Intune admin center. Desktop Analytics is supported in most regions where [Log Analytics is available](https://azure.microsoft.com/global-infrastructure/services/?products=monitor&regions=all). If you select an international Azure region, your diagnostic data is still sent to and processed in Microsoft's secure data centers in the United States.
 
   - name: Existing Windows Analytics customers
     questions:
@@ -118,7 +118,7 @@ sections:
 
           - Support for scenarios that don't require Configuration Manager. For example, [Intune support](#can-i-use-cloud-enabled-analytics-with-intune-managed-devices-).
           - Licensing prerequisite of any valid Windows license versus E3, E5
-          - Support for multiple workspaces per Azure AD tenant
+          - Support for multiple workspaces per Microsoft Entra tenant
           - Ability to run custom queries and export raw solution data
           - Data model documentation for custom reports
 
@@ -137,7 +137,7 @@ sections:
           - Windows Defender status
 
           > [!Note]
-          > All existing Update Compliance features, including those not available in Desktop Analytics, remain available in the [Update Compliance](/windows/deployment/update/update-compliance-get-started) solution in the Azure portal.
+          > All existing Update Compliance features, including those not available in Desktop Analytics, remain available in the [Update Compliance](/windows/deployment/update/update-compliance-get-started) solution in the Microsoft Intune admin center.
 
           **Device Health**
 
@@ -170,8 +170,7 @@ sections:
       - question: |
           How can I provide feedback about Desktop Analytics?
         answer: |
-          To share your feedback about Desktop Analytics, select the **Send a Smile** icon at the top of the portal. Include a screenshot with your submission to help Microsoft better understand your feedback. You can also submit product suggestions and upvote other ideas on [UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas?category_id=366805).
+          To share your feedback about Desktop Analytics, select the **Send a Smile** icon at the top of the portal. Include a screenshot with your submission to help Microsoft better understand your feedback.
           
-          > [!Note]
-          > Never share private information via Send a Smile or UserVoice. Such private information includes your Tenant Id or Commercial Id. Microsoft doesn't provide support via the Send a Smile or UserVoice channels. To get help with your Desktop Analytics workspace, select the **Help and Support** link in the navigation menu to open a support ticket.
-          
+          > [!NOTE]
+          > Never share private information via Send a Smile. Such private information includes your Tenant Id or Commercial Id. Microsoft doesn't provide support via these feedback channels. To get help with your Desktop Analytics workspace, select the **Help and Support** link in the navigation menu to open a support ticket.

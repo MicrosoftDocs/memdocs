@@ -4,26 +4,28 @@
 title: Configure endpoint protection on macOS devices with Microsoft Intune | Microsoft Docs
 description: Use Intune to configure macOS devices use the built-in firewall to allow or block specific apps or to use stealth mode, to use Gatekeeper to determine where apps install, and to use FileVault disk encryption.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 08/15/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
 #audience:
 
+ms.reviewer: mattcall
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
+- endpoint-protection
 ---
 
 # macOS endpoint protection settings in Intune
@@ -33,61 +35,6 @@ This article shows you the endpoint protection settings that you can configure f
 ## Before you begin
 
 [Create a macOS endpoint protection profile](endpoint-protection-configure.md).
-
-## Firewall
-
-Use the firewall to control connections per-application, rather than per-port. Using per-application settings makes it easier to get the benefits of firewall protection. It also helps prevent undesirable apps from taking control of network ports that are open for legitimate apps.
-
-- **Enable Firewall**
-
-  Turn use of Firewall on macOS and then configure how incoming connections are handled in your environment.
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-- **Block all incoming connections**
-
-  Block all incoming connections except the connections required for basic Internet services, such as DHCP, Bonjour, and IPSec. This feature also blocks all sharing services, such as File Sharing and Screen Sharing. If you're using sharing services, then keep this setting as *Not configured*.
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-  When you set *Block all incoming connections* to *Not configured*, you can then configure which apps can or can't receive incoming connections.
-
-  **Apps allowed**: Configure a list of apps that are allowed to receive incoming connections.
-
-  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
-  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
-
-  **Apps blocked**: Configure a list of apps that have incoming connections blocked.
-
-  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
-  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
-
-- **Enable stealth mode**
-
-  To prevent the computer from responding to probing requests, enable stealth mode. The device continues to answer incoming requests for authorized apps. Unexpected requests, such as ICMP (ping), are ignored.
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-## Gatekeeper
-
-- **Allow apps downloaded from these locations**
-
-  Limit the apps a device can launch, depending on where the apps were downloaded from. The intent is to protect devices from malware, and allow apps from only the sources you trust.
-
-  - **Not configured** (*default*)
-  - **Mac App Store**
-  - **Mac App Store and identified developers**
-  - **Anywhere**
-
-- **Do not allow user to override Gatekeeper**
-
-  Prevents users from overriding the Gatekeeper setting, and prevents users from Control clicking to install an app. When enabled, users can Control-click any app, and install it.
-
-  - **Not configured** (*default*) - Users can Control-click to install apps.
-  - **Yes** - Prevents users from using Control-click to install apps.
 
 ## FileVault
 
@@ -103,15 +50,11 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
   - **Not configured** (*default*)
   - **Yes**
 
-  When *Enable FileVault* is set to *Yes*, you can configure the following settings:
-
-  - **Recovery key type**
-
-    *Personal key* recovery keys are created for devices. Configure the following settings for the personal key.
+  When *Enable FileVault* is set to *Yes*, a personal recovery key is generated for the device during encryption, and the following settings apply to that key:
 
   - **Escrow location description of personal recovery key**
 
-    Specify a short message to the user that explains how and where they can retrieve their personal recovery key. This text is inserted into the message the user sees on their sign in screen when prompted to enter their personal recovery key if a password is forgotten.
+    Specify a short message to the user that explains how and where they can retrieve their personal recovery key. This text is inserted into the message the user sees on their sign-in screen when prompted to enter their personal recovery key if a password is forgotten.
 
   - **Personal recovery key rotation**
 
@@ -147,11 +90,81 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
     - **0** - Require devices to encrypt the next time a user signs in to the device.
     - **1** to **10** - Allow a user to ignore the prompt from 1 to 10 times before requiring encryption on the device.
     - **No limit, always prompt** - The user is prompted to enable FileVault but encryption is never required.
+    - **Disable** - Disables the feature.
 
     The default for this setting depends on the configuration of *Disable prompt at sign out*. When *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Yes**, this setting defaults to **1** and a value of **Not configured** isn't an option.
+
+## Firewall
+
+Use the firewall to control connections per-application, rather than per-port. Using per-application settings makes it easier to get the benefits of firewall protection. It also helps prevent undesirable apps from taking control of network ports that are open for legitimate apps.
+
+- **Enable Firewall**
+
+  Turn use of Firewall on macOS and then configure how incoming connections are handled in your environment.
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+- **Block all incoming connections**
+
+  Block all incoming connections except the connections required for basic Internet services, such as DHCP, Bonjour, and IPSec. This feature also blocks all sharing services, such as File Sharing and Screen Sharing. If you're using sharing services, then keep this setting as *Not configured*.
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+  When you set *Block all incoming connections* to *Not configured*, you can then configure which apps can or can't receive incoming connections.
+
+  **Apps allowed**: Configure a list of apps that are allowed to receive incoming connections.
+
+  - **Add apps by bundle ID**: Enter the *bundle ID* of the app.
+
+    To get the app bundle ID:
+
+    - Use the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`.
+    - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+
+  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+
+  **Apps blocked**: Configure a list of apps that have incoming connections blocked.
+
+  - **Add apps by bundle ID**: Enter the *bundle ID* of the app.
+
+    To get the app bundle ID:
+
+    - Use the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`.
+    - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+
+  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+
+- **Enable stealth mode**
+
+  To prevent the computer from responding to probing requests, enable stealth mode. The device continues to answer incoming requests for authorized apps. Unexpected requests, such as ICMP (ping), are ignored.
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+## Gatekeeper
+
+- **Allow apps downloaded from these locations**
+
+  Limit the apps a device can launch, depending on where the apps were downloaded from. The intent is to protect devices from malware, and allow apps from only the sources you trust.
+
+  - **Not configured** (*default*)
+  - **Mac App Store**
+  - **Mac App Store and identified developers**
+  - **Anywhere**
+
+- **Do not allow user to override Gatekeeper**
+
+  Prevents users from overriding the Gatekeeper setting, and prevents users from Control-clicking to install an app. When enabled, users can't Control-click any app to install it.
+
+  - **Not configured** (*default*) - Users can Control-click to install apps.
+  - **Yes** - Prevents users from using Control-click to install apps.
 
 ## Next steps
 
 [Assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md).
 
-You can also configure endpoint protection on [Windows 10 and newer devices](endpoint-protection-windows-10.md).
+You can also configure endpoint protection on [Windows 10 and Windows 11 devices](endpoint-protection-windows-10.md).

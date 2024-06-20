@@ -1,93 +1,128 @@
 ---
 # required metadata
 
-title: Manage devices with Microsoft Intune - Azure | Microsoft Docs
-description: Review the devices you manage with Microsoft Intune, including exporting a devices list into csv format, view your Azure Active Directory-joined devices, review a change log of actions on the device, use TeamViewer Connector to allow IT admins remotely troubleshoot Android devices, and view all the actions you can run on your devices.
+title: Run remote actions on devices with Microsoft Intune
+description: Use Microsoft Intune to run remote actions on Android, iOS/iPadOS, macOS, and Windows devices. You can reset the password, lock the device, wipe or reset the OS, scan for viruses, and more. Use this feature to remotely manage devices and have help desk run common tasks.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/17/2020
+ms.date: 03/12/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-#ms.reviewer: dougeby
+ms.reviewer: ankitanangia
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
-# What is Microsoft Intune device management?
+# Use remote actions to manage devices using Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+In Microsoft Intune, you can remotely run and execute commands on devices.
 
-As an IT admin, you must ensure that managed devices are providing the resources that your users need to do their work, while protecting that data from risk.
+:::image type="content" source="./media/device-management/remote-actions-steps.png" alt-text="Diagram that shows how remote actions and commands work in Microsoft Intune." lightbox="./media/device-management/remote-actions-steps.png":::
 
-The **Devices** workload gives you insights into the devices you manage, and lets you activate remote tasks on those devices.
+For example:
 
-Not all device actions are available for every platform or device. Available actions are shown on the device's overview page (**Devices** > **All devices** > choose a device).
+- If a device is lost or stolen, you can reset or wipe the device.
+- Your help desk can reset a password, lock the device, or collect diagnostic data.
+- You can synchronize devices that haven't checked-in to Intune for a while.
+- Do a quick scan or full scan of a device using Microsoft Defender Antivirus.
+- And more
+
+Use remote device actions to help you manage your devices remotely, without having to physically touch the device. This feature is available for devices that are enrolled in Intune and devices that are enrolled in other mobile device management (MDM) services.
+
+This feature applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Windows
+
+This article shows you how to see the available remote actions, and lists some of the common remote actions you can run on your devices.
+
+## Prerequisites
+
+- To run remote actions, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the **Help Desk Operator** role. For more information on the different roles, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+
+- To receive the remote action, the device must be connected to the internet and powered on.
 
 ## Get to your devices
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices**. This view shows detailed information about the individual devices, and what you can do with them, including:
 
-   - **Overview**: The Overview page shows a visual snapshot of the enrolled devices, how many devices are using the different platforms, and more.
-   - **All devices**: The All devices page shows a list of the enrolled devices you manage.
+    - **Overview**: Shows a visual snapshot of the enrolled devices, how many devices are using the different platforms, and more.
+    - **All devices**: Shows a list of the enrolled devices you manage.
 
-     Use the **Export** feature to create a .zip list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
+      Use the **Export** feature to create a `.zip`` list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
 
-     Select any device to [view additional details about that device](device-inventory.md), like hardware details, installed apps, policies, which remote actions are available for the device, and more.
+      Select any device to [view more details about that device](device-inventory.md), like hardware details, installed apps, policies, which remote actions are available for the device, and more.
 
-   - **By platform**: The items under By platform let you view lists of devices by the specific platform.
-   - **Device enrollment**: This option takes you to the enrollment page.
-   - **Policy**: These options let you set various policies for your organization's devices.
-   - **Other**:
-       - **Device cleanup rules**: This option lets you automatically remove inactive devices from Intune. For more information, see [Automatically delete devices with cleanup rules](devices-wipe.md#delete-devices-from-the-intune-portal).
-       - **Device categories**: This option lets you create [device categories](../enrollment/device-group-mapping.md).
-   - **Help and Support** provides a shortcut on troubleshooting tips, requesting support, or checking the status of Intune.
+    - **By platform**: View lists of devices by the specific platform.
+    - **Enrollment**: Opens the enrollment page and lists the different enrollment options for each platform.
+    - **Configuration**, **Compliance**, **Conditional access**: These options let you create new policies and view & update existing policies.
+    - **Device cleanup rules**: Automatically removes inactive devices from Intune. For more information, go to [Automatically delete devices with cleanup rules](devices-wipe.md#delete-devices-from-the-intune-admin-center).
+    - **Device categories**: Create [device categories](../enrollment/device-group-mapping.md) to help organize devices and build dynamic device groups.
+    - **Help and Support** provides a shortcut on troubleshooting tips, requesting support, or checking the status of Intune.
 
-## Available device actions
+## Available remote actions
 
-The available actions depend on the device platform and the device configuration. The following list includes some common device actions. For a complete list of what can be done on your devices, select **All devices**, and select a specific device. The available actions are shown at the top.
+The available device actions depend on the device platform and the device configuration. Not all actions are available for all devices.
 
-- [View device inventory](device-inventory.md): To see a full inventory of all the devices, select **Devices** > **All devices**.
-- To run - [bulk device actions](bulk-device-actions.md) on multiple devices at the same time, select **Devices** > **All devices** > **Bulk Device Actions**.
-- To run remote actions on a single device, select the device from the **All devices** page and then select the specific remote action at the top of the individual device page. Not all actions are available for all devices.
-  - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows Only)
-  - [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
-  - [Collect diagnostics](collect-diagnostics.md) (Windows 10 only)
-  - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
-  - [Disable Activation Lock](device-activation-lock-disable.md) (iOS only)
-  - [Erase](https://docs.microsoft.com/mem/intune/remote-actions/device-erase) (macOS Only)
-  - [Fresh Start](device-fresh-start.md) (Windows only)
-  - [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 only)
-  - [Locate device](device-locate.md) (iOS only)
-  - [Lost mode](device-lost-mode.md) (iOS only)
-  - [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 only)
-  - [Remote control for Android](teamviewer-support.md)
-  - [Remote lock](device-remote-lock.md)
-  - [Rename device](device-rename.md)
-  - [Reset passcode](device-passcode-reset.md)
-  - [Restart](device-restart.md) (Windows only)
-  - [Retire](devices-wipe.md#retire)
-  - [Update Windows Defender Security Intelligence](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
-  - [Windows 10 PIN reset](device-windows-pin-reset.md)
-  - [Wipe](devices-wipe.md#wipe)
-  - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
-  - [Synchronize device](device-sync.md)
+For a complete list of what can be done on your devices, in the Intune admin center, select **Devices** > **All devices**, and select a specific device. The available device actions are shown at the top.
 
-## Next steps
+The following list includes some common device actions:
 
-[Remotely run device actions with Intune](./index.yml)
+| Action | Description | Supported OS |
+|--------|-------------|--------------|
+| [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) | Restores a device to its original settings and removes personal files, apps, and settings. | Windows |
+| [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) | Changes the BitLocker recovery key for a device and uploads the new key to Intune. | Windows |
+| [Collect diagnostics](collect-diagnostics.md)  | Collects diagnostic logs from a device and uploads the logs to Intune. | Windows 10 |
+| [Delete](devices-wipe.md#delete-devices-from-the-intune-admin-center) | Removes a device from Intune management, any company data is removed, and the device is retired. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
+| [Disable Activation Lock](device-activation-lock-disable.md) | Removes the Activation Lock from a device that is enrolled with a device enrollment manager (DEM) account. | - iOS/iPadOS <br/>- macOS|
+| [Fresh Start](device-fresh-start.md) | Reinstalls the latest version of Windows on a device and removes apps that the manufacturer installed. | Windows |
+| [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) | Initiates a full scan of the device by Microsoft Defender Antivirus. | Windows |
+| [Locate device](device-locate.md) | Shows the approximate location of a device on a map. | - Android <br/>- iOS/iPadOS <br/>- Windows |
+| [Lost mode](device-lost-mode.md) | Locks a device with a custom message and disables sound and vibration. | iOS/iPadOS |
+| [Pause Config Refresh](pause-config-refresh.md)|Pause ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes.| (Windows 11 only)|
+| [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) | Initiates a quick scan of the device by Microsoft Defender Antivirus. | Windows |
+| [Remote control with Team Viewer](teamviewer-support.md) | Allows you to remotely control a device using TeamViewer. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
+| [Remote lock](device-remote-lock.md) | Locks a device and resets its password. | - Android <br/>- iOS/iPadOS <br/>- macOS  |
+| [Rename device](device-rename.md) | Changes the device name in Intune. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
+| [Reset passcode](device-passcode-reset.md) | Resets the device passcode. | - Android <br/>- iOS/iPadOS |
+| [Restart](device-restart.md) | Restarts a device. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
+| [Retire](devices-wipe.md#retire) | Removes company data and settings from a device, and leaves personal data intact. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
+| [Rotate Local admin password](../protect/windows-laps-policy.md#manually-rotate-passwords) | Changes the local administrator password for a device and stores the password in Intune. | Windows |
+| [Send custom notification](custom-notifications.md) | Sends a custom notification message to a device that can be viewed in the Company Portal app. | - Android <br/>- iOS/iPadOS |
+| [Synchronize device](device-sync.md) | Syncs a device with Intune to apply the latest policies and configurations. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
+| [Update cellular data plan](update-cellular-data-plan.md) | Updates the cellular data plan settings for a device that uses an eSIM profile. | iOS/iPadOS |
+| [Update Windows Defender Security Intelligence](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus) | Updates the security intelligence files for Microsoft Defender Antivirus. | Windows |
+| [Windows 10 PIN reset](device-windows-pin-reset.md) | Resets the PIN of a device that uses Microsoft Entra authentication. | Windows 10 Mobile |
+| [Wipe](devices-wipe.md#wipe) | This action restores a device to its factory settings and removes all data and settings. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
+
+> [!NOTE]
+> The **Retire**, **Wipe**, and **Delete** actions take precendence over all other actions. A device with multiple pending actions only carry out a Retire, Wipe, or Delete. All other pending actions are ignored.
+
+You can also:
+
+- See a [full device inventory](device-inventory.md) of all the devices (**Devices** > **All devices**).
+- Run [bulk device actions](bulk-device-actions.md) on multiple devices at the same time (**Devices** > **All devices** > **Bulk Device Actions**).
+
+## Resources
+
+- [Bulk device actions](bulk-device-actions.md)
+- [Troubleshoot device actions](/troubleshoot/mem/intune/device-management/troubleshoot-device-actions)

@@ -3,13 +3,15 @@ title: Asset Intelligence security & privacy
 titleSuffix: Configuration Manager
 description: Security guidance and privacy information for Asset Intelligence in Configuration Manager.
 ms.date: 05/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Security and privacy for Asset Intelligence in Configuration Manager

@@ -1,16 +1,18 @@
 ---
-title: "SMS_AppDeploymentStatus Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_AppDeploymentStatus Class
+titleSuffix: Configuration Manager
+description: The SMS_AppDeploymentStatus Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents application deployment status.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 20668ec6-c221-4c44-8119-19565706d544
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_AppDeploymentStatus Server WMI Class
 The `SMS_AppDeploymentStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application deployment status.  

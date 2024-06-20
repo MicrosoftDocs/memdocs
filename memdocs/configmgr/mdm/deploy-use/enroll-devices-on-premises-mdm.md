@@ -3,13 +3,15 @@ title: Enroll devices for on-premises MDM
 titleSuffix: Configuration Manager
 description: Learn about methods to enroll devices for on-premises mobile device management (MDM) in Configuration Manager.
 ms.date: 01/13/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-mdm
+ms.subservice: mdm
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: b58472e3-31a5-4305-8eb6-2522befebe02
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Enroll devices for on-premises MDM in Configuration Manager

@@ -3,13 +3,15 @@ title: Custom database file locations
 titleSuffix: Configuration Manager
 description: Learn how to specify custom locations for SQL Server database files.
 ms.date: 10/08/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Custom locations for Configuration Manager site database files

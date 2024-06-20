@@ -3,14 +3,15 @@ title: Assets in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about devices, drivers, and apps in Desktop Analytics.
 ms.date: 12/15/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
+ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # Assets in Desktop Analytics

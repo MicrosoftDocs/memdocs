@@ -1,16 +1,18 @@
 ---
+description: "Learn how to use ICcmAlternateDownloadProvider::ModifyJobTimeout method to instruct the provider to modify the timeout for a given job."
 title: "ICcmAlternateDownloadProvider : ModifyJobTimeout"
-titleSuffix: "Configuration Manager"
-ms.date: "07/25/2017"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+titleSuffix: Configuration Manager
+ms.date: 07/25/2017
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: dec5c5c8-c0b3-400c-835e-08ade5256a30
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICcmAlternateDownloadProvider : ModifyJobTimeout Method
 The **ICcmAlternateDownloadProvider::ModifyJobTimeout** method, in Configuration Manager, instructs the provider to modify the timeout for a given job.  
@@ -46,7 +48,7 @@ HRESULT ModifyJobTimeout(
 >  An error should be returned if the job is not found or if modification of the timeout failed. If the new timeout results in the job immediately timing out, the call should complete and then the provider should notify Content Transfer Manager of the error using SendNotifyErrorToCTM.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully. All other return values indicate failure.  

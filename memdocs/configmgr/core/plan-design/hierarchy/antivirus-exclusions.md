@@ -1,18 +1,18 @@
 ---
 title: Antivirus exclusions
 titleSuffix: Configuration Manager
-description: Learn about recommended antivirus exclusions for use when troubleshooting possible issues. 
+description: Learn about recommended antivirus exclusions for use when troubleshooting possible issues.
 ms.date: 10/31/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: deb470e3-6f6b-4ccf-b3d8-1598d79d3490
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Recommended antivirus exclusions for Configuration Manager

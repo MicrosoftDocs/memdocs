@@ -3,15 +3,15 @@ title: Support for Active Directory domains
 titleSuffix: Configuration Manager
 description: Learn about the requirements for a Configuration Manager site system in an Active Directory domain.
 ms.date: 10/22/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Support for Active Directory domains in Configuration Manager

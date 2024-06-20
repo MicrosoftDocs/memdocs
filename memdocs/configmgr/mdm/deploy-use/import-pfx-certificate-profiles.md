@@ -3,13 +3,15 @@ title: Import PFX certificate profiles
 titleSuffix: Configuration Manager
 description: Learn how to import PFX files in Configuration Manager to generate user-specific certificates that support encrypted data exchange.
 ms.date: 11/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
-ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Import PFX certificate profiles

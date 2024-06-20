@@ -7,12 +7,11 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/17/2021
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
 
 # optional metadata
@@ -23,8 +22,9 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Reference for application entities
@@ -106,23 +106,6 @@ The **vppProgramType** entity lists possible VPP program types for an app.
 | 00000000-0000-0000-0000-000000000000 | Not Yet Available | Default value, No VPP. |
 | B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple | Apple's VPP program. |
 
-
-
-## applicationInventories
-
-The **applicationInventory** entity lists the applications found on the device at the time of inventory collection.
-
-> [!NOTE]
-> This entity is in the process of being deprecated.
-
-| Property  | Description |
-|---------|------------|
-| deviceKey | This is a reference to the Device table which contains the Intune device ID. |
-| dateKey | Reference to date table indicating the day of inventory. |
-| applicationName | The application name. |
-| applicationVersion | Version of the application. |
-| bundleSize | The size of the app in bytes. |
-
 ## mobileAppInstallStates
 
 The **mobileAppInstallState** entity represents the install state for a mobile application after it has been assigned to a group containing devices, users or both.
@@ -132,6 +115,3 @@ The **mobileAppInstallState** entity represents the install state for a mobile a
 | appInstallStateKey | The unique ID of the app install state for your account. |
 | appInstallState | Enum value of the app install state. |
 | appInstallStateName | Name of the app install state. |
-
-
-

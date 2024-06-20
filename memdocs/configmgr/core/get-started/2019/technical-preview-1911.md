@@ -3,14 +3,16 @@ title: Technical preview 1911
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1911.
 ms.date: 11/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 2dbab3f8-9c67-47b4-a904-7632b0da090d
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Features in Configuration Manager technical preview version 1911
@@ -25,7 +27,7 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1911/1234567.md)] -->
 
-[!INCLUDE [Microsoft Endpoint Configuration Manager](includes/1911/4960084.md)]
+[!INCLUDE [Microsoft Configuration Manager](includes/1911/4960084.md)]
 [!INCLUDE [Microsoft Connected Cache support for Intune Win32 apps](includes/1911/5032900.md)]
 
 <!--

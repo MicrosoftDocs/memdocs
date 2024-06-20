@@ -1,17 +1,19 @@
-﻿---
+---
 title: Query views
 titleSuffix: Configuration Manager
 description: Information about all the queries in the Configuration Manager hierarchy.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
 ms.assetid: 87b3f582-449b-4659-be0b-265fecdda6dd
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
 ---
 
 # Query views in Configuration Manager

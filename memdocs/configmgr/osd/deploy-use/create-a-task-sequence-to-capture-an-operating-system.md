@@ -3,20 +3,25 @@ title: Create a task sequence to capture an OS
 titleSuffix: Configuration Manager
 description: A build-and-capture task sequence builds a reference computer that can include specific drivers and software updates along with the OS.
 ms.date: 11/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
-ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Create a task sequence to capture an OS
 
 *Applies to: Configuration Manager (current branch)*
 
-When you use a task sequence to deploy an OS to a computer in Configuration Manager, the computer installs the OS image that you specify in the task sequence. You can customize the OS image so it includes specific drivers, applications, and software updates. First use a build and capture task sequence to build a reference computer. Then capture the OS image from that reference computer. If you already have a reference computer available to capture, create a custom task sequence to capture the OS.
+When you use a task sequence to deploy an OS to a computer in Configuration Manager, the computer installs the OS image that you specify in the task sequence. You can customize the OS image so it includes specific applications and software updates. First use a build and capture task sequence to build a reference computer. Then capture the OS image from that reference computer. If you already have a reference computer available to capture, create a custom task sequence to capture the OS.
+
+> [!NOTE]  
+> To avoid potential hardware driver issues when deploying custom reference images to different model devices, it is recommended to create custom reference images using virtual machines (VMs). This minimizes the amount of potentially conflicting drivers that are included as part of the custom reference image. Additionally it is recommended not to add any drivers to the custom reference image via either the **Auto Apply Drivers** task or the **Apply Driver Package** task.
 
 ## <a name="BKMK_BuildCaptureTS"></a> About the build and capture task sequence
 

@@ -1,16 +1,18 @@
 ---
-title: "CCM_Service_SystemTaskConfiguration Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: CCM_Service_SystemTaskConfiguration Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the CCM_Service_SystemTaskConfiguration class is a client WMI class that supports system task configuration for the CCMEXEC service.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d7864ef9-16f6-4c98-afe6-7d4a21275263
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Service_SystemTaskConfiguration Client WMI Class
 > [!IMPORTANT]

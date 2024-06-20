@@ -3,15 +3,17 @@ title: Additional privacy information
 titleSuffix: Configuration Manager
 description: Learn about how Microsoft collects and uses data from Configuration Manager.
 ms.date: 09/04/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: 
+    - tier3
+    - essentials-privacy
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Additional information about privacy for Configuration Manager
@@ -42,7 +44,7 @@ For more information about usage data levels and settings, see [Diagnostics and 
 
 ## Log Analytics Connector
 
-The Log Analytics Connector syncs data, such as collections, from Configuration Manager to the Azure cloud service. The Azure subscription ID and secret key are stored in the Configuration Manager database when an admin configures the feature. Both the Azure Active Directory client secret and the Azure workspace shared key are stored in the on-premises Configuration Manager database. All communications between Configuration Manager and Azure use HTTPS. No additional information about the collections is provided to Microsoft outside of randomized diagnostics and usage data. 
+The Log Analytics Connector syncs data, such as collections, from Configuration Manager to the Azure cloud service. The Azure subscription ID and secret key are stored in the Configuration Manager database when an admin configures the feature. Both the Microsoft Entra client secret and the Azure workspace shared key are stored in the on-premises Configuration Manager database. All communications between Configuration Manager and Azure use HTTPS. No additional information about the collections is provided to Microsoft outside of randomized diagnostics and usage data. 
 
 For more information about the information that Log Analytics collects, see [Log analytics data security](/azure/log-analytics/log-analytics-data-security).
 
@@ -64,7 +66,7 @@ Asset Intelligence isn't enabled by default in Configuration Manager. Uploading 
 
 Microsoft Cloud Protection Service was formerly known as Microsoft Active Protection Service or MAPS.
 
-The applicable products are System Center Endpoint Protection and the Endpoint Protection feature of Configuration Manager (to manage System Center Endpoint Protection and Windows Defender for Windows 10).
+The applicable products are System Center Endpoint Protection and the Endpoint Protection feature of Configuration Manager (to manage System Center Endpoint Protection and Windows Defender for Windows 10 or later).
 
 The Microsoft Cloud Protection Service antimalware community is a voluntary worldwide online community that includes System Center Endpoint Protection users. When you join Microsoft Cloud Protection Service, System Center Endpoint Protection automatically sends information to Microsoft. Microsoft uses the information to determine software to investigate for potential threats and to help improve the effectiveness of System Center Endpoint Protection. This community helps stop the spread of new malicious software infections. If a Microsoft Cloud Protection Service report includes details about malware or potentially unwanted software that the Endpoint Protection client may be able to remove, Microsoft Cloud Protection Service downloads the latest signature to address it. Microsoft Cloud Protection Service can also find "false positives" and fix them. (False positives are where something originally identified as malware turns out not to be.) 
 

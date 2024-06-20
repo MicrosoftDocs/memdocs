@@ -3,13 +3,15 @@ title: Create a task sequence to install an OS
 titleSuffix: Configuration Manager
 description: Use task sequences in Configuration Manager to automatically install an OS image and other content on a destination computer.
 ms.date: 07/26/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
-ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Create a task sequence to install an OS

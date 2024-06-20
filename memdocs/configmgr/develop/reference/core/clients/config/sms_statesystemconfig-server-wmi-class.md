@@ -1,16 +1,18 @@
 ---
-title: "SMS_StateSystemConfig Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_StateSystemConfig Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the SMS_StateSystemConfig WMI class is an SMS Provider server class that specifies how client computers report state messages.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: bbaeaac6-7d53-4214-b616-c10720cdd6bb
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_StateSystemConfig Server WMI Class
 The `SMS_StateSystemConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies how client computers report state messages.  

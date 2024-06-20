@@ -3,14 +3,15 @@ title: Compatibility assessment
 titleSuffix: Configuration Manager
 description: Learn about compatibility assessment for Windows apps and drivers in Desktop Analytics.
 ms.date: 05/11/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
+ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # Compatibility assessment in Desktop Analytics

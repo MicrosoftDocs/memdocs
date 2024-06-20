@@ -3,13 +3,15 @@ title: Customize the self-service portal
 titleSuffix: Configuration Manager
 description: Add custom organization-specific information to the BitLocker management self-service portal
 ms.date: 11/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: how-to
-ms.assetid: 6bc26e36-9914-4606-ae8d-f7b23218942f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Customize the self-service portal

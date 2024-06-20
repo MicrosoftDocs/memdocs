@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-title: Configure endpoint protection settings in Microsoft Intune - Azure | Microsoft Docs
-description: Create endpoint protection settings when you create a macOS or Windows 10 device profile in Microsoft Intune.
+title: Configure Endpoint protection settings in Microsoft Intune
+description: Create Endpoint protection settings when you create a macOS or Windows 10 device profile in Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 11/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -23,31 +21,34 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
-mr.reviewer: karthib
+ms.collection:
+- tier2
+- M365-identity-device-management
+- endpoint-protection
+ms.reviewer: mattcall
 ---
 
-# Add endpoint protection settings in Intune
+# Add Endpoint protection settings in Intune
 
-With Intune, you can use device configuration profiles to manage common endpoint protection security features on devices, including:
+With Intune, you can use device configuration profiles to manage common Endpoint protection security features on devices, including:
 
 - Firewall
 - BitLocker
 - Allowing and blocking apps
 - Microsoft Defender and encryption
 
-For example, you can create an endpoint protection profile that only allows macOS users to install apps from the Mac App Store. Or, enable Windows SmartScreen when running apps on Windows 10 devices.
+For example, you can create an Endpoint protection profile that only allows macOS users to install apps from the Mac App Store. Or, enable Windows SmartScreen when running apps on Windows 10/11 devices.
 
-Before you create a profile, review the following articles that detail the endpoint protection settings Intune can manage for each supported platform:
+Before you create a profile, review the following articles that detail the Endpoint protection settings Intune can manage for each supported platform:
 
 - [macOS settings](endpoint-protection-macos.md)
-- [Windows 10 settings](endpoint-protection-windows-10.md)
+- [Windows settings](endpoint-protection-windows-10.md)
 
-## Create a device profile containing endpoint protection settings
+## Create a device profile containing Endpoint protection settings
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
 
@@ -70,7 +71,7 @@ Before you create a profile, review the following articles that detail the endpo
 6. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
    - [macOS settings](endpoint-protection-macos.md)
-   - [Windows 10 settings](endpoint-protection-windows-10.md)
+   - [Windows settings](endpoint-protection-windows-10.md)
 
 7. Select **Next**.
 
@@ -84,9 +85,9 @@ Before you create a profile, review the following articles that detail the endpo
 
 10. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
-## Add custom Firewall rules for Windows 10 devices
+## Add custom Firewall rules for Windows 10/11 devices
 
-When you configure the Microsoft Defender Firewall as part of a profile that includes endpoint protection rules for Windows 10, you can configure custom rules for Firewalls. Custom rules let you expand on the pre-defined set of Firewall rules supported for Windows 10.
+When you configure the Windows Firewall as part of a profile that includes endpoint protection rules for Windows 10/11, you can configure custom rules for Firewalls. Custom rules let you expand on the pre-defined set of Firewall rules supported for Windows devices.
 
 When you plan for profiles with custom Firewall rules, consider the following information, which could affect how you choose to group firewall rules in your profiles:
 
@@ -96,13 +97,13 @@ When you plan for profiles with custom Firewall rules, consider the following in
 
 - When a rule fails to apply, all rules in the profile are reported as failed. Intune cannot identify which individual rule failed.  
 
-The Firewall rules that Intune can manage are detailed in the Windows [Firewall configuration service provider](/windows/client-management/mdm/firewall-csp) (CSP). To review the list of custom firewall settings for Windows 10 devices that Intune supports, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
+The Firewall rules that Intune can manage are detailed in the Windows [Firewall configuration service provider](/windows/client-management/mdm/firewall-csp) (CSP). To review the list of custom firewall settings for Windows devices that Intune supports, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
 
 ### To add custom firewall rules to an Endpoint protection profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create Profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
 
@@ -119,11 +120,11 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
    Select **Next**.
 
-6. In **Configuration settings**, expand **Microsoft Defender Firewall**. Next, for *Firewall rules*, select **Add** to open the **Create Rule** page.
+6. In **Configuration settings**, expand **Windows Firewall**. Next, for *Firewall rules*, select **Add** to open the **Create Rule** page.
 
 7. Specify settings for the Firewall rule, and then select **Save** to save it. To review the available custom firewall rule options in documentation, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
 
-    1. The rule appears on the *Microsoft Defender Firewall* page in the list of rules.
+    1. The rule appears on the *Windows Firewall* page in the list of rules.
     2. To modify a rule, select the rule from the list, to open the **Edit Rule** page.
     3. To delete a rule from a profile, select the ellipsis **(…)** for the rule, and then select **Delete**.
     4. To change the order in which rules display, select the *up arrow, down arrow* icon at the top of the rule list.

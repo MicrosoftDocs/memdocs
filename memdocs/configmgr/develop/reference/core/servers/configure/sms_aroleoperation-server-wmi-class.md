@@ -1,19 +1,21 @@
 ---
-title: "SMS_ARoleOperation Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_ARoleOperation Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that SMS_Role embeds, and this class describes the operation granted to this role.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0631a5e5-4f9c-4e14-b662-684439588b55
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ARoleOperation Server WMI Class
-The `SMS_ARoleOperation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is embedded by SMS_Role and describes the operation that is granted to this role.  
+The `SMS_ARoleOperation` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that the SMS_Role embeds, and this class describes the operation that is granted to this role.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -28,7 +30,7 @@ Class SMS_ARoleOperation : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_ARoleOperation` class does not define any methods.  
+ The `SMS_ARoleOperation` class doesn't define any methods.  
 
 ## Properties  
  `GrantedOperations`  

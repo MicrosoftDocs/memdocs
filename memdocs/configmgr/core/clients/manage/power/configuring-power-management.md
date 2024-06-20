@@ -3,15 +3,15 @@ title: Configure power management
 titleSuffix: Configuration Manager
 description: Set up power management in Configuration Manager.
 ms.date: 09/10/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
-
-
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configure power management in Configuration Manager
@@ -36,7 +36,7 @@ If you want to apply these settings to only some computers, create a *custom dev
 
 1. Configure the additional client settings that you require. For more information, see [About client settings - Power Management](../../deploy/about-client-settings.md#power-management).  
 
-Clients configure these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients](../manage-clients.md#BKMK_PolicyRetrieval).  
+Clients configure these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients](../manage-clients.md#start-policy-retrieval).  
 
 ## Exclude computers
 

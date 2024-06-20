@@ -1,3 +1,4 @@
+items:
 - name: Co-management documentation
   href: index.yml
 - name: Overview
@@ -18,7 +19,7 @@
       href: quickstart-remote-actions.md
     - name: Client health
       href: quickstart-client-health.md
-    - name: Hybrid Azure AD
+    - name: Hybrid Microsoft Entra ID
       href: quickstart-hybrid-aad.md
     - name: Windows Autopilot
       href: quickstart-autopilot.md
@@ -26,9 +27,9 @@
     items:
     - name: Paths to co-management
       href: quickstart-paths.md
-    - name: Set up hybrid Azure AD
+    - name: Set up hybrid Microsoft Entra ID
       href: quickstart-setup-hybrid-aad.md
-    - name: Upgrade to Windows 10
+    - name: Upgrade Windows 10
       href: quickstart-upgrade-win10.md
     - name: Get help from FastTrack
       href: quickstart-fasttrack.md
@@ -50,6 +51,8 @@
     href: how-to-enable.md
   - name: Prepare internet-based devices
     href: how-to-prepare-Win10.md
+  - name: Enroll with Autopilot
+    href: autopilot-enrollment.md
   - name: Switch workloads to Intune
     href: how-to-switch-workloads.md
   - name: Apps in Company Portal

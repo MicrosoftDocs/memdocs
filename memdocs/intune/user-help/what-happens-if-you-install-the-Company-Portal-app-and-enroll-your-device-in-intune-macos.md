@@ -2,7 +2,7 @@
 # required metadata
 
 title: Installing the Company Portal app for macOS | Microsoft Docs
-description:
+description: What happens if you install the Company Portal app and enroll your macOS device in Intune.
 keywords:
 author: lenewsad
 
@@ -10,10 +10,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 11/06/2017
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: c1601bb7-5397-44af-a2e2-9c370f23976f
 
 searchScope:
@@ -28,7 +26,8 @@ ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 

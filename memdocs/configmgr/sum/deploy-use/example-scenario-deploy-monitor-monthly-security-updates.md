@@ -4,14 +4,14 @@ titleSuffix: Configuration Manager
 description: How to use software updates in Configuration Manager to deploy and monitor monthly software updates.
 ms.date: 10/21/2019
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
-ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+ms.service: configuration-manager
+ms.subservice: software-updates
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Example scenario to deploy and monitor monthly software updates

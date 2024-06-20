@@ -1,17 +1,17 @@
 ---
-title: "Source hierarchy strategy"
-titleSuffix: "Configuration Manager"
-description: "Configure a source hierarchy and gather data from a source site before you configure a Configuration Manager migration job."
+title: Source hierarchy strategy
+titleSuffix: Configuration Manager
+description: Configure a source hierarchy and gather data from a source site before you configure a Configuration Manager migration job.
 ms.date: 01/3/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Plan a source hierarchy strategy in Configuration Manager
 

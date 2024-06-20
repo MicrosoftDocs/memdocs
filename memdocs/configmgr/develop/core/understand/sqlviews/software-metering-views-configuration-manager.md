@@ -1,17 +1,19 @@
-﻿---
+---
 title: Software metering views
 titleSuffix: Configuration Manager
 description: Information such as the software metering rules that are created in the Configuration Manager hierarchy.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
 ms.assetid: e88c5f27-7ce1-48b3-bf3d-e4e6f5100b19
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
 ---
 
 # Software metering views in Configuration Manager

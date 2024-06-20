@@ -1,17 +1,19 @@
-﻿---
+---
 title: How to modify reports
 titleSuffix: Configuration Manager
 description: Information about viewing the properties of, and modifying Configuration Manager reports.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 
 
 ms.assetid: 9e27d0a3-9b5a-410e-9d80-49eef493a1e2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
 ---
 
 # How to modify Configuration Manager reports
@@ -27,8 +29,8 @@ You can view general properties for a report in the Configuration Manager consol
 1. In the Configuration Manager console, select **Monitoring**.
 1. In the **Monitoring** workspace, expand **Reporting**, and then select **Reports**.
 1. From the list of reports, select the report that you want to view properties for and then, in the **Home** tab, in the **Properties** group, select **Properties**.
-1. In the *report name* **Properties** dialog box, you can view general information about the report, create and view report subscriptions and view security information about the report.
-1. Close the *report name* **Properties** dialog box.
+1. In the *report name*�**Properties** dialog box, you can view general information about the report, create and view report subscriptions and view security information about the report.
+1. Close the *report name*�**Properties** dialog box.
 
 ## How to modify a report
 

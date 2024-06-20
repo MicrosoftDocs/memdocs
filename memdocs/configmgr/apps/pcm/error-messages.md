@@ -3,13 +3,15 @@ title: Error messages
 titleSuffix: Configuration Manager
 description: Learn about the error messages from Package Conversion Manager.
 ms.date: 08/24/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0d3cf6e1-b295-4b05-821d-e9f57c74ca14
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Technical reference for Package Conversion Manager error messages

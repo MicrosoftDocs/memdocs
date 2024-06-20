@@ -3,15 +3,15 @@ title: Power Viewer Tool
 titleSuffix: Configuration Manager
 description: Use the Power Viewer Tool to view the status of the power management feature on a Configuration Manager client.
 ms.date: 07/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 8143e3bf-d6bd-4c69-aec1-e6989cf2ecd9
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Power Viewer Tool

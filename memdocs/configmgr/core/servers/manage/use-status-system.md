@@ -2,14 +2,16 @@
 title: The status system
 titleSuffix: Configuration Manager
 description: Use the status system to understand the state of your Configuration Manager environment.
-ms.date: 11/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 08/02/2021
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 88c38f81-da42-41d7-ad51-0e875ae40021
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Use the status system in Configuration Manager
@@ -118,6 +120,9 @@ For example, if a component generates 2000 informational status messages in the 
 ## Manage status filter rules
 
 With status filter rules, the site can take action when specific status message criteria occurs. There are several default status filter rules, and you can create custom rules.
+
+> [!TIP]
+> Starting in version 2107, you can enable the site to send notifications to an external system or application.<!--9504414--> This capability simplifies the process by using a web service-based method. You configure subscriptions to send these notifications. These notifications are in response to specific, defined events as they occur. For example, status message filter rules. For more information, see [External notifications](external-notifications.md).
 
 ### Modify a status filter rule
 

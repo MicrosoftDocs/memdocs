@@ -1,16 +1,16 @@
 ---
-title: "Get ready for deployment"
-titleSuffix: "Configuration Manager"
-description: "Find topics that will help you plan a Configuration Manager deployment."
+title: Get ready for deployment
+titleSuffix: Configuration Manager
+description: Find topics that will help you plan a Configuration Manager deployment.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 3e839a3e-e476-4ec2-bf29-21e78180441d
-author: mestew
-ms.author: mstewart
-
-
+author: Banreet
+ms.author: banreetkaur
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Get ready for Configuration Manager
 

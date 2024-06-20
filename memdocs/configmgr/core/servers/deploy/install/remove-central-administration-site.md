@@ -2,14 +2,16 @@
 title: Remove CAS
 titleSuffix: Configuration Manager
 description: Remove the central administration site (CAS) to simplify your Configuration Manager infrastructure to a single, standalone primary site.
-ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 04/08/2022
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Remove the central administration site
@@ -23,7 +25,7 @@ If the hierarchy consists of the central administration site (CAS) and a single 
 > [!NOTE]
 > This feature was first introduced in version 2002 as a [pre-release feature](../../manage/pre-release-features.md). Starting in version 2103, it's no longer a pre-release feature.
 >
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../manage/install-in-console-updates.md#bkmk_options).
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../manage/optional-features.md).
 
 ## Plan
 
@@ -41,16 +43,14 @@ If the hierarchy consists of the central administration site (CAS) and a single 
   - Endpoint Protection point
   - Reporting services point
   - Data warehouse service point
-  - Cloud management gateway (CMG)
-
-    > [!NOTE]
-    > If you enabled the CMG for content, plan to redistribute the content after you recreate the CMG on the primary site.<!-- 6608659 -->
 
 - Turn off distributed views
 
 - Configuration Manager automatically handles package source locations for built-in packages, like the Configuration Manager client. Review all other content source locations to make sure they aren't using a share on the CAS.
 
 - Stop any active migration jobs and remove all configurations for migration. For more information, see [Stop active migration from another hierarchy](prerequisites-for-installing-sites.md#stop-active-migration-from-another-hierarchy).
+
+- If you have any custom [status filter rules](../../manage/use-status-system.md#manage-status-filter-rules) or [alerts and subscriptions](../../manage/configure-alerts.md), recreate them on the child primary site. Starting in version 2107, also recreate any subscriptions for [external notifications](../../manage/external-notifications.md).
 
 - If you use automatic deployment rules for software updates, recreate them on the child primary site.
 
@@ -62,7 +62,7 @@ If the hierarchy consists of the central administration site (CAS) and a single 
 
 ## Prerequisites
 
-- The [latest released version of Configuration Manager current branch](../../manage/updates.md#version-details).
+- Configuration Manager version 2103 or later.
 
 - The administrative user that runs Configuration Manager setup needs the following security rights:
 
@@ -130,13 +130,18 @@ After you remove the CAS, review the following steps as they apply to your envir
 
 - Manually remove the CAS server computer account from the primary site local groups.
 
-- The trusted root key changed, which can require additional actions:
+- If you perform OS Deployment activities, these additional actions need to be performed as the trusted root key has changed:
 
   - Update OS deployment boot images to include the latest Configuration Manager binaries.
 
   - Recreate [OS deployment media](../../../../osd/deploy-use/create-task-sequence-media.md).
 
+- If you enable Endpoint Analytics for devices uploaded to Microsoft Endpoint Manager, in version 2107, re-enable this option.<!-- 10362047 -->
+
 - If you connect Configuration Manager with [Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context), you need to reset the connection. The first step to resolve any issues is to [renew the secret key](../configure/azure-services-wizard.md#bkmk_renew). If that doesn't resolve the issue, recreate the connection.<!-- 5584635 -->
+
+    > [!IMPORTANT]
+    > The *Log Analytics Connector* was deprecated in November 2020. It's removed from Configuration Manager in version 2107. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features).<!-- 9649296 -->
 
 - If you enable synchronization of Surface drivers, reconfigure this feature after you remove the CAS. For more information, see [Microsoft Surface drivers and firmware updates](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 

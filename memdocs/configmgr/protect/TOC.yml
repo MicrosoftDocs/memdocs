@@ -1,3 +1,4 @@
+items:
 - name: Protect data and infrastructure documentation
   href: index.yml
 - name: Understand and explore
@@ -6,8 +7,8 @@
     href: understand\protect-data-and-site-infrastructure.md
 - name: Plan and design
   items:
-  - name: Plan for Endpoint Protection
-    href: plan-design/planning-for-endpoint-protection.md
+  - name: Endpoint Protection overview
+    href: deploy-use/endpoint-protection.md
   - name: Plan for BitLocker management
     href: plan-design/bitlocker-management.md
   - name: Plan for certificate profiles
@@ -24,12 +25,12 @@
       href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
     - name: Certificate profiles
       href: plan-design/security-and-privacy-for-certificate-profiles.md
+  - name: Resource access deprecation FAQ
+    href: plan-design/resource-access-deprecation-faq.yml
 - name: Deploy and use
   items:
   - name: Endpoint Protection
     items:
-    - name: Endpoint Protection overview
-      href: deploy-use/endpoint-protection.md
     - name: Configure Endpoint Protection
       items:
       - name: How to configure Endpoint Protection
@@ -79,7 +80,7 @@
     - name: Troubleshooting client
       href: deploy-use/troubleshoot-endpoint-client.md
     - name: Windows Defender FAQ
-      href: deploy-use/endpoint-protection-client-faq.md
+      href: deploy-use/endpoint-protection-client-faq.yml
   - name: BitLocker management
     items:
     - name: Encrypt recovery data over the network
@@ -88,6 +89,10 @@
       href: deploy-use/bitlocker/encrypt-recovery-data.md
     - name: Deploy BitLocker management
       href: deploy-use/bitlocker/deploy-management-agent.md
+    - name: About the recovery service
+      href: deploy-use/bitlocker/recovery-service.md
+    - name: Migrate from MBAM
+      href: deploy-use/bitlocker/migration-considerations.md
     - name: Set up BitLocker portals
       href: deploy-use/bitlocker/setup-websites.md
     - name: Customize the self-service portal

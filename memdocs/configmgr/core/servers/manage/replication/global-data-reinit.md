@@ -3,13 +3,15 @@ title: Global data reinit
 titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL Server replication reinit for global data in a Configuration Manager hierarchy
 ms.date: 08/09/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: d36622c0-776c-493b-971a-4a586fc394d4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Troubleshoot global data reinit
@@ -24,7 +26,7 @@ Use the following diagram to start troubleshooting SQL Server replication reinit
 
 This diagram uses the following queries:
 
-### Check if site replication hasn't finished reinit
+### Check if renit isn't finished for site replication
 
 ```sql
 SELECT * FROM RCM_DrsInitializationTracking dt

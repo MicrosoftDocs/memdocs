@@ -2,14 +2,16 @@
 title: Prepare to use an availability group
 titleSuffix: Configuration Manager
 description: Plan to use a SQL Server Always On availability group for the Configuration Manager site database.
-ms.date: 10/08/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 03/25/2022
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Prepare to use a SQL Server Always On availability group with Configuration Manager
@@ -215,6 +217,9 @@ Each replica member must have the following configuration:
 
 - Use the *default instance* or a *named instance*.
 
+  > [!NOTE]
+  > Don't have a file share on the server that's the same name as the SQL Server instance name.<!--9401511-->
+
 - The **Connections in Primary Role** setting is **Allow all connections**.
 
 - The **Readable Secondary** setting is **Yes**.
@@ -355,6 +360,8 @@ You don't need to make any changes to the configuration when adding a secondary 
 ### Backup database files
 
 When a site database uses an availability group, run the built-in **Backup Site server** maintenance task to back up common Configuration Manager settings and files. Don't use the MDF or LDF files created by that backup. Instead, make direct backups of these database files by using SQL Server.
+
+You can still use the SQL Server back up, however you can't restore it directly to a SQL Server Always On cluster. You need to restore it on a standalone server and move it back to SQL Server Always On.
 
 ### Transaction log
 

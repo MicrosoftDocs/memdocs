@@ -1,19 +1,21 @@
 ---
-title: "GetRemCtrlSettings Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: GetRemCtrlSettings Method
+description: The GetRemCtrlSettings Windows Management Instrumentation (WMI) class method in Configuration Manager that gets the remote control settings on a client computer.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b090c545-39e8-4e74-8b5b-d95a9a12ef29
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetRemCtrlSettings Method in Class CCM_RemoteControlManager
-The `GetRemCtrlSettings` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the remote control settings on a client computer.    
+The `GetRemCtrlSettings` Windows Management Instrumentation (WMI) class method in Configuration Manager that gets the remote control settings on a client computer.    
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -55,7 +57,7 @@ uint32 GetRemCtrlSettings
 
  Qualifiers: [id("2"), out]  
 
- `true`true if Remote Assistance settings, which might be configured by the user in a Control Panel program, should be overridden by the Configuration Manager settings.    
+ `true` if Remote Assistance settings, which the user can configure in a Control Panel program, is going to get overridden by the Configuration Manager settings.    
 
  `RemoteControlEnabled`  
  Data type: `Boolean`  

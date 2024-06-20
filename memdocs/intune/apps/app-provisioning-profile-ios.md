@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
-ms.technology:
+ms.localizationpriority: medium
 ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 
 # optional metadata
@@ -21,12 +20,15 @@ ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
+- iOS/iPadOS
 ---
 
 # Use iOS app provisioning profiles to prevent your apps from expiring
@@ -48,7 +50,7 @@ As the admin, you can include and exclude security groups to assign iOS/iPadOS a
 
 ## How to create an iOS mobile app provisioning profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **iOS app provisioning profiles** > **Create profile**.
 3. On the **Basics** page, add the following values:
     - **Name** - Provide a name for this mobile provisioning profile.

@@ -3,16 +3,16 @@ title: Plug-in configuration XML
 titleSuffix: Configuration Manager
 description: Technical reference for the XML elements of the Package Conversion Manager plug-in.
 ms.date: 08/24/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 940cc075-4066-44d5-972a-927c0b0a1143
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Technical reference for the Package Conversion Manager plug-in configuration XML

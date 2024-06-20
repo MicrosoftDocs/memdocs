@@ -1,16 +1,18 @@
 ---
-title: "SMS_PackageAccessByUsers Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: The SMS_PackageAccessByUsers WMI class is an SMS Provider server class, in Configuration Manager, that controls which users are granted access rights to a package folder or to distribution points.
+title: SMS_PackageAccessByUsers Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 38fb7c0d-8420-4602-8b8d-3fa74e8df0d8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_PackageAccessByUsers Server WMI Class
 The `SMS_PackageAccessByUsers` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that controls which users are granted access rights to a package folder or to distribution points.  
@@ -29,7 +31,7 @@ Class SMS_PackageAccessByUsers : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_PackageAccessByUsers` class does not define any methods.  
+ The `SMS_PackageAccessByUsers` class doesn't define any methods.  
 
 ## Properties  
  `Access`  

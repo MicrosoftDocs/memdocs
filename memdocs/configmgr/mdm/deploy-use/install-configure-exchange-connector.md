@@ -3,14 +3,15 @@ title: Install the Exchange connector
 titleSuffix: Configuration Manager
 description: Install and configure the Exchange connector for Configuration Manager to manage mobile devices via ActiveSync.
 ms.date: 12/31/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-mdm
+ms.subservice: mdm
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
-ms.assetid: e179e30a-a1fc-461e-8087-ff3a55803450
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.collection: tier3
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Install and configure the Exchange connector

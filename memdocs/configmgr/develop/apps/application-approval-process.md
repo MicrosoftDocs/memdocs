@@ -2,15 +2,16 @@
 title: Application approval process
 titleSuffix: Configuration Manager
 description: Learn about the application approval process. See scenarios with code examples and view known issues.
-ms.date: 07/01/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.date: 08/02/2021
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: e32671bd-3036-4c87-9371-f56b8d2eb57b
-author: mestew
-ms.author: mstewart
-manager: dougeby
-ms.collection: M365-identity-device-management
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Application approval process
@@ -24,7 +25,7 @@ The IT administrator at Contoso uses Software Center to make software available 
 The user browses the list of applications in Software Center but can't install the application until the request is approved. The user submits the request from Software Center and specifies the reason for the request. If the option, **Approve application requests for users per device** is enabled, the user has to request approval from every device where they want to install the application. The admin then approves or denies the request for each of the user's devices where requests were made.
 
 > [!NOTE]
-> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
+> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
 
 Software Center requires the user to submit the request for the application from their device. The user sees this message in Software Center:
 
@@ -113,11 +114,11 @@ Learn more about the [Deny-CMApprovalRequest](/powershell/module/configurationma
 ### Prerequisites to revoke app approvals
 
 1. Set the [Select these new settings to specify company information](../../core/clients/deploy/about-client-settings.md#software-center) client setting to **Yes**.
-1. Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
+1. Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
 
 ## Scenario 4: Machine-based pre-approved requests
 
- You can use the `CreateApprovedRequest` API to create a pre-approved request for a device with no user required. This action allows you to install and uninstall applications in real time.  Currently this functionality is only available in the SDK. For machine-based pre-approved requests to work, you must also enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
+ You can use the `CreateApprovedRequest` API to create a pre-approved request for a device with no user required. This action allows you to install and uninstall applications in real time.  Currently this functionality is only available in the SDK. For machine-based pre-approved requests to work, you must also enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
 
 Administrators can create a machine-available deployment that requires approval using the [New-CMApplicationDeployment](/powershell/module/configurationmanager/new-cmapplicationdeployment) cmdlet. Here's an example:
 
@@ -182,12 +183,14 @@ Administrators can configure email notifications for application approval reques
 
 ### Prerequisites for email notifications
 
-1. The server with the SMS Provider role must have .NET version 4.5.2 or higher installed.
-1. Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
-1. If PKI certificate infrastructure isn't set up, Configuration Manager-generated certificates feature should be enabled. Select the primary site under **Administration** > **Site Configuration** > **Sites**. Open the properties dialog and choose the **Communication Security** tab. Enable the **Use Configuration Manager-generated certificates for HTTP client systems** checkbox.
+- Starting in version 2107, the SMS Provider requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5 or later. For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
+
+- Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
+
+- If PKI certificate infrastructure isn't set up, enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md).
 
    > [!NOTE]
-   > This checkbox is per primary site but if the checkbox is enabled on **any** of the primary sites, then Configuration Manager-generated certificates will be used on all providers, including the CAS and other primary sites.
+   > The configuration for Enhanced HTTP is per primary site. If you enable it on _any_ of the primary sites in a hierarchy, then Configuration Manager uses self-signed certificates on all providers. This behavior includes the CAS and other primary sites.
 
 ### Configure email notifications
 
@@ -212,8 +215,8 @@ To approve application requests outside of the internal network, additional sett
 
 1. Enable Allow Configuration Manager cloud management gateway traffic in **Administration** > **Site Configuration** > **Servers and Site Systems Roles** > **SMS Provider** > **Properties**.
 1. Configure the [cloud management gateway](../../core/clients/manage/cmg/overview.md).
-1. Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
-1. Configure the following settings for this native app (client app) in Azure AD. These settings should be configured manually in the [Azure portal](https://portal.azure.com/).
+1. Enable [Microsoft Entra user Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
+1. Configure the following settings for this native app (client app) in Microsoft Entra ID. These settings should be configured manually in the [Azure portal](https://portal.azure.com/).
    - **Redirect URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Use the fully qualified domain name of the cloud management gateway (CMG) service, for example, GraniteFalls.Contoso.com.
     [![Azure portal showing redirect URI for the registered app](media/client-app-redirect-uri.png)](media/client-app-redirect-uri.png#lightbox)
   
@@ -247,7 +250,7 @@ Let's walk through the end-to-end scenario:
    - Check if the Admin Service is running. On a provider machine, go to **Task Manager** > **Details**. Make sure there's an active process called `sccmprovidergraph.exe`
    - Open the Configuration Manager Console, **Administration** > **Site Configuration** > **Servers and Site Systems Roles** > **SMS Provider**.  Right click on **Properties**. Make sure that `Allow Configuration Manager cloud management gateway traffic.` is checked when email approval feature is intended to use with Cloud Management Gateway; and not checked when the feature is used to approve or deny requests in the internal network.
 1. Links to approve or deny request through Cloud Management Gateway don't work.
-   - Verify that Azure AD User Discovery is enabled.
+   - Verify that Microsoft Entra user Discovery is enabled.
    - Make sure that e-mail address specified during application deployment belongs to your organization.
 1. Email isn't sent when a user requested an application.
    - Verify the email address is correct.

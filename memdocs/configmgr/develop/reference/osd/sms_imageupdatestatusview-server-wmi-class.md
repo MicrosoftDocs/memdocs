@@ -1,16 +1,18 @@
 ---
-title: "SMS_ImageUpdateStatusView Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_ImageUpdateStatusView Class
+titleSuffix: Configuration Manager
+description: The SMS_ImageUpdateStatusView WMI class represents software update information that is used by offline servicing image.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5a94bf9c-d78e-4a52-883a-de2d9532ada6
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ImageUpdateStatusView Server WMI Class
 The `SMS_ImageUpdateStatusView` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents software update information that is used by offline servicing image.  
@@ -51,7 +53,7 @@ Class SMS_ImageUpdateStatusView : SMS_BaseClass
 
  Qualifiers: [key]  
 
- Index for offline servcing image.  
+ Index for offline servicing image.  
 
  `ImagePackageID`  
  Data type: `String`  

@@ -1,17 +1,17 @@
 ---
-title: "Common tasks for managing compliance"
-titleSuffix: "Configuration Manager"
-description: "Learn how to use compliance settings in Configuration Manager."
+title: Common tasks for managing compliance
+titleSuffix: Configuration Manager
+description: Learn how to use compliance settings in Configuration Manager.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
-ms.assetid: 915f866e-7559-4c9c-aee2-f9ca92e637b3
-author: mestew
-manager: dougeby
-ms.author: mstewart
-
-
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Common tasks for managing compliance with Configuration Manager
 

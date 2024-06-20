@@ -3,13 +3,15 @@ title: Fundamentals of security
 titleSuffix: Configuration Manager
 description: Learn about the layers of security in Configuration Manager.
 ms.date: 04/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Fundamentals of security for Configuration Manager
@@ -86,7 +88,7 @@ For more information, see [Fundamentals of role-based administration](fundamenta
 
 ## Securing client endpoints
 
-Configuration Manager secures client communication to site system roles by using either self-signed or PKI certificates, or Azure Active Directory (Azure AD) tokens. Some scenarios require the use of PKI certificates. For example, [internet-based client management](../clients/manage/plan-internet-based-client-management.md), and for [mobile device clients](../../mdm/plan-design/plan-on-premises-mdm.md).
+Configuration Manager secures client communication to site system roles by using either self-signed or PKI certificates, or Microsoft Entra tokens. Some scenarios require the use of PKI certificates. For example, [internet-based client management](../clients/manage/plan-internet-based-client-management.md), and for [mobile device clients](../../mdm/plan-design/plan-on-premises-mdm.md).
 
 You can configure the site system roles to which clients connect for either HTTPS or HTTP client communication. Client computers always communicate by using the most secure method that's available. Client computers only fall back to using the less secure communication method if you have site systems roles that allow HTTP communication.
 

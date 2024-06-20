@@ -2,14 +2,16 @@
 title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
-ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.date: 12/01/2021
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: how-to
-ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Deploy BitLocker management
@@ -22,7 +24,7 @@ BitLocker management in Configuration Manager includes the following components:
 
 - **BitLocker management agent**: Configuration Manager enables this agent on a device when you [create a policy](#create-a-policy) and [deploy it to a collection](#deploy-a-policy).
 
-- **Recovery service**: The server component that receives BitLocker recovery data from clients. For more information, see [Recovery service](#recovery-service).
+- **Recovery service**: The server component that receives BitLocker recovery data from clients. For more information, see [Recovery service](recovery-service.md).
 
 Before you create and deploy BitLocker management policies:
 
@@ -60,7 +62,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 
     - For Windows 8.1 devices, enable the option for **Drive encryption method and cipher strength**. Then select the encryption method.
 
-    - For Windows 10 devices, enable the option for **Drive encryption method and cipher strength (Windows 10)**. Then individually select the encryption method for OS drives, fixed data drives, and removable data drives.
+    - For Windows 10 or later devices, enable the option for **Drive encryption method and cipher strength (Windows 10 or later)**. Then individually select the encryption method for OS drives, fixed data drives, and removable data drives.
 
     For more information on these and other settings on this page, see [Settings reference - Setup](../../tech-ref/bitlocker/settings.md#setup).
 
@@ -97,7 +99,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 1. On the **Client Management** page, specify the following settings:
 
     > [!IMPORTANT]
-    > If you don't have a management point with an HTTPS-enabled website, don't configure this setting. For more information, see [Recovery service](#recovery-service).
+    > For versions of Configuration Manager prior to 2103, if you don't have a management point with an HTTPS-enabled website, don't configure this setting. For more information, see [Recovery service](recovery-service.md).
 
     - **Configure BitLocker Management Services**: When you enable this setting, Configuration Manager automatically and silently backs up key recovery information in the site database. If you disable or don't configure this setting, Configuration Manager doesn't save key recovery information.
 
@@ -127,7 +129,7 @@ Starting in version 2006, you can use Windows PowerShell cmdlets for this task. 
 
 1. Select **OK** to deploy the policy.
 
-You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab.
+You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab. You can also use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
 > [!IMPORTANT]
 > If a remote desktop protocol (RDP) connection is active, the MBAM client doesn't start BitLocker Drive Encryption actions. Close all remote console connections and sign in to a console session with a domain user account. Then BitLocker Drive Encryption begins and the client uploads recovery keys and packages. If you sign in with a local user account, BitLocker Drive Encryption doesn't start.
@@ -135,8 +137,6 @@ You can create multiple deployments of the same policy. To view additional infor
 > You can use RDP to remotely connect to the console session of the device with the `/admin` switch. For example: `mstsc.exe /admin /v:<IP address of device>`
 >
 > A _console session_ is either when you're at the computer's physical console, or a remote connection that's the same as if you're at the computer's physical console.
-
-Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
 ## Monitor
 
@@ -156,33 +156,15 @@ Use the following logs to monitor and troubleshoot:
 
 ### Client logs
 
-- MBAM event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM.  For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Client event logs](../../tech-ref/bitlocker/client-event-logs.md).
+- MBAM event log: in the Windows Event Viewer, browse to **Applications and Services** > **Microsoft** > **Windows** > **MBAM**.  For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Client event logs](../../tech-ref/bitlocker/client-event-logs.md).
 
-- **BitlockerManagementHandler.log** in client logs path, `%WINDIR%\CCM\Logs` by default
+- **BitlockerManagementHandler.log** and **BitlockerManagement_GroupPolicyHandler.log** in client logs path, `%WINDIR%\CCM\Logs` by default
 
 ### Management point logs (recovery service)
 
-- Recovery service event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM-Web. For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Server event logs](../../tech-ref/bitlocker/server-event-logs.md).
+- Recovery service event log: in the Windows Event Viewer, browse to **Applications and Services** > **Microsoft** > **Windows** > **MBAM-Web**. For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Server event logs](../../tech-ref/bitlocker/server-event-logs.md).
 
 - Recovery service trace logs: `<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
-
-## Recovery service
-
-The BitLocker recovery service is a server component that receives BitLocker recovery data from Configuration Manager clients. The site deploys the recovery service when you create a BitLocker management policy. Configuration Manager automatically installs the recovery service on each management point with an HTTPS-enabled website.
-
-Configuration Manager stores the recovery information in the site database. Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data in the database](encrypt-recovery-data.md).
-
-Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). When domain-joined clients communicate via the CMG, they don't use the legacy recovery service, but the message processing engine component of the management point. Hybrid Azure AD-joined devices also use the message processing engine.
-
-Starting in version 2103, all supported clients use the message processing engine component of the management point as the recovery service. This change reduces dependencies on legacy MBAM components, and enables support for [enhanced HTTP](../../../core/plan-design/hierarchy/enhanced-http.md).<!-- 9503186 -->
-
-> [!NOTE]
-> For version 2010, the message processing engine channel only escrows keys for OS and fixed drive volumes. It doesn't support recovery keys for removable drives or the TPM password hash.
->
-> Starting in version 2103, BitLocker management policies over a CMG support the following capabilities:<!--8845996-->
->
-> - Recovery keys for removable drives
-> - TPM password hash, otherwise known as TPM owner authorization
 
 ## Migration considerations
 
@@ -210,7 +192,7 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 - If you need to migrate this information to the Configuration Manager recovery service, clear the TPM on the device. After it restarts, it uploads the new TPM password hash to the recovery service.
 
 > [!NOTE]
-> Uploading of the TPM password hash mainly pertains to versions of Windows before Windows 10. Windows 10 by default doesn't save the TPM password hash, so these devices don't normally upload it. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
+> Uploading of the TPM password hash mainly pertains to versions of Windows before Windows 10. Windows 10 or later by default doesn't save the TPM password hash, so these devices don't normally upload it. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
 
 ### Re-encryption
 
@@ -235,5 +217,7 @@ For more information about managing BitLocker with Intune, see the following art
 - [Troubleshoot BitLocker policies in Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 
 ## Next steps
+
+[About the BitLocker recovery service](recovery-service.md)
 
 [Set up BitLocker reports and portals](setup-websites.md)

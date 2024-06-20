@@ -1,16 +1,18 @@
 ---
-title: "SendNotifyProgressToCTM Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SendNotifyProgressToCTM Method
+titleSuffix: Configuration Manager
+description: The SendNotifyProgressToCTM method notifies Content Transfer Manager of the progress of a job.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 4adf2263-faa3-444b-b331-bb5ca4acfb4d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SendNotifyProgressToCTM Method
 The **SendNotifyProgressToCTM** method notifies Content Transfer Manager of the progress of a job.  
@@ -58,7 +60,7 @@ HRESULT stdcall SendNotifyProgressToCTM(
 
  Qualifiers: [in]  
 
- The client-specific data which was passed into the call to **ICcmAlternateDownloadProvider::DownloadContent** (szNotifyData).  
+ The client-specific data that was passed into the call to **ICcmAlternateDownloadProvider::DownloadContent** (szNotifyData).  
 
  `szBytesTotal`  
  Data type: LPCWSTR  
@@ -89,10 +91,10 @@ HRESULT stdcall SendNotifyProgressToCTM(
  The number of files transferred so far.  
 
 ## Remarks  
- If the totals are not yet known, pass 0 for the values. Once the provider has determined the total byte and file count, those values should be used.  
+ If the totals aren't yet known, pass 0 for the values. Once the provider has determined the total byte and file count, those values should be used.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully. All other return values indicate failure.  

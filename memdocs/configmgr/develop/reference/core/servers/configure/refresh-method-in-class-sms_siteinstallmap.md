@@ -1,16 +1,18 @@
 ---
+description: Learn how to reload the install map from the database, which repopulates the classes using Refresh class method.
 title: Refresh method in class SMS_SiteInstallMap
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 13db1af5-84b4-4242-b1f3-98bd282766a3
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Refresh Method in Class SMS_SiteInstallMap
 The `Refresh` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reloads the install map from the database, which repopulates the classes.  
@@ -32,7 +34,7 @@ SInt32 Refresh( );
  For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## Remarks  
- This method is used in the rare case when a new component is added by Configuration Manager site setup and the SMS Provider is located on a remote SQL Server computer that might not be restarted. Generally it is not necessary for your application to call this method because the SMS Provider copy of the install map will be up to date.  
+ This method is used in the rare case when a new component is added by Configuration Manager site setup and the SMS Provider is located on a remote SQL Server computer that might not be restarted. Generally it isn't necessary for your application to call this method because the SMS Provider copy of the install map will be up to date.  
 
 ## Requirements  
 

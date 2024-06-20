@@ -1,17 +1,17 @@
 ---
-title: "Use Asset Intelligence"
-titleSuffix: "Configuration Manager"
-description: "Do common Asset Intelligence tasks in Configuration Manager."
+title: Use Asset Intelligence
+titleSuffix: Configuration Manager
+description: Do common Asset Intelligence tasks in Configuration Manager.
 ms.date: 08/30/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 # How to use Asset Intelligence in Configuration Manager
 

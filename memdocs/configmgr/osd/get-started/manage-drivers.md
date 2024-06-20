@@ -3,13 +3,15 @@ title: Manage drivers
 titleSuffix: Configuration Manager
 description: Use the Configuration Manager driver catalog to import device drivers, group drivers in packages, and distribute those packages to distribution points.
 ms.date: 11/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
-ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Manage drivers in Configuration Manager
@@ -228,7 +230,7 @@ You can add to boot images Windows device drivers that have been imported into t
 
 - Add only storage and network drivers to boot images. Other types of drivers aren't usually required in Windows PE. Drivers that aren't required unnecessarily increase the size of the boot image.  
 
-- Add only device drivers for Windows 10 to a boot image. The required version of Windows PE is based on Windows 10.  
+- Add only device drivers to a boot image for the version of Windows PE. For example, if you're using the Windows ADK for Windows 11, only add Windows 11 drivers.
 
 - Make sure that you use the correct device driver for the architecture of the boot image. Don't add an x86 device driver to an x64 boot image.  
 

@@ -1,17 +1,17 @@
 ---
-title: "Deploy App-V virtual applications"
-titleSuffix: "Configuration Manager"
-description: "See which considerations you must take into account when you create and deploy virtual applications."
+title: Deploy App-V virtual applications
+titleSuffix: Configuration Manager
+description: See which considerations you must take into account when you create and deploy virtual applications.
 ms.date: 03/12/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Deploy App-V virtual applications with Configuration Manager
 

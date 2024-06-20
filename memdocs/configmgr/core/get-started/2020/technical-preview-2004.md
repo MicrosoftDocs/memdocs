@@ -3,14 +3,16 @@ title: Technical preview 2004
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2004.
 ms.date: 04/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 087822b0-18b2-4c3b-929e-04f60312bc98
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Features in Configuration Manager technical preview version 2004
@@ -25,7 +27,7 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2004/1234567.md)] -->
 
-[!INCLUDE [Microsoft Endpoint Manager tenant attach: ConfigMgr client details](includes/2004/6374854.md)]
+[!INCLUDE [Microsoft Intune tenant attach: ConfigMgr client details](includes/2004/6374854.md)]
 [!INCLUDE [Notifications from Microsoft](includes/2004/3953121.md)]
 [!INCLUDE [Copy discovery data from the console](includes/2004/6890051.md)]
 [!INCLUDE [Improvements to CMPivot](includes/2004/6518631.md)]

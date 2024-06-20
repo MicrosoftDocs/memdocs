@@ -3,13 +3,15 @@ title: Site data reinit
 titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL Server replication reinit for site data in a Configuration Manager hierarchy
 ms.date: 08/09/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 19741d45-2d42-438e-a9f3-15bb365d63ca
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Troubleshoot site data reinit
@@ -24,7 +26,7 @@ Use the following diagram to start troubleshooting SQL Server replication reinit
 
 This diagram uses the following queries:
 
-### Check if site replication hasn't finished reinit
+### Check if reinit isn't finished for site replication
 
 ```sql
 SELECT * FROM RCM_DrsInitializationTracking dt

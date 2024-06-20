@@ -1,18 +1,18 @@
 ---
-title: "Technical Preview 1707"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1707 for Configuration Manager."
+title: Technical Preview 1707
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview version 1707 for Configuration Manager.
 ms.date: 08/14/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: cb405ba0-8792-4ab7-988b-2f835f3a9550
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Capabilities in Technical Preview 1707 for Configuration Manager
 

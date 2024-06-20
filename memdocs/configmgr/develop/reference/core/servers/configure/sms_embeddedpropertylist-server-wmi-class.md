@@ -1,19 +1,21 @@
 ---
-title: "SMS_EmbeddedPropertyList Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_EmbeddedPropertyList Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that represents a general-purpose embedded object, which defines property lists.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5ef2a217-7dd3-41ed-9c27-ad824660a948
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_EmbeddedPropertyList Server WMI Class
-The `SMS_EmbeddedPropertyList` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a general-purpose embedded object that defines property lists. The property lists are used by the site control file to define the string array properties of a site control item.  
+The `SMS_EmbeddedPropertyList` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a general-purpose embedded object that defines property lists. The property lists are used by the site control file to define the string array properties of a site control item.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -29,7 +31,7 @@ Class SMS_EmbeddedPropertyList
 ```  
 
 ## Methods  
- The `SMS_EmbeddedPropertyList` class does not define any methods.  
+ The `SMS_EmbeddedPropertyList` class doesn't define any methods.  
 
 ## Properties  
  `ItemType`  

@@ -3,13 +3,15 @@ title: Prerequisites for reporting
 titleSuffix: Configuration Manager
 description: Understand various dependencies that impact your use of reporting in Configuration Manager.
 ms.date: 04/01/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Prerequisites for reporting in Configuration Manager
@@ -36,7 +38,7 @@ Configuration Manager supports the same versions of SQL Server for reporting as 
 
 Before you can use reporting in Configuration Manager, configure the reporting services point site system role.
 
-For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012RSpoint).
+For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#reporting-services-point).
 
 ## Power BI Report Server
 

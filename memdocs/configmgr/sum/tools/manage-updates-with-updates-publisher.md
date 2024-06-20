@@ -1,17 +1,17 @@
 ---
-title: "Manage updates"
-titleSuffix: "Configuration Manager"
-description: "Manage the udpates you deploy and create with System Center Updates Publisher"
+title: Manage updates
+titleSuffix: Configuration Manager
+description: Manage the updates you deploy and create with System Center Updates Publisher
 ms.date: 04/29/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: conceptual
-ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 # Manage software updates in Updates Publisher
 

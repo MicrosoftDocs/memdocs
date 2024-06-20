@@ -1,17 +1,17 @@
 ---
-title: "Security and privacy for power management"
-titleSuffix: "Configuration Manager"
-description: "Get security and privacy information for power management in Configuration Manager."
+title: Security and privacy for power management
+titleSuffix: Configuration Manager
+description: Get security and privacy information for power management in Configuration Manager.
 ms.date: 04/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 469ff35f-59a1-484d-902b-107dd6070baf
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
-
-
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Security and privacy for power management in Configuration Manager
 

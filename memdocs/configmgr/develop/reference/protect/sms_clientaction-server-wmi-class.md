@@ -1,16 +1,18 @@
 ---
-title: "SMS_ClientAction Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_ClientAction Class
+description: The SMS_ClientAction Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the client action.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a00af5d1-dc44-4361-a927-b3c0a3479f27
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ClientAction Server WMI Class
 The `SMS_ClientAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the client action.  

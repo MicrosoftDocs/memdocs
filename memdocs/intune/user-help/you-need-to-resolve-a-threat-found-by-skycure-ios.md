@@ -10,10 +10,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 10/05/2018
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: b40595f0-a399-4aa1-aa6f-344c2a1cb883
 
 searchScope:
@@ -24,11 +22,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: heenamac
+ms.reviewer: heenamac
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Resolve a threat found by Symantec Endpoint Protection Mobile on iOS
@@ -61,4 +60,3 @@ If you install an app that's seen as a threat to your device, you'll receive a n
 To resolve, select the app from the list of threats in SEP Mobile. Then follow the on-screen instructions to remove and uninstall the app.  
 
 Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
-

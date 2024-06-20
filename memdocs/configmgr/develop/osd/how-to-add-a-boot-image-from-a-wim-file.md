@@ -1,16 +1,18 @@
 ---
-title: "Add a Boot Image from a WIM File"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: Add a Boot Image from a WIM File
+description: You add a boot image from a Windows Image (WIM) file to Configuration Manager by creating an instance of SMS_BootImagePackage.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: c995b2e6-c364-4d59-8bc7-d8ef3596a0fd
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Add a Boot Image from a WIM File in Configuration Manager
 You add a boot image from a Windows Image (WIM) file to Configuration Manager by creating an instance of [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md). The property ImagePath must be set to the Universal Naming Convention (UNC) path to the WIM file. The property ImageIndex is the index to the required image within the WIM file.  

@@ -1,16 +1,18 @@
 ---
-title: "SMS_SCI_Component Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: Learn how to represent a Configuration Manager server component installed on one or more servers at a site.
+title: SMS_SCI_Component Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f73ab9ee-0b2b-4e98-bebb-dbd982ac5424
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SCI_Component Server WMI Class
 The `SMS_SCI_Component` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a Configuration Manager server component installed on one or more servers at a site.  

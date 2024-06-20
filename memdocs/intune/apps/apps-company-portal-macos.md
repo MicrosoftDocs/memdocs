@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/20/2021
+ms.date: 12/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
-ms.technology:
+ms.localizationpriority: medium
 ms.assetid: 
 
 # optional metadata
@@ -26,7 +25,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
+- macOS
+- highpri
 ---
 
 # Add the macOS Company Portal app
@@ -46,13 +49,16 @@ To help keep the apps more secure and up to date once installed, the Company Por
 
 You can instruct users to download, install, and sign in to Company Portal for macOS. For instructions on downloading, installing, and signing into the Company Portal, see [Enroll your macOS device using the Company Portal app](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
-##	Install Company Portal for macOS as a macOS LOB app
+> [!NOTE]
+> When you download the Intune Company Portal for macOS devices version 2.18.2107 and later, it installs the new universal version of the app that runs natively on Apple Silicon Macs. The same app will install the x64 version of the app on Intel Mac machines.
+
+## Install Company Portal for macOS as a macOS LOB app
 
 Company Portal for macOS can be downloaded and installed using the [macOS LOB apps](lob-apps-macos.md) feature. The version downloaded is the version that will always be installed and may need to be updated periodically to ensure users get the best experience during initial enrollment.
 
 1. Download Company Portal for macOS from https://go.microsoft.com/fwlink/?linkid=853070. 
 
-2. Follow the instructions to create a macOS LOB app in [macOS LOB apps](lob-apps-macos.md).
+2. Follow the instructions to create a macOS LOB app in [Add an unmanaged macOS PKG app to Microsoft Intune](macos-unmanaged-pkg.md).
 
 > [!NOTE]
 > Once installed, the Company Portal for macOS app will automatically update using Microsoft AutoUpdate (MAU).
@@ -60,7 +66,7 @@ Company Portal for macOS can be downloaded and installed using the [macOS LOB ap
 
 Company Portal for macOS can be downloaded and installed using the [macOS Shell Scripts](macos-shell-scripts.md) feature. This option will always install the current version of Company Portal for macOS, but will not provide you with application install reporting you might be used to when deploying applications using [macOS LOB apps](lob-apps-macos.md).
 
-1. Download a sample script to install Company Portal for macOS from [Intune Shell Script Samples - Company Portal](https://github.com/microsoft/shell-intune-samples/tree/master/Apps/Company%20Portal).
+1. Download a sample script to install Company Portal for macOS from [Intune Shell Script Samples - Company Portal](https://github.com/microsoft/shell-intune-samples).
 
 2. Follow instructions to deploy the macOS Shell Script using [macOS Shell Scripts](macos-shell-scripts.md). 
     - Set **Run script as signed-in user** to **No** (to run in the system context).
@@ -69,11 +75,15 @@ Company Portal for macOS can be downloaded and installed using the [macOS Shell 
 > [!NOTE]
 > The script will require Internet access when it runs to download the current version of the Company Portal for macOS. 
 
-## Install Company Portal for macOS using the Apple Setup Assistant
+## Signing into the Company Portal for macOS when using Setup Assistant with Modern Authentication 
 
-For macOS devices running 10.15 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication (preview)**. The user has to authenticate using Azure AD credentials during the setup assistant screens. This will require an additional Azure AD login post-enrollment in in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance.
+For macOS devices running 10.15 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**. The user has to authenticate using Microsoft Entra credentials during the setup assistant screens. This will require an additional Microsoft Entra login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The Company Portal can be installed in any of the three ways documented here for Setup Assistant with modern authentication. 
 
-Users must sign into the Company Portal to complete Azure AD authentication and gain access to resources protected by Conditional Access. User affinity is established when users complete the additional Azure AD login into the Company Portal app on the device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during enrollment during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed.
+Use one of the ways documented above to deploy the macOS Company Portal to the devices enrolling with Setup Assistant with modern authentication so that the end user can authenticate and complete Microsoft Entra registration.
+
+Users must sign into the Company Portal to complete Microsoft Entra authentication and gain access to resources protected by Conditional Access. User affinity is established when users complete the enrollment and reach the home screen of the macOS device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during enrollment during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed.
+
+For more information about configuring Setup Assistant with modern authentication for macOS, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
 
 ## Next steps
 - To learn more about assigning apps, see [Assign apps to groups](apps-deploy.md).

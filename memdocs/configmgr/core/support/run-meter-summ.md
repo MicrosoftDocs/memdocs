@@ -3,15 +3,15 @@ title: Run Meter Summarization Tool
 titleSuffix: Configuration Manager
 description: Use the Run Meter Summarization Tool to trigger the software metering summarization tasks in Configuration Manager.
 ms.date: 07/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: d27f88fe-817f-4af4-b290-c16f2e46cf31
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Run Meter Summarization Tool

@@ -3,7 +3,7 @@
 
 title: Prevent unauthorized access to company data
 titleSuffix: Microsoft Intune
-description: Prevent unauthorized access to your company data when it is shared outside the company network using Microsoft Intune. 
+description: Prevent unauthorized access to your company data when it's shared outside the company network using Microsoft Intune. 
 keywords: Microsoft 365 M365 Azure Information Protection data protect outside network company data 
 ms.author: dougeby
 author: dougeby
@@ -13,7 +13,6 @@ ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 6a88573a-aa60-455c-858c-74562798246b
 
 # optional metadata
@@ -26,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 # Prevent unauthorized access to company data using Microsoft Intune
 
@@ -36,7 +37,7 @@ You can classify, label, and protect Microsoft 365 documents and emails so only 
 
 The following action plan can be used when you meet the following requirements:
 * Your company is ready to transition securely to the cloud.
-* Your company uses Microsoft 365 Exchange Online, SharePoint Online, OneDrive for Business, or Yammer.
+* Your company uses Microsoft 365 Exchange Online, SharePoint Online, OneDrive for Business, or Viva Engage.
 * Your company has licenses for Microsoft 365, Enterprise Mobility + Security (EMS), or Azure Information Protection.
 * Your company works with devices running Windows 7 Service Pack 1 or later.
 * Your company uses Microsoft 365 Apps with 2016 apps or 2013 apps, Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010.

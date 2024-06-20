@@ -1,0 +1,73 @@
+### YamlMime:Landing
+
+title: Windows Autopilot documentation
+summary: Windows Autopilot and Windows Autopilot device preparation is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
+metadata:
+  title: Windows Autopilot and Windows Autopilot device preparation documentation
+  description: Windows Autopilot and Windows Autopilot device preparation is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
+  ms.service: windows-client
+  ms.subservice: itpro-deploy
+  ms.topic: landing-page
+  ms.collection:
+    - tier1
+    - highpri
+    - essentials-navigation
+  author: frankroj
+  ms.author: frankroj
+  manager: aaroncz
+  ms.reviewer: jubaptis
+  ms.date: 06/03/2024
+  ms.localizationpriority: high
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+
+  # Card (optional)
+  - title: Windows Autopilot solutions
+    linkLists:
+    - linkListType: get-started
+      links:
+      - text: Compare Windows Autopilot device preparation and Windows Autopilot
+        url:  device-preparation/compare.md
+
+  # Card (optional)
+  - title: Understand Windows Autopilot device preparation
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Overview of Windows Autopilot device preparation
+        url:  device-preparation/overview.md
+      - text: Requirements
+        url:  device-preparation/requirements.md
+      - text: Reporting and monitoring
+        url:  device-preparation/reporting-monitoring.md
+
+  # Card (optional)
+  - title: Understand Windows Autopilot
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Overview of Windows Autopilot
+        url:  windows-autopilot.md
+      - text: Requirements
+        url:  requirements.md
+      - text: Device registration overview
+        url:  registration-overview.md
+      - text: Enrollment Status Page
+        url: enrollment-status.md
+      - text: Manually register devices
+        url: add-devices.md
+
+  # Card (optional)
+  - title: Tutorials
+    linkLists:
+    - linkListType: tutorial
+      links:
+      - text: Windows Autopilot scenarios
+        url:  tutorial/autopilot-scenarios.md
+      - text: Windows Autopilot device preparation scenarios
+        url:  device-preparation/tutorial/scenarios.md
+

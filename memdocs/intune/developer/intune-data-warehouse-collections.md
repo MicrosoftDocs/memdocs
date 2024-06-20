@@ -1,18 +1,17 @@
 ---
 # required metadata
-title:  Intune Date Warehouse Collections
+title:  Intune Data Warehouse Collections
 titleSuffix: Microsoft Intune 
 description: The Intune Data Warehouse collections provide details related to the Data Warehouse API.
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2021
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
 
 # optional metadata
@@ -24,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Intune Data Warehouse Collections
@@ -89,12 +90,12 @@ The following table summarizes the assignment status of compliance policies to d
 |    Property   |                                                                                      Description                                                                                     |  Example |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | dateKey       | Date   key when the summary was created for the compliance policy.                                                                                                                   | 20161204 |
-| unknown       | Number   of devices that are offline or failed to communicate with Intune or Azure AD   for other reasons.                                                                           | 5        |
+| unknown       | Number   of devices that are offline or failed to communicate with Intune or Microsoft Entra ID   for other reasons.                                                                           | 5        |
 | notApplicable | Number   of devices where device compliance policies targeted by the admin are not   applicable.                                                                                     | 201      |
 | compliant     | Number   of devices that successfully applied one or more device compliance policies   targeted by the admin.                                                                        | 4083     |
 | inGracePeriod | Number   of devices that are not compliant but that are in the grace-period defined by   the admin.                                                                                  | 57       |
 | nonCompliant  | Number   of devices that failed to apply one or more device compliance policies   targeted by the admin or where the user hasn't complied with the policies   targeted by the admin. | 43       |
-|    error      |    Number of   devices that failed to communicate with Intune or Azure AD, and returned an   error message.                                                                          |    3     |
+|    error      |    Number of   devices that failed to communicate with Intune or Microsoft Entra ID, and returned an   error message.                                                                          |    3     |
 
 ## compliancePolicyStatusDevicePerPolicyActivities
 The following table summarizes the assignment status of compliance policies to devices on a per policy and a per policy type basis. It lists the count of devices found in each compliance state for each assigned compliance policy.
@@ -104,12 +105,12 @@ The following table summarizes the assignment status of compliance policies to d
 | dateKey           | Date   key when the summary was created for the compliance policy.                                                                                                                   | 20161219 |
 | policyKey         | Key   for the compliance policy for which the summary was created.                                                                                                                   | 10178    |
 | policyPlatformKey | Key   for the platform type of the compliance policy for which the summary was   created.                                                                                            | 5        |
-| unknown           | Number   of devices that are offline or failed to communicate with Intune or Azure AD   for other reasons.                                                                           | 13       |
+| unknown           | Number   of devices that are offline or failed to communicate with Intune or Microsoft Entra ID   for other reasons.                                                                           | 13       |
 | notApplicable     | Number   of devices where device compliance policies targeted by the admin are not   applicable.                                                                                     | 3        |
 | compliant         | Number   of devices that successfully applied one or more device compliance policies   targeted by the admin.                                                                        | 45       |
 | inGracePeriod     | Number   of devices that are not compliant but that are in the grace-period defined by   the admin.                                                                                  | 3        |
 | nonCompliant      | Number   of devices that failed to apply one or more device compliance policies   targeted by the admin or where the user hasn't complied with the policies   targeted by the admin. | 7        |
-| error             | Number   of devices that failed to communicate with Intune or Azure AD, and returned   an error message.                                                                             | 3        |
+| error             | Number   of devices that failed to communicate with Intune or Microsoft Entra ID, and returned   an error message.                                                                             | 3        |
 ## complianceStates
 
 |      Property      |                       Description                      |
@@ -194,7 +195,7 @@ The **DeviceConfigurationProfileUserActivity** entity lists the number of users 
 | deviceRegistrationStateKey | Key of the device registration state attribute for this   device.                                                                                                                    |
 | ownerTypeKey               | Key of the owner type attribute for this device:   corporate, personal, or unknown.                                                                                                  |
 | managementStateKey         | Key of the management state associated with this device,   indicating latest state of a remote action or if it was jailbroken/rooted.                                                |
-| azureADRegistered          | Whether the device is Azure Active Directory registered.                                                                                                                             |
+| azureADRegistered          | Whether the device is Microsoft Entra registered.                                                                                                                             |
 | complianceStateKey         | A key to ComplianceState.                                                                                                                                                            |
 | oSVersion                  | OS version.                                                                                                                                                                          |
 | jailBroken                 | Whether the device is jail broken or rooted.                                                                                                                                         |
@@ -237,7 +238,7 @@ The **device** entity lists all enrolled devices under management and their corr
 | managementAgentKey         | Key of the management agent   associated with this device.                                                                                                                             |
 | managementStateKey         | Key of the management state   associated with this device, indicating latest state of a remote action or if   it was jailbroken/rooted.                                                |
 | azureADDeviceId            | The   Azure deviceID for this device.                                                                                                                                                  |
-| azureADRegistered          | Whether the device is Azure Active   Directory registered.                                                                                                                             |
+| azureADRegistered          | Whether the device is Microsoft Entra registered.                                                                                                                             |
 | deviceCategoryKey          | Key of the category associated   with this device.                                                                                                                                     |
 | deviceEnrollmentType       | Key of the enrollment type   associated with this device, indicating method of enrollment.                                                                                             |
 | complianceStateKey         | Key of the Compliance state   associated with this device.                                                                                                                             |
@@ -263,6 +264,8 @@ The **device** entity lists all enrolled devices under management and their corr
 | wiFiMacAddress             | Wi-Fi MAC.                                                                                                                                                                              |
 | windowsOsEdition             | Windows Operating System edition.                                                                                                                                                                              |
 
+> [!NOTE]
+> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#managed-device-properties).
 
 ## deviceTypes
 The **deviceType** entity represents the device type referenced by other data warehouse entities. The device type typically describes either the device model, manufacturer, or a combination of both.
@@ -319,12 +322,12 @@ The **deviceEnrollmentType** entity indicates how a device was enrolled. The enr
 | 2                | DeviceEnrollmentManager            | User enrollment with a device   enrollment manager account.                              |
 | 3                | AppleBulkWithUser                  | Apple bulk enrollment with user   challenge. (DEP, Apple Configurator)                   |
 | 4                | AppleBulkWithoutUser               | Apple bulk enrollment without user challenge.   (DEP, Apple Configurator, Mobile Config) |
-| 5                | WindowsAzureADJoin                 | Windows 10 Azure AD Join.                                                                |
+| 5                | WindowsAzureADJoin                 | Windows 10 Microsoft Entra join.                                                                |
 | 6                | WindowsBulkUserless                | Windows 10 Bulk enrollment through   ICD with certificate.                               |
 | 7                | WindowsAutoEnrollment              | Windows 10 automatic enrollment.   (Add work account)                                    |
-| 8                | WindowsBulkAzureDomainJoin         | Windows 10 bulk Azure AD Join.                                                           |
-| 9                | WindowsCoManagement                | Windows 10 co-management triggered   by AutoPilot or Group Policy.                       |
-| 10               | WindowsAzureADJoinsUsingDeviceAuth | Windows 10 Azure AD Join using   Device Auth.                                            |
+| 8                | WindowsBulkAzureDomainJoin         | Windows 10 bulk Microsoft Entra join.                                                           |
+| 9                | WindowsCoManagement                | Windows 10 co-management triggered   by Autopilot or Group Policy.                       |
+| 10               | WindowsAzureADJoinsUsingDeviceAuth | Windows 10 Microsoft Entra join using   Device Auth.                                            |
 
 ## enrollmentActivities 
 The **EnrollmentActivity** entity indicates the activity of a device enrollment.
@@ -541,7 +544,6 @@ The **managementAgentType** entity represents the agents used to manage a device
 | 10                    | ConfigurationManagerClientMdm     | The device is managed by   Configuration Manager and MDM.                    |
 | 11                    | ConfigurationManagerCLientMdmEas  | The device is managed by   Configuration Manager, MDM and Exchange Active Sync.               |
 | 16                    | Unknown                           | Unknown   management agent type                                              |
-| 32                    | Jamf                              | The device attributes are fetched   from Jamf.                               |
 | 64                    | GoogleCloudDevicePolicyController |  The device is managed by Google's CloudDPC.                                 |
 
 ## managementStates
@@ -699,7 +701,7 @@ The **UserDeviceAssociation** entity contains user device associations in your o
 | endedDateTimeUTC   | Date and time in UTC when IsDeleted changed to True.                                               | 6/23/2017 0:00  |
 
 ## users
-The **user** entity lists all the Azure Active Directory (Azure AD) users with assigned licenses in your enterprise.
+The **user** entity lists all the Microsoft Entra users with assigned licenses in your enterprise.
 
 The **user** entity collection contains user data. These records include user states during the data collection period, even if the user has been removed. For example, a user may be added to Intune and then removed during the course of the last month. While this user is not present at the time of the report, the user and state are present in the data from the prior month. You could create a report that would show the duration of the user's historic presence in your data.
 

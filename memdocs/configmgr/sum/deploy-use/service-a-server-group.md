@@ -1,17 +1,17 @@
 ---
 title: Service a server group
-titleSuffix: "Configuration Manager"
+titleSuffix: Configuration Manager
 description: Server groups have been replaced by orchestration groups
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.date: 04/01/2020
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
-ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-
-
+ms.service: configuration-manager
+ms.subservice: software-updates
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 # Service a server group
 
@@ -19,7 +19,7 @@ ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 
 >[!IMPORTANT]
 > - Starting in Configuration Manager version 2002, server groups have been replaced by orchestration groups. For more information, see [Orchestration groups](orchestration-groups.md).
-> - Pre-release features are features that are in the Current Branch for early testing in a production environment. These features are fully supported but are still in active development and might receive changes until they move out of the pre-release category. You must turn on this feature for it to be available. For more information, see [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+> - Pre-release features are features that are in the Current Branch for early testing in a production environment. These features are fully supported but are still in active development and might receive changes until they move out of the pre-release category. You must turn on this feature for it to be available. For more information, see [Use pre-release features from updates](../../core/servers/manage/pre-release-features.md).
 
 Starting in Configuration Manager version 1606, you can configure server group settings for a collection to define how many, what percentage, or in what order computers in the collection will install software updates. You can also configure pre-deployment and post-deployment PowerShell scripts to run custom actions.
 

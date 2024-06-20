@@ -1,16 +1,18 @@
 ---
-title: "SMS_StateMigration Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_StateMigration Class
+titleSuffix: Configuration Manager
+description: An SMS Provider that contains all the state migration information for a specific computer association and exposes methods for managing an association.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 04fc39cc-e229-4bd1-8382-9d5b78af2867
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_StateMigration Server WMI Class
 The `SMS_StateMigration` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains all the state migration information for a specific computer association and exposes methods for managing an association.  

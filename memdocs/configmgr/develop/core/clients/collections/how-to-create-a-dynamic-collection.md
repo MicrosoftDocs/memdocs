@@ -1,14 +1,17 @@
 ---
+description: In Configuration Manager, your application uses the SMS_Collection Server WMI Class to define the attributes of a collection, such as the membership rules and the refresh schedule.
 title: "Create a Dynamic Collection"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 7d27ea5b-8941-4453-b90b-35d9ad2891eb
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
 
 
 ---

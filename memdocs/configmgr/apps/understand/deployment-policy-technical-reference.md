@@ -3,15 +3,15 @@ title: Application deployment policy technical reference
 titleSuffix: Configuration Manager
 description: Troubleshooting application deployment policies technical reference for Configuration Manager.
 ms.date: 11/04/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: troubleshooting
-ms.assetid: bf24fb83-521f-4a41-ab8e-df70a6c10e78
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Application Deployment Policy

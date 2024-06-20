@@ -3,13 +3,15 @@ title: Troubleshoot SQL Server replication
 titleSuffix: Configuration Manager
 description: Use these diagrams to help understand and troubleshoot SQL Server replication between Configuration Manager sites
 ms.date: 02/05/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: overview
-ms.assetid: 71d7430e-c5aa-485b-8dc0-c80fd8f29f17
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Troubleshoot SQL Server replication

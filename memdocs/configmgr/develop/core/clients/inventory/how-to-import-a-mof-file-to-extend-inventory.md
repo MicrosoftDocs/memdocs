@@ -1,14 +1,17 @@
 ---
+description: Learn how to import a MOF file to extend inventory, in Configuration Manager, by using the ImportInventoryReport method.
 title: "Import a MOF File to Extend Inventory"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 4b57f922-9029-4617-8c21-6c75ccebbb5d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
 
 
 ---

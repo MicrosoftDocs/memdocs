@@ -1,16 +1,18 @@
 ---
-title: "ExportRole Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: ExportRole Method
+titleSuffix: Configuration Manager
+description: The ExportRole Windows Management Instrumentation class method, in Configuration Manager, exports roles to an XML string.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 75620ffa-b4ad-45b7-a738-7e2c52ef0f62
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ExportRole Method in Class SMS_Role
 The `ExportRole` Windows Management Instrumentation (WMI) class method, in Configuration Manager, exports roles to an XML string.  

@@ -1,16 +1,18 @@
 ---
-title: "Verifying the Application Management Extension"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: Verifying the Application Management Extension
+titleSuffix: Configuration Manager
+description: Verifying the Application Management Extension. Verify the new Deployment Type is available in the console.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: a93ed163-3b08-4d56-991f-630586f835a7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Verifying the Application Management Extension
 ## Server  
@@ -23,7 +25,7 @@ manager: dougeby
 
 3.  On the **Home** tab, in the **Create** group, click **Create Application**.  
 
-4.  In the **Type** field, verify that the new deployment type is available in the pull down menu.  
+4.  In the **Type** field, verify that the new deployment type is available in the pull-down menu.  
 
      The image below shows an example from the RDP sample project.  
 
@@ -40,7 +42,7 @@ manager: dougeby
 
 3.  On the **Home** tab, in the **Create** group, click **Create Application**.  
 
-4.  In the **Type** field, select the new deployment type from the pull down menu.  
+4.  In the **Type** field, select the new deployment type from the pull-down menu.  
 
 5.  Continue through the wizard until successful completion.  
 
@@ -55,7 +57,7 @@ manager: dougeby
 
 3.  Select an application and then, on the **Home** tab, in the **Application** group, click **Create Deployment Type** to create a new deployment type for this application.  
 
-4.  In the **Type** field, select the new deployment type from the pull down menu.  
+4.  In the **Type** field, select the new deployment type from the pull-down menu.  
 
 5.  Continue through the wizard until successful completion.  
 

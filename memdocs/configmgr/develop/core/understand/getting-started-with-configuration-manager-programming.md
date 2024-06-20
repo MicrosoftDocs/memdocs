@@ -3,13 +3,16 @@ title: Configuration Manager programming
 titleSuffix: Configuration Manager
 description: Learn the basics of programming and automation with the Configuration Manager software development kit (SDK).
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 7dc6cb76-469e-4e4f-b79b-bb391fd4e758
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Get started with Configuration Manager programming
@@ -33,8 +36,6 @@ To successfully automate or extend Configuration Manager, it is incredibly impor
 - [Microsoft System Center 2012 Configuration Manager: Administration Cookbook](https://www.amazon.com/Microsoft-System-Center-Configuration-Manager/dp/1849684944/ref=sr_1_1?s=books&ie=UTF8&qid=1382812164&sr=1-1&keywords=Microsoft+System+Center+2012+Configuration+Manager%3A+Administration+Cookbook)  
 
 #### Videos
-
-- [Channel 9: Microsoft System Center 2012 Configuration Manager Overview](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2012/MGT309)  
 
 - [YouTube: Technical Deep Dive: Configuration Manager 2012 Technical Overview](https://www.youtube.com/watch?v=qLACm3910_A)  
 
@@ -134,9 +135,7 @@ CMTrace can be found on the Configuration Manager site server, under the "\<Conf
 
 **Client Spy:** A tool that helps you troubleshoot issues related to software distribution, inventory, and software metering on System Center 2012 Configuration Manager clients.  
 
-**Policy Spy:** A policy viewer that helps you review and troubleshoot the policy system on System Center 2012 Configuration Manager clients.  
-
-Client Spy and Policy Spy are both tools contained in the [System Center 2012 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012)  
+**Policy Spy:** A policy viewer that helps you review and troubleshoot the policy system on System Center 2012 Configuration Manager clients.    
 
 ## Basic Configuration Manager program example  
 

@@ -3,13 +3,16 @@ title: SMS_CollectionEvaluationIncremental class
 titleSuffix: Configuration Manager
 description: Show incremental evaluated collections.
 ms.date: 11/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2f13a639-a138-4894-bc50-59f6d6abc2b7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # SMS_CollectionEvaluationIncremental server WMI class

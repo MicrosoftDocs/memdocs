@@ -1,16 +1,19 @@
 ---
-title: "SMS_AdminUIContent Class"
-titleSuffix: "Configuration Manager"
-ms.date: "02/15/2017"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMS_AdminUIContent Class
+description: Learn how to use the SMS_AdminUIContent class although it has no defined methods.
+titleSuffix: Configuration Manager
+ms.date: 02/15/2017
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c4bb10ba-7fad-4307-afc2-b0b4c7db7658
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+descriptions: Learn about the simplified syntax, methods, properties, and requirements of the SMS_AdminUIContent server class.
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_AdminUIContent Server WMI Class
 For internal use only.  

@@ -3,15 +3,15 @@ title: Flowchart - unplanned promotion
 titleSuffix: Configuration Manager
 description: A flowchart diagram for how the Configuration Manager site server in passive mode is promoted to active when the current site server in active mode is offline.
 ms.date: 07/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: f3df18c2-99eb-4606-a3ef-db31374af602
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Flowchart - Promote site server (unplanned)

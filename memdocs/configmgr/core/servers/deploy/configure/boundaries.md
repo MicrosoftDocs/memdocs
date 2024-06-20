@@ -2,14 +2,16 @@
 title: Define boundaries
 titleSuffix: Configuration Manager
 description: Understand how to define network locations on your intranet that can contain devices you want to manage.
-ms.date: 08/11/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 12/01/2021
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Define network locations as boundaries for Configuration Manager
@@ -49,7 +51,7 @@ For the **Active Directory site** boundary type, you specify the site name. You 
 
 When you specify an Active Directory site for a boundary, the boundary includes each IP subnet that's a member of that Active Directory site. If the configuration of the Active Directory site changes in Active Directory, the network locations included in this boundary also change.  
 
-Active Directory site boundaries don't work for pure Azure Active Directory (Azure AD) devices, also called cloud domain-joined devices. If they roam on-premises, and you only create Active Directory site type boundaries, these devices won't be in a boundary.
+Active Directory site boundaries don't work for pure Microsoft Entra devices, also called cloud domain-joined devices. If they roam on-premises, and you only create Active Directory site type boundaries, these devices won't be in a boundary.
 
 > [!TIP]
 > Use the following Windows command to see a device's current Active Directory site: `nltest /dsgetsite`.
@@ -89,6 +91,8 @@ You can configure a VPN boundary in several ways:
 >
 > To use this VPN boundary during an OS deployment, make sure to also update the boot image to include the latest client binaries.
 
+Starting in version 2111, you can now match the start of a connection name or description instead of the whole string. Some third-party VPN drivers dynamically create the connection, which starts with a consistent string but also has a unique connection identifier. For example, `Virtual network adapter #19`. When you use the **Connection name** or **Connection description** options, also use the new **Starts with** option.<!--7822886-->
+
 ## Create a boundary
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Boundaries** node.
@@ -126,7 +130,7 @@ You can configure a VPN boundary in several ways:
 1. To view the site systems that are associated with this boundary, switch to the **Site Systems** tab. You can't change this configuration from the properties of a boundary.
 
     > [!TIP]
-    > For a server to be listed as a site system for a boundary, associate it as a site system server for at least one boundary group that includes this boundary. Make this configuration on the **References** tab of a boundary group. For more information, see [Configure site assignment and select site system servers](boundary-group-procedures.md#bkmk_references).
+    > For a server to be listed as a site system for a boundary, associate it as a site system server for at least one boundary group that includes this boundary. Make this configuration on the **References** tab of a boundary group. For more information, see [Configure site assignment and select site system servers](boundary-group-procedures.md#configure-site-assignment-and-select-site-system-servers).
 
 1. To modify the boundary group membership for this boundary, select the **Boundary Groups** tab:
 

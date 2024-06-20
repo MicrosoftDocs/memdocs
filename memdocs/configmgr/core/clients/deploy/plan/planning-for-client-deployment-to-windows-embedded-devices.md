@@ -1,17 +1,17 @@
 ---
-title: "Planning client deployment to Windows Embedded devices"
-titleSuffix: "Configuration Manager"
-description: "Plan for client deployment to Windows Embedded devices in Configuration Manager."
-ms.date: 06/12/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+title: Planning client deployment to Windows Embedded devices
+titleSuffix: Configuration Manager
+description: Plan for client deployment to Windows Embedded devices in Configuration Manager.
+ms.date: 10/11/2021
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Planning for client deployment to Windows Embedded devices in Configuration Manager
 
@@ -86,20 +86,4 @@ manager: dougeby
  For more information about how to build images for Windows Embedded devices and configure write filters, see your Windows Embedded documentation, or contact your OEM.  
 
 > [!NOTE]
->  When you select the applicable platforms for software deployments and configuration items, these display the Windows Embedded families rather than specific versions. Use the following list to map the specific version of Windows Embedded to the options in the list box:  
-> 
-> - **Embedded Operating Systems based on Windows XP (32-bit)** includes the following:  
-> 
->   -   Windows XP Embedded  
->   -   Windows Embedded for Point of Service  
->   -   Windows Embedded Standard 2009  
->   -   Windows Embedded POSReady 2009  
->   -   **Embedded operating systems based on Windows 7 (32-bit)** includes the following:  
-> 
->   -   Windows Embedded Standard 7 (32-bit)  
->   -   Windows Embedded POSReady 7 (32-bit)  
->   -   Windows ThinPC  
->   -   **Embedded operating systems based on Windows 7 (64-bit)** includes the following:  
-> 
->   -   Windows Embedded Standard 7 (64-bit)  
->   -   Windows Embedded POSReady 7 (64-bit)
+>  When you select the applicable platforms for software deployments and configuration items, these display the Windows Embedded families rather than specific versions. 

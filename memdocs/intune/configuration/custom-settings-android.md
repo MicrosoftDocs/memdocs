@@ -1,39 +1,41 @@
 ---
 # required metadata
 
-title: Add custom settings to Android devices in Microsoft Intune - Azure | Microsoft Docs
-description: Add or create a custom profile for Android devices to create a WiFi profile with a pre-shared key, create a per-app VPN profile, or allow/block apps for Samsung Knox Standard devices in Microsoft Intune
+title: Add custom settings to Android DA devices in Microsoft Intune
+description: Add or create a custom profile for Android devices in Microsoft Intune. Create a WiFi profile with a preshared key, create a per-app VPN profile, or allow/block apps for Samsung Knox Standard devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2020
-ms.topic: reference
+ms.date: 12/05/2023
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-ms.reviewer: heenamac
+ms.reviewer: anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use custom settings for Android devices in Microsoft Intune
 
-Using Microsoft Intune, you can add or create custom settings for your Android devices using a "custom profile". Custom profiles are a feature in Intune. They are designed to add device settings and features that aren't built in to Intune.
+Using Microsoft Intune, you can add or create custom settings for your Android devices using a custom profile. Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
 This feature applies to:
 
-- Android device administrator (DA)
+- Android device administrator
+
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 Android custom profiles use Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings to configure different features on Android devices. These settings are typically used by mobile device manufacturers to control these features.
 
@@ -44,19 +46,19 @@ Using a custom profile, you can configure and assign the following Android setti
 - [Allow and block apps for Samsung Knox Standard devices](/intune/samsung-knox-apps-allow-block)
 - [Configure web protection in Microsoft Defender for Endpoint for Android](../protect/advanced-threat-protection-manage-android.md)
 
->[!IMPORTANT]
-> Only the settings listed can be configured by in a custom profile. Android devices don't expose a complete list of OMA-URI settings you can configure. If you'd like to see more settings, then vote for more settings at the [Intune Uservoice site](https://microsoftintune.uservoice.com/forums/291681-ideas).
+> [!IMPORTANT]
+> Only the settings listed can be configured by in a custom profile. Android devices don't expose a complete list of OMA-URI settings you can configure.<!-- 10948264 -->
 
 This article shows you how to create a custom profile for Android devices.
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following settings:
 
     - **Platform**: Select **Android device administrator**.
-    - **Profile**: Select **Custom**.
+    - **Profile type**: Select **Custom**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -70,7 +72,7 @@ This article shows you how to create a custom profile for Android devices.
     - **Name**: Enter a unique name for the OMA-URI setting so you can easily find it.
     - **Description**: Enter a description that gives an overview of the setting, and any other important details.
     - **OMA-URI**: Enter the OMA-URI you want to use as a setting.
-    - **Data type**: Select the data type you'll use for this OMA-URI setting. Your options:
+    - **Data type**: Select the data type for this OMA-URI setting. Your options:
 
       - String
       - String (XML file)

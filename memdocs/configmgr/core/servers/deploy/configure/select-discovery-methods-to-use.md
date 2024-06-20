@@ -1,17 +1,17 @@
 ---
-title: "Select discovery methods"
-titleSuffix: "Configuration Manager"
-description: "Review considerations for which methods to use and at which sites to run them."
+title: Select discovery methods
+titleSuffix: Configuration Manager
+description: Review considerations for which methods to use and at which sites to run them.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Select discovery methods to use for Configuration Manager
 

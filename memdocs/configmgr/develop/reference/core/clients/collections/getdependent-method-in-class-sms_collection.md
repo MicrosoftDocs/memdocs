@@ -3,13 +3,16 @@ title: GetDependent method
 titleSuffix: Configuration Manager
 description: Get the collection relationship info which depends on the input collection.
 ms.date: 11/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # GetDependent method in class SMS_Collection

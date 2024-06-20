@@ -3,15 +3,15 @@ title: Device management with Exchange
 titleSuffix: Configuration Manager
 description: Manage mobile devices with the Exchange Server connector in Configuration Manager.
 ms.date: 12/31/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-mdm
+ms.subservice: mdm
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Device management with Exchange and Configuration Manager

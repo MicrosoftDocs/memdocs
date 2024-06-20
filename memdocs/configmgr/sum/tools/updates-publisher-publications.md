@@ -1,17 +1,17 @@
 ---
-title: "Manage publications"
-titleSuffix: "Configuration Manager"
-description: "Manage groups of software updates as a publication with System Center Updates Publisher"
+title: Manage publications
+titleSuffix: Configuration Manager
+description: Manage groups of software updates as a publication with System Center Updates Publisher
 ms.date: 04/29/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: conceptual
-ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 # Manage publications in Updates Publisher
 

@@ -2,21 +2,24 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
-ms.topic: troubleshooting
-ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
-author: mestew
-ms.author: mstewart
-manager: dougeby
+ms.date: 03/28/2024
+ms.subservice: core-infra
+ms.service: configuration-manager
+ms.topic: conceptual
+author: PalikaSingh
+ms.author: palsi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
+
 
 # Release notes for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.
+With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a [troubleshooting article](/troubleshoot/mem/configmgr/).
 
 Feature-specific documentation includes information about known issues that affect core scenarios.
 
@@ -24,117 +27,69 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
-- [What's new in version 2103](../../../plan-design/changes/whats-new-in-version-2103.md)
-- [What's new in version 2010](../../../plan-design/changes/whats-new-in-version-2010.md)
-- [What's new in version 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
-- [What's new in version 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
+- [What's new in version 2403](../../../plan-design/changes/whats-new-in-version-2403.md)
+- [What's new in version 2309](../../../plan-design/changes/whats-new-in-version-2309.md)
+- [What's new in version 2303](../../../plan-design/changes/whats-new-in-version-2303.md)
+- [What's new in version 2211](../../../plan-design/changes/whats-new-in-version-2211.md)
 
-For information about the new features in Desktop Analytics, see [What's new in Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
 > [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
+> You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../../use-docs.md#notifications).
 
-## Client management
+<!-- > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
+> `https://learn.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us` -->
 
-### Client notification actions apply to entire collection
+<!-- ## Client management -->
+## Endpoint Protection
+### Security configurations removed from Intune
+<!-- 27951696 -->
+_Applies to: version 2309 with KB25858444 and later_
 
-<!-- 9021554 -->
+Microsoft Defender security configurations are no longer managed with Microsoft Intune after updating to Configuration Manager version 2403, or installing the [Update Rollup for 2309](../../../../hotfix/2309/25858444.md). 
 
-_Applies to version 2010_
+The symptom is seen as a drop in the Microsoft Security Score values when viewed in Intune. This issue happens because security policy configuration data is incorrectly removed from clients after Configuration Manager clients are upgraded. 
 
-When you use a [client notification](../../../clients/manage/client-notification.md) action on a device in a collection, the action applies to all devices in the collection.
+An updated version of the Microsoft Security Client Policy Configuration Tool, ConfigSecurityPolicy.exe, is available to resolve the Endpoint Protection policy issue described in this note.
 
-For example:
+The updated tool, version 4.18.24040.4, is distributed with the April 2024 monthly Microsoft Defender platform update. At the time of this writing, the platform update is in the process of global distribution, and should be broadly available in all regions by May 17, 2024.   
+Once the platform update is installed on affected clients, Endpoint Protection policies are reapplied from Intune within 8 hours. The "Manage Endpoint Protection client on client computers" setting in Configuration Manager can be changed back to "Yes" as required.
+#### Additional references
 
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node.
-
-1. Select a collection, and then choose the **Show Members** action.
-
-1. Select a device in the collection. In the ribbon on the **Home** tab, select **Client Notification**, and choose an action such as **Restart**.
-
-    Due to this issue, this action applies to all members of the collection, not just the selected client.
-
-    > [!NOTE]
-    > This issue doesn't apply to the **Start CMPivot** or **Run Script** options.
-
-To work around this issue, install the following hotfix: [Client notifications sent to all collection members in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4594177).
-
-Alternatively, use the **Devices** node. Find the device in the list and start the action from there.
-
-> [!NOTE]
-> This issue also applies to the [Invoke-CMClientAction](/powershell/module/configurationmanager/invoke-cmclientaction) PowerShell cmdlet and other SDK methods, if you don't include a collection object or ID.
+- [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates#monthly-platform-and-engine-versions)
+- [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/topic/microsoft-defender-update-for-windows-operating-system-installation-images-1c89630b-61ff-00a1-04e2-2d1f3865450d).
+- [Sync devices to get the latest policies and actions with Intune](/mem/intune/remote-actions/device-sync#sync-a-device)
 
 ## Set up and upgrade
 
-### Client automatic upgrade happens immediately for all clients
+### Version 2107 update fails to download
 
-<!-- 6040412 -->
+<!--9791281,10237384-->
+_Applies to: version 2107 and later_
 
-*Applies to version 1910*
+The update for Configuration Manager version 2107 is available to download, but it fails to download. The **dmpdownloader.log** on the service connection point has entries similar to the following:
 
-If your site uses [automatic client upgrade](../../../clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade), when you update the site to version 1910, all clients immediately upgrade after the site updates successfully. The only randomization is when clients receive the policy, which by default is every hour. For a large site with many clients, this behavior can consume a significant amount of network traffic and stress distribution points.
+```log
+Download large file with BITs
+WARNING: EasySetupDownloadSinglePackage Failed with exception: The remote name could not be resolved: 'configmgrbits.azureedge.net'
+WARNING: Retry in the next polling cycle
+```
 
-For more information on affected versions, see [Client update for Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4538166).
+This failure happens because the service connection point can't communicate with the required internet endpoint, `configmgrbits.azureedge.net`. Confirm that the site system that hosts the service connection point role can communicate with this internet endpoint. It was already required, but its use is expanded in version 2107. The site system can't download version 2107 or later unless your network allows traffic to this URL.
 
-### Site server in passive mode doesn't update configuration.mof
+For more information, see [internet access requirements](../../../plan-design/network/internet-endpoints.md#service-connection-point) for the service connection point.
 
-<!-- 5787848 -->
-
-*Applies to version 1910*
-
-If your site includes a [site server in passive mode](../configure/site-server-high-availability.md), you may lose inventory customizations when you update the site. The site doesn't currently synchronize the configuration.mof when you fail over the site servers.
-
-To work around this issue, manually back up and restore the site's configuration.mof.
-
-## Role based administration
-
-### Security scopes for certain folders don't replicate from CAS to primary sites
-<!--6306759-->
-*Applies to version 1910*
-
-After upgrade to version 1910, [security scopes for folders](../configure/configure-role-based-administration.md#how-to-configure-security-scopes-for-an-object) in user collections and device collections don't get replicated from the CAS to primary sites.
-
-## Application management
-
-### Unable to get certificate for PowerShell error when deploying Microsoft Edge, version 77 and later
-<!--5769384-->
-*Applies to: version 1910*
-
-If you are running the Configuration Manager console on an OS where the language is Swedish, Hungarian, or Japanese, you'll receive the following error when deploying Microsoft Edge, version 77 and later:
-
-`Unable to get certificate for Powershell`
-
-This error occurs because a `scripts` folder doesn't exist under the `AdminConsole\bin` directory for Swedish, Hungarian, or Japanese languages. The scripts folder is localized in these OS languages.
-
-To work around this issue, create a folder called `scripts` in the `AdminConsole\bin` directory. Copy the files from your localized folder to the newly created `scripts` folder. Deploy Microsoft Edge, version 77 and later once the files have been copied.
-
-## OS deployment
-
-### Task sequences can't run over CMG
-
-*Applies to: version 2002*
-
-There are two instances in which task sequences can't run on a device that communicates via a cloud management gateway (CMG):
-
-- You configure the site for Enhanced HTTP and the management point is HTTP.<!-- 6358851 -->
-
-    To work around this issue, update to version 2006. Alternatively, configure the management point for HTTPS.
-
-- You installed and registered the client with a bulk registration token for authentication.<!-- 6377921 -->
-
-    To work around this issue, update to version 2006. Alternatively, use one of the following authentication methods:
-
-  - Pre-register the device on the internal network
-  - Configure the device with a client authentication certificate
-  - Join the device to Azure AD
+<!-- ## OS deployment -->
 
 ## Software updates
+
+### Reset default value of superseding age in months for software updates
+_Applies to: version 2303_
+
+Removing SUP role in Admin Console does not reset the superseding age property in WMI. As a result, while reconfiguring the role, the previously configured value is shown in the configuration window. This property needs to be reset to default value on role removal. For more information, see [supersedence rules for installing a software update point.](../../../../sum/get-started/install-a-software-update-point.md)
 
 ### Security roles are missing for phased deployments
 
 <!--3479337, SCCMDocs-pr issue 3095-->
-*Applies to: versions 1810 and later*
 
 The **OS Deployment Manager** built-in security role has permissions to [phased deployments](../../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md). The following roles are missing these permissions:  
 
@@ -142,7 +97,7 @@ The **OS Deployment Manager** built-in security role has permissions to [phased 
 - **Application Deployment Manager**  
 - **Software Update Manager**  
 
-The **App Author** role may appear to have some permissions to phased deployments, but shouldn't be able to create deployments.
+The **App Author** role may appear to have some permissions to phased deployments, but can't create deployments.
 
 A user with one these roles can start the Create Phased Deployment wizard, and can see phased deployments for an application or software update. They can't complete the wizard, or make any changes to an existing deployment.
 
@@ -155,38 +110,83 @@ To work around this issue, create a custom security role. Copy an existing secur
 
 For more information, see [Create custom security roles](../configure/configure-role-based-administration.md#create-custom-security-roles)
 
-## Desktop Analytics
-
-### <a name="dawin7-diagtrack"></a> An extended security update for Windows 7 causes them to show as **Unable to enroll**
-
-<!-- 7283186 -->
-_Applies to: versions 2002 and earlier_
-
-The April 2020 extended security update (ESU) for Windows 7 changed the minimum required version of the diagtrack.dll from 10586 to 10240. This change causes Windows 7 devices to show as **Unable to enroll** in the Desktop Analytics **Connection Health** dashboard. When you drill down to the device view for this status, the **DiagTrack service configuration** property displays the following state: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
-
-No workaround is required for this issue. Don't uninstall the April ESU. If otherwise properly configured, the Windows 7 devices still report diagnostic data to the Desktop Analytics service, and still show in the portal.
-
 ## Configuration Manager console
 
-### Console extensions
-<!--3555909-->
-*Applies to version 2103* 
+### Intune RBAC for tenant attached devices
+<!--13058986-->
+*Applies to: version 2207*
 
-There is a new hierarchy setting that allows for only using the new style of [console extensions](../../manage/admin-console-extensions.md). If this setting is enabled, your old style extensions that aren't approved through the **Console Extensions** node will no longer be able to be used. The setting, **Only allow console extensions that are approved for the hierarchy**, is `enabled` by default if you installed from the [2103 baseline image](../../manage/updates.md#bkmk_Baselines). It will remain `disabled` by default, if you upgraded from a version prior to 2103.
+***[Updated]***: There is a checkbox for a role-based access control (RBAC) setting in the [cloud attach configuration wizard](../../../../cloud-attach/enable.md) in the console. By default, Configuration Manager RBAC is enforced along with Intune RBAC when you're uploading your Configuration Manager devices to the cloud service. This checkbox is selected by default.
 
-If the setting was enabled in error, disabling the setting allows the old style extensions to be used again.
-## Cloud services
+You can now configure Intune role-based access control (RBAC) when interacting with [tenant attached devices](../../../../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) from the Microsoft Intune admin center. For more information, see [Intune role-based access control for tenant-attached clients](../../../../cloud-attach/use-intune-rbac.md).
 
-### Azure service for US Government cloud shows as public cloud
+### Unable to open console because extension installation loops
+<!--12868458-->
+_Applies to: version 2111_
 
-<!-- 6036748 -->
+In certain circumstances, you'll be unable to open the console due to an extension installation loop. This issue occurs when two or more versions of a single extension were marked as [required for installation](../../manage/admin-console-extensions.md#require-installation-of-a-console-extension). This issue occurs for extensions imported through the wizard, from a PowerShell script, or through Community hub. If you use the **Make optional** setting before importing a new version of the extension, this issue doesn't occur.
 
-*Applies to version 1910*
+When you encounter this issue, it initially appears as a normal console extension installation. After the extension finishes installing, you select **Close** to restart the Configuration Manager console. When the console restarts, you're prompted to install the console extension again. The extension installation will continue to loop and the Configuration Manager console doesn't fully open.
 
-If you create a connection to an Azure service, and set the **Azure environment** to the government cloud, the properties of the connection show the environment as the Azure public cloud. This issue is only a display problem in the console, the service is in the government cloud. To confirm the configuration, run the following SQL query on the site database:
+To both prevent and work around this issue, run the below SQL script on your CAS database and all of your primary site databases:
 
-```SQL
-Select Environment, Name, TenantID From AAD_Tenant_Ex
+```sql
+ALTER VIEW vSMS_ConsoleExtensionMetadata
+AS
+    WITH m AS(
+       SELECT *,
+           RN = ROW_NUMBER()OVER(PARTITION BY ID ORDER BY Version DESC)
+       FROM ConsoleExtensionMetadata
+    ) 
+    SELECT 
+        m.ID, 
+        m.Name, 
+        m.Description, 
+        m.Author, 
+        m.Version, 
+        m.IsEnabled, 
+        m.IsApproved, 
+        m.CreatedTime, 
+        m.CreatedBy, 
+        m.UpdateTime, 
+        m.IsTombstoned, 
+        m.IsRequired, 
+        m.IsSigned, 
+        m.IsUnsignedAllowed, 
+        CASE m.IsRequired 
+            WHEN 0 THEN ''  
+            ELSE  
+            ( 
+                SELECT top(1) author FROM ConsoleExtensionRevisionHistory h 
+                WHERE m.ID=h.ExtensionId AND m.Version=h.Version AND h.Changes & 1=1 
+                ORDER BY h.RevisionTime DESC 
+            ) 
+        END AS RequiredBy, 
+        m.IsSetupDefined 
+    FROM m
+    WHERE RN = 1
+GO
 ```
+## Boundaries and Boundary groups
 
-For the government cloud, the result of this query is `2` for the specific tenant.
+### Clients not belonging to any boundary group may fail to download due to SQL issue 
+<!--22760249-->
+*Applies to: version 2303, 2309 RTM*
+
+ Consider ConfigMgr hierarchy with a remote MP and CMG and you deploy an app to a device collection. The Clients cannot download app, and reflect the below SQL permissions issue in **MP_Location.log**.
+
+ ```log
+    The SELECT permission was denied on the object 'vSMS_DefaultBoundaryGroup', database 'CM_xxx', schema 'dbo'.
+ ```
+ To work around the issue run the below SQL script on the SQL database on the primary sites where the MP reports.
+
+```sql
+    GRANT SELECT ON vSMS_DefaultBoundaryGroup To smsdbrole_MP
+```
+<!-- ## Cloud services -->
+
+<!-- ## Role based administration -->
+
+<!-- ## Application management -->
+
+<!-- ## CMPivot -->

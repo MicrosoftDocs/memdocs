@@ -3,14 +3,16 @@ title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
 ms.date: 07/06/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 1810 of Configuration Manager current branch
@@ -27,11 +29,6 @@ To take advantage of new Configuration Manager features, first update clients to
 > [!Note]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized. 
 -->  
-
-> [!Tip]  
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1810+-+Configuration+Manager%22&locale=en-us`
-
 
 
 ## <a name="bkmk_deprecated"></a> Deprecated features and operating systems
@@ -101,7 +98,7 @@ Boundary groups now include the following additional settings to give you more c
 
 - **Prefer cloud distribution points over distribution points**: If you have a branch office with a faster internet link, you can now prioritize cloud content.  
 
-For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
+For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-group-options.md).
 
 
 ### Management insights rule for peer cache source client version
@@ -147,7 +144,7 @@ For more information, see [How to create collections](../../clients/manage/colle
 <!--1358840-->
 When installing the Configuration Manager client, the ccmsetup process contacts the management point to locate the necessary content. Previously in this process the management point only returns distribution points in the client's current boundary group. If no content is available, the setup process falls back to download content from the management point. There's no option to fall back to distribution points in other boundary groups that might have the necessary content. Now the management point returns distribution points based on boundary group configuration.
 
-For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup).
+For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups-distribution-points.md#client-installation).
 
 
 
@@ -233,7 +230,7 @@ For more information, see [Create applications](../../../apps/deploy-use/create-
 <!--3607717, fka 1358333-->
 [Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence.
 
-For more information, see [Windows Autopilot for existing devices](../../../../autopilot/existing-devices.md).
+For more information, see [Windows Autopilot for existing devices](/autopilot/existing-devices).
 
 
 ### Specify the drive for offline OS image servicing
@@ -241,7 +238,7 @@ For more information, see [Windows Autopilot for existing devices](../../../../a
 <!--1358924-->
 Now specify the drive that Configuration Manager uses when adding software updates to OS images and OS upgrade packages. This process can consume a large amount of disk space with temporary files, so this option gives you flexibility to select the drive to use.
 
-For more information, see [Manage OS images](../../../osd/get-started/manage-operating-system-images.md#bkmk_servicing-drive) or [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#bkmk_servicing-drive).
+For more information, see [Manage OS images](../../../osd/get-started/manage-operating-system-images.md#specify-the-drive-for-offline-os-image-servicing) or [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#specify-the-drive-for-offline-os-image-servicing).
 
 
 ### Task sequence support for boundary groups
@@ -249,7 +246,7 @@ For more information, see [Manage OS images](../../../osd/get-started/manage-ope
 <!--1359025-->
 When a device runs a task sequence and needs to acquire content, it now uses boundary group behaviors similar to the Configuration Manager client.
 
-For more information, see [Boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_bgr-osd).
+For more information, see [Boundary groups](../../servers/deploy/configure/boundary-groups-distribution-points.md#task-sequence-support).
 
 
 ### Improvements to driver maintenance
@@ -264,7 +261,7 @@ For more information, see [Manage drivers](../../../osd/get-started/manage-drive
 <!--3098809, 3113836, 3204570 -->
 Additional filters have been added to Windows 10 servicing plans. You can now filter by **Architecture**, **Product Category**, and if the upgrade is **Superseded**.
 
-For more information, see [Windows 10 servicing plan](../../../osd/deploy-use/manage-windows-as-a-service.md#windows-10-servicing-plan).
+For more information, see [Windows 10 servicing plan](../../../osd/deploy-use/manage-windows-as-a-service.md#windows-servicing-plan).
 
 ### New task sequence variable for last action name
 

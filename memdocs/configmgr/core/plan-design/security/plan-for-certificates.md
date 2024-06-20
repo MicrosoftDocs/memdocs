@@ -1,73 +1,26 @@
 ---
-title: Plan for certificates
+title: Plan for PKI certificates
 titleSuffix: Configuration Manager
-description: Plan for the use of self-signed and PKI digital certificates in Configuration Manager.
-ms.date: 05/04/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+description: Plan for the use of PKI digital certificates in Configuration Manager.
+ms.date: 03/23/2023
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
-# Plan for certificates in Configuration Manager
+# Plan for PKI certificates in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager uses a combination of self-signed and public key infrastructure (PKI) digital certificates.
+Configuration Manager uses public key infrastructure (PKI)-based digital certificates when available. Use of these certificates is recommended for greater security, but not required for most scenarios. You need to deploy and manage these certificates independently from Configuration Manager.
 
-Use PKI certificates whenever possible. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md). When Configuration Manager requests PKI certificates during enrollment for mobile devices, use Active Directory Domain Services and an enterprise certification authority. For all other PKI certificates, deploy and manage them independently from Configuration Manager.
-
-PKI certificates are required when client computers connect to internet-based site systems. Some scenarios with the cloud management gateway and cloud distribution point also require PKI certificates. For more information, see [Manage clients on the internet](../../clients/manage/manage-clients-internet.md).
-
-When you use a PKI, you can also use IPsec to help secure the server-to-server communication between site systems in a site, between sites, and for other data transfer between computers. Implementation of IPsec is independent from Configuration Manager.
-
-When PKI certificates aren't available, Configuration Manager automatically generates self-signed certificates. Some certificates in Configuration Manager are always self-signed. In most cases, Configuration Manager automatically manages the self-signed certificates, and you don't have to take another action. One example is the site server signing certificate. This certificate is always self-signed. It makes sure that the policies that clients download from the management point were sent from the site server and weren't tampered with. As another example, when you enable the site for [Enhanced HTTP](../hierarchy/enhanced-http.md), the site issues self-signed certificates to site server roles.
-
-> [!IMPORTANT]
-> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
-
-## CNG v3 certificates
-
-Configuration Manager supports _Cryptography: Next Generation_ (CNG) v3 certificates. Configuration Manager clients can use a PKI client authentication certificate with private key in a CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private keys, such as a TPM KSP for PKI client authentication certificates.
-
-For more information, see [CNG v3 certificates overview](../network/cng-certificates-overview.md).
-
-## Enhanced HTTP
-
-Using HTTPS communication is recommended for all Configuration Manager communication paths, but is challenging for some customers because of the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. You can instead enable the site to use _enhanced HTTP_. This configuration supports HTTPS on site systems by using self-signed certificates, along with Azure AD for some scenarios. It doesn't require PKI.
-
-For more information, see [Enhanced HTTP](../hierarchy/enhanced-http.md).  
-
-## Certificates for CMG and CDP
-
-Managing clients on the internet via the cloud management gateway (CMG) and cloud distribution point (CDP) requires the use of certificates. The number and type of certificates varies depending upon your specific scenarios.
-
-For more information, see the following articles:
-
-- [CMG set up checklist](../../clients/manage/cmg/set-up-checklist.md)
-- [Certificates for the cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)
-
-## The site server signing certificate
-
-The site server always creates a self-signed certificate. It uses this certificate for several purposes.
-
-Clients can securely get a copy of the site server signing certificate from Active Directory Domain Services and from client push installation. If clients can't get a copy of this certificate by one of these mechanisms, install it when you install the client. This process is especially important if the client's first communication with the site is with an internet-based management point. Because this server is connected to an untrusted network, it's more vulnerable to attack. If you don't take this other step, clients automatically download a copy of the site server signing certificate from the management point.
-
-Clients can't securely get a copy of the site server certificate in the following scenarios:
-
-- You don't install the client by using client push, and:
-
-  - You haven't extended the Active Directory schema for Configuration Manager.
-
-  - You haven't published the client's site to Active Directory Domain Services.
-
-  - The client is from an untrusted forest or a workgroup.
-
-- You're using internet-based client management and you install the client when it's on the internet.
-
-For more information on how to install clients with a copy of the site server signing certificate, use the **SMSSIGNCERT** command-line property. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#smssigncert).
+This article provides information about PKI certificates in Configuration Manager to help you plan your implementation. For more general information about the use of certificates in Configuration Manager, see [Certificates in Configuration Manager](certificates-overview.md).
 
 ## PKI certificate revocation
 
@@ -214,19 +167,22 @@ Because of the number of configuration options and choices in Configuration Mana
 
 1. Track how many clients are using a client PKI certificate by viewing the **Client Certificate** column in the **Assets and Compliance** workspace, **Devices** node.
 
-    You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**CMHttpsReadiness.exe**) to computers. Then use the reports to view how many computers can use a client PKI certificate with Configuration Manager.
+   > [!NOTE]
+   > For clients that also have a PKI certificate, the Configuration Manager console displays the **Client certificate** property as **Self-signed**. The client control panel **Client certificate** property shows **PKI**.<!-- 10278780 -->
 
-    > [!NOTE]
-    > When you install the Configuration Manager client, it installs the **CMHttpsReadiness.exe** tool in the `%windir%\CCM` folder. The following command-line options are available when you run this tool:
-    >
-    > - `/Store:<Certificate store name>`: This option is the same as the [CCMCERTSTORE](../../clients/deploy/about-client-installation-properties.md#ccmcertstore) client.msi property
-    > - `/Issuers:<Case-sensitive issuer common name>`: This option is the same as the [CCMCERTISSUERS](../../clients/deploy/about-client-installation-properties.md#ccmcertissuers) client.msi property
-    > - `/Criteria:<Selection criteria>`: This option is the same as the [CCMCERTSEL](../../clients/deploy/about-client-installation-properties.md#ccmcertsel) client.msi property
-    > - `/SelectFirstCert`: This option is the same as the [CCMFIRSTCERT](../../clients/deploy/about-client-installation-properties.md#ccmfirstcert) client.msi property
-    >
-    > The tool outputs information to the CMHttpsReadiness.log in the `CCM\Logs` directory.
-    >
-    > For more information, see [About client installation properties](../../clients/deploy/about-client-installation-properties.md).
+   You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**CMHttpsReadiness.exe**) to computers. Then use the reports to view how many computers can use a client PKI certificate with Configuration Manager.
+
+   > [!NOTE]
+   > When you install the Configuration Manager client, it installs the **CMHttpsReadiness.exe** tool in the `%windir%\CCM` folder. The following command-line options are available when you run this tool:
+   >
+   > - ```/Store:<Certificate store name>```: This option is the same as the [CCMCERTSTORE](../../clients/deploy/about-client-installation-properties.md#ccmcertstore) client.msi property
+   > -```/Issuers:<Case-sensitive issuer common name>```: This option is the same as the [CCMCERTISSUERS](../../clients/deploy/about-client-installation-properties.md#ccmcertissuers) client.msi property
+   > - ```/Criteria:<Selection criteria>```: This option is the same as the [CCMCERTSEL](../../clients/deploy/about-client-installation-properties.md#ccmcertsel) client.msi property
+   > - ```/SelectFirstCert```: This option is the same as the [CCMFIRSTCERT](../../clients/deploy/about-client-installation-properties.md#ccmfirstcert) client.msi property
+
+     The tool outputs information to the CMHttpsReadiness.log in the ```CCM\Logs``` directory.
+
+     For more information, see [About client installation properties](../../clients/deploy/about-client-installation-properties.md).
 
 1. When you're confident that enough clients are successfully using their client PKI certificate for authentication over HTTP, follow these steps:
 

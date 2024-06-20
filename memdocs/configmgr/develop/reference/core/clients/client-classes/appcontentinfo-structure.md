@@ -1,16 +1,18 @@
 ---
-title: "AppContentInfo Structure"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: AppContentInfo Structure
+titleSuffix: Configuration Manager
+description: The AppContentInfo structure provides information about the application content.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: eae48844-c1fe-4dd1-9c76-21d7f53217b6
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AppContentInfo Structure
 In Configuration Manager, the `AppContentInfo` structure contains information about the application content.  

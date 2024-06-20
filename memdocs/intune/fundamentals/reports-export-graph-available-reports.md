@@ -3,53 +3,54 @@
 
 title: Intune Graph API - Reports and properties | Microsoft Docs
 description: Learn about Intune reports and properties provided via Graph API.
-keywords: 
+keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2021
+ms.date: 03/14/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
-ms.assetid: 
+ms.assetid:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-#ms.reviewer: spenspshumwa
+ms.reviewer: davidra
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Intune reports and properties available using Graph API
 
-Microsoft Intune provides many reports in the console that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information about , see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+Microsoft Intune provides many reports in the Microsoft Intune admin center that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 > [!NOTE]
 > Intune reports that have been migrated to a new [Intune reporting infrastructure](https://techcommunity.microsoft.com/t5/intune-customer-success/new-reporting-framework-coming-to-intune/ba-p/1009553#:~:text=New%20Reporting%20Framework%20Coming%20to%20Intune%20%20,Device%20compliance%20logging%20%203%20more%20rows), will be available for export from a single top-level export Graph API.
-> 
+>
 > For more information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
-Microsoft Endpoint Manager will export reports using the following Microsoft Graph API endpoint:
+Microsoft Intune will export reports using the following Microsoft Graph API endpoint:
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 ```
+
 The following table contains the possible values for the `reportName` parameter. These are the currently available reports for export.
 
-|         ReportName (Export Parameter)  |            Associated   Report in Microsoft Endpoint Manager        |
+|         ReportName (Export Parameter)  |            Associated   Report in Microsoft Intune        |
 |-|-|
 |         DeviceCompliance  |            Device   Compliance Org        |
 |         DeviceNonCompliance  |            Non-compliant   devices        |
 |         Devices  |            All   devices list        |
-|         DetectedAppsAggregate  |            Detected   Apps report        |
 |         FeatureUpdatePolicyFailuresAggregate  |            Under   **Devices** > **Monitor** > **Failure for feature updates**       |
 |         DeviceFailuresByFeatureUpdatePolicy  |            Under   **Devices** > **Monitor** > **Failure for feature updates** > *click   on error*        |
 |         FeatureUpdateDeviceState  |            Under   **Reports** > **Window Updates** > **Reports** > **Windows   Feature Update Report**         |
@@ -61,6 +62,22 @@ The following table contains the possible values for the `reportName` parameter.
 |         AppInstallStatusAggregate  |             Under **Apps** > **Monitor** > **App install status**         |
 |         DeviceInstallStatusByApp  |            Under **Apps** > **All Apps** > *Select an individual app*       |
 |         UserInstallStatusAggregateByApp  |            Under **Apps** > **All Apps** > *Select an individual app*         |
+|         ComanagedDeviceWorkloads  |            Under **Reports** > **Cloud attached devices** > **Reports** > **Co-Managed Workloads**        |
+|         ComanagementEligibilityTenantAttachedDevices  |            Under **Reports** > **Cloud attached devices** > **Reports** > **Co-Management Eligibility**        |
+|         DeviceRunStatesByProactiveRemediation  |            Under **Reports** > **Endpoint Analytics** > **Proactive remediations** > *Select a remediation* > **Device status**        |
+|         DevicesWithInventory  |            Under **Devices** > **All Devices** > **Export**        |
+|         FirewallStatus  |            Under **Reports** > **Firewall** > **MDM Firewall status for Windows 10 and later**        |
+|         GPAnalyticsSettingMigrationReadiness  |            Under **Reports** > **Group policy analytics** > **Reports** > **Group policy migration readiness**        |
+|         QualityUpdateDeviceErrorsByPolicy  |            Under **Devices** > **Monitor** > **Windows Expedited update failures** > *Select a profile*        |
+|         QualityUpdateDeviceStatusByPolicy  |            Under **Reports** > **Windows updates** > **Reports** > **Windows Expedited Update Report**        |
+|         MAMAppProtectionStatus  |            Under **Apps** > **Monitor** > **App protection status** > **App protection report: iOS, Android**       |
+|         MAMAppConfigurationStatus  |            Under **Apps** > **Monitor** > **App protection status** > **App configuration report**        |
+|         DevicesByAppInv  |            Under **Apps** > **Monitor** > **Discovered apps** > **Discovered app**> **Export**         |
+|         AppInvByDevice  |            Under **Devices** > **All Devices** > **Device** > **Discovered Apps**         |
+|         AppInvAggregate  |            Under **Apps** > **Monitor** > **Discovered apps** > **Export**         |
+|         AppInvRawData  |            Under **Apps** > **Monitor** > **Discovered apps** > **Export**         |
+
+
 
 Each of the listed reports is described below.
 
@@ -70,7 +87,7 @@ The following table contains the possible output when calling the `AllAppsList` 
 
 | Available   properties |
 |-|
-|     AppIdentifier |
+| AppIdentifier |
 | Name |
 | Publisher |
 | Platform |
@@ -88,7 +105,7 @@ The following table contains the possible output when calling the `AllAppsList` 
 | MoreInformationURL |
 | PrivacyInformationURL |
 | StoreURL |
-| Assigned    |
+| Assigned |
 
 There are no filters for this report.
 
@@ -98,7 +115,7 @@ The following table contains the possible output when calling the `AppInstallSta
 
 | Available   properties |
 |-|
-|     ApplicationId |
+| ApplicationId |
 | DisplayName |
 | Publisher |
 | Platform |
@@ -126,8 +143,9 @@ The following table contains the possible output when calling the `DeviceInstall
 
 | Available   properties |
 |-|
-|     DeviceName |
+| DeviceName |
 | UserPrincipalName |
+| UserName |
 | Platform |
 | AppVersion |
 | DeviceId |
@@ -139,8 +157,8 @@ The following table contains the possible output when calling the `DeviceInstall
 | AppInstallStateDetails_loc |
 | HexErrorCode    |
 
-You can choose to filter the `AppInstallStatusAggregate` report's output based on the following columns:
-- `ApplicationId`
+You can choose to filter the `DeviceInstallStatusByApp` report's output based on the following columns:
+- `ApplicationId` **(Required)**
 - `AppInstallState`
 - `HexErrorCode` (Used as ErrorCode)
 
@@ -150,7 +168,7 @@ The following table contains the possible output when calling the `UserInstallSt
 
 | Available   properties |
 |-|
-|     UserName |
+| UserName |
 | UserPrincipalName |
 | FailedCount |
 | InstalledCount |
@@ -158,7 +176,8 @@ The following table contains the possible output when calling the `UserInstallSt
 | NotInstalledCount |
 | NotApplicableCount    |
 
-There are no filters for this report.
+You can choose to filter the `UserInstallStatusAggregateByApp` report's output based on the following column:
+- `ApplicationId` **(Required)**
 
 ## DeviceCompliance report
 
@@ -192,9 +211,9 @@ The following table contains the possible output when calling the `DeviceComplia
 
 You can choose to filter the `DeviceCompliance` report's output based on the following columns:
 - `ComplianceState`
-- `OS` 
+- `OS`
 - `OwnerType`
-- `DeviceType` 
+- `DeviceType`
 
 ## DeviceNonCompliance report
 
@@ -227,9 +246,9 @@ The following table contains the possible output when calling the `DeviceNonComp
 | OS |
 
 You can choose to filter the `DeviceNonCompliance` report's output based on the following columns:
-- `OS` 
+- `OS`
 - `OwnerType`
-- `DeviceType` 
+- `DeviceType`
 - `UserId`
 - `ComplianceState`
 
@@ -310,30 +329,15 @@ The following table contains the possible output when calling the `Devices` repo
 
 You can choose to filter the `Devices` report's output based on the following columns:
 - `OwnerType`
-- `DeviceType` 
+- `DeviceType`
 - `ManagementAgents`
-- `CategoryName` 
-- `ManagementState` 
-- `CompliantState` 
-- `JailBroken` 
-- `LastContact` 
-- `CreatedDate` 
-- `EnrollmentType` 
-
-## DetectedAppsAggregate report
-
-The following table contains the possible output when calling the `DetectedAppsAggregate` report:
-
-|     Available properties  |
-|-|
-|     ApplicationKey  |
-| ApplicationName  |
-|            ApplicationVersion  |
-| DeviceCount  |
-| BundleSize  |
-
-You can choose to filter the `DetectedAppsAggregate` report's output based on the following column:
-- `ApplicationName`
+- `CategoryName`
+- `ManagementState`
+- `CompliantState`
+- `JailBroken`
+- `LastContact`
+- `CreatedDate`
+- `EnrollmentType`
 
 ## FeatureUpdatePolicyFailuresAggregate report
 
@@ -379,10 +383,10 @@ The following table contains the possible output when calling the `DeviceFailure
 |     UPN     |
 
 You can choose to filter the `DeviceFailuresByFeatureUpdatePolicy` report's output based on the following columns:
-- `PolicyId` **(Required)** 
-- `AlertMessage` 
-- `RecommendedAction` 
-- `WindowsUpdateVersion` 
+- `PolicyId` **(Required)**
+- `AlertMessage`
+- `RecommendedAction`
+- `WindowsUpdateVersion`
 
 ## FeatureUpdateDeviceState report
 
@@ -457,10 +461,10 @@ The `UnhealthyDefenderAgents` and `DefenderAgents` reports are two distinct repo
 |     UserName     |
 
 You can choose to filter the `UnhealthyDefenderAgents` and `DefenderAgents` report's output based on the following columns:
-- `DeviceState` 
-- `SignatureUpdateOverdue` 
+- `DeviceState`
+- `SignatureUpdateOverdue`
 - `MalwareProtectionEnabled`
-- `RealTimeProtectionEnabled` 
+- `RealTimeProtectionEnabled`
 - `NetworkInspectionSystemEnabled`
 
 ## ActiveMalware and Malware reports
@@ -486,9 +490,464 @@ The `ActiveMalware` and `Malware` reports are two distinct reports that have the
 |     UserName     |
 
 You can choose to filter the `ActiveMalware` and `Malware` report's output based on the following columns:
-- `Severity` 
-- `ExecutionState` 
-- `State` 
+- `Severity`
+- `ExecutionState`
+- `State`
+
+## ComanagedDeviceWorkloads
+
+The following table contains the possible output when calling the `ComanagedDeviceWorkloads` report:
+
+| Available   properties |
+|-|
+|   DeviceName  |
+|   DeviceId    |
+|   CompliancePolicy    |
+|   ResourceAccess   |
+|   DeviceConfiguration  |
+|   WindowsUpdateforBusiness     |
+|   EndpointProtection   |
+|   ModernApps   |
+|   OfficeApps   |
+
+You can choose to filter the `ComanagedDeviceWorkloads` report's output based on the following columns:
+- `CompliancePolicy`
+- `ResourceAccess`
+- `DeviceConfiguration`
+- `WindowsUpdateforBusiness`
+- `EndpointProtection`
+- `ModernApps`
+- `OfficeApps`
+
+## ComanagementEligibilityTenantAttachedDevices
+
+The following table contains the possible output when calling the `ComanagementEligibilityTenantAttachedDevices` report:
+
+| Available   properties |
+|-|
+|   DeviceName   |
+|   DeviceId   |
+|   Status   |
+|   OSDescription   |
+|   OSVersion   |
+
+You can choose to filter the `ComanagementEligibilityTenantAttachedDevices` report's output based on the following columns:
+- `Status`
+
+## DeviceRunStatesByProactiveRemediation
+
+The following table contains the possible output when calling the `DeviceRunStatesByProactiveRemediation` report:
+
+| Available   properties |
+|-|
+|   PolicyId   |
+|   DeviceId   |
+|   UserId   |
+|   InternalVersion   |
+|   ModifiedTime   |
+|   PostRemediationDetectionScriptError   |
+|   PostRemediationDetectionScriptOutput   |
+|   PreRemediationDetectionScriptError   |
+|   PreRemediationDetectionScriptOutput   |
+|   RemediationScriptErrorDetails   |
+|   RemediationStatus   |
+|   DeviceName   |
+|   OSVersion   |
+|   UPN   |
+|   UserEmail   |
+|   UserName   |
+|   DetectionStatus   |
+|   UniqueKustoKey   |
+|   DetectionScriptStatus   |
+|   RemediationScriptStatus   |
+
+You can choose to filter the `DeviceRunStatesByProactiveRemediation` report's output based on the following columns:
+- `PolicyId` **(required)**
+- `RemediationStatus`
+- `DetectionStatus`
+
+## DevicesWithInventory
+
+> [!NOTE]
+> To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API will allow you to select, to what you will receive back.
+>
+> The column alias can only be accepted by the select parameter, and can not be accepted by the filter parameter.
+>
+> The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` will only be exported when they are included in the select parameter. These columns will not be exported by default.
+
+The following table contains the possible output when calling the `DevicesWithInventory` report:
+
+| Requestable Columns  | Columns received  |
+|---|---|
+| DeviceId  | Device ID  |
+| DeviceName  | Device name  |
+| CreatedDate  | Enrollment date  |
+| LastContact  | Last check-in  |
+| ReferenceId  | Microsoft Entra Device ID  |
+| OSVersion  | OS version  |
+| GraphDeviceIsManaged  | Microsoft Entra registered  |
+| EasID  | EAS activation ID  |
+| SerialNumber  | Serial number  |
+| Manufacturer  | Manufacturer  |
+| Model  | Model  |
+| EasActivationStatus  | EAS activated  |
+| IMEI  | IMEI  |
+| EasLastSyncSuccessUtc  | Last EAS sync time  |
+| EasStateReason  | EAS reason  |
+| EasAccessState  | EAS status  |
+| InGracePeriodUntil  | Compliance grace period expiration  |
+| AndroidPatchLevel  | Security patch level  |
+| WifiMacAddress  | Wi-Fi MAC  |
+| MEID  | MEID  |
+| SubscriberCarrierNetwork  | Subscriber carrier  |
+| StorageTotal  | Total storage  |
+| StorageFree  | Free storage  |
+| ManagedDeviceName  | Management name  |
+| CategoryName  | Category  |
+| UserId  | UserId  |
+| UPN  | Primary user UPN  |
+| UserEmail  | Primary user email address  |
+| UserName  | Primary user display name  |
+| WiFiIPv4Address  | WiFiIPv4Address  |
+| WiFiSubnetID  | WiFiSubnetID  |
+| CompliantState *(alias: ComplianceState)*  | Compliance  |
+| ManagementAgent  | Managed by  |
+| OwnerType  | Ownership  |
+| ManagementState  | Device state  |
+| DeviceRegistrationState  | Intune registered  |
+| IsSupervised  | Supervised  |
+| IsEncrypted  | Encrypted  |
+| DeviceType *(alias: OS)*  | OS  |
+| SkuFamily  | SkuFamily  |
+| JoinType  | JoinType  |
+| PhoneNumber  | Phone number  |
+| JailBroken  | Jailbroken  |
+| ICCID  | ICCID  |
+| EthernetMAC  | EthernetMAC  |
+| CellularTechnology  | CellularTechnology  |
+| ProcessorArchitecture  | ProcessorArchitecture  |
+| EID  | EID  |
+| EnrollmentType  | EnrollmentType  |
+| PartnerFeaturesBitmask  | PartnerFeaturesBitmask  |
+| ManagementAgents  | ManagementAgents  |
+| CertExpirationDate  | CertExpirationDate  |
+| IsManaged  | IsManaged  |
+| SystemManagementBIOSVersion  | SystemManagementBIOSVersion  |
+| TPMManufacturerId  | TPMManufacturerId  |
+| TPMManufacturerVersion  | TPMManufacturerVersion  |
+
+You can choose to filter the `DevicesWithInventory` report's output based on the following columns:
+- `CreatedDate`
+- `LastContact`
+- `CategoryName`
+- `CompliantState`
+- `ManagementAgents`
+- `OwnerType`
+- `ManagementState`
+- `DeviceType`
+- `JailBroken`
+- `EnrollmentType`
+- `PartnerFeaturesBitmask`
+
+The `ProcessorArchitecture` mappings for Windows 10+ are the following:
+- 9 = x64
+- 5 = ARM
+- 12 = ARM64
+- 0 = x86
+- default = Unknown
+
+The `ProcessorArchitecture` mappings for macOS are the following:
+- 9 = x64
+- 12 = ARM64
+- default = unknown
+
+## FirewallStatus
+
+The following table contains the possible output when calling the `FirewallStatus` report:
+
+| Available   properties |
+|-|
+| DeviceName  |
+| FirewallStatus  |
+| FirewallStatus_loc   |
+| _ManagedBy   |
+| UPN   |
+
+You can choose to filter the `FirewallStatus` report's output based on the following columns:
+- `FirewallStatus`
+
+## GPAnalyticsSettingMigrationReadiness
+
+The following table contains the possible output when calling the `GPAnalyticsSettingMigrationReadiness` report:
+
+| Available   properties |
+|-|
+| SettingName   |
+| SettingCategory   |
+| MigrationReadiness   |
+| OSVersion   |
+| Scope   |
+| ProfileType   |
+| CSPName   |
+| MdmMapping   |
+
+You can choose to filter the `GPAnalyticsSettingMigrationReadiness` report's output based on the following columns:
+- `MigrationReadiness`
+- `ProfileType`
+- `CSPName`
+
+## QualityUpdateDeviceErrorsByPolicy
+
+The following table contains the possible output when calling the `QualityUpdateDeviceErrorsByPolicy` report:
+
+| Available   properties |
+|-|
+| PolicyId   |
+| DeviceName   |
+| AlertMessage   |
+| AlertMessage_loc   |
+| Win32ErrorCode   |
+| UPN   |
+| ExpediteQUReleaseDate   |
+| DeviceId   |
+
+You can choose to filter the `QualityUpdateDeviceErrorsByPolicy` report's output based on the following columns:
+- `PolicyId` **(required)**
+- `AlertMessage`
+
+## QualityUpdateDeviceStatusByPolicy
+
+The following table contains the possible output when calling the `QualityUpdateDeviceStatusByPolicy` report:
+
+| Available   properties |
+|-|
+| PolicyId   |
+| DeviceName   |
+| UPN   |
+| DeviceId   |
+| AADDeviceId   |
+| EventDateTimeUTC   |
+| CurrentDeviceUpdateStatus   |
+| CurrentDeviceUpdateStatus_loc   |
+| CurrentDeviceUpdateSubstatus   |
+| CurrentDeviceUpdateSubstatus_loc   |
+| AggregateState   |
+| AggregateState_loc   |
+| LatestAlertMessage   |
+| LatestAlertMessage_loc   |
+| LastWUScanTimeUTC   |
+| OwnerType   |
+
+You can choose to filter the `QualityUpdateDeviceStatusByPolicy` report's output based on the following columns:
+- `PolicyId` **(required)**
+- `AggregateState`
+- `OwnerType`
+
+## MAMAppProtectionStatus
+
+The following table contains the possible output when calling the `MAMAppProtectionStatus` report:
+
+| Available   properties |
+|-|
+| User   |
+| Email   |
+| App   |
+| AppVersion   |
+| SdkVersion   |
+| AppInstanceId   |
+| DeviceName   |
+| DeviceHealth   |
+| DeviceType   |
+| DeviceManufacturer   |
+| DeviceModel   |
+| AndroidPatchVersion   |
+| AADDeviceID   |
+| MDMDeviceID   |
+| Platform   |
+| PlatformVersion   |
+| ManagementType   |
+| AppProtectionStatus   |
+| Policy   |
+| LastSync   |
+| ComplianceState   |
+
+There are no filters for this report.
+
+## MAMAppConfigurationStatus
+
+The following table contains the possible output when calling the `MAMAppConfigurationStatus` report:
+
+| Available   properties |
+|-|
+| User   |
+| Email   |
+| App   |
+| AppVersion   |
+| SdkVersion   |
+| AppInstanceId   |
+| DeviceName   |
+| DeviceHealth   |
+| DeviceType   |
+| DeviceManufacturer   |
+| DeviceModel   |
+| AndroidPatchVersion   |
+| AADDeviceID   |
+| MDMDeviceID    |
+| Platform   |
+| PlatformVersion   |
+| Policy   |
+| LastSync   |
+
+There are no filters for this report.
+
+## DevicesByAppInv report
+
+The following table contains the possible output when calling the `DevicesByAppInv` report:
+
+|     Available properties  |
+|-|
+|     ApplicationKey  |
+|     ApplicationName  |
+|     ApplicationPublisher  |
+|     ApplicationShortVersion  |
+|     ApplicationVersion  |
+|     DeviceId  |
+|     DeviceName  |
+|     OSDescription  |
+|     OSVersion  |
+|     Platform  |
+|     UserId  |
+|     EmailAddress  |
+|     UserName  |
+
+You can choose to filter the `DevicesByAppInv` report's output based on the following column:
+- `ApplicationKey` **(Required)**
+
+
+## AppInvByDevice report
+
+The following table contains the possible output when calling the `AppInvByDevice` report:
+
+|     Available properties  |
+|-|
+|     DeviceId  |
+|     ApplicationKey  |
+|     ApplicationName  |
+|     ApplicationPublisher  |
+|     ApplicationShortVersion  |
+|     ApplicationVersion  |
+|     DeviceName  |
+|     OSDescription  |
+|     OSVersion  |
+|     Platform  |
+|     UserId  |
+|     EmailAddress  |
+|     UserName  |
+
+You can choose to filter the `AppInvByDevice` report's output based on the following column:
+- `DeviceId` **(Required)**
+
+
+## AppInvAggregate report
+
+The following table contains the possible output when calling the `AppInvAggregate` report:
+
+|     Available properties  |
+|-|
+| ApplicationKey  |
+| ApplicationName  |
+| ApplicationPublisher  |
+| ApplicationShortVersion  |
+| ApplicationVersion  |
+| DeviceCount  |
+
+There are no filters for this report.
+
+
+## AppInvRawData report
+
+The following table contains the possible output when calling the `AppInvRawData` report:
+
+|     Available properties  |
+|-|
+|     ApplicationKey  |
+|     ApplicationName  |
+|     ApplicationPublisher  |
+|     ApplicationShortVersion  |
+|     ApplicationVersion  |
+|     DeviceId  |
+|     DeviceName  |
+|     OSDescription  |
+|     OSVersion  |
+|     Platform  |
+|     UserId  |
+|     EmailAddress  |
+|     UserName  |
+
+There are no filters for this report.
+
+## ChromeOSDevices report
+
+The following table contains the possible output when calling the `ChromeOSDevices` report:
+
+|     Available properties  |
+|-|
+|     IntuneDeviceId  |
+|     IntuneDeviceName  |
+|     LastSyncFromGoogle  |
+|     OSVersion  |
+|     SerialNumber  |
+|     Model  |
+|     WifiMacAddress  |
+|     MostRecentUserEmail  |
+|     MostRecentLogin  |
+|     OrganizationalUnitPath  |
+|     LastOSUpdateTime  |
+|     AutoUpdateExpiration  |
+|     LastEnrollmentTime  |
+|     LastRebootTime  |
+|     ChromeOSDeviceStatus  |
+
+To call this report, you'll need a minimum RBAC permission of **Read** for **Managed Devices**. The minimum Microsoft Graph Application required permission is `DeviceManagementManagedDevices.Read.All`.
+
+> [!NOTE]
+> The reporting data for this report is updated at a minimum of once per day.
+
+The properties `LastOSUpdateTime` and `LastRebootTime` will only populate in the report when the **OS Update Status** setting is enabled in the Google Admin Console. This setting can be found in the Google Admin Console under **Devices** > **Chrome** **Settings**.
+
+You can filter the `ChromeOSDevices` report using the following properties: 
+- IntuneDeviceId
+- MostRecentUserEmail
+- MostRecentLogin
+- OrganizationalUnitPath
+- ChromeOSDeviceStatus
+
+### Generate the ChromeOSDevices report
+
+You can generate the ChromeOSDevices report using the Microsoft Graph API to make the HTTP call. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources.
+
+| Microsoft Graph API Endpoint | Method | Body examples |
+|---|---|---|
+| `https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs` | POST | The following examples show different types of calls you can make based on the data you need to retrieve. This list is not comprehensive.<ul><li>Return all devices using CSV format:<br>`{ 'reportName': 'ChromeOSDevices', 'format': 'csv' }`</li><li>Return all devices using JSON format:<br>`{ 'reportName': 'ChromeOSDevices', 'format': 'json' }`</li><li>Use a filter:<br>`{ 'reportName': 'ChromeOSDevices', 'filter':'(ChromeOSDeviceStatus eq  'ACTIVE') ', 'format': 'csv' }`</li><li>Select which columns are included in the report:<br>`{ 'reportName': 'ChromeOSDevices', 'select':['IntuneDeviceId','IntuneDeviceName','MostRecentUserEmail']}`</li></ul>  |
+
+### Check the status of the ChromeOSDevices report
+
+You can check whether the ChromeOSDevices report has completed by using the Microsoft Graph API. 
+
+| Microsoft Graph API Endpoint | Method | 
+|---|---|
+| `https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('id') ` | GET |
+
+Use the output from the above call to determine the status of the ChromeOSDevices report. An example call will look similar to the following:
+`https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('ChromeOSDevices_1223a321-4bcd-5432-efg1-0hi9876h1234') `
+
+You can continue to run your call to check the status of the report. When the report shows a status of `complete`, you're report is ready to be downloaded.
+
+### Download the completed ChromeOSDevices report
+
+You can download the completed ChromeOSDevices report by retrieving the `url` provided based on the same call you used to check the ChromeOSDevices report status. The download contains a zip file with the requested data that is formatted as CSV or JSON based on your selected format.
+
+For more information about generating Intune reports, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 ## Next steps
 

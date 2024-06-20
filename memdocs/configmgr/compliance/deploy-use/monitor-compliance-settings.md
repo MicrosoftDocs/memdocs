@@ -1,17 +1,17 @@
 ---
-title: "Monitor compliance settings"
-titleSuffix: "Configuration Manager"
-description: "Use one or more of the procedures in this topic to display the compliance status of the configuration baseline."
+title: Monitor compliance settings
+titleSuffix: Configuration Manager
+description: Use one or more of the procedures in this topic to display the compliance status of the configuration baseline.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
-ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
-author: mestew
-manager: dougeby
-ms.author: mstewart
-
-
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Monitor compliance settings in Configuration Manager
 

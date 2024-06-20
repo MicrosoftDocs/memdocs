@@ -1,16 +1,18 @@
 ---
-title: "List All Programs and Their Maximum Run Time Value"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: List All Programs and Their Maximum Run Time Value
+titleSuffix: Configuration Manager
+description: Learn how to list all programs with their maximum run time values by using the SMS_Package and SMS_Program classes and class properties.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 8334dc55-78fe-4305-bd01-ce595c1a924a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to List All Programs and Their Maximum Run Time Value
 In Configuration Manager, you can list all programs with their maximum run time values by using the `SMS_Package` and `SMS_Program` classes and class properties.  

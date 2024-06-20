@@ -3,7 +3,7 @@
 
 title: Intune shared device settings for the iOS/iPadOS Classroom app
 titleSuffix: Microsoft Intune
-description: Learn the Intune settings you can use to control settings for the Classroom app on iOS/iPadOS devices.  
+description: Learn the Intune settings you can use to control settings for the Classroom app on shared iOS/iPadOS devices.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -13,7 +13,6 @@ ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 
 # optional metadata
@@ -26,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 
@@ -46,43 +47,50 @@ For information about configuring dedicated (1:1) iPad devices to use the Classr
 The prerequisites to use the shared iPad capabilities are:
 
 - Setup [Apple School Manager](../enrollment/apple-school-manager-set-up-ios.md) and [School Data Sync (SDS)](https://support.office.com/article/Apple-School-Manager-integration-with-Intune-for-Education-and-School-Data-Sync-974bd1f9-2c7a-45cb-9447-b58166108617).
-- As part of Apple School Manager setup, configure [Managed Apple IDs](http://help.apple.com/schoolmanager/#/tes78b477c81) for students. [Learn more about Managed Apple IDs](https://support.apple.com/HT205918).
+- As part of Apple School Manager setup, configure [Managed Apple IDs](https://school.apple.com/) for students. [Learn more about Managed Apple IDs](https://support.apple.com/HT205918).
 - Create an enrollment profile for the device serial numbers synced from Apple School Manager.
 
-## Step 1 - Import your school data into Azure Active Directory
+<a name='step-1---import-your-school-data-into-azure-active-directory'></a>
 
-Use Microsoft's School Data Sync (SDS) to import school records from an existing Student Information System (SIS) to Azure Active Directory (Azure AD).
-SDS synchronizes information from your SIS and stores it in Azure AD. Azure AD is a Microsoft management system that helps you organize users and devices. You can then use this data to help you manage your students and classes. [Learn more about how to deploy SDS](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
+## Step 1 - Import your school data into Microsoft Entra ID
+
+Use Microsoft's School Data Sync (SDS) to import school records from an existing Student Information System (SIS) to Microsoft Entra ID.
+SDS synchronizes information from your SIS and stores it in Microsoft Entra ID. Microsoft Entra ID is a Microsoft management system that helps you organize users and devices. You can then use this data to help you manage your students and classes. [Learn more about how to deploy SDS](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
 
 ### How to import data using SDS
 
 You can import information into SDS by using one of the following methods:
 
 - [CSV files](https://support.office.com/article/Follow-these-steps-71d5fe4a-aa51-4f35-9b53-348898a390a1) - Manually export and compile comma-separated value (.csv) files
-- [PowerSchool API](https://support.office.com/article/Follow-these-steps-851b5edc-558f-43a9-9122-b2d63458cb8f) - An SIS provider that simplifies syncing with Azure AD
-- [OneRoster](https://support.office.com/article/Follow-these-steps-f43cbb2a-b502-497d-a8b1-783dc05a57ab) - A CSV format that you can export and convert to sync with Azure AD
+- [PowerSchool API](https://support.office.com/article/Follow-these-steps-851b5edc-558f-43a9-9122-b2d63458cb8f) - An SIS provider that simplifies syncing with Microsoft Entra ID
+- [OneRoster](https://support.office.com/article/Follow-these-steps-f43cbb2a-b502-497d-a8b1-783dc05a57ab) - A CSV format that you can export and convert to sync with Microsoft Entra ID
 
 ### Find out more
 
-- [Find out more about the full experience of syncing on-premises school data to Azure AD](/azure/active-directory/connect/active-directory-aadconnect)
+- [Find out more about the full experience of syncing on-premises school data to Microsoft Entra ID](/azure/active-directory/connect/active-directory-aadconnect)
 - [Find out more about Microsoft School Data Sync](https://sds.microsoft.com/)
-- [Find out more about licensing in Azure Active Directory](/azure/active-directory/active-directory-licensing-whatis-azure-portal)
+- [Find out more about licensing in Microsoft Entra ID](/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 
 ## Step 2 - Create and assign an iOS/iPadOS Education profile in Intune
 
 ### Configure general settings
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. On the **Intune** pane, choose **Device configuration**.
-2. On the **Device configuration** pane under the **Manage** section, choose **Profiles**.
-5. On the profiles pane, choose **Create profile**.
-6. On the **Create profile** pane, enter a **Name** and **Description** for the iOS/iPadOS education profile.
-7. From the **Platform** drop-down list, choose **iOS**.
-8. From the **Profile type** drop-down list, choose **Education**.
-9. Choose **Settings** > **Configure**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Devices** > **Configuration** > **Create**.
+3. Enter the following properties:
 
-Next, you need certificates to establish a trust relationship between teacher and student iPads. Certificates are used to seamlessly and silently authenticate connections between devices without having to enter user names and passwords.
+    - **Platform:** Select **iOS/iPadOS**.
+    - **Profile type**: Select **Templates** > **Secure assessment (Education)**.
+
+    Select **Create**.
+
+4. In **Basics**, enter the following properties:
+
+    - **Name**: Enter a descriptive name for the profile. For example, enter **iOS/iPadOS education profile**.
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+
+5. In **Configuration settings**, you need certificates to establish a trust relationship between teacher and student iPads. Certificates are used to seamlessly and silently authenticate connections between devices without having to enter user names and passwords.
 
 >[!Important]
 >The teacher and student certificates you use must be issued by different certificate authorities (CAs). You must create two new subordinate CAs connected to your existing certificate infrastructure; one for teachers, and one for students.
@@ -141,16 +149,9 @@ When you are finished configuring certificates, choose **OK**.
 
 The profile is created and appears on the profiles list pane.
 
-## Step 3 - Create a device category
+## Step 3 - Create a device category  
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. On the **Intune** pane, choose **Device enrollment**.
-4. On the **Device enrollment - Overview** pane, choose **Device categories**.
-5. On the **Device enrollment - Device Categories** pane, choose **Create**.
-6. On the **Create device category** pane, enter a **Name** and **Description** for the category.
-7. On the **Create device category** pane, choose **Create**.
-
-The device category is created in the **Enrollment – Device Categories** pane.
+In the admin center, go to **Devices** > **Device categories**.  For more information about how to categorize devices in Intune, see [Add device categories](../enrollment/device-group-mapping.md#step-1-create-device-category-in-intune).  
 
 ## Step 4 – Create a dynamic group
 
@@ -210,4 +211,4 @@ The assignment completes, and Intune deploys the Classroom profile to the target
 
 ## Next Steps
 
-Now students can share devices between students, and students can pick up any iPad in a classroom, log in with a PIN and have it personalized with their content. For more information about Shared iPads, see the [Apple website](https://www.apple.com/education/it/).
+Now students can share devices between students, and students can pick up any iPad in a classroom, log in with a PIN and have it personalized with their content. For more information about Shared iPads, see the [Apple website](https://www.apple.com/education/).

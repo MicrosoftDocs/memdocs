@@ -1,18 +1,18 @@
 ---
-title: "Capabilities in Technical Preview 1605"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for Configuration Manager, version 1605."
+title: Capabilities in Technical Preview 1605
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview for Configuration Manager, version 1605.
 ms.date: 01/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
+author: Banreet
+manager: apoorvseth
+ms.author: banreetkaur
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Capabilities in Technical Preview 1605 for Configuration Manager
 
@@ -22,7 +22,7 @@ This article introduces the features that are available in the Technical Preview
 
  **Known issues in this Technical Preview:**  
 
-- With Technical Preview 1605, if you update the properties of a management point after it is installed, you might see a console error which forces the console to close.  If this happens, you can uninstall the management point and then reinstall the management point using the desired settings. Alternately, you  can modify the management point prior to installing  Technical Preview 1605.  
+- With Technical Preview 1605, if you update the properties of a management point after it's installed, you might see a console error that forces the console to close.  If this happens, you can uninstall the management point and then reinstall the management point using the desired settings. Alternately, you  can modify the management point prior to installing  Technical Preview 1605.  
 
 - When you use the Windows Store for Business feature with the Technical Preview 1604 and then upgrade to Technical Preview 1605, you can no longer view  the onboarding data. All other functionally continues to work. If you onboarded with the Technical Preview 1604, you remain onboarded after you install Technical Preview 1605 and need take no further action.  
 
@@ -60,9 +60,9 @@ This article introduces the features that are available in the Technical Preview
 
     All deployments that have this check-box selected and are which are targeted to devices to which you also deployed the client setting will use the grace period.  
 
-   In this release, the grace period you configure is not used by client devices. If you configure a grace period and select the checkbox, the application will be installed in the first non-business window that the user configured after the deadline.  
+   In this release, the grace period you configure isn't used by client devices. If you configure a grace period and select the checkbox, the application will be installed in the first non-business window that the user configured after the deadline.  
 
-   Similar options have been added to the software updates deployment wizard,  automatic deployment rules wizard, and properties pages. However, these are not currently implemented in this technical preview.  
+   Similar options have been added to the software updates deployment wizard,  automatic deployment rules wizard, and properties pages. However, these aren't currently implemented in this technical preview.  
 
 ##  <a name="BKMK_Remote"></a> New experience for remote device actions  
  The experience for performing remote device actions from the Configuration Manager console has been improved.  
@@ -91,33 +91,33 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 ### Set up Windows Store for Business synchronization  
 
-1.  In Azure Active Directory, register Configuration Manager as a "Web Application and/or Web API" management tool. This will give you a client ID that you will need later.  
+1.  In Microsoft Entra ID, register Configuration Manager as a "Web Application and/or Web API" management tool. This will give you a client ID that you'll need later.  
 
-    1.  In the Active Directory node of [https://portal.azure.com](https://portal.azure.com), select your Azure Active Directory, then click **Applications** > **Add**.  
+    1.  In the Active Directory node of [https://portal.azure.com](https://portal.azure.com), select your Microsoft Entra ID, then click **Applications** > **Add**.  
 
     2.  Click **Add an application my organization is developing**.  
 
     3.  Enter a name for the application, select **Web application** and/or **Web API**, then click the **Next** arrow.  
 
-    4.  Enter the same URL for both the **Sign-on URL** and **App ID URI**. The URL can be anything and does not need to resolve to a real address. For example, you can enter **https://&lt;yourdomain>/sccm**.  
+    4.  Enter the same URL for both the **Sign-on URL** and **App ID URI**. The URL can be anything and doesn't need to resolve to a real address. For example, you can enter **https://&lt;yourdomain>/sccm**.  
 
     5.  Complete the wizard.  
 
-2.  In Azure Active Directory, create a client key for the registered management tool.  
+2.  In Microsoft Entra ID, create a client key for the registered management tool.  
 
     1.  Highlight the application you just created and click **Configure**.  
 
-    2.  Under **Keys**, select a duration from the list, and click **Save**. This will create a new client key. Do not navigate away from this page until you have successfully onboarded Windows Store for Business to Configuration Manager.  
+    2.  Under **Keys**, select a duration from the list, and click **Save**. This will create a new client key. Don't navigate away from this page until you have successfully onboarded Windows Store for Business to Configuration Manager.  
 
 3.  In the Windows Store for Business, configure Configuration Manager as the store management tool.  
 
-    1.  Open [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/managementtools) and sign-in if prompted.  
+    1.  Open [https://businessstore.microsoft.com](https://businessstore.microsoft.com/) and sign-in if prompted.  
 
-    2.  Accept the terms of use if required.  
+    2.  Accept the terms of use if necessary.  
 
     3.  Under **Management Tools**, click **Add a management tool**.  
 
-    4.  In **Search for the tool by name**, type the name of the application you created in AAD previously, then click **Add**.  
+    4.  In **Search for the tool by name**, type the name of the application you created in Microsoft Entra ID previously, then click **Add**.  
 
     5.  Click **Activate** next to the application you just imported.  
 
@@ -129,9 +129,9 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 6.  On the **Home** tab, in the **Create** group, click **Add Windows Store for Business Account**.  
 
-7.  Add your tenant ID, client id, and client key from Azure Active Directory, then complete the wizard.  
+7.  Add your tenant ID, client id, and client key from Microsoft Entra ID, then complete the wizard.  
 
-8.  Once you are done, you will see the account you configured in the **Windows Store for Business Accounts** list in the Configuration Manager console.  
+8.  Once you're done, you'll see the account you configured in the **Windows Store for Business Accounts** list in the Configuration Manager console.  
 
 ### Try it out!  
  Try to complete the following task and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
@@ -206,7 +206,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
         -   You must uninstall any existing Application Catalog roles before selecting the option to allow mobile devices to connect.  
 
-        -   Make sure there is only one set of Application Catalog roles and the roles are co-located on the same site system with the Enrollment point and Enrollment Proxy point roles.  
+        -   Ensure there's only one set of Application Catalog roles and the roles are co-located on the same site system with the Enrollment point and Enrollment Proxy point roles.  
 
 2.  Verify that the following components are operational from the Component Status node in the Configuration Manager console:  
 
@@ -253,11 +253,11 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 ### Try it out!  
  Try to complete the following tasks and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
 
-1.  Deploy several applications with supported deployment types to a user collection with a deployment purpose of **Available**. For this technical preview, applications that require admin approval are not supported and will not be displayed in the Company Portal.  
+1.  Deploy several applications with supported deployment types to a user collection with a deployment purpose of **Available**. For this technical preview, applications that require admin approval aren't supported and won't be displayed in the Company Portal.  
 
 2.  Users can then browse for, and install apps from the Company Portal.  
 
-     After you open Company Portal, you will see an authentication dialog box named **Configuration Manager** Specify the user's Active Directory credentials (either in the form of user@domain or domain\user) to log in.  
+     After you open Company Portal, you'll see an authentication dialog box named **Configuration Manager** Specify the user's Active Directory credentials (either in the form of user@domain or domain\user) to sign in.  
 
 ##  <a name="BKMK_SW1"></a> New tabs for Updates and Operating systems in Software Center  
  In this release, the following changes have been made to improve the layout of the Software Center application:  
@@ -351,7 +351,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
   ##### How to create an onboarding configuration file  
 
-  1.  Logon to the Microsoft Defender for Endpoint online service  
+  1.  Sign in to the Microsoft Defender for Endpoint online service  
 
   2.  Click on the **Client On-boarding** menu item  
 
@@ -395,7 +395,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
         -   **Agent state** - The system service for the agent in Windows isn't running  
 
-        -   **No onboarded** - Policy was applied but the agent has not reported policy onboard  
+        -   **No onboarded** - Policy was applied but the agent hasn't reported policy onboard  
 
 ##  <a name="BKMK_DHA"></a> On-premises Device Health Attestation  
  Health attestation for Windows 10 devices can now be configured to communicate using the on-premises infrastructure. Administrators can specify whether reporting is done via the cloud or on-premises resources. If on-premises is selected for health attestation reporting, then a URL can be specified for the service. This enables client PCs without internet access to  enable and manage devices using health attestation.  
@@ -408,7 +408,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 2.  Specify the **On-premise Health Attestation Service URL**, and then click **OK**.  
 
 ##  <a name="BKMK_RestartOptions"></a> New restart options for Windows 10 clients after software update installation  
- When a software update that requires a restart is deployed using Configuration Manager and installed on a computer, a pending restart is scheduled and a restart dialog box is displayed. Currently, for Windows 8 and above, if you shut down or restart the computer using the Windows Power options (instead of from the restart dialog), the restart dialog remains after the computer restarts and the computer will need to restart at the configured deadline. In this technical preview, the option to **Update and Restart** and **Update and Shutdown** will be available on Windows 10 computers in the Windows Power options whenever there is a pending restart for a Configuration Manager software update. After using one of these options, the restart dialog will not display after the computer restarts.  
+ When a software update that requires a restart is deployed using Configuration Manager and installed on a computer, a pending restart is scheduled and a restart dialog box is displayed. Currently, for Windows 8 and above, if you shut down or restart the computer using the Windows Power options (instead of from the restart dialog), the restart dialog remains after the computer restarts and the computer will need to restart at the configured deadline. In this technical preview, the option to **Update and Restart** and **Update and Shutdown** will be available on Windows 10 computers in the Windows Power options whenever there's a pending restart for a Configuration Manager software update. After using one of these options, the restart dialog won't display after the computer restarts.  
 
 ##  <a name="BKMK_IMEI"></a> Pre-declare corporate-owned devices with IMEI or iOS serial number  
  You can now identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information.  You can also import serial numbers for iOS devices.  Imported information will set ownership of the devices that enroll as "Corporate".  An Intune license is still required for each user that accesses the service.  

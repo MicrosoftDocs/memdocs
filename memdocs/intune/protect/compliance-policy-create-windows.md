@@ -1,39 +1,43 @@
 ---
 # required metadata
 
-title: Windows 10 compliance settings in Microsoft Intune - Azure | Microsoft Docs
-description: See a list of all the settings you can use when setting compliance for your Windows 10, Windows Holographic, and Surface Hub devices in Microsoft Intune. Check for compliance on the minimum and maximum operating system, set password restrictions and length, check for partner anti-virus (AV) solutions, enable encryption on data storage, and more.
+title: Windows compliance settings in Microsoft Intune
+description: See a list of all the settings you can use when setting compliance for your Windows 10, Windows 11, Windows Holographic, and Surface Hub devices in Microsoft Intune. Check for compliance on the minimum and maximum operating system, set password restrictions and length, check for partner anti-virus (AV) solutions, enable encryption on data storage, and more.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 5/5/2021
+ms.date: 11/14/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: samyada
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
+- compliance
 ---
 
-# Device Compliance settings for Windows 10 and later in Intune
+# Device Compliance settings for Windows 10/11 in Intune
 
-This article lists and describes the different compliance settings you can configure on Windows 10 and later devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require BitLocker, set a minimum and maximum operating system, set a risk level using Microsoft Defender for Endpoint, and more.
+This article lists and describes the different compliance settings you can configure on Windows devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require BitLocker, set a minimum and maximum operating system, set a risk level using Microsoft Defender for Endpoint, and more.
 
 This feature applies to:
 
-- Windows 10 and later
+- Windows 10/11
 - Windows Holographic for Business
 - Surface Hub
 
@@ -54,7 +58,9 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Require** - The device can protect data that's stored on the drive from unauthorized access when the system is off, or hibernates.
   
   [Device HealthAttestation CSP - BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
-
+  
+  > [!NOTE]
+  > If using a device compliance policy in Intune, be aware that the state of this setting is only measured at boot time. Therefore, even although BitLocker encryption may have completed - a reboot will be required in order for the device detect this and become compliant. For more information, see the following Microsoft support blog on [Device Health Attestation](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-device-health-attestation-settings-as-part-of/ba-p/282643).
   
 - **Require Secure Boot to be enabled on the device**:  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -77,7 +83,7 @@ More resources:
 
 ### Operating System Version
 
-To discover build versions for all Windows 10 Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows 10 release information](/windows/release-information). Be sure to include the 10.0. prefix before the build numbers, as the following examples illustrate.
+To discover build versions for all Windows 10/11 Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows release information](/windows/release-information). Be sure to include the appropriate version prefix before the build numbers, like 10.0 for Windows 10 as the following examples illustrate.
 
 - **Minimum OS version**:  
   Enter the minimum allowed version in the **major.minor.build.revision number** format. To get the correct value, open a command prompt, and type `ver`. The `ver` command returns the version in the following format:
@@ -106,6 +112,8 @@ To discover build versions for all Windows 10 Feature Updates and Cumulative Upd
 - **Valid operating system builds**:  
   Specify a list of minimum and maximum operating system builds. Valid operating system builds provides additional flexibility when compared against minimum and maximum OS versions. Consider a scenario where minimum OS version is set to 10.0.18362.xxx (Windows 10 1903) and maximum OS version is set to 10.0.18363.xxx (Windows 10 1909). This configuration can allow a Windows 10 1903 device that doesn't have recent cumulative updates installed to be identified as compliant. Minimum and maximum OS versions might be suitable if you have standardized on a single Windows 10 release, but might not address your requirements if you need to use multiple builds, each with specific patch levels. In such a case, consider leveraging valid operating system builds instead, which allows multiple builds to be specified as per the following example.
 
+  The largest supported value for each of the version, major, minor, and build fields is 65535. For example, the largest value you can enter is 65535.65535.65535.65535.
+
   **Example**:  
   The following table is an example of a range for the acceptable operating systems versions for different Windows 10 releases. In this example, three different Feature Updates have been allowed (1809, 1909 and 2004). Specifically, only those versions of Windows and which have applied cumulative updates from June to September 2020 will be considered to be compliant. This is sample data only. The table includes a first column that includes any text you want to describe the entry, followed by the minimum and maximum OS version for that entry. The second and third columns must adhere to valid OS build versions in the **major.minor.build.revision number** format. After you define one or more entries, you can **Export** the list as a comma-separated values (CSV) file.  
 
@@ -115,9 +123,12 @@ To discover build versions for all Windows 10 Feature Updates and Cumulative Upd
   | Win 10 1909 (Jun-Sept 2020) | 10.0.18363.900     | 10.0.18363.1110    |
   | Win 10 1809 (Jun-Sept 2020) | 10.0.17763.1282    | 10.0.17763.1490    |
 
+  > [!NOTE]
+  > If you specify multiple ranges of OS version builds in your policy, and a device has a build outside of the compliant ranges, Company Portal will notify the device user that the device is noncompliant with this setting. However, be aware that due to technical limitations, the compliance remediation message only shows the first OS version range specified in the policy. We recommend that you document the acceptable OS version ranges for managed devices in your organization.  
+  
 ## Configuration Manager Compliance
 
-Applies only to co-managed devices running Windows 10 and later. Intune-only devices return a not available status.
+Applies only to co-managed devices running Windows 10/11. Intune-only devices return a not available status.
 
 - **Require device compliance from Configuration Manager**:  
   - **Not configured** (*default*) - Intune doesn't check for any of the Configuration Manager settings for compliance.
@@ -183,18 +194,20 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
    [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device, more specifically at the OS drive level. Currently, Intune supports only the encryption check with BitLocker. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate Bitlocker status at the TPM level.
+  > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device, more specifically at the OS drive level. Currently, Intune supports only the encryption check with BitLocker. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate BitLocker status at the TPM level. However, when leveraging this setting, be aware that a reboot may be required before the device will reflect as compliant.
 
 ### Device Security  
 
 - **Firewall**:  
-  - **Not configured** (*default*) - Intune doesn't control the Microsoft Defender Firewall, nor change existing settings.
-  - **Require** - Turn on the Microsoft Defender Firewall, and prevent users from turning it off.
+  - **Not configured** (*default*) - Intune doesn't control the Windows Firewall, nor change existing settings.
+  - **Require** - Turn on the Windows Firewall, and prevent users from turning it off.
 
   [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](../user-help/sync-your-device-manually-windows.md).
+  > - If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](../user-help/sync-your-device-manually-windows.md).
+  >
+  > - If a configuration is applied (for example, via a group policy) to a device that configures Windows Firewall to allow all inbound traffic, or turns off the firewall, setting **Firewall** to **Require** will return **Not compliant**, even if Intune device configuration policy turns Firewall on. This is because the group policy object overrides the Intune policy. To fix this issue, we recommend that you remove any conflicting group policy settings, or that you migrate your Firewall-related group policy settings to Intune device configuration policy. In general, we recommend that you [keep default settings](/windows/security/threat-protection/windows-firewall/best-practices-configuring#keep-default-settings), including blocking inbound connections. For more information, see [Best practices for configuring Windows Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).
 
 - **Trusted Platform Module (TPM)**:  
   - **Not configured** (*default*) -  Intune doesn't check the device for a TPM chip version.
@@ -205,18 +218,20 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
 - **Antivirus**:  
   - **Not configured** (*default*) - Intune doesn't check for any antivirus solutions installed on the device.
   - **Require** - Check compliance using antivirus solutions that are registered with [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), such as Symantec and Microsoft Defender.
+    When set to Require, a device that has its Antivirus software disabled or out of date is noncompliant.
 
   [DeviceStatus CSP - DeviceStatus/Antivirus/Status](/windows/client-management/mdm/devicestatus-csp)
 
 - **Antispyware**:  
   - **Not configured** (*default*) - Intune doesn't check for any antispyware solutions installed on the device.
   - **Require** - Check compliance using antispyware solutions that are registered with [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), such as Symantec and Microsoft Defender.
+    When set to Require, a device that has its antimalware software disabled or out of date is noncompliant.
 
   [DeviceStatus CSP - DeviceStatus/Antispyware/Status](/windows/client-management/mdm/devicestatus-csp)
 
 ### Defender
 
-*The following compliance settings are supported with Windows 10 Desktop.*
+*The following compliance settings are supported with Windows 10/11 Desktop.*
 
 - **Microsoft Defender Antimalware**:  
   - **Not configured** (*default*) - Intune doesn't control the service, nor change existing settings.
@@ -268,12 +283,12 @@ To verify device encryption on the Microsoft HoloLens, see [Verify device encryp
 
 ## Surface Hub
 
-Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are supported for both compliance and Conditional Access. To enable these features on Surface Hubs, we recommend you [enable Windows 10 automatic enrollment](../enrollment/windows-enroll.md) in Intune (requires Azure Active Directory (Azure AD)), and target the Surface Hub devices as device groups. Surface Hubs are required to be Azure AD joined for compliance and Conditional Access to work.
+Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are supported for both compliance and Conditional Access. To enable these features on Surface Hubs, we recommend you [enable Windows automatic enrollment](../enrollment/windows-enroll.md) in Intune (requires Microsoft Entra ID), and target the Surface Hub devices as device groups. Surface Hubs are required to be Microsoft Entra joined for compliance and Conditional Access to work.
 
 For guidance, see [set up enrollment for Windows devices](../enrollment/windows-enroll.md).
 
-**Special consideration for Surface Hubs running Windows 10 Team OS**:  
-Surface Hubs that run Windows 10 Team OS do not support the Microsoft Defender for Endpoint and Password compliance policies at this time. Therefore, for Surface Hubs that run Windows 10 Team OS set the following two settings to their default of *Not configured*:
+**Special consideration for Surface Hubs running Windows 10/11 Team OS**:  
+Surface Hubs that run Windows 10/11 Team OS do not support the Microsoft Defender for Endpoint and Password compliance policies at this time. Therefore, for Surface Hubs that run Windows 10/11 Team OS set the following two settings to their default of *Not configured*:
 
 - In the category [Password](#password), set **Require a password to unlock mobile devices** to the default of *Not configured*.
 

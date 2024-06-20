@@ -1,18 +1,16 @@
 ---
 # required metadata
 
-title: Rename your device from the Company Portal website 
-description: Learn how to rename your device from the Company Portal website.
+title: Rename your device on the Company Portal website 
+description: Learn how to rename your work or school device on the Company Portal website.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 11/29/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 35a34ef8-efbb-4edf-88eb-a03c1b27a026
 searchScope:
  - User help
@@ -26,25 +24,31 @@ ms.reviewer: jieyang
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
-# Rename your device from the Company Portal website
+# Rename your device from the Company Portal website  
 
-Rename an enrolled, managed device from the Company Portal website. Change a device's generic or default model name to a name that you can quickly identify.
+**Applies to:**
 
-1. Open the [Company Portal website](https://portal.manage.microsoft.com) and select the __Menu__ button > __Devices__.  
+* Android
+* iOS/iPadOS
+* macOS
+* Windows 10/11  
 
-2. Select the device you want to rename.
+Rename a device on the Company Portal website. If you use more than one device for work or school, renaming them can make it easier to recognize and manage them when you're in Company Portal.   
 
-    ![A screenshot of the Devices page, with 2 tiles that show unidentified, generically named devices. A gray banner sits directly below the devices and prompts user to identify the device they are using or add a new one.](./media/rename-reset-device-step2-1808.png)   
+1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account.  
+2. Go to **Devices**.  
+3. Select the device you want to rename.  
+4. Select **Rename**. If the rename option isn't visible at the top of your page, select the **More (…)** menu to check the overflow actions.  
+5. Enter a new name for your device. Then select **Rename** to save your changes.  
 
-3. Select **Rename**. If the rename option isn't visible at the top of your page, select **More (…)** > **Rename**.   
+Need additional help? Contact your IT support person. For contact details, go to **Helpdesk** on the Company Portal website.  
 
-   ![Device details page for a selected device on the Company Portal website, with a list of links at the top showing Rename, Remove, Reset Device, Reset Passcode, and Remote Lock. ](./media/rename-reset-device-1808.png)   
-
-    ![Zoomed in view of the More icon, highlighted with a red arrow.](./media/rename-reset-device-step3-more-1808.png)  
-
-4. In the box where your device's name appears, type a new name for your device. Then tap the **Rename** button. Your device now appears with the new name.  
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+>[!NOTE]
+>The rename action on the Company Portal website gives employees and students the chance to rename enrolled devices to something that's easy to recognize. This change only applies to the name in Company Portal, and not to the device name or management name that appears in the Microsoft Intune admin center. If you're an IT administrator and need more information about managing device details in the admin center, see:  
+>
+>- [Rename a device with Microsoft Intune](../remote-actions/device-rename.md).
+>- [View device details with Microsoft Intune](../remote-actions/device-inventory.md#hardware-device-details).

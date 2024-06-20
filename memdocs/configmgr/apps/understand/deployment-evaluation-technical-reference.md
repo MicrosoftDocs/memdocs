@@ -3,15 +3,15 @@ title: Application evaluation technical reference
 titleSuffix: Configuration Manager
 description: Troubleshooting application evaluation technical reference for Configuration Manager.
 ms.date: 11/04/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: troubleshooting
-ms.assetid: a7035223-d7bd-47b4-896f-08de3416a4eb
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Application Deployment Evaluation

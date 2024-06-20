@@ -1,19 +1,18 @@
 ---
 # required metadata
 
-title: Microsoft Intune policy to allow/block apps for Samsung Knox
+title: Allow or block apps for Samsung Knox Standard devices
 titleSuffix:
-description: Create a custom profile to allow and block apps for Samsung Knox Standard devices.
+description: Create a custom profile to allow and block apps for Samsung Knox Standard Android device administrator devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
-ms.topic: reference
+ms.date: 01/16/2024
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -25,10 +24,14 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use custom policies in Microsoft Intune to allow and block apps for Samsung Knox Standard devices 
+
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 Use the steps in this article to create a Microsoft Intune custom policy that creates one of the following lists:
 
@@ -39,21 +42,25 @@ This feature applies to:
 
 - Android device administrator (DA)
 
-These settings can only be used by devices that run Samsung Knox Standard.
+These settings are only used on devices that run Samsung Knox Standard.
+
+## Prerequisites
+
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Create an allowed or blocked app list
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **Android device administrator**.
-    - **Profile**: Select **Custom**.
+    - **Profile type**: Select **Custom**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Android Samsung Knox custom profile - blocks apps**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Android Samsung Knox - blocks apps**.
     - **Description**: Enter a description that gives an overview of the setting, and any other important details. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -76,21 +83,21 @@ These settings can only be used by devices that run Samsung Knox Standard.
     - **Value**: Enter a list of the app package names you want to allow. You can use `;`, `:`, or `|` as a delimiter. For example, enter `package1;package2;`.
 
 8. **Save** your changes > **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, see [assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, go to [assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
 11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 > [!TIP]
-> You can find the package ID of an app by browsing to the app on the Google Play store. The package ID is contained in the URL of the app's page. For example, the package ID of the Microsoft Word app is **com.microsoft.office.word**.
+> You can find the package ID of an app by browsing to the app on the Google Play store. The package ID is contained in the URL of the app's page. For example, the package ID of the Microsoft Word app is `com.microsoft.office.word`.
 
 The next time each targeted device checks in, the app settings are applied.
 
-## Next steps
+## Resources
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but might not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).

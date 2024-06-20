@@ -1,10 +1,11 @@
 ---
-author: aczechowski
-ms.author: aaroncz
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+author: banreet
+ms.author: banreetkaur
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: include
 ms.date: 08/11/2020
+ms.localizationpriority: medium
 ---
 
 ### Server connectivity endpoints

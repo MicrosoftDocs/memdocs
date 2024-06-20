@@ -3,16 +3,16 @@ title: Technical Preview 1806
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1806.
 ms.date: 06/06/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 52d64ef0-8c0d-42c3-857e-07d7ec776f29
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Capabilities in Technical Preview 1806 for Configuration Manager
@@ -61,7 +61,7 @@ Move the content library to a drive local to the site server. For more informati
 
 ## <a name="bkmk-3pupdate"></a> Third-party software updates
 <!--1352101-->
-This release further iterates on support for third-party software updates as a result of your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co). You no longer require the use of System Center Updates Publisher (SCUP) for some common scenarios. The new **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point, and then deploy them to clients. 
+This release further iterates on support for third-party software updates as a result of your feedback. You no longer require the use of System Center Updates Publisher (SCUP) for some common scenarios. The new **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point, and then deploy them to clients. 
 
 The following third-party software update catalogs are available in this release:
 
@@ -169,7 +169,7 @@ This release adds three settings for [Windows Defender SmartScreen](/windows/sec
 
 ## Sync MDM policy from Microsoft Intune for a co-managed device
 <!--1357377-->
-Starting in this release when you [switch a co-management workload](../../comanage/how-to-switch-workloads.md), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](../clients/manage/manage-clients.md#BKMK_PolicyRetrieval).
+Starting in this release when you [switch a co-management workload](../../comanage/how-to-switch-workloads.md), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](../clients/manage/manage-clients.md#start-policy-retrieval).
 
 
 
@@ -255,7 +255,7 @@ The following command-line properties are required in all scenarios:
 - CCMHOSTNAME  
 - SMSSITECODE  
 
-The following properties are required when using Azure AD for client authentication instead of PKI-based client authentication certificates:
+The following properties are required when using Microsoft Entra ID for client authentication instead of PKI-based client authentication certificates:
 - AADCLIENTAPPID  
 - AADRESOURCEURI  
 
@@ -271,9 +271,11 @@ For more information, see [Client installation properties](../clients/deploy/abo
 <!--1358651-->
 Previously, you had to deploy a cloud distribution point and CMG as separate roles. Now in this release, a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. To enable this feature, enable the new option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage** on the **Settings** tab of the CMG properties. 
 
-### Trusted root certificate isn't required with Azure AD
+<a name='trusted-root-certificate-isnt-required-with-azure-ad'></a>
+
+### Trusted root certificate isn't required with Microsoft Entra ID
 <!--503899-->
-When you create a CMG, you're no longer required to provide a [trusted root certificate](../clients/manage/cmg/server-auth-cert.md) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
+When you create a CMG, you're no longer required to provide a [trusted root certificate](../clients/manage/cmg/server-auth-cert.md) on the Settings page. This certificate isn't required when using Microsoft Entra ID for client authentication, but used to be required in the wizard.
 
 > [!Important]  
 > If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
@@ -293,7 +295,7 @@ These task sequences can be for OS deployment or custom. It is also supported fo
 
 ## Software Center infrastructure improvements
 <!--1358309-->
-Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](../servers/deploy/configure/boundary-groups.md#management-points).
+Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](../servers/deploy/configure/boundary-groups-management-points.md).
 
 ### Try it out!
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
@@ -303,7 +305,7 @@ Application catalog roles are no longer required to display user-available appli
 3. Use Software Center as a targeted user to browse for, request, and install the application.
 
 ### Known issue
-- If you use an Azure Active Directory-joined client with this feature, don't configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. It currently conflicts with this feature.<!--515846--> For more information on this setting, see [improved secure client communications](capabilities-in-technical-preview-1805.md#improved-secure-client-communications).
+- If you use a Microsoft Entra joined client with this feature, don't configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. It currently conflicts with this feature.<!--515846--> For more information on this setting, see [improved secure client communications](capabilities-in-technical-preview-1805.md#improved-secure-client-communications).
 
 
 

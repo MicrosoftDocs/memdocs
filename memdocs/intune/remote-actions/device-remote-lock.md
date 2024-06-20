@@ -1,18 +1,17 @@
 ---
 # required metadata
 
-title: Lock devices with Microsoft Intune - Azure | Microsoft Docs
+title: Remotely lock devices with Microsoft Intune
 description: Use the Remote lock action in Microsoft Intune to lock a device that is protected by a PIN or password. 
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 07/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
 
 # optional metadata
@@ -20,19 +19,21 @@ ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
 #ROBOTS:
 #audience:
 
-#ms.reviewer: coferro
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Remotely lock devices with Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 The **Remote lock** device action locks the device. To unlock the device, the device owner enters their passcode. You can remotely lock devices that have a PIN or password set. Devices that don't have a PIN or password can't be remotely locked.
+
+When **Remote lock** is applied to a device that doesn’t have a PIN or password, the device’s screen will turn off but the device will not be locked and the user will be able to wake the device and start using it again without entering a PIN or password. Ensure devices have a PIN or password policy enforced before using the **Remote lock** action to lock the device.
 
 ## Supported platforms
 
@@ -43,6 +44,7 @@ The **Remote lock** device action locks the device. To unlock the device, the de
 - Android Enterprise work profile devices
 - Android Enterprise fully managed devices
 - Android Enterprise corporate-owned with work profile devices
+- Android Open Source Project (AOSP) devices
 - iOS
 - macOS
 
@@ -55,7 +57,7 @@ The **Remote lock** device action locks the device. To unlock the device, the de
 
 ## Remote lock a device
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **All devices**.
 4. In the list of devices, select a device, and then select the **Remote lock** action.
 

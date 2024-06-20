@@ -1,16 +1,18 @@
 ---
-title: "SMSFormatMessageCtl Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+title: SMSFormatMessageCtl Class
+titleSuffix: Configuration Manager
+description: The SMSFormatMessageCtl class supports message formatting for the Configuration Manager status system.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 161adad1-6dd0-46da-9a3b-52a8455dee74
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMSFormatMessageCtl Class
 The `SMSFormatMessageCtl` class supports message formatting for the Configuration Manager status system.  

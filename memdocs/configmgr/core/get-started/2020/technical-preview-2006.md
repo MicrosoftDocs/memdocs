@@ -3,14 +3,16 @@ title: Technical preview 2006
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2006.
 ms.date: 06/29/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: fa0fe290-2eb7-4be2-8f42-b84751774bca
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Features in Configuration Manager technical preview version 2006
@@ -31,7 +33,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improvements to task sequences via CMG](includes/2006/6983320.md)]
 [!INCLUDE [Management insights to optimize for remote workers](includes/2006/6982226.md)]
 [!INCLUDE [Improvements to VPN boundary type](includes/2006/7020519.md)]
-[!INCLUDE [Tenant Attach: Improvements to Configuration Manager actions in Microsoft Endpoint Manager admin center](includes/2006/7518897.md)]
+[!INCLUDE [Tenant Attach: Improvements to Configuration Manager actions in Microsoft Intune admin center](includes/2006/7518897.md)]
 [!INCLUDE [CMG support for endpoint protection policies](includes/2006/4773948.md)]
 [!INCLUDE [Import previously created Azure AD application during tenant attach onboarding](includes/2006/6479246.md)]
 [!INCLUDE [Improvements to client upgrade on a metered connection](includes/2006/6976145.md)]

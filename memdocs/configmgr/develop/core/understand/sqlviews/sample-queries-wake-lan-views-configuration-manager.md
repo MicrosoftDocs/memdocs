@@ -1,17 +1,19 @@
-﻿---
+---
 title: Sample queries for Wake on LAN
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join Wake On LAN views to application management, discovery, and compliance settings views.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
 ms.assetid: 8a1dcdff-9578-447c-b3cf-3c72166bf7cc
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
 ---
 
 # Sample queries for Wake On LAN in Configuration Manager
@@ -25,13 +27,13 @@ The following query retrieves the Configuration Manager object type, the deploym
 ```sql
     SELECT v_WOLGetSupportedObjects.Name AS [Object Type], 
     v_CIAssignment.AssignmentID AS DeploymentID, v_Advertisement.AdvertisementID 
-      v_WOLEnabledObjects.ObjectName AS Name 
+    ��v_WOLEnabledObjects.ObjectName AS Name 
     FROM v_WOLGetSupportedObjects INNER JOIN v_WOLEnabledObjects ON 
-      v_WOLGetSupportedObjects.ObjectType = v_WOLEnabledObjects.ObjectType 
-      LEFT OUTER JOIN v_Advertisement ON 
-      v_WOLEnabledObjects.ObjectID = v_Advertisement.AdvertisementID 
-      LEFT OUTER JOIN v_CIAssignment ON 
-      v_WOLEnabledObjects.ObjectID = v_CIAssignment.Assignment_UniqueID 
+    ��v_WOLGetSupportedObjects.ObjectType = v_WOLEnabledObjects.ObjectType 
+    ��LEFT OUTER JOIN v_Advertisement ON 
+    ��v_WOLEnabledObjects.ObjectID = v_Advertisement.AdvertisementID 
+    ��LEFT OUTER JOIN v_CIAssignment ON 
+    ��v_WOLEnabledObjects.ObjectID = v_CIAssignment.Assignment_UniqueID 
     ORDER BY [Object Type], Name 
 ```
 
@@ -41,11 +43,11 @@ The following query retrieves client computers, by NetBIOS name, that have been 
 
 ```sql
     SELECT v_R_System.Netbios_Name0 AS Computer, v_WOLEnabledObjects.ObjectName, 
-      v_WOLGetSupportedObjects.Name AS ObjectType, v_WOLEnabledObjects.ObjectID 
+    ��v_WOLGetSupportedObjects.Name AS ObjectType, v_WOLEnabledObjects.ObjectID 
     FROM v_WOLTargetedClients INNER JOIN v_R_System ON 
-      v_WOLTargetedClients.ResourceID = v_R_System.ResourceID INNER JOIN v_WOLEnabledObjects ON 
-      v_WOLTargetedClients.ObjectID = v_WOLEnabledObjects.ObjectID INNER JOIN v_WOLGetSupportedObjects ON 
-      v_WOLEnabledObjects.ObjectType = v_WOLGetSupportedObjects.ObjectType 
+    ��v_WOLTargetedClients.ResourceID = v_R_System.ResourceID INNER JOIN v_WOLEnabledObjects ON 
+    ��v_WOLTargetedClients.ObjectID = v_WOLEnabledObjects.ObjectID INNER JOIN v_WOLGetSupportedObjects ON 
+    ��v_WOLEnabledObjects.ObjectType = v_WOLGetSupportedObjects.ObjectType 
     ORDER BY Computer, v_WOLGetSupportedObjects.ObjectType, v_WOLEnabledObjects.ObjectID 
 ```
 

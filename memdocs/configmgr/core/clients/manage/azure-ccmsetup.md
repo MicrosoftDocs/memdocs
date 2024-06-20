@@ -1,38 +1,41 @@
 ---
-title: Azure AD authentication workflow
+title: Microsoft Entra authentication workflow
 titleSuffix: Configuration Manager
-description: Details of the Configuration Manager client installation process on a Windows 10 device with Azure Active Directory authentication
-ms.date: 10/07/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+description: Details of the Configuration Manager client installation process on a Windows device with Microsoft Entra authentication.
+ms.date: 02/16/2022
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 9aaf466a-3f40-4468-b3cd-f0010f21f05a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: bmoran
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
+ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
-# Azure AD authentication workflow
+# Microsoft Entra authentication workflow
 
 *Applies to: Configuration Manager (current branch)*
 
-This article is a technical reference for the Configuration Manager client installation and registration process on a Windows 10 device that is joined to Azure Active Directory (Azure AD). It details the workflow process for the device authentication.
+This article is a technical reference for the Configuration Manager client installation and registration process on a Windows device that is joined to Microsoft Entra ID. It details the workflow process for the device authentication.
 
 > [!NOTE]
-> Windows 10 clients get a workplace join (WPJ) certificate when they join an Azure AD tenant. If the certificate isn't found, the Configuration Manager client can't request Azure AD tokens. Without a token, the client can't use the Configuration Manager security token service (CCM_STS) communication channel for Azure AD authentication with Configuration Manager site systems.
+> Windows clients get a workplace join (WPJ) certificate when they join a Microsoft Entra tenant. If the certificate isn't found, the Configuration Manager client can't request Microsoft Entra tokens. Without a token, the client can't use the Configuration Manager security token service (CCM_STS) communication channel for Microsoft Entra authentication with Configuration Manager site systems.
 
 ## Client installation
 
-In this workflow sample, you installed the Configuration Manager client on a Windows 10 device over the internet with the following ccmsetup command-line properties:
+In this workflow sample, you installed the Configuration Manager client on a Windows device over the internet with the following ccmsetup command-line properties:
 
 `CCMHOSTNAME="CMG.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500" SMSSITECODE="MEM"`
 
-:::image type="content" source="media/azure-ad-auth-ccmsetup.png" alt-text="Workflow diagram of CcmSetup with Azure AD authentication" lightbox="media/azure-ad-auth-ccmsetup.png":::
+:::image type="content" source="media/azure-ad-auth-ccmsetup.png" alt-text="Workflow diagram of CcmSetup with Microsoft Entra authentication" lightbox="media/azure-ad-auth-ccmsetup.png":::
 
-### 1. Azure AD info request from ccmsetup
+<a name='1-azure-ad-info-request-from-ccmsetup'></a>
 
-Clients installed from internet need specific command-line properties to use Azure AD authentication. You can include these properties in the command line for [internet ccmsetup](../../../comanage/how-to-prepare-win10.md#install-the-configuration-manager-client), but they aren't required. When you don't use Azure AD properties, ccmsetup requests the **AADCLIENTAPPID** and **AADRESOURCEURI** properties from the cloud management gateway (CMG). It uses the device's Azure AD TenantID as a reference. If you haven't onboarded the client's TenantID in Configuration Manager, the CMG doesn't give the required properties to ccmsetup to continue client installation.
+### 1. Microsoft Entra info request from ccmsetup
+
+Clients installed from internet need specific command-line properties to use Microsoft Entra authentication. You can include these properties in the command line for [internet ccmsetup](../../../comanage/how-to-prepare-win10.md#install-the-configuration-manager-client), but they aren't required. When you don't use Microsoft Entra properties, ccmsetup requests the `AADCLIENTAPPID` and `AADRESOURCEURI` properties from the cloud management gateway (CMG). It uses the device's Microsoft Entra TenantID as a reference. If you haven't onboarded the client's TenantID in Configuration Manager, the CMG doesn't give the required properties to ccmsetup to continue client installation.
 
 The following entries are logged in **ccmsetup.log** of the client:
 
@@ -46,20 +49,22 @@ Enabled SSL revocation check.
 > [!IMPORTANT]
 > During ccmsetup, the device has to validate the CMG server authentication certificate. The root certificate authority (CA) certificate for the CMG server authentication certificate needs to be available on the client for the chain validation. If you use PKI, when the root CA isn't published on the internet, add the root CA certificate to the device's root CAs store.
 >
-> If the root CA certificate revocation list (CRL) isn't published on internet, add the **/nocrlcheck** parameter in the ccmsetup command line.
+> If the root CA certificate revocation list (CRL) isn't published on internet, add the `/nocrlcheck` parameter in the ccmsetup command line.
 
-### 2. Azure AD token request
+<a name='2-azure-ad-token-request'></a>
 
-On a Windows 10 Azure AD domain-joined device, ccmsetup uses the Azure AD properties to request an Azure AD token calling the ADALOperation provider. The following entries are logged in **ccmsetup.log** on the client:
+### 2. Microsoft Entra token request
+
+On a Windows Azure AD domain-joined device, ccmsetup uses the Microsoft Entra properties to request a Microsoft Entra token calling the ADALOperation provider. The following entries are logged in **ccmsetup.log** on the client:
 
 ``` Log
 Getting AAD (device) token with: ClientId = 0b7c8ab3-9ea1-4ffa-b2b9-8ffdd944bd8b, ResourceUrl = https://ConfigMgrService, AccountId = https://login.microsoftonline.com/common/oauth2/token
 ```
 
-If the device token request fails, ccmsetup falls back to try requesting an Azure AD user token. If the device can't get either an Azure AD device or user token, ccmsetup doesn't continue.
+If the device token request fails, ccmsetup falls back to try requesting a Microsoft Entra user token. If the device can't get either a Microsoft Entra device or user token, ccmsetup doesn't continue.
 
 > [!NOTE]
-> If the device has a valid PKI client authentication certificate, ccmsetup always prefers the certificate. In this case, the client installs as a PKI client and doesn't use Azure AD authentication.
+> If the device has a valid PKI client authentication certificate, ccmsetup always prefers the certificate. In this case, the client installs as a PKI client and doesn't use Microsoft Entra authentication.
 
 ``` Log
 WAM token request failed. Status 5, Details 'AAD WAM extension error'
@@ -73,7 +78,7 @@ Retrieved AAD token for AAD user 'e8838041-db7a-42d5-b9ae-78813910e4cc'
 
 ### 3. Configuration Manager client token request
 
-The client uses the Azure AD token to request the Configuration Manager client (CCM) token. Operational communication between ccmsetup and the site uses the CCM token as authorization token (CcmTokenAuth=1).
+The client uses the Microsoft Entra token to request the Configuration Manager client (CCM) token. Operational communication between ccmsetup and the site uses the CCM token as authorization token (CcmTokenAuth=1).
 
 #### 3.1 Client sends CCM token request to CMG
 
@@ -144,11 +149,11 @@ Package:     C:\WINDOWS\ccmsetup\{E6F27809-FF66-4BAA-B0FB-E4A154A6A388}\client.m
 ```
 
 > [!NOTE]
-> If the client finds the content from a content-enabled CMG or cloud-based distribution point, ccmsetup downloads the content from the cloud storage. If the latest client version isn't available on the cloud, it downloads the content from the management point via a CMG request.
+> If the client finds the content from a content-enabled CMG, ccmsetup downloads the content from the cloud storage. If the latest client version isn't available on the cloud, it downloads the content from the management point via a CMG request.
 
 ## Client registration
 
-:::image type="content" source="media/azure-ad-auth-registration.png" alt-text="Workflow diagram of client registration with Azure AD authentication" lightbox="media/azure-ad-auth-registration.png":::
+:::image type="content" source="media/azure-ad-auth-registration.png" alt-text="Workflow diagram of client registration with Microsoft Entra authentication" lightbox="media/azure-ad-auth-registration.png":::
 
 ### 1. Configuration Manager client request registration
 
@@ -164,9 +169,11 @@ RegEndPoint: Received notification for site assignment change from '<none>' to '
 Registering client using AAD auth.
 ```
 
-### 2. Configuration Manager requests Azure AD token to register client
+<a name='2-configuration-manager-requests-azure-ad-token-to-register-client'></a>
 
-The client requests a new Azure AD token to register using Azure AD authentication. It prefers a device token, but if it's not available, the client falls back to request an Azure AD user token. The following entries are logged in **ADALOperationProvider.log** of the client:
+### 2. Configuration Manager requests Microsoft Entra token to register client
+
+The client requests a new Microsoft Entra token to register using Microsoft Entra authentication. It prefers a device token, but if it's not available, the client falls back to request a Microsoft Entra user token. The following entries are logged in **ADALOperationProvider.log** of the client:
 
 ``` Log
 Getting AAD (user) token with: ClientId = 0b7c8ab3-9ea1-4ffa-b2b9-8ffdd944bd8, ResourceUrl = https://ConfigMgrService, AccountId = 9756a359-f76a-47d5-8662-9a837012fc35
@@ -188,7 +195,7 @@ Processing Registration request from Client 'GUID:C66EE0FD-08E7-4B38-B282-7E6954
 
 #### 3.2 Configuration Manager client is registered  
 
-If registration succeeds, the client gets a confirmation message of registration with **Approval 3** for Azure AD-based registration. The following entries are logged in **ClientIDManagerStartup.log** of the client:
+If registration succeeds, the client gets a confirmation message of registration with **Approval 3** for Microsoft Entra ID-based registration. The following entries are logged in **ClientIDManagerStartup.log** of the client:
 
 ``` Log
 [RegTask] - Client is registered. Server assigned ClientID is GUID:C66EE0FD-08E7-4B38-B282-7E6954B71139. Approval status 3
@@ -238,7 +245,7 @@ Return token to client
 The server returns the CCM token to the client for the rest of client-to-site communication.
 
 > [!NOTE]
-> During client registration, certificate validation always runs. This process happens even if you're using the Azure AD authentication method to register the client. This behavior is a fallback option, in case Azure AD authentication doesn't succeed.
+> During client registration, certificate validation always runs. This process happens even if you're using the Microsoft Entra authentication method to register the client. This behavior is a fallback option, in case Microsoft Entra authentication doesn't succeed.
 
 ### CCM token renewal
 
@@ -262,9 +269,9 @@ Message '{BD03DEED-D09A-4E63-ADAD-596376FFB0DA}' got reply message '{36EE3A78-8F
 
 - Root CA not present: Clients need the root CA certificate to validate the CMG server authentication certificate.
 
-- CRL check is enabled: Publish the CRL on the internet. As an alternative, use the **/NoCRLCheck** parameter for ccmsetup. You can also disable the following option: **Clients check the certificate revocation list (CRL) for site systems**. Find this setting on the **Communication Security** tab of the site properties.
+- CRL check is enabled: Publish the CRL on the internet. As an alternative, use the `/NoCRLCheck` parameter for ccmsetup. You can also disable the following option: **Clients check the certificate revocation list (CRL) for site systems**. Find this setting on the **Communication Security** tab of the site properties.
 
-- The WPJ certificate isn't found: Make sure the device is Azure AD-joined. Use [dsregcmd.exe](/azure/active-directory/devices/troubleshoot-device-dsregcmd). For example, `dsregcmd /status` and look at the **Device State** section.
+- The WPJ certificate isn't found: Make sure the device is Microsoft Entra joined. Use [dsregcmd.exe](/azure/active-directory/devices/troubleshoot-device-dsregcmd). For example, `dsregcmd /status` and look at the **Device State** section.
 
 > [!TIP]
 >
@@ -275,7 +282,7 @@ Message '{BD03DEED-D09A-4E63-ADAD-596376FFB0DA}' got reply message '{36EE3A78-8F
 >   - PKI certificate: Client requires the root CA of the CMG certificate in its local store.
 >   - Third-party certificate: Clients automatically validate a certificate with its root CA published on the internet.
 >
-> - CMG, CMG connection point, and management point validate Azure AD and CCM tokens.
+> - CMG, CMG connection point, and management point validate Microsoft Entra ID and CCM tokens.
 >
 > - Communication between CMG connection point and management point is also secured in both ends:
 >

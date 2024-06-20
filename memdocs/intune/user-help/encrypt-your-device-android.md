@@ -9,10 +9,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 09/23/2020
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
  - User help
@@ -26,7 +24,8 @@ ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 
@@ -72,7 +71,7 @@ The name and location of the secure startup option can vary depending on your de
 
 
 ## Set startup passcode   
-Once you encrypt your device and enable secure startup, you'll be prompted to set your device PIN, password, or other authentication method (if allowed by your organization). Competing that step will satisfy the startup passcode requirement. 
+Once you encrypt your device and enable secure startup, you'll be prompted to set your device PIN, password, or other authentication method (if allowed by your organization). Completing that step will satisfy the startup passcode requirement. 
 
 To set a lock screen on your device or change the type that you're currently using:  
 

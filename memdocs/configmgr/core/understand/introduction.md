@@ -1,36 +1,38 @@
 ---
 title: What is Configuration Manager?
 titleSuffix: Configuration Manager
-description: Learn the basics of Microsoft Endpoint Configuration Manager.
+description: Learn the basics of Microsoft Configuration Manager.
 ms.date: 11/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
+ms.custom: intro-overview
 ms.topic: overview
-ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: 
+    - tier3
+    - essentials-overview
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What is Configuration Manager?
 
 *Applies to: Configuration Manager (current branch)*
 
-Starting in version 1910, Configuration Manager is now part of Microsoft Endpoint Manager.
+Configuration Manager is part of the Microsoft Intune family of products.
 
-![Microsoft Endpoint Configuration Manager](media/4960084-endpoint-manager-logo.png)
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune, without a complex migration, and with simplified licensing. Continue to leverage your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune, without a complex migration, and with simplified licensing. Continue to leverage your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
+The following Microsoft management solutions are all now part of the **Microsoft Intune** brand:
 
-The following Microsoft management solutions are all now part of the **Microsoft Endpoint Manager** brand:
+- [Configuration Manager](../../index.yml)
+- [Intune](../../../intune/index.yml)
+- [Endpoint analytics](../../../analytics/index.yml)
+- [Autopilot](/autopilot/index)
 
-- [Configuration Manager](/configmgr)
-- [Intune](/intune)
-- [Desktop Analytics](../../desktop-analytics/overview.md)
-- [Autopilot](/intune/enrollment/enrollment-autopilot)
-- Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
-
-For more information, see [Microsoft Endpoint Configuration Manager FAQ](microsoft-endpoint-manager-faq.yml).
+For more information, see [Microsoft Configuration Manager FAQ](microsoft-endpoint-manager-faq.yml).
 
 ## Introduction
 
@@ -63,7 +65,7 @@ Configuration Manager extends and works alongside many Microsoft technologies an
 
 Configuration Manager also uses:  
 
-- Active Directory Domain Services and Azure Active Directory for security, service location, configuration, and to discover the users and devices that you want to manage.  
+- Active Directory Domain Services and Microsoft Entra ID for security, service location, configuration, and to discover the users and devices that you want to manage.  
 - Microsoft SQL Server as a distributed change management database—and integrates with SQL Server Reporting Services (SSRS) to produce reports to monitor and track management activities.  
 - Site system roles that extend management functionality and use the web services of Internet Information Services (IIS).
 - Delivery Optimization, Windows Low Extra Delay Background Transport (LEDBAT), Background Intelligent Transfer Service (BITS), BranchCache, and other peer caching technologies to help manage content on your networks and between devices.

@@ -3,13 +3,15 @@ title: Manage devices with on-premises MDM
 titleSuffix: Configuration Manager
 description: Protect device data with full wipe, selective wipe, remote lock, or passcode reset by using Configuration Manager on-premises mobile device management (MDM).
 ms.date: 08/14/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-mdm
+ms.subservice: mdm
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Manage devices and protect data with on-premises MDM in Configuration Manager
@@ -116,7 +118,7 @@ If a user forgets their passcode, use this action to force a new temporary passc
 | OS version | Passcode reset |
 |------------|----------------|
 | Windows 10 | Not supported |
-| Windows 10 mobile | Supported, excluding Azure Active Directory-joined devices |
+| Windows 10 mobile | Supported, excluding Microsoft Entra joined devices |
 | Windows Phone 8 and Windows Phone 8.1 | Supported |
 | Windows RT 8.1 | Not supported |
 | Windows 8.1 | Not supported |

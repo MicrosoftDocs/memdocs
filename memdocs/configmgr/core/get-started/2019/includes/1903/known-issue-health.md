@@ -1,7 +1,7 @@
 ---
-author: aczechowski
-ms.author: aaroncz
-ms.prod: configuration-manager
+author: Banreet
+ms.author: banreetkaur
+ms.service: configuration-manager
 ms.topic: include
 ms.date: 04/03/2019
 

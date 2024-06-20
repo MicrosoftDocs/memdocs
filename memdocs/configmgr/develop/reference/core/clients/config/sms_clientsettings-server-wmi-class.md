@@ -1,16 +1,18 @@
 ---
-title: "SMS_ClientSettings Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+description: Learn how to represent the settings that apply to the clients which belong to a specified collection using SMS_ClientSettings class.
+title: SMS_ClientSettings Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f46e48ff-60cd-4a68-a36e-9ece153d93c3
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ClientSettings Server WMI Class
 The `SMS_ClientSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the settings that apply to the clients which belong to a specified collection. These settings override the default client settings.  
@@ -169,7 +171,7 @@ Class SMS_ClientSettings : SMS_ClientSettingsBase
 
  Qualifiers: [read]  
 
- The name of the security scopes with which the setting is associated. The default value is "Default".  
+ The name of the security scopes with which the setting is associated. The default value is "Default."  
 
  `SettingsID`  
  Data type: `UInt32`  
@@ -187,7 +189,7 @@ Class SMS_ClientSettings : SMS_ClientSettingsBase
 
  Qualifiers: [notnull]  
 
- Type indicates whether the settings is applied to Device or User. The default value is 1 (Device).  
+ Type indicates whether the settings are applied to Device or User. The default value is 1 (Device).  
 
 |Value|Settings type|  
 |-|-|  

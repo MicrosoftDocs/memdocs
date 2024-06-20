@@ -1,17 +1,17 @@
 ---
-title: "Updates Publisher"
-titleSuffix: "Configuration Manager"
-description: "Use System Center Updates Publisher to manage custom updates"
-ms.date: 11/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+title: Updates Publisher
+titleSuffix: Configuration Manager
+description: Use System Center Updates Publisher to manage custom updates
+ms.date: 10/31/2023
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: conceptual
-ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 # System Center Updates Publisher
 
@@ -27,6 +27,9 @@ Using Updates Publisher, you can:
 -   Publish updates to an update server.
 
 After you publish updates to an update server, you can then use Configuration Manager to detect and deploy those updates to your managed devices.
+
+>[!Important] 
+> The System Center Updates Publisher (SCUP) and Integration with Configuration manager will be deprecated on January 31, 2024. 
 
 ## Workspaces
 When you open Updates Publisher, it defaults to the Overview node of the *Updates Workspace.*
@@ -54,6 +57,9 @@ Managing publications includes publishing updates to a server so your clients ca
 
 >[!NOTE] 
 > The latest version of System Center Updates Publisher was released on November 6, 2019. For more information, see the [Release history](#release-history) section.
+
+>[!Important] 
+> The System Center Updates Publisher (SCUP) and Integration with Configuration manager will be deprecated on January 31, 2024. 
 
 There's a new authoring mode System Center Updates Publisher to help you author your updates. When you enable authoring mode, a **Categories Workspace** is added to the start screen. A new **Detectoid** button is also added to the **Updates Workspace** when authoring mode is enabled.
 

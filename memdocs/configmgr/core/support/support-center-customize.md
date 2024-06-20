@@ -3,13 +3,15 @@ title: Customize Support Center
 titleSuffix: Configuration Manager
 description: Customize the Support Center configuration file.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: a6f7f6b7-9ef3-4ffa-a3cf-d877ac55983b
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Customize Support Center

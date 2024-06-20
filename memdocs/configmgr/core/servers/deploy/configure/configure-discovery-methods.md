@@ -1,22 +1,24 @@
 ---
 title: Configure discovery
 titleSuffix: Configuration Manager
-description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
-ms.date: 04/27/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+description: Configure discovery methods to find resources to manage from your network, Active Directory, and Microsoft Entra ID.
+ms.date: 04/25/2022
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-author: mestew
-ms.author: mstewart
-manager: dougeby
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configure discovery methods for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory (Azure AD). First enable and then configure each method that you want to use to search your environment. You can also disable a method by using the same procedure that you use to enable it. The only exceptions to this process are Heartbeat Discovery and Server Discovery:  
+Configure discovery methods to find resources to manage from your network, Active Directory, and Microsoft Entra ID. First enable and then configure each method that you want to use to search your environment. You can also disable a method by using the same procedure that you use to enable it. The only exceptions to this process are Heartbeat Discovery and Server Discovery:  
 
 - By default, **Heartbeat Discovery** is already enabled when you install a Configuration Manager primary site. It's configured to run on a basic schedule. Keep Heartbeat Discovery enabled. It makes sure that the discovery data records (DDRs) for devices are up to date. For more information about Heartbeat Discovery, see [About Heartbeat Discovery](about-discovery-methods.md#bkmk_aboutHeartbeat).  
 
@@ -155,7 +157,9 @@ Although each of these discovery methods is independent of the others, they shar
           Select subcontainers to exclude from this recursive search. This option helps to reduce the number of discovered objects. Select **Add** to choose the containers under the above path. In the Select New Container dialog box, select a child container to exclude. Select **OK** to close the Select New Container dialog box.<!--1358143-->
 
           > [!Tip]  
-          > The list of Active Directory containers in the Active Directory System Discovery Properties window includes a column **Has Exclusions**. When you select containers to exclude, this value is **Yes**.  
+          > - The list of Active Directory containers in the Active Directory System Discovery Properties window includes a column **Has Exclusions**. When you select containers to exclude, this value is **Yes**.
+          > - Starting in version 2203, you can exclude subcontainers in untrusted domains for **Active Directory System Discovery** and **Active Directory User Discovery**. 
+  
 
     3. For each location, specify the account to use as the **Active Directory Discovery Account**. For more information, see [Accounts](../../../plan-design/hierarchy/accounts.md#active-directory-system-discovery-account).  
 
@@ -212,13 +216,18 @@ Starting in version 2103, you can exclude OUs from Active Directory User Discove
 
 1. Select **OK** to save the Active Directory container configuration.
 
-## <a name="azureaadisc"></a> Azure AD User Discovery
+> [!TIP]
+> Starting in version 2203, you can exclude subcontainers in untrusted domains for **Active Directory System Discovery** and **Active Directory User Discovery**.
 
-Azure AD User Discovery isn't enabled or configured the same as other discovery methods. Configure it when you onboard the Configuration Manager site to Azure AD.
+## <a name="azureaadisc"></a> Microsoft Entra user Discovery
 
-For more information, see [Azure AD User Discovery](about-discovery-methods.md#azureaddisc).
+Microsoft Entra user Discovery isn't enabled or configured the same as other discovery methods. Configure it when you onboard the Configuration Manager site to Microsoft Entra ID.
 
-### Prerequisites for Azure AD User Discovery
+For more information, see [Microsoft Entra user Discovery](about-discovery-methods.md#azureaddisc).
+
+<a name='prerequisites-for-azure-ad-user-discovery'></a>
+
+### Prerequisites for Microsoft Entra user Discovery
 
 To enable and configure this discovery method, [Configure Azure Services](azure-services-wizard.md) for **Cloud Management**.
 
@@ -226,7 +235,7 @@ If you use Configuration Manager to *create* the Azure app, it configures the ap
 
 If you create the app in Azure first, and then *import* it into Configuration Manager, you need to manually configure the app. This configuration includes granting the server app permission to read directory data.
 
-1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**. Switch to **All applications** if necessary.
+1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Microsoft Entra ID**, and select **App registrations**. Switch to **All applications** if necessary.
 
 1. Select the target application.
 
@@ -244,54 +253,58 @@ If you create the app in Azure first, and then *import* it into Configuration Ma
 
 1. On the **API permissions** panel, in the **Grant consent** section, select **Grant admin consent...**. Select **Yes**.  
 
-### Configure Azure AD User Discovery
+<a name='configure-azure-ad-user-discovery'></a>
+
+### Configure Microsoft Entra user Discovery
 
 When configuring the **Cloud Management** Azure service:
 
-- On the **Discovery** page of the wizard, select the option to **Enable Azure Active Directory User Discovery**.
+- On the **Discovery** page of the wizard, select the option to **Enable Microsoft Entra user Discovery**.
 - Select **Settings**.
-- In the Azure AD User Discovery Settings dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery, which only checks for new or changed accounts in Azure AD.
+- In the Microsoft Entra user Discovery Settings dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery, which only checks for new or changed accounts in Microsoft Entra ID.
 
 > [!Note]  
-> If the user is a federated or synchronized identity, you must use Configuration Manager [Active Directory user discovery](about-discovery-methods.md#bkmk_aboutUser) as well as Azure AD user discovery. For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
+> If the user is a federated or synchronized identity, you must use Configuration Manager [Active Directory user discovery](about-discovery-methods.md#bkmk_aboutUser) as well as Microsoft Entra user discovery. For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 
-## <a name="bkmk_azuregroupdisco"></a> Azure AD User Group Discovery
+## <a name="bkmk_azuregroupdisco"></a> Microsoft Entra user Group Discovery
 
 <!--3611956-->
-> [!Tip]  
-> This feature was first introduced in version 1906 as a [pre-release feature](../../manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.  
 
-You can discover user groups and members of those groups from Azure AD. When the site finds users in Azure AD groups that it hasn't previously discovered, it adds them as new user resources in Configuration Manager. A user group resource record is created when the group is a security group.
+You can discover user groups and members of those groups from Microsoft Entra ID. When the site finds users in Microsoft Entra groups that it hasn't previously discovered, it adds them as new user resources in Configuration Manager. A user group resource record is created when the group is a security group.
 
-### Prerequisites for Azure AD User Group Discovery
+<a name='prerequisites-for-azure-ad-user-group-discovery'></a>
+
+### Prerequisites for Microsoft Entra user Group Discovery
 
 - Cloud Management [Azure service](azure-services-wizard.md)
-- Permission to read and search Azure AD groups
+- Permission to read and search Microsoft Entra groups
 
 ### Log files
 
-Use the SMS_AZUREAD_DISCOVERY_AGENT.log for troubleshooting. This log is also shared with Azure AD user discovery. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#BKMK_ServerLogs).
+Use the SMS_AZUREAD_DISCOVERY_AGENT.log for troubleshooting. This log is also shared with Microsoft Entra user discovery. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#BKMK_ServerLogs).
 
-### Enable Azure AD user group discovery
+<a name='enable-azure-ad-user-group-discovery'></a>
+
+### Enable Microsoft Entra user group discovery
 
 To enable discovery on an existing **Cloud Management** Azure service:
 
 1. Go to the **Administration** workspace, expand **Cloud Services**, then select the **Azure Services** node.
 1. Select one of your Azure services, then select **Properties** in the ribbon.
-1. In the **Discovery** tab, check the box to **Enable Azure Active Directory Group Discovery**, then select **Settings**.
+1. In the **Discovery** tab, check the box to **Enable Microsoft Entra group Discovery**, then select **Settings**.
 1. Select **Add** under the **Discovery Scopes** tab.
     - You can modify the **Polling Schedule** in the other tab.
-1. Select one or more user groups. You can **Search** by name and choose if you want to see **Security groups only**.
+1. Select one or more user groups. You can **Search** by name.
     - You'll be prompted to sign in to Azure when you select **Search** the first time.
 1. Select **OK** when you finish selecting groups.
-1. Once discovery finishes running, you can browse your Azure AD user groups in the **Users** node.
+1. Once discovery finishes running, you can browse your Microsoft Entra user groups in the **Users** node.
 
 To enable discovery when configuring a new **Cloud Management** Azure service:
 
-- On the **Discovery** page of the wizard, select the option to **Enable Azure Active Directory Group Discovery**.
+- On the **Discovery** page of the wizard, select the option to **Enable Microsoft Entra group Discovery**.
 - Select **Settings**.
-- In the Azure AD Group Discovery Settings dialog box, configure your discovery scope and a schedule for when discovery occurs.
+- In the Microsoft Entra group Discovery Settings dialog box, configure your discovery scope and a schedule for when discovery occurs.
 
 
 ## <a name="BKMK_ConfigHBDisc"></a> Heartbeat Discovery

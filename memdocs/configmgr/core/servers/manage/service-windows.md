@@ -3,13 +3,15 @@ title: Service Windows
 titleSuffix: Configuration Manager
 description: Use service windows to control when Configuration Manager sites install updates.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: ca4886d4-7173-46be-8dcd-1657d5b0deb9
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
+author: banreet
+manager: apoorvseth
+ms.author: banreetkaur
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Service windows for site servers

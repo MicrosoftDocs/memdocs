@@ -2,14 +2,16 @@
 title: Manage clients over the internet
 titleSuffix: Configuration Manager
 description: Learn about managing clients with cloud management gateway and internet-based client management in Configuration Manager.
-ms.date: 06/10/2020
-ms.prod: configuration-manager
+ms.date: 08/02/2021
+ms.subservice: client-mgt
 ms.topic: conceptual
-ms.technology: configmgr-client
-ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.service: configuration-manager
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Manage clients over the internet with Configuration Manager
@@ -25,7 +27,7 @@ Configuration Manager provides two ways to manage internet-connected clients:
 - Internet-based client management
 
 > [!NOTE]
-> You can have a combination of both services for a single site. If a device gets policy from the site for both IBCM and CMG, then it randomizes between them for communication. The only mechanism available to control communication is client authentication. For example, if an Azure AD-joined client doesn't trust the server authentication certificate of the internet-based management point, it can only use the CMG. If a domain-joined client doesn't trust the server authentication certificate of the CMG, it can only use the internet-based management point.<!-- SCCMDocs#1541 -->
+> You can have a combination of both services for a single site. If a device gets policy from the site for both IBCM and CMG, then it randomizes between them for communication. The only mechanism available to control communication is client authentication. For example, if a Microsoft Entra joined client doesn't trust the server authentication certificate of the internet-based management point, it can only use the CMG. If a domain-joined client doesn't trust the server authentication certificate of the CMG, it can only use the internet-based management point.<!-- SCCMDocs#1541 -->
 
 ## Cloud management gateway
 
@@ -47,8 +49,6 @@ The cloud management gateway provides management of internet-based clients. It u
 
 - Management data sent through cloud service.  
 
-For more information, see [Overview of cloud management gateway](cmg/overview.md).  
-
 ## Internet-based client management
 
 This method relies on internet-facing site system servers to which clients directly communicate for management purposes. It requires clients and site system servers to be configured for internet-based client management (IBCM).
@@ -69,4 +69,8 @@ This method relies on internet-facing site system servers to which clients direc
 
 - Infrastructure must be exposed to the internet.  
 
-For more information, see [Plan for internet-based client management](plan-internet-based-client-management.md).  
+## Next steps
+
+[Overview of cloud management gateway](cmg/overview.md)
+
+[Plan for internet-based client management](plan-internet-based-client-management.md)

@@ -1,17 +1,17 @@
 ---
-title: "Windows client firewall and port settings"
-titleSuffix: "Configuration Manager"
-description: "Select Windows Firewall and port settings for clients in Configuration Manager."
+title: Windows client firewall and port settings
+titleSuffix: Configuration Manager
+description: Select Windows Firewall and port settings for clients in Configuration Manager.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Windows Firewall and port settings for clients in Configuration Manager
 

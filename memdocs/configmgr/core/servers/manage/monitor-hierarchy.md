@@ -3,15 +3,15 @@ title: Monitor the hierarchy
 titleSuffix: Configuration Manager
 description: Learn how to monitor your infrastructure in Configuration Manager by using the Monitoring workspace in the console.
 ms.date: 06/06/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 007dbb73-18a7-48a3-a489-97cf9fc4f140
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Monitor the hierarchy

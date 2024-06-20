@@ -1,17 +1,17 @@
 ---
-title: "Introduction to power management"
-titleSuffix: "Configuration Manager"
-description: "Get an introduction to power management in Configuration Manager."
+title: Introduction to power management
+titleSuffix: Configuration Manager
+description: Get an introduction to power management in Configuration Manager.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 3ddff2a7-99eb-4ef8-b969-f3f7f24053db
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
-
-
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Introduction to power management in Configuration Manager
 

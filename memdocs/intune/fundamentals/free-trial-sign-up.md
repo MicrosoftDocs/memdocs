@@ -1,43 +1,47 @@
 ---
 # required metadata
 
-title: Quickstart - Try Microsoft Intune for free
+title: Try Microsoft Intune for free
 titleSuffix: 
-description: In this quickstart you will create a free trial subscription, understand supported configurations and networking requirements, and optionally configure your domain name.
+description: Create a free trial subscription, understand supported configurations and networking requirements, and optionally configure your domain name.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/14/2021
-ms.topic: quickstart
+ms.date: 05/13/2024
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
-# Quickstart: Try Microsoft Intune for free
+# Try Microsoft Intune for free
 
-Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this quickstart, you will create a free subscription to try Intune in a test environment.
+Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this topic, you will create a free subscription to try Intune in a test environment.
 
-Intune provides mobile device management (MDM) and mobile app management (MAM) from a secure cloud-based service that is administered using the Microsoft Endpoint Manager admin center. Using Intune, you ensure your workforce's corporate resources (data, devices, and apps) are correctly configured, accessed, and updated, meeting your company's compliance policies and requirements.
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
-When you complete the sign up process, you'll have a new tenant. A tenant is a dedicated instance of Azure Active Directory (Azure AD) where your subscription to Intune is hosted. You can then configure the tenant, add users and groups, and assign licenses to users. When you're ready, you can help users enroll their devices and add apps that they need to begin the modern endpoint management process. As you continue, you can set configuration and protection policies, as well as other endpoint management capabilities.
+Intune provides mobile device management (MDM) and mobile app management (MAM) from a secure cloud-based service that is administered using the Microsoft Intune admin center. Using Intune, you ensure your workforce's corporate resources (data, devices, and apps) are correctly configured, accessed, and updated, meeting your company's compliance policies and requirements.
+
+When you complete the signup process, you'll have a new tenant. A tenant is a dedicated instance of Microsoft Entra ID where your subscription to Intune is hosted. You can then configure the tenant, add users and groups, and assign licenses to users. When you're ready, you can help users enroll their devices and add apps that they need to begin the modern endpoint management process. As you continue, you can set configuration and protection policies, as well as other endpoint management capabilities.
 
 ## Prerequisites
+
 Before setting up Microsoft Intune, review the following requirements:
 
 - [Supported operating systems and browsers](supported-devices-browsers.md)
@@ -59,78 +63,74 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
    > [!NOTE]
    > If you already have an account set up with another Microsoft service using your email address, you can choose to sign in to use the account with the Intune trial, or you can create a new account. These steps assume you are creating a new account.
 
-   ![Screenshot of the Microsoft Intune set up account page - Enter email address](./media/free-trial-sign-up/sign-up-for-intune-01.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-01.png" alt-text="Screenshot of the Microsoft Intune set up account page - Enter email" border="true":::
 
 3. Click **Set up account** to create a new account.
 
-   ![Screenshot of the Microsoft Intune set up account page - Set up account](./media/free-trial-sign-up/sign-up-for-intune-02.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-02.png" alt-text="Screenshot of the Microsoft Intune set up account page - Set up account" border="true":::
 
-4.  Add your name, phone number, company name, company size, and region. Then, click **Next**.
+4. Add your name, phone number, company name, company size, and region. Review the remaining information and click **Next**.
 
-    > [!NOTE]
-    > If most of your IT operations and users are in a different locale than you, you may want to select that locale under **Country or region**. Intune uses your regional information to deliver the right services. This setting can't be changed later.
-    
-    ![Screenshot of the Microsoft Intune set up account page - Add account details](./media/free-trial-sign-up/sign-up-for-intune-03.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-03.png" alt-text="Screenshot of the Microsoft Intune set up account page - Add account details" border="true":::
 
-5. Click **Send Verification Code** to verify the phone number you added.
+5. Click **Send verification code** to verify the phone number you added.
 
-    ![Screenshot of the Microsoft Intune set up account page - Send verification code](./media/free-trial-sign-up/sign-up-for-intune-04.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-04.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Send verification code" border="true":::
 
 6. Enter the verification code you receive on your mobile device, then click **Verify**.
 
-    ![Screenshot of the Microsoft Intune set up account page - Verify code](./media/free-trial-sign-up/sign-up-for-intune-05.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-05.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Verify code" border="true":::
 
-7. Add a domain name for your trial that represents your business or organization. Your name will be added before *.onmicrosoft.com*. Click **Check availability** > **Next**. If you like, you can later change this domain name to your custom domain name.
+7. Add your **Username** and **Domain name** for your trial that represents your business or organization. Your name will be added before *.onmicrosoft.com*. Click **Save** to check availability. Click **Next** to continue. If you like, you can later change this domain name to your custom domain name.
 
-    ![Screenshot of the Microsoft Intune set up account page - Add domain name](./media/free-trial-sign-up/sign-up-for-intune-06.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-06.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Sign in" border="true":::
 
-    > [!NOTE]
-    > If your organization has its own custom domain that you want to use without *.onmicrosoft.com*, you can change that in the Microsoft 365 admin center described later in this article.
+8. In order to verify your identity, you must add a payment method. Your card is only used for verification purposes and won't be charged until you buy something.
 
-8. Add your user name and password that you'll use to log in to Microsoft Intune. Review the trial agreement and privacy statement. Click **Sign up** to create your account.
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-06a.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Add payment method" border="true":::
 
-    > [!IMPORTANT]
-    > Be sure to make a note of your user name and password.
+9. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
 
-    ![Screenshot of the Microsoft Intune set up account page - Add user name and password](./media/free-trial-sign-up/sign-up-for-intune-07.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-07.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Confirmation details" border="true":::
 
-9. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you'll receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
+   > [!NOTE]
+   > If you click **Get Started**, you'll open the **Microsoft 365 admin center** home page. If you click **Manage your subscription**, you'll open **Your products** and view details about your Microsoft Intune Trial subscription.
 
-## Sign in to Intune in the Microsoft Endpoint Manager admin center
+## Sign in to Intune in the Microsoft Intune admin center
 
-If you're not already signed in to the portal, complete the following steps:
+If you're not already signed in to the admin center, complete the following steps:
 
-1. Open a new browser window and enter **[https://endpoint.microsoft.com](https://endpoint.microsoft.com)** in the address bar.
+1. Open a new browser window and enter **[https://intune.microsoft.com](https://intune.microsoft.com)** in the address bar.
 2. Use the user ID that you were given in the steps above to sign in. The user ID will look similar to the following: *yourID@yourdomain.onmicrosoft.com*.
 
-    ![Image of the portal sign-in page](./media/free-trial-sign-up/azure-portal-signin.png)
+    ![Image of the Intune admin center sign-in page](./media/free-trial-sign-up/azure-portal-signin.png)
 
 When you sign up for a trial, you will also receive an email message that contains your account information and the email address that you provided during the sign-up process. This email confirms your trial is active.
 
 > [!TIP]
-> When working with the Microsoft Endpoint Manager, you may have better results working with a browser in regular mode, rather than private mode.
+> When working with the Microsoft Intune, you may have better results working with a browser in regular mode, rather than private mode.
 
-## Confirm the MDM authority in Microsoft Endpoint Manager
+## Confirm the MDM authority in Microsoft Intune
 
 By default, the Mobile Device Management (MDM) authority is set when you create your free trial. You can confirm that the MDM authority is set by using the following steps:
 
-1. If you're not already signed in, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+1. If you're not already signed in, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click **Tenant administration**.
 3. View the tenant details. The **MDM authority** should be set to **Microsoft Intune**.
 
-If after signing in to the Microsoft Endpoint Manager, you see an orange banner indicating that you haven't yet set the MDM authority, you can activate it at this time. The mobile device management (MDM) authority setting determines how you manage your devices. The MDM authority must be set before users can enroll devices for management.
+If after signing in to the Microsoft Intune admin center, you see an orange banner indicating that you haven't yet set the MDM authority, you can activate it at this time. The mobile device management (MDM) authority setting determines how you manage your devices. The MDM authority must be set before users can enroll devices for management.
 
 ### Set the MDM authority to Intune
 
-1. If you do not have the MEM authority set, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com). 
-2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority. 
+1. If you do not have the MDM authority set, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
 
     > [!NOTE]
-    > If you have set the MDM Authority, you will see the MDM authority value on the **Tenant administration** pane. The orange banner is only displayed if you haven't yet set the MDM authority. 
+    > If you have set the MDM Authority, you will see the MDM authority value on the **Tenant administration** pane. The orange banner is only displayed if you haven't yet set the MDM authority.
 
-    ![Image of the Choose MDM Authority blade](./media/free-trial-sign-up/choose-mdm-authority.png) 
+   ![Image of the Choose MDM Authority blade](./media/free-trial-sign-up/choose-mdm-authority.png)
 
-4. If your MDM Authority is not set, under **Choose MDM Authority**, set your MDM authority to **Intune MDM Authority**.
+3. If your MDM Authority is not set, under **Choose MDM Authority**, set your MDM authority to **Intune MDM Authority**.
 
 For more information about the MDM authority, see [Set the mobile device management authority](mdm-authority-set.md).
 
@@ -143,32 +143,44 @@ As mentioned above, if your organization has its own custom domain that you want
 
 1. Go to [Microsoft 365 admin center](https://admin.microsoft.com) and sign in using your administrator account.
 
-2. In the navigation pane, choose **Setup** > **Domains** > **Add domain**.
+2. In the navigation pane, choose **Setup**.
 
-3. Type your custom domain name. Then, select **Next**.
+3. On the page in the **Sign-in and security** section,  select **Get your custom domain set up**.
+
+4. Select **Get started** to set up your custom domain.
+
+5. Type your domain name. Then, select **Use this domain**.
 
    ![Screenshot of Microsoft 365 admin center - Add domain](./media/free-trial-sign-up/domain-custom-add.png)
 
-4. Verify that you are the owner of the domain that you entered in the previous step. 
-    
-    Selecting **send code via email** will send an email to the registered contact of your domain. After you receive the email, copy the code and enter it in the field labeled **Type your verification code here**. If the verification code matches, the domain will be added to your tenant. The email displayed may not look familiar. Some registrars hide the real email address. Also, the email address may be different then what was provided when the domain was registered.
+6. Verify that you are the owner of the domain that you entered in the previous step.
+
+   Select the method that you will use to verify your domain.
 
    ![Screenshot of Microsoft 365 admin center - Verify domain](./media/free-trial-sign-up/domain-custom-verify.png)
 
    > [!NOTE]
    > For TXT record verification details, see [Create DNS records at any DNS hosting provider for Microsoft 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
 
+## Confirm your licenses
+
+A Microsoft Intune license is created for you when you sign up for the Intune free trial. As part of this trial, you'll also have a trial Enterprise Mobility + Security (EMS) subscription. An Enterprise Mobility + Security (EMS) subscription includes both Microsoft Entra ID P1 or P2 and Microsoft Intune.
+
+To confirm your Microsoft Entra ID P1 or P2 and Microsoft Intune, see [Confirm your licenses](../fundamentals/licenses.md#confirm-your-licenses).
+
 ## Admin experiences
 
-There are two portals that you will use most often:
-- The Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
-- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Azure Active Directory for this. You can also manage other aspects of your account, including billing and support.
+There are two admin centers that you will use most often:
+
+- The Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
+
+- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Microsoft Entra ID for this. You can also manage other aspects of your account, including billing and support.
 
 ## Next steps
 
-In this quickstart, you've created a free subscription to try Intune in a test environment. For more information about setting up Intune, see [Set up Intune](setup-steps.md).
+In this topic, you've created a free subscription to try Intune in a test environment. For more information about setting up Intune, see [Set up Intune](deployment-plan-setup.md).
 
-To follow this series of Intune quickstarts, continue to the next quickstart.
+To continue to evaluate Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Quickstart: Create a user and assign a license to it](quickstart-create-user.md)
+> [Step 2 - Create a user and assign a license to it](quickstart-create-user.md)

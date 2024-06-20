@@ -3,15 +3,15 @@ title: Recommendations for power management
 titleSuffix: Configuration Manager
 description: Learn Microsoft recommendations for power management in Configuration Manager.
 ms.date: 09/10/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
-
-
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Recommendations for power management in Configuration Manager

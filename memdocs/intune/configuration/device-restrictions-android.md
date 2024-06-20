@@ -1,30 +1,31 @@
 ---
 # required metadata
 
-title: Device restriction settings for Android in Microsoft Intune - Azure | Microsoft Docs
+title: Device restriction settings for Android in Microsoft Intune
 description: See a list of all the Android device administrator settings you can control and restrict in Microsoft Intune. Use these settings to control the password, access Google Play, allow or prohibit apps, control the browser settings, block apps, backup to the Google cloud, and control the message, voice, data roaming, Wi-Fi, and Bluetooth connection options.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
+ms.date: 10/23/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: mikedano, chmaguir, chrisbal
+ms.reviewer: anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Android and Samsung Knox Standard device restriction settings lists in Intune
@@ -34,6 +35,9 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 This feature applies to:
 
 - Android device administrator (DA)
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 >[!TIP]
 >If the settings you want are not available, you might be able to configure your devices using a [custom profile](custom-settings-android.md).
@@ -57,11 +61,11 @@ Create an [Android device administrator device restrictions configuration profil
 - **Screen capture (Samsung Knox only)**: **Block** prevents screenshots. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
 - **Voice assistant (Samsung Knox only)**: **Block** disables the S Voice service. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the S Voice service and app on devices. This setting doesn't apply to Bixby or the voice assistant for accessibility that reads the screen content aloud.
 - **YouTube (Samsung Knox only)**: **Block** prevents users from using the YouTube app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the YouTube app on devices.
-- **Shared devices (Samsung Knox only)**: Configure a managed Samsung Knox Standard device as shared. **Allow** lets users sign in and out of devices with their Azure AD credentials. Devices stay managed, whether they're in use or not.
+- **Shared devices (Samsung Knox only)**: Configure a managed Samsung Knox Standard device as shared. **Allow** lets users sign in and out of devices with their Microsoft Entra credentials. Devices stay managed, whether they're in use or not.
 
   When used in with a SCEP certificate profile, this feature allows users to share a device with the same apps for all users. But, each user has their own SCEP user certificate. When users sign out, all app data is cleared. This feature is limited to LOB apps only.
 
-  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent multiple users from signing in to the Company Portal app on devices using their Azure AD credentials.
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent multiple users from signing in to the Company Portal app on devices using their Microsoft Entra credentials.
 - **Block date and time changes (Samsung Knox)**: **Block** prevents users from changing the date and time settings on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the date and time settings.
 
 ## Password
@@ -98,11 +102,11 @@ These settings apply to Android 4.0 and newer, and Knox 4.0 and newer.
     - Pattern
     - Numeric PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
   - **Medium**: The password satisfies one of the following conditions:
-    - Numeric PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
+    - Numeric PIN doesn't have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
     - Alphabetic, with a minimum length of 4.
     - Alphanumeric, with a minimum length of 4.
   - **High**: The password satisfies one of the following conditions:
-    - Numeric PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
+    - Numeric PIN doesn't have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
 
@@ -112,7 +116,7 @@ These settings apply to Android 4.0 and newer, and Knox 4.0 and newer.
   > [!IMPORTANT]
   > The **Password complexity** setting is a work in progress. In late October 2020, **Password complexity** will take effect on devices.
   >
-  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**, which is found under the *All Android devices* section. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don’t set the **Password** setting to **Require**, users with weak passwords won’t receive the warning.
+  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**, which is found under the *All Android devices* section. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don't set the **Password** setting to **Require**, users with weak passwords won't receive the warning.
 
 ### Android 9 and earlier, or Samsung Knox (any version)
 
@@ -128,8 +132,8 @@ These settings apply to Android 4.0 and newer, and Knox 4.0 and newer.
 
     When set to **Numeric complex**, and you assign the setting to devices running an Android version earlier than 5.0, then the following behavior applies:
 
-    - If the Company Portal app is running a version earlier than 1704, no PIN policy applies to devices, and an error shows in the Microsoft Endpoint Manager admin center.
-    - If the Company Portal app runs the 1704 version or later, only a simple PIN can be applied. Android version earlier than 5.0 don't support this setting. No error is shown in the Microsoft Endpoint Manager admin center.
+    - If the Company Portal app is running a version earlier than 1704, no PIN policy applies to devices, and an error shows in the Microsoft Intune admin center.
+    - If the Company Portal app runs the 1704 version or later, only a simple PIN can be applied. Android version earlier than 5.0 don't support this setting. No error is shown in the Microsoft Intune admin center.
 
   - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
   - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
@@ -165,7 +169,7 @@ This feature is supported on Android and Samsung Knox Standard devices.
   - **App store URL**: Enter the Google Play Store URL of the app you want. For example, to add the Microsoft Remote Desktop app for Android, enter `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`.
 
     To find the URL of an app, open the [Google Play store](https://play.google.com/store/apps), and search for the app. For example, search for `Microsoft Remote Desktop Play Store` or `Microsoft Planner`. Select the app, and copy the URL.
-  - **App bundle ID**: Enter the app bundle ID.
+  - **App bundle ID**: Enter the app bundle ID. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
   - **App name**: Enter the name you want. This name is shown to users.
   - **Publisher** (optional): Enter the publisher of the app, such as `Microsoft`.
 
@@ -222,7 +226,7 @@ For each setting, add your apps:
 
 ## Kiosk
 
-Kiosk settings apply only to Samsung Knox Standard devices, and only to apps you manage using Intune.
+Kiosk settings apply only to Samsung Knox Standard devices running Android 10 or earlier, and only to apps you manage using Intune.
 
 - Add apps you want to run when the device is in kiosk mode. In kiosk mode, only the apps you add run; apps not added don't run. Pre-installed browsers don't run as an app when the device is in kiosk mode. If a browser is required, consider using the [Managed Browser](../apps/manage-microsoft-edge.md).
 

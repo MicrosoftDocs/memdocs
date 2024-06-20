@@ -1,28 +1,28 @@
 ---
-title: File and command reference for Microsoft Tunnel Gateway, a VPN solution for Microsoft Intune - Azure | Microsoft Docs
+title: File and command reference for Microsoft Tunnel Gateway, a VPN solution for Microsoft Intune
 description: Find file and command-line references for tools you use to install or manage the Microsoft Tunnel Gateway, a VPN server that runs on Linux.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 01/12/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: ochukwunyere
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Reference for Microsoft Tunnel Gateway
@@ -127,14 +127,14 @@ The following are common command line uses of the tool.
 Following are environment variables you might want to configure when you install the Microsoft Tunnel Gateway software on the Linux server. These variables are found in the environment file **/etc/mstunnel/env.sh**:
 
 - **http_proxy**=[address] - The HTTP address for your proxy server.
-- **https_proxy**=[address] - The HTTPs address for your proxy server. 
+- **https_proxy**=[address] - The HTTPs address for your proxy server.
 
-## Data Paths  
+## Data Paths
 
 | Path/File                       | Description             | Permissions |
 |---------------------------------|-------------------------|------------|
 | /…/mstunnel                     | The root directory for all configuration.   | Owner root, Group mstunnel |
-| /…/mstunnel/admin-settings.json | Contains the settings for the server install.  *This file is managed by Intune and shouldn't be edited manually*. | |
+| /…/mstunnel/admin-settings.json | Contains the settings for the server install. | *Intune manages this file and it shouldn't be edited manually*. |
 | /…/mstunnel/certs               | The directory where the TLS certificate is stored.  | Owner root, Group mstunnel |
 | /…/mstunnel/private             |The directory where the Intune Agent certificate and the TLS private key are stored. | Owner root, Group mstunnel |
 
@@ -144,7 +144,7 @@ Following are environment variables you might want to configure when you install
 
 - **admin-settings.json**:
   - Contains the serialized *Server configuration* from Intune.
-  - Created after the server has enrolled.
+  - Created after the server enrolls.
 
 - **agent-info.json**:
   - Created when the enrollment is complete.
@@ -187,19 +187,24 @@ Following are environment variables you might want to configure when you install
 
 | Admin Setting     | Description                           |
 |-------------------|---------------------------------------|
-| PolicyName          |The name of the settings policy. You can choose the name.       |
-| DisplayName         |  The short display name. You can choose the name.              |
-| Description        | The description of the policy. You can choose the description. |
-| Network             | The network with mask that will be used to assign clients virtual addresses. This doesn't need to change unless you have a conflict. This setting will support 64,000 clients. |
-| DNSServers          | The list of DNS servers that the client should use.  These servers can resolve the addresses of internal resources. |
+| PolicyName          | The name of the settings policy. You can choose the name.       |
+| DisplayName         | The short display name. You can choose the name.              |
+| Description         | The description of the policy. You can choose the description. |
+| Network             | The network and mask that is used to assign clients virtual addresses. This doesn't need to change unless you have a conflict. This setting supports up to 64,000 clients. |
+| DNSServers          | The list of DNS servers that the client should use. These servers can resolve the addresses of internal resources. |
 | DefaultDomainSuffix | The Domain suffix that a client appends to the host name when trying to resolve resources. |
-| RoutesInclude       | The list of routes that will be routed via the VPN.  The default is all routes. |
+| RoutesInclude       | The list of routes that are routed via the VPN. The default is all routes. |
 | RoutesExclude       | The list of routes that should bypass the VPN.                 |
-| ListenPort          | The port that the VPN server will receive traffic on.          |
+| ListenPort          | The port that the VPN server receives traffic on.          |
 
 ## Docker commands
 
 The following are common commands for Docker that can be of use if you must investigate problems on a tunnel server.
+
+> [!NOTE]
+> Most Linux distributions use Docker. However, some like *Red Hat Enterprise Linux (RHEL) 8.4* do not support Docker. Instead, these distributions use Podman. For more information about supported distributions and the Docker or Podman requirements of each, see [Linxu servers](../protect/microsoft-tunnel-prerequisites.md#linux-server).
+>
+> The references and command lines that are written for Docker can be used with Podman by replacing *docker* with *podman*.
 
 Command-line interface:
 
@@ -207,12 +212,22 @@ Command-line interface:
   - *mstunnel-server* – This container runs the **ocserv** server components, and uses inbound Port 443 *(default)*, or a custom port configuration.
   - *mstunnel-agent* - This container runs the Intune connector and uses outbound Port 443.
 
-- **To restart Docker**:  
+- **To restart Docker**:
+
   - `systemctl restart docker`
 
 - **To run something in a container**:
+
   - `docker exec –it mstunnel-server bash`
   - `docker exec –it mstunnel-agent bash`
+
+## Podman commands
+
+The following are commands for Podman that can be of use if you must investigate problems on a tunnel server. For more commands you can use with Podman, see [Docker commands](#docker-commands).
+
+- `sudo podman images` - List all running containers.
+- `sudo podman stats` - Display container CPU utilization, MEM usage, Network and Block IO.
+- `sudo podman port mstunnel-server` - List the port mappings from tunnel-server to the local Linux host.
 
 ## Linux commands
 
@@ -233,3 +248,13 @@ The following are common Linux commands you might use with a tunnel server.
 - `curl <URL>` – Checks access to a website. For example: `curl https://microsoft.com`
 
 - `./<filename>` -  Run a script.
+
+### Manually load ip_tables
+
+Use the following commands to check for, and manually load if necessary, ip_tables in the Linux server kernel. Use the sudo context:
+
+- Validate the presence of ip_tables on the server: `lsmod |grep ip_tables`
+
+- Create a config file that loads the ip_tables into kernel when the server boots: `echo ip_tables > /etc/modules-load.d/mstunnel_iptables.conf`
+
+- To load ip_tables into the kernel immediately: `/sbin/modprobe ip_tables`

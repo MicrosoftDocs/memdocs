@@ -1,15 +1,17 @@
 ---
-title: "Synchronize Microsoft 365 Apps updates with no Internet connection"
-titleSuffix: "Configuration Manager"
-description: "Synchronize Microsoft 365 Apps updates on the top-level software update point that is disconnected from the Internet."
+title: Synchronize Microsoft 365 Apps updates with no Internet connection
+titleSuffix: Configuration Manager
+description: Synchronize Microsoft 365 Apps updates on the top-level software update point that is disconnected from the Internet.
 ms.date: 08/11/2020
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
-ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
-manager: dougeby
-author: mestew
-ms.author: mstewart
+ms.service: configuration-manager
+ms.subservice: software-updates
+manager: apoorvseth
+author: BalaDelli
+ms.author: baladell
+ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # <a name="bkmk_O365"></a> Synchronize Microsoft 365 Apps updates from a disconnected software update point
@@ -24,9 +26,11 @@ Starting in Configuration Manager version 2002, you can use a tool to import Mic
 ## Prerequisites
 
 - An internet connected WSUS server running a minimum of Windows Server 2012.
-- The WSUS server needs connectivity to these two internet endpoints:
+- The WSUS server needs connectivity to these internet endpoints:
    - `officecdn.microsoft.com`
    - `config.office.com`
+   - `clients.config.office.net`
+   - `go.microsoft.com`
 - Copy the OfflineUpdateExporter tool and its dependencies to the internet connected WSUS server.
   - The tool and its dependencies are in the **&lt;ConfigMgrInstallDir>/tools/OfflineUpdateExporter** directory.
 - The user running the tool must be part of the **WSUS Administrators** group.

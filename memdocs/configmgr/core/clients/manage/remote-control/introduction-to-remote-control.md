@@ -1,17 +1,17 @@
 ---
-title: "Remote control"
-titleSuffix: "Configuration Manager"
-description: "Get an introduction to remote control in Configuration Manager."
+title: Remote control
+titleSuffix: Configuration Manager
+description: Get an introduction to remote control in Configuration Manager.
 ms.date: 04/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
-author: mestew
-ms.author: mstewart
-manager: dougeby
-
-
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Introduction to remote control in Configuration Manager
 

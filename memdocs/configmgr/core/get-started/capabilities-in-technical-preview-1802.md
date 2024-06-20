@@ -1,18 +1,18 @@
 ---
-title: "Technical Preview 1802 | Microsoft Docs"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1802 for Configuration Manager."
+title: Technical Preview 1802 | Microsoft Docs
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview version 1802 for Configuration Manager.
 ms.date: 02/09/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-ms.assetid: 4884a2d3-13ce-44e5-88c4-a66dc7ec6014
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Capabilities in Technical Preview 1802 for Configuration Manager
 
@@ -160,13 +160,13 @@ To access the Lifecycle Dashboard, in the Configuration Manager console, go to *
 
 ## Improvements to reporting
 <!--1357653-->
-As a result of [your feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/32434147-new-builtin-reports-about-windows-10-versions-and) we added a new report, **Windows 10 Servicing details for a specific collection**. This report shows Resource ID, NetBIOS name, OS name, OS release name, build, OS branch, and servicing state for Windows 10 devices. To access the report, go to **Monitoring** >**Reporting** >**Reports** >**Operating Systems** >**Windows 10 Servicing details for a specific collection**.
+As a result of your feedback we added a new report, **Windows 10 Servicing details for a specific collection**. This report shows Resource ID, NetBIOS name, OS name, OS release name, build, OS branch, and servicing state for Windows 10 devices. To access the report, go to **Monitoring** >**Reporting** >**Reports** >**Operating Systems** >**Windows 10 Servicing details for a specific collection**.
 
 
 
 ## Improvements to Software Center
 <!--1357592-->
-As a result of [your feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/13002684-software-center-show-only-available-software-hid) installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled. 
+As a result of your feedback installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled. 
 
 ### Try it out!
 Enable the **Hide Installed Applications in Software Center** setting in the Software Center client settings. Observe the behavior on Software Center when the end user installs an application.
@@ -190,7 +190,7 @@ When upgrading the site to this version, Configuration Manager adds all non-inte
 Management point boundary group fallback does not change the behavior during client installation (ccmsetup). If the command line does not specify the initial management point using the /MP parameter, the new client receives the full list of available management points. For its initial bootstrap process, the client uses the first management point it can access. Once the client registers with the site, it receives the management point list properly sorted with this new behavior. 
 
 ### Prerequisites
-- Enable [preferred management points](../servers/deploy/configure/boundary-groups.md#bkmk_preferred). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
+- Enable [preferred management points](../servers/deploy/configure/boundary-groups-management-points.md#preferred-management-points). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
 
 ### Known issues
 - Operating system deployment processes are not aware of boundary groups.
@@ -223,7 +223,7 @@ The list of [unsupported scenarios](../plan-design/network/cng-certificates-over
 
 ## Cloud management gateway support for Azure Resource Manager
 <!-- 1324735 -->
-When creating an instance of the [cloud management gateway](../clients/manage/cmg/overview.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
+When creating an instance of the [cloud management gateway](../clients/manage/cmg/overview.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Microsoft Entra ID to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
 
 The CMG wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, we recommend using the Azure Resource Manager deployment model for all new CMG instances. If possible, redeploy existing CMG instances through Resource Manager.
 
@@ -233,19 +233,19 @@ Configuration Manager does not migrate existing classic CMG instances to the Azu
 > This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 ### Prerequisites
-- Integration with [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md). Azure AD user discovery is not required.
+- Integration with [Microsoft Entra ID](../clients/deploy/deploy-clients-cmg-azure.md). Microsoft Entra user discovery is not required.
 - The same [requirements for cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md#requirements), except for the Azure management certificate.
 
 ### Try it out!  
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
 
 1. In the Configuration Manager console, **Administration** workspace, expand **Cloud Services**, and select **Cloud Management Gateway**. Click **Create Cloud Management Gateway** in the ribbon. 
-2. On the **General** page, select **Azure Resource Manager deployment**. Click **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the Azure AD subscription information stored during the integration prerequisite. If you own multiple subscriptions, select the desired subscription to use. Click **Next**.  
+2. On the **General** page, select **Azure Resource Manager deployment**. Click **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the Microsoft Entra subscription information stored during the integration prerequisite. If you own multiple subscriptions, select the desired subscription to use. Click **Next**.  
 3. On the **Settings** page, provide the server PKI certificate file as usual. This certificate defines the CMG service name in Azure. Select the **Region**, and then select a resource group option to either **Create new** or **Use existing**. Enter the new resource group name, or select an existing resource group from the drop-down list. 
 4. Complete the wizard.
 
 > [!NOTE] 
-> For the selected Azure AD server app, Azure assigns the subscription **contributor** permission. 
+> For the selected Microsoft Entra server app, Azure assigns the subscription **contributor** permission. 
 
 Monitor the service deployment progress with **cloudmgr.log** on the service connection point.
 
@@ -256,7 +256,7 @@ Monitor the service deployment progress with **cloudmgr.log** on the service con
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. 
 
 > [!NOTE]
-> This feature is optional. When updating to this release, enable this feature in the update wizard. Alternatively, enable the feature in the console later. For more information, see [Enable optional features from updates](../servers/manage/install-in-console-updates.md#bkmk_options).
+> This feature is optional. When updating to this release, enable this feature in the update wizard. Alternatively, enable the feature in the console later. For more information, see [Enable optional features from updates](../servers/manage/optional-features.md).
 
 ### Prerequisites
 - Upgrade the Configuration Manager client to the latest version
@@ -272,19 +272,21 @@ Starting in this release, when a user requests an application that requires appr
 
 
 
-## Use Software Center to browse and install user-available applications on Azure AD-joined devices
+<a name='use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices'></a>
+
+## Use Software Center to browse and install user-available applications on Microsoft Entra joined devices
 <!-- 1322613 -->
-If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices.  
+If you deploy applications as available to users, they can now browse and install them through Software Center on Microsoft Entra devices.  
 
 ### Prerequisites
 - Enable HTTPS on the management point
-- Integrate the site with [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md)
+- Integrate the site with [Microsoft Entra ID](../clients/deploy/deploy-clients-cmg-azure.md)
 - Deploy an application as available to a user collection
 - Distribute any application content to a [cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
 - Enable the client setting **Use new Software Center** in the [Computer agent](../clients/deploy/about-client-settings.md#computer-agent) group
 - The client must be: 
    - Windows 10
-   - Azure AD-joined, also known as cloud domain-joined
+   - Microsoft Entra joined, also known as cloud domain-joined
 - To support internet-based clients:
     - [Cloud management gateway](../clients/manage/cmg/overview.md) 
     - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](../clients/deploy/about-client-settings.md#client-policy) group
@@ -294,9 +296,9 @@ If you deploy applications as available to users, they can now browse and instal
 
 
 
-## Report on Windows AutoPilot device information
+## Report on Windows Autopilot device information
 <!-- 1351442 -->
-Windows AutoPilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [overview of Windows AutoPilot](/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows AutoPilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information. 
+Windows Autopilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [overview of Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows Autopilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information. 
 
 ### Prerequisites
 - This device information only applies to clients on Windows 10, version 1703, and later
@@ -305,7 +307,7 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
 
 1. In the Configuration Manager console, **Monitoring** workspace, expand the **Reporting** node, expand **Reports**, and select the **Hardware - General** node.
-2. Run the new report, **Windows AutoPilot Device Information** and view the results. 
+2. Run the new report, **Windows Autopilot Device Information** and view the results. 
 3. In the report viewer click the **Export** icon, and select **CSV (comma delimited)** option.
 4. After saving the file, upload the data to the Microsoft Store for Business and Education. For more information, see [add devices in Microsoft Store for Business and Education](/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile). 
 
@@ -344,7 +346,7 @@ For customers who use the [Microsoft Edge](https://www.microsoft.com/itpro/micro
 - **Allow extensions**: For more information, see [AllowExtensions browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
 ### Prerequisites
-- Windows 10 client that is Azure Active Directory-joined. 
+- Windows 10 client that is Microsoft Entra joined. 
 
 ### Known issues
 - On-premises domain-joined devices cannot apply this policy in this release. This issue also pertains to hybrid domain-joined devices.

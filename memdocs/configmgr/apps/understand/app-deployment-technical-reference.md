@@ -3,15 +3,15 @@ title: Troubleshooting application deployment technical reference
 titleSuffix: Configuration Manager
 description: Technical reference for troubleshooting application deployment in Configuration Manager.
 ms.date: 11/04/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: troubleshooting
-ms.assetid: a4eb09c8-e570-4369-9adb-ded9c8ad3400
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-
-
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Technical Reference for Application Deployment in Configuration Manager

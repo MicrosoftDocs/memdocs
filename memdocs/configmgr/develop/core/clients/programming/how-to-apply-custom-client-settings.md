@@ -3,13 +3,15 @@ title: Apply custom client settings
 titleSuffix: Configuration Manager
 description: Use the SDK to apply custom client settings.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: b171d930-dd3f-4587-ad24-058448fcfa30
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
 ---
 
 # How to apply custom client settings

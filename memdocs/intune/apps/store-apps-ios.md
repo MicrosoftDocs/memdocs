@@ -7,24 +7,27 @@ keywords: Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
-ms.technology:
+ms.localizationpriority: medium
 ms.assetid: c59514d7-1256-4576-9380-e7a0b85a0378
 
 # optional metadata
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
+- iOS/iPadOS
+- FocusArea_Apps_Store
 ---
 
 # Add iOS store apps to Microsoft Intune
@@ -43,7 +46,7 @@ You can assign apps by using this method only if they are free of charge in the 
 >[!NOTE]
 >When you work with Microsoft Intune, we recommend that you use either the Microsoft Edge or Google Chrome browser.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **iOS store app**.
 4. Click **Select**.<br>

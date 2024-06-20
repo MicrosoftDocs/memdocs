@@ -1,17 +1,16 @@
 ---
-title: Bulk enrollment for Windows 10
+title: Bulk enrollment for Windows devices  
 titleSuffix: Microsoft Intune
 description: Create a bulk enrollment package for Microsoft Intune
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 11/24/2020
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 
 # optional metadata
@@ -19,61 +18,81 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 #ROBOTS:
 #audience:
 
-ms.reviewer: spshumwa
+ms.reviewer: maholdaa
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
-# Bulk enrollment for Windows devices
+# Bulk enrollment for Windows devices  
 
-As an administrator, you can join large numbers of new Windows devices to Azure Active Directory and Intune. To bulk enroll devices for your Azure AD tenant, you create a provisioning package with the Windows Configuration Designer (WCD) app. Applying the provisioning package to corporate-owned devices joins the devices to your Azure AD tenant and enrolls them for Intune management. Once the package is applied, it's ready for your Azure AD users to sign in.
+**Applies to**  
+- Windows 10  
+- Windows 11  
 
-> [!NOTE]
-> Creating a provisioning package does not require any administrator roles in your Azure AD tenant.
+Join new Windows devices to Microsoft Entra ID and Intune. To bulk enroll devices for your Microsoft Entra tenant, you create a provisioning package with the Windows Configuration Designer (WCD) app. Applying the provisioning package to corporate-owned devices joins the devices to your Microsoft Entra tenant and enrolls them for Intune management. Once the package is applied, it's ready for your Microsoft Entra users to sign in.
 
-Azure AD users are standard users on these devices and receive assigned Intune policies and required apps. Windows devices that are enrolled into Intune using Windows bulk enrollment can use the Company Portal app to install available apps. 
+Microsoft Entra users are standard users on these devices and receive assigned Intune policies and required apps. Windows devices that are enrolled into Intune using Windows bulk enrollment can use the Company Portal app to install available apps. 
 
-## Prerequisites for Windows devices bulk enrollment
+## Roles and permissions    
 
-- Devices running Windows 10 Creator update (build 1709) or later
-- [Windows automatic enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment)
+To create a bulk enrollment token, you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The supported roles are:  
+- Global Administrator  
+- Cloud Device Administrator  
+- Intune Administrator  
+- Password Administrator  
+
+You can assign these roles in Intune for Education > **Tenant settings** or in the Microsoft Intune admin center > **Users**. For more information, see [Give admin permissions in Microsoft Intune admin center](../fundamentals/users-add.md#give-admin-permissions-in-microsoft-intune-admin-center).  
+
+## Prerequisites 
+
+- Devices must be running Windows 11 or Windows 10 Creator update (build 1709) or later.   
+- Enable [Windows automatic enrollment](windows-enroll.md#enable-windows-automatic-enrollment).  
+
+Additionally, ensure that the service principal for Microsoft.Azure.SyncFabric (AppID 00000014-0000-0000-c000-000000000000) is present in your Microsoft Entra tenant. In a command line, use the `Get-AzureADServicePrincipal` command to check for the [service principal](/entra/identity-platform/developer-glossary#service-principal-object). Without the service principal, Windows Configuration Designer can't retrieve the bulk enrollment token, which results in an error. 
 
 ## Create a provisioning package
 
-1. Download [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) from the Microsoft Store.
-   ![Screenshot of the Windows Configuration Designer app Store](./media/windows-bulk-enroll/bulk-enroll-store.png)
+1. Install [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) from the Microsoft Store.  
 
-2. Open the **Windows Configuration Designer** app and select **Provision desktop devices**.
+1. Open the **Windows Configuration Designer** app and select **Provision desktop devices**.
    ![Screenshot of selecting Provision desktop devices in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-select.png)
 
-3. A **New project** window opens where you specify the following information:
+1. A **New project** window opens where you specify the following information:
    - **Name** - A name for your project
    - **Project folder** - Save location for the project
    - **Description** - An optional description of the project
    ![Screenshot of specifying name, project folder, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-name.png)
 
-4. Enter a unique name for your devices. Names can include a serial number (%SERIAL%) or a random set of characters. Optionally, you can also enter a product key if you are upgrading the edition of Windows, configure the device for shared use, and remove pre-installed software.
+1. Enter a unique name for your devices. Names can include a serial number (%SERIAL%) or a random set of characters. Optionally, you can also enter a product key if you are upgrading the edition of Windows, configure the device for shared use, and remove pre-installed software.
    
    ![Screenshot of specifying name and product key in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-device.png)
 
-5. Optionally, you can configure the Wi-Fi network devices connect to when they first start.  If the network devices aren't configured, a wired network connection is required when the device is first started.
+1. Optionally, you can configure the Wi-Fi network devices connect to when they first start.  If the network devices aren't configured, a wired network connection is required when the device is first started.
    ![Screenshot of enabling Wi-Fi including Network SSID and Network type options in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-network.png)
 
-6. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**.
-   ![Screenshot of account management in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-account.png)
+1. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.  
 
-7. Provide your Azure AD credentials to get a bulk token.
+   > [!NOTE]
+   > Once a provisioning package is created, it can be revoked before its expiration by removing the associated package_{GUID} user account from Microsoft Entra ID.
+
+1. Provide your Microsoft Entra credentials to get a bulk token.
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**. If you keep the check box selected and press OK, the device you are using will become managed by your organization. If you do not intend for your device to be managed, make sure to select **No, sign in to this app only**. 
+   > [!NOTE]
+   > The account used to request the bulk token must be included in the [MDM user scope](windows-enroll.md#enable-windows-automatic-enrollment) that is specified in Microsoft Entra ID. If this account is removed from a group that is tied to the MDM user scope, bulk enrollment will stop working.  
 
-9. Click **Next** when **Bulk Token** is fetched successfully.
+1. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**. If you keep the check box selected and press OK, the device you are using will become managed by your organization. If you do not intend for your device to be managed, make sure to select **No, sign in to this app only**. 
 
-10. Optionally, you can **Add applications** and **Add certificates**. These apps and certificates are provisioned on the device.
+1. Click **Next** when **Bulk Token** is fetched successfully.
 
-11. Optionally, you can password protect your provisioning package.  Click **Create**.
+1. Optionally, you can **Add applications** and **Add certificates**. These apps and certificates are provisioned on the device.
+
+1. Optionally, you can password protect your provisioning package.  Click **Create**.
     ![Screenshot of package protection in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## Provision devices
@@ -89,22 +108,26 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 3. After you apply the package, the device will automatically restart in one minute.
    ![Screenshot of project folder, specifying name, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-add.png)
 
-4. When the device restarts, it connects to the Azure Active Directory and enrolls in Microsoft Intune.
+4. When the device restarts, it connects to the Microsoft Entra ID and enrolls in Microsoft Intune.
 
 ## Troubleshooting Windows bulk enrollment
 
 ### Provisioning issues
 Provisioning is intended to be used on new Windows devices. Provisioning failures might require a wipe of the device or device recovery from a boot image. These examples describe some reasons for provisioning failures:
 
-- A provisioning package that attempts to join an Active Directory domain or Azure Active Directory tenant that does not create a local account could make the device unreachable if the domain-join process fails due to lack of network connectivity.
+- A provisioning package that attempts to join an Active Directory domain or Microsoft Entra tenant that does not create a local account could make the device unreachable if the domain-join process fails due to lack of network connectivity.
 - Scripts run by the provisioning package are run in system context. The scripts are able to make arbitrary changes to the device file system and configurations. A malicious or bad script could put the device in a state that can only be recovered by reimaging or wiping the device.
 
 You can check for success/failure of the settings in your package in the **Provisioning-Diagnostics-Provider** Admin log in Event Viewer.
+
+> [!NOTE]
+> Bulk enrollment is considered a userless enrollment method, and because of it, only the "Default" enrollment restriction in Intune would apply during enrollment. Make sure Windows platform is allowed in the default restriction, otherwise, the enrollment will fail.
+> To check the capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](/mem/intune/fundamentals/deployment-guide-enrollment-windows).  
 
 ### Bulk enrollment with Wi-Fi 
 
 When not using an open network, you must use [device-level certificates](../protect/certificates-configure.md) to initiate connections. Bulk enrolled devices are unable to use to user-targeted certificates for network access. 
 
-### Conditional Access
+### Conditional access
 
-Conditional Access is available for Windows 10 1803+ devices enrolled using bulk enrollment.
+Conditional access is available for devices enrolled via bulk enrollment running Windows 11 or Windows 10, version 1803 and later.  
