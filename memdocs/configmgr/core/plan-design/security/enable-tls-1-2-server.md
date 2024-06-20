@@ -2,7 +2,7 @@
 title: Enable TLS 1.2 on servers
 titleSuffix: Configuration Manager
 description: Information about how to enable Transport Layer Security (TLS) 1.2 for Configuration Manager site servers and remote site systems.
-ms.date: 05/04/2021
+ms.date: 06/20/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # How to enable TLS 1.2 on the site servers and remote site systems
@@ -45,6 +45,7 @@ Secondary site servers need to use at least SQL Server 2016 Express with Service
 ### <a name="bkmk_sql-client"></a> SQL Server Native Client
 
 > [!NOTE]
+>
 > [KB 3135244](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe) also describes requirements for SQL Server client components.
 
 Make sure to also update the SQL Server Native Client to at least version SQL Server 2012 SP4 (11.*.7001.0). This requirement is a [prerequisite check (warning)](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
@@ -74,7 +75,6 @@ Automatically configures TLS 1.2 across both client and server for machines runn
 After the configuration has been assigned, the compliance status of your resources can be viewed in detail by navigating to the Guest Assignments page and scoping down to the impacted resources.
 
 For a detailed, step-by-step tutorial, see [Consistently upgrade your server TLS protocol using Azure Arc and Automanage Machine Configuration](https://techcommunity.microsoft.com/t5/azure-arc-blog/consistently-upgrade-your-server-tls-protocol-using-azure-arc/ba-p/3664217).
-
 
 ## <a name="bkmk_wsus"></a> Update Windows Server Update Services (WSUS)
 
