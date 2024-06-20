@@ -2,17 +2,16 @@
 # required metadata
 
 title: Create device profiles in Microsoft Intune
-description: Add or configure a device configuration profile in Microsoft Intune. Select the platform type, configure the settings, add a scope tag.
+description: Add or configure a device configuration profile in Microsoft Intune. Select the platform type, configure the settings, and add a scope tag.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 05/13/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 
 # optional metadata
@@ -29,6 +28,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- magic-ai-copilot
 ---
 
 # Create a device profile in Microsoft Intune
@@ -37,24 +37,19 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Administrative templates**: On Windows 10/11 devices, these templates are ADMX settings that you configure. If you're familiar with ADMX policies or group policy objects (GPO), then using administrative templates is a natural step to Microsoft Intune.
 
-  For more information, see [Administrative Templates](administrative-templates-windows.md)
+  For more information, go to [Administrative Templates](administrative-templates-windows.md)
 
 - **Baselines**: On Windows 10/11 devices, these baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
 
-  For more information, see [Security baselines](../protect/security-baselines.md).
+  For more information, go to [Security baselines](../protect/security-baselines.md).
 
-- **Settings catalog**: On Windows 10/11 devices, use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings.
+- **Settings catalog**: On your Apple and Windows devices, you can use the settings catalog to configure device features and settings. The settings catalog has all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings.
 
-  For more information, see [Settings catalog](settings-catalog.md).
-
-  On macOS, continue using the [preference file](/deployedge/configure-microsoft-edge-on-mac) to:
-  
-  - Configure earlier versions of Microsoft Edge
-  - Configure Edge browser settings that aren't in settings catalog
+  For more information, go to [Settings catalog](settings-catalog.md).
 
 - **Templates**: On Android, iOS/iPadOS, macOS, and Windows devices, the templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
-  For more information, including the available templates, see [Apply features and settings on your devices using device profiles](device-profiles.md).
+  For more information, including the available templates, go to [Apply features and settings on your devices using device profiles](device-profiles.md).
 
 This article:
 
@@ -71,7 +66,7 @@ Profiles are created in the [Microsoft Intune admin center](https://go.microsoft
 
 - **Overview**: Lists the status of your profiles, and provides more details on the profiles you assigned to users and devices.
 - **Monitor**: Check the status of your profiles for success or failure, and also view logs on your profiles.
-- **By platform**: Create and view policies and profiles by your platform. This view may also show features specific to the platform. For example, select **Windows**. You'll see Windows-specific features, such as **Windows Update Rings** and **PowerShell scripts**.
+- **By platform**: Create and view policies and profiles by your platform. This view can also show features specific to the platform. For example, select **Windows**. You see Windows-specific features, such as **Windows Update Rings** and **PowerShell scripts**.
 - **Manage devices**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run on devices, and add data plans to devices using [eSIM](esim-device-configuration.md).
 
 When you create a profile (**Configuration** > **Create**), choose your platform:
@@ -86,11 +81,12 @@ When you create a profile (**Configuration** > **Create**), choose your platform
 Then, choose the profile. Depending on the platform you choose, the settings you can configure are different. The following articles describe the different profiles:
 
 - [Administrative templates (Windows)](administrative-templates-windows.md)
+- [BIOS configuration and other settings](bios-configuration.md)
 - [Custom](custom-settings-configure.md)
 - [Delivery Optimization (Windows)](delivery-optimization-windows.md)
 - [Derived credential (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
 - [Device features (macOS, iOS, iPadOS)](device-features-configure.md)
-- [Device firmware (Windows)](device-firmware-configuration-interface-windows.md)
+- [Device firmware configuration interface (DFCI) (Windows)](device-firmware-configuration-interface-windows.md)
 - [Device restrictions](device-restrictions-configure.md)
 - [Domain join (Windows)](domain-join-configure.md)
 - [Edition upgrade and mode switch (Windows)](edition-upgrade-configure-windows-10.md)
@@ -128,7 +124,7 @@ If you select **Windows 10 and later** for the platform, your options look simil
 
 After you add the settings, you can also add a scope tag to the profile. Scope tags filter profiles to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. And, are used in distributed IT.
 
-For more information about scope tags, and what you can do, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+For more information about scope tags, and what you can do, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 ## Applicability rules
 
@@ -148,11 +144,11 @@ To approach these scenarios, you:
 
 - Create a devices group that includes all devices at Bellows College. In the profile, add an applicability rule so it applies if the OS minimum version is `16299` and the maximum version is `17134`. Assign this profile to the Bellows College devices group.
 
-  When it's assigned, the profile applies to devices between the minimum and maximum versions you enter. For devices that aren't between the minimum and maximum versions you enter, their status shows as **Not applicable**.
+  When the profile is assigned, it applies to devices between the minimum and maximum versions you enter. For devices that aren't between the minimum and maximum versions you enter, their status shows as **Not applicable**.
 
 - Create a users group that includes all users in Human Resources (HR) at Contoso. In the profile, add an applicability rule so it applies to devices running Windows 10 Professional or Enterprise. Assign this profile to the HR users group.
 
-  When it's assigned, the profile applies to devices running Windows 10 Professional or Enterprise. For devices that aren't running these editions, their status shows as **Not applicable**.
+  When the profile is assigned, it applies to devices running Windows 10 Professional or Enterprise. For devices that aren't running these editions, their status shows as **Not applicable**.
 
 - If there are two profiles with the exact same settings, then the profile without an applicability rule is applied. 
 
@@ -166,21 +162,21 @@ When you assign the profile to the groups, the applicability rules act as a filt
 
 1. In your policy, select **Applicability Rules**. You can choose the **Rule**, and **Property**:
 
-    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Screenshot that shows how to add an applicability rule to a Windows 10 device configuration profile in Microsoft Intune.":::
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Screenshot that shows how to add an applicability rule to a Windows 10 device configuration profile in Microsoft Intune." lightbox="./media/device-profile-create/applicability-rules.png":::
 
 2. In **Rule**, choose if you want to include or exclude users or groups. Your options:
 
     - **Assign profile if**: Includes users or groups that meet the criteria you enter.
     - **Don't assign profile if**: Excludes users or groups that meet the criteria you enter.
 
-3. In **Property**, choose your filter. Your options: 
+3. In **Property**, choose your filter. Your options:
 
     - **OS edition**: In the list, check the Windows client editions you want to include (or exclude) in your rule.
     - **OS version**: Enter the **min** and **max** Windows client version numbers of you want to include (or exclude) in your rule. Both values are required.
 
       For example, you can enter `10.0.16299.0` (RS3 or 1709) for minimum version and `10.0.17134.0` (RS4 or 1803) for maximum version. Or, you can be more granular and enter `10.0.16299.001` for minimum version and `10.0.17134.319` for maximum version.
 
-      For more version numbers, see [Windows client release information](/windows/release-health/release-information).
+      For more version numbers, go to [Windows client release information](/windows/release-health/release-information).
 
 4. Select **Add** to save your changes.
 
@@ -199,14 +195,18 @@ When creating profiles, consider the following recommendations:
   Some configuration profile examples include:
 
   **Profile name**: Admin template - OneDrive configuration profile for all Windows 10 users  
-  **Profile description**: OneDrive admin template profile that includes the minimum and base settings for all Windows 10 users. Created by user@contoso.com to prevent users from sharing organizational data to personal OneDrive accounts.
+  **Profile description**: OneDrive admin template profile that includes the minimum and base settings for all Windows 10 users. Created by `user@contoso.com` to prevent users from sharing organizational data to personal OneDrive accounts.
 
   **Profile name**: VPN profile for all iOS/iPadOS users  
-  **Profile description**: VPN profile that includes the minimum and base settings for all iOS/iPadOS users to connect to Contoso VPN. Created by user@contoso.com so users automatically authenticate to VPN, instead of prompting users for their username and password.
+  **Profile description**: VPN profile that includes the minimum and base settings for all iOS/iPadOS users to connect to Contoso VPN. Created by `user@contoso.com` so users automatically authenticate to VPN, instead of prompting users for their username and password.
 
 - Create your profile by its task, such as configure Microsoft Edge settings, enable Microsoft Defender anti-virus settings, block iOS/iPadOS jailbroken devices, and so on.
 
-- Create profiles that apply to specific groups, such as Marketing, Sales, IT Administrators, or by location or school system.
+- Create profiles that apply to specific groups, such as Marketing, Sales, IT Administrators, or by location or school system. Use the built-in features, including:
+
+  - [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](../fundamentals/scope-tags.md)
+  - [Distributed IT with many admins in the same Intune tenant](../fundamentals/intune-scale-guidelines.md)
+  - [Use filters when assigning your apps, policies, and profiles in Intune](../fundamentals/filters.md)
 
 - Separate user policies from device policies.
 
@@ -215,6 +215,10 @@ When creating profiles, consider the following recommendations:
   The following image shows an example of a setting that can apply to users, apply to devices, or apply to both:
 
   :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Screenshot that shows an Intune admin template that applies to user and devices in Microsoft Intune.":::
+
+- Use Microsoft Copilot in Intune to evaluate your policies, learn more about a policy setting and its impact on your users & security, and compare policies between two devices.
+
+  For more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
 
 - Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from four (4) characters to six (6) characters, let your users know before your assign the policy.
 

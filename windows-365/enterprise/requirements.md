@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2024
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -43,9 +42,9 @@ None, if you plan on provisioning Microsoft Entra joined Cloud PCs on a Microsof
 If you choose to provision Cloud PCs on your own network, an active Azure subscription with the following configurations is required:
 
 - Sufficient permissions to grant Windows 365:
-  - A reader role on the subscription.
-  - Network contributor permissions on the resource group.
-  - A network contributor role on the vNet.
+  - A reader role on the Azure subscription.
+  - Windows365 network interface contributor role on the specified resource group.
+  - Windows365 network user role on the virtual network.
 
 ### [Windows 365 Government](#tab/government)
 
@@ -64,7 +63,7 @@ A subscription in Azure Government is required for Windows 365 Government custom
 ## Microsoft Entra ID and Intune requirements
 
 - A valid and working Intune and Microsoft Entra tenant.
-- Ensure that Intune device type enrollment restrictions are set to Allow Windows (MDM) platform for corporate enrollment.
+- Intune device type enrollment restrictions set to Allow Windows (MDM) platform for corporate enrollment.
 - Infrastructure configuration: If you plan on provisioning Microsoft Entra hybrid joined Cloud PCs, you must configure your infrastructure to automatically Microsoft Entra hybrid join any devices that domain join to the on-premises Active Directory. This [configuration lets them be recognized and managed in the cloud](/azure/active-directory/devices/overview).
 - Microsoft Entra Domain Services isn't supported because it doesn't support Microsoft Entra hybrid join.
 
@@ -103,7 +102,7 @@ If you choose to provision Microsoft Entra hybrid joined Cloud PCs, then the fol
 
 ### [Windows 365 Enterprise and Frontline](#tab/ent)
 
-Windows 365 manages the capacity and availability of underlying Azure resources as part of the service. Windows 365 partners closely with Azure to select regions that meet our Windows 365 service requirements for availability and capacity. On availability, we use features like availability zones in Azure to provide in-region resiliency as built-in value to the service. You can create a virtual network or use the Microsoft hosted network for provisioning Cloud PCs in the following Azure regions:
+Windows 365 manages the capacity and availability of underlying Azure resources as part of the service. Windows 365 partners closely with Azure to select regions that meet our Windows 365 service requirements for availability and capacity. When selecting a region Microsoft strongly recommends using the **Automatic** option. This automation decreases the chance of provisioning failure, by increasing the possible regions that the CloudPCs will be installed into. On availability, we use features like availability zones in Azure to provide in-region resiliency as built-in value to the service. You can create a virtual network or use the Microsoft hosted network for provisioning Cloud PCs in the following Azure regions:
 
 - Asia
   - East Asia
@@ -115,28 +114,25 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
 - European Union
   - North Europe
   - West Europe
+  - Italy North
+  - Poland Central
+  - Sweden Central
 - France
   - France Central
 - Germany
   - Germany West Central
 - India
   - Central India
-- Italy
-  - Italy North 
 - Japan
   - Japan East
 - Norway
   - Norway East
-- Poland
-  - Poland Central
 - South Africa
   - South Africa North
 - South America
   - Brazil South (Restricted)
 - South Korea
   - Korea Central
-- Sweden
-  - Sweden Central
 - Switzerland
   - Switzerland North
 - UAE

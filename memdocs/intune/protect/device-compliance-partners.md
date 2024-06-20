@@ -41,7 +41,7 @@ Third-party partners support one or more of the following platforms:
 
 By default, Intune is set up to be the Mobile Device Management (MDM) authority for your devices. When you add a compliance partner to Microsoft Entra ID and Intune, you're configuring that partner to be a source of Mobile Device Management (MDM) authority for the devices you assign to that partner through a Microsoft Entra user group.
 
-To enable use data from device compliance partners, complete the following tasks:
+To enable user data from device compliance partners, complete the following tasks:
 
 1. **Configure Intune to work with the device compliance partner**, and then configure groups of users whose devices are managed by that compliance partner.
 
@@ -55,6 +55,7 @@ With these tasks complete, the device compliance partner sends device state deta
 
 The following compliance partners are supported as generally available:
 
+- 42Gears SureMDM
 - 7P
 - Addigy
 - BlackBerry UEM
@@ -134,6 +135,7 @@ Your configuration now appears on the Partner compliance management page.
 
 To enable a device compliance partner to work with Intune, you must complete configurations specific to that partner. For information on this task, see the documentation for the applicable partner:
 
+- [42Gears SureMDM](https://docs.42gears.com/suremdm/docs/SureMDM/ConditionalAccessintheSureMDMCon.html)
 - [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
 - [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)
 

@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/28/2024
+ms.date: 06/05/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -50,6 +49,16 @@ Learn what new features are available in Windows 365 Business.
 -->
 
 <!-- ########################## -->
+## Week of June 3, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Single sign-on is now generally available<!--50103753-->
+
+Windows 365 Business now supports single sign-on. For more information, see [Configure single sign-on for Windows 365 Business](configure-single-sign-on.md). 
+
+<!-- ########################## -->
 ## Week of March 26, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -62,9 +71,9 @@ You can now use the resize remote action for Windows 365 Business Cloud PCs. For
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### Single sign-on (public preview)<1--48439644->
+#### Single sign-on (public preview)<!--48439644-->
 
-Windows 365 Business now supports single sign-on for new and existing Cloud PCs. You can turn on single sign-on in **Organizational settings**. When turned on, users no longer have to sign in to the operating system. For more information, see [Configure single sign-on for Windows 365 Business](configure-single-sign-on.md).
+Windows 365 Business now supports single sign-on for new and existing Cloud PCs. You can turn on single sign-on in **Organizational settings**. When turned on, users no longer have to sign in to the operating system. For more information, see [Configure single sign-on for Windows 365 Business](configure-single-sign-on.md). 
 
 
 <!-- ########################## -->

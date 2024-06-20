@@ -197,7 +197,7 @@ For each device, you can see its current state of updates (Devices > macOS > Upd
 
 :::image type="content" source="./media/software-updates-guide-macos/intune-report-device-update-category-status.png" alt-text="Use the built-in reporting to check the update status of a macOS Apple device in the Microsoft Intune admin center." lightbox="./media/software-updates-guide-macos/intune-report-device-update-category-status.png":::
 
-## Next steps
+## Related articles
 
 - [Software updates planning guide for BYOD and personal devices in Microsoft Intune](software-updates-guide-personal-byod.md)
 - [Software updates planning guide for managed Android Enterprise devices in Microsoft Intune](software-updates-guide-android.md)

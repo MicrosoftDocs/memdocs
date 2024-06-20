@@ -6,13 +6,12 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 2/12/2024
+ms.date: 6/05/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -108,7 +107,7 @@ To prevent this dialog from being shown, you can create a pre-consented device g
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
 
-When single sign-on isn't used, users can opt see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that:
+When single sign-on isn't used, users can see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that:
 
 1. Users can use passwordless authentication to unlock their Cloud PC.
 2. Conditional Access policies and multifactor authentication can be enforced when unlocking the Cloud PC.
@@ -179,7 +178,7 @@ This change lets the web client/Safari browser store and use the `microsoft.us` 
 
 ## Windows Security reports Memory Integrity is off. Your device may be vulnerable.<!--48643259-->
 
-Windows Security reports *Memory Integrity is off. Your device may be vulnerable.* 
+Windows Security reports *Memory Integrity is off. Your device may be vulnerable.*
 
 In the Cloud PC's Windows Systems Information, you might also see that the Virtualization-based security (VBS) row shows **Enabled but not running**.
 
@@ -200,6 +199,49 @@ When screen capture protection is enabled, Teams on Windows 365 Cloud PCs isn’
   2. Under  **Configuration settings**, make sure the following is chosen: **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Azure Virtual Desktop**:
       - **Enable screen capture protection** = Enable
       - **Screen Capture Protection Options** = Block screen capture on client and server
+
+## Windows 365 scope tags and nested groups
+
+Windows 365 doesn't support nested security groups. If you apply a scope tag to the top of a nested security group, Cloud PCs in inner nested groups won't be assigned scope tags.
+
+**Troubleshooting steps**:
+
+Apply the scope tag individually to each group in the nested security group.
+
+## Windows 365 doesn't support editing of scope tags for individual Cloud PCs
+
+Windows 365 user interface and Graph API don't support editing of scope tags for individual Cloud PCs.
+
+**Troubleshooting steps**:
+
+Edit scope tags for individual Cloud PCs on Intune's **All Devices** blade to sync the scope tag associations to the Windows 365 service.
+
+## Scope tags for custom images can't be edited
+
+Scope tags applied to custom images can't be edited or directly added by top-level admins.
+
+**Troubleshooting steps**:
+
+When scoped admins create custom images, those custom images are tagged with the same scope tags that are associated with the scoped admin.  
+
+For example, if an admin scoped with the scope tag “Scope Tag A” creates a custom image, the created custom image is automatically tagged with “Scope Tag A”.  
+
+## WebRTC Redirector Service missing from latest Windows 365 Cloud PC gallery images
+
+The May 21, 2024 updates for Cloud PC gallery images are missing the WebRTC Redirector Service. Without this component, Teams media redirection does not work.
+
+This applies to the following gallery images:
+
+- Windows 11 23H2 with Microsoft 365 apps
+- Windows 11 22H2 with Microsoft 365 apps
+
+**Troubleshooting steps**
+
+For newly provisioned Cloud PCs, verify WebRTC is available. If it’s not, you can use either of the following options:
+
+- To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps: [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/intune/apps/apps-add-office365).
+
+- To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps: [install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, use this link: [https://aka.ms/msrdcwebrtcsvc/msi]( https://aka.ms/msrdcwebrtcsvc/msi).
 
 ## Next steps
 

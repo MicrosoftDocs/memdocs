@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/26/2023
+ms.date: 06/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -44,27 +44,6 @@ App protection data is retained for a minimum of 90 days. Any app instances that
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Monitor** > **App protection status**.
-
-The following list provides details about app protection status: 
-
-- **Assigned users**: The total number of assigned users in your company who are using an app that is associated with a policy in a work context and are protected and licensed, as well as the assigned users that are unprotected and unlicensed.
-- **Flagged users**: The number of users who are experiencing issues with their devices. Jailbroken (iOS/iPadOS) and rooted (Android) devices are reported under **Flagged users**. Also, users with devices that are flagged by the Google Play’s device integrity check (if turned on by the IT admin) are reported here. 
-- **Users with potentially harmful apps**: The number of users who may have a harmful app on their Android device detected by Google Play Protect. 
-- **User status for iOS** and **User status for Android**: The number of users who have used an app who have a policy assigned to them in a work context for the related platform. This information shows the number of users managed by the policy, as well as the number of users who are using an app that is not targeted by any policy in a work context. You might consider adding these users to the policy.
-- **Top Protected iOS/iPadOS Apps** and **Top Protected Android Apps**: Based on the most used iOS/iPadOS and Android apps, this information shows the number of protected and unprotected apps by platform.
-- **Top Configured iOS/iPadOS Apps Without Enrollment** and **Top Configured Android Apps Without Enrollment**: Based on the most used iOS/iPadOS and Android apps for unenrolled devices, this information shows the number of configured apps by platform  (as in, using an app configuration policy).
-
-    > [!NOTE]
-    > If you have multiple policies per platform, a user is considered managed by policy when they have at least one policy assigned to them.
-
-## Detailed view
-You can get to the detailed view of the summary by choosing the **Flagged users** tile, and the **Users with potentially harmful apps** tile.
-
-### Flagged users
-The detailed view shows the error message, the app that was accessed when the error happened, the device OS platform affected, and a time stamp. The error is typically for jailbroken (iOS/iPadOS) or rooted (Android) devices. Also, users with devices that are flagged by the 'Play integrity verdict' conditional launch check are reported here with the reason as reported by Google. For a user to be removed from the report, the status of the device itself needs to have changed, which happens after the next root detection check (or jailbreak check/Play integrity verdict happens) that needs to report a positive result. If the device is truly remediated, the refresh on the Flagged Users report will happen when the pane reloads.
-
-### Users with potentially harmful apps
-Users with devices that are flagged by the **Require threat scan on apps** conditional launch check are reported here, with the threat category as reported by Google. If there are apps listed in this report that are being deployed through Intune, contact the app developer for the app, or remove the app from being assigned to your users. The detailed view shows:
 
 - **User**: The name of the user.
 - **Email**: The email of the user.

@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Connect your Intune account to your Managed Google Play account.
+title: Connect Intune account to Managed Google Play account 
 titleSuffix: Microsoft Intune
-description: Learn how to connect your Intune account to your Managed Google Play account.
+description: Learn how to connect your Intune account to your Managed Google Play account.  
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -35,7 +34,7 @@ ms.collection:
 # Connect your Intune account to your Managed Google Play account
 
 
-To support the following Android enrollment types, you must connect your Intune tenant account to your Managed Google Play account:
+To manage Intune-enrolled devices with any of the supported Android Enterprise management options, you must connect your Intune tenant to your Managed Google Play account. Those management options include:  
 
 - [Android Enterprise personally owned work profile](android-work-profile-enroll.md)
 - [Android Enterprise corporate-owned work profile](android-corporate-owned-work-profile-enroll.md)

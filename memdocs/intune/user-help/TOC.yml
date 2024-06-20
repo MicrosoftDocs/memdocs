@@ -253,10 +253,12 @@ items:
     href: check-status-company-portal-website.md 
   - name: Manage apps
     href: manage-apps-cpweb.md
-  - name: Store recovery key
+  - name: Store recovery key for Mac
     href: store-recovery-key.md
-  - name: Get recovery key
+  - name: Get recovery key for Mac
     href: get-recovery-key-cpweb.md
+  - name: Get recovery key for Windows 
+    href: get-recovery-key-windows.md  
   - name: Remote lock device
     href: remote-lock-your-device-cpwebsite.md
   - name: Rename device

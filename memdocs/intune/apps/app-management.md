@@ -29,7 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
-- AIreviewed
+- AI-Assisted
 - FocusArea_Apps_AppManagement
 ---
 
@@ -73,7 +73,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 | Assign apps to devices not enrolled with Intune | Yes | Yes | No | No |
 | Use app configuration policies to control the startup behavior of apps | Yes | Yes | No | No |
 | Use mobile app provisioning policies to renew expired apps | No | Yes | No | No |
-| Protect company data in apps with app protection policies | Yes | Yes | No | No <sup>1</sup> |
+| Protect company data in apps with app protection policies | Yes | Yes | No | Yes <sup>1</sup> |
 | Remove only corporate data from an installed app (app selective wipe) | Yes | Yes | No | Yes |
 | Monitor app assignments | Yes | Yes | Yes | Yes |
 | Assign and track volume-purchased apps from an app store | No | Yes | No | Yes |
@@ -84,11 +84,11 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 | Apps from a store | Yes | Yes | No | Yes |
 | Update apps | Yes | Yes | No | Yes |
 
-<sup>1</sup> Consider using  [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection) and [Microsoft Purview Data Loss Prevention](/microsoft-365/compliance/dlp-learn-about-dlp). Microsoft Purview simplifies the configuration set-up and provides an advanced set of capabilities. <br>
+<sup>1</sup> Consider using [Windows MAM](../apps/protect-mam-windows.md), or [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection) and [Microsoft Purview Data Loss Prevention](/microsoft-365/compliance/dlp-learn-about-dlp). Microsoft Purview simplifies the configuration set-up and provides an advanced set of capabilities. <br>
 <sup>2</sup> Applies to devices managed by Intune only.<br>
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
-<sup>4</sup> Intune doesn't provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#device-experience).<br>
-<sup>5</sup> LOB for AE are supported, but the apps need to be published privately to Managed Play.
+<sup>4</sup> Intune doesn't provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#device-experience).<br> 
+<sup>5</sup> LOB for AE are supported, but the apps need to be published privately to Managed Google Play.
 
 ## Get started
 

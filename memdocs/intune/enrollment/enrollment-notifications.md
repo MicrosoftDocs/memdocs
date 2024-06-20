@@ -8,12 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 06/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -44,11 +43,11 @@ Set up enrollment notifications in Microsoft Intune to notify employees of newly
 
 Enrollment notifications are supported on these devices:   
 
-* Android devices in bring-your-own-device (BYOD) scenarios    
-* iOS/iPadOS devices in BYOD scenarios      
-* Macs   
-* Devices running Windows 10/11, excluding Microsoft Entra hybrid joined devices
-* Autopilot devices, excluding userless scenarios such as Windows Autopilot for pre-provisioned deployment    
+* Android devices in bring-your-own-device (BYOD) scenarios.      
+* iOS/iPadOS devices in BYOD scenarios such as device enrollment. However, enrollment notifications aren't supported with user enrollment.  
+* macOS devices in BYOD scenarios such as device enrollment.    
+* Devices running Windows 10/11, excluding Microsoft Entra hybrid joined devices.  
+* Autopilot devices, excluding userless scenarios such as Windows Autopilot for pre-provisioned deployment.      
 
 ## Example  
 The following example image shows what an enrollment notification looks like to a device user.    
@@ -79,7 +78,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 4. Apple and Android notifications are supported on iOS, macOS, Android Enterprise, and Android device administrator, respectively. Select the tab that corresponds to the OS you're managing.  
 
     Your options for Apple enrollment are:  
-      * **iOS Notifications**  
+      * **iOS/iPadOS Notifications**  
       * **macOS Notifications**  
 
    Your options for Android enrollment are:  
@@ -111,13 +110,18 @@ Email notifications appear in the user's inbox. Push notifications appear in the
          * Model  
          * OS  
          * OS version  
-         * Serial number     
-    * **Show company name**: Flip the switch **On** to make your organization's name visible in the footer of the email. The tenant value is automatically populated.  
+         * Serial number
+    > [!NOTE]
+    > Device name does not always reflect the most recent device name in a tenant. Some devices have a pre-configured device name from Intune that changes once enrolled and given timing, this pre-configured name can sometimes show in the Device details of the message. The Company portal website link will always show the most recent and accurate device name.
+
+* **Show company name**: Flip the switch **On** to make your organization's name visible in the footer of the email. The tenant value is automatically populated.  
     * **Show contact information**: Flip the switch **On** to show your organization's contact information. The tenant value is automatically populated.  
     * **Show Company portal website link**: Flip the switch **On** to show a link to the Company Portal website. The tenant value is automatically populated. 
 8. Select **Next**. 
 9. Optionally, assign a scope tag, like `US-NC IT Team` or `JohnGlenn_ITDepartment`, to limit management of the notification to specific IT groups. Then select **Next**.  
-10. In **Assignments**, select the users or groups receiving the notification.     
+10. In **Assignments**, select the users or groups receiving the notification.
+    > [!NOTE]
+    > The *exclude* feature isn't available for enrollment notifications.  
 11. Select **Next**. 
 12. In **Review + create**, review the notification details, and then select **Create**.  
 

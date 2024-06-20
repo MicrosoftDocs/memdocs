@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 ms.assetid:
 
 # optional metadata
@@ -151,7 +150,6 @@ When you create the Settings Catalog profile, any settings that can be included 
   For more information, go to:
   
   - [Firewall policy in Endpoint Security](../protect/endpoint-security-firewall-policy.md)
-  - [Endpoint security firewall rule migration tool overview](../protect/endpoint-security-firewall-rule-tool.md)
   - [Application control policy in Endpoint Security](../protect/endpoint-security-asr-policy.md).
 
   If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](../protect/endpoint-security.md), including security baselines and mobile threat defense.

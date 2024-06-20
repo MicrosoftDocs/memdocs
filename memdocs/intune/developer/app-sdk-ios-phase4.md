@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 04/04/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -78,7 +78,7 @@ The rest of this guide describes the remaining set of app participation features
 
 ## Customize your app's behavior with APIs
 
-The Intune App SDK has several APIs you can call to get information about the Intune APP policy deployed to the app. You can use this data to customize your app's behavior. The following table provides information on some essential Intune classes you'll use.
+The Intune App SDK has several APIs you can call to get information about the Intune APP policy deployed to the app. You can use this data to customize your app's behavior. The following table provides information on some essential Intune classes you use.
 
 Class | Description
 ----- | -----------
@@ -91,9 +91,14 @@ IntuneMAMDataProtectionManager.h | The IntuneMAMDataProtectionManager class expo
 
 Intune lets IT admins specify which accounts can be logged into by the user. Apps can query the Intune App SDK for the specified list of allowed accounts and then ensure only allowed accounts are signed into the device.
 
-To query for allowed accounts, the App should check the `allowedAccounts` property on the `IntuneMAMEnrollmentManager`. The `allowedAccounts` property is either an array containing the allowed accounts or nil. If the property is nil then no allowed accounts have been specified.
+To query for allowed accounts, the App should check the `allowedAccounts` property on the `IntuneMAMEnrollmentManager`. The `allowedAccounts` property is either an array containing the allowed accounts or nil. If the property is nil then no allowed accounts have been specified. MSAL/OneAuth enabled applications should use the `allowedAccountIds` property on the `IntuneMAMEnrollmentManager` instance to query Entra object ID.
 
 Apps can also react to changes of the `allowedAccounts` property by observing the `IntuneMAMAllowedAccountsDidChangeNotification` notification. The notification is posted whenever the `allowedAccounts` property changes in value.
+
+The following requirements are needed when using APIs for allowed accounts: 
+- Identity comparison must be case insensitive for UPN and OID.
+- Identity comparison must support both UPN and OID.
+- Application must have logging to diagnosis any mismatch between the admin-specified account and user-entered account.
 
 ## Implement File Encryption Required
 
@@ -103,7 +108,7 @@ Apps can react to changes in this policy by observing the `IntuneMAMDataProtecti
 
 ## Implement save-as and open-from controls
 
-Intune lets IT admins select which storage locations a managed app can save data to or open data from. Apps can query the Intune MAM SDK for allowed save-to storage locations by using the `isSaveToAllowedForLocation:withAccount:` API, defined in `IntuneMAMPolicy.h`. Apps can also query the SDK for allowed open-from storage locations by using the `isOpenFromAllowedForLocation:withAccount:` API, also defined in `IntuneMAMPolicy.h`.
+Intune lets IT admins select which storage locations a managed app can save data to or open data from. Apps can query the Intune MAM SDK for allowed save-to storage locations by using the `isSaveToAllowedForLocation:withAccountId:` API, defined in `IntuneMAMPolicy.h`. Apps can also query the SDK for allowed open-from storage locations by using the `isOpenFromAllowedForLocation:withAccountId:` API, also defined in `IntuneMAMPolicy.h`.
 
 Additionally, apps can verify that incoming data from a share extension is allowed by querying the `canReceiveSharedItemProvider:` API, defined in `IntuneMAMPolicy.h`. Apps can also query the `canReceiveSharedFile:` API to verify incoming files from an openURL call, also defined in `IntuneMAMPolicy.h`
 
@@ -114,12 +119,12 @@ Additionally, apps can verify that incoming data from a share extension is allow
 
 ### Handling save-to scenarios
 
-Before moving data to a new cloud-storage or local location, an app must check with the `isSaveToAllowedForLocation:withAccount:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being edited and saved in-place doesn't need to be checked with this API.
+Before moving data to a new cloud-storage or local location, an app must check with the `isSaveToAllowedForLocation:withAccountId:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being edited and saved in-place doesn't need to be checked with this API.
 
 > [!NOTE] 
-> The `IntuneMAMPolicy` object should represent the policies of the owner of the data being saved. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForIdentity:` method. If the owner is an unmanaged account with no identity, `nil` can be passed into `policyForIdentity:`.  Even if the data being saved is not organizational data, `isSaveToAllowedForLocation:withAccount:` should still be called. The account owning the destination location might still have policies restricting incoming unmanaged data.
+> The `IntuneMAMPolicy` object should represent the policies of the owner of the data being saved. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForAccountId:` method. If the owner is an unmanaged account with no identity, `nil` can be passed into `policyForAccountId:`.  Even if the data being saved is not organizational data, `isSaveToAllowedForLocation:withAccountId:` should still be called. The account owning the destination location might still have policies restricting incoming unmanaged data.
 
-The `isSaveToAllowedForLocation:withAccount:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMSaveLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner isn't known, `nil` can be used instead.
+The `isSaveToAllowedForLocation:withAccountId:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMSaveLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner isn't known, `nil` can be used instead.
 
 #### Supported save locations
 
@@ -127,10 +132,10 @@ The Intune MAM SDK provides support for the following save locations defined in 
 
 * `IntuneMAMSaveLocationOneDriveForBusiness` - This location represents OneDrive for Business locations. The identity associated with the OneDrive account should be passed in as the second argument.
 * `IntuneMAMSaveLocationSharePoint` - This location represents both SharePoint online and Microsoft Entra Hybrid Modern Auth SharePoint on-premises locations. The identity associated with the SharePoint account should be passed in as the second argument.
-* `IntuneMAMSaveLocationLocalDrive` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for saving via a file picker or for saving to files through a share extension. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there's no identity, `nil` should be passed instead. (For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.)
+* `IntuneMAMSaveLocationLocalDrive` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for saving via a file picker or for saving to files through a share extension. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there's no identity, `nil` should be passed instead. For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.
 * `IntuneMAMSaveLocationCameraRoll` - This location represents the iOS Photo Library. Because there's no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. 
-* `IntuneMAMSaveLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument.  (e.g. Uploading a photo to an organization’s LOB cloud service that is tied to the organization account.)
-* `IntuneMAMSaveLocationOther` - This location represents any non-organizational, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
+* `IntuneMAMSaveLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. For example, uploading a photo to an organization’s LOB cloud service that is tied to the organization account.
+* `IntuneMAMSaveLocationOther` - This location represents any nonorganizational, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
 ##### Special considerations for save locations
 
@@ -140,12 +145,12 @@ If the destination location isn't listed, either `IntuneMAMSaveLocationAccountDo
 
 ### Handling open-from scenarios
 
-Before importing data from a new cloud-storage or local location, an app must check with the `isOpenFromAllowedForLocation:withAccount:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being opened in-place doesn't need to be checked with this API.
+Before importing data from a new cloud-storage or local location, an app must check with the `isOpenFromAllowedForLocation:withAccountId:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being opened in-place doesn't need to be checked with this API.
 
 > [!NOTE] 
-> The `IntuneMAMPolicy` object should represent the policies of the identity receiving the data. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForIdentity:` method. If the receiving account is an unmanaged account with no identity, `nil` can be passed into `policyForIdentity:`. Even if the data being received is not organizational data, `isOpenFromAllowedForLocation:withAccount:` should still be called. The account owning the data might still have policies restricting the destinations of outgoing data transfers.
+> The `IntuneMAMPolicy` object should represent the policies of the identity receiving the data. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForAccountId:` method. If the receiving account is an unmanaged account with no identity, `nil` can be passed into `policyForAccountId:`. Even if the data being received is not organizational data, `isOpenFromAllowedForLocation:withAccountId:` should still be called. The account owning the data might still have policies restricting the destinations of outgoing data transfers.
 
-The `isOpenFromAllowedForLocation:withAccount:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMOpenLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner isn't known, `nil` can be used instead.
+The `isOpenFromAllowedForLocation:withAccountId:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMOpenLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner isn't known, `nil` can be used instead.
 
 #### Supported open locations
 
@@ -155,25 +160,25 @@ The Intune MAM SDK provides support for the following open locations defined in 
 * `IntuneMAMOpenLocationSharePoint` - This location represents both SharePoint online and Microsoft Entra Hybrid Modern Auth SharePoint on-premises locations. The identity associated with the SharePoint account should be passed in as the second argument.
 * `IntuneMAMOpenLocationCamera` - This location **only** represents new images taken by the camera. Because there's no account associated with the iOS camera, only `nil` should be passed as the second argument when this location is used. For opening data from the iOS Photo Library, use  `IntuneMAMOpenLocationPhotos`.
 * `IntuneMAMOpenLocationPhotos` - This location **only** represents existing images within the iOS Photo Library. Because there's no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. For opening images taken directly from the iOS camera, use `IntuneMAMOpenLocationCamera`.
-* `IntuneMAMOpenLocationLocalStorage` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for opening files from a file picker or handling incoming files from an openURL. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there's no identity, `nil` should be passed instead. (e.g. an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.) 
-* `IntuneMAMOpenLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. (e.g. Downloading a photo from an organization’s LOB cloud service that is tied to the organization account.)
-* `IntuneMAMOpenLocationOther` - This location represents any non-organizational location, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
+* `IntuneMAMOpenLocationLocalStorage` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for opening files from a file picker or handling incoming files from an openURL. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there's no identity, `nil` should be passed instead. For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument. 
+* `IntuneMAMOpenLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. For example, downloading a photo from an organization’s LOB cloud service that is tied to the organization account.
+* `IntuneMAMOpenLocationOther` - This location represents any nonorganizational location, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
 ##### Special considerations for open locations
 
 The `IntuneMAMOpenLocationLocalStorage` location should only be used for app-sandbox storage that can be accessed by the app. For checking if a file can be opened from iOS device storage through a file picker or some other method where the data is also accessible in the Files app, `IntuneMAMOpenLocationOther` should be used.
 
-If the destination location isn't listed, either `IntuneMAMOpenLocationAccountDocument` or `IntuneMAMOpenLocationOther` should be used. If the location contains organizational data that is accessed using the managed account (ie. LOB cloud service for storing organizational data), `IntuneMAMOpenLocationAccountDocument` should be used. If the location doesn't contain organizational data, then the `IntuneMAMSaveLocationOther` location should be used.
+If the destination location isn't listed, either `IntuneMAMOpenLocationAccountDocument` or `IntuneMAMOpenLocationOther` should be used. If the location contains organizational data that is accessed using the managed account. For example, LOB cloud service for storing organizational data, `IntuneMAMOpenLocationAccountDocument` should be used. If the location doesn't contain organizational data, then the `IntuneMAMSaveLocationOther` location should be used.
 
 ##### Handling incoming NSItemProviders and Files
 
-For handling NSItemProviders received from a share extension, the `IntuneMAMPolicy`'s `canReceiveSharedItemProvider:` method can be used instead of `isOpenFromAllowedForLocation:withAccount:`. The `canReceiveSharedItemProvider:` method takes an NSItemProvider and returns whether it's allowed by the IT admin to be opened into the `IntuneMAMPolicy` object's account. The item must be loaded prior to calling this method (e.g. by calling `loadItemForTypeIdentifier:options:completionHandler`). This method can also be called from the completion handler passed to the NSItemProvider load call.
+For handling NSItemProviders received from a share extension, the `IntuneMAMPolicy`'s `canReceiveSharedItemProvider:` method can be used instead of `isOpenFromAllowedForLocation:withAccountId:`. The `canReceiveSharedItemProvider:` method takes an NSItemProvider and returns whether it's allowed by the IT admin to be opened into the `IntuneMAMPolicy` object's account. The item must be loaded prior to calling this method. For example, by calling `loadItemForTypeIdentifier:options:completionHandler`. This method can also be called from the completion handler passed to the NSItemProvider load call.
 
-For handling incoming files, the `IntuneMAMPolicy`'s `canReceiveSharedFile:` method can be used instead of `isOpenFromAllowedForLocation:withAccount:`. The `canReceiveSharedFile:` method takes a NSString path and returns whether it's allowed by the IT admin to be opened into the `IntuneMAMPolicy` object's account.
+For handling incoming files, the `IntuneMAMPolicy`'s `canReceiveSharedFile:` method can be used instead of `isOpenFromAllowedForLocation:withAccountId:`. The `canReceiveSharedFile:` method takes a NSString path and returns whether it's allowed by the IT admin to be opened into the `IntuneMAMPolicy` object's account.
 
 ### Sharing blocked alert
 
-A UI helper function can be used when either the `isSaveToAllowedForLocation:withAccount:` or `isOpenFromAllowedForLocation:withAccount:` API is called and found to block the save/open action. If the app wants to notify the user  that the action was blocked, it can call the `showSharingBlockedMessage` API defined in `IntuneMAMUIHelper.h` to present an alert view with a generic message.
+A UI helper function can be used when either the `isSaveToAllowedForLocation:withAccountId:` or `isOpenFromAllowedForLocation:withAccountId:` API is called and found to block the save/open action. If the app wants to notify the user  that the action was blocked, it can call the `showSharingBlockedMessage` API defined in `IntuneMAMUIHelper.h` to present an alert view with a generic message.
 
 ## Share Data via UIActivityViewController
 
@@ -261,7 +266,7 @@ SUBQUERY (
 ```
 
 > [!NOTE]
-> The IntuneMAMConfigurator tool can be used to add the Intune types to the activation rule. If your existing activation rule uses the predefined string constants (e.g. NSExtensionActivationSupportsFileWithMaxCount, NSExtensionActivationSupportsText, etc.), the predicate syntax can get quite complex. The IntuneMAMConfigurator tool can also be used to convert the activation rule from the string constants to a predicate string while adding the Intune types.
+> The IntuneMAMConfigurator tool can be used to add the Intune types to the activation rule. If your existing activation rule uses the predefined string constants. For example, NSExtensionActivationSupportsFileWithMaxCount, NSExtensionActivationSupportsText, etc., the predicate syntax can get quite complex. The IntuneMAMConfigurator tool can also be used to convert the activation rule from the string constants to a predicate string while adding the Intune types.
 
 ### What the UI should look like
 
@@ -283,7 +288,7 @@ Intune administrators can target and deploy configuration data via the [Microsof
 
 * Include `IntuneMAMAppConfigManager.h` in your app's source file.
 
-* Call `[[IntuneMAMAppConfigManager instance] appConfigForIdentity:]` to get the App Config Object.
+* Call `[[IntuneMAMAppConfigManager instance] appConfigForAccountId:]` to get the App Config Object.
 
 * Call the appropriate selector on `IntuneMAMAppConfig` object. For example, if your application's key is a string, you'd want to use `stringValueForKey` or `allStringsForKey`. See `IntuneMAMAppConfig.h` for a detailed description on return values and error conditions.
 
@@ -403,7 +408,7 @@ However, you must validate every combination: every supported copy-to location a
 For these tests, install your app, integrate it with the SDK and log in with a managed account before starting the test.
 
 Additionally:
-- Completed all the integration steps from ['Copy To' actions] with an Action Extension for Microsoft Word and build and run the app succesfully
+- Completed all the integration steps from ['Copy To' actions] with an Action Extension for Microsoft Word and build and run the app successfully.
 - Set the managed account's policy as:
   - "Send org data to other apps" to "Policy managed apps".
 
@@ -418,7 +423,7 @@ Skip if you didn't implement [Printing].
 For this test, install your app, integrate it with the SDK and log in with a managed account before starting the test.
 
 Additionally:
-- Completed all the integration steps from [Printing] and build and run the app succesfully
+- Completed all the integration steps from [Printing] and build and run the app successfully.
 - Your app already implements alerts/action items to handle the case when printing is not allowed from the APP IT admin. In this test, assuming your app will prompt an alert to end users when printing is blocked.
 
 | Scenario | Steps |
