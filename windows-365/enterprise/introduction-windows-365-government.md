@@ -65,8 +65,7 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Windows App
 - Microsoft Purview forensic evidence
 - Windows 365 Switch
-- Windows 365 Frontline (avialable for GCC, not available for GCCH)
-- Microsoft Purview Customer Key
+- Windows 365 Frontline (available for GCC, not available for GCCH)
 
 ## Next steps
 
