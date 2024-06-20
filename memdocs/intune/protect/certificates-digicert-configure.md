@@ -217,7 +217,7 @@ The certificate profile OID is associated with a certificate profile template in
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
 

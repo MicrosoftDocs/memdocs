@@ -150,8 +150,7 @@ The following tabs describe the Intune-supported Android and AOSP enrollment opt
 
 ---
 
->[!NOTE]
-> Microsoft Intune also supports [Android device administrator management](../enrollment/android-enroll-device-administrator.md), but will be ending support on devices with access to Google Mobile Services (GMS) on August 30, 2024. After that date, device enrollment, technical support, bug fixes, and security fixes will be unavailable. For more information, read [Ending support for Android device administrator on GMS devices](https://aka.ms/Intune-Android-DA-blog).  
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)] 
 
 ## Enrollment for Apple devices 
 This section describes the enrollment options available for iOS/iPadOS and Mac devices in Intune. 

@@ -194,7 +194,7 @@ Now we can create the Windows Autopilot profile and assign it to our test device
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Enrollment** > **Windows Autopilot** > **Deployment profiles**.
+2. Select **Devices** > **Device onboarding** > **Enrollment** > **Windows** > **Windows Autopilot** > **Deployment profiles**.
 
 3. Select **Create profile** > **Windows PC**.
 
@@ -212,7 +212,7 @@ The Windows Autopilot service synchronizes several times a day. You can also tri
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Enrollment** > **Windows Autopilot** > **Devices**.
+2. Select **Devices** > **Device onboarding** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**.
 
 3. Select **Sync**.
 
@@ -250,7 +250,7 @@ After you've created the profile and added your settings, assign the profile to 
 
 The following screenshot shows an example of a settings catalog profile with each of the suggested settings configured:
 
-:::image type="content" source="../media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Image that shows an example of a settings catalog profile in Microsoft Intune.":::
+:::image type="content" source="../media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Screenshot that shows an example of a settings catalog profile in Microsoft Intune.":::
 
 ### Step 9 - Create and assign some applications
 
@@ -374,7 +374,7 @@ Use Endpoint Security in Microsoft Intune to configure encryption with BitLocker
 - For more information about managing BitLocker, go to [Encrypt Windows 10/11 devices with BitLocker in Intune](../../intune/protect/encrypt-devices.md).
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
-These settings can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
+These settings can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Manage** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
 
 When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../intune/protect/encrypt-devices.md) for more settings.
 
@@ -611,7 +611,7 @@ Following are some settings available in the settings catalog that might be rele
 
 Windows Device restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, go to [Device Restrictions](../../intune/configuration/device-restrictions-configure.md).
 
-To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > Select **Windows 10 and later** for or *Platform* and **Templates** for *Profile type* > **Device restrictions**.
+To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > Select **Windows 10 and later** for platform > **Templates** **Device restrictions** for profile type.
 
 - **Desktop background picture URL (Desktop only)**
   Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You host the file online or reference a file that has been copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization* and configure **Desktop background picture URL (Desktop only)**.
