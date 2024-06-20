@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -21,15 +21,19 @@ appliesto:
 # Windows Autopilot deployment for existing devices: Speed up the deployment process (optional)
 
 Autopilot user-driven Microsoft Entra join steps:
+
 - Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
-- Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
-- Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)
+- Step 2: [Install required modules to obtain Autopilot profiles from Intune](install-modules.md)
+- Step 3: [Create JSON file for Autopilot profiles](create-json-file.md)
 - Step 4: [Create and distribute package for JSON file in Configuration Manager](create-json-package.md)
 - Step 5: [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md)
 - Step 6: [Create collection in Configuration Manager](create-collection.md)
 - Step 7: [Deploy Autopilot task sequence to collection in Configuration Manager](deploy-autopilot-task-sequence.md)
+
 > [!div class="checklist"]
+>
 > - **Step 8: Speed up the deployment process (optional)**
+
 - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 - Step 10: [Register device for Windows Autopilot](register-device.md)
 
@@ -39,7 +43,7 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 When the Windows Autopilot for existing devices task sequence runs on a device, the Autopilot deployment doesn't run when the device boots into Windows for the first time during the **Setup Windows and ConfigMgr** task of the task sequence. Instead, the Autopilot deployment doesn't run until after the task sequence completes.
 
-The Autopilot deployment normally runs when Windows boots for the first time and Windows Setup and OOBE run. However, during a Windows Autopilot for existing devices task sequence, even though the task sequence injected an Autopilot profile JSON file into the offline Windows installation, the file isn't processed when Windows first boots because the task sequence also creates and injects an `unattend.xml` file. When there's both an `unattend.xml` file and an Autopilot profile JSON file during Windows Setup, Windows Setup ignores the Autopilot profile JSON file, and it only processes the `unattend.xml` file.
+The Autopilot deployment normally runs when Windows boots for the first time and Windows Setup and the out-of-box experience (OOBE) run. However, during a Windows Autopilot for existing devices task sequence, even though the task sequence injected an Autopilot profile JSON file into the offline Windows installation, the file isn't processed when Windows first boots because the task sequence also creates and injects an `unattend.xml` file. When there's both an `unattend.xml` file and an Autopilot profile JSON file during Windows Setup, Windows Setup ignores the Autopilot profile JSON file, and it only processes the `unattend.xml` file.
 
 After Windows Setup is done, the task sequence resumes and deletes the existing `unattend.xml`. Later in the task sequence when the task sequence runs Sysprep on the device, it doesn't specify or add a new `unattend.xml` file. Once the task sequence finishes running Sysprep, the task sequence completes and the device is rebooted. When the device reboots, Windows starts and Windows Setup runs for a second time. Since there's no `unattend.xml` file and only the Autopilot profile JSON file exists, Windows Setup processes the Windows Autopilot profile JSON file and the Autopilot deployment starts.
 
@@ -83,7 +87,7 @@ In order for these additional tasks to run, the task sequence deployment process
 The above steps are necessary if additional tasks need to run during the task sequence. However, if additional tasks don't need to run during the task sequence, then several of the above steps aren't needed. Running the above steps when they aren't needed can potentially cause several issues including:
 
 - Needlessly adding time to the deployment process.
-- Needlessly installing the Configuration Manager client on the device. It's best practice to avoid installing the Configuration Manager client if it's never needed during the task sequence and if it's eventually going to be uninstalled.
+- Needlessly installing the Configuration Manager client on the device. It's best practice to avoid installing the Configuration Manager client if not needed during the task sequence and if it's eventually going to be uninstalled.
 - Needlessly running Windows Setup and OOBE multiple times.
 - Needlessly running Sysprep.
 
@@ -99,7 +103,7 @@ The above steps are necessary if additional tasks need to run during the task se
 > - Enable BitLocker via Intune.
 > - Install software updates via offline servicing and [Configuration Manager Scheduled Updates](/mem/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image).
 >
-> When possible, Microsoft recommends using the above methods to run the additional tasks instead of running them via the task sequence. Using the above methods allows you to use the solution to speed up the deployment.
+> When possible, Microsoft recommends using the above methods to run the additional tasks instead of running them via the task sequence. Using the above methods allows using this solution to speed up the deployment.
 
 If no additional tasks are needed via a task sequence before running the Autopilot deployment, then the Windows Autopilot for existing devices task sequence can be modified to eliminate unneeded tasks and processes. Eliminating unneeded tasks and processes speeds up the deployment process and the time it takes for the deployment to finish. Examples of processes that can be eliminated to speed up the deployment include:
 
@@ -108,7 +112,7 @@ If no additional tasks are needed via a task sequence before running the Autopil
 - Uninstalling the Configuration Manager client via the **Prepare ConfigMgr Client for Capture** task.
 - Running Sysprep via the **Prepare Windows for Capture**/**Sysprep** tasks.
 
-The solution to speed up the deployment deletes the `unattend.xml` file and eliminates the unnecessary tasks so that the Autopilot profile JSON file is processed during the first boot into Windows. After the solution has been applied, the updated overview of the Windows Autopilot for existing devices task sequence process is as follows:
+The solution to speed up the deployment deletes the `unattend.xml` file and eliminates the unnecessary tasks so that the Autopilot profile JSON file is processed during the first boot into Windows. After the solution is applied, the updated overview of the Windows Autopilot for existing devices task sequence process is as follows:
 
 1. Task sequence starts in Windows PE.
 1. Task sequence formats and partitions the disk.
@@ -123,7 +127,7 @@ The solution to speed up the deployment reduces the number of steps in the deplo
 
 > [!NOTE]
 >
-> The steps for the solution to speed up the deployment are optional. The out-of-box Windows Autopilot for existing devices task sequence still works without any modification. The below steps are only designed to reduce the time it takes to run the deployment and potentially avoid some issues. If you don't want to modify the existing Windows Autopilot for existing devices task sequence, then skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
+> The steps for the solution to speed up the deployment are optional. The out-of-box Windows Autopilot for existing devices task sequence still works without any modification. The below steps are only designed to reduce the time it takes to run the deployment and potentially avoid some issues. If the preference is to not modify the existing Windows Autopilot for existing devices task sequence, then skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
 
 To modify the Windows Autopilot for existing devices task sequence to speed up the deployment process, follow these steps:
 
@@ -205,6 +209,6 @@ If the default behavior of restarting the device when the task sequence complete
 
 ## Related content
 
-For more information on speeding up the deployment process, see the following article(s):
+For more information on speeding up the deployment process, see the following articles:
 
 - [Speeding up Windows Autopilot for existing devices](/archive/blogs/mniehaus/speeding-up-windows-autopilot-for-existing-devices)

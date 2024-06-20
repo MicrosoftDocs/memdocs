@@ -106,9 +106,17 @@ Or
 
 1. Right-click on the **Start** menu and select **Settings**.
 
-1. In **Settings**, select **Accounts** in the left hand pane.
+1. In the **Settings** app:
 
-1. In the **Accounts** page, select **Access work or school**.
+    - Windows 11
+
+      1. Select **Accounts** in the left hand pane.
+      1. In the **Accounts** page, select **Access work or school**.
+
+    - Windows 10
+
+      1. Select **Accounts**.
+      1. In the left hand pane, select **Access work or school**.
 
 Once the **Access work or school** pane is open in the **Settings** app, follow these steps:
 

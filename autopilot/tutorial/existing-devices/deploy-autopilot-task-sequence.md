@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -21,14 +21,18 @@ appliesto:
 # Windows Autopilot deployment for existing devices: Deploy Autopilot task sequence to collection in Configuration Manager
 
 Autopilot user-driven Microsoft Entra join steps:
+
 - Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
-- Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
-- Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)
+- Step 2: [Install required modules to obtain Autopilot profiles from Intune](install-modules.md)
+- Step 3: [Create JSON file for Autopilot profiles](create-json-file.md)
 - Step 4: [Create and distribute package for JSON file in Configuration Manager](create-json-package.md)
 - Step 5: [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md)
 - Step 6: [Create collection in Configuration Manager](create-collection.md)
+
 > [!div class="checklist"]
+>
 > - **Step 7: Deploy Autopilot task sequence to collection in Configuration Manager**
+
 - Step 8: [Speed up the deployment process (optional)](speed-up-deployment.md)
 - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 - Step 10: [Register device for Windows Autopilot](register-device.md)
@@ -67,7 +71,12 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
           > [!WARNING]
           >
-          > The deployment can instead be set to **Required** which will cause the deployment to start automatically without any end-user intervention when the deployment assignment time is reached. However, it's not recommended to make a deployment required due to the potential destructive behavior that a required task sequence can have. For example, if a required task sequence is accidentally deployed to the wrong collection, or the wrong devices are added to the collection that the task sequence is deployed to, it can wipe those devices without any user interaction. If using the option of **Required**, do so with extreme caution making sure the task sequence is deployed to the correct collection that contains expected devices.
+          > The deployment can instead be set to **Required**. Setting the deployment to **Required** causes the deployment to start automatically without any end-user intervention when the deployment assignment time is reached. However, Microsoft recommends not making a deployment required due to the potential destructive behavior that a required task sequence can have. For example, a required task sequence can unexpectedly wipe devices without any user interaction if:
+          >
+          > - The task sequence is accidentally deployed to the wrong collection.
+          > - The wrong devices are added to the collection that the task sequence is deployed to.
+          >
+          > If using the option of **Required**, do so with extreme caution making sure the task sequence is deployed to the correct collection that contains expected devices.
 
       1. Under **Make available to the following:**, select where the task sequence appears and when the task sequence can run:
 
@@ -79,7 +88,7 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
           > [!WARNING]
           >
-          > When the deployment is set to **Required**, the above options are the scenarios when the deployment can automatically run when the deployment assignment time is reached. For example, if the deployment is set to **Required** and **Only media and PXE**, the task sequence won't ever run automatically while in Windows. However, it will run automatically when the device is booted from a PXE enabled distribution point or when booted from task sequence bootable media.
+          > When the deployment is set to **Required**, the above options are the scenarios when the deployment can automatically run when the deployment assignment time is reached. For example, if the deployment is set to **Required** and **Only media and PXE**, the task sequence doesn't ever run automatically while in Windows. However, it runs automatically when the device is booted from a PXE enabled distribution point or when booted from task sequence bootable media.
 
       1. Select the **Next >** button.
 
@@ -109,14 +118,14 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
 > [!NOTE]
 >
-> The instructions in this step doesn't fully go into detail all of the options available when running the **Deploy Software Wizard**. For full details on the options available, see [Deploy a task sequence](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence).
+> The instructions in this step don't fully go into detail all of the options available when running the **Deploy Software Wizard**. For full details on the options available, see [Deploy a task sequence](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence).
 
 ## Next step: Speed up the deployment process (optional)
 
 > [!div class="nextstepaction"]
 > [Step 8: Speed up the deployment process (optional)](speed-up-deployment.md)
 
-If you rather use an unmodified out of box Autopilot task sequence created by the **Create Task Sequence Wizard** in Configuration Manager, then skip to [Step 9: Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
+If the preference is to use an unmodified out-of-box Autopilot task sequence created by the **Create Task Sequence Wizard** in Configuration Manager, then skip to [Step 9: Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
 
 > [!div class="nextstepaction"]
 > [Step 9: Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
