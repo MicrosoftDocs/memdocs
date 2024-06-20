@@ -123,9 +123,9 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 
 #### Known issue for remote site systems
 
-After you upgrade a server that hosts a site system role, the value `Software\Microsoft\SMS` may be missing from the following registry key: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`
+After you upgrade a site server, the value data `Software\Microsoft\SMS` may be missing from the `Machine` value under the following registry key: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`
 
-If this value is missing after you upgrade Windows on the server, manually add it. Otherwise site system roles can have issues uploading files to the site server inboxes.
+If this value is missing after you upgrade Windows on the site server, manually add it. Otherwise remote site system roles can have issues uploading files to the site server inboxes.
 
 ## Upgrade the OS of clients
 
