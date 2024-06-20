@@ -66,7 +66,7 @@ After the cross region disaster recovery activation is complete, when a user sig
 - Data stored on the local disk
 - User-installed applications up to the RPO for the device.
 
-When the cross region disaster recovery is deactivated, the temporary device is discarded. The user is returned to their primary device, as it was before the disaster recovery event. No applications, settings, data, or other information saved to the Local OS disk (C drive) is preserved. Data stored in cloud storage, cloud applications, and so on are unaffected by the Cloud PC disaster recovery event.
+When the cross region disaster recovery is deactivated, the temporary device is discarded. The user is returned to their primary device, as it was before the disaster recovery event. No applications, settings, data, or other information saved to the Local OS disk (C drive) is preserved. Data stored in cloud storage, cloud applications, and so on, are unaffected by the Cloud PC disaster recovery event.
 
 <!-- ########################## -->
 ## Next steps
