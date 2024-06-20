@@ -53,14 +53,14 @@ You can also read:
 > For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](../fundamentals/in-development.md).
 >
 > For new information about Windows Autopilot solutions, see:
-> 
+>
 > - [Windows Autopilot device preparation: What's new](/autopilot/device-preparation/whats-new).
 > - [Windows Autopilot: What's new](/autopilot/whats-new).
 
 You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
 
-<!-- Common categories - in this order: 
+<!-- Common categories - in this order:
 
 ### Microsoft Intune Suite
 ### App management
@@ -76,14 +76,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of June 3, 2024 
+## Week of June 3, 2024
 
-### Device enrollment  
+### Device enrollment
 
-#### New enrollment time grouping feature for devices <!-- 16902437 -->  
-Enrollment time grouping is a new, faster way to group devices during enrollment. When it's configured, Intune adds devices to the appropriate group without requiring inventory discovery and dynamic membership evaluations. To set up enrollment time grouping, you must configure a static Microsoft Entra security group in each enrollment profile. After a device enrolls, Intune adds it to the static security group and delivers assigned apps and policies. 
+#### New enrollment time grouping feature for devices <!-- 16902437 -->
+Enrollment time grouping is a new, faster way to group devices during enrollment. When it's configured, Intune adds devices to the appropriate group without requiring inventory discovery and dynamic membership evaluations. To set up enrollment time grouping, you must configure a static Microsoft Entra security group in each enrollment profile. After a device enrolls, Intune adds it to the static security group and delivers assigned apps and policies.
 
-This feature is available for Windows 11 devices enrolling via Windows Autopilot device preparation. For more information, see [Enrollment time grouping in Microsoft Intune](../enrollment/enrollment-time-grouping.md).  
+This feature is available for Windows 11 devices enrolling via Windows Autopilot device preparation. For more information, see [Enrollment time grouping in Microsoft Intune](../enrollment/enrollment-time-grouping.md).
 
 ## Week of May 27, 2024
 
@@ -961,7 +961,7 @@ Windows Autopilot self-deploying mode is now generally available and out of prev
 - [Windows Autopilot self-deploying mode](/autopilot/self-deploying)
 - [Step by step tutorial for Windows Autopilot self-deploying mode in Intune](/autopilot/tutorial/self-deploying/self-deploying-workflow)
 
-This information is also published in [Windows Autopilot: What's new](/autopilot/windows-autopilot-whats-new).
+This information is also published in [Windows Autopilot: What's new](/autopilot/whats-new).
 
 #### Windows Autopilot for pre-provisioned deployment is now generally available<!-- 26780755  -->
 
@@ -971,7 +971,7 @@ Windows Autopilot for pre-provisioned deployment is now generally available and 
 - [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune](/autopilot/tutorial/pre-provisioning/azure-ad-join-workflow)
 - [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join in Intune](/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-workflow).
 
-This information is also published in [Windows Autopilot: What's new](/autopilot/windows-autopilot-whats-new).
+This information is also published in [Windows Autopilot: What's new](/autopilot/whats-new).
 
 ### Device enrollment
 
@@ -1031,7 +1031,7 @@ If you want to try the new experience before your tenant is updated, go to **Dev
 
 #### Bulk approval of drivers<!-- 14723288  -->
 
-Bulk actions are now available for Windows Driver update policies. With bulk actions, multiple driver updates can be approved, paused, or declined at the same time, saving time and effort.  
+Bulk actions are now available for Windows Driver update policies. With bulk actions, multiple driver updates can be approved, paused, or declined at the same time, saving time and effort.
 
 When you bulk approve drivers, the date for when the drivers become available to applicable devices can also be set, enabling drivers to be installed together.
 
@@ -1245,7 +1245,7 @@ When you select the **Send logs** button:
 - Intune captures and submits the current server logs as a baseline, prior to collecting verbose logs.
 - Verbose logging is automatically enabled at level 4, and runs for eight hours to provide time to reproduce an issue for capture in those logs.
 - After eight hours, Intune submits the verbose logs and then restores the server to its default verbosity level of zero (0), for normal operations. If you previously set logs to run at a higher verbosity level, you can restore your custom verbosity level after log collection and upload is complete.
-- Each time Intune collects and submits logs, it updates the list view below the button. 
+- Each time Intune collects and submits logs, it updates the list view below the button.
 - Below the button is a list of past log submissions, displaying their verbosity level and an Incident ID that you can use when working with Microsoft to reference a specific set of logs.
 
 For more information about this capability, see [Easy upload of diagnostic logs for Tunnel servers](../protect/microsoft-tunnel-monitor.md#easy-upload-of-diagnostic-logs-for-tunnel-servers).
@@ -1461,7 +1461,7 @@ We made the following changes to the new Devices experience in the Microsoft Int
 - Quick entry to monitoring reports: Select the titles of the metrics cards to go to the corresponding monitoring report.
 - Improved navigation menu: We added icons back in to provide more color and context as you navigate.
 
-Flip the toggle in the Microsoft Intune admin center to try out the new experience while it's in public preview and share your feedback. 
+Flip the toggle in the Microsoft Intune admin center to try out the new experience while it's in public preview and share your feedback.
 
 For more information, see:
 

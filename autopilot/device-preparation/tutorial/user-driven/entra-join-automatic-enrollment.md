@@ -49,6 +49,6 @@ In order for Windows Autopilot device preparation to work, devices need to be ab
 > [!div class="nextstepaction"]
 > [Step 2: Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information automatic enrollment](../../../includes/more-info-automatic-enrollment.md)]

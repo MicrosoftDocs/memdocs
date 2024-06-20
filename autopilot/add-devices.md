@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -27,6 +27,7 @@ appliesto:
 Within an organization, Windows Autopilot device registration required the following actions:
 
 1. Manually collecting the hardware identity of devices, known as hardware hashes.
+
 1. Uploading the hardware hash information in a comma-separated-values (CSV) file.
 
 Capturing the hardware hash for manual registration requires booting the device into Windows. For this reason, this process is primarily for testing and evaluation scenarios.
@@ -137,7 +138,9 @@ To install the script directly and capture the hardware hash from the local comp
 
 1. The device hash is uploaded automatically after signing in.
 
-1. After confirming the details of the uploaded device hash, run a sync in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Windows** > **Windows enrollment** > **Devices**. Under **Windows Autopilot Deployment Program**, select **Sync**.
+1. After confirming the details of the uploaded device hash, run a sync in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Windows** > **Windows enrollment** > **Devices**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**, and then select **Sync**.
 
 1. After the device appears in the device list, and an Autopilot profile is assigned, restarting the device causes OOBE to run through the Windows Autopilot provisioning process.
 
@@ -164,12 +167,35 @@ During OOBE, enter the keystroke <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>D</kb
 
 ### Desktop hash export
 
-1. Right click on the Start menu and select **Settings** > **Accounts** > **Access work or school**.
+Sign into the device where the hardware hash needs to be exported. Once signed into the device, open the **Accounts** > **Access work or school** pane in the **Settings** app by selecting the following link:
 
-1. Export log files:
+> [!div class="nextstepaction"]
+> [Access work or school](ms-settings:workplace)
 
-   - Windows 11: In the **Export your management log files** tile, select **Export**.
-   - Windows 10: Select the **Export your management log files** link.
+Or
+
+1. Right-click on the **Start** menu and select **Run**.
+
+1. In the **Run** window, next to **Open:**, enter:
+
+   ```console
+   ms-settings:workplace
+   ```
+
+   and then select **OK**.
+
+Or
+
+1. Right-click on the **Start** menu and select **Settings**.
+
+1. In **Settings**, select **Accounts** in the left hand pane.
+
+1. In the **Accounts** page, select **Access work or school**.
+
+Once the **Access work or school** pane is open in the **Settings** app, export the log files:
+
+- Windows 11: In the **Export your management log files** section, select the **Export** button.
+- Windows 10: Select the **Export your management log files** link.
 
 The logs include a CSV file with the hardware hash. Log files are exported to the `C:\Users\Public\Documents\MDMDiagnostics` directory.
 
@@ -211,17 +237,17 @@ During upload of a CSV file, the only validation that Microsoft performs on the 
 
 Once the hardware hashes are captured in a CSV file, Windows Autopilot devices can be added by importing the file. To import the file by using Intune:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment**.
 
-   :::image type="content" source="images/autopilot-import-device.png" alt-text="Screenshot of selections in the admin center for importing Windows Autopilot devices.":::
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**, and then select **Import**.
 
-1. Under **Add Windows Autopilot devices**, browse to the CSV file that lists the devices that need to be added.
-
-   :::image type="content" source="media/enrollment-autopilot/autopilot-import-device-2.png" alt-text="Screenshot of the box for specifying the path to a list of Windows Autopilot devices.":::
+1. Under **Add Autopilot devices**, browse to the CSV file that lists the devices that need to be added.
 
 1. Select **Import** to start importing the device information. Importing can take several minutes.
 
-1. After import is complete, select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Sync**.
+1. After import is complete, select **Devices** > **Windows** > **Windows enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**, and then select **Sync**.
 
    A message says that the synchronization is in progress. The process might take a few minutes to complete, depending on how many devices are being synchronized.
 
@@ -231,7 +257,9 @@ Once the hardware hashes are captured in a CSV file, Windows Autopilot devices c
 
 After an Autopilot device is uploaded, certain attributes of the device can be edited:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
 1. Select the device that needs to be edited.
 
@@ -251,9 +279,11 @@ After an Autopilot device is uploaded, certain attributes of the device can be e
 
 Windows Autopilot devices that aren't enrolled in Intune can be deleted:
 
-1. Select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
+1. Select **Devices** > **Windows** > **Windows enrollment**.
 
-2. Choose the devices that need deletion, and then select **Delete**. The deletion process can take a few minutes to complete.
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
+
+1. Select the devices that need deletion, and then select **Delete**. The deletion process can take a few minutes to complete.
 
 Completely removing a device from a tenant requires the device records in Intune, Microsoft Entra ID, and Windows Autopilot to all be deleted. These deletions can all be done from Intune but need to be done in the following order. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
 
