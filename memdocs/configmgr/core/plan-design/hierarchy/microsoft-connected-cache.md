@@ -101,7 +101,7 @@ You need one of the following license subscriptions for each device that gets co
 
 Connected Cache in Configuration Manager requires an _on-premises_ distribution point, with the following configurations:
 
-- Running Windows Server 2019 or later.
+- Running a [currently supported version](/windows-server/get-started/windows-server-release-info) of Windows Server.
 
 - Microsoft .NET Framework version 4.7.2 or later. For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).<!-- MEMDocs#1105 -->
 
