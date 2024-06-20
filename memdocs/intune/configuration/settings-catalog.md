@@ -88,7 +88,7 @@ For information on some features you can configure using the settings catalog, g
 You can create the policy using the settings catalog profile type.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **iOS/iPadOS**, **macOS**, or **Windows 10 and later**.
@@ -210,7 +210,7 @@ Select **Duplicate** to create a copy of an existing profile. Duplicating is use
 
 The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
 
-1. Go to **Devices** > **Configuration**.
+1. Go to **Devices** > **Manage devices** > **Configuration**.
 2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (`…`).
 3. Select **Duplicate**.  
 4. Enter a new name and description for the policy.
@@ -224,15 +224,15 @@ This feature applies to:
 
 When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you export a policy, import it to create a new policy, and then make changes to the new policy.
 
-1. Go to **Devices** > **Configuration**.
+1. Go to **Devices** > **Manage devices** > **Configuration**.
 
-2. To export an existing policy, select the profile > select the ellipsis context menu (`…`) > **Export JSON**:
+2. To export an existing policy, select the Windows settings catalog policy > select the ellipsis context menu (`…`) > **Export JSON**:
 
     :::image type="content" source="./media/settings-catalog/export-settings-catalog-policy.png" alt-text="Screenshot that shows how to export a settings catalog policy as JSON in Microsoft Intune and Intune admin center.":::
 
 3. To import a previously exported settings catalog policy, select **Create** > **Import policy**:
 
-    :::image type="content" source="./media/settings-catalog/import-settings-catalog-policy.png" alt-text="Screenshot that shows how to import an existing settings catalog policy in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/settings-catalog/import-settings-catalog-policy.png" alt-text="Screenshot that shows how to import an existing settings catalog policy in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/import-settings-catalog-policy.png":::
 
     Select the JSON file you exported and name your new policy. **Save** your changes.
 
@@ -248,7 +248,7 @@ If you use Copilot, then you can use some built-in prompts to get more informati
 
 In the Intune admin center, you can use the built-in reporting features to help find and resolve conflicts.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**. In the list, select the policy you created using the Settings Catalog. The **Profile type** column shows **Settings Catalog**:
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**. In the list, select the policy you created using the Settings Catalog. The **Profile type** column shows **Settings Catalog**:
 
     :::image type="content" source="./media/settings-catalog/profile-type-shows-settings-catalog.png" alt-text="Screenshot that shows how to open the settings catalog in Microsoft Intune and Intune admin center.":::
 
@@ -284,7 +284,7 @@ For more information on conflict resolution, go to:
 
 Copilot can help you find the status of your existing policies, find the status of a specific setting in your policy, and show any potential conflicts.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**. In the policy list, select the policy you want to evaluate using Copilot.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**. In the policy list, select the policy you want to evaluate using Copilot.
 
 2. When you select the policy, the device status shows. Select **Summarize with Copilot**:
 

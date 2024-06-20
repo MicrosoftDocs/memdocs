@@ -492,7 +492,7 @@ For more information on these features, see:
 
 In your Managed Google Play apps, you can give apps enhanced permissions using delegated scopes.
 
-When your apps include delegated scopes, you can configure the following settings in a device configuration profile (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device Restrictions** for profile type > **Applications**):
+When your apps include delegated scopes, you can configure the following settings in a device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device Restrictions** for profile type > **Applications**):
 
 - **Allow other apps to install and manage certificates**: Admins can select multiple apps for this permission. The selected apps are granted access to certificate installation and management.
 - **Allow this app to access Android security logs**: Admins can select one app for this permission. The selected app is granted access to security logs.
@@ -525,7 +525,7 @@ Applies to:
 
 #### Import and export settings catalog policies<!-- 3470151  -->
 
-The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place (**Devices** > **Configuration** > **Create** > **New Policy** > Select your **platform** > For **Profile**, select **Settings catalog**).
+The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place (**Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy** > Select your **platform** > For **Profile type**, select **Settings catalog**).
 
 The settings catalog policies can be imported and exported:
 
@@ -542,7 +542,7 @@ For more information about the settings catalog, see [Use the settings catalog t
 
 On Android Enterprise personally owned devices with a work profile, users can use the same password to unlock the device and access the work profile.
 
-There's a new setting that can enforce different passwords to unlock the device and access the work profile (**Devices** > **Configuration** > **Create** > **Android Enterprise** > **Personally Owned Work Profile** for platform > **Device Restrictions** for profile type):
+There's a new setting that can enforce different passwords to unlock the device and access the work profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** > **Personally Owned Work Profile** for platform > **Device Restrictions** for profile type):
 
 - **One lock for device and work profile**: **Block** prevents users from using the same password for the lock screen on the device and work profile. End users are required to enter the device password to unlock the device and enter their work profile password to access their work profile. When set to **Not Configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access their work profile using a single password.
 
@@ -560,7 +560,7 @@ For a list of settings you can configure on personally owned devices with a work
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** > **Settings catalog** for profile type.
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** > **Settings catalog** for profile type.
 
 **Privacy > Privacy Preferences Policy Control**:
 
@@ -608,7 +608,7 @@ For more information, see [Remote Help on Android](../fundamentals/remote-help-a
 
 #### Configure declarative software updates and passcode policies for Apple devices in the Settings Catalog<!-- 24989083  -->
 
-You can manage software updates and passcode using Apple's declarative device management (DDM) configuration using the settings catalog (**Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative device management**).
+You can manage software updates and passcode using Apple's declarative device management (DDM) configuration using the settings catalog (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative device management**).
 
 For more information about DDM, see [Apple's declarative device management (DDM)](https://developer.apple.com/documentation/devicemanagement/leveraging_the_declarative_management_data_model_to_scale_devices) (opens Apple's website).
 
@@ -708,13 +708,13 @@ Sovereign cloud support is expected in the future. For more information, see [Ap
 
 #### OEMConfig profiles that don't deploy successfully aren't shown as "pending"<!-- 24284049 -->
 
-For Android Enterprise devices, you can create a configuration policy that configures the OEMConfig app (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **OEMConfig** for profile type).
+For Android Enterprise devices, you can create a configuration policy that configures the OEMConfig app (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **OEMConfig** for profile type).
 
 Previously, OEMConfig profiles that exceed 350 KB show a "pending" state. This behavior changed. An OEMConfig profile that exceeds 350 KB isn't deployed to the device. Profiles in a pending state or profiles larger that 350 KB aren't shown. Only profiles that successfully deploy are shown.
 
 This change is a UI change only. No changes are made to the corresponding Microsoft Graph APIs.
 
-To monitor the profile pending status in the Intune admin center, go to **Devices** > **Configuration** > Select the profile > **Device status**.
+To monitor the profile pending status in the Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > Select the profile > **Device status**.
 
 Applies to:
 
@@ -741,7 +741,7 @@ For more information on the Settings Catalog, see [Use the settings catalog to c
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-The settings within the Managed Settings command are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** > **Settings catalog** for profile type.
+The settings within the Managed Settings command are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** > **Settings catalog** for profile type.
 
 **Managed Settings > App Analytics**:
 
@@ -794,7 +794,7 @@ For more information on these settings, see [Apple's developer website](https://
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There's a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** > **Settings catalog** for profile type.
+There's a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** > **Settings catalog** for profile type.
 
 **Microsoft Defender > Cloud delivered protection preferences**:
 
@@ -1055,7 +1055,7 @@ For more information about Group Policy analytics, see [Analyze your on-premises
 #### New SSO, login, restrictions, passcode, and tamper protection settings available in the Apple settings catalog<!-- 24335541  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
 
 ##### iOS/iPadOS 17.0 and later
 
@@ -1350,7 +1350,7 @@ You can now add scope tags when creating deployments using Zebra LifeGuard Over-
 #### New settings available in the macOS settings catalog<!-- 24167142  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type.
 
 **Microsoft AutoUpdate (MAU)**:
 
@@ -1582,7 +1582,7 @@ To participate in the public preview, [complete the opt-in form](https://aka.ms/
 #### New settings available in the Apple settings catalog<!-- 19951554  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 ##### iOS/iPadOS
 
@@ -1606,7 +1606,7 @@ A new setting is available in the Settings Catalog. In the [Microsoft Intune adm
 - UseKeyChain
 
 #### Device Firmware Configuration Interface (DFCI) supports Asus devices <!-- 10249874 -->  
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
 Some Asus devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
 
@@ -1756,7 +1756,7 @@ For more information, see the following resources:
 
 ### Android Enterprise 11+ devices can use Zebra's latest OEMConfig app version<!-- 8675347 -->  
 
-On Android Enterprise devices, you can use OEMConfig to add, create, and customize OEM-specific settings in Microsoft Intune (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **OEMConfig**).
+On Android Enterprise devices, you can use OEMConfig to add, create, and customize OEM-specific settings in Microsoft Intune (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **OEMConfig**).
 
 There's a new **Zebra OEMConfig Powered by MX** OEMConfig app that aligns more closely to Google's standards. This app supports Android Enterprise 11.0 and newer devices.
 
@@ -1932,7 +1932,7 @@ Applies to:
 > [!NOTE]
 > This setting is coming in a future release, possibly the 2308 Intune release.
 
-You can create a device configuration profile that deploys a VPN connection to devices (**Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile type).
+You can create a device configuration profile that deploys a VPN connection to devices (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile type).
 
 In this VPN connection, you can use the **Apps and Traffic rules** settings to create network traffic rules.
 
@@ -1950,7 +1950,7 @@ Applies to:
 #### New settings available in the macOS settings catalog <!-- 18430228  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type.
 
 **Microsoft Defender > Antivirus engine**:
 
@@ -1966,7 +1966,7 @@ For more information about configuring Settings Catalog profiles in Intune, see 
 #### Wipe device action and new obliteration behavior setting available for macOS<!-- 16647226 -->  
 You can now use the **Wipe** device action instead of Erase for macOS devices. You can also configure the **Obliteration Behavior** setting as part of the **Wipe** action.
 
-This new key allows you to control the wipe fallback behavior on Macs that have Apple Silicon or the T2 Security Chip. To find this setting, navigate to **Devices** > **macOS** > [Select a device] > **Overview** > **Wipe** in the **Device action** area.
+This new key allows you to control the wipe fallback behavior on Macs that have Apple Silicon or the T2 Security Chip. To find this setting, navigate to **Devices** > **By platform** > **macOS** > [Select a device] > **Overview** > **Wipe** in the **Device action** area.
 
 For more information on the Obliteration Behavior setting, go to Apple's Platform Deployment site [Erase Apple devices - Apple Support](https://support.apple.com/guide/deployment/erase-devices-dep0a819891e/web).
 
@@ -2028,7 +2028,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Device configuration
 
 #### Device Firmware Configuration Interface (DFCI) supports Dynabook devices<!-- 10249859 -->  
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
 Some Dynabook devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
 
@@ -2139,7 +2139,7 @@ Applies to:
 #### Updates to the macOS Settings Catalog <!-- 17673709  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type.
 
 The new setting is located under:
 
@@ -2176,7 +2176,7 @@ Applies to:
 - macOS
 
 #### Disable Activation Lock device action for supervised macOS devices<!-- 16813146  -->  
-You can now use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on Mac devices without requiring the current username or password. This new action is available in **Devices** > **macOS** > select one of your listed devices > **Disable Activation Lock**.
+You can now use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on Mac devices without requiring the current username or password. This new action is available in **Devices** > **By platform** > **macOS** > select one of your listed devices > **Disable Activation Lock**.
 
 More information on managing Activation Lock is available at [Bypass iOS/iPadOS Activation Lock with Intune](../remote-actions/device-activation-lock-disable.md) or on Apple's website at [Activation Lock for iPhone, iPad, and iPod touch - Apple Support](https://support.apple.com/en-us/HT201365).
 
@@ -2394,7 +2394,7 @@ You can view and manage VPP apps with only the **Mobile apps** permission assign
 #### New settings and setting options available in the macOS Settings Catalog <!-- 16813395  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
+New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -2436,7 +2436,7 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### Add custom Bash scripts to configure Linux devices<!-- 12508999  -->  
-In Intune, you can add existing Bash scripts to configure Linux devices (**Devices** > **Linux** > **Configuration Scripts**).
+In Intune, you can add existing Bash scripts to configure Linux devices (**Devices** > **By platform** > **Linux** > **Scripts**).
 
 When you create this script policy, you can set the context that the script runs in (user or root), how frequently the script runs, and how many times execution should retry.
 
@@ -2449,7 +2449,7 @@ Applies to:
 ### Device enrollment
 
 #### Support for the await final configuration setting for iOS/iPadOS Automated device enrollment (public preview)<!-- 13156553  -->  
-Now in public preview, Intune supports a new setting called **Await final configuration** in eligible new and existing iOS/iPadOS automated device enrollment profiles. This setting enables an out-of-the-box locked experience in Setup Assistant. It prevents device users from accessing restricted content or changing settings on the device until most Intune device configuration policies are installed. You can configure the setting in an existing automated device enrollment profile, or in a new profile (**Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens** > **Create profile**). For more information, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+Now in public preview, Intune supports a new setting called **Await final configuration** in eligible new and existing iOS/iPadOS automated device enrollment profiles. This setting enables an out-of-the-box locked experience in Setup Assistant. It prevents device users from accessing restricted content or changing settings on the device until most Intune device configuration policies are installed. You can configure the setting in an existing automated device enrollment profile, or in a new profile (**Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment** > **Enrollment program tokens** > **Create profile**). For more information, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 #### New setting gives Intune admins control over device-to-category mapping<!-- 15029839 -->  
 Control visibility of the device category prompt in Intune Company Portal. You can now hide the prompt from end users and leave the device-to-category mapping up to Intune admins. The new setting is available in the admin center under **Tenant Administration** > **Customization** > **Device Categories**. For more information, see [Device categories](../apps/company-portal-app.md#device-categories).
@@ -2625,7 +2625,7 @@ The Enrollment Status Page (ESP) now supports the new Microsoft store applicatio
 
 You can now use "Locate device" on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices. With this feature, admins are able to locate lost or stolen corporate devices on-demand.
 
-In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you need to turn the feature on using a device configuration profiles (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Device Restrictions** for profile type).
+In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you need to turn the feature on using a device configuration profiles (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Device Restrictions** for profile type).
 
 Select **Allow** on the **Locate device** toggle for fully managed and corporate owned work profile devices and select applicable groups. **Locate device** is available when you select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
 
@@ -2701,7 +2701,7 @@ When you assign an app or policy, you can filter the assignment using different 
 After you create a filter, there's a new **Associated Assignments tab**. This tab shows all the policy assignments, the groups that receive the filter assignments, and if the filter is using **Exclude** or **Include**:
 
 1. Sign in to the Microsoft Intune admin center.
-2. Go to **Devices** > **Filters** > Select an existing filter > **Associated Assignments tab**.
+2. Go to **Devices** > **Organize devices** > **Filters** > Select an existing filter > **Associated Assignments tab**.
  
 For more information on filters, go to:
 
@@ -2761,7 +2761,7 @@ You can now **Delete** a device that's managed through the [Security Management 
 #### New settings and setting options available in the Apple Settings Catalog<!-- 16813380  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -2918,7 +2918,7 @@ You can now use [SentinelOne](../protect/sentinelone-mobile-threat-defense-conne
 ### Device configuration
 
 #### Device Firmware Configuration Interface (DFCI) supports Fujitsu devices<!--10249866 -->  
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
 
 Some Fujitsu devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
 
@@ -2955,7 +2955,7 @@ Applies to:
 #### New settings available in the Apple Settings Catalog<!--16237513  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -3088,7 +3088,7 @@ The feature set for Win32 app supersedence GA is available. It adds support for 
 #### The Company Portal app enforces Password Complexity setting on Android Enterprise 12+ personally owned devices with a work profile<!-- 16211313  -->  
 On Android Enterprise 12+ personally owned devices with a work profile, you can create a compliance policy and/or device configuration profile that sets the password complexity. Starting with the 2211 release, this setting is available in the Intune admin center:
 
-- **Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > Personally owned with a work profile
+- **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > Personally owned with a work profile > **Device restrictions** for profile type > **Password**
 - **Devices** > **Compliance policies** > **Create policy** > **Android Enterprise** for platform > Personally owned with a work profile
 
 The Company Portal app enforces the **Password complexity** setting.
@@ -3127,7 +3127,7 @@ For more information, see [Configure Remote Help for your tenant](/mem/intune/fu
 #### New settings available in the macOS Settings Catalog<!-- 16069006 -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
+New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -3252,8 +3252,8 @@ You can group Managed Google Play apps into collections and control the order th
 On Android Enterprise 11 and older personally owned devices with a work profile, you can set the following password settings:
 
 - **Devices** > **Compliance** > **Android Enterprise** for platform > **Personally owned work profile** > **System security** > **Required password type**, **Minimum password length**
-- **Devices** > **Configuration** > **Android Enterprise** for platform > **Personally owned work profile** > **Device restrictions** > **Work profile settings** > **Required password type**, **Minimum password length**
-- **Devices** > **Configuration** > **Android Enterprise** for platform > **Personally owned work profile** > **Device restrictions** > **Password** > **Required password type**, **Minimum password length**
+- **Devices** > **Manage devices** > **Configuration** > **Android Enterprise** for platform > **Personally owned work profile** > **Device restrictions** > **Work profile settings** > **Required password type**, **Minimum password length**
+- **Devices** > **Manage devices** > **Configuration** > **Android Enterprise** for platform > **Personally owned work profile** > **Device restrictions** > **Password** > **Required password type**, **Minimum password length**
 
 Google is deprecating the **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
 
@@ -3280,7 +3280,7 @@ Applies to:
 #### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 16068756 -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -3354,7 +3354,7 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### Device Firmware Configuration Interface (DFCI) supports Panasonic devices<!-- 15729353 -->  
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
 
 New Panasonic devices running Windows 10/11 are being enabled for DFCI starting Fall 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Panasonic devices.
 
@@ -3373,7 +3373,7 @@ Applies to:
 #### Sign in and background item management support on macOS devices using the settings catalog<!-- 15751007  -->  
 On macOS devices, you can create a policy that automatically opens items when users sign in to their macOS devices. For example, you can open apps, documents, and folders.
 
-In Intune, the settings catalog includes new Service Management settings at **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** > **Login** > **Service Management**. These settings can prevent users from disabling the managed login and background items on their devices.
+In Intune, the settings catalog includes new Service Management settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type > **Login** > **Service Management**. These settings can prevent users from disabling the managed login and background items on their devices.
 
 For more information on the settings catalog, go to:
 
@@ -3503,7 +3503,7 @@ Applies to:
 #### New settings available in the iOS/iPadOS and macOS settings catalog <!-- 15514929  -->  
 The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-New settings are available in the settings catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+New settings are available in the settings catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -3536,7 +3536,7 @@ Applies to:
 For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### New settings for Device Firmware Configuration Interface (DFCI) profiles on Windows devices<!-- 15511597  -->  
-You can create a DFCI profile that enables the Windows OS to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface) (**Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates > Device Firmware Configuration Interface**)
+You can create a DFCI profile that enables the Windows OS to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface) (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates > Device Firmware Configuration Interface**)
 
 You can use this feature to control BIOS settings. There are new settings you can configure in the DFCI policy:
 
@@ -3783,7 +3783,7 @@ When assigning policies in the admin center, you can now see the number of users
 ### Device configuration
 
 #### New lock screen message when adding custom support information to Android Enterprise devices<!-- 13158348 -->
-On Android Enterprise devices, you can create a device restrictions configuration profile that shows a custom support message on the devices (**Devices** > **Configuration** > **Create** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type > **Custom support information**).
+On Android Enterprise devices, you can create a device restrictions configuration profile that shows a custom support message on the devices (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type > **Custom support information**).
 
 There's a new setting you can configure:
 - **Lock screen message**: Add a message that's shown on the device lock screen. 
@@ -3817,7 +3817,7 @@ Applies to:
 - Android Enterprise corporate owned work profile
 
 #### Filter on the user scope or device scope in the settings catalog for Windows devices<!-- 13949975 -->
-When you create a settings catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Settings catalog** for profile type).
+When you create a settings catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type).
 
 When you **Add filter**, you can also filter on the settings by user scope or device scope.
 
@@ -3838,7 +3838,7 @@ Applies to:
 - Android Open Source Project (AOSP)
 
 #### Device Firmware Configuration Interface (DFCI) now supports Acer devices<!-- 15240661 -->
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
 
 New Acer devices running Windows 10/11 will be enabled for DFCI in later 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Acer devices.
 
@@ -3853,7 +3853,7 @@ Applies to:
 #### New settings available in the iOS/iPadOS and macOS settings catalog<!-- 15349701 -->
 The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. 
 
-There are new settings available in the settings catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+There are new settings available in the settings catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Manage devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -4016,7 +4016,7 @@ Applies to:
 - Windows 10/11
 
 #### View contents of macOS shell scripts and custom attributes<!-- 14757037 -->
-You can view the contents of macOS shell scripts and custom attributes after you upload the scripts to Intune. You can view Shell scripts and custom attributes in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **macOS**. For more information, see [Use shell scripts on macOS devices in Intune](../apps/macos-shell-scripts.md).
+You can view the contents of macOS shell scripts and custom attributes after you upload the scripts to Intune. You can view Shell scripts and custom attributes in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **By platform** > **macOS**. For more information, see [Use shell scripts on macOS devices in Intune](../apps/macos-shell-scripts.md).
 
 #### Reset passcode remote action available for Android (AOSP) Corporate devices<!-- 10247332 -->
 You can use Reset passcode remote action from the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) for Android Open Source Project (AOSP) Corporate devices.
@@ -4035,7 +4035,7 @@ Applies to:
 You can now use Simple Certificate Enrollment Protocol (SCEP) [certificate profiles](../protect/certificates-configure.md) with corporate-owned and userless devices that run the Android Open Source Project (AOSP) platform.
 
 #### Import, create, and manage custom ADMX and ADML administrative templates<!-- 4970862 -->
-You can create a device configuration policy that uses built-in ADMX templates. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **Administrative templates**.
+You can create a device configuration policy that uses built-in ADMX templates. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Administrative templates**.
 
 You can also import custom and third party/partner ADMX and ADML templates into the Intune admin center. Once imported, you can create a device configuration policy, assign the policy to your devices, and manage the settings in the policy.
 
@@ -4048,7 +4048,7 @@ Applies to:
 - Windows 10
 
 #### Add an HTTP proxy to Wi-Fi device configuration profiles on Android Enterprise<!-- 13975609 -->
-On Android Enterprise devices, you can create a Wi-Fi device configuration profile with basic and enterprise settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create** > **Android Enterprise** > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** for platform > **Wi-Fi**.
+On Android Enterprise devices, you can create a Wi-Fi device configuration profile with basic and enterprise settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** for platform > **Wi-Fi**.
 
 When you create the profile, you can configure an HTTP proxy using a PAC file or configure the settings manually. You can configure an HTTP proxy for each Wi-Fi network in your organization.
 
@@ -4074,7 +4074,7 @@ Applies to:
 -  iOS/iPadOS 15 or later devices enrolled using Apple User Enrollment
 
 #### New macOS settings available in the settings catalog <!-- 15020250 -->
-The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the settings catalog. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the settings catalog. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -4142,7 +4142,7 @@ Applies to:
 - macOS
 
 #### New iOS/iPadOS settings in the settings catalog<!-- 15020319 -->
-The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new iOS/iPadOS settings available in the settings catalog. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create** > **iOS/iPadOS** for platform > **Settings catalog** for profile type. Previously, these settings were only available in Templates:
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new iOS/iPadOS settings available in the settings catalog. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type. Previously, these settings were only available in Templates:
 
 **Authentication > Extensible Single Sign On**:
 
@@ -4267,7 +4267,7 @@ Microsoft Intune will now alert you when it detects a hardware change on an Auto
 ### Device configuration
 
 #### New macOS Microsoft AutoUpdate (MAU) settings in the settings catalog<!-- 14873468 -->
-The settings catalog supports settings for Microsoft AutoUpdate (MAU) (**Devices** > **Configuration** > **Create** > **macOS** for platform >**Settings catalog** for profile type).
+The settings catalog supports settings for Microsoft AutoUpdate (MAU) (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type).
 
 The following settings are now available:
 
@@ -4318,7 +4318,7 @@ Applies to:
 - macOS
 
 #### New iOS/iPadOS settings in the settings catalog<!-- 14875716 -->
-The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new iOS/iPadOS settings available in the settings catalog (**Devices** > **Configuration** > **Create** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new iOS/iPadOS settings available in the settings catalog (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).
 
 New settings include:
 
@@ -4508,7 +4508,7 @@ Applies to:
 - iOS/iPadOS
 
 #### New macOS settings available in the settings catalog<!-- 14875745 -->
-The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the settings catalog (**Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type).
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the settings catalog (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type).
 
 New settings include:
 
@@ -4530,7 +4530,7 @@ Applies to:
 - macOS
 
 #### New search feature in Preview devices when creating a filter<!-- 14921046 -->
-In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create filters, and then use these filters when assigning apps and policies (**Devices** > **Filters** > **Create**).
+In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create filters, and then use these filters when assigning apps and policies (**Devices** > **Organize devices** > **Filters** > **Create**).
 
 When you create a filter, you can select **Preview devices** to see a list of enrolled devices that match your filter criteria. In **Preview devices**, you can also search through the list using the device name, OS version, device model, device manufacturer, user principal name of the primary user, and device ID.
 
@@ -4567,3 +4567,509 @@ Intune's remote action to [Collect diagnostics](../remote-actions/collect-diagno
 The new details that are collected include:  
 - Files: `C:\Program Files\Microsoft Update Health Tools\Logs\*.etl`
 - Registry Keys: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CloudManagedUpdate`
+<<<<<<< HEAD
+=======
+
+
+## Week of June 27, 2022 (Service release 2206)
+
+### App management
+
+#### Enterprise feedback policies for Web Company Portal<!-- 9846764 -->
+Feedback settings are now available to address Microsoft 365 enterprise feedback policies for the currently logged in user via the [Microsoft 365 Apps admin center](https://config.office.com/). The settings are used to determine whether feedback can be enabled or must be disabled for a user in the Web Company Portal. For more information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
+
+#### App Protection Policies with Android Enterprise dedicated devices and Android (AOSP) devices<!-- 13819227 -->
+Intune-managed Android Enterprise dedicated devices enrolled with Microsoft Entra ID shared mode and Android (AOSP) devices can now receive app protection policies and can be targeted separately from other Android device types. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md). For more information about Android Enterprise dedicated devices and Android (AOSP), see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
+
+### Device security
+
+#### Users assigned the Endpoint Security Manager admin role can modify Mobile Threat Defense connector settings<!-- 14179885 -->
+We've updated the permissions of the built-in [Endpoint Security Manager](../fundamentals/role-based-access-control.md#built-in-roles) admin role. The role now has the **Modify** permission for the **Mobile Threat Defense** category set to **Yes**. With this change, users assigned this role have permission to change the [Mobile Threat Defense connector](../protect/mtd-connector-enable.md) (MTD connector) settings for your Tenant. Previously, this permission was set to *No*.
+
+If you missed the previous notice about this coming change, now is a good time to review the users that are assigned the *Endpoint Security Manager* role for your tenant. If any shouldn't have permissions to edit the MTD connector settings, update their role permissions or [create a custom role](../fundamentals/create-custom-role.md) that includes only *Read* permissions for Mobile Threat Defense.
+
+View the full list of permissions for the built-in [Endpoint Security Manager role](../protect/endpoint-security.md#permissions-granted-by-the-endpoint-security-manager-role).
+
+#### Improved certificate profile support for Android Enterprise Fully Managed devices<!-- 14217083  -->
+We've improved our [PKCS](../protect/certificates-pfx-configure.md) and [SCEP](../protect/certificates-profile-scep.md) certificate profile support for Android Enterprise Fully Managed (Device Owner) devices. You can now use the Intune device ID variable, **CN={{DeviceID}}**, as the subject alternative name (SAN) in your certificates for these devices. 
+
+### Device configuration
+
+### Certificate profiles support for Android (AOSP) devices<!-- 8506319, 8506363 -->
+You can now use the following [certificate profiles](../protect/certificates-configure.md) with corporate-owned and userless devices that run the Android Open Source Project (AOSP) platform: 
+- Trusted certificate profile
+- PKCS certificate profile
+
+#### New settings for DFCI profiles on Windows 10/11 devices<!-- 6039135 -->
+On Windows 10/11 devices, you can create a Device Firmware Configuration Interface (DFCI) profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+
+DFCI profiles let Intune pass management commands to UEFI (Unified Extensible Firmware Interface) using the DFCI firmware layer. This firmware layer makes configuration more resilient to malicious attacks. DFCI also limits end users' control over the BIOS by graying out managed settings.
+
+There are new settings you can configure:
+- **Microphones and Speakers**:
+  - Microphones
+
+- **Radios**:
+  - Bluetooth
+  - Wi-Fi
+
+- **Ports**:
+  - USB type A
+
+- **Wake settings**:
+  - Wake on LAN
+  - Wake on power
+
+For more information, see the following resources:
+- [Use Device Firmware Configuration Interface profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) profile settings in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows-settings.md)
+
+Applies to:
+- Windows 10/11
+
+#### Add custom support information to Android Enterprise devices<!-- 7913128 -->
+On Android Enterprise devices, you can create a device restrictions configuration profile that manages device settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type > **Custom support information**).
+
+There are some new settings you can configure:
+- **Short support message**: When users try to change a managed setting, you can add a short message that's shown to users in a system dialog window.
+- **Long support message**: You can add a long message that's shown in **Settings** > **Security** > **Device admin apps** > **Device Policy**.
+
+By default, the OEM default messages are shown. When you deploy a custom message, the Intune default message is also deployed. If you don't enter a custom message for the device's default language, then the Intune default message is shown. 
+
+For example, you deploy a custom message for English and French. The user changes the device's default language to Spanish. Since you didn't deploy a custom message to the Spanish language, the Intune default message is shown.
+
+The Intune default message is translated for all languages in the Endpoint Manger admin center (**Settings** > **Language + Region**). The **Language** setting value determines the default language used by Intune. By default, it's set to **English**.
+
+In the policy, you can customize the messages for the following languages:
+- Czech
+- German
+- English (United States)
+- Spanish (Spain)
+- French (France)
+- Hungarian
+- Indonesian
+- Italian
+- Japanese
+- Korean
+- Dutch
+- Polish
+- Portuguese (Brazil)
+- Portuguese (Portugal)
+- Russian
+- Swedish
+- Turkish
+- Chinese (Simplified)
+- Chinese (Traditional)
+
+For more information on these settings and the other settings you can configure, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+
+Applies to:
+- Android 7.0 and newer
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+- Android Enterprise corporate owned work profile (COPE)
+
+#### Create and deploy Wi-Fi profiles to Android AOSP devices<!-- 8506299 -->
+You create configure and deploy a Wi-Fi profile to your Android AOSP devices.
+
+For more information on these settings, go to [Add Wi-Fi settings for Android (AOSP) devices in Microsoft Intune](../configuration/wi-fi-settings-android-aosp.md).
+
+Applies to:
+- Android (AOSP)
+
+#### Settings catalog is generally available (GA) for Windows and macOS devices<!-- 9558656 -->
+The settings catalog is generally available (GA). For more information, go to:
+- [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
+- [Tasks you can complete using the Settings Catalog in Intune](../configuration/settings-catalog-common-features.md)
+
+Applies to:
+- macOS
+- Windows 10/11
+
+#### Migrate feature in Group policy analytics supports sovereign clouds<!-- 13927582 -->
+Using Group Policy analytics, you can import your on-premises GPOs, and create a settings catalog policy using these GPOs. Previously, this Migrate feature wasn't supported on Sovereign Clouds.
+
+The Migrate feature is now supported on Sovereign Clouds.
+
+For more information on these features, go to:
+- [Analyze your on-premises GPOs using Group Policy analytics in Microsoft Endpoint Manager](../configuration/group-policy-analytics.md)
+- [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager](../configuration/group-policy-analytics-migrate.md)
+
+#### iOS/iPadOS platform is in settings catalog<!-- 13934066 -->
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. The iOS/iPadOS platform and some settings are now available in the settings catalog (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).
+
+New settings include:
+
+**Accounts > Caldav**:
+
+- Card DAV Account Description
+- Card DAV Host Name
+- Card DAV Password
+- Card DAV Port
+- Card DAV Principal URL
+- Card DAV Use SSL
+- Card DAV Username
+
+**Accounts > Carddav**:
+
+- Card DAV Account Description
+- Card DAV Host Name
+- Card DAV Password
+- Card DAV Port
+- Card DAV Principal URL
+- Card DAV Use SSL
+- Card DAV Username
+
+**AirPlay**:
+
+- Allow List
+- Password
+
+- **Profile Removal Password**:
+
+- Removal Password
+
+**Proxies > Global HTTP Proxy**:
+
+- Proxy Captive Login Allowed
+- Proxy PAC Fallback Allowed
+- Proxy PAC URL
+- Proxy Password
+- Proxy Server
+- Proxy Server Port
+- Proxy Type
+- Proxy Username
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**Networking > Domains**:
+
+- Email Domains
+
+**Printing > Air Print**:
+
+- Printers
+- IP Address
+- Resource Path
+
+**Restrictions**:
+
+- Allow Activity Continuation
+- Allow Adding Game Center Friends
+- Allow Air Drop
+- Allow Auto Unlock
+- Allow Camera
+- Allow Cloud Document Sync
+- Allow Cloud Keychain Sync
+- Allow Cloud Photo Library
+- Allow Cloud Private Relay
+- Allow Diagnostic Submission
+- Allow Dictation
+- Allow Erase Content And Settings
+- Allow Fingerprint For Unlock
+- Allow Game Center
+- Allow Multiplayer Gaming
+- Allow Music Service
+- Allow Passcode Modification
+- Allow Password Auto Fill
+- Allow Password Proximity Requests
+- Allow Password Sharing
+- Allow Remote Screen Observation
+- Allow Screenshot
+- Allow Spotlight Internet Results
+- Allow Wallpaper Modification
+- Enforced Software Update Delay
+- Force Classroom Automatically Join Classes
+- Force Classroom Request Permission To Leave Classes
+- Force Classroom Unprompted App And Device Lock
+- Force Delayed Software Updates
+- Safari Allow Autofill
+
+**Security > Passcode**:
+
+- Allow Simple Passcode
+- Force PIN
+- Max Failed Attempts
+- Max Grace Period
+- Max Inactivity
+- Max PIN Age In Days
+- Min Complex Characters
+- Min Length
+- PIN History
+- Require Alphanumeric Passcode
+
+**User Experience > Notifications**:
+
+- Alert Type
+- Badges Enabled
+- Bundle Identifier
+- Critical Alert Enabled
+- Notifications Enabled
+- Show In Lock Screen
+- Show In Notification Center
+- Sounds Enabled
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+Applies to:
+- iOS/iPadOS
+
+#### Use TEAP authentication in wired networks device configuration profiles for Windows devices<!-- 14042602 -->
+On Windows devices, you can create a **Wired Networks** device configuration profile that supports the Extensible Authentication Protocol (EAP) (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Wired networks** for profile type).
+
+When you create the profile, you can use the Tunnel Extensible Authentication Protocol (TEAP).
+
+For more information on wired networks, go to [Add and use wired networks settings on your macOS and Windows devices in Microsoft Intune](../configuration/wired-networks-configure.md).
+
+Applies to:
+- Windows 11
+- Windows 10
+
+#### Unlock the work profile on Android Enterprise corporate owned work profile (COPE) devices after a set time using password, PIN, or pattern<!-- 14133548 -->
+
+On Android Enterprise devices, you can create a device restrictions configuration profile that manages device settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type).
+
+On Android Enterprise COPE devices, you can configure the **Work profile password** > **Required unlock frequency** setting. Use this setting to select how long users have before they're required to unlock the work profile using a strong authentication method.
+
+For more information on this setting, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+
+Applies to:
+- Android 8.0 and newer
+- Android Enterprise corporate owned work profile (COPE)
+
+#### New macOS settings in Settings Catalog<!-- 14158964 -->
+The Settings Catalog has new macOS settings you can configure (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type):
+
+**Accounts > Caldav**:
+
+- Cal DAV Account Description
+- Cal DAV Host Name
+- Cal DAV Password
+- Cal DAV Port
+- Cal DAV Principal URL
+- Cal DAV Use SSL
+- Cal DAV Username
+
+**Accounts > Carddav**:
+
+- Card DAV Account Description
+- Card DAV Host Name
+- Card DAV Password
+- Card DAV Port
+- Card DAV Principal URL
+- Card DAV Use SSL
+- Card DAV Username
+
+**User Experience > Dock**:
+
+- Allow Dock Fixup Override
+- Auto Hide
+- Auto Hide Immutable
+- Contents Immutable
+- Double Click Behavior
+- Double Click Behavior Immutable
+- Large Size
+- Launch Animation
+- Launch Animation Immutable
+- Magnification
+- Magnification Size Immutable
+- Magnify Immutable
+- MCX Dock Special Folders
+- Minimize Effect
+- Minimize Effect Immutable
+- Minimize Into Application Immutable
+- Minimize To Application
+- Orientation
+- Persistent Apps
+- Persistent Others
+- Position Immutable
+- Show Indicators Immutable
+- Show Process Indicators
+- Show Recents
+- Show Recents Immutable
+- Size Immutable
+- Static Apps
+- Static Only
+- Static Others
+- Tile Size
+- Window Tabbing
+- Window Tabbing Immutable
+
+**System Configuration > Energy Saver**:
+
+- Desktop Power
+- Desktop Schedule
+- Destroy FV Key On Standby
+- Laptop Battery Power
+- Laptop Power
+- Sleep Disabled
+
+**System Configuration > System Logging**:
+
+- Enable Private Data
+
+**System Configuration > Time Server**:
+
+- Time Server
+- Time Zone
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**Security > Passcode**:
+
+- Allow Simple Passcode
+- Change At Next Auth
+- Force PIN
+- Max Failed Attempts
+- Max Grace Period
+- Max Inactivity
+- Max PIN Age In Days
+- Min Complex Characters
+- Min Length
+- Minutes Until Failed Login Reset
+- PIN History
+- Require Alphanumeric Passcode
+
+There isn't any conflict resolution between policies created using the Settings catalog and policies created using Templates. When creating new policies in the Settings Catalog, be sure there are no conflicting settings with your current policies.
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md).
+
+Applies to:
+- macOS
+
+#### New Microsoft Office and Microsoft Outlook preference settings in the macOS Settings Catalog<!-- 14193331 -->
+The Settings Catalog supports preference settings for Microsoft Office and Microsoft Outlook (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type). 
+
+The following settings are available:
+
+**Microsoft Office > Microsoft Office**:
+
+- Allow experiences and functionality that analyzes user content
+- Allow experiences and functionality that downloads user content
+- Allow macros to modify Visual Basic projects
+- Allow optional connected experiences
+- Allow Visual Basic macros to use system APIs
+- Background accessibility checking
+- Default to local files for open - save
+- Diagnostic data level
+- Disable cloud fonts
+- Disable third-party store add-in catalog
+- Disable user surveys
+- Enable automatic sign-in
+- Prevent all Visual Basic macros from executing
+- Prevent Visual Basic macros from using external dynamic libraries
+- Prevent Visual Basic macros from using legacy MacScript
+- Prevent Visual Basic macros from using pipes to communicate
+- Show Template Gallery on app launch
+- Show What's New dialog
+- Visual Basic macro policy
+
+**Microsoft Office > Microsoft Outlook**:
+
+- Allow S - MIME certificates without a matching email address
+- Allowed Email Domains
+- Default domain name
+- Default weather location
+- Disable 'Do Not Forward' options
+- Disable automatic updating of weather location
+- Disable email signatures
+- Disable export to OLM files
+- Disable import from OLM and PST files
+- Disable Junk settings
+- Disable Microsoft 365 encryption options
+- Disable Microsoft Teams meeting support
+- Disable S - MIME
+- Disable Skype for Business meeting support
+- Download embedded images
+- Enable New Outlook
+- Hide On My Computer folders
+- Hide the 'Get started with Outlook' control in the task pane
+- Hide the 'Personalize the new Outlook' dialog
+- Set the order in which S - MIME certificates are considered
+- Set theme
+- Specify first day of the week
+- Trust Office 365 autodiscover redirects
+- Use domain-based autodiscover instead of Office 365
+
+For more information about the Settings Catalog, go to:
+
+- [Tasks you can complete using the Settings Catalog in Intune](../configuration/settings-catalog-common-features.md)
+- [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md)
+
+For more information about Microsoft Office and Outlook settings you can configure, go to:
+
+- [Use preferences to manage privacy controls for Office for Mac - Deploy Office](/deployoffice/privacy/mac-privacy-preferences#preference-setting-for-connected-experiences-that-download-online-content).
+- [Set preferences for Outlook for Mac - Deploy Office](/deployoffice/mac/preferences-outlook)
+
+Applies to:
+- macOS
+
+### Device management
+
+#### Remotely restart and shut down macOS device<!-- 12472418 -->
+You can remotely restart or shut down a macOS device using device actions. These device actions are available for devices running macOS 10.13 and later. 
+
+For more information, see [Restart devices with Microsoft Intune](../remote-actions/device-restart.md). 
+
+#### More Remote actions for Android (AOSP) Corporate devices<!-- 8504019 -->
+For Android Open Source Project (AOSP) Corporate devices, you can soon use more remote actions from the Microsoft Intune admin center - Reboot and Remote lock. 
+
+For information about these features, see:
+ - [Remotely restart devices with Intune](../remote-actions/device-restart.md)
+ - [Remotely lock devices with Intune](../remote-actions/device-remote-lock.md)
+
+Applies to:
+- Android Open Source Project (AOSP)
+
+#### User configuration support for  Windows 11 multi-session VMs is in public preview<!-- 7231329 -->
+
+You can:
+- Configure user scope policies using **Settings catalog** and assign to groups of users
+- Configure user certificates and assign to users
+- Configure PowerShell scripts to install in the user context and assign to users
+
+Applies to: 
+ - Windows 11
+
+> [!Note]
+> User support for Windows 10 multi-session builds will be available later this year.
+
+For more information, go to
+[Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
+
+#### View a managed device's group membership<!-- 4100067 -->
+In the monitor section of the **Devices** workload of Intune, you can view the group membership of all Microsoft Entra groups for a managed device. You can select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **All devices** > *select a device* > **Group Membership**. For more information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
+
+#### Improved certificate reporting details<!-- 13316515 -->
+We've changed what Intune displays when you view certificate details for devices and certificate profiles. To view the report, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to > **Devices** > **Monitor** > **Certificates**.
+
+With the improved reporting view, Intune displays the following information:
+
+- Valid certificates
+- Certificates that were revoked within the last 30 days
+- Certificates that expired within the last 30 days
+
+The report no longer displays details for certificates that are not valid or that are no longer on a device.
+
+### Device enrollment
+
+### Utilize bootstrap tokens on macOS devices<!-- 12693392 -->
+Bootstrap token support, previously in public preview, is now generally available to all Microsoft Intune customers, including GCC High and Microsoft Azure Government Cloud tenants. Intune supports the use of bootstrap tokens on enrolled devices running macOS, version 10.15 or later.
+
+Bootstrap tokens allow for non-admin users to have increased MDM permissions, and perform specific software functions on behalf of the IT admin.  Bootstrap tokens are supported on:  
+
+- Supervised devices (in Intune, that's all user-approved enrollments)  
+- Devices enrolled in Intune via Apple automated device enrollment   
+
+For more information about how bootstrap tokens work with Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md#bootstrap-tokens).
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 14469921, 14645753 -->
+The following protected apps are now available for Microsoft Intune:
+
+- Condeco by Condeco Limited
+- RICOH Spaces by Ricoh Digital Services
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+>>>>>>> 65b3a6828c8042b75f1782932bfa6a8b6f1e2519

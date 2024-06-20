@@ -82,7 +82,59 @@ Applies to:
 
 <!-- *********************************************** -->
 
+<<<<<<< HEAD
 <!-- ## Device configuration -->
+=======
+## Device configuration
+
+### Version picker available for configuring managed Apple DDM software updates using the settings catalog<!-- 27565292 -->
+
+Using the [Intune settings catalog](../configuration/settings-catalog.md), you can configure Apple's declarative device management (DDM) feature to manage software updates on iOS/iPadOS and macOS devices.
+
+When you configure a managed software update policy using the settings catalog, you'll be able to:
+
+- Select a target OS version from a list of updates made available by Apple.
+- Manually enter the target OS version, if needed.
+
+For more information about configuring managed software update profiles in Intune, see [Use the settings catalog to configure managed software updates](../protect/managed-software-updates-ios-macos.md).
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+### Intune admin center UI updates at Devices > By platform<!-- 25104008 -->
+
+In the Intune admin center, you can select **Devices** > **By platform**, and view the policy options for the platform you select. These platform-specific pages are being updated and will include tabs for navigation.
+
+### New settings available in the Apple settings catalog <!--27175914 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There will be new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+#### iOS/iPadOS
+
+**Restrictions**:
+
+- Allow Web Distribution App Installation
+
+**System Configuration > Font**:
+
+- Font
+- Name
+
+#### macOS
+
+**Privacy > Privacy Preferences Policy Control**:
+
+- Bluetooth Always
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+>>>>>>> 65b3a6828c8042b75f1782932bfa6a8b6f1e2519
 
 <!-- *********************************************** -->
 
