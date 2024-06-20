@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -162,11 +162,11 @@ Both ways of reregistering a device are shown in the following sections.
 
 To reregister an Autopilot device from Intune, an IT Admin would:
 
-1. Sign in to Intune.
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Navigate to **Device enrollment** > **Windows enrollment** > **Devices** > **Import**.
+1. Navigate to **Devices** > **Device onboarding** | **Enrollment** > **Windows Autopilot** | **Devices**.
 
-1. Select the **Import** button to upload a csv file containing the device ID of the device to be reregistered. The device ID was the 4K HH captured by the PowerShell script or OA3 tool described in the section [Capture a new Autopilot device ID (4K HH) from the device](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
+1. Select the **Import** option in the toolbar at the top to upload a CSV file containing the device ID of the device to be reregistered. The device ID was the 4K HH captured by the PowerShell script or OA3 tool described in the section [Capture a new Autopilot device ID (4K HH) from the device](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
 
 ### Reregister from the Microsoft Partner Center (MPC)
 
@@ -176,11 +176,11 @@ To reregister an Autopilot device from the Microsoft Partner Center MPC, an OEM 
 
 1. Navigate to the **Customer** > **Devices** page.
 
-1. Select **Add devices** to upload the csv file.
+1. Select **Add devices** to upload the CSV file.
 
-When a repaired device is reregistering through MPC, the uploaded csv file must contain the 4K HH for the device, and not just the PKID or Tuple (SerialNumber + OEMName + ModelName). If only the PKID or Tuple was used, the Autopilot service would be unable to find a match in the Autopilot database. No match would be found because no 4K HH info was previously submitted for this essentially "new" device and the upload fails, likely returning a **ZtdDeviceNotFound** error. For this reason, only upload the 4K HH. Don't upload the Tuple or PKID.
+When a repaired device is reregistering through MPC, the uploaded CSV file must contain the 4K HH for the device, and not just the PKID or Tuple (SerialNumber + OEMName + ModelName). If only the PKID or Tuple was used, the Autopilot service would be unable to find a match in the Autopilot database. No match would be found because no 4K HH info was previously submitted for this essentially "new" device and the upload fails, likely returning a **ZtdDeviceNotFound** error. For this reason, only upload the 4K HH. Don't upload the Tuple or PKID.
 
-When including the 4K HH in the csv file, the PKID or Tuple don't also need to be included. Those columns might be left blank, as shown in the following example:
+When including the 4K HH in the CSV file, the PKID or Tuple don't also need to be included. Those columns might be left blank, as shown in the following example:
 
 :::image type="content" source="images/hh.png" alt-text="Screenshot of a CSV file in Excel with a hash value in the Hardware Hash column.":::
 
@@ -202,7 +202,7 @@ To use the reset feature in Windows on a device:
 
    1. Under **How would you like to reinstall Windows?**, select either option.
 
-   1. Under **Additional settings**, select the **Next** button.
+   1. Under **Additional settings**, select **Next**.
 
    1. Under **Ready to reset this PC**, select the **Reset** button.
 
@@ -218,7 +218,7 @@ To use the reset feature in Windows on a device:
 
    1. Under **How would you like to reinstall Windows?**, select either option.
 
-   1. Under **Additional settings**, select the **Next** button.
+   1. Under **Additional settings**, select **Next**.
 
    1. Under **Ready to reset this PC**, select the **Reset** button.
 
