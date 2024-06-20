@@ -259,7 +259,7 @@ For more information about current RBAC permissions and built-in roles, see:
 
 - [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
-- [Assign role-based access controls for endpoint security policy](../protect/endpoint-security-policy.md#rbac-roles-and-permissions-to-manage-endpoint-security-workloads) in *Manage device security with endpoint security policies in Microsoft Intune*.
+- [Assign role-based access controls for endpoint security policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy) in *Manage device security with endpoint security policies in Microsoft Intune*.
 
 > [!IMPORTANT]
 >
