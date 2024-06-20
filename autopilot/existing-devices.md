@@ -164,7 +164,7 @@ $AutopilotProfile | ForEach-Object {
 >
 > The file name has to be `AutopilotConfigurationFile.json` and encoded as ASCII or ANSI.
 
-The profile can also be saved to a text file and edit in Notepad. In Notepad, when choosing **Save as**, select the save as type: **All Files**, and then choose **ANSI** for the **Encoding**.
+The profile can also be saved to a text file and edit in Notepad. In Notepad, when choosing **Save as**, select the save as type: **All Files**, and then select **ANSI** for the **Encoding**.
 
 :::image type="content" source="images/notepad.png" alt-text="Save as ANSI encoding in Notepad.":::
 
@@ -208,7 +208,7 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node.
 
-1. On the ribbon, select **Create**, and then choose **Create Device Collection**. An existing collection can also be used. If using an existing collection, proceed to the [Create a task sequence](#create-a-task-sequence) section.
+1. On the ribbon, select **Create**, and then select **Create Device Collection**. An existing collection can also be used. If using an existing collection, proceed to the [Create a task sequence](#create-a-task-sequence) section.
 
 1. In the Create Device Collection Wizard, enter the following **General** details:
 
@@ -328,7 +328,7 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
         > [!NOTE]
         >
-        > Choose the option here that is relevant for the context of testing. If the target client doesn't have the Configuration Manager agent or Windows installed, the task sequence needs to be started via PXE or Boot Media.
+        > Select the option here that is relevant for the context of testing. If the target client doesn't have the Configuration Manager agent or Windows installed, the task sequence needs to be started via PXE or Boot Media.
 
     - **Scheduling**
 

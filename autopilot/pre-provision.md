@@ -107,7 +107,7 @@ Each of these scenarios consists of two parts, a technician flow and a user flow
 After the customer or IT Admin targets all the apps and settings they want for their devices through Intune, the pre-provisioning technician can begin the pre-provisioning process. The technician could be a member of the IT staff, a services partner, or an OEM - each organization can decide who should perform these activities. Regardless of the scenario, the process done by the technician is the same:
 
 - Boot the device.
-- From the first out-of-box experience (OOBE) screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
+- From the first out-of-box experience (OOBE) screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, select the **Windows Autopilot provisioning** option and then select **Continue**.
 
 - On the **Windows Autopilot Configuration** screen, it displays the following information about the device:
   - The Autopilot profile assigned to the device.

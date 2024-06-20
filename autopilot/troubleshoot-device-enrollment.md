@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/07/2024
+ms.date: 06/19/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -25,7 +25,7 @@ See the following sections for information about issues that can occur when impo
 
 ## Error code 0x80180014 when re-enrolling using self-deployment or pre-provisioning mode
 
-After the first Autopilot deployment, devices with a targeted Autopilot self-deployment mode or pre-provisioning mode profile can't automatically re-enroll using Autopilot. If you try to redeploy the device, then the `0x80180014` error code is returned.
+After the first Autopilot deployment, devices with a targeted Autopilot self-deployment mode or pre-provisioning mode profile can't automatically re-enroll using Autopilot. If device is redeployed, then the `0x80180014` error code is returned.
 
 The Event Tracing for Windows (ETW) logs might show the following mobile device management (MDM) error:
 
@@ -33,7 +33,7 @@ The Event Tracing for Windows (ETW) logs might show the following mobile device 
 
 ### Cause A for error code 0x80180014
 
-Microsoft Intune changed the Windows Autopilot self-deployment mode and Pre-Provisioning mode experience. To reuse a device, you must delete the device record created by Intune.
+Microsoft Intune changed the Windows Autopilot self-deployment mode and Pre-Provisioning mode experience. To reuse a device, the device record created by Intune must be deleted.
 
 This change impacts all Autopilot deployments that use the self-deployment or pre-provisioning mode. This change impacts devices when they're reused, reset, or when redeploying a profile.
 
@@ -46,14 +46,14 @@ To redeploy the device through Autopilot:
 
 ### Cause B for error code 0x80180014
 
-Windows MDM enrollment is disabled in your Intune tenant.
+Windows MDM enrollment is disabled in the Intune tenant.
 
 ### Resolution B for error code 0x80180014
 
 To fix this issue in a stand-alone Intune environment, follow these steps:
 
-1. In the Microsoft Intune admin center, chooses **Devices** > **Enrollment restrictions**, and then choose a device type restriction.
-1. Choose **Properties** > **Edit** next to Platform settings. Then select **Allow for Windows (MDM)**.
+1. In the Microsoft Intune admin center, select **Devices** > **Enrollment restrictions**, and then select a device type restriction.
+1. Select **Properties** > **Edit** next to Platform settings. Then select **Allow for Windows (MDM)**.
 1. Select **Review** and then **Save**.
 
 ## Device import issues
@@ -77,7 +77,7 @@ The "A" characters at the end of the hash are effectively empty data. Each chara
 
 To fix this issue, the hash needs to be modified, then the new value tested, until PowerShell succeeds in decoding the hash. The result is mostly illegible, which is fine. We're just looking for it to not throw the error **Invalid length for a Base-64 char array or string**.
 
-To test the base64, you can use the following PowerShell:
+To test the base64, use the following PowerShell:
 
 ```powershell
 [System.Text.Encoding]::ascii.getstring( [System.Convert]::FromBase64String("DEVICE HASH"))
@@ -112,12 +112,12 @@ Replace the collected hash with this new padded hash then try to import again.
 
 ## Autopilot profile not applied after reimaging to an older OS version
 
-If you enroll a device with one of the following Windows versions:
+If a device is enrolled with one of the following Windows versions:
 
 - Windows 11 with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later
 - Windows 10 with Windows Update [KB5015878](https://support.microsoft.com/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or later
 
-and then reimage to an older OS version, the Autopilot profile isn't applied. The device would need to be re-registered to complete a successful Autopilot deployment. You might see the message **Fix pending** or **Attention required** in the Autopilot devices page, which indicates that there was a hardware change on the device. When the link for the **Fix pending** status is selected, the following message appears:
+and then reimage to an older OS version, the Autopilot profile isn't applied. The device would need to be re-registered to complete a successful Autopilot deployment. The message **Fix pending** or **Attention required** might be displayed in the Autopilot devices page, which indicates that there was a hardware change on the device. When the link for the **Fix pending** status is selected, the following message appears:
 
 **We've detected a hardware change on this device. We're trying to automatically register the new hardware. You don't need to do anything now; the status will be updated at the next check in with the result.**
 

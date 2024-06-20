@@ -23,7 +23,7 @@ Headings are driven by article context. -->
 
 10. In the **Assignments** page:
 
-    1. Under **Included groups**, choose **Add groups**.
+    1. Under **Included groups**, select **Add groups**.
 
       > [!NOTE]
       >
@@ -33,4 +33,4 @@ Headings are driven by article context. -->
 
     1. Under **Included groups** > **Groups**, ensure the correct groups are selected, and then select **Next**.
 
-11. In the **Review + Create** page, verify that all settings are set correctly, and then choose **Create** to create the Autopilot profile.
+11. In the **Review + Create** page, verify that all settings are set correctly, and then select **Create** to create the Autopilot profile.

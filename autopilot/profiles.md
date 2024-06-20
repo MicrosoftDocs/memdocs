@@ -53,7 +53,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 
 1. Select **Next**.
 
-1. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, choose one of these two options:
+1. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select one of these two options:
 
     - **User-driven**: Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 
@@ -65,47 +65,47 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
     >
     > Options that are dimmed or shaded in the selected deployment mode aren't currently supported.
 
-1. In the **Join to Azure AD as** box, choose **Azure AD joined**.
+1. In the **Join to Azure AD as** box, select **Azure AD joined**.
 
 1. Configure the following options:
 
-    - **Microsoft Software License Terms**: Choose whether or not to show the EULA to users.
+    - **Microsoft Software License Terms**: Select whether or not to show the EULA to users.
 
-    - **Privacy settings**: Choose whether or not to show privacy settings to users.
+    - **Privacy settings**: Select whether or not to show privacy settings to users.
 
       > [!IMPORTANT]
       >
       > The default value for the Diagnostic Data setting is set to Full during the out-of-box experience. For more information, see [Windows Diagnostics Data](/windows/privacy/windows-diagnostic-data).
 
-    - **Hide change account options**: Choose **Hide** to prevent change account options from displaying on the company sign-in and domain error pages. This option requires [company branding to be configured in Microsoft Entra ID](/azure/active-directory/fundamentals/customize-branding).
+    - **Hide change account options**: Select **Hide** to prevent change account options from displaying on the company sign-in and domain error pages. This option requires [company branding to be configured in Microsoft Entra ID](/azure/active-directory/fundamentals/customize-branding).
 
-    - **User account type**: Choose the user's account type (**Administrator** or **Standard** user). We allow the user joining the device to be a local Administrator by adding them to the local Admin group. We don't enable the user as the default administrator on the device.
+    - **User account type**: Select the user's account type (**Administrator** or **Standard** user). We allow the user joining the device to be a local Administrator by adding them to the local Admin group. We don't enable the user as the default administrator on the device.
 
-    - **Allow pre-provisioned deployment** ([Prerequisites](pre-provision.md#prerequisites)): Choose **Yes** to allow pre-provisioning support.
+    - **Allow pre-provisioned deployment** ([Prerequisites](pre-provision.md#prerequisites)): Select **Yes** to allow pre-provisioning support.
 
       > [!NOTE]
       >
       > When setting **Allow pre-provisioned deployment** to **No**, it's still possible to press the Windows key five times during OOBE to invoke pre-provisioning and progress down that path. However, Intune enforces this setting and a pre-provisioning failure with error code 0x80180005 occurs.
 
-    - **Language (Region)**: Choose the language to use for the device. This option is available in all Deployment modes.
+    - **Language (Region)**: Select the language to use for the device. This option is available in all Deployment modes.
 
-    - **Automatically configure keyboard**: If a **Language (Region)** is selected, choose **Yes** to skip the keyboard selection page. This option is available in all Deployment modes.
+    - **Automatically configure keyboard**: If a **Language (Region)** is selected, select **Yes** to skip the keyboard selection page. This option is available in all Deployment modes.
 
         > [!NOTE]
         >
-        > Language and keyboard settings requires ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-fi connection.
+        > Language and keyboard settings requires ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to select a language, locale, and keyboard to make that Wi-fi connection.
 
-    - **Apply device name template** (requires Microsoft Entra join type): Choose **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. Only a prefix can be provided for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile).
+    - **Apply device name template** (requires Microsoft Entra join type): Select **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. Only a prefix can be provided for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile).
 
 1. Select **Next**.
 
-1. On the **Assignments** page, choose **Selected groups** for **Assign to**.
+1. On the **Assignments** page, select **Selected groups** for **Assign to**.
 
     :::image type="content" source="images/create-profile-assignments.png" alt-text="Screenshot of Assignments page.":::
 
-1. Choose **Select groups to include**, and choose the groups to include in this profile.
+1. Select **Select groups to include**, and select the groups to include in this profile.
 
-1. To exclude any groups, choose **Select groups to exclude**, and choose the groups to exclude.
+1. To exclude any groups, select **Select groups to exclude**, and select the groups to exclude.
 
    > [!NOTE]
    >
@@ -113,7 +113,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 
 1. Select **Next**.
 
-1. On the **Review + Create** page, choose **Create** to create the profile.
+1. On the **Review + Create** page, select **Create** to create the profile.
 
     :::image type="content" source="images/create-profile-review.png" alt-text="Screenshot of Review page.":::
 
@@ -127,7 +127,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 
 After the Autopilot deployment profile is created, certain parts of the deployment profile can be edited.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment profiles**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment profiles**.
 
 1. Select the profile to edit.
 
@@ -146,7 +146,7 @@ If a device is registered in Autopilot and a profile isn't assigned, it receives
 
 Alerts show how many Autopilot program devices don't have Autopilot deployment profiles. Use the information in the alert to create profiles and assign them to the unassigned devices. When an alert is selected, a full list of Windows Autopilot devices and detailed information about them is displayed.
 
-To see alerts for unassigned devices, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.
+To see alerts for unassigned devices, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.
 
 ## Autopilot profile priority
 
@@ -168,7 +168,7 @@ If a group is assigned to multiple Autopilot profiles, the device would receive 
 
 ## Autopilot deployments report
 
-Details on each device deployed through Windows Autopilot can be seen through a report. To see the report, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**. The data is available for 30 days after deployment.
+Details on each device deployed through Windows Autopilot can be seen through a report. To see the report, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Autopilot deployments**. The data is available for 30 days after deployment.
 
 This report is in preview. Only new Intune enrollment events trigger device deployment records. Deployments that don't trigger a new Intune enrollment don't appear in this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot pre-provisioning.
 

@@ -283,7 +283,7 @@ Windows Autopilot devices that aren't enrolled in Intune can be deleted:
 
 1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
-1. Choose the devices that need deletion, and then select **Delete**. The deletion process can take a few minutes to complete.
+1. Select the devices that need deletion, and then select **Delete**. The deletion process can take a few minutes to complete.
 
 Completely removing a device from a tenant requires the device records in Intune, Microsoft Entra ID, and Windows Autopilot to all be deleted. These deletions can all be done from Intune but need to be done in the following order. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
 

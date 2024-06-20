@@ -185,7 +185,7 @@ If there is a web proxy in the networking environment, ensure that the Intune Co
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
 
-1. In the **Group** pane, choose the following options:
+1. In the **Group** pane, select the following options:
 
     1. For **Group type**, select **Security**.
 
@@ -337,7 +337,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
     - **Name**: Enter a descriptive name for the new profile.
     - **Description**: Enter a description for the profile.
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Templates**, choose the template name **Domain Join**, and select **Create**.
+    - **Profile type**: Select **Templates**, select the template name **Domain Join**, and select **Create**.
 
 1. Enter the **Name** and **Description** and select **Next**.
 

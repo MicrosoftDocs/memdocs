@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot requirements
-description: Inform yourself about requirements for Windows Autopilot deployment.
+description: Information regarding requirements for Windows Autopilot deployment.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
