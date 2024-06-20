@@ -41,10 +41,6 @@ Control mobile device access to corporate resources using conditional access bas
 
 You can configure *conditional access* policies that are based on Jamf's risk assessment, enabled through Intune device compliance policies. Risk assessment policy can allow or block noncompliant devices from accessing corporate resources based on detected threats.
 
-> [!NOTE]
->
-> In July of 2021, Jamf completed acquisition of Wandera, and more recently began rebranding and updates to move Wandera to the Jamf portfolio. Work to update the Intune admin center to reflect the new branding remains in progress. This content will reflect the new branding Jamf where possible, but continue to reflect the Wandera branding when necessary to retain accuracy to the current user interface in the admin center.
-
 ## How do Intune and Jamf Mobile Threat Defense help protect your company resources?
 
 Jamf's mobile app seamlessly installs using Microsoft Intune. This app captures file system, network stack, and device and application telemetry (where available). This information synchronizes to the Jamf cloud service to assess the device's risk for mobile threats. These risk level classifications are configurable to suit your needs in the Jamf administrator console.
@@ -65,8 +61,8 @@ These categories and their associated threat levels are configurable in Jamf Sec
 
 The following platforms are supported for Jamf when enrolled in Intune:
 
-- Android 9.0 and later
-- iOS 13.7 and later
+- Android 11 and later
+- iOS / iPadOS 15.6 and later (iOS App Bundle ID: com.jamf.trust)
 
 For more information about platform and device, see the [Jamf website](https://www.jamf.com/products/jamf-protect/).
 

@@ -223,7 +223,7 @@ For more information about Windows Autopilot, go to [Windows Autopilot overview]
 
   For more specific information, go to [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
 
-After the profile is assigned, the devices start showing in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Windows**).
+After the profile is assigned, the devices start showing in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **By platform** > **Windows**).
 
 ### Windows Autopilot end user tasks
 
