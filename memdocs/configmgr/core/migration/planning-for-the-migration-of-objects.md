@@ -112,7 +112,7 @@ You can migrate the following operating system deployment objects from a support
 
     > [!NOTE]
     >
-    > - Only task sequences with native Configuration Manager tasks can be migrated. Task sequences that contain non-native tasks including MDT tasks or non-Microsoft tasks can't be migrated. Attempting to migrate non-native tasks results in the following errors in the `Migmctrl.log`:
+    > - Only task sequences with native Configuration Manager tasks can be migrated. Task sequences that contain non-native tasks including MDT tasks or non-Microsoft tasks can't be migrated. Attempting to migrate task sequences with non-native tasks results in the following errors in the log `Migmctrl.log`:
     >
     >    `Type <ts-add-in-package> are not found`
     >
