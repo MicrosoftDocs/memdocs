@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/27/2023
+ms.date: 06/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -119,7 +119,7 @@ When you use the **Retire** device action, the user's personal data is not remov
 
 The following tables describe what data is removed, and the effect of the **Retire** action on data that remains on the device after company data is removed.
 
-#### iOS
+#### [iOS](#ios)
 
 > [!IMPORTANT]
 > Retired devices might not be automatically deleted resulting in the device record remaining in Intune for 180 days unless issued a **Delete** action.
@@ -137,7 +137,7 @@ The following tables describe what data is removed, and the effect of the **Reti
 > [!NOTE]
 > Users that reinstall the Outlook Mobile app following a **Retire** device action may need to choose to **Delete All Saved Contacts** before re-exporting contacts to avoid duplicate contact entries.  Previously exported contacts from Outlook Mobile are considered personal data and are not removed by the **Retire** device action.
 
-#### Android device administrator
+#### [Android device administrator](#android-device-administrator)
 
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
@@ -156,15 +156,15 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|N/A (Android devices don't support Email profiles)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Microsoft Entra unjoin|The Microsoft Entra ID record is removed.|The Microsoft Entra ID record is removed.|
 
-#### Android Enterprise personally owned devices with a work profile
+#### [Android Enterprise personally owned devices with a work profile](#android-enterprise-personally-owned-devices-with-a-work-profile)
 
 Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune.
 
-#### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
+#### [Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices](#android-enterprise-dedicated-fully-managed-and-corporate-owned-work-profile-devices)
 
 - The **Retire** action is supported on Android Enterprise Corporate-Owned Work Profile devices. When the **Retire** action is used on Android Enterprise Corporate-Owned Work Profile devices, the device is unenrolled from Intune management. The work profile is removed along with all corporate data and applications, but all the personal data and applications remain on the device.
 
-#### macOS
+#### [macOS](#macos)
 
 |Data type|macOS|
 |-------------|-------|
@@ -175,7 +175,7 @@ Removing company data from an Android personally owned work profile device remov
 |Outlook|If Conditional Access is enabled, the device doesn't receive new mail.|
 |Microsoft Entra Device Record |The Microsoft Entra ID record isn't removed.|
 
-#### Windows
+#### [Windows](#windows)
 
 |Data type|Windows 8.1 (MDM) and Windows RT 8.1|Windows RT|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|
@@ -191,6 +191,7 @@ Removing company data from an Android personally owned work profile device remov
 
 > [!NOTE]
 > For Windows 10 devices that join Microsoft Entra ID during initial Setup (OOBE), the retire command will remove all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) to login as a local admin and regain access to the user's local data.
+---
 
 ## Manually unenroll devices
 
