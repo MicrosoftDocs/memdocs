@@ -98,8 +98,6 @@ For more information, see the [Software Center user guide](software-center.md).
 
 Before you install Configuration Manager, familiarize yourself with the basic concepts and terms:
 
-- If you're familiar with System Center 2012 Configuration Manager, see [What's changed from System Center 2012 Configuration Manager](../plan-design/changes/what-has-changed-from-configuration-manager-2012.md).
-
 - For a high-level technical overview of Configuration Manager, see [Fundamentals of Configuration Manager](fundamentals.md).
 
 When you're familiar with the basic concepts, use this documentation library to help you successfully deploy and use Configuration Manager. Start with the following articles:
