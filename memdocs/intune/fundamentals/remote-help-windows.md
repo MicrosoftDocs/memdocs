@@ -320,40 +320,6 @@ Use the `Disconnect-MgGraph` command to sign out.
 Disconnect-MgGraph
 ```
 
-### Remote Help to work on non-compliant and unenrolled devices through Conditional Access
-
-When setting a Conditional Access policy for apps Office 365 and Office 365 SharePoint Online with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, the tenant can use Remote Help by completing the steps shown here. The Conditional Access policy created blocks some scope that Remote Help uses to access resources when the device is non-compliant. 
-
-Currently, Remote Help needs access to the Remote Assistance app, Microsoft Intune app, Windows Azure Active Directory app, and the Microsoft Command Device Graph Service. To use Remote Help, you must allow the following resources, or the app will block the user as it is unable to support the feature set it is designed for. 
-
-1. In your Conditional Access policy,
-  - exclude the Remote Assistance app by browsing to it. Remote Assistance allows connections to be made through the Remote Help app. 
-  - exclude Microsoft Intune. Microsoft Intune is needed to perform RBAC checks to determine if the helper has permissions to assist the sharer. 
-  - exclude the Windows Azure Active Directory and Microsoft Command Device Graph Service apps. Windows Azure Active Directory grants Remote Help the ability to read organizational data like users, groups, management chain to support showing the user profile information as part of the information shown to the helper and sharer such as profile picture, name, title, etc. Microsoft Command Device Graph Service is needed to support the ability to confirm Intune enrollment and check compliance.
-
-If these apps don't appear by default in the app selection area of the Conditional Access policy, see this section for instructions on configuration.
-
-The following table shows you the App ID of the 2 apps needed:
-
-|Display Name| App ID|
-|:-----------------------------------|:----------------------------:|
-|00000002-0000-0000-c000-000000000000|Windows Azure Active Directory|
-|62060984-07ca-4b01-802e-d9c0e90718d8|Microsoft Command Device Graph Service|
-
-If these applications are not found in the tenant, then the admin must create the Service Principal for these applications using the following commands in Powershell.
-
-[PowerShell Gallery | AzureADPreview 2.0.2.149](https://www.powershellgallery.com/packages/AzureADPreview/2.0.2.149)
-
-```powershell
-> Install-Module -Name AzureADPreview
-> Connect-AzureAD
-> New-AzureADServicePrincipal -AppId <app-id>
-> New-AzureADServicePrincipal -AppId 00000002-0000-0000-c000-000000000000
-> New-AzureADServicePrincipal -AppId 62060984-07ca-4b01-802e-d9c0e90718d8
-```
-After these Service Principals are created, these applications need to be excluded, which can be done by creating an attribute-value and using the app filters described in the documentation [here.](/entra/identity/conditional-access/concept-filter-for-applications) 
-You can learn more about these scopes [here.](/graph/permissions-reference)
-
 
 ## Languages Supported
 
@@ -394,11 +360,32 @@ Remote Help is supported in the following languages:
 - Turkish
 - Ukrainian
 
+## Troubleshooting Remote Help on Windows for Edge WebView2
+
+You might see an error code in a dialog box if you're having trouble installing and running Remote Help. The error might be related to Microsoft Edge WebView 2, which is required to use Remote Help. Here are some error codes you might see along with a short description of the problem.
+
+|Error Code |General Problem |
+|-----------| ----------------|
+|1001|Remote Help failed to initialize one of its internal components.|
+|1002|Remote Help failed to load WebView2.|
+|1003|Remote Help failed to install WebView2.|
+
+### Solutions
+
+1. Ensure that Microsoft Edge is installed properly and is up to date.
+Remote Help uses the Microsoft Edge browser control. If your device has Microsoft Edge installed, then it’s likely that Remote Help will run properly. If you have problems, the common troubleshooting tips here may help get Remote Help working. Learn more about [Troubleshooting tips for installing and updating Microsoft Edge.](https://support.microsoft.com/microsoft-edge/troubleshooting-tips-for-installing-and-updating-microsoft-edge-a5eceb94-c2b1-dfab-6569-e79d0250317b)
+After installing or updating Microsoft Edge, try opening Remote Help again. If Remote Help doesn't run or you get an error message that Microsoft Edge WebView2 isn't installed, go to the next step.
+
+2.  Install Microsoft Edge WebView 2
+Microsoft Edge WebView2 is required to use Remote Help. If you get an error message that WebView2 isn't installed when you try to open Remote Help, then [download and install Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/consumer/?form=MA13LH) from the Microsoft website. After you've downloaded WebView2, try opening Remote Help again.
+
+> [!NOTE]
+> WebView2 should already be installed if your device is running Windows 11 or has Microsoft Edge.
+
 ## Known Issues
 For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service isn't running.
 After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30-60 seconds after restart), or manually start the service through services.msc.
 For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
-
 
 ## What's New for Remote Help
 
@@ -410,7 +397,7 @@ Version: 5.1.1214.0
 
 - Changed the primary endpoint for Remote Help from https://remoteassistance.support.services.microsoft.com to https://remotehelp.microsoft.com.
   > [!NOTE]
-  > This could cause a breaking change for some organizations that have not yet allowed remotehelp.microsoft.com through their firewall.
+  > This could cause a breaking change for some organizations that have not yet allowed remotehelp.microsoft.com through their firewall after 5/30/2024.
 - Resolved various bugs including an issue with Conditional Access. If a tenant had a **Terms of Use** policy enabled for Office 365, Remote Help wouldn't know how to respond and would instead present an authentication error message to the user.
 - Enabled a shortcut to open context menus with the keyboard shortcut 'Alt + Space'
 

@@ -146,6 +146,7 @@ As the Microsoft Intune administrator, you can control which work or school acco
 
    > [!NOTE]
    > The following apps process the above app configuration and only allow organization accounts:
+   > - Copilot for Android (28.1.420328045 and later)
    > - Edge for Android (42.0.4.4048 and later)
    > - Office, Word, Excel, PowerPoint for Android (16.0.9327.1000 and later)
    > - OneDrive for Android (5.28 and later)

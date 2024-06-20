@@ -252,7 +252,7 @@ For a list of clients by operating system, see [Remote Desktop clients](/windows
 To set up their Remote Desktop client, users follow these steps:
 
 1. Download the Remote Desktop app from the [Remote Desktop clients page](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients).
-2. Select **Subscribe**.
+2. Select **Subscribe**. (If using macOS, iOS, iPadOS, or Android/Chrome OS, select **Add Workspace** and then enter the URL `https://rdweb.wvd.microsoft.com`).
 3. Enter their Microsoft Entra credentials.
 4. The Cloud PC appears in the list, and they can double-click it to launch.
 
