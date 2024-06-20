@@ -609,7 +609,9 @@ items:
             - name: JSON for custom settings
               href: ./protect/compliance-custom-json.md    
             - name: PowerShell script for custom settings
-              href: ./protect/compliance-custom-script.md    
+              href: ./protect/compliance-custom-script.md 
+            - name: Windows Subsystem for Linux 
+              href: ./protect/compliance-wsl.md   
           - name: Actions for noncompliance
             href: ./protect/actions-for-noncompliance.md
           - name: Monitor device compliance
@@ -651,7 +653,6 @@ items:
                 href: ./protect/endpoint-security-edr-policy.md
               - name: Firewall
                 href: ./protect/endpoint-security-firewall-policy.md
-
           - name: Microsoft Defender for Endpoint
             items:
             - name: Microsoft Defender for Endpoint
@@ -663,7 +664,11 @@ items:
             - name: Monitor Defender for Endpoint
               href: ./protect/advanced-threat-protection-monitor.md
             - name: Microsoft Defender for Endpoint Security settings management
-              href: ./protect/mde-security-integration.md
+              items:
+              - name: Microsoft Defender for Endpoint Security settings management
+                href: ./protect/mde-security-integration.md
+              - name: Manage endpoint security policies in Microsoft Defender
+                href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
           - name: Firewall rule migration
             href: ./protect/endpoint-security-firewall-rule-tool.md  
           - name: Tenant attach
@@ -1484,9 +1489,12 @@ items:
           displayName: multi-factor; enrollment; MFA; verification; conditional access
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
-          displayName: Set up enrollment notifications
+          displayName: intune; enrollment; terms and conditions; policy 
         - name: Set up enrollment notifications  
           href: ./enrollment/enrollment-notifications.md
+        - name: Set up enrollment time grouping  
+          href: ./enrollment/enrollment-time-grouping.md
+          displayName: enrollment time grouping; security groups; Entra 
         - name: Configure device enrollment restrictions
           items:  
           - name: Overview  
@@ -1534,6 +1542,9 @@ items:
           items:
           - name: Prerequisite - Connect Intune to Android Enterprise 
             href: ./enrollment/connect-intune-android-enterprise.md
+          - name: Device staging overview          
+            href: ./enrollment/device-staging-overview.md
+            displayName: COBO; staged enrollment 
           - name: Set up work profile management
             items: 
             - name: Overview  

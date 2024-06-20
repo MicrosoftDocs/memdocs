@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 04/24/2023
+ms.date: 06/07/2024
 ms.localizationpriority: medium
 ---
 
@@ -35,7 +35,7 @@ There are several methods to register a device as an Autopilot device in Intune:
   - [PowerShell script](/mem/autopilot/add-devices#powershell)
   - [Diagnostics page hash export](/mem/autopilot/add-devices#diagnostics-page-hash-export)
   - [Desktop hash export](/mem/autopilot/add-devices#desktop-hash-export)
-  
+
   These methods of obtaining the hardware hash of a device are well documented. The corresponding documentation can be viewed by selecting the appropriate link from the above list.
 
 - Automatically registering device via:
@@ -47,7 +47,9 @@ There are several methods to register a device as an Autopilot device in Intune:
 
 For most organizations, using an OEM or partner to register devices as Autopilot devices is the preferred, most common, and most secure method. However for smaller organizations, for testing/lab scenarios, and for emergency scenarios, manually registering devices as Autopilot devices via the hardware hash is also used.
 
-> [!IMPORTANT]
+[!INCLUDE [Registered device warning](../../includes/registered-vs-joined.md)]
+
+> [!NOTE]
 >
 > Assuming that a device isn't currently enrolled Intune, remember that registering a device in Autopilot doesn't make it an Intune enrolled device. That device doesn't enroll into Intune until Autopilot runs on the device for the first time.
 

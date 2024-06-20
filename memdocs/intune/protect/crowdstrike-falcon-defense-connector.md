@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: CrowdStrike Falcon Mobile Threat Defense with Microsoft Intune
+title: Use CrowdStrike Falcon for Mobile with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: How to set up CrowdStrike Falcon Threat Defense with Microsoft Intune control mobile device access to your corporate resources.
 keywords:
@@ -29,7 +29,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# CrowdStrike Falcon Mobile Threat Defense connector with Microsoft Intune
+# CrowdStrike Falcon for Mobile connector with Microsoft Intune
 
 You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by CrowdStrike Falcon for Mobile. CrowdStrike Falcon is a mobile threat defense solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the CrowdStrike Falcon app.
 
@@ -47,7 +47,7 @@ You can configure Conditional Access policies based on CrowdStrike Falcon for Mo
 
 - Microsoft Intune Plan 1 subscription
 
-- CrowdStrike Falcon Mobile Threat Defense subscription.  
+- CrowdStrike Falcon for Mobile subscription.  
   See the [CrowdStrike Falcon for Mobile](https://www.crowdstrike.com/products/endpoint-security/falcon-for-mobile/) website.
 
 ## How do Intune and CrowdStrike Falcon for Mobile help protect your company resources?

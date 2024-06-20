@@ -52,7 +52,7 @@ Cloud PCs support the following remote management actions:
 | [Restore](restore-overview.md) | Yes|
 | Share Cloud PC restore point to storage | Yes |
 | Sync | Yes |
-| Troubleshoot | Yes |
+| [Troubleshoot](health-checks-connectivity.md) | Yes |
 | Update Windows Defender | No |
 
 You can run remote actions for up to 5,000 Cloud PCs at a time. For more information about bulk actions, see [Use bulk device actions](/mem/intune/remote-actions/bulk-device-actions).

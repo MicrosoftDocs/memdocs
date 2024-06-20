@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 01/24/2024
+ms.date: 05/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -95,7 +95,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2401**
+- **Technical preview version 2405**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/en-in/evalcenter/evaluate-microsoft-endpoint-configuration-manager-technical-preview).
 
@@ -128,19 +128,12 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2401
+### Technical preview version 2405
 
-- [Automated diagnostic Dashboard for Software Update Issues](2024/technical-preview-2401.md)
-- [Introducing Centralized Search box: Effortlessly Find What You Need in the Console!](2024/technical-preview-2401.md)
-- [HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager](2024/technical-preview-2401.md)
-- [Microsoft Azure Active Directory re-branded to Microsoft Entra ID](2024/technical-preview-2401.md)
-- [Enhancement in Deploying Software Packages with Dynamic Variables](2024/technical-preview-2401.md)
-- [Enabling Auto-Image Patching for CMG Virtual Machine Scale Sets](2024/technical-preview-2401.md)
-- [Window 11 Readiness dashboard to support Windows 23H2](2024/technical-preview-2401.md)
-- [Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager](2024/technical-preview-2401.md)
-- [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](2024/technical-preview-2401.md)
-- [Improvements to Bitlocker](2024/technical-preview-2401.md)
-
+- [Introducing Centralized Search - Desired Workspace Selection](2024/technical-preview-2405.md)
+- [BitLocker support in Arm devices](2024/technical-preview-2405.md)
+- [Configuration Manager now support SQL Extended Protection for Authentication](2024/technical-preview-2405.md)
+- [Performance Enhancement of policy processing and collection evaluation](2024/technical-preview-2405.md)
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -158,7 +151,20 @@ The following features were released with previous versions of the Configuration
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
+### Technical preview version 2401
 
+- [Automated diagnostic Dashboard for Software Update Issues](2024/technical-preview-2401.md)
+- [Introducing Centralized Search box: Effortlessly Find What You Need in the Console!](2024/technical-preview-2401.md)
+- [HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager](2024/technical-preview-2401.md)
+- [Microsoft Azure Active Directory re-branded to Microsoft Entra ID](2024/technical-preview-2401.md)
+- [Enhancement in Deploying Software Packages with Dynamic Variables](2024/technical-preview-2401.md)
+- [Enabling Auto-Image Patching for CMG Virtual Machine Scale Sets](2024/technical-preview-2401.md)
+- [Window 11 Readiness dashboard to support Windows 23H2](2024/technical-preview-2401.md)
+- [Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager](2024/technical-preview-2401.md)
+- [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](2024/technical-preview-2401.md)
+- [Improvements to Bitlocker](2024/technical-preview-2401.md)
+
+  
 ### Technical preview version 2311
 
 - [Folder support for Scripts node in Software Library](2023/technical-preview-2311.md)
