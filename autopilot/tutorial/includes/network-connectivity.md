@@ -28,7 +28,7 @@ Headings are driven by article context. -->
 
    - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to the Internet is required:
 
-     1. OOBE (out of box experience) begins and a screen asking for a country or region appears. Select the appropriate country or region, and then select **Yes**.
+     1. The out-of-box experience (OOBE) begins and a screen asking for a country or region appears. Select the appropriate country or region, and then select **Yes**.
 
      1. The keyboard screen appears to select a keyboard layout. Select the appropriate keyboard layout, and then select **Yes**.
 

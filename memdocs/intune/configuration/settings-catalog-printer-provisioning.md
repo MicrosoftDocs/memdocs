@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 05/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -53,20 +53,17 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
   - **Universal Print**: For more specific information, go to [License Universal Print](/universal-print/fundamentals/universal-print-license).
   - **Microsoft Intune**: For more specific information, go to [Microsoft Intune licensing](../fundamentals/licenses.md).
 
-- Every printer must be registered in the Universal Print service (UP), which uses Microsoft Entra ID. To create the Intune policy, you need the device ID, printer shared ID, and printer shared name.
+- Every printer must be registered in the Universal Print service (UP), which uses Microsoft Entra ID. For more information, go to [What is printer registration?](/universal-print/fundamentals/universal-print-printer-registration).
 
-  For more specific information, go to [What is printer registration?](/universal-print/fundamentals/universal-print-printer-registration)
+- To create the Intune policy, you need the following printer information. Get this information from the Printer Administrator in your organization.  
 
-- Admin accounts need the following roles/licenses:
+  - Device ID
+  - Printer shared ID
+  - Printer shared name
 
-  - **Printer Administrator** or **Global Administrator** roles: Needed to add printers.
+- Accounts need the following roles/licenses:
 
-    For more information on these roles, go to [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference).
-
-  - **Intune Administrator** or **Global Administrator** roles: Needed to create and assign Intune policies.
-
-    For more information on these roles, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
-
+  - **Policy and Profile Manager** role: Needed to create and assign Intune policies. For information on this role, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
   - An assigned Universal Print license.
 
 - End user accounts need the following permissions/licenses:
