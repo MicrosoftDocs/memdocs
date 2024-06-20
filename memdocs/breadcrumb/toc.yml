@@ -13,7 +13,6 @@ items:
     - name: Endpoint settings management
       tocHref: /defender-endpoint/ 
       topicHref: /defender-endpoint/
-      
   - name: Configuration Manager
     tocHref: /mem/configmgr/
     topicHref: /mem/configmgr/

@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 06/03/2024
+  ms.date: 06/18/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -37,7 +37,7 @@ sections:
       - question: |
           Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE).
         answer: |
-          - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md?tabs=software). This requirement includes that the minimum required update is installed before starting the device for the first time:
+          - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md?tabs=software#software-requirements). This requirement includes that the minimum required update is installed before starting the device for the first time:
 
             - Verify with OEMs that devices shipped from the OEM have the minimum required update installed.
 
@@ -80,7 +80,7 @@ sections:
 
           Additionally, **Device group** in the Windows Autopilot device preparation policy shows **0 groups assigned**.
 
-          To fix the issue, add **Intune Provisioning Client** with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner of the device security group specified in the Windows Autopilot device preparation policy. For more information, see [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
+          To fix the issue, add the **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner of the device security group specified in the Windows Autopilot device preparation policy. For more information, see [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
 
       - question: |
           Unable to find Intune Provisioning Client with AppID of f1346770-5b25-470b-88bd-d5744ab7952c when trying to set the owner of the Windows Autopilot device preparation policy device group.

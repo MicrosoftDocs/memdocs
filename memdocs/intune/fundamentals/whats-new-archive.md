@@ -865,8 +865,6 @@ Applies to:
 
 - iOS/iPadOS
 
-For more information on this change, see [Plan for change: Intune is moving to support iOS/iPadOS 15 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-iosipados-15-and-later).
-
 > [!NOTE]
 >
 > Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
@@ -3777,7 +3775,7 @@ These new app types work in a similar way to the existing **web link** applicati
 ### Device management
 
 #### Microsoft Intune is ending support for Windows 8.1<!-- 14740233 -->
-Microsoft Intune is ending support on October 21, 2022 for devices running Windows 8.1. After that date, technical assistance and automatic updates that help protect your devices running Windows 8.1 will no longer be available. Also, because the sideloading scenario for line-of-business apps is only applicable to Windows 8.1 devices, Intune no longer supports Windows 8.1 sideloading. Sideloading is installing, and then running or testing an app that isn't cerified by the Microsoft Store. In Windows 10/11, "sideloading" is simply setting a device config policy to include "Trusted app installation". For more information, see [Plan for Change: Ending support for Windows 8.1](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-81-).
+Microsoft Intune is ending support on October 21, 2022 for devices running Windows 8.1. After that date, technical assistance and automatic updates that help protect your devices running Windows 8.1 will no longer be available. Also, because the sideloading scenario for line-of-business apps is only applicable to Windows 8.1 devices, Intune no longer supports Windows 8.1 sideloading. Sideloading is installing, and then running or testing an app that isn't cerified by the Microsoft Store. In Windows 10/11, "sideloading" is simply setting a device config policy to include "Trusted app installation". 
 
 #### Group member count visible in assignments<!-- 13434676 -->
 When assigning policies in the admin center, you can now see the number of users and devices in a group. Having both counts help you pinpoint the right group and understand the impact the assignment has before you apply it.
