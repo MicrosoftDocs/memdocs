@@ -78,7 +78,7 @@ For a detailed, step-by-step tutorial, see [Consistently upgrade your server TLS
 
 ## <a name="bkmk_wsus"></a> Update Windows Server Update Services (WSUS)
 
-Starting in Windows Server 2016, TLS 1.2 is supported by default for WSUS. 
+TLS 1.2 is supported by default for WSUS on all [currently supported version](/windows-server/get-started/windows-server-release-info) of Windows Server.
 
 To support TLS 1.2 in earlier versions of WSUS, install the following update on the WSUS server:
 
@@ -88,5 +88,7 @@ To support TLS 1.2 in earlier versions of WSUS, install the following update on 
 
 > [!NOTE]
 > On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 entered the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see **[Extended Security Updates and Configuration Manager](/mem/configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)**.
+
 ## Next steps
+
 - [Common issues when enabling TLS 1.2](enable-tls-1-2-troubleshoot.md)
