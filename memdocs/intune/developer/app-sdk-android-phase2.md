@@ -65,7 +65,7 @@ To learn more about MSAL, see the [MSAL Wiki] and [list of MSAL libraries].
 
 ## Register your Application with Microsoft Entra ID
 
-Before integrating MSAL into your Android application, follow the [instructions to register your application with Microsoft Entra ID].
+Before integrating MSAL into your Android application, all apps are required to register with the Microsoft identity platform. Follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
 This generates a **Client ID** for your application.
 
 Next, follow the instructions to [give your app access to the Intune Mobile App Management service].
@@ -149,7 +149,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 3: Gett
 [Microsoft Entra ID]:https://azure.microsoft.com/services/active-directory/
 [Microsoft accounts]:https://account.microsoft.com/
 [What is Microsoft Entra ID?]:/azure/active-directory/fundamentals/active-directory-whatis
-[instructions to register your application with Microsoft Entra ID]:/azure/active-directory/active-directory-app-registration
+[Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/active-directory-app-registration
 
 <!-- Microsoft Learn documentation: MSAL-->
 [Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview

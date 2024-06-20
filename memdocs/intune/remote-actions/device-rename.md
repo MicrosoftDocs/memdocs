@@ -7,12 +7,11 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 03/29/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -37,7 +36,7 @@ You can use the **Rename device** action to change the **Device name** in the Mi
 For more information, on modifying the Management name and renaming in the Company Portal go to:
 
 - [View device details with Microsoft Intune](../remote-actions/device-inventory.md#hardware-device-details).
-- [Rename device from the Intune Company Portal app for Windows](../user-help/rename-your-device-cpapp.md). 
+- [Rename device from the Intune Company Portal app for Windows](../user-help/rename-your-device-cpapp.md).
 
 If a device isn't listed here, it's not supported. This feature doesn't support renaming hybrid Microsoft Entra Windows devices.
 
@@ -57,7 +56,7 @@ You can rename the following types of devices:
 
 ## Rename a device
 
-Use the **Rename** action to give your device a new name. If you already renamed the device but don't see its new name, the device may need to check in to Intune. Check the status of your rename in device **Overview** before attempting to rename again.
+Use the **Rename** action to give your device a new name. If you already renamed the device but don't see its new name, the device might need to check in to Intune. Check the status of your rename in device **Overview** before attempting to rename again.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose a device > **...** > **Rename device**.

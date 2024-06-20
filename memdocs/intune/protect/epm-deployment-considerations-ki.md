@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2023
+ms.date: 05/29/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,18 +43,41 @@ Applies to:
 
 ## Deployment considerations for Endpoint Privilege Management
 
+### Windows 10 devices might not immediately receive confirmation of support approvals
+
+We are working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations). We are working with the owner to resolve this as quickly as possible.
+
+### Organization that disable User Account Control (UAC) may experience issues with Endpoint Privilege Management
+
+Endpoint Privilege Management does not support UAC being explicitly disabled. Windows policy controls for UAC Prompt Behavior exist to control the behavior of UAC. If organizations take additional steps to disable UAC outside of the existing policy controls, like disabling Windows services, they may experience issues with Endpoint Privilege Management.
+
+### Organizations use Application Control for Business might experience issues running Endpoint Privilege Management
+
+Application Control for Business policies that do not account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function. For more information about troubleshooting application control, see [WDAC debugging and troubleshooting](/windows/security/application-security/application-control/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting).
+
+> [!Note]
+> EPM is not included in default policies for Application Control and may require creating custom policies.
+
+### Organizations restricting users who can log on interactively might see issues with Endpoint Privilege Management
+
+Endpoint Privilege Management uses an isolated account to facilitate elevations. This account requires the ability to create an interactive logon session. Organizations who limit the ability for users to create interactive sessions will need to make changes for EPM to function properly.
+
+### Users requesting support approval for elevation must be the primary user on the device
+
+Endpoint Privilege Management currently requires the user requesting an elevation to be the primary user of the device. We are working to remove this limitation in a future release.
+
 ### Authoring files with a file name as one of the sole attributes for identification
 
 File name is an attribute that can be utilized to detect an application that needs to be elevated. However, it isn't protected by the signature of the file.
 
-File names are *highly susceptible* to change, and files that are signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which may not be your intended behavior.
+File names are *highly susceptible* to change, and files that are signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which might not be your intended behavior.
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
 
-### Elevation settings policies may show conflict if changed in quick succession
+### Elevation settings policies might show conflict if changed in quick succession
 
-Endpoint Privilege Management reports status of individual settings applied using the *Elevation Settings* profile. If settings in this profile (Default elevation behavior for instance) are changed multiple times in quick succession, it may result device reporting conflict or falling back to the default behavior of *Denying* the elevation. This is a transient state and resolves without further action (in less than 60 minutes). This issue will be fixed in a future release.
+Endpoint Privilege Management reports status of individual settings applied using the *Elevation Settings* profile. If settings in this profile (Default elevation behavior for instance) are changed multiple times in quick succession, it might result device reporting conflict or falling back to the default behavior of *Denying* the elevation. This is a transient state and resolves without further action (in less than 60 minutes). This issue will be fixed in a future release.
 
 ### Blocked files downloaded from the internet fail to elevate
 

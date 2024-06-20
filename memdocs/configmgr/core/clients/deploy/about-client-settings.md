@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 10/31/2023
+ms.date: 03/28/2024
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: reference
@@ -83,7 +83,10 @@ Enables [peer cache](../../plan-design/hierarchy/client-peer-cache.md) for Confi
 
 - **Port for content download from peer** (default TCP 8003): Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.  
 
-    For more information, see [Ports used for connections](../../plan-design/hierarchy/ports.md#BKMK_PortsClient-ClientWakeUp).  
+    For more information, see [Ports used for connections](../../plan-design/hierarchy/ports.md#BKMK_PortsClient-ClientWakeUp).
+
+> [!NOTE]  
+> We configure the port to download content from peer as (default TCP 8003) which binds to self-signed cert even in an environment where PKI certificate is enabled.
 
 ### Minimum duration before cached content can be removed (minutes)
 

@@ -108,7 +108,6 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipsourceroutingprotectionlevel)
-
   - **DisableIPSourceRouting (Device)**  
     Baseline default: *Enabled*  *Highest protection, source routing is completely disabled*
 
@@ -137,7 +136,6 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **Hardened UNC Paths**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#hardeneduncpaths)
-
   - **Hardened UNC Paths: (Device)**  
     Baseline defaults:
 
@@ -1160,15 +1158,8 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#disallowstoringofrunascredentials)
 
-<!-- 
-- ****  
-  Baseline default: *Enabled*  
-  [Learn more]()
-  - ****  
-    Baseline default: **
--->
 ## Auditing
-  <!-- UI Links add - in place of url which uses _ -->
+
 - **Account Logon Audit Credential Validation**  
   Baseline default: *Success+ Failure*  
   [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogon_auditcredentialvalidation)
@@ -1322,47 +1313,36 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **Allow Script Scanning**  
   Baseline default: *Allowed.*  
   [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscriptscanning)
-
   - **Block execution of potentially obfuscated scripts**  
     Baseline default: *Not configured*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
   - **Block Win32 API calls from Office macros**  
     Baseline default: *Not configured*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
   - **Block Office communication application from creating child processes**  
     Baseline default: *Not configured*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
   - **Block all Office applications from creating child processes**  
     Baseline default: *Not configured*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
   - **Block JavaScript or VBScript from launching downloaded executable content**  
     Baseline default: *Not configured*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
   - **Block untrusted and unsigned processes that run from USB**  
     Baseline default: *Not configured*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
   - **Block Adobe Reader from creating child processes**  
     Baseline default: *Not configured*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
   - **Block credential stealing from the Windows local security authority subsystem**  
     Baseline default: *Not configured*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
   - **Block Office applications from creating executable content**  
     Baseline default: *Not configured*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
   - **Block Office applications from injecting code into other processes**  
     Baseline default: *Not configured*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
   - **Block executable content from email client and webmail**  
     Baseline default: *Not configured*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
@@ -1427,12 +1407,10 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **Device Password Enabled**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordenabled)
-
   - **Device Password History**  
     Baseline default: *Configured*  
     Value: *24*  
     [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordhistory)
-
   - **Min Device Password Length**  
     Baseline default: *Configured*  
     Value: *14*  
@@ -1449,11 +1427,9 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **Allow Windows Spotlight (User)**  
   Baseline default: *Allow*  
   [Learn more](/windows/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowwindowsspotlight)
-
   - **Allow Windows Consumer Features**  
     Baseline default: *Block*  
     [Learn more](/windows/client-management/mdm/policy-csp-experience?WT.mc_id=Portal-fx#allowwindowsconsumerfeatures)
-
   - **Allow Third Party Suggestions In Windows Spotlight (User)**  
     Baseline default: *Block*  
     [Learn more](/windows/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowthirdpartysuggestionsinwindowsspotlight)
@@ -1463,27 +1439,21 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **Enable Domain Network Firewall**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablefirewall)
-
   - **Enable Log Success Connections**  
     Baseline default: *Enable Logging Of Successful Connections*  
     [Learn more](/windows/client-management/mdm/Firewall-csp/?WT.mc_id=Portal-fx#mdmstoredomainprofileenablelogsuccessconnections)
-
   - **Default Outbound Action**  
     Baseline default: *Allow*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledefaultoutboundaction)
-
   - **Enable Log Dropped Packets**  
     Baseline default: *Enable Logging Of Dropped Packets*  
     [Learn more](/windows/client-management/mdm/Firewall-csp/?WT.mc_id=Portal-fx#mdmstoredomainprofileenablelogdroppedpackets)
-
   - **Disable Inbound Notifications**  
     Baseline default: *True*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableinboundnotifications)
-
   - **Log Max File Size**  
     Baseline default: *16384*  
     [Learn more](/windows/client-management/mdm/Firewall-csp/?WT.mc_id=Portal-fx#mdmstoredomainprofilelogmaxfilesize)
-
   - **Default Inbound Action for Domain Profile**  
     Baseline default: *Block*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledefaultinboundaction)
@@ -1491,27 +1461,21 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **Enable Private Network Firewall**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablefirewall)
-
   - **Log Max File Size**  
     Baseline default: *16384*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofilelogmaxfilesize)
-
   - **Default Inbound Action for Private Profile**  
     Baseline default: *Block*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultinboundaction)
-
   - **Enable Log Success Connections**  
     Baseline default: *Enable Logging Of Successful Connections*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablelogsuccessconnections)
-
   - **Enable Log Dropped Packets**  
     Baseline default: *Enable Logging Of Dropped Packets*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablelogdroppedpackets)
-
   - **Default Outbound Action**  
     Baseline default: *Allow*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultoutboundaction)
-
   - **Disable Inbound Notifications**  
     Baseline default: *True*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableinboundnotifications)
@@ -1519,35 +1483,27 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **Enable Public Network Firewall**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablefirewall)
-
   - **Enable Log Dropped Packets**  
     Baseline default: *Enable Logging Of Dropped Packets*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablelogdroppedpackets)
-
   - **Log Max File Size**  
     Baseline default: *16384*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofilelogmaxfilesize)
-
   - **Default Outbound Action**  
     Baseline default: *Allow*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultoutboundaction)
-
   - **Disable Inbound Notifications**  
     Baseline default: *True*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableinboundnotifications)
-
   - **Default Inbound Action for Public Profile**  
     Baseline default: *Block*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
-
   - **Allow Local Policy Merge**  
     Baseline default: *False*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalpolicymerge)
-
   - **Enable Log Success Connections**  
     Baseline default: *Enable Logging Of Successful Connections*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablelogsuccessconnections)
-
   - **Allow Local Ipsec Policy Merge**  
     Baseline default: *False*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)

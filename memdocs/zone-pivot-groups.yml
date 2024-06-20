@@ -37,6 +37,8 @@ groups:
   title: ATP baseline versions
   prompt: Choose a version
   pivots:
+    - id: mde-v24h1
+      title: Version 24H1
     - id: atp-december-2020
       title: December 2020
     - id: atp-sept-2020
@@ -74,3 +76,12 @@ groups:
       title: Generally Available
     - id: mdssc-preview
       title: Opt-in Public Preview
+
+- id: platforms-windows-ios
+  title: Device platform
+  prompt: Choose which platform you are configuring
+  pivots: 
+  - id: windows
+    title: Windows
+  - id: ios
+    title: iOS

@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/03/2023
+ms.date: 04/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -98,6 +98,8 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
     - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
     - Windows Update for Business deployment service
 
+- Enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy feature updates.
+
 - Feature updates are supported for the following Windows 10/11 editions:  
   - Pro
   - Enterprise
@@ -158,17 +160,43 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows** > **Feature updates for Windows 10 and later** > **Create profile**.
+2. Select **Devices** > **Windows** > **Windows 10 and later updates** > **Feature updates** > **Create profile**.
 
 3. Under **Deployment settings**:
 
-   - Specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**. Only versions of Windows that remain in support are available to select.
+   a. **Name**, **Description**: Specify a name, and a description (optional).
+  
+   b. **Required/Optional updates**: These options are only available when the target version is Windows 11.
 
-   - Configure **Rollout options** to manage when Windows Updates makes the update available to devices that receive this policy. For information about using these options, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md).
+     - When the default option **Make available to users as a required update** is selected, the device will automatically install the update based on device settings.
+     - When the admin selects the option **Make available to users as an optional update**, then the selected updates are made available to users as an optional update. The rollout settings still control when the update is available to the device but then the user must choose to install the update before it is installed on the device.
+
+     **What the user sees on their device**  
+     When the admin makes the update available as an **Optional** update, the user must navigate to the **Windows update settings** page to see and choose to install the update. It is recommended to communicate to end users through your communication channels that an optional update is available to them.  
+     When the user navigates to the **Windows update settings** page, they can see and choose to install the update when they're willing to take the update.
+     Users have to click **Download** to install the update. Otherwise it doesn't get installed until the admin makes it a **Required** update.
+     It's the same optional update experience that users are familiar with in their personal PCs.
+
+     When the admin switches from **Optional** to **Required**, the following behavior is observed:  
+
+     - Updates aren't reinstalled for people who went ahead and opted to install the update back when it was an **Optional** update.
+     - If a device has not started on an update, the next time the device checks for updates the update is treated and automatically installed as a **Required** update.
+
+     When the admin switches from **Required** to **Optional**, the following behavior is observed:
+
+     - Devices that have already installed the update are not impacted.
+     - Devices that are pending restart are likely to continue to install the update as a **Required** update.
+     - Switching only impacts devices that haven't started the update yet or were early enough in the update process so they could be changed to an **Optional** update.
+
+   c. **Feature update to deploy**: select the specific version of Windows with the feature set you want deployed on your devices. Only versions of Windows that remain in support are available to select.
+
+   d. **Rollout options**: Configure **Rollout options** to manage when Windows Updates makes the update available to devices that receive this policy. For more information about using these options, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md), and then select **Next**.
 
 4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature updates deployment to one or more device groups. Select **Next** to continue.
 
 5. Under **Review + create**, review the settings. When ready to save the Feature updates policy, select **Create**.  
+
+
 
 ## Upgrade devices to Windows 11
 

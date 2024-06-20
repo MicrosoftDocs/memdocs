@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -37,7 +37,7 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Set up a Windows Autopilot profile
 
-Windows Autopilot deployment for existing devices isn't an Autopilot deployment where an Autopilot profile is downloaded and applied to a device during the out of box experience (OOBE) of Windows Setup. Instead, it prepares a device to receive an Autopilot profile by performing the following actions:
+Windows Autopilot deployment for existing devices isn't an Autopilot deployment where an Autopilot profile is downloaded and applied to a device during the out-of-box experience (OOBE) of Windows Setup. Instead, it prepares a device to receive an Autopilot profile by performing the following actions:
 
 - Wipes the device.
 - Installs a fresh copy of Windows.

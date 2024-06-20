@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 03/28/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -40,6 +40,7 @@ Microsoft Intune will export reports using the following Microsoft Graph API end
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
+https://graph.microsoft.com/v1.0/deviceManagement/reports/exportJobs
 ```
 
 ## Example devices report request and response
