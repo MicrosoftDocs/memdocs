@@ -30,7 +30,7 @@ ms.collection:
 - essentials-security
 ---
 
-# Microsoft Purview Customer Key for Windows 365 Cloud PCs
+# Microsoft Purview Customer Key for Windows 365 Cloud PCs (preview)
 
 [Microsoft Purview Customer Key](/purview/customer-key-overview) is a security feature that lets you add an extra layer of encryption to your data within Microsoft 365 services.
 
@@ -39,6 +39,8 @@ When you use Customer Key with Windows 365 Cloud PCs:
 - Your Cloud PC disks, snapshots, and images are encrypted at rest with customer-managed keys.
 - These keys are supplied by you and managed using Azure Key Vault.
 - Microsoft manages all other keys, supporting a secure and controlled environment.
+
+Windows 365 support for Customer Keys is  in [public preview](../public-preview.md).
 
 ## Set up Customer Keys for your Windows 365 Cloud PCs
 
