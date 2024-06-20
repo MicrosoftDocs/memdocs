@@ -45,7 +45,7 @@ Optionally, you can use Intune to add and deploy the Microsoft Authenticator, an
 > - Better Mobile (Android, iOS/iPadOS)
 > - BlackBerry Mobile (CylancePROTECT for Android, iOS/iPadOS)
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
-> - Jamf (Android, iOS/iPadOS) *(formerly Wandera)*
+> - Jamf (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - SentinelOne (Android, iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
