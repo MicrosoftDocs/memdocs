@@ -72,7 +72,7 @@ The initial release of Windows Autopilot device preparation has the following kn
 
 ### Device is stuck at 100% during the out-of-box experience (OOBE)
 
-- *2024/06/03*
+2024/06/03
 
 If during Windows Autopilot device preparation deployment a device gets stuck at 100% during the out-of-box experience (OOBE), the end-user needs to manually restart the device for the deployment to continue. This issue is a known issue and a fix is being worked on.
 
