@@ -20,7 +20,7 @@ appliesto:
 
 # Windows Autopilot: What's new
 
-## Update to enrollmentProfileName property for devices deployed via Autopilot for existing devices
+## Update to enrollmentProfileName property for devices deployed via Windows Autopilot for existing devices
 <!--9105086-->
 Date added: *06/21/2024*
 
