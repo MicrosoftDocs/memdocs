@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/18/2024
+ms.date: 06/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -225,7 +225,7 @@ To use the report:
    - **Service-side data**:
      - **Pending**:
        - **Validation** – The update can't be offered to the device because of a validation issue with the device and Windows Update.
-       - **Scheduled** – The update isn't ready to be offered to the device but is ready to be offered.
+       - **Scheduled** – The update isn't ready to be offered to the device but is scheduled for offering at a later date.
      - **On hold**:
        - **Admin paused** – The update is on hold because the Deployment being paused by an explicit Administrator action.
        - **ServicePaused** – The update is on hold because of an automatic action by Windows Update.
