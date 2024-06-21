@@ -30,7 +30,7 @@ This article describes known issues that can often be resolved with:
 
 ## Windows Autopilot device preparation policy shows 0 groups assigned
 
-|*2024/06/18*|
+*2024/06/18*
 
 There's a known issue that the Windows Autopilot device preparation policy shows **0 groups assigned** even when:
 
@@ -41,7 +41,7 @@ The issue is being investigated. As a workaround, create a new assigned device s
 
 ## Unable to assign Windows Autopilot device preparation policy to user group
 
-> *2024/06/18*
+- *2024/06/18*
 
 There's a known issue where an administrator might not be able to assign the Windows Autopilot device preparation policy to a user group. When the issue occurs, the following error might occur:
 
@@ -60,7 +60,7 @@ For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#
 
 ### Initial release of Windows Autopilot device preparation
 
-- *2024/06/03*
+> *2024/06/03*
 
 The initial release of Windows Autopilot device preparation has the following known issues and limitations:
 
