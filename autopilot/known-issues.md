@@ -258,9 +258,9 @@ To fix this issue:
 - Edit the Configuration Manager task sequence and disable the **Prepare Windows for Capture** step.
 - Add a new **Run command-line** step that runs the following command:
 
-    > ```cmd
-    > C:\Windows\System32\sysprep\sysprep.exe /oobe /reboot
-    > ```
+  ```cmd
+  C:\Windows\System32\sysprep\sysprep.exe /oobe /reboot
+  ```
 
 For more information, see [Modify the task sequence to account for Sysprep command line configuration](tutorial/existing-devices/create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) and [Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#prepare-windows-for-capture).
 
