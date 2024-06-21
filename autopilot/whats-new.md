@@ -24,7 +24,7 @@ appliesto:
 <!--9105086-->
 Date added: *06/21/2024*
 
-Devices deployed via Windows Autopilot for existing devices which are also registered for Windows Autopilot would previously have an **enrollmentProfileName** property incorrectly set as **OfflineAutoPilotProfile-\<ZtdCorrelationId\>**. With a recent change, **enrollmentProfileName** has been updated to correctly display the assigned Windows Autopilot profile. This may impact customers who are using **enrollmentProfileName** for Microsoft Entra dynamic groups or Microsoft Intune assignment filters to distinguish devices deployed via Windows Autopilot for existing devices.
+Devices deployed via Windows Autopilot for existing devices which are also registered for Windows Autopilot would previously have an **enrollmentProfileName** property incorrectly set as **OfflineAutoPilotProfile-\<ZtdCorrelationId\>**. With a recent change, **enrollmentProfileName** has been updated to correctly display the assigned Windows Autopilot profile. This may impact customers who are using **enrollmentProfileName** for Microsoft Entra dynamic groups or Microsoft Intune assignment filters to distinguish devices deployed via Windows Autopilot for existing devices. For more information, see [Register the device for Windows Autopilot](existing-devices.md#register-the-device-for-windows-autopilot).
 
 ## Windows Autopilot support for Microsoft Teams Rooms
 
