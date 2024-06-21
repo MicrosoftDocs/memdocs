@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2024
+ms.date: 06/17/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,6 +39,10 @@ Find the endpoint security policies for Account protection under *Manage* in the
 
 - To support the *Account protection (preview)* profile, devices must run Windows 10 or Windows 11.
 - To support the *Local user group membership (preview)* profile, devices must run Windows 10 20H2 or later, or Windows 11.
+
+## Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to manage Intune account protection profiles, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Account protection profiles
 

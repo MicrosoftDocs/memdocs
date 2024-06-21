@@ -154,7 +154,7 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 For details about the payload settings for the Extensible Single Sign-on extension, go to [Extensible Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/depfd9cdf845/web) (opens Apple's web site).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create** > **New policy**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **macOS**.

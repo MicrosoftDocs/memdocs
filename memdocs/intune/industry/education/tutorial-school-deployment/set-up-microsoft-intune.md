@@ -109,7 +109,7 @@ It's common for Windows Hello for Business to be disabled at the tenant level. T
 To disable Windows Hello for Business at the tenant level:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices** > **Windows** > **Windows Enrollment**.
+1. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment**.
 1. Select **Windows Hello for Business**.
 1. Ensure that **Configure Windows Hello for Business** is set to **disabled**.
 1. Select **Save**.

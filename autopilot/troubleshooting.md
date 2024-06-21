@@ -33,9 +33,9 @@ On Windows 11, the Autopilot diagnostic page can be opened to view additional de
 
 1. Go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status) where the Autopilot diagnostics page needs to be enabled.
 
-2. Make sure that **Show app and profile configuration progress** is selected to **Yes**.
+1. Make sure that **Show app and profile configuration progress** is selected to **Yes**.
 
-3. Make sure that **Turn on log collection and diagnostics page for end users** is selected to **Yes**.
+1. Make sure that **Turn on log collection and diagnostics page for end users** is selected to **Yes**.
 
 Once the diagnostic page is enabled, select the **View Diagnostics button** or enter the keystroke <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>D</kbd> to access any diagnostic information. The Autopilot diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode.
 

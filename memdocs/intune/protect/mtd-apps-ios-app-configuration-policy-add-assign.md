@@ -7,7 +7,7 @@ description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authe
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 06/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -278,10 +278,10 @@ Choose the section that corresponds to your MTD provider:
 ### Assigning Jamf
 
 - **Android**:
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Jamf Mobile app store URL](https://play.google.com/store/apps/details?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 8.0**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Jamf Mobile app store URL](https://play.google.com/store/apps/details/?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 11**.
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Jamf Mobile app store URL](https://apps.apple.com/us/app/jamf-trust/id1608041266) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Jamf Mobile app store URL](https://apps.apple.com/us/app/jamf-trust/id1608041266?mt=8) for the **Appstore URL**.
 
 ### Assigning Lookout for Work
 

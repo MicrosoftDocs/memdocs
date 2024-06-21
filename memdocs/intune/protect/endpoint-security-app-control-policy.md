@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/31/2024
+ms.date: 06/17/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -93,11 +93,11 @@ To manage App Control for Business policies, an account must have sufficient rol
 
 - **Enable use of a managed installer** - Accounts must be assigned the role of **Global Administrator** or **Intune Service Administrator**.
 
-- **Manage App Control for Business policy** - Accounts must have the **Security baseline** permissions for *Delete*, *Read*, *Assign*, *Create*, and *Update*.
+- **Manage App Control for Business policy** - Accounts must have the **Application control** permission, which includes rights for *Delete*, *Read*, *Assign*, *Create*, *Update*, and *View Reports*.
 
 - **View reports for App Control for Business policy** - Accounts must have the **Organization** permission of *Read*.
 
-For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
+For guidance on assigning the right level of permissions and rights to manage Intune App Control for Business policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ### Government cloud support
 
@@ -434,7 +434,7 @@ It can be helpful to explore [Advanced Hunting, which is a feature in Microsoft 
 
 ### What do I do with the old Application Control policy from my Attack surface reduction policy
 
-You may have noticed instances of the Application Control policy in the Intune UI under **Endpoint Security** > **Attach Surface Reduction** or under **Devices** > **Configuration**. These will be deprecated in a future release.
+You may have noticed instances of the Application Control policy in the Intune UI under **Endpoint Security** > **Attach Surface Reduction** or under **Devices** > **Manage devices** > **Configuration**. These will be deprecated in a future release.
 
 ### What if I have multiple base or supplemental policies on the same device?
 

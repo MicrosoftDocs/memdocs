@@ -40,7 +40,7 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 > - BlackBerry Mobile (Android, iOS/iPadOS)
 > - Better Mobile (Android,iOS/iPadOS)
 > - Check Point Harmony Mobile Protect (Android, iOS/iPadOS)
-> - Jamf (Android, iOS/iPadOS) *(formerly Wandera)*
+> - Jamf (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - SentinelOne (Android,iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
