@@ -89,7 +89,7 @@ Endpoint Privilege Management (EPM) *elevation rules* now support the elevation 
 
 For information about using EPM, see [Endpoint Privilege Management](../protect/epm-overview.md).
 
-#### View CA key type in Microsoft Cloud PKI properties<!-- 27032276 -->
+#### View the certification authority key type in Microsoft Cloud PKI properties<!-- 27032276 -->
 
 A new Microsoft Cloud PKI property called *CA keys* is available in the admin center and shows the type of certification authority keys used for signing and encryption. The property will display one of the following values:
 
@@ -215,6 +215,11 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 End users can view the BitLocker recovery key for an enrolled Windows device and the FileVault recovery key for an enrolled Mac in the Company Portal app for iOS and Company Portal app for macOS. This capability will reduce helpdesk calls in the event the end user gets locked out of their corporate machines. End users can access the recovery key for an enrolled device by signing into the Company Portal app and selecting **Get recovery key**. This experience is similar to the recovery process on the Company Portal website, which also allows end users to see recovery keys.
 
 You can prevent end users within your organization from accessing BitLocker recovery keys by configuring the **Restrict non-admin users from recovering the BitLocker keys for their owned device** setting in Microsoft Entra ID.
+
+Applies to:
+
+- macOS
+- Windows 10/11
 
 For more information, see:
 
