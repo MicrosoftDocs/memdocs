@@ -30,7 +30,7 @@ This article describes known issues that can often be resolved with:
 
 ## Windows Autopilot device preparation policy shows 0 groups assigned
 
-- *2024/06/18*
+|*2024/06/18*|
 
 There's a known issue that the Windows Autopilot device preparation policy shows **0 groups assigned** even when:
 
