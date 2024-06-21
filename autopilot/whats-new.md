@@ -20,6 +20,10 @@ appliesto:
 
 # Windows Autopilot: What's new
 
+## Update to enrollmentProfileName property for devices deployed via Autopilot for existing devices
+
+Devices deployed via Autopilot for existing devices which are also registered for Autopilot would previously have an **enrollmentProfileName** property incorrectly set as **OfflineAutoPilotProfile-<ZtdCorrelationId>**. With a recent change, **enrollmentProfileName** has been updated to correctly display the assigned Autopilot profile. This may impact customers who are using **enrollmentProfileName** for Entra dynamic groups or Intune assignment filters to distinguish devices deployed via Autopilot for existing devices.
+
 ## Windows Autopilot support for Microsoft Teams Rooms
 
 Windows Autopilot streamlines provisioning for laptops. Now Windows Autopilot adds the same support for **Microsoft Teams Rooms**! With this combination, Teams Rooms devices can now be deployed and provisioned without needing physical access to the device. Policies and apps are configured and the Teams Rooms console automatically signed in without needing to enter credentials.
