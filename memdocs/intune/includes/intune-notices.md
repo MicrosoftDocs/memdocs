@@ -1,11 +1,12 @@
 ---
 title: include file
 description: include file
-author: ErikjeMS  
+author: dougeby  
 ms.service: microsoft-intune
 ms.topic: include
 ms.date: 03/13/2024
-ms.author: erikje
+ms.author: dougeby
+manager: dougeby
 ms.custom: include file
 ---
 
