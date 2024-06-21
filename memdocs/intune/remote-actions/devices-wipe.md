@@ -223,7 +223,6 @@ If you want to remove devices from the Intune admin center, you can delete them 
 | iOS     | All                                        | RETIRE - All Profiles are deleted, CP app is signed out                            |
 | Windows | All                                        | RETIRE - All Profiles are deleted, work and school account is signed out                   |
 | macOS   | All                                        | RETIRE - All Profiles are deleted, CP app is deleted                              |
-| Linux   | All                                        | DELETED from Intune Portal only, DEVICE is not RETIRE/WIPE  |
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
