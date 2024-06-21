@@ -32,7 +32,7 @@ appliesto:
 
 Windows Autopilot self-deploying mode allows deployment of a device with little to no user interaction. For devices with an Ethernet connection, no user interaction is required. For devices connected via Wi-Fi, the user must only:
 
-- Choose the language, locale, and keyboard.
+- Select the language, locale, and keyboard.
 - Make a network connection.
 
 Self-deploying mode provides all the following features:

@@ -29,7 +29,7 @@ ms.collection:
 # Remediations
 
 > [!IMPORTANT]
-> **Proactive Remediations** is renamed to **Remediations** and is now available from **Devices** > **Remediations**. All references to Proactive Remediations in this documentation are replaced with **Remediations**. However, the term Proactive Remediations might still appear in some blogs and other articles.
+> **Proactive Remediations** is renamed to **Remediations** and is now available from **Devices** > **Manage devices** > **Scripts and remediations**. All references to Proactive Remediations in this documentation are replaced with **Remediations**. However, the term Proactive Remediations might still appear in some blogs and other articles.
 
 Remediations helps you fix common support issues before end-users notice issues.
 
@@ -104,7 +104,7 @@ There are built-in script packages you can use to get started with Remediations.
 
 To assign the script package:
 
-1. From the **Devices** > **Remediations** node, select one of the built-in script packages.
+1. From the **Devices** > **Manage devices** > **Scripts and remediations** node, select one of the built-in script packages.
 1. Select **Properties**, then next the **Assignments** heading, select **Edit**.
 1. Choose the groups you want to **Assign to** and any **Excluded groups** for the script package.
 1. To change the **Scope tags**, select **Edit** then **Select scope tags**.
@@ -127,7 +127,7 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 
 Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather than editing them directly in your browser helps ensure that the script encoding is correct so your devices can execute them.
 
-1. In the Intune admin center, go to **Devices** > **Remediations**.
+1. In the Intune admin center, go to **Devices** > **Manage devices** > **Scripts and remediations**.
 1. Choose **Create script package** button to create a script package.
      [![Remediations page. Select the create link.](media/remediations/remediations-create.png)](media/remediations/remediations-create.png#lightbox)
 1. In the **Basics** step, give the script package a **Name** and optionally, a **Description**. The **Publisher** field can be edited, but defaults to your name. **Version** can't be edited.
@@ -173,7 +173,7 @@ You can use the **Run remediation** device action to run a remediation script on
 ### How to run a Remediation script on-demand
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Navigate to  **Devices** >  **Windows** > select a supported device.
+2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
 3. On the device's  **Overview**  page, select  **…** > **Run remediation (preview).**
 4. In the **Run remediation (preview)** pane, select the **Script package** you want to run from the list. Select **View details** to see properties of the script package like detection and remediation script contents, description, and configured settings.
 5. To run the remediation on-demand, select **Run remediation**.
@@ -207,7 +207,7 @@ The client reports Remediation information at the following times:
 
 ## Monitor your script packages
 
-1. In the Intune admin center, go to **Devices** > **Remediations**, you can see an overview of your detection and remediation status.
+1. In the Intune admin center, go to **Devices** > **Manage devices** > **Scripts and remediations**, you can see an overview of your detection and remediation status.
        [![Remediations report, overview page.](media/remediations/remediations-report-overview.png)](media/remediations/remediations-report-overview.png#lightbox)
 
 1. Select **Device status** to get status details for each device in your deployment.
@@ -222,7 +222,7 @@ To help you easily analyze returned outputs, use the **Export** option to save t
 You can view the status of Remediations that have been assigned or run on-demand to a device.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Navigate to  **Devices** >  **Windows** > select a supported device.
+2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
 3. Select **Remediations** in the **Monitor** section.
 
 ## Next steps
