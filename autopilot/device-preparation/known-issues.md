@@ -30,7 +30,7 @@ This article describes known issues that can often be resolved with:
 
 ## Windows Autopilot device preparation policy shows 0 groups assigned
 
-Date added: *06/18/2024*
+Date added: *June 18, 2024*
 
 There's a known issue that the Windows Autopilot device preparation policy shows **0 groups assigned** even when:
 
@@ -41,7 +41,7 @@ The issue is being investigated. As a workaround, create a new assigned device s
 
 ## Unable to assign Windows Autopilot device preparation policy to user group
 
-Date added: *06/18/2024*
+Date added: *June 18, 2024*
 
 There's a known issue where an administrator might not be able to assign the Windows Autopilot device preparation policy to a user group. When the issue occurs, the following error might occur:
 
@@ -60,19 +60,19 @@ For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#
 
 ### Device is stuck at 100% during the out-of-box experience (OOBE)
 
-Date added: *06/03/2024*
+Date added: *June 3, 2024*
 
 If during Windows Autopilot device preparation deployment a device gets stuck at 100% during the out-of-box experience (OOBE), the end-user needs to manually restart the device for the deployment to continue. This issue is a known issue and a fix is being worked on.
 
 ### Object with AppID of f1346770-5b25-470b-88bd-d5744ab7952c displays as Intune Autopilot ConfidentialClient
 
-Date added: *06/03/2024*
+Date added: *June 3, 2024*
 
 In some tenants, when trying to set the owner of the device group used in the Windows Autopilot device preparation policy, the service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** displays as **Intune Autopilot ConfidentialClient** instead of **Intune Provisioning Client**. As long as the service principal has an AppID of **f1346770-5b25-470b-88bd-d5744ab7952c**, it's the correct service principal and can be selected.
 
 ### Conflict between Microsoft Entra ID and Windows Autopilot device preparation local administrator setting
 
-Date added: *06/03/2024*
+Date added: *June 3, 2024*
 
 There's a compatibility problem between the Windows Autopilot device preparation policy **User account type** setting and the Microsoft Entra ID **Local administrator settings**. Specifically, when the Windows Autopilot device preparation policy **User account type** setting is set to **Standard user** and the Microsoft Entra ID setting **Registering user is added as local administrator on the device during Microsoft Entra join (Preview)** under **Local administrator settings** is set to either **Selected** or **None**, provisioning gets skipped during a Windows Autopilot device preparation deployment. This settings conflict leads to a scenario where users could reach the desktop without having the expected applications installed. The Microsoft Entra ID **Local administrator settings** can be found by signing into the [Azure portal](https://portal.azure.com/) and navigating to **Microsoft Entra ID** > **Manage | Devices** > **Manage | Devices settings**.
 
@@ -99,13 +99,13 @@ If the intention is for the user to be a local administrator user on the device,
 
 ### Corporate identifiers isn't working in initial release of Windows Autopilot device preparation
 
-Date added: *06/03/2024*
+Date added: *June 3, 2024*
 
 Corporate identifiers isn't working in the initial release of Windows Autopilot device preparation. If the personal device restriction is enabled and personal devices aren't allowed, enrollment always fails during the Windows Autopilot device preparation deployment. For this reason, Windows Autopilot device preparation doesn't work when the personal device restriction is enabled. The issue is being investigated. Microsoft recommends that customers that have personal device restrictions enabled wait for the issue to be resolved before trying to use Windows Autopilot device preparation.
 
 ### Initial release of Windows Autopilot device preparation
 
-Date added: *06/03/2024*
+Date added: *June 3, 2024*
 
 The initial release of Windows Autopilot device preparation has the following known issues and limitations:
 
