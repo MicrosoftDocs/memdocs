@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -41,12 +40,12 @@ Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk
 > - Better Mobile (Android, iOS/iPadOS)
 > - BlackBerry Mobile (Android, iOS/iPadOS)
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
+> - Jamf (Android, iOS/iPadOS)
 > - Microsoft Defender for Endpoint (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - Trellix Mobile Security (Android, iOS/iPadOS)
 > - SentinelOne (Android, iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
-> - Wandera (Android, iOS/iPadOS)
 > - Windows Security Center (Windows)
 > - Zimperium (Android, iOS/iPadOS)
  

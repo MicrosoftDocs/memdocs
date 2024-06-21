@@ -59,7 +59,7 @@ Additionally, review the following information:
 Complete these steps to create an enrollment profile for devices enrolling via user enrollment with Company Portal.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**. 
+2. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment**. 
 3. Under **Enrollment Options**, choose **Enrollment types**. 
 4. Select **Create profile** > **iOS/iPadOS**.  
 5. On the **Basics** page, enter a name and description for the profile so that you can distinguish it from other profiles in the admin center. Device users don't see these details. 

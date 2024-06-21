@@ -7,12 +7,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 02/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -41,7 +40,7 @@ Use shell scripts to extend device management capabilities in Intune, beyond wha
 
 Ensure that the following prerequisites are met when composing shell scripts and assigning them to macOS devices.
 
-- Devices are running macOS 11.0 or later.
+- Devices are running macOS 12.0 or later.
 - Devices are managed by Intune.
 - Devices are connected directly to the Internet. Connection through a proxy is not supported. 
 - Shell scripts begin with `#!` and must be in a valid location such as `#!/bin/sh` or `#!/usr/bin/env zsh`.
@@ -60,7 +59,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 ## Create and assign a shell script policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **macOS** > **Shell scripts** > **Add**.
+2. Select **Devices** > **By platform** > **macOS** > **Manage devices** > **Scripts** > **Add**.
 3. In **Basics**, enter the following properties, and select **Next**:
    - **Name**: Enter a name for the shell script.
    - **Description**: Enter a description for the shell script. This setting is optional, but recommended.
@@ -149,7 +148,7 @@ You can create custom attribute profiles which enable you to collect custom prop
 ### Create and assign a custom attribute for macOS devices
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **macOS** > **Custom attributes** > **Add**.
+2. Select **Devices** > **By platform** > **macOS** > **Organize devices** > **Custom attributes for macOS** > **Add**.
 3. In **Basics**, enter the following properties, and select **Next**:
    - **Name**: Enter a name for the script.
    - **Description**: Enter a description for the script. This setting is optional, but recommended.

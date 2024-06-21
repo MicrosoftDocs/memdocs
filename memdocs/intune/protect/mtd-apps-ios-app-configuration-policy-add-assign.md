@@ -7,12 +7,11 @@ description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authe
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 06/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 
 # optional metadata
@@ -88,6 +87,44 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 - For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
 
   `<dict><key>MDM</key><string>INTUNE</string></dict>`
+
+### CrowdStrike Falcon for Mobile app configuration policy
+
+To configure **Android Enterprise** and **iOS** app configuration policies for CrowdStrike Falcon, see [Integrating Falcon for Mobile with Microsoft Intune for remediation actions](https://falcon.crowdstrike.com/documentation/page/odf8977b/integrating-falcon-for-mobile-with-microsoft-intune-for-remediation-actions) in the CrowdStrike documentation. You must sign in with your CrowdStrike credentials before you can access this content.
+
+For general guidance about Intune app configuration policies, see the following articles in the Intune documentation:
+
+- [Android managed devices](../apps/app-configuration-policies-use-android.md)
+- [iOS managed devices](../apps/app-configuration-policies-use-ios.md)
+
+### Jamf Trust app configuration policy
+
+> [!NOTE]
+> For initial testing, use a test group when assigning users and devices in the Assignments section of the configuration policy.
+
+- **Android Enterprise**:  
+  See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Jamf Android app configuration policy using the following information when prompted.
+
+  1. In the **Jamf Portal**, select the **Add** button under **Configuration settings** format.
+  2. Select **Activation Profile URL** from the list of **Configuration Keys**. Select **OK**.
+  3. For **Activation Profile URL** select **string** from the **Value type** menu then copy the **Shareable Link URL** from the desired Activation Profile in RADAR.
+  4. In the **Intune admin center app configuration UI**, select **Settings**, define **Configuration settings format > Use Configuration Designer** and paste the **Shareable Link URL**.
+
+  > [!NOTE]
+  >
+  > Unlike iOS, you will need to define a unique Android Enterprise app configuration policy for each Activation Profile. If you don’t require multiple Activation Profiles, you may use a single Android app configuration for all target devices. When creating Activation Profiles in Jamf, be sure to select Microsoft Entra ID under the Associated User configuration to ensure Jamf is able to synchronize the device with Intune via UEM Connect.
+
+- **iOS**:  
+  See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Jamf iOS app configuration policy using the information below when prompted.
+
+  1. In **Jamf Portal**, navigate to **Devices > Activations** and select any activation profile. Select **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.
+  2. Expand the box to reveal the iOS app configuration XML and copy it to your system clipboard.
+  3. In **Intune admin center app configuration UI Settings,** define **Configuration settings format > Enter XML data**.
+  4. Paste the XML in the app configuration text box.
+
+  > [!NOTE]
+  >
+  > A single iOS configuration policy may be used across all devices that are to be provisioned with Jamf.  
 
 ### Lookout for Work app configuration policy
 
@@ -168,35 +205,6 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 
 See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Trend Micro Mobile Security as a Service app configuration policy.
 
-### Wandera app configuration policy
-
-> [!NOTE]
-> For initial testing, use a test group when assigning users and devices in the Assignments section of the configuration policy.
-
-- **Android Enterprise**:  
-  See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Wandera Android app configuration policy using the following information when prompted.
-
-  1. In the **RADAR Wandera Portal**, select the **Add** button under **Configuration settings** format.
-  2. Select **Activation Profile URL** from the list of **Configuration Keys**. Select **OK**.
-  3. For **Activation Profile URL** select **string** from the **Value type** menu then copy the **Shareable Link URL** from the desired Activation Profile in RADAR.
-  4. In the **Intune admin center app configuration UI**, select **Settings**, define **Configuration settings format > Use Configuration Designer** and paste the **Shareable Link URL**.
-
-  > [!NOTE]
-  >
-  > Unlike iOS, you will need to define a unique Android Enterprise app configuration policy for each Wandera Activation Profile. If you don’t require multiple Wandera Activation Profiles, you may use a single Android app configuration for all target devices. When creating Activation Profiles in Wandera, be sure to select Microsoft Entra ID under the Associated User configuration to ensure Wandera is able to synchronize the device with Intune via UEM Connect.
-
-- **iOS**:  
-  See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Wandera iOS app configuration policy using the information below when prompted.
-
-  1. In **RADAR Wandera Portal**, navigate to **Devices > Activations** and select any activation profile. Select **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.
-  2. Expand the box to reveal the iOS app configuration XML and copy it to your system clipboard.
-  3. In **Intune admin center app configuration UI Settings,** define **Configuration settings format > Enter XML data**.
-  4. Paste the XML in the app configuration text box.
-
-  > [!NOTE]
-  >
-  > A single iOS configuration policy may be used across all devices that are to be provisioned with Wandera.  
-
 ### Zimperium app configuration policy
 
 - **Android Enterprise**:  
@@ -231,13 +239,14 @@ Choose the section that corresponds to your MTD provider:
 
 - [Better Mobile](#assigning-better-mobile)
 - [Check Point Harmony Mobile Protect](#assigning-check-point-harmony-mobile-protect)
+- [CrowdStrike Falcon for Mobile](#assigning-crowdstrike-falcon-for-mobile)
+- [Jamf](#assigning-jamf)
 - [Lookout for Work](#assigning-lookout-for-work)
 - [Pradeo](#assigning-pradeo)
 - [SentinelOne](#assigning-sentinelone)
 - [Sophos Mobile](#assigning-sophos)
 - [Symantec Endpoint Protection Mobile (SEP Mobile)](#assigning-symantec-endpoint-protection-mobile)
 - [Trellix Mobile Security](#assigning-trellix-mobile-security)
-- [Wandera](#assigning-wandera)
 - [Zimperium](#assigning-zimperium)
 
 ### Assigning Better Mobile
@@ -255,6 +264,24 @@ Choose the section that corresponds to your MTD provider:
 
 - **iOS**:
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point Harmony Mobile Protect app store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) for the **Appstore URL**.
+
+### Assigning CrowdStrike Falcon for Mobile
+
+- **Android**:
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md).
+  - Use the URL for [CrowdStrike Falcon](https://play.google.com/store/apps/details?id=com.crowdstrike.falconmobile) from the app store for the **Appstore URL**.
+
+- **iOS**:
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). 
+  - Use the URL for [CrowdStrike Falcon](https://apps.apple.com/us/app/crowdstrike-falcon/id1458815656) from the app store for the **Appstore URL**.
+
+### Assigning Jamf
+
+- **Android**:
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Jamf Mobile app store URL](https://play.google.com/store/apps/details/?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 11**.
+
+- **iOS**:
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Jamf Mobile app store URL](https://apps.apple.com/us/app/jamf-trust/id1608041266?mt=8) for the **Appstore URL**.
 
 ### Assigning Lookout for Work
 
@@ -326,14 +353,6 @@ Choose the section that corresponds to your MTD provider:
 
 - **iOS**:
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Trellix Mobile Security app store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) for the **Appstore URL**.
-
-### Assigning Wandera
-
-- **Android**:
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Wandera Mobile app store URL](https://play.google.com/store/apps/details?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 8.0**.
-
-- **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Wandera Mobile app store URL](https://itunes.apple.com/app/wandera/id605469330) for the **Appstore URL**.
 
 ### Assigning Zimperium
 

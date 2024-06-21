@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2023
+ms.date: 03/07/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority:
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -98,13 +97,16 @@ This feature applies to:
 
   - Sign in with a Domain Administrator account.
 
-  - Install the **RSAT: Group Policy Management Tools**:
+  - Add the **RSAT: Group Policy Management Tools**:
+  
+    1. Open the **Settings** app > **System** > **Optional features** > **Add feature**.
 
-    1. Open the **Settings** app > **Apps** > **Optional features** > **Add feature**.
-    2. Select **RSAT: Group Policy Management Tools** > **Install**.
-
-        Wait while Windows installs the feature. When complete, it eventually shows in the **Windows Administrative Tools** app.
-
+        If you use a version older than Windows 10 22H2, go to **Settings** > **Apps** > **Apps & features** > **Optional features** > **Add feature**.
+        
+    1. Select **RSAT: Group Policy Management Tools** > **Add**.
+    
+        Wait while Windows adds the feature. When complete, it eventually shows in the **Windows Administrative Tools** app.
+       
         :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png" alt-text="Screenshot that shows the Windows Administrative Tools apps, including the Group Policy Management app.":::
 
   - Be sure you have internet access and administrator rights to the Microsoft 365 subscription, which includes the Intune admin center.
@@ -233,11 +235,11 @@ In the Intune admin center, you created new security groups, and added existing 
 
 In this section, we create an administrative template in Intune, look at some settings in **Group Policy Management**, and compare the same setting in Intune. The goal is to show a setting in group policy, and show the same setting in Intune.
 
-1. In the Intune admin center, select **Devices** > **Configuration** > **Create**.
+1. In the Intune admin center, select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 2. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Administrative Templates**.
+    - **Profile type**: Select **Templates** > **Administrative Templates**.
 
 3. Select **Create**.
 4. In **Basics**, enter the following properties:
@@ -266,8 +268,8 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
 1. On the **Admin computer**, open the **Group Policy Management** app.
 
-    This app gets installed with **RSAT: Group Policy Management Tools**, which is an optional feature you install on Windows. [Prerequisites](#prerequisites) (in this article) lists the steps to install it.
-
+    This app gets installed with **RSAT: Group Policy Management Tools**, which is an optional feature you add on Windows. [Prerequisites](#prerequisites) (in this article) lists the steps to install it.
+   
 2. Expand **Domains** > select your domain. For example, select `contoso.net`.
 3. Right-click the **OfficeandEdge** policy > **Edit**. The Group Policy Management Editor app opens.
 
@@ -378,12 +380,12 @@ In the Intune admin center, you created an administrative template device config
 
 In this section, you create a OneDrive admin template in Intune to control some settings. These specific settings are chosen because they're commonly used by organizations.
 
-1. Create another profile (**Devices** > **Configuration** > **Create**).
+1. Create another profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**).
 
 2. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Administrative templates**.
+    - **Profile type**: Select **Templates** > **Administrative templates**.
 
 3. Select **Create**.
 4. In **Basics**, enter the following properties:
@@ -503,7 +505,7 @@ This section uses the following resources. We install these resources in this se
     $configuration = Invoke-MSGraphRequest -Url https://graph.microsoft.com/beta/deviceManagement/groupPolicyConfigurations -Content '{"displayName":"Test Configuration","description":"A test configuration created through PS"}' -HttpMethod POST
     ```
 
-    When these cmdlets succeed, the profile is created. To confirm, go to the Intune admin center > **Devices** > **Configuration**. Your **Test Configuration** profile should be listed.
+    When these cmdlets succeed, the profile is created. To confirm, go to the Intune admin center > **Devices** > **Manage devices** > **Configuration**. Your **Test Configuration** profile should be listed.
 
 10. Get all the SettingDefinitions. Enter:
 
@@ -533,7 +535,7 @@ This section uses the following resources. We install these resources in this se
 
 ### See your policy
 
-1. In the Intune admin center > **Devices** > **Configuration** > **Refresh**.
+1. In the Intune admin center > **Devices** > **Manage devices** > **Configuration** > **Refresh**.
 2. Select your **Test Configuration** profile > **Settings**.
 3. In the drop-down list, select **All products**.
 

@@ -5,13 +5,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/02/2024
+ms.date: 04/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -130,6 +128,48 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 >
 > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
 
+### May 16, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:50b62c1d7f81e2941fc73a09856583ea752fe821e9fef448114fe7e00f90f25a
+
+- **serverImageDigest**: sha256:f6249bc16f90abc9e6fb278c74e07b1c3e295cc0614d38ae20036cee50ff5c56
+
+Changes in this release:
+
+- Hardened containers by reducing the container capabilities to minimum
+- Security updates on the base image
+
+### April 22, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:987028e043434cabf9a85a8be232a35cb10d6499ab9fa2b0ac33bd214455cdf6
+
+- **serverImageDigest**: sha256:95106796faa4648ffe877c1ae4635037fd8bd630498bb3caea366e3c832f84cc
+
+Changes in this release:
+
+- Added rootless Podman container support
+- Fixed "mst-cli server capture" command
+- Fixed some TLS certificate revocation check failures
+
+### March 14, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:a0fa473b477c051445548f9e024cd58b3f87b0a87da7bafdf0d71ad6bb49a7c5
+
+- **serverImageDigest**: sha256:5f3f34f3f11a4d45efdd369e86d183cae0fafdd78c9c1d0a9275f26ce64e5510
+
+Changes in this release:
+
+- Bug fix: recreate the /tmp/mstunnel folder during upgrading if missing.
+- Update OpenConnect VPN Server to version 1.2.3.
+- Enhancements on the diagnostic tool.
+- Security updates on the base image.
+
 ### February 1, 2024
 
 Image hash values:
@@ -141,7 +181,7 @@ Image hash values:
 Changes in this release:
 
 - Bug fix: do not issue the "docker network reload" command to reset the network. The command is not supported on Docker.
-- Security updates on the base image. 
+- Security updates on the base image.
 
 ### January 4, 2024
 
@@ -155,7 +195,6 @@ Changes in this release:
 
 - Bug fix: Rootless container fix
 - MTG handling for Diagnostic and Log Upload request in HB response
-
 
 ### November 14, 2023
 
@@ -184,6 +223,8 @@ Changes in this release:
 - Bug fix: add SELinux policy to allow TCP DNS traffic for the containers on Red Hat hosts
 - Increase mstunnel-server container pid limit to 10000
 
+<!-- Archive of past releases
+
 ### October 2, 2023
 
 Image hash values:
@@ -197,8 +238,6 @@ Changes in this release:
 - Bug fix: Ensure the monitor starts the container when the state is empty
 - Bug fix for server container: Check /dev/tun permissions only when the server container is running
 - Limit Tunnel server's maximum logging level to verbose to enhance privacy
-
-<!-- Archive of past releases
 
 ### July 24, 2023
 

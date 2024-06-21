@@ -7,12 +7,11 @@ keywords:
 author: Brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/31/2023
+ms.date: 03/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid:  
 # optional metadata
 
@@ -32,6 +31,8 @@ ms.collection:
 ---
 
 # Microsoft Tunnel for MAM iOS SDK developer guide
+
+[!INCLUDE [intune-add-on-note](../includes/intune-plan2-suite-note.md)]
 
 The Microsoft Tunnel for MAM iOS SDK developer guide is a resource for developers. It helps developers integrate and configure the SDK into an iOS/iPadOS app. For an overview of the Microsoft Tunnel for MAM, go to [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../protect/microsoft-tunnel-mam-ios.md).
 
@@ -76,6 +77,7 @@ To use the Microsoft Tunnel for MAM iOS SDK, the following prerequisites are req
 - Install and set up the [Microsoft Tunnel for MAM iOS SDK](https://aka.ms/MAMTunneliOSGithubLink) (opens a GitHub site). This SDK is the focus of this article.
 
   > [!IMPORTANT]
+  >
   > Intune regularly releases updates to the Microsoft Tunnel for MAM iOS SDK. Regularly, check the [Microsoft Tunnel for MAM iOS SDK](https://aka.ms/MAMTunneliOSGithubLink) for updates. Add these updates into your software development release cycle. You want to make sure your apps support the Microsoft Tunnel Gateway updates and feature enhancements.
 
 ## How the Microsoft Tunnel for MAM iOS SDK works
@@ -278,6 +280,7 @@ The `MicrosoftTunnelAPI` includes the following methods:
   - `kLoggingSeverityCrit`
 
 > [!WARNING]
+>
 > Don't use debug keys in deployed apps. The keys can log and show user identifiable information and security data.
 
 ### Logging on iOS/iPadOS LOB apps
@@ -291,6 +294,7 @@ The developer should:
 - Consult and work with the organization's company/organization privacy team. The privacy team can provide guidance on the appropriate data that can be logged and the appropriate ways of handling sensitive data.
 
 > [!WARNING]
+>
 > Consult the [Microsoft Tunnel for MAM iOS SDK privacy documentation](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios/blob/main/MAM-Tunnel-Privacy-Doc.pdf) (opens a PDF file in GitHub) for specific guidance regarding logging and data privacy.
 
 ### MAM-Tunnel log delegate method example
@@ -299,7 +303,8 @@ The developer should:
 
 :::image type="content" source="./media/tunnel-mam-ios-sdk/log-delegate-method-output-example.png" alt-text="Screenshot that shows a sample Microsoft Tunnel log output in Xcode on a macOS device.":::
 
-## Microsoft Tunnel for Mobile Application Management Privacy information  
+## Microsoft Tunnel for Mobile Application Management Privacy information
+
 Your privacy is important to us.  Review the following privacy related online documentation:
 
 - [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement)
@@ -331,6 +336,7 @@ When integrating the Microsoft Tunnel for MAM iOS SDK into mobile apps, the foll
 No user identifiable information is collected.
 
 > [!IMPORTANT]
+>
 > As a developer, when integrating the SDK it is important to not include any user identifiable data when using code to address and capture messages in your application.
 
 ## Known issues

@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 
 # optional metadata
@@ -25,7 +24,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 - Android
 ms.custom: intune-classic
@@ -50,7 +49,7 @@ This guide is for Android developers who are looking to add support for Microsof
 
 Before you start integrating the Intune App SDK into your Android application, take a moment to familiarize yourself with Microsoft Intune's Mobile Application Management solution:
 
-- [What is Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
+- [Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
   and where to find these features in the Microsoft Intune admin center.
 - [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
 - [Android app protection policy settings] describes each Android setting in detail.
@@ -62,6 +61,10 @@ Before you start integrating the Intune App SDK into your Android application, t
 > See [Stage 7: App Participation Features] for more detail.
 
 ## Key Decisions for SDK integration
+
+### Do I need to register my application with the Microsoft identity platform?
+
+Yes, all apps integrating with the Intune SDK are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
 
 ### Do I have access to my application's source code?
 
@@ -278,6 +281,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Assign licenses]:/mem/intune/fundamentals/licenses-assign
 [Create and assign app protection policies]:/mem/intune/apps/app-protection-policies
 [app configuration policy]:/mem/intune/apps/app-configuration-policies-overview
+[Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/active-directory-app-registration
 
 <!-- Other Microsoft links -->
 [Microsoft Intune admin center]:https://go.microsoft.com/fwlink/?linkid=2109431

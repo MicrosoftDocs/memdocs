@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 
 # optional metadata
@@ -30,6 +29,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Protect
 ---
 
 # How to create and assign app protection policies

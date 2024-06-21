@@ -13,7 +13,6 @@ ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 
 # optional metadata
@@ -85,7 +84,7 @@ You can import information into SDS by using one of the following methods:
 ### Configure general settings
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Configuration** > **Create**.
+2. Go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform:** Select **iOS/iPadOS**.

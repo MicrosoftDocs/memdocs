@@ -13,8 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -48,9 +46,9 @@ This article lists the steps to add an existing script and has a GitHub repo wit
 ## Import the script
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Scripts and remediations** > **Add** > **Linux**:
+2. Select **Devices** > **Manage devices** > **Scripts and remediations** > **Platform scripts** tab > **Add** > **Linux**:
 
-    :::image type="content" source="./media/custom-settings-linux/add-linux-script.png" alt-text="Screenshot that shows the Microsoft Intune admin center and how to select devices, scripts, add, and select Linux from the drop-down list to add a custom Bash script.":::
+    :::image type="content" source="./media/custom-settings-linux/add-linux-script.png" alt-text="Screenshot that shows how to select devices, scripts, add, and select Linux from the drop-down list to add a custom Bash script in Microsoft Intune.":::
 
 3. In **Basics**, enter the following properties:
 

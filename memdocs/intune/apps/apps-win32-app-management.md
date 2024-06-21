@@ -19,6 +19,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Win32
 ---
 
 # Win32 app management in Microsoft Intune
@@ -27,12 +28,12 @@ Microsoft Intune enables Windows Win32 app management. Although it's possible fo
 
 > [!NOTE]
 > This app management capability supports both 32-bit and 64-bit operating system architecture for Windows applications.
-> 
-> For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](../apps/apps-add-enterprise-app.md). 
+>
+> For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](../apps/apps-add-enterprise-app.md).
 
 
 > [!IMPORTANT]
-> When you're deploying Windows Win32 apps, consider using the Win32 app type in Intune exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during Autopilot enrollment, the app installation might fail as they both may attempt to use the Trusted Installer service at the same time which causes a failure due to this conflict.
+> When you're deploying Windows Win32 apps, consider using the Win32 app type in Intune exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during Windows Autopilot enrollment, the app installation might fail as they both may attempt to use the Trusted Installer service at the same time which causes a failure due to this conflict. However, mixing of Win32 and line-of-business apps during Windows Autopilot device preparation is supported.
 
 ## Prerequisites
 
@@ -136,7 +137,7 @@ Set the app availability and other app assignment properties using the following
       - **Select when to display the restart countdown dialog box before the restart occurs (minutes)**: The default value is 15 minutes.
       - **Allow user to snooze the restart notification**: You can choose **Yes** or **No**.
         - **Select the snooze duration (minutes)**: The default value is 240 minutes (4 hours). The snooze value can't be more than the reboot grace period.
-       
+
       > [!IMPORTANT]
       > The **Restart grace period** assignment setting is available only when **Device restart behavior** in the **Program** section of the app is set to either of the following options:
       >

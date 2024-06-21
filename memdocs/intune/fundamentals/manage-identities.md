@@ -14,7 +14,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 # optional metadata
  
@@ -85,7 +84,7 @@ For more information and guidance, go to [Known issues and limitations with clou
 
 For the different admin-type of tasks, Intune uses role-based access control (RBAC). The roles you assign determine the resources an admin can access in the Intune admin center, and what they can do with those resources. There are some built-in roles that focus on endpoint management, such as Application Manager, Policy and Profile Manager, and more.
 
-Since Intune uses Microsoft Entra ID, you also have access to the built-in Microsoft Entra roles, such as Global Administrator and Intune Service Administrator.
+Since Intune uses Microsoft Entra ID, you also have access to the built-in Microsoft Entra roles, like the Intune Service Administrator.
 
 Each role has its own create, read, update or delete permissions as needed. You can also create custom roles if your admins need a specific permission. When you add or create your administrator-type of users and groups, you can assign these accounts to the different roles. The Intune admin center has this information in a central location and can be easily updated.
 

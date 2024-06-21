@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/05/2023
+ms.date: 05/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 
 # optional metadata
@@ -127,6 +126,7 @@ As the Microsoft Intune administrator, you can control which work or school acco
 
    > [!NOTE]
    > The following apps process the above app configuration and only allow organization accounts:
+   > - Copilot for iOS (28.1.420324001 and later)
    > - Edge for iOS (44.8.7 and later)
    > - Office, Word, Excel, PowerPoint for iOS (2.41 and later)
    > - OneDrive for iOS (10.34 and later)
@@ -218,6 +218,7 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS/iPadOS devices)
 - \{\{aaddeviceid\}\}—for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 - \{\{issupervised\}\}—for example, **True** (for iOS/iPadOS devices)
+- \{\{OnPremisesSamAccountName\}\}—for example, **contoso\John**
 
 ## Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment
 

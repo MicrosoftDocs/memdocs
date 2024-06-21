@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 09/18/2023
+ms.date: 02/14/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
@@ -553,7 +553,8 @@ The following table lists the log files that contain information related to the 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |ConfigMgrAdminUISetup.log|Records the installation of the Configuration Manager console.|Computer that runs the Configuration Manager console|  
-|SmsAdminUI.log|Records information about the operation of the Configuration Manager console.|Computer that runs the Configuration Manager console|  
+|SmsAdminUI.log|Records information about the operation of the Configuration Manager console.|Computer that runs the Configuration Manager console|
+|CMPivot.log|Records details about each CMPivot task run from the console.|Computer that runs the Configuration Manager console|  
 |Smsprov.log|Records activities of the SMS Provider. Configuration Manager console activities use the SMS Provider.|Site server or site system server|  
 
 ### <a name="BKMK_ContentLog"></a> Content management

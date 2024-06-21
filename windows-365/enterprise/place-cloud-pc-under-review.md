@@ -12,7 +12,6 @@ ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -89,6 +88,10 @@ Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?
 ## Bulk actions
 
 You can also use Intune’s bulk device actions to place multiple Cloud PCs under review at the same time. For more information, see [Use bulk device actions]( /mem/intune/remote-actions/bulk-device-actions).
+
+## Management with API
+
+You can use the Graph API to place or remove a Cloud PC from review. For more information, see [managedDevice: setCloudPcReviewStatus](/graph/api/manageddevice-setcloudpcreviewstatus?view=graph-rest-beta&tabs=http).
 
 ## Next steps
 [Learn more about digital forensics and Cloud PCs](digital-forensics.md).

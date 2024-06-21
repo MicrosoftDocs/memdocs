@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2023
+ms.date: 05/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 07dd262f-13e7-4cb2-9cc2-b755d1c276cf
 
 # optional metadata
@@ -60,11 +59,11 @@ The following list provides the app platform type, the apps that are monitored f
 
 | Platform | For personally owned devices | For company-owned devices | Refresh cycle |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10/11 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | MSI installed apps on the device | Every 24 hours from device enrollment |
+| Windows 10/11 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | MSI installed apps on the device that appear in add/remove programs | Every 24 hours from device enrollment |
 | Windows 10/11 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every seven days from device enrollment |
 | Windows 8.1 | Only managed apps | Only managed apps | Every seven days from device enrollment |
 | Windows RT | Only managed apps | Only managed apps | Every seven days from device enrollment |
-| iOS/iPadOS | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
+| iOS/iPadOS | Only managed apps | All apps installed on the device except system apps | Every seven days from device enrollment |
 | macOS | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
 | Android device administrator | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
 | Android Enterprise personally owned enrollment | Only managed apps in the work profile | Not applicable | Every seven days from device enrollment |

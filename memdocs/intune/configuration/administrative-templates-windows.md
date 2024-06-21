@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2023
+ms.date: 03/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -28,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- magic-ai-copilot
 ---
 
 # Use Windows 10/11 templates to configure group policy settings in Microsoft Intune
@@ -61,7 +61,7 @@ This article lists the steps to create a template for Windows client devices, an
 
 - There are two ways to create an administrative template: Using a template, or using the Settings Catalog. This article focuses on using the **Administrative Templates** template. The Settings Catalog has more Administrative Template settings available.
 
-  For the specific steps to use the Settings Catalog, see [Use the settings catalog to configure settings](settings-catalog.md).
+  For the specific steps to use the Settings Catalog, and how to use Microsoft Copilot in the settings catalog, go to [Use the settings catalog to configure settings](settings-catalog.md).
 
 - The ADMX templates use the following sources:
 
@@ -78,7 +78,7 @@ This article lists the steps to create a template for Windows client devices, an
 ## Create the template
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
@@ -92,17 +92,23 @@ This article lists the steps to create a template for Windows client devices, an
 
 6. Select **Next**.
 
-7. In **Configuration settings**, select **All settings** to see an alphabetical list of all the settings. Or, configure settings that apply to devices (**Computer configuration**), and settings that apply to users **(User configuration**):
+7. Add the settings:
 
-    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Apply ADMX template settings to users and devices in Microsoft Intune and Intune admin center.":::
+    # [ADMX template](#tab/template)
 
-    > [!NOTE]
-    >
-    > If you're using the **Settings catalog**, then select **Add settings**, and expand **Administrative Templates**. Select any setting to see what you can configure.
-    > 
-    > :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Expand administrative templates in Settings catalog in Microsoft Intune and Intune admin center.":::
-    > 
-    > For more information on creating policies using the Settings Catalog, see [Use the settings catalog to configure settings](settings-catalog.md).
+    In **Configuration settings**, select **All settings** to see an alphabetical list of all the settings. Or, configure settings that apply to devices (**Computer configuration**), and settings that apply to users **(User configuration**):
+
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Screenshot that shows how to select All Settings using ADMX template policy in Microsoft Intune.":::
+
+    # [Settings catalog](#tab/settingscatalog)
+
+    In the **Settings catalog**, select **Add settings**, and expand **Administrative Templates**. Select any setting to see what you can configure.
+
+    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Screenshot that shows how to expand administrative templates in a Settings catalog policy in Microsoft Intune.":::
+
+    For more information on creating policies using the Settings Catalog, go to [Use the settings catalog to configure settings](settings-catalog.md).
+
+    ---
 
 8. When you select **All settings**, every setting is listed. Scroll down to use the before and next arrows to see more settings:
 
@@ -132,15 +138,15 @@ This article lists the steps to create a template for Windows client devices, an
     - And more...
 
 12. Select **Next**.
-13. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+13. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-14. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles in Intune](device-profile-assign.md).
+14. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles in Intune](device-profile-assign.md).
 
     If the profile is assigned to user groups, then configured ADMX settings apply to any device that the user enrolls, and signs in to. If the profile is assigned to device groups, then configured ADMX settings apply to any user that signs into that device. This assignment happens if the ADMX setting is a computer configuration (`HKEY_LOCAL_MACHINE`), or a user configuration (`HKEY_CURRENT_USER`). With some settings, a computer setting assigned to a user can also affect the experience of other users on that device.
 
-    For more information, see [User groups vs. device groups when assigning policies](device-profile-assign.md#user-groups-vs-device-groups).
+    For more information, go to [User groups vs. device groups when assigning policies](device-profile-assign.md#user-groups-vs-device-groups).
 
     Select **Next**.
 

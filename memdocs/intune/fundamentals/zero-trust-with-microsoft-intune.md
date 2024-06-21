@@ -7,7 +7,7 @@ keywords: Zero Trust, security architecture, security strategy, cyber security, 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 05/13/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -42,7 +42,7 @@ ms.collection:
 
 ## Device and application authentication, authorization, and protection for Zero Trust
 
-You can use Intune to protect access and data on organization-owned and user's personal devices and has compliance and reporting features that support Zero Trust.
+You can use Intune to protect access and data on organization-owned and user's personal devices and have compliance and reporting features that support Zero Trust.
 
 | Zero Trust principle | How Intune helps |
 |---------|---------|
@@ -54,9 +54,8 @@ You can use Intune to protect access and data on organization-owned and user's p
 
 Learn more about Zero Trust and how to build an enterprise-scale strategy and architecture with the [Zero Trust Guidance Center](/security/zero-trust).
 
-For device-centric concepts and deployment objectives, see [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints)
+For device-centric concepts and deployment objectives, see [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints).
 
 For Intune in Microsoft 365, see [Manage devices with Intune Overview](/microsoft-365/solutions/manage-devices-with-intune-overview).
 
 Learn more about other Microsoft 365 capabilities that contribute to a strong Zero Trust strategy and architecture with [Zero Trust deployment plan with Microsoft 365](/microsoft-365/security/microsoft-365-zero-trust).
-

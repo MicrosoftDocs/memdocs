@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 02/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -33,15 +32,15 @@ ms.collection:
 
 # How to use Intune in environments without Google Mobile Services
 
-Microsoft Intune uses Google Mobile Services (GMS) to communicate with the Microsoft Intune company portal when managing Android devices. In some cases, devices may temporarily or permanently not have access to GMS. For example, a device might ship without GMS, or the device may be connecting to a closed network where GMS is not available. This document summarizes the differences and limitations you may observe when installing and using Intune to manage Android devices without GMS.
+Microsoft Intune uses Google Mobile Services (GMS) to communicate with the Microsoft Intune company portal when managing Android devices. In some cases, devices can temporarily or permanently not have access to GMS. For example, a device might ship without GMS, or the device might be connecting to a closed network where GMS isn't available. This document summarizes the differences and limitations you can observe when installing and using Intune to manage Android devices without GMS.
 
 > [!NOTE]
 > These GMS related limitations also apply to Device Administrator management and Android (AOSP) Management.
 
 > [!NOTE]
 > Microsoft Intune is ending support for [Android device administrator management](../enrollment/android-enroll-device-administrator.md) on devices with access to Google Mobile Services (GMS) on August 30, 2024. After that date, device enrollment, technical support, bug fixes, and security fixes will be unavailable.
-> For devices running Android 14 or earlier that don't have access GMS (excluding Microsoft Teams certified Android devices), Intune will continue allowing device administrator enrollment and will maintain limited support, since Android Enterprise management is unavailable to these devices. However, device administrator use on these devices is still not recommended, since Google's device administrator deprecation means there could be future functionality impact outside Intune's ability to mitigate.
-> For more information, read [Ending support for Android device administrator on GMS devices](https://aka.ms/Intune-Android-DA-blog).
+> For devices running Android 15 or earlier that don't have access GMS (excluding Microsoft Teams certified Android devices), Intune will continue allowing device administrator enrollment and will maintain limited support, since Android Enterprise management is unavailable to these devices. However, device administrator use on these devices is still not recommended, since Google's device administrator deprecation means there could be future functionality impact outside Intune's ability to mitigate.
+> For more information, see [Ending support for Android device administrator on GMS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/microsoft-intune-ending-support-for-android-device-administrator/ba-p/3915443).  
 
 ## Install the Intune Company Portal app without access to the Google Play Store
 
@@ -57,22 +56,30 @@ Because the Google Play Store is currently not available in People's Republic of
 
 ### Unavailable Intune features
 
-Some Intune features rely on components of GMS such as the Google Play store or Google Play services. Because these components are not available in environments without GMS, the following features in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) may be unavailable.  
+Some Intune features rely on components of GMS such as the Google Play store or Google Play services. Because these components are not available in environments without GMS, the following features in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) might be unavailable.  
 
 | Scenario  | Features  |
-|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Device compliance policies  | When creating or editing compliance policies for Android device administrator, all options listed under **Google Play Protect** are unavailable.  |
-| App protection policies (conditional launch)  | **SafetyNet device attestation**, **Require threat scan on apps**, and **Max Company Portal version age (days)** are device conditions that cannot be used for conditional launch.  |
+|---|---|
+| Device compliance policies  | When you create or edit compliance policies for Android device administrator, all options listed under **Google Play Protect** are unavailable.  |
+| App protection policies (conditional launch)  | **Play integrity verdict**, **Require threat scan on apps**, and **Max Company Portal version age (days)** are device conditions that can't be used for conditional launch.  |
 | Client apps  | Apps of type **Android** are not available. Use **Line-of-business app** instead to deploy and manage apps.  |
-| Mobile Threat Defense  | Work with your MTD vendor to understand if their solution is integrated with Intune, if it is available in the region of interest, and if it relies on GMS.  |
+| Mobile Threat Defense (MTD)  | Work with your MTD vendor to understand if their solution is integrated with Intune, if it's available in the region of interest, and if it relies on GMS.  |
 
-### Some tasks may be delayed
+### Some tasks can be delayed
 
-In environments where GMS is available, Intune relies on push notifications to speed tasks to finish. For example, if you try to remotely wipe the device, notifications generally get to the device in seconds. In conditions where GMS isn't available, push notifications may also not be available.
+In environments where GMS is available, Intune relies on push notifications to speed tasks to finish. For example, if you try to remotely wipe the device, notifications generally get to the device in seconds. In conditions where GMS isn't available, push notifications might also not be available.
 
-All Android devices enrolled with device administrator or Android (AOSP) management report to Intune every 8 hours. For example, if a device reports to Intune at 1 PM and the remote tasks are issued at 1:05 PM, Intune will contact the device at 9 PM to complete the tasks.
+All Android devices enrolled with device administrator or Android (AOSP) management report to Intune every 8 hours. For example, if a device reports to Intune at 1 PM and the remote tasks are issued at 1:05 PM, then Intune contacts the device at 9 PM to complete the tasks.
 
-In conditions where GMS isn't available, if the device is enrolled with device administrator and running Company Portal 5.0.5655.0 and above, Intune also attempts to check for new tasks and notifications approximately every 15 minutes. Note that this frequency may be affected by the device manufacturer, device usage patterns, and whether battery optimization is enabled for the Company Portal app.
+In conditions where GMS isn't available:
+
+- If the device is enrolled with device administrator and running the Company Portal app version 5.0.5655.0 and newer, then Intune tries to check for new tasks and notifications approximately every 15 minutes.
+
+- If the device is enrolled with Android (AOSP) management and running the Intune app version 24.02.4 and newer, then Intune tries to check for new tasks and notifications approximately every 15 minutes.
+
+This frequency is also affected by the device manufacturer, device usage patterns, and whether battery optimization is enabled for the Company Portal or Intune apps.
+
+For more information on Intune policy refresh intervals, go to [Common questions, answers, and scenarios with Intune policies](../configuration/device-profile-troubleshoot.md).
 
 The following tasks can require up to 8 hours to finish:
 
@@ -85,20 +92,23 @@ The following tasks can require up to 8 hours to finish:
 - Passcode reset
 
 **Intune Company Portal app for Android**:
+
 - Remote device removal
 - Device reset
 - Installation of available line-of-business apps
 
 **Intune app for Android (AOSP)**:
+
 - Remote device removal
 - Device reset
 
 **Intune Company Portal website**:
+
 - Device removal (local and remote)
 - Device reset
 - Device passcode reset
 
-If the device recently enrolled, the compliance, non-compliance, and configuration check-in runs more frequently. For more information on device check-ins, see [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md). 
+If the device recently enrolled, the compliance, non-compliance, and configuration check-in runs more frequently. For more information on device check-ins, see [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md).
 
 ## Next steps
 

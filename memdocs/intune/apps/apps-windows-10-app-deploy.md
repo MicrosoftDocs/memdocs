@@ -2,18 +2,17 @@
 # required metadata
 
 title: Windows app deployment by using Microsoft Intune
-titleSuffix: 
+titleSuffix:
 description: Learn about Windows 10/11 app deployment scenarios available with Microsoft Intune.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/19/2023
+ms.date: 04/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
 
 # optional metadata
@@ -31,13 +30,14 @@ ms.collection:
 - M365-identity-device-management
 - Windows
 - highpri
+- FocusArea_Apps_Deploy
 ---
 
 # Windows app deployment by using Microsoft Intune
 
 Microsoft Intune supports a variety of app types and deployment scenarios on Windows 10 devices. After you've added an app to Intune, you can assign the app to users and devices. This article provides more details on the supported Windows scenarios, and also covers key details to note when you're deploying apps to Windows. For information about deploying an app, also known as assigning an app, see [Assign an app](../apps/apps-deploy.md#assign-an-app) to a group.
 
-Line-of-business (LOB) apps and Microsoft Store for Business apps are the app types supported on Windows 10 devices. The file extensions for Windows apps include .msi, .appx, and .appxbundle.  
+Line-of-business (LOB) apps and Microsoft Store for Business apps are the app types supported on Windows 10 devices. The file extensions for Windows apps include .msi, .appx, and .appxbundle.
 
 > [!NOTE]
 > To deploy modern apps, you need at least:
@@ -87,7 +87,7 @@ Depending on the app type, you can install the app on a Windows device in one of
   - Win32 apps built as Machine Mode or Dual Mode and Microsoft Store apps can be deployed in device context, and support both the Required and Available intents.
 
 > [!NOTE]
-> For Win32 apps built as Dual Mode apps, the admin must choose if the app will install as a User Mode or Machine Mode app for all assignments associated with that instance. The deployment context can't be changed per assignment.  
+> For Win32 apps built as Dual Mode apps, the admin must choose if the app will install as a User Mode or Machine Mode app for all assignments associated with that instance. The deployment context can't be changed per assignment.
 
 Apps can only be installed in the device context when supported by the device and the Intune app type. Device context installs are supported on Windows desktops and Teams devices, such as the Surface Hub. They aren't supported on devices running Windows Holographic for Business, such as the Microsoft HoloLens.
 
@@ -104,7 +104,7 @@ Windows LOB apps (specifically APPX and MSIX) that you've selected to install in
 - Error: A user can't be targeted with a device context install.
 
 > [!IMPORTANT]
-> When used in combination with an Autopilot pre-provisioning scenario, there is no requirement for LOB apps deployed in device context to target a device group. For more information, see [Windows Autopilot pre-provisioning deployment](/windows/deployment/windows-autopilot/white-glove).
+> When used in combination with an Autopilot pre-provisioning scenario, there is no requirement for LOB apps deployed in device context to target a device group. For more information, see [Windows Autopilot pre-provisioning deployment](/autopilot/pre-provision).
 
 > [!NOTE]
 > After you save an app assignment with a specific deployment, you can't change the context for that assignment, except for modern apps. For modern apps, you can change the context from user context to device context.

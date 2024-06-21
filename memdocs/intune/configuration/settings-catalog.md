@@ -2,24 +2,23 @@
 # required metadata
 
 title: Create a policy using settings catalog in Microsoft Intune
-description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, and macOS client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features.
-keywords:
+description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, and macOS client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get impact What If analysis, and learn more about each setting.
+keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 05/13/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: mikedano, beflamm
+ms.reviewer: mikedano, beflamm, rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -27,17 +26,23 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- magic-ai-copilot
 ---
 
-# Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices
+# Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices
 
-Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added. For a list of the settings in the settings catalog, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
+Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
 
-If you prefer to configure settings at a granular level, similar to on-premises GPO, then the settings catalog is a natural transition to cloud-based policy.
+You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md). When you use the Copilot features with the settings catalog, you can use Copilot to:
 
-When you create the policy, you start from scratch. You add only the settings you want to control and manage. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings, and all in one place in Intune.
+- Learn more about each setting, get impact What If analysis, and find potential conflicts.
+- Summarize existing policies and get impact analysis on users and security.
 
-Use the settings catalog as part of your mobile device management (MDM) solution to manage and secure devices in your organization.
+If you prefer to configure settings at a granular level, similar to on-premises Group Policy Objects (GPOs), then the settings catalog is a natural transition to cloud-based policy.
+
+When you create the policy, you start from scratch. You add only the settings you want to control and manage.
+
+To manage and secure devices in your organization, use the settings catalog as part of your mobile device management (MDM) solution. More settings are continually being added to the settings catalog. For a list of the settings, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
 
 This feature applies to:
 
@@ -53,26 +58,40 @@ This feature applies to:
 
   Apple's declarative device management (DDM) is available in the settings catalog. You can [use DDM to manage software updates](../protect/managed-software-updates-ios-macos.md), passcode restrictions, and more.
 
+  You can also use the settings catalog to configure newer versions of Microsoft Edge and other features, instead of property list (plist) files. For more information, go to:
+
+  - [Built-in macOS features replacing plist files](settings-catalog-common-features.md#built-in-macos-features-replacing-plist-files)
+  - [Add a property list file to macOS devices using Microsoft Intune](preference-file-settings-macos.md).
+
+  You can continue using the [preference file](/deployedge/configure-microsoft-edge-on-mac) to:
+  
+  - Configure earlier versions of Microsoft Edge.
+  - Configure Microsoft Edge browser settings that aren't in the settings catalog.
+
 - **Windows 10/11**
 
-  There are thousands of settings, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
+  There are thousands of settings, including settings that weren't previously available. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
 
 > [!TIP]
 >
 > - For a list of the settings in the settings catalog, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
 > - To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
 
-This article lists the steps to create a policy, and shows how to search and filter the settings in Intune. When you create the policy, it creates a device configuration profile. You can then assign or deploy this profile to devices in your organization.
+This article lists the steps to create a policy, shows how to search and filter the settings in Intune, and shows how to use Copilot.
+
+When you create the policy, it creates a device configuration profile. You can then assign or deploy this profile to devices in your organization.
 
 For information on some features you can configure using the settings catalog, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
 
 ## Create the policy
 
+You can create the policy using the settings catalog profile type.
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **macOS**, or select **Windows 10 and later**.
+    - **Platform**: Select **iOS/iPadOS**, **macOS**, or **Windows 10 and later**.
     - **Profile type**: Select **Settings catalog**.
 
 4. Select **Create**.
@@ -119,7 +138,7 @@ For information on some features you can configure using the settings catalog, g
     > - When a setting allows multiple values, it's recommended to add each value separately.
     >
     >   For example, you can enter multiple values in the **Bluetooth** > **Services Allowed List** setting. Enter each value on a separate line:
-    >   :::image type="content" source="./media/settings-catalog/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Intune admin center":::
+    >   :::image type="content" source="./media/settings-catalog/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Intune admin center.":::
     >
     >   You can add multiple values in a single field, but you may experience a character limit.
 
@@ -136,11 +155,17 @@ For information on some features you can configure using the settings catalog, g
 
 The next time the device checks for configuration updates, the settings you configured are applied.
 
-## Find some settings
+## Find some settings and learn more about each setting
 
-There are thousands of settings available in the settings catalog. To make it easier to find specific settings, use the built-in features:
+There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog.
 
-- In your policy, use **Add settings** > **Search** to find specific settings. You can search by category, such as `browser`, search for a keyword, such as `office` or `google`, and search for specific settings.
+If you use Copilot, then you can get AI generated information about each setting.
+
+# [Search and filter](#tab/sc-search-filter)
+
+When you create a new policy or update an existing policy, there are built-in search and filter features to help you find settings.
+
+- In your policy, to find specific settings, you can use **Add settings** > **Search**. You can search by category, such as `browser`, search for a keyword, such as `office` or `google`, and search for specific settings.
 
   For example, search for `internet explorer`. All the settings with `internet explorer` are shown. Select a category to see the available settings:
 
@@ -159,11 +184,33 @@ There are thousands of settings available in the settings catalog. To make it ea
 
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-scope.png" alt-text="Screenshot that shows the user and device scope filter in the settings catalog in Microsoft Intune and Intune admin center.":::
 
+# [Copilot](#tab/copilot-tooltips)
+
+When you use settings catalog policies, you can use Copilot to get more information about a specific setting and its impact.
+
+1. In your policy, select **Add settings**. In the Settings Picker, select some settings. For example, in a macOS policy, expand **Declarative Device Management** > **Software Update** > **Select all these settings**. Close the Settings Picker.
+
+2. For the settings, notice the Copilot tooltip:
+
+    :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-tooltip.png" alt-text="Screenshot that shows Copilot prompts tooltip for on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
+
+3. When you select a Copilot tooltip, more information is automatically shown about the setting:
+
+    :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-details.png" alt-text="Screenshot that shows Copilot giving more detailed information on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
+
+4. In the prompt, there are more prompts that you can use. You can also select the prompt guide and select from an existing list of prompts:
+
+    :::image type="content" source="./media/settings-catalog/copilot-setting-prompt-guide.png" alt-text="Screenshot that shows the Copilot settings prompt guide and a list of the available prompts in the Settings Catalog in Microsoft Intune and Intune admin center.":::
+
+---
+
 ## Copy a profile  
 
-Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
+Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one.
 
-1. Go to **Devices** > **Configuration**.
+The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
+
+1. Go to **Devices** > **Manage devices** > **Configuration**.
 2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (`…`).
 3. Select **Duplicate**.  
 4. Enter a new name and description for the policy.
@@ -177,23 +224,31 @@ This feature applies to:
 
 When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you export a policy, import it to create a new policy, and then make changes to the new policy.
 
-1. Go to **Devices** > **Configuration**.
+1. Go to **Devices** > **Manage devices** > **Configuration**.
 
-2. To export an existing policy, select the profile > select the ellipsis context menu (`…`) > **Export JSON**:
+2. To export an existing policy, select the Windows settings catalog policy > select the ellipsis context menu (`…`) > **Export JSON**:
 
     :::image type="content" source="./media/settings-catalog/export-settings-catalog-policy.png" alt-text="Screenshot that shows how to export a settings catalog policy as JSON in Microsoft Intune and Intune admin center.":::
 
 3. To import a previously exported settings catalog policy, select **Create** > **Import policy**:
 
-    :::image type="content" source="./media/settings-catalog/import-settings-catalog-policy.png" alt-text="Screenshot that shows how to import an existing settings catalog policy in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/settings-catalog/import-settings-catalog-policy.png" alt-text="Screenshot that shows how to import an existing settings catalog policy in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/import-settings-catalog-policy.png":::
 
     Select the JSON file you exported and name your new policy. **Save** your changes.
 
-## Reporting and conflicts
+## Conflicts and reporting
 
-You create the policy, and assign it to your groups. In the Intune admin center, you can check the status of your policy. The data refreshes automatically, and operates in near real time.
+Conflicts happen when the same setting is updated to different values, including policies configured using the settings catalog. In the Intune admin center, you can check the status of your existing policies. The data refreshes automatically, and operates in near real time.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Device configuration profiles**. In the list, select the policy you created using the Settings Catalog. The **Profile type** column shows **Settings Catalog**:
+There are built-in features that can help you troubleshoot conflicts, including per-setting status reporting.
+
+If you use Copilot, then you can use some built-in prompts to get more information on existing policies, including their impact.
+
+# [Reporting and troubleshooting](#tab/sc-reporting)
+
+In the Intune admin center, you can use the built-in reporting features to help find and resolve conflicts.
+
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**. In the list, select the policy you created using the Settings Catalog. The **Profile type** column shows **Settings Catalog**:
 
     :::image type="content" source="./media/settings-catalog/profile-type-shows-settings-catalog.png" alt-text="Screenshot that shows how to open the settings catalog in Microsoft Intune and Intune admin center.":::
 
@@ -220,12 +275,28 @@ You create the policy, and assign it to your groups. In the Intune admin center,
 > [!TIP]
 > [Intune reports](../fundamentals/reports.md) is a great resource, and describes all the reporting features you can use. For information on all the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).
 
-### Conflicts
-
-Conflicts happen when the same setting is updated to different values. Conflicts can also happen with policies configured using the settings catalog. For more information on conflict resolution, see:
+For more information on conflict resolution, go to:
 
 - [Monitor device profiles](device-profile-monitor.md#view-conflicts)
 - [Common questions and answers with device policies](device-profile-troubleshoot.md)
+
+# [Copilot](#tab/copilot-conflicts)
+
+Copilot can help you find the status of your existing policies, find the status of a specific setting in your policy, and show any potential conflicts.
+
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**. In the policy list, select the policy you want to evaluate using Copilot.
+
+2. When you select the policy, the device status shows. Select **Summarize with Copilot**:
+
+    :::image type="content" source="./media/settings-catalog/copilot-summarize-policy.png" alt-text="Screenshot that shows how to select the Summarize with Copilot feature in a settings catalog policy in Microsoft Intune and Intune admin center.":::
+
+    A summary is automatically shown and includes the settings in the policy & their values.
+
+3. In the prompt, there are more prompts you can select. You can also select the prompt guide and select from an existing list of prompts:
+
+    :::image type="content" source="./media/settings-catalog/copilot-policy-prompt-guide.png" alt-text="Screenshot that shows the Copilot policy prompt guide and a list of the available prompts in the Settings Catalog in Microsoft Intune and Intune admin center.":::
+
+---
 
 ## Settings catalog vs. templates
 
@@ -252,7 +323,7 @@ When deploying policy from Intune, you can assign user scope or device scope to 
 - User scoped policy writes to `HKEY_CURRENT_USER (HKCU)`. 
 - Device scoped policy writes to `HKEY_LOCAL_MACHINE (HKLM)`.
 
-When a device checks in to Intune, the device always presents a `deviceID`. The device may or may not present a `userID`, depending on the check-in timing and if a user is signed in.
+When a device checks in to Intune, the device always presents a `deviceID`. The device might or might not present a `userID`, depending on the check-in timing and if a user is signed in.
 
 The following list includes some possible combinations of scope, assignment, and the expected behavior:
 
@@ -262,10 +333,11 @@ The following list includes some possible combinations of scope, assignment, and
 - If a user scoped policy is assigned to a user, then only that user has that setting applied.
 - There are some settings that are available in the user scope and the device scope. If one of these settings is assigned to both user and device scope, then user scope takes precedence over device scope.
 
-If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initial check-ins, then you may see some user scope settings marked as not applicable. This behavior happens in the early moments of a device before a user is present.
+If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initial check-ins, then you can see some user scope settings marked as not applicable. This behavior happens in the early moments of a device before a user is present.
 
 ## Next steps
 
 - [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md)
 - [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md)
-- Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Overview of Microsoft Copilot for Intune](../copilot/copilot-intune-overview.md)

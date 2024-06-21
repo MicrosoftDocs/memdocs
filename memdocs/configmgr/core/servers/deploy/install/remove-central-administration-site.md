@@ -130,7 +130,7 @@ After you remove the CAS, review the following steps as they apply to your envir
 
 - Manually remove the CAS server computer account from the primary site local groups.
 
-- The trusted root key changed, which can require additional actions:
+- If you perform OS Deployment activities, these additional actions need to be performed as the trusted root key has changed:
 
   - Update OS deployment boot images to include the latest Configuration Manager binaries.
 

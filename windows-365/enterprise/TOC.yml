@@ -41,6 +41,8 @@ items:
       href: security.md
     - name: Encryption
       href: encryption.md
+    - name: Customer Lockbox
+      href: /purview/customer-lockbox-requests?context=/windows-365/context/pr-context
     - name: ANC domain credential life cycle
       href: azure-network-connection-domain-credential.md
   - name: Privacy and data
@@ -123,6 +125,10 @@ items:
           href: requirements-vmware-horizon.md
         - name: Set up VMware Horizon for Windows 365
           href: set-up-vmware-horizon.md
+        - name: HP Anyware requirements
+          href: hp-anyware-requirements.md
+        - name: Set up HP Anyware for Windows 365
+          href: hp-anyware-set-up.md  
     - name: Provisioning
       items:
       - name: Create and assign provisioning policy
@@ -155,12 +161,16 @@ items:
         href: deploy-security-baselines.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
+      - name: Microsoft Purview Customer Key
+        href: purview-customer-key.md
       - name: Enable screen capture protection
         href: /azure/virtual-desktop/screen-capture-protection?context=/windows-365/context/pr-context
       - name: Watermarking
         href: watermarking.md
       - name: Restrict Office 365 access to Cloud PCs 
         href: restrict-office-365-cloud-pcs.md
+      - name: Set up forensic evidence 
+        href: forensic-evidence-set-up.md
     - name: Identity and access management
       items:
       - name: Set conditional access policies
@@ -197,6 +207,8 @@ items:
         href: alerts.md
       - name: Remotely manage Cloud PC devices 
         href: remotely-manage-cloud-pc.md
+      - name: Cloud PC maintenance windows
+        href: cloud-pc-maintenance-windows.md
       - name: RDP Shortpath for public networks 
         href: rdp-shortpath-public-networks.md
       - name: RDP Shortpath for private networks  
@@ -235,20 +247,22 @@ items:
           href: place-cloud-pc-under-review.md
     - name: Reports
       items:
+      - name: Cloud PC actions
+        href: report-cloud-pc-actions.md
+      - name: Cloud PC connection quality report
+        href: report-cloud-pc-connection-quality.md
+      - name: Cloud PC recommendations
+        href: report-cloud-pc-recommendations.md
+      - name: Cloud PC utilization report
+        href: report-cloud-pc-utilization.md
+      - name: Cloud PCs that aren't available
+        href: report-cloud-pcs-not-available.md
+      - name: Connected Frontline Cloud PCs report
+        href: report-connected-frontline-cloud-pcs.md
       - name: Resource performance report
         href: report-resource-performance.md
       - name: Remoting connection report
         href: report-remoting-connection.md
-      - name: Cloud PC actions
-        href: report-cloud-pc-actions.md
-      - name: Cloud PC utilization report
-        href: report-cloud-pc-utilization.md
-      - name: Cloud PC connection quality report
-        href: report-cloud-pc-connection-quality.md
-      - name: Connected Frontline Cloud PCs report
-        href: report-connected-frontline-cloud-pcs.md
-      - name: Cloud PCs that aren't available
-        href: report-cloud-pcs-not-available.md
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
@@ -282,7 +296,7 @@ items:
     - name: Provisioning errors
       href: provisioning-errors.md
     - name: Partner connectors
-      href: troubleshoot-citrix-hdx-plus.md
+      href: troubleshoot-partner-connector.md
     - name: Windows 365 app
       href: troubleshoot-windows-365-app.md
     - name: Windows 365 Boot

@@ -24,7 +24,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
@@ -112,7 +112,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Full Wipe of app data|X|X|
 |Selective Wipe of work and school data in Multi-Identity scenarios <br><br>**Note:** For iOS/iPadOS, when the management profile is removed, the app is also removed.|X||
 |Prevent "Save as"|X||
-|Targeted Application Configuration (or app config through the "MAM channel")|X|X|
+|Targeted Application Configuration (or app config through the "MAM channel")|X||
 |Support for Multi-Identity|X||
 |Customizable Style |X||
 |On-demand application VPN connections with Citrix mVPN|X|X| 
@@ -122,7 +122,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Require minimum operating system|X|X|
 |Require minimum Android security patch version (Android only)|X|X|
 |Require minimum Intune SDK for iOS (iOS only)|X|X|
-|SafetyNet device attestation (Android only)|X|X|
+|Play integrity verdict (Android only)|X|X|
 |Threat scan on apps (Android only)|X|X|
 |Require maximum Mobile Threat Defense vendor device risk level|X||
 |Configure app notification content for organization accounts|X|X|

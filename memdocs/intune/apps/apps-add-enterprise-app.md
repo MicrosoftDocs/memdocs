@@ -11,7 +11,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 ms.reviewer: dguilory
 ms.suite: ems
@@ -21,6 +20,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_EAC
 ---
 
 # Add an Enterprise App Catalog app to Microsoft Intune
