@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/21/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -31,13 +31,13 @@ This article describes known issues that can often be resolved with configuratio
 
 ### Required apps aren't shown on the Enrollment Status Page (ESP) after an Autopilot Reset
 
-- *2024-05-17*
+Date added: *2024-05-17*
 
 When an Autopilot Reset happens, the required apps aren't installed on the Enrollment Status Page (ESP) before the user reaches the desktop. The apps aren't tracked on the ESP, but they're installed when the user signs in to the desktop.
 
 ### Enrolled date for Autopilot device is incorrect
 
-- *2023-11-01*
+Date added: *2023-11-01*
 
 The **Enrolled date** in the **Devices | All devices** and **Windows | Windows devices** panes display the date the device was registered to Autopilot instead of the date it was enrolled to Autopilot. For a more accurate date for when the device enrolled to the tenant:
 
@@ -51,13 +51,13 @@ The **Enrolled date** in the **Devices | All devices** and **Windows | Windows d
 
 ### Filtering Windows Autopilot devices not working as expected
 
-- *2023-07-14*
+Date added: *2023-07-14*
 
 Viewing Windows Autopilot devices within Intune might not work as expected if attempting to filter results. While this issue is being worked on, a workaround is to use [Microsoft Graph API](/graph/use-the-api) to properly query and filter necessary devices.
 
 ### TPM attestation isn't working on some platforms with Infineon SLB9672 discrete TPMs
 
-- *2023-06-02*
+Date added: *2023-06-02*
 
 Platforms with the Infineon SLB9672 TPM with firmware release 15.22 with EK certificate might fail with error message **Something happened, and TPM attestation timed out.** To resolve this issue, contact the OEM for an update.
 

@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/19/2024
+ms.date: 06/21/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -22,7 +22,7 @@ appliesto:
 
 ## Windows Autopilot support for Microsoft Teams Rooms
 
-- *2024-06-04*
+Date added: *2024-06-04*
 
 Windows Autopilot streamlines provisioning for laptops. Now Windows Autopilot adds the same support for **Microsoft Teams Rooms**! With this combination, Teams Rooms devices can now be deployed and provisioned without needing physical access to the device. Policies and apps are configured and the Teams Rooms console automatically signed in without needing to enter credentials.
 
