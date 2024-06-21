@@ -31,13 +31,13 @@ This article describes known issues that can often be resolved with configuratio
 
 ### Required apps aren't shown on the Enrollment Status Page (ESP) after an Autopilot Reset
 
-Date added: *2024-05-17*
+Date added: *05/17/2024*
 
 When an Autopilot Reset happens, the required apps aren't installed on the Enrollment Status Page (ESP) before the user reaches the desktop. The apps aren't tracked on the ESP, but they're installed when the user signs in to the desktop.
 
 ### Enrolled date for Autopilot device is incorrect
 
-Date added: *2023-11-01*
+Date added: *11/01/2023*
 
 The **Enrolled date** in the **Devices | All devices** and **Windows | Windows devices** panes display the date the device was registered to Autopilot instead of the date it was enrolled to Autopilot. For a more accurate date for when the device enrolled to the tenant:
 
@@ -51,17 +51,19 @@ The **Enrolled date** in the **Devices | All devices** and **Windows | Windows d
 
 ### Filtering Windows Autopilot devices not working as expected
 
-Date added: *2023-07-14*
+Date added: *07/14/2023*
 
 Viewing Windows Autopilot devices within Intune might not work as expected if attempting to filter results. While this issue is being worked on, a workaround is to use [Microsoft Graph API](/graph/use-the-api) to properly query and filter necessary devices.
 
 ### TPM attestation isn't working on some platforms with Infineon SLB9672 discrete TPMs
 
-Date added: *2023-06-02*
+Date added: *06/02/2023*
 
 Platforms with the Infineon SLB9672 TPM with firmware release 15.22 with EK certificate might fail with error message **Something happened, and TPM attestation timed out.** To resolve this issue, contact the OEM for an update.
 
 ### Kiosk device profile not auto logging in
+
+Date added: *01/30/2023*
 
 There's currently a known issue in the following Windows Updates released in January 2023:
 
@@ -77,29 +79,43 @@ If these updates are installed on a device, Kiosk device profiles that have auto
 
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
+Date added: *12/01/2022*
+
 TPM attestation for AMD platforms with ASP firmware TPM might fail with error code 0x80070490 on Windows systems. This issue is resolved on later versions of AMD firmware. Consult with device manufacturers and firmware release notes for which firmware versions contain the update.
 
 ### TPM attestation failure with error code 0x81039001
 
-Some devices might intermittently fail TPM attestation during Windows Autopilot pre-provisioning technician flow or self-deployment mode with the error code 0x81039001 E_AUTOPILOT_CLIENT_TPM_MAX_ATTESTATION_RETRY_EXCEEDED. This failure occurs during the **Securing your hardware** step for Windows Autopilot devices deployed using self-deploying mode or pre-provisioning mode. Subsequent attempts to provision might resolve the issue.
+Date added: *10/06/2022*
+
+Some devices might intermittently fail TPM attestation during Windows Autopilot pre-provisioning technician flow or self-deployment mode with the error code **0x81039001 E_AUTOPILOT_CLIENT_TPM_MAX_ATTESTATION_RETRY_EXCEEDED**. This failure occurs during the **Securing your hardware** step for Windows Autopilot devices deployed using self-deploying mode or pre-provisioning mode. Subsequent attempts to provision might resolve the issue.
 
 ### Autopilot deployment report shows "failure" status on a successful deployment
+
+Date added: *09/22/2022*
 
 The Autopilot deployment report (preview) shows a failed status for any device that experiences an initial deployment failure. For subsequent deployment attempts, using the **Try again** or **Continue to desktop** options, the deployment state in the report doesn't update. If the user resets the device, a new deployment row is shown in the report with the previous attempt remaining as failed.
 
 ### Autopilot deployment report doesn't show deployed device
 
+Date added: *09/22/2022*
+
 Autopilot deployments that take longer than one hour might display an incomplete deployment status in the deployment report. If the device successfully enrolls but doesn't complete provisioning after more than one hour, the device status might not be updated in the report.
 
 ### Autopilot profile not being applied when assigned
+
+Date added: *06/15/2022*
 
 In Windows 10, version 21H2 April 2022 and some May 2022 update releases, there's an issue where the Autopilot profile might fail to apply to the device. Additionally, the hardware hash might not be harvested. As a result, any settings made in the profile might not be configured for the user such as device renaming. To resolve this issue, apply [KB5015020](https://support.microsoft.com/topic/may-19-2022-kb5015020-os-builds-19042-1708-19043-1708-and-19044-1708-out-of-band-9b5bd38a-ab3c-4ada-96b0-b754134fcd2a) cumulative update or later to the device.
 
 ### DefaultuserX profile not deleted
 
+Date added: *03/28/2022*
+
 When the [EnableWebSignIn CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin) is used, the `defaultuserX` profile might not be deleted.
 
 ### Autopilot reset ran into trouble. Could not find the recovery environment
+
+Date added: *03/28/2022*
 
 When an Autopilot reset is attempted, the following message is displayed:
 
@@ -108,6 +124,8 @@ When an Autopilot reset is attempted, the following message is displayed:
 If there isn't an issue with the recovery environment, enter administrator credentials to continue with the reset process.
 
 ### Device-based Conditional Access policies
+
+Date added: *03/03/2022*
 
 1. The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn't supported.  See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
 
@@ -128,15 +146,21 @@ If there isn't an issue with the recovery environment, enter administrator crede
 
 ### Device goes through Autopilot deployment without an assigned profile
 
+Date added: *03/02/2022*
+
 When a device is registered in Autopilot and no profile is assigned, the default Autopilot profile is taken. This behavior is by design. It makes sure that all devices registered with Autopilot go through the Autopilot experience. If the device shouldn't go through an Autopilot deployment, remove the Autopilot registration.
 
 ### White screen during Microsoft Entra hybrid joined deployment
+
+Date added: *02/19/2022*
 
 There's a UI bug on Autopilot Microsoft Entra hybrid joined deployments where the Enrollment Status page is displayed as a white screen. This issue is limited to the UI and shouldn't affect the deployment process.
 
 This issue was resolved in September 2022.
 
 ### Virtual machine failing at "Preparing your device for mobile management"
+
+Date added: *02/19/2022*
 
 When trying to use Windows Autopilot on a virtual machine (VM), the following error might occur:
 
@@ -146,21 +170,31 @@ To resolve the issue, make sure the virtual machine is configured with a minimum
 
 ### ODJConnectorSvc.exe leaks memory
 
+Date added: *02/19/2022*
+
 When a proxy server is used with the ODJConnector service, the memory file can get too large when processing requests resulting in impacts to performance. The current workaround for this issue is to restart the ODJConnectSvc.exe service.
 
 ### Reset button causes pre-provisioning to fail on retry
+
+Date added: *02/09/2022*
 
 When ESP fails during the pre-provisioning flow and the user selects the reset button, TPM attestation might fail during the retry.
 
 ### TPM attestation failure on Windows 11 error code 0x81039023
 
+Date added: *02/09/2022*
+
 Some devices might fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code **0x81039023**. To resolve the issue, apply the May 2022 cumulative update for Windows 11, version 21H2 [KB5013943](https://support.microsoft.com/topic/may-10-2022-kb5013943-os-build-22000-675-14aa767a-aa87-414e-8491-b6e845541755) or later to the device.
 
-### Duplicate device objects with hybrid Microsoft Entra deployments
+### Duplicate device objects with Microsoft Entra hybrid deployments
+
+Date added: *01/09/2022*
 
 A device object is pre-created in Microsoft Entra ID once a device is registered in Autopilot. If a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
 
 ### TPM attestation failure on Windows 11 error code 0x81039024
+
+Date added: *12/08/2021*
 
 Some devices might fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039024. This error code indicates that there are known vulnerabilities detected with the TPM and as a result attestation fails. If this error occurs, visit the PC manufacturer's website to update the TPM firmware.
 
