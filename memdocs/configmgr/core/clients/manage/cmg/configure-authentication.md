@@ -72,7 +72,7 @@ The CMG has to trust the client authentication certificates to establish the HTT
 Make sure to export all certificates in the trust chain. For example, if the client authentication certificate is issued by an intermediate CA, export both the intermediate and root CA certificates.
 
 > [!NOTE]
-> Export this certificate when any client uses PKI certificates for authentication. When all clients use either Microsoft Entra ID or tokens for authentication, this certificate isn't required.
+> Follow these steps only when using HTTPS Management Points and PKI certificates for authentication. When Management Points are EHTTP and clients are using Microsoft Entra ID or tokens for authentication, this certificate isn't required.
 
 After you issue a client authentication certificate to a computer, use this process on that computer to export the trusted root certificate.
 
@@ -132,7 +132,7 @@ Depending upon how you configure the site, and which client authentication metho
 
 When you use the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, you can configure the management point for HTTP. When you enable Enhanced HTTP, the site server generates a self-signed certificate named **SMS Role SSL Certificate**. This certificate is issued by the root **SMS Issuing** certificate. The management point adds this certificate to the IIS Default Web site bound to port 443.
 
-With this option, internal clients can continue to communicate with the management point using HTTP. Internet-based clients using Microsoft Entra ID or a client authentication certificate can securely communicate through the CMG with this management point over HTTPS.
+With this option, internal clients can continue to communicate with the management point using HTTP. Internet-based clients using Microsoft Entra ID can securely communicate through the CMG with a Management Point configured for EHTTP.
 
 For more information, see [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
 
