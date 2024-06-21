@@ -118,7 +118,7 @@ When you update to Configuration Manager version 1906 and have the **Windows 10*
 
 #### Windows 10, version 1903 and later with Configuration Manager version 1902
 
-If you are using Configuration Manager 1902 with Windows 10,version 1903 clients, you'll need to:
+If you are using Configuration Manager 1902 with Windows 10, version 1903 clients, you'll need to:
 
 - Select the **Windows 10, version 1903 and later** product for synchronization.
 - Update any [Automatic Deployment Rules](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) for Windows 10, version 1903 clients.
@@ -169,7 +169,7 @@ Deploy Feature Updates for Windows Insider to your target collection just like a
 
 For more information on how to deploy upgrades, see [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md).
 
-### Keeping Insider devices up-to date
+### Keeping Insider devices up-to-date
 
 Cumulative Updates for Windows Insider will be available for WSUS and by extension for Configuration Manager. These Cumulative Updates will be released at a frequency similar to Windows Cumulative Updates. The Windows Insider Cumulative updates are in the **Windows Insider Pre-Release** product category and classified as either **Security Updates** or **Updates**. You can deploy the Cumulative Updates for Windows Insider using your regular software update process like using [automatic deployment rules](../deploy-use/automatically-deploy-software-updates.md) or [phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
