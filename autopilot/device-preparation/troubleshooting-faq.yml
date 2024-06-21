@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 06/18/2024
+  ms.date: 06/21/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -36,7 +36,7 @@ sections:
 
           - Verify that **Microsoft Entra roles can be assigned to the group** setting in the device group is set to **No**. For more information, see [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
-          - Verify that the admin creating the Autopilot device preparation policy has the **Enrollment time device membership assignment** RBAC permission. For more information, see [Requirements](requirements.md?tabs=rbac).
+          - Verify that the admin creating the Autopilot device preparation policy has the **Enrollment time device membership assignment** RBAC permission. For more information, see [Requirements](requirements.md?tabs=rbac#required-rbac-permissions).
 
       - question: |
           Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE).
