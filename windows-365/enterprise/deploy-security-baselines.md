@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 06/24/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -47,7 +47,7 @@ You can optionally apply Windows 365 security baselines to the Microsoft Entra g
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) select **Endpoint Security** > **Security Baselines**.
 ![Screenshot of view security baselines](./media/deploy-security-baselines/view-security-baselines.png)
 2. Select **Windows 365 Security Baseline**.
-3. Select **Create Profile** and provide a name for your profile.
+3. On the **Create a profile** pane, select **Create**.
 4. On the **Basics** page, provide a **Name** > **Next**.
 5. On the **Configuration settings** tab, view the groups of settings that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
     - Select a group to expand and review the available settings.
