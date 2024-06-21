@@ -34,6 +34,10 @@ sections:
 
           - Verify that the correct device group is specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
+          - Verify that **Microsoft Entra roles can be assigned to the group** setting in the device group is set to **No**. For more information, see [Create a device group](tutorial/user-driven/entra-join-device-group.md).
+
+          - Verify that the admin creating the Autopilot device preparation policy has the **Enrollment time device membership assignment** RBAC permission. For more information, see [Requirements](requirements.md?tabs=rbac).
+
       - question: |
           Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE).
         answer: |
