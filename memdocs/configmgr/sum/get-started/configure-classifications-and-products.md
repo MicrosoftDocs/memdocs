@@ -118,7 +118,7 @@ When you update to Configuration Manager version 1906 and have the **Windows 10*
 
 #### Windows 10, version 1903 and later with Configuration Manager version 1902
 
-If you are using Configuration Manager 1902 with Windows 10, version 1903 clients, you'll need to:
+If you're using Configuration Manager 1902 with Windows 10, version 1903 clients, you'll need to:
 
 - Select the **Windows 10, version 1903 and later** product for synchronization.
 - Update any [Automatic Deployment Rules](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) for Windows 10, version 1903 clients.
