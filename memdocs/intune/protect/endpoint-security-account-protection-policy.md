@@ -38,7 +38,7 @@ Find the endpoint security policies for Account protection under *Manage* in the
 ## Prerequisites for Account protection profiles
 
 - To support the *Account protection (preview)* profile, devices must run Windows 10 or Windows 11.
-- To support the *Local user group membership (preview)* profile, devices must run Windows 10 20H2 or later, or Windows 11.
+- To support the *Local user group membership* profile, devices must run Windows 10 20H2 or later, or Windows 11.
 
 ## Role-based access controls (RBAC)
 
