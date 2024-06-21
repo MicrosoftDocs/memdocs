@@ -70,7 +70,7 @@ If during Windows Autopilot device preparation deployment a device gets stuck at
 
 ### Object with AppID of f1346770-5b25-470b-88bd-d5744ab7952c displays as Intune Autopilot ConfidentialClient
 
-In some tenants, when trying to set the owner of the device group used in the Windows Autopilot device preparation policy, the service principle with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** displays as **Intune Autopilot ConfidentialClient** instead of **Intune Provisioning Client**. As long as the service principle has an AppID of **f1346770-5b25-470b-88bd-d5744ab7952c**, it's the correct service principle and can be selected.
+In some tenants, when trying to set the owner of the device group used in the Windows Autopilot device preparation policy, the service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** displays as **Intune Autopilot ConfidentialClient** instead of **Intune Provisioning Client**. As long as the service principal has an AppID of **f1346770-5b25-470b-88bd-d5744ab7952c**, it's the correct service principal and can be selected.
 
 ### User gets to desktop without required applications installed due to conflict between Microsoft Entra ID and Windows Autopilot device preparation local administrator setting
 
