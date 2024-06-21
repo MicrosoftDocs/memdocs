@@ -102,7 +102,7 @@ To connect to Bluetooth devices from your Windows 365 Boot Cloud PC:
 
 ## Battery redirection
 
- When in Windows 365 Boot mode, the Cloud PC desktop shows the the local PC's battery status in the taskbar.
+ When in Windows 365 Boot mode, the Cloud PC desktop shows the local PC's battery status in the taskbar.
 
 <!-- ########################## -->
 ## Next steps
