@@ -119,7 +119,7 @@ When you use the **Retire** device action, the user's personal data is not remov
 
 The following tables describe what data is removed, and the effect of the **Retire** action on data that remains on the device after company data is removed.
 
-#### [iOS](#ios)
+#### iOS
 
 > [!IMPORTANT]
 > Retired devices might not be automatically deleted resulting in the device record remaining in Intune for 180 days unless issued a **Delete** action.
@@ -137,7 +137,7 @@ The following tables describe what data is removed, and the effect of the **Reti
 > [!NOTE]
 > Users that reinstall the Outlook Mobile app following a **Retire** device action may need to choose to **Delete All Saved Contacts** before re-exporting contacts to avoid duplicate contact entries.  Previously exported contacts from Outlook Mobile are considered personal data and are not removed by the **Retire** device action.
 
-#### [Android device administrator](#android-device-administrator)
+#### Android device administrator
 
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
@@ -156,15 +156,15 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|N/A (Android devices don't support Email profiles)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Microsoft Entra unjoin|The Microsoft Entra ID record is removed.|The Microsoft Entra ID record is removed.|
 
-#### [Android Enterprise personally owned devices with a work profile](#android-enterprise-personally-owned-devices-with-a-work-profile)
+#### Android Enterprise personally owned devices with a work profile
 
 Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune.
 
-#### [Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices](#android-enterprise-dedicated-fully-managed-and-corporate-owned-work-profile-devices)
+#### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
 
-- The **Retire** action is supported on Android Enterprise Corporate-Owned Work Profile devices. When the **Retire** action is used on Android Enterprise Corporate-Owned Work Profile devices, the device is unenrolled from Intune management. The work profile is removed along with all corporate data and applications, but all the personal data and applications remain on the device.
+When the **Retire** action is used on Android Enterprise Corporate-Owned Work Profile devices, the device is unenrolled from Intune management. The work profile is removed along with all corporate data and applications, but all the personal data and applications remain on the device.
 
-#### [macOS](#macos)
+#### macOS
 
 |Data type|macOS|
 |-------------|-------|
@@ -175,7 +175,7 @@ Removing company data from an Android personally owned work profile device remov
 |Outlook|If Conditional Access is enabled, the device doesn't receive new mail.|
 |Microsoft Entra Device Record |The Microsoft Entra ID record isn't removed.|
 
-#### [Windows](#windows)
+#### Windows
 
 |Data type|Windows 8.1 (MDM) and Windows RT 8.1|Windows RT|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|
@@ -207,17 +207,30 @@ Device owners can manually unenroll their devices as explained in the following 
 
 ## Delete devices from the Intune admin center
 
-If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. Intune issues a Retire or Wipe action depending on the OS/Enrollment type. Not all enrollment types support the Retire action. 
-<!--Please update this statement to call out which enrollment types will receive a retire when a delete is issued, and which enrollment types will receive a wipe when a delete is issued.-->
+If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. Intune issues a **Retire** or **Wipe** action depending on the OS/Enrollment type. Not all enrollment types support the **Retire** action.
+
+| OS      | Environment                                | Action triggered                                                                           |
+|---------|--------------------------------------------|--------------------------------------------------------------------------------------------|
+| Android | Device administrator                       | RETIRE - All Profiles are deleted, Company Portal (CP) app is signed out.           |
+| Android | Personally-owned devices with work profile | RETIRE - All Profiles are deleted, CP app is deleted.                               |
+| Android | Corporate-owned devices with work profile  | WIPE                                                                       |
+| Android | Dedicated devices                          | WIPE                                                                       |
+| Android | Dedicated w/ Entra ID Shared Mode          | WIPE                                  |
+| Android | Fully managed user devices                 | WIPE                                                                       |
+| Android | AOSP Userless/AOSP User-Associated         | WIPE                                                                       |
+| iOS     | All                                        | RETIRE - All Profiles are deleted, CP app is signed out                            |
+| Windows | All                                        | RETIRE - All Profiles are deleted, work and school account is signed out                   |
+| macOS   | All                                        | RETIRE - All Profiles are deleted, CP app is deleted                              |
+| Linux   | All                                        | DELETED from Intune Portal only, DEVICE is not RETIRE/WIPE  |
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
 
 > [!IMPORTANT]
 > The **Delete** action triggers the following actions:
+>
 > * Depending on the device platform, it may retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](../remote-actions/devices-wipe.md#retire) section for the expected behavior.
 > * BitLocker encryption is suspended if managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
-
 
 ### Automatically delete devices with cleanup rules
 
