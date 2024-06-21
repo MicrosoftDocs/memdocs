@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/19/2024
+ms.date: 06/21/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -22,7 +22,9 @@ appliesto:
 
 ## Update to enrollmentProfileName property for devices deployed via Autopilot for existing devices
 <!--9105086-->
-Devices deployed via Autopilot for existing devices which are also registered for Autopilot would previously have an **enrollmentProfileName** property incorrectly set as **OfflineAutoPilotProfile-<ZtdCorrelationId>**. With a recent change, **enrollmentProfileName** has been updated to correctly display the assigned Autopilot profile. This may impact customers who are using **enrollmentProfileName** for Entra dynamic groups or Intune assignment filters to distinguish devices deployed via Autopilot for existing devices.
+Date added: *06/21/2024*
+
+Devices deployed via Windows Autopilot for existing devices which are also registered for Windows Autopilot would previously have an **enrollmentProfileName** property incorrectly set as **OfflineAutoPilotProfile-\<ZtdCorrelationId\>**. With a recent change, **enrollmentProfileName** has been updated to correctly display the assigned Windows Autopilot profile. This may impact customers who are using **enrollmentProfileName** for Microsoft Entra dynamic groups or Microsoft Intune assignment filters to distinguish devices deployed via Windows Autopilot for existing devices.
 
 ## Windows Autopilot support for Microsoft Teams Rooms
 
