@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/17/2023
+ms.date: 06/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,11 +39,28 @@ This feature applies to:
 
 In Intune, you can bulk activate eSIM codes using the following options:
 
-- **Option 1 - Use an eSIM download server with the Settings Catalog** (this article).
+- **Option 1 - Use an eSIM download server with the settings catalog (this article)**
 
-- **Option 2 - Import activation codes using a CSV file**.
+  | &nbsp; | &nbsp; |
+  | --- | --- |
+  | ✅ | Recommended for **Windows 11** devices. |
+  | ❌ | Not available for **Windows 10**. Instead, go to [Import activation codes using a CSV file](esim-device-configuration.md). |
+  ---
 
-  For more information on this option, go to [Configure eSIM cellular profiles using imported activation codes in Intune](esim-device-configuration.md).
+  In Intune, you create a settings catalog policy that includes the FQDN of your mobile operator's download server. You deploy this policy to your eSIM-capable devices. For cellular connectivity, the device contacts the download server, the download server authenticates the device, and provides the devices with the eSIM connection info for that specific device.
+
+  With this option, you don't need individual activation codes.
+
+- **[Option 2 - Import activation codes using a CSV file](esim-device-configuration.md)**
+
+  | &nbsp; | &nbsp; |
+  | --- | --- |
+  | ✅ | Available for **Windows 10** and **Windows 11**. Go to [Import activation codes using a CSV file](esim-device-configuration.md). |
+  | ❌ | Not recommended for **Windows 11** devices. Instead, we recommend you use a download server in a settings catalog policy (this article).
+
+  In Intune, you create a policy that imports one time use activation codes provided by your mobile operator. You deploy the policy to your eSIM-capable devices. When Intune installs the activation code, the eSIM hardware module uses the data in the activation code to contact the mobile operator. Once complete, the eSIM profile is downloaded on the device, and configured for cellular activation.
+
+  With this option, you need individual activation codes given to you by the mobile operator in a CSV file.
 
 Using Microsoft Intune, you can add eSIM to your supported devices using an eSIM download server. This article gives more information about eSIM, describes the process, lists the prerequisites, and lists the steps to configure eSIM using Intune policy.
 
