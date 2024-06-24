@@ -238,6 +238,20 @@ For more information on filters and the device properties you can currently use,
 - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
 - [Filter properties](filters-device-properties.md)
 
+### Government community cloud (GCC) support for Remote Help for macOS devices
+<!-- 25568551 -->
+
+GCC customers will soon be able to use Remote Help for macOS devices on both web app and native application.
+
+Applies to:
+
+- macOS 12, 13 and 14
+
+For more information, see:
+
+[Remote Help on macOS](../fundamentals/remote-help-macos.md)
+[Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md)
+
 <!-- *********************************************** -->
 
 ## Device security
@@ -284,7 +298,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-<!-- ## Monitor and troubleshoot  -->
+<!-- ## Monitor and troubleshoot -->
  
 <!-- *********************************************** -->
 
