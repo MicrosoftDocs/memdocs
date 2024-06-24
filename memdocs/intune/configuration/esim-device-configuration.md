@@ -45,7 +45,7 @@ In Intune, you can bulk activate eSIM codes using the following options:
   | &nbsp; | &nbsp; |
   | --- | --- |
   | ✅ | Available for **Windows 10** and **Windows 11** (this article). |
-  | ❌ | Not recommended for **Windows 11** devices. Instead, we recommend you use a [download server in a settings catalog policy](esim-device-configuration-settings-catalog.md).
+  | ❌ | Not recommended for **Windows 11** devices. Instead, we recommend you use a [download server in a settings catalog policy](esim-device-configuration-download-server.md). |
 
   In Intune, you can import one time use activation codes provided by your mobile operator. To configure cellular data plans on the eSIM module, deploy those activation codes to your eSIM-capable devices. When Intune installs the activation code, the eSIM hardware module uses the data in the activation code to contact the mobile operator. Once complete, the eSIM profile is downloaded on the device, and configured for cellular activation.
 
@@ -106,7 +106,7 @@ When working with the `csv` file with the activation codes, be sure you or your 
 - The file structure must adhere to a strict format. Otherwise, the import fails. Intune checks the file on import, and fails if errors are found.
 - Activation codes are used only once. It's not recommended to import activation codes that you previously imported, as it can cause problems when you deploy to the same or different device.
 - Each file should be specific to a single mobile operator, and all activation codes specific to the same billing plan. Intune randomly distributes the activation codes to targeted devices. There isn't any guarantee which device gets a specific activation code.
-- A maximum of 1000 activation codes can be imported in one `csv` file.
+- A maximum of 1,000 activation codes can be imported in one `csv` file.
 
 ### CSV file example
 
