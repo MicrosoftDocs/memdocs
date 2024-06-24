@@ -161,7 +161,7 @@ items:
         href: deploy-security-baselines.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
-      - name: Client device redireciton
+      - name: Client device redirection
         href: /azure/virtual-desktop/client-device-redirection-intune
       - name: Microsoft Purview Customer Key
         href: purview-customer-key.md
