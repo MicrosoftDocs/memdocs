@@ -57,7 +57,6 @@ In Intune, you can bulk activate eSIM codes using the following options:
   | --- | --- |
   | ✅ | Recommended for **Windows 11** devices. Go to [Configure eSIM download server using the settings catalog](esim-device-configuration-download-server.md). |
   | ❌ | Not available for **Windows 10**. Instead, import activation codes using a CSV file (this article). |
-  ---
 
   In Intune, you create a settings catalog policy that includes the FQDN of your mobile operator's download server. You deploy this policy to your eSIM-capable devices. For cellular connectivity, the device contacts the download server, the download server authenticates the device, and provides the devices with the eSIM connection info for that specific device.
 
