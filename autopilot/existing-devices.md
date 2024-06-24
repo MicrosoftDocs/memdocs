@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 06/21/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -378,7 +378,11 @@ Also see [Adding devices to Windows Autopilot](add-devices.md).
 
 > [!NOTE]
 >
-> Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if the online profile times out.
+> - Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if the online profile times out.
+> <!--9105086-->
+> - When the assigned profile is applied, the **enrollmentProfileName** property of the device object in Microsoft Intune and Microsoft Entra ID match the Windows Autopilot profile name.
+>
+> - When the Windows Autopilot for existing devices profile is applied, the **enrollmentProfileName** property of the device object in Microsoft Intune and Microsoft Entra ID are **OffilineAutoPilotProfile-\<ZtdCorrelationId\>**.
 
 ## How to speed up the deployment process
 
