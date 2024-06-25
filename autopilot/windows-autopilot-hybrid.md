@@ -233,20 +233,22 @@ If purchasing new devices, some OEMs can register the devices on behalf of the o
 
 ### Display registered Autopilot device
 
-Before they're enrolled in Intune, *registered* Autopilot devices are displayed in three places (with names set to their serial numbers):
+Before devices enroll in Intune, *registered* Windows Autopilot devices are displayed in three places (with names set to their serial numbers):
 
 - The **Windows Autopilot Devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **By platform | Windows** > **Windows enrollment**. Under **Windows Autopilot**, select **Devices**.
 - The **Devices | All devices** pane in the [Azure portal](https://portal.azure.com). Select **Devices** > **All Devices**.
 - The **Autopilot** pane in [Microsoft 365 admin center](https://admin.microsoft.com/). Select **Devices** > **Autopilot**.
 
-After the Autopilot devices are *enrolled*, they're displayed in five places:
+After the Windows Autopilot devices are *enrolled*, the devices are displayed in four places:
 
-- The **Windows Autopilot Devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **By platform | Windows** > **Windows enrollment**. Under **Windows Autopilot**, select **Devices**.
 - The **Devices | All Devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **All devices**.
 - The **Windows | Windows devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **By platform | Windows**.
 - The **Devices | All devices** pane in the [Azure portal](https://portal.azure.com). Select **Devices** > **All Devices**.
-- The **Autopilot** pane in [Microsoft 365 admin center](https://admin.microsoft.com/). Select **Devices** > **Autopilot**.
 - The **Active devices** pane in [Microsoft 365 admin center](https://admin.microsoft.com/). Select **Devices** > **Active devices**.
+
+> [!NOTE]
+>
+> After devices are enrolled, the devices are still displayed in the **Windows Autopilot Devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and in the **Autopilot** pane in [Microsoft 365 admin center](https://admin.microsoft.com/), but those objects are the Windows Autopilot registered objects.
 
 A device object is pre-created in Microsoft Entra ID once a device is registered in Autopilot. When a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
 
