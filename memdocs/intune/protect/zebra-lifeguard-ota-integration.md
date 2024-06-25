@@ -174,7 +174,7 @@ After synchronization is complete, the devices that support LG OTA will contact 
 > LG OTA deployments are fire and forget actions and are not persistent policies that enforce compliance. Therefore, Microsoft refers to them as deployments rather than policy. For example, if an upgrade fails initially but later the issue is remediated, LG OTA will not try to update the device even after the issue is remediated.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Android** > **Android FOTA deployments** to create and manage FOTA deployments.
+2. Select **Devices** > **By platform** > **Android** > **Manage updates** > **Android FOTA deployments** to create and manage FOTA deployments.
 3. Select **Create deployment**.
 4. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.  
 5. On the **Settings** tab, configure the deployment settings you'd like to use.

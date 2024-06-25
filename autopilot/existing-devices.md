@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/21/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -60,13 +60,9 @@ If desired, an [enrollment status page](enrollment-status.md) (ESP) for Autopilo
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Go to **Devices > Enroll Devices > Windows enrollment > Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+1. Go to **Devices** > **Device onboarding** | **Enrollment**. Make sure **Windows** is selected at the top and then under **Windows Autopilot**, select **Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
 
-    :::image type="content" source="images/esp-config.png" alt-text="Enrollment status page policy page in Intune.":::
-
-1. Go to **Microsoft Entra ID > Mobility (MDM and MAM) > Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
-
-    :::image type="content" source="images/mdm-config.png" alt-text="Configure MDM enrollment in Azure.":::
+1. Go to **Microsoft Entra ID** > **Manage** | **Mobility (MDM and WIP)** > **Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
 
 ## Install required modules
 
@@ -168,7 +164,7 @@ $AutopilotProfile | ForEach-Object {
 >
 > The file name has to be `AutopilotConfigurationFile.json` and encoded as ASCII or ANSI.
 
-The profile can also be saved to a text file and edit in Notepad. In Notepad, when choosing **Save as**, select the save as type: **All Files**, and then choose **ANSI** for the **Encoding**.
+The profile can also be saved to a text file and edit in Notepad. In Notepad, when choosing **Save as**, select the save as type: **All Files**, and then select **ANSI** for the **Encoding**.
 
 :::image type="content" source="images/notepad.png" alt-text="Save as ANSI encoding in Notepad.":::
 
@@ -212,7 +208,7 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node.
 
-1. On the ribbon, select **Create**, and then choose **Create Device Collection**. An existing collection can also be used. If using an existing collection, proceed to the [Create a task sequence](#create-a-task-sequence) section.
+1. On the ribbon, select **Create**, and then select **Create Device Collection**. An existing collection can also be used. If using an existing collection, proceed to the [Create a task sequence](#create-a-task-sequence) section.
 
 1. In the Create Device Collection Wizard, enter the following **General** details:
 
@@ -332,7 +328,7 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
         > [!NOTE]
         >
-        > Choose the option here that is relevant for the context of testing. If the target client doesn't have the Configuration Manager agent or Windows installed, the task sequence needs to be started via PXE or Boot Media.
+        > Select the option here that is relevant for the context of testing. If the target client doesn't have the Configuration Manager agent or Windows installed, the task sequence needs to be started via PXE or Boot Media.
 
     - **Scheduling**
 
@@ -382,7 +378,11 @@ Also see [Adding devices to Windows Autopilot](add-devices.md).
 
 > [!NOTE]
 >
-> Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if the online profile times out.
+> - Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if the online profile times out.
+> <!--9105086-->
+> - When the assigned profile is applied, the **enrollmentProfileName** property of the device object in Microsoft Intune and Microsoft Entra ID match the Windows Autopilot profile name.
+>
+> - When the Windows Autopilot for existing devices profile is applied, the **enrollmentProfileName** property of the device object in Microsoft Intune and Microsoft Entra ID are **OffilineAutoPilotProfile-\<ZtdCorrelationId\>**.
 
 ## How to speed up the deployment process
 
