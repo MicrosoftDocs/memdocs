@@ -376,7 +376,7 @@ Connection status and timeout information on the connection screen for Windows 3
 
 #### FQDN requirement changes<!--46731885-->
 
-Many required FQDNs have been moved to the *.infra.windows365.microsoft.com wildcard FQDN. This move reduces the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs were moved to *.infra.windows365.microsoft.us. To avaoid any issues when provisioning new Cloud PCs, you must make sure that *.infra.windows365.microsoft.com (*.infra.windows365.microsoft.us for Windows 365 Government) is an accessible endpoint in your network allow list.
+Many required FQDNs have been moved to the *.infra.windows365.microsoft.com wildcard FQDN. This move reduces the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs were moved to *.infra.windows365.microsoft.us. To avoid any issues when provisioning new Cloud PCs, you must make sure that *.infra.windows365.microsoft.com (*.infra.windows365.microsoft.us for Windows 365 Government) is an accessible endpoint in your network allow list.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### End user experience
@@ -580,7 +580,7 @@ These 16 vCPU licenses can be purchased and assigned in the same way that you pu
 Two new gallery images are now available for Windows 365 Cloud PCs:
 
 - Windows 11 Preview + Microsoft 365 Apps 23H2
-- Winodws 11 Preview + OS Optimizations 23H2
+- Windows 11 Preview + OS Optimizations 23H2
 
 You can choose the new gallery images when [creating a provisioning policy](create-provisioning-policy.md).
 
@@ -659,7 +659,7 @@ The following updates related to single sign-on are now available:
 - [Public preview features](..\public-preview.md).
   - Single sign-on for Microsoft Entra hybrid join Cloud PCs.
   - You can turn on single sign-on separately for each provisioning policy.
-  - A new Azure Network Connection check to make sure that the network is properly configured for single sign on.
+  - A new Azure Network Connection check to make sure that the network is properly configured for single sign-on.
   - Apply single sign-on to existing Microsoft Entra joined and Microsoft Entra hybrid joined Cloud PCs.
 
 For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
@@ -919,7 +919,7 @@ Users can now change multiple monitor setting in the Windows 365 app.
 
 #### Windows 365 Government Azure Network Connection set up improvement<!--44237227-->
 
-During Azure network connection (ANC) creation or editing, instead of copying and pasting details (like Subscription ID, and VNET name) for the ANC, you can now select options from a drop down menu. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
+During Azure network connection (ANC) creation or editing, instead of copying and pasting details (like Subscription ID, and VNET name) for the ANC, you can now select options from a drop-down menu. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
 
 <!-- ########################## -->
 ## Week of May 22, 2023
