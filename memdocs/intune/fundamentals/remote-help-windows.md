@@ -115,7 +115,7 @@ Some users may choose to opt out of automatic updates. However, when a new versi
 
 Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of Remote Help is **5.1.1214.0**
+The most recent version of Remote Help is **5.1.1419.0**
 
 ### Deploy Remote Help as a Win32 app
 
@@ -373,10 +373,12 @@ You might see an error code in a dialog box if you're having trouble installing 
 ### Solutions
 
 1. Ensure that Microsoft Edge is installed properly and is up to date.
+   
 Remote Help uses the Microsoft Edge browser control. If your device has Microsoft Edge installed, then it’s likely that Remote Help will run properly. If you have problems, the common troubleshooting tips here may help get Remote Help working. Learn more about [Troubleshooting tips for installing and updating Microsoft Edge.](https://support.microsoft.com/microsoft-edge/troubleshooting-tips-for-installing-and-updating-microsoft-edge-a5eceb94-c2b1-dfab-6569-e79d0250317b)
 After installing or updating Microsoft Edge, try opening Remote Help again. If Remote Help doesn't run or you get an error message that Microsoft Edge WebView2 isn't installed, go to the next step.
 
-2.  Install Microsoft Edge WebView 2
+2. Install Microsoft Edge WebView 2
+   
 Microsoft Edge WebView2 is required to use Remote Help. If you get an error message that WebView2 isn't installed when you try to open Remote Help, then [download and install Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/consumer/?form=MA13LH) from the Microsoft website. After you've downloaded WebView2, try opening Remote Help again.
 
 > [!NOTE]
@@ -390,6 +392,12 @@ For newly enrolled devices, there's a 1 hour delay before the user's device begi
 ## What's New for Remote Help
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
+
+### June 25, 2024
+
+Version 5.1.1419.0
+
+- Resolve issue where the screen may be blank on first launch. 
 
 ### March 13, 2024
 
