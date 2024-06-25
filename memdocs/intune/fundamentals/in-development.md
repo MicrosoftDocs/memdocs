@@ -108,7 +108,7 @@ Applies to:
 
 ## Device configuration
 
-### New settings available in the Apple settings catalog <!-- 28052449 -->
+### New settings available in the Apple settings catalog<!-- 28052449 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
@@ -172,7 +172,24 @@ Applies to:
 
 ## Device management
 
-### New `cpuArchitecture` filter device property for app and policy assignments <!-- 7423106 -->
+### Changes for Account Protection policies<!-- 24810271 -->
+
+Account Protection policies can help you protect the credentials of your users, and focus on settings for Windows Hello and Credential Guard, which are part of Windows identity and access management.
+
+To help improve Intune Account Protection policies, we will be removing two older templates that use an outdated settings format, and consolidating Account Protection management through use of a single new profile. The settings in the new profile will use the newer unified settings format for device management, be available through the settings catalog, and help to improve the reporting experience in the Intune admin center.
+
+The new profile will be found in the account protection policy node of endpoint security, and will be named *Account Protection*. With this profile you’ll be able to manage the same settings as before, though the new profile will present updated names and options for those settings.
+
+The old profiles we're removing include the *Account Protection* template that's available through device configuration, and the *Account Protection (Preview)* template that's available through endpoint security Account Protection policy.
+
+For more information about this type of policy, see [Manage device security with endpoint security policies](../protect/ endpoint-security-account-protection-policy.md).
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+### New `cpuArchitecture` filter device property for app and policy assignments<!-- 7423106 -->
 
 When you assign an app, compliance policy, or configuration profile, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
 
@@ -190,7 +207,7 @@ Applies to:
 - Windows 11
 - macOS
 
-### New `operatingSystemVersion` filter property with new comparison operators (preview) <!-- 10033345 -->
+### New `operatingSystemVersion` filter property with new comparison operators (preview)<!-- 10033345 -->
 
 There's a new `operatingSystemVersion` filter property. This property:
 
@@ -238,8 +255,7 @@ For more information on filters and the device properties you can currently use,
 - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
 - [Filter properties](filters-device-properties.md)
 
-### Government community cloud (GCC) support for Remote Help for macOS devices
-<!-- 25568551 -->
+### Government community cloud (GCC) support for Remote Help for macOS devices<!-- 25568551 -->
 
 GCC customers will soon be able to use Remote Help for macOS devices on both web app and native application.
 
