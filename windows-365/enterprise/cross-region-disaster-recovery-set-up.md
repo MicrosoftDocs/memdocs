@@ -33,7 +33,7 @@ ms.collection:
 
 [Cross region disaster recovery](cross-region-disaster-recovery.md) is set up as explained in the following steps. For more information about user settings, see [User settings](assign-users-as-local-admin.md).
 
-> [!NOTE]  
+> [!IMPORTANT]  
 > When using cross region disaster recovery, it's critical to configure and test the entire cross region flow as part of your repeating [business continuity adn disaster recovery planning](../business-continuity-disaster-recovery.md). Before releasing widely across your whole environment, you should activate and deactivate multiple test devices to make sure that it's working as expected. You should also periodically your environment is healthy and configured correctly by using the [**Cloud PCs cross region disaster recovery status** report](cross-region-disaster-recovery-report.md).
 
 
