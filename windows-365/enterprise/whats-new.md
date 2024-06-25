@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/05/2024
+ms.date: 06/26/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -54,6 +54,38 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of June 24, 2024 (Service release 2406)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+
+Windows 365 now supports AVC mixed mode when MMR is not enabled.
+
+#### Windows 365 Boot and Windows 365 Switch now support battery direction<!--51748880-->
+
+Windows 365 Boot and Windows 365 Switch now support battery redirection. Cloud PCs now show the local PC's battery status.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Single sign-on Windows 365 clients authentication change<!--49918010-->
+
+Single sign-on for Windows 365 is transitioning to use the Windows Cloud Login Entra ID cloud app for Windows authentication starting with the Windows and Web clients. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Windows 365 Government now supports Cloud PC utilization report<!--49200860-->
+
+Windows 365 Government now supports the Cloud PC utilization report. For more information,  see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### Cloud PC size recommendation report is now generally available<!--50219942-->
+
+The Cloud PC size recommendation report has moved out of preview and is now generally available. For more information, see [Cloud PC recommendations report](report-cloud-pc-recommendations.md).
 
 <!-- ########################## -->
 ## Week of June 3, 2024 (Service release 2405)
