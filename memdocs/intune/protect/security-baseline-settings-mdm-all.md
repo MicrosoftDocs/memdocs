@@ -1313,39 +1313,39 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **Allow Script Scanning**  
   Baseline default: *Allowed.*  
   [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscriptscanning)
-  - **Block execution of potentially obfuscated scripts**  
-    Baseline default: *Not configured*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block Win32 API calls from Office macros**  
-    Baseline default: *Not configured*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block Office communication application from creating child processes**  
-    Baseline default: *Not configured*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block all Office applications from creating child processes**  
-    Baseline default: *Not configured*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block JavaScript or VBScript from launching downloaded executable content**  
-    Baseline default: *Not configured*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block untrusted and unsigned processes that run from USB**  
-    Baseline default: *Not configured*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block Adobe Reader from creating child processes**  
-    Baseline default: *Not configured*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block credential stealing from the Windows local security authority subsystem**  
-    Baseline default: *Not configured*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block Office applications from creating executable content**  
-    Baseline default: *Not configured*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block Office applications from injecting code into other processes**  
-    Baseline default: *Not configured*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block executable content from email client and webmail**  
-    Baseline default: *Not configured*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block execution of potentially obfuscated scripts**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block Win32 API calls from Office macros**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block Office communication application from creating child processes**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block all Office applications from creating child processes**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block JavaScript or VBScript from launching downloaded executable content**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block untrusted and unsigned processes that run from USB**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block Adobe Reader from creating child processes**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block credential stealing from the Windows local security authority subsystem**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block Office applications from creating executable content**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block Office applications from injecting code into other processes**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block executable content from email client and webmail**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
 - **Cloud Block Level**  
   Baseline default: *High*  
