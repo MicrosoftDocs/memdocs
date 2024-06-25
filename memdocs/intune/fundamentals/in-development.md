@@ -194,11 +194,11 @@ To learn more about how you can currently use Copilot in Intune, see [Microsoft 
 
 Account Protection policies can help you protect the credentials of your users, and focus on settings for Windows Hello and Credential Guard, which are part of Windows identity and access management.
 
-To help improve Intune Account Protection policies, we will be removing two older templates that use an outdated settings format, and consolidating Account Protection management through use of a single new profile. The settings in the new profile will use the newer unified settings format for device management, be available through the settings catalog, and help to improve the reporting experience in the Intune admin center.
+To help improve Intune Account Protection policies, we will be removing older templates that use an outdated settings format, and consolidating Account Protection management through use of a single new profile. The settings in the new profile will use the newer unified settings format for device management, be available through the settings catalog, and help to improve the reporting experience in the Intune admin center.
 
 The new profile will be found in the account protection policy node of endpoint security, and will be named *Account Protection*. With this profile you’ll be able to manage the same settings as before, though the new profile will present updated names and options for those settings.
 
-The old profiles we're removing include the *Account Protection* template that's available through device configuration, and the *Account Protection (Preview)* template that's available through endpoint security Account Protection policy.
+The old profile we're removing is the *Account Protection (Preview)* template that's available through endpoint security Account Protection policy.
 
 For more information about this type of policy, see [Manage device security with endpoint security policies](../protect/ endpoint-security-account-protection-policy.md).
 
