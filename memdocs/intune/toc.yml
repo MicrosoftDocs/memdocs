@@ -1241,9 +1241,9 @@ items:
         - name: eSIM cellular on Windows
           displayName: embedded sim, activation code
           items:
-          - name: eSIM bulk activation with download server
+          - name: eSIM bulk activation with download server (settings catalog)
             href: ./configuration/esim-device-configuration-download-server.md
-          - name: eSIM bulk activation with activation codes
+          - name: eSIM bulk activation with activation codes (import CSV)
             href: ./configuration/esim-device-configuration.md
 
       - name: Configuration profile settings lists
