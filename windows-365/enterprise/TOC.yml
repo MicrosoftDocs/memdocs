@@ -161,6 +161,8 @@ items:
         href: deploy-security-baselines.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
+      - name: Client device redirection
+        href: /azure/virtual-desktop/client-device-redirection-intune
       - name: Microsoft Purview Customer Key
         href: purview-customer-key.md
       - name: Enable screen capture protection
@@ -169,6 +171,8 @@ items:
         href: watermarking.md
       - name: Restrict Office 365 access to Cloud PCs 
         href: restrict-office-365-cloud-pcs.md
+      - name: Set up forensic evidence 
+        href: forensic-evidence-set-up.md
     - name: Identity and access management
       items:
       - name: Set conditional access policies

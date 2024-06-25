@@ -79,7 +79,7 @@ This article guides you through these steps.
 Cellular activation codes are provided by your mobile operator in a comma-separated file (csv). When you have this file, add it to Intune using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **eSIM cellular profiles** > **Add**.
+2. Select **Devices** > **Manage devices** > **eSIM cellular profiles** > **Add**.
 3. Select the CSV file that has your activation codes.
 4. Select **OK** to save your changes.
 
@@ -129,7 +129,7 @@ Create a device group that includes the eSIM capable devices. [Add groups](../fu
 Assign the profile to the Microsoft Entra group that includes your eSIM devices.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **eSIM cellular profiles**.
+2. Select **Devices** > **Manage devices** > **eSIM cellular profiles**.
 3. In the list of profiles, select the eSIM cellular subscription pool you want to assign, and then select **Assignments**.
 4. Choose to **Include** groups or **Exclude**  groups, and then select the groups.
 
@@ -147,14 +147,14 @@ eSIM activation codes are used once. After Intune installs an activation code on
 After you assign the profile, you can monitor the deployment status of a subscription pool.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **eSIM cellular profiles**. All of your existing eSIM cellular subscription pools are listed.
+2. Select **Devices** > **Manage devices** > **eSIM cellular profiles**. All of your existing eSIM cellular subscription pools are listed.
 3. Select a subscription, and review the **Deployment Status**.
 
 ### Check the profile status
 
 After you create your device profile, Intune provides graphical charts. These charts display the status of a profile, such as it being successfully assigned to devices, or if the profile shows a conflict.
 
-1. Select **Devices** > **eSIM cellular profiles** > Select an existing subscription.
+1. Select **Devices** > **Manage devices** > **eSIM cellular profiles** > Select an existing subscription.
 2. In the **Overview** tab, the top graphical chart shows the number of devices assigned to the specific eSIM cellular subscription pool deployment.
 
     It also shows the number of devices for other platforms that are assigned the same device profile.
@@ -170,7 +170,7 @@ After you create your device profile, Intune provides graphical charts. These ch
 
 In **Device Status**, you can monitor and view a detailed list of devices you can view.
 
-1. Select **Devices** > **eSIM cellular profiles** > Select an existing subscription.
+1. Select **Devices** > **Manage devices** > **eSIM cellular profiles** > Select an existing subscription.
 2. Select **Device Status**. Intune shows more details about the device:
 
     - **Device Name**: Name of the device that is targeted

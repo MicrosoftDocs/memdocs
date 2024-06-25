@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/30/2024
+ms.date: 06/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -154,7 +154,7 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 For details about the payload settings for the Extensible Single Sign-on extension, go to [Extensible Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/depfd9cdf845/web) (opens Apple's web site).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create** > **New policy**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **macOS**.
@@ -177,6 +177,7 @@ For details about the payload settings for the Extensible Single Sign-on extensi
     - **Extension Identifier**
     - Expand **Platform SSO**:
       - Select **Authentication Method** (macOS 14+)
+      - Select **Token To User Mapping**
       - Select **Use Shared Device Keys**
     - **Registration Token**
     - **Screen Locked Behavior**
@@ -199,12 +200,18 @@ For details about the payload settings for the Extensible Single Sign-on extensi
     | **Platform SSO** > **Use Shared Device Keys** </br>(macOS 14+) | **Enabled** | When enabled, Platform SSO uses the same signing and encryption keys for all users on the same device. </br></br>Users upgrading from macOS 13.x to 14.x are prompted to register again. |
     | **Registration token** | `{{DEVICEREGISTRATION}}` | You must include the curly braces. For more information on this registration token, go to [Configure Microsoft Entra device registration](/entra/identity-platform/apple-sso-plugin#configure-microsoft-entra-device-registration). <br/><br/>This setting requires that you also configure the `AuthenticationMethod` setting.<br/><br/>- If you use only macOS 13 devices, then configure the **Authentication Method (Deprecated)** setting.<br/>- If you use only macOS 14+ devices, then configure the **Platform SSO** > **Authentication Method** setting.<br/>- If you have a mix of macOS 13 and macOS 14+ devices, then configure both authentication settings in the same profile. |
     | **Screen Locked Behavior** | **Do Not Handle** | When set to **Do Not Handle**, the request continues without SSO. |
+    | **Token To User Mapping** > **Account Name** | `preferred_username` | This token specifies that the Entra [`preferred_username`](/entra/identity-platform/id-token-claims-reference#payload-claims) attribute value is used for the macOS account's Account Name value. |
+    | **Token To User Mapping** > **Full Name** | `name` | This token specifies that the Entra [`name`](/entra/identity-platform/id-token-claims-reference#payload-claims) claim is used for the macOS account's Full Name value. |
     | **Team Identifier** | `UBF8T346G9` | This identifier is the team identifier of the Enterprise SSO plug-in app extension. |
     | **Type** | Redirect | |
     | **URLs** | Enter all the following URLs: <br/><br/>`https://login.microsoftonline.com` <br/> `https://login.microsoft.com` <br/> `https://sts.windows.net` <br/><br/> If your environment needs to allow sovereign cloud domains, then also add the following URLs: <br/><br/> `https://login.partner.microsoftonline.cn` <br/> `https://login.chinacloudapi.cn` <br/> `https://login.microsoftonline.us` <br/> `https://login-us.microsoftonline.com` | These URL prefixes are the identity providers that do SSO app extensions. The URLs are required for **redirect** payloads and are ignored for **credential** payloads. <br/><br/>For more information on these URLs, go to [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin). |
 
     > [!IMPORTANT]
     > If you have a mix of macOS 13 and macOS 14+ devices in your environment, then configure the **Platform SSO** > **Authentication Method** and the **Authentication Method (Deprecated)** authentication settings in the same profile.
+
+    When the profile is ready, it looks similar to the following example:
+
+    :::image type="content" source="./media/platform-sso-macos/intune-psso-device-profile.png" alt-text="Screenshot that shows the recommended Platform SSO settings in an Intune MDM profile.":::
 
 9. Select **Next**.
 10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).

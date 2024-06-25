@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -19,7 +19,7 @@ appliesto:
 
 # Step by step tutorial for Windows Autopilot device preparation user-driven Microsoft Entra join in Intune
 
-This step by step tutorial guides you through using Intune to perform a Windows Autopilot device preparation user-driven scenario when the devices are Microsoft Entra joined.
+This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation user-driven scenario when the devices are Microsoft Entra joined.
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Windows Autopilot device preparation user-driven Microsoft Entra join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
@@ -41,11 +41,11 @@ Windows Autopilot device preparation user-driven deployments can perform the fol
 - Installs up to 10 essential applications.
 - Runs up to 10 essential PowerShell scripts.
 
-Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop.
+Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the desktop.
 
 ## Windows Autopilot device preparation user-driven Microsoft Entra join process
 
-During the out of box experience (OOBE), a user authenticates with their corporate credentials. If there's a Windows Autopilot device preparation policy assigned to the user signing in, then that policy is delivered to the device. It then determines the configuration that needs to be applied to the device based on the settings configured in the policy. After that, device setup continues in the following order:
+During the out-of-box experience (OOBE), a user authenticates with their corporate credentials. If there's a Windows Autopilot device preparation policy assigned to the user signing in, then that policy is delivered to the device. It then determines the configuration that needs to be applied to the device based on the settings configured in the policy. After that, device setup continues in the following order:
 
 1. The device joins Microsoft Entra ID and enrolls in Intune.
 
@@ -63,7 +63,7 @@ During the out of box experience (OOBE), a user authenticates with their corpora
 
 1. If all steps succeed, the **Required setup complete** page is displayed for the user.
 
-1. Once the **Required setup complete** page is dismissed, the user is automatically signed in and the Desktop is displayed.
+1. Once the **Required setup complete** page is dismissed, the user is automatically signed in and the desktop is displayed.
 
 1. At this point, another sync is triggered and all other configurations is delivered to the device. Additional configurations might include:
 

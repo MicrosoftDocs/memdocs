@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -49,11 +49,11 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
 1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-1. Under **Windows Autopilot device preparation**, select **Device preparation policies**.
+1. In the **Windows | Windows enrollment** screen, Under **Windows Autopilot device preparation**, select **Device preparation policies**.
 
 1. In the **Device preparation policies** screen, select **Create**.
 
-1. The **Create profile** screen opens. In the **Introduction** page, select the **Next** button.
+1. The **Create profile** screen opens. In the **Introduction** page, select **Next**.
 
 1. In the **Basics** page:
 
@@ -61,11 +61,11 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
    1. In the **Description** text box, if desired, enter a description for the Windows Autopilot device preparation policy.
 
-   1. Once a name and description is entered, select the **Next** button.
+   1. Once a name and description is entered, select **Next**.
 
-1. In the **Device group** page, select the **Search by group name..** box, and then either select or search for the device group created in [Step 3: Create a device group](entra-join-device-group.md). Make sure to select the device group created in [Step 3: Create a device group](entra-join-device-group.md) and not the user group created in [Step 4: Create a user group](entra-join-user-group.md). Once the correct device group is selected, select the **Next** button.
+1. In the **Device group** page, select the **Search by group name..** box, and then either select or search for the device group created in [Step 3: Create a device group](entra-join-device-group.md). Make sure to select the device group created in [Step 3: Create a device group](entra-join-device-group.md) and not the user group created in [Step 4: Create a user group](entra-join-user-group.md). Once the correct device group is selected, select **Next**.
 
-1. In the **Configuration settings** page, configure the various settings as desired and then select the **Next** button. For detailed information on the configurations on this page, see the next section [Configuration settings](#configuration-settings).
+1. In the **Configuration settings** page, configure the various settings as desired and then select **Next**. For detailed information on the configurations on this page, see the next section [Configuration settings](#configuration-settings).
 
 1. In the **Scope tags** page, select **Next**.
 
@@ -73,9 +73,9 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
     >
     > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
-1. In the **Assignments** page, select the **Search by group name..** box, and then either select or search for the user group created in [Step 4: Create a user group](entra-join-user-group.md). Make sure to select the user group created in [Step 4: Create a user group](entra-join-user-group.md) and not the device group created in [Step 3: Create a device group](entra-join-device-group.md). Once the correct user group is selected, select the **Next** button.
+1. In the **Assignments** page, select the **Search by group name..** box, and then either select or search for the user group created in [Step 4: Create a user group](entra-join-user-group.md). Make sure to select the user group created in [Step 4: Create a user group](entra-join-user-group.md) and not the device group created in [Step 3: Create a device group](entra-join-device-group.md). Once the correct user group is selected, select **Next**.
 
-1. In the **Review + create** page, review all settings to make sure they're all correct. Once everything is verified, select the **Save** button to finish creating the Windows Autopilot device preparation policy.
+1. In the **Review + create** page, review all settings to make sure they're all correct. Once everything is verified, select **Save** to finish creating the Windows Autopilot device preparation policy.
 
 ## Configuration settings
 
@@ -93,7 +93,7 @@ In the **Configuration settings** page:
 
    1. **Allow users to skip setup after multiple attempts** - select either **Yes** or **No** as desired by toggling the switch.
 
-      Normally after a deployment failure, a **Retry** button is displayed allowing the end-user to retry the deployment. Setting this option as **Yes** also adds a **Continue anyway** button that allows the deployment to just fail, signs the end-user in, and lets them continue to the Desktop.
+      Normally after a deployment failure, a **Retry** button is displayed allowing the end-user to retry the deployment. Setting this option as **Yes** also adds a **Continue anyway** button that allows the deployment to just fail, signs the end-user in, and lets them continue to the desktop.
 
    1. **Show link to diagnostics** - select either **Yes** or **No** as desired by toggling the switch.
 
@@ -115,7 +115,7 @@ In the **Configuration settings** page:
 
       1. Once a desired application is found, select the **Add** button next to the application. The application is added to the list under **Selected Apps**.
 
-      1. Once all of the desired applications are selected, select the **Save** button.
+      1. Once all of the desired applications are selected, select **Save**.
 
     All of the selected applications should display under **Allowed Applications**.
 
@@ -142,7 +142,7 @@ In the **Configuration settings** page:
 
     > [!IMPORTANT]
     >
-    > By default, when a device is enrolled in Microsoft Entra ID, the user is automatically added to the **Administrator** group on the device. If this setting is set to **Standard User**, the Windows Autopilot device preparation deployment ensures that the user is removed from the **Administrator** group before the deployment completes, the user is signed in, and the user reaches the Desktop.
+    > By default, when a device is enrolled in Microsoft Entra ID, the user is automatically added to the **Administrator** group on the device. If this setting is set to **Standard User**, the Windows Autopilot device preparation deployment ensures that the user is removed from the **Administrator** group before the deployment completes, the user is signed in, and the user reaches the desktop.
 
 1. Expand the **Scripts** section by selecting it:
 
@@ -160,7 +160,7 @@ In the **Configuration settings** page:
 
       1. Once a desired PowerShell script is found, select the **Add** button next to the PowerShell script. The PowerShell script is added to the list under **Selected Scripts**.
 
-      1. Once all of the desired PowerShell scripts are selected, select the **Save** button.
+      1. Once all of the desired PowerShell scripts are selected, select **Save**.
 
     All of the selected PowerShell scripts should display under **Allowed Scripts**.
 

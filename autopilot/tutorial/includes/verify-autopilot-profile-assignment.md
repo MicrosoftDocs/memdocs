@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 03/21/2024
+ms.date: 06/19/2024
 ms.localizationpriority: medium
 ---
 
@@ -23,19 +23,19 @@ Before deploying a device, ensure that an Autopilot profile is assigned to a dev
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. In the **Home** screen, select **Devices** in the left pane.
+1. In the **Home** screen, select **Devices** in the left pane.
 
-3. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-4. In the **Windows | Windows devices** screen, select **Windows enrollment**.
+1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-5. Under **Windows Autopilot Deployment Program**, select **Devices**.
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
-6. In the **Windows Autopilot devices** screen that opens:
+1. In the **Windows Autopilot devices** screen that opens:
 
    1. Find the desired device that Autopilot deployment profile assignment status needs to be checked.
 
-   2. Once the device is located, its current status is listed under the **Profile status** column. The status has one of the following values:
+   1. Once the device is located, its current status is listed under the **Profile status** column. The status has one of the following values:
 
        - **Not assigned**: An Autopilot deployment profile isn't assigned to the device.
 
@@ -68,4 +68,4 @@ Before deploying a device, ensure that an Autopilot profile is assigned to a dev
 
 > [!NOTE]
 >
-> Intune periodically checks for new devices in the assigned device groups, and then begins the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
+> Intune periodically checks for new devices in the assigned device groups, and then begins the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Autopilot services, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
