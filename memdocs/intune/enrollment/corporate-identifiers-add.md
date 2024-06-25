@@ -40,7 +40,6 @@ It isn't necessary to add corporate identifiers for all deployments. During enro
 - [Device enrollment manager](device-enrollment-manager-enroll.md) account (all platforms)
 - An Apple device enrollment program such as [Apple School Manager](apple-school-manager-set-up-ios.md), Apple Business Manager, or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS/iPadOS only)  
 - [Windows Autopilot](/autopilot/windows-autopilot)
-- [Windows Autopilot device preparation](/autopilot/device-preparation/overview)  
 - Co-management with Microsoft Intune and group policy (GPO)  
 - Azure Virtual Desktop  
 - Automatic mobile device management (MDM) enrollment via provisioning package  
@@ -90,7 +89,7 @@ The following table shows the identifiers supported for each platform. When a de
 ## Step 1: Create CSV file
 Create a list of corporate identifiers and save it as a CSV file. You can add up to 5,000 rows or 5 MB of data per file, whichever comes first. Don't add headers.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Remember, only add one type of corporate identifier per CSV file.  
 
 ### Add Android, iOS corporate identifiers
@@ -109,6 +108,9 @@ Android and iOS/iPadOS devices can have multiple IMEI numbers. Intune reads and 
 Android serial numbers aren't guaranteed to be unique or present. Check with your device supplier to find out if the serial number is a reliable device ID. Serial numbers reported by the device to Intune might not match the ID shown on the device in Android settings or Android device information. Verify the type of serial number reported by the device manufacturer.  
 
 ### Add Windows corporate identifiers  
+
+> [!IMPORTANT]
+> Corporate identifiers are not supported for devices running Windows 10. If you're enrolling Windows 10 devices, do not use the corporate identifier feature.
 
 To add corporate identifiers for corporate devices running Windows 11, list the manufacturer, model, and serial number for each device as shown in the following example.  
 
