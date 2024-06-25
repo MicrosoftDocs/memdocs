@@ -8,7 +8,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 06/11/2024
+ms.date: 06/25/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -171,6 +171,17 @@ The device ESP reruns during the user flow so that both device and user ESP run 
 > [!NOTE]
 >
 > If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Microsoft Entra sign-in option might not show. Instead, users are asked to accept the EULA, and create a local account, which might not be the desired behavior.
+
+## Deploying a device
+
+For more information on starting a deployment on a device when using Windows Autopilot for pre-provisioned, see the Technician flow and User flow steps of the Windows Autopilot for pre-provisioned deployment tutorials:
+
+- [Microsoft Entra join](tutorial/pre-provisioning/azure-ad-join-workflow.md):
+  - [Technician flow](tutorial/pre-provisioning/azure-ad-join-technician-flow.md).
+  - [User flow](tutorial/pre-provisioning/azure-ad-join-user-flow.md).
+- [Microsoft Entra hybrid](tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md):
+  - [Technician flow](tutorial/pre-provisioning/hybrid-azure-ad-join-technician-flow.md).
+  - [User flow](tutorial/pre-provisioning/hybrid-azure-ad-join-user-flow.md).
 
 ## Related content
 
