@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 06/25/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -65,7 +65,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
     >
     > Options that are dimmed or shaded in the selected deployment mode aren't currently supported.
 
-1. In the **Join to Azure AD as** box, select **Azure AD joined**.
+1. In the **Join to Microsoft Entra ID as** box, select **Microsoft Entra joined**.
 
 1. Configure the following options:
 
@@ -127,7 +127,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 
 After the Autopilot deployment profile is created, certain parts of the deployment profile can be edited.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment profiles**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **By platform | Windows** > **Windows enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment profiles**.
 
 1. Select the profile to edit.
 
@@ -168,7 +170,7 @@ If a group is assigned to multiple Autopilot profiles, the device would receive 
 
 ## Autopilot deployments report
 
-Details on each device deployed through Windows Autopilot can be seen through a report. To see the report, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Autopilot deployments**. The data is available for 30 days after deployment.
+Details on each device deployed through Windows Autopilot can be seen through a report. To see the report, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Windows Autopilot deployment status**. The data is available for 30 days after deployment.
 
 This report is in preview. Only new Intune enrollment events trigger device deployment records. Deployments that don't trigger a new Intune enrollment don't appear in this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot pre-provisioning.
 

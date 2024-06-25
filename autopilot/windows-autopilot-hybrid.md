@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/19/2024
+ms.date: 06/25/2024
 ms.topic: how-to
 ms.service: windows-client
 ms.subservice: itpro-deploy
@@ -235,16 +235,16 @@ If purchasing new devices, some OEMs can register the devices on behalf of the o
 
 Before they're enrolled in Intune, *registered* Autopilot devices are displayed in three places (with names set to their serial numbers):
 
-- The **Autopilot Devices** pane in the Intune in the Azure portal. Select **Device enrollment** > **Windows enrollment** > **Devices**.
-- The **Microsoft Entra devices** pane in the Intune in the Azure portal. Select **Devices** > **Microsoft Entra Devices**.
-- The **Microsoft Entra All Devices** pane in Microsoft Entra ID in the Azure portal by selecting **Devices** > **All Devices**.
+- The **Windows Autopilot Devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **By platform | Windows** > **Windows enrollment**. Under **Windows Autopilot**, select **Devices**.
+<!-- - The **Microsoft Entra devices** pane in the Intune in the Azure portal. Select **Devices** > **Microsoft Entra Devices**.  -->
+- The **Devices | All devices** pane in the [Azure portal](https://portal.azure.com). Select **Devices** > **All Devices**.
 
 After the Autopilot devices are *enrolled*, they're displayed in four places:
 
-- The **Autopilot Devices** pane in the Intune in the Azure portal. Select **Device enrollment** > **Windows enrollment** > **Devices**.
-- The **Microsoft Entra devices** pane in the Intune in the Azure portal. Select **Devices** > **Microsoft Entra Devices**.
-- The **Microsoft Entra All Devices** pane in Microsoft Entra ID in the Azure portal. Select **Devices** > **All Devices**.
-- The **All Devices** pane in the Intune in the Azure portal. Select **Devices** > **All Devices**.
+- The **Windows Autopilot Devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **By platform | Windows** > **Windows enrollment**. Under **Windows Autopilot**, select **Devices**.
+<!-- - The **Microsoft Entra devices** pane in the Intune in the Azure portal. Select **Devices** > **Microsoft Entra Devices**.
+- The **Microsoft Entra All Devices** pane in Microsoft Entra ID in the Azure portal. Select **Devices** > **All Devices**. -->
+- The **Devices | All devices** pane in the [Azure portal](https://portal.azure.com). Select **Devices** > **All Devices**.
 
 A device object is pre-created in Microsoft Entra ID once a device is registered in Autopilot. When a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
 
@@ -283,9 +283,9 @@ The following VPN solutions are **known** not to work with Windows Autopilot and
 
 Autopilot deployment profiles are used to configure the Autopilot devices.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **By platform** | **Windows** > **Windows enrollment**
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **By platform** | **Windows** > **Windows enrollment**.
 
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment Profiles**
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment Profiles**.
 
 1. In the **Windows Autopilot deployment profiles** screen, select the **Create Profile** drop down menu and then select **Windows PC**.
 

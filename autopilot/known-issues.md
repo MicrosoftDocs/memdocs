@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/21/2024
+ms.date: 06/25/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -138,7 +138,7 @@ Date added: *March 3, 2022*
 
     If a policy is in place such that **all cloud apps** require a compliant device (there's no exclusion list), by default Microsoft Intune Enrollment is excluded, so that the device can register with Microsoft Entra ID and enroll with Intune and avoid a circular dependency.
 
-1. **Hybrid Microsoft Entra devices**: When Hybrid Microsoft Entra devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Microsoft Entra ID and one hybrid.  The hybrid compliance state displays as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
+1. **Hybrid Microsoft Entra devices**: When Hybrid Microsoft Entra devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Microsoft Entra ID and one hybrid.  The hybrid compliance state displays as **N/A** when viewed from the devices list in the [Azure portal](https://portal.azure.com) until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
 
     The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or Microsoft Entra hybrid joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
 
@@ -298,7 +298,7 @@ Ensure that the JSON profile file is saved in **ANSI/ASCII** format, not Unicode
 
 ### **Something went wrong** is displayed page during OOBE
 
-The client is likely unable to access all the required Azure AD/MSA-related URLs. For more information, see [Networking requirements](requirements.md?tabs=networking).
+The client is likely unable to access all the required Microsoft Entra ID/MSA-related URLs. For more information, see [Networking requirements](requirements.md?tabs=networking).
 
 ### Using a provisioning package in combination with Windows Autopilot can cause issues, especially if the PPKG contains join, enrollment, or device name information
 
