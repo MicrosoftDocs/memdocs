@@ -319,81 +319,81 @@ This baseline is optimized for physical devices and isn't recommended for use on
   Baseline default: *Allowed. Lets users access UI.*  
   [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowuseruiaccess)
 
-  - **Block execution of potentially obfuscated scripts**  
-  Baseline default: *Off*  
-  [Learn more](/defender-endpoint/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block execution of potentially obfuscated scripts**  
+Baseline default: *Block*  
+[Learn more](/defender-endpoint/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block Win32 API calls from Office macros**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block Win32 API calls from Office macros**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block executable files from running unless they meet a prevalence, age, or trusted list criterion**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block executable files from running unless they meet a prevalence, age, or trusted list criterion**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block Office communication application from creating child processes**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block Office communication application from creating child processes**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block all Office applications from creating child processes**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block all Office applications from creating child processes**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block JavaScript or VBScript from launching downloaded executable content**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block JavaScript or VBScript from launching downloaded executable content**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block Webshell creation for Servers**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block Webshell creation for Servers**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block untrusted and unsigned processes that run from USB**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block untrusted and unsigned processes that run from USB**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block Adobe Reader from creating child processes**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block Adobe Reader from creating child processes**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block credential stealing from the Windows local security authority subsystem**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block credential stealing from the Windows local security authority subsystem**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block abuse of exploited vulnerable signed drivers (Device)**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block abuse of exploited vulnerable signed drivers (Device)**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block persistence through WMI event subscription**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block persistence through WMI event subscription**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **[PREVIEW] Block use of copied or impersonated system tools**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **[PREVIEW] Block use of copied or impersonated system tools**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block process creations originating from PSExec and WMI commands**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block process creations originating from PSExec and WMI commands**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block Office applications from creating executable content**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block Office applications from creating executable content**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block Office applications from injecting code into other processes**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block Office applications from injecting code into other processes**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **[PREVIEW] Block rebooting machine in Safe Mode**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **[PREVIEW] Block rebooting machine in Safe Mode**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Use advanced protection against ransomware**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Use advanced protection against ransomware**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block executable content from email client and webmail**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+- **Block executable content from email client and webmail**  
+Baseline default: *Block*  
+[Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
 - **Check For Signatures Before Running Scan**  
   Baseline default: *Enabled*  
