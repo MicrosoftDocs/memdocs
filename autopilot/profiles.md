@@ -143,13 +143,6 @@ After the Autopilot deployment profile is created, certain parts of the deployme
 
 If a device is registered in Autopilot and a profile isn't assigned, it receives the default Autopilot profile. If a device shouldn't go through Autopilot, the Autopilot registration must be removed.
 
-## Alerts for Windows Autopilot unassigned devices
-<!-- 163236 -->
-
-Alerts show how many Autopilot program devices don't have Autopilot deployment profiles. Use the information in the alert to create profiles and assign them to the unassigned devices. When an alert is selected, a full list of Windows Autopilot devices and detailed information about them is displayed.
-
-To see alerts for unassigned devices, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.
-
 ## Autopilot profile priority
 
 If a group is assigned to multiple Autopilot profiles, the device would receive the oldest created profile to resolve the conflict. If no other profile is applicable to the device and there's a default profile (any Autopilot profile assigned to all devices), then the default profile is applied. If a device is assigned to a security group that isn't assigned to Autopilot profile, then it would receive the default profile targeted to all devices. To see when an Autopilot profile is created:
