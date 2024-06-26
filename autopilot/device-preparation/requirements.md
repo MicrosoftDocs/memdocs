@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot device preparation requirements
-description: Requirements for Windows Autopilot device preparation.
+description: Software, Networking, Licensing, Configuration, and RBAC requirements for Windows Autopilot device preparation.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
