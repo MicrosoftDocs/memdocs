@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/12/2024
+ms.date: 06/26/2024
 ms.topic: article
 ms.collection:
   - M365-modern-desktop
@@ -52,6 +52,7 @@ In general, the following are some of the major factors when considering between
 | Autopilot reset support | ❌ | ✅ |
 | Microsoft Entra join | ✅ | ✅ |
 | Microsoft Entra hybrid join | ❌ | ✅ |
+| [Windows Autopilot Reset](../tutorial/reset/autopilot-reset-overview.md) | ❌ | ✅ |
 | Windows 11 | ✅ | ✅ |
 | Windows 10 | ❌ | ✅ |
 | Deploy Win32 and LOB applications<br>in the same deployment | ✅ | ❌ |
