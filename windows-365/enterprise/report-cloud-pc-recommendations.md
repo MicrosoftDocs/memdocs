@@ -29,7 +29,7 @@ ms.collection:
 - tier2
 ---
 
-# Cloud PC recommendations report (preview)
+# Cloud PC recommendations report
 
 The **Cloud PC recommendations** report is an AI-powered feature that helps Windows 365 administrators determine the correct size for Cloud PCs. It's designed to help you find the optimal configuration for Cloud PCs based on:
 
