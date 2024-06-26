@@ -130,5 +130,5 @@ Only one file can be elevated at a time. To launch multiple files elevated, righ
 - [Learn about Endpoint Privilege Management](../protect/epm-overview.md)
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
