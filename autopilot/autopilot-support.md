@@ -31,6 +31,6 @@ Before contacting the following resources listed for Windows Autopilot-related i
 | **Enterprise customers (Company IT Administrator)** | Contact the Technical Account Manager (TAM), Account Technology Strategist (ATS), or Customer Service Support (CSS) representative. |
 | **End-user** | Contact the IT administrator or the Channel Partner/OEM. |
 | **Microsoft Partner Center users** | Use the [help resources](https://partner.microsoft.com/support) available in Microsoft Partner Center. |
-| **Intune users (IT Admin)**| From the Microsoft Intune admin center, select [Help and support](https://intune.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/TenantAdminMenu/helpSupport). |
+| **Intune users (IT Admin)**| From the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select [Help and support](https://intune.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/TenantAdminMenu/helpSupport). |
 | **Microsoft 365 Business Premium** | Support is accessible directly through the Microsoft 365 Business Premium portal when logged in:  https://support.microsoft.com/. |
 | **Queries relating to MDA testing** | Contact MDAHelp@microsoft.com. |
