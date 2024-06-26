@@ -64,7 +64,7 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
    1. Install the **azuread** module by entering the following command:
 
         ```powershell
-        install-module azuread
+        Install-Module azuread
         ```
 
     If prompted to do so, agree to install **NuGet** and the **azuread** module from **PSGallery**.

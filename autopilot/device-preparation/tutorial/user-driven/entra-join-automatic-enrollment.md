@@ -40,7 +40,7 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 ## Set up Windows automatic Intune enrollment
 
-In order for Windows Autopilot device preparation to work, devices need to be able to enroll in Intune automatically. Enrolling devices in Intune automatically can be configured in the Azure portal:
+In order for Windows Autopilot device preparation to work, devices need to be able to enroll in Intune automatically. Enrolling devices in Intune automatically can be configured in the [Azure portal](https://portal.azure.com):
 
 [!INCLUDE [Set up Windows automatic enrollment](../../../includes/automatic-intune-enrollment.md)]
 

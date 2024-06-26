@@ -72,7 +72,7 @@ Headings are driven by article context. -->
 
    1. Close the **Intune connector for Active Directory** window.
 
-1. In the Microsoft Intune admin center, close the **Add connector** window if it's still displayed.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), close the **Add connector** window if it's still displayed.
 
 1. In the **Intune Connector for Active Directory** page, confirm that the server is displayed under **Connector name** and shows as **Active** under **Status**. If the server isn't displayed, select **Refresh** or navigate away from the page, and then navigate back to the **Intune Connector for Active Directory** page.
 
@@ -80,6 +80,6 @@ Headings are driven by article context. -->
 >
 > - The account used to enroll the Intune connector is only a temporary requirement at the time of installation. The account isn't used going forward after the server is enrolled.
 >
-> - It can take several minutes for the newly enrolled server to appear in the **Intune Connector for Active Directory** page of the Microsoft Intune admin center. The enrolled server only appears if it can successfully communicate with the Intune service.
+> - It can take several minutes for the newly enrolled server to appear in the **Intune Connector for Active Directory** page of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The enrolled server only appears if it can successfully communicate with the Intune service.
 
 After the Intune Connector is installed, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, the **Admin** and **Operational** logs are found.
