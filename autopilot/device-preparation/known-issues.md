@@ -28,6 +28,12 @@ This article describes known issues that can often be resolved with:
 
 ## Known issues
 
+## Correct BitLocker policy is not applied to devices
+
+Date added: *June 26, 2024*
+
+There's a known issue where a Windows device that is targeted with a BitLocker policy requiring AES 256-bit encryption, gets encrypted with AES 128-bit encryption instead. As Autopilot device provisioning does not currently require devices to be pre-registered, BitLocker does not delay encryption during the device preparation phase (which would allow BitLocker policies to be applied). This can result in a race/timing issue where the device immediately encrypts the disk using the default AES 128-bit encryption.
+
 ## Windows Autopilot device preparation policy shows 0 groups assigned
 
 Date added: *June 18, 2024*
