@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot known issues
-description: Be informed about known issues that might occur during Windows Autopilot deployment.
+description: Be informed about known issues that might occur during Windows Autopilot deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/25/2024
+ms.date: 06/26/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -22,6 +22,18 @@ appliesto:
 # Windows Autopilot - known issues
 
 This article describes known issues that can often be resolved with configuration changes, through cumulative updates, or might be resolved automatically in a future release.
+
+> [!TIP]
+>
+> You can use RSS to be notified when new known issues are added to this page. For example, the following RSS link includes this article:
+>
+> ``` url
+> https://learn.microsoft.com/api/search/rss?search=%22Be+informed+about+known+issues+that+might+occur+during+Windows+Autopilot+deployment.%22&locale=en-us&%24filter=
+> ```
+>
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but you can change it to another supported locale. For example, `&locale=es-es`.
+>
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 > [!NOTE]
 >

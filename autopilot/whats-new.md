@@ -1,6 +1,6 @@
 ---
-title: What's new in Autopilot
-description: News and resources about the latest updates and past versions of Windows Autopilot.
+title: What's new in Windows Autopilot
+description: News and resources about the latest updates and past versions of Windows Autopilot. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/21/2024
+ms.date: 06/26/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -19,6 +19,18 @@ appliesto:
 ---
 
 # Windows Autopilot: What's new
+
+> [!TIP]
+>
+> You can use RSS to be notified when new features for Windows Autopilot are added to this page. For example, the following RSS link includes this article:
+>
+> ``` url
+> https://learn.microsoft.com/api/search/rss?search=%22News+and+resources+about+the+latest+updates+and+past+versions+of+Windows+Autopilot.%22&locale=en-us&%24filter=
+> ```
+>
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but you can change it to another supported locale. For example, `&locale=es-es`.
+>
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 ## Update to enrollmentProfileName property for devices deployed via Windows Autopilot for existing devices
 <!--9105086-->
