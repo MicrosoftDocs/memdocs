@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot requirements
-description: Information regarding requirements for Windows Autopilot deployment.
+description: Software, Networking, Licensing, and Configuration requirements for Windows Autopilot.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 06/26/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -26,7 +26,7 @@ appliesto:
 
 # Windows Autopilot requirements
 
-The list of requirements for Windows Autopilot device preparation is organized into five different categories:
+The list of requirements for Windows Autopilot is organized into five different categories:
 
 - **Software** - OS requirements.
 - **Networking** - networking requirements.
