@@ -613,7 +613,7 @@ When attempting to access blocked websites, users will be prompted to use either
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in.<br>**2**:Automatically switch to InPrivate if InPrivate switch is allowed by com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true. |
+|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in.If personal account is not signed in, the behavior will be changed to value 2. <br>**2**:Automatically switch to InPrivate if InPrivate switch is allowed by com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true. |
 
 ### Manage websites to allow upload files
 There may be scenarios where users are only allowed to view websites, without the ability to upload files. Organizations have the option to designate which websites can receive file uploads.
