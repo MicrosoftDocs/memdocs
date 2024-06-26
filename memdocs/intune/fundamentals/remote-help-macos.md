@@ -127,6 +127,8 @@ On macOS, applications that access and control the screen require permission. By
 
 With settings catalog, we can streamline the end users experience for allowing these permissions.
 
+#### [:::image type="icon" source="../media/icons/intune.svg"::: **Intune Admin Console**](#tab/intune)
+
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices > Manage devices > Configuration > Create > macOS > Settings catalog**
 1. Enter a name and description for the profile. For example, "macOS Remote Help privacy permissions" and select **Next**
 1. Select **Add settings** and in the settings picker, navigate to **Privacy > Privacy Preferences Policy Control > Services**
