@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/17/2024
+ms.date: 07/18/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -583,6 +583,13 @@ End of comment -->
   - **Always**: Updates are installed when they're available.
 
 - **Allow access to all apps in Google Play store**:
+
+  - When set to **Block**:
+
+    - Users can't access apps in the Google Play store and can't access any private apps added to your organization's Managed Google Play account
+    - Only shows apps in the Managed Google Play store that are approved, apps that are required, and apps that are assigned to the user.
+    - Uninstalls apps that were installed outside of the Managed Google Play store.
+    - If you change this setting from **Allow** to **Block**, then any app not in the policy is automatically uninstalled from the device.
 
   - When set to **Allow**:
 
