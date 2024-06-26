@@ -351,7 +351,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
     - Provide an OU in which control is delegated to the Windows device that is running the Intune Connector.
     - Provide an OU in which control is delegated to the root computers in organization's on-premises Active Directory.
-    - If this fields is left blank, the computer object is created in the Active Directory default container. The default container is normally the `CN=Computers` container. For more information, see [Redirect the users and computers containers in Active Directory domains](/troubleshoot/windows-server/identity/redirect-users-computers-containers).
+    - If this field is left blank, the computer object is created in the Active Directory default container. The default container is normally the `CN=Computers` container. For more information, see [Redirect the users and computers containers in Active Directory domains](/troubleshoot/windows-server/identity/redirect-users-computers-containers).
 
     Valid examples:
 
