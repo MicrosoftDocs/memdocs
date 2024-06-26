@@ -127,9 +127,9 @@ The following table lists the type of ownership given to devices when they enrol
 
 |Windows enrollment types | Without corporate identifiers | With corporate identifiers |
 |---|---|---|
-| The device enrolls through [Windows Autopilot](/autopilot/enrollment-autopilot). | Corporate | Corporate |
+| The device enrolls through [Windows Autopilot](/autopilot/enrollment-autopilot) | Corporate | Corporate |
 | The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths) | Corporate | Corporate|
-| The device enrolls through a [bulk provisioning package](/mem/intune/enrollment/windows-bulk-enroll). | Corporate | Corporate |
+| The device enrolls through a [bulk provisioning package](/mem/intune/enrollment/windows-bulk-enroll) | Corporate | Corporate |
 | The enrolling user is using a [device enrollment manager account](/mem/intune/enrollment/device-enrollment-manager-enroll) | Corporate | Corporate |
 | The device enrolls through Azure Virtual desktop (non-hybrid) | Corporate | Corporate |
 | [Automatic MDM enrollment](/mem/intune/enrollment/windows-enroll) with [Microsoft Entra join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx) | Corporate | Personal, unless defined by corporate identifiers |
