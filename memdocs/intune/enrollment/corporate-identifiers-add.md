@@ -123,23 +123,23 @@ Remove all periods, if applicable, from the serial number before you add it to t
 
 After you add Windows corporate identifiers, Intune marks devices that match all three identifiers as corporate-owned, and marks all other enrolling devices in your tenant as personal. This means that anything you exclude from the Windows corporate identifiers is marked personal. To change the ownership type after enrollment, you have to manually adjust it in the admin center.  
 
-The following table lists the type of ownership given to devices when they enroll with corporate identifiers and when they enroll without corporate identifiers.  
+The following table lists the type of ownership given to devices when they enroll without corporate identifiers and when they enroll with corporate identifiers.  
 
-| Windows enrollment types | With corporate identifiers | Without corporate identifiers |
+|Windows enrollment types | Without corporate identifiers | With corporate identifiers |
 |---|---|---|
-| Windows Autopilot| Corporate | Corporate |
-| Windows Autopilot device preparation |Corporate | Personal|
-| Group policy (GPO) or co-management with automatic enrollment and Configuration Manager| Corporate | Corporate | 
-| Bulk enrollment with provisioning package | Corporate | Corporate |  
-| Enrollment via enrollment manager account| Corporate | Corporate|
-| Azure Virtual desktop (nonhybrid) | Corporate| Corporate |
-| Automatic MDM enrollment with Microsoft Entra join during Windows setup| Corporate| Personal|
-| Automatic MDM enrollment with Microsoft Entra join from Windows settings| Corporate | Personal |
-| Automatic MDM enrollment with Microsoft Entra join or hybrid Entra join via Windows Autopilot for existing devices | Corporate| Personal|
-| Automatic MDM enrollment with *Add work account* from Windows settings| Personal | Personal|
-| MDM enrollment only via Windows Settings | Personal| Personal|
-| Enrollment via Intune Company Portal app| Personal | Personal|
-| Enrollment via a Microsoft 365 app <br/></br> This type of enrollment occurs when users select the **Allow my organization to manage my device option** during app sign-in. | Personal | Personal|
+| The device enrolls through [Windows Autopilot](/autopilot/enrollment-autopilot). | Corporate | Corporate |
+| The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths) | Corporate | Corporate|
+| The device enrolls through a [bulk provisioning package](/mem/intune/enrollment/windows-bulk-enroll). | Corporate | Corporate |
+| The enrolling user is using a [device enrollment manager account](/mem/intune/enrollment/device-enrollment-manager-enroll) | Corporate | Corporate |
+| The device enrolls through Azure Virtual desktop (non-hybrid) | Corporate | Corporate |
+| [Automatic MDM enrollment](/mem/intune/enrollment/windows-enroll) with [Microsoft Entra join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx) | Corporate | Personal, unless defined by corporate identifiers |
+| [Automatic MDM enrollment](/mem/intune/enrollment/windows-enroll) with [Microsoft Entra join from Windows Settings](/azure/active-directory/device-management-azuread-joined-devices-frx) | Corporate | Personal, unless defined by corporate identifiers |
+| [Automatic MDM enrollment](/mem/intune/enrollment/windows-enroll) with Microsoft Entra join or hybrid Entra join via [Windows Autopilot for existing devices](/autopilot/existing-devices) | Corporate | Personal, unless defined by corporate identifiers |
+| Autopilot device preparation profile | Corporate | Personal, unless defined by corporate identifiers |
+| [Automatic MDM enrollment](/mem/intune/enrollment/windows-enroll) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network) | Personal | Personal|
+| [MDM enrollment only](/windows/client-management/mdm/mdm-enrollment-of-windows-devices) option from Windows Settings | Personal | Personal |
+| [Enrollment using the Intune Company Portal app](/mem/intune/user-help/enroll-windows-10-device) | Personal | Personal |
+| Enrollment via a Microsoft 365 app, which occurs when users select the **Allow my organization to manage my device** option during app sign-in | Personal | Personal |
 
 Windows corporate identifiers can only change ownership type if someone adds them to Microsoft Intune. If you don't have corporate identifiers for Windows in Intune, or if you remove them, devices that are Microsoft Entra domain joined are marked as corporate-owned. This includes devices enrolled via [automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with:
 
