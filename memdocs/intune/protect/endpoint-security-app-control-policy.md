@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2024
+ms.date: 06/26/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -79,6 +79,7 @@ The following devices are supported when enrolled with Intune:
 
 - **Azure Virtual Desktop** (AVD):
   - AVD devices are supported to use App Control for Business policies
+  - To target AVD multi session devices, use the App Control for Business node in Endpoint Security. However, App Control for Business is device scope only.
 
 - **Co-managed devices**:
   - To support Application Control for Business Policies on [co-managed](../../configmgr/comanage/workloads.md) devices, set the slider for *Endpoint Protection* slider to *Intune*.
