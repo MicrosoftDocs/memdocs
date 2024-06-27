@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot device preparation requirements
-description: Software, Networking, Licensing, Configuration, and RBAC requirements for Windows Autopilot device preparation.
+description: Software, Networking, Licensing, Configuration, and RBAC requirements for Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/18/2024
+ms.date: 06/27/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -23,6 +23,18 @@ appliesto:
 
 
 # Windows Autopilot device preparation requirements
+
+> [!TIP]
+>
+> You can use RSS to be notified when requirements are added or updated to this page. For example, the following RSS link includes this article:
+>
+> ``` url
+> https://learn.microsoft.com/en-us/search/?terms=%22Software%2C%20Networking%2C%20Licensing%2C%20Configuration%2C%20and%20RBAC%20requirements%20for%20Windows%20Autopilot%20device%22
+> ```
+>
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but you can change it to another supported locale. For example, `&locale=es-es`.
+>
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 The list of requirements for Windows Autopilot device preparation is organized into five different categories:
 

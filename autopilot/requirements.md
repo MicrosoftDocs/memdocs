@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2024
+ms.date: 06/27/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -23,10 +23,21 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>
 ---
 
-
 # Windows Autopilot requirements
 
-The list of requirements for Windows Autopilot is organized into five different categories:
+> [!TIP]
+>
+> You can use RSS to be notified when requirements are added or updated to this page. For example, the following RSS link includes this article:
+>
+> ``` url
+> https://learn.microsoft.com/en-us/search/?terms=%22The%20list%20of%20requirements%20for%20Windows%20Autopilot%20is%20organized%20into%20four%20different%20categories%22
+> ```
+>
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but you can change it to another supported locale. For example, `&locale=es-es`.
+>
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+The list of requirements for Windows Autopilot is organized into four different categories: <!-- RSS subscription is based on this line so don't change. If the line needs to change, update RSS URL in the Tip in the article.>
 
 - **Software** - OS requirements.
 - **Networking** - networking requirements.
