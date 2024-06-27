@@ -63,11 +63,15 @@ For more information about public preview items, see [Public preview in Windows 
 
 #### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
 
-Windows 365 now supports AVC mixed mode when MMR is not enabled.
+Windows 365 now supports AVC mixed mode when MMR isn't enabled.
 
 #### Windows 365 Boot and Windows 365 Switch now support battery direction<!--51748880-->
 
 Windows 365 Boot and Windows 365 Switch now support battery redirection. Cloud PCs now show the local PC's battery status.
+
+#### Support for symmetric NAT with RDP Shortpath<!--43602619-->
+
+RDP Shortpath in Windows 365 now supports establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT. TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
