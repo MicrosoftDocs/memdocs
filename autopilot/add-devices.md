@@ -86,7 +86,7 @@ Microsoft Configuration Manager automatically collects the hardware hashes for e
 
 The hardware hash for an existing device is available through Windows Management Instrumentation (WMI). The PowerShell script [Get-WindowsAutopilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo) can be used to get a device's hardware hash and serial number. The serial number is useful for quickly seeing which device the hardware hash belongs to.
 
-To use the `Get-WindowsAutopilotInfo.ps1` script, it needs to be downloaded and then run on a device use either of the following methods:
+To use the `Get-WindowsAutopilotInfo.ps1` script, it needs to be downloaded and then run on a device using either of the following methods:
 
 - [Save the hardware hash locally on a devices as a CSV file](#save-the-hardware-hash-locally-on-a-device-as-a-csv-file) - the `Get-WindowsAutopilotInfo.ps1` script saves the hardware hash locally on the device as a CSV file. This method is normally used on devices that already underwent Windows Setup and OOBE.
 
@@ -156,15 +156,21 @@ Directly uploading the hardware hash to an MDM service such as Microsoft Intune 
 
       If prompted to do so, agree to install **NuGet** from the **PSGallery**.
 
-      > [!NOTE]
-      >
-      > On first run, the `Get-WindowsAutopilotInfo.ps1` script prompts to approve the required app registration permissions.
+1. When the last command of `Get-WindowsAutopilotInfo -Online` runs, a Microsoft Entra ID sign-on prompt is displayed. Sign in with an account that is at least an Intune Administrator.
 
-1. After the last command of `Get-WindowsAutopilotInfo -Online` runs, a Microsoft Entra ID sign-on prompt is displayed. Sign in with an account that is at least an Intune Administrator.
+   > [!NOTE]
+   >
+   > On first run, the `Get-WindowsAutopilotInfo.ps1` script prompts to approve the required app registration permissions.
 
 1. After the sign-in is successful, the device hash uploads automatically.
 
-To confirm the hardware hash for the device was uploaded:
+1. Verify that the hardware hash uploaded successfully and the device is showing as a registered Windows Autopilot device using the instructions in the section [Verify the hardware hash uploaded](#verify-the-hardware-hash-uploaded).
+
+1. For devices undergoing Windows Setup and OOBE, restart the device. The device should pick up the Windows Autopilot profile and OOBE should run through the Windows Autopilot provisioning process.
+
+#### Verify the hardware hash uploaded
+
+To confirm the hardware hash for the device was uploaded and that the device shows as a Windows Autopilot device:
 
 1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -179,8 +185,6 @@ To confirm the hardware hash for the device was uploaded:
 1. Wait for the sync to finish. The sync might take several minutes.
 
 1. After the sync completes and the device appears in the device list in the **Windows Autopilot devices** screen in Intune, the device is ready for a Windows Autopilot deployment as long as a Windows Autopilot profile is assigned to the device.
-
-    For devices undergoing Windows Setup and OOBE, restart the device. The device should pick up the Windows Autopilot profile and OOBE should run through the Windows Autopilot provisioning process.
 
 > [!NOTE]
 >
