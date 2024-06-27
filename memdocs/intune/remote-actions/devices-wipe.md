@@ -187,7 +187,7 @@ Removing company data from an Android personally owned work profile device remov
 
 > [!NOTE]
 > For Windows 10 devices that join Microsoft Entra ID during initial Setup (OOBE), the retire command will remove all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) to login as a local admin and regain access to the user's local data.
----
+
 
 ## Manually unenroll devices
 
