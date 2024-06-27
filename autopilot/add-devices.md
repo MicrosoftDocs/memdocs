@@ -174,7 +174,7 @@ To confirm the hardware hash for the device was uploaded into Intune and that th
 
 1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the Home screen, select **Devices**.
+1. In the **Home** screen, select **Devices**.
 
 1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
 
@@ -253,13 +253,15 @@ For more information, see [Collect MDM logs](/windows/client-management/mdm-coll
 
 Device information in the hardware hashes CSV file should include:
 
-- Serial number.
-- Windows product ID (optional).
-- Hardware hash.
-- Group tag (optional).
-- Assigned user (optional).
+| Item | Required | Optional |
+| --- | --- | --- |
+| **Serial number** | ✅ | ❌ |
+| **Windows product ID** |Partners uploading<br>into Intune. | Admins uploading<br>directly into Intune. |
+| **Hardware hash** | ✅ | ❌ |
+| **Group tag** | ❌ | ✅ |
+| **Assigned user** | ❌ | ✅ |
 
-The required items of serial number and hardware has can be collected into an individual device CSV file using the following methods:
+The required items of serial number and hardware can be collected into an individual device CSV file using the following methods:
 
 - The `Get-WindowsAutopilotInfo` script documented in the [Save the hardware hash locally on a device as a CSV file](#save-the-hardware-hash-locally-on-a-device-as-a-csv-file) section.
 - The Desktop hash export documented in the [Desktop hash export](#desktop-hash-export) section.
@@ -294,7 +296,7 @@ Once the hardware hashes are captured in a CSV file, Windows Autopilot devices c
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. 1. In the Home screen, select **Devices**, select **Devices**.
+1. In the **Home* screen, select **Devices**.
 
 1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
 
@@ -312,19 +314,23 @@ Once the hardware hashes are captured in a CSV file, Windows Autopilot devices c
 
    A message says that the synchronization is in progress. The process might take a few minutes to complete, depending on how many devices are being synchronized.
 
-1. Select **Refresh** in the toolbar until the the new devices appear.
+1. Select **Refresh** in the toolbar until the new devices appear.
 
 ## Edit Autopilot device attributes
 
 After an Autopilot device is uploaded, certain attributes of the device can be edited:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment**.
+1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
+1. In the **Home** screen, select **Devices**.
 
-1. Select the device that needs to be edited.
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
 
-1. On the pane on the right of the screen, the following items can be edited:
+1. In the **Devices | Enrollment** screen, under **Windows Autopilot**, select **Devices**.
+
+1. In the **Windows Autopilot devices** screen, select the device that needs to be edited.
+
+1. In the pane on the right of the screen, the following items can be edited:
 
    - Device name.
    - Group tag.
@@ -340,11 +346,15 @@ After an Autopilot device is uploaded, certain attributes of the device can be e
 
 Windows Autopilot devices that aren't enrolled in Intune can be deleted:
 
-1. Select **Devices** > **Windows** > **Windows enrollment**.
+1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
+1. In the **Home** screen, select **Devices**.
 
-1. Select the devices that need deletion, and then select **Delete**. The deletion process can take a few minutes to complete.
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Devices | Enrollment** screen, under **Windows Autopilot**, select **Devices**.
+
+1. In the **Windows Autopilot devices** screen, select the devices that need deletion, and then select **Delete** in the toolbar. The deletion process can take a few minutes to complete.
 
 Completely removing a device from a tenant requires the device records in Intune, Microsoft Entra ID, and Windows Autopilot to all be deleted. These deletions can all be done from Intune but need to be done in the following order. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
 
