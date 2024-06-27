@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/16/2024
+ms.date: 06/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -122,8 +122,17 @@ You can use detection rules to choose how an app installation is detected on a m
 
 > [!NOTE]
 >
-> - The first app on the Included apps list is used for identifying the app when multiple apps are present in the PKG file. 
-> - the `CFBundleIdentifier` and `CFBundleShortVersionString` can be found under the ```<app_name>.app/Contents/Info.plist``` file of an installed app on a Mac. <br/><br/> Alternatively, Mac Terminal can be used to look up and confirm the included app details of an installed app at a known location.<br>For example, to look up the bundle ID and build number of Company Portal, run the following:<br> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier`<br>Then, run the following:<br> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString` <br/><br/>For apps added to Intune, [you can use the Intune admin center to get the app bundle ID](../apps/get-app-bundle-id-intune-admin-center.md).
+> - If a PKG package contains multiple apps, only one of these can be shown in the related app reports.
+> - The first app/bundle ID in the Included apps list is the one that will be reported on. The list can be re-ordered if necessary.
+> - In the case of the Intune Company Portal app, there are many additional libraries included in the PKG which can safely be removed (using the trash can icon). This will leave only a single app bundle ID: `com.microsoft.CompanyPortalMac`
+
+> [!TIP]
+>
+> The `CFBundleIdentifier` and `CFBundleShortVersionString` can be found under the ```<app_name>.app/Contents/Info.plist``` file of an installed app on a Mac.
+> 
+> Alternatively, Mac Terminal can be used to look up and confirm the included app details of an installed app at a known location.
+> 
+> For example, to look up the bundle ID and build number of Company Portal, run the following:<br> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier`<br>Then, run the following:<br> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString` <br/><br/>For apps added to Intune, [you can use the Intune admin center to get the app bundle ID](../apps/get-app-bundle-id-intune-admin-center.md).
 
 ## Step 5 – Select scope tags (optional)
 

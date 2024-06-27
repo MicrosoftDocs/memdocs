@@ -11,7 +11,7 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: high
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Cloud attach your Configuration Manager environment
@@ -76,11 +76,11 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 ## Co-management
 
-Co-management transforms your on-premises Configuration Manager environment without having to go through a large migration effort. Co-management helps simplify device management by giving you the ability to manage workloads from the cloud. 
+Co-management transforms your on-premises Configuration Manager environment without having to go through a large migration effort. Co-management helps simplify device management by giving you the ability to manage workloads from the cloud.
 
 :::image type="content" source="media/comanagement-workloads.png" alt-text="Screenshot of comanagement workload tab in cloud attach properties in configuration manager admin console." lightbox="media/comanagement-workloads.png":::
 
-Once you co-manage the devices, you can specify which workloads to move, such as compliance policy to enable Conditional Access. [Conditional Access](../comanage/quickstart-conditional-access.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) combines granular control over organizational data while maintaining a consistent user experience on any device from any location. Enforcing compliance policy from Intune is a critical part of developing your [Zero Trust](/security/zero-trust/) architecture. Additionally, you can Use [Windows Autopilot](/autopilot/windows-autopilot) with co-management to simplify the complex process of provisioning devices from the cloud.  
+Once you co-manage the devices, you can specify which workloads to move, such as compliance policy to enable Conditional Access. [Conditional Access](../comanage/quickstart-conditional-access.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) combines granular control over organizational data while maintaining a consistent user experience on any device from any location. Enforcing compliance policy from Intune is a critical part of developing your [Zero Trust](/security/zero-trust/) architecture. Additionally, you can Use [Windows Autopilot](/autopilot/overview) with co-management to simplify the complex process of provisioning devices from the cloud.
 
 ## <a name="bkmk_cmg"></a> Cloud management gateway (CMG)
 

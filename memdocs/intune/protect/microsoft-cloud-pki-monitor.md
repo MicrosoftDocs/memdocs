@@ -68,7 +68,7 @@ From here, you can also manually revoke an issued leaf certificate.
 
 ## View SCEP certificate profile report
 
-Go to **Devices** > **Configuration profiles**. Select the SCEP profile, and then select **Certificates**.
+Go to **Devices** > **Manage devices** > **Configuration**. Select the SCEP profile, and then select **Certificates**.
 
    > [!div class="mx-imgBorder"]
    > ![Image of the SCEP certifiate profile report in the admin center.](./media/microsoft-cloud-pki/scep-certificate-profile.png)

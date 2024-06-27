@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 06/24/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: anbiswas
+ms.reviewer: ryclark
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -44,10 +44,10 @@ You can optionally apply Windows 365 security baselines to the Microsoft Entra g
 > [!TIP]
 > Like any configuration change, it is always a good idea to test the security baseline on a pilot group of Cloud PCs. For information on how to build a rollout plan in Microsoft Intune, see the [Microsoft Intune planning guide](/mem/intune/fundamentals/intune-planning-guide#task-5-create-a-rollout-plan). For information on Microsoft Defender for Endpoint features can be tested, see [Test how Microsoft Defender for Endpoint features work in audit mode](/microsoft-365/security/defender-endpoint/audit-windows-defender).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) select **Endpoint Security** > **View Security Baselines**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) select **Endpoint Security** > **Security Baselines**.
 ![Screenshot of view security baselines](./media/deploy-security-baselines/view-security-baselines.png)
-2. Select **Windows 365 Security Baseline (Preview)**.
-3. Select **Create Profile** and provide a name for your profile.
+2. Select **Windows 365 Security Baseline**.
+3. On the **Create a profile** pane, select **Create**.
 4. On the **Basics** page, provide a **Name** > **Next**.
 5. On the **Configuration settings** tab, view the groups of settings that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
     - Select a group to expand and review the available settings.

@@ -7,12 +7,12 @@ keywords: what is Intune, mobile endpoint management, mobile application managem
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/08/2024
+ms.date: 05/21/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.custom: 
+ms.custom:
   - intro-overview
   - get-started
   - essentials-overview
@@ -87,6 +87,8 @@ For more information, go to [Manage apps using Microsoft Intune](manage-apps.md)
 
 You can create policies for apps, security, device configuration, compliance, conditional access, and more. When the policies are ready, you can deploy these policies to your user groups and device groups. To receive these policies, the devices only need internet access.
 
+For more information, go to [Assign policies in Microsoft Intune](../configuration/device-profile-assign.md).
+
 ✅ **Use the self-service features**
 
 Employees and students can use the Company Portal app and website to reset a PIN/password, install apps, join groups, and more. You can customize the Company Portal to help reduce support calls.
@@ -95,7 +97,7 @@ For more information, go to [Configure the Intune Company Portal apps, Company P
 
 ✅ **Integrate with mobile threat defense**
 
-Intune integrates with Microsoft Defender for Endpoint and third party partner services. With these services, the focus is on endpoint security. You can create policies that respond to threats, do real-time risk analysis, and automate remediation.  
+Intune integrates with Microsoft Defender for Endpoint and third party partner services. With these services, the focus is on endpoint security. You can create policies that respond to threats, do real-time risk analysis, and automate remediation.
 
 For more information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
@@ -116,6 +118,14 @@ For more information, go to [Intune Suite add-on features](intune-add-ons.md).
 > [!TIP]
 > Step through a training module to learn how you can [benefit from modern endpoint management](/training/modules/benefits-microsoft-endpoint-manager?azure-portal=true) with Microsoft Intune.
 
+✅ **Use Microsoft Copilot in Intune for AI-generated analysis**
+
+Copilot in Intune is available and has capabilities that are powered by Copilot for Security.
+
+Copilot can summarize existing policies, give you more setting information, including recommended values and potential conflicts. You can also get device details and troubleshoot a device.
+
+For more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+
 ## Integrates with other Microsoft services and apps
 
 Microsoft Intune integrates with other Microsoft products and services that focus on endpoint management, including:
@@ -130,13 +140,13 @@ Microsoft Intune integrates with other Microsoft products and services that focu
   - [Frequently asked questions about co-management](../../configmgr/comanage/faq.yml)
   - [How to enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md)
 
-- **[Windows Autopilot](/autopilot/windows-autopilot)** for modern OS deployment and provisioning
+- **[Windows Autopilot](/autopilot/overview)** for modern OS deployment and provisioning
 
   With Windows Autopilot, you can provision new devices and send these devices directly to users from an OEM or device provider. For existing devices, you can reimage these devices to use Windows Autopilot and deploy the latest Windows version.
 
   For more specific information, go to:
 
-  - [Windows Autopilot overview](/autopilot/windows-autopilot)
+  - [Windows Autopilot overview](/autopilot/overview)
   - [Windows Autopilot deployment for existing devices](/autopilot/existing-devices)
 
 - **[Endpoint analytics](../../analytics/overview.md)** for visibility and reporting on end user experiences, including device performance and reliability

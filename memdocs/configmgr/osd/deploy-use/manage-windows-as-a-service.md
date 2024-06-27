@@ -2,7 +2,7 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows clients are near end of support.
-ms.date: 04/08/2022
+ms.date: 06/20/2024
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: conceptual
@@ -10,7 +10,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ms.collection: tier3
 ---
 
@@ -29,9 +29,9 @@ For more information about Windows servicing options, see [Overview of Windows a
 - Windows computers must use Configuration Manager software updates with Windows Server Update Services (WSUS) for software update management. When a computer uses Windows Update for Business or Windows Insiders, it isn't evaluated in Windows servicing plans. For more information, see [Integration with Windows Update for Business](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).
 
 - Use a supported WSUS version:
-  - WSUS 10.0.14393, a role in Windows Server 2016
-  - WSUS 10.0.17763, a role in Windows Server 2019
-  - WSUS 6.3, a role in Windows Server 2012 R2. Also install [KB 3095113 and KB 3159706](../../sum/plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012) or later.
+  - WSUS 10.0.14393 (role in Windows Server 2016) (2023-02 Cumulative Update, or a later cumulative update)
+  - WSUS 10.0.17763 (role in Windows Server 2019) (Requires Configuration Manager 1810 or later) (2023-02 Cumulative Update, or a later cumulative update)
+  - WSUS 10.0.20348 (role in Windows Server 2022) (2023-02 Cumulative Update, or a later cumulative update)
 
 - Enable heartbeat discovery. The data that the Windows servicing dashboard displays comes from discovery. For more information, see [Configure heartbeat discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc).
 
@@ -68,7 +68,7 @@ Starting in version 2103, the **Windows Servicing** dashboard was simplified to 
 
 **Windows 11 Latest Feature Update** (added in 2111): This chart shows the number of devices that installed the latest feature update for Windows 11. <!--10579996-->
 
-**Latest Feature Update** (versions 2103 and 2107): This chart shows the number of devices that installed the latest feature update. 
+**Latest Feature Update** (versions 2103 and 2107): This chart shows the number of devices that installed the latest feature update.
 
 **Collection Errors**: This tile shows the number of devices that failed with the specified error code. For more information, see [Analyze SetupDiag errors](#analyze-setupdiag-errors).
 
@@ -77,7 +77,9 @@ Starting in version 2103, the **Windows Servicing** dashboard was simplified to 
 :::image type="content" source="./media/3555940-10579996-servicing-dashboard.png" alt-text="Screenshot of the Windows Servicing dashboard in Configuration Manager." lightbox="./media/3555940-10579996-servicing-dashboard.png":::
 
 > [!IMPORTANT]
+>
 > - The **Windows Servicing** dashboard in Configuration Manager versions 2103 and 2107 includes Windows 11 devices with the latest version of Windows 10. They don't distinguish a version for Windows 11.<!-- 10732387 -->
+>
 > - The information shown in the Windows servicing dashboard is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you. For more detailed information about Windows builds, see the [Product Lifecycle dashboard](../../core/clients/manage/asset-intelligence/product-lifecycle-dashboard.md). <!--3446861-->
 
 ## Windows 10 servicing dashboard in version 2010 and earlier
@@ -103,6 +105,7 @@ The Windows 10 servicing dashboard provides you with information about Windows 1
 For more detailed information about Windows 10 builds, see the [Product Lifecycle dashboard](../../core/clients/manage/asset-intelligence/product-lifecycle-dashboard.md). <!--3446861-->
 
 > [!IMPORTANT]
+>
 > The information shown in the Windows 10 servicing dashboard is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you.
 
 ## Drill through required updates
@@ -131,6 +134,7 @@ Windows servicing plans in Configuration Manager are much like automatic deploym
   When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection. It does these actions based on the settings that you configure in the servicing plan. Monitor the deployments with the **Service Plan Monitoring** tile on the Windows servicing dashboard. For more information, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).
 
 > [!NOTE]
+>
 > **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10** product like earlier versions. This change caused you to do a number of manual steps to make sure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. For more information, see [Configuring products for versions of Windows 10](../../sum/get-started/configure-classifications-and-products.md#windows-10-version-1903-and-later).<!--4682946-->
 
 ## Windows servicing plan
@@ -138,6 +142,7 @@ Windows servicing plans in Configuration Manager are much like automatic deploym
 As you deploy Windows, you can create one or more servicing plans. These plans define the deployment rings that you want in your environment. Then monitor them in the Windows servicing dashboard. Servicing plans use only the **Upgrades** software updates classification, not cumulative updates for Windows. For cumulative updates, continue to use the software updates workflow. The end-user experience with a servicing plan is the same as with software updates, including the settings that you configure in the servicing plan.
 
 > [!NOTE]
+>
 > You can use a task sequence to deploy an upgrade for each Windows build, but it requires more manual work. You would need to import the updated source files as an OS upgrade package, and then create and deploy the task sequence to the appropriate set of computers. However, a task sequence provides additional customized options, such as the pre-deployment and post-deployment actions.
 
 You can create a basic servicing plan from the Windows servicing dashboard. After you specify the name, collection, deployment package, and readiness state, Configuration Manager creates the servicing plan with default values for the other settings. You can also start the Create Servicing Plan wizard to configure all of the settings.
@@ -157,6 +162,7 @@ You can create a basic servicing plan from the Windows servicing dashboard. Afte
 1. On the **Servicing Plan** page, specify the **Target Collection**. Members of the collection receive the Windows upgrades that the servicing plan defines.
 
     > [!IMPORTANT]
+    >
     > When you deploy a high-risk deployment, such as servicing plan, the **Select Collection** window displays only the custom collections that meet the deployment verification settings. Configure these settings in the site properties.
     >
     > High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments.md).
@@ -186,6 +192,7 @@ You can create a basic servicing plan from the Windows servicing dashboard. Afte
     - **Required**
 
       > [!IMPORTANT]
+      >
       > Set the **Required** field with a value of `>=1`. Using this criteria makes sure that only applicable updates are added to the servicing plan.
 
     - **Superseded**
@@ -199,6 +206,7 @@ You can create a basic servicing plan from the Windows servicing dashboard. Afte
     - **Schedule evaluation**: Specify how Configuration Manager evaluates the available time and installation deadline times. It can either use UTC or the local time of the computer that runs the Configuration Manager console.
 
         > [!NOTE]
+        >
         > When you select local time, it uses the current time on the computer running the Configuration Manager console. If you then select **As soon as possible** for the **Software available time** or **Installation deadline**, it uses the current local time to evaluate when the upgrade is available or when a client installs it. If the client is in a different time zone, these actions will occur when the client's time reaches the evaluation time.
 
     - **Software available time**: Select one of the following settings to specify when the upgrade is available to clients:
@@ -214,11 +222,12 @@ You can create a basic servicing plan from the Windows servicing dashboard. Afte
         - **Specific time**: Automatically install the upgrade at a specific time period after the servicing plan creates the deployment. Configuration Manager determines the deadline to install the upgrade by adding the configured **Specific time** interval to the **Software available time**. This setting is the default and most common for the installation deadline. By default it's seven days. In other words, by default clients receive the upgrade deployment at the next policy refresh, and have one week before it's required.
 
             > [!NOTE]
+            >
             > The actual installation deadline time is the displayed deadline interval plus a random amount of time up to 2 hours. This randomization reduces the potential impact of all clients in the collection installing the upgrade at the same time.
 
         - **Delay enforcement of this deployment according to user preferences, up to the grace period defined on the client**: Select this option to honor the [**Grace period for enforcement after deployment deadline (hours)** client setting](../../core/clients/deploy/about-client-settings.md#grace-period-for-enforcement-after-deployment-deadline-hours).
 
-1. On the **User Experience** page, configure the following settings:  
+1. On the **User Experience** page, configure the following settings:
 
     - **User notifications**: Specify whether to display notification of the upgrade in Software Center on the client at the available time. By default, it's set to **Hide in Software Center and all notifications**.
 
@@ -275,6 +284,7 @@ After you complete the wizard, the site runs the servicing plan for the first ti
 After you create a basic servicing plan from the Windows servicing dashboard, or you need to change the settings for an existing servicing plan, go to properties for the servicing plan.
 
 > [!NOTE]
+>
 > You can configure settings in the properties for the servicing plan that aren't available in the wizard. The wizard uses default settings for  the following areas: download settings, deployment settings, and alerts.
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows Servicing**, and select the **Servicing Plans** node. Then select the servicing plan that you want to modify.
@@ -288,6 +298,7 @@ The following settings are available in the servicing plan properties that weren
 - **Use Wake-on-LAN to wake up clients for required deployments**: Enable Wake On LAN at the deployment deadline. The site will send wake-up packets to computers for the deployment. By default, this setting isn't enabled.
 
     > [!WARNING]
+    >
     > Before you can use this option, configure computers and networks for [Wake On LAN](../../core/clients/deploy/configure-wake-on-lan.md).
 
 - **Detail level**: Specify the level of detail for the state messages that clients send to the site.

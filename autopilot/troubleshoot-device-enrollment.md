@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 02/23/2024
+ms.date: 06/26/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -19,14 +19,13 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-
 # Troubleshoot Autopilot device import and enrollment
 
 See the following sections for information about issues that can occur when importing and enrolling devices into Intune.
 
 ## Error code 0x80180014 when re-enrolling using self-deployment or pre-provisioning mode
 
-After the first Autopilot deployment, devices with a targeted Autopilot self-deployment mode or pre-provisioning mode profile can't automatically re-enroll using Autopilot. If you try to redeploy the device, then the `0x80180014` error code is returned.
+After the first Autopilot deployment, devices with a targeted Autopilot self-deployment mode or pre-provisioning mode profile can't automatically re-enroll using Autopilot. If device is redeployed, then the `0x80180014` error code is returned.
 
 The Event Tracing for Windows (ETW) logs might show the following mobile device management (MDM) error:
 
@@ -34,7 +33,7 @@ The Event Tracing for Windows (ETW) logs might show the following mobile device 
 
 ### Cause A for error code 0x80180014
 
-Microsoft Intune changed the Windows Autopilot self-deployment mode and Pre-Provisioning mode experience. To reuse a device, you must delete the device record created by Intune.
+Microsoft Intune changed the Windows Autopilot self-deployment mode and Pre-Provisioning mode experience. To reuse a device, the device record created by Intune must be deleted.
 
 This change impacts all Autopilot deployments that use the self-deployment or pre-provisioning mode. This change impacts devices when they're reused, reset, or when redeploying a profile.
 
@@ -43,26 +42,54 @@ This change impacts all Autopilot deployments that use the self-deployment or pr
 To redeploy the device through Autopilot:
 
 1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Intune admin center](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-admin-center).
-2. Redeploy the Autopilot deployment profile.
+1. Redeploy the Autopilot deployment profile.
 
 ### Cause B for error code 0x80180014
 
-Windows MDM enrollment is disabled in your Intune tenant.
+Windows MDM enrollment is disabled in the Intune tenant.
 
 ### Resolution B for error code 0x80180014
 
 To fix this issue in a stand-alone Intune environment, follow these steps:
 
-1. In the Microsoft Intune admin center, chooses **Devices** > **Enrollment restrictions**, and then choose a device type restriction.
-1. Choose **Properties** > **Edit** next to Platform settings. Then select **Allow for Windows (MDM)**.
-1. Select **Review** and then **Save**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**.
+
+1. In the **Devices | Overview** screen, under **Device onboarding** select **Enrollment**.
+
+1. In the **Devices | Enrollment** screen:
+
+   1. Verify that **Windows** is selected at the top of the page.
+
+   1. Under **Enrollment options**, select **Device platform restriction**.
+
+1. In the **Enrollment restrictions** screen, under **Device type restrictions**, select **All Users** under the **Name** column.
+
+1. In the **All Users** screen that opens, under **Manage**, select **Properties**.
+
+1. In the **Properties** screen that opens, next to **Platform settings**, select the **Edit** link.
+
+1. In the **Edit restriction** screen that opens:
+
+   1. Locate **Windows (MDM)** under the **Type** column.
+
+   1. Make sure that **Windows (MDM)** is set to **Allow** under the **Platform** column.
+
+   1. If **Windows (MDM)** is set to **Block**, change it to **Allow**.
+
+   1. Select **Review + save**, and then either **Save** if a setting was changed, or **Cancel** if not settings were changed.
+
+1. Repeat the above steps for any additional restrictions that might exist in the **Enrollment restrictions** screen other than **All Users**. Only restrictions for the **Windows** platform need to be verified.
+
+> [!NOTE]
+>
+> When multiple restrictions exist, restrictions might exist that only allow certain groups MDM enrollment. Some of the restrictions blocking MDM enrollment might be valid based on what group they're assigned to. When experiencing this problem, verify that the device isn't a member of one of the groups where there's MDM enrollment is blocked, or if applicable, change the MDM enrollment setting for that restriction to **Allow**.
 
 ## Device import issues
 
 ### Cannot convert device hash error
 
-- Clicking Import after selecting CSV does nothing
-- A **400** error appears in network trace with error body **"Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'**
+- Selecting **Import** after selecting a CSV file doesn't do anything.
+- A **400** error appears in network trace with error body **"Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'**.
 
 #### Cause of Cannot convert device hash error
 
@@ -78,7 +105,7 @@ The "A" characters at the end of the hash are effectively empty data. Each chara
 
 To fix this issue, the hash needs to be modified, then the new value tested, until PowerShell succeeds in decoding the hash. The result is mostly illegible, which is fine. We're just looking for it to not throw the error **Invalid length for a Base-64 char array or string**.
 
-To test the base64, you can use the following PowerShell:
+To test the base64, use the following PowerShell:
 
 ```powershell
 [System.Text.Encoding]::ascii.getstring( [System.Convert]::FromBase64String("DEVICE HASH"))
@@ -113,12 +140,12 @@ Replace the collected hash with this new padded hash then try to import again.
 
 ## Autopilot profile not applied after reimaging to an older OS version
 
-If you enroll a device with one of the following Windows versions:
+If a device is enrolled with one of the following Windows versions:
 
 - Windows 11 with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later
 - Windows 10 with Windows Update [KB5015878](https://support.microsoft.com/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or later
 
-and then reimage to an older OS version, the Autopilot profile isn't applied. The device would need to be re-registered to complete a successful Autopilot deployment. You might see the message **Fix pending** or **Attention required** in the Autopilot devices page, which indicates that there was a hardware change on the device. When the link for the **Fix pending** status is selected, the following message appears:
+and then reimage to an older OS version, the Autopilot profile isn't applied. The device would need to be re-registered to complete a successful Autopilot deployment. The message **Fix pending** or **Attention required** might be displayed in the Autopilot devices page, which indicates that there was a hardware change on the device. When the link for the **Fix pending** status is selected, the following message appears:
 
 **We've detected a hardware change on this device. We're trying to automatically register the new hardware. You don't need to do anything now; the status will be updated at the next check in with the result.**
 
@@ -132,6 +159,20 @@ When a device is reimaged to an older OS version after a hardware change on a de
 
 - [Windows Autopilot motherboard replacement scenario guidance](autopilot-motherboard-replacement.md).
 - [Deregister a device](registration-overview.md#deregister-a-device).
+
+<!-- MAXADO-8911669 -->
+
+## Device appears as Microsoft Entra registered instead of Microsoft Entra joined
+
+When checking the **Join type** of a device that has been joined to Microsoft Entra ID, it shows **Microsoft Entra registered** instead of **Microsoft Entra joined**.
+
+### Cause of device appearing as Microsoft Entra registered instead of Microsoft Entra joined
+
+This issue occurs if the device was previously registered in Microsoft Entra ID, for example via a [Workplace join](/entra/identity/devices/concept-device-registration), before it was joined to Microsoft Entra ID. If the Microsoft Entra ID registered device isn't deleted from Microsoft Entra ID before it's joined to Microsoft Entra ID, then the previous trust type is retained in the record. Joining an existing Microsoft Entra registered device to Microsoft Entra ID results in the Windows Autopilot device showing as **Microsoft Entra registered** instead of **Microsoft Entra joined**.
+
+### Resolution for device appearing as Microsoft Entra registered instead of Microsoft Entra joined
+
+Before registering an existing Microsoft Entra ID registered devices as Windows Autopilot devices, make sure that any existing Microsoft Intune, Microsoft Entra ID, and Windows Autopilot device objects are deleted. After all device objects are deleted, re-register the device as a Windows Autopilot device and then re-enroll the device. For more information on properly deleting all of the device objects, see [Deregister a device](registration-overview.md#deregister-a-device).
 
 ## Intune enrollment issues
 
@@ -147,4 +188,4 @@ If Autopilot Reset fails immediately with the error **Ran into trouble. Please s
 ## Related content
 
 - [Windows Autopilot - known issues](known-issues.md).
-- [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
+- [Collect MDM logs](/windows/client-management/mdm-collect-logs).

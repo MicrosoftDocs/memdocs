@@ -32,7 +32,7 @@ ms.collection:
 
 # Graph APIs and matching Windows 10 CSPs used in Intune
 
-Microsoft Intune uses the [Graph API entities](/graph/api/resources/intune-graph-overview) (opens another Docs site) to configure devices (**Intune admin center** > **Devices** > **Configuration**) running Windows 10 and later. The Graph API uses configuration service providers (CSPs) to read, set, change, and/or delete configuration settings on devices.
+Microsoft Intune uses the [Graph API entities](/graph/api/resources/intune-graph-overview) (opens another Docs site) to configure devices (**Intune admin center** > **Devices** > **Manage devices** > **Configuration**) running Windows 10 and later. The Graph API uses configuration service providers (CSPs) to read, set, change, and/or delete configuration settings on devices.
 
 This list applies to:
 
