@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/20/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -160,10 +160,6 @@ The following tables describe what data is removed, and the effect of the **Reti
 
 Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune.
 
-#### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
-
-When the **Retire** action is used on Android Enterprise Corporate-Owned Work Profile devices, the device is unenrolled from Intune management. The work profile is removed along with all corporate data and applications, but all the personal data and applications remain on the device.
-
 #### macOS
 
 |Data type|macOS|
@@ -211,7 +207,7 @@ Device owners can manually unenroll their devices as explained in the following 
 
 If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. Intune issues a **Retire** or **Wipe** action depending on the OS/Enrollment type. Not all enrollment types support the **Retire** action. See the following table for the expected behavior based on the device platform and the enrollment type.
 
-| OS      | Environment                                | Action triggered                                                                           |
+| OS      | Enrollment Type                                | Action triggered                                                                           |
 |---------|--------------------------------------------|--------------------------------------------------------------------------------------------|
 | Android | Device administrator                       | RETIRE - All Profiles are deleted, Company Portal (CP) app is signed out.           |
 | Android | Personally-owned devices with work profile | RETIRE - All Profiles are deleted, CP app is deleted.                               |

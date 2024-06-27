@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/30/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -126,7 +126,7 @@ Once your account is linked with Intune, the default configuration is applied to
 
 ### Create configuration in zero-touch enrollment portal        
 
-Add a zero-touch configuration in the [zero-touch enrollment portal](https://partner.android.com/zerotouch). You can use the portal by itself to manage configurations, or you can use it in combination with the zero-touch iframe. The portal supports configurations for fully managed and dedicated devices, and corporate-owned devices with a work profile. 
+Add a zero-touch configuration in the [zero-touch enrollment portal](https://enterprise.google.com/android/zero-touch/customers). You can use the portal by itself to manage configurations, or you can use it in combination with the zero-touch iframe. The portal supports configurations for fully managed and dedicated devices, and corporate-owned devices with a work profile. 
 
 1. Sign in to the zero-touch enrollment portal with your Google account.
 2. Select the option to add a new configuration.  

@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 06/26/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -76,15 +76,15 @@ If desired, an [enrollment status page](enrollment-status.md) (ESP) for Autopilo
 
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-    Install-Module WindowsAutopilotIntune -MinimumVersion 5.4.0 -Force
-    Install-Module Microsoft.Graph.Groups -Force
-    Install-Module Microsoft.Graph.Authentication -Force
-    Install-Module Microsoft.Graph.Identity.DirectoryManagement -Force
+    Install-Module -Name WindowsAutopilotIntune -MinimumVersion 5.4.0 -Force
+    Install-Module -Name Microsoft.Graph.Groups -Force
+    Install-Module -Name Microsoft.Graph.Authentication -Force
+    Install-Module -Name Microsoft.Graph.Identity.DirectoryManagement -Force
 
-    Import-Module WindowsAutopilotIntune -MinimumVersion 5.4
-    Import-Module Microsoft.Graph.Groups
-    Import-Module Microsoft.Graph.Authentication
-    Import-Module Microsoft.Graph.Identity.DirectoryManagement
+    Import-Module -Name WindowsAutopilotIntune -MinimumVersion 5.4
+    Import-Module -Name Microsoft.Graph.Groups
+    Import-Module -Name Microsoft.Graph.Authentication
+    Import-Module -Name Microsoft.Graph.Identity.DirectoryManagement
     ```
 
 1. Enter the following commands and provide Intune administrative credentials:
@@ -378,7 +378,11 @@ Also see [Adding devices to Windows Autopilot](add-devices.md).
 
 > [!NOTE]
 >
-> Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if the online profile times out.
+> - Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if the online profile times out.
+> <!--9105086-->
+> - When the assigned profile is applied, the **enrollmentProfileName** property of the device object in Microsoft Intune and Microsoft Entra ID match the Windows Autopilot profile name.
+>
+> - When the Windows Autopilot for existing devices profile is applied, the **enrollmentProfileName** property of the device object in Microsoft Intune and Microsoft Entra ID are **OffilineAutoPilotProfile-\<ZtdCorrelationId\>**.
 
 ## How to speed up the deployment process
 

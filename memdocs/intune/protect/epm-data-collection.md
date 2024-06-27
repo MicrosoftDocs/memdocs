@@ -102,4 +102,4 @@ Usage data is elevation data that is used by customers to determine what elevati
 - [Learn about Endpoint Privilege Management](../protect/epm-overview.md)
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
