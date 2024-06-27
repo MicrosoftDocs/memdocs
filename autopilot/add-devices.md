@@ -66,7 +66,7 @@ The following methods are available to harvest a hardware hash from existing dev
 
 - During the out-of-box experience (OOBE) by using the [Diagnostics Page](#diagnostics-page-hash-export) (Windows 11 only).
 
-- From the desktop using [Settings > Accounts](#desktop-hash-export).
+- Directly on the device using the [Access work or school](ms-settings:workplace) pane in the [Settings app](#desktop-hash-export).
 
 For a description of each method, select the link for the method.
 
@@ -118,10 +118,10 @@ Saving the hardware hash locally on a device as a CSV file is normally done on d
 
 The hardware hash is saved locally on the device in the directory `C:\HWID` with the filename `AutopilotHWID.csv`. The CSV file can then be used to [import the device](#add-devices) into an MDM service such as Intune.
 
-The PowerShell commands can run remotely on devices if the following are true:
+Instead of running the PowerShell commands directly on devices, they can instead be run remotely on devices as long as the following requirements are met on the remote device:
 
 - WMI permissions are in place.
-- WMI is accessible through Windows Firewall on the remote computer.
+- WMI is accessible through Windows Firewall on the remote device.
 
 #### Directly upload the hardware hash to an MDM service
 
@@ -170,7 +170,7 @@ Directly uploading the hardware hash to an MDM service such as Microsoft Intune 
 
 #### Verify the hardware hash uploaded
 
-To confirm the hardware hash for the device was uploaded and that the device shows as a Windows Autopilot device:
+To confirm the hardware hash for the device was uploaded into Intune and that the device shows as a Windows Autopilot device:
 
 1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -254,12 +254,19 @@ For more information, see [Collect MDM logs](/windows/client-management/mdm-coll
 Device information in the hardware hashes CSV file should include:
 
 - Serial number.
-- Windows product ID.
+- Windows product ID (optional).
 - Hardware hash.
-- Optional group tag.
-- Optional assigned user.
+- Group tag (optional).
+- Assigned user (optional).
 
-The files can have up to 500 rows of devices. The header and line format must have the following format:
+The required items of serial number and hardware has can be collected into an individual device CSV file using the following methods:
+
+- The `Get-WindowsAutopilotInfo` script documented in the [Save the hardware hash locally on a device as a CSV file](#save-the-hardware-hash-locally-on-a-device-as-a-csv-file) section.
+- The Desktop hash export documented in the [Desktop hash export](#desktop-hash-export) section.
+
+The information from the individual device CSV files can be then used to create a CSV file with multiple devices to [import](#add-devices) multiple devices at once into an MDM service such as Intune.
+
+The multiple devices CSV file can have up to 500 rows of devices. The header and line format must have the following format:
 
 ```csv
 Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User
@@ -285,21 +292,27 @@ During upload of a CSV file, the only validation that Microsoft performs on the 
 
 Once the hardware hashes are captured in a CSV file, Windows Autopilot devices can be added by importing the file. To import the file by using Intune:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment**.
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**, and then select **Import**.
+1. 1. In the Home screen, select **Devices**, select **Devices**.
 
-1. Under **Add Autopilot devices**, browse to the CSV file that lists the devices that need to be added.
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
 
-1. Select **Import** to start importing the device information. Importing can take several minutes.
+1. In the **Devices | Enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
-1. After import is complete, select **Devices** > **Windows** > **Windows enrollment**.
+1. In the **Windows Autopilot devices** screen, select **Import** in the toolbar.
 
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**, and then select **Sync**.
+1. In the **Add Autopilot devices** screen:
+
+   1. browse to the CSV file that lists the devices that need to be added.
+
+   1. Select **Import** to start importing the device information. Importing can take several minutes.
+
+1. After import is complete, in the **Windows Autopilot devices** screen, select **Sync** in the toolbar.
 
    A message says that the synchronization is in progress. The process might take a few minutes to complete, depending on how many devices are being synchronized.
 
-1. Refresh the view to see the new devices.
+1. Select **Refresh** in the toolbar until the the new devices appear.
 
 ## Edit Autopilot device attributes
 
