@@ -21,13 +21,13 @@ appliesto:
 
 > [!TIP]
 >
-> You can use RSS to be notified when new features for Windows Autopilot device preparation are added to this page. For example, the following RSS link includes this article:
+> RSS can be used for notification of when new features for Windows Autopilot device preparation are added to this page. For example, the following RSS link includes this article:
 >
 > ``` url
 > https://learn.microsoft.com/api/search/rss?search=%22News+and+resources+about+the+latest+updates+of+Windows+Autopilot+device+preparation.%22&locale=en-us&%24filter=
 > ```
 >
-> This example includes the `&locale=en-us` variable. The `locale` variable is required, but you can change it to another supported locale. For example, `&locale=es-es`.
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
