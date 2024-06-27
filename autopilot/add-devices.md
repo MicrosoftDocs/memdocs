@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -84,16 +84,21 @@ Microsoft Configuration Manager automatically collects the hardware hashes for e
 
 ### PowerShell
 
-The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows. The PowerShell script [Get-WindowsAutopilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo) can be used to get a device's hardware hash and serial number. The serial number is useful for quickly seeing which device the hardware hash belongs to.
+The hardware hash for an existing device is available through Windows Management Instrumentation (WMI). The PowerShell script [Get-WindowsAutopilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo) can be used to get a device's hardware hash and serial number. The serial number is useful for quickly seeing which device the hardware hash belongs to.
 
-To use this script, use either of the following methods:
+To use the `Get-WindowsAutopilotInfo.ps1` script, it needs to be downloaded and then run on a device use either of the following methods:
 
-- Download the script file from the PowerShell Gallery and run it on each computer.
-- Install the script directly from the PowerShell Gallery.
+- [Save the hardware hash locally on a devices as a CSV file](#save-the-hardware-hash-locally-on-a-device-as-a-csv-file) - the `Get-WindowsAutopilotInfo.ps1` script saves the hardware hash locally on the device as a CSV file. This method is normally used on devices that already underwent Windows Setup and OOBE.
 
-To install the script directly and capture the hardware hash from the local computer:
+- [Directly upload the hardware hash to a mobile device management (MDM) service such as Intune](#directly-upload-the-hardware-hash-to-an-mdm-service) - the `Get-WindowsAutopilotInfo.ps1` script directly uploads the hardware hash to the MDM service. This method is normally used on devices that are undergoing Windows Setup and OOBE.
 
-1. Use the following commands from an elevated Windows PowerShell prompt:
+#### Save the hardware hash locally on a device as a CSV file
+
+Saving the hardware hash locally on a device as a CSV file is normally done on devices that already underwent Windows Setup and OOBE. To capture and save the hardware hash locally on a device:
+
+1. On a device, open an elevated Windows PowerShell prompt.
+
+1. Run the following commands from the elevated Windows PowerShell prompt:
 
    ```powershell
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -105,46 +110,65 @@ To install the script directly and capture the hardware hash from the local comp
    Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
    ```
 
-   The commands can be run remotely if both of the following are true:
+The hardware hash is saved locally on the device in the directory `C:\HWID` with the filename `AutopilotHWID.csv`. The CSV file can then be used to [import the device](#add-devices) into an MDM service such as Intune.
 
-   - WMI permissions are in place.
-   - WMI is accessible through Windows Firewall on the remote computer.
+The PowerShell commands can run remotely on devices if all of the following are true:
 
-1. While OOBE is running, the hardware hash can be uploaded with the following steps:
+- WMI permissions are in place.
+- WMI is accessible through Windows Firewall on the remote computer.
 
-   1. At the sign-in prompt, opening a command prompt with Shift+F10
+#### Directly upload the hardware hash to an MDM service
 
-   1. In the command prompt window that opens, start PowerShell by running the following command:
+Directly uploading the hardware hash to an MDM service such as Microsoft Intune can be done on any device, but it's especially useful for a device currently undergoing Windows Setup and OOBE. To directly upload the hardware hash for a device during Windows Setup and OOBE:
 
-    ```cmd
-    powershell.exe
-    ```
+1. On a device that is:
 
-   1. At the `PS` PowerShell prompt, run the following PowerShell commands:
+   - Currently undergoing Windows Setup and OOBE:
+
+     1. At the sign-in prompt after OOBE starts, open a command prompt window with the keystroke <kbd>Shift</kbd>+<kbd>F10</kbd>.
+
+     1. In the command prompt window that opens, start PowerShell by running the following command:
+
+        ```cmd
+        powershell.exe
+        ```
+
+   - Already undergone Windows Setup and OOBE, open an elevated Windows PowerShell prompt.
+
+1. At the `PS` PowerShell prompt, run the following PowerShell commands:
 
     ```powershell
-    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-    PowerShell.exe -ExecutionPolicy Bypass
-    Install-Script -Name Get-WindowsAutopilotInfo -Force
-    Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-    Get-WindowsAutopilotInfo -Online
-    ```
+       [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+       Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+       Install-Script -Name Get-WindowsAutopilotInfo -Force
+       Get-WindowsAutopilotInfo -Online
+       ```
 
-   > [!NOTE]
-   >
-   > The `Get-WindowsAutopilotInfo` script was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure to use the latest version of the script. The Microsoft Graph PowerShell modules might require approval of additional permissions in Microsoft Entra ID when they're first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
+      If prompted to do so, agree to install **NuGet** from the **PSGallery**.
 
-1. A sign-on prompt is displayed. Sign in with an account that is at least an Intune Administrator role.
+1. After the `Get-WindowsAutopilotInfo -Online` command runs, a Microsoft Entra ID sign-on prompt is displayed. Sign in with an account that is at least an Intune Administrator role.
 
-1. The device hash is uploaded automatically after signing in.
+1. The device hash is uploaded automatically after the sign in completes successfully.
 
-1. After confirming the details of the uploaded device hash, run a sync in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Windows** > **Windows enrollment** > **Devices**.
+To confirm the hardware hash for the device was uploaded:
 
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**, and then select **Sync**.
+1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. After the device appears in the device list, and an Autopilot profile is assigned, restarting the device causes OOBE to run through the Windows Autopilot provisioning process.
+1. In the Home screen, select **Devices**.
 
-   On first run, it prompts to approve the required app registration permissions.
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Devices | Enrollment** screen, under **Windows Autopilot**, select **Devices**.
+
+1. In the **Windows Autopilot devices** screen, select **Sync** in the toolbar.
+
+1. For devices currently undergoing Windows Setup and OOBE, after the device appears in the device list in the **Windows Autopilot devices** screen in Intune and a Windows Autopilot profile is assigned to the device, restart the device. The device should pick up the Windows Autopilot profile and OOBE should run through the Windows Autopilot provisioning process.
+
+    On first run, it prompts to approve the required app registration permissions.
+
+> [!NOTE]
+>
+> The `Get-WindowsAutopilotInfo` script used in this section was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure to use the latest version of the script. The Microsoft Graph PowerShell modules might require approval of additional permissions in Microsoft Entra ID when the modules are first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
 
 > [!NOTE]
 >
@@ -153,9 +177,13 @@ To install the script directly and capture the hardware hash from the local comp
 > - Availability of free and inexpensive accounts in Intune that lack robust vetting.
 > - 4K hardware hashes contain sensitive information that only device owners should maintain.
 >
-> In most cases, use instead the Microsoft Partner Center for Autopilot device registration.
+> In most cases, instead use the Microsoft Partner Center for Windows Autopilot device registration.
 
-For more information about running the `Get-WindowsAutopilotInfo.ps1` script, see the script's help by using `Get-Help Get-WindowsAutopilotInfo`.
+For more information about running the `Get-WindowsAutopilotInfo.ps1` script, see the script's help by running the following command in PowerShell:
+
+```powershell
+Get-Help Get-WindowsAutopilotInfo
+```
 
 ### Diagnostics page hash export
 
