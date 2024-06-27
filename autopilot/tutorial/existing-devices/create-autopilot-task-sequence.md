@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 06/27/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -134,6 +134,10 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
    1. When the **Create Task Sequence Wizard** completes with **The task "Create Task Sequence Wizard" completed successfully** message, select the **Close** button.
 
 1. If using multiple Autopilot profiles and multiple Autopilot profile JSON files were created, repeat the above steps to create additional task sequences. Each Autopilot profile JSON file needs its own separate task sequence.
+
+> [!NOTE]
+>
+> For Windows Autopilot for existing devices task sequence, the **Create Task Sequence Wizard** purposely skips configuring and adding the **Apply Network Settings** task. If the **Apply Network Settings** task isn't specified in a task sequence, it uses Windows default behavior, which is to join a workgroup. The Windows Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). Sysprep fails if the device is joined to a domain, so therefore the Windows Autopilot for existing devices task sequence joins a workgroup instead. For this reason, it isn't necessary to add the **Apply Network Settings** task to a Windows Autopilot for existing devices task sequence.
 
 ## Modify the task sequence to account for Sysprep command line configuration
 

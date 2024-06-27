@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2024
+ms.date: 06/27/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -174,13 +174,11 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 >
 > The configuration file can only contain one profile. Multiple JSON profile files can be used, but each one must be named `AutopilotConfigurationFile.json`. This requirement is for OOBE to follow the Autopilot experience. To use more than one Autopilot profile, create separate Configuration Manager packages.
 >
-> If the file is saved with one of the following criteria:
+> Windows OOBE doesn't follow the Autopilot experience if the file is saved with one of the following criteria:
 >
-> - Unicode encoding
-> - UTF-8 encoding
-> - a file name other than `AutopilotConfigurationFile.json`
->
-> then Windows OOBE doesn't follow the Autopilot experience.
+> - Unicode encoding.
+> - UTF-8 encoding.
+> - A file name other than `AutopilotConfigurationFile.json`.
 
 ## Create a package containing the JSON file
 
@@ -258,13 +256,11 @@ For more information, see [How to create collections in Configuration Manager](/
         - **Randomly generate the local administrator password and disable the account on all support platforms (recommended)**
         - **Enable the account and specify the local administrator password**
 
-1. On the **Configure Network** page, select the option to **Join a workgroup**.
+1. On the **Install Configuration manager** page, add any necessary installation properties for the environment.
 
     > [!IMPORTANT]
     >
-    > The Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). This action fails if the device is joined to a domain.
-
-1. On the **Install Configuration manager** page, add any necessary installation properties for the environment.
+    > Since the task sequence doesn't join a domain, Active Directory isn't available to look up Management Points for the site during the task sequence. For this reason, make sure to specify the [SMSMP](/mem/configmgr/core/clients/deploy/about-client-installation-properties?redirectedfrom=MSDN#smsmp) parameter in the installation properties box.
 
 1. The **Include updates** page selects by default the option to **Do not install any software updates**.
 
@@ -275,6 +271,10 @@ For more information, see [How to create collections in Configuration Manager](/
 1. Complete the wizard.
 
 The Windows Autopilot for existing devices task sequence results in a device joined to Microsoft Entra ID.
+
+> [!NOTE]
+>
+> For Windows Autopilot for existing devices task sequence, the **Create Task Sequence Wizard** purposely skips configuring and adding the **Apply Network Settings** task. If the **Apply Network Settings** task isn't specified in a task sequence, it uses Windows default behavior, which is to join a workgroup. The Windows Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). Sysprep fails if the device is joined to a domain, so therefore the Windows Autopilot for existing devices task sequence joins a workgroup instead. For this reason, it isn't necessary to add the **Apply Network Settings** task to a Windows Autopilot for existing devices task sequence.
 
 For more information on creating the task sequence, including information on other wizard options, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
 
