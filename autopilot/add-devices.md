@@ -296,7 +296,7 @@ Once the hardware hashes are captured in a CSV file, Windows Autopilot devices c
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home* screen, select **Devices**.
+1. In the **Home** screen, select **Devices**.
 
 1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
 
