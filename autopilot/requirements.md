@@ -27,7 +27,7 @@ appliesto:
 
 > [!TIP]
 >
-> RSS can be used for notification of when requirements are added or updated to this page. For example, the following RSS link includes this article:
+> RSS can be used to notify when requirements are added or updated to this page. For example, the following RSS link includes this article:
 >
 > ``` url
 > https://learn.microsoft.com/en-us/search/?terms=%22The%20list%20of%20requirements%20for%20Windows%20Autopilot%20is%20organized%20into%20four%20different%20categories%22

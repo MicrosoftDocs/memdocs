@@ -25,7 +25,7 @@ This article describes known issues that can often be resolved with configuratio
 
 > [!TIP]
 >
-> RSS can be used for notification of when new known issues are added to this page. For example, the following RSS link includes this article:
+> RSS can be used to notify when new known issues are added to this page. For example, the following RSS link includes this article:
 >
 > ``` url
 > https://learn.microsoft.com/api/search/rss?search=%22Be+informed+about+known+issues+that+might+occur+during+Windows+Autopilot+deployment.%22&locale=en-us&%24filter=

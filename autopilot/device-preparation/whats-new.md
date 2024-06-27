@@ -21,7 +21,7 @@ appliesto:
 
 > [!TIP]
 >
-> RSS can be used for notification of when new features for Windows Autopilot device preparation are added to this page. For example, the following RSS link includes this article:
+> RSS can be used to notify when new features for Windows Autopilot device preparation are added to this page. For example, the following RSS link includes this article:
 >
 > ``` url
 > https://learn.microsoft.com/api/search/rss?search=%22News+and+resources+about+the+latest+updates+of+Windows+Autopilot+device+preparation.%22&locale=en-us&%24filter=

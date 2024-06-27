@@ -22,7 +22,7 @@ appliesto:
 
 > [!TIP]
 >
-> RSS can be used for notification of when new features for Windows Autopilot are added to this page. For example, the following RSS link includes this article:
+> RSS can be used to notify when new features for Windows Autopilot are added to this page. For example, the following RSS link includes this article:
 >
 > ``` url
 > https://learn.microsoft.com/api/search/rss?search=%22News+and+resources+about+the+latest+updates+and+past+versions+of+Windows+Autopilot.%22&locale=en-us&%24filter=
