@@ -77,6 +77,10 @@ When you use RDP Shortpath, the connection with the Cloud PC proceeds as follows
 6. Both parties attempt a connection at the same time. Because both are creating outbound connections, it often allows connectivity to be established through firewalls because no inbound initiated connectivity occurs. If this connection is not established, then an indirect UDP connection is attempted using relay.
 7. If connectivity is successful, the service evaluates if the connection is the fastest path. If it is, all dynamic virtual channels (such as graphics, input, device redirection, and more) switch to the new transport flow.
 
+## Indirect UDP connection using TURN
+
+By default, Indirect UDP connections using TURN is turned on for everyone. You can turn off UDP connections for public (and private) RDP Shortpath as described in [POlicy CSP - ADMX_TerminalServer](/windows/client-management/mdm/policy-csp-admx-terminalserver#admx-terminalserver-ts_select_transport) and set **ADMX_TerminalServer/TS_SELECT_TRANSPORT** to **Use only TCP**.
+
 ## Known issues
 
 The RDP Shortpath for public networks may not work with Cloud PCs where:
