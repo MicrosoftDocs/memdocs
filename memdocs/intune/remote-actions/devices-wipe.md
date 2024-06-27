@@ -185,9 +185,7 @@ Removing company data from an Android personally owned work profile device remov
 > [!IMPORTANT]
 > Windows devices that are not registered in the Windows Autopilot Service, upon being deleted or retired from Intune are removed from Microsoft Entra ID. Before performing these commands consider backing up the Bitlocker Recovery Key and/or a local administrator user account credentials. On the other hand, although Autopilot registered devices leave Microsoft Entra ID, their computer object is retained alongside their properties (e.g. Windows LAPS, Bitlocker Recovery Key, Entra ID groups memberships).
 
-
 > [!NOTE]
->
 > For Windows 10 devices that join Microsoft Entra ID during initial Setup (OOBE), the retire command will remove all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) to login as a local admin and regain access to the user's local data.
 ---
 
