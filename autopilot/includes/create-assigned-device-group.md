@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/03/2024
+ms.date: 06/27/2024
 ms.localizationpriority: medium
 ---
 
@@ -43,7 +43,7 @@ Headings are driven by article context. -->
            >
            > - In some tenants, the service principal might have the name of **Intune Autopilot ConfidentialClient** instead of **Intune Provisioning Client**. As long as the AppID of the service principal is **f1346770-5b25-470b-88bd-d5744ab7952c**, it's the correct service principal.
            >
-           > - If the **Intune Provisioning Client**/**Intune Autopilot ConfidentialClient** service principal with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available either in the list of objects or when searching, see [Adding the Intune Provisioning Client service principal](#adding-the-intune-provisioning-client-service-principal).
+           > - If the **Intune Provisioning Client** or **Intune Autopilot ConfidentialClient** service principal with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available either in the list of objects or when searching, see [Adding the Intune Provisioning Client service principal](#adding-the-intune-provisioning-client-service-principal).
 
        1. Once **Intune Provisioning Client** is selected as the owner, select **Select**.
 
@@ -67,7 +67,7 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
         Install-Module azuread
         ```
 
-    If prompted to do so, agree to install **NuGet** and the **azuread** module from **PSGallery**.
+    If prompted to do so, agree to install **NuGet** and the **azuread** module from the **PSGallery**.
 
    1. Once the **azuread** module is installed, connect to Microsoft Entra ID by entering the following command:
 

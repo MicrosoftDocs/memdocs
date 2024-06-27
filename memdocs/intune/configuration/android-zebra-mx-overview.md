@@ -7,11 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/03/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
-ms.localizationpriority:
+ms.localizationpriority: Low
 ms.assetid: 
 
 # optional metadata
