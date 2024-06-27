@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2024
+ms.date: 06/27/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -174,13 +174,11 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 >
 > The configuration file can only contain one profile. Multiple JSON profile files can be used, but each one must be named `AutopilotConfigurationFile.json`. This requirement is for OOBE to follow the Autopilot experience. To use more than one Autopilot profile, create separate Configuration Manager packages.
 >
-> If the file is saved with one of the following criteria:
+> Windows OOBE doesn't follow the Autopilot experience if the file is saved with one of the following criteria:
 >
-> - Unicode encoding
-> - UTF-8 encoding
-> - a file name other than `AutopilotConfigurationFile.json`
->
-> then Windows OOBE doesn't follow the Autopilot experience.
+> - Unicode encoding.
+> - UTF-8 encoding.
+> - A file name other than `AutopilotConfigurationFile.json`.
 
 ## Create a package containing the JSON file
 
@@ -234,17 +232,17 @@ For more information, see [How to create collections in Configuration Manager](/
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems** and select the **Task Sequences** node.
 
-1. On the **Home** ribbon, select **Create Task Sequence**.
+1. In the **Home** ribbon, select **Create Task Sequence**.
 
-1. On the **Create new task sequence** page, select the option to **Deploy Windows Autopilot for existing devices**.
+1. In the **Create new task sequence** page, select the option to **Deploy Windows Autopilot for existing devices**.
 
-1. On the **Task sequence information** page, specify the following information:
+1. In the **Task sequence information** page, specify the following information:
 
     - A name for the task sequence. For example, **Autopilot for existing devices**.
     - Optionally add a description to better describe the task sequence.
     - Select a boot image. For more information on supported boot image versions, see [Support for the Windows ADK in Configuration Manager](/mem/configmgr/core/plan-design/configs/support-for-windows-adk).
 
-1. On the **Install Windows** page, select the Windows **Image package**. Then configure the following settings:
+1. In the **Install Windows** page, select the Windows **Image package**. Then configure the following settings:
 
     - **Image index**: Select either Enterprise, Education, or Professional, as required by the organization.
 
@@ -258,23 +256,23 @@ For more information, see [How to create collections in Configuration Manager](/
         - **Randomly generate the local administrator password and disable the account on all support platforms (recommended)**
         - **Enable the account and specify the local administrator password**
 
-1. On the **Configure Network** page, select the option to **Join a workgroup**.
-
-    > [!IMPORTANT]
-    >
-    > The Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). This action fails if the device is joined to a domain.
-
-1. On the **Install Configuration manager** page, add any necessary installation properties for the environment.
+1. In the **Install the Configuration Manager client** page, add any necessary Configuration Manager client installation properties for the environment. For example, since the device is a Workgroup device and not domain joined during the Windows Autopilot for existing devices task sequence, the [SMSMP](/mem/configmgr/core/clients/deploy/about-client-installation-properties#smsmp) or [SMSMPLIST](/mem/configmgr/core/clients/deploy/about-client-installation-properties#smsmplist) parameters might be needed to run certain tasks such as the **Install Application** or **Install Software Updates** tasks.
 
 1. The **Include updates** page selects by default the option to **Do not install any software updates**.
 
-1. On the **Install applications** page, applications to install during the task sequence can be selected. However, Microsoft recommends that to mirror the signature image approach with this scenario. After the device provisions with Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.
+1. In the **Install applications** page, applications to install during the task sequence can be selected. However, Microsoft recommends that to mirror the signature image approach with this scenario. After the device provisions with Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.
 
-1. On the **System Preparation** page, select the package that includes the Autopilot configuration file. By default, the task sequence restarts the computer after it runs Windows Sysprep. The option to **Shutdown computer after this task sequence completes** can also be selected. This option allows preparation of a device and then delivery to a user for a consistent Autopilot experience.
+1. In the **System Preparation** page, select the package that includes the Autopilot configuration file. By default, the task sequence restarts the computer after it runs Windows Sysprep. The option to **Shutdown computer after this task sequence completes** can also be selected. This option allows preparation of a device and then delivery to a user for a consistent Autopilot experience.
 
 1. Complete the wizard.
 
 The Windows Autopilot for existing devices task sequence results in a device joined to Microsoft Entra ID.
+
+> [!NOTE]
+>
+> For Windows Autopilot for existing devices task sequence, the **Create Task Sequence Wizard** purposely skips configuring and adding the **Apply Network Settings** task. If the **Apply Network Settings** task isn't specified in a task sequence, it uses Windows default behavior, which is to join a workgroup.
+>
+> The Windows Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). If the device is joined to a domain, Sysprep fails, so therefore the Windows Autopilot for existing devices task sequence joins a workgroup. For this reason, it isn't necessary to add the **Apply Network Settings** task to a Windows Autopilot for existing devices task sequence.
 
 For more information on creating the task sequence, including information on other wizard options, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
 
