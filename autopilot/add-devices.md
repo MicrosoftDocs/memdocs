@@ -92,6 +92,10 @@ To use the `Get-WindowsAutopilotInfo.ps1` script, it needs to be downloaded and 
 
 - [Directly upload the hardware hash to a mobile device management (MDM) service such as Intune](#directly-upload-the-hardware-hash-to-an-mdm-service) - the `Get-WindowsAutopilotInfo.ps1` script directly uploads the hardware hash to the MDM service. This method is normally used on devices that are undergoing Windows Setup and OOBE.
 
+> [!NOTE]
+>
+> The `Get-WindowsAutopilotInfo` script used in this section was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure to use the latest version of the script. The Microsoft Graph PowerShell modules might require approval of additional permissions in Microsoft Entra ID when the modules are first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
+
 #### Save the hardware hash locally on a device as a CSV file
 
 Saving the hardware hash locally on a device as a CSV file is normally done on devices that already underwent Windows Setup and OOBE. To capture and save the hardware hash locally on a device:
@@ -185,10 +189,6 @@ To confirm the hardware hash for the device was uploaded into Intune and that th
 1. Wait for the sync to finish. The sync might take several minutes.
 
 1. After the sync completes and the device appears in the device list in the **Windows Autopilot devices** screen in Intune, the device is ready for a Windows Autopilot deployment as long as a Windows Autopilot profile is assigned to the device.
-
-> [!NOTE]
->
-> The `Get-WindowsAutopilotInfo` script used in this section was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure to use the latest version of the script. The Microsoft Graph PowerShell modules might require approval of additional permissions in Microsoft Entra ID when the modules are first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
 
 > [!NOTE]
 >
