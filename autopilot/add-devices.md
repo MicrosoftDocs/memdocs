@@ -96,7 +96,9 @@ To use the `Get-WindowsAutopilotInfo.ps1` script, it needs to be downloaded and 
 
 Saving the hardware hash locally on a device as a CSV file is normally done on devices that already underwent Windows Setup and OOBE. To capture and save the hardware hash locally on a device:
 
-1. On a device, open an elevated Windows PowerShell prompt.
+1. Sign into the device.
+
+1. On the device, open an elevated Windows PowerShell prompt.
 
 1. Run the following commands from the elevated Windows PowerShell prompt:
 
@@ -110,16 +112,20 @@ Saving the hardware hash locally on a device as a CSV file is normally done on d
    Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
    ```
 
+    > [!NOTE]
+    >
+    > On first run, the `Get-WindowsAutopilotInfo.ps1` script prompts to approve the required app registration permissions.
+
 The hardware hash is saved locally on the device in the directory `C:\HWID` with the filename `AutopilotHWID.csv`. The CSV file can then be used to [import the device](#add-devices) into an MDM service such as Intune.
 
-The PowerShell commands can run remotely on devices if all of the following are true:
+The PowerShell commands can run remotely on devices if the following are true:
 
 - WMI permissions are in place.
 - WMI is accessible through Windows Firewall on the remote computer.
 
 #### Directly upload the hardware hash to an MDM service
 
-Directly uploading the hardware hash to an MDM service such as Microsoft Intune can be done on any device, but it's especially useful for a device currently undergoing Windows Setup and OOBE. To directly upload the hardware hash for a device during Windows Setup and OOBE:
+Directly uploading the hardware hash to an MDM service such as Microsoft Intune can be done on any device, but it's especially useful for a device currently undergoing Windows Setup and OOBE. To directly upload the hardware hash for a device:
 
 1. On a device that is:
 
@@ -133,22 +139,30 @@ Directly uploading the hardware hash to an MDM service such as Microsoft Intune 
         powershell.exe
         ```
 
-   - Already undergone Windows Setup and OOBE, open an elevated Windows PowerShell prompt.
+   - Already undergone Windows Setup and OOBE:
 
-1. At the `PS` PowerShell prompt, run the following PowerShell commands:
+     1. Sign into the device.
 
-    ```powershell
-       [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-       Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-       Install-Script -Name Get-WindowsAutopilotInfo -Force
-       Get-WindowsAutopilotInfo -Online
-       ```
+     1. Open an elevated Windows PowerShell prompt.
+
+1. At the `PS` PowerShell command prompt, run the following PowerShell commands:
+
+   ```powershell
+   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+    Install-Script -Name Get-WindowsAutopilotInfo -Force
+    Get-WindowsAutopilotInfo -Online
+   ```
 
       If prompted to do so, agree to install **NuGet** from the **PSGallery**.
 
-1. After the `Get-WindowsAutopilotInfo -Online` command runs, a Microsoft Entra ID sign-on prompt is displayed. Sign in with an account that is at least an Intune Administrator role.
+      > [!NOTE]
+      >
+      > On first run, the `Get-WindowsAutopilotInfo.ps1` script prompts to approve the required app registration permissions.
 
-1. The device hash is uploaded automatically after the sign in completes successfully.
+1. After the last command of `Get-WindowsAutopilotInfo -Online` runs, a Microsoft Entra ID sign-on prompt is displayed. Sign in with an account that is at least an Intune Administrator.
+
+1. After the sign-in is successful, the device hash uploads automatically.
 
 To confirm the hardware hash for the device was uploaded:
 
@@ -162,9 +176,11 @@ To confirm the hardware hash for the device was uploaded:
 
 1. In the **Windows Autopilot devices** screen, select **Sync** in the toolbar.
 
-1. For devices currently undergoing Windows Setup and OOBE, after the device appears in the device list in the **Windows Autopilot devices** screen in Intune and a Windows Autopilot profile is assigned to the device, restart the device. The device should pick up the Windows Autopilot profile and OOBE should run through the Windows Autopilot provisioning process.
+1. Wait for the sync to finish. The sync might take several minutes.
 
-    On first run, it prompts to approve the required app registration permissions.
+1. After the sync completes and the device appears in the device list in the **Windows Autopilot devices** screen in Intune, the device is ready for a Windows Autopilot deployment as long as a Windows Autopilot profile is assigned to the device.
+
+    For devices undergoing Windows Setup and OOBE, restart the device. The device should pick up the Windows Autopilot profile and OOBE should run through the Windows Autopilot provisioning process.
 
 > [!NOTE]
 >
@@ -179,7 +195,7 @@ To confirm the hardware hash for the device was uploaded:
 >
 > In most cases, instead use the Microsoft Partner Center for Windows Autopilot device registration.
 
-For more information about running the `Get-WindowsAutopilotInfo.ps1` script, see the script's help by running the following command in PowerShell:
+For more information about running the `Get-WindowsAutopilotInfo.ps1` script, see the script's help by running the following command at PowerShell command prompt:
 
 ```powershell
 Get-Help Get-WindowsAutopilotInfo
