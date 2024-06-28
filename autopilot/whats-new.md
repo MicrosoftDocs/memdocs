@@ -1,6 +1,6 @@
 ---
-title: What's new in Autopilot
-description: News and resources about the latest updates and past versions of Windows Autopilot.
+title: What's new in Windows Autopilot
+description: News and resources about the latest updates and past versions of Windows Autopilot. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/21/2024
+ms.date: 06/28/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -19,6 +19,18 @@ appliesto:
 ---
 
 # Windows Autopilot: What's new
+
+> [!TIP]
+>
+> RSS can be used to notify when new features for Windows Autopilot are added to this page. For example, the following RSS link includes this article:
+>
+> ``` url
+> https://learn.microsoft.com/api/search/rss?search=%22News+and+resources+about+the+latest+updates+and+past+versions+of+Windows+Autopilot.%22&locale=en-us&%24filter=
+> ```
+>
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
+>
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 ## Update to enrollmentProfileName property for devices deployed via Windows Autopilot for existing devices
 <!--9105086-->
@@ -77,15 +89,13 @@ Starting in 2310, we're making an update to the self-deployment and pre-provisio
 
 ### How to unblock devices
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices** in the left hand pane.
+1. In the **Home** screen, select **Devices**.
 
-1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
 
-1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
-
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
+1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Devices**.
 
 1. Select the device to unblock and the select the **Unblock device** option in the toolbar at the top of the page.
 
@@ -139,15 +149,13 @@ Date added: *July 3, 2023*
 
 Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device in Autopilot devices in Intune. One step removal of a device means that the Autopilot registration of a device can now be removed without needing to delete the record in Intune. If the device is still active in Intune, the deletion just removes the registration, but it continues to be managed. To use this feature in Intune:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices** in the left hand pane.
+1. In the **Home** screen, select **Devices**.
 
-1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
 
-1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
-
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
+1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Devices**.
 
 1. Select the device that needs deletion and then select **Delete** in the toolbar at the top.
 
@@ -203,7 +211,7 @@ With Intune 2208, we're updating the Autopilot infrastructure to ensure that the
 
 Date added: *August 3, 2022*
 
-Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) requires .NET Framework version 4.7.2 or later. If .NET 4.7.2 or later isn't used, the Intune Connector might not work for Autopilot hybrid Microsoft Entra deployments resulting in failures. When a new Intune Connector is installed, don't use the connector installation package that was previously downloaded. Before installing a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the Microsoft Intune admin center. If the latest version isn't used, it might continue to work, but the auto-upgrade feature to provide updates to the Intune Connector doesn't work.
+Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) requires .NET Framework version 4.7.2 or later. If .NET 4.7.2 or later isn't used, the Intune Connector might not work for Autopilot hybrid Microsoft Entra deployments resulting in failures. When a new Intune Connector is installed, don't use the connector installation package that was previously downloaded. Before installing a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). If the latest version isn't used, it might continue to work, but the auto-upgrade feature to provide updates to the Intune Connector doesn't work.
 
 ## Enroll to co-management from Windows Autopilot <!-- 11300628 -->
 

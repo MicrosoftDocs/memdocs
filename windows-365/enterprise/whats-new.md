@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/05/2024
+ms.date: 06/26/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -54,6 +54,42 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of June 24, 2024 (Service release 2406)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+
+Windows 365 now supports AVC mixed mode when MMR isn't enabled.
+
+#### Windows 365 Boot and Windows 365 Switch now support battery direction<!--51748880-->
+
+Windows 365 Boot and Windows 365 Switch now support battery redirection. Cloud PCs now show the local PC's battery status.
+
+#### Support for symmetric NAT with RDP Shortpath<!--43602619-->
+
+RDP Shortpath in Windows 365 now supports establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT. TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Single sign-on Windows 365 clients authentication change<!--49918010-->
+
+Single sign-on for Windows 365 is transitioning to use the Windows Cloud Login Entra ID cloud app for Windows authentication starting with the Windows and Web clients. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Windows 365 Government now supports Cloud PC utilization report<!--49200860-->
+
+Windows 365 Government now supports the Cloud PC utilization report. For more information,  see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### Cloud PC size recommendation report is now generally available<!--50219942-->
+
+The Cloud PC size recommendation report has moved out of preview and is now generally available. For more information, see [Cloud PC recommendations report](report-cloud-pc-recommendations.md).
 
 <!-- ########################## -->
 ## Week of June 3, 2024 (Service release 2405)
@@ -344,7 +380,7 @@ Connection status and timeout information on the connection screen for Windows 3
 
 #### FQDN requirement changes<!--46731885-->
 
-Many required FQDNs have been moved to the *.infra.windows365.microsoft.com wildcard FQDN. This move reduces the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs were moved to *.infra.windows365.microsoft.us. To avaoid any issues when provisioning new Cloud PCs, you must make sure that *.infra.windows365.microsoft.com (*.infra.windows365.microsoft.us for Windows 365 Government) is an accessible endpoint in your network allow list.
+Many required FQDNs have been moved to the *.infra.windows365.microsoft.com wildcard FQDN. This move reduces the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs were moved to *.infra.windows365.microsoft.us. To avoid any issues when provisioning new Cloud PCs, you must make sure that *.infra.windows365.microsoft.com (*.infra.windows365.microsoft.us for Windows 365 Government) is an accessible endpoint in your network allow list.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### End user experience
@@ -548,7 +584,7 @@ These 16 vCPU licenses can be purchased and assigned in the same way that you pu
 Two new gallery images are now available for Windows 365 Cloud PCs:
 
 - Windows 11 Preview + Microsoft 365 Apps 23H2
-- Winodws 11 Preview + OS Optimizations 23H2
+- Windows 11 Preview + OS Optimizations 23H2
 
 You can choose the new gallery images when [creating a provisioning policy](create-provisioning-policy.md).
 
@@ -627,7 +663,7 @@ The following updates related to single sign-on are now available:
 - [Public preview features](..\public-preview.md).
   - Single sign-on for Microsoft Entra hybrid join Cloud PCs.
   - You can turn on single sign-on separately for each provisioning policy.
-  - A new Azure Network Connection check to make sure that the network is properly configured for single sign on.
+  - A new Azure Network Connection check to make sure that the network is properly configured for single sign-on.
   - Apply single sign-on to existing Microsoft Entra joined and Microsoft Entra hybrid joined Cloud PCs.
 
 For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
@@ -887,7 +923,7 @@ Users can now change multiple monitor setting in the Windows 365 app.
 
 #### Windows 365 Government Azure Network Connection set up improvement<!--44237227-->
 
-During Azure network connection (ANC) creation or editing, instead of copying and pasting details (like Subscription ID, and VNET name) for the ANC, you can now select options from a drop down menu. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
+During Azure network connection (ANC) creation or editing, instead of copying and pasting details (like Subscription ID, and VNET name) for the ANC, you can now select options from a drop-down menu. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
 
 <!-- ########################## -->
 ## Week of May 22, 2023

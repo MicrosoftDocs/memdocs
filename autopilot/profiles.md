@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 06/28/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -37,9 +37,13 @@ For Intune managed devices, pre-provisioning, self-deploying, and co-management 
 
 Autopilot deployment profiles are used to configure the Autopilot devices. Up to 350 profiles can be created per tenant.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **By platform** | **Windows** > **Windows enrollment**.
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment Profiles**
+1. In the **Home** screen, select **Devices**.
+
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Deployment Profiles**
 
 1. In the **Windows Autopilot deployment profiles** screen, select the **Create Profile** drop down menu and then select either **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and HoloLens, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
@@ -65,7 +69,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
     >
     > Options that are dimmed or shaded in the selected deployment mode aren't currently supported.
 
-1. In the **Join to Azure AD as** box, select **Azure AD joined**.
+1. In the **Join to Microsoft Entra ID as** box, select **Microsoft Entra joined**.
 
 1. Configure the following options:
 
@@ -117,17 +121,37 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 
     :::image type="content" source="images/create-profile-review.png" alt-text="Screenshot of Review page.":::
 
-> [!NOTE]
->
-> Intune periodically checks for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra ID groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
->
-> Before deploying a device, ensure that this process is complete. To ensure the process is complete, select **Devices** > **Windows** > **Windows enrollment**. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**. The profile status changes from **Unassigned** to **Assigning** and finally to **Assigned**. Once the device is showing **Assigned**, open the properties of the device by selecting it, and then ensuring that **Date assigned** is populated. If **Date assigned** isn't yet populated, wait until it populates before deploying the device.
+### Assignment of Autopilot deployment profiles to devices
+
+Intune periodically checks for new devices in the assigned groups, and then begin the process of assigning deployment profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra ID groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
+
+Before deploying a device, ensure that a Windows Autopilot deployment profile is assigned to the device. To ensure the process is complete:
+
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Devices**.
+
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Devices**.
+
+1. In the **Windows Autopilot devices** screen, monitor the **Profile Status** column for a device that just had a deployment profile assigned to it. The profile status changes from **Unassigned** to **Assigning** and finally to **Assigned**.
+
+1. Once the device is showing **Assigned**, open the properties of the device by selecting it.
+
+1. In the device properties pane that opens, ensure that **Date assigned** is populated. If **Date assigned** isn't yet populated, wait until it populates before deploying the device.
 
 ## Edit an Autopilot deployment profile
 
 After the Autopilot deployment profile is created, certain parts of the deployment profile can be edited.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment profiles**.
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Devices**.
+
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Deployment profiles**.
 
 1. Select the profile to edit.
 
@@ -141,26 +165,17 @@ After the Autopilot deployment profile is created, certain parts of the deployme
 
 If a device is registered in Autopilot and a profile isn't assigned, it receives the default Autopilot profile. If a device shouldn't go through Autopilot, the Autopilot registration must be removed.
 
-## Alerts for Windows Autopilot unassigned devices
-<!-- 163236 -->
-
-Alerts show how many Autopilot program devices don't have Autopilot deployment profiles. Use the information in the alert to create profiles and assign them to the unassigned devices. When an alert is selected, a full list of Windows Autopilot devices and detailed information about them is displayed.
-
-To see alerts for unassigned devices, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.
-
 ## Autopilot profile priority
 
 If a group is assigned to multiple Autopilot profiles, the device would receive the oldest created profile to resolve the conflict. If no other profile is applicable to the device and there's a default profile (any Autopilot profile assigned to all devices), then the default profile is applied. If a device is assigned to a security group that isn't assigned to Autopilot profile, then it would receive the default profile targeted to all devices. To see when an Autopilot profile is created:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices** in the left hand pane.
+1. In the **Home** screen, select **Devices**.
 
-1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
 
-1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
-
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment Profiles**.
+1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Deployment Profiles**.
 
 1. In the **Windows Autopilot deployment profiles** screen, under **Name**, select the Autopilot profile name where the create date needs to be viewed.
 
@@ -168,7 +183,7 @@ If a group is assigned to multiple Autopilot profiles, the device would receive 
 
 ## Autopilot deployments report
 
-Details on each device deployed through Windows Autopilot can be seen through a report. To see the report, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Autopilot deployments**. The data is available for 30 days after deployment.
+Details on each device deployed through Windows Autopilot can be seen through a report. To see the report, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Windows Autopilot deployment status**. The data is available for 30 days after deployment.
 
 This report is in preview. Only new Intune enrollment events trigger device deployment records. Deployments that don't trigger a new Intune enrollment don't appear in this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot pre-provisioning.
 
