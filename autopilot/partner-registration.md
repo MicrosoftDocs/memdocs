@@ -33,6 +33,8 @@ For Surface devices, Microsoft Support can help with device registration. For mo
 
 Windows Autopilot doesn't require delegated administrator permissions when establishing the relationship between the CSP partner and the organization. As part of the Global Administrator's approval process, they can choose to uncheck the **Include delegated administration permissions** checkbox.
 
+<!-- MAXADO-9048730 -->
+
 > [!IMPORTANT]
 >
 > Microsoft recommends using roles with the fewest permissions. Using lower permissioned accounts helps improve security for an organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when an existing role can't be used.
