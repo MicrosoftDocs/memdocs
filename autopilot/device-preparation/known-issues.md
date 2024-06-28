@@ -28,13 +28,13 @@ This article describes known issues that can often be resolved with:
 
 > [!TIP]
 >
-> You can use RSS to be notified when new known issues are added to this page. For example, the following RSS link includes this article:
+> RSS can be used to notify when new known issues are added to this page. For example, the following RSS link includes this article:
 >
 > ``` url
 > https://learn.microsoft.com/api/search/rss?search=%22Information+regarding+known+issues+that+might+occur+during+a+Windows+Autopilot+device+preparation%22&locale=en-us&%24filter=
 > ```
 >
-> This example includes the `&locale=en-us` variable. The `locale` variable is required, but you can change it to another supported locale. For example, `&locale=es-es`.
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 

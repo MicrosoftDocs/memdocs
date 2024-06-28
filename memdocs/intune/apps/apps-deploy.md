@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/16/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,7 +41,9 @@ After you've [added an app](apps-add.md) to Microsoft Intune, you can assign the
 > [!NOTE]
 > The **Available for enrolled devices** deployment intent is supported for **user groups** and **device groups** when targeting Android Enterprise fully managed devices (COBO) and Android Enterprise corporate-owned personally-enabled (COPE) devices.
 
-The following table lists the various options for *assigning* apps to users and devices:
+## Options when assigning managed apps
+
+The following table lists the various options when *assigning* apps to users and devices:
 
 | Option  | Devices enrolled with Intune | Devices not enrolled with Intune |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
