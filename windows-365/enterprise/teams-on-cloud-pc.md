@@ -35,7 +35,7 @@ Microsoft Teams is one of the core Microsoft 365 applications used with Windows 
 
 Using Microsoft Teams on a Cloud PC is different from using it on a physical PC. You'll need to do the following to provide the best Teams experiences from Cloud PCs:
 
-- Read the [requirements and limitations](MicrosoftTeams/vdi-2) for using Microsoft Teams in virtualized environments.
+- Read the [requirements and limitations](/MicrosoftTeams/vdi-2) for using Microsoft Teams in virtualized environments.
 - [Prepare your network](/microsoftteams/prepare-network/) for Microsoft Teams.
 - Confirm that [required components](/azure/virtual-desktop/teams-on-avd) for Microsoft Teams optimizations are installed.
 - Conform to [Cloud PCs sizing requirements](cloud-pc-size-recommendations.md) for Microsoft Teams.
