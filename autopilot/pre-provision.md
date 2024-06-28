@@ -35,7 +35,7 @@ Pre-provisioned deployments use Microsoft Intune in currently supported versions
 
 ## Prerequisites
 
-In addition to [Windows Autopilot requirements](requirements.md?tabs=software), Windows Autopilot for pre-provisioned deployment also requires:
+In addition to [Windows Autopilot requirements](requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
 - A currently supported version of Windows.
 - Windows Pro, Enterprise, or Education editions.

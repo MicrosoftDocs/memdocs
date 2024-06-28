@@ -203,7 +203,7 @@ User experience settings control the end-user experience for device restart and 
 - **Use deadline settings**  
   **Default**: Not configured  
 
-  Allows user to use deadline settings.  
+  Allows configuration of deadline settings.  
 
   - **Not configured**
   - **Allow**
@@ -232,7 +232,8 @@ User experience settings control the end-user experience for device restart and 
     **Default**:  Yes
     Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot)
 
-    Specifies whether the device should auto reboot before deadline.
+    Specifies whether the device will attempt to automatically reboot outside of active hours before the deadline and grace period are passed. The recommended value is **Yes**, as it enables the system to reboot when the user isn't using the device. Setting this value to **No** forces the system to wait until the deadline and grace period are passed and then restarts the device and this could occur during active hours.
+
     - **Yes**
     - **No**
 
