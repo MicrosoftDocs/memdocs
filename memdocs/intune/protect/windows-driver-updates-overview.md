@@ -311,7 +311,14 @@ The recommended and preferred path to embrace cloud based updates is to move the
 
 ### Is there a way to set a deadline for drivers?
 
-- The Quality Update deadline and grace period settings apply to drivers. The deadline starts from the time the driver is first offered to the device, but isn't a deferral period. The deferral period delays when updates are first offered to a device.
+- The Quality Update deadline and grace period settings apply to drivers.
+- A driver is approved to be made available (manually or automatically) on a date.  This is shown as the First Deployment.
+- On first or initial  scan the approved driver is offered to the device. The offered date is also the start date and time for the deadline.
+- The deadline calculation for both quality and feature updates is based off the time the client's update scan initially discovered the update. See [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines)
+
+### How do I set deferrals for drivers?
+
+- The deferral period set for Quality Updates within the Update Rings policy does not apply to drivers that are approved using the Driver Update Policy. Instead, use the deferral setting in the Driver policy to set a deferral.  In fact, using multiple driver policies with different deferral settings to create driver deployment rings is highly recommended. Remember to only assign a device to one driver policy.
 
 ### Are the user experience settings from an Update Ring policy applied for driver updates?
 
