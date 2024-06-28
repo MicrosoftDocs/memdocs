@@ -28,7 +28,7 @@ Out of the box reporting and monitoring with near real-time status of deployment
 
 To access Windows Autopilot device preparation reports and monitor deployments in near real-time:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 

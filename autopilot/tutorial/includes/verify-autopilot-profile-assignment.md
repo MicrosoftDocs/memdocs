@@ -21,7 +21,7 @@ Headings are driven by article context. -->
 
 Before deploying a device, ensure that an Autopilot profile is assigned to a device group that the device is a member of. Autopilot profile assignment to a device can take some time after the Autopilot profile is assigned to the device group or after the device is added to the device group. To verify that the profile is assigned to a device, follow these steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 

@@ -43,11 +43,13 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot device preparation**, select **Device preparation policies**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot device preparation**, select **Device preparation policies**.
 
 1. In the **Device preparation policies** screen, select **Create**.
 
