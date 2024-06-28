@@ -178,11 +178,13 @@ To confirm the hardware hash for the device was uploaded into Intune and that th
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Devices**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
 1. In the **Windows Autopilot devices** screen, select **Sync** in the toolbar.
 
@@ -296,11 +298,13 @@ Once the hardware hashes are captured in a CSV file, Windows Autopilot devices c
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Devices**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
 1. In the **Windows Autopilot devices** screen, select **Import** in the toolbar.
 
@@ -322,11 +326,13 @@ After an Autopilot device is uploaded, certain attributes of the device can be e
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Devices**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
 1. In the **Windows Autopilot devices** screen, select the device that needs to be edited.
 
@@ -348,11 +354,13 @@ Windows Autopilot devices that aren't enrolled in Intune can be deleted:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Devices**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
 1. In the **Windows Autopilot devices** screen, select the devices that need deletion, and then select **Delete** in the toolbar. The deletion process can take a few minutes to complete.
 

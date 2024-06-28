@@ -152,11 +152,13 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Intune Connector for Active Directory**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Intune Connector for Active Directory**.
 
 1. In the **Intune Connector for Active Directory** screen, select **Add**.
 
@@ -168,21 +170,23 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 1. Select **Sign In**.
 
-1. Enter the Global administrator or Intune administrator role credentials. The user account must have an assigned Intune license.
+1. Enter the credentials of an Intune administrator role. The user account must have an assigned Intune license.
 
 > [!NOTE]
 >
-> The Global administrator role is a temporary requirement at the time of installation.
+> The Intune administrator role is a temporary requirement at the time of installation.
 
 After authenticating, the Intune Connector for Active Directory finishes installing. Once it finishes installing, verify that it is active in Intune by following these steps:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Intune
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Intune Connector for Active Directory**.
 
 1. Confirm that the connection status in the **Status** column is **Active**.
 
@@ -310,11 +314,13 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Deployment Profiles**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment Profiles**.
 
 1. In the **Windows Autopilot deployment profiles** screen, select the **Create Profile** drop down menu and then select **Windows PC**.
 
@@ -350,11 +356,13 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Enrollment Status Page**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Enrollment Status Page**.
 
 1. In the **Enrollment Status Page** pane, select **Default** > **Settings**.
 
