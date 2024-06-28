@@ -39,11 +39,13 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Deployment Profiles**
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment Profiles**
 
 1. In the **Windows Autopilot deployment profiles** screen, select the **Create Profile** drop down menu and then select either **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and HoloLens, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
@@ -129,11 +131,13 @@ Before deploying a device, ensure that a Windows Autopilot deployment profile is
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Devices**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
 1. In the **Windows Autopilot devices** screen, monitor the **Profile Status** column for a device that just had a deployment profile assigned to it. The profile status changes from **Unassigned** to **Assigning** and finally to **Assigned**.
 
@@ -147,11 +151,13 @@ After the Autopilot deployment profile is created, certain parts of the deployme
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Deployment profiles**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment profiles**.
 
 1. Select the profile to edit.
 
@@ -171,11 +177,13 @@ If a group is assigned to multiple Autopilot profiles, the device would receive 
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Deployment Profiles**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment Profiles**.
 
 1. In the **Windows Autopilot deployment profiles** screen, under **Name**, select the Autopilot profile name where the create date needs to be viewed.
 
