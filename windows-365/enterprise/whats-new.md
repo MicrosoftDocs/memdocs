@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/26/2024
+ms.date: 06/28/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -68,6 +68,10 @@ Windows 365 now supports AVC mixed mode when MMR isn't enabled.
 #### Windows 365 Boot and Windows 365 Switch now support battery direction<!--51748880-->
 
 Windows 365 Boot and Windows 365 Switch now support battery redirection. Cloud PCs now show the local PC's battery status.
+
+#### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
+
+Customers that have Modern Microsoft Cloud Agreements can upgrade their existing Windows 365 licenses in the Microsoft Admin Center.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
