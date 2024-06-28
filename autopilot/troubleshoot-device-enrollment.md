@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2024
+ms.date: 06/28/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -52,9 +52,11 @@ Windows MDM enrollment is disabled in the Intune tenant.
 
 To fix this issue in a stand-alone Intune environment, follow these steps:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**.
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Devices | Overview** screen, under **Device onboarding** select **Enrollment**.
+1. In the **Home** screen, select **Devices**.
+
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
 
 1. In the **Devices | Enrollment** screen:
 

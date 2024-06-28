@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/26/2024
+ms.date: 06/28/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -89,15 +89,13 @@ Starting in 2310, we're making an update to the self-deployment and pre-provisio
 
 ### How to unblock devices
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices** in the left hand pane.
+1. In the **Home** screen, select **Devices**.
 
-1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
 
-1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
-
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
+1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Devices**.
 
 1. Select the device to unblock and the select the **Unblock device** option in the toolbar at the top of the page.
 
@@ -151,15 +149,13 @@ Date added: *July 3, 2023*
 
 Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device in Autopilot devices in Intune. One step removal of a device means that the Autopilot registration of a device can now be removed without needing to delete the record in Intune. If the device is still active in Intune, the deletion just removes the registration, but it continues to be managed. To use this feature in Intune:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices** in the left hand pane.
+1. In the **Home** screen, select **Devices**.
 
-1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Enrollment**.
 
-1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
-
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
+1. In the **Devices | Enrollment** screen, verify that **Windows** is selected at the top of the screen, and then under **Windows Autopilot**, select **Devices**.
 
 1. Select the device that needs deletion and then select **Delete** in the toolbar at the top.
 
