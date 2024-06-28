@@ -1,11 +1,11 @@
 ---
 title: Win32 app management in Microsoft Intune
-description: Learn how to manage Win32 apps with Microsoft Intune. This topic provides an overview of the Intune Win32 app delivery and management capabilities.
+description: Learn how to manage Win32 apps with Microsoft Intune. This article provides an overview of the Intune Win32 app delivery and management capabilities.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/29/2023
+ms.date: 06/28/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -20,17 +20,25 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Win32
+- AI-Assisted
 ---
 
 # Win32 app management in Microsoft Intune
 
-Microsoft Intune enables Windows Win32 app management. Although it's possible for cloud-connected customers to use Microsoft Configuration Manager for Windows app management, Intune-only customers will have greater management capabilities for their Win32 apps. This topic provides an overview of the Intune Win32 app management features and related information.
+Microsoft Intune enables Windows Win32 app management. Win32 app management in Intune allows you to install, configure, protect, and monitor your Windows applications on devices at your organization. Win32 apps are deployed using the Microsoft Intune management extension (IME), which is installed automatically when a PowerShell script or a Win32 app is assigned to the user or device using Intune.
+
+In addition to supporting extensive management capabilities, Win32 app management in Microsoft Intune provides support for the following capabilities:
+- Management of large traditional desktop apps 
+- Support for several app types
+- Control for complex app installations
+- Support for detection rules, dependencies, and requirements
+- Support for 32-bit and 64-bit Windows operating system architecture
+- Support for Windows S mode devices
+
+Although it's possible for cloud-connected customers to use Microsoft Configuration Manager for Windows app management, Intune-only customers have greater management capabilities for their Win32 apps. This article provides an overview of the Intune Win32 app management features and related information.
 
 > [!NOTE]
-> This app management capability supports both 32-bit and 64-bit operating system architecture for Windows applications.
->
 > For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](../apps/apps-add-enterprise-app.md).
-
 
 > [!IMPORTANT]
 > When you're deploying Windows Win32 apps, consider using the Win32 app type in Intune exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during Windows Autopilot enrollment, the app installation might fail as they both may attempt to use the Trusted Installer service at the same time which causes a failure due to this conflict. However, mixing of Win32 and line-of-business apps during Windows Autopilot device preparation is supported.
@@ -52,7 +60,7 @@ To use Win32 app management, be sure the following criteria are met:
 
 ## Prepare the Win32 app content for upload
 
-Before you can add a Win32 app to Microsoft Intune, you must prepare the app by using the Microsoft Win32 Content Prep Tool. You use the Microsoft Win32 Content Prep Tool to pre-process Windows classic (Win32) apps. The tool converts application installation files into the *.intunewin* format. For more information and steps, see [Prepare Win32 app content for upload](apps-win32-prepare.md).
+Before you can add a Win32 app to Microsoft Intune, you must prepare the app by using the Microsoft Win32 Content Prep Tool. You use the Microsoft Win32 Content Prep Tool to preprocess Windows classic (Win32) apps. The tool converts application installation files into the *.intunewin* format. For more information and steps, see [Prepare Win32 app content for upload](apps-win32-prepare.md).
 
 ## Add, assign, and monitor a Win32 app
 

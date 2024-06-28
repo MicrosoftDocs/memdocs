@@ -81,6 +81,8 @@ The environment in the diagram was set up using the following Azure Firewall app
 | Windows Update | FQDN Tag | WindowsUpdate| HTTP: 80, HTTPS: 443 | [Not recommended](/windows/deployment/update/windows-update-security#securing-metadata-connections) | Optional|
 | Citrix HDX Plus | FQDN Tag | CitrixHDXPlusForWindows365 | HTTP: 80, HTTPS: 443 | [Not recommended](/windows/deployment/update/windows-update-security#securing-metadata-connections) | Optional (only required when using Citrix HDX Plus) |
 
+Azure Firewall can be associated with public IP addresses to provide outbound connectivity to the internet. Public IPs are selected to provide [outbound SNAT](/azure/firewall/features#outbound-snat-support) based on the available SNAT ports of the actively used IP. In scenarios that require high throughput, it is recomended to leverage an Azure NAT Gateway. NAT Gateway dynamically scales outbound connectivity and can be [integrated with an Azure Firewall](/azure/firewall/integrate-with-nat-gateway). See the [integrate NAT Gateway with Azure Firewall tutorial](/azure/nat-gateway/tutorial-hub-spoke-nat-firewall) for guidance.
+
 ### Windows365 tag
 
 The Windows365 tag includes the required Azure Virtual Desktop (AVD) endpoints, except those endpoints with nonstandard ports that need to be entered manually (see the Network rules section).
