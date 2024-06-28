@@ -56,6 +56,15 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of July 1, 2024
+
+### Apps
+
+#### Windows 365 Cloud PC gallery images use new Teams VDI<!--51726416-->
+
+Windows 365 Cloud PC gallery images now use the new Teams Virtualized Desktop Infrastructure (VDI). For more information, see [Microsoft Teams on a Cloud PC](teams-on-cloud-pc) and [New VDI solution for Teams](/MicrosoftTeams/vdi-2).
+
+<!-- ########################## -->
 ## Week of June 24, 2024 (Service release 2406)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
