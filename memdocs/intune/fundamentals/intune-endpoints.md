@@ -109,7 +109,7 @@ ID |Desc |Category |ER |Addresses |Ports
 
 ID |Desc |Category |ER |Addresses |Ports|
 -- |-- |-----|--- |--------------|--------------------------------|
-164 | Autopilot - Windows Update| Default<BR>Required | False | `*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`catalog.update.microsoft.com`<BR>`adl.windows.com`<BR> | **TCP:** 80, 443|
+164 | Autopilot - Windows Update| Default<BR>Required | False | `*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`adl.windows.com`<BR> | **TCP:** 80, 443|
 165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` |**UDP:** 123|
 169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
 173 | Autopilot - Third party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
