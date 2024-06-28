@@ -5,14 +5,14 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/19/2024
+ms.date: 06/28/2024
 ms.localizationpriority: medium
 ---
 
 <!-- This file is shared by the following articles:
 
-user-driven/hybrid-azure-ad-join-intune-connector.md
 pre-provisioning/hybrid-azure-ad-join-intune-connector.md
+user-driven/hybrid-azure-ad-join-intune-connector.md
 
 Headings are driven by article context. -->
 
@@ -32,13 +32,13 @@ Headings are driven by article context. -->
 
 ### Download the Intune Connector
 
-1. On the server where the Intune Connector is being installed, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. On the server where the Intune Connector is being installed, Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices** in the left pane.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
 1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
 
 1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Intune Connector for Active Directory**.
 
@@ -66,7 +66,7 @@ Headings are driven by article context. -->
 
    1. Under the **Enrollment** tab, select **Sign In**.
 
-   1. Under the **Sign In** tab, sign in with the Global administrator or with the credentials of an Intune administrator role. The user account must have an assigned Intune license. The sign in process might take a few minutes to complete.
+   1. Under the **Sign In** tab, sign in with the credentials of an Intune administrator role. The user account must have an assigned Intune license. The sign in process might take a few minutes to complete.
 
    1. Once the sign in process is complete, a **The Intune connector for Active Directory successfully enrolled** confirmation window appears. Select **OK** to close the window. The **Enrollment** tab shows **Intune connector for Active Directory is enrolled** and the **Sign In** button is greyed out.
 

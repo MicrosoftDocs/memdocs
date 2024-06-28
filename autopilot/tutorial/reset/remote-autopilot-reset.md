@@ -43,7 +43,7 @@ To trigger a remote Windows Autopilot Reset via Intune, follow these steps:
 
 1. Make sure the Intune admin initiating the remote Windows Autopilot Reset is a member of the Intune Service Administrator role. For more information, see [Add users and grant administrative permission to Intune](/mem/intune/fundamentals/users-add).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
@@ -69,7 +69,7 @@ A Windows Autopilot Reset can be forced to start sooner on a device by forcing t
 
 To force the device to obtain the latest Intune policy remotely, follow these steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
