@@ -33,6 +33,9 @@ ms.collection:
 
 As part of a digital forensics request, you may be asked to provide a snapshot of a Cloud PC to internal or external investigators. Placing a Cloud PC under review saves a snapshot of the Cloud PC to your Azure Storage account. From there, you can provide the snapshot to the investigator.
 
+> [!NOTE]
+> Up to 10 Cloud PCs can be placed under review simultaneously. When more than 10 are placed under review at once, the requests are queued up for processing, but the possibility of timeouts increases if the requests remain too long in the queue. If you experience timeouts, it is recommended you stagger the requests to allow sufficient time for previous requests to complete first.   
+
 ## Requirements
 
 To place a Cloud PC under review, you must meet the following requirements:

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2024
+ms.date: 06/28/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -76,11 +76,8 @@ For more information, see [Microsoft Purview Customer Lockbox](/purview/customer
 <!-- ## End user experience -->
 
 <!-- ***********************************************-->
-## Miscellaneous
-
-### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
-
-In a future update, customers that have Modern Microsoft Cloud Agreements will be able to upgrade their existing Windows 365 licenses in the Microsoft Admin Center.
+<!--## Miscellaneous
+-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -88,12 +85,6 @@ In a future update, customers that have Modern Microsoft Cloud Agreements will b
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
-
-### Windows 365 Government support for Cloud PC utilization report<!--49200860-->
-
-Windows 365 Government will support the Cloud PC utilization report.
-
-For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
 
 ### Update to Cloud PC action status report<!--49451077-->
 
