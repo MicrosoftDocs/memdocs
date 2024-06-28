@@ -79,6 +79,8 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
 
     :::image type="content" source="images/csp5.png" alt-text="Customers.":::
 
+<!-- MAXADO-9048730 -->
+
 > [!IMPORTANT]
 >
 > Microsoft recommends using roles with the fewest permissions. Using lower permissioned accounts helps improve security for an organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when an existing role can't be used.
