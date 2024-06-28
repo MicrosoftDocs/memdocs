@@ -11,12 +11,33 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for Change: Update to Intune endpoint for Remote Help 
+
+Starting on May 30, 2024, or soon after, to improve the experience for Remote Help on Windows, Web, and macOS, we're updating the primary network endpoint for Remote Help from https://remoteassistance.support.services.microsoft.com to https://remotehelp.microsoft.com. 
+
+#### How does this affect you or your users?
+
+If you're using Remote Help and you have firewall rules that don't permit the new endpoint https://remotehelp.microsoft.com, admins and users may experience connectivity issues or disruptions with Remote Help.  
+
+Additionally, the Remote Help app on Windows will need to be updated to the newest version. No action is needed for the Remote Help app for macOS and the Remote Help Web app.
+
+#### How can you prepare?
+
+Update your firewall rules to include the new Remote Help endpoint: https://remotehelp.microsoft.com. For Remote Help on Windows, users will need to update to the [newest version (5.1.124.0)](../fundamentals/remote-help-windows.md#march-13-2024). Most users have opted in for automatic updates and will be updated automatically without any action from the user. To learn more, review [Install and update Remote Help for Windows](../fundamentals/remote-help-windows.md#install-and-update-remote-help).
+
+#### Additional information: 
+
+- [Remote Help on Windows with Microsoft Intune](../fundamentals/remote-help-windows.md)
+- [Network endpoints for Microsoft Intune | Microsoft Learn](../fundamentals/intune-endpoints.md#remote-help)
+
 ### Update to the latest Company Portal for Android, Intune App SDK for iOS, and Intune App Wrapper for iOS
 
 Starting **June 1, 2024**, we're making updates to improve the Intune mobile application management (MAM) service. This update will require iOS wrapped apps, iOS SDK integrated apps, and the Company Portal for Android to be updated to the latest versions to ensure applications stay secure and run smoothly. 
 
 > [!IMPORTANT]
 > If you don't update to the latest versions, users will be blocked from launching your app.
+>
+> Ahead of this change, for Microsoft apps that need to be updated, when a user opens the app, they'll receive a warning message to update the app.
 
 Note that the way Android updates, once one Microsoft application with the updated SDK is on the device and the Company Portal is updated to the latest version, Android apps will update. So, this message is focused on iOS SDK/app wrapper updates. We recommend always updating your Android and iOS apps to the latest SDK or app wrapper to ensure that your app continues to run smoothly.  
 
@@ -56,9 +77,9 @@ Upgrade your Xamarin based apps to .NET MAUI. Review the following documentation
 - [Microsoft Intune App SDK for .NET MAUI – Android | NuGet Gallery](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android)
 - [Microsoft Intune App SDK for .NET MAUI – iOS | NuGet Gallery](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS)
 
-### Plan for Change: Update your PowerShell scripts with a Microsoft Entra ID registered app ID by April 2024<!--26960016-->
+### Plan for Change: Update your PowerShell scripts with a Microsoft Entra ID registered app ID<!--26960016-->
 
-Last year we announced a [new Microsoft Intune GitHub repository](https://aka.ms/Intune/Scripts-blog) based on the Microsoft Graph SDK-based PowerShell module. The legacy Microsoft Intune PowerShell sample scripts GitHub repository is now read-only. Additionally, starting on **April 1, 2024**, due to updated authentication methods in the Graph SDK-based PowerShell module, the global Microsoft Intune PowerShell application (client) ID based authentication method will be removed.
+Last year we announced a [new Microsoft Intune GitHub repository](https://aka.ms/Intune/Scripts-blog) based on the Microsoft Graph SDK-based PowerShell module. The legacy Microsoft Intune PowerShell sample scripts GitHub repository is now read-only. Additionally, in **May 2024**, due to updated authentication methods in the Graph SDK-based PowerShell module, the global Microsoft Intune PowerShell application (client) ID based authentication method will be removed.
 
 #### How does this affect you or your users?
 
@@ -66,10 +87,12 @@ If you're using the Intune PowerShell application ID (d1ddf0e4-d672-4dae-b554-9d
 
 #### How can you prepare?
 
-Before April 1, 2024, update your PowerShell scripts by:
+Update your PowerShell scripts by:
 
 1. Creating a new app registration in the Microsoft Entra admin center. For detailed instructions, read: [Quickstart: Register an application with the Microsoft identity platform](/entra/identity-platform/quickstart-register-app).
 2. Update scripts containing the Intune application ID (d1ddf0e4-d672-4dae-b554-9d5bdfd93547) with the new application ID created in step 1.
+
+For detailed step-by-step instructions visit [powershell-intune-samples/Updating App Registration (github.com)](https://github.com/microsoftgraph/powershell-intune-samples/blob/master/Updating%20App%20Registration).
 
 ### Intune moving to support Android 10 and later for user-based management methods in October 2024<!--14755802-->
 

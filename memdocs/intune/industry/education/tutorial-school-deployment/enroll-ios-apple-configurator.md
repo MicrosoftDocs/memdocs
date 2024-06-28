@@ -1,7 +1,7 @@
 ---
 title: Bulk enrollment with Apple Configurator
 description: Learn how to bulk enroll devices with Apple Configurator.
-ms.date: 11/09/2023
+ms.date: 5/2/2024
 ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree

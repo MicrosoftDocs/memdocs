@@ -1,8 +1,8 @@
 ---
 title: Common Education Windows Update configuration
 description: Learn about common Windows Update configuration used by Education organizations in Intune.
-ms.date: 4/9/2024
-ms.topic: windows-update
+ms.date: 5/2/2024
+ms.topic: tutorial
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
@@ -99,4 +99,4 @@ To set a feature update policy:
 5. Under **Review + create**, review the settings. When ready to save the Feature updates policy, select **Create**.
 
 > [!WARNING]
-> If you don’t review the feature update version at least every 18 months, your Windows devices may no longer receive security updates. Ensure you review and update the feature version to stay supported.
+> If you don't review the feature update version at least every 18 months, your Windows devices may no longer receive security updates. Ensure you review and update the feature version to stay supported.

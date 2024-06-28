@@ -26,9 +26,11 @@ Starting in Configuration Manager version 2002, you can use a tool to import Mic
 ## Prerequisites
 
 - An internet connected WSUS server running a minimum of Windows Server 2012.
-- The WSUS server needs connectivity to these two internet endpoints:
+- The WSUS server needs connectivity to these internet endpoints:
    - `officecdn.microsoft.com`
    - `config.office.com`
+   - `clients.config.office.net`
+   - `go.microsoft.com`
 - Copy the OfflineUpdateExporter tool and its dependencies to the internet connected WSUS server.
   - The tool and its dependencies are in the **&lt;ConfigMgrInstallDir>/tools/OfflineUpdateExporter** directory.
 - The user running the tool must be part of the **WSUS Administrators** group.

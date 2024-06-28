@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/17/2023
+ms.date: 05/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -57,7 +57,7 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** types, select **Web link**. Other options include **iOS/iPadOS web clip**, **macOS web clip**, and **Windows web link**.
 4. Click **Select**. The **Add app** steps are displayed.
-5. On the **App information** page, add the following information:
+1. On the **App information** page, add the following information:
     - **Name**:  Enter the name of the app as it is to be displayed in the company portal. 
 
         > [!NOTE]
@@ -65,7 +65,11 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
 
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of this app.
-    - **App URL**: Enter the URL of the website that hosts the app that you want to assign.
+   - **App URL**: Enter the URL of the website that hosts the app that you want to assign.
+
+        > [!NOTE]
+        > Once you deploy a web link app, the App URL cannot be modified, which is by design.
+      
     - **Require a managed browser to open this link**: Select this option to assign to your users a link to a website or web app that they can open in the Intune managed browser. This browser must be installed on their device.
     - **Full screen**: [iOS/iPadOS only] If configured to **Yes**, launches the web clip as a full-screen web app without a browser. Additionally, there’s no URL or search bar, and no bookmarks.
     - **Ignore manifest scope**: [iOS/iPadOS only] If configured to **Yes**, a full screen web clip can navigate to an external web site without showing Safari UI. Otherwise, Safari UI appears when navigating away from the web clip’s URL. This setting has no effect when **Full screen** is set to **No**. Available in iOS 14 and later.
