@@ -5,14 +5,14 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/19/2024
+ms.date: 06/28/2024
 ms.localizationpriority: medium
 ---
 
 <!-- This file is shared by the following articles:
 
-user-driven/hybrid-azure-ad-join-intune-connector.md
 pre-provisioning/hybrid-azure-ad-join-intune-connector.md
+user-driven/hybrid-azure-ad-join-intune-connector.md
 
 Headings are driven by article context. -->
 
