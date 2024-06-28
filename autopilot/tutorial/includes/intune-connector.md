@@ -34,11 +34,11 @@ Headings are driven by article context. -->
 
 1. On the server where the Intune Connector is being installed, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices** in the left pane.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
 1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
 
 1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Intune Connector for Active Directory**.
 
