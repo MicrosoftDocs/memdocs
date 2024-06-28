@@ -168,11 +168,11 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 1. Select **Sign In**.
 
-1. Enter the Global administrator or Intune administrator role credentials. The user account must have an assigned Intune license.
+1. Enter the credentials of an Intune administrator role. The user account must have an assigned Intune license.
 
 > [!NOTE]
 >
-> The Global administrator role is a temporary requirement at the time of installation.
+> The Intune administrator role is a temporary requirement at the time of installation.
 
 After authenticating, the Intune Connector for Active Directory finishes installing. Once it finishes installing, verify that it is active in Intune by following these steps:
 
