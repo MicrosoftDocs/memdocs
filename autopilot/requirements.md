@@ -37,7 +37,7 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
-The list of requirements for Windows Autopilot is organized into four different categories: <!-- RSS subscription is based on this line so don't change. If the line needs to change, update RSS URL in the Tip in the article.>
+The list of requirements for Windows Autopilot is organized into four different categories:<!-- RSS subscription is based on this line so don't change. If the line needs to change, update RSS URL in the Tip in the article.-->
 
 - **Software** - OS requirements.
 - **Networking** - networking requirements.
