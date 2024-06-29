@@ -34,11 +34,11 @@ This article describes how to prevent Microsoft from collecting data about your 
 
 1. Open the Microsoft Intune or Company Portal app on your Android device.  
 2. Select the menu button > **Settings**.
-3. Turn the **Usage data** toggle off. With this change, usage data won't be automatically sent to Microsoft.      
+3. Switch the **Usage data** toggle off. With this change, usage data won't be automatically sent to Microsoft.      
 
 ## Allowing Microsoft data collection   
 
-When usage data is turned on, your in-app performance and usage data is automatically anonymized and shared with Microsoft. This type of data helps us improve the reliability and performance of Microsoft products. Your organization doesn't have control over the collection of this data and cannot change your preferences.    
+When usage data is turned on, Company Portal shares app performance and usage data with Microsoft. Usage data is shared anonymously. This type of data helps us improve the reliability and performance of Microsoft products. Your organization doesn't have control over the collection of this data and cannot change your preferences.    
 
 ## Next steps  
 
