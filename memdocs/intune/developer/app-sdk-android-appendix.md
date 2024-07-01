@@ -345,4 +345,4 @@ If you need to test your application under Robolectric, the recommended workarou
 [Enroll Android devices]:/mem/intune/enrollment/android-enroll
 
 <!-- Class links -->
-[MAMActivity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
+[MAMActivity]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html

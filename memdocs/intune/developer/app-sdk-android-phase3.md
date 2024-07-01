@@ -438,7 +438,7 @@ After you've completed all the [Exit Criteria], continue to [Stage 4: MAM Integr
 [MAM SDK GitHub issues]:https://github.com/msintuneappsdk/ms-intune-app-sdk-android/issues
 
 <!-- Class links -->
-[MAMActivity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
+[MAMActivity]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
 
 <!-- 3rd party links -->
 [ProGuard]:https://www.guardsquare.com/products/proguard
