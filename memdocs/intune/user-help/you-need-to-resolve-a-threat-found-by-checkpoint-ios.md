@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Resolving threats found by Harmony Mobile Protect on iOS | Microsoft Docs
-description: Learn how to fix a threat found by Harmony Mobile Protect for iOS.
+title: Resolving threats found by Check point Harmony Mobile Protect for iOS | Microsoft Docs
+description: Learn how to fix a threat found by Check point Harmony Mobile Protect for iOS.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 07/01/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -41,19 +41,14 @@ Harmony Mobile Protect is a Mobile Threat Defender service that identifies and a
 This article describes how to recognize Harmony Mobile Protect threat alerts and what to do to resolve them.  
 
 ## Troubleshoot virus or security threat  
-If a virus or security threat is detected, Harmony Mobile Protect app acts according to your organization's access policies. Access policies could prevent you from accessing your work's network, apps, and email.  
+If a virus or security threat is detected, the Harmony Mobile Protect app acts according to your organization's access policies. Access policies could prevent you from accessing your work's network, apps, and email. Harmony Mobile Protect prompts you to take action immediately to regain the access you lost. To take action, select the threat and follow the instructions within the app to resolve it.
 
-![Example screenshot of a SEP Mobile app alert message.](./media/skycure-list-of-potential-issues-android.png)  
-Harmony Mobile Protect will prompt you to take action to regain the access you've lost. Select the threat and follow the instructions within the app to resolve it.
-
-Because the app is integrated with your company's MDM provider, you'll also see a warning about restricted access in the Company portal app. The warning instructs you to open Harmony Mobile Protect to fix the virus or security threat.  
+Because the app is integrated with your company's MDM provider, you can also see a warning about restricted access in the Company Portal app. The warning instructs you to open Harmony Mobile Protect to fix the virus or security threat.  
 
   ![Example screenshot of the Company Portal device page, showing the Harmony Mobile Protect warning.](./media/CP-lookout-virus-banner-1808.png)  
 
 ## Troubleshoot an app threat  
 
-If you install an app that's seen as a threat to your device, you'll receive a notification within Harmony Mobile Protect. If the affected app remains on your device, you'll be unable to access company resources.  
+If you install an app that's seen as a threat to your device, you receive a notification about it within Harmony Mobile Protect. If the affected app remains on your device, you'll be unable to access company resources. To resolve the threat, select the app from the list of threats in Harmony Mobile Protect. Then follow the instructions to remove and uninstall the app.  
 
-To resolve, select the app from the list of threats in Harmony Mobile Protect. Then follow the instructions to remove and uninstall the app.  
-
-Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Still need help? Check in with your IT support person. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) or in the Intune Company Portal app.  
