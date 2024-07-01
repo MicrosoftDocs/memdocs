@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/28/2024
+ms.date: 07/01/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -34,7 +34,7 @@ This article describes how to prevent Microsoft from collecting data about your 
 
 1. Open the Microsoft Intune or Company Portal app on your Android device.  
 2. Select the menu button > **Settings**.
-3. Switch the **Usage data** toggle off. With this change, usage data won't be automatically sent to Microsoft.      
+3. Switch the **Usage Data** toggle to the off position.       
 
 ## Allowing Microsoft data collection   
 

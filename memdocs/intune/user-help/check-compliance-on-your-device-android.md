@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/15/2023
+ms.date: 07/01/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -40,15 +40,16 @@ During a status check, Company Portal checks your device to make sure it meets y
 
 1. Sign in to the Company Portal app for Android with your work account.  
 
-2. Tap **Devices** and then select your device.  
+2. Tap **DEVICES** and then select your device.  
 
-3. Tap **Check device settings**. Wait while Company Portal checks your device.  
+3. Tap **Check device settings**. Wait on the Device Details page while Company Portal confirms your device settings.  
 
-4. If you're required to make any changes, the message **You need to update settings on this device** appears at the top of the screen. Tap the message for more details. 
+4. If you're required to make any changes, the message **You need to update settings on this device** appears at the top of the screen. Tap the message for more details. After you make changes to your settings, repeat step 3 in this procedure.  
 
 ## Device settings status  
 
-The device settings status tells you the following information about your enrolled device:    
+The device settings status in Company Portal tells you the following information about your enrolled device:    
+* **Confirming devices settings**: Company Portal is currently checking your device settings. Return to **Device Settings Status** in a few minutes for an updated status.  
 * **In Compliance**: Your device is allowed to access work or school resources.  
 * **Can access resources, but action required**: Your device is allowed to access work or school resources, but one or more settings don't meet your organization's requirements. Update your device settings by the date shown to keep your access.  
 * **Not in Compliance**: Your device isn't allowed to access work or school resources. Make the required changes to gain access.  
