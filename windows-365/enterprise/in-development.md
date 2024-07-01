@@ -63,6 +63,14 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 
 To reduce monitor support issues, the Windows 365 service will default the chroma subsampling at 4:2:0 (instead of the previous 4:4:4).
 
+### Cloud PC gallery images update to Microsoft Teams 2.1<!--50394023-->
+
+In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 applications will be updated to use Microsoft Teams 2.1. These images include:
+
+- Windows 11 Enterprise + Microsoft 365 Apps  21H2
+- Windows 10 Enterprise + Microsoft 365 Apps 22H2
+- Windows 10 Enterprise + Microsoft 365 Apps 21H2
+
 <!-- ***********************************************-->
 ## Device security
 
@@ -71,6 +79,14 @@ To reduce monitor support issues, the Windows 365 service will default the chrom
 Windows 365 Government will support Microsoft Purview Customer Lockbox.
 
 For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+### Closing port 3389 by default for newly provisioned Cloud PCs<!--51154043-->
+
+To help secure your Windows 365 environment, the inbound port 3389 will be closed by default.
+
+### Cloud PC support for FIDO devices and passkeys on macOS and iOS<!--51858977-->
+
+Windows 365 Cloud PCs will support FIDO devices and passkeys for Microsoft Entra ID sign in on macOS and iOS.
 
 <!--***********************************************-->
 <!-- ## End user experience -->
