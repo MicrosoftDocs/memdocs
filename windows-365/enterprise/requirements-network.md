@@ -246,6 +246,8 @@ Full HD (1920x1080p) isn’t a supported resolution for Microsoft Teams on Cloud
 | 1.2 Mbps | Peer-to-peer HD quality video calling with resolution of HD 720p at 30 fps. |
 | 500kbps/1Mbps | Group Video calling. |
 
+For more information on Microsoft Teams networking requirements, see [Networking considerations](/MicrosoftTeams/vdi-2#networking-considerations).
+
 ## Traffic interception technologies
 
 Some enterprise customers use traffic interception, SSL decryption, deep packet inspection, and other similar technologies for security teams to monitor network traffic. Cloud PC provisioning may need direct access to the virtual machine. These traffic interception technologies can cause issues with running Azure network connection checks or Cloud PC provisioning. Make sure no network interception is enforced for Cloud PCs provisioned within the Windows 365 service.
