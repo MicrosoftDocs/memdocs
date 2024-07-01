@@ -589,7 +589,10 @@ End of comment -->
     - Users can't access apps in the Google Play store and can't access any private apps added to your organization's Managed Google Play account
     - Only shows apps in the Managed Google Play store that are approved, apps that are required, and apps that are assigned to the user.
     - Uninstalls apps that were installed outside of the Managed Google Play store.
-    - If you change this setting from **Allow** to **Block**, then any app not marked as **Required** or **Available** is automatically uninstalled from the device.
+
+    > [!IMPORTANT]
+    >
+    > If you change this setting from **Allow** to **Block**, then any app not marked as **Required** or **Available** is automatically uninstalled from the device.
 
   - When set to **Allow**:
 
