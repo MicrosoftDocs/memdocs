@@ -40,7 +40,7 @@ This feature is in [public preview](../fundamentals/public-preview.md).
 
 Intune has capabilities that are powered by Copilot. These capabilities access your Intune data and help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
 
-There are two ways to access your Intune data by copilot:
+There are two ways to access your Intune data by using Copilot:
 
 - **Microsoft Copilot in Intune** (this article): Copilot is embedded in Intune and is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The Copilot prompts and their output are in the context of Intune and your Intune data.
 
