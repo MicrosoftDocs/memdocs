@@ -590,7 +590,7 @@ End of comment -->
     - Only shows apps in the Managed Google Play store that are approved, apps that are required, and apps that are assigned to the user.
     - Uninstalls apps that were installed outside of the Managed Google Play store.
 
-    > [!IMPORTANT]
+    > [!CAUTION]
     >
     > If you change this setting from **Allow** to **Block**, then any app not marked as **Required** or **Available** is automatically uninstalled from the device.
 
