@@ -154,7 +154,7 @@ The next time the device checks for configuration updates, the settings you conf
 
 ## Find some settings and learn more about each setting
 
-There are thousands of settings available in the settings catalog. To find the settings you want, you can use the search and filter features.
+There are thousands of settings available in the settings catalog. To find the settings you want, use the search and filter features.
 
 If you use Copilot, you can get AI-generated information about each setting.
 
