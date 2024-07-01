@@ -53,7 +53,7 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 
 Now that you have the Intune App SDK downloaded, integrated into your build, and successfully performing class and method replacements, it's time to make the essential code changes to start enforcing app protection policy settings for MAM-protected accounts.
 
-This stage will instruct you on how to hook into the SDK's logging, invoke a diagnostics dialog, enable MAM Strict Mode to identify possible integration bugs, register for notifications from the SDK, and most importantly, how to register an account for Intune MAM to start receiving policy.
+This stage instructs you on how to hook into the SDK's logging, invoke a diagnostics dialog, enable MAM Strict Mode to identify possible integration bugs, register for notifications from the SDK, and most importantly, how to register an account for Intune MAM to start receiving policy.
 
 ## MAM Strict Mode
 
@@ -71,9 +71,9 @@ To enable MAM Strict Mode, call
 MAMStrictMode.enable();
 ```
 
- early in application initialization (for example, `Application.onCreate`).
+ Early in application initialization (for example, `Application.onCreate`).
 
-When a MAM Strict Mode check fails, try to determine whether it is a
+When a MAM Strict Mode check fails, try to determine whether it's a
 real issue that can be fixed in your app or a false positive.
 If you believe it's a false positive or you aren't sure, let the
 Intune MAM team know.
@@ -92,18 +92,18 @@ If your app would like to handle violations differently, it can supply its own h
 MAMStrictMode.global().setHandler(handler);
 ```
 
-where `handler` implements `MAMStrictViolationHandler`.
+Where `handler` implements `MAMStrictViolationHandler`.
 
 ### Suppressing Checks
 
 If a check fails in a situation where your app is doing nothing
 incorrect, report it as mentioned above.
 In the meantime, it may be necessary to disable the check encountering a false positive, at least while waiting for an updated SDK.
-The check which failed will be shown in the error raised by the default handler, or will be passed to a custom handler if set.
+The check, which failed will be shown in the error raised by the default handler, or will be passed to a custom handler if set.
 
 Although suppressions can be done globally, temporarily disabling per-thread at the specific call site is preferred.
 The following examples show various ways to disable [MAMStrictCheck.IDENTITY_NO_SUCH_FILE][MAMStrictCheck] (raised if an
-attempt is made to protect a file which doesn't exist).
+attempt is made to protect a file, which doesn't exist).
 
 #### Per-Thread Temporary Suppression
 
@@ -201,10 +201,10 @@ The SDK frequently communicates with the Intune service: for enrolling registere
 To successfully communicate with the Intune service, the SDK requires fresh access tokens from apps that have integrated MSAL.
 
 If the SDK isn't able to retrieve a fresh token, it will not be able to communicate with the Intune service, which can delay retrieval and enforcement of new policy settings or admin actions.
-It is critical that your app completes these steps to ensure seamless enforcement of policy.
+It's critical that your app completes these steps to ensure seamless enforcement of policy.
 
 In Stage 2, you integrated MSAL into your application for authentication and acquiring access tokens.
-Here, you'll implement an authentication callback to allow the SDK to request necessary tokens.
+Here, you implement an authentication callback to allow the SDK to request necessary tokens.
 
 [MAMEnrollmentManager] has the following authentication methods:
 
@@ -278,7 +278,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     }
     ```
 
-3. In case the app is unable to provide a token when the SDK calls `acquireToken()`  -- for example, if silent authentication fails and it is an inconvenient time to show a UI -- the app can provide a token at a later time by calling the [updateToken] method. The same UPN, Microsoft Entra ID, and resource ID that were requested by the prior call to `acquireToken()` must be passed to `updateToken()`, along with the token that was finally acquired. The app should call this method as soon as possible after returning null from the provided callback.
+3. In case the app is unable to provide a token when the SDK calls `acquireToken()`  -- for example, if silent authentication fails and it's an inconvenient time to show a UI -- the app can provide a token at a later time by calling the [updateToken] method. The same UPN, Microsoft Entra ID, and resource ID that were requested by the prior call to `acquireToken()` must be passed to `updateToken()`, along with the token that was finally acquired. The app should call this method as soon as possible after returning null from the provided callback.
 
     > [!WARNING]
     > Do not call `updateToken()` from within your implementation of `acquireToken()`. `updateToken()` should be used in the case where `acquireToken()` is unable to acquire a token.
@@ -292,10 +292,10 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 - Apps are encouraged to acquire Microsoft Entra tokens **prior to** calling [registerAccountForMAM].
 After registering an account, apps will receive a callback to the registered `MAMServiceAuthenticationCallback`'s `acquireToken()` method on a different thread.
 Providing a valid token in that callback allows enrollment to proceed.
-The app will get the enrollment result via notification.
+The app gets the enrollment result via notification.
 
 - If the app doesn't return a valid Microsoft Entra token, the final result from the enrollment attempt will be `AUTHORIZATION_NEEDED`.
-If the app receives this Result via notification, it is strongly recommended to expedite the enrollment process by acquiring the token for the account and resource previously requested from [acquireToken] and calling the [updateToken] method to initiate the enrollment process again.
+If the app receives this Result via notification, it's recommended to expedite the enrollment process by acquiring the token for the account and resource previously requested from [acquireToken] and calling the [updateToken] method to initiate the enrollment process again.
 
 - The app's registered `MAMServiceAuthenticationCallback` will also be called to acquire a token for periodic app protection policy refresh check-ins.
 If the app is unable to provide a token when requested, it will not get a notification, but it should attempt to acquire a token and call `updateToken()` at the next convenient time to expedite the check-in process.
@@ -309,7 +309,7 @@ If a token isn't provided, the callback may still be called at the next check-in
 
 Whenever the app adds an account, it must register the account with the SDK.
 Likewise, whenever the app removes an account, it should unregister that account to indicate that the app should no longer apply policy for that account.
-If the account was enrolled in the MAM service, the account will be unenrolled and the app will be wiped.
+If the account was enrolled in the MAM service, the account is unenrolled and the app will be wiped.
 
 [MAMEnrollmentManager] has the following account registration methods:
 
@@ -336,14 +336,14 @@ The account's Microsoft Entra user ID and tenant ID are returned from the MSAL a
     - The authority comes from the `IAccount.getAuthority()` method.
 
 3. To unregister an account from Intune management, the app should call `unregisterAccountForMAM()`.
-If the account has been successfully enrolled and is managed, the SDK will unenroll the account and wipe its data.
+If the account has been successfully enrolled and is managed, the SDK unenrolls the account and wipe its data.
 Periodic enrollment retries for the account will be stopped.
 The SDK provides the status of unenrollment requests asynchronously via notification.
 
 #### Registration Implementation Notes
 
 - The registration methods are idempotent.
-For example, [registerAccountForMAM] will only register an account and attempt to enroll the app if the account isn't already registered, and [unregisterAccountForMAM] will only unregister an account if it is currently registered.
+For example, [registerAccountForMAM] will only register an account and attempt to enroll the app if the account isn't already registered, and [unregisterAccountForMAM] will only unregister an account if it's currently registered.
 Subsequent calls are no-ops, so there's no harm in calling these methods more than once.
 
 - There's no guarantee that every register/unregister call has a corresponding result notification.
@@ -354,8 +354,8 @@ Alternately, the SDK may send notifications even when your app didn't call these
 If multiple accounts that are licensed for Intune and targeted with app protection policy are registered at or near the same time, there's no guarantee on which one will win the race.
 
 - You can query [MAMEnrollmentManager] to see if a particular account is registered and to get its current status using the [getRegisteredAccountStatus] method.
-If the provided account isn't registered, this method will return **null**.
-If the account is registered, this method will return the account's status as one of the members of the [MAMEnrollmentManager.Result] enumeration.
+If the provided account isn't registered, this method returns **null**.
+If the account is registered, this method returns the account's status as one of the members of the [MAMEnrollmentManager.Result] enumeration.
 
 ### Sovereign Cloud Registration
 
@@ -376,20 +376,20 @@ For MSAL, set `multiple_clouds_supported` to `true` in the [MSAL configuration f
 
 When an account is first registered, it begins in the `PENDING` state, indicating that the initial MAM service enrollment attempt is incomplete.
 After the enrollment attempt finishes, a notification will be sent with one of the Result codes in the table below.
-In addition, the [getRegisteredAccountStatus] method will return the account's status so the app can always determine if that account has app protection policies enforced.
+In addition, the [getRegisteredAccountStatus] method returns the account's status so the app can always determine if that account has app protection policies enforced.
 If the enrollment attempt fails, the account's status may change over time as the SDK retries enrollment in the background.
 
 | Result code | Explanation |
 | -- | -- |
 | `AUTHORIZATION_NEEDED` | This result indicates that a token wasn't provided by the app's registered [MAMServiceAuthenticationCallback] instance, or the provided token was invalid.  The app should acquire a valid token and call [updateToken] if possible. |
 | `NOT_LICENSED` | The account isn't licensed for Intune, or the attempt to contact the Intune MAM service failed.  The app should continue in an unmanaged (normal) state and the user shouldn't be blocked.  Enrollments will be retried periodically in case the account becomes licensed in the future. |
-| `ENROLLMENT_SUCCEEDED` | The enrollment attempt succeeded, or the account is already enrolled.  In the case of a successful enrollment, a policy refresh notification will be sent before this notification.  Access to corporate data should be allowed. |
+| `ENROLLMENT_SUCCEEDED` | The enrollment attempt succeeded, or the account is already enrolled.  In the case of a successful enrollment, a policy refresh notification is sent before this notification.  Access to corporate data should be allowed. |
 | `ENROLLMENT_FAILED` | The enrollment attempt failed.  Further details can be found in the device logs.  The app shouldn't allow access to corporate data in this state, since it was previously determined that the account is licensed for Intune. All apps should ensure that corporate data access is unauthorized, until `ENROLLMENT_SUCCEEDED` is obtained by your app.|
-| `WRONG_USER` | Only one account per device can enroll an app with the MAM service. This result indicates that the account for whom this result was delivered (the second account) is targeted with MAM policy, but a different account is already enrolled. Because MAM policy can't be enforced for the second account, your app must not allow access to this account's data (possibly by removing the account from your app) unless/until enrollment for this account succeeds at a later time. Concurrent with delivering this `WRONG_USER` result, MAM will prompt with the option to remove the existing account. If the human user answers in the affirmative, it will indeed be possible to enroll the second account a short time later. As long as the second account remains registered, MAM will retry enrollment periodically. |
+| `WRONG_USER` | Only one account per device can enroll an app with the MAM service. This result indicates that the account for whom this result was delivered (the second account) is targeted with MAM policy, but a different account is already enrolled. Because MAM policy can't be enforced for the second account, your app must not allow access to this account's data (possibly by removing the account from your app) unless/until enrollment for this account succeeds at a later time. Concurrent with delivering this `WRONG_USER` result, MAM prompts with the option to remove the existing account. If the human user answers in the affirmative, it will indeed be possible to enroll the second account a short time later. As long as the second account remains registered, MAM retries enrollment periodically. |
 | `UNENROLLMENT_SUCCEEDED` | Unenrollment was successful.|
 | `UNENROLLMENT_FAILED` | The unenrollment request failed.  Further details can be found in the device logs. In general, this won't occur as long as the app passes a valid (neither null nor empty) UPN. There's no direct, reliable remediation the app can take. If this value is received when unregistering a valid UPN, report as a bug to the Intune MAM team.|
 | `PENDING` | The initial enrollment attempt for the account is in progress.  The app can block access to corporate data until the enrollment result is known, but isn't required to do so. |
-| `COMPANY_PORTAL_REQUIRED` | The account is licensed for Intune, but the app can't be enrolled until the Company Portal app is installed on the device. The Intune App SDK will attempt to block access to the app for the given account and direct them to install the Company Portal app. When sending this notification to the app, the Intune App SDK will show a nonblocking UI on top of the current Activity if the Activity is currently visible to the user or the next time `onResume` is called. If the user cancels out this nonblocking UI, the Intune App SDK will show a blocking UI the next time `onCreate` is called for an Activity and the current identity is managed (see below for details on troubleshooting). |
+| `COMPANY_PORTAL_REQUIRED` | The account is licensed for Intune, but the app can't be enrolled until the Company Portal app is installed on the device. The Intune App SDK attempts to block access to the app for the given account and direct them to install the Company Portal app. When sending this notification to the app, the Intune App SDK will show a nonblocking UI on top of the current Activity if the Activity is currently visible to the user or the next time `onResume` is called. If the user cancels out this nonblocking UI, the Intune App SDK will show a blocking UI the next time `onCreate` is called for an Activity and the current identity is managed (see below for details on troubleshooting). |
 
 ## (Recommended) Logging
 
@@ -397,7 +397,7 @@ Logging should be initialized early to get the most value out of logged data.
 `Application.onMAMCreate()` is typically the best place to initialize logging.
 
 To receive MAM logs in your app, create a [Java Handler](https://docs.oracle.com/javase/7/docs/api/java/util/logging/Handler.html) and add it to the [MAMLogHandlerWrapper].
-This will invoke `publish()` on the application handler for every log message.
+This invokes `publish()` on the application handler for every log message.
 
 ```java
 /**
@@ -505,8 +505,8 @@ For these tests:
 | Copy text | "Restrict cut, copy and paste between other apps" set to "Policy managed apps" | 0. If your app doesn't have any text to copy, skip. <br> 1. Navigate to all pages in your app that have copyable text. <br> 2. Copy text. <br> 3. Switch to the unmanaged app. <br> 4. Attempt to paste in the unmanaged app. <br> 5. Confirm the paste is blocked. <br> 6. Navigate to the other managed app. <br> 7. Attempt to paste in the managed app. <br> 8. Confirm the paste is allowed. |
 | Paste text | "Restrict cut, copy and paste between other apps" set to "Policy managed apps" | 0. If your app doesn't have any text inputs to paste in, skip. <br> 1. Switch to the unmanaged app. <br> 2. Copy text from the unmanaged app. <br> 3. Navigate to all pages in your app that have text inputs. <br> 5. Attempt to paste from the unmanaged app. <br> 5. Confirm the paste is blocked. <br> 6. Switch to the other managed app. <br> 7. Copy text from the other managed app. <br> 7. Navigate to all pages in your app that have text inputs. <br> 8. Attempt to paste from the other managed app. <br> 9. Confirm the paste is allowed. |
 | Printing | "Printing Org data" set to "Block" | 0. If your app doesn't have any pages or documents that can be printed, skip. <br> 1. Navigate to all pages in your app that invoke Android's print function. <br> 2. Attempt to print from each page. <br> 3. Confirm that printing is blocked. |
-| Managed browser | "Restrict web content transfer with other apps" set to "Microsoft Edge" | 0. If your app doesn't render weblinks, skip. <br> 1. Navigate to all pages in your app that can display weblinks or have text input that render into clickable weblinks. <br> 2. For each page, select the weblink. <br> 3. Confirm that you are prompted to install Microsoft Edge and the weblink doesn't open in another browser.  |
-| Restricted keyboard | "Approved keyboards" set to "Required" <br> "Select keyboards to approve" set to just a keyboard package your device doesn't currently have installed | 0. If your app doesn't have any text inputs, skip. <br> 1. Navigate to all pages in your app that have text inputs. <br> 2. Select the text input to bring up the device keyboard. <br> 3. Confirm that you are prompted to install the configured approved keyboard and the current device keyboard doesn't open. |
+| Managed browser | "Restrict web content transfer with other apps" set to "Microsoft Edge" | 0. If your app doesn't render weblinks, skip. <br> 1. Navigate to all pages in your app that can display weblinks or have text input that render into clickable weblinks. <br> 2. For each page, select the weblink. <br> 3. Confirm that you're prompted to install Microsoft Edge and the weblink doesn't open in another browser.  |
+| Restricted keyboard | "Approved keyboards" set to "Required" <br> "Select keyboards to approve" set to just a keyboard package your device doesn't currently have installed | 0. If your app doesn't have any text inputs, skip. <br> 1. Navigate to all pages in your app that have text inputs. <br> 2. Select the text input to bring up the device keyboard. <br> 3. Confirm that you're prompted to install the configured approved keyboard and the current device keyboard doesn't open. |
 
 #### Data Transfer Tests
 
@@ -516,7 +516,7 @@ If your app has these capabilities, you'll need to implement additional support.
 
 Your app may actively import data from other apps, like Microsoft Outlook attaching a file from Microsoft OneDrive.
 Your app may also passively receive data from other apps, like Microsoft Office opening a document from a Microsoft Outlook attachment.
-The receive app protection policy setting covers both scenarios.
+The received app protection policy setting covers both scenarios.
 
 For these tests:
 
@@ -530,7 +530,7 @@ For these tests:
 | Scenario | App Protection Policy Setting | Test Steps |
 | - | - | - |
 | Sending data to other apps | "Send org data to other apps" set to "Policy managed apps" | 0. If your app can't send data to other apps, skip. <br> 1. Navigate to where your app can send data. <br> 2. Attempt to send data. <br> 3. Confirm that you're limited to sending data only to other managed apps. You should see an app picker with only managed apps. |
-| Importing data from other apps | "Receive data from other apps" set to "Policy managed apps" | 0. If your app can't import data from other apps, skip. <br> 1. Navigate to where your app can import data from other apps. <br> 2. Attempt to import data. <br> 3. Confirm that you are limited to importing data only from other managed apps. You should see an app picker with only managed apps. |
+| Importing data from other apps | "Receive data from other apps" set to "Policy managed apps" | 0. If your app can't import data from other apps, skip. <br> 1. Navigate to where your app can import data from other apps. <br> 2. Attempt to import data. <br> 3. Confirm that you're limited to importing data only from other managed apps. You should see an app picker with only managed apps. |
 | Receiving data from unmanaged app | "Receive data from other apps" set to "Policy managed apps" | 0. If your app can't receive data from other apps, skip. <br> 1. Switch to the unmanaged app. <br> 2. Navigate to where it can send data. <br> 3. Attempt to send data from the unmanaged app to your app. <br> 4. Confirm that your app isn't able to receive data from the unmanaged app. |
 | Receiving data from managed app | "Receive data from other apps" set to "Policy managed apps" | 0. If your app can't receive data from other apps, skip. <br> 1. Switch to the other managed app. <br> 2. Navigate to where it can send data. <br> 3. Attempt to send data from the other managed app to your app. <br> 4. Confirm that your app is able to receive data from the other managed app. |
 
@@ -553,8 +553,8 @@ Conditional launch settings are a subset of App Protection Policy features that 
 These settings include both conditions (like "minimum OS version") and actions (like "block access").
 Conditional launch actions can be either:
 
-- **Warn**: the end user will see a warning dialog when their device or app fails the criteria. They'll still have access to all app data.
-- **Block access**: the end user will see a warning dialog when their device or app fails the criteria. They won't be allowed to enter the app and access app data until they either meet the criteria or remove the managed account from the app.
+- **Warn**: the end user sees a warning dialog when their device or app fails the criteria. They'll still have access to all app data.
+- **Block access**: the end user sees a warning dialog when their device or app fails the criteria. They won't be allowed to enter the app and access app data until they either meet the criteria or remove the managed account from the app.
 - **Wipe data**: all corporate data associated with the managed account will be wiped when the device or app fails the criteria. The user won't have an opportunity to meet the criteria before the data is removed.
 
 Some conditional launch settings can be configured with multiple values and actions. For example:
@@ -587,7 +587,7 @@ If this former isn't called at the right time and/or the latter didn't properly 
 Finally, either look in the logs (or debugging) for the registration result code or explicitly call `getRegisteredAccountStatus` on the account.
 Codes like NOT_LICENSED can indicate configuration problems with the test account.
 
-#### I did not see the Get Access screen after logging in (step 10)
+#### I didn't see the Get Access screen after logging in (step 10)
 
 If the Company Portal wasn't previously installed, you may need to resume or fully restart your application to see the Get Access screen and have policy properly enforced.
 This is an expected result based on how SDK-integrated apps leverage code inside the Company Portal app.
@@ -595,7 +595,7 @@ This is an expected result based on how SDK-integrated apps leverage code inside
 If you still don't see the Get Access screen, even after restarting your app and logging in again, the SDK may be failing to either enroll the account or retrieve policy for the account.
 Double check your source code's implementation of the `MAMServiceAuthenticationCallback`.
 
-#### I did not see the screen to set or enter an app PIN after logging in (step 11)
+#### I didn't see the screen to set or enter an app PIN after logging in (step 11)
 
 Are there other SDK-integrated applications on your test device?
 The app PIN is shared between all managed apps, and the SDK has a global timer to prevent end users from being prompted for the PIN on every managed app launch or resume.
@@ -626,7 +626,7 @@ If policy is still enforced after logging out, it's likely the account wasn't pr
 
 Following the [Data Protection Tests] steps above, you may run into the following unexpected behaviors:
 
-#### My app is not receiving or enforcing any policies
+#### My app isn't receiving or enforcing any policies
 
 First, confirm that the App Protection Policy is targeted to a group containing your test account.
 See [How to validate your app protection policy setup in Microsoft Intune] for details.
@@ -641,12 +641,12 @@ Confirm that "Send org data to other apps" set to "Policy managed apps".
 Check the [Microsoft Intune admin center] to confirm the policy is configured and targeted correctly.
 Check the client [Diagnostics Information] to confirm the SDK has received the configured policy.
 
-Next, if policy is configured and retrieved correctly, check if *any* policies are being enforced: [My app is not receiving or enforcing any policies].
+Next, if policy is configured and retrieved correctly, check if *any* policies are being enforced: [My app isn't receiving or enforcing any policies].
 
 #### My app cannot share data with another managed app
 
 Confirm the App Protection Policy settings targeted to both your app *and the other managed app*.
-It is recommended to have the same policy target both apps.
+It's recommended to have the same policy target both apps.
 The policy targeting your app should have "Send org data to other apps" set to "Policy managed apps".
 Check the policy targeting the other app; if it has "Receive data from other apps" set to "None", this behavior is expected.
 
@@ -656,12 +656,12 @@ Confirm that "Receive data from other apps" set to "Policy managed apps".
 Check the [Microsoft Intune admin center] to confirm the policy is configured and targeted correctly.
 Check the client [Diagnostics Information] to confirm the SDK has received the configured policy.
 
-Next, if policy is configured and retrieved correctly, check if *any* policies are being enforced: [My app is not receiving or enforcing any policies].
+Next, if policy is configured and retrieved correctly, check if *any* policies are being enforced: [My app isn't receiving or enforcing any policies].
 
 #### My app cannot receive data from another managed app
 
 Confirm the App Protection Policy settings targeted to both your app *and the other managed app*.
-It is recommended to have the same policy target both apps.
+It's recommended to have the same policy target both apps.
 The policy targeting your app should have "Receive data from other apps" set to "Policy managed apps".
 Check the policy targeting the other app; if it has "Send org data to other apps" set to "None", this behavior is expected.
 
