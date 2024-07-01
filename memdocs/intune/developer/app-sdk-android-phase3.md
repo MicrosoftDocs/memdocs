@@ -435,7 +435,7 @@ After you've completed all the [Exit Criteria], continue to [Stage 4: MAM Integr
 [MSAL documentation]:https://github.com/AzureAD/microsoft-authentication-library-for-android
 
 <!-- MAM SDK GitHub -->
-[MAM SDK GitHub issues]:https://github.com/msintuneappsdk/ms-intune-app-sdk-android/issues
+[MAM SDK GitHub issues]:https://github.com/microsoftconnect/ms-intune-app-sdk-android/issues
 
 <!-- Class links -->
 [MAMActivity]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
