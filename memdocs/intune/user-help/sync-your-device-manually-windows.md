@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/29/2023
+ms.date: 06/28/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -39,8 +39,8 @@ Sync the enrolled device you're using for work to get the latest updates, requir
 This article describes how to start a sync from the:
 
 * Company Portal app
-* Desktop taskbar or Start menu
-* Settings app  
+* Windows desktop taskbar or Start menu
+* System settings app  
 
 ## Sync from Company Portal app for Windows  
 Complete these steps to sync a device in the Company Portal app. You can sync devices running Windows 10 with the Creator's Update (1703) or later, and Windows 11.  
