@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/26/2024
+ms.date: 07/01/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -56,6 +56,23 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of July 1, 2024
+
+### Apps
+
+#### Windows 365 Cloud PC gallery images use new Teams VDI<!--51726416-->
+
+Windows 365 Cloud PC gallery images now use the new Teams Virtualized Desktop Infrastructure (VDI). For more information, see [Microsoft Teams on a Cloud PC](teams-on-cloud-pc.md) and [New VDI solution for Teams](/MicrosoftTeams/vdi-2).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Cross region disaster recovery<!--5184001500-->
+
+Windows 365 now supports cross region disaster recovery. For more information, see [Cross region disaster recovery in Windows 365](cross-region-disaster-recovery.md).
+
+
+<!-- ########################## -->
 ## Week of June 24, 2024 (Service release 2406)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -69,9 +86,9 @@ Windows 365 now supports AVC mixed mode when MMR isn't enabled.
 
 Windows 365 Boot and Windows 365 Switch now support battery redirection. Cloud PCs now show the local PC's battery status.
 
-#### Support for symmetric NAT with RDP Shortpath<!--43602619-->
+#### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
 
-RDP Shortpath in Windows 365 now supports establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT. TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+Customers that have Modern Microsoft Cloud Agreements can upgrade their existing Windows 365 licenses in the Microsoft Admin Center.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
