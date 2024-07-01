@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/26/2022
+ms.date: 05/15/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,11 +31,9 @@ ms.collection:
 - highpri
 ---
 
-# Set up enrollment for macOS devices in Intune
+# Set up enrollment for macOS devices in Intune  
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
- Microsoft Intune supports enrollment on personal and company-owned devices. This article describes the methods and features you can use to enroll personal, company-owned, and VM devices in Intune. 
+ Microsoft Intune supports enrollment on personal and company-owned Macs. This article describes the methods and features you can use to enroll personal devices, company-owned devices, and virtual machines (VM).  
  
 ## Enable enrollment in Microsoft Intune  
 
@@ -89,31 +87,33 @@ The token is then automatically escrowed to Microsoft Intune. You can use a comm
 You can monitor the escrow status for any enrolled Mac in the admin center. The *Bootstrap token escrowed* hardware property reports whether or not the bootstrap token has been escrowed in Intune. Intune reports **Yes** when the token has been successfully escrowed and **No** when the token has not been escrowed. 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
-2. Go to **Devices** > **macOS**.  
+2. Go to **Devices** > **By platform** > **macOS**.  
 3. Select a device from your list of macOS devices.  
 4. Select **Hardware**.  
 5. In your hardware details, scroll down to **Conditional access** > **Bootstrap token escrowed**.  
 
-### Manage kernel extensions and software updates  
+### Manage kernel extensions and software updates   
+
+>[!IMPORTANT]
+> Kernel extensions are no longer recommended for macOS. Apple recommends using system extensions where possible. For more details, see [Apple Platform Security guide - Securely extending the kernel in macOS](https://support.apple.com/guide/security/securely-extending-the-kernel-sec8e454101b/web) on Apple Support.   
+
 A bootstrap token can be used to approve the installation of both kernel extensions and software updates on a Mac with Apple silicon. 
 
 User-initiated software updates can be carried out with a bootstrap token on Macs that are running macOS, version 11.1, and enrolled via automated device enrollment. To authorize user-initiated software updates on a device that isn't enrolled via automated device enrollment, you must restart the Mac in recovery mode and downgrade its security settings. You can also utilize the bootstrap token for software updates on Macs running macOS 11.2 and later, with the only requirement being that the device needs to be supervised. 
 
-Kernel extension management is automatically available on Macs running macOS 11 or later and enrolled via automated device enrollment. To authorize the remote management of kernel extensions on a device that isn't enrolled via automated device enrollment, you must restart the Mac in recovery mode and downgrade its security settings.
-
-For more information about changing security settings, see [Change security settings on the startup disk of a Mac with Apple silicon](https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac) on Apple Support.      
+Kernel extension management is automatically available on Macs running macOS 11 or later and enrolled via automated device enrollment. To authorize the remote management of kernel extensions on a device that isn't enrolled via automated device enrollment, you must restart the Mac in recovery mode and downgrade its security settings. For more information, see [Change security settings on the startup disk of a Mac with Apple silicon](https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac) on Apple Support.      
 
 ## Block macOS enrollment  
-By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).  
+By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set a device platform restriction](create-device-platform-restrictions.md).    
 
 ## Enroll virtual macOS machines for testing
 
 > [!NOTE]
-> Intune supports macOS virtual machines for testing purposes only. Don't use macOS virtual machines as official devices for employees or students.  
+> Intune supports virtual macOS machines for testing purposes only. Don't use virtual machines (VMs) as official devices for employees or students.  
 
-Intune supports virtual machines running:
+Intune supports VMs running: 
 
-* Parallels Desktop
+* Parallels Desktop  
 * VMware Fusion  
 * Apple Silicon  
 
@@ -139,7 +139,7 @@ Enter any string of alphanumeric characters for the serial number. For hardware 
 VMware Fusion is only supported on Intel Macs. See the VMware customer connect website for more information about [editing the .vmx file for your VMware Fusion VM](https://kb.vmware.com/s/article/1014782).  
 
 ### Apple Silicon 
-No changes are required for virtual machines running on Apple Silicon hardware. Parallels Desktop is supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number.  
+No changes are required for VMs running on Apple Silicon hardware. Parallels Desktop is supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number.  
 
 ## User-approved enrollment
 

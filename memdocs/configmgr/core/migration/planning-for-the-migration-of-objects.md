@@ -110,8 +110,17 @@ You can migrate the following operating system deployment objects from a support
 
 -   Task sequences. When you migrate a task sequence that has a reference to a client installation package, that reference is replaced with a reference to the client installation package of the destination hierarchy.  
 
-    > [!NOTE]  
-    >  When you migrate a task sequence, Configuration Manager might migrate objects that are not required in the destination hierarchy. These objects include boot images and Configuration Manager 2007 client installation packages.  
+    > [!NOTE]
+    >
+    > - Only task sequences with native Configuration Manager tasks can be migrated. Task sequences that contain non-native tasks including MDT tasks or non-Microsoft tasks can't be migrated. Attempting to migrate task sequences with non-native tasks results in the following errors in the log `Migmctrl.log`:
+    >
+    >    `Type <ts-add-in-package> are not found`
+    >
+    >    `ERROR: [MigMCtrl]: FAILED to EXECUTE job. error = Unknown error 0x80131500, 80131500~`
+    >
+    >    To migrate task sequences with non-native Configuration Manager tasks, remove the non-native tasks and then migrate the task sequence.
+    >
+    > - When migrating a task sequence, Configuration Manager might migrate objects that aren't required in the destination hierarchy. These objects include boot images and Configuration Manager 2007 client installation packages.
 
 -   Drivers and driver packages. When you migrate driver packages, the computer account of the SMS Provider in the destination hierarchy must have full control to the package source.
 

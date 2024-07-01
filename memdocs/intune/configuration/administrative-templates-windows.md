@@ -78,7 +78,7 @@ This article lists the steps to create a template for Windows client devices, an
 ## Create the template
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
@@ -92,17 +92,23 @@ This article lists the steps to create a template for Windows client devices, an
 
 6. Select **Next**.
 
-7. In **Configuration settings**, select **All settings** to see an alphabetical list of all the settings. Or, configure settings that apply to devices (**Computer configuration**), and settings that apply to users **(User configuration**):
+7. Add the settings:
 
-    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Apply ADMX template settings to users and devices in Microsoft Intune and Intune admin center.":::
+    # [ADMX template](#tab/template)
 
-    > [!NOTE]
-    >
-    > If you're using the **Settings catalog**, then select **Add settings**, and expand **Administrative Templates**. Select any setting to see what you can configure.
-    > 
-    > :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Expand administrative templates in Settings catalog in Microsoft Intune and Intune admin center.":::
-    > 
-    > For more information on creating policies using the Settings Catalog, go to [Use the settings catalog to configure settings](settings-catalog.md).
+    In **Configuration settings**, select **All settings** to see an alphabetical list of all the settings. Or, configure settings that apply to devices (**Computer configuration**), and settings that apply to users **(User configuration**):
+
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Screenshot that shows how to select All Settings using ADMX template policy in Microsoft Intune.":::
+
+    # [Settings catalog](#tab/settingscatalog)
+
+    In the **Settings catalog**, select **Add settings**, and expand **Administrative Templates**. Select any setting to see what you can configure.
+
+    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Screenshot that shows how to expand administrative templates in a Settings catalog policy in Microsoft Intune.":::
+
+    For more information on creating policies using the Settings Catalog, go to [Use the settings catalog to configure settings](settings-catalog.md).
+
+    ---
 
 8. When you select **All settings**, every setting is listed. Scroll down to use the before and next arrows to see more settings:
 
