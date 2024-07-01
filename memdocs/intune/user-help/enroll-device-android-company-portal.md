@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/21/2023
+ms.date: 07/01/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -42,7 +42,7 @@ Company Portal supports devices running Android 8.0 and later, including devices
 ## Install Company Portal app  
 Install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md) for a list of stores that offer the app in People's Republic of China.
 
-1. Tap **Home** > **Play Store**.
+1. On your device, open the **Play Store** app.
 
 2. Search for and install **Intune Company Portal**.  
 
@@ -51,9 +51,9 @@ Install the Intune Company Portal app [from Google Play](https://play.google.com
 3. When prompted about app permissions, tap **ACCEPT**.  
 
 ## Enroll device  
-During enrollment, you might be asked to choose a category that best describes how you use your device. Your company support uses your answer to check the apps that you have access to.  
+During enrollment, you might be asked to choose a category that best describes how you use your device. Company Portal uses your answer to check for work and school apps relevant to you.  
 
-1. Open the Company Portal app and sign in with your work or school account. If prompted to, review notification permissions for Company Portal. You can adjust notification permissions anytime in the Settings app.  
+1. Open the Company Portal app and sign in with your work or school account.  If prompted to, review notification permissions for Company Portal. You can adjust notification permissions anytime in the Settings app.  
 
 2. If you're prompted to accept your organization's terms and conditions, tap **ACCEPT ALL**.  
 
