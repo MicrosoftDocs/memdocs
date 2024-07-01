@@ -129,7 +129,7 @@ You create the policy by using the settings catalog profile type.
     When you select the minus:
 
     - Intune doesn't change or update this setting. The minus is the same as **Not configured**. When set to **Not configured**, the setting is no longer managed.
-    - The setting is removed from the policy. The next time you open your policy, the setting isn't shown. But you can readd it.
+    - The setting is removed from the policy. The next time you open your policy, the setting isn't shown. But you can re-add it.
     - The next time devices check in, the setting is no longer locked. Another policy or device user can change the policy.
 
    > [!TIP]
