@@ -605,8 +605,7 @@ End of comment -->
   - When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS:
   
     - Only shows apps in the Managed Google Play store that are approved, apps that are required, and apps that are assigned to the user.
-    - If you change this setting from **Allow** to **Not configured**, no apps will be automatically uninstalled from the device.
-
+  
 - The following settings are part of the Google's delegated scope feature:
 
   - **Allow other apps to install and manage certificates**: Select **Add** to select existing apps for this permission. You can add multiple apps. The selected apps are granted access to install and manage certificates.
