@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/28/2024
+ms.date: 07/01/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -54,6 +54,23 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of July 1, 2024
+
+### Apps
+
+#### Windows 365 Cloud PC gallery images use new Teams VDI<!--51726416-->
+
+Windows 365 Cloud PC gallery images now use the new Teams Virtualized Desktop Infrastructure (VDI). For more information, see [Microsoft Teams on a Cloud PC](teams-on-cloud-pc.md) and [New VDI solution for Teams](/MicrosoftTeams/vdi-2).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Cross region disaster recovery<!--5184001500-->
+
+Windows 365 now supports cross region disaster recovery. For more information, see [Cross region disaster recovery in Windows 365](cross-region-disaster-recovery.md).
+
 
 <!-- ########################## -->
 ## Week of June 24, 2024 (Service release 2406)
