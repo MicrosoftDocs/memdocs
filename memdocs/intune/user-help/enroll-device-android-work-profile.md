@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/17/2023  
+ms.date: 07/01/2024  
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -86,7 +86,7 @@ Make sure you're signed in to the primary user account on your device. Work prof
 
     ![Example image of Company Portal, Company Access Setup screen, showing completed setup and highlighting Done button.](./media/work-profile-done-1911.png)  
 
-12. Optionally, when prompted to view suggested work apps in Google Play, tap **OPEN**. If you're not ready to install apps, you can do it later by going to the Google Play app in your work profile.    
+12. Optionally, when prompted to view suggested work apps in Google Play Store, tap **OPEN**. If you're not ready to install apps, you can do it later by going to the Play Store app in your work profile.    
 
     ![Example image of Company Portal prompt to open badged version of Google Play.](./media/get-apps-banner-android-2005.png) 
 
@@ -103,6 +103,6 @@ Work profiles are supported in [countries and regions where Android Enterprise i
 If the version of Google Play services on your device is outdated, you may be unable to enroll your device. [Open Google Play services](https://play.google.com/store/apps/details?id=com.google.android.gms) on your device to check for available updates. For more information about how to update Android apps, see [Update your Android apps](https://support.google.com/googleplay/answer/113412)(opens Google Support website).  
 
 ## Next steps  
-Install the apps you need for work or school. Switch to your work profile to see all available apps, and search for more apps in the work version of the Google Play store. 
+Install the apps you need for work or school. Switch to your work profile to see all available apps, and search for more apps in the work version of Google Play Store. 
 
 Need more help? Go to **Support** in the Company Portal app to find your organization's IT contact information. You can also sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account, and go to **Helpdesk**.
