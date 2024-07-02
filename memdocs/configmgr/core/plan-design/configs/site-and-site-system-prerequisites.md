@@ -48,14 +48,13 @@ The following requirements apply to all site system servers:
 
 ## .NET version requirements
 
-<!--10402814-->
-
-Starting in version 2107, site servers and specific site systems require Microsoft .NET Framework version 4.6.2. Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8.
+<!--28583799-->
+Starting in version 2303, site servers and specific site systems require Microsoft .NET Framework version 4.8 Before you run setup to install or update the site, first update .NET and restart the system.
 
 > [!NOTE]
 > .NET Framework version 4.6.2 is preinstalled with Windows Server 2016. Later versions of Windows are preinstalled with a later version of the .NET Framework.
 >
-> .NET Framework version 4.8 isn't supported on some OS versions.
+> .NET Framework version 4.8 is required for 2403 upgrade.
 >
 > For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
 
