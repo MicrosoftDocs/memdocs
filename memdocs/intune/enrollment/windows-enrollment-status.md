@@ -32,8 +32,8 @@ ms.collection:
 ---
 
 
- 
-# Set up the Enrollment Status Page  
+
+ # Set up the Enrollment Status Page  
 
 **Applies to**
 - Windows 10  
@@ -115,7 +115,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 1. In **Assignments**, select the groups to receive your profile. Optionally, select **Edit filter** to restrict the assignment further.  
     > [!NOTE]
     >
-    > Due to OS restrictions, a limited selection of filters are available for ESP assignments. The picker only shows filters that have rules defined for `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` properties. Filters that contain other properties aren't available.  
+    > Due to OS restrictions, a limited selection of filters are available for ESP assignments. The picker only shows filters that have rules defined for `model`, `manufacturer`, `osVersion`, `operatingSystemSKU`, `deviceOwnership`, and `enrollmentProfileName` properties. `model` and `manufacturer` are available with Windows 11, version 23H2 with KB5035942 or later, or version 22H2 with KB5035942 or later. Filters that contain other properties aren't available.  
 
 1. Select **Next**.  
 
