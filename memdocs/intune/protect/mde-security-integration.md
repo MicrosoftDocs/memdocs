@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use Intune to manage security settings for Microsoft Defender on devices that are not enrolled with Microsoft Intune 
+title: Use Intune to manage security settings for Microsoft Defender on devices that aren't enrolled with Microsoft Intune 
 description: Learn about the device management scenario called Microsoft Defender security settings management, where you use Intune profiles to manage Microsoft Defender for Endpoint settings on devices that haven't enrolled with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/18/2024
+ms.date: 07/03/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -118,18 +118,16 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2019 (with [KB5025229](https://support.microsoft.com/topic/april-11-2023-kb5025229-os-build-17763-4252-e8ead788-2cd3-4c9b-8c77-d677e2d8744f))
 - Windows Server 2022 (with [KB5025230](https://support.microsoft.com/topic/april-11-2023-security-update-kb5025230-5048ddfb-7bf3-4e6c-b29a-7b44b789d282))
 
-> [!NOTE]
->
-> 32bit versions of Windows are not supported.
-
 Security settings management doesn't work on and isn't supported with the following devices:
 
-- Non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients or Azure Virtual Desktops.
+- Non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients
+- Azure Virtual Desktop (AVD and formerly Windows Virtual Desktop, WVD)
 - Domain Controllers
+- 32 bit versions of Windows
 
 > [!IMPORTANT]
 >
-> In some cases, Domain Controllers that are run a down level server Operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn't happen in your environment, we recommend making sure your domain controllers are neither tagged "MDE-Management" or managed by MDE.
+> In some cases, Domain Controllers that run a down level server operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn't happen in your environment, we recommend making sure your domain controllers are neither tagged "MDE-Management" or managed by MDE.
 
 ### Licensing and subscriptions
 
@@ -147,7 +145,7 @@ To use security settings management, you need:
 
 ### Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to administrators who will manage Intune endpoint security policies from within the Intune admin center, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to administrators who manage Intune endpoint security policies from within the Intune admin center, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Architecture
 
