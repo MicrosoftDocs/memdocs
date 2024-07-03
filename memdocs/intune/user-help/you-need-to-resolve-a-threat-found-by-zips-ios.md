@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 07/01/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -41,7 +41,7 @@ Zimperium zIPS is a Mobile Threat Defender service that identifies potential thr
 This article describes how to recognize Zimperium zIPS threat alerts and what to do to resolve them. 
 
 ## Troubleshoot virus or security threat  
-If a virus or security threat is detected, Zimperium zIPS will enforce restrictions according to your organization's access policies. You company's access policies could prevent you from accessing your work's network, apps, and email from your device.  
+If a virus or security threat is detected, Zimperium zIPS will enforce restrictions according to your organization's access policies. Your company's access policies could prevent you from accessing your work's network, apps, and email from your device.  
 
 Zimperium zIPS will prompt you to take action to regain the access you've lost. Select the threat and follow the instructions within the app to resolve it.
 

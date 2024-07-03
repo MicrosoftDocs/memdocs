@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/10/2024
+ms.date: 06/26/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -63,8 +63,9 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Windows 365 Boot (available for GCC, not available for GCCH)
 - Microsoft Purview Customer Lockbox
 - Windows App
-- Cloud PC Reports
 - Microsoft Purview forensic evidence
+- Windows 365 Switch
+- Windows 365 Frontline (available for GCC, not available for GCCH)
 
 ## Next steps
 

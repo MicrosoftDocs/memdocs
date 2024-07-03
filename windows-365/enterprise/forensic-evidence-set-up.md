@@ -43,21 +43,26 @@ Forensic evidence capturing is off by default and policy creation requires dual 
 
 ## Requirements
 
+If the following requirements aren't met, you might run into Microsoft Purview client issues and the quality of forensic captures might not be reliable.
+
 To set up Microsoft Purview forensic evidence, your environment must meet the following requirements:
 
 ### Device configuration requirements
 
 - Gallery image type
-    - Windows 11 Enterprise + Microsoft 365 Apps 23H2
-- Licensing
-    - Microsoft 365 E5, or
-    - Windows 365 Enterprise 2 vCPU, 4 GB, 64 GB
+  - Windows 11 Enterprise + Microsoft 365 Apps 23H2 or later
+- Licensing options
+  - Microsoft 365 E5
+  - Microsoft 365 E5 Compliance
+  - Microsoft 365 E5 Insider Risk Management
 - Join type and network
-    - Microsoft Entra join for Azure network connection
-    - Microsoft Entra hybrid join for Microsoft hosted network
-- Antimalware client version 4.18.2110 or later
+  - [Microsoft Entra joined](/entra/identity/devices/concept-directory-join) with Microsoft hosted network and Azure network connections
+  - [Microsoft Entra hybrid joined](/entra/identity/devices/concept-hybrid-join) with Azure network connection
+- [Microsoft Defender Antivirus in Windows](/defender-endpoint/microsoft-defender-antivirus-windows) version 4.18.2110 or later
 - Microsoft 365 Apps version 16.0.14701.0 or later
 - The device must be assigned to a [primary user](/mem/intune/remote-actions/find-primary-user)
+- Cloud PC size
+  - For optimal performance, 8vCPU or better (for more information, see [Cloud PC size recommendations](cloud-pc-size-recommendations.md))
 
 ### Role requirements
 
@@ -73,7 +78,7 @@ For more information about insider risk management roles, see [Enable permission
 
 ## Turn on device onboarding
 
-1. Open the [Microsoft Purview compliance portal](https://compliance.microsoft.com). Choose **Settings** > **Device onboarding** > **Devices** > **Onboarding**.
+1. Open the [Microsoft Purview portal](https://purview.microsoft.com). Choose **Settings** > **Device onboarding** > **Devices** > **Onboarding**.
 
 2. Select which **Deployment method** to use to deploy the configuration package:
 
@@ -120,7 +125,7 @@ Follow the instructions in  [Onboard Windows 10 and Windows 11 devices using a l
 
 ## View onboarding devices list
 
-1. Open the [Microsoft Purview compliance portal](https://compliance.microsoft.com) > **Settings** > **Device onboarding** > **Devices**.
+1. Open the [Microsoft Purview portal](https://purview.microsoft.com) > **Settings** > **Device onboarding** > **Devices**.
 
 2. Check the following columns:
 

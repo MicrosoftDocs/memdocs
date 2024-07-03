@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/25/2024
+ms.date: 06/07/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -115,7 +115,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../protect/conditional-access.md)
 
-6. From the navigation pane, select **Devices** > **Configuration** to display details about device profiles in Intune.
+6. From the navigation pane, select **Devices** > **Manage devices** > **Configuration** to display details about device profiles in Intune.
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Configuration profiles." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png":::
 
@@ -223,7 +223,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Help and support." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-14.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-14.png":::
 
-    To create a support ticket, your account must be assigned as an administrator role in Microsoft Entra ID. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**.
+    To create a support ticket, your account must be assigned as an administrator role in Microsoft Entra ID. Administrator roles that can be used to create support tickets include, **Service support administrator**, **Intune administrator**, and **Global administrator**. Microsoft recommends granting the **Service support administrator** role to your administrators to create Intune support tickets, which is the lowest possible administrator rights needed to create support tickets. For more information, see an [Types of administrators](../fundamentals/users-add.md#types-of-administrators).
 
     For more information, see [How to get support in Microsoft Intune](../../get-support.md).
 

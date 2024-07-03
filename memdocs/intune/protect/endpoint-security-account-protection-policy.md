@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2024
+ms.date: 06/17/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,7 +38,11 @@ Find the endpoint security policies for Account protection under *Manage* in the
 ## Prerequisites for Account protection profiles
 
 - To support the *Account protection (preview)* profile, devices must run Windows 10 or Windows 11.
-- To support the *Local user group membership (preview)* profile, devices must run Windows 10 20H2 or later, or Windows 11.
+- To support the *Local user group membership* profile, devices must run Windows 10 20H2 or later, or Windows 11.
+
+## Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to manage Intune account protection profiles, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Account protection profiles
 
@@ -91,9 +95,9 @@ The following are the configurations you can make:
 > The list of local groups is limited to the six built-in local groups which are guaranteed to be evaluated at logon, as referenced in the [How to manage the local administrators group on Microsoft Entra joined devices](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-microsoft-entra-groups-preview) documentation.
 
 - **Group and user action**: Configure the action to apply to the selected groups. This action will apply to the users you select for this same action and grouping of local accounts.  Actions you can choose include:
-  - **Add (Update)**: Adds members to the selected groups. The group membership for users that aren’t specified by the policy are not changed.
-  - **Remove (Update)**: Remove members from the selected groups. The group membership for users that aren’t specified by the policy are not changed.
-  - **Add (Replace)**: Replace the members of the selected groups with the new members you specify for this action. This option works in the same way as a Restricted Group and any group members that are not specified in the policy are removed.
+  - **Add (Update)**: Adds members to the selected groups. The group membership for users that aren’t specified by the policy aren't changed.
+  - **Remove (Update)**: Remove members from the selected groups. The group membership for users that aren’t specified by the policy aren't changed.
+  - **Add (Replace)**: Replace the members of the selected groups with the new members you specify for this action. This option works in the same way as a Restricted Group and any group members that aren't specified in the policy are removed.
 
   > [!CAUTION]
   > If the same group is configured with both a Replace and Update action, the Replace action wins. This is not considered a conflict. Such a configuration can occur when you deploy multiple policies to the same device, or when this CSP is also configured by use of Microsoft Graph.
@@ -114,7 +118,7 @@ Choosing the Manual option can be helpful in scenarios where you want to manage 
 
 ### Conflicts
 
-If policies create a conflict for a group membership, the conflicting settings from each policy are not sent to the device. Instead, the conflict is reported for those policies in the Microsoft Intune admin center. To resolve the conflict, reconfigure one or more policies.
+If policies create a conflict for a group membership, the conflicting settings from each policy aren't sent to the device. Instead, the conflict is reported for those policies in the Microsoft Intune admin center. To resolve the conflict, reconfigure one or more policies.
 
 ### Reporting
 
