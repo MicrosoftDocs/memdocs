@@ -95,6 +95,97 @@ With your enrollment and grouping plan in place, you can create your groups.
 
 ---
 
+## Avoiding policy conflicts
+
+✅ Ensure policies apply effectively to devices
+
+> [!NOTE]
+> If you only use Intune for Education to manage your devices, you can easily update the settings or apps that you have deployed to existing groups or create new groups to apply new policies or apps. You don't need to do anything extra to prevent conflicts if the members of the new groups are different from the members of the existing groups.
+
+### Considerations when creating new policies in the Microsoft Intune Admin Center
+
+When a device or user is targeted with the same setting from different policies a conflict occurs. When a conflict occurs in most cases you should assume that neither setting applies. As a result, it is important to avoid or resolve conflicts to ensure the correct configuration is applied.
+
+Below is a high-level framework that you can use to avoid policy conflicts when creating and targeting new policies in the Microsoft Intune admin center:
+
+1. Determine which users and/or devices the new policy will be targeted to
+1. Identify and review potentials sources of conflict
+1. Add new policy assignment to target group
+1. Monitoring for policy conflicts
+
+Let's review each of these steps in more detail.
+
+#### Determine which users and/or devices the new policy will be targeted to
+
+If you don't already have an Entra ID group containing the users and/or devices that you want to target new configurations to, verify if they can be added to an existing group. Otherwise, you can use a new group containing the required members.
+
+#### Identify and review potentials sources of conflict
+
+The key to avoiding policy conflicts is to understand if existing policies that are targeted at the same set of users and/or devices may contain the same settings. For any new policy that has overlapping settings targeted to the same user or device, you must ensure to exclude them from existing policies prior to deploying them or simply remove any of the overlapping settings from either policy.
+
+A group can be excluded from existing policies using the "Exclude group" option of the policy assignment or using assignment [filters](/mem/intune/fundamentals/filters) in conjunction with the "Include group" assignment of the existing policy.
+
+If you are using an Education tenant, these are the potential policies that may lead to policy conflicts. They should be reviewed for overlapping settings to determine if exclusions are required when targeting the same set of users and/or devices.
+
+> [!NOTE]
+> If you're only using Intune for Education, you can confirm current assignments by navigating to **Groups** and select the group **All Devices** or **All Users** – **Settings** – **Windows device settings** or **iOS device settings**.
+
+##### Default Intune for Education policies
+
+When Intune licenses are added to an Education tenant for the first time, a set of default policies are created and can be viewed in the Configuration policies list in the Intune admin center. These are the policies created:
+
+- **Devices** – **Windows** – **Configuration**
+  - Default Policies for EDU
+  - Default Admx policy for EDU
+  - Edition Upgrade
+  - Shared PC Policy
+- **Devices** – **Windows** – **Windows 10 and later updates** – **Update rings**
+  - Windows Update Policy
+
+##### Policies created on Intune for Education console
+
+When you configure settings in Intune for Education, corresponding policies are created in the Intune service that can be viewed and edited from the Intune admin console. Configuration profiles created by Intune for Education have a recognizable naming template that always starts with the name of the group followed by a suffix based on the template type.
+
+The following list provides examples of configuration profiles created by Intune for Education. **GROUP NAME** represents the group that was selected in Intune for Education when the settings were configured.
+
+- **Devices** – **Windows** – **Configuration**
+  - **GROUP NAME** Windows10General
+  - **GROUP NAME** GroupPolicyConfiguration
+  - **GROUP NAME** Windows10EndpointProtection
+  - **GROUP NAME** Windows10CustomDenyAdministrativeApps
+  - **GROUP NAME** Windows10CustomDenyStore
+  - **GROUP NAME** Windows10SharedPC
+  - **GROUP NAME** Windows10EnterpriseModernAppManagement
+  - **GROUP NAME** ConfigurationPolicy
+- **Devices** – **Windows** – **Enrollment** – **Windows Autopilot/Deployment Profiles**
+  - **GROUP NAME** Windows10AutopilotProfile
+- **Devices** – **Windows** – **Windows 10 and later updates** – **Update rings**
+  - **GROUP NAME** Windows10UpdatesForBusiness
+- **Devices** – **Windows** – **Windows 10 and later updates** – **Feature Updates**
+  - **GROUP NAME** WindowsFeatureUpdates
+- **Endpoint security** – **Account protection**
+  - **GROUP NAME**_LocalUsersAndGroupsConfig_EDU
+
+If you have also previously created policies in the Intune admin center, you will also need to confirm if any of the custom policies created there to check and remediate any policy conflicts.
+
+#### Add new policy assignment to target group(s)
+
+Once all the potential sources of conflict have been reviewed and required exclusions are configured for any of the existing policies, you are now ready to assign the newly created policy to the desired user or device group. This can be done by simply selecting the group as "Included groups" or it can also be used in conjunction with assignment filters for additional targeting options as part of the policy assignment process.
+
+#### Monitoring for policy conflicts
+
+##### [Intune](#tab/intune)
+
+After the new policy has been deployed, you can go check for any potential policy conflicts by going to **Devices** – **Monitor** – **Configuration policy assignment failure**. Review the newly created policy for conflicts in the report. The report can also be exported to CSV.
+
+##### [Intune for Education](#tab/intune-for-education)
+
+After the new policy has been deployed, you can check for any potential policy by going to **Reports** – **Settings error**.
+
+---
+
+If a conflict is found, remove the overlapping settings from the new policy or exclude the targeted user and/or devices from existing policies.
+
 ## Example groups
 
 ✅ See examples of common grouping by enrollment type
