@@ -78,6 +78,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of June 24, 2024
 
+### App management
+
+#### MAC address available from the Managed Home Screen app<!-- 25994454 -->
+MAC address details are now available from the **Device Information** page of the Managed Home Screen (MHS) app. For information about MHS, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+## Week of June 24, 2024
+
 ### Device enrollment
 
 #### Add corporate device identifiers for Windows<!-- 25873757 -->

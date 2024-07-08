@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/10/2024
+ms.date: 07/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -160,6 +160,8 @@ The following table lists the Managed Home Screen available configuration keys, 
 >[!NOTE]
 > The automatic relaunch functionality requires granting exact alarm permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant exact alarm permission to prevent possible breakout scenarios from the Settings application.
 
+>[!NOTE]
+> MAC address details are available from the **Device Information** page of the Managed Home Screen (MHS) app. Use the MAC address when troubleshooting device connectivity issues.
 
 **Configurations to customize Managed Home Screen experience when device is set up with Microsoft Entra shared device mode**:
 
