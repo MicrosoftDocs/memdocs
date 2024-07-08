@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/10/2024
+ms.date: 07/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -84,6 +84,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Top Bar Primary Element | choice |  | Use this key to select whether the primary element of the top bar will be the device Serial Number, Device Name, or Tenant Name. This setting can only be used if **Enable sign in** key is set to **false**. If the **Enable sign in** key is set to **true**, the user's name will be shown as the primary element. **Enable updated user experience** must be set to **true** to make the top bar visible on users devices. If you select serial number, **Show serial number for all supported OS versions on MHS** must be set to `{{SerialNumber}}`. If you select device name, **Show device name for all supported OS version on MHS** must be set to `{{DeviceName}}`. | ❌ |
 | Top Bar Secondary Element | choice |  | Use this key to select whether the secondary element of the top bar will be the device Serial Number, Device Name, or Tenant Name. **Enable updated user experience** must be set to **true** to make the top bar visible on users devices. If you select serial number, **Show serial number for all supported OS versions on MHS** must be set to `{{SerialNumber}}`. If you select device name, **Show device name for all supported OS version on MHS** must be set to `{{DeviceName}}`. | ❌ |
 | Top Bar User Name Style | choice |  | Use this setting to select the style of the user's name in the top bar based on the following list:<ul><li>display name</li><li>last name, first name</li><li>first name, last name</li><li>first name, last initial</li></ul><br>This setting can only be used if the **Enable sign in** key is set to **true**. **Enable updated user experience** must be set to **true** to make the top bar visible on users devices. | ❌ |
+| Type of virtual app switcher button | string |  | The configuration key is `virtual_app_switcher_type` and the possible values are `none`, `float`, and `swipe_up`. Use `swipe_up` to access app switcher button with a swipe up gesture. Use `float` to access a sticky, persistent app switcher button that can be moved around the screen by the end user. | ❌ |
 
 **Configurations for device peripherals and Managed Home Screen settings**: 
 
@@ -696,6 +697,10 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "custom_privacy_statement_url",
             "valueString": "link to custom privacy statement here"
+        }
+        {
+            "key": "virtual_app_switcher_type",
+            "valueString": "float"
         }
     ]
 }
