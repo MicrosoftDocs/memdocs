@@ -76,7 +76,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of June 24, 2024
+## Week of July 8, 2024
 
 ### App management
 
