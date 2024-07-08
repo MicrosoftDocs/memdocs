@@ -41,6 +41,12 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
+
+Date added: *July 8, 2024*
+
+In some Windows Autopilot deployments of unregistered devices, BitLocker encryption may default to 128-bit even though the admin configured 256-bit encryption due to a known race condition. The issue is being investigated. Microsoft recommends that customers who need 256-bit BitLocker encryption register devices for Autopilot.
+
 ### Required apps aren't shown on the Enrollment Status Page (ESP) after an Autopilot Reset
 
 Date added: *May 17, 2024*
