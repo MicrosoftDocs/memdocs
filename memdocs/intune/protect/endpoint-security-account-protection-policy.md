@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Manage account protection settings with endpoint security policies in Microsoft Intune | Microsoft Docs
+title: Manage account protection settings with endpoint security policies in Microsoft Intune
 description: Deploy policies for endpoint security account protection policies to devices you manage with  in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/17/2024
+ms.date: 07/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,7 +25,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-ms.reviewer: mattcall
+ms.reviewer: juidaewo
 
 ---
 
@@ -33,12 +33,22 @@ ms.reviewer: mattcall
 
 Use Intune endpoint security policies for account protection to protect the identity and accounts of your users and manage the built-in group memberships on devices.
 
+> [!IMPORTANT]
+>
+> In July 2024, the following Intune profiles for identity protection and account protection were deprecated and replaced by a new consolidated profile named *Account protection*. This newer profile is found in the account protection policy node of endpoint security, and is the only profile template that remains available to create new policy instances for identity and account protection. The settings from this new profile are also available through the settings catalog.
+>
+> Any instances of the following older profiles that you have created remain available to use and edit:
+>
+> - **Identity protection** – previously available from  *Devices* > *Configuration* > *Create* >  *New Policy* > *Windows 10 and later* > *Templates* > *Identity Protection*
+> - **Account protection (Preview)** – previously available from *Endpoint Security* > *Account protection* > *Windows 10 and later* > *Account protection ( Preview)*
+
 Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Prerequisites for Account protection profiles
 
-- To support the *Account protection (preview)* profile, devices must run Windows 10 or Windows 11.
+- To support the *Account protection* profile, devices must run Windows 10 or Windows 11.
 - To support the *Local user group membership* profile, devices must run Windows 10 20H2 or later, or Windows 11.
+- To support the *Local admin password solution (Windows LAPS), see [Prerequisites](../protect/windows-laps-overview.md#prerequisites) in *Microsoft Intune support for Windows LAPS*.
 
 ## Role-based access controls (RBAC)
 
@@ -50,7 +60,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 **Windows 10/11 profiles**:
 
-- **Account protection (preview)** – Settings for account protection policies help you protect user credentials.
+- **Account protection** – Settings for account protection policies help you protect user credentials.
 
   The account protection policy is focused on settings for  Windows Hello and Credential Guard, which is part of Windows identity and access management.
 
@@ -59,7 +69,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
   To learn more, see [Identity and access management](/windows/security/identity-protection/) in the Windows identity and access management documentation.
 
-  View [settings for the account protection profile](../protect/endpoint-security-account-protection-profile-settings.md).
+  The settings in this profile are also available in the [Settings catalog](../configuration/settings-catalog.md). 
 
 - **Local admin password solution (Windows LAPS)** - Use this profile to configure Windows LAPS on devices. Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting *Administrator Account Name*.
 
@@ -112,7 +122,7 @@ The following are the configurations you can make:
   - **Select user(s)**: Select the users and user groups from Microsoft Entra.
   - **Add user(s)**: This opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *security identifier (SID)*, *Domain\username*, or by *Username*.
 
-    :::image type="content" source="./media/endpoint-security-account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page.":::
+    :::image type="content" source="./media/endpoint-security-account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page in the Intune admin center.":::
 
 Choosing the Manual option can be helpful in scenarios where you want to manage your on-prem Active Directory users from Active Directory to a local group for a Microsoft Entra hybrid joined device. The supported formats of identifying the user selection in order of most to least preferred is through the SID, domain\username, or member’s username. Values from Active Directory must be used for hybrid joined devices, while values from Microsoft Entra ID must be used for Microsoft Entra join. Microsoft Entra group SIDs can be obtained using [Graph API for Groups](/graph/api/resources/group?view=graph-rest-1.0#json-representation&preserve-view=true).
 

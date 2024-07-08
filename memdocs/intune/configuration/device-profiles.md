@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 07/23/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -236,7 +236,7 @@ This feature supports:
 
 ## Identity protection
 
-[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows client devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
+[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows client devices. After device enrollment, use Intune's endpoint security [account protection](../protect/endpoint-security-account-protection-policy.md) policy to configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
 
 This feature supports:  
 
