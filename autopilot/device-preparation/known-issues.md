@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2024
+ms.date: 07/08/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -39,6 +39,18 @@ This article describes known issues that can often be resolved with:
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 ## Known issues
+
+## Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
+
+Date added: *July 8, 2024*
+
+Autopilot device preparation deployments fail when devices aren't in the UTC time zone. The issue is being investigated.
+
+As a workaround, customers can manually set the time zone in OOBE via Windows PowerShell until the issue is resolved:
+
+```powershell
+Set-TimeZone -Id "UTC"
+```
 
 ## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
 
