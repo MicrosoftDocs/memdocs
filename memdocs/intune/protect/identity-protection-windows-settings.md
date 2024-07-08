@@ -45,7 +45,7 @@ ms.reviewer: mattcall
 
 This article describes Windows Hello for Business settings you can manage with an Identity protection profile. Identity protection profiles are part of device configuration policy in Microsoft Intune. However, as of July 2024, you can use profiles you previously created, but can’t create new instances. Instead, to create a new profile to manage settings for identity protection, use an endpoint security [account protection policy](../protect/endpoint-security-account-protection-policy.md).
 
-With an Identity protection profile, you can configure settings on discrete groups of Windows 10/11 devices. To configure Windows Hello for Business tenant-wide, as part of *device enrollment*, see the section [Create a Windows Hello for Business policy](../protect/windows-hello.md#create-a-windows-hello-for-business-policy) in *Integrate Windows Hello for Business with Microsoft Intune*. 
+With an Identity protection profile, you can configure settings on discrete groups of Windows 10/11 devices. To configure Windows Hello for Business tenant-wide, as part of *device enrollment*, see [Create a Windows Hello for Business policy](../protect/windows-hello.md) in *Integrate Windows Hello for Business with Microsoft Intune*.
 
 This article describes the settings for the enrollment policy.
 
