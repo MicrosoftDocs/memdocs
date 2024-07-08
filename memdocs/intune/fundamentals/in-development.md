@@ -73,12 +73,6 @@ You’ll be able to access all new actions in the Microsoft Intune admin center 
 
 ## App management
 
-### MAC address available from the Managed Home Screen app<!-- 25994454 -->
-
-MAC address details will be available from the **Device Information** page of the Managed Home Screen (MHS) app.
-
-For information about MHS, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](..\remote-actions\collect-diagnostics.md).
-
 ### Intune will support additional macOS app types from the Company Portal<!-- 26133163 -->
 
 Intune will support the ability to deploy DMG and PKG apps as **Available** in the Intune macOS Company Portal. This capability enables end users to browse and install agent-deployed applications using Company Portal for macOS.
