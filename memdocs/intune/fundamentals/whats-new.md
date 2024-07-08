@@ -93,11 +93,13 @@ We've made changes to the device registration process for Apple devices enrollin
 
 Existing enrolled devices are not affected by this change. For new user or device enrollments that utilize Company Portal, users must return to Company Portal to complete registration:  
 
-- For iOS users: Users with notifications enabled will receive a prompt to return to Company Portal for iOS. If they disabled notifications, they will not be alerted but still need to return to Company Portal to complete registration.  
+- For iOS users: Users with notifications enabled will be prompted to return to the Company Portal app for iOS. If they disable notifications, they won't be alerted, but still need to return to Company Portal to complete registration.  
 
-- For macOS devices: Company Portal for macOS will detect the installation of the management profile and automatically register the device unless it's manually closed by the user. If the users closes the app, they must reopen it to complete registration.  
+- For macOS devices: The Company Portal app for macOS will detect the installation of the management profile and automatically register the device, unless the user closes the app. If they close the app, they must reopen it to complete registration.  
 
-If you're using dynamic groups, which rely on device registration to work, it's important for users to complete device registration. Update your user guidance and admin documentation as needed. If you're using Conditional Access (CA) policies, no action is required. When users attempt to sign in to a CA-protected app, they will be prompted to return to Company Portal to complete registration. These changes are currently rolling out and will be made available to all Microsoft Intune tenants by the end of July. There's no change to the Company Portal user interface. For more information about device enrollment for Apple devices, see: 
+If you're using dynamic groups, which rely on device registration to work, it's important for users to complete device registration. Update your user guidance and admin documentation as needed. If you're using Conditional Access (CA) policies, no action is required. When users attempt to sign in to a CA-protected app, they will be prompted to return to Company Portal to complete registration. 
+
+These changes are currently rolling out and will be made available to all Microsoft Intune tenants by the end of July. There's no change to the Company Portal user interface. For more information about device enrollment for Apple devices, see: 
 
 - [Enrollment guide: Enroll macOS devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-macos.md#device-enrollment-end-user-tasks)  
 - [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-ios-ipados.md#user-and-device-enrollment-end-user-tasks)  
