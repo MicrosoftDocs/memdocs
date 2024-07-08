@@ -31,6 +31,12 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
+## Corporate identifiers can now be used with Windows Autopilot device preparation
+
+Date added: *July 8, 2024*
+
+Customers who are blocking personal device enrollments can now use Windows Autopilot device preparation by pre-uploading the model, manufacturer, and serial number for all devices which will deploy with Autopilot device preparation. For more information, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
+
 ## Additional role-based access control (RBAC) permissions for Managed apps and Mobile apps
 
 Date added: *June 18, 2024*

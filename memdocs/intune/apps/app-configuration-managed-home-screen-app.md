@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/10/2024
+ms.date: 07/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -99,7 +99,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Show brightness slider | bool | FALSE | Turn this setting to TRUE to allow end users to access a brightness slider to adjust the device screen brightness. This configuration is only available when **Enable updated user experience** is set to TRUE.  | ❌ |
 | Show adaptive brightness toggle | bool | FALSE | Turn this setting to TRUE to allow end users to turn adaptive brightness on and off on the device. Adaptive brightness allows the device to select an optimal brightness based on ambient lighting. This configuration is only available when **Enable updated user experience** is set to TRUE.  | ❌ |
 | Show autorotate toggle | bool | FALSE | Turn this setting to TRUE to allow end users to access a toggle to turn on and off the device's auto-rotation setting. This configuration is only available when **Enable updated user experience** is set to TRUE.| ❌ |
-| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting menu. Accessible information includes device's make, model, serial number, and IPv4 and IPv6 details. On OS version 9 and newer, to let users see the device's serial number, ensure that **Show serial number for all supported OS version on MHS** is configured to display `{{SerialNumber}}`.| ✔️ |
+| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting menu. Accessible information includes device's make, model, serial number, and IPv4 and IPv6 details. On OS version 9 and newer, to let users see the device's serial number, ensure that **Show serial number for all supported OS version on MHS** is configured to display `{{SerialNumber}}`. MAC address details are available from the **Device Information** page of the Managed Home Screen (MHS) app. Use the MAC address when troubleshooting device connectivity issues. | ✔️ |
 | Show device's name on MHS | bool | FALSE | Turn this setting to True to easily view the device's Intune admin center "device name" property from the Managed Settings menu when **Show device info setting** is set to True. Make sure to also include the string property "Device's name," which is auto-populated by Intune with the correct value. | ❌ |
 | Show serial number for all supported OS version on MHS | choice | {{SerialNumber}} | Ensure that in-app config device_serial_number is configured to display {{SerialNumber}} when **Show device info setting** is set to True. This value is auto-populated by Intune with the correct value. | ❌ |
 | Show device name for all supported OS version on MHS | choice | {{DeviceName}} | Ensure that app configuration device name is configured to display `{{DeviceName}}`. This value is auto-populated by Intune with the correct value. | ❌ |
@@ -107,6 +107,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Type of virtual home button | string | swipe_up | Use swipe_up to access home button with   a swipe up gesture. Use float to access a sticky, persistent home   button that can be moved around the screen by the end user. | ✔️ |
 | Enable notifications badge | bool | FALSE | Enables the notification badge for app icons that   shows the number of new notifications on the app. If you enable this setting,   end users will see notification badges on apps that have unread   notifications. If you keep this configuration key disabled, the end user won't see any notification badged to apps that might have unread notifications. | ✔️ |
 | Battery and Signal Strength   indicator bar | bool | TRUE | Turning this setting to True shows the   battery and signal strength indicator bar. | ❌ |
+| Type of virtual app switcher button | string |  | The configuration key is `virtual_app_switcher_type` and the possible values are `none`, `float`, and `swipe_up`. Use `swipe_up` to access app switcher button with a swipe up gesture. Use `float` to access a sticky, persistent app switcher button that can be moved around the screen by the end user. | ❌ |
 
 > [!IMPORTANT]
 > The Managed Home Screen app has been updated at the API level to better adhere with the Google Play Store's requirements. In doing so, there were some changes to how Wi-Fi configuration works from Managed Home Screen. The changes include the following: 
@@ -159,7 +160,6 @@ The following table lists the Managed Home Screen available configuration keys, 
 
 >[!NOTE]
 > The automatic relaunch functionality requires granting exact alarm permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant exact alarm permission to prevent possible breakout scenarios from the Settings application.
-
 
 **Configurations to customize Managed Home Screen experience when device is set up with Microsoft Entra shared device mode**:
 
@@ -696,6 +696,10 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "custom_privacy_statement_url",
             "valueString": "link to custom privacy statement here"
+        }
+        {
+            "key": "virtual_app_switcher_type",
+            "valueString": "float"
         }
     ]
 }
