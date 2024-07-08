@@ -139,9 +139,8 @@ Managed software updates have precedence over other policies that configure soft
       - If the device is powered off when the deadline is met, when the device powers back on, there's a one hour grace period. When the grace period ends, the device force installs the update and forces a restart.
 
            > [!IMPORTANT]
-           > If you create a policy using this setting before the January 2024 release, then this setting shows `Invalid Date` for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows `Invalid Date`.
-      >
-      > To configure a new date and time, you can delete the `Invalid Date` values, and select a new date and time. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
+           > If you create a policy using this setting before the January 2024 release, then this setting shows *Invalid Date* for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows *Invalid Date*.
+           > To configure a new date and time, you can delete the *Invalid Date* values, and select a new date and time. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
 
     - **Target OS Version**: Select or manually enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
