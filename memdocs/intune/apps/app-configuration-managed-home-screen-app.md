@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/10/2024
+ms.date: 07/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -107,6 +107,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Type of virtual home button | string | swipe_up | Use swipe_up to access home button with   a swipe up gesture. Use float to access a sticky, persistent home   button that can be moved around the screen by the end user. | ✔️ |
 | Enable notifications badge | bool | FALSE | Enables the notification badge for app icons that   shows the number of new notifications on the app. If you enable this setting,   end users will see notification badges on apps that have unread   notifications. If you keep this configuration key disabled, the end user won't see any notification badged to apps that might have unread notifications. | ✔️ |
 | Battery and Signal Strength   indicator bar | bool | TRUE | Turning this setting to True shows the   battery and signal strength indicator bar. | ❌ |
+| Type of virtual app switcher button | string |  | The configuration key is `virtual_app_switcher_type` and the possible values are `none`, `float`, and `swipe_up`. Use `swipe_up` to access app switcher button with a swipe up gesture. Use `float` to access a sticky, persistent app switcher button that can be moved around the screen by the end user. | ❌ |
 
 > [!IMPORTANT]
 > The Managed Home Screen app has been updated at the API level to better adhere with the Google Play Store's requirements. In doing so, there were some changes to how Wi-Fi configuration works from Managed Home Screen. The changes include the following: 
@@ -696,6 +697,10 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "custom_privacy_statement_url",
             "valueString": "link to custom privacy statement here"
+        }
+        {
+            "key": "virtual_app_switcher_type",
+            "valueString": "float"
         }
     ]
 }

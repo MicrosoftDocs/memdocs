@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 06/27/2024
+ms.date: 07/08/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -72,12 +72,6 @@ The following actions will be added to Microsoft Cloud PKI:
 You’ll be able to access all new actions in the Microsoft Intune admin center and Graph API.
 
 ## App management
-
-### New configuration capabilities for Managed Home Screen<!-- 25013268 -->
-
-You'll be able to configure Managed Home Screen (MHS) to enable a virtual app-switcher button that allows end users to easily navigate between apps on their kiosk devices from MHS. You'll be able to select between a floating or swipe-up app-switcher button. The configuration key will be `virtual_app_switcher_type` and the possible values will be `none`, `float`, and `swipe_up`.
-
-For information related to configuring the Managed Home Screen app, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 ### MAC address available from the Managed Home Screen app<!-- 25994454 -->
 
