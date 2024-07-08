@@ -73,12 +73,6 @@ You’ll be able to access all new actions in the Microsoft Intune admin center 
 
 ## App management
 
-### New configuration capabilities for Managed Home Screen<!-- 25013268 -->
-
-You'll be able to configure Managed Home Screen (MHS) to enable a virtual app-switcher button that allows end users to easily navigate between apps on their kiosk devices from MHS. You'll be able to select between a floating or swipe-up app-switcher button. The configuration key will be `virtual_app_switcher_type` and the possible values will be `none`, `float`, and `swipe_up`.
-
-For information related to configuring the Managed Home Screen app, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
-
 ### Intune will support additional macOS app types from the Company Portal<!-- 26133163 -->
 
 Intune will support the ability to deploy DMG and PKG apps as **Available** in the Intune macOS Company Portal. This capability enables end users to browse and install agent-deployed applications using Company Portal for macOS.
