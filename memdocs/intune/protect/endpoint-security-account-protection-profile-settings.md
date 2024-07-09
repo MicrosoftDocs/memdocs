@@ -56,9 +56,9 @@ Supported platforms and profiles:
 >
 > For *Local admin password solution (Windows LAPS)* profiles, see [Manage LAPS policy](../protect/windows-laps-policy.md).
 
-## Account protection profile
+## Account protection profile (Preview)
 
-### Account protection
+*The following settings details apply only to the endpoint security profile template for Account protection (Preview), which was deprecated in July 2024.*
 
 - **Block Windows Hello for Business**
 
