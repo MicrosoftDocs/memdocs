@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 6/05/2024
+ms.date: 7/09/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -182,9 +182,16 @@ Windows Security reports *Memory Integrity is off. Your device may be vulnerable
 
 In the Cloud PC's Windows Systems Information, you might also see that the Virtualization-based security (VBS) row shows **Enabled but not running**.
 
-This issue can be caused when the Intune tenant configuration requires Direct Memory Access (DMA), which Cloud PCs don’t support. Currently, if DMA is required in a VBS policy used by a Cloud PC, the VBS policy won’t run.
+This issue can be caused when nested virtualization is turned *ON*. When nested virtualization is turned on it requires a running nested hypervisor, which inhibits Direct Memory Access Protections. DMA protections are required when running VBS.
 
-**Troubleshooting steps**: In the Intune policies used by the Cloud PC, remove the DMA requirement from **Virtualization-based security BS Required Security Properties**. Make sure your VBS configurations still provide your desired security.
+**Troubleshooting steps**:
+
+Make sure that:
+
+- Nested virtualization turned *OFF* for the Cloud PC.
+- Policies have VBS enabled with DMA protection.
+
+Another option is to not require DMA for VBS because they're incompatible with each other.
 
 ## Teams isn’t enforcing screen capture protection<!-- 49423094 -->
 
