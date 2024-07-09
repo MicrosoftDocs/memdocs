@@ -92,7 +92,7 @@ The following device compliance settings may report as **Not Compliant** when be
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
 
-When enabling single sign-on, you're prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
+When enabling single sign-on, a prompt appears to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
 
 To prevent this dialog from being shown, you can create a pre-consented device group. Follow the instructions to [configure a target device group](/azure/virtual-desktop/configure-single-sign-on#configure-the-target-device-groups) to get started.
 
@@ -102,7 +102,7 @@ To prevent this dialog from being shown, you can create a pre-consented device g
 
 **Possible cause**: To log in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Microsoft Entra, which may be the cause of the failed connection.
 
-**Troubleshooting**: Follow the steps to [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
+**Troubleshooting**: To [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access), follow the steps.
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
 
@@ -208,7 +208,7 @@ When screen capture protection is enabled, Teams on Windows 365 Cloud PCs isn’
 
 ## Windows 365 scope tags and nested groups
 
-Windows 365 doesn't support nested security groups. If you apply a scope tag to the top of a nested security group, Cloud PCs in inner nested groups won't be assigned scope tags.
+Windows 365 doesn't support nested security groups. If you apply a scope tag to the top of a nested security group, Cloud PCs in inner nested groups aren't assigned scope tags.
 
 **Troubleshooting steps**:
 
@@ -234,7 +234,7 @@ For example, if an admin scoped with the scope tag “Scope Tag A” creates a c
 
 ## WebRTC Redirector Service missing from latest Windows 365 Cloud PC gallery images
 
-The May 21, 2024 updates for Cloud PC gallery images are missing the WebRTC Redirector Service. Without this component, Teams media redirection does not work.
+The May 21, 2024 updates for Cloud PC gallery images are missing the WebRTC Redirector Service. Without this component, Teams media redirection doesn't work.
 
 This applies to the following gallery images:
 
