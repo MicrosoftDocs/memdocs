@@ -68,6 +68,7 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Windows 365 Frontline (available for GCC, not available for GCCH)
 - Cloud PC connection quality report
 - Cloud PC recommendation report
+- Cross region disaster recovery
 
 ## Next steps
 
