@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/27/2024
+ms.date: 07/1/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -77,13 +77,13 @@ Since Intune supports two Android platforms, it's important to understand how OS
 
 ## Create a device platform restriction
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Go to **Devices** > **Enrollment**.
-1. Select **Device platform restriction**.  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices**. 
+1. Under **Device onboarding**, select **Enrollment**.  
+1. Under **Enrollment options**, select **Device platform restriction**.  
 1. Select the tab along the top of the page that corresponds with the platform you're configuring. Your options:  
 
-    * **Android restrictions**  
     * **Windows restrictions**  
+    * **Android restrictions**  
     * **macOS restrictions**  
     * **iOS restrictions**  
 
@@ -113,7 +113,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
 
 1. Select **Next**.
 1. On the **Assignments** page, select **Add groups** and then use the search box to find and select groups. To assign the restriction to all device users, select **Add all users**. If you don't assign a restriction to at least one group, the restriction won't take effect.  
-1. Optionally, after you assign groups, select **Edit filter** to restrict the policy assignment further with filters. Filters are available for macOS, iOS, and Windows policies. For more information, see [Apply assignment filters](create-device-platform-restrictions.md#apply-assignment-filters) (in this article).  
+1. Optionally, after you assign groups, select **Edit filter** to restrict the policy assignment further with filters. Filters are available for macOS, iOS, and Windows policies. For more information, see [Apply assignment filters](create-device-platform-restrictions.md#apply-assignment-filters) in this article.  
 1. Select **Next**.
 1. Review your policy, and then select **Create** to create it.
 
@@ -166,7 +166,7 @@ For more information about these properties, see [device properties](../fundamen
 Edits are applied to new enrollments and don't affect devices that are already enrolled.  
 
 1. Return to **Devices** > **Enrollment**.  
-2. Select **Device platform restrictions**.  
+2. Select **Device platform restrictions** and then select the OS platform the restriction belongs to.   
 3. In the **Device type restrictions** table, select the name of the policy you want to change.  
 4. Select **Properties**.  
 5. Select **Edit**.

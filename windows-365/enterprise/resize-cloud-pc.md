@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2024
+ms.date: 07/09/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -121,6 +121,7 @@ If there are available licenses, the resizing starts.
 6. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
 7. Select **Users** > search for the user name assigned to the Cloud PC and select it > **Groups**.
 8. To retrieve the old license, remove the users from the original source Microsoft Entra group. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
+    - When using Microsoft Entra ID hybrid in your environment, after removing the user from the original group, you must wait until Microsoft Entra Connect synchronizes  your on-premises Active Directory with with your Microsoft Entra ID. This can take up to 30 minutes. Then you can add the user to the new group.
 9. Assign the target license to the new target Microsoft Entra group. The resizing process now begins.
 
 ## Bulk resizing Cloud PCs
@@ -160,6 +161,7 @@ Up to 5,000 Cloud PCs can be resized at a time.
 7. Under **Select groups to include**, choose the groups containing the users who own the devices that you want to resize > **Next**.
 8. On the **Review + create** page, select **Create**. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
 9. To retrieve the old license, remove the users from the original source Microsoft Entra group. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
+    - When using Microsoft Entra ID hybrid in your environment, after removing the user from the original group, you must wait until Microsoft Entra Connect synchronizes  your on-premises Active Directory with with your Microsoft Entra ID. This can take up to 30 minutes. Then you can add the user to the new group.
 10. Assign the target license to the new target Microsoft Entra group. The resizing process now begins.
 
 ## Resizing details

@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 07/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -71,7 +71,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a third-party Mobile Threat Defense vendor, you must be a Microsoft Entra *Global administrator* or be assigned the *Endpoint Security Manager* built-in admin role for Intune. You can also use a custom role that includes the *Mobile Threat Defense* permission in Intune.
+2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a third-party Mobile Threat Defense vendor, your account must be assigned the *Endpoint Security Manager* built-in admin role for Intune, or be assigned a custom role that includes the *Read* and *Modify* rights for the Intune *Mobile Threat Defense* permission.
 
 3. On the **Mobile Threat Defense** pane, select **Add**.
 

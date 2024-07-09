@@ -33,6 +33,10 @@ ms.collection:
 
 [Cross region disaster recovery](cross-region-disaster-recovery.md) is set up as explained in the following steps. For more information about user settings, see [User settings](assign-users-as-local-admin.md).
 
+> [!IMPORTANT]  
+> When using cross region disaster recovery, it's critical to configure and test the entire cross region flow as part of your repeating [business continuity adn disaster recovery planning](../business-continuity-disaster-recovery.md). Before releasing widely across your whole environment, you should activate and deactivate multiple test devices to make sure that it's working as expected. You should also periodically your environment is healthy and configured correctly by using the [**Cloud PCs cross region disaster recovery status** report](cross-region-disaster-recovery-report.md).
+
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365**(under **Device Onboarding**)> **User Settings**.
 2. Select **Add** (alternately, you can make the following changes to an existing user setting).
 3. On the **Settings** page, type a name in the **Name** box.
