@@ -137,7 +137,7 @@ Image hash values:
 - **serverImageDigest**: sha256:5ba3c960be6b9da4569a019fcd57509c25a89106fc689fbf4fe38f0bdb98fbdd
 
 Changes in this release:
-- AL base image
+- AL base image - Use Azure Linux as the base image for the Tunnel containers
 - Improvement on cert revocation check
 
 ### May 16, 2024
