@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/23/2024
+ms.date: 07/09/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ ms.reviewer: mattcall
 
 > [!IMPORTANT]
 >
-> In July 2024, the following Intune profiles for identity protection and account protection were deprecated and replaced by a new consolidated profile named *Account protection*. This newer profile is found in the account protection policy node of endpoint security, and is the only profile template that remains available to create new policy instances for identity and account protection. The settings from this new profile are also available through the settings catalog. 
+> In July 2024, the following Intune profiles for identity protection and account protection were deprecated and replaced by a new consolidated profile named *Account protection*. This newer profile is found in the account protection policy node of endpoint security, and is the only profile template that remains available to create new policy instances for identity and account protection. The settings from this new profile are also available through the settings catalog.
 >
 > Any instances of the following older profiles that you have created remain available to use and edit:
 >
@@ -43,7 +43,7 @@ ms.reviewer: mattcall
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-This article describes Windows Hello for Business settings you can manage with an Identity protection profile. Identity protection profiles are part of device configuration policy in Microsoft Intune. However, as of July 2024, you can use profiles you previously created, but can’t create new instances. Instead, to create a new profile to manage settings for identity protection, use an endpoint security [account protection policy](../protect/endpoint-security-account-protection-policy.md).
+This article describes Windows Hello for Business settings you can manage with an Identity protection profile. Identity protection profiles are part of device configuration policy in Microsoft Intune. However, as of July 2024, device configuration profiles for *Identity protection* are replaced by endpoint security profiles for *Account protection*. While you can continue to use identity protection profiles that you previously created, Intune no longer supports creating new instances. Instead, to manage settings for identity protection, use an endpoint security [account protection policy](../protect/endpoint-security-account-protection-policy.md).
 
 With an Identity protection profile, you can configure settings on discrete groups of Windows 10/11 devices. To configure Windows Hello for Business tenant-wide, as part of *device enrollment*, see [Create a Windows Hello for Business policy](../protect/windows-hello.md) in *Integrate Windows Hello for Business with Microsoft Intune*.
 
@@ -52,6 +52,8 @@ This article describes the settings for the enrollment policy.
 You can find additional information about these settings in [Configure Windows Hello for Business Policy settings](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings), in the Windows Hello documentation.
 
 ## Windows Hello for Business
+
+*The following settings details apply only to the device configuration profile template for Identity protection, which was deprecated in July 2024.*
 
 - **Configure Windows Hello for Business**:  
 
@@ -101,7 +103,6 @@ You can find additional information about these settings in [Configure Windows H
     - **Enable** - The PIN recovery secret is stored on the device and the user can change their PIN if needed.
     - **Not configured** (*default*) - The recovery secret isn't created or stored.
 
-
   - **Use a Trusted Platform Module (TPM)**  
     A TPM chip provides an additional layer of data security.
 
@@ -133,4 +134,4 @@ You can find additional information about these settings in [Configure Windows H
 
 ## Next steps
 
-[Assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md).
+[Assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md)

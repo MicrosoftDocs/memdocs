@@ -60,16 +60,14 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 **Windows 10/11 profiles**:
 
-- **Account protection** – Settings for account protection policies help you protect user credentials.
-
-  The account protection policy is focused on settings for Windows Hello and Credential Guard, which is part of Windows identity and access management.
+- **Account protection** – Settings for account protection policies help you protect user credentials. The account protection policy is focused on settings for Windows Hello for Business that include both *device-scoped* and *user-scoped* settings, and Credential Guard, which is part of Windows identity and access management.
 
   - *Windows Hello for Business* replaces passwords with strong two-factor authentication on PCs and mobile devices.
   - *Credential Guard* helps protect credentials and secrets that you use with your devices.
 
   To learn more, see [Identity and access management](/windows/security/identity-protection/) in the Windows identity and access management documentation.
 
-  The settings in this profile are also available in the [Settings catalog](../configuration/settings-catalog.md). 
+  The settings in this profile are also available in the [Settings catalog](../configuration/settings-catalog.md).
 
 - **Local admin password solution (Windows LAPS)** - Use this profile to configure Windows LAPS on devices. Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting *Administrator Account Name*.
 

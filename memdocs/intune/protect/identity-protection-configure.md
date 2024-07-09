@@ -29,12 +29,12 @@ ms.collection:
 
 # Use identity protection profiles to manage Windows Hello for Business in Microsoft Intune
 
-> [!NOTE]
+> [!IMPORTANT]
 >
 > In July 2024, the following Intune profiles for identity protection and account protection were deprecated and replaced by a new consolidated profile named *Account protection*. This newer profile is found in the account protection policy node of endpoint security, and is the only profile template that remains available to create new policy instances for identity and account protection. The settings from this new profile are also available through the settings catalog. 
 >
 > Any instances of the following older profiles that you have created remain available to use and edit:
-> 
+>
 > - *Identity protection* – previously available from  *Devices* > *Configuration* > *Create* >  *New Policy* > *Windows 10 and later* > *Templates* > *Identity Protection*
 > - *Account protection (Preview)* – previously available from *Endpoint Security* > *Account protection* > *Windows 10 and later* > *Account protection ( Preview)*
 
