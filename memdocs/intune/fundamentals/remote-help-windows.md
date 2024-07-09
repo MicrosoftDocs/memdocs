@@ -154,7 +154,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
    - For *File or folder*, specify **RemoteHelp.exe**
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
-   - For *Value*, specify the version of the Remote Help you're deploying. For example, **10.0.22467.1000**, check the note below for more info.
+   - For *Value*, specify the Remote Help version that you're deploying. For example, **10.0.22467.1000**. See the following note for details on how to get the Remote Help version.
    - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
      
 > [!NOTE]
