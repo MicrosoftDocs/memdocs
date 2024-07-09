@@ -1,8 +1,7 @@
 ---
 title: Known issues for Windows 365 Enterprise and Frontline
 description: Learn about known issues for Windows 365 Enterprise.
-f1.keywords:
-- NOCSH
+keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
