@@ -158,7 +158,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
    - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
      
 > [!NOTE]
-> In order to get the version of the **RemoteHelp.exe**, install RemoteHelp manually to a machine and run the following Powershell command **(Get-Item "$env:ProgramFiles\Remote Help\RemoteHelp.exe").VersionInfo**. From the output take a note of the FileVersion and use it to specify the *Value* in the detection rule.
+> To get the version of the **RemoteHelp.exe**, install RemoteHelp manually to a machine and run the following Powershell command **(Get-Item "$env:ProgramFiles\Remote Help\RemoteHelp.exe").VersionInfo**. From the output make a note of the FileVersion and use it to specify the *Value* in the detection rule.
 
 5. Proceed to the Assignments page, and then select an applicable device group or device groups that should install the Remote Help app. Remote Help is applicable when targeting group(s) of devices and not for User groups.
 
