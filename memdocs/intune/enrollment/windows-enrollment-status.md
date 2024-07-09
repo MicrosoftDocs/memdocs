@@ -306,7 +306,12 @@ enrolled via the *Add work and school account* option. The ESP waits for Microso
   - The autologon will fail if the device rebooted after the user entered their Microsoft Entra credentials but before exiting the ESP Device setup phase. This failure occurs because the ESP Device setup phase never completed. The workaround is to reset the device.
 - ESP doesn't apply to a Windows device that was enrolled with Group Policy (GPO).
 - Scripts that run in user context (**Run this script using the logged on credentials** on the script properties is set to **yes**) may not execute during ESP.  As a workaround, execute scripts in System context by changing this setting to **no**.
-- if Microsoft 365 Apps is tracked during ESP and is created using the Microsoft 365 Apps (Windows 10 and later) app type in Intune then the app may cause ESP to hang if the installation begins while there is an ongoing installation of another Win32 app (also tracked during ESP). In this case it is recommended to deploy Microsoft 365 Apps as a Win32 app.
+- Microsoft 365 Apps might cause the ESP to hang during app installation, specifically when: 
+  - You add Microsoft 365 Apps to Microsoft Intune by using the *Microsoft 365 Apps (Windows 10 and later)* app type.    
+  - The ESP is tracking the installation of Microsoft 365 Apps.     
+  - Microsoft 365 Apps begin installing during the installation of another Win32 app being tracked.  
+    
+  To prevent the ESP from lagging during installation, we recommended readding Microsoft 365 Apps to Microsoft Intune by using the *Win32* app type.  
 
 ## Troubleshooting  
 
