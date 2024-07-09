@@ -132,14 +132,13 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 
 Image hash values:
 
-- **agentImageDigest**: sha256:331e4dfa9c87f4626ef4230375cde004e5814e3713839d830c2486af0a448ef7
+- **agentImageDigest**: sha256:2c700282bbb525ca42c4da0827a62bee6e8079b36572cf777db72810dac3a788
 
-- **serverImageDigest**: sha256:ee6d05cfbd25659895c2f2f2d2dc91a78ec7219c0e525a2e483cc79e87b15476
+- **serverImageDigest**: sha256:5ba3c960be6b9da4569a019fcd57509c25a89106fc689fbf4fe38f0bdb98fbdd
 
 Changes in this release:
 - AL base image
 - Improvement on cert revocation check
-- Custom image registry support (need mstunnel-setup update)
 
 ### May 16, 2024
 
