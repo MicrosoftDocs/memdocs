@@ -158,6 +158,24 @@ When the Copilot window opens, select a prompt and enter any required or optiona
 
 For more information on using Copilot with your devices, go to [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 
+### Query with Copilot in device query
+
+You can use Copilot to help you create KQL queries to run when using device query in Intune. 
+
+To use this feature in Intune, select a device, select **Device query**, and then select **Query with Copilot**.
+
+Enter your question about the device, and if device query supports the properties needed to answer it, Copilot will generate a KQL query that you can use to get the data you are looking for. To use the query Copilot generates, select **Add to editor** to add it to the query editor in device query, or select **Add and run** to add it to the editor and automatically run it. Here are some example queries you can try:
+
+- Is Defender running on this device?
+- Show me the last 5 app crash events on this device.
+- What are the top 10 processes using the most memory on this device?
+- Show me expired certificates on this device.
+
+    > [!NOTE]
+    > Copilot can only generate queries for requests related to the properties supported by device query. You cannot use this feature to ask Copilot for details about the device beyond what is available in device query.
+
+For a full list of supported properties in device query, go to [Device query](https://learn.microsoft.com/en-us/mem/analytics/device-query). 
+
 ## Related content
 
 - [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
