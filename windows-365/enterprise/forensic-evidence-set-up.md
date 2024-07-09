@@ -43,7 +43,7 @@ Forensic evidence capturing is off by default and policy creation requires dual 
 
 ## Requirements
 
-If the following requirements aren't met, you might run into Microsoft Purview client issues and the quality of forensic captures might not be reliabel.
+If the following requirements aren't met, you might run into Microsoft Purview client issues and the quality of forensic captures might not be reliable.
 
 To set up Microsoft Purview forensic evidence, your environment must meet the following requirements:
 
@@ -81,7 +81,7 @@ For more information about insider risk management roles, see [Enable permission
 
 ## Turn on device onboarding
 
-1. Open the [Microsoft Purview compliance portal](https://compliance.microsoft.com). Choose **Settings** > **Device onboarding** > **Devices** > **Onboarding**.
+1. Open the [Microsoft Purview portal](https://purview.microsoft.com). Choose **Settings** > **Device onboarding** > **Devices** > **Onboarding**.
 
 2. Select which **Deployment method** to use to deploy the configuration package:
 
@@ -128,7 +128,7 @@ Follow the instructions in  [Onboard Windows 10 and Windows 11 devices using a l
 
 ## View onboarding devices list
 
-1. Open the [Microsoft Purview compliance portal](https://compliance.microsoft.com) > **Settings** > **Device onboarding** > **Devices**.
+1. Open the [Microsoft Purview portal](https://purview.microsoft.com) > **Settings** > **Device onboarding** > **Devices**.
 
 2. Check the following columns:
 

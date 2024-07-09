@@ -10,9 +10,9 @@ manager: dougeby
 ms.date: 11/03/2023
 ms.topic: overview
 ms.service: microsoft-intune
-ms.subservice: 
+ms.subservice:
 ms.localizationpriority: high
-ms.assetid: 
+ms.assetid:
 
 # optional metadata
 
@@ -22,7 +22,7 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
   - get-started
   - intro-overview
 ms.collection:
@@ -129,7 +129,7 @@ If you constantly provision new devices or repurpose existing devices, then use 
 
 For more information, go to:
 
-- [Windows Autopilot overview](/autopilot/windows-autopilot)
+- [Windows Autopilot overview](/autopilot/overview)
 - [Enroll Windows devices in Intune](/autopilot/enrollment-autopilot)
 
 ## Windows 365
