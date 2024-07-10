@@ -31,7 +31,7 @@ ms.collection:
 
 # Cross region disaster recovery in Windows 365
 
-Windows 365 cross region disaster recovery is an optional service for Windows 365 Enterprise that protects Cloud PCs and data against regional outages. When activated, it creates geographically distant temporary copies of Cloud PCs Cloud PCthat can be accessed in the selected backup region. These copies help increase availability and preserve productivity.
+Windows 365 cross region disaster recovery is an optional service for Windows 365 Enterprise that protects Cloud PCs and data against regional outages. When activated, it creates geographically distant temporary copies of Cloud PCs that can be accessed in the selected backup region. These copies help increase availability and preserve productivity.
 
 Admins must manually activate and deactivate cross region disaster recovery.
 
