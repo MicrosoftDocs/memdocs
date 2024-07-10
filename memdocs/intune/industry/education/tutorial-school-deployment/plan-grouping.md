@@ -104,24 +104,22 @@ With your enrollment and grouping plan in place, you can create your groups.
 
 ### Considerations when creating new policies in the Microsoft Intune Admin Center
 
-When a device or user is targeted with the same setting from different policies a conflict occurs. When a conflict occurs in most cases you should assume that neither setting applies. As a result, it is important to avoid or resolve conflicts to ensure the correct configuration is applied.
+Devices and users targeted with the same setting from different policies cause conflicts. Conflicts result in neither setting being applied to a device or user. As a result, it is important to avoid or resolve conflicts to ensure the correct configuration is applied.
 
-Below is a high-level framework that you can use to avoid policy conflicts when creating and targeting new policies in the Microsoft Intune admin center:
+Use these steps to avoid policy conflicts:
 
-1. Determine which users and/or devices the new policy will be targeted to
-1. Identify and review potentials sources of conflict
-1. Add new policy assignment to target group
-1. Monitoring for policy conflicts
+1. Determine which users or devices need the new policy.
+1. Identify and review potentials sources of conflict.
+1. Assign the policy to target group.
+1. Monitoring for policy conflicts.
 
-Let's review each of these steps in more detail.
+#### Determine which users or devices need the new policy
 
-#### Determine which users and/or devices the new policy will be targeted to
-
-If you don't already have an Entra ID group containing the users and/or devices that you want to target new configurations to, verify if they can be added to an existing group. Otherwise, you can use a new group containing the required members.
+Review the existing Entra ID groups and determine if they are applicable for the new policy. Otherwise, create a new group and add users or devices.
 
 #### Identify and review potentials sources of conflict
 
-The key to avoiding policy conflicts is to understand if existing policies that are targeted at the same set of users and/or devices may contain the same settings. For any new policy that has overlapping settings targeted to the same user or device, you must ensure to exclude them from existing policies prior to deploying them or simply remove any of the overlapping settings from either policy.
+The key to avoiding policy conflicts is to understand if existing policies that are targeted at the same set of users or devices may contain the same settings. For any new policy that has overlapping settings targeted to the same user or device, you must ensure to exclude them from existing policies prior to deploying them or simply remove any of the overlapping settings from either policy.
 
 A group can be excluded from existing policies using the "Exclude group" option of the policy assignment or using assignment [filters](/mem/intune/fundamentals/filters) in conjunction with the "Include group" assignment of the existing policy.
 
