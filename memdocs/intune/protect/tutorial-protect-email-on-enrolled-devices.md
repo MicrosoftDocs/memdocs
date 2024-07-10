@@ -177,13 +177,13 @@ Conditional Access policies are configurable in either the Microsoft Entra admin
 
 10. Select **Create** to save your changes. The profile is assigned.
 
-*Note*
-
-Certain dependent services, such as Microsoft Teams, integrate with Exchange Online resources, which are governed by Early-bound Policy enforcement. Consequently, users must comply with Exchange policies before signing into Microsoft Teams.
-
-If you have configured a Conditional Access Policy to restrict authentication requests for Exchange Online resources, users must meet the Exchange Policy requirements before logging into Teams. Failure to comply with these policies will affect the ability to log into Teams.
-
-For more details, please refer to the [Microsoft documentation on service dependencies and policy enforcement](/entra/identity/conditional-access/service-dependencies"https://learn.microsoft.com/en-us/entra/identity/conditional-access/service-dependencies#policy-enforcement").
+> [!NOTE]
+>
+> Some dependent services, like Microsoft Teams, integrate with Exchange Online resources and are governed by Early-bound Policy enforcement. Consequently, users must comply with Exchange policies before signing into Microsoft Teams.
+>
+> If you have a Conditional Access Policy that restricts authentication requests for Exchange Online resources, users must meet the Exchange Policy requirements before signing into Teams. Failure to comply with these policies affects the ability to sign into Teams.
+>
+> For more information, see [Microsoft documentation on service dependencies and policy enforcement](/entra/identity/conditional-access/service-dependencies).
 
 ## Try it out
 
