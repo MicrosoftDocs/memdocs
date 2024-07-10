@@ -13,7 +13,6 @@ ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.assetid:
-zone_pivot_groups: windows-365-baseline-versions
 
 # optional metadata
 #ROBOTS:
@@ -27,25 +26,31 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+zone_pivot_groups: windows-365-versions
 ---
+
+<!-- Pivots for this baseline 
+- win365-24h1 > Version 24H1
+- win365-nov21 > November 2021
+-->
 
 # List of the settings in the Windows 365 Cloud PC security baseline in Intune
 
-This article is a reference for the settings that are available in the Windows 365 Cloud PC security baseline that you can deploy with Microsoft Intune. 
+This article is a reference for the settings that are available in the Windows 365 Cloud PC security baseline that you can deploy with Microsoft Intune.
 
-For each setting you’ll find the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, could also set different defaults.
+For each setting we list the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, could also set different defaults.
 
-When the Intune UI includes a *Learn more* link for a setting, you’ll find that here as well. Use that link to view the settings *policy configuration service provider* (CSP) or relevant content that explains the settings operation.
+When the Intune UI includes a *Learn more* link for a setting, we include that here as well. Use that link to view the settings *policy configuration service provider* (CSP) or relevant content that explains the settings operation.
 
 When a new version of a baseline becomes available, it replaces the previous version. Profiles instances that you’ve created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
 - Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
-To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
+To learn more about using security baselines, see:
 
-<!-- - [Compare baselines](../protect/security-baselines.md) to discover what's changed from version to version.  -->
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
+- [Use security baselines](security-baselines.md)
+- [Manage security baselines](security-baselines-configure.md)
 
 ::: zone pivot="win365-24h1"
 
@@ -2054,10 +2059,8 @@ Audit settings configure the events that are generated for the conditions of the
 - **Block hardware device installation by setup classes**  
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067048)
-
   - **Remove matching hardware devices**  
     Baseline default: *Yes*
-
   - **Block list**  
     *Not configured by default. Manually add one or more Identifiers.*
 
@@ -2983,3 +2986,5 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
 - **Enable tamper protection to prevent Microsoft Defender being disabled**  
   Baseline default: *Enable*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2066083)
+
+::: zone-end
