@@ -144,7 +144,7 @@ When Intune licenses are added to an Education tenant for the first time, a set 
 
 When you configure settings in Intune for Education, corresponding policies are created in the Intune service that can be viewed and edited from the Intune admin console. Configuration profiles created by Intune for Education have a recognizable naming template that always starts with the name of the group followed by a suffix based on the template type.
 
-This list provides examples of configuration profiles created by Intune for Education. **GROUP NAME** represents the group that was selected in Intune for Education when the settings were configured.
+This list provides examples of configuration profiles created by Intune for Education. *<GROUP NAME>* represents the group that was selected in Intune for Education when the settings were configured.
 
 - **Devices** – **Windows** – **Configuration**
   - `*<GROUP NAME>* Windows10General`
