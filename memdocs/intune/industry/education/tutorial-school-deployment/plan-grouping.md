@@ -119,7 +119,7 @@ Review the existing Entra ID groups and determine if they are applicable for the
 
 #### Identify and review potentials sources of conflict
 
-The key to avoiding policy conflicts is to understand if existing policies targeted at the same set of users or devices contain the same settings. If a new policy has overlapping settings that are targeted to the same users or devices, exclude those users or devices from existing policies or remove any of the overlapping settings.
+The key to avoiding policy conflicts is to understand if existing policies targeted at the same set of users or devices contain the same settings. If a new policy has settings that overlap with existing ones for the same users or devices, either exclude those users or devices from the old policies or remove the overlapping settings.
 
 You can exclude groups of devices or users using the "exclude group" option or by excluding devices using [filters](/mem/intune/fundamentals/filters).
 
@@ -164,9 +164,9 @@ This list provides examples of configuration profiles created by Intune for Educ
 - **Endpoint security** – **Account protection**
   - **GROUP NAME**_LocalUsersAndGroupsConfig_EDU
 
-#### Add new policy assignment to target groups
+#### Assign the policy to target group
 
-Once all the potential sources of conflict have been reviewed and any exclusions are configured, you can assign the new policy to the user or device groups. Assign the policy using "Included groups" and optionally use assignment filters.
+Once all the potential sources of conflict are reviewed and any exclusions are configured, you can assign the new policy to the user or device groups. Assign the policy using "Included groups" and optionally use assignment filters.
 
 #### Monitoring for policy conflicts
 
