@@ -50,6 +50,7 @@ Some of the key benefits of the optimizations are:
 - High-performance peer-to-peer streaming facilitated by WebRTC and rendered directly on the endpoint.
 - Devices are redirected as the same hardware device, resulting in better hardware redirection support.
 - Windows 10/11 and macOS endpoints get all the benefits of the modern media stack, including HW video decoding.
+- Teams optimization VDI 2.0 is currently not supported for macOS.
 
 ### Supported endpoints
 
