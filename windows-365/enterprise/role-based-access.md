@@ -171,6 +171,8 @@ For more details about removing a role assignment from an Azure resource, see [R
 
 ## Scope tags
 
+Windows 365 support for scope tags is in [public preview](../public-preview.md).
+
 For RBAC, roles are only part of the equation. While roles work well to define a set of permissions, scope tags help define visibility of your organization’s resources. Scope tags are most helpful when organizing your tenant to have users scoped to certain hierarchies, geographical regions, business units, and so on.
 
 Use Intune to create and manage scope tags. For more information on how scope tags are created and managed, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).  
@@ -194,6 +196,17 @@ To let scoped administrators view which scope tags are assigned to them and the 
 - Intune read only
 - Cloud PC reader/administrator
 - A custom role with similar permissions.
+
+### Graph API bulk actions and scope tags during the public preview
+
+For the duration of the scope tags public preview, the following bulk actions don't honor scope tags when called directly from the Graph API:
+
+- Restore
+- Reprovision
+- Place Cloud PC under review
+- Remove Cloud PC under review
+- Share Cloud PC restore point to storage
+- Create Cloud PC manual restore point
 
 <!-- ########################## -->
 ## Next steps

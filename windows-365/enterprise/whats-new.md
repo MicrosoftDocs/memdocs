@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/08/2024
+ms.date: 07/01/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -56,6 +56,114 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of July 1, 2024
+
+### Apps
+
+#### Windows 365 Cloud PC gallery images use new Teams VDI<!--51726416-->
+
+Windows 365 Cloud PC gallery images now use the new Teams Virtualized Desktop Infrastructure (VDI). For more information, see [Microsoft Teams on a Cloud PC](teams-on-cloud-pc.md) and [New VDI solution for Teams](/MicrosoftTeams/vdi-2).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Cross region disaster recovery<!--5184001500-->
+
+Windows 365 now supports cross region disaster recovery. For more information, see [Cross region disaster recovery in Windows 365](cross-region-disaster-recovery.md).
+
+
+<!-- ########################## -->
+## Week of June 24, 2024 (Service release 2406)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+
+Windows 365 now supports AVC mixed mode when MMR isn't enabled.
+
+#### Windows 365 Boot and Windows 365 Switch now support battery direction<!--51748880-->
+
+Windows 365 Boot and Windows 365 Switch now support battery redirection. Cloud PCs now show the local PC's battery status.
+
+#### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
+
+Customers that have Modern Microsoft Cloud Agreements can upgrade their existing Windows 365 licenses in the Microsoft Admin Center.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Single sign-on Windows 365 clients authentication change<!--49918010-->
+
+Single sign-on for Windows 365 is transitioning to use the Windows Cloud Login Entra ID cloud app for Windows authentication starting with the Windows and Web clients. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Windows 365 Government now supports Cloud PC utilization report<!--49200860-->
+
+Windows 365 Government now supports the Cloud PC utilization report. For more information,  see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### Cloud PC size recommendation report is now generally available<!--50219942-->
+
+The Cloud PC size recommendation report has moved out of preview and is now generally available. For more information, see [Cloud PC recommendations report](report-cloud-pc-recommendations.md).
+
+<!-- ########################## -->
+## Week of June 3, 2024 (Service release 2405)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows 365 support for Microsoft Purview forensic evidence <!--50309017-->
+
+Windows 365 now supports [Microsoft Purview forensic evidence](/purview/insider-risk-management-forensic-evidence). For more information, see [Set up forensic evidence](forensic-evidence-set-up.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Troubleshoot action now supports bulk<!--50276472-->
+
+The Troubleshoot remote action can now be used in bulk. For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Government Community Cloud
+
+#### New Windows 365 Frontline offers for GCC<!--50390472-->
+
+New Windows 365 Frontline offers are now available for Government Community Cloud (GCC) customers using the Azure Commercial cloud.
+
+<!-- ########################## -->
+## Week of May 27, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### New Windows 365 Cloud PC images available in the gallery<!--48537480-->
+
+New Cloud PC gallery images for Windows 10 and Windows 11 are now available. These improved images have harmonized optimizations with Windows 365 apps images for better policy management:
+
+- Win 10 Enterprise Cloud PC: 21H2, 22H2,
+- Win 11 Enterprise Cloud PC: 21H2, 22H2, 23H2
+
+#### Manage redirections for Cloud PCs on Android devices<!--49090100-->
+
+You can now  use the Intune admin center to manage redirections for Android users who access their Cloud PCs using Microsoft Remote Desktop.
+
+#### Manage redirections for Cloud PCs on iOS/iPadOS devices<!--49090121-->
+
+You can now use the Intune admin center to manage redirections for iOS/iPadOS users who access their Cloud PCs using Microsoft Remote Desktop and Windows App.
+
+<!-- ########################## -->
+## Week of May 20, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 365 Cloud PC gallery images now pre-install new Microsoft Teams<!--49222964-->
+
+Gallery images for Windows 365 Cloud PCs now come with the new Microsoft Teams pre-installed (not Teams (Classic)). This applies to Windows Enterprise 11 23H2 and 22H2. For more information, see [Gallery images](device-images.md#gallery-images).
+
+<!-- ########################## -->
 ## Week of May 6, 2024 (Service release 2404)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -75,7 +183,7 @@ The **Cloud PCs that aren't available report** has moved out of preview and into
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control
 
-#### Intune scope tags<!--48907552-->
+#### Intune scope tags (preview)<!--48907552-->
 
 Windows 365 now supports [Intune scope tags](/mem/intune/fundamentals/scope-tags). For more information, see [Scope tags](role-based-access.md#scope-tags).
 
@@ -289,7 +397,7 @@ Connection status and timeout information on the connection screen for Windows 3
 
 #### FQDN requirement changes<!--46731885-->
 
-Many required FQDNs have been moved to the *.infra.windows365.microsoft.com wildcard FQDN. This move reduces the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs were moved to *.infra.windows365.microsoft.us. To avaoid any issues when provisioning new Cloud PCs, you must make sure that *.infra.windows365.microsoft.com (*.infra.windows365.microsoft.us for Windows 365 Government) is an accessible endpoint in your network allow list.
+Many required FQDNs have been moved to the *.infra.windows365.microsoft.com wildcard FQDN. This move reduces the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs were moved to *.infra.windows365.microsoft.us. To avoid any issues when provisioning new Cloud PCs, you must make sure that *.infra.windows365.microsoft.com (*.infra.windows365.microsoft.us for Windows 365 Government) is an accessible endpoint in your network allow list.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### End user experience
@@ -493,7 +601,7 @@ These 16 vCPU licenses can be purchased and assigned in the same way that you pu
 Two new gallery images are now available for Windows 365 Cloud PCs:
 
 - Windows 11 Preview + Microsoft 365 Apps 23H2
-- Winodws 11 Preview + OS Optimizations 23H2
+- Windows 11 Preview + OS Optimizations 23H2
 
 You can choose the new gallery images when [creating a provisioning policy](create-provisioning-policy.md).
 
@@ -572,7 +680,7 @@ The following updates related to single sign-on are now available:
 - [Public preview features](..\public-preview.md).
   - Single sign-on for Microsoft Entra hybrid join Cloud PCs.
   - You can turn on single sign-on separately for each provisioning policy.
-  - A new Azure Network Connection check to make sure that the network is properly configured for single sign on.
+  - A new Azure Network Connection check to make sure that the network is properly configured for single sign-on.
   - Apply single sign-on to existing Microsoft Entra joined and Microsoft Entra hybrid joined Cloud PCs.
 
 For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
@@ -832,7 +940,7 @@ Users can now change multiple monitor setting in the Windows 365 app.
 
 #### Windows 365 Government Azure Network Connection set up improvement<!--44237227-->
 
-During Azure network connection (ANC) creation or editing, instead of copying and pasting details (like Subscription ID, and VNET name) for the ANC, you can now select options from a drop down menu. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
+During Azure network connection (ANC) creation or editing, instead of copying and pasting details (like Subscription ID, and VNET name) for the ANC, you can now select options from a drop-down menu. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
 
 <!-- ########################## -->
 ## Week of May 22, 2023
@@ -976,7 +1084,7 @@ You can now create on-demand Cloud PC restore points and copy them to an Azure S
 
 #### Permission changes for Azure network connection operations<!--43251193-->
 
-The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. For more information, see [Azure network connections](azure-network-connections.md).
+The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator) or [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference) permissions. For more information, see [Azure network connections](azure-network-connections.md).
 
 <!-- ########################## -->
 ## Week of February 27, 2023 (Service release 2302)

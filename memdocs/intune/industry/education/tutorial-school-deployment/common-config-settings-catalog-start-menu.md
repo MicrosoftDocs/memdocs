@@ -32,13 +32,13 @@ To learn more, see:
 
 | **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
-| **:::no-loc text="Custom Start Menu":::** | A custom XML string | Create and deploy a custom Start menu and taskbar layout. Please refer to articles in the Additional information. | [StartLayout](/windows/client-management/mdm/policy-csp-start) |
-| **:::no-loc text="Hide App List":::** | None | | [Start/HideAppList](/windows/client-management/mdm/policy-csp-start#hideapplist) |
-| **:::no-loc text="Hide Change Account Settings":::** | Disabled | | [Start/HideChangeAccountSettings](/windows/client-management/mdm/policy-csp-start#hidechangeaccountsettings) |
-| **:::no-loc text="Hide Frequently Used Apps":::** | Enabled | | [Start/HideFrequentlyUsedApps](/windows/client-management/mdm/policy-csp-start#hidefrequentlyusedapps) |
-| **:::no-loc text="Hide Power Button":::** | Disabled | | [Start/HidePowerButton](/windows/client-management/mdm/policy-csp-start#hidepowerbutton) |
-| **:::no-loc text="Hide Recent Jumplists":::** | Enabled | | [Start/HideRecentJumplists](/windows/client-management/mdm/policy-csp-start#hiderecentjumplists) |
-| **:::no-loc text="Hide Recently Added Apps":::** | Enabled | | [Start/HideRecentlyAddedApps](/windows/client-management/mdm/policy-csp-start#hiderecentlyaddedapps) |
-| **:::no-loc text="Hide User Tile":::** | Disabled | | [Start/HideUserTile](/windows/client-management/mdm/policy-csp-start#hideusertile) |
-| **:::no-loc text="Hide Lock":::** | Disabled | | [Start/HideLock](/windows/client-management/mdm/policy-csp-start#hidelock) |
-| **:::no-loc text="Hide Sign Out":::** | Disabled | | [Start/HideSignOut](/windows/client-management/mdm/policy-csp-start#hidesignout) |
+| **:::no-loc text="Start Layout":::** | A custom XML string | Create and deploy a custom Start menu and taskbar layout. Please refer to articles in the learn more section above. | [:::no-loc text="StartLayout":::](/windows/client-management/mdm/policy-csp-start#startlayout) |
+| **:::no-loc text="Hide App List":::** | None | | [:::no-loc text="Start/HideAppList":::](/windows/client-management/mdm/policy-csp-start#hideapplist) |
+| **:::no-loc text="Hide Change Account Settings":::** | Disabled | | [:::no-loc text="Start/HideChangeAccountSettings":::](/windows/client-management/mdm/policy-csp-start#hidechangeaccountsettings) |
+| **:::no-loc text="Hide Frequently Used Apps":::** | Enabled | | [:::no-loc text="Start/HideFrequentlyUsedApps":::](/windows/client-management/mdm/policy-csp-start#hidefrequentlyusedapps) |
+| **:::no-loc text="Hide Power Button":::** | Disabled | | [:::no-loc text="Start/HidePowerButton":::](/windows/client-management/mdm/policy-csp-start#hidepowerbutton) |
+| **:::no-loc text="Hide Recent Jumplists":::** | Enabled | | [:::no-loc text="Start/HideRecentJumplists":::](/windows/client-management/mdm/policy-csp-start#hiderecentjumplists) |
+| **:::no-loc text="Hide Recently Added Apps":::** | Enabled | | [:::no-loc text="Start/HideRecentlyAddedApps":::](/windows/client-management/mdm/policy-csp-start#hiderecentlyaddedapps) |
+| **:::no-loc text="Hide User Tile":::** | Disabled | | [:::no-loc text="Start/HideUserTile":::](/windows/client-management/mdm/policy-csp-start#hideusertile) |
+| **:::no-loc text="Hide Lock":::** | Disabled | | [:::no-loc text="Start/HideLock":::](/windows/client-management/mdm/policy-csp-start#hidelock) |
+| **:::no-loc text="Hide Sign Out":::** | Disabled | | [:::no-loc text="Start/HideSignOut":::](/windows/client-management/mdm/policy-csp-start#hidesignout) |

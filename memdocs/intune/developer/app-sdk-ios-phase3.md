@@ -41,30 +41,32 @@ ms.collection:
 - Reference the Intune App SDK in your application.
 - Confirm that the Intune App SDK is properly included in your build.
 - Register new accounts for MAM management after authenticating with MSAL.
-- Unregister accounts on log-out to remove corporate data.
+- To remove corporate data, unregister accounts on log-out 
 - (Recommended) Incorporate MAM logging into your app.
 
 ## Prerequisites
 
-- You'll need a macOS computer which has Xcode 14.0 or later installed.
+- You need a macOS computer, which has Xcode 14.0 or later installed.
 
 - Your app must be targeted for iOS 14.0 or above.
 
-- Review the [Intune App SDK for iOS License Terms](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK for iOS, you agree to such license terms.  If you don't accept them, don't use the software.
+- Review the [Intune App SDK for iOS License Terms](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK for iOS, you agree to such license terms. If you don't accept them, don't use the software.
 
 - Download the files for the Intune App SDK for iOS on [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
 ## What's in the SDK Repository
 
-* **IntuneMAMSwift.xcframework**: The Intune App SDK framework. It's recommended that you link this framework to your app/extensions to enable Intune client application management. However, some developers might prefer the performance benefits of the static library. See the following:
+* **IntuneMAMSwift.xcframework**: The Intune App SDK dynamic framework. It is recommended that you link this framework to your app/extensions to enable Intune client application management. However, some developers might prefer the performance benefits of the static framework (IntuneMAMStatic.xcframework). See below.
 
-* **libIntuneMAMSwift.xcframework**: The Intune App SDK static library. Developers might choose to link the static library instead of the framework. Because static libraries are embedded directly into the app/extension binary at build time, there are some launch-time performance benefits to using the static library. However, integrating it into your app is a more complicated process. If your app includes any extensions, linking the static library to the app and extensions will result in a larger app bundle size, as the static library will be embedded into each app/extension binary. When using the framework, apps and extensions can share the same Intune SDK binary, resulting in a smaller app size.
+* **IntuneMAMStatic.xcframework**: The Intune App SDK static framework. Developers might choose to link the static framework instead of the dynamic framework. Because the executable code from a static framework is embedded directly into the app/extension binary at build time, there are some launch-time performance benefits to using the static library. However, if your app includes any extensions, linking the static framework to the app and extensions results in a larger app bundle size, as the executable code is embedded into each app/extension binary. In contrast, when using the dynamic framework, apps and extensions can share the same Intune SDK binary, resulting in a smaller app size.
 
-* **IntuneMAMSwiftStub.xcframework**: The Intune App SDK Swift Stub framework. This is a required dependency of both IntuneMAMSwift.xcframework and libIntuneMAMSwift.xcframework which apps/extensions must link.
+* **IntuneMAMSwiftStub.xcframework**: The Intune App SDK Swift Stub framework. This framework is a required dependency of both IntuneMAMSwift.xcframework and IntuneMAMStatic.xcframework which apps/extensions must link.
 
-* **IntuneMAMResources.bundle**: A resource bundle that contains resources that the SDK relies on. The resources bundle is required only for apps which integrate the static library (libIntuneMAMSwift.xcframework).
+* **IntuneMAMConfigurator**: A tool used to configure the app or extension's Info.plist with the minimum required changes for Intune management. Depending on the functionality of your app or extension, you might need to make more manual changes to the Info.plist.
 
-* **IntuneMAMConfigurator**: A tool used to configure the app or extension's Info.plist with the minimum required changes for Intune management. Depending on the functionality of your app or extension, you might need to make additional manual changes to the Info.plist.
+* **libIntuneMAMSwift.xcframework**: The Intune App SDK static library. This variant of the Intune MAM iOS SDK is deprecated and will be removed in a future update. It is recommended that you do not link the static library, and instead link your app/extensions to either the dynamic framework (IntuneMAMSwift.xcframework) or static framework (IntuneMAMStatic.xcframework) previously mentioned. 
+
+* **IntuneMAMResources.bundle**: A resource bundle that contains resources that the SDK relies on. The resources bundle is required only for apps which integrate the deprecated static library (libIntuneMAMSwift.xcframework), and will be removed in a future update.
 
 ## How the Intune App SDK works
 
@@ -83,23 +85,9 @@ The following diagram provides the Intune App SDK for iOS process flow:
 
 To enable the Intune App SDK, follow these steps:
 
-1. **Option 1 - Framework (recommended)**: Link `IntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to your target: Drag `IntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the **Frameworks, Libraries, and Embedded Content** list of the project target.
+1. Link either `IntuneMAMSwift.xcframework` or `IntuneMAMStatic.xcframework` to your target: Drag the xcframework bundle to the **Frameworks, Libraries, and Embedded Content** list of the project target. Repeat these steps for `IntuneMAMSwiftStub.xcframework`. For your main app, select "Embed & Sign" in the "Embed" column for both the xcframeworks added. For any extensions, select "Do Not Embed."
 
     :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-framework.png" alt-text="Intune App SDK iOS Framework: Xcode Frameworks, Libraries, and Embedded Content sample":::
-
-   **Option 2 - Static Library**:  Link `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the target: Drag `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the **Frameworks, Libraries, and Embedded Content** list of the project target.  
-
-    :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-static-lib.png" alt-text="Screenshot of the Intune App SDK iOS Static Library: Xcode Frameworks, Libraries, and Embedded Content sample.":::
-
-    > [!NOTE]
-    > Currently, if you run the SDK static lib on iOS 15 simulator, it can cause a crash since AppleArchive does not exist.
-    > This can be fixed by explicitly weak linking `libSwiftAppleArchive` in the main app target by marking it as "optional".
-    >
-    > ![Screenshot of the Intune App SDK iOS Static Library: Weak linking Apple Archive sample.](./media/app-sdk-ios/intune-app-sdk-ios-weak-link-apple-archive.png.png)
-
-     Add the `IntuneMAMResources.bundle` resource bundle to the project by dragging the resource bundle under **Copy Bundle Resources** within **Build Phases**.
-
-     ![Intune App SDK iOS: copy bundle resources](./media/app-sdk-ios/intune-app-sdk-ios-copy-bundle-resources.png)
          
 2. Add these iOS frameworks to the project:  
    -  MessageUI.framework  
@@ -145,21 +133,21 @@ To enable the Intune App SDK, follow these steps:
        > [!NOTE]
        > An entitlements file is an XML file that is unique to your mobile application. It is used to specify special permissions and capabilities in your iOS app. If your app did not previously have an entitlements file, enabling keychain sharing (step 3) should have caused Xcode to generate one for your app. Ensure the app's bundle ID is the first entry in the list.
 
-5. Include each protocol that your app passes to `UIApplication canOpenURL` in the `LSApplicationQueriesSchemes` array of your app's Info.plist file. For each protocol listed in this array, a copy of the protocol appended with `-intunemam` also needs to be added to the array. Additionally, `http-intunemam`, `https-intunemam`, `microsoft-edge-http-intunemam`, `microsoft-edge-https-intunemam`,  `smart-ns`,  `zips`,  `lacoonsecurity`,  `wandera`,  `lookoutwork-ase`,  `skycure`,  `betteractiveshield`,  `smsec`, `mvisionmobile`, `scmx` and `intunemam-mtd` should be added to the array. If your app uses the mailto: protocol, `ms-outlook-intunemam` should be added to the array as well. Be sure to save your changes before proceeding to the next step.
+5. Include each protocol that your app passes to `UIApplication canOpenURL` in the `LSApplicationQueriesSchemes` array of your app's Info.plist file. For each protocol listed in this array, a copy of the protocol appended with `-intunemam` also needs to be added to the array. Additionally, `http-intunemam`, `https-intunemam`, `microsoft-edge-http-intunemam`, `microsoft-edge-https-intunemam`,  `smart-ns`,  `zips`,  `lacoonsecurity`,  `wandera`,  `lookoutwork-ase`,  `skycure`,  `betteractiveshield`,  `smsec`, `mvisionmobile`, `scmx`, and `intunemam-mtd` should be added to the array. If your app uses the mailto: protocol, `ms-outlook-intunemam` should be added to the array as well. Be sure to save your changes before proceeding to the next step.
 
-   If the app runs out of space in its LSApplicationQueriesSchemes list, then it can remove the "-intunemam" schemes for apps that are known to also implement the Intune MAM SDK. When the app removes  "scheme-intunemam" from the LSApplicationQueriesSchemes list, `canOpenURL()` may return incorrect responses for those schemes. To fix this, the app should instead call `[IntuneMAMPolicy isURLAllowed:url isKnownManagedAppScheme:YES]` for that scheme. This call will return `NO` if the policy will block the URL from being opened. If it returns true, then the app can call `canOpenURL()` with an empty identity to determine if the url can be opened. For example:
+   If the app runs out of space in its LSApplicationQueriesSchemes list, then it can remove the "-intunemam" schemes for apps that are known to also implement the Intune MAM SDK. When the app removes  "scheme-intunemam" from the LSApplicationQueriesSchemes list, `canOpenURL()` may return incorrect responses for those schemes. To fix this problem, the app should instead call `[IntuneMAMPolicy isURLAllowed:url isKnownManagedAppScheme:YES]` for that scheme. This call returns `NO` if the policy blocks the URL from being opened. If it returns true, then the app can call `canOpenURL()` with an empty identity to determine if the url can be opened. For example:
 
    ```objc
    BOOL __block canOpen = NO;
    if([policy isURLAllowed:urlForKnownManagedApp isKnownManagedAppScheme:YES])
    {
-       [[IntuneMAMPolicyManager instance] setCurrentThreadIdentity:"" forScope:^{
+       [[IntuneMAMPolicyManager instance] setCurrentThreadAccountId:"" forScope:^{
        canOpen = [[UIApplication sharedApplication] canOpenURL:urlForKnownManagedApp];
        }];
    }
    ```
 
-6. If your app doesn't use FaceID already, ensure the [NSFaceIDUsageDescription Info.plist key](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) is configured with a default message. This is required so iOS can let the user know how the app intends to use FaceID. An Intune app protection policy setting allows for FaceID to be used as a method for app access when configured by the IT admin.
+6. If your app doesn't use FaceID already, ensure the [NSFaceIDUsageDescription Info.plist key](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) is configured with a default message. This step is required so iOS can let the user know how the app intends to use FaceID. An Intune app protection policy setting allows for FaceID to be used as a method for app access when configured by the IT admin.
 
 7. Use the IntuneMAMConfigurator tool that is included in the [SDK repo](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) to finish configuring your app's Info.plist. The tool has three parameters:
 
@@ -179,11 +167,21 @@ File Provider extensions have certain memory requirements that might make integr
 
 To integrate the one of these libraries with your File Provider extension, follow the steps for integrating the SDK as a static library as shown above. Make sure to include `ContainingAppBundleId` setting.
 
-If it’s a multi-identity app, the current user identity should be set in the file provider enumerator in `- enumeratorForContainerItemIdentifier:error:` API using `setIdentity:onFileProviderEnumerator:` method of `IntuneMAMFileProtectionManager`.
+#### Integrating a Non-Replicated File Provider extension
+Your app is using a Non-Replicated File Provider if it implements the NSFileProviderExtension protocol. All file providers created before iOS 16.0 are non-replicated.
 
-In `- startProvidingItemAtURL:completionHandler:` check if you should encrypt files using `[[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]`. Use `encryptFile:forIdentity` API in `IntuneMAMFileProtectionManager` for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
+In - startProvidingItemAtURL:completionHandler: check if you should encrypt files using [[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]. Use encryptFile:forAccountId: API in IntuneMAMFileProtectionManager for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
 
-In `- importDocumentAtURL:toParentItemIdentifier:completionHandler:` check whether the file is encrypted using `isFileEncrytped:` API in `IntuneMAMFileProtectionManager`. If it's then decrypt it using `decryptFile:toCopyPath:` API of `IntuneMAMFileProtectionManager`.
+In - importDocumentAtURL:toParentItemIdentifier:completionHandler: check whether the file is encrypted using isFileEncrytped: API in IntuneMAMFileProtectionManager. If it's then decrypt it using decryptFile:toCopyPath: API of IntuneMAMFileProtectionManager. In multi-identity apps, also check against the canReceiveSharedFile: API in the destination owner's IntuneMAMPolicy to see if the owner can receive the file.
+
+#### Integrating a Replicated File Provider extension
+Your app is using a Replicated File Provider if it implements the NSFileProviderReplicatedExtension protocol (added in iOS 16.0).
+
+In - fetchContentsForItemWithIdentifier:version:request:completionHandler: check if you should encrypt files using [[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]. Use encryptFile:forAccountId: API in IntuneMAMFileProtectionManager for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
+
+In - createItemBasedOnTemplate:fields:contents:options:request:completionHandler: check whether the file is encrypted using isFileEncrypted: API in IntuneMAMFileProtectionManager. If it's then decrypt it using decryptFile:toCopyPath: API of IntuneMAMFileProtectionManager. In multi-identity apps, also check against the canReceiveSharedFile: API in the destination owner's IntuneMAMPolicy to see if the owner can receive the file.
+
+Anywhere that the Replicated File Provider creates and passes an NSFileProviderItem to the system, call the IntuneMAMFileProtectionManager's protectFileProviderItem:forAccountId: API with the item's owner identity. Depending on where the NSFileProviderItem object is created and persisted within your extension, you might need to do this in each of the NSFileProviderReplicatedExtension's protocol methods.
 
 ## Configure settings for the Intune App SDK
 
@@ -218,8 +216,8 @@ SecondaryForegroundColor| String| Specifies the secondary foreground color for t
 SupportsDarkMode| Boolean | Specifies whether the Intune SDK's UI color scheme should observe the system dark mode setting, if no explicit value has been set for BackgroundColor/ForegroundColor/AccentColor | Optional. Defaults to yes. |
 MAMTelemetryDisabled| Boolean| Specifies if the SDK won't send any telemetry data to its back end.| Optional. Defaults to no. |
 MAMTelemetryUsePPE | Boolean | Specifies if MAM SDK will send data to PPE telemetry backend. Use this when testing your apps with Intune policy so that test telemetry data doesn't mix up with customer data. | Optional. Defaults to no. |
-MaxFileProtectionLevel | String | Allows the app to specify the maximum `NSFileProtectionType` it can support. This value will override the policy sent by the service if the level is higher than what the application can support. Possible values: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`. Notice: With the highest file protection level (`NSFileProtectionComplete`), protected files can only be accessed while the device is unlocked. Ten seconds after the device is locked, the app will lose access to protected files.  In some cases, this may cause loss of access to internal components (such as MySQL databases), leading to unexpected behavior. It's recommended that applications that present lockscreen UI elements set this value to `NSFileProtectionCompleteUntilFirstUserAuthentication`. | Optional. Defaults to `NSFileProtectionComplete`. |
-OpenInActionExtension | Boolean | Set to YES for Open in Action extensions. See the Sharing Data via UIActivityViewController section for more information. 
+MaxFileProtectionLevel | String | Allows the app to specify the maximum `NSFileProtectionType` it can support. This value will override the policy sent by the service if the level is higher than what the application can support. Possible values: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`. Notice: With the highest file protection level (`NSFileProtectionComplete`), protected files can only be accessed while the device is unlocked. 10 seconds after the device is locked, the app will lose access to protected files. In some cases, this may cause loss of access to internal components (such as MySQL databases), leading to unexpected behavior. It's recommended that applications that present lock screen UI elements set this value to `NSFileProtectionCompleteUntilFirstUserAuthentication`. | Optional. Defaults to `NSFileProtectionComplete`. |
+OpenInActionExtension | Boolean | Set to YES for Open in Action extensions. For more information, see the [Sharing Data via UIActivityViewController](../developer/app-sdk-ios-phase4.md#share-data-via-uiactivityviewcontroller) section.
 WebViewHandledURLSchemes | Array of Strings | Specifies the URL schemes that your app's WebView handles. | Required if your app uses a WebView that handles URLs via links and/or JavaScript. |
 DocumentBrowserFileCachePath | String | If your app uses the [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) to browse through files in various file providers, you can set this path relative to the home directory in the application sandbox so the Intune SDK can drop decrypted managed files into that folder. | Optional. Defaults to the `/Documents/` directory. |
 VerboseLoggingEnabled | Boolean | If set to YES, Intune will log in verbose mode. | Optional. Defaults to NO |
@@ -240,24 +238,25 @@ To receive Intune app protection policy, apps must initiate an enrollment reques
 > [!NOTE]
 > Azure AD Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
-Apps which already use ADAL or MSAL should call the `registerAndEnrollAccount` method on the `IntuneMAMEnrollmentManager` instance after the user has been successfully authenticated:
+Apps which already use MSAL should call the `registerAndEnrollAccountId` method on the `IntuneMAMEnrollmentManager` instance after the user has been successfully authenticated:
 
 ```objc
 /*
  *  This method will add the account to the list of registered accounts.
  *  An enrollment request will immediately be started.
- *  @param identity The UPN of the account to be registered with the SDK
+ *  @param accountId The Entra object ID of the account to be registered with the SDK
  */
 
-(void)registerAndEnrollAccount:(NSString *)identity;
+(void)registerAndEnrollAccountId:(NSString *_Nonnull)accountId;
 ```
+On successful sign in MSAL sends back the result in MSALResult object. Use tenantProfile.identifier within MSALResult as the accountId parameter for the above API. 
 
-By calling the `registerAndEnrollAccount` method, the SDK will register the user account and attempt to enroll the app on behalf of this account. If the enrollment fails for any reason, the SDK will automatically retry the enrollment 24 hours later. For debugging purposes, the app can receive [notifications](#status-result-and-debug-notifications), via a delegate, about the results of any enrollment requests.
+By calling the `registerAndEnrollAccountId` method, the SDK will register the user account and attempt to enroll the app on behalf of this account. If the enrollment fails for any reason, the SDK will automatically retry the enrollment 24 hours later. For debugging purposes, the app can receive [notifications](#status-result-and-debug-notifications), via a delegate, about the results of any enrollment requests.
 
 After this API has been invoked, the app can continue to function as normal. If the enrollment succeeds, the SDK will notify the user that an app restart is required. At that time, the user can immediately restart the app.
 
 ```objc
-[[IntuneMAMEnrollmentManager instance] registerAndEnrollAccount:@"user@foo.com"];
+[[IntuneMAMEnrollmentManager instance] registerAndEnrollAccountId:@"3ec2c00f-b125-4519-acf0-302ac3761822"];
 ```
 
 ### Apps that don't use ADAL or MSAL
@@ -279,6 +278,7 @@ By calling this method, the SDK will prompt the user for credentials if no exist
 If the enrollment fails, the app should consider calling this API again at a future time, depending on the details of the failure. The app can receive [notifications](#status-result-and-debug-notifications), via a delegate, about the results of any enrollment requests.
 
 After this API has been invoked, the app can continue functioning as normal. If the enrollment succeeds, the SDK will notify the user that an app restart is required.
+Once the app is managed, the Entra object ID value needs to be queried using `enrolledAccountId` in the `IntuneMAMEnrollmentManager`. Use this for all the MAM SDK APIs that the app uses for this enrolled account.
 
 Example:
 
@@ -305,7 +305,7 @@ Before a user is signed out of an app, the app should deregister the user from t
 
 2. App protection policy will be removed.
 
-3. If the app initiates a selective wipe (optional), any corporate data is deleted.
+3. Any corporate data is deleted if the app initiates a selective wipe (optional).
 
 Before the user is signed out, the app should call the following method on the  `IntuneMAMEnrollmentManager` instance:
 
@@ -318,20 +318,20 @@ Before the user is signed out, the app should call the following method on the  
  *  until the Intune APP AAD token is acquired, then return.  This method must be called before  
  *  the user is removed from the application (so that required AAD tokens are not purged
  *  before this method is called).
- *  @param identity The UPN of the account to be removed.
- *  @param doWipe   If YES, a selective wipe if the account is un-enrolled
+ *  @param accountId The object ID of the account to be removed.
+ *  @param doWipe  If YES, a selective wipe if the account is un-enrolled
  */
-(void)deRegisterAndUnenrollAccount:(NSString *)identity withWipe:(BOOL)doWipe;
+(void)deRegisterAndUnenrollAccountId:(NSString *)accountId withWipe:(BOOL)doWipe;
 ```
 
 This method must be called before the user account's Microsoft Entra tokens are deleted. The SDK needs the user account's Microsoft Entra token(s) to make specific requests to the Intune MAM service on behalf of the user.
 
-If the app will delete the user's corporate data on its own, the `doWipe` flag can be set to false. Otherwise, the app can have the SDK initiate a selective wipe. This will result in a call to the app's selective wipe delegate.
+If the app will delete the user's corporate data on its own, the `doWipe` flag can be set to false. Otherwise, the app can have the SDK initiate a selective wipe. This results in a call to the app's selective wipe delegate.
 
 Example:
 
 ```objc
-[[IntuneMAMEnrollmentManager instance] deRegisterAndUnenrollAccount:@"user@foo.com" withWipe:YES];
+[[IntuneMAMEnrollmentManager instance] deRegisterAndUnenrollAccountId:@"3ec2c00f-b125-4519-acf0-302ac3761822" withWipe:YES];
 ```
 
 ## Status, result, and debug notifications
@@ -369,31 +369,32 @@ The notifications are presented via delegate methods in `IntuneMAMEnrollmentDele
 
 These delegate methods return an `IntuneMAMEnrollmentStatus` object that has the following information:
 
-* The identity of the account associated with the request
+* The accountId (Object ID) of the account associated with the request
+* The identity (UPN) of the account associated with the request
 * A status code that indicates the result of the request
 * An error string with a description of the status code
 * An `NSError` object. This object is defined in `IntuneMAMEnrollmentStatus.h`, along with the specific status codes that can be returned.
 
 ### Sample code
 
-These are example implementations of the delegate methods:
+The following are example implementations of the delegate methods:
 
 ```objc
 - (void)enrollmentRequestWithStatus:(IntuneMAMEnrollmentStatus*)status
 {
-    NSLog(@"enrollment result for identity %@ with status code %ld", status.identity, (unsigned long)status.statusCode);
+    NSLog(@"enrollment result for identity %@ with status code %ld", status.accountId, (unsigned long)status.statusCode);
     NSLog(@"Debug Message: %@", status.errorString);
 }
 
 - (void)policyRequestWithStatus:(IntuneMAMEnrollmentStatus*)status
 {
-    NSLog(@"policy check-in result for identity %@ with status code %ld", status.identity, (unsigned long)status.statusCode);
+    NSLog(@"policy check-in result for identity %@ with status code %ld", status.accountId, (unsigned long)status.statusCode);
     NSLog(@"Debug Message: %@", status.errorString);
 }
 
 - (void)unenrollRequestWithStatus:(IntuneMAMEnrollmentStatus*)status
 {
-    NSLog(@"un-enroll result for identity %@ with status code %ld", status.identity, (unsigned long)status.statusCode);
+    NSLog(@"un-enroll result for identity %@ with status code %ld", status.accountId, (unsigned long)status.statusCode);
     NSLog(@"Debug Message: %@", status.errorString);
 }
 ```
@@ -410,14 +411,14 @@ The return value of this method tells the SDK if the application must handle the
 
 * If true is returned, the application must handle the restart.
 
-* If false is returned, the SDK will restart the application after this method returns. The SDK will immediately show a dialog box that tells the user to restart the application.
+* If false is returned, the SDK will restart the application after this method returns. The SDK immediately shows a dialog box that tells the user to restart the application.
 
 ## Exit Criteria
 
 After you've either configured the build plugin or integrated the command line tool into your build process, validate that it's running successfully:
 
 - Ensure that your build compiles and builds successfully.
-- Launch your compiled app, login with a Microsoft Entra user that isn't targeted with App Protection Policy, and confirm that app functions as expected.
+- Launch your compiled app, log in with a Microsoft Entra user that isn't targeted with App Protection Policy, and confirm that app functions as expected.
 - Logout and repeat this test *with a Microsoft Entra user that is targeted with App Protection Policy* and confirm that app is now managed by Intune and restarted.
 
 At this point in the integration, your app can now receive and enforce App Protection Policy. 
@@ -429,21 +430,21 @@ Execute the following test first to get familiar with the complete end user expe
 
 1. Create an iOS App Protection Policy in the Microsoft Intune admin center. For this test, configure the policy:
     - Under Access Requirements, leave the default settings. Notably, "PIN for Access" should be "Require".
-2. Ensure the App Protection Policy is targeted to your application. You'll likely need to manually add the bundle ID of the application in the policy creation wizard.
+2. Ensure the App Protection Policy is targeted to your application. You might need to manually add the bundle ID of the application in the policy creation wizard.
 3. Assign the App Protection Policy to a user group containing your test account.
 4. Install your application.
 5. Log in to your application with your test account that is targeted with App Protection Policy.
-6. Confirm that you're prompted with an Intune managed screen and confirming the prompt will restart the app. This indicates that the SDK has successfully retrieved policy for this account.
-7. You should be prompted to set an app PIN. Create a PIN.
+6. Confirm that you're prompted with an Intune managed screen and confirming the prompt restarts the app. This screen indicates that the SDK successfully retrieves policy for this account.
+7. Create a PIN when you are prompted to set an app PIN. 
 8. Log the managed account out of your application.
-9. If possible without logging in, navigate around your application and confirm your app works as expected.
+9. Navigate around your application and confirm your app works as expected if possible without logging in.
 
-This is a *bare minimum- test to confirm that your app has properly registered the account, registered the authentication callback, and unregistered the account. 
+This list of steps is a *bare minimum- test to confirm that your app properly registers the account, registers the authentication callback, and unregisters the account. 
 Execute the following tests to more thoroughly validate how other App Protection Policy settings modify the behavior of your application.
 
 ## Next Steps
 
-After you've completed all the [Exit Criteria] above, continue to [Stage 4: App participation features].
+After you complete all the [Exit Criteria], continue to [Stage 4: App participation features].
 
 <!-- Stage 3 links -->
 <!-- internal links -->

@@ -210,9 +210,9 @@ When you create an enrollment profile in the [Intune admin center](https://go.mi
 
       At this point, the device isn't fully registered with Microsoft Entra ID and shows as noncompliant in Microsoft Entra ID. The device shows it's compliant in the Microsoft Intune admin center.
 
-  3. If you **Install Company Portal app with VPP** (recommended), then the Company Portal app automatically installs. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Microsoft Entra registration in the Company Portal app, which fully registers the device with Microsoft Entra ID. Users then gain access to corporate resources protected by Conditional Access policies and the device shows as being compliant in Microsoft Entra ID.
+  4. If you **Install Company Portal app with VPP** (recommended), then the Company Portal app automatically installs. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Microsoft Entra registration in the Company Portal app, which fully registers the device with Microsoft Entra ID. Users then gain access to corporate resources protected by Conditional Access policies and the device shows as being compliant in Microsoft Entra ID.
 
-  4. If you don't **Install Company Portal app with VPP**, and want to use the Company Portal app, then:
+  5. If you don't **Install Company Portal app with VPP**, and want to use the Company Portal app, then:
 
       1. Users sign in to the Apple app store with their Apple ID (`user@iCloud.com` or `user@gmail.com`). When they sign in, the Company Portal app automatically installs.
 
@@ -411,7 +411,7 @@ This task list provides an overview. For more specific information, go to [Set u
       Since the Outlook app was installed before the user enrollment profile, the user enrollment profile fails. The Outlook app can't be managed because it's installed and configured in the user partition, not the work partition. Users must manually uninstall the Outlook app.
 
       Once uninstalled, users can sync the device manually, and possibly reapply the user enrollment profile. Or, you might have to create an app configuration policy to deploy Outlook, and make it a required app. Then, deploy an app protection policy to secure the app and its data.  
-  This option is a typical enrollment for personal devices. The device is managed, not just specifics apps or features. With this option, consider the following information:
+
 - Assign the enrollment profile to user groups. Don't assign to device groups.
 
 ### User and Device enrollment end user tasks
@@ -422,6 +422,10 @@ Your users must do the following steps. For the specific user experience, go to 
 2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
 
     Users might have to enter more information. For more specific steps, go to [enroll the device](../user-help/enroll-your-device-in-intune-ios.md). 
+
+Users with enabled app notifications receive a prompt to return to the Company Portal app to complete the required device registration. Users with disabled app notifications aren't alerted to this requirement. If you're utilizing dynamic groups, which rely on device registration to work, it's important that users complete device registration. Plan to communicate these steps to end users. If you're using Conditional Access (CA) policies, no action is required because any CA-protected app users try to sign into will prompt them to return to Company Portal to complete device registration. 
+
+When enrollment completes, Intune automatically installs a profile signing certificate on the device. This certificate is valid for one year. At the year end when the certificate is expiring, Intune renews the certificate. If this renew process fails, then on the device, the **Settings** app > **General** > **VPN & Device management** > **Management Profile** status shows **Not verified**. With this status, end users aren't impacted, and devices continue to check-in with Intune and receive policy updates.
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/21/2023
+ms.date: 06/17/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,7 +43,9 @@ Applies to:
 
 - Linux
 - macOS
-- Windows 10/11
+- Windows 10
+- Windows 11
+- Windows Server *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
 
 ## Prerequisites for antivirus policy
 
@@ -67,6 +69,10 @@ Applies to:
 **Support for Microsoft Defender for Endpoint clients:**
 
 - **Defender for Endpoint security settings management** - To configure support for deploying antivirus policy to devices that are managed by Defender, but not enrolled with Intune, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md). This article also includes the information about platforms supported by this capability, and the policies and profiles that those platforms support.
+
+### Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to manage Intune antivirus policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ### Prerequisites for tamper protection
 
