@@ -123,6 +123,9 @@ To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, a
 
 After you repackage Remote Help as a *.intunewin* file, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md) with the following details to upload and deploy Remote Help. In the following, the repackaged remotehelpinstaller.exe file is named *remotehelp.intunewin*.
 
+   > [!IMPORTANT]
+   > Make sure the file you dowloaded is renamed to **remotehelpinstaller.exe**. 
+
 1. On the App information page, select **Select app package file**, and locate the *remotehelp.intunewin* file you've previously prepared, and then select **OK**.
 
    Add a *Publisher* and then select **Next**. The other details on the App Information page are optional.
@@ -151,8 +154,11 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
    - For *File or folder*, specify **RemoteHelp.exe**
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
-   - For *Value*, specify the [version of Remote Help](#download-remote-help) you're deploying. For example, **10.0.22467.1000**
+   - For *Value*, specify the Remote Help version that you're deploying. For example, **10.0.22467.1000**. See the following note for details on how to get the Remote Help version.
    - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
+     
+> [!NOTE]
+> To get the version of the **RemoteHelp.exe**, install RemoteHelp manually to a machine and run the following Powershell command **(Get-Item "$env:ProgramFiles\Remote Help\RemoteHelp.exe").VersionInfo**. From the output make a note of the FileVersion and use it to specify the *Value* in the detection rule.
 
 5. Proceed to the Assignments page, and then select an applicable device group or device groups that should install the Remote Help app. Remote Help is applicable when targeting group(s) of devices and not for User groups.
 
