@@ -16,7 +16,7 @@ author: scottbreenmsft
 
 ## Considerations when creating new policies in the Microsoft Intune Admin Center
 
-Devices and users targeted with the same setting from different policies cause conflicts. When conflicts occur, Intune generates an error and don't apply either setting. As a result, it is important to avoid or resolve conflicts to ensure the correct configuration is applied.
+Devices and users targeted with the same setting from different policies cause conflicts. When conflicts occur, Intune generates an error and don't apply either setting. As a result, it's important to avoid or resolve conflicts to ensure the correct configuration is applied.
 
 Use these steps to avoid policy conflicts:
 
@@ -27,7 +27,7 @@ Use these steps to avoid policy conflicts:
 
 ### 1. Determine which users or devices need the new policy
 
-Review the existing Entra ID groups and determine if they are applicable for the new policy. Otherwise, create a new group and add users or devices.
+Review the existing Entra ID groups and determine if they're applicable for the new policy. Otherwise, create a new group and add users or devices.
 
 ### 2. Identify and review potentials sources of conflict
 
@@ -38,14 +38,16 @@ You can exclude groups of devices or users using the "exclude group" option or b
 > [!NOTE]
 > For more information about grouping and targeting, see [Plan Education device grouping and targeting](plan-grouping.md).
 
-If you are using an Education tenant, there are the potential policies that may lead to policy conflicts. They should be reviewed for overlapping settings to determine if exclusions are required when targeting the same set of users or devices.
+If you're using an Education tenant, there are the potential policies that may lead to policy conflicts. They should be reviewed for overlapping settings to determine if exclusions are required when targeting the same set of users or devices.
 
 > [!NOTE]
 > If you're only using Intune for Education, you can confirm current assignments by navigating to **Groups** and select the group **All Devices** or **All Users** – **Settings** – **Windows device settings** or **iOS device settings**.
 
 #### Default policies for Education tenants
 
-When Intune licenses are added to an Education tenant for the first time, a set of default policies are created. These policies can be viewed in the Configuration policies list in the Intune admin center. This is a list of policies that are created by default:
+When Intune licenses are added to an Education tenant for the first time, a set of default policies are created. These policies can be viewed in the Configuration policies list in the Intune admin center.
+
+Default policy names:
 
 - **Devices** – **Windows** – **Configuration**
   - Default Policies for EDU
