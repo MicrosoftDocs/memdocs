@@ -144,25 +144,25 @@ When Intune licenses are added to an Education tenant for the first time, a set 
 
 When you configure settings in Intune for Education, corresponding policies are created in the Intune service that can be viewed and edited from the Intune admin console. Configuration profiles created by Intune for Education have a recognizable naming template that always starts with the name of the group followed by a suffix based on the template type.
 
-This list provides examples of configuration profiles created by Intune for Education. *<GROUP NAME>* represents the group that was selected in Intune for Education when the settings were configured.
+This list provides examples of configuration profiles created by Intune for Education. "*\<GROUP NAME>*" represents the group that was selected in Intune for Education when the settings were configured.
 
 - **Devices** – **Windows** – **Configuration**
-  - `*<GROUP NAME>* Windows10General`
-  - `*<GROUP NAME>* GroupPolicyConfiguration`
-  - `*<GROUP NAME>* Windows10EndpointProtection`
-  - `*<GROUP NAME>* Windows10CustomDenyAdministrativeApps`
-  - `*<GROUP NAME>* Windows10CustomDenyStore`
-  - `*<GROUP NAME>* Windows10SharedPC`
-  - `*<GROUP NAME>* Windows10EnterpriseModernAppManagement`
-  - `*<GROUP NAME>* ConfigurationPolicy`
+  - "*\<GROUP NAME>* Windows10General"
+  - "*\<GROUP NAME>* GroupPolicyConfiguration"
+  - "*\<GROUP NAME>* Windows10EndpointProtection"
+  - "*\<GROUP NAME>* Windows10CustomDenyAdministrativeApps"
+  - "*\<GROUP NAME>* Windows10CustomDenyStore"
+  - "*\<GROUP NAME>* Windows10SharedPC"
+  - "*\<GROUP NAME>* Windows10EnterpriseModernAppManagement"
+  - "*\<GROUP NAME>* ConfigurationPolicy"
 - **Devices** – **Windows** – **Enrollment** – **Windows Autopilot/Deployment Profiles**
-  - `*<GROUP NAME>* Windows10AutopilotProfile`
+  - "*\<GROUP NAME>* Windows10AutopilotProfile"
 - **Devices** – **Windows** – **Windows 10 and later updates** – **Update rings**
-  - `*<GROUP NAME>* Windows10UpdatesForBusiness`
+  - "*\<GROUP NAME>* Windows10UpdatesForBusiness"
 - **Devices** – **Windows** – **Windows 10 and later updates** – **Feature Updates**
-  - `*<GROUP NAME>* WindowsFeatureUpdates`
+  - "*\<GROUP NAME>* WindowsFeatureUpdates"
 - **Endpoint security** – **Account protection**
-  - `*<GROUP NAME>*_LocalUsersAndGroupsConfig_EDU`
+  - "*\<GROUP NAME>*_LocalUsersAndGroupsConfig_EDU"
 
 #### Assign the policy to target group
 
