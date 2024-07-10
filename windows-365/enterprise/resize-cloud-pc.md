@@ -65,14 +65,12 @@ Downsizing may impact support for nested virtualization. For more information, s
 To resize a Cloud PC, the admin must have certain built-in Microsoft Entra roles.
 
 - For a Cloud PC provisioned with a direct assigned license, at least one of the following roles
-  - Global Admin
-  - Intune Service Admin
+    - Intune Service Administrator
   - Intune Reader + Cloud PC Admin roles
-  - Intune Reader + Windows 365 Admin
+  - Intune Reader + Windows 365 Administrator
 - For a Cloud PC provisioned with a group-based license, at least one of the following roles
-  - Global Admin
-  - Intune Service Admin
-  - Intune Reader + Windows 365 Admin
+    - Intune Service Administrator
+  - Intune Reader + Windows 365 Administrator
   - In addition to one of the previous three roles, a role with Microsoft Entra group read/write membership and licensing permissions, like the Windows 365 Admin role.
 
 Alternatively, you can assign a custom role that includes the permissions of these built-in roles.
