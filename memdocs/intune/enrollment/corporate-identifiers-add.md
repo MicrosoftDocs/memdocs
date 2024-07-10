@@ -250,7 +250,7 @@ For details about International Mobile Equipment Identifiers, see [3GGPP TS 23.0
 You can use the following script to get the device details required for Windows corporate identifiers:
 
  ```powershell
- (Get-WmiObject -Class Win32_ComputerSystem | ForEach-Object { $.Manufacturer, $.Model, (Get-WmiObject -Class Win32_BIOS).SerialNumber -join ',' })
+ (Get-WmiObject -Class Win32_ComputerSystem | ForEach-Object {$_.Manufacturer, $_.Model, (Get-WmiObject -Class Win32_BIOS).SerialNumber -join ',' })
 
  ```
 
