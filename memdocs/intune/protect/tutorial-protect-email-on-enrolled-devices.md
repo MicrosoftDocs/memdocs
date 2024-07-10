@@ -177,6 +177,14 @@ Conditional Access policies are configurable in either the Microsoft Entra admin
 
 10. Select **Create** to save your changes. The profile is assigned.
 
+> [!NOTE]
+>
+> Some dependent services, like Microsoft Teams, integrate with Exchange Online resources and are governed by Early-bound Policy enforcement. Consequently, users must comply with Exchange policies before signing into Microsoft Teams.
+>
+> If you have a Conditional Access Policy that restricts authentication requests for Exchange Online resources, users must meet the Exchange Policy requirements before signing into Teams. Failure to comply with these policies affects the ability to sign into Teams.
+>
+> For more information, see [Microsoft documentation on service dependencies and policy enforcement](/entra/identity/conditional-access/service-dependencies#policy-enforcement).
+
 ## Try it out
 
 With the policies you've created, any iOS device that attempts to sign in to Microsoft 365 email must enroll in Intune and use the Outlook mobile app for iOS/iPadOS. To test this scenario on an iOS device, try signing in to Exchange Online using credentials for a user in your test tenant. You're prompted to enroll the device and install the Outlook mobile app.
