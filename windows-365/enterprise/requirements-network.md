@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 05/08/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -99,37 +98,7 @@ You must allow traffic in your network configuration to the following service UR
 The following URLs and ports are required for the provisioning of Cloud PCs and the Azure Network Connection (ANC) health checks:
 
 - \*.infra.windows365.microsoft.com
-- cpcsaamssa1prodprap01.blob.core.windows.net
-- cpcsaamssa1prodprau01.blob.core.windows.net
-- cpcsaamssa1prodpreu01.blob.core.windows.net
-- cpcsaamssa1prodpreu02.blob.core.windows.net
-- cpcsaamssa1prodprna01.blob.core.windows.net
-- cpcsaamssa1prodprna02.blob.core.windows.net
-- cpcstcnryprodprap01.blob.core.windows.net
-- cpcstcnryprodprau01.blob.core.windows.net
-- cpcstcnryprodpreu01.blob.core.windows.net
-- cpcstcnryprodpreu02.blob.core.windows.net
-- cpcstcnryprodprna01.blob.core.windows.net
-- cpcstcnryprodprna02.blob.core.windows.net
-- cpcstprovprodpreu01.blob.core.windows.net
-- cpcstprovprodpreu02.blob.core.windows.net
-- cpcstprovprodprna01.blob.core.windows.net
-- cpcstprovprodprna02.blob.core.windows.net
-- cpcstprovprodprap01.blob.core.windows.net
-- cpcstprovprodprau01.blob.core.windows.net
-- prna01.prod.cpcgateway.trafficmanager.net
-- prna02.prod.cpcgateway.trafficmanager.net
-- preu01.prod.cpcgateway.trafficmanager.net
-- preu02.prod.cpcgateway.trafficmanager.net
-- prap01.prod.cpcgateway.trafficmanager.net
-- prau01.prod.cpcgateway.trafficmanager.net
-- Cloud PC communication endpoints
-  - endpointdiscovery.cmdagent.trafficmanager.net
-  - registration.prna01.cmdagent.trafficmanager.net
-  - registration.preu01.cmdagent.trafficmanager.net
-  - registration.prap01.cmdagent.trafficmanager.net
-  - registration.prau01.cmdagent.trafficmanager.net
-  - registration.prna02.cmdagent.trafficmanager.net
+- *.cmdagent.trafficmanager.net
 - Registration endpoints
   - login.microsoftonline.com
   - login.live.com
@@ -166,11 +135,8 @@ All endpoints connect over port 443 unless specified otherwise.
 
 | Address:Port | Required for |
 | --- | --- | --- |
-| `https://ghp01.ghp.cpcgateway.usgovtrafficmanager.net` | GCCH |
-| `https://gcp01.gcp.cpcgateway.usgovtrafficmanager.net` | GCC |
-| cpcstprovghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1ghpghp01.blob.core.usgovcloudapi.net:443<br>cpcstcnryghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1ghpghp01.blob.core.usgovcloudapi.net:443<br> | GCCH |
-| cpcstprovgcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1gcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcstcnrygcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1gcpgcp01.blob.core.usgovcloudapi.net:443 | GCC |
 | *.infra.windows365.microsoft.us | GCC, GCCH |
+| *.cmdagent.usgovtrafficmanager.net | GCC, GCCH |
 
 #### Intune-dependent URLs
 
@@ -199,12 +165,10 @@ All endpoints connect over port 443 unless specified otherwise.
 | global.azure-devices-provisioning.us (port 443 and 5671) | GCC, GCCH |
 | hm-iot-in-ghp-ghp01.azure-devices.us (port 443 and 5671) | GCCH |
 | hm-iot-in-gcp-gcp01.azure-devices.us (port 443 and 5671) | GCC |
-| endpointdiscovery.ghp.cmdagent.usgovtrafficmanager.net (port 443) | GCCH |
-| endpointdiscovery.gcp.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
-| registration.ghp01.cmdagent.usgovtrafficmanager.net (port 443) | GCCH |
-| registration.gcp01.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
 | hm-iot-in-gcb-gcb01.azure-devices.us (port 443 and 5671) |GCC |
 | hm-iot-in-ghb-ghb01.azure-devices.us (port 443 and 5671) |GCCH |
+| enterpriseregistration.windows.net | GCCH |
+| enterpriseregistration.microsoftonline.us | GCCH |
 
 #### Azure Virtual Device-dependent URLs
 
@@ -281,6 +245,8 @@ Full HD (1920x1080p) isn’t a supported resolution for Microsoft Teams on Cloud
 | 500 kbps | Peer-to-peer quality video calling 360p at 30 fps. |
 | 1.2 Mbps | Peer-to-peer HD quality video calling with resolution of HD 720p at 30 fps. |
 | 500kbps/1Mbps | Group Video calling. |
+
+For more information on Microsoft Teams networking requirements, see [Networking considerations](/MicrosoftTeams/vdi-2#networking-considerations).
 
 ## Traffic interception technologies
 

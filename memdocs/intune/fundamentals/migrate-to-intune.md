@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2023
+ms.date: 06/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -52,7 +52,7 @@ This article helps you migrate your mobile device management (MDM) from Microsof
 
 ## Before you begin
 
-- When you sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), use an account that has Microsoft Entra global admin or license admin rights.
+- When you sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), use an account that has Microsoft Entra **License administrator** rights. For more information on this role, go to [Microsoft Entra built-in roles - License Administrator](/entra/identity/role-based-access-control/permissions-reference#license-administrator).
 
 - Test the steps in this article on a test users group that have devices enrolled in Basic Mobility and Security. Confirm that the policies behave as you expect.
 
@@ -174,7 +174,7 @@ After the policies are created, they're ready to be assigned. For this migration
 
     For more information on the impact of existing Intune licenses, go to [Before you begin](#before-you-begin) (in this article).
 
-2. **Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)** with Microsoft Entra global admin or license admin rights.
+2. **Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)** with Microsoft Entra **[License administrator](/entra/identity/role-based-access-control/permissions-reference#license-administrator)** rights.
 
 3. **Enable [coexistence](mdm-authority-set.md#coexistence)**. When enabled:
 
@@ -211,7 +211,7 @@ This section describes what happens behind the scenes when you migrate from Basi
   | Intune policy type | Intune location |
   | --- | --- |
   | [Compliance policies](../protect/device-compliance-get-started.md)</br></br>Specify the device settings as access requirements. | [Microsoft Intune Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance** |
-  | [Configuration profiles](../configuration/device-profiles.md) </br></br> Specify other settings that aren't part of the access requirements, including email profiles. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration** |
+  | [Configuration profiles](../configuration/device-profiles.md) </br></br> Specify other settings that aren't part of the access requirements, including email profiles. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
   | [Conditional access policies]( ../protect/conditional-access.md)</br></br> Microsoft Entra Conditional Access blocks access if the settings aren't compliant. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional access** > **Classic policies** |
 
 ## Known issues

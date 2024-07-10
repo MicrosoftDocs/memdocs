@@ -7,12 +7,13 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2024
+ms.date: 07/23/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.assetid:
+zone_pivot_groups: windows-365-baseline-versions
 
 # optional metadata
 #ROBOTS:
@@ -26,31 +27,25 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-zone_pivot_groups: windows-365-versions
 ---
-
-<!-- Pivots for this baseline 
-- win365-24h1 > Version 24H1
-- win365-nov21 > November 2021
--->
 
 # List of the settings in the Windows 365 Cloud PC security baseline in Intune
 
-This article is a reference for the settings that are available in the Windows 365 Cloud PC security baseline that you can deploy with Microsoft Intune.
+This article is a reference for the settings that are available in the Windows 365 Cloud PC security baseline that you can deploy with Microsoft Intune. 
 
-For each setting we list the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, could also set different defaults.
+For each setting you’ll find the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, could also set different defaults.
 
-When the Intune UI includes a *Learn more* link for a setting, we include that here as well. Use that link to view the settings *policy configuration service provider* (CSP) or relevant content that explains the settings operation.
+When the Intune UI includes a *Learn more* link for a setting, you’ll find that here as well. Use that link to view the settings *policy configuration service provider* (CSP) or relevant content that explains the settings operation.
 
 When a new version of a baseline becomes available, it replaces the previous version. Profiles instances that you’ve created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
 - Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
-To learn more about using security baselines, see:
+To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
 
-- [Use security baselines](security-baselines.md)
-- [Manage security baselines](security-baselines-configure.md)
+<!-- - [Compare baselines](../protect/security-baselines.md) to discover what's changed from version to version.  -->
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
 
 ::: zone pivot="win365-24h1"
 
@@ -1275,37 +1270,37 @@ The settings in this baseline apply to Windows devices managed through Intune. W
   Baseline default: *Allowed.*  
   [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscriptscanning)
   - **Block execution of potentially obfuscated scripts**  
-    Baseline default: *Not configured*  
+    Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block Win32 API calls from Office macros**  
-    Baseline default: *Not configured*  
+    Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block Office communication application from creating child processes**  
-    Baseline default: *Not configured*  
+    Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block all Office applications from creating child processes**  
-    Baseline default: *Not configured*  
+    Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block JavaScript or VBScript from launching downloaded executable content**  
-    Baseline default: *Not configured*  
+    Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block untrusted and unsigned processes that run from USB**  
-    Baseline default: *Not configured*  
+    Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block Adobe Reader from creating child processes**  
-    Baseline default: *Not configured*  
+    Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block credential stealing from the Windows local security authority subsystem**  
-    Baseline default: *Not configured*  
+    Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block Office applications from creating executable content**  
-    Baseline default: *Not configured*  
+    Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block Office applications from injecting code into other processes**  
-    Baseline default: *Not configured*  
+    Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block executable content from email client and webmail**  
-    Baseline default: *Not configured*  
+    Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
 - **Cloud Block Level**  
@@ -1679,87 +1674,112 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Access From Network**  
   Baseline default: *Configured*  
-  Values: *Administrators*, *Remote Desktop Users*  
+  Values:
+  - `*S-1-5-32-544`
+  - `*S-1-5-32-555`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#accessfromnetwork)
-
+ 
 - **Allow Local Log On**  
   Baseline default: *Configured*  
-  Values: *Administrators*, *Users*  
+  Values:
+  - `*S-1-5-32-544`
+  - `*S-1-5-32-545`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#allowlocallogon)
 
 - **Backup Files And Directories**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value:
+  - `*S-1-5-32-544`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#backupfilesanddirectories)
 
 - **Create Global Objects**  
   Baseline default: *Configured*  
-  Values: *Administrators*, *Local Service*, *Network Service*, *Service*  
+   Values:
+  - `*S-1-5-32-544`
+  - `*S-1-5-19`
+  - `*S-1-5-20`
+  - `*S-1-5-6`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#createglobalobjects)
 
 - **Create Page File**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value:
+  - `*S-1-5-32-544`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#createpagefile)
 
 - **Debug Programs**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value:
+  - `*S-1-5-32-544`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#debugprograms)
 
 - **Deny Access From Network**  
   Baseline default: *Configured*  
-  Value: *NT AUTHORITY\Local Account*  
+  Value:
+  - `*S-1-5-113`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#denyaccessfromnetwork)
 
 - **Deny Remote Desktop Services Log On**  
   Baseline default: *Configured*  
-  Value: *NT AUTHORITY\Local Account*  
+  Value:
+  - `*S-1-5-113`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#denyremotedesktopserviceslogon)
 
 - **Impersonate Client**  
   Baseline default: *Configured*  
-  Values: *Administrators*, *SERVICE*, *Local Service*, *Network Service*  
+  Values:
+  - `*S-1-5-32-544`
+  - `*S-1-5-6`
+  - `*S-1-5-19`
+  - `*S-1-5-20`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#impersonateclient)
 
 - **Load Unload Device Drivers**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value:
+  - `*S-1-5-32-544`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#loadunloaddevicedrivers)
 
 - **Manage Auditing And Security Log**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value:
+  - `*S-1-5-32-544`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#manageauditingandsecuritylog)
 
 - **Manage Volume**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value:
+  - `*S-1-5-32-544`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#managevolume)
 
 - **Modify Firmware Environment**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value:
+  - `*S-1-5-32-544`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#modifyfirmwareenvironment)
 
 - **Profile Single Process**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value:
+  - `*S-1-5-32-544`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#profilesingleprocess)
 
 - **Remote Shutdown**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value:
+  - `*S-1-5-32-544`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#remoteshutdown)
 
 - **Restore Files And Directories**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value:
+  - `*S-1-5-32-544`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#restorefilesanddirectories)
 
 - **Take Ownership**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value:
+  - `*S-1-5-32-544`  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#takeownership)
 
 ## Virtualization Based Technology
@@ -2034,8 +2054,10 @@ Audit settings configure the events that are generated for the conditions of the
 - **Block hardware device installation by setup classes**  
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067048)
+
   - **Remove matching hardware devices**  
     Baseline default: *Yes*
+
   - **Block list**  
     *Not configured by default. Manually add one or more Identifiers.*
 
@@ -2961,5 +2983,3 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
 - **Enable tamper protection to prevent Microsoft Defender being disabled**  
   Baseline default: *Enable*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2066083)
-
-::: zone-end

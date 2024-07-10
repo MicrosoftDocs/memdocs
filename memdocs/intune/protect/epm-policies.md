@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 06/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -97,6 +97,11 @@ Use *Windows elevation settings policy* when you want to:
 ### About Windows elevation rules policy
 
 Use profiles for *Windows elevation rules policy* to manage the identification of specific files, and how elevation requests for those files are handled. Each *Windows elevation rule policy* includes one or more *elevation rules*. It's with elevation rules that you configure details about the file being managed and requirements for it to be elevated.
+
+The following types of files are supported:
+
+- Executable files with the `.exe` or `.msi` extension.
+- PowerShell scripts with the `.ps1` extension.
 
 Each elevation rule instructs EPM on how to:
 
@@ -308,7 +313,7 @@ If a device receives two rules targeting the same application, both rules are co
 - Rules deployed to a user take precedence over rules deployed to a device.
 - Rules with a hash defined are always deemed the most *specific* rule.
 - If more than one rule applies (with no hash defined), the rule with the most defined attributes wins (most *specific*).
-- If applying the above logic results in more than one rule, the following order determines the elevation behavior: User Confirmed, Support Approved (once available), and then Automatic.
+- If applying the above logic results in more than one rule, the following order determines the elevation behavior: User Confirmed, Support Approved, and then Automatic.
 
 > [!NOTE]
 > If a rule does not exist for an elevation and that elevation was requested through the *Run with elevated access* right-click context menu, then the *Default Elevation Behavior* will be used.

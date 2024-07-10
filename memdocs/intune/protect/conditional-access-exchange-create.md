@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 
 # optional metadata
@@ -89,7 +88,7 @@ Before you can configure Conditional Access, verify the following configurations
   
   2. Deploy the Gmail or Nine Work app as **Required**.  
 
-  3. Go to **Devices** > **Configuration** and choose **Create*. 
+  3. Go to **Devices** > **Manage devices** > **Configuration** and choose **Create*. 
   4. Enter a **Name** and **Description** for the profile.  
 
   5. Select **Android enterprise** in **Platform**, select **Email** in **Profile type**.

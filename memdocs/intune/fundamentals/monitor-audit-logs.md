@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 
 # optional metadata
@@ -38,9 +37,8 @@ Audit logs include a record of activities that generate a change in Microsoft In
 
 Users with the following permissions can review audit logs:
 
-- Global Administrator
-- Intune Service Administrator
-- Administrators assigned to an Intune role with **Audit data** - **Read** permissions
+- [Intune Administrator Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
+- Administrators assigned to an Intune role with **Audit data** - **Read** permissions. For a list of built-in Intune roles that have this permission, go to [Built-in role permissions for Microsoft Intune](role-based-access-control-reference.md).
 
 ## Audit logs for Intune workloads
 

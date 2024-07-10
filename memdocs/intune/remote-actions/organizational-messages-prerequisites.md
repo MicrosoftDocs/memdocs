@@ -6,12 +6,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/31/2023
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 # optional metadata
 
@@ -84,7 +83,7 @@ Enable the delivery of organizational messages in all new and existing policies 
 > If you use the Windows 10/11 MDM security baseline, you will need to change the **Windows Spotlight** policy to **Not configured**. The Windows Spotlight policy controls organizational messages and messages coming from Microsoft. To continue blocking messages from Microsoft as defined in the Windows 10/11 MDM security baseline, [configure the Microsoft messaging policy](organizational-messages-prerequisites.md#microsoft-messaging-policy).
 
 #### Template profiles    
-Go to **Devices** > **Windows** > **Configuration profiles**, and in a new or existing template profile, select **Device restrictions** > **Windows Spotlight**.    
+Go to **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration**, and in a new or existing template profile, select **Device restrictions** > **Windows Spotlight**.    
 
 * To allow taskbar messages:   
   * **Windows Spotlight**: Select **Not configured**.    

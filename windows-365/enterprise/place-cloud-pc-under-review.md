@@ -12,7 +12,6 @@ ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -33,6 +32,9 @@ ms.collection:
 # Place a Windows 365 Enterprise Cloud PC under review
 
 As part of a digital forensics request, you may be asked to provide a snapshot of a Cloud PC to internal or external investigators. Placing a Cloud PC under review saves a snapshot of the Cloud PC to your Azure Storage account. From there, you can provide the snapshot to the investigator.
+
+> [!NOTE]
+> Up to 10 Cloud PCs can be placed under review simultaneously. When more than 10 are placed under review at once, the requests are queued up for processing, but the possibility of timeouts increases if the requests remain too long in the queue. If you experience timeouts, it is recommended you stagger the requests to allow sufficient time for previous requests to complete first.   
 
 ## Requirements
 
@@ -89,6 +91,10 @@ Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?
 ## Bulk actions
 
 You can also use Intune’s bulk device actions to place multiple Cloud PCs under review at the same time. For more information, see [Use bulk device actions]( /mem/intune/remote-actions/bulk-device-actions).
+
+## Management with API
+
+You can use the Graph API to place or remove a Cloud PC from review. For more information, see [managedDevice: setCloudPcReviewStatus](/graph/api/manageddevice-setcloudpcreviewstatus?view=graph-rest-beta&tabs=http).
 
 ## Next steps
 [Learn more about digital forensics and Cloud PCs](digital-forensics.md).

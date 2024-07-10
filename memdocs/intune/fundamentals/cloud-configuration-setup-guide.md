@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -111,7 +110,7 @@ If you already use Windows Autopilot, then skip this step, and go to [Step 3 - D
 Enable automatic enrollment for the organization users that you want to use cloud config. Automatic enrollment is required for cloud config. For more information on automatic enrollment, go to [Enrollment guide -  Windows automatic enrollment](../fundamentals/deployment-guide-enrollment-windows.md#windows-automatic-enrollment).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Windows** > **Windows enrollment** > **Automatic Enrollment**.
+2. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment** > **Automatic Enrollment**.
 3. Under **MDM user scope**, select one of the following:
 
     - Select **All** to apply the cloud configuration to all Windows devices that users in your organization use. In most cloud config scenarios, **All** is selected.
@@ -154,7 +153,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
 2. **Create and assign a Windows Autopilot deployment profile in Intune**.
 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-    2. Select **Devices** > **Windows** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Deployment profiles**.
+    2. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment** > **Windows Autopilot Deployment Program** > **Deployment profiles**.
     3. Select **Create profile** > **Windows PC**. Enter a name for the profile.
     4. For the **Convert all targeted devices to Autopilot** setting, select **Yes**. Select **Next**.
 
@@ -181,7 +180,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
 3. **Create and assign an Enrollment Status Page in Intune**.
   
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-    2. Select **Devices** > **Windows** > **Windows enrollment** > **General** > **Enrollment Status Page**.
+    2. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment** > **General** > **Enrollment Status Page**.
     3. Select **Create** and enter a name for the **Enrollment Status Page**.
     4. In the **Settings** tab, enter the following values, and then select **Next**:
 
@@ -249,7 +248,7 @@ With **Known Folder Move**, users data (files and folders) is saved to OneDrive.
 To configure **Known Folder Move**, use an ADMX template in Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Windows** > **Configuration profiles** > **Create** > **New policy**.
+2. Select **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Select **Windows 10 and later** for platform and select **Templates** for profile type.
 4. Select **Administrative Templates** and select **Create**.
 5. Enter a name for the profile and select **Next**.
@@ -281,7 +280,7 @@ The script is deployed to devices using in Intune. To add and deploy the script,
     > If you want to keep the Microsoft Store app on devices, then you can use the [script that removes built-in apps but keeps the Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2157781) instead. To use this script, download it instead and follow the same steps. This script tries to remove built-in apps but might not remove all of them. You might need to modify the script to remove all built-in apps on your devices.
 
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices** > **Windows** >  **Scripts and remediations** > **Platform scripts** > **Add**.
+3. Select **Devices** > **By platform** > **Windows** > **Manage devices** > **Scripts and remediations** > **Platform scripts** tab > **Add**.
 4. In **Basics**, enter a name for your script policy and select **Next**.
 5. In **Script settings**, upload the script you downloaded. Leave the other settings unchanged and select **Next**.
 6. Assign the script to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
@@ -306,7 +305,7 @@ Using Intune, on Windows 10/11 Enterprise and Education devices, you can block e
 To prevent these outside apps, use the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Windows** > **Configuration profiles** > **Create** > **New policy**.
+2. Select **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Select **Windows 10 and later** for platform and select **Settings catalog** for profile type. Select **Create**.
 4. In **Basics**, enter a name for your profile.
 5. In **Configuration settings**, select **Add settings**. Then:
@@ -430,7 +429,7 @@ This step uses a Windows Update Ring to keep devices automatically updated. The 
 Configure the Update ring in Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Windows 10 and later updates** > **Update rings** > **Create profile**.
+2. Select **Devices** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > **Create profile**.
 3. In **Basics**, enter a name for the update ring.
 4. In **Update ring settings**, configure the following values and select **Next**:
 
@@ -509,7 +508,7 @@ Configure devices to automatically use your tenant's domain name for user sign-i
 Add the tenant domain name in Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Windows** > **Configuration profiles** > **Create** > **New policy**.
+2. Select **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. For platform, select **Windows 10 and later**.
 4. For Profile type, select **Templates** > **Device restrictions** > **Create**.
 5. Enter a name for the profile and select **Next**.
@@ -545,7 +544,7 @@ There are some Microsoft Edge app settings that can be configured for a better u
 To configure these recommended settings, use Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select to **Devices** > **Windows** > **Configuration profiles** > **Create** > **New policy**.
+2. Select **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Select **Windows 10 and later** for platform and **Templates** for profile type.
 4. Select **Administrative Templates** and select **Create**.
 5. Enter a name for the profile and select **Next**.
@@ -572,7 +571,7 @@ When you apply cloud config to your devices, you can use Intune to monitor the s
 
 You can monitor the installation status of your deployed scripts:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Windows** > **Scripts and remediations** > **Platform scripts**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **By platform** > **Windows** > **Scripts and remediations** > **Platform scripts**.
 2. Select the script you deployed.
 3. In the script details page, select **Device status**. The script installation details are shown.
 
@@ -604,7 +603,7 @@ You can monitor the status of this BitLocker profile:
 
 You can monitor the status of the Windows Update ring policy:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Windows 10 and later updates** > **Update rings**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab.
 2. Select the update ring you deployed as part of cloud config.
 3. Select **Device status**, **User status**, or **End user update status**. The update ring settings details are shown.
 

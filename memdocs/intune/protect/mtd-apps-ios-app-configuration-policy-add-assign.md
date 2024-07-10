@@ -7,12 +7,11 @@ description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authe
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 06/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 
 # optional metadata
@@ -88,6 +87,15 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 - For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
 
   `<dict><key>MDM</key><string>INTUNE</string></dict>`
+
+### CrowdStrike Falcon for Mobile app configuration policy
+
+To configure **Android Enterprise** and **iOS** app configuration policies for CrowdStrike Falcon, see [Integrating Falcon for Mobile with Microsoft Intune for remediation actions](https://falcon.crowdstrike.com/documentation/page/odf8977b/integrating-falcon-for-mobile-with-microsoft-intune-for-remediation-actions) in the CrowdStrike documentation. You must sign in with your CrowdStrike credentials before you can access this content.
+
+For general guidance about Intune app configuration policies, see the following articles in the Intune documentation:
+
+- [Android managed devices](../apps/app-configuration-policies-use-android.md)
+- [iOS managed devices](../apps/app-configuration-policies-use-ios.md)
 
 ### Jamf Trust app configuration policy
 
@@ -231,6 +239,7 @@ Choose the section that corresponds to your MTD provider:
 
 - [Better Mobile](#assigning-better-mobile)
 - [Check Point Harmony Mobile Protect](#assigning-check-point-harmony-mobile-protect)
+- [CrowdStrike Falcon for Mobile](#assigning-crowdstrike-falcon-for-mobile)
 - [Jamf](#assigning-jamf)
 - [Lookout for Work](#assigning-lookout-for-work)
 - [Pradeo](#assigning-pradeo)
@@ -256,13 +265,23 @@ Choose the section that corresponds to your MTD provider:
 - **iOS**:
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point Harmony Mobile Protect app store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) for the **Appstore URL**.
 
+### Assigning CrowdStrike Falcon for Mobile
+
+- **Android**:
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md).
+  - Use the URL for [CrowdStrike Falcon](https://play.google.com/store/apps/details?id=com.crowdstrike.falconmobile) from the app store for the **Appstore URL**.
+
+- **iOS**:
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). 
+  - Use the URL for [CrowdStrike Falcon](https://apps.apple.com/us/app/crowdstrike-falcon/id1458815656) from the app store for the **Appstore URL**.
+
 ### Assigning Jamf
 
 - **Android**:
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Jamf Mobile app store URL](https://play.google.com/store/apps/details?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 8.0**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Jamf Mobile app store URL](https://play.google.com/store/apps/details/?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 11**.
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Jamf Mobile app store URL](https://apps.apple.com/us/app/jamf-trust/id1608041266) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Jamf Mobile app store URL](https://apps.apple.com/us/app/jamf-trust/id1608041266?mt=8) for the **Appstore URL**.
 
 ### Assigning Lookout for Work
 

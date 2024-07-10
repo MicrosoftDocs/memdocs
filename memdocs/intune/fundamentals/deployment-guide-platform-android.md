@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/16/2021
+ms.date: 04/02/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -51,7 +51,7 @@ Use the [Microsoft Intune planning guide](intune-planning-guide.md) for help wit
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-## Leverage the Android Enterprise security configuration framework  
+<!-- Commenting out b/c outated; add back in after updates. ## Leverage the Android Enterprise security configuration framework  
 
 The Android Enterprise security configuration framework is a series of recommendations for device compliance and configuration policy settings. These recommendations can help you tailor your organization's mobile device security protection to your specific needs. You can apply them to devices that are fully managed or personally owned with work profiles.
 
@@ -79,7 +79,7 @@ For more information about the security framework, see the articles listed in th
 | [Configure device enrollment restrictions for personally owned devices](../enrollment/android-work-profile-security-settings.md)|Apply these restrictions to configure a basic or high security level for devices that are personally owned with work profile. |
 | [Disallow personal accounts on Android Enterprise devices](../enrollment/android-app-configuration-policies.md) |Prevent people on work or school devices from signing into Microsoft apps with a personal account. |  
 |[Configure security settings for personally owned devices](../enrollment/android-work-profile-security-settings.md)  | Apply these settings to configure a basic or high security level on devices that are personally owned with work profile. |
-|[Configure security settings for fully managed devices](../enrollment/android-fully-managed-security-settings.md)  | Apply these settings to configure a basic, enhanced, or high security level on corporate-owned, fully managed devices. |
+|[Configure security settings for fully managed devices](../enrollment/android-fully-managed-security-settings.md)  | Apply these settings to configure a basic, enhanced, or high security level on corporate-owned, fully managed devices. | -->
 
 ## Create compliance rules  
 
@@ -149,7 +149,7 @@ As you set up apps and app policies, think about your organization's requirement
 |[Add managed Google Play apps](../apps/apps-add-android-for-work.md) | Add store apps, line-of-business (LOB) apps, and web apps through the managed Google Play Store.| Android Enterprise|
 |[Add Android Enterprise system apps](../apps/apps-ae-system.md) | Use Intune to enable and disable Android Enterprise system apps. | Android Enterprise|  
 |[Add web apps](../apps/web-app.md) | Add web apps to Intune and assign to groups. | Android device administrator|
-|[Add built-in apps](../apps/apps-add-built-in.md) | Add built-in apps to Intune and assign to groups. | Android Enterprise, Android device administrator|
+|[Add built-in apps](../apps/apps-add-built-in.md) | Add built-in apps to Intune and assign to groups. | Android device administrator|
 |[Add line-of-business apps](../apps/lob-apps-android.md)|Add Android line-of-business (LOB) apps to Intune and assign to groups.| Android device administrator|
 |[Assign apps to groups](../apps/apps-deploy.md)|Assign apps to users and devices. | Android Enterprise, Android device administrator|
 |[Include and exclude app assignments](../apps/apps-inc-exl-assignments.md)|Control access and availability to an app by including and excluding selected groups from assignment.|  Android Enterprise, Android device administrator|
@@ -174,7 +174,7 @@ Intune supports the following enrollment methods for Android devices:
 * Android Enterprise corporate owned dedicated devices
 * Android Enterprise corporate owned fully managed
 * Android Enterprise corporate owned work profile
-* Android device administrator
+* Android device administrator 
 
 For information about each enrollment method and how to choose one that's right for your organization, see the [Android device enrollment guide for Microsoft Intune](deployment-guide-enrollment-android.md).
 

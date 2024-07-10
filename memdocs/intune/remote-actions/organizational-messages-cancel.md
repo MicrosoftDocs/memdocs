@@ -6,12 +6,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/31/2023  
+ms.date: 04/02/2024  
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 # optional metadata
 
@@ -53,7 +52,7 @@ Intune automatically cancels active messages after you delete them, and stops th
 3. Find your message in the table and scroll to the end of the row.   
 3. Select the (**...**) context menu > **Delete**.   
 
-This action requires the *Organizational Messages/Delete* permission. Be sure to assign the delete permission to the custom admin roles in your tenant that need it. For more information about adding permissions to custom roles, see [Custom role permissions](../fundamentals/create-custom-role.md#custom-role-permissions).    
+This action requires the *Organizational Messages/Delete* permission. Be sure to assign the permission to the custom admin roles in your tenant that need it. For more information about adding permissions to custom roles, see [Custom role permissions](../fundamentals/create-custom-role.md#custom-role-permissions).    
 
 ## Learn more about organizational messages  
 

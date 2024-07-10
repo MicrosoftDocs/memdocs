@@ -7,13 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2024
+ms.date: 06/17/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -40,7 +38,11 @@ Find the endpoint security policies for Account protection under *Manage* in the
 ## Prerequisites for Account protection profiles
 
 - To support the *Account protection (preview)* profile, devices must run Windows 10 or Windows 11.
-- To support the *Local user group membership (preview)* profile, devices must run Windows 10 20H2 or later, or Windows 11.
+- To support the *Local user group membership* profile, devices must run Windows 10 20H2 or later, or Windows 11.
+
+## Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to manage Intune account protection profiles, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Account protection profiles
 
@@ -66,13 +68,13 @@ Find the endpoint security policies for Account protection under *Manage* in the
   - Learn about [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
   - [Manage LAPS policy](../protect/windows-laps-policy.md)
 
-- **Local user group membership (preview)** – Use this profile to add, remove, or replace members of the built-in local groups on Windows devices. For example, the Administrators local group has broad rights. You can use this policy to edit the Admin group's membership to lock it down to a set of exclusively defined members.
+- **Local user group membership** – Use this profile to add, remove, or replace members of the built-in local groups on Windows devices. For example, the Administrators local group has broad rights. You can use this policy to edit the Admin group's membership to lock it down to a set of exclusively defined members.
 
   Use of this profile is detailed in the following section, [Manage local groups on Windows devices](#manage-local-groups-on-windows-devices).
 
 ## Manage local groups on Windows devices
 
-Use the *Local user group membership (preview)* profile to manage the users that are members of the built-in local groups on devices that run Windows 10 [20H2 and later](/windows/client-management/mdm/policy-csp-localusersandgroups#localusersandgroups-policies), and Windows 11 devices.
+Use the *Local user group membership* profile to manage the users that are members of the built-in local groups on devices that run Windows 10 [20H2 and later](/windows/client-management/mdm/policy-csp-localusersandgroups#localusersandgroups-policies), and Windows 11 devices.
 
 > [!TIP]
 > To learn more about support for managing administrator privileges using Microsoft Entra groups, see [Manage administrator privileges using Microsoft Entra groups](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-microsoft-entra-groups-preview) in the Microsoft Entra documentation.
@@ -93,9 +95,9 @@ The following are the configurations you can make:
 > The list of local groups is limited to the six built-in local groups which are guaranteed to be evaluated at logon, as referenced in the [How to manage the local administrators group on Microsoft Entra joined devices](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-microsoft-entra-groups-preview) documentation.
 
 - **Group and user action**: Configure the action to apply to the selected groups. This action will apply to the users you select for this same action and grouping of local accounts.  Actions you can choose include:
-  - **Add (Update)**: Adds members to the selected groups. The group membership for users that aren’t specified by the policy are not changed.
-  - **Remove (Update)**: Remove members from the selected groups. The group membership for users that aren’t specified by the policy are not changed.
-  - **Add (Replace)**: Replace the members of the selected groups with the new members you specify for this action. This option works in the same way as a Restricted Group and any group members that are not specified in the policy are removed.
+  - **Add (Update)**: Adds members to the selected groups. The group membership for users that aren’t specified by the policy aren't changed.
+  - **Remove (Update)**: Remove members from the selected groups. The group membership for users that aren’t specified by the policy aren't changed.
+  - **Add (Replace)**: Replace the members of the selected groups with the new members you specify for this action. This option works in the same way as a Restricted Group and any group members that aren't specified in the policy are removed.
 
   > [!CAUTION]
   > If the same group is configured with both a Replace and Update action, the Replace action wins. This is not considered a conflict. Such a configuration can occur when you deploy multiple policies to the same device, or when this CSP is also configured by use of Microsoft Graph.
@@ -108,7 +110,7 @@ The following are the configurations you can make:
 - **Selected user(s)**: Depending on your selection for *User selection type*, you’ll use one of the following options:
 
   - **Select user(s)**: Select the users and user groups from Microsoft Entra.
-  - **Add users(s)**: This opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *security identifier (SID)*, *Domain\username*, or by *Username*.
+  - **Add user(s)**: This opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *security identifier (SID)*, *Domain\username*, or by *Username*.
 
     :::image type="content" source="./media/endpoint-security-account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page.":::
 
@@ -116,7 +118,7 @@ Choosing the Manual option can be helpful in scenarios where you want to manage 
 
 ### Conflicts
 
-If policies create a conflict for a group membership, the conflicting settings from each policy are not sent to the device. Instead, the conflict is reported for those policies in the Microsoft Intune admin center. To resolve the conflict, reconfigure one or more policies.
+If policies create a conflict for a group membership, the conflicting settings from each policy aren't sent to the device. Instead, the conflict is reported for those policies in the Microsoft Intune admin center. To resolve the conflict, reconfigure one or more policies.
 
 ### Reporting
 

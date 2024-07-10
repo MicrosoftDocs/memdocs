@@ -7,13 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2023
+ms.date: 06/25/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -86,13 +84,14 @@ Not all settings are compatible with all Windows client versions. The [CSP refer
 Also, Intune doesn't support all the settings listed in [CSP reference](/windows/client-management/mdm/configuration-service-provider-reference). To find out if Intune supports the setting you want, open the article for that setting. Each setting page shows its supported operation. To work with Intune, the setting must support the **Add**, **Replace**, and **Get** operations. If the value returned by the **Get** operation doesn't match the value supplied by the **Add** or **Replace** operations, then Intune reports a compliance error.
 
 > [!NOTE]
-> For settings that were created by using a string, base64, or XML data type, the stored value is obscured. If the user who is accessing the value has any of the following permissions or roles, they can see the value:
+> For settings created using a string, base64, or XML data type, the stored value is obscured. If the user who is accessing the value has any of the following permissions or roles, they can see the value:
 >
-> - Create, Read, and Update permissions in a Microsoft Intune role-based access control (RBAC) role.
-> - Intune Service Administrator.
-> - Global Administrator Microsoft Entra role.
+> - A Microsoft Intune role that has the **Device configurations** > **Create**, **Read**, and **Update** permissions, like the **Policy and Profile manager** Intune built-in role.
+> - Intune Administrator Microsoft Entra role
 >
-> For more information, go to [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
+> For more information, go to:
+> - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
+> - [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
 
 ## Next steps
 

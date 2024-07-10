@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -41,7 +40,7 @@ Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk
 > - Better Mobile (Android, iOS/iPadOS)
 > - BlackBerry Mobile (Android, iOS/iPadOS)
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
-> - Jamf (Android, iOS/iPadOS) *(formerly Wandera)*
+> - Jamf (Android, iOS/iPadOS)
 > - Microsoft Defender for Endpoint (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - Trellix Mobile Security (Android, iOS/iPadOS)
@@ -97,7 +96,8 @@ Use the procedure to [create an Application protection policy for Windows](../ap
 
   - **Block access**
   - **Wipe data**
-  - **Assignments**: Assign the policy to groups of users. The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
+    
+- **Assignments**: Assign the policy to groups of users. The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
 
 > [!IMPORTANT]
 >

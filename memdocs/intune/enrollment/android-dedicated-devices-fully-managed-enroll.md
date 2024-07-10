@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/30/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -99,7 +99,7 @@ admin.
 #### Step 2: Enable enrollment for corporate-owned devices  
 Verify that enrollment is enabled for corporate-owned, fully managed devices.   
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Android**.  
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **By platform** > **Android**.  
 2. Select **Android enrollment**. 
 3. Under **Enrollment profiles**, choose **Corporate-owned, fully managed user devices**.  
 4. Verify that the setting for **Allow users to enroll corporate-owned user devices**, is set to **Yes**.             
@@ -107,7 +107,7 @@ Verify that enrollment is enabled for corporate-owned, fully managed devices.
 #### Step 3: Link zero-touch account to Intune    
 Link a zero-touch account with your Microsoft Intune account.   
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Android**.  
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **By platform** > **Android**.  
 2. Select **Android enrollment**.  
 3. Under **Bulk enrollment methods**, choose **Zero-touch enrollment**.  
 4. The iframe opens.  Select **Next** to begin setup.   
@@ -126,7 +126,7 @@ Once your account is linked with Intune, the default configuration is applied to
 
 ### Create configuration in zero-touch enrollment portal        
 
-Add a zero-touch configuration in the [zero-touch enrollment portal](https://partner.android.com/zerotouch). You can use the portal by itself to manage configurations, or you can use it in combination with the zero-touch iframe. The portal supports configurations for fully managed and dedicated devices, and corporate-owned devices with a work profile. 
+Add a zero-touch configuration in the [zero-touch enrollment portal](https://enterprise.google.com/android/zero-touch/customers). You can use the portal by itself to manage configurations, or you can use it in combination with the zero-touch iframe. The portal supports configurations for fully managed and dedicated devices, and corporate-owned devices with a work profile. 
 
 1. Sign in to the zero-touch enrollment portal with your Google account.
 2. Select the option to add a new configuration.  
