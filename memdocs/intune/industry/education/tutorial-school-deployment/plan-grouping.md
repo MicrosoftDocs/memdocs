@@ -128,9 +128,9 @@ If you are using an Education tenant, there are the potential policies that may 
 > [!NOTE]
 > If you're only using Intune for Education, you can confirm current assignments by navigating to **Groups** and select the group **All Devices** or **All Users** – **Settings** – **Windows device settings** or **iOS device settings**.
 
-##### Default Intune for Education policies
+##### Default policies for Education tenants
 
-When Intune licenses are added to an Education tenant for the first time, a set of default policies are created and can be viewed in the Configuration policies list in the Intune admin center. This is a list of policies that are created by default:
+When Intune licenses are added to an Education tenant for the first time, a set of default policies are created. These policies can be viewed in the Configuration policies list in the Intune admin center. This is a list of policies that are created by default:
 
 - **Devices** – **Windows** – **Configuration**
   - Default Policies for EDU
@@ -144,7 +144,7 @@ When Intune licenses are added to an Education tenant for the first time, a set 
 
 When you configure settings in Intune for Education, corresponding policies are created in the Intune service that can be viewed and edited from the Intune admin console. Configuration profiles created by Intune for Education have a recognizable naming template that always starts with the name of the group followed by a suffix based on the template type.
 
-This list provides examples of configuration profiles created by Intune for Education. *\<GROUP NAME>* represents the group that was selected in Intune for Education when the settings were configured.
+This list provides examples of configuration profiles created by Intune for Education:
 
 - **Devices** – **Windows** – **Configuration**
   - *\<GROUP NAME>* Windows10General
@@ -164,6 +164,8 @@ This list provides examples of configuration profiles created by Intune for Educ
 - **Endpoint security** – **Account protection**
   - *\<GROUP NAME>*_LocalUsersAndGroupsConfig_EDU
 
+*\<GROUP NAME>* represents the group that was selected in Intune for Education when the settings were configured.
+
 #### Assign the policy to target group
 
 Once all the potential sources of conflict are reviewed and any exclusions are configured, you can assign the new policy to the user or device groups. Assign the policy using "Included groups" and optionally use assignment filters.
@@ -172,7 +174,7 @@ Once all the potential sources of conflict are reviewed and any exclusions are c
 
 ##### [Intune](#tab/intune)
 
- **Devices** – **Monitor** – **Configuration policy assignment failure**. Find the new policy and review any conflicts in the report. The report can also be exported to CSV.
+You can check for potential policy conflicts by going to **Devices** – **Monitor** – **Configuration policy assignment failure**. Find the new policy and review any conflicts in the report. The report can also be exported to CSV.
 
 ##### [Intune for Education](#tab/intune-for-education)
 
