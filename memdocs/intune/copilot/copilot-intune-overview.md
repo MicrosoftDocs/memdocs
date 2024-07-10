@@ -185,7 +185,7 @@ Here are some example queries you can try:
 
     > [!NOTE]
     > Copilot can only generate queries for requests related to the properties that are supported by device query. You cannot use this feature to ask Copilot for details about the device beyond what is available in device query.
-For a full list of supported properties in device query, go to [Device query](https://learn.microsoft.com/en-us/mem/analytics/device-query).
+For a full list of supported properties in device query, go to [Device query](../../analytics/device-query.md).
 
 ## Related content
 
