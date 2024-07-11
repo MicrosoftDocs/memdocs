@@ -265,11 +265,19 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 ### Windows Components > BitLocker Drive Encryption > Fixed Data Drives
 
+> [!NOTE]
+>
+> The default configuration of the following setting will apply to all managed Windows 365 PCs as Windows 365 PC’s do no support use of BitLocker as an encryption option.  For more information, see [Data encryption in Windows 365](/windows-365/enterprise/encryption) in the Windows Security documentation.
+
 - **Deny write access to fixed drives not protected by BitLocker**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrequireencryption)
 
 ### Windows Components > BitLocker Drive Encryption > Removable Data Drives
+
+> [!NOTE]
+>
+> The default configuration of the following setting will apply to all managed Windows 365 PCs as Windows 365 PC’s do no support use of BitLocker as an encryption option.  For more information, see [Data encryption in Windows 365](/windows-365/enterprise/encryption) in the Windows Security documentation.
 
 - **Deny write access to removable drives not protected by BitLocker**  
   Baseline default: *Enabled*  
