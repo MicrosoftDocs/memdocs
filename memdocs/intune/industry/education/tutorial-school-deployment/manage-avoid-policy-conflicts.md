@@ -11,10 +11,10 @@ author: scottbreenmsft
 
 ✅ Ensure policies apply effectively to devices
 
+Devices and users targeted with the same setting from different policies cause conflicts. When conflicts occur, Intune generates an error and don't apply either setting. As a result, it's important to avoid or resolve conflicts to ensure the correct configuration is applied.
+
 > [!NOTE]
 > If you only use Intune for Education to manage your devices, you can easily update the settings or apps that you have deployed to existing groups or create new groups to apply new policies or apps. You don't need to do anything extra to prevent conflicts if the members of the new groups are different from the members of the existing groups.
-
-Devices and users targeted with the same setting from different policies cause conflicts. When conflicts occur, Intune generates an error and don't apply either setting. As a result, it's important to avoid or resolve conflicts to ensure the correct configuration is applied.
 
 Use these steps to avoid policy conflicts:
 
