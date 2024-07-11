@@ -88,10 +88,6 @@ Windows 365 now supports cross region disaster recovery. For more information, s
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
-
-Windows 365 now supports AVC mixed mode when MMR isn't enabled.
-
 #### Windows 365 Boot and Windows 365 Switch now support battery direction<!--51748880-->
 
 Windows 365 Boot and Windows 365 Switch now support battery redirection. Cloud PCs now show the local PC's battery status.
