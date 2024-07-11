@@ -78,6 +78,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of July 8, 2024
 
+### Monitor and Troubleshoot
+
+#### New actions for policies, profiles, and apps<!-- 15283153 -->
+
+You can now remove, reinstall, and re-apply individual policies, profiles, and apps for iOS/iPadOS devices and Android corporate owned devices. You can apply these actions without changing assignments or group membership. These actions are intended to help resolve customer challenges that are external to Intune. Also, these actions can help to quickly restore end user productivity.
+
+For more information, go to: [Remove apps and configuration](../remote-actions/remove-apps-config.md)
+
 ### App management
 
 #### MAC address available from the Managed Home Screen app<!-- 25994454 -->

@@ -225,6 +225,8 @@ items:
         href: move-cloud-pc.md
       - name: Set idle session time limits
         href: frontline-cloud-pc-session-time-limits.md
+      - name: Change default chroma value
+        href: chroma-value-change-default.md
       - name: Restore a Cloud PC
         items:
         - name: Overview
