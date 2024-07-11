@@ -37,7 +37,6 @@ Audit logs for Windows 365 include a record of activities that generate a change
 
 Users with the following permissions can review audit logs:
 
-- Global Administrator
 - Intune Service Administrator
 - Administrators assigned to an Intune role with **Audit data - Read** permissions
 

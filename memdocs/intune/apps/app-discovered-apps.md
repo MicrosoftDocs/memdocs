@@ -67,7 +67,7 @@ The following list provides the app platform type, the apps that are monitored f
 | macOS | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
 | Android device administrator | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
 | Android Enterprise personally owned enrollment | Only managed apps in the work profile | Not applicable | Every seven days from device enrollment |
-| Android Enterprise corporate-owned enrollments | Not applicable| All apps installed on the device| Every seven days from device enrollment |
+| Android Enterprise corporate-owned enrollments | Not applicable| Apps installed in the work profile| Every seven days from device enrollment |
 | AOSP enrollments | Not applicable | Not yet supported | Not applicable |
 
 > [!NOTE]
