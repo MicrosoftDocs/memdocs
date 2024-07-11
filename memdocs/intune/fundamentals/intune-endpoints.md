@@ -321,7 +321,7 @@ Managed Windows devices using the Microsoft Store – either to acquire, install
 - storeedgefd.dsx.mp.microsoft.com
 
 **Proxy configuration**
-- [Prerequisites for Microsoft Store for Business and Education] (https://learn.microsoft.com/en-us/microsoft-store/prerequisites-microsoft-store-for-business)
+- [Prerequisites for Microsoft Store for Business and Education] (https://learn.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business)
 
 **Windows Update Agent:**
 
