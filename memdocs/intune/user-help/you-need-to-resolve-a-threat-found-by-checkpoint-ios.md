@@ -30,20 +30,18 @@ ms.collection:
 
 # Resolve a threat found by Harmony Mobile Protect on iOS
 
-Harmony Mobile Protect is a mobile threat defense service that identifies and assesses potential threats on mobile devices used for work or school. The Harmony Mobile Protect app for iOS works with the Intune Company Portal app to keep enrolled devices free of viruses and threats. You can the view current threats on your device in the Intune Company Portal app. While these threats are present, you may be restricted from using your device for work, and unable to:  
+Harmony Mobile Protect is a mobile threat defense service that identifies and assesses potential threats on mobile devices used for work or school. The Harmony Mobile Protect app for iOS works with the Intune Company Portal app to keep work devices free of viruses and threats. While threats are present, you may be restricted from using your device for work, and unable to:  
 
-* Connect to corporate e-mail
+* Connect to corporate e-mail 
 * Connect to corporate Wi-Fi
 * Connect to SharePoint Online
 * Sync corporate files with OneDrive
 * Access company app
 
-This article describes how to recognize Harmony Mobile Protect threat alerts and what to do to resolve them.  
+This article describes how to recognize alerts about detected threats, and what to do to resolve them.  
 
 ## Troubleshoot virus or security threat  
-When Harmony Mobile Protect detects a virus or security threat on a work or school device, it acts according to your organization's mobile device management (MDM) policies. We recommend addressing threat and virus alerts right away to maintain work access on the device. Tap or open threat notifications and follow the onscreen instructions to resolve them in the Harmony Mobile Protect app.  
-
-A warning about restricted access also appears in the Company Portal app. Open Harmony Mobile Protect to fix the virus or security threat.  
+When Harmony Mobile Protect detects a virus or security threat on a work or school device, it acts according to your organization's mobile device management (MDM) policies. To maintain work access on the device, immediately investigate push notifications and Company Portal alerts about detected threats. Tap or open threat notifications and follow the onscreen instructions to resolve them in the Harmony Mobile Protect app.  
 
   ![Example screenshot of the Company Portal device page, showing the Harmony Mobile Protect warning.](./media/CP-lookout-virus-banner-1808.png)  
 
