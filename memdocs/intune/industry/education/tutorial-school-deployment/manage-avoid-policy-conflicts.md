@@ -16,13 +16,6 @@ Devices and users targeted with the same setting from different policies cause c
 > [!NOTE]
 > If you only use Intune for Education to manage your devices, you can easily update the settings or apps that you have deployed to existing groups or create new groups to apply new policies or apps. You don't need to do anything extra to prevent conflicts if the members of the new groups are different from the members of the existing groups.
 
-Use these steps to avoid policy conflicts:
-
-1. Determine which users or devices need the new policy.
-1. Identify and review potentials sources of conflict.
-1. Assign the policy to target group.
-1. Monitoring for policy conflicts.
-
 ## 1. Determine which users or devices need the new policy
 
 Review the existing Entra ID groups and determine if they're applicable for the new policy. Otherwise, create a new group and add users or devices.
