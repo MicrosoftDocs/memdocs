@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/01/2024
+ms.date: 07/11/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -56,8 +56,19 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of July 8, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+### Chroma subsampling default change to 4:2:0<!--50308895-->
+
+To reduce monitor support issues, the Windows 365 service now defaults the chroma subsampling at 4:2:0. (instead of the previous 4:4:4). For more information, see [Change the default chroma value for Windows 365 Cloud PCs](chroma-value-change-default.md).
+
+<!-- ########################## -->
 ## Week of July 1, 2024
 
+<!-- ########################## -->
 ### Apps
 
 #### Windows 365 Cloud PC gallery images use new Teams VDI<!--51726416-->
@@ -70,7 +81,6 @@ Windows 365 Cloud PC gallery images now use the new Teams Virtualized Desktop In
 #### Cross region disaster recovery<!--5184001500-->
 
 Windows 365 now supports cross region disaster recovery. For more information, see [Cross region disaster recovery in Windows 365](cross-region-disaster-recovery.md).
-
 
 <!-- ########################## -->
 ## Week of June 24, 2024 (Service release 2406)
