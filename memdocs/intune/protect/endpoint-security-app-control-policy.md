@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2024
+ms.date: 06/26/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,17 +36,20 @@ Every day new malicious files and apps appear in the wild. When run on devices i
 
 Intune's App Control for Business policies are part of endpoint security and use the Windows ApplicationControl CSP to manage allowed apps on Windows devices.
 
-Also available through App Control for Business policy, managed installer policy adds the *Intune Management Extension* to your Tenant as a managed installer. With this extension as a managed installer, the apps you deploy through Intune are automatically tagged by the installer. Tagged apps can be identified by your  App Control for Business policies as safe apps that can be allowed to run on your devices.
+Also available through App Control for Business policy, you can use a managed installer policy to add the [*Intune management extension*](../apps/apps-win32-app-management.md) to your Tenant as a [managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work). With this extension as a managed installer, the apps you deploy through Intune are automatically tagged by the installer. Tagged apps can be identified by your App Control for Business policies as safe apps that can be allowed to run on your devices.
 
-- The *Intune Management Extension* is an Intune service that supplements Windows 10 MDM features for Windows 10 and Windows 11 devices. It facilitates the [installation of Win32 apps and PowerShell scripts on managed devices](../apps/apps-win32-app-management.md).
+- The *Intune management extension* is an Intune service that supplements Windows 10 MDM features for Windows 10 and Windows 11 devices. It facilitates the [installation of Win32 apps and PowerShell scripts on managed devices](../apps/apps-win32-app-management.md).
 
 - A *managed installer* uses an AppLocker rule to tag applications you install as trusted by your organization For more information, see [Allow apps installed by a managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
   Use of a managed installer isn't required to use App Control for Business policies.
 
-The information in this article can help you configure the Intune Management Extension as a managed installer, and also configure endpoint security App Control for Business policies. Combined, they make it easy to control the apps that are allowed to run on Windows devices in your environment.
+The information in this article can help you:
 
-For more information, see [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview#windows-defender-application-control) in the Windows Security documentation.
+- [Configure the Intune Management Extension as a managed installer](#get-started-with-managed-installers).
+- [Configure endpoint security App Control for Business policies](#get-started-with-app-control-for-business-policies).
+
+For related information, see [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview#windows-defender-application-control) in the Windows Security documentation.
 
 > [!NOTE]
 > **App Control for Business policy vs Application control profiles**:
@@ -62,7 +65,7 @@ Applies to:
 
 ### Devices
 
-The following devices are supported when enrolled with Intune:
+The following devices are supported for App Control for Business policies when they are enrolled with Intune:
 
 - **Windows Enterprise or Education**:
   - Windows 10 version 1903 or later
@@ -79,6 +82,7 @@ The following devices are supported when enrolled with Intune:
 
 - **Azure Virtual Desktop** (AVD):
   - AVD devices are supported to use App Control for Business policies
+  - To target AVD multi session devices, use the App Control for Business node in Endpoint Security. However, App Control for Business is device scope only.
 
 - **Co-managed devices**:
   - To support Application Control for Business Policies on [co-managed](../../configmgr/comanage/workloads.md) devices, set the slider for *Endpoint Protection* slider to *Intune*.
@@ -89,12 +93,12 @@ See [Windows edition and licensing requirements](/windows/security/threat-protec
 
 ### Role based access controls
 
-To manage App Control for Business policies, an account must be assigned an Intune [role-based access control](../fundamentals/role-based-access-control.md) (RBAC) role that includes sufficient role-based access control (RBAC) permissions to complete a desired task.
+To manage App Control for Business policies, an account must be assigned an Intune [role-based access control](../fundamentals/role-based-access-control.md) (RBAC) role that includes sufficient permissions and rights to complete a desired task.
 
 The following are the available tasks with their required permissions and rights.
 
 - **Enable use of a managed installer** - Accounts must be assigned the role of **Global Administrator** or **Intune Administrator**. Enabling the installer is a one-time event.
-  
+
   >[!IMPORTANT]
   >
   > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator and the Intune Administrator are highly privileged roles that should be limited to scenarios that can't use a different role.
@@ -274,8 +278,8 @@ Use the following procedure to help you create a successful App Control for Busi
 
        Behavior for all other apps and files that aren't specified by rules in this policy depend on the configuration of *Enable trust of Windows components and store apps*:
 
-       - If *Enabled*, files and apps are blocked from running on devices
-       - If set to *Audit only*, files and apps are audited only in local client logs
+       - If *Enabled*, files and apps are blocked from running on devices.
+       - If set to *Audit only*, files and apps are audited only in local client logs.
 
    :::image type="content" source="./media/endpoint-security-app-control-policy/built-in-controls.png" alt-text="This screen capture shows the default options and settings for App Control for Business policy when you use the built-in-controls." lightbox="./media/endpoint-security-app-control-policy/built-in-controls.png":::
 

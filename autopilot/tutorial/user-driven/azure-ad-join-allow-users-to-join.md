@@ -43,7 +43,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 ## Allow users to join devices to Microsoft Entra ID
 
-In order for Windows Autopilot to work, users need to be allowed to join devices to Microsoft Entra ID. Allowing users to join devices to Microsoft Entra ID can be configured in the Azure portal:
+In order for Windows Autopilot to work, users need to be allowed to join devices to Microsoft Entra ID. Allowing users to join devices to Microsoft Entra ID can be configured in the [Azure portal](https://portal.azure.com):
 
 [!INCLUDE [Allow users to join devices to Microsoft Entra ID](../../includes/allow-users-to-join.md)]
 

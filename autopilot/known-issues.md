@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot known issues
-description: Be informed about known issues that might occur during Windows Autopilot deployment.
+description: Be informed about known issues that might occur during Windows Autopilot deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/21/2024
+ms.date: 06/26/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -23,11 +23,29 @@ appliesto:
 
 This article describes known issues that can often be resolved with configuration changes, through cumulative updates, or might be resolved automatically in a future release.
 
+> [!TIP]
+>
+> RSS can be used to notify when new known issues are added to this page. For example, the following RSS link includes this article:
+>
+> ``` url
+> https://learn.microsoft.com/api/search/rss?search=%22Be+informed+about+known+issues+that+might+occur+during+Windows+Autopilot+deployment.%22&locale=en-us&%24filter=
+> ```
+>
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
+>
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
 > [!NOTE]
 >
 > For issues with Autopilot with Co-management, see [Windows Autopilot with co-management](/mem/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues
+
+## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
+
+Date added: *July 8, 2024*
+
+In some Windows Autopilot deployments of unregistered devices, BitLocker encryption may default to 128-bit even though the admin configured 256-bit encryption due to a known race condition. The issue is being investigated. Microsoft recommends that customers who need 256-bit BitLocker encryption register devices for Autopilot.
 
 ### Required apps aren't shown on the Enrollment Status Page (ESP) after an Autopilot Reset
 
@@ -138,7 +156,7 @@ Date added: *March 3, 2022*
 
     If a policy is in place such that **all cloud apps** require a compliant device (there's no exclusion list), by default Microsoft Intune Enrollment is excluded, so that the device can register with Microsoft Entra ID and enroll with Intune and avoid a circular dependency.
 
-1. **Hybrid Microsoft Entra devices**: When Hybrid Microsoft Entra devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Microsoft Entra ID and one hybrid.  The hybrid compliance state displays as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
+1. **Hybrid Microsoft Entra devices**: When Hybrid Microsoft Entra devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Microsoft Entra ID and one hybrid.  The hybrid compliance state displays as **N/A** when viewed from the devices list in the [Azure portal](https://portal.azure.com) until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
 
     The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or Microsoft Entra hybrid joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
 
@@ -298,7 +316,7 @@ Ensure that the JSON profile file is saved in **ANSI/ASCII** format, not Unicode
 
 ### **Something went wrong** is displayed page during OOBE
 
-The client is likely unable to access all the required Azure AD/MSA-related URLs. For more information, see [Networking requirements](requirements.md?tabs=networking).
+The client is likely unable to access all the required Microsoft Entra ID/MSA-related URLs. For more information, see [Networking requirements](requirements.md?tabs=networking).
 
 ### Using a provisioning package in combination with Windows Autopilot can cause issues, especially if the PPKG contains join, enrollment, or device name information
 

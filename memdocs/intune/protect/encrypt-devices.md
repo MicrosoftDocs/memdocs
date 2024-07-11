@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2024
+ms.date: 06/26/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -124,6 +124,7 @@ The following subjects can help you manage specific tasks through BitLocker poli
 - [View details for recovery keys](#view-details-for-recovery-keys)
 - [View recovery keys for tenant-attached devices](#view-recovery-keys-for-tenant-attached-devices)
 - [Rotate BitLocker recovery keys](#rotate-bitlocker-recovery-keys)
+- [End user self service recovery key experiences](#self-service-recovery-keys)
 
 To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md). 
 
@@ -305,6 +306,18 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 
    ![Select the ellipsis to view more options](./media/encrypt-devices/select-more.png)
 
+### Self service recovery keys
+
+To help end users get their recovery keys without calling the company helpdesk, Intune has enabled [self service scenarios for the end user through the Company Portal app](../user-help/get-recovery-key-windows.md). 
+
+While Intune helps configure policy to define the escrow of BitLocker recovery keys, these keys are stored within Entra ID. These are the capabilities within Entra ID that are helpful to use in conjunction with self-service BitLocker recovery key access for end users.
+
+1. **Tenant-wide toggle to prevent recovery key access for non-admin users**: This setting determines if users can self-service to recover their BitLocker key(s). The default value is 'No' which allows all users to recover their BitLocker key(s). 'Yes' restricts non-admin users from being able to see the BitLocker key(s) for their own devices if there are any. [Learn more about this control in Entra ID](/entra/identity/devices/manage-device-identities#configure-device-settings).
+
+3. **Auditing for recovery key access**: Audit Logs within the Entra ID portal show the history of activities within the tenant. Any user recovery key accesses made through the Company Portal website will be logged in Audit Logs under the Key Management category as a “Read BitLocker key” activity type. The user’s User Principal Name and additional info such as key ID is also logged. [Learn more about audit logs in Entra ID](/entra/identity/monitoring-health/concept-audit-logs).
+
+4. **Entra Conditional Access policy requiring a compliant device to access BitLocker Recovery Key**: With Conditional Access policy (CA), you can restrict the access to certain corporate resources if a device is not compliant with the “Require compliant device” setting. If this is set up within your organization, and a device fails to meet the Compliance requirements configured in the Intune Compliance policy, that device cannot be used to access the BitLocker Recovery Key as it is considered a corporate resource which is access controlled by CA.
+
 ## Next steps
 
 - [Manage FileVault policy](../protect/encrypt-devices-filevault.md)  
@@ -312,3 +325,4 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
 - [BitLocker management for enterprises](/windows/security/information-protection/bitlocker/bitlocker-management-for-enterprises), in the Windows security documentation
+- [Self service scenarios for the end user through the Company Portal app](../user-help/get-recovery-key-windows.md)

@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 06/28/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -52,16 +52,44 @@ Windows MDM enrollment is disabled in the Intune tenant.
 
 To fix this issue in a stand-alone Intune environment, follow these steps:
 
-1. In the Microsoft Intune admin center, select **Devices** > **Enrollment restrictions**, and then select a device type restriction.
-1. Select **Properties** > **Edit** next to Platform settings. Then select **Allow for Windows (MDM)**.
-1. Select **Review** and then **Save**.
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Devices** in the left hand pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Enrollment** screen, under **Enrollment options**, select **Device platform restriction**.
+
+1. In the **Enrollment restrictions** screen, under **Device type restrictions**, select **All Users** under the **Name** column.
+
+1. In the **All Users** screen that opens, under **Manage**, select **Properties**.
+
+1. In the **Properties** screen that opens, next to **Platform settings**, select the **Edit** link.
+
+1. In the **Edit restriction** screen that opens:
+
+   1. Locate **Windows (MDM)** under the **Type** column.
+
+   1. Make sure that **Windows (MDM)** is set to **Allow** under the **Platform** column.
+
+   1. If **Windows (MDM)** is set to **Block**, change it to **Allow**.
+
+   1. Select **Review + save**, and then either **Save** if a setting was changed, or **Cancel** if not settings were changed.
+
+1. Repeat the above steps for any additional restrictions that might exist in the **Enrollment restrictions** screen other than **All Users**. Only restrictions for the **Windows** platform need to be verified.
+
+> [!NOTE]
+>
+> When multiple restrictions exist, restrictions might exist that only allow certain groups MDM enrollment. Some of the restrictions blocking MDM enrollment might be valid based on what group they're assigned to. When experiencing this problem, verify that the device isn't a member of one of the groups where there's MDM enrollment is blocked, or if applicable, change the MDM enrollment setting for that restriction to **Allow**.
 
 ## Device import issues
 
 ### Cannot convert device hash error
 
-- Clicking Import after selecting CSV does nothing
-- A **400** error appears in network trace with error body **"Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'**
+- Selecting **Import** after selecting a CSV file doesn't do anything.
+- A **400** error appears in network trace with error body **"Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'**.
 
 #### Cause of Cannot convert device hash error
 
