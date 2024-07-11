@@ -9,7 +9,7 @@ ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 06/11/2024
-ms.topic: article
+ms.topic: overview
 ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
