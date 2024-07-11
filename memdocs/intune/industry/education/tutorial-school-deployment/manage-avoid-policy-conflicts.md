@@ -18,7 +18,7 @@ Devices and users targeted with the same setting from different policies cause c
 
 ## 1. Determine which users or devices need the new policy
 
-Review the existing Entra ID groups and determine if they're applicable for the new policy. Otherwise, create a new group and add users or devices.
+Review the existing Microsoft Entra ID groups and determine if they're applicable for the new policy. Otherwise, create a new group and add users or devices.
 
 ## 2. Identify and review potentials sources of conflict
 
@@ -29,7 +29,7 @@ You can exclude groups of devices or users using the "exclude group" option or b
 > [!NOTE]
 > For more information about grouping and targeting, see [Plan Education device grouping and targeting](plan-grouping.md).
 
-If you're using an Education tenant, there are the potential policies that may lead to policy conflicts. They should be reviewed for overlapping settings to determine if exclusions are required when targeting the same set of users or devices.
+If you're using an Education tenant, there are the potential policies that might lead to policy conflicts. They should be reviewed for overlapping settings to determine if exclusions are required when targeting the same set of users or devices.
 
 > [!NOTE]
 > If you're only using Intune for Education, you can confirm current assignments by navigating to **Groups** and select the group **All Devices** or **All Users** – **Settings** – **Windows device settings** or **iOS device settings**.
