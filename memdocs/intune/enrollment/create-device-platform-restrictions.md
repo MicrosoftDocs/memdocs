@@ -50,7 +50,7 @@ This article describes the device platform restrictions supported in Microsoft I
 
 ## Role-based access control  
 
-Global Administrator and Intune Service Administrator roles are permitted to:  
+To create device platform restrictions in Microsoft Intune, you must be assigned as [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). This role is built-in to Microsoft Entra ID and can:   
 
 - Create device platform restrictions  
 
