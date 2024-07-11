@@ -311,7 +311,7 @@ enrolled via the *Add work and school account* option. The ESP waits for Microso
   - The ESP is tracking the installation of Microsoft 365 Apps.     
   - Microsoft 365 Apps begin installing during the installation of another Win32 app being tracked.  
     
-  To prevent the ESP from hanging during installation and fail the deployment, we recommend deploying Microsoft 365 Apps with Microsoft Intune by using the *Win32* app type.  
+  To prevent the ESP from hanging during installation and causing a failed deployment, we recommend deploying Microsoft 365 Apps with Microsoft Intune by using the *Win32* app type.  
 
 ## Troubleshooting  
 
