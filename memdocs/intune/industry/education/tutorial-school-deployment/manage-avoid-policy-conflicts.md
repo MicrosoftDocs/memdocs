@@ -80,11 +80,11 @@ Once all the potential sources of conflict are reviewed and any exclusions are c
 
 ## 4. Monitoring for policy conflicts
 
-### [:::image type="icon" source="../../media/icons/intune.svg"::: Intune](#tab/intune)
+### [:::image type="icon" source="../../../media/icons/intune.svg"::: Intune](#tab/intune)
 
 You can check for potential policy conflicts by going to **Devices** – **Monitor** – **Configuration policy assignment failure**. Find the new policy and review any conflicts in the report. The report can also be exported to CSV.
 
-### [:::image type="icon" source="../../media/icons/intune.svg"::: Intune for Education](#tab/intune-for-education)
+### [:::image type="icon" source="../../../media/icons/intune.svg"::: Intune for Education](#tab/intune-for-education)
 
 You can check for potential policy conflicts by going to **Reports** – **Settings error**.
 
