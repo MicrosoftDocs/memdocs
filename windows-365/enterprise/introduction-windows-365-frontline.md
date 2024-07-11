@@ -109,7 +109,8 @@ The concurrency buffer can be used up to four times per day with maximum of one 
 Excessive use of the concurrency buffer will temporarily block its further use for the next 48 hours. A temporary block is imposed when:
 
 - On four or more occasions within a 24-hour period, the concurrency buffer is used for more than one hour.
-- While temporarily blocked, you can still use your Windows 365 Frontline Cloud PCs up to the maximum concurrency limit.
+
+While temporarily blocked, you can still use your Windows 365 Frontline Cloud PCs up to the maximum concurrency limit.
 
 ### Permanent blocks
 
