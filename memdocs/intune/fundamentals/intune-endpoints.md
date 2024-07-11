@@ -122,7 +122,7 @@ ID |Desc |Category |ER |Addresses |Ports|Notes|
 181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`rdprelayv3eastusprod-0.support.services.microsoft.com`<BR>`*.trouter.skype.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`go.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`trouter2-usce-1-a.trouter.teams.microsoft.com`<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`trouter-azsc-usea-0-a.trouter.skype.com`<BR> | **TCP:** 443|
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443|
 188 | Remote Help Dependency for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR>`*.gov.teams.microsoft.us` | **TCP:** 443|
-189 | Dependency - Feature Deployment| Default<BR>Required | False |`reconfig.edge.skype.com`<BR> | **TCP:** 443|
+189 | Dependency - Feature Deployment| Default<BR>Required | False |`config.edge.skype.com`<BR> | **TCP:** 443|
 
 <!--### Windows update for Business deployment service
 
