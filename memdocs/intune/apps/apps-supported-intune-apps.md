@@ -128,8 +128,6 @@ The below apps support the core Intune App Protection Policy settings.
 |Microsoft Power BI|[iOS](https://apps.apple.com/us/app/microsoft-power-bi/id929738808)|✔|No settings|
 |Microsoft Skype for Business|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.lync15)|✔|No settings|
 |Microsoft Skype for Business|[iOS](https://apps.apple.com/app/skype-for-business-formerly/id605841731)|✔|No settings|
-|Microsoft Stream|Android|✔|No settings|
-|Microsoft Stream|iOS|✔|No settings|
 |Microsoft Whiteboard|[iOS](https://apps.apple.com/app/microsoft-whiteboard/id1352499399)|✔|No settings|
 |Microsoft Whiteboard|[Android](https://play.google.com/store/apps/details?id=com.microsoft.whiteboard.publicpreview)|✔|No settings|
 
