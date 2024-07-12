@@ -174,7 +174,7 @@ If one account is already enrolled for your application, when it registers anoth
 
 Your app must make three code changes to successfully register an account:
 
-1. The app *must* implement and register an instance of the [MAMServiceAuthenticationCallback] interface. The callback instance must be registered in the `onCreate()` (or `onMAMCreate()`) method of the Application subclass.
+1. The app *must* implement and register an instance of the [MAMServiceAuthenticationCallback] or [MAMServiceAuthenticationCallbackExtended] interface. The callback instance must be registered in the `onCreate()` (or `onMAMCreate()`) method of the Application subclass.
 
 2. When an account is created and the user successfully signs in with MSAL, the app *must* call [registerAccountForMAM].
 
@@ -219,27 +219,31 @@ void registerAuthenticationCallback(MAMServiceAuthenticationCallback callback);
 void updateToken(String upn, String aadId, String resourceId, String token);
 ```
 
-1. The app must implement the [MAMServiceAuthenticationCallback] interface or the `MAMServiceAuthenticationCallbackExtended` interface to allow the SDK to request a Microsoft Entra token for the given account and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its [registerAuthenticationCallback] method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's `Application` subclass.
+> [!NOTE]
+> The `aadId` parameter in these methods refers to the Microsoft Entra User ID, formerly known as AAD ID and also known as OID.
+
+1. The app must implement the [MAMServiceAuthenticationCallback] interface or the [MAMServiceAuthenticationCallbackExtended] interface to allow the SDK to request a Microsoft Entra token for the given account and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its [registerAuthenticationCallback] method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's `Application` subclass.
 
 2. The `acquireToken` method should acquire the access token for the requested resource ID for the given account. If it can't acquire the requested token, it should return null.
 
     > [!TIP]
     > Ensure that your app utilizes the `resourceId` and the `aadId` parameters passed to `acquireToken()`
-    > so that the correct token is acquired.
+    > so that the correct token is acquired. The `upn` parameter is for informational use only; it should not be used to identify an account without also considering the `aadId`.
     > The `resourceId` should be used to generate the proper scopes and the `aadId` should be used
     > to pass along the correct account.
+    > If tokens are returned for the wrong account and/or wrong resource, they could cause delays or failures in enrolling the app and retrieving policies.
     > If your app needs the Microsoft Entra Authority to acquire the token correctly, implement the `MAMServiceAuthenticationCallbackExtended` interface.
 
     ```java
-    class MAMAuthCallback implements MAMServiceAuthenticationCallback {
-        public String acquireToken(String upn, String aadId, String resourceId) {
+    class MAMAuthCallback implements MAMServiceAuthenticationCallbackExtended {
+        public String acquireToken(String upn, String aadId,
+                    String tenantId, String authority, String resourceId) {
             final String[] scopes = {resourceId + "/.default"};
 
             final IAccount account = getAccount(aadId);
             if (account == null) {
-                callback.onError(
-                        new MsalUiRequiredException(MsalUiRequiredException.NO_ACCOUNT_FOUND, "no account found for " + aadId));
-                return;
+                // Log error or warning here about: "no account found for " + aadId
+                return null;
             }
 
             AcquireTokenSilentParameters params =
@@ -278,7 +282,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     }
     ```
 
-3. In case the app is unable to provide a token when the SDK calls `acquireToken()`  -- for example, if silent authentication fails and it is an inconvenient time to show a UI -- the app can provide a token at a later time by calling the [updateToken] method. The same UPN, Microsoft Entra ID, and resource ID that were requested by the prior call to `acquireToken()` must be passed to `updateToken()`, along with the token that was finally acquired. The app should call this method as soon as possible after returning null from the provided callback.
+3. In case the app is unable to provide a token when the SDK calls `acquireToken()`  -- for example, if silent authentication fails and it is an inconvenient time to show a UI -- the app can provide a token at a later time by calling the [updateToken] method. The same UPN, Microsoft Entra ID, and resource ID that were requested by the prior call to `acquireToken()` must be passed to `updateToken()`, along with the token that was finally acquired. The `upn` parameter is for informational purposes only and is generally ignored by the MAM SDK. The app should call this method as soon as possible after returning null from the provided callback.
 
     > [!WARNING]
     > Do not call `updateToken()` from within your implementation of `acquireToken()`. `updateToken()` should be used in the case where `acquireToken()` is unable to acquire a token.
@@ -303,7 +307,7 @@ If a token isn't provided, the callback may still be called at the next check-in
 
 - Support for sovereign clouds requires providing the authority.
 
-- If `MAMServiceAuthenticationCallbackExtended` interface is implemented, the inherited `acquireToken()` method from `MAMServiceAuthenticationCallback` doesn't need to be implemented, as the `MAMServiceAuthenticationCallbackExtended` interface provides a default implementation.
+- If `MAMServiceAuthenticationCallbackExtended` interface is implemented, the inherited `acquireToken()` method from `MAMServiceAuthenticationCallback` does not need to be implemented, as the `MAMServiceAuthenticationCallbackExtended` interface provides a default implementation.
 
 ### MAMEnrollmentManager and Registration
 
@@ -329,9 +333,9 @@ The retry period will typically be 12-24 hours.
 The SDK provides the status of enrollment attempts asynchronously via notifications.
 
 2. The best time to call `registerAccountForMAM` is after the user has signed into the app and is successfully authenticated using MSAL.
-The account's Microsoft Entra user ID and tenant ID are returned from the MSAL authentication call as part of the [`IAccount`] related to the [`IAuthenticationResult`].
+The account's Microsoft Entra user ID, tenant ID and authority are returned from the MSAL authentication call as part of the [`IAccount`] related to the [`IAuthenticationResult`].
     - The account comes from the `IAuthenticationResult.getAccount()` method and contains the pertinent account information.
-    - The AAD ID comes from the `IAccount.getId()` method.
+    - The AAD ID (also known as Microsoft Entra ID or OID) comes from the `IAccount.getId()` method.
     - The tenant ID comes from the `IAccount.getTenantId()` method.
     - The authority comes from the `IAccount.getAuthority()` method.
 
@@ -710,16 +714,16 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [MAMEnrollmentManager.Result]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.Result.html
 [MAMLogHandlerWrapper]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/log/MAMLogHandlerWrapper.html
 [MAMServiceAuthenticationCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html
-<!-- [MAMServiceAuthenticationCallbackExtended]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html -->
+[MAMServiceAuthenticationCallbackExtended]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html
 [MAMStrictViolationHandler]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictViolationHandler.html
 [MAMStrictCheck]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictCheck.html
 
 <!-- Method links -->
 [acquireToken]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html#acquireToken(java.lang.String,%20java.lang.String,%20java.lang.String)
-[getRegisteredAccountStatus]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#getRegisteredAccountStatus(java.lang.String)
+[getRegisteredAccountStatus]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#getRegisteredAccountStatus(java.lang.String,%20java.lang.String)
 [registerAccountForMAM]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAccountForMAM(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
 [registerAuthenticationCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAuthenticationCallback(com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback)
-[unregisterAccountForMAM]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String)
+[unregisterAccountForMAM]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String,%20java.lang.String)
 [updateToken]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#updateToken(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
 
 <!-- Other Microsoft links -->
