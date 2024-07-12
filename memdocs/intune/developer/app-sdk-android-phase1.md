@@ -49,7 +49,7 @@ This guide is for Android developers who are looking to add support for Microsof
 
 Before you start integrating the Intune App SDK into your Android application, take a moment to familiarize yourself with Microsoft Intune's Mobile Application Management solution:
 
-- [Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
+- [What is Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
   and where to find these features in the Microsoft Intune admin center.
 - [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
 - [Android app protection policy settings] describes each Android setting in detail.
