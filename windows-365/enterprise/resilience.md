@@ -31,11 +31,11 @@ ms.collection:
 
 # Windows 365 service resilience
 
-Windows 365 is designed to provide a resilient and reliable service for organizations and end users. Windows 365 uses [Azure Virtual Desktop services]((/azure/virtual-desktop/service-architecture-resilience)) to let end users connect to their Cloud PC in any of the supported Azure regions from anywhere, on any device. To always minimize outages and support end user and administrator requests, resilience is architected into these services.
+Windows 365 is designed to provide a resilient and reliable service for organizations and end users. Windows 365 uses [Azure Virtual Desktop services](/azure/virtual-desktop/service-architecture-resilience) to let end users connect to their Cloud PC in any of the supported Azure regions from anywhere, on any device. To always minimize outages and support end user and administrator requests, resilience is architected into these services.
 
 Windows 365 is a software-as-a-service (SaaS) service, where customers of the service don't have to architect, deploy, or manage complex infrastructure. As a SaaS service, Microsoft manages the underlying infrastructure for all of the individual Windows 365 services to maintain a global, fully available, resilient service that customers can rely upon for the daily use of their Cloud PCs. Microsoft continually works to improve the architecture of the service to improve the resilience and recovery times should there be an outage in any of the related Azure services.
 
-In addition to the Azure Virtual Desktop connectivity layer, Windows 365 operates many dedicated services that are architected as microservices to support agile operations and independence. Each of these performs specific tasks related to administrator or end user requests. Some examples include:
+In addition to the Azure Virtual Desktop connectivity layer, Windows 365 operates many dedicated services that are architected as microservices to support agile operations and independence. Each of these services performs specific tasks related to administrator or end user requests. Some examples include:
 
 - The Windows 365 provisioning service processes deployment requests to provision Cloud PCs according to the specifications and locations defined by the administrator making the request.
 - The Entra ID notification service monitors administrator changes to Microsoft Entra ID groups that trigger new deployments.
