@@ -47,12 +47,11 @@ For more information about license options, see [Microsoft Intune licensing](../
 ## Role-based access control requirements  
 To create organizational messages in Microsoft Intune, you must be assigned one of these roles: 
 
-* Microsoft Entra Global Administrator  
-* Intune administrator  
-* Organizational messages manager (Microsoft Intune role)  
-* Organizational messages writer (Microsoft Entra role)  
+* Organizational Messages Manager, a Microsoft Intune built-in role    
+* Organizational Messages Writer, a Microsoft Entra built-in role   
+* Intune Administrator, a Microsoft Entra built-in role  
 
-You can also create a custom role for people managing organization messages by using role-based access control (RBAC). For more information about how to use built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
+You can also create a custom role for people managing organization messages by using role-based access control (RBAC). For more information about how to use built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).     
 
 ## Logo requirements  
 Logos must meet these requirements:  
