@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/12/2024
+ms.date: 07/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -142,12 +142,12 @@ You can use scope tags to determine who can see client app information in Intune
 
 ## Step 6 - Assignments
 
-You can select the **Required** group assignment for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
+You can select either the **Required** or **Available** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
 
 > [!NOTE]
 > A macOS app deployed using Intune agent will not automatically be removed from the device when the device is retired. The app and data it contains will remain on the device. It is recommended that the app is removed prior to retiring the device.
 
-1. For the specific app, select **Required** assignment type.
+1. For the specific app, select eiterh the **Required** or **Available** assignment type.
 2. Click **Next** to display the **Review + create** page.
 
 ## Step 7 – Review + create
@@ -160,7 +160,8 @@ The app you have created appears in the apps list where you can assign it to the
 
 ## Known issues
 
-- **"Available for enrolled devices" and "uninstall" assignment type are not available**: Only **Required** assignment type is currently supported.
+- The **Uninstall** assignment type is not available. Only Required and Available assignments are currently supported.
+- The Intune Company Portal shows the **Pending** state even after a successful app install. Specifically, **Available** apps show as **Pending** after the user clicks the **Install** button in the Company Portal app even after apps have successfully installed. Users may reattempt installation by clicking **Check status** on the local device in the **Devices** tab of the Company Portal app. Reporting in the Intune Admin Console is not affected by this issue. This issue is being actively addressed to be resolved.
 
 ## Troubleshooting
 
