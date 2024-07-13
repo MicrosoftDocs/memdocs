@@ -47,7 +47,7 @@ Set Up School PCs configures many settings, allowing you to optimize devices for
 For more information on prerequisites, configuration, and recommendations, see [Use the Set Up School PCs app][EDU-1].
 
 > [!TIP]
-> To learn more and practice with Set up School PCs, try the [Set Up School PCs demo](https://www.microsoft.com/en-us/education/interactive-demos/enroll-devices-at-scale), which provides detailed steps to create a provisioning package and deploy a device.
+> To learn more and practice with Set up School PCs, try the [Set Up School PCs demo](https://www.microsoft.com/education), which provides detailed steps to create a provisioning package and deploy a device.
 
 ## Enroll devices with the provisioning package
 
