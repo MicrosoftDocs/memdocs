@@ -85,15 +85,6 @@ Applies to:
 
 The Intune App SDK and Intune App Wrapping Tool are moving to a different GitHub repository and a new account. There will be redirects in place for all existing repositories. In addition, the Intune sample applications are also included in this move. This change relates to both Android and iOS platforms.
 
-### New actions for policies, profiles, and apps<!-- 15283153 -->
-
-You'll be able to remove, reinstall, and reapply individual policies, profiles, and apps for iOS/iPadOS devices and Android corporate owned devices. You'll be able to apply these actions without changing assignments or group membership. These actions are intended to help resolve customer challenges that are external to Intune. Also, these actions can help to quickly restore end user productivity.
-
-Applies to:
-
-- iOS/iPadOS
-- Android Enterprise corporate owned devices
-
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
@@ -165,14 +156,6 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device management
-
-### Copilot in Intune will have device query feature using Kusto Query Language (KQL) (public preview)<!-- 24874816 -->
-
-When you use Copilot in Intune, there's a new device query feature that uses KQL.
-
-Use this feature to ask questions about your devices using a natural language. If device query can answer your question, Copilot generates the KQL query you can run to get the data you want.
-
-To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
 
 ### Changes for Account Protection policies<!-- 24810271 -->
 

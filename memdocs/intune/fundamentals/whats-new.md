@@ -78,6 +78,22 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of July 8, 2024
 
+### Device management
+
+#### Copilot in Intune now has the device query feature using Kusto Query Language (KQL) (public preview)<!-- 24874816 -->
+When you use Copilot in Intune, there's a new device query feature that uses KQL.
+Use this feature to ask questions about your devices using a natural language. If device query can answer your question, Copilot generates the KQL query you can run to get the data you want.
+
+To learn more about how you can currently use Copilot in Intune, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+
+### Monitor and Troubleshoot
+
+#### New actions for policies, profiles, and apps<!-- 15283153 -->
+
+You can now remove, reinstall, and re-apply individual policies, profiles, and apps for iOS/iPadOS devices and Android corporate owned devices. You can apply these actions without changing assignments or group membership. These actions are intended to help resolve customer challenges that are external to Intune. Also, these actions can help to quickly restore end user productivity.
+
+For more information, go to: [Remove apps and configuration](../remote-actions/remove-apps-config.md)
+
 ### App management
 
 #### MAC address available from the Managed Home Screen app<!-- 25994454 -->
