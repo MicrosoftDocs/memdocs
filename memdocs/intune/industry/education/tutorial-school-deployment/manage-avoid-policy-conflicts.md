@@ -26,17 +26,12 @@ The key to avoiding policy conflicts is to understand if existing policies targe
 
 You can exclude groups of devices or users using the "exclude group" option or by excluding devices using [filters](/mem/intune/fundamentals/filters).
 
-> [!NOTE]
+> [!TIP]
 > For more information about grouping and targeting, see [Plan Education device grouping and targeting](plan-grouping.md).
-
-If you're using an Education tenant, there are the potential policies that might lead to policy conflicts. They should be reviewed for overlapping settings to determine if exclusions are required when targeting the same set of users or devices.
-
-> [!NOTE]
-> If you're only using Intune for Education, you can confirm current assignments by navigating to **Groups** and select the group **All Devices** or **All Users** – **Settings** – **Windows device settings** or **iOS device settings**.
 
 ### Default policies for Education tenants
 
-When Intune licenses are added to an Education tenant for the first time, a set of default policies are created. These policies can be viewed in the Configuration policies list in the Intune admin center.
+When Intune licenses are added to an Education tenant for the first time, a set of default policies are created. These policies can be viewed in the Configuration policies list in the Intune admin center. They should be reviewed for overlapping settings to determine if exclusions are required when targeting the same set of users or devices. By default, these policies are targeted to *All Devices*.
 
 Default policy names:
 
@@ -48,11 +43,14 @@ Default policy names:
 - **Devices** – **Windows** – **Windows 10 and later updates** – **Update rings**
   - Windows Update Policy
 
+> [!NOTE]
+> If you're using Intune for Education, you can see and change these settings by navigating to **Groups** and then selecting the group **All Devices** or **All Users** – **Settings**. Select **Windows device settings** or **iOS device settings**.
+
 ### Policies created in the Intune for Education console
 
 When you configure settings in Intune for Education, corresponding policies are created in the Intune service that can be viewed and edited from the Intune admin console. Configuration profiles created by Intune for Education have a recognizable naming template that always starts with the name of the group followed by a suffix based on the template type.
 
-This list provides examples of configuration profiles created by Intune for Education:
+This list provides examples of configuration profiles created by Intune for Education. The *\<GROUP NAME>* part of each name represents the group that was selected in Intune for Education when the settings were configured.
 
 - **Devices** – **Windows** – **Configuration**
   - *\<GROUP NAME>* Windows10General
@@ -71,8 +69,6 @@ This list provides examples of configuration profiles created by Intune for Educ
   - *\<GROUP NAME>* WindowsFeatureUpdates
 - **Endpoint security** – **Account protection**
   - *\<GROUP NAME>*_LocalUsersAndGroupsConfig_EDU
-
-*\<GROUP NAME>* represents the group that was selected in Intune for Education when the settings were configured.
 
 ## 3. Assign the policy to target group
 
