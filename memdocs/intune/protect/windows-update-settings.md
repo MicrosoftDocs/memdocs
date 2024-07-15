@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/28/2024
+ms.date: 07/15/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -234,7 +234,7 @@ User experience settings control the end-user experience for device restart and 
     **Default**:  Yes
     Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot)
 
-    Specifies whether the device will attempt to automatically reboot outside of active hours before the deadline and grace period are passed. The recommended value is **Yes**, as it enables the system to reboot when the user isn't using the device. Setting this value to **No** forces the system to wait until the deadline and grace period are passed and then restarts the device and this could occur during active hours.
+    Specifies whether the device will attempt to automatically reboot outside of active hours before the deadline and grace period are expired. The recommended value is **Yes**, as it enables the system to reboot when the user isn't using the device. Setting this value to **No** forces the system to wait until the deadline and grace period are expired and then restarts the device and this could occur during active hours.
 
     - **Yes**
     - **No**

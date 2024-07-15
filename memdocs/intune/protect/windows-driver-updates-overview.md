@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/28/2024
+ms.date: 07/15/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -311,9 +311,12 @@ The recommended and preferred path to embrace cloud based updates is to move the
 
 ### Is there a way to set a deadline for drivers?
 
-- The Quality Update deadline and grace period settings apply to drivers.
-- A driver is approved to be made available (manually or automatically) on a date.  This is shown as the First Deployment.
-- On first or initial  scan the approved driver is offered to the device. The offered date is also the start date and time for the deadline.
+The Quality Update deadline and grace period settings apply to drivers.
+
+Here are some more details on when deadlines are applied to drivers:
+
+- A driver is approved to be made available (manually or automatically) on a date. This is shown as the First Deployment.
+- On first or initial scan the approved driver is offered to the device. The date the client's update scan initially discovered the update is also the start date and time for the deadline.
 - The deadline calculation for both quality and feature updates is based off the time the client's update scan initially discovered the update. See [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines)
 
 ### How do I set deferrals for drivers?
