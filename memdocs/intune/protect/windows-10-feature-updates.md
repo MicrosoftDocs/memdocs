@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/27/2024
+ms.date: 07/15/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -66,7 +66,7 @@ When a device receives a policy for Feature updates:
 
 The following are prerequisites for Intune's Feature updates for Windows 10 and later:
 
-- The basic functionality of creating and targeting a feature update only requires a license for Intune. The basic functionality includes creating the policy and selecting a feature update to update devices, using the **Make updates available as soon as possible** option or specifying a start date, and reporting. Capabilities supported by client policies on Professional SKU devices won't require a license.
+- The core functionality of creating and targeting a feature update only requires a license for Intune. The core functionality includes creating the policy and selecting a feature update to update devices, using the **Make updates available as soon as possible** option or specifying a start date, and reporting. Capabilities supported by client policies on Professional SKU devices don't require a license.
 
 - Additional cloud-based functionality requires an additional license. To use a cloud-based capability, in addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
 
