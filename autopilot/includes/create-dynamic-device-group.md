@@ -20,7 +20,7 @@ device-preparation/tutorial/user-driven/entra-join-automatic-enrollment.md
 
 Headings are driven by article context. -->
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Groups** in the left hand pane.
 
