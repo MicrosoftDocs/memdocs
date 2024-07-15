@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2024
+ms.date: 07/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -1579,7 +1579,6 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 - **Configure Lsa Protected Process**  
   Baseline default: *Enabled with UEFI lock. LSA will run as protected process and this configuration is UEFI locked.*  
   [Learn more](/windows/client-management/mdm/policy-csp-lsa#configurelsaprotectedprocess)
-  <!-- UI Link is a 404 -->
 
 ## Microsoft App Store
 
