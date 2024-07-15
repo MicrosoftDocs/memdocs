@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: amhaq
+ms.reviewer: rishitasarin
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -118,4 +118,4 @@ After considering supported settings and enrollment features, choose the user en
 * [Set up user enrollment with Company Portal](apple-user-enrollment-with-company-portal.md)   
 * [Set up account driven user enrollment](apple-account-driven-user-enrollment.md)   
 
-For more details about Apple User Enrollment features and functionality, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/dep23db2037d/web) on the Apple support website.  
+For more information about Apple User Enrollment, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/dep23db2037d/web) on the Apple support website.  
