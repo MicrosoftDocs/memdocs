@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2024
+ms.date: 07/08/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -39,6 +39,24 @@ This article describes known issues that can often be resolved with:
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 ## Known issues
+
+## Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
+
+Date added: *July 8, 2024*
+
+Autopilot device preparation deployments fail when devices aren't in the UTC time zone. The issue is being investigated.
+
+As a workaround, customers can manually set the time zone in OOBE via Windows PowerShell until the issue is resolved:
+
+```powershell
+Set-TimeZone -Id "UTC"
+```
+
+## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
+
+Date added: *July 8, 2024*
+
+In some Windows Autopilot device preparation deployments, BitLocker encryption may default to 128-bit even though the admin configured 256-bit encryption due to a known race condition. The issue is being investigated. Microsoft recommends that customers who need 256-bit BitLocker encryption wait for the issue to be resolved before trying to use Windows Autopilot device preparation.
 
 ## Windows Autopilot device preparation policy shows 0 groups assigned
 
@@ -108,12 +126,6 @@ If the intention is for the user to be a local administrator user on the device,
 
 - The Microsoft Entra ID **Local administrator settings** is set to **Selected** and the administrator users are selected.
 - The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
-
-### Corporate identifiers isn't working in initial release of Windows Autopilot device preparation
-
-Date added: *June 3, 2024*
-
-Corporate identifiers isn't working in the initial release of Windows Autopilot device preparation. If the personal device restriction is enabled and personal devices aren't allowed, enrollment always fails during the Windows Autopilot device preparation deployment. For this reason, Windows Autopilot device preparation doesn't work when the personal device restriction is enabled. The issue is being investigated. Microsoft recommends that customers that have personal device restrictions enabled wait for the issue to be resolved before trying to use Windows Autopilot device preparation.
 
 ### Initial release of Windows Autopilot device preparation
 

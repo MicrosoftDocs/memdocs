@@ -55,14 +55,23 @@ It isn't necessary to add corporate identifiers for all deployments. During enro
 
 Microsoft Intune marks devices that register with Microsoft Entra as personal.
 
-## Role-based access control
+## Role-based access control  
 
-You must be an Intune administrator or global administrator to add corporate identifiers, or a custom Intune role assigned corporate device identifier permissions. Permissions include:
+To add corporate identifiers in Microsoft Intune, you must be assigned one of these roles:  
 
-- Update  
-- Read  
-- Delete  
-- Create  
+- Policy and Profile Manager, a Microsoft Intune built-in role  
+- [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator), a Microsoft Entra built-in role    
+
+These roles can *read*, *delete*, *create*, and *update* corporate device identifiers.    
+
+|Permission| Description |
+|---------------|------------|
+|Read | View the IMEI or serial numbers used as corporate device identifiers. | 
+|Delete | Delete IMEI or serial numbers used as corporate device identifiers. |
+|Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. |
+|Update | Change IMEI or serial numbers used as corporate device identifiers. |  
+
+You can also create a custom Intune role for people managing corporate identifiers and assign corporate device identifier permissions. For more information about built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).  
 
 ## Supported corporate identifiers  
 
@@ -250,7 +259,7 @@ For details about International Mobile Equipment Identifiers, see [3GGPP TS 23.0
 You can use the following script to get the device details required for Windows corporate identifiers:
 
  ```powershell
- (Get-WmiObject -Class Win32_ComputerSystem | ForEach-Object { $.Manufacturer, $.Model, (Get-WmiObject -Class Win32_BIOS).SerialNumber -join ',' })
+ (Get-WmiObject -Class Win32_ComputerSystem | ForEach-Object {$_.Manufacturer, $_.Model, (Get-WmiObject -Class Win32_BIOS).SerialNumber -join ',' })
 
  ```
 
