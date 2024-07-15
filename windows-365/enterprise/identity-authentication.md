@@ -75,7 +75,7 @@ The following table shows key capabilities or requirements based on the selected
 
 ## Authentication
 
-When accessing a Cloud PC, there are three separate authentication phases:
+When a user accessess a Cloud PC, there are three separate authentication phases:
 
 - **Cloud service authentication**: Authenticating to the Windows 365 service, which includes subscribing to resources and authenticating to the Gateway, is with Microsoft Entra ID.
 - **Remote session authentication**: Authenticating to the Cloud PC. There are multiple ways to authenticate to the remote session, including the recommended single sign-on (SSO).
@@ -102,7 +102,7 @@ To access the Windows 365 service, users must first authenticate to the service 
 
 #### Multifactor authentication
 
-Follow the instructions in [Set conditional access policies](set-conditional-access-policies.md) to learn how to enforce Microsoft Entra multifactor authentication for your Cloud PCs. That article will also tell you how to configure how often your users are prompted to enter their credentials.
+Follow the instructions in [Set conditional access policies](set-conditional-access-policies.md) to learn how to enforce Microsoft Entra multifactor authentication for your Cloud PCs. That article also tells you how to configure how often your users are prompted to enter their credentials.
 
 #### Passwordless authentication
 
@@ -118,17 +118,17 @@ You can use third-party identity providers as long as they [federate with Micros
 
 ### Remote session authentication
 
-If you haven't already enabled [single sign-on](#single-sign-on-sso) and users haven't saved their credentials locally, they'll also need to authenticate to the Cloud PC when launching a connection.
+If you haven't already enabled [single sign-on](#single-sign-on-sso) and users haven't saved their credentials locally, they also need to authenticate to the Cloud PC when launching a connection.
 
 #### Single sign-on (SSO)
 
-Single sign-on (SSO) allows the connection to skip the Cloud PC VM credential prompt and automatically sign the user in to Windows through Microsoft Entra authentication. Microsoft Entra authentication provides other benefits including passwordless authentication and support for third-party identity providers. To get started, review the steps to [configure single sign-on](configure-single-sign-on.md).
+Single sign-on (SSO) allows the connection to skip the Cloud PC credential prompt and automatically sign the user in to Windows through Microsoft Entra authentication. Microsoft Entra authentication provides other benefits including passwordless authentication and support for third-party identity providers. To get started, review the steps to [configure single sign-on](configure-single-sign-on.md).
 
 Without SSO, the client prompts users for their Cloud PC credentials for every connection. The only way to avoid being prompted is to save the credentials in the client. We recommend you only save credentials on secure devices to prevent other users from accessing your resources.
 
 ### In-session authentication
 
-Once you're connected to your Cloud PC, you may be prompted for authentication inside the session. This section explains how to use credentials other than username and password in this scenario.
+After you connect to your Cloud PC, you may be prompted for authentication inside the session. This section explains how to use credentials other than username and password in this scenario.
 
 #### In-session passwordless authentication
 
@@ -143,7 +143,7 @@ To access Microsoft Entra resources with Windows Hello for Business or security 
 
 #### In-session smart card authentication
 
-To use a smart card in your session, make sure you've installed the smart card drivers on the Cloud PC and allow smart card redirection as part of [managing RDP device redirections for Cloud PCs](manage-rdp-device-redirections.md). Review the [client comparison chart](/azure/virtual-desktop/compare-remote-desktop-clients?pivots=windows-365#in-session-authentication) to make sure your client supports smart card redirection.
+To use a smart card in your session, make sure you install the smart card drivers on the Cloud PC and allow smart card redirection as part of [managing RDP device redirections for Cloud PCs](manage-rdp-device-redirections.md). Review the [client comparison chart](/azure/virtual-desktop/compare-remote-desktop-clients?pivots=windows-365#in-session-authentication) to make sure your client supports smart card redirection.
 
 <!-- ########################## -->
 ## Next steps
