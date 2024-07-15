@@ -73,8 +73,6 @@ To use Windows Driver Update management, your organization must have the followi
 
 - **Microsoft Entra ID**: *Microsoft Entra ID Free* (or greater) subscription.
 
-### Device & Edition requirements
-
 **Windows subscriptions and licenses**:
 
 Your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
@@ -87,6 +85,8 @@ Your organization must have one of the following subscriptions that include a li
 *Review your subscription details for applicability to Windows 11*.
 
 If you’re blocked when creating new policies for capabilities that require WUfB-DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants’ licenses meet the WUfB-DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+
+### Device & Edition requirements
 
 **Windows editions**:
 
