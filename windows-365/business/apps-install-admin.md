@@ -36,7 +36,7 @@ Admins can deploy apps to users' Cloud PCs by first enrolling Windows 365 Busine
 
 ## Requirements
 
-- You must have the Global Administrator or Windows 365 Administrator role.
+- You must have the Windows 365 Administrator role.
 - An Intune license subscription. For more information, see [Microsoft Intune licensing](/mem/intune/fundamentals/licenses).
 
 ## Change setting to allow admins to enroll Cloud PCs in Intune

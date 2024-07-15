@@ -11,7 +11,7 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Windows Autopilot with co-management
@@ -38,7 +38,7 @@ In the following video, senior program manager Danny Guillory and principal prog
 > [!VIDEO https://aka.ms/docs/player?id=86b3188d-1f01-4655-b001-2274f072e910]
 
 > [!NOTE]
-> [Introducing Autopilot into co-management](./autopilot-enrollment.md). When you use [Windows Autopilot](/autopilot/windows-autopilot) to provision a device, it first enrolls to Microsoft Entra ID and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app which introduces component timing and policy delays.
+> [Introducing Autopilot into co-management](./autopilot-enrollment.md). When you use [Windows Autopilot](/autopilot/overview) to provision a device, it first enrolls to Microsoft Entra ID and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app which introduces component timing and policy delays.
 
 ## Benefits
 

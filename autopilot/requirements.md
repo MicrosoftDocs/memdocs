@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot requirements
-description: Inform yourself about requirements for Windows Autopilot deployment.
+description: Software, Networking, Licensing, and Configuration requirements for Windows Autopilot.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/28/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -23,10 +23,21 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>
 ---
 
-
 # Windows Autopilot requirements
 
-The list of requirements for Windows Autopilot device preparation is organized into five different categories:
+> [!TIP]
+>
+> RSS can be used to notify when requirements are added or updated to this page. For example, the following RSS link includes this article:
+>
+> ``` url
+> https://learn.microsoft.com/en-us/search/?terms=%22The%20list%20of%20requirements%20for%20Windows%20Autopilot%20is%20organized%20into%20four%20different%20categories%22
+> ```
+>
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
+>
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+The list of requirements for Windows Autopilot is organized into four different categories:<!-- RSS subscription is based on this line so don't change. If the line needs to change, update RSS URL in the Tip in the article.-->
 
 - **Software** - OS requirements.
 - **Networking** - networking requirements.
@@ -219,9 +230,9 @@ Windows Autopilot depends on specific capabilities available in Windows client a
 
 To provide needed Microsoft Entra ID and MDM functionality, including automatic MDM enrollment and company branding features, one of the following subscriptions is required:
 
-- [Microsoft 365 Business Premium subscription](https://www.microsoft.com/microsoft-365/business)
-- [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline)
-- [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/buy-license/microsoft365/default.aspx)
+- [Microsoft 365 Business Premium subscription](https://www.microsoft.com/microsoft-365/business).
+- [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline).
+- [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/products/microsoft-365).
 - [Microsoft 365 Enterprise E3 or E5 subscription](https://www.microsoft.com/microsoft-365/enterprise), which include all Windows client, Microsoft 365, and EMS features (Microsoft Entra ID and Intune).
 - [Enterprise Mobility + Security E3 or E5 subscription](https://www.microsoft.com/cloud-platform/enterprise-mobility-security), which include all needed Microsoft Entra ID and Intune features.
 - [Intune for Education subscription](/intune-education/what-is-intune-for-education), which include all needed Microsoft Entra ID and Intune features.
