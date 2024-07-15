@@ -157,14 +157,6 @@ Applies to:
 
 ## Device management
 
-### Copilot in Intune will have device query feature using Kusto Query Language (KQL) (public preview)<!-- 24874816 -->
-
-When you use Copilot in Intune, there's a new device query feature that uses KQL.
-
-Use this feature to ask questions about your devices using a natural language. If device query can answer your question, Copilot generates the KQL query you can run to get the data you want.
-
-To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
-
 ### Changes for Account Protection policies<!-- 24810271 -->
 
 Account Protection policies can help you protect the credentials of your users, and focus on settings for Windows Hello and Credential Guard, which are part of Windows identity and access management.
