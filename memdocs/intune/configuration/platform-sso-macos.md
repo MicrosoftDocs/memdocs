@@ -297,7 +297,7 @@ The following settings let you customize the end-user experience and give more g
 | Platform SSO settings | Possible values  | Usage |
 | --- | --- | --- |
 | **Account Display Name**  | Any string value. | Customize the organization name end users see in the Platform SSO notifications. |
-| **Enable Create User At Login** | **Enable** or **Disable**. | Allow any organizational user to sign in to the device using their Microsoft Entra credentials.  |
+| **Enable Create User At Login** | **Enable** or **Disable**. | Allow any organizational user to sign in to the device using their Microsoft Entra credentials. When creating new local accounts, the provided username and password must be the same as the user's Entra ID UPN (e.g., `user@contoso.com`) and password.|
 | **New User Authorization Mode** | **Standard**, **Admin**, or **Groups** | One-time permissions the user has at sign-in when the account is created using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
 | **User Authorization Mode** | **Standard**, **Admin**, or **Groups** | Persistent permissions the user has at sign-in each time the user authenticates using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
 
