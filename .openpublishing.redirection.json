@@ -30,7 +30,6 @@
       "redirect_url": "/mem/intune/copilot/security-copilot",
       "redirect_document_id": true
     },
-
     {
       "source_path": "memdocs/intune/user-help/allow-wi-fi-control-android.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
@@ -2469,6 +2468,136 @@
     {
       "source_path": "autopilot/software-requirements-old.md",
       "redirect_url": "/autopilot/requirements?tabs=software",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/monitor-connection-health.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/enroll-devices.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/about-updates.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/tutorial-windows10.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/get-support.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/connect-configmgr.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/ready-for-windows.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/deploy-pilot.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/troubleshooting.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/group-policy-settings.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/deploy-prod.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/compat-assessment.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/account-reset.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/privacy.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/set-up.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/about-deployment-plans.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/faq.yml",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/overview.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/enable-data-sharing.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/whats-new.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/create-deployment-plans.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/index.yml",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/health-status-monitoring.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/account-close.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/log-collector.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/about-assets.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
       "redirect_document_id": false
     }
   ]
