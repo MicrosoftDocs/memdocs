@@ -5,7 +5,7 @@ description: Microsoft Deployment Toolkit (MDT) samples
 ms.date: 09/09/2016
 ms.subservice: mdt
 ms.service: configuration-manager
-ms.topic: article
+ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
