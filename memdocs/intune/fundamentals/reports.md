@@ -314,6 +314,18 @@ You can view the **Incomplete user enrollments** report using the following step
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Incomplete user enrollments**.
 
+### Device attestation status report
+
+This report provides a summary of devices that have either *Completed*, *Failed* or *Not started* enrollment attestation.
+
+You can view the **Device attestation status report** report using the following steps:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Device management** > **Device attestation status**.
+3. Use the drop-downs to filter by attestation status or device ownership.
+4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
+5. For more information on the report, see [Windows enrollment attestation](../enrollment/windows-enrollment-attestation.md#device-attestation-status-report).
+
 ### Windows Autopilot deployments report (Operational)
 
 This report provides a summary of deployment details for Windows Autopilot enrolled devices for the last 30 days.
