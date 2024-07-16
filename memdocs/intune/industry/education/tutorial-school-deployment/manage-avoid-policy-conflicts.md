@@ -48,9 +48,9 @@ Default policy names:
 
 ### Policies created in the Intune for Education console
 
-When you configure settings in Intune for Education, corresponding policies are created in the Intune service that can be viewed and edited from the Intune admin console. Configuration profiles created by Intune for Education have a recognizable naming template that always starts with the name of the group followed by a suffix based on the template type.
+When you configure settings in Intune for Education, corresponding policies are created in the Intune service that can be viewed and edited from the Intune admin console. Configuration profiles created by Intune for Education have a recognizable naming template that always starts with the name of the group followed by a suffix based on the template type. The *\<GROUP NAME>* part of each name represents the group that was selected in Intune for Education when the settings were configured.
 
-This list provides examples of configuration profiles created by Intune for Education. The *\<GROUP NAME>* part of each name represents the group that was selected in Intune for Education when the settings were configured.
+This list provides examples of configuration profiles created by Intune for Education. They should be reviewed for overlapping settings to determine if exclusions are required when targeting the same set of users or devices.
 
 - **Devices** – **Windows** – **Configuration**
   - *\<GROUP NAME>* Windows10General
