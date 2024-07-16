@@ -20,9 +20,6 @@ If you don't already have a Microsoft 365 tenant, you need to create one.
 
 For more information, see [Create your Office 365 tenant][M365-1].
 
-> [!TIP]
-> To learn more, and practice how to configure the Microsoft 365 tenant for your school, try [this interactive demo](https://www.microsoft.com/en-us/education/interactive-demos/set-up-Microsoft-365).
-
 ### Explore the Microsoft 365 admin center
 
 The **Microsoft 365 admin center** is the hub for all administrative consoles for the Microsoft 365 cloud. To access the [Microsoft 365 admin center](https://admin.microsoft.com), sign in with the same global administrator account when you [created the Microsoft 365 tenant](#create-a-microsoft-365-tenant).
