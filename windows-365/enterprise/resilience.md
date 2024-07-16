@@ -52,7 +52,7 @@ Each of these services:
 
 - Use standard Azure services
 - Is architected to use Azure resilience services like Azure availability zones.
-- Is its own web service that has a certain set of extra Azure infrastructure requirements like CosmosBD, Azure storage, and Event hubs.
+- Is its own web service that has a certain set of extra Azure infrastructure requirements like CosmosDB, Azure storage, and Event hubs.
 
 The following diagram shows the architecture of an example service. Windows 365 distributes its infrastructure across multiple availability zones within a region and across multiple Azure regions. This supports in-region and cross-region resiliency. If an outage occurs within a region, the service continues functioning. If a region fails, the service is transferred to the secondary region's infrastructure, and normal operations continue.
 
