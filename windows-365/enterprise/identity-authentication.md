@@ -75,7 +75,7 @@ The following table shows key capabilities or requirements based on the selected
 
 ## Authentication
 
-When a user accessess a Cloud PC, there are three separate authentication phases:
+When a user accesses a Cloud PC, there are three separate authentication phases:
 
 - **Cloud service authentication**: Authenticating to the Windows 365 service, which includes subscribing to resources and authenticating to the Gateway, is with Microsoft Entra ID.
 - **Remote session authentication**: Authenticating to the Cloud PC. There are multiple ways to authenticate to the remote session, including the recommended single sign-on (SSO).
