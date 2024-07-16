@@ -108,15 +108,15 @@ There's a compatibility problem between the Windows Autopilot device preparation
 
 Until the issue is fixed, for users to be standard non-administrators on their device, make sure that the settings are set to one of the following three setting combinations:
 
-- **Option 1**
+- **Standard user option 1**
   - The Microsoft Entra ID **Local administrator settings** is set to **None**.
   - The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
 
-- **Option 2**
+- **Standard user option 2**
   - The Microsoft Entra ID **Local administrator settings** is set to **Selected** and the standard non-administrator users aren't selected.
   - The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
 
-- **Option 3**
+- **Standard user option 3**
   - The Microsoft Entra ID **Local administrator settings** is set to **All**.
   - The Windows Autopilot device preparation policy **User account type** is set to **Standard user**.
 
@@ -124,11 +124,11 @@ In all three cases, the end result is that the user is a standard non-administra
 
 If the intention is for the user to be a local administrator user on the device, make sure that the settings are set to one of the following two setting combinations:
 
-- **Option 1**
+- **Administrator user option 1**
   - The Microsoft Entra ID **Local administrator settings** is set to **All**.
   - The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
 
-- **Option 2**
+- **Administrator user option 2**
   - The Microsoft Entra ID **Local administrator settings** is set to **Selected** and the administrator users are selected.
   - The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
 
