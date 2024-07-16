@@ -57,6 +57,11 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 - **Wi-Fi type**: Select **Basic**.
 - **Network name**: Enter a name for this Wi-Fi connection. End users see this name when they browse their device for available Wi-Fi connections. For example, enter **Contoso WiFi**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
+
+Note:
+1. We cannot target two wi-fi profiles with the same SSID to the same device.
+2. If you intend to chnge the Trusted Root Certificate of the profile, please ensure you are connected to a second internet source, to avoid disconnection due to cert change and proper delivery of the updated profile. Once we support multiple  trusted root certificate in wi-fi profile, which we intend to do, the second internet connection will no longer be needed.
+
 - **Connect automatically**: **Enable** automatically connects to your Wi-Fi network when devices are in range. Select **Disable** to prevent or block this automatic connection.
 
   When devices are connected to another preferred Wi-Fi connection, then they don't automatically connect to this Wi-Fi network. If devices fail to connect automatically when this setting is enabled, then disconnect the devices from any existing Wi-Fi connections.
