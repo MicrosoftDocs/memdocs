@@ -25,16 +25,16 @@ sections:
           Can I turn off diagnostic and usage data?
         answer: |
           To help manage when the site sends data, use the service connection point in offline mode. Then use the service connection tool to manually send data. For more information, see the following articles:
-          
+
           - [About the service connection point](../../servers/deploy/configure/about-the-service-connection-point.md)
           - [Use the service connection tool](../../servers/manage/use-the-service-connection-tool.md)
-          
+
           To support new versions of Windows and cloud services like Microsoft Intune, you need to update the current branch of Configuration Manager on a regular basis. Microsoft requires at least the basic level of diagnostic and usage data. This data is used to keep the product up to date, improve the update experience, and improve the quality and security of the product.
-          
+
           No data is sent to the service when the service connection point is in offline mode. When you switch to online mode or use the service connection tool, it sends data to the service to check for updates.
-          
+
           You can also choose the level of data that Configuration Manager collects. For more information, see [Levels of diagnostic usage data](levels-overview.md).
-          
+
       - question: |
           What is the data retention period?
         answer: |
@@ -49,18 +49,18 @@ sections:
           How frequently is the data sent?
         answer: |
           The SQL Server stored procedures run every seven days from the date you installed the site.
-          
+
           - In online mode, the service connection point uploads the data after the queries run.
-          
-          - In offline mode, you use the service connection tool to upload the data. (The data isn't initially available for offline use until seven days after you install the site.)  
-          
+
+          - In offline mode, you use the service connection tool to upload the data. (The data isn't initially available for offline use until seven days after you install the site.)
+
       - question: |
           Can the data be used to form a network map?
         answer: |
           No. This data doesn't include any network details, such as IP addresses or detailed geographic information. For more information, see [Levels of diagnostic usage data](levels-overview.md#version-specific-details), and find more detail for the version you're using.
-          
+
           The data does include time zone information from each site. This information can provide insight into the broad geolocation and global dispersion of sites in a hierarchy.
-          
+
       - question: |
           Can you see data in custom SQL Server tables?
         answer: |
@@ -75,18 +75,17 @@ sections:
           Is any data sent to other integrated cloud services?
         answer: |
           Yes, when you integrate those services with Configuration Manager. As part of the interaction with any cloud service, Configuration Manager sends some data to that service. This data is specific to that cloud service, and separate from Configuration Manager diagnostics and usage data. For more information on the specific data used in the interaction with another cloud service, see the documentation for that service.
-          
+
           For example, the following cloud services are a part of Microsoft Intune family of products:
-          
-          - [Desktop Analytics data privacy](../../../desktop-analytics/privacy.md)
+
           - [Tenant attach data collection](../../../tenant-attach/data-collection.md)
           - [Endpoint analytics data collection](../../../../analytics/data-collection.md)
           - [Privacy and personal data in Intune](/intune/protect/privacy-personal-data)
           - [Windows Autopilot requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
-          
+
       - question: |
           Does Configuration Manager collect any personal data?
         answer: |
           No. Configuration doesn't collect or transmit any personal data or customer data. It's an on-premises product that you directly deploy, manage, and operate. The diagnostics and usage data that Microsoft collects improves the installation experience, quality, and security of future releases.
-          
+
           For more information about Configuration Manager data, see [Levels of diagnostic usage data](levels-overview.md).

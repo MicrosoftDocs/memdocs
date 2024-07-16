@@ -2599,6 +2599,11 @@
       "source_path": "memdocs/configmgr/desktop-analytics/about-assets.md",
       "redirect_url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/core/clients/manage/monitor-windows-analytics.md",
+      "redirect_url": "/mem/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove",
+      "redirect_document_id": false
     }
   ]
 }
