@@ -24,7 +24,7 @@ ms.localizationpriority: high
 > [!NOTE]
 > **Supported** versions include devices running the three most recent operating system versions. These devices can enroll and take advantage of all Intune functionality that is applicable, and all new eligible features will work on these devices.
 >
-> **Allowed** versions includes devices running a non-supported version (within three versions of the supported versions). These devices will be able to enroll and take advantage of Intune's eligible features but doesn't guarantee that there won’t be breaking features, bugs, or issues. 
+> **Allowed** versions includes devices running a non-supported version (within three versions of the supported versions). These devices can enroll and take advantage of Intune's eligible features but there is no guarantee that they will work as expected. 
 >
 > Intune requires iOS 15.x or later for app protection policies and app configuration.
 
