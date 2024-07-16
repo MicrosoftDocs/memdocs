@@ -80,7 +80,7 @@ The following editions are supported:
 - Windows 10 Enterprise
 - Windows 10 Education
 
-Windows 10 LTSC/LTSB editions aren't supported.
+- Windows 10 LTSC/LTSB
 
 #### HoloLens
 
