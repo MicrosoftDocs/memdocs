@@ -97,10 +97,11 @@ To access Copilot in Intune, sign into the [Intune admin center](https://go.micr
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-home-page.png" alt-text="Screenshot that shows the Intune admin center homepage with Copilot features in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-home-page.png":::
 
-Currently, there are two areas to use Copilot in Intune:
+Currently, there are three areas to use Copilot in Intune:
 
 - Policy and setting management
 - Device details and troubleshooting
+- Device query
 
 ### Policy and setting management
 

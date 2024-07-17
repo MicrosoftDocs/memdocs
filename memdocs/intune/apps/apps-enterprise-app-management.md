@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/12/2024
+ms.date: 07/15/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -71,7 +71,7 @@ The Enterprise App Catalog includes apps that self update. Intune ensures the ap
 
 ## Frequently asked questions (FAQ)
 
-### How can I request to add an application the Enterprise App Catalog?
+### How can I request to add an application to the Enterprise App Catalog?
 
 If you aren't already working with a Microsoft contact, fill out the [Enterprise app management app catalog request](https://aka.ms/EAM/AppRequest) form.
 

@@ -10,10 +10,10 @@ author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
-# Support for Windows 11 in Configuration Manager  
+# Support for Windows 11 in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -26,7 +26,7 @@ For more information about support for the Windows Assessment and Deployment Kit
 
 <!--
 > [!TIP]
-> Windows Server builds as a client are supported the same as the associated Windows 11 version. For example, Windows Server 2022 is the same build version as Windows 11 ..., and Windows Server version ... is the same build version as Windows 11, version .... 
+> Windows Server builds as a client are supported the same as the associated Windows 11 version. For example, Windows Server 2022 is the same build version as Windows 11 ..., and Windows Server version ... is the same build version as Windows 11, version ....
 >
 > For more information on Windows Server as a site system, see [Supported operating systems for Configuration Manager site system servers](supported-operating-systems-for-site-system-servers.md).
 -->
@@ -50,7 +50,7 @@ The following table lists the versions of Windows 11 that you can use as a clien
 |--------------------------------------------|----------------|----------------|----------------|----------------|
 | **23H2**<br>(10.0.22631) <!--2026-10-31--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 | **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | 
+| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
 
@@ -92,10 +92,6 @@ You can [update and service Windows Insider](../../../sum/get-started/configure-
 To provide feedback on Windows Insider, use the Windows [Feedback Hub](/windows-insider/business/feedback).
 
 ## Known issues
-
-<!-- ### Desktop Analytics -->
-
-<!-- [Desktop Analytics](../../../desktop-analytics/overview.md) doesn't support Windows 11. For information about Windows 11 hardware readiness, Microsoft recommends that you enable tenant attach and [Endpoint analytics](../../../../analytics/overview.md). -->
 
 <!-- 10797955 -->
 ### Windows servicing dashboard

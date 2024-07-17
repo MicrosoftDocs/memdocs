@@ -103,7 +103,7 @@ The following are the available tasks with their required permissions and rights
   >
   > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. The Intune Administrator and similar accounts are highly privileged roles that should be limited to scenarios that can't use a different role.
 
-- **Manage App Control for Business policy** - Accounts must have the **Application control** permission, which includes rights for *Delete*, *Read*, *Assign*, *Create*, *Update*, and *View Reports*.
+- **Manage App Control for Business policy** - Accounts must have the **App Control for Business** permission, which includes rights for *Delete*, *Read*, *Assign*, *Create*, *Update*, and *View Reports*.
 
 - **View reports for App Control for Business policy** - Accounts must have one of the following permissions and rights:
 
