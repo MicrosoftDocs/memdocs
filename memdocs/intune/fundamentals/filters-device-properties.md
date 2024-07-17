@@ -125,7 +125,7 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
-- **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device Operating System version. Specify a version value for the operatingSystemVersion (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
+- **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter a version value (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
 
   Examples:
 
@@ -354,7 +354,7 @@ You can use the following app properties in your managed app filter rules:
   - iOS/iPadOS
   - Windows
 
-- **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device Operating System version. Specify a version value for the operatingSystemVersion (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
+- **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter a version value (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
 
   Examples:
 
