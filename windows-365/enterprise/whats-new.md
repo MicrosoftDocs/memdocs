@@ -96,9 +96,9 @@ Windows 365 now supports cross region disaster recovery. For more information, s
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Windows 365 Boot and Windows 365 Switch now support battery direction<!--51748880-->
+#### Windows 365 Boot and Windows 365 Switch now support battery status redirection<!--51748880-->
 
-Windows 365 Boot and Windows 365 Switch now support battery redirection. Cloud PCs now show the local PC's battery status.
+Windows 365 Boot and Windows 365 Switch now support battery status redirection. Cloud PCs now show the local PC's battery status.
 
 #### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
 

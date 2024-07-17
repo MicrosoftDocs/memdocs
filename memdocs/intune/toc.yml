@@ -1829,6 +1829,8 @@ items:
             href: ./industry/education/tutorial-school-deployment/manage-surface-devices.md       
           - name: Reset and wipe devices
             href: ./industry/education/tutorial-school-deployment/reset-wipe.md
+          - name: Avoid policy conflicts
+            href: ./industry/education/tutorial-school-deployment/manage-avoid-policy-conflicts.md
         - name: 6. Troubleshoot and get help
           href: ./industry/education/tutorial-school-deployment/troubleshoot-overview.md
         - name: 7. Common Education configuration
