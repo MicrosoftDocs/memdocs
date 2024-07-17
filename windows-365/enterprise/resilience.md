@@ -31,7 +31,7 @@ ms.collection:
 
 # Windows 365 service resilience
 
-Windows 365 is designed to provide a resilient and reliable service for organizations and end users, connecting to and using their Cloud PCs. 
+Windows 365 is designed to provide a resilient and reliable service for organizations and end users, connecting to, and using their Cloud PCs. 
 
 Windows 365 uses the [Azure Virtual Desktop service](/azure/virtual-desktop/service-architecture-resilience) to connect and broker end user connections to their Cloud PC in any of the supported Azure regions from anywhere, on any device. To always minimize outages and support end user and administrator requests, resilience is architected into these services. In addition to this Windows 365 operates another set of platform infrastructure that provides the many administrator and end user features that manage and control the overall Windows 365 experience. This infrastructure is fully managed by Microsoft. 
 
