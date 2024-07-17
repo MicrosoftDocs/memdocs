@@ -38,7 +38,7 @@ Windows 365 is a software-as-a-service (SaaS) service, where customers of the se
 In addition to the Azure Virtual Desktop connectivity layer, Windows 365 operates many dedicated services that are architected as microservices to support agile operations and independence. Each of these services performs specific tasks related to administrator or end user requests. Some examples include:
 
 - The Windows 365 provisioning service processes deployment requests to provision Cloud PCs according to the specifications and locations defined by the administrator making the request.
-- The Entra ID notification service monitors administrator changes to Microsoft Entra ID groups that trigger new deployments.
+- The Entra ID notification service monitors administrator changes to Microsoft Entra ID groups, subscription and license changes that trigger new deployments.
 - Other services manage
   - The administrator portal
   - The end user portal
@@ -54,7 +54,7 @@ Each of these services:
 - Is architected to use Azure resilience services like Azure availability zones.
 - Is its own web service that has a certain set of extra Azure infrastructure requirements like CosmosDB, Azure storage, and Event hubs.
 
-The following diagram shows the architecture of an example service. Windows 365 distributes its infrastructure across multiple availability zones within a region and across multiple Azure regions. This supports in-region and cross-region resiliency. If an outage occurs within a region, the service continues functioning. If a region fails, the service is transferred to the secondary region's infrastructure, and normal operations continue.
+The following diagram shows the architecture of an example service. Windows 365 distributes its infrastructure across multiple availability zones within a region and across multiple Azure regions. The service operates in an active-active manner. This supports in-region and cross-region resiliency. If an outage occurs within a region, the service continues functioning. If a region fails, the service is transferred to the secondary region's infrastructure, and normal operations continue.
 
 <!-- ########################## -->
 ## Next steps
