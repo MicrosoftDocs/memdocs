@@ -133,7 +133,7 @@ You can use the following device properties in your managed device filter rules:
   - `(device.operatingSystemVersion -gt 10.0.22000.1000)`
   - `(device.operatingSystemVersion -le 10.0.22631.3235)`
 
-  For a list of supported operators, go to [operatingSystemVersion operators](#operatingsystemversion-operators) (in this article).
+  For a list of supported operators, go to [operatingSystemVersion supported operators](#operatingsystemversion-supported-operators) (in this article).
 
   This property applies to:
 
@@ -150,7 +150,7 @@ You can use the following device properties in your managed device filter rules:
 
 - **`osVersion` (OS Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
-  > [!NOTE]
+  > [!TIP]
   > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new filters using this property. Existing filters that use `osVersion` continue to work.
 
   Examples:
@@ -362,7 +362,7 @@ You can use the following app properties in your managed app filter rules:
   - `(app.operatingSystemVersion -gt 10.0.22000.1000)`
   - `(app.operatingSystemVersion -le 10.0.22631.3235)`
 
-  For a list of supported operators, go to [operatingSystemVersion operators](#operatingsystemversion-operators) (in this article).
+  For a list of supported operators, go to [operatingSystemVersion supported operators](#operatingsystemversion-supported-operators) (in this article).
 
   This property applies to:
 
@@ -375,7 +375,7 @@ You can use the following app properties in your managed app filter rules:
 
 - **`osVersion` (OS Version)**: Create a filter rule based on the client reported operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
-  > [!NOTE]
+  > [!TIP]
   > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new filters using this property. Existing filters that use `osVersion` continue to work.
 
   Examples:
@@ -452,7 +452,7 @@ You can use the following operators in the rule syntax editor:
   - **Allowed values**: `-notContains` | `notContains`
   - **Example**: `(device.manufacturer -notContains "Samsung")`
 
-#### operatingSystemVersion operators
+#### operatingSystemVersion supported operators
 
 When you use the `operatingSystemVersion (Operating System Version)` property, you can use the following operators in the rule syntax editor:
 
