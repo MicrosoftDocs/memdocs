@@ -105,6 +105,13 @@ If you need to get the version information of your Win32 app, you can use the fo
 
 In the preceding PowerShell command, replace `<path to binary file>` with your file path.
 
+## Intune Management Extension win32 app installation failure retry interval
+If a win32 app fails to install, the Intune Management Extension will retry the installation:
+- every 5 minutes for 3 times if the installation exit code is specified as **Retry** in the Return Codes section of the win32 app properties. If the 3 retries fail as well, then IME will repeat the process 24 hours later.
+- every 24 hours if the installation exit code is specified as **Failure** or not specified at all (also considered Failure) in the Return Codes section of the win32 app properties.
+
+![IME retry interval - flowchart](https://github.com/user-attachments/assets/8eb864b8-bc2e-477a-8e0d-cb19703a848d)
+
 ## Additional troubleshooting areas to consider
 - Check targeting to make sure the agent is installed on the device. A Win32 app targeted to a group or a PowerShell Script targeted to a group will create an agent installation policy for a security group.
 - Check the OS version: Windows 10 1607 and later.
@@ -115,3 +122,4 @@ For more information about troubleshooting Win32 apps, see [Win32 app installati
 ## Next steps
 
 - [Troubleshoot app installation issues](/troubleshoot/mem/intune/troubleshoot-app-install)
+
