@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/25/2024
+ms.date: 07/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -59,7 +59,10 @@ We recommend using the latest updates for a more successful attestation rate.
 
 - Minimum TPM 2.0 on devices
 
-- Physical devices are supported. **Virtual machines can't attest**.  
+- Physical devices are supported.
+
+  > [!NOTE]
+  > Virtual machines can't attest.  
 
 - Attestation with TPM in this feature is during Intune device management enrollment, after the TPM attestation that occurs in Autopilot pre-provision and Shared device mode (SDM).
 
@@ -75,7 +78,7 @@ We recommend using the latest updates for a more successful attestation rate.
 
 ## Device attestation status report
 
-The report shows information about the device, its TPM, and whether the successfully attested on enrollment. If a device doesn’t attest, the report explains why in the **Status details** section. Use this report to see the full list of devices and check which ones successfully attested on enrollment.
+The report shows information about the device, its TPM, and whether the device successfully attested on enrollment. If a device doesn’t attest, the report explains why in the **Status details** section. Use this report to see the full list of devices and check which ones successfully attested on enrollment.
 
 To access this report:
 
@@ -150,12 +153,7 @@ To attest some *Not Started* devices:
 > [!NOTE]
 > You can only select up to 100 devices at a time for device action and wait at least 1 minute between triggering **Attest device** action.
 
-If devices are failing attestation, depending on the value in the **Status detail** column, you can retry attestation using the **Attest device** action.  
-
-### Permissions for device action
-
-To use the **Attest device** device action, you require a role based permission known as Remote tasks: **Indicates mobile device management (MDM) attestation if device is capable for it**. Set the Permission to **yes** to enable the action. With the permission set to **Yes**, IT admins can initiate **Attest device** action.
-
+If devices are failing attestation, depending on the value in the **Status detail** column, you can retry attestation using the **Attest device** action.
 If any of the following **Status details** appear, we recommend re-attempting the **Attest device** action.
 
 - AIK certificate wasn't provided by client
@@ -172,7 +170,14 @@ If any of the following **Status details** appear, we recommend re-attempting th
 
 - Entra token does not match device identity
 
+### Permissions for device action
+
+To use the **Attest device** device action, you require a role based permission known as Remote tasks: **Indicates mobile device management (MDM) attestation if device is capable for it**. Set the Permission to **yes** to enable the action. With the permission set to **Yes**, IT admins can initiate **Attest device** action.
+
 ## Resources
+
+> [!IMPORTANT]
+> Troubleshooting TPM usually requires a Wipe and Reset action, which can result in data loss. Ensure that you have backups in place before carrying out any TPM troubleshooting steps.
 
 - [TPM recommendations - Windows Security | Microsoft Learn](/windows/security/hardware-security/tpm/tpm-recommendations)
 
