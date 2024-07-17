@@ -58,29 +58,28 @@ Windows Autopilot depends on specific features available in Windows client, Micr
 
 #### Windows 11
 
-A [supported version](/windows/release-health/) of Windows 11 General Availability Channel is required.
+A [supported version](/windows/release-health/windows11-release-information) of Windows 11 General Availability Channel is required.
 
-The following editions are supported:
+The following editions of Windows 11 are supported:
 
-- Windows 11 Pro
-- Windows 11 Pro Education
-- Windows 11 Pro for Workstations
-- Windows 11 Enterprise
-- Windows 11 Education
+- Windows 11 Pro.
+- Windows 11 Pro Education.
+- Windows 11 Pro for Workstations.
+- Windows 11 Enterprise.
+- Windows 11 Education.
 
 #### Windows 10
 
-A [supported version](/windows/release-health/) of Windows 10 General Availability Channel is required.
+A [supported version](/windows/release-health/release-information) of Windows 10 is required.
 
-The following editions are supported:
+The following editions of Windows 10 are supported:
 
-- Windows 10 Pro
-- Windows 10 Pro Education
-- Windows 10 Pro for Workstations
-- Windows 10 Enterprise
-- Windows 10 Education
-
-Windows 10 LTSC/LTSB editions aren't supported.
+- Windows 10 Pro.
+- Windows 10 Pro Education.
+- Windows 10 Pro for Workstations.
+- Windows 10 Enterprise.
+- Windows 10 Education.
+- [Windows 10 Enterprise LTSC](/windows/whats-new/ltsc/overview).
 
 #### HoloLens
 

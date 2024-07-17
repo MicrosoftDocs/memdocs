@@ -67,12 +67,15 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 ### Role requirements
 
 - Account must have at least one of these roles:
-    - Microsoft Entra ID Global Administrator role
     - Microsoft Entra ID Compliance Administrator role
+    - Microsoft Entra ID Global Administrator role
     - Microsoft Purview Organization Management role group
     - Microsoft Purview Compliance Administrator role group
     - Insider Risk Management role group
     - Insider Risk Management Admins role group
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 For more information about insider risk management roles, see [Enable permissions for insider risk management](/purview/insider-risk-management-configure?tabs=purview-portal#step-1-required-enable-permissions-for-insider-risk-management).
 

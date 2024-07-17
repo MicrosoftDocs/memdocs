@@ -5,7 +5,7 @@ description: A quickstart guide for Microsoft Deployment Toolkit (MDT) with Syst
 ms.date: 09/09/2016
 ms.subservice: mdt
 ms.service: configuration-manager
-ms.topic: article
+ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
