@@ -77,12 +77,8 @@ The deep link is the link to your app's listing in the public app store. If your
 
 The Intune App SDKs for native iOS and Android are hosted on a Microsoft GitHub account. These public repositories have the SDK files for native iOS and Android, respectively:
 
-* [Intune App SDK for iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
-* [Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
-
-If your app is a Xamarin app, use this SDK variant:
-
-* [Intune App SDK Xamarin Bindings](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
+* [Intune App SDK for iOS](https://github.com/microsoftconnect/ms-intune-app-sdk-ios)
+* [Intune App SDK for Android](https://github.com/microsoftconnect/ms-intune-app-sdk-android)
 
 If your app builds with [.NET Multi-platform App UI (.NET MAUI)](https://dotnet.microsoft.com/en-us/apps/maui), use this SDK variant:
 
