@@ -108,6 +108,8 @@ The results show the differences and similarities between the two devices.
 
 ### Analyze an error code
 
+Select the prompt guide and select > **Analyze an error code**.
+
 This prompt can help you troubleshoot an error code that you see in Intune, including error codes from a device configuration profile, compliance policy, app installation, and more. The error doesn't have to be scoped to the device you select.
 
 For example, enter `90` > **Submit**.
