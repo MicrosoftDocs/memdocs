@@ -12,10 +12,10 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
-<!-- 
+<!--
 - Feature 1357546
 - This page displays in-console, under the Community workspace, Documentation node.
 - Don't use any relative links; must be full  and language neutral
@@ -46,7 +46,6 @@ A curated list of important articles.  <!--URLs MUST BE ABSOLUTE LINKS-->
 
 - [Microsoft Intune tenant attach](https://learn.microsoft.com/mem/configmgr/tenant-attach?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Endpoint analytics](https://learn.microsoft.com/mem/analytics/?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
-- [Desktop Analytics](https://learn.microsoft.com/mem/configmgr/desktop-analytics/?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Co-management for Windows devices](https://learn.microsoft.com/mem/configmgr/comanage/?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [CMPivot](https://learn.microsoft.com/mem/configmgr/core/servers/manage/cmpivot?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Plan for BitLocker management](https://learn.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
@@ -68,7 +67,6 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 - [Understanding and troubleshooting the Microsoft Store for Business integration](https://learn.microsoft.com/mem/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration?WT.mc_id=configmgr-console?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Software update management troubleshooting](https://learn.microsoft.com/troubleshoot/mem/configmgr/troubleshoot-software-update-management?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Troubleshooting the Install Application task sequence step](https://learn.microsoft.com/troubleshoot/mem/configmgr/troubleshoot-install-application-step?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
-- [Troubleshoot Desktop Analytics](https://learn.microsoft.com/mem/configmgr/desktop-analytics/troubleshooting?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Troubleshoot Microsoft Connected Cache](https://learn.microsoft.com/mem/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Troubleshoot BitLocker](https://learn.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/troubleshoot?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 

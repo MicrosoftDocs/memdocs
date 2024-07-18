@@ -1531,7 +1531,9 @@ items:
           - name: Set up Intune Connector for Active Directory  
             href: ./enrollment/autopilot-hybrid-connector-proxy.md
           - name: Set up Enrollment Status Page
-            href: ./enrollment/windows-enrollment-status.md 
+            href: ./enrollment/windows-enrollment-status.md
+          - name: Set up Windows Enrollment Attestation
+            href: ./enrollment/windows-enrollment-attestation.md   
  
       - name: Set up Android enrollment
         items:
@@ -1722,6 +1724,8 @@ items:
           href: ./remote-actions/device-inventory.md
         - name: Collect diagnostics
           href: ./remote-actions/collect-diagnostics.md
+        - name: Remove apps and configuration
+          href: ./remote-actions/remove-apps-config.md  
         - name: Pause config refresh
           href: ./remote-actions/pause-config-refresh.md    
         - name: Send organizational messages  
@@ -1825,6 +1829,8 @@ items:
             href: ./industry/education/tutorial-school-deployment/manage-surface-devices.md       
           - name: Reset and wipe devices
             href: ./industry/education/tutorial-school-deployment/reset-wipe.md
+          - name: Avoid policy conflicts
+            href: ./industry/education/tutorial-school-deployment/manage-avoid-policy-conflicts.md
         - name: 6. Troubleshoot and get help
           href: ./industry/education/tutorial-school-deployment/troubleshoot-overview.md
         - name: 7. Common Education configuration
