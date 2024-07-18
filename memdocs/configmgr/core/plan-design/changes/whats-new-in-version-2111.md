@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # What's new in version 2111 of Configuration Manager current branch
@@ -268,7 +268,7 @@ In this release we've made the following improvements to the Configuration Manag
 
 - When viewing a collection, you could previously see the amount of time the site took to evaluate the collection membership. This data is now also available in the **Monitoring** workspace.<!-- 9648622 --> When you select a collection in either subnode of the **Collection Evaluation** node, the details pane displays this collection evaluation time data. For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md#monitoring-workspace).
 
-- There's a new built-in device collection for **Co-management Eligible Devices**. The **Co-management Eligible Devices** collection uses incremental updates and a daily full update to keep the collection up to date. <!--12377291-->For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md#assets-and-compliance-workspace). 
+- There's a new built-in device collection for **Co-management Eligible Devices**. The **Co-management Eligible Devices** collection uses incremental updates and a daily full update to keep the collection up to date. <!--12377291-->For more information about improvements to the console, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md#assets-and-compliance-workspace).
 
 
 
@@ -318,7 +318,7 @@ Starting with this version, the following features are no longer [pre-release](.
 - [Application groups](../../../apps/deploy-use/create-app-groups.md) <!--3555907-->
 - [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md) <!--3098816-->
 
-Similarly, the [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md) is now generally available for production use.<!-- 10735017 -->
+Similarly, the [Microsoft Connected Cache with Configuration Manager](../hierarchy/microsoft-connected-cache.md) is now generally available for production use.<!-- 10735017 -->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2111 release notes](/powershell/sccm/2111-release-notes).
 
