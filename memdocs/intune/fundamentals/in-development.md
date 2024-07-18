@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 07/08/2024
+ms.date: 07/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -73,14 +73,6 @@ You’ll be able to access all new actions in the Microsoft Intune admin center 
 
 ## App management
 
-### Intune will support additional macOS app types from the Company Portal<!-- 26133163 -->
-
-Intune will support the ability to deploy DMG and PKG apps as **Available** in the Intune macOS Company Portal. This capability enables end users to browse and install agent-deployed applications using Company Portal for macOS.
-
-Applies to:
-
-- macOS
-
 ### The Intune App SDK and Intune App Wrapping Tool are moving to a different GitHub repo<!-- 27264674, 27264632 -->
 
 The Intune App SDK and Intune App Wrapping Tool are moving to a different GitHub repository and a new account. There will be redirects in place for all existing repositories. In addition, the Intune sample applications are also included in this move. This change relates to both Android and iOS platforms.
@@ -95,53 +87,11 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device configuration
-
-### New settings available in the Apple settings catalog<!-- 28052449 -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
-
-#### iOS/iPadOS
-
-**Restrictions**:
-
-- Allow Auto Dim
-
-#### macOS
-
-**Privacy > Privacy Preferences Policy Control**:
-
-- Bluetooth Always
-
-### Allow access to all apps in Google Play store setting values are changing for Android Enterprise<!-- 28367525 -->
-
-In an Intune device restrictions configuration policy, you can configure the **Allow access to all apps in Google Play store** setting using the **Allow** and **Not configured** options (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Fully managed, dedicated and corporate-owned work profile > Device restrictions** for profile type > **Applications).
-
-The available options are being updated to **Allow**, **Block**, and **Not configured**.
-
-There's no impact to existing profiles using this setting.
-
-For more information on this setting and the values you can currently configure, see [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
-
-Applies to:
-
-- Android Enterprise Fully managed, dedicated and corporate-owned work profile
-
+<!-- ## Device configuration -->
 
 <!-- *********************************************** -->
 
 ## Device enrollment
-
-### Intune adding support for Red Hat Enterprise Linux<!-- 25160548 -->
-
-Microsoft Intune will support device management for Red Hat Enterprise Linux. You'll be able to enroll and manage Red Hat Enterprise Linux devices, and assign standard compliance policies, custom configuration scripts, and compliance scripts.
-
-Applies to:
-
-- Red Hat Enterprise Linux 9
-- Red Hat Enterprise Linux 8
 
 ### Account-driven Apple User Enrollment to be generally available for iOS/iPadOS 15+ devices<!-- 10277062 -->
 
@@ -156,23 +106,6 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device management
-
-### Changes for Account Protection policies<!-- 24810271 -->
-
-Account Protection policies can help you protect the credentials of your users, and focus on settings for Windows Hello and Credential Guard, which are part of Windows identity and access management.
-
-To help improve Intune Account Protection policies, we will be removing older templates that use an outdated settings format, and consolidating Account Protection management through use of a single new profile. The settings in the new profile will use the newer unified settings format for device management, be available through the settings catalog, and help to improve the reporting experience in the Intune admin center.
-
-The new profile will be found in the account protection policy node of endpoint security, and will be named *Account Protection*. With this profile you’ll be able to manage the same settings as before, though the new profile will present updated names and options for those settings.
-
-The old profile we're removing is the *Account Protection (Preview)* template that's available through endpoint security Account Protection policy.
-
-For more information about this type of policy, see [Manage device security with endpoint security policies](../protect/ endpoint-security-account-protection-policy.md).
-
-Applies to:
-
-- Windows 10
-- Windows 11
 
 ### New `cpuArchitecture` filter device property for app and policy assignments<!-- 7423106 -->
 
@@ -192,67 +125,6 @@ Applies to:
 - Windows 11
 - macOS
 
-### New `operatingSystemVersion` filter property with new comparison operators (preview)<!-- 10033345 -->
-
-There's a new `operatingSystemVersion` filter property. This property:
-
-- Is in [public preview](public-preview.md) and still being developed. So, some features, like **Preview devices**, don't work yet.
-
-- Should be used instead of the existing `OSVersion` property. The `OSVersion` property is being deprecated. When `operatingSystemVersion` is generally available (GA), the `OSVersion` property will retire, and you won't be able to create new filters using this property. Existing filters that use `OSVersion` continue to work.
-
-- Has new comparison operators:
-
-  - `GreaterThan`: Use for version value types.
-
-    - Allowed values: `-gt` | `gt`
-    - Example: `(device.operatingSystemVersion -gt 10.0.22000.1000)`
-
-  - `GreaterThanOrEquals`: Use for version value types.
-
-    - Allowed values: `-ge` | `ge`
-    - Example: `(device.operatingSystemVersion -ge 10.0.22000.1000)`
-
-  - `LessThan`: Use for version value types.
-
-    - Allowed values: `-lt | lt`
-    - Example: `(device.operatingSystemVersion -lt 10.0.22000.1000)`
-
-  - `LessThanOrEquals`: Use for version value types.
-
-    - Allowed values: `-le` | `le`
-    - Example: `(device.operatingSystemVersion -le 10.0.22000.1000)`
-
-For managed devices, `operatingSystemVersion` applies to:
-
-- Android
-- iOS/iPadOS
-- macOS
-- Windows
-
-For managed apps, `operatingSystemVersion` applies to:
-
-- Android
-- iOS/iPadOS
-- Windows
-
-For more information on filters and the device properties you can currently use, see:
-
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
-- [Filter properties](filters-device-properties.md)
-
-### Government community cloud (GCC) support for Remote Help for macOS devices<!-- 25568551 -->
-
-GCC customers will soon be able to use Remote Help for macOS devices on both web app and native application.
-
-Applies to:
-
-- macOS 12, 13 and 14
-
-For more information, see:
-
-[Remote Help on macOS](../fundamentals/remote-help-macos.md)
-[Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md)
-
 <!-- *********************************************** -->
 
 ## Device security
@@ -262,19 +134,6 @@ For more information, see:
 Customer tenants in US Government Community (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
 
 For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
-
-### Updated security baseline for Windows 365 Cloud PC<!-- 26504698 -->
-
-We're working on an update to the Intune security baseline for **Windows 365 Cloud PC**. The new baseline version uses the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
-
-Use of [Intune security baselines](../protect/security-baselines.md) can help you maintain best-practice configurations for your Windows devices and can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft.
-
-As with all baselines, the default baseline represents the recommended configurations for each setting, which you can modify to meet the requirements of your organization.
-
-Applies to:
-
-- Windows 10
-- Windows 11
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
