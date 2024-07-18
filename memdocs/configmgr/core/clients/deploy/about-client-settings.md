@@ -321,7 +321,7 @@ Choose **Yes** to apply the boundary group identifier as the Delivery Optimizati
 ### Enable devices managed by Configuration Manager to use Microsoft Connected Cache servers for content download
 
 <!--3555764-->
-Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Microsoft Connected Cache server. For more information, see [Microsoft Connected Cache in Configuration Manager](../../plan-design/hierarchy/microsoft-connected-cache.md).
+Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Microsoft Connected Cache server. For more information, see [Microsoft Connected Cache with Configuration Manager](../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 ## Endpoint Protection
 
