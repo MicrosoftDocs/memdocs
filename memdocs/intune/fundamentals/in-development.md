@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 06/27/2024
+ms.date: 07/08/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -73,18 +73,6 @@ You’ll be able to access all new actions in the Microsoft Intune admin center 
 
 ## App management
 
-### New configuration capabilities for Managed Home Screen<!-- 25013268 -->
-
-You'll be able to configure Managed Home Screen (MHS) to enable a virtual app-switcher button that allows end users to easily navigate between apps on their kiosk devices from MHS. You'll be able to select between a floating or swipe-up app-switcher button. The configuration key will be `virtual_app_switcher_type` and the possible values will be `none`, `float`, and `swipe_up`.
-
-For information related to configuring the Managed Home Screen app, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
-
-### MAC address available from the Managed Home Screen app<!-- 25994454 -->
-
-MAC address details will be available from the **Device Information** page of the Managed Home Screen (MHS) app.
-
-For information about MHS, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](..\remote-actions\collect-diagnostics.md).
-
 ### Intune will support additional macOS app types from the Company Portal<!-- 26133163 -->
 
 Intune will support the ability to deploy DMG and PKG apps as **Available** in the Intune macOS Company Portal. This capability enables end users to browse and install agent-deployed applications using Company Portal for macOS.
@@ -96,15 +84,6 @@ Applies to:
 ### The Intune App SDK and Intune App Wrapping Tool are moving to a different GitHub repo<!-- 27264674, 27264632 -->
 
 The Intune App SDK and Intune App Wrapping Tool are moving to a different GitHub repository and a new account. There will be redirects in place for all existing repositories. In addition, the Intune sample applications are also included in this move. This change relates to both Android and iOS platforms.
-
-### New actions for policies, profiles, and apps<!-- 15283153 -->
-
-You'll be able to remove, reinstall, and reapply individual policies, profiles, and apps for iOS/iPadOS devices and Android corporate owned devices. You'll be able to apply these actions without changing assignments or group membership. These actions are intended to help resolve customer challenges that are external to Intune. Also, these actions can help to quickly restore end user productivity.
-
-Applies to:
-
-- iOS/iPadOS
-- Android Enterprise corporate owned devices
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -155,10 +134,6 @@ Applies to:
 
 ## Device enrollment
 
-### Define corporate device identifiers for Windows<!-- 25873757 -->
-
-Microsoft Intune will support corporate device identifiers for Windows devices. You'll be able to upload a CSV file with model, manufacturer, and serial number to identify corporate machines ahead of enrolling. When a device that matches the model, manufacturer, and serial number criteria enrolls, it will be marked as corporate and managed appropriately.
-
 ### Intune adding support for Red Hat Enterprise Linux<!-- 25160548 -->
 
 Microsoft Intune will support device management for Red Hat Enterprise Linux. You'll be able to enroll and manage Red Hat Enterprise Linux devices, and assign standard compliance policies, custom configuration scripts, and compliance scripts.
@@ -181,14 +156,6 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device management
-
-### Copilot in Intune will have device query feature using Kusto Query Language (KQL) (public preview)<!-- 24874816 -->
-
-When you use Copilot in Intune, there's a new device query feature that uses KQL.
-
-Use this feature to ask questions about your devices using a natural language. If device query can answer your question, Copilot generates the KQL query you can run to get the data you want.
-
-To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
 
 ### Changes for Account Protection policies<!-- 24810271 -->
 

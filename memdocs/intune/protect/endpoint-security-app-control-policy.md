@@ -97,13 +97,13 @@ To manage App Control for Business policies, an account must be assigned an Intu
 
 The following are the available tasks with their required permissions and rights.
 
-- **Enable use of a managed installer** - Accounts must be assigned the role of **Global Administrator** or **Intune Administrator**. Enabling the installer is a one-time event.
+- **Enable use of a managed installer** - Accounts must be assigned the role of **Intune Administrator**. Enabling the installer is a one-time event.
 
   >[!IMPORTANT]
   >
-  > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator and the Intune Administrator are highly privileged roles that should be limited to scenarios that can't use a different role.
+  > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. The Intune Administrator and similar accounts are highly privileged roles that should be limited to scenarios that can't use a different role.
 
-- **Manage App Control for Business policy** - Accounts must have the **Application control** permission, which includes rights for *Delete*, *Read*, *Assign*, *Create*, *Update*, and *View Reports*.
+- **Manage App Control for Business policy** - Accounts must have the **App Control for Business** permission, which includes rights for *Delete*, *Read*, *Assign*, *Create*, *Update*, and *View Reports*.
 
 - **View reports for App Control for Business policy** - Accounts must have one of the following permissions and rights:
 

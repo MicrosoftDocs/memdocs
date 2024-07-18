@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Which branch of Configuration Manager should I use?
@@ -26,17 +26,17 @@ There are three branches of Configuration Manager available:
 
 Use this article to help you choose the right branch.
 
-> [!TIP]  
+> [!TIP]
 > All sites in a hierarchy must run the same branch. It isn't supported to have a hierarchy with different branches at different sites.
 
 ## Current branch
 
-This branch is licensed for use in a production environment. Use this branch to get the latest features and functionalities. If you have one of the following licenses, you can use this branch:  
+This branch is licensed for use in a production environment. Use this branch to get the latest features and functionalities. If you have one of the following licenses, you can use this branch:
 
 - System Center Datacenter
 - System Center Standard
 - System Center Configuration Manager
-- Equivalent subscription rights  
+- Equivalent subscription rights
 
 For more information about Software Assurance and licensing options, see [Licensing and branches for Configuration Manager](learn-more-editions.md) and [Frequently asked questions for Configuration Manager branches and licensing](product-and-licensing-faq.yml).
 
@@ -53,11 +53,11 @@ You can also use the baseline media to install a new site that is an evaluation 
 > The Evaluation Center is currently unavailable. As a workaround you can download the ConfigMgr 2203 Current Branch Eval exe here : ( https://aka.ms/MECM2203CB-Eval).
 -->
 >
-> Use baseline media to install sites for a new Configuration Manager hierarchy. If you previously installed a baseline version, use in-console updates to update your sites to a new version.  
+> Use baseline media to install sites for a new Configuration Manager hierarchy. If you previously installed a baseline version, use in-console updates to update your sites to a new version.
 >
 > Sites that are updated using in-console updates result in sites that are the same as the new site installed using the baseline media.
 >
-> For more information, see [Updates for Configuration Manager](../servers/manage/updates.md).  
+> For more information, see [Updates for Configuration Manager](../servers/manage/updates.md).
 
 ### Features of the current branch
 
@@ -75,7 +75,7 @@ For more information, see [Support for current branch versions](../servers/manag
 
 ### Current branch update options
 
-- With active Software Assurance, you can install in-console updates for current branch versions.  
+- With active Software Assurance, you can install in-console updates for current branch versions.
 - There's no option to convert the current branch to a technical preview branch. Technical preview branches are separate installations that don't require a license.
 - There's no option to convert your current branch to the long-term servicing branch (LTSB). You must uninstall the current branch and then install the LTSB as a new installation.
 
@@ -87,13 +87,13 @@ The LTSB is based on version 1606. This branch doesn't receive in-console update
 
 To install the LTSB as a new site or as an upgrade from a supported System Center 2012 Configuration Manager site, use the version 1606 [baseline media](../servers/manage/updates.md#bkmk_Baselines) that you get with System Center 2016. You can use baseline media to install a new site that runs version 1606 of the current branch, or a new site that runs the long-term servicing branch.
 
-> [!TIP]  
-> To learn about System Center 2016, see [System Center 2016 documentation](/system-center/index). This documentation also identifies how to get System Center 2016, which requires a Microsoft license agreement or similar rights.  
->  
-> To find Configuration Manager version 1606 in the Volume Licensing Service Center (VLSC), go to the **Downloads and Keys** tab of the [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), search for `System Center 2016`, and then select either **System Center 2016 Datacenter** or **System Center 2016 Standard**.  
+> [!TIP]
+> To learn about System Center 2016, see [System Center 2016 documentation](/system-center/index). This documentation also identifies how to get System Center 2016, which requires a Microsoft license agreement or similar rights.
+>
+> To find Configuration Manager version 1606 in the Volume Licensing Service Center (VLSC), go to the **Downloads and Keys** tab of the [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), search for `System Center 2016`, and then select either **System Center 2016 Datacenter** or **System Center 2016 Standard**.
 
->  
-> You can also get an evaluation edition of System Center 2019 from the [Evaluation Center](https://www.microsoft.com/evalcenter/download-system-center-2019).  
+>
+> You can also get an evaluation edition of System Center 2019 from the [Evaluation Center](https://www.microsoft.com/evalcenter/download-system-center-2019).
 
 <!--
 > [!NOTE]
@@ -114,7 +114,7 @@ The LTSB is based on the current branch version 1606 and has the following limit
 - Supports a limited set list of server and client operating systems and related technologies, like SQL Server versions. For more information, see [Supported configurations for the long-term servicing branch](supported-configurations-for-ltsb.md).
 - Doesn't receive updates for new features
 - Doesn't support the following capabilities:
-  - Cloud-attached features like co-management or Desktop Analytics
+  - Cloud-attached features like co-management or tenant attach
   - On-premises MDM
   - The Windows servicing dashboard, servicing plans, or Windows release channels
   - Future releases of Windows 10 LTSB and Windows Server
@@ -150,7 +150,7 @@ To install a new site that runs the technical preview branch, use the latest [ba
 
 ### Technical preview limitations
 
-- [Support is limited](../get-started/technical-preview.md#bkmk_reqs), including only a single primary site and up to 10 clients.  
+- [Support is limited](../get-started/technical-preview.md#bkmk_reqs), including only a single primary site and up to 10 clients.
 - You can't upgrade or migrate it to a current branch or LTSB installation.
 - Doesn't support the following behaviors:
   - Use migration to import or export data to another Configuration Manager installation
