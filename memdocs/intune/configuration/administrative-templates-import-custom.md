@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/19/2024
+ms.date: 07/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -182,7 +182,7 @@ To update existing ADMX files that are imported, you have the following options:
 
 - **Option 2: Create a new ADMX file**
 
-  1. Create another version of the ADMX file with the same namespace as the original ADMX file.
+  1. Create another version of the ADMX file with a different namespace than the original ADMX file. We recommend you add a version number in the namespace so the names are different.
   2. Add the new and different settings to this ADMX file.
   3. Import the new ADMX and ADML files.
 
