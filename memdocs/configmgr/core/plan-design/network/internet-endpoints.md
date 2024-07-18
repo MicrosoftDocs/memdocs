@@ -118,7 +118,7 @@ For more information, see the following articles:
 
 - [Delivery optimization FAQ](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
 - [Fundamental concepts for content management in Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
-- [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md)
+- [Microsoft Connected Cache with Configuration Manager](../hierarchy/microsoft-connected-cache.md)
 
 ## Cloud services
 
