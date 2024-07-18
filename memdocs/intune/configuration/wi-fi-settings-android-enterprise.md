@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/21/2024
+ms.date: 07/18/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -58,9 +58,9 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 - **Network name**: Enter a name for this Wi-Fi connection. End users see this name when they browse their device for available Wi-Fi connections. For example, enter **Contoso WiFi**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
 
-Note:
-1. We cannot target two wi-fi profiles with the same SSID to the same device.
-2. If you intend to chnge the Trusted Root Certificate of the profile, please ensure you are connected to a second internet source, to avoid disconnection due to cert change and proper delivery of the updated profile. Once we support multiple  trusted root certificate in wi-fi profile, which we intend to do, the second internet connection will no longer be needed.
+  > [!IMPORTANT]
+  > - You can't target two Wi-Fi profiles with the same SSID to the same device. So, make sure any new Wi-Fi profiles use a different SSID.
+  > - If you plan to change the Trusted Root Certificate of a Wi-Fi profile, before you change the certificate, make sure the device connects to another internet connection. The backup internet connection allows the Wi-Fi profile with the updated certificate to be assigned. In a future update (no ETA), Intune will support multiple trusted root certificates in Wi-Fi profile. Then, a second internet connection isn't needed.
 
 - **Connect automatically**: **Enable** automatically connects to your Wi-Fi network when devices are in range. Select **Disable** to prevent or block this automatic connection.
 
@@ -117,6 +117,11 @@ Note:
 
 - **Wi-Fi type**: Select **Enterprise**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
+
+  > [!IMPORTANT]
+  > - You can't target two Wi-Fi profiles with the same SSID to the same device. So, make sure any new Wi-Fi profiles use a different SSID.
+  > - If you plan to change the Trusted Root Certificate of a Wi-Fi profile, before you change the certificate, make sure the device connects to another internet connection. The backup internet connection allows the Wi-Fi profile with the updated certificate to be assigned. In a future update (no ETA), Intune will support multiple trusted root certificates in Wi-Fi profile. Then, a second internet connection isn't needed.
+
 - **Connect automatically**: **Enable** automatically connects to your Wi-Fi network when devices are in range. Select **Disable** to prevent or block this automatic connection.
 
   When devices are connected to another preferred Wi-Fi connection, then they don't automatically connect to this Wi-Fi network. If devices fail to connect automatically when this setting is enabled, then disconnect the devices from any existing Wi-Fi connections.
@@ -311,10 +316,10 @@ Note:
 
     For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
-## Next steps
+## Related articles
 
-The profile is created, but might not be doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
+- The profile is created, but might not be doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows 10](wi-fi-settings-windows.md).
+- You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows 10](wi-fi-settings-windows.md).
 
-[Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).
+- [Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).
