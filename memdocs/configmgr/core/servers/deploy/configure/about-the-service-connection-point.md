@@ -11,7 +11,7 @@ author: gowdhamankarthikeyan
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # About the service connection point in Configuration Manager
@@ -29,8 +29,6 @@ The service connection point is a site system role that provides several importa
 - Synchronize apps from the [Microsoft Store for Business and Education](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)
 
 - Discover users and groups in [Microsoft Entra ID](about-discovery-methods.md#azureaddisc)
-
-- Use [Desktop Analytics](../../../../desktop-analytics/overview.md) to gain insights on Windows 10 update and app readiness
 
 Each hierarchy supports a single instance of this role. It can only be installed at the top-tier site of your hierarchy, which is a central administration site (CAS) or stand-alone primary site. If you expand a stand-alone primary site to a larger hierarchy, uninstall this role from the primary site, and then install it at the CAS.
 
@@ -57,7 +55,7 @@ To use the Configuration Manager Service Manager to restart the SMS_DMP_DOWNLOAD
 
 1. Go to the **Component** menu, and choose **Query**.
 
-1. Confirm the current status of the component. Then go to the **Component** menu, and choose **Stop**.  
+1. Confirm the current status of the component. Then go to the **Component** menu, and choose **Stop**.
 
 1. **Query** the component again to confirm that it stopped. Then choose the **Start** component action to restart it.
 
@@ -83,12 +81,9 @@ For more information, see [Internet access requirements](../../../plan-design/ne
 
 <!--8565578-->
 
-If you use Desktop Analytics or tenant attach, starting in version 2010, the service connection point now checks important internet endpoints. These checks help make sure that the cloud-connected services are available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem.
+If you use tenant attach, starting in version 2010, the service connection point now checks important internet endpoints. These checks help make sure that the cloud-connected services are available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem.
 
-For the list of internet endpoints, see the following sections of the **Internet access requirements** article:
-
-- [Desktop Analytics](../../../plan-design/network/internet-endpoints.md#desktop-analytics)
-- [Tenant attach](../../../plan-design/network/internet-endpoints.md#tenant-attach)
+For the list of internet endpoints, see the following section of the **Internet access requirements** article: [Tenant attach](../../../plan-design/network/internet-endpoints.md#tenant-attach).
 
 For more details, review the **EndpointConnectivityCheckWorker.log** file on the service connection point.
 

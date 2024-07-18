@@ -13,6 +13,15 @@ groups:
     - id: mdm-august-2020
       title: August 2020
 
+- id: windows-365-versions
+  title: Security Baselines for Windows 365
+  prompt: Choose a version
+  pivots:
+    - id: win365-24h1
+      title: Version 24H1
+    - id: win365-nov21
+      title: November 2021
+
 - id: dcv2-edge-baselines
   title: Microsoft Edge baseline versions
   prompt: Choose a version
@@ -85,3 +94,4 @@ groups:
     title: Windows
   - id: ios
     title: iOS
+

@@ -1531,7 +1531,9 @@ items:
           - name: Set up Intune Connector for Active Directory  
             href: ./enrollment/autopilot-hybrid-connector-proxy.md
           - name: Set up Enrollment Status Page
-            href: ./enrollment/windows-enrollment-status.md 
+            href: ./enrollment/windows-enrollment-status.md
+          - name: Set up Windows Enrollment Attestation
+            href: ./enrollment/windows-enrollment-attestation.md   
  
       - name: Set up Android enrollment
         items:
@@ -1827,6 +1829,8 @@ items:
             href: ./industry/education/tutorial-school-deployment/manage-surface-devices.md       
           - name: Reset and wipe devices
             href: ./industry/education/tutorial-school-deployment/reset-wipe.md
+          - name: Avoid policy conflicts
+            href: ./industry/education/tutorial-school-deployment/manage-avoid-policy-conflicts.md
         - name: 6. Troubleshoot and get help
           href: ./industry/education/tutorial-school-deployment/troubleshoot-overview.md
         - name: 7. Common Education configuration

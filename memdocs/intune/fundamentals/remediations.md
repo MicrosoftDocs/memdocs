@@ -1,7 +1,7 @@
 ---
 title: Remediations
 description: Learn about how to use Remediations
-ms.date: 06/23/2023
+ms.date: 06/20/2024
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: how-to
@@ -113,7 +113,7 @@ To assign the script package:
 
 ## Create and deploy custom script packages
 
-The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. You can copy the provided scripts and deploy them, or you can create your own script packages. To deploy script packages, follow the instructions below:
+The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. You can copy the provided scripts and deploy them, or you can create your own script packages. To deploy script packages, follow the instructions in the next section.
 
 ### Copy the provided detection and remediation scripts
 
@@ -136,7 +136,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
    1. Browse to the `.ps1` file.
    1. Choose the file and select **Open** to upload it.
 
-    The detection script must use exit code `exit 1` if the target issue is detected. The remediation script won't run when there's any other exit code, including an empty output, since it results in an *issue is not found* state. Review the [Sample detection script](powershell-scripts-remediation.md#script-descriptions) for an example of exit code usage.
+    The detection script must use exit code `exit 1` if the target issue is detected. If there's any other exit code, the remediation script won't run. Including an empty output, since it results in an *issue is not found* state. Review the [Sample detection script](powershell-scripts-remediation.md#script-descriptions) for an example of exit code usage.
 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
        [![Remediations script settings page.](media/remediations/remediations-script-settings.png)](media/remediations/remediations-script-settings.png#lightbox)
@@ -146,7 +146,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
    - **Run script in 64-bit PowerShell**: No
 
    For information about enforcing script signature checks, see [Script requirements](#script-requirements).
-1. Click **Next** then assign any **Scope tags** you need.
+1. Select **Next** then assign any **Scope tags** you need.
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](filters.md).
  
    >[!NOTE]
@@ -162,7 +162,7 @@ You can use the **Run remediation** device action to run a remediation script on
 
 - Remediations must already be configured before a remediation script can be used on-demand.
 
-- The built-in or custom script packages must be available for users to run a remediation on-demand, however they do not need to be assigned to a user or device. You can use **Scope tags** to limit which remediation script packages a user can see.
+- The built-in or custom script packages must be available for users to run a remediation on-demand, however they don't need to be assigned to a user or device. You can use **Scope tags** to limit which remediation script packages a user can see.
 
 - Users must be Global Admins, Intune Admins, or have a role with the **Run remediation** permission (available under  **Remote tasks**). During the public preview, the user must also have Organization: Read.
 
@@ -193,17 +193,17 @@ The client retrieves policy for Remediation scripts at the following times:
 
 - Once every 8 hours
 
-  - The 8 hour script retrieval schedule is fixed based on when the Intune management extension service starts. The schedule isn't altered by user sign ins.
+  - The 8 hour script retrieval schedule is fixed based on when the Intune management extension service starts. User sign ins do not alter the schedule.
 
 The client reports Remediation information at the following times:
 
 - When a script is set to run once, the results are reported after the script runs.
 
-- Recurring scripts follow a 7 day reporting cycle:
+- Recurring scripts follow a seven day reporting cycle:
 
-  - Within the first 6 days, the client reports only if a change occurs. The first time the script runs would be considered a change.
+  - Within the first six days, the client reports only if a change occurs. The first time the script runs would be considered a change.
 
-  - Every 7 days the client sends a report even if there wasn't a change.
+  - Every seven days the client sends a report even if there wasn't a change.
 
 ## Monitor your script packages
 
@@ -215,11 +215,11 @@ The client reports Remediation information at the following times:
 
 ## Export script output
 <!-- 10198545 -->
-To help you easily analyze returned outputs, use the **Export** option to save the output as a `.csv` file. Exporting the output to a `.csv` file allows you to analyze the returned outputs when Remediations run on devices with issues. Exporting also allows you to share the results with others for additional analysis.  
+To help you easily analyze returned outputs, use the **Export** option to save the output as a `.csv` file. Exporting the output to a `.csv` file allows you to analyze the returned outputs when Remediations run on devices with issues. Exporting also allows you to share the results with others for more analysis.  
 
 ## Monitor remediation status for a device
 
-You can view the status of Remediations that have been assigned or run on-demand to a device.
+You can view the status of Remediations that are assigned or run on-demand to a device.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
