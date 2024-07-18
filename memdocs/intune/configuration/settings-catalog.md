@@ -7,7 +7,7 @@ keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2024
+ms.date: 07/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -137,7 +137,7 @@ You create the policy by using the settings catalog profile type.
    > - When a setting allows multiple values, we recommend that you add each value separately. For example, you can enter multiple values in the **Bluetooth** > **Services Allowed List** setting. Enter each value on a separate line:
    >   :::image type="content" source="./media/settings-catalog/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Intune admin center.":::
    >
-   >You can add multiple values in a single field, but you may experience a character limit.
+   >    You can add multiple values in a single field, but you may experience a character limit.
 
 9. Select **Next**.
 10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
@@ -203,7 +203,9 @@ When you use settings catalog policies, you can use Copilot to get more informat
 
 ## Copy a profile  
 
-Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar to the original one. The copy contains the same setting configurations and scope tags as the original profile but doesn't have assignments attached to it. After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
+Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar to the original one. The copy contains the same setting configurations and scope tags as the original profile but doesn't have assignments attached to it. 
+
+After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
 
 1. Go to **Devices** > **Manage devices** > **Configuration**.
 2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (`…`).
