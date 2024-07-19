@@ -82,9 +82,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 #### New setting in the Device Control profile for Attack surface reduction policy<!-- 28761508 -->
 
-We've added a new category and setting to the Device Control profile that part of Intune [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
+We've added a new category and setting to the Device Control profile for the *Windows 10, Windows 11, and Windows Server* platform of Intune [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
 
-The new setting is **Allow Storage Card**, and found in the new **System** category of the profile. This setting is also available from the Intune [settings catalog](../configuration/settings-catalog.md)
+The new setting is **Allow Storage Card**, and found in the new **System** category of the profile. This setting is also available from the Intune [settings catalog](../configuration/settings-catalog.md).
 
 for the Windows devices.
 
