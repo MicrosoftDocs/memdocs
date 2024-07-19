@@ -88,7 +88,7 @@ The new setting is **Allow Storage Card**, and found in the new **System** categ
 
 for the Windows devices.
 
-This setting controls whether the user is allowed to use the storage card for device storage, and can prevent programmatic access to the storage card. For more information on this new setting, see [AllowStorageCard](/windows/client-management/mdm/policy-csp-System?WT.mc_id=Portal-fx#system-allowstoragecard) in the Windows documentation.
+This setting controls whether the user is allowed to use the storage card for device storage, and can prevent programmatic access to the storage card. For more information on this new setting, see [AllowStorageCard](/windows/client-management/mdm/policy-csp-system?branch=main&branchFallbackFrom=pr-en-us-15655&WT.mc_id=Portal-fx#allowstoragecard) in the Windows documentation.
 
 Applies to:
 
