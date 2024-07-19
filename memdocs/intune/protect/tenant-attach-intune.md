@@ -1,19 +1,19 @@
 ---
 # required metadata
 
-title: Use Intune policies with tenant attached Configuration Manager devices | Microsoft Docs
-description: Configure tenant attach of Configuration Manager devices to the Microsoft Intune admin center so you can deploy supported policies from Microsoft Intune to those devices. 
+title: Use Microsoft Intune policies with tenant attached Configuration Manager devices
+description: Use tenant attach to add Configuration Manager devices to Microsoft Intune and then deploy Intune policies to those devices.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/12/2023
+ms.date: 07/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 # optional metadata
- 
+
 #ROBOTS:
 #audience:
 #ms.devlang:
@@ -26,12 +26,11 @@ ms.collection:
 - M365-identity-device-management
 ms.reviewer: mattsha
 
-
 ---
 
 # Configure tenant attach to support endpoint security policies from Intune
 
-When you use the Configuration Manager tenant attach scenario, you can deploy endpoint security policies from Intune to devices you manage with Configuration Manager. To use this scenario, you must first configure tenant attach for Configuration Manager and enable collections of devices from Configuration Manager for use with Intune. After collections are enabled for use, you use the Microsoft Intune admin center to create and deploy policies.
+When you use the Configuration Manager [tenant attach scenario](/configmgr/tenant-attach/), you can deploy endpoint security policies from Intune to devices you manage with Configuration Manager. To use this scenario, you must first configure tenant attach for Configuration Manager and enable collections of devices from Configuration Manager for use with Intune. After collections are enabled for use, you use the Microsoft Intune admin center to create and deploy policies.
 
 ## Requirements to use Intune policy for tenant attach
 
@@ -330,5 +329,4 @@ For more information about viewing device events for tenant attached devices, se
 ## Next steps
 
 - [Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
-
 - Learn more about [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response).
