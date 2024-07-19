@@ -62,8 +62,6 @@ The following platforms are supported for Lookout when enrolled in Intune:
 - **Android 5.0 and later**
 - **iOS 12 and later**
 
-For additional information about platform and language support, visit the [Lookout website](https://personal.support.lookout.com/hc/articles/114094140253).
-
 ## Prerequisites
 
 - Lookout Mobile Endpoint Security enterprise subscription  
