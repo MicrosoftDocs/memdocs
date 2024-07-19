@@ -11,7 +11,7 @@ ms.date: 07/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
-ms.localizationpriority:
+ms.localizationpriority: medium
 ms.assetid: 
 
 # optional metadata
@@ -68,7 +68,7 @@ The following table lists the permissions that you can configure for the MHS app
 | **Alarms & Reminders** permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | ❌ | ❌ |
 | **Write Settings** permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ❌ | ❌ |
 
-For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for Zebra devices](/oemconfig-zebra-android-devices.md#oemconfig-apps-for-zebra-devices).
+For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for Zebra devices](oemconfig-zebra-android-devices.md#oemconfig-apps-for-zebra-devices).
 
 ## Before you begin
 
