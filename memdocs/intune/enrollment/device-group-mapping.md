@@ -43,15 +43,15 @@ Device categories allow you to easily manage and group devices in Microsoft Intu
  
 This article describes how to configure and edit device categories.   
 
-## Configure device categories
+## Role based access control  
 
-You must be a Global Administrator or Intune Administrator to perform these steps.  
+To configure device categories, you must be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).  
 
-### Before you begin  
+## Before you begin  
 
 Decide if it's necessary to show the device category selection prompt to end users when they visit the Company Portal app or website. If you don't want the prompt to be visible, block it in a [customization profile](../apps/company-portal-app.md#device-categories) first, and then create your categories.       
 
-### Step 1: Create device category in Intune  
+## Step 1: Create device category in Intune  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **Device categories**.  
@@ -66,19 +66,19 @@ You'll use the device category name when you create Microsoft Entra security gro
 
 <a name='step-2-create-azure-ad-security-groups'></a>   
 
-### Step 2: Create Microsoft Entra security groups 
+## Step 2: Create Microsoft Entra security groups 
 
 To enable automatic grouping, you must create a dynamic group using attribute-based rules in Microsoft Entra ID. For instructions, see [Using attributes to create advanced rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) in the Microsoft Entra documentation. Create an advanced rule for your group using the **deviceCategory** attribute and the category name you created in Step 1 of this article. 
 
 For example, to create a rule that automatically groups devices belonging in the HR category, use the following rule syntax: `device.deviceCategory -eq "HR"`    
 
-### View categories of all devices 
+## View categories of all devices 
 To view the device category assigned to each device, go to **Devices** > **All devices**.
 The category is listed in the **Device category** column. To add the column to your table, select **Columns**, and then choose **Category** > **Apply**.  
 
 When you delete a category, devices assigned to it appear as **Unassigned**.  
 
-### Change the category of a device  
+## Change the category of a device  
 If you edit a category, be sure to update any Microsoft Entra security groups that reference the category in their rules.  
 
 1. Go to **Devices** > **All devices**.  

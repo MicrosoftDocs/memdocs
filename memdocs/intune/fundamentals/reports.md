@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/21/2024
+ms.date: 06/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -55,8 +55,10 @@ The reporting framework provides a consistent and more comprehensive reporting e
 Users with the following permissions can review logs:
 
 - Global Administrator
-- Intune Service Administrator
+- Intune Administrator
 - Administrators assigned to an Intune role with **Read** permissions
+
+For more information about administrator permissions, see [Types of administrators](../fundamentals/users-add.md#types-of-administrators).
 
 ## Reporting tiles
 
@@ -665,6 +667,9 @@ To see the report for a device, you can use the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > *select a device* > **Managed Apps**.
 3. To see the managed apps for a specific user, select a user from the dropdown box near the top of the report.
+
+> [!NOTE]
+> The **Managed Apps** report also includes Enterprise App Catalog apps.
 
 ### Device group membership report (Organizational)
 

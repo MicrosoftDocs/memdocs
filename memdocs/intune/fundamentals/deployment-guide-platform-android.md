@@ -149,7 +149,7 @@ As you set up apps and app policies, think about your organization's requirement
 |[Add managed Google Play apps](../apps/apps-add-android-for-work.md) | Add store apps, line-of-business (LOB) apps, and web apps through the managed Google Play Store.| Android Enterprise|
 |[Add Android Enterprise system apps](../apps/apps-ae-system.md) | Use Intune to enable and disable Android Enterprise system apps. | Android Enterprise|  
 |[Add web apps](../apps/web-app.md) | Add web apps to Intune and assign to groups. | Android device administrator|
-|[Add built-in apps](../apps/apps-add-built-in.md) | Add built-in apps to Intune and assign to groups. | Android Enterprise, Android device administrator|
+|[Add built-in apps](../apps/apps-add-built-in.md) | Add built-in apps to Intune and assign to groups. | Android device administrator|
 |[Add line-of-business apps](../apps/lob-apps-android.md)|Add Android line-of-business (LOB) apps to Intune and assign to groups.| Android device administrator|
 |[Assign apps to groups](../apps/apps-deploy.md)|Assign apps to users and devices. | Android Enterprise, Android device administrator|
 |[Include and exclude app assignments](../apps/apps-inc-exl-assignments.md)|Control access and availability to an app by including and excluding selected groups from assignment.|  Android Enterprise, Android device administrator|
