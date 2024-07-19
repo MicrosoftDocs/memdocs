@@ -15,7 +15,7 @@ ms.collection: highpri
 
 # Work from anywhere report
 <!--8668496-->
-The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere. From this report, you can review your scores and how they compare to the selected baseline. Learn how to improve your scores by reviewing the insights and recommendations for each of them.  
+The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere. From this report, you can review your scores and how they compare to the selected baseline. Learn how to improve your scores by reviewing the insights and recommendations for each of them.
 
 > [!NOTE]
 > The **Work from anywhere** report replaced the **Recommended software report**. You may notice changes in your scores because the calculations are different in the **Work from anywhere** report.
@@ -41,7 +41,7 @@ The following metrics are weighted and used to compute the **Work from anywhere�
 
 ## Windows
 
-Newer versions of Windows provide a better user experience than older versions of Windows. The **Windows** metric measures the percent of devices on supported versions of Windows. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to [move devices to an updated version of Windows](../intune/protect/windows-10-feature-updates.md). For Configuration Manager devices, create a deployment plan using [Desktop Analytics](../configmgr/desktop-analytics/overview.md). Your score is based on if these remediation actions have been completed or not.
+Newer versions of Windows provide a better user experience than older versions of Windows. The **Windows** metric measures the percent of devices on supported versions of Windows. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to [move devices to an updated version of Windows](../intune/protect/windows-10-feature-updates.md). Your score is based on if these remediation actions have been completed or not.
 
 For information about the cost savings and benefits enabled by Windows, download the [TEI whitepaper](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWCpaP).
 
@@ -76,7 +76,7 @@ Cloud identity provides users with many productivity benefits including device-w
 
 ## <a name="bkmk_provisioning"></a> Cloud provisioning
 
-Cloud provisioning provides a simpler initial provisioning experience for Windows PCs than the native experience. It reduces the number of screens in the Out Of Box Experience (OOBE) and provides defaults, to ensure the device is correctly provisioning from the factory or on reset. The **Cloud provisioning** metric measures the percentage of machines that are either Windows 365 Cloud PCs or Windows Intune devices that are both registered and have a deployment profile created for Autopilot. 
+Cloud provisioning provides a simpler initial provisioning experience for Windows PCs than the native experience. It reduces the number of screens in the Out Of Box Experience (OOBE) and provides defaults, to ensure the device is correctly provisioning from the factory or on reset. The **Cloud provisioning** metric measures the percentage of machines that are either Windows 365 Cloud PCs or Windows Intune devices that are both registered and have a deployment profile created for Autopilot.
 
 > [!NOTE]
 > The **Autopilot profile assigned** metric indicates whether an Autopilot deployment profile is assigned to the device. If a device inherits a default Autopilot profile, it will not receive credit for having a deployment profile assigned.

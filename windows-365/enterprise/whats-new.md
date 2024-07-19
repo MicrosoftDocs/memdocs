@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/11/2024
+ms.date: 07/16/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -56,6 +56,14 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of July 15, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Cloud PC support for FIDO devices and passkeys on macOS and iOS (preview)<!--51858977-->
+
+Windows 365 Cloud PCs now support FIDO devices and passkeys for Microsoft Entra ID sign in on macOS and iOS.
+
+<!-- ########################## -->
 ## Week of July 8, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -88,9 +96,9 @@ Windows 365 now supports cross region disaster recovery. For more information, s
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Windows 365 Boot and Windows 365 Switch now support battery direction<!--51748880-->
+#### Windows 365 Boot and Windows 365 Switch now support battery status redirection<!--51748880-->
 
-Windows 365 Boot and Windows 365 Switch now support battery redirection. Cloud PCs now show the local PC's battery status.
+Windows 365 Boot and Windows 365 Switch now support battery status redirection. Cloud PCs now show the local PC's battery status.
 
 #### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
 

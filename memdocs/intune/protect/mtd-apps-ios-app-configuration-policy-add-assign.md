@@ -293,7 +293,7 @@ Choose the section that corresponds to your MTD provider:
 
 - **Lookout for Work app outside the Apple store**:
   - You must re-sign the Lookout for Work iOS app. Lookout distributes its Lookout for Work iOS app outside of the iOS App Store. Before distributing the app, you must re-sign the app with your iOS Enterprise Developer Certificate.  
-  - For detailed instructions to re-sign the Lookout for Work iOS apps, see [Lookout for Work iOS app re-signing process](https://personal.support.lookout.com/hc/articles/114094038714) on the Lookout website.
+  - For detailed instructions to re-sign the Lookout for Work iOS apps, see [Lookout for Work iOS app re-signing process](https://support.lms.f-secure.com/hc/articles/114094041894-How-do-I-register-with-Lookout-Life) on the Lookout website.
 
   - **Enable Microsoft Entra authentication for Lookout for Work iOS app users.**
 
