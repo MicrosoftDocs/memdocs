@@ -2,12 +2,12 @@
 # required metadata
 
 title: Set up Better Mobile integration with Intune
-description: How to set  up the Better Mobile solution with Microsoft Intune to control mobile device access to your corporate resources
+description: Integrate the third-party mobile threat defense solution of Better Mobile with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 07/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
