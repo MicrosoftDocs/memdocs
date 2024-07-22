@@ -258,6 +258,13 @@ The following protected apps are now available for Microsoft Intune:
 - HCSS Field: Time, cost, safety (iOS) by Heavy Construction Systems Specialists, Inc.
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+## Week of July 22, 2024  
+
+### Device enrollment  
+
+#### Just-in-time registration and compliance remediation available for all iOS/iPadOS enrollments<!-- 27759589 -->  
+
+You can now configure just-in-time (JIT) registration and JIT compliance remediation for all Apple iOS and iPadOS enrollments. These Intune-supported features improve the enrollment experience because they can take the place of the Intune Company Portal app for device registration and compliance checks. We recommend setting up JIT registration and compliance remediation for new enrollments, and to improve the experience for existing enrolled devices. For more information, see [Set up just in time registration in Microsoft Intune](../enrollment/set-up-just-in-time-registration.md).   
 
 ## Week of July 15, 2024
 
