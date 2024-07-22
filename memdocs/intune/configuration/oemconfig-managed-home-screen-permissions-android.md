@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/18/2024
+ms.date: 07/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -65,8 +65,8 @@ The following table lists the permissions that you can configure for the MHS app
 |---|---|---|---|
 | **Overlay Permission** includes: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ |
 | **Notification Permission** includes:<br/><br/>- Notification badge| ✅ | ✅ | ✅ |
-| **Alarms & Reminders** permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | ❌ | ❌ |
-| **Write Settings** permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ❌ | ❌ |
+| **Alarms & Reminders** permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | n/a | n/a |
+| **Write Settings** permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | n/a | n/a |
 
 For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for Zebra devices](oemconfig-zebra-android-devices.md#oemconfig-apps-for-zebra-devices).
 
@@ -140,6 +140,7 @@ When you use the schema settings in the **Knox Service Plugin** app, this profil
 - **Overlay Permission**
 - **Notification Permission**
 - **Alarms & Reminders Permission**
+- **Write Settings**
 
 **Create the policy**:
 
