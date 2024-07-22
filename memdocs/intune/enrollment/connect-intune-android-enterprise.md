@@ -68,18 +68,19 @@ To verify Android Enterprise availability in your country or region, see [Is And
 7. On the Google sign-in page, confirm that the pre-filled  Entra account is the account you want to associate with all Android Enterprise management tasks for this tenant.  
 
 > [!Important]
-> This Entra account will be the one that your company's IT admins use to manage the Google Admin account and associated subscriptions, as appropriate. . This Entra account must have
-> a mailbox set up for the validation process required by Google.
+> This Entra account will be the one that your company's IT admins use to manage the Google Admin account and associated subscriptions, as appropriate. This Entra account must have a mailbox set up for the validation process required by Google.
 
 8. You will be prompted to complete the flow to create a Google admin account.
 
 9. When prompted, select “Allow and create account” to allow Microsoft Intune to manage your Android Enterprise devices.
 
-> [!Important]
+> > [!NOTE]
+> This onboarding will now link your Entra identity account to a Google account. For more information on Google’s offering, refer to [How Android Enterprise connects your Google services (blog.google)](https://blog.google/products/android-enterprise/android-enterprise-signup-google-services/)
+
+> > [!Important]
 > It is recommended to use your signed in Entra ID to create the account. Additional administrators, if needed, can be added in the Google admin console after the onboarding is done.
 
-> > [!NOTE]
-> For current tenants who have completed the onboarding process with the Gmail account, no action is needed. All existing tenants are supported until the migration flow is enabled at a later date.
+
 
 
 > [!TIP]
