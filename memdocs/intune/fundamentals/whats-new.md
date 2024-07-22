@@ -144,7 +144,7 @@ Use the new device attestation status report in Microsoft Intune to find out if 
 For more information, see:
 
 - [Windows enrollment attestation](../enrollment/windows-enrollment-attestation.md)
-- [Intune Reports](../fundaments/report.md#device-attestation-status-report)
+- [Intune Reports](../fundamentals/report.md#device-attestation-status-report)
 
 ### Device management
 
@@ -242,7 +242,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-To view the new baselines included settings with their default configurations, see, [Windows 365 baseline settings version 24H1](../protect/security-baseline-settings-windows-365?pivots=win365-24h1).
+To view the new baselines included settings with their default configurations, see, [Windows 365 baseline settings version 24H1](../protect/security-baseline-settings-windows-365.md?pivots=win365-24h1).
 
 ### Intune apps
 
