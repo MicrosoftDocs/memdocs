@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2024
+ms.date: 07/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of July 22, 2024  
+
+### Device enrollment  
+
+#### Just-in-time registration and compliance remediation available for all iOS/iPadOS enrollments<!-- 27759589 -->  
+
+Just-in-time (JIT) registration and compliance remediation is  now available to configure for all Apple iOS and iPadOS enrollments. JIT registration and compliance remediation improves the user's enrollment experience because it no longer requires the Company Portal app for Microsoft Entra registration or compliance checking. We recommend setting up JIT registration and compliance remediation for new enrollments, and to improve the experience for existing enrolled devices. For more information, see [Set up just in time registration in Microsoft Intune](../enrollment/set-up-just-in-time-registration.md).   
 
 ## Week of July 15, 2024
 
