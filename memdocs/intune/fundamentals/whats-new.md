@@ -88,6 +88,10 @@ Intune supports the capability to deploy DMG and PKG apps as **Available** in th
 
 The Enterprise App Catalog has updated to include additional apps. For a complete list of supported apps, see [Apps available in the Enterprise App Catalog](../apps/apps-enterprise-app-management.md#apps-available-in-the-enterprise-app-catalog).
 
+#### The Intune App SDK and Intune App Wrapping Tool are now in a different GitHub repo<!-- 27264674, 27264632 -->
+
+The Intune App SDK and Intune App Wrapping Tool have moved to a different GitHub repository and a new account. There are redirects in place for all existing repositories. In addition, the Intune sample applications are also included in this move. This change relates to both Android and iOS platforms.
+
 ### Device configuration
 
 #### New settings available in the Apple settings catalog <!-- 28052449 -->
