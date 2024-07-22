@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2024
+ms.date: 07/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of July 22, 2024  
+
+### Device enrollment  
+
+#### Just-in-time registration and compliance remediation available for all iOS/iPadOS enrollments<!-- 27759589 -->  
+
+You can now configure just-in-time (JIT) registration and JIT compliance remediation for all Apple iOS and iPadOS enrollments. These Intune-supported features improve the enrollment experience because they can take the place of the Intune Company Portal app for device registration and compliance checks. We recommend setting up JIT registration and compliance remediation for new enrollments, and to improve the experience for existing enrolled devices. For more information, see [Set up just in time registration in Microsoft Intune](../enrollment/set-up-just-in-time-registration.md).   
 
 ## Week of July 15, 2024
 
@@ -1051,7 +1059,7 @@ For more information, see [Role-based access control](../protect/windows-hello.m
 
 A new Windows Hello for Business enrollment setting, **Enable enhanced sign in security** is available in the Intune admin center. Enhanced sign-in security is a Windows Hello feature that prevents malicious users from gaining access to a user's biometrics through external peripherals.
 
-For more information about this setting, see [Create a Windows Hello for Business policy](../protect/windows-hello.md#create-a-windows-hello-for-business-policy).
+For more information about this setting, see [Create a Windows Hello for Business policy](../protect/windows-hello.md).
 
 #### HTML formatting supported in noncompliance email notifications<!-- 24197255 -->
 
