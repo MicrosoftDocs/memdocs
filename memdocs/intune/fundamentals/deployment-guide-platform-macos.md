@@ -40,8 +40,9 @@ Complete the following prerequisites to enable macOS device management in Intune
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md) 
 * [Set mobile device management authority](mdm-authority-set.md) 
-* [Have Global Administrator or Intune administrator Microsoft Entra permissions](role-based-access-control.md)  
 * [Set up Apple MDM push (APNs) certificate](../enrollment/apple-mdm-push-certificate-get.md)  
+
+For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. The Global Administrator has more permissions than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the **Policy and Profile Manager*, a built-in Intune role.  
 
  For more detailed information about how to do the initial setup, onboard, or move to Microsoft Intune, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
 

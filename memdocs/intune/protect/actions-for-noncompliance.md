@@ -231,7 +231,7 @@ Notifications that have been created are available in the *Compliance policies* 
 
 - Select **Send preview email** to send a preview of the notification email to the account you've used to sign in to Intune.
 
-  To successfully send the preview email, your account must have permissions equal to those of the following Microsoft Entra groups or Intune roles: *Microsoft Entra Global Administrator*, Intune *Administrator* (Intune Microsoft Entra Intune Service Administrator), or  Intune *Policy and Profile Manager*.
+  To successfully send the preview email, your account must have permissions equal to those of the following Microsoft Entra groups or Intune roles: Intune *Administrator* (Intune Microsoft Entra Intune Service Administrator) or  Intune *Policy and Profile Manager*.
 - Select **Edit** for *Basics* or *Scope tags* to make a change.
 
 > [!NOTE]

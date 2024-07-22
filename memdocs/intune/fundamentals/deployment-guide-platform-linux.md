@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2022  
+ms.date: 07/22/2024  
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -44,12 +44,13 @@ For each section in this guide, review the associated tasks. Some tasks are requ
 
  Microsoft Intune, Microsoft Entra ID, and Microsoft Edge power the feature and capabilities for Linux desktop management. Microsoft Intune powers the device management and compliance capabilities. Microsoft Entra ID powers conditional access, which is used alongside Microsoft Intune compliance policies. Microsoft Edge is the web browser app used to provide protected access to Microsoft 365 web apps. 
  
- Complete the following prerequisites to enable your tenant's endpoint management capabilities:   
+ Complete the following prerequisites as an Intune administrator to enable your tenant's endpoint management capabilities:   
 
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md) 
-* [Set mobile device management authority](mdm-authority-set.md) 
-* [Have Global Administrator or Intune administrator Microsoft Entra permissions](role-based-access-control.md)  
+* [Set mobile device management authority](mdm-authority-set.md)  
+
+For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. The Global Administrator has more permissions than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the **Policy and Profile Manager*, a built-in Intune role. 
 
  For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
 
