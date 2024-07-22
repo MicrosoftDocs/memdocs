@@ -144,7 +144,7 @@ Use the new device attestation status report in Microsoft Intune to find out if 
 For more information, see:
 
 - [Windows enrollment attestation](../enrollment/windows-enrollment-attestation.md)
-- [Intune Reports](../fundamentals/report.md#device-attestation-status-report)
+- [Intune Reports](../fundamentals/reports.md#device-attestation-status-report)
 
 ### Device management
 
