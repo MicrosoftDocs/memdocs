@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Set up just in time registration   
+title: Set up just-in-time registration   
 titleSuffix: Microsoft Intune
-description: Set up just in time registration in Intune for devices enrolling via a supported Apple device enrollment or user enrollment method.   
+description: Set up JIT registration in Intune for devices enrolling via a supported Apple device enrollment or user enrollment method.   
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -30,10 +30,10 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Set up just in time registration in Microsoft Intune    
+# Set up just-in-time registration in Microsoft Intune    
 **Applies to iOS/iPadOS**  
 
-Set up *just in time (JIT) registration* in Microsoft Intune to enable device users to initiate and complete device enrollment from a work or school app. The Intune Company Portal isn't required when using JIT registration. Instead, JIT registration utilizes the Apple single sign-on (SSO) extension to complete Microsoft Entra registration and compliance checks. Registration and compliance checks can be fully integrated in a designated Microsoft or non-Microsoft app that's configured with the Apple single sign-on (SSO) app extension.  The extension reduces authentication prompts during the device user's session and establishes SSO across the whole device.  
+Set up *just-in-time (JIT) registration* in Microsoft Intune to enable device users to initiate and complete device enrollment from a work or school app. The Intune Company Portal isn't required when using JIT registration. Instead, JIT registration utilizes the Apple single sign-on (SSO) extension to complete Microsoft Entra registration and compliance checks. Registration and compliance checks can be fully integrated in a designated Microsoft or non-Microsoft app that's configured with the Apple single sign-on (SSO) app extension.  The extension reduces authentication prompts during the device user's session and establishes SSO across the whole device.  
 
 JIT compliance remediation, the feature that initiates compliance checks, is enabled automatically on devices utilizing JIT registration and targeted with compliance policies. Compliance remediation happens in an embedded flow within the app users are registering. They can see their compliance status and take actionable steps to remediate the issues as they complete JIT registration. If their device is noncompliant, for example, the Company Portal website opens in the app and shows them the reason for noncompliance.  
 
