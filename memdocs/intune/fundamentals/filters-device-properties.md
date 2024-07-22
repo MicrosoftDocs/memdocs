@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/21/2024
+ms.date: 07/18/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -96,7 +96,7 @@ You can use the following device properties in your managed device filter rules:
   - `(device.model -startsWith "Surface Book")`
   - `(device.model -startsWith "MacBookPro")`
   - `(device.model -startsWith "iPhone 8")`
-    
+
   This property applies to:
 
   - Android device administrator
@@ -125,7 +125,33 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
+- **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter a version value (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
+
+  Examples:
+
+  - `(device.operatingSystemVersion -eq 14.2.1)`
+  - `(device.operatingSystemVersion -gt 10.0.22000.1000)`
+  - `(device.operatingSystemVersion -le 10.0.22631.3235)`
+
+  For a list of supported operators, go to [operatingSystemVersion supported operators](#operatingsystemversion-supported-operators) (in this article).
+
+  This property applies to:
+
+  - Android device administrator
+  - Android Enterprise
+  - Android (AOSP)
+  - iOS/iPadOS
+  - macOS
+  - Windows 11
+  - Windows 10
+
+  > [!NOTE]
+  > The `operatingSystemVersion` property is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
+
 - **`osVersion` (OS Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+
+  > [!TIP]
+  > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new filters using this property. Existing filters that use `osVersion` continue to work.
 
   Examples:
 
@@ -145,6 +171,8 @@ You can use the following device properties in your managed device filter rules:
   
   > [!NOTE]
   > For Apple devices, the `OSversion` property doesn't include Apple's Security Patch Version (SPV) information. The SPV is the letter after the version number, like `14.1.2a`. When creating filters for Apple devices, don't include the SPV in the `OSversion` rule syntax.
+
+
 
 - **`IsRooted` (Rooted or jailbroken)**: Create a filter rule based on the device's rooted (Android) or jailbroken (iOS/iPadOS) device property. Select `True`, `False`, or unknown values using the `-eq` and `-ne` operators.
 
@@ -326,7 +354,29 @@ You can use the following app properties in your managed app filter rules:
   - iOS/iPadOS
   - Windows
 
+- **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter a version value (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
+
+  Examples:
+
+  - `(app.operatingSystemVersion -eq 14.2.1)`
+  - `(app.operatingSystemVersion -gt 10.0.22000.1000)`
+  - `(app.operatingSystemVersion -le 10.0.22631.3235)`
+
+  For a list of supported operators, go to [operatingSystemVersion supported operators](#operatingsystemversion-supported-operators) (in this article).
+
+  This property applies to:
+
+  - Android
+  - iOS/iPadOS
+  - Windows
+
+  > [!NOTE]
+  > The `operatingSystemVersion` property is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
+
 - **`osVersion` (OS Version)**: Create a filter rule based on the client reported operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+
+  > [!TIP]
+  > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new filters using this property. Existing filters that use `osVersion` continue to work.
 
   Examples:
 
@@ -402,7 +452,41 @@ You can use the following operators in the rule syntax editor:
   - **Allowed values**: `-notContains` | `notContains`
   - **Example**: `(device.manufacturer -notContains "Samsung")`
 
-## Next steps
+#### operatingSystemVersion supported operators
+
+When you use the `operatingSystemVersion (Operating System Version)` property, you can use the following operators in the rule syntax editor:
+
+- **Equals**: Use for all value types, including simple rules, strings, arrays, and more.
+
+  - **Allowed values**: `-eq` | `eq`
+  - **Example**: `(device.operatingSystemVersion -eq "10.0.22000.1000")`
+
+- **NotEquals**: Use for all value types, including simple rules, strings, arrays, and more.
+
+  - **Allowed values**: `-ne` | `ne`
+  - **Example**: `(device.operatingSystemVersion -ne "10.0.22000.1000")`
+
+- **GreaterThan**: Use for version value types.
+
+  - **Allowed values**: `-gt` | `gt`
+  - **Example**: `(device.operatingSystemVersion -gt 10.0.22000.1000)`
+
+- **LessThan**: Use for version value types.
+
+  - **Allowed values**: `-lt` | `lt`
+  - **Example**: `(device.operatingSystemVersion -lt 10.0.22000.1000)`
+
+- **GreaterThanOrEquals**: Use for version value types.
+
+  - **Allowed values**: `-ge` | `ge`
+  - **Example**: `(device.operatingSystemVersion -ge 10.0.22000.1000)`
+
+- **LessThanOrEquals**: Use for version value types.
+
+  - **Allowed values**: `-le` | `le`
+  - **Example**: `(device.operatingSystemVersion -le 10.0.22000.1000)`
+
+## Related articles
 
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
 - [Supported workloads when creating filters](filters-supported-workloads.md)
