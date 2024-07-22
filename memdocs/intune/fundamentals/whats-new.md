@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2024
+ms.date: 07/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -76,7 +76,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of July 21, 2024 (Service release 2407)
+## Week of July 22, 2024 (Service release 2407)
 
 ### App management
 
@@ -254,6 +254,20 @@ The following protected apps are now available for Microsoft Intune:
 - HCSS Field: Time, cost, safety (iOS) by Heavy Construction Systems Specialists, Inc.
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+## Week of July 15, 2024
+
+### Device management
+
+#### New setting in the Device Control profile for Attack surface reduction policy<!-- 28761508 -->
+
+We've added a new category and setting to the Device Control profile for the *Windows 10, Windows 11, and Windows Server* platform of Intune [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
+
+The new setting is **Allow Storage Card**, and found in the new **System** category of the profile. This setting is also available from the Intune [settings catalog](../configuration/settings-catalog.md).
+
+for the Windows devices.
+
+This setting controls whether the user is allowed to use the storage card for device storage, and can prevent programmatic access to the storage card. For more information on this new setting, see [AllowStorageCard](/windows/client-management/mdm/policy-csp-system?branch=main&branchFallbackFrom=pr-en-us-15655&WT.mc_id=Portal-fx#allowstoragecard) in the Windows documentation.
 
 ## Week of July 8, 2024
 
