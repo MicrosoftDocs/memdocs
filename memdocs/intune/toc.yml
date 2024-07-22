@@ -1531,7 +1531,9 @@ items:
           - name: Set up Intune Connector for Active Directory  
             href: ./enrollment/autopilot-hybrid-connector-proxy.md
           - name: Set up Enrollment Status Page
-            href: ./enrollment/windows-enrollment-status.md 
+            href: ./enrollment/windows-enrollment-status.md
+          - name: Set up Windows Enrollment Attestation
+            href: ./enrollment/windows-enrollment-attestation.md   
  
       - name: Set up Android enrollment
         items:

@@ -1232,7 +1232,7 @@ For more information, see [Role-based access control](../protect/windows-hello.m
 
 A new Windows Hello for Business enrollment setting, **Enable enhanced sign in security** is available in the Intune admin center. Enhanced sign-in security is a Windows Hello feature that prevents malicious users from gaining access to a user's biometrics through external peripherals.
 
-For more information about this setting, see [Create a Windows Hello for Business policy](../protect/windows-hello.md#create-a-windows-hello-for-business-policy).
+For more information about this setting, see [Create a Windows Hello for Business policy](../protect/windows-hello.md).
 
 #### HTML formatting supported in noncompliance email notifications<!-- 24197255 -->
 
