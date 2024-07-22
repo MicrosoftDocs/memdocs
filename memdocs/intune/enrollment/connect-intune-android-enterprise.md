@@ -53,36 +53,41 @@ To verify Android Enterprise availability in your country or region, see [Is And
 > [!NOTE]
 > Due to interaction between Google and Microsoft domains, this step may require that you adjust your browser settings.  Make sure that "portal.azure.com" and "play.google.com" are in the same security zone in your browser.
 
+
+> > [!NOTE]
+> The process to connect your Intune tenant to your Managed Google play account has been updated and no longer requires a personal Google account. Current tenants who have completed this stage with a Gmail account will continue to be supported until Google enables the migration flow. More information will be provided at a later date.
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Go to **Devices** > **Enrollment**.   
 3. Select the **Android** tab. 
-3. Under **Prerequisites**, choose **Managed Google Play**.  If you're using a custom Intune admin role, access to this option requires organization *read* and *update* permissions.  
-4. Select **I agree** to grant Microsoft permission to [send user and device information to Google](../protect/data-intune-sends-to-google.md). 
+4. Under **Prerequisites**, choose **Managed Google Play**.  If you're using a custom Intune admin role, access to this option requires organization *read* and *update* permissions.  
+5. Select **I agree** to grant Microsoft permission to [send user and device information to Google](../protect/data-intune-sends-to-google.md). 
    
-5. Select **Launch Google to connect now** to open the Managed Google Play website. The website opens on a new tab in your browser.  
+6. Select **Launch Google to connect now** to open the Managed Google Play website. The website opens on a new tab in your browser.  
   
-6. On the Google sign-in page, enter the Google account you want to associate with all Android Enterprise management tasks for this tenant. This Google account will be the one that your company's IT admins share to manage and publish apps in the Google Play console. You can use an existing Google account or create a new one. The account you choose must not be associated with a G-Suite domain.  
+7. On the Google sign-in page, confirm that the pre-filled  Entra account is the account you want to associate with all Android Enterprise management tasks for this tenant.  
 
-   >[!Important]
-   > Be sure to use or create an Enterprise account rather than a personal GMail account. Keep in mind that the account you use should be one that is easily shared or
-   > transferred in the case that the person setting up the Managed Google Play connection leaves the company or moves teams.  
-    
-   > [!Note]
-   > If you're using the Microsoft Edge browser, make sure to **Sign-In** to the browser with your Google account.  
+> [!Important]
+> This Entra account will be the one that your company's IT admins use to manage the Google Admin account and associated subscriptions, as appropriate. . This Entra account must have
+> a mailbox set up for the validation process required by Google.
 
-7. Enter the following details:  
-   * **Organization name**: Your company name. 
-   * **Enterprise mobility management (EMM) provider**: Verify that **Microsoft Intune** is shown.  
+8. You will be prompted to complete the flow to create a Google admin account.
 
-8. Agree to the Android agreement, and then select **Confirm**.  
+9. When prompted, select “Allow and create account” to allow Microsoft Intune to manage your Android Enterprise devices.
+
+> [!Important]
+> It is recommended to use your signed in Entra ID to create the account. Additional administrators, if needed, can be added in the Google admin console after the onboarding is done.
+
+> > [!NOTE]
+> For current tenants who have completed the onboarding process with the Gmail account, no action is needed. All existing tenants are supported until the migration flow is enabled at a later date.
+
 
 > [!TIP]
 > To choose a scope tag for your Managed Google Play apps, go to **Tenant administration** > **Connectors and tokens** > **Managed Google Play** in the Microsoft Intune admin center.  Then select a scope tag to apply to all newly-approved Managed Google Play apps. You must have the following permissions to interact with this area in the admin center and to remove the selected scope tag. Tenant admins, or admins who are in charge of giving admin permissions to others, can go to **Tenant Administration** > **Roles** to edit permissions.   
    >  - Android Sync - Read
    >  - Android Sync – UpdateOnBoarding
 
-   > [!Important]
-   > Only link one Intune account to a managed Google Play account. Linking multiple accounts is unsupported and prevents basic functionality from working as expected. Disconnecting a single managed Google Play account from just one of its multilinked Intune accounts could cause the managed Google Play account to disconnect from all Intune accounts. In addition, Android Enterprise devices that already enrolled in those tenants could stop working properly. 
+
 
 ## Disconnect your Android Enterprise administrative account
 
