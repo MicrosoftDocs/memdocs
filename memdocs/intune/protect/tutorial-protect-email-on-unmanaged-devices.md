@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Tutorial - Protect Exchange Online email on unmanaged devices with Microsoft Intune
+title: Tutorial - Use Microsoft Intune to protect Exchange Online email from unmanaged iOS devices 
 titleSuffix: Microsoft Intune
-description: Use Microsoft Intune app protection policies and Conditional Access to secure Microsoft 365 Exchange Online.
+description: Learn how to use Microsoft Intune app protection policies and Conditional Access to prevent unmanaged iOS devices from accessing Exchange Online.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/13/2024
+ms.date: 07/18/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,9 +29,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Tutorial: Protect Exchange Online email on unmanaged devices with Microsoft Intune
+# Tutorial: Protect Exchange Online email on unmanaged iOS devices with Microsoft Intune
 
-This tutorial demonstrates how to use Microsoft Intune app protection policies with Microsoft Entra Conditional Access to protect access to Exchange Online. This protection prevents access to Exchange by users who use are using an unmanaged device or an app other than the Outlook mobile app to access Microsoft 365 email. The results of these policies apply when devices aren't enrolled in a device management solution like Intune.
+This tutorial demonstrates how to use Microsoft Intune app protection policies with Microsoft Entra Conditional Access to block access to Exchange Online by users who are using an unmanaged iOS device or an app other than the Outlook mobile app to access Microsoft 365 email. The results of these policies apply when the iOS devices aren't enrolled in a device management solution like Intune.
 
 In this tutorial, you'll learn how to:
 
@@ -129,7 +129,7 @@ Next, use the Microsoft Intune admin center to create two Conditional Access pol
 
 When you configure Conditional Access policies in the Microsoft Intune admin center, you're really configuring those policies in the Conditional Access blades from the Azure portal. Therefore, the user interface is a bit different than the interface you use for other policies for Intune.
 
-### Create an MFA policy for Modern Authentication clients
+### Create a multi-factor authentication policy for Modern Authentication clients
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

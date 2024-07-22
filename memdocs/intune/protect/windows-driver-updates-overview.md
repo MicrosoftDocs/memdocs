@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/02/2024
+ms.date: 07/15/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -73,8 +73,6 @@ To use Windows Driver Update management, your organization must have the followi
 
 - **Microsoft Entra ID**: *Microsoft Entra ID Free* (or greater) subscription.
 
-### Device & Edition requirements
-
 **Windows subscriptions and licenses**:
 
 Your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
@@ -87,6 +85,8 @@ Your organization must have one of the following subscriptions that include a li
 *Review your subscription details for applicability to Windows 11*.
 
 If you’re blocked when creating new policies for capabilities that require WUfB-DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants’ licenses meet the WUfB-DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+
+### Device & Edition requirements
 
 **Windows editions**:
 
@@ -311,7 +311,17 @@ The recommended and preferred path to embrace cloud based updates is to move the
 
 ### Is there a way to set a deadline for drivers?
 
-- The Quality Update deadline and grace period settings apply to drivers. The deadline starts from the time the driver is first offered to the device, but isn't a deferral period. The deferral period delays when updates are first offered to a device.
+The Quality Update deadline and grace period settings apply to drivers.
+
+Here are some more details on when deadlines are applied to drivers:
+
+- A driver is approved to be made available (manually or automatically) on a date. This is shown as the First Deployment.
+- On first or initial scan the approved driver is offered to the device. The date the client's update scan initially discovered the update is also the start date and time for the deadline.
+- The deadline calculation for both quality and feature updates is based off the time the client's update scan initially discovered the update. See [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines)
+
+### How do I set deferrals for drivers?
+
+- The deferral period set for Quality Updates within the Update Rings policy does not apply to drivers that are approved using the Driver Update Policy. Instead, use the deferral setting in the Driver policy to set a deferral.  In fact, using multiple driver policies with different deferral settings to create driver deployment rings is highly recommended. Remember to only assign a device to one driver policy.
 
 ### Are the user experience settings from an Update Ring policy applied for driver updates?
 

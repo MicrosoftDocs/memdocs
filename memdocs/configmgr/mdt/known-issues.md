@@ -4,7 +4,7 @@ description: Current limitations with the Microsoft Deployment Toolkit (MDT).
 ms.date: 03/08/2022
 ms.subservice: mdt
 ms.service: configuration-manager
-ms.topic: article
+ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
