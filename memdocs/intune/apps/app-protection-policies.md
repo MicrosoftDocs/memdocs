@@ -206,7 +206,7 @@ To use these filters when assigning policies, browse to **Apps** > **App protect
 
 On Android, Android devices will prompt to install the Intune Company Portal app regardless of which Device Management type is chosen. For example, if you select 'Android Enterprise' then users with unmanaged Android devices will still be prompted.
 
-For iOS/iPadOS, for the Device Management type to be enforced to Intune managed devices, additional app configuration settings are required. These configurations will communicate to the APP service that a particular app is managed and until that APP settings won't apply. The following are the app configuration settings:
+For iOS/iPadOS, for the Device Management type to be enforced to Intune managed devices, for that additional app configuration settings are required. These settings communicate with the APP (App Protection Policy) service to indicate that the app is managed. Therefore, the APP settings will not apply until you deploy the app configuration policy. The following are the app configuration settings:
 
 - **IntuneMAMUPN** and **IntuneMAMOID** must be configured for all MDM managed applications. For more information, see [How to manage data transfer between iOS/iPadOS apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** must be configured for all third-party and line-of-business MDM managed applications. The **IntuneMAMDeviceID** should be configured to the device ID token. For example, `key=IntuneMAMDeviceID, value={{deviceID}}`. For more information, see [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
