@@ -52,7 +52,7 @@ This article provides an overview of the steps to start your Intune deployment.
 
   The following articles are good resources:
 
-  - [Move to cloud-native endpoints](/mem/cloud-native-endpoints-overview)
+  - [Move to cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
   - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
   - [Deployment guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
   - [Microsoft Intune fundamentals online training](/training/paths/endpoint-manager-fundamentals/).
@@ -172,8 +172,6 @@ When a device enrolls, the device is issued a secure MDM certificate. This certi
 
 Different platforms have different enrollment requirements. The following articles can help you learn more about device enrollment, including platform-specific guidance:
 
-- [What is device enrollment in Intune?](/mem/intune/fundamentals/deployment-guide-enrollment)
-- [Enrolled device management capabilities of Microsoft Intune](/mem/intune/enrollment/device-enrollment)
 - [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
   - [Deployment guide: Enroll Android devices](deployment-guide-enrollment-android.md)
   - [Deployment guide: Enroll iOS/iPadOS devices](deployment-guide-enrollment-ios-ipados.md)
