@@ -45,7 +45,7 @@ For more information about Cloud PCs and Windows 365, see [What is Windows 365?]
 
 ## Features not yet supported Windows 365 Government
 
-The following features aren't yet supported for Windows 365 GCC or GCCH. 
+The following features aren't yet supported for Windows 365 GCC or GCC High. 
 
 - Unified dashboard
 - Windows 365 Security baseline
@@ -60,11 +60,11 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - GPU Cloud PCs
 - Audit logs support in Azure Log Analytics
 - [New Microsoft Teams client](/microsoftteams/new-teams-desktop-admin)
-- Windows 365 Boot (available for GCC, not available for GCCH)
+- Windows 365 Boot (available for GCC, not available for GCC High)
 - Windows App
 - Microsoft Purview forensic evidence
 - Windows 365 Switch
-- Windows 365 Frontline (available for GCC, not available for GCCH)
+- Windows 365 Frontline (available for GCC, not available for GCC High)
 - Cloud PC connection quality report
 - Cloud PC recommendation report
 - Cross region disaster recovery
