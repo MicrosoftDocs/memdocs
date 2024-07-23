@@ -91,11 +91,11 @@ The issue is being investigated. As a workaround, add the following additional r
 
 For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
 
-**This issue was resolved in July 2024.**
-
 > [!NOTE]
 >
-> The [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions) article doesn't list the **Device configurations** - **Assign** permission. The requirement of this permission is only temporary until the issue is resolved. However, the article can be used as a guide on how to properly add this permission.
+> The [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions) article doesn't list the **Device configurations** - **Assign** permission. This permission requirement is only temporary until the issue is resolved. However, the article can be used as a guide on how to properly add this permission.
+
+**This issue was resolved in July 2024.**
 
 ### Device is stuck at 100% during the out-of-box experience (OOBE)
 
