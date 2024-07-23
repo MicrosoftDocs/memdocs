@@ -109,7 +109,8 @@ There are two ways to add LOB apps to Managed Google Play:
 6. Click the **"+"** button at the lower right to add a new app.
 7. Add an app **Title** and click **Upload APK** add the APK app package.
    > [!NOTE]
-   > Your app's package name must be globally unique in Google Play (not just unique within your enterprise or Google Play Developer account). Otherwise, you will receive the **Upload a new APK file with a different package name** error.
+   > 1. Your app's package name must be globally unique in Google Play (not just unique within your enterprise or Google Play Developer account). Otherwise, you will receive the **Upload a new APK file with a different package name** error.
+   > 2. Your app's APK must not be marked as debuggable. Otherwise, you will receive the **APK is marked as debuggable** error. 
 8. Click **Create**.
 1. Click **Select** for the private app you want to sync. 
 
