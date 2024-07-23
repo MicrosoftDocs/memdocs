@@ -303,7 +303,7 @@ There are options available for the different platforms, including Android (AOSP
 
 ✅ **Task: Determine your FLW scenarios**
 
-FLW devices are organization-owned, enrolled into device management, and can be used by one user (user assigned) or many users (shared devices). These devices are critical to frontline workers to do their job, and are often used in a limited-use mode. For example, a device is used to scan items, or a tablet is used to check in patients at a hospital.
+FLW devices are organization-owned, enrolled into device management, and can be used by one user (user assigned) or many users (shared devices). These devices are critical to frontline workers to do their job, and are often used in a limited-use mode. For example, it can be a device that scans items, a kiosk that displays information, or a tablet that checks in patients at a hospital or medical facility.
 
 For more information, go to [Frontline worker device management in Microsoft Intune](frontline-worker-overview.md).
 
