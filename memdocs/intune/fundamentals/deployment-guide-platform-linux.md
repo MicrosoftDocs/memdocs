@@ -50,7 +50,7 @@ For each section in this guide, review the associated tasks. Some tasks are requ
 * [Assign licenses to users](licenses-assign.md) 
 * [Set mobile device management authority](mdm-authority-set.md)  
 
-For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. The Global Administrator has more permissions than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the **Policy and Profile Manager*, a built-in Intune role. 
+For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. The Global Administrator has more permissions than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the *Policy and Profile Manager*, a built-in Intune role. 
 
  For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
 
