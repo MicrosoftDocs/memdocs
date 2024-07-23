@@ -77,7 +77,7 @@ We have added a new category to the [Microsoft Feedback Portal](https://feedback
 
 To request adding an application to the Enterprise app catalog use the [Microsoft Feedback Portal](https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472). The feedback portal will also give Microsoft the ability to communicate with you on the status of your request and other communication about your request.
 
-When requesting an application please include three pieces of information:
+Include the following details when requesting to add an application:
 - Application publisher
 - Application name
 - Download URL
@@ -85,7 +85,7 @@ When requesting an application please include three pieces of information:
 > [!IMPORTANT]
 > Enterprise application management does not support the addition of applications that are behind a paywall or login screen.
 
-You can also upvote an application previously submitted by someone else. Applications with large numbers of votes will receive the most consideration and effort to be added to the catalog. However, priority will depend on complexity of the applications mechanics.
+You can also upvote an application previously submitted by someone else. Applications with large numbers of votes receive the most consideration and effort to be added to the catalog. However, priority depends on complexity of the applications mechanics.
 
 > [!IMPORTANT]
 > Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the Enterprise App Catalog. Once the submission is reviewed using the form provided above, the app may or may not be added to the Enterprise App Catalog. Microsoft does not offer or assume any Service Level Agreement (SLA) or timeline with regard to adding an app to the Enterprise App Catalog.
