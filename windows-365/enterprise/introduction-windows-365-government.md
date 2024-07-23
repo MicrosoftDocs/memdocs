@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/9/2024
+ms.date: 07/31/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -61,7 +61,6 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Audit logs support in Azure Log Analytics
 - [New Microsoft Teams client](/microsoftteams/new-teams-desktop-admin)
 - Windows 365 Boot (available for GCC, not available for GCCH)
-- Microsoft Purview Customer Lockbox
 - Windows App
 - Microsoft Purview forensic evidence
 - Windows 365 Switch
