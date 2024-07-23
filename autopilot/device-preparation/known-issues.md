@@ -43,6 +43,7 @@ This article describes known issues that can often be resolved with:
 ## Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
 
 Date added: *July 8, 2024*
+Date updated: *July 23, 2024*
 
 Autopilot device preparation deployments fail when devices aren't in the UTC time zone. The issue is being investigated.
 
@@ -63,6 +64,7 @@ In some Windows Autopilot device preparation deployments, BitLocker encryption m
 ## Windows Autopilot device preparation policy shows 0 groups assigned
 
 Date added: *June 18, 2024*
+Date updated: *July 23, 2024*
 
 There's a known issue that the Windows Autopilot device preparation policy shows **0 groups assigned** even when:
 
@@ -76,6 +78,7 @@ This issue was resolved in July 2024.
 ## Unable to assign Windows Autopilot device preparation policy to user group
 
 Date added: *June 18, 2024*
+Date updated: *July 23, 2024*
 
 There's a known issue where an administrator might not be able to assign the Windows Autopilot device preparation policy to a user group. When the issue occurs, the following error might occur:
 
