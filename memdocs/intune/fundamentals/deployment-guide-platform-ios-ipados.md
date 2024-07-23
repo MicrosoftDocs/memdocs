@@ -2,12 +2,12 @@
 # required metadata
 
 title: Deployment guide to manage iOS/iPadOS devices in Microsoft Intune
-description: Learn the recommended processes to manage iOS/iPadOS devices in Microsoft Intune.
+description: A guide to managing iOS/iPadOS devices in Microsoft Intune.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/11/2021
+ms.date: 07/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -41,8 +41,9 @@ Before you begin, complete these prerequisites to enable iOS/iPadOS device manag
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md) 
 * [Set mobile device management authority](mdm-authority-set.md) 
-* [Have Global Administrator or Intune administrator Microsoft Entra permissions](role-based-access-control.md)  
 * [Set up Apple MDM push (APNs) certificate](../enrollment/apple-mdm-push-certificate-get.md)  
+
+For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. The Global Administrator has more permissions than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the *Policy and Profile Manager*, a built-in Intune role.   
 
 ## Plan for your deployment  
 
@@ -134,9 +135,6 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 |[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md). 
 |[Set up a derived credentials issuer](../protect/derived-credentials.md)| Provision iOS/iPadOS devices with certificates that are derived from user smart cards.  
 
-
-
-
 ## Deploy apps  
 
 As you set up apps and app policies, think about your organization's requirements, such as the platforms you'll support, the tasks people need to do, the type of apps they need to complete those tasks, and finally, the groups who need those apps. You can use Intune to manage the whole device (including apps) or use Intune to manage the apps only.   
@@ -161,7 +159,7 @@ As you set up apps and app policies, think about your organization's requirement
 
 ## Enroll devices  
 
- Enrolling devices allows them to receive the policies you create, so have your Microsoft Entra user groups and device groups ready. 
+Enrolling devices allows them to receive the policies you create, so have your Microsoft Entra user groups and device groups ready.  
 
 For information about each enrollment method and how to choose one that's right for your organization, see the [iOS/iPadOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-ios-ipados.md). 
 
@@ -171,7 +169,7 @@ For information about each enrollment method and how to choose one that's right 
 |[Set up Apple School Manager in Intune](../enrollment/apple-school-manager-set-up-ios.md)|Set up Intune to enroll devices you purchased through the Apple School Manager program.|  
 |[Set up device enrollment with Apple Configurator ](../enrollment/apple-configurator-enroll-ios.md)| Create an Apple Configurator profile to enroll corporate-owned devices (with no user affinity) via direct enrollment; or to enroll wiped or new devices (with user affinity) via Setup Assistant. You'll need to export the Apple Configurator profile from Intune, which requires a USB connection to a Mac computer running Apple Configurator.|  
 | [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | 
-|[Set up Apple User Enrollment (in preview)](../enrollment/ios-user-enrollment.md)|Create a user enrollment profile to deploy the Apple user enrollment experience to devices using a managed Apple ID. Support for this feature is currently in preview. |   
+|[Set up Apple User Enrollment](../enrollment/ios-user-enrollment-supported-actions.md)|Create a user enrollment profile to deploy the Apple User Enrollment experience to devices using a managed Apple ID. |   
 |[Set up shared iPad devices](../enrollment/device-enrollment-shared-ipad.md)|Configure devices so that they can be used by more than one person (the type of setup you'd see in a library or educational environment).| 
 |[Backup and restore devices](../enrollment/backup-restore-ios.md)|Back up and restore a device to prepare it for enrollment or migration in Intune, such as during Automated Device Enrollment setup.   |
 |[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.|  
