@@ -52,6 +52,8 @@ As a workaround, customers can manually set the time zone in OOBE via Windows Po
 Set-TimeZone -Id "UTC"
 ```
 
+This issue was resolved in July 2024.
+
 ## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
 
 Date added: *July 8, 2024*
@@ -69,6 +71,8 @@ There's a known issue that the Windows Autopilot device preparation policy shows
 
 The issue is being investigated. As a workaround, create a new assigned device security group with the **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner, and then assign the new device group to the Windows Autopilot device preparation policy. For more information on creating the assigned device group, see [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
 
+This issue was resolved in July 2024.
+
 ## Unable to assign Windows Autopilot device preparation policy to user group
 
 Date added: *June 18, 2024*
@@ -83,6 +87,8 @@ The issue is being investigated. As a workaround, add the following additional r
   - Assign
 
 For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
+
+This issue was resolved in July 2024.
 
 > [!NOTE]
 >
