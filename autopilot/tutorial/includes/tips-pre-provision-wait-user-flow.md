@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 07/24/2024
+ms.date: 07/23/2024
 ms.localizationpriority: medium
 ---
 
