@@ -94,7 +94,6 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [Email](email-settings-configure.md)
 - [Endpoint protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
 - [Extensions (macOS)](kernel-extensions-overview-macos.md)
-- [Identity protection (Windows)](../protect/identity-protection-configure.md)
 - [Kiosk](kiosk-settings.md)
 - [Microsoft Defender for Endpoint (Windows)](../protect/advanced-threat-protection.md)
 - [Mobility Extensions (MX) profile (Android device administrator)](android-zebra-mx-overview.md)
