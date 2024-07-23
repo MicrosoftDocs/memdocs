@@ -68,6 +68,7 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 - Cloud PC connection quality report
 - Cloud PC recommendation report
 - Cross region disaster recovery
+- [Microsoft Purview Customer Key](purview-customer-key.md) 
 
 ## Next steps
 
