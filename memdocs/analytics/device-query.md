@@ -60,6 +60,9 @@ The supported properties you can query are listed in the **Properties** section.
 
 For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
 
+> [!TIP]
+> You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](copilot-intune-overview.md#query-with-copilot-in-device-query).
+
 ## Supported Operators  
 
 Device query supports only a subset of the operators supported in the Kusto Query Language (KQL). The following operators are currently supported:
