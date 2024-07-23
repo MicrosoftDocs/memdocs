@@ -46,6 +46,17 @@ Date added: *July 8, 2024*
 
 Date updated: *July 23, 2024*
 
+:::row:::
+   :::column span="":::
+      Date added: *July 8, 2024*
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Date updated: *July 23, 2024*
+   :::column-end:::
+:::row-end:::
+
 Autopilot device preparation deployments fail when devices aren't in the UTC time zone. The issue is being investigated.
 
 As a workaround, customers can manually set the time zone in OOBE via Windows PowerShell until the issue is resolved:
