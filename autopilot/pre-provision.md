@@ -8,7 +8,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 06/26/2024
+ms.date: 07/23/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -35,7 +35,7 @@ Pre-provisioned deployments use Microsoft Intune in currently supported versions
 
 ## Prerequisites
 
-In addition to [Windows Autopilot requirements](requirements.md?tabs=software), Windows Autopilot for pre-provisioned deployment also requires:
+In addition to [Windows Autopilot requirements](requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
 - A currently supported version of Windows.
 - Windows Pro, Enterprise, or Education editions.
@@ -140,11 +140,15 @@ If the pre-provisioning process fails:
 
 ### User flow
 
-<!-- MAXADO 8850476 -->
+<!-- MAXADO 8850476 & 8911061 -->
 
 > [!IMPORTANT]
 >
 > - In order to make sure tokens are refreshed properly between the Technician flow and the User flow, wait at least 90 minutes after running the Technician flow before running the User flow. This scenario mainly affects lab and testing scenarios when the User flow is run within 90 minutes after the Technician flow completes.
+>
+> - The User flow should be run within six months after the Technician flow finishes. Waiting more than six months can cause the certificates used by the Intune Management Engine (IME) to no longer be valid leading to errors such as:
+>
+>   `Error code: [Win32App][DetectionActionHandler] Detection for policy with id: <policy_id> resulted in action status: Failed and detection state: NotComputed.`
 >
 > - Compliance in Microsoft Entra ID is reset during the User flow. Devices might show as compliant in Microsoft Entra ID after the Technician flow completes, but then show as noncompliant once the User flow starts. Allow enough time after the User flow completes for compliance to reevaluate and update.
 

@@ -56,12 +56,9 @@ The following example image shows what an enrollment notification looks like to 
 > ![Example image of an enrollment notification configured in Intune, notifying the recipient that a device named *Nia's iPhone" was enrolled, and includes HTML elements such as bolded font and a hyperlink, device details, contact information, and privacy statement.](./media/enrollment-notifications/enrollment-notification-message.png)  
 
 ## Prerequisites  
-To create an enrollment notification, you must: 
+Prior to creating enrollment notifications, you must [configure Microsoft Intune branding and customization settings](../apps/company-portal-app.md) under **Tenant administration** > **Customization**.  
 
-* Be a Global Administrator or Intune Administrator. 
-* [Configure branding and customization settings](../apps/company-portal-app.md) in **Tenant administration** > **Customization**.  
-
-Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios. 
+Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios.  
 
 ## You should know  
 Email notifications appear in the user's inbox. Push notifications appear in the Intune Company Portal apps for iOS/iPadOS, macOS, and Android.  Enrollment push notifications aren't supported in the Company Portal for Windows, so they'll never appear there.  
@@ -71,7 +68,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 > [!TIP]
 > Use the built-in HTML editor to format and style email notifications. Intune supports the following HTML tags: `<a>`, `<strong>`, `<b>`, `<u>`, `<ol>`, `<ul>`, `<li>`, `<p>`, `<br>`, `<code>`, `<table>`, `<tbody>`, `<tr>`, `<td>`, `<thead>`, and`<th>`. It also supports the `href` attribute for hyperlinks, but only for HTTPS links.  
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).    
 2. Go to **Devices** > **Enrollment**.
 3. Select the **Windows**, **Apple**, or **Android** tab. 
 3. Choose **Enrollment notifications**. 

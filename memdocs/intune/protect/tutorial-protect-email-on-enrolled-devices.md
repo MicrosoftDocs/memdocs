@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Tutorial - Protect Exchange Online email on managed devices
+title: Tutorial - Protect Exchange Online email on managed iOS devices
 titleSuffix: Microsoft Intune
 description: Learn to secure Exchange Online with iOS Intune compliance policies and Microsoft Entra Conditional Access to require managed devices and the Outlook app.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/13/2024
+ms.date: 07/18/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,9 +30,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Tutorial: Protect Exchange Online email on managed devices with Microsoft Intune
+# Tutorial: Protect Exchange Online email on managed iOS devices with Microsoft Intune
 
-This tutorial demonstrates how to use Microsoft device compliance policies with Microsoft Entra conditional access policy, to allow iOS devices access to Exchange  only when they're managed by Intune and use an approved email app.
+This tutorial demonstrates how to use Microsoft device compliance policies with Microsoft Entra Conditional Access policy, to allow iOS devices access to Exchange  only when they're managed by Intune and use an approved email app.
 
 In this tutorial, you'll learn how to:
 
@@ -176,6 +176,14 @@ Conditional Access policies are configurable in either the Microsoft Entra admin
    :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png" alt-text="To enable policy, set the Enable policy slider to On.":::
 
 10. Select **Create** to save your changes. The profile is assigned.
+
+> [!NOTE]
+>
+> Some dependent services, like Microsoft Teams, integrate with Exchange Online resources and are governed by Early-bound Policy enforcement. Consequently, users must comply with Exchange policies before signing into Microsoft Teams.
+>
+> If you have a Conditional Access Policy that restricts authentication requests for Exchange Online resources, users must meet the Exchange Policy requirements before signing into Teams. Failure to comply with these policies affects the ability to sign into Teams.
+>
+> For more information, see [Microsoft documentation on service dependencies and policy enforcement](/entra/identity/conditional-access/service-dependencies#policy-enforcement).
 
 ## Try it out
 

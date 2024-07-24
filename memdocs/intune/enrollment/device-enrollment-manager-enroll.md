@@ -35,9 +35,7 @@ ms.collection:
 
 A device enrollment manager (DEM) is a non-administrator user who can enroll devices in Intune. Device enrollment managers are useful to have when you need to enroll and prepare many devices for distribution. People signed in to a DEM account can enroll and manage up to 1,000 devices, while a standard non-admin account can only enroll 15.  
 
-A DEM account requires an Intune user or device license, and an associated Microsoft Entra user. Global Administrators and Intune Service Administrators can add and manage device enrollment managers in the Microsoft Intune admin center. 
-
-This article describes the limits and specifications of enrollment manager and how to manage permissions.  
+A DEM account requires an Intune user or device license, and an associated Microsoft Entra user. This article describes the limits and specifications of DEM accounts and how to manage permissions.  
 
 ## Supported enrollment methods 
 
@@ -51,14 +49,14 @@ A device enrollment manager can use the following methods to enroll devices in I
 > To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](/mem/intune/fundamentals/deployment-guide-enrollment-windows).  
 
 
-## Account permissions 
+## Role based access control   
 
-These Microsoft Entra roles can manage device enrollment managers: 
+To manage device enrollment manager accounts in Microsoft Intune, you must be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). The Intune Administrator role can *update* and *read* device enrollment manager accounts.    
 
-* Global Administrator 
-* Intune Service Administrator role in Microsoft Entra ID      
-
-People assigned these roles can add and delete device enrollment managers, and view all DEM users in the Microsoft Intune admin center.  
+|Permission| Description |
+|---------------|------------|
+|Update | Create new device enrollment manager accounts, or delete device enrollment manager accounts. |  
+|Read | View the list of device enrollment manager accounts. | 
 
 ## Add a device enrollment manager
 
