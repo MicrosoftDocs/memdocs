@@ -43,7 +43,7 @@ To manage Intune-enrolled devices with any of the supported Android Enterprise m
 
 This article describes how to link your accounts in the Microsoft Intune admin center. After you connect to Google Play, these common apps for Android Enterprise are added to the admin center:  
 
-- **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed, dedicated and corporate-owned work profile scenarios.
+- **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed, dedicated, and corporate-owned work profile scenarios.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign in to your accounts if you use two-factor verification, and is also used for Android Enterprise dedicated devices that enroll with [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices).
 - **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used with Android Enterprise work profile scenarios on personal devices and Intune App Protection Policies (APP). 
 - **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Used for multi-app kiosk mode on Android Enterprise dedicated devices. [Learn more about Managed Home Screen](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
@@ -54,8 +54,8 @@ This article describes how to link your accounts in the Microsoft Intune admin c
 > As of July 2024, a Microsoft Entra account is required to connect to Google Play. Current tenants who have already associated a personal Gmail account with Intune will continue to be supported until Google enables the migration flow. To maintain the connection, we recommend completing the updated procedure in this article with a Microsoft Entra account.  
 
 - Confirm Android Enterprise availability in your country or region. For more information, see [Is Android Enterprise available in my country?](https://support.google.com/work/android/answer/6270910)
-- Choose a Microsoft Entra account. During the procedure, you must confirm a Microsoft Entra account.  This account will be the one that your company's IT admins use to manage the Google Admin account and associated subscriptions, and will be associated with all Android Enterprise management tasks under your Microsoft Intune tenant.
-- The Microsoft Entra account must have a mailbox set up to complete the validation process required by Google.  
+- Confirm the Microsoft Entra account you want to use. This account will be the one that your company's IT admins use to manage the Google Admin account and associated subscriptions, and will be associated with all Android Enterprise management tasks under your Microsoft Intune tenant.
+- Confirm that the Microsoft Entra account has a mailbox set up so that you can complete the validation process required by Google.  
 
 ## Connect accounts  
 > [!TIP]
@@ -74,8 +74,8 @@ Complete these steps to enable Android Enterprise management options in Microsof
 7. On the Google sign-in page, confirm that the prefilled Entra account is the account you want to associate with all Android Enterprise management tasks for this tenant. 
 
   > [!IMPORTANT]
-  > - Your company's IT admins will use this Microsoft Entra account to manage the Google Admin account and associated subscriptions, as appropriate. The account must have a mailbox set up for the validation process required by Google.
-  > - We recommend using the Microsoft Entra account you're signed into to create the account. After you establish the connection, you can add more administrators, if needed, in the Google admin console.  
+  > - Your company's IT admins will use this Microsoft Entra account to manage the Google Admin account and associated subscriptions, as appropriate. The Microsoft Entra account must have a mailbox set up for the the validation process required by Google.
+  > - We recommend using the Microsoft Entra account you're signed into to create the Google account. After you establish the connection, you can add more administrators, if needed, in the Google admin console.  
 
 8. Follow the onscreen prompts to finish creating a Google Admin account.  
 
