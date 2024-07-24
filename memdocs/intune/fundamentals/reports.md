@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/10/2024
+ms.date: 07/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -798,7 +798,7 @@ Workbooks combine text, Analytics queries, Azure Metrics, and parameters into 
 
 ### Device actions report
 
-Use the **Device Action** report to view a list of requested device actions and their statuses. For example, you can determine when a device delete action has been triggered, who initiated it, and the status of the action. For each device action, the report provides the **id**, **Device Name**, **User ID**, **IMEI**, **Action Status**, **Initiated By**, and **Date/Time**. This device information is valuable to help maintain compliance, ensure security, and streamline your audit processes.
+Use the **Device Action** report to view a list of requested device actions and their statuses. For each device action, the report provides the **id**, **Device Name**, **User ID**, **IMEI**, **Action Status**, **Initiated By**, and **Date/Time**. This device information is valuable to help maintain compliance, ensure security, and streamline your audit processes.
 
 You can view the **Device action** report using the following steps:
 
