@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/16/2024
+ms.date: 07/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -165,7 +165,7 @@ If you're a third-party CA interested in integrating your product with Intune, r
 ## Security and privacy information  
 Some user information in the SCEP profile becomes visible to the third-party certificate authority (CA) receiving the certificate signing request. This happens when you deploy a new or updated SCEP profile that contains the `Common name (CN)` user attribute, and variables such as `UserName`, `OnPrem_Distinguished_Name`, and `OnPremisesSamAccountName`. During profile deployment, Microsoft Intune replaces these variables with actual values. The targeted devices in turn must reach out to the third-party CA to request a certificate with the actual values.     
 
-For a list of supported user variables, see **Step 7** in this article under [Create a SCEP certificate profile](#create-a-scep-certificate-profile).  
+For a list of supported user variables, see **Step 7** under [Create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile).  
 
 ## See also
 
