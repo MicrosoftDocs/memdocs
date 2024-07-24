@@ -635,12 +635,6 @@ Applies to:
 - Windows 10
 - Windows 11
 
-#### Monitor device delete actions<!-- 25255093 -->
-
-You can now monitor and track device delete actions in the **Device Action** report of Intune. You can determine when a device delete action has been triggered, who initiated it, and the status of the action. Status for a device delete action is either completed, pending, or failed. This device information is valuable to help maintain compliance, ensure security, and streamline your audit processes. You can find the report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor** > **Device actions**.
-
-For more information about reports, see [Intune Reports](..\fundamentals\reports.md).
-
 #### Optional Feature updates<!--12769586 -->
 
 Feature updates can now be made available to end users as **Optional** updates, with the introduction of **Optional** Feature updates. End users will see the update in the **Windows Update** settings page in the same way that it's shown for consumer devices.
