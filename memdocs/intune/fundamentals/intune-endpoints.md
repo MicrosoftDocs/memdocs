@@ -400,6 +400,10 @@ To find your tenant location navigate to the Intune admin center > **Tenant admi
 
 ---
 
+## Windows Update for Business deployment service
+
+For more information on the required endpoints for Windows Update for Business deployment service, see [Windows Update for Business deployment service prerequisites](/windows/deployment/update/deployment-service-prerequisites#required-endpoints).
+
 ## Endpoint analytics
 
 For more information on the required endpoints for Endpoint analytics, see [Endpoint analytics proxy configuration](../../analytics/troubleshoot.md#bkmk_endpoints).
