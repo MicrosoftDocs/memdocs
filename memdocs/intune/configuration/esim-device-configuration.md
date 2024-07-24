@@ -17,7 +17,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: hejimenez
+ms.reviewer: nicolezhao, hejimenez
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

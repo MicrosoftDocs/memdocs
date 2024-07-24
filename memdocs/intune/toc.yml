@@ -1223,6 +1223,9 @@ items:
           - name: Profiles on Zebra devices
             displayName: original equipment manufacturers, oem, oemconfig, schema, android
             href: ./configuration/oemconfig-zebra-android-devices.md
+          - name: Managed Home Screen (MHS) permissions
+            displayName: original equipment manufacturers, oem, oemconfig, schema, android, auto-grant
+            href: ./configuration/oemconfig-managed-home-screen-permissions-android.md
         - name: Kiosks and dedicated devices
           href: ./configuration/kiosk-settings.md
           displayName: single app, multi app, windows, holographic
@@ -1531,7 +1534,9 @@ items:
           - name: Set up Intune Connector for Active Directory  
             href: ./enrollment/autopilot-hybrid-connector-proxy.md
           - name: Set up Enrollment Status Page
-            href: ./enrollment/windows-enrollment-status.md 
+            href: ./enrollment/windows-enrollment-status.md
+          - name: Set up Windows Enrollment Attestation
+            href: ./enrollment/windows-enrollment-attestation.md   
  
       - name: Set up Android enrollment
         items:

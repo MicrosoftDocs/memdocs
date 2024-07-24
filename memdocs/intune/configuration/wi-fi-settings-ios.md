@@ -45,7 +45,7 @@ This article describes the settings you can configure.
 
 - Create an [iOS/iPadOS Wi-Fi device configuration profile](wi-fi-settings-configure.md).
 
-- These settings are available for all enrollment types. For more information on the enrollment types, go to [iOS/iPadOS enrollment](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados).
+- These settings are available for all enrollment types. For more information on the enrollment types, go to [iOS/iPadOS enrollment](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
 - These settings use the [Apple Wi-Fi payload](https://developer.apple.com/documentation/devicemanagement/wifi) (opens Apple's web site).
 

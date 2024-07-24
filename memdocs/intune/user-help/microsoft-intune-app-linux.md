@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/29/2023
+ms.date: 05/15/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -30,9 +30,16 @@ ms.collection:
 
 # Get the Microsoft Intune app for Linux   
 
-This article describes how to install, update, and remove the Microsoft Intune app for Linux on a  personal device.  
+This article describes how to install, update, and remove the Microsoft Intune app for Linux on a personal device.  
 
 The Microsoft Intune app package is available at [https://packages.microsoft.com/](https://packages.microsoft.com/). For more information about how to use, install, and configure Linux software packages for Microsoft products, see [Linux Software Repository for Microsoft Products](/windows-server/administration/linux-package-repository-for-microsoft-software).  
+
+## Requirements  
+The Microsoft Intune app is supported with the following operating systems:  
+
+ - Ubuntu Desktop 22.04 or 20.04 LTS (physical or Hyper-V machine with x86/64 CPUs)  
+ - RedHat Enterprise Linux 8  
+ - RedHat Enterprise Linux 9    
 
 ## Install Intune app  
 Run the following commands in a command line to manually install the Intune app and its dependencies on your device.  

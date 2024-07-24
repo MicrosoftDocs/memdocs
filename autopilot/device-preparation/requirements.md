@@ -148,9 +148,9 @@ To resolve internet names for all services, the device communicates with a DNS s
 
 #### Diagnostics data
 
-Diagnostic data collection is enabled by default. To disable Windows Analytics and related diagnostics capabilities, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm).
+Diagnostic data collection is enabled by default. For more information, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm).
 
-If the device can't send diagnostic data, the Windows Autopilot device preparation process still continues. However, services that depend on diagnostic data, such as Desktop Analytics, doesn't work.
+If the device can't send diagnostic data, the Windows Autopilot device preparation process still continues. However, services that depend on diagnostic data don't work.
 
 #### Network Connection Status Indicator (NCSI)
 

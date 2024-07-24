@@ -39,7 +39,8 @@ Before you begin, complete these prerequisites to enable Android device manageme
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md)
 * [Set mobile device management authority](mdm-authority-set.md)
-* [Have Global Administrator or Intune administrator Microsoft Entra permissions](role-based-access-control.md)  
+
+For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. The Global Administrator has more permissions than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the *Policy and Profile Manager*, a built-in Intune role.  
 
 ## Plan for your deployment  
 
@@ -75,7 +76,7 @@ For more information about the security framework, see the articles listed in th
 
 | Task | Detail |
 | ---- | ------ |
-| [Learn about the Android Enterprise framework deployment methodology](/mem/intune/enrollment/android-configuration-framework)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |
+| [Learn about the Android Enterprise framework deployment methodology](../enrollment/android-configuration-framework.md)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |
 | [Configure device enrollment restrictions for personally owned devices](../enrollment/android-work-profile-security-settings.md)|Apply these restrictions to configure a basic or high security level for devices that are personally owned with work profile. |
 | [Disallow personal accounts on Android Enterprise devices](../enrollment/android-app-configuration-policies.md) |Prevent people on work or school devices from signing into Microsoft apps with a personal account. |  
 |[Configure security settings for personally owned devices](../enrollment/android-work-profile-security-settings.md)  | Apply these settings to configure a basic or high security level on devices that are personally owned with work profile. |
@@ -134,7 +135,7 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 | ---- | ------ | ------ |
 |[Require multi-factor authentication (MFA)](../enrollment/multi-factor-authentication.md)| Require people to supply two forms of credentials at time of enrollment.| Android Enterprise |
 |[Create a trusted certificate profile](../protect/certificates-trusted-root.md)|Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. The trusted certificate profile deploys the trusted root certificate to devices using SCEP, PKCS, and PKCS imported certificates.| Android Enterprise, Android device administrator |  
-|[Use SCEP certificates with Intune](../protect/certificates-scep-configure.md)| Learn what’s needed to use SCEP certificates with Intune, and configure the required infrastructure. After you do that, you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).| Android Enterprise |
+|[Use SCEP certificates with Intune](../protect/certificates-scep-configure.md)| Learn what's needed to use SCEP certificates with Intune, and configure the required infrastructure. After you do that, you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).| Android Enterprise |
 |[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)| Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. | Android Enterprise, Android device administrator |
 |[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md). | Android Enterprise, Android device administrator |
 |[Set up a derived credentials issuer](../protect/derived-credentials.md)| Provision Android devices with certificates that are derived from user smart cards. | Android Enterprise |

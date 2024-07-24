@@ -82,13 +82,7 @@ The Intune App SDK is a standard Android library with no external dependencies.
 
 ### Android Studio
 
-**Microsoft.Intune.MAM.SDK.aar** must be specified as an Android library reference:
-
- 1. Open your app project in Android Studio and go to **File > New > New module**.
- 2. Select **Import .JAR/.AAR Package**.
- 3. Select Microsoft.Intune.MAM.SDK.aar to create a module for the *.AAR* file type.
- 4. Right-click the module or modules containing your app code and go to **Module Settings** > **Dependencies tab** > **+ icon** > **Module dependency**.
- 5. Select the MAM SDK AAR module you created and select **OK**. Adding this reference ensures that your module compiles with the MAM SDK when you build your project.
+**Microsoft.Intune.MAM.SDK.aar** must be specified as an Android library reference. To add this dependency to your build, follow [Add your AAR or JAR as a dependency] from Android documentation.
 
 ### Visual Studio
 
@@ -165,7 +159,7 @@ buildscript {
 }
 ```
 
-Then, to apply the plugin, add the following to the `build.gradle` file for your app module:
+Then, to apply the plugin, add the following to the `build.gradle` file for your app and dynamic feature modules:
 
 ```groovy
 apply plugin: 'com.microsoft.intune.mam'
@@ -300,6 +294,14 @@ intunemam {
     incremental = true
 }
 ```
+
+### Dynamic Feature Module configuration
+
+Dynamic Feature Modules build separately from the app project. As such, Dynamic Feature Modules also need to apply the Gradle Build Plugin.
+
+Due to technical limitations in the APIs used by the Gradle plugin, app classes need to be reprocessed when transforming dynamic feature module classes. To ensure that this can be done, all feature modules should be configured with the same settings as the app it is designed for.
+
+For example, if an app excludes a class, the dynamic feature module should also exclude that class.
 
 ## Integrating with the .NET MAUI Targets
 
@@ -444,3 +446,4 @@ After you've completed all the [Exit Criteria], continue to [Stage 4: MAM Integr
 [ProGuard]:https://www.guardsquare.com/products/proguard
 [Javassist]:https://jboss-javassist.github.io/javassist/
 [Service]:https://developer.android.com/reference/android/app/Service
+[Add your AAR or JAR as a dependency]: https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency
