@@ -1003,5 +1003,5 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [MAMCertTrustWebViewClient]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html
 
 <!-- Method links -->
-[unregisterAccountForMAM]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String,%20java.lang.String)
+[unregisterAccountForMAM]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String,%20java.lang.String)
 
