@@ -51,10 +51,10 @@ This article describes how to link your accounts in the Microsoft Intune admin c
 ## Before you begin  
 
 >[!IMPORTANT]
-> Beginning July 2024, we recommend using your Microsoft Entra account to connect to Google Play. Google has made updates and improvements to the the Google services onboarding flow. With these updates, you can now link your Microsoft Entra identity account to a Google account, instead of using a personal Gmail account. For more information about these changes, see [Google blog: How we’re making Android Enterprise signup and access to Google services better](https://blog.google/products/android-enterprise/android-enterprise-signup-google-services/). Current Microsoft Intune tenants who have already associated a personal Gmail account with Intune will continue to be supported.  
+> Beginning July 2024, we recommend using your Microsoft Entra account to connect to Google Play. As a result of recent changes made by Google, you can now link your Microsoft Entra identity account to a Google account, instead of using a personal Gmail account. For more information about these changes, see [Google blog: How we’re making Android Enterprise signup and access to Google services better](https://blog.google/products/android-enterprise/android-enterprise-signup-google-services/). Current Microsoft Intune tenants who have already associated a personal Gmail account with Intune will continue to be supported.  
 
 - Confirm Android Enterprise availability in your country or region. For more information, see [Is Android Enterprise available in my country?](https://support.google.com/work/android/answer/6270910)
-- Confirm the Microsoft Entra account you want to use. This account enables you and other admins with designated access to manage the Google Admin account and associated subscriptions, and will be associated with all Android Enterprise management tasks under your Microsoft Intune tenant.
+- Confirm the Microsoft Entra account you want to use. This account is used to manage the Google Admin account and associated subscriptions, and will be associated with all Android Enterprise management tasks under your Microsoft Intune tenant.  
 - Confirm that the Microsoft Entra account has a mailbox set up so that you can complete the validation process required by Google.  
 
 ## Connect accounts  
