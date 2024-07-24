@@ -2,7 +2,7 @@
 title: What is Configuration Manager?
 titleSuffix: Configuration Manager
 description: Learn the basics of Microsoft Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 06/19/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.custom: intro-overview
@@ -97,8 +97,6 @@ For more information, see the [Software Center user guide](software-center.md).
 ## Next steps
 
 Before you install Configuration Manager, familiarize yourself with the basic concepts and terms:
-
-- If you're familiar with System Center 2012 Configuration Manager, see [What's changed from System Center 2012 Configuration Manager](../plan-design/changes/what-has-changed-from-configuration-manager-2012.md).
 
 - For a high-level technical overview of Configuration Manager, see [Fundamentals of Configuration Manager](fundamentals.md).
 

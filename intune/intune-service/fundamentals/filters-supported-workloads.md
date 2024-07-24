@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/19/2024
+ms.date: 07/18/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -322,7 +322,6 @@ You can use filters for some common app policies on the following platforms. For
 | Endpoint analytics Remediations scripts|✔️ |
 | Endpoint Protection | ✔️ |
 | Enrollment device platform restrictions | ✔️ <br/> Support for a subset of filter properties including device `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` |
-| Identity Protection | ✔️ |
 | Kiosk | ✔️ |
 | Network boundary | ✔️ |
 | PKCS certificate | ✔️ |
@@ -338,7 +337,7 @@ You can use filters for some common app policies on the following platforms. For
 | Windows health monitoring | ✔️ |
 | &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
-| Account protection | ✔️ <br/> **Local user group membership** and **Local admin password solution (Windows LAPS)** |
+| Account protection | ✔️ <br/> **Account protection**, **Local user group membership**, and **Local admin password solution (Windows LAPS)** |
 | Antivirus | ✔️ |
 | Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, and **App and browser isolation** |
 | Disk encryption | ✔️ |

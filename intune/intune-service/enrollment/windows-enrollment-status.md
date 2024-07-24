@@ -32,8 +32,8 @@ ms.collection:
 ---
 
 
- 
-# Set up the Enrollment Status Page  
+
+ # Set up the Enrollment Status Page  
 
 **Applies to**
 - Windows 10  
@@ -115,7 +115,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 1. In **Assignments**, select the groups to receive your profile. Optionally, select **Edit filter** to restrict the assignment further.  
     > [!NOTE]
     >
-    > Due to OS restrictions, a limited selection of filters are available for ESP assignments. The picker only shows filters that have rules defined for `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` properties. Filters that contain other properties aren't available.  
+    > Due to OS restrictions, a limited selection of filters are available for ESP assignments. The picker only shows filters that have rules defined for `model`, `manufacturer`, `osVersion`, `operatingSystemSKU`, `deviceOwnership`, and `enrollmentProfileName` properties. `model` and `manufacturer` are available with Windows 11, version 23H2 with KB5035942 or later, or version 22H2 with KB5035942 or later. Filters that contain other properties aren't available.  
 
 1. Select **Next**.  
 
@@ -306,6 +306,12 @@ enrolled via the *Add work and school account* option. The ESP waits for Microso
   - The autologon will fail if the device rebooted after the user entered their Microsoft Entra credentials but before exiting the ESP Device setup phase. This failure occurs because the ESP Device setup phase never completed. The workaround is to reset the device.
 - ESP doesn't apply to a Windows device that was enrolled with Group Policy (GPO).
 - Scripts that run in user context (**Run this script using the logged on credentials** on the script properties is set to **yes**) may not execute during ESP.  As a workaround, execute scripts in System context by changing this setting to **no**.
+- Microsoft 365 Apps might cause the ESP to hang during app installation, specifically when: 
+  - You add Microsoft 365 Apps to Microsoft Intune by using the *Microsoft 365 Apps (Windows 10 and later)* app type.    
+  - The ESP is tracking the installation of Microsoft 365 Apps.     
+  - Microsoft 365 Apps begin installing during the installation of another Win32 app being tracked.  
+    
+  To prevent the ESP from hanging during installation and causing a failed deployment, we recommend deploying Microsoft 365 Apps with Microsoft Intune by using the *Win32* app type.  
 
 ## Troubleshooting  
 

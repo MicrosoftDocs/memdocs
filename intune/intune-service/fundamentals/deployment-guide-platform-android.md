@@ -39,7 +39,8 @@ Before you begin, complete these prerequisites to enable Android device manageme
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md)
 * [Set mobile device management authority](mdm-authority-set.md)
-* [Have Global Administrator or Intune administrator Microsoft Entra permissions](role-based-access-control.md)  
+
+For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. The Global Administrator has more permissions than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the *Policy and Profile Manager*, a built-in Intune role.  
 
 ## Plan for your deployment  
 
@@ -149,7 +150,7 @@ As you set up apps and app policies, think about your organization's requirement
 |[Add managed Google Play apps](../apps/apps-add-android-for-work.md) | Add store apps, line-of-business (LOB) apps, and web apps through the managed Google Play Store.| Android Enterprise|
 |[Add Android Enterprise system apps](../apps/apps-ae-system.md) | Use Intune to enable and disable Android Enterprise system apps. | Android Enterprise|  
 |[Add web apps](../apps/web-app.md) | Add web apps to Intune and assign to groups. | Android device administrator|
-|[Add built-in apps](../apps/apps-add-built-in.md) | Add built-in apps to Intune and assign to groups. | Android Enterprise, Android device administrator|
+|[Add built-in apps](../apps/apps-add-built-in.md) | Add built-in apps to Intune and assign to groups. | Android device administrator|
 |[Add line-of-business apps](../apps/lob-apps-android.md)|Add Android line-of-business (LOB) apps to Intune and assign to groups.| Android device administrator|
 |[Assign apps to groups](../apps/apps-deploy.md)|Assign apps to users and devices. | Android Enterprise, Android device administrator|
 |[Include and exclude app assignments](../apps/apps-inc-exl-assignments.md)|Control access and availability to an app by including and excluding selected groups from assignment.|  Android Enterprise, Android device administrator|

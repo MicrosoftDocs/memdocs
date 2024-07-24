@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/30/2024
+ms.date: 06/17/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -112,6 +112,8 @@ This feature applies to:
 - You can have preexisting apps installed on the device that aren't included in the home screen layout configuration. These apps are shown in alphabetical order after the configured apps.
 
 - When you use the Home Screen grid settings to add pages, or add pages and apps to the dock, then the icons on the Home Screen and pages are locked. They can't be moved or deleted. This behavior might be by design with iOS/iPadOS and Apple's MDM policies.
+
+- iOS/iPadOS web clips that are required to open in a managed browser won’t appear in the order that you enter in the Home Screen layout policy.
 
 ### Home screen
 

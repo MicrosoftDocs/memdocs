@@ -30,7 +30,6 @@
       "redirect_url": "/intune/intune-service/copilot/security-copilot",
       "redirect_document_id": true
     },
-
     {
       "source_path": "memdocs/intune/user-help/allow-wi-fi-control-android.md",
       "redirect_url": "/intune/intune-service/user-help/update-device-settings-android",
@@ -1718,7 +1717,7 @@
     },
     {
       "source_path": "memdocs/autopilot/configuration-requirements.md",
-      "redirect_url": "/autopilot/requirements&tabs=configuration",
+      "redirect_url": "/autopilot/requirements?tabs=configuration",
       "redirect_document_id": false
     },
     {
@@ -1758,7 +1757,7 @@
     },
     {
       "source_path": "memdocs/autopilot/licensing-requirements.md",
-      "redirect_url": "/autopilot/requirements&tabs=licensing",
+      "redirect_url": "/autopilot/requirements?tabs=licensing",
       "redirect_document_id": false
     },
     {
@@ -1768,7 +1767,7 @@
     },
     {
       "source_path": "memdocs/autopilot/networking-requirements.md",
-      "redirect_url": "/autopilot/requirements&tabs=networking",
+      "redirect_url": "/autopilot/requirements?tabs=networking",
       "redirect_document_id": false
     },
     {
@@ -1818,7 +1817,7 @@
     },
     {
       "source_path": "memdocs/autopilot/software-requirements.md",
-      "redirect_url": "/autopilot/requirements&tabs=software",
+      "redirect_url": "/autopilot/requirements?tabs=software",
       "redirect_document_id": false
     },
     {
@@ -2433,27 +2432,177 @@
     },
     {
       "source_path": "autopilot/software-requirements.md",
-      "redirect_url": "/autopilot/requirements?tabs=software",
+      "redirect_url": "/autopilot/requirements?tabs=software#software-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/networking-requirements.md",
-      "redirect_url": "/autopilot/requirements?tabs=networking",
+      "redirect_url": "/autopilot/requirements?tabs=networking#networking-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/licensing-requirements.md",
-      "redirect_url": "/autopilot/requirements?tabs=licensing",
+      "redirect_url": "/autopilot/requirements?tabs=licensing#licensing-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/configuration-requirements.md",
-      "redirect_url": "/autopilot/requirements?tabs=configuration",
+      "redirect_url": "/autopilot/requirements?tabs=configuration#configuration-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/windows-autopilot-whats-new.md",
       "redirect_url": "/autopilot/whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/resolved-issues.md",
+      "redirect_url": "/autopilot/known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/windows-autopilot.md",
+      "redirect_url": "/autopilot/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/software-requirements-old.md",
+      "redirect_url": "/autopilot/requirements?tabs=software",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/monitor-connection-health.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/enroll-devices.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/about-updates.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/tutorial-windows10.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/get-support.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/connect-configmgr.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/ready-for-windows.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/deploy-pilot.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/troubleshooting.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/group-policy-settings.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/deploy-prod.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/compat-assessment.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/account-reset.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/privacy.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/set-up.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/about-deployment-plans.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/faq.yml",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/overview.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/enable-data-sharing.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/whats-new.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/create-deployment-plans.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/index.yml",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/health-status-monitoring.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/account-close.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/log-collector.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/about-assets.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/core/clients/manage/monitor-windows-analytics.md",
+      "redirect_url": "/mem/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove",
       "redirect_document_id": false
     }
   ]

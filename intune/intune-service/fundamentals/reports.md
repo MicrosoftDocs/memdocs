@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/21/2024
+ms.date: 06/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -55,8 +55,10 @@ The reporting framework provides a consistent and more comprehensive reporting e
 Users with the following permissions can review logs:
 
 - Global Administrator
-- Intune Service Administrator
+- Intune Administrator
 - Administrators assigned to an Intune role with **Read** permissions
+
+For more information about administrator permissions, see [Types of administrators](../fundamentals/users-add.md#types-of-administrators).
 
 ## Reporting tiles
 
@@ -311,6 +313,18 @@ You can view the **Incomplete user enrollments** report using the following step
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Incomplete user enrollments**.
+
+### Device attestation status report
+
+This report provides a summary of devices that have either *Completed*, *Failed* or *Not started* enrollment attestation.
+
+You can view the **Device attestation status report** report using the following steps:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Device management** > **Device attestation status**.
+3. Use the drop-downs to filter by attestation status or device ownership.
+4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
+5. For more information on the report, see [Windows enrollment attestation](../enrollment/windows-enrollment-attestation.md#device-attestation-status-report).
 
 ### Windows Autopilot deployments report (Operational)
 
@@ -665,6 +679,9 @@ To see the report for a device, you can use the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > *select a device* > **Managed Apps**.
 3. To see the managed apps for a specific user, select a user from the dropdown box near the top of the report.
+
+> [!NOTE]
+> The **Managed Apps** report also includes Enterprise App Catalog apps.
 
 ### Device group membership report (Organizational)
 

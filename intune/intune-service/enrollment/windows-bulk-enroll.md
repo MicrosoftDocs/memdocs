@@ -40,13 +40,14 @@ Microsoft Entra users are standard users on these devices and receive assigned I
 
 ## Roles and permissions    
 
-To create a bulk enrollment token, you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The supported roles are:  
-- Global Administrator  
+To create a bulk enrollment token, you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The Microsoft Entra built-in roles with permission to create bulk enrollment tokens are:       
+
 - Cloud Device Administrator  
 - Intune Administrator  
 - Password Administrator  
 
-You can assign these roles in Intune for Education > **Tenant settings** or in the Microsoft Intune admin center > **Users**. For more information, see [Give admin permissions in Microsoft Intune admin center](../fundamentals/users-add.md#give-admin-permissions-in-microsoft-intune-admin-center).  
+For more information about these roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).  
+
 
 ## Prerequisites 
 

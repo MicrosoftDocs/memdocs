@@ -251,5 +251,5 @@ If you're unsure if any of these features apply to your app, revisit [Key Decisi
 [Android's `RestrictionsManager`]:https://developer.android.com/reference/android/content/RestrictionsManager
 
 <!-- Class links -->
-[MAMAppConfigManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/appconfig/MAMAppConfigManager.html
-[MAMAppConfig]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/appconfig/MAMAppConfig.html
+[MAMAppConfigManager]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/appconfig/MAMAppConfigManager.html
+[MAMAppConfig]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/appconfig/MAMAppConfig.html

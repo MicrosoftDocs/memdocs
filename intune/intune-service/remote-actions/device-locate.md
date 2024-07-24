@@ -82,7 +82,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
    ![Screenshot of Locate device using Intune in Azure](./media/device-locate/locate-device.png)
 
-Android use of **Locate device** is managed using a device configuration profile (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Device Restrictions** for profile type).
+Android use of **Locate device** is managed using a device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Device Restrictions** for profile type).
 
 There are two separate toggles, one for dedicated and one for fully managed and corporate-owned work profile devices.
 

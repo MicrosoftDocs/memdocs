@@ -7,7 +7,7 @@ keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/30/2023
+ms.date: 06/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,18 +40,22 @@ This feature applies to:
 - Windows 10
 - Windows Holographic for Business
 
-To create kiosk profiles for other platforms, go to [Android device administrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+To create kiosk profiles for other platforms, go to:
+
+- [Android device administrator](device-restrictions-android.md#kiosk)
+- [Android Enterprise](device-restrictions-android-for-work.md#device-experience)
+- [iOS/iPadOS](device-restrictions-ios.md#kiosk)
 
 Intune supports one kiosk profile per device. If you need multiple kiosk profiles on a single device, you can use a [Custom OMA-URI](custom-settings-windows-10.md).
 
-Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, push or deploy these settings to groups in your organization.
+Intune uses configuration profiles to create and customize these settings for your organization's needs. After you add these features in a profile, assign or deploy these settings to groups in your organization.
 
 This article shows you how to run one app or many apps as a Windows kiosk device using a device configuration profile. For a list of all the settings, and what they do, go to [Windows client kiosk settings](kiosk-settings-windows.md) and [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md).
 
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
    - **Platform**: Select **Windows 10 and later**.
@@ -97,13 +101,12 @@ This article shows you how to run one app or many apps as a Windows kiosk device
 
 The next time each device checks in, the policy is applied.
 
-## Next steps
+## Related articles
 
-After the [profile is assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- You can create kiosk profiles for devices that run the following platforms:
 
-You can create kiosk profiles for devices that run the following platforms:
-
-- [Android device administrator](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#device-experience)
-- [Windows 10/11](kiosk-settings-windows.md)
-- [Windows Holographic for Business](kiosk-settings-holographic.md)
+  - [Android device administrator](device-restrictions-android.md#kiosk)
+  - [Android Enterprise](device-restrictions-android-for-work.md#device-experience)
+  - [Windows 10/11](kiosk-settings-windows.md)
+  - [Windows Holographic for Business](kiosk-settings-holographic.md)

@@ -57,7 +57,7 @@ items:
   - name: Overview
     items:
     - name: Windows Autopilot overview
-      href: windows-autopilot.md
+      href: overview.md
     - name: Device registration
       items:
       - name: Registration overview
@@ -119,8 +119,6 @@ items:
           href: policy-conflicts.md
         - name: Known issues
           href: known-issues.md
-        - name: Resolved issues
-          href: resolved-issues.md
 
   - name: Tutorial
     items:

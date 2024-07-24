@@ -1,5 +1,5 @@
 ---
-title: Bulk enrollment with Apple Configurator
+title: Education device enrollment with Apple Configurator and Intune
 description: Learn how to bulk enroll devices with Apple Configurator.
 ms.date: 5/2/2024
 ms.topic: tutorial

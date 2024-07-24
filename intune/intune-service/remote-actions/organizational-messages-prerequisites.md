@@ -47,12 +47,11 @@ For more information about license options, see [Microsoft Intune licensing](../
 ## Role-based access control requirements  
 To create organizational messages in Microsoft Intune, you must be assigned one of these roles: 
 
-* Microsoft Entra Global Administrator  
-* Intune administrator  
-* Organizational messages manager (Microsoft Intune role)  
-* Organizational messages writer (Microsoft Entra role)  
+* Organizational Messages Manager, a Microsoft Intune built-in role    
+* Organizational Messages Writer, a Microsoft Entra built-in role   
+* Intune Administrator, a Microsoft Entra built-in role  
 
-You can also create a custom role for people managing organization messages by using role-based access control (RBAC). For more information about how to use built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
+You can also create a custom role for people managing organization messages by using role-based access control (RBAC). For more information about how to use built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).     
 
 ## Logo requirements  
 Logos must meet these requirements:  
@@ -83,7 +82,7 @@ Enable the delivery of organizational messages in all new and existing policies 
 > If you use the Windows 10/11 MDM security baseline, you will need to change the **Windows Spotlight** policy to **Not configured**. The Windows Spotlight policy controls organizational messages and messages coming from Microsoft. To continue blocking messages from Microsoft as defined in the Windows 10/11 MDM security baseline, [configure the Microsoft messaging policy](organizational-messages-prerequisites.md#microsoft-messaging-policy).
 
 #### Template profiles    
-Go to **Devices** > **Windows** > **Configuration profiles**, and in a new or existing template profile, select **Device restrictions** > **Windows Spotlight**.    
+Go to **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration**, and in a new or existing template profile, select **Device restrictions** > **Windows Spotlight**.    
 
 * To allow taskbar messages:   
   * **Windows Spotlight**: Select **Not configured**.    

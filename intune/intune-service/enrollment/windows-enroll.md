@@ -60,8 +60,15 @@ You must have:
 - A [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium) or [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845) for automatic MDM enrollment and custom company branding.  
   
 - A Microsoft Intune subscription.  
+
+## Role-based access control 
   
-- Global Administrator permissions.    
+To manage automatic MDM enrollment in Microsoft Intune, you must be assigned one of these roles:  
+
+- Policy and Profile Manager, a Microsoft Intune built-in role  
+- [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator), a Microsoft Entra built-in role    
+
+For more information about role-based-access-control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).  
 
 [!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]  
 

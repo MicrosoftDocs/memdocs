@@ -7,11 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
-ms.localizationpriority:
+ms.localizationpriority: Low
 ms.assetid: 
 
 # optional metadata
@@ -131,7 +131,7 @@ You get the OEMConfig app from the Managed Google Play Store, add the app to Int
 After the app is added to Intune, you create an OEMConfig profile to configure the features defined in the app.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Android Enterprise**.
@@ -200,7 +200,7 @@ The next time the device checks for configuration updates, the OEM-specific sett
 
 After your profile is deployed, you can check its status:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**. A list of all your profiles is shown.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**. A list of all your profiles is shown.
 2. Select your OEMConfig profile. You can get more information on your profile, including successful and failed deployments:
 
     - **Overview**: Shows the profile assignment statuses. For more information on what the statuses mean, go to [Monitor device profiles in Microsoft Intune](device-profile-monitor.md).

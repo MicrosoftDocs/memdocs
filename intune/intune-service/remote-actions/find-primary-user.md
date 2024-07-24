@@ -88,7 +88,7 @@ Intune automatically adds primary user to devices during or soon after enrollmen
 | Windows | Microsoft Entra join (out of box experience) | Enrolling user | During enrollment | 
 | Windows | Microsoft Entra join (Autopilot out of box experience) | Enrolling user | During enrollment | 
 | Windows | Enroll in MDM only | Enrolling user | During enrollment | 
-| Windows | Hybrid AADJ + automatic enrollment GPO | First user to sign in to Windows | When first user signs in to Windows| 
+| Windows | Microsoft Entra hybrid join + automatic enrollment GPO | First user to sign in to Windows | When first user signs in to Windows| 
 | Windows | Co-management | First user to sign in to Windows | When first user signs in to Windows | 
 | Windows | Microsoft Entra join (bulk enrollment token) | None | Not applicable | 
 | Windows | Microsoft Entra join (Autopilot self-deploying mode) | None | Not applicable | 
