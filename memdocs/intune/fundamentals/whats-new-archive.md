@@ -153,11 +153,11 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 In Intune, you can view a new list of all device monitoring reports. You can find these reports in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**. The **Monitor** pane provides reports related to configuration, compliance, enrollment, and software updates. Additionally, there are other reports that you can view, such as **Device actions**.
 
-For more information, see [Intune reports](../fundamentals/reports.md).
+For more information, see [Intune reports](reports.md).
 
 #### Exported report data maintains search results<!-- 17723620 -->
 
-Intune can now maintain your report search and filter results when exporting report data. For example, when you use the [Noncompliant devices and settings](../fundamentals/reports.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
+Intune can now maintain your report search and filter results when exporting report data. For example, when you use the [Noncompliant devices and settings](reports.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
 
 #### Easy upload of diagnostic logs for Microsoft Tunnel servers<!-- 15728481 -->
 
@@ -195,7 +195,7 @@ For more information, see [Add an unmanaged macOS PKG app to Microsoft Intune](.
 
 Customer tenants in US Government Community (GCC), US Government Community (GCC) High, and Department of Defense (DoD) environments are now able to use Windows MAM. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../apps/apps-deploy-gcc-dod.md) and [Data protection for Windows MAM](../apps/protect-mam-windows.md).
 
-In addition, Windows MAM is available for Intune operated by 21Vianet in China. For more information, see [Intune operated by 21Vianet in China](../fundamentals/china.md).
+In addition, Windows MAM is available for Intune operated by 21Vianet in China. For more information, see [Intune operated by 21Vianet in China](china.md).
 
 ### Device configuration
 
@@ -515,7 +515,7 @@ If you have a helpdesk, you might want to make them aware of the prompt to updat
 
 #### Defender for Endpoint security settings management enhancements and support for Linux and macOS are generally available<!-- 24190967 -->
 
-The improvements that were introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new-archive.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) are now generally available.
+The improvements that were introduced in the Defender for Endpoint security settings management [opt-in public preview](#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) are now generally available.
 
 With this change, the default behavior for security settings management includes all the behavior added for the opt-in preview – without having to enable support for preview features in Microsoft Defender for Endpoint. This includes the general availability and support for the following endpoint security profiles for Linux and macOS:
 
@@ -731,7 +731,7 @@ For more information, see [Set up web based device enrollment for iOS](../enroll
 
 The Intune add-ons page under **Tenant administration** includes **Your add-ons**, **All add-ons**, and **Capabilities**. It provides an enhanced view into your trial or purchased licenses, the add-on capabilities you're licensed to use in your tenant, and support for new billing experiences in Microsoft admin center.
 
-For more information, see [Use Intune Suite add-ons capabilities](../fundamentals/intune-add-ons.md).
+For more information, see [Use Intune Suite add-ons capabilities](intune-add-ons.md).
 
 #### Remote Help for Android is now Generally available<!--17675897 -->
 
@@ -743,7 +743,7 @@ Applies to:
 
 - Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
-For more information, see [Remote Help on Android](../fundamentals/remote-help-android.md).
+For more information, see [Remote Help on Android](remote-help-android.md).
 
 ### Device security
 
@@ -806,8 +806,8 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 The following device compliance reports are out of public preview and are now generally available:
 
-- [Policy compliance](../fundamentals/reports.md#policy-compliance-report-organizational)
-- [Setting compliance](../fundamentals/reports.md#settings-compliance--organizational)
+- [Policy compliance](reports.md#policy-compliance-report-organizational)
+- [Setting compliance](reports.md#settings-compliance--organizational)
 
 With this move to general availability, the older versions of both reports have been retired from the Intune admin center and are no longer available.
 
@@ -955,7 +955,7 @@ This integration is now generally available for Android Enterprise Dedicated and
 
 Previously, this feature was in public preview and free for use. With this release as generally available, this solution now requires an add-on license for its use.
 
-For licensing details, see [Intune add-ons](../fundamentals/intune-add-ons.md).
+For licensing details, see [Intune add-ons](intune-add-ons.md).
 
 ### Device enrollment
 
@@ -986,7 +986,7 @@ Applies to:
 - 12 Monterey
 - 13 Ventura
 
-For more information on Remote Help on macOS, see [Remote Help](../fundamentals/remote-help-macos.md).
+For more information on Remote Help on macOS, see [Remote Help](remote-help-macos.md).
 
 #### Management certificate expiration date<!-- 17648747  -->
 
@@ -1017,7 +1017,7 @@ We've added support to use endpoint security [Application Control policies](../p
 - US Government clouds
 - 21Vianet in China
 
-Support for Application Control policy and managed installers was originally [released in preview in June 2023](../fundamentals/whats-new-archive.md#new-endpoint-security-application-control-policy-in-preview). Application Control policies in Intune are an implementation of Defender Application Control (WDAC).
+Support for Application Control policy and managed installers was originally [released in preview in June 2023](#new-endpoint-security-application-control-policy-in-preview). Application Control policies in Intune are an implementation of Defender Application Control (WDAC).
 
 ### Device security
 
@@ -1084,7 +1084,7 @@ The **UpdateOnboarding** setting for custom and built-in roles is modified to on
 
 The resource name is being updated from **Android for work** to **Android Enterprise**.
 
-For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 ## Week of September 11, 2023
 
@@ -1098,7 +1098,7 @@ Applies to:
 
 - Windows 10/11
 
-For more information, see [Remote Help](../fundamentals/remote-help-windows.md).
+For more information, see [Remote Help](remote-help-windows.md).
 
 ## Week of September 4, 2023
 
@@ -1139,7 +1139,7 @@ With this update, be aware of the following limitations on Windows devices:
 
 Access policies for multiple Administrator Approval are out of public preview and are now generally available. With these policies, you can protect a resource, like App deployments, by requiring any change to the deployment to be approved by one of a group of users who are *approvers* for the resource, before that change is applied.
 
-For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
+For more information, see [Use Access policies to require multiple administrative approval](multi-admin-approval.md).
 
 ## Week of August 21, 2023 (Service release 2308)
 
@@ -1181,7 +1181,7 @@ Applies to:
 
 - Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
-For more information, see [Remote Help on Android](../fundamentals/remote-help-android.md).
+For more information, see [Remote Help on Android](remote-help-android.md).
 
 #### Group Policy analytics is generally available<!-- 24249203  -->  
 Group Policy analytics is generally available (GA). Use Group Policy analytics to analyze your on-premises group policy objects (GPOs) for their migration to Intune policy settings.
@@ -1410,7 +1410,7 @@ For more information, see [Add Microsoft Store Apps to Microsoft Intune](../apps
 #### Introducing a new role-based access control (RBAC) permission under the resource Android for work<!--11298214 -->  
 Introducing a new RBAC **Permission** for creating a custom role in Intune, under the resource **Android for work**. The permission **Update Enrollment Profile** allows the admin to manage or change both AOSP and Android Enterprise Device Owner enrollment profiles that are used to enroll devices.
 
-For more information, see [Create custom role](../fundamentals/create-custom-role.md).
+For more information, see [Create custom role](create-custom-role.md).
 
 ## Week of July 31, 2023
 
@@ -1527,7 +1527,7 @@ For information about the CR service as a replacement for the Intune Network Acc
 #### Settings insight within Intune security baselines is generally available<!-- 24507891   -->  
 Announcing the general availability of Settings insight in Microsoft Intune.
 
-The [Settings insight](../fundamentals/settings-insight.md) feature adds insight to settings giving you confidence in configurations that have been successfully adopted by similar organizations. Settings insight is currently available for security baselines.
+The [Settings insight](settings-insight.md) feature adds insight to settings giving you confidence in configurations that have been successfully adopted by similar organizations. Settings insight is currently available for security baselines.
 
 Navigate to **Endpoint security** > **Security baselines**. While creating and editing a workflow, these insights are available for all settings with light bulbs.
 
@@ -1550,7 +1550,7 @@ With *Child process behavior*, your rules can manage the elevation context for a
 - Allow a child process to run as elevated only when it matches the rule that manages its parent process.
 - Deny all child processes from running in an elevated context, in which case they run as standard users.
 
-Endpoint Privilege Management is available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+Endpoint Privilege Management is available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](intune-add-ons.md).
 
 ### Intune apps
 
@@ -1566,8 +1566,8 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 #### Updated reports for Setting compliance and Policy compliance are in public preview<!-- 15425624, 15425656  -->  
 We've released two new reports as a public preview for Intune device compliance. You can find these new preview reports in the Intune admin center at **Reports** > **Device compliance** > *Reports* tab:
 
-- [Setting compliance (preview)](../fundamentals/reports.md)
-- [Policy compliance (preview)](../fundamentals/reports.md)
+- [Setting compliance (preview)](reports.md)
+- [Policy compliance (preview)](reports.md)
 
 Both reports are new instances of existing reports, and deliver improvements over the older versions, including:  
 
@@ -1678,7 +1678,7 @@ A new device action that is in public preview allows you to run a remediation on
 
 The **Run remediation** device action is rolling-out and can take a few weeks to reach all customers.
 
-For more information, see [Remediations](../fundamentals/remediations.md).
+For more information, see [Remediations](remediations.md).
 
 ### Device management
 
@@ -1778,7 +1778,7 @@ Applies to:
 - iOS/iPadOS
 
 #### Settings insight within Intune security baseline<!-- 11127203  -->  
-The [Settings insight](../fundamentals/settings-insight.md) feature adds insights to security baselines giving you confidence in configurations that are successfully adopted by similar organizations.
+The [Settings insight](settings-insight.md) feature adds insights to security baselines giving you confidence in configurations that are successfully adopted by similar organizations.
 
 Navigate to **Endpoint security** > **Security baselines**. When you create and edit the workflow, these insights are available for you in the form of a light bulb.
 
@@ -1801,12 +1801,12 @@ Applies to:
 #### Endpoint analytics is available to tenants in Government cloud<!-- 8527244  -->  
 With this release, Endpoint analytics is available to tenants in Government cloud.
 
-Learn more about [Endpoint analytics](/mem/analytics/).
+Learn more about [Endpoint analytics](../../analytics).
 
 #### Introducing in-session connection mode switch in Remote Help<!-- 10602971  -->  
 In Remote Help, you can now take advantage of the in-session connection mode switch feature. This feature can help effortlessly transition between full control and view-only modes, granting flexibility and convenience.
 
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help.md).
+For more information on Remote Help, see [Remote Help](remote-help.md).
 
 Applies to:
 
@@ -1820,7 +1820,7 @@ Intune's Endpoint Privilege Management (EPM) reports now support exporting the f
 #### Endpoint Privilege Managements run with elevated access option now available on the top-level menu for Windows 11<!-- 17749664  -->  
 The Endpoint Privilege Management option to *Run with elevated access* is now available as a top-level right-click option on Windows 11 devices. Previous to this change, standard users were required to select *Show more options* to view the *Run with elevated access* prompt on Windows 11 devices.
 
-[Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+[Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](intune-add-ons.md).
 
 Applies to:
 
@@ -1854,7 +1854,7 @@ The Intune troubleshooting pane is now generally available.  It provides details
 You can find the troubleshooting pane in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**.
 
 #### Updated troubleshoot + support pane in Intune<!-- 16240430  -->  
-The **Troubleshooting + support** pane in the Intune admin center has been updated by consolidating the **Roles and Scopes** report into a single report. This report now includes all relevant role and scope data from both Intune and Microsoft Entra ID, providing a more streamlined and efficient experience. For related information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).
+The **Troubleshooting + support** pane in the Intune admin center has been updated by consolidating the **Roles and Scopes** report into a single report. This report now includes all relevant role and scope data from both Intune and Microsoft Entra ID, providing a more streamlined and efficient experience. For related information, see [Use the troubleshooting dashboard to help users at your company](help-desk-operators.md).
 
 #### Download mobile app diagnostics<!-- 22139638  -->  
 Now generally available, access user-submitted mobile app diagnostics in the Intune admin center, including app logs sent through Company Portal apps, which include Windows, iOS, Android, Android AOSP, and macOS. In addition, you can retrieve app protection logs via Microsoft Edge. For more information, see [Company Portal app logs](../apps/company-portal-app.md#app-logs) and [Use Microsoft Edge for iOS and Android to access managed app logs](../apps/manage-microsoft-edge.md#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs).
@@ -1872,9 +1872,9 @@ Microsoft Intune for Android open source project devices (AOSP) now supports the
 
 For more information, see:
 
-- [Operating systems and browsers supported by Microsoft Intune](../fundamentals/supported-devices-browsers.md)
+- [Operating systems and browsers supported by Microsoft Intune](supported-devices-browsers.md)
 
-- [Android Open Source Project Supported Devices](../fundamentals/android-os-project-supported-devices.md)
+- [Android Open Source Project Supported Devices](android-os-project-supported-devices.md)
 
 Applies to:
 
@@ -1883,7 +1883,7 @@ Applies to:
 ### App management
 
 #### Microsoft Store for Business or Microsoft Store for Education<!-- 24250535 -->  
-Apps added from the Microsoft Store for Business or Microsoft Store for Education won't deploy to devices and users. Apps show as "not applicable" in reporting. Apps already deployed are unaffected. Use the [new Microsoft Store app](../apps/store-apps-microsoft.md) to deploy Microsoft Store apps to devices or users. For related information, see [Plan for Change: Ending support for Microsoft Store for Business and Education apps](../fundamentals/whats-new.md#plan-for-change-ending-support-for-microsoft-store-for-business-and-education-apps) for upcoming dates when Microsoft Store for Business apps will no longer deploy and Microsoft Store for Business apps will be removed.
+Apps added from the Microsoft Store for Business or Microsoft Store for Education won't deploy to devices and users. Apps show as "not applicable" in reporting. Apps already deployed are unaffected. Use the [new Microsoft Store app](../apps/store-apps-microsoft.md) to deploy Microsoft Store apps to devices or users. For related information, see [Plan for Change: Ending support for Microsoft Store for Business and Education apps](whats-new.md#plan-for-change-ending-support-for-microsoft-store-for-business-and-education-apps) for upcoming dates when Microsoft Store for Business apps will no longer deploy and Microsoft Store for Business apps will be removed.
 
 For more information, see the following resources:
 
@@ -1972,7 +1972,7 @@ The global quiet time settings allow you to create policies to schedule quiet ti
 #### Introducing enhanced chat in Remote Help<!-- 10602997 -->  
 Introducing enhanced chat with Remote Help. With the new and enhanced chat you can maintain a continuous thread of all messages. This chat provides support for special characters and other languages including Chinese and Arabic.
 
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help.md).
+For more information on Remote Help, see [Remote Help](remote-help.md).
 
 Applies to:
 
@@ -1981,7 +1981,7 @@ Applies to:
 #### Remote Help administrators can reference audit log sessions<!-- 9052185  -->  
 For Remote Help, in addition to existing session reports, administrators can now reference audit logs sessions created in Intune. This feature enables administrators to reference past events for troubleshooting and analyzing log activities.
 
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help.md).
+For more information on Remote Help, see [Remote Help](remote-help.md).
 
 Applies to:
 
@@ -2054,7 +2054,7 @@ Applies to:
 #### Renaming Proactive remediation to Remediations and moving to a new location<!-- 16526263  -->  
 Proactive remediations are now Remediations and are available from **Devices** > **Remediations**. You can still find Remediations in both the new location and the existing **Reports** > **Endpoint Analytics** location until the next Intune service update.
 
-Remediations are currently not available in the new [Devices experience preview](../fundamentals/microsoft-intune-admin-center-devices.md).
+Remediations are currently not available in the new [Devices experience preview](microsoft-intune-admin-center-devices.md).
 
 Applies to:
 
@@ -2062,7 +2062,7 @@ Applies to:
 - Windows 11
 
 #### Remediations are now available in Intune for US Government GCC High and DoD<!-- 16526300 -->  
-Remediations (previously known as proactive remediations) are now available in [Microsoft Intune for US Government GCC High and DoD](../fundamentals/intune-govt-service-description.md).
+Remediations (previously known as proactive remediations) are now available in [Microsoft Intune for US Government GCC High and DoD](intune-govt-service-description.md).
 
 Applies to:
 
@@ -2208,7 +2208,7 @@ The Microsoft Store for Business connector is no longer available in the [Micros
 
 It's now also possible to delete Microsoft Store for Business apps from the **Apps** pane in the Microsoft Intune admin center so that you can clean up your environment as you move to the new Microsoft Store app type.
 
-For related information, see [Plan for Change: Ending support for Microsoft Store for Business and Education apps](../fundamentals/whats-new.md#plan-for-change-ending-support-for-microsoft-store-for-business-and-education-apps) for upcoming dates when Microsoft Store for Business apps won't deploy and Microsoft Store for Business apps are removed.
+For related information, see [Plan for Change: Ending support for Microsoft Store for Business and Education apps](whats-new.md#plan-for-change-ending-support-for-microsoft-store-for-business-and-education-apps) for upcoming dates when Microsoft Store for Business apps won't deploy and Microsoft Store for Business apps are removed.
 
 ### Device configuration
 
@@ -2218,7 +2218,7 @@ Administrators can now utilize conditional access capability when setting up pol
 For more information, see:
 
 - [Conditional access](../protect/conditional-access.md)
-- [Remote Help](../fundamentals/remote-help-windows.md#setup-conditional-access-for-remote-help)
+- [Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help)
 
 ### Device security
 
@@ -2337,7 +2337,7 @@ The **Update organizational message control** RBAC permission for organizational
 
 Existing custom roles for managing Organizational Messages must be modified to add this permission for users to modify this setting.
 
-- For more information, about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- For more information, about role-based access control (RBAC), see [RBAC with Microsoft Intune](role-based-access-control.md).
 - For more information, about prerequisites for organization messages, see [Organizational messages prerequisites](../remote-actions/organizational-messages-prerequisites.md#role-based-access-control-requirements).
 
 ### Device management
@@ -2404,7 +2404,7 @@ Microsoft Endpoint Privilege Management (EPM) is now generally available and no 
 
 With [Endpoint Privilege Management](../protect/epm-overview.md), admins can set policies that allow standard users to perform tasks normally reserved for an administrator. To do so, you configure policies for *automatic* and *user-confirmed* workflows that elevate the run-time permissions for apps or processes you select. You then assign these policies to users or devices that have end users running without Administrator privileges. After the device receives a policy, EPM brokers the elevation on behalf of the user, allowing them to elevate approved applications without needing full administrator privileges. EPM also includes built-in insights and reporting.
 
-Now that EPM is out of preview, it requires another license to use. You can choose between a stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+Now that EPM is out of preview, it requires another license to use. You can choose between a stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](intune-add-ons.md).
 
 While Endpoint Privilege Management is now generally available, the [reports for EPM](../protect/epm-reports.md) will transition to a feature in *preview*, and will receive some more enhancements before being removed from preview.
 
@@ -2454,7 +2454,7 @@ The **Assign** RBAC permissions for organizational messages determines who can a
 
 This permission is also added to the **Organizational Messages Manager** built-in role.  Existing custom roles for managing Organizational Messages must be modified to add this permission for users to modify this setting.
 
-- For more information, about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- For more information, about role-based access control (RBAC), see [RBAC with Microsoft Intune](role-based-access-control.md).
 - For more information, about prerequisites for organization messages, see [Organizational messages prerequisites](../remote-actions/organizational-messages-prerequisites.md#role-based-access-control-requirements).
 
 ### Tenant administration
@@ -2463,7 +2463,7 @@ This permission is also added to the **Organizational Messages Manager** built-i
 You can now delete organizational messages from Microsoft Intune.  After you delete a message, it's removed from Intune, and no longer appears in the admin center. You can delete a message anytime, regardless of its status. Intune automatically cancels active messages after you delete them. For more information, see [Delete organizational messages](../remote-actions/organizational-messages-cancel.md#delete-message).  
 
 #### Review audit logs for organizational messages<!-- 16576073 -->  
-Use audit logs to track and monitor organizational message events in Microsoft Intune. To access the logs, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Audit logs**. For more information, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md#audit-logs-for-intune-workloads).  
+Use audit logs to track and monitor organizational message events in Microsoft Intune. To access the logs, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Audit logs**. For more information, see [Audit logs for Intune activities](monitor-audit-logs.md#audit-logs-for-intune-workloads).  
 
 ## Week of April 10, 2023
 
@@ -2479,7 +2479,7 @@ You can now:
 Applies to:
 
 - **Windows 10**
-- Virtual machines created in [Azure Public and Azure Government clouds](../fundamentals/intune-govt-service-description.md)
+- Virtual machines created in [Azure Public and Azure Government clouds](intune-govt-service-description.md)
 
 ## Week of April 3, 2023
 
@@ -2528,7 +2528,7 @@ Intune supports more minimum operating system versions for Windows 10 and 11 whe
 - Windows 11 22H2
 
 #### Managed apps permission is no longer required to manage VPP apps<!-- 17205644  -->  
-You can view and manage VPP apps with only the **Mobile apps** permission assigned. Previously, the **Managed apps** permission was required to view and manage VPP apps. This change doesn't apply to Intune for Education tenants who still need to assign the **Managed apps** permission. More information about permissions in Intune is available at [Custom role permissions](../fundamentals/create-custom-role.md#custom-role-permissions).
+You can view and manage VPP apps with only the **Mobile apps** permission assigned. Previously, the **Managed apps** permission was required to view and manage VPP apps. This change doesn't apply to Intune for Education tenants who still need to assign the **Managed apps** permission. More information about permissions in Intune is available at [Custom role permissions](create-custom-role.md#custom-role-permissions).
 
 ### Device configuration
 
@@ -2666,7 +2666,7 @@ As a public preview, you can now use Microsoft Intune Endpoint Privilege Managem
 
 With the public preview, you can configure policies for *automatic* and *user-confirmed* workflows that elevate the run-time permissions for apps or processes you select. You then assign these policies to users or devices that have end users running without Administrator privileges. Once policy is received, Endpoint Privilege Management will broker the elevation on behalf of the user, allowing them to elevate approved applications without needing full administrator privileges. The preview also includes built-in insights and reporting for Endpoint Privilege Management.
 
-To learn how to activate the public preview and use Endpoint Privilege Management policies, start with [Use Endpoint Privilege Management with Microsoft Intune](../protect/epm-overview.md). Endpoint Privilege Management is part of the [Intune Suite](../fundamentals/intune-add-ons.md) offering, and free to try while it remains in public preview.
+To learn how to activate the public preview and use Endpoint Privilege Management policies, start with [Use Endpoint Privilege Management with Microsoft Intune](../protect/epm-overview.md). Endpoint Privilege Management is part of the [Intune Suite](intune-add-ons.md) offering, and free to try while it remains in public preview.
 
 ### Intune apps
 
@@ -2717,7 +2717,7 @@ You can now view information for tenant attach devices in the existing antivirus
 #### Meta Quest 2 and Quest Pro are now in Open Beta (US only) on Microsoft Intune for Android Open Source Devices  
 Microsoft Intune for Android open source project devices (AOSP) has welcomed Meta Quest 2 and Quest Pro into Open Beta for the US market.
 
-For more information, go to [Operating systems and browsers supported by Microsoft Intune](../fundamentals/supported-devices-browsers.md)
+For more information, go to [Operating systems and browsers supported by Microsoft Intune](supported-devices-browsers.md)
 
 Applies to:
 
@@ -2786,7 +2786,7 @@ Microsoft Intune Suite provides mission-critical advanced endpoint management an
 
 You can find add-ons to Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Intune add-ons**.
 
-For detailed information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+For detailed information, see [Use Intune Suite add-on capabilities](intune-add-ons.md).
 
 #### View ServiceNow Incidents in the Intune Troubleshooting workspace (Preview)<!-- 12508062 -->
 
@@ -2804,7 +2804,7 @@ In addition, MAM Tunnel for iOS now supports Microsoft Edge.
 
 Previously, Tunnel for MAM for Android and iOS was in public preview and free for use. With this release as generally available, this solution now requires an add-on license for its use.
 
-For licensing details, see [Intune add-ons](../fundamentals/intune-add-ons.md).
+For licensing details, see [Intune add-ons](intune-add-ons.md).
 
 Applies to:
 
@@ -2970,7 +2970,7 @@ For more information, see [Enable Microsoft Intune tenant attach - Configuration
 
 Microsoft Intune for Android open source project devices (AOSP) now supports HTC Vive Focus 3. 
 
-For more information, go to [Operating systems and browsers supported by Microsoft Intune](../fundamentals/supported-devices-browsers.md)
+For more information, go to [Operating systems and browsers supported by Microsoft Intune](supported-devices-browsers.md)
 
 Applies to:
 
@@ -2980,7 +2980,7 @@ Applies to:
 
 In Remote Help, you can now use a laser pointer when you're providing assistance on Windows.
 
-For more information on Remote Help, go to [Remote Help](/mem/intune/fundamentals/remote-help).
+For more information on Remote Help, go to [Remote Help](remote-help.md).
 
 Applies to:
 
@@ -3182,7 +3182,7 @@ You can find the troubleshooting pane in [Microsoft Intune admin center](https:/
 #### New report for devices without compliance policy (preview)<!--14911124 -->  
 We've added a new report named **Devices without compliance policy** to the Device compliance reports you can access through the *Reports* node of the Microsoft Intune admin center.  This report, which is in preview, uses a  newer reporting format that provides for more capabilities.
 
-To learn about this new organizational report, see [Devices without compliance policy (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-organizational).
+To learn about this new organizational report, see [Devices without compliance policy (Organizational)](reports.md#devices-without-compliance-policy-organizational).
 
 An older version of this report remains available through the *Devices > Monitor* page of the admin center. Eventually, that older report version will retire, though it remains available for now.
 
@@ -3191,7 +3191,7 @@ The *Service health and message center page* in the Microsoft Intune admin cente
 
 You can view messages for *Issues in your environment that require action* in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Tenant administration** > **Tenant status** and then selecting the **Service health and message center** tab.
 
-For more information about this page of the admin center, see [View details about your Tenant on the Intune tenant status page](../fundamentals/tenant-status.md).
+For more information about this page of the admin center, see [View details about your Tenant on the Intune tenant status page](tenant-status.md).
 
 ### Tenant administration
 
@@ -3261,7 +3261,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 #### Remote Help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
 In the Remote Help app, admins can disable chat functionality from the new tenant level setting. Turning on the disable chat feature removes the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
 
-For more information, see [Configure Remote Help for your tenant](/mem/intune/fundamentals/remote-help#configure-remote-help-for-your-tenant).
+For more information, see [Configure Remote Help for your tenant](remote-help.md#configure-remote-help-for-your-tenant).
 
 **Applies to**: Windows 10/11
 
@@ -3360,7 +3360,7 @@ Access policies are supported for the following resources:
 - **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
 - **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
 
-For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
+For more information, see [Use Access policies to require multiple administrative approval](multi-admin-approval.md).
 
 ### Device security
 
@@ -3567,7 +3567,7 @@ All configurations need to be done in the Microsoft Intune admin center. The Mic
 ### App management
 
 #### Ending support for Windows Information Protection<!-- 15991481 -->
-Windows Information Protection (WIP) policies without enrollment are being deprecated. You can no longer create new WIP policies without enrollment. Until December of 2022, you can modify existing policies until the deprecation of the *without enrollment* scenario is complete. For more information, go to [Plan for Change: Ending support for Windows Information Protection](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-information-protection).
+Windows Information Protection (WIP) policies without enrollment are being deprecated. You can no longer create new WIP policies without enrollment. Until December of 2022, you can modify existing policies until the deprecation of the *without enrollment* scenario is complete. For more information, go to [Plan for Change: Ending support for Windows Information Protection](whats-new.md#plan-for-change-ending-support-for-windows-information-protection).
 
 ### Device Configuration
 
@@ -3593,7 +3593,7 @@ Intune now supports both Microsoft Defender for Endpoint and one non-Mobile Thre
 ### App management
 
 #### Use filters with app configuration policies for managed devices<!-- 7423842  -->  
-You can use filters to refine the assignment scope when deploying app configuration policies for managed devices. You must first [create a filter](../fundamentals/filters.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration policy by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune admin center](../fundamentals/filters.md).
+You can use filters to refine the assignment scope when deploying app configuration policies for managed devices. You must first [create a filter](filters.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration policy by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune admin center](filters.md).
 
 ### Device configuration
 
@@ -3886,7 +3886,7 @@ In Remote Help, a link has been added to the non-compliance warning notification
 
 For more information, go to:
 
-- [Microsoft Intune Remote Help](/mem/intune/fundamentals/remote-help)
+- [Microsoft Intune Remote Help](remote-help.md)
 
 - [Monitor Device compliance](../protect/compliance-policy-monitor.md)
 
@@ -4080,10 +4080,10 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Device management
 
 #### Intune now requires iOS/iPadOS 14 and higher<!-- 14778947 -->
-With Apple's release of iOS/iPadOS 16, Microsoft Intune and the Intune Company Portal will now require iOS/iPadOS 14 and higher. For more information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
+With Apple's release of iOS/iPadOS 16, Microsoft Intune and the Intune Company Portal will now require iOS/iPadOS 14 and higher. For more information, see [Supported operating systems and browsers in Intune](supported-devices-browsers.md).
 
 #### Intune now requires macOS 11.6 and higher<!-- 14766663 -->
-With Apple's release of macOS 13 Ventura, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 11.6 (Big Sur) and later. For more information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
+With Apple's release of macOS 13 Ventura, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 11.6 (Big Sur) and later. For more information, see [Supported operating systems and browsers in Intune](supported-devices-browsers.md).
 
 ## Week of September 05, 2022
 
@@ -4093,7 +4093,7 @@ With Apple's release of macOS 13 Ventura, Microsoft Intune, the Company Portal a
 
 With Remote Help 4.0.1.13, fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use Remote Help with Intune and Microsoft Intune](/mem/intune/fundamentals/remote-help)
+For more information, go to [Use Remote Help with Intune and Microsoft Intune](remote-help.md).
 
 ## Week of August 29, 2022
 
@@ -4395,7 +4395,7 @@ Applies to:
 #### Remote Help Version: 4.0.1.12 release<!-- 14999203 -->
 With Remote Help 4.0.1.12, various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
 
-For more information, see [Use Remote Help with Intune](/mem/intune/fundamentals/remote-help)
+For more information, see [Use Remote Help with Intune](remote-help.md).
 
 ### Device enrollment
 
@@ -4675,7 +4675,7 @@ In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=21094
 
 When you create a filter, you can select **Preview devices** to see a list of enrolled devices that match your filter criteria. In **Preview devices**, you can also search through the list using the device name, OS version, device model, device manufacturer, user principal name of the primary user, and device ID.
 
-For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md).
+For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
 
 ## Week of July 18, 2022
 

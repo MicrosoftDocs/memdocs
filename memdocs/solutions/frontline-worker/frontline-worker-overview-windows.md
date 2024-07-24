@@ -76,7 +76,7 @@ You can use Windows Autopilot on existing devices. When the existing devices are
 
 ❌ Windows Autopilot requires Microsoft Entra Premium. If you don't have Entra Premium, then use a provisioning package. There are other Windows enrollment options available, but they're not commonly used for FLW devices.
 
-For more information on Windows Autopilot, go to [Windows Autopilot overview](/mem/autopilot/windows-autopilot) and [Windows Autopilot self-deploying mode](/mem/autopilot/self-deploying).
+For more information on Windows Autopilot, go to [Windows Autopilot overview](../../../autopilot/overview.md) and [Windows Autopilot self-deploying mode](../../../autopilot/self-deploying.md).
 
 # [Provisioning package](#tab/provpackage)
 
