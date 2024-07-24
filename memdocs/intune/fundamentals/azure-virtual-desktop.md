@@ -43,7 +43,7 @@ Currently, for single-session, Intune supports Azure Virtual Desktop VMs that ar
 - [Microsoft Entra hybrid joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Intune in one of the following methods:
   - Configure [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are Microsoft Entra hybrid joined.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
-  - [User self-enrollment via Microsoft Entra join](deployment-guide-enroll.md#user-self-enrollment-in-intune).
+  - [User self-enrollment via Microsoft Entra join](deployment-guide-enrollment-windows.md#byod-user-enrollment).
 - Microsoft Entra joined and enrolled in Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 - Under the same tenant as Intune
 

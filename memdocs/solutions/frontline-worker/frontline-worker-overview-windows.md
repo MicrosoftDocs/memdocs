@@ -51,7 +51,7 @@ Use this article to get started with Windows FLW devices in Intune. Specifically
 
 **Windows 365 Cloud PCs** are virtual machines that are hosted in the Windows 365 service. They're accessible from anywhere and from any device. They include a Windows desktop experience and are associated with a user. Basically, end users have their own PC in the cloud.
 
-✔️ Windows 365 Cloud PCs are ideal for frontline workers that need a Windows desktop experience, but don't need a physical device. For example, a call center worker that needs access to a Windows desktop app.
+✅ Windows 365 Cloud PCs are ideal for frontline workers that need a Windows desktop experience, but don't need a physical device. For example, a call center worker that needs access to a Windows desktop app.
 
 These devices enroll in Intune, and are managed like any other device, including apps, configuration settings, and updates.
 
@@ -70,7 +70,7 @@ For FLW devices using the Windows platform, you can use **Windows Autopilot** en
 
 **Windows Autopilot** is the recommended option for FLW devices. You can ship the devices directly to the location without ever touching the devices. With self-deploying mode, users turn on the device, and the enrollment automatically starts.
 
-✔️ If you have Microsoft Entra Premium and you're getting new devices from an OEM, then use Windows Autopilot. You can use the Windows OEM version preinstalled on the devices to automatically enroll the devices. Other than turning on the device, no other end user interaction is required.
+✅ If you have Microsoft Entra Premium and you're getting new devices from an OEM, then use Windows Autopilot. You can use the Windows OEM version preinstalled on the devices to automatically enroll the devices. Other than turning on the device, no other end user interaction is required.
 
 You can use Windows Autopilot on existing devices. When the existing devices are reset, the Windows Autopilot enrollment can automatically start.
 
@@ -82,7 +82,7 @@ For more information on Windows Autopilot, go to [Windows Autopilot overview](..
 
 This option uses the Windows Configuration Designer (WCD) app to create a provisioning package (`.ppkg`). When you create the package, you configure the enrollment settings you want. Then, you make the package available to users on a USB drive or network location (including a SharePoint site).
 
-✔️ If you don't have Microsoft Entra Premium, then use a provisioning package. You can use the provisioning package to bulk enroll many devices. You can also use the provisioning package to enroll new and existing devices.
+✅ If you don't have Microsoft Entra Premium, then use a provisioning package. You can use the provisioning package to bulk enroll many devices. You can also use the provisioning package to enroll new and existing devices.
 
 ❌ If you have Microsoft Entra Premium, then use Windows Autopilot. Windows Autopilot requires Entra Premium.
 
