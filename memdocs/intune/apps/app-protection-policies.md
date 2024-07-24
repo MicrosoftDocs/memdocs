@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2023
+ms.date: 07/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -65,19 +65,16 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies**. This selection opens the **App protection policies** details, where you create new policies and edit existing policies.
 3. Select **Create policy** and select either **iOS/iPadOS** or **Android**. The **Create policy** pane is displayed.
-1. On the **Basics** page, add the following values:
+4. On the **Basics** page, add the following values:
 
  | Value | Description |
  |:-------------|:-----------------------------------------------|
  | Name | The name of this app protection policy. |
  | Description | [Optional] The description of this app protection policy. |
 
-
-```
-The **Platform** value is set based on your above choice.
-
 ![Screenshot of the Basics page of the Create policy pane](./media/app-protection-policies/app-protection-add-policies-01.png)
-```5. Click **Next** to display the **Apps** page.  \
+
+5. Click **Next** to display the **Apps** page.  \
     The **Apps** page allows you to choose which apps should be targeted by this policy. You must add at least one app.
 
     | Value/Option | Description |
