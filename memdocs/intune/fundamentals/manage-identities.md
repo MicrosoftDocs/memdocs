@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2023
+ms.date: 07/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
@@ -136,7 +136,12 @@ Your user and group accounts access organization resources. You need to keep the
 
   - [Windows Hello for Business Overview](/windows/security/identity-protection/hello-for-business/hello-overview)
   - [Manage Windows Hello for Business on devices when devices enroll with Intune](../protect/windows-hello.md)
-  - [Use identity protection profiles to manage Windows Hello for Business in Microsoft Intune](../protect/identity-protection-configure.md)
+
+  To manage Windows Hello for Business, you use one of the following options:
+
+  - [During device enrollment](../protect/windows-hello.md): Configure tenant-wide policy that applies Windows Hello settings to devices at the time the device enrolls with Intune.
+  - [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the baselines for *Microsoft Defender for Endpoint security* or *Security Baseline for Windows 10 and later*.
+  - [Settings catalog](../configuration/settings-catalog.md): The settings from endpoint security Account protection profiles are available in the Intune settings catalog.
 
 - **Certificate-based authentication** is also a part of a password-less strategy. You can use certificates to authenticate your users to applications and organization resources through a VPN, a Wi-Fi connection, or email profiles. With certificates, users don't need to enter usernames and passwords, and can make access to these resources easier.
 
