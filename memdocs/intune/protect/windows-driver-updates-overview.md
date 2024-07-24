@@ -278,7 +278,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
 > [!NOTE]
 > The following procedure only works and is supported for managed Windows 11 devices. For Windows 10 devices, we recommend moving the Windows Update workload in the Configuration Manager co-management settings to Intune. Alternatively, configure the Windows Update workload to the Pilot setting and specify a collection containing the in-scope Windows 10 managed devices.
 
-   1. Leave the [Windows Update](../../configmgr/comanage/workloads#windows-update-policies.md) workload set to Configuration Manager.
+   1. Leave the [Windows Update](../../configmgr/comanage/workloads.md#windows-update-policies.md) workload set to Configuration Manager.
 
    2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](windows-driver-updates-policy.md).
 
