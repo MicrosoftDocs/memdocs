@@ -1,4 +1,4 @@
-.---
+---
 title: Work from anywhere report in Endpoint analytics
 titleSuffix: Microsoft Intune
 description: The Work from anywhere report in Endpoint analytics provides insights to help your end users be productive from anywhere.
