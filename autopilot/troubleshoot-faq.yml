@@ -96,13 +96,7 @@ sections:
     questions:
 
       - question: |
-          After the initial Windows Autopilot deployment, devices with a targeted Windows Autopilot self-deployment mode or pre-provisioning mode profile can't automatically re-enroll using Windows Autopilot. If a device is redeployed, then the `0x80180014` error code is returned.
-
-          The Event Tracing for Windows (ETW) logs might show the following mobile device management (MDM) error:
-
-          `MDM Enroll: Server Returned Fault/Code/Subcode/Value=(DeviceNotSupported) Fault/Reason/Text=(Enrollment blocked for AP device by SDM One Time Limit Check)`
-
-          What is the cause of error code 0x80180014 and why can't the device re-enroll?
+          During a Windows Autopilot self-deployment or pre-provisioning deployment on a device that previously undergone a Windows Autopilot deployment, why is error code `0x80180014` occurring on the device when trying to re-enroll the device?
 
         answer: |
           Error code 0x80180014 can occur under either of the following scenarios:
@@ -111,14 +105,14 @@ sections:
 
               This change impacts all Autopilot deployments that use the self-deployment or pre-provisioning mode. This change impacts devices when they're reused, reset, or when redeploying a profile.
 
-              To resolve the issue in this scenario and redeploy the device using Windows Autopilot:
+              To resolve and fix the issue in this scenario and redeploy the device using Windows Autopilot, follow these steps:
 
               1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Intune admin center](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-admin-center).
               1. Redeploy the Autopilot deployment profile.
 
           1. Windows MDM enrollment is disabled in the Intune tenant.
 
-              To resolve and fix the issue in this scenario, follow these steps:
+              To resolve and fix the issue in this scenario and redeploy the device using Windows Autopilot, follow these steps:
 
               1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -151,6 +145,62 @@ sections:
               > [!NOTE]
               >
               > When multiple restrictions exist, restrictions might exist that only allow certain groups MDM enrollment. Some of the restrictions blocking MDM enrollment might be valid based on what group they're assigned to. When experiencing this problem, verify that the device isn't a member of one of the groups where there's MDM enrollment is blocked, or if applicable, change the MDM enrollment setting for that restriction to **Allow**.
+
+
+          In both of these scenarios, in addition to error 0x80180014 occurring, the Event Tracing for Windows (ETW) logs might also show the following mobile device management (MDM) error:
+
+          `MDM Enroll: Server Returned Fault/Code/Subcode/Value=(DeviceNotSupported) Fault/Reason/Text=(Enrollment blocked for AP device by SDM One Time Limit Check)`
+
+      - question: |
+          When trying to import a CSV file with a device hardware hash, why does nothing happen when selecting **Import**?
+
+        answer: |
+          This issue usually occurs because the device hash in the CSV file is incorrectly formatted. The issue can be confirmed by running a network trace while the issue occurrs. If an error **400** occurs in the network trace with the message body of
+
+          `Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'`
+
+          then most likely the device hash in the CSV file is incorrectly formatted. Anything that corrupts the collected hash can cause this error. One possibility is that the hash itself fails to be decoded, even if the hash is valid.
+
+          The device hash is Base64. At the device level, it's encoded as unpadded Base64, but Windows Autopilot expects padded Base64. Usually, the payload doesn't require padding and the process works. Sometimes, however, the payload doesn't line up cleanly and padding is necessary. In this case, the above error is displayed. PowerShell's Base64 decoder also expects padded Base64, so this decoder can be used to validate that the hash is properly padded.
+
+          The "A" characters at the end of the hash are effectively empty data. Each character in Base64 is 6 bits. A in Base64 is 6 bits equal to 0. Deleting or adding **A**s at the end doesn't change the actual payload data.
+
+          To resolve and fix this issue, the hash needs to be modified. The new value then needs to be tested until PowerShell succeeds in decoding the hash. The result is mostly illegible, which is fine as long as the the error **Invalid length for a Base-64 char array or string** isn't displayed.
+
+          To test the base64, use the following PowerShell:
+
+          ```powershell
+          [System.Text.Encoding]::ascii.getstring( [System.Convert]::FromBase64String("DEVICE HASH"))
+          ```
+
+          As an example:
+
+          ```powershell
+          [System.Text.Encoding]::ascii.getstring( [System.Convert]::FromBase64String("Q29udG9zbwAAA"))
+          ```
+
+          This particular example isn't a device hash, but it's a misaligned unpadded Base64 so it's good for testing.
+
+          Now for the padding rules. The padding character is "=". The padding character can only be at the end of the hash, and there can only be a maximum of two padding characters. Here's the basic logic.
+
+          - Does decoding the hash fail?
+            - Yes: Are the last two characters "="?
+              - Yes: Replace both "=" with a single "A" character, then try again
+              - No: Add another "=" character at the end, then try again
+          - No: That hash is valid
+
+          Looping the above logic on the previous example hash, we get the following permutations:
+
+          - Q29udG9zbwAAA
+          - Q29udG9zbwAAA=
+          - Q29udG9zbwAAA==
+          - Q29udG9zbwAAAA
+          - Q29udG9zbwAAAA=
+          - **Q29udG9zbwAAAA==** - This result has valid padding.
+
+          Replace the collected hash with this new padded hash then try to import again.
+
+
 
 
 
