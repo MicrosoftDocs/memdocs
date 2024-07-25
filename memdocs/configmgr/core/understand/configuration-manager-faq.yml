@@ -16,7 +16,7 @@ metadata:
 title: Microsoft Configuration Manager FAQ
 summary: |
   *Applies to: Configuration Manager (current branch, technical preview branch)*
-  
+
   Configuration Manager is part of the Microsoft Intune family of products. This article provides answers to frequently asked questions.
 
 sections:
@@ -26,47 +26,46 @@ sections:
           What is the Microsoft Intune family of products?
         answer: |
           The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to use your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
-          
+
           The following Microsoft management solutions are all now part of the **Microsoft Intune** brand:
-          
+
           - [Configuration Manager](../../index.yml)
           - [Intune](../../../intune/index.yml)
-          - [Desktop Analytics](../../desktop-analytics/overview.md)
-            - NOTE: Desktop Analytics is deprecated. Instead, see [Endpoint analytics](../../../analytics/index.yml)
+          - [Endpoint analytics](../../../analytics/index.yml)
           - [Autopilot](/autopilot/enrollment-autopilot/)
-          
+
       - question: |
           What things change in Configuration Manager and the Microsoft Intune family of products?
         answer: |
           Aside from the name change, Configuration Manager still functions the same.
-          
+
           Most notably, the Start menu folder names changed for common components, such as the [Configuration Manager console](../servers/manage/admin-console.md#bkmk_open) and [Software Center](software-center.md#bkmk_open).
-          
+
       - question: |
           How do we refer to the product now?
         answer: |
           - When referring to the entire solution that includes all components: **Microsoft Intune family of products**
-          
+
           - When referring to the on-premises component:
             - On first reference, use the full brand name: **Microsoft Configuration Manager**
             - For general use: **Configuration Manager**
             - For space-constrained use: **ConfigMgr**, only in instances where the general use name doesn't fit
-          
+
       - question: |
           Are there any licensing changes?
         answer: |
           If you're licensed for Configuration Manager, then you're also licensed for Intune to [co-manage](../../comanage/overview.md) your Windows PCs. For more information, see the [Product and licensing FAQ](product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-the-microsoft-intune-family-of-products-).
-          
+
       - question: |
           Why do I still see "System Center Configuration Manager" some places?
         answer: |
           It takes time to make changes across all products, services, and supporting materials like documentation.
-          
+
           There are also some fundamental components that may never change. The main Windows service on site servers is still **SMS_Executive**.
-          
+
 additionalContent: |
 
   ## Next steps
-  
+
   Learn about the [what's new in Configuration Manager incremental versions](../plan-design/changes/whats-new-incremental-versions.md).
-        
+

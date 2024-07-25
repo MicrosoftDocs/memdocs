@@ -1,6 +1,5 @@
 ## Enable Windows automatic enrollment  
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or Intune service administrator](../fundamentals/users-add.md#types-of-administrators).  
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)    
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).     
 1. Go to **Devices** > **Enrollment**.     
 1. Go to the **Windows** tab. Then select **Automatic Enrollment**.  
 

@@ -55,7 +55,7 @@ When a device receives a policy for Feature updates:
 
 - The ability to *Uninstall* the Feature update is still honored by the Update Rings.
 
-- You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md).
+- You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](windows-update-rollout-options.md).
 
 ## Prerequisites
 
@@ -82,11 +82,11 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   
   The cloud-based capabilities requiring the additional license are indicated in the *Create feature update deployment* or policy creation page and include the following items and potentially new features:
 
-  - Gradual rollout: The [Gradual Rollout](/mem/intune/protect/windows-update-rollout-options#make-updates-available-gradually) capability is a cloud only feature and includes basic controls for deploying a specified feature update and when to start making the update available to devices.
+  - Gradual rollout: The [Gradual Rollout](windows-update-rollout-options.md#make-updates-available-gradually) capability is a cloud only feature and includes basic controls for deploying a specified feature update and when to start making the update available to devices.
   
   - [Optional feature updates](#create-and-assign-feature-updates-for-windows-10-and-later-policy)
 
-  - Windows 10 (SxS): The Windows 10 (SxS) feature is a cloud-only feature. If you’re blocked when creating new policies for capabilities that require Windows Update for Business deployment service and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB ds license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+  - Windows 10 (SxS): The Windows 10 (SxS) feature is a cloud-only feature. If you're blocked when creating new policies for capabilities that require Windows Update for Business deployment service and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB ds license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 - Devices must:  
   - Run a version of Windows 10/11 that remains in support.
@@ -120,7 +120,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 Intune policies for *Feature updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides more capabilities that aren't supported for WPJ devices.
 
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](../protect/windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 
 ## Limitations for Feature updates for Windows 10 and later policy
 
@@ -131,7 +131,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
   > [!TIP]
   > If you're using feature updates, we recommend you set the Feature update deferral period to *0* in the associated Update Rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations.  
   >
-  > For more information, see [Move from update ring deferrals to feature updates policy](../protect/windows-update-for-business-configure.md#move-from-update-ring-deferrals-to-feature-updates-policy)
+  > For more information, see [Move from update ring deferrals to feature updates policy](windows-update-for-business-configure.md#move-from-update-ring-deferrals-to-feature-updates-policy)
 
 - Feature updates for Windows 10 and later policies can't be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 
@@ -146,7 +146,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
      Monitor the report for the policy. To do so, go to **Reports** > **Windows Updates** > **Reports** Tab > **Feature Updates report**. Select the policy you created and then generate the report.
 
-  5. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See, [Use the Windows 10 feature updates (Organizational) report](../protect/windows-update-reports.md#use-the-windows-10-feature-updates-organizational-report).
+  5. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See, [Use the Windows 10 feature updates (Organizational) report](windows-update-reports.md#use-the-windows-10-feature-updates-organizational-report).
   6. With devices enrolled for updates and protected, you can safely change the *Windows Update policies* workload from Configuration Manager to Intune. See, [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads) in the co-management documentation.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
@@ -195,7 +195,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
    c. **Feature update to deploy**: select the specific version of Windows with the feature set you want deployed on your devices. Only versions of Windows that remain in support are available to select.
 
-   d. **Rollout options**: Configure **Rollout options** to manage when Windows Updates makes the update available to devices that receive this policy. For more information about using these options, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md), and then select **Next**.
+   d. **Rollout options**: Configure **Rollout options** to manage when Windows Updates makes the update available to devices that receive this policy. For more information about using these options, see [Rollout options for Windows Updates](windows-update-rollout-options.md), and then select **Next**.
 
 4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature updates deployment to one or more device groups. Select **Next** to continue.
 
@@ -287,11 +287,11 @@ Selecting a profile from the list opens the profiles **Overview** pane where you
 
 There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. Windows update reports show details about your Windows 10 and Windows 11 devices side by side in the same report.
 
-To learn more, see [Intune compliance reports](../protect/windows-update-reports.md).
+To learn more, see [Intune compliance reports](windows-update-reports.md).
 
 ## Next steps
 
-- Use [Windows update rings in Intune](../protect/windows-10-update-rings.md)
-- Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
-- Use [Windows update reports](../protect/windows-update-reports.md) for Windows 10/11 updates
+- Use [Windows update rings in Intune](windows-10-update-rings.md)
+- Use [Windows update compatibility reports](windows-update-compatibility-reports.md)
+- Use [Windows update reports](windows-update-reports.md) for Windows 10/11 updates
 - Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) in the Windows deployment content for an alternative solution
