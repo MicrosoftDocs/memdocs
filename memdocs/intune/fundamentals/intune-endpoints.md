@@ -316,7 +316,7 @@ Managed Windows devices using the Microsoft Store – either to acquire, install
 
 **Microsoft Store API (AppInstallManager):**
 
-- displaycatalog.md.mp.microsoft.com
+- displaycatalog.mp.microsoft.com
 - purchase.md.mp.microsoft.com
 - licensing.mp.microsoft.com
 - storeedgefd.dsx.mp.microsoft.com
@@ -399,6 +399,10 @@ To find your tenant location navigate to the Intune admin center > **Tenant admi
 - 'https://intunemaape19.jpe.attest.azure.net'
 
 ---
+
+## Windows Update for Business deployment service
+
+For more information on the required endpoints for Windows Update for Business deployment service, see [Windows Update for Business deployment service prerequisites](/windows/deployment/update/deployment-service-prerequisites#required-endpoints).
 
 ## Endpoint analytics
 

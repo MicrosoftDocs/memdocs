@@ -110,7 +110,7 @@ The following are the available tasks with their required permissions and rights
   - The **App Control for Business** permission with *View Reports*.
   - The **Organization** permission with *Read*.
 
-For guidance on assigning the right level of permissions and rights to manage Intune App Control for Business policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to manage Intune App Control for Business policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ### Government cloud support
 
@@ -465,7 +465,7 @@ If setting Configuration Manager as the Managed Installer is desired, you can al
 
 Entra hybrid join devices require connectivity to an on-premises Domain Controller (DC) to apply Group Policies including the Managed Installer policy (through AppLocker). Without DC connectivity, especially during Autopilot provisioning, Managed Installer policy won't successfully apply. Consider:
 
-1. Use Autopilot with Entra join instead. See our recommendation for [which Entra join option](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization) to choose for more information.
+1. Use Autopilot with Entra join instead. See our recommendation for [which Entra join option](../../solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md#which-option-is-right-for-your-organization) to choose for more information.
 
 2. For Entra hybrid join, choose one or both of the following:
    - Use device provisioning methods that provide DC connectivity at the time of app install as Autopilot might not work here.
@@ -473,4 +473,4 @@ Entra hybrid join devices require connectivity to an on-premises Domain Controll
 
 ## Next Steps
 
-[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy)
