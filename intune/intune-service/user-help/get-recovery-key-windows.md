@@ -56,6 +56,9 @@ You can obtain the recovery key for a work or school device that's encrypted by 
 ## Get recovery key from Company Portal website  
 Retrieve a personal BitLocker recovery key on the Company Portal website. 
 
+> [!div class="mx-imgBorder"]
+> ![Example screenshot of the BitLocker Recovery Key page on the Intune Company Portal website. ](./media/get-recovery-key-company-portal-website.png)  
+
 1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com).   
 2. Go to **Devices**.  
 2. Select the PC you're locked out of.  

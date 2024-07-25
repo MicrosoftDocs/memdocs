@@ -38,7 +38,7 @@ Join new Windows devices to Microsoft Entra ID and Intune. To bulk enroll device
 
 Microsoft Entra users are standard users on these devices and receive assigned Intune policies and required apps. Windows devices that are enrolled into Intune using Windows bulk enrollment can use the Company Portal app to install available apps. 
 
-## Roles and permissions    
+## Roles and permissions
 
 To create a bulk enrollment token, you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The Microsoft Entra built-in roles with permission to create bulk enrollment tokens are:       
 
@@ -61,12 +61,15 @@ Additionally, ensure that the service principal for Microsoft.Azure.SyncFabric (
 1. Install [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) from the Microsoft Store.  
 
 1. Open the **Windows Configuration Designer** app and select **Provision desktop devices**.
+
    ![Screenshot of selecting Provision desktop devices in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-select.png)
 
 1. A **New project** window opens where you specify the following information:
+
    - **Name** - A name for your project
    - **Project folder** - Save location for the project
    - **Description** - An optional description of the project
+
    ![Screenshot of specifying name, project folder, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-name.png)
 
 1. Enter a unique name for your devices. Names can include a serial number (%SERIAL%) or a random set of characters. Optionally, you can also enter a product key if you are upgrading the edition of Windows, configure the device for shared use, and remove pre-installed software.
@@ -74,6 +77,7 @@ Additionally, ensure that the service principal for Microsoft.Azure.SyncFabric (
    ![Screenshot of specifying name and product key in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-device.png)
 
 1. Optionally, you can configure the Wi-Fi network devices connect to when they first start.  If the network devices aren't configured, a wired network connection is required when the device is first started.
+
    ![Screenshot of enabling Wi-Fi including Network SSID and Network type options in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-network.png)
 
 1. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.  
@@ -82,6 +86,7 @@ Additionally, ensure that the service principal for Microsoft.Azure.SyncFabric (
    > Once a provisioning package is created, it can be revoked before its expiration by removing the associated package_{GUID} user account from Microsoft Entra ID.
 
 1. Provide your Microsoft Entra credentials to get a bulk token.
+
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
    > [!NOTE]
@@ -94,19 +99,22 @@ Additionally, ensure that the service principal for Microsoft.Azure.SyncFabric (
 1. Optionally, you can **Add applications** and **Add certificates**. These apps and certificates are provisioned on the device.
 
 1. Optionally, you can password protect your provisioning package.  Click **Create**.
-    ![Screenshot of package protection in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-create.png)
+
+   ![Screenshot of package protection in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## Provision devices
 
 1. Access the provisioning package in the location specified in **Project folder** specified in the app.
 
 2. Choose how you're going to apply the provisioning package to the device.  A provisioning package can be applied to a device one of the following ways:
+
    - Place the provisioning package on a USB drive, insert the USB drive into the device you'd like to bulk enroll, and apply it during initial setup
    - Place the provisioning package on a network folder, and apply it after initial setup
 
    For step-by-step instruction on applying a provisioning package, see [Apply a provisioning package](/windows/configuration/provisioning-packages/provisioning-apply-package).
 
 3. After you apply the package, the device will automatically restart in one minute.
+
    ![Screenshot of project folder, specifying name, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-add.png)
 
 4. When the device restarts, it connects to the Microsoft Entra ID and enrolls in Microsoft Intune.
@@ -114,6 +122,7 @@ Additionally, ensure that the service principal for Microsoft.Azure.SyncFabric (
 ## Troubleshooting Windows bulk enrollment
 
 ### Provisioning issues
+
 Provisioning is intended to be used on new Windows devices. Provisioning failures might require a wipe of the device or device recovery from a boot image. These examples describe some reasons for provisioning failures:
 
 - A provisioning package that attempts to join an Active Directory domain or Microsoft Entra tenant that does not create a local account could make the device unreachable if the domain-join process fails due to lack of network connectivity.
@@ -123,7 +132,7 @@ You can check for success/failure of the settings in your package in the **Provi
 
 > [!NOTE]
 > Bulk enrollment is considered a userless enrollment method, and because of it, only the "Default" enrollment restriction in Intune would apply during enrollment. Make sure Windows platform is allowed in the default restriction, otherwise, the enrollment will fail.
-> To check the capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](/intune/intune-service/fundamentals/deployment-guide-enrollment-windows).  
+> To check the capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](../fundamentals/deployment-guide-enrollment-windows.md).  
 
 ### Bulk enrollment with Wi-Fi 
 

@@ -48,7 +48,7 @@ This article lists these settings, and describes what each setting does. For mor
 Create an [iOS/iPadOS device features configuration profile](device-features-configure.md).
 
 > [!NOTE]
-> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, go to [iOS/iPadOS enrollment](/intune/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados).
+> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, go to [iOS/iPadOS enrollment](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
 ## AirPrint
 
@@ -113,7 +113,7 @@ This feature applies to:
 
 - When you use the Home Screen grid settings to add pages, or add pages and apps to the dock, then the icons on the Home Screen and pages are locked. They can't be moved or deleted. This behavior might be by design with iOS/iPadOS and Apple's MDM policies.
 
-- iOS/iPadOS web clips that are required to open in a managed browser won’t appear in the order that you enter in the Home Screen layout policy.
+- iOS/iPadOS web clips that are required to open in a managed browser won't appear in the order that you enter in the Home Screen layout policy.
 
 ### Home screen
 

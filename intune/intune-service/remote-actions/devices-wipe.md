@@ -224,7 +224,7 @@ If you want to remove devices from the Intune admin center, you can delete them 
 > [!IMPORTANT]
 > The **Delete** action triggers the following actions:
 >
-> * Depending on the device platform, it may retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](../remote-actions/devices-wipe.md#retire) section for the expected behavior.
+> * Depending on the device platform, it may retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](devices-wipe.md#retire) section for the expected behavior.
 > * BitLocker encryption is suspended if managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
 
 ### Automatically delete devices with cleanup rules
@@ -287,4 +287,4 @@ Applicable for Windows 10 devices. Read more about [Fresh Start](device-fresh-st
 
 ## Next steps
 
-If you want to reenroll a deleted device, see [Enrollment options](/intune/intune-service/enrollment/device-enrollment).
+If you want to reenroll a deleted device, see [Enrollment options](../fundamentals/deployment-guide-enrollment.md).

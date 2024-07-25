@@ -95,7 +95,7 @@ This section provides the high-level enrollment steps for device users. We recom
 5. Sign in to a work app, such as Microsoft Teams, with your work account.  
 6. Wait while the app identifies required setting updates. For example, you may be required to update your device's operating system before you can use the app. Check the app you're signed into for pending action items. When you're done making changes, select **Recheck**.   
 
-After compliance checks are complete, users can access apps configured with the SSO app extension policy for the rest of their session without needing to sign in again.       
+After compliance checks are complete, users can access apps configured with the SSO app extension policy for the rest of their session without needing to sign in again.
 
 ### Removing device from management  
 The volume and cryptographic keys created to manage the work data on the device are erased when the device unenrolls from Intune. 
@@ -107,9 +107,3 @@ For more details about Apple Device Enrollment features and functionality, see [
 
 ### Troubleshooting  
 For information about how to troubleshoot device enrollment issues in Microsoft Intune, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
-
- 
-
-
-
-

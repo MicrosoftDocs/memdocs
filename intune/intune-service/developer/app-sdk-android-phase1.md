@@ -260,7 +260,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 
 <!-- Microsoft Learn documentation: Intune overview -->
 [Intune App SDK overview]:/intune/intune-service/developer/app-sdk
-[What is Microsoft Intune app management]:/intune/intune-service/apps/app-management
+[Microsoft Intune app management]:/intune/intune-service/apps/app-management
 [Android app protection policy settings]:/intune/intune-service/apps/app-protection-policy-settings-android
 [Overview of the Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer

@@ -224,14 +224,14 @@ By default, an Android Enterprise fully managed device will not allow employees 
 
 By default, Managed Google Play apps will not update unless the following conditions are met:
 
-- The device is connected to wi-fi
+- The device is connected to Wi-Fi
 - The device is charging
 - The device is not actively being used
 - The app to be updated is not running on the foreground
 
 For more information, see the [Manage App Updates](https://support.google.com/googleplay/work/answer/9350374?hl=en) documentation from Google.
 
-You can choose to configure the wi-fi requirement for dedicated, fully managed, corporate-owned, and personally-owned work profile devices by configuring app auto-updates in [device configurations policies](../configuration/device-restrictions-android-for-work.md).
+You can choose to configure the Wi-Fi requirement for dedicated, fully managed and corporate-owned work profile devices by configuring app auto-updates in [device configurations policies](../configuration/device-restrictions-android-for-work.md).
 
 For dedicated, fully managed, corporate-owned, and personally-owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
 

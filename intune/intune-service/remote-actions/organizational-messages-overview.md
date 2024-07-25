@@ -71,7 +71,7 @@ This section answers frequently asked questions (FAQ) for organizational message
 ### Can I customize message text? 
 No, we'll generate the message based on the theme you select. You can add a custom URL to the message to link people to more detailed information.   
 
-### What do I need to do if I don’t have the correct permissions?  
+### What do I need to do if I don't have the correct permissions?  
 Contact someone in your organization who is a Microsoft Entra Global Administrator, Intune Administrator, or Intune Role Administrator and ask them to assign one of the following roles:  
  * Microsoft Entra Global Administrator 
  * Intune Administrator 
@@ -87,7 +87,7 @@ You can schedule messages to arrive at different times on a device by selecting 
 ### Where can I share an idea for organizational messages or suggest an improvement?  
 In the Microsoft Intune admin center, select the **Feedback** icon that's next to your account name at the top of the page. Rate your experience and then describe your experience or idea. If you're okay with getting a response from Microsoft, select **Microsoft can email you about your feedback.**  
 
-For other support options, see [How to get support in Microsoft Intune admin center](/intune/get-support).  
+For other support options, see [How to get support in Microsoft Intune admin center](../../get-support.md).  
 
 ## Next steps  
 Complete the [prerequisites for organizational messages](organizational-messages-prerequisites.md) to enable the feature in your tenant.     

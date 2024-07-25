@@ -380,7 +380,7 @@ You might see an error code in a dialog box if you're having trouble installing 
 
 1. Ensure that Microsoft Edge is installed properly and is up to date.
    
-Remote Help uses the Microsoft Edge browser control. If your device has Microsoft Edge installed, then it’s likely that Remote Help will run properly. If you have problems, the common troubleshooting tips here may help get Remote Help working. Learn more about [Troubleshooting tips for installing and updating Microsoft Edge.](https://support.microsoft.com/microsoft-edge/troubleshooting-tips-for-installing-and-updating-microsoft-edge-a5eceb94-c2b1-dfab-6569-e79d0250317b)
+Remote Help uses the Microsoft Edge browser control. If your device has Microsoft Edge installed, then it's likely that Remote Help will run properly. If you have problems, the common troubleshooting tips here may help get Remote Help working. Learn more about [Troubleshooting tips for installing and updating Microsoft Edge.](https://support.microsoft.com/microsoft-edge/troubleshooting-tips-for-installing-and-updating-microsoft-edge-a5eceb94-c2b1-dfab-6569-e79d0250317b)
 After installing or updating Microsoft Edge, try opening Remote Help again. If Remote Help doesn't run or you get an error message that Microsoft Edge WebView2 isn't installed, go to the next step.
 
 2. Install Microsoft Edge WebView 2
@@ -477,7 +477,7 @@ Version: 4.0.1.13 - Changes in this release:
 
 Fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use Remote Help with Intune.](/intune/intune-service/fundamentals/remote-help)
+For more information, go to [Use Remote Help with Intune](remote-help.md).
 
 ### July 26, 2022
 

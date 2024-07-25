@@ -132,18 +132,23 @@ With settings catalog, we can streamline the end users experience for allowing t
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices > Manage devices > Configuration > Create > macOS > Settings catalog**
 1. Enter a name and description for the profile. For example, "macOS Remote Help privacy permissions" and select **Next**
 1. Select **Add settings** and in the settings picker, navigate to **Privacy > Privacy Preferences Policy Control > Services**
+
     1. Under **Accessibility** select:
+
       - **Authorization**
       - **Code Requirement**
       - **Identifer**
       - **Identifer type**
       - **Static code**
+
     1. Under **Screen Capture** select:
+
       - **Authorization**
       - **Code Requirement**
       - **Identifer**
       - **Identifer type**
       - **Static code**
+
 1. Close the **Add settings** pane and select **+ Edit instance** under **Accessibility** and configure the following settings:
 
     | Name | Configuration |
@@ -163,6 +168,7 @@ With settings catalog, we can streamline the end users experience for allowing t
     | Identifier | com.microsoft.remotehelp |
     | Identifier type | bundle ID |
     | Static Code | False |
+
 1. Select **Next**, configure scope tags as required, assign the profile to groups as required, review settings and **Create** the policy.
 
 #### [:::image type="icon" source="../media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
@@ -237,7 +243,7 @@ The most recent version of Remote Help is **1.0.2404171**.
 
 For enrolled devices, you can streamline the user experience by installing Remote Help on behalf of your users.
 
-For more information on installing Remote Help through Intune as a required install, see [Add an unmanaged macOS PKG app to Microsoft Intune](/intune/intune-service/apps/macos-unmanaged-pkg).
+For more information on installing Remote Help through Intune as a required install, see [Add an unmanaged macOS PKG app to Microsoft Intune](../apps/macos-unmanaged-pkg.md).
 
 For more information on making Remote Help available in Company Portal for the user to install, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
 
@@ -258,20 +264,30 @@ When you as the sharer and your helper are ready to begin the session:
 
 1. Open Remote Help app on the device **Finder** > **Applications** > **Microsoft Remote Help**.
 1. When opening Remote Help for the first time, you must allow Remote Help access to control and share your screen. Click on each of the required permissions to open Settings and ensure the permission is allowed for Microsoft Remote Help.
+
     1. **Accessibility** (also available to set in **Settings > Privacy & Security > Accessibility**)
     1. **Screen and System Audio Recording**  (also available to set in **Settings > Privacy & Security > Screen and System Audio Recording**)
+
 1. If prompted, sign in with your organization credentials to authenticate. to your organization.
 1. Enter the 8-digit security code provided by the helper. After entering the code, select **Share screen** to continue.
 1. When the session connection begins, a trust screen is displayed with the Helpers information including their full name, job title, company, profile picture, and verified domain. At this time, the helper requests a session with Full control of your device or View Only screen sharing. You can either choose to *Allow* or to *Decline* the request.
 1. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone.
+
    - Select **Don't Allow** as this permission isn't needed for screen sharing.
+
      :::image type="content" source="media/remote-help/remote-help-microphone-permission.png" alt-text="The microphone permission prompt showing to select Don't Allow":::
+
 1. Select **Share screen** to continue. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
+
 1. macOS displays a dialogue menu in the top right corner as one of two options:
+
    - **Green camera icon**: Choose **Screen**, and then move your mouse to select the screen share.
-   :::image type="content" source="media/remote-help/remote-help-screen-share.png" alt-text="A screenshot of the macOS screen  sharing dialog to allow screen sharing for Microsoft Remote Help":::
+
+     :::image type="content" source="media/remote-help/remote-help-screen-share.png" alt-text="A screenshot of the macOS screen  sharing dialog to allow screen sharing for Microsoft Remote Help":::
+
    - **Yellow microphone icon** (if you selected to allow the microphone permission): Select the microphone icon, then to the right of the application name Microsoft Remote Help, select the grey icon, and then **Screen**. Move your cursor to the screen you want to share and select **Share this screen**.
-   :::image type="content" source="media/remote-help/remote-help-screen-share-microphone.png" alt-text="A screenshot of the macOS microphone sharing dialog to allow screen sharing for Microsoft Remote Help":::
+
+     :::image type="content" source="media/remote-help/remote-help-screen-share-microphone.png" alt-text="A screenshot of the macOS microphone sharing dialog to allow screen sharing for Microsoft Remote Help":::
 
 1. After the session is established, the helper can then help in resolving any issues on the device.
 

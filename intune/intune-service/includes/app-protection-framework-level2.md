@@ -30,7 +30,7 @@ The policy settings enforced in level 2 include all the policy settings recommen
 | Data   Transfer |       Allow cut, copy, and paste for  |  No destination or source  |             Windows        |
 | Data Transfer |       Screen   capture and Google Assistant  |          Block  |          Android  |                  |
 | Functionality |       Restrict   web content transfer with other apps  |          Microsoft   Edge  |          iOS/iPadOS,   Android  |                  |
-| Functionality |       Org data   notifications  |          Block Org   Data  |          iOS/iPadOS,   Android  |          For a list   of apps that support this setting, see [iOS app protection policy   settings](/intune/intune-service/apps/app-protection-policy-settings-ios) and [Android   app protection policy   settings](/intune/intune-service/apps/app-protection-policy-settings-android).       |
+| Functionality |       Org data   notifications  |          Block Org   Data  |          iOS/iPadOS,   Android  | For a list of apps that support this setting, see [iOS app protection policy settings](/intune/intune-service/apps/app-protection-policy-settings-ios) and [Android app protection policy settings](/intune/intune-service/apps/app-protection-policy-settings-android). |
 
 #### Conditional launch
 
