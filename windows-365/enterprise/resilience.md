@@ -52,14 +52,28 @@ In addition to the Azure Virtual Desktop connectivity layer, Windows 365 operate
 
 Each of these services:
 
-- Use standard Azure services.
-- Is architected to use Azure resilience services like Azure availability zones.
-- Is deployed and operates in a cross region active-active configuration for maximum resiliency, and supports full region failover in the event of a region failure.
-- Is its own web service that has a certain set of extra Azure infrastructure requirements like CosmosDB, Azure storage, and Event hubs.
+- Is its own web service that use standard Azure infrastructure services. Each service has a certain set of extra Azure infrastructure requirements like CosmosDB, Azure storage, and Event hubs.
+- Is architected for resiliency. For example, for the services storage requirements an Azure Storage accounts with Globally Redundant Storage (GRS) is used. For database services such as CosmosDB, the data store is replicated across regions.
+- Is architected to use Azure resilience services like Azure availability zones, and cross region failover.
 
 The following diagram shows the architecture of an example service. Windows 365 distributes its infrastructure across multiple availability zones within a region and across multiple Azure regions. The service operates in an active-active manner. This supports in-region and cross-region resiliency. If an outage occurs within a region, the service continues functioning. If a region fails, the service is transferred to the secondary region's infrastructure, and normal operations continue.
 
-<!-- ########################## -->
+## Virtual machine resiliency
+
+Each Windows 365 Cloud PC is a single instance Azure virtual machine. Resilience is provided at the Azure host level to mitigate any compute continuity issues. For more information, see [Business continuity and disaster recovery overview](business-continuity-disaster-recovery.md).
+
+## Customer best practices
+
+As Windows 365 has a shared responsibility for overall service delivery, there are some best practices that customers should follow to increase the resiliency of the overall service.
+
+**[Microsoft hosted network](deployment-options.md#microsoft-hosted-network)**. Use a Microsoft hosted network when creating a rovisioning policy. Microsoft hosted network is a Microsoft managed networking option, where no Azure vNet or subscription is required for Cloud PC network connectivity. This lets Microsoft make the placement decisions for the Cloud PC virtual machines and decreases the possibility of provisioning issues.
+
+**[Azure Network Connection](/azure/architecture/guide/virtual-desktop/windows-365-azure-network-connection)**. If you need granular control of your corporate network traffic – firewall rules, custom routes, or on-prem network access – the Azure Network Connection (ANC) feature lets you bring your own Azure vNet/subscription to Windows 365. For customers using the ANC, create multiple connections and prioritize these in order of failover usage. This prioritization provides a network connection failover in the case of a networking outage.
+
+**[Point-in-time restore](restore-overview.md)**. This service allows you to fully restore your Cloud PC to a previous state. You can configure the service to automatically create restore points across short and longer time windows.
+
+**[Cross region disaster recovery](cross-region-disaster-recovery.md)**. This Windows 365 add-on feature that creates snapshots of Cloud PCs. These snapshots are placed in customer-defined, geographically distant locations. The snapshots can be recovered to Cloud PCs running in the selected location during a disaster recovery event.
+
 ## Next steps
 
 [Windows 365 architecture](architecture.md)]
