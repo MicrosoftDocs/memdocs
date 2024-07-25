@@ -25,13 +25,80 @@ summary: |
   This article provides troubleshooting for common Windows Autopilot issues.
 
 sections:
+  - name: Windows Autopilot troubleshooting overview
+    questions:
+
+      - question: |
+          What concepts should be understood when troubleshooting Windows Autopilot?
+        answer: |
+          Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues might arise. When troubleshooting an issue, it's helpful to understand:
+
+            - The Windows Autopilot [process flow](#windows-autopilot-flow).
+            - How Windows Autopilot [device profiles](#profile-download) are downloaded.
+            - [Key activities](#key-troubleshooting-activities) to perform during troubleshooting.
+
+      - question: |
+          What is the Windows Autopilot process flow?
+        answer: |
+          Whether performing user-driven or self-deploying device deployments, the troubleshooting process is about the same. It's useful to understand the flow for a specific device:
+
+          1. A network connection is established. The connection can be a wireless (Wi-fi) or wired (Ethernet) connection.
+
+          1. The Windows Autopilot profile is downloaded. When a wired connection is used, or a wireless connection is established, the profile downloads from the Autopilot deployment service as soon as the network connection is in place.
+
+          1. User authentication occurs. During a user-driven deployment, the user enters their Microsoft Entra credentials, which is then validated.
+
+          1. Microsoft Entra join occurs. For user-driven deployments, the device is joined to Microsoft Entra ID using the specified user credentials. For self-deploying scenarios, the device is joined without specifying any user credentials.
+
+          1. Automatic mobile device management (MDM) enrollment occurs. As part of the Microsoft Entra join process, the device enrolls in the MDM service configured in Microsoft Entra ID (for example, Microsoft Intune).
+
+          1. Settings are applied. If the [enrollment status page](enrollment-status.md) is configured, most settings are applied while the enrollment status page is displayed. If not configured or available, settings will be applied after the user is signed in.
+
+      - question: |
+          How are Windows Autopilot device profiles downloaded?
+        answer: |
+          When an Internet-connected Windows device boots up, it attempts to connect to the Autopilot service and download an Autopilot profile. The Autopilot profile is downloaded as soon as possible, and again after each reboot.
+
+          > [!NOTE]
+          >
+          > At this stage, it's important that a Windows Autopilot profile exists in the tenant so that a blank profile isn't cached locally on the device. If necessary, a new Windows Autopilot profile can be retrieved by rebooting the device.
+          >
+          > If a computer needs to be rebooted during OOBE to retrieve a new Autopilot profile:
+          >
+          > 1. Select Shift-F10 to open a command prompt window.
+          >
+          > 1. In the command prompt window, enter one of the following two commands:
+          >
+          >    - `shutdown.exe /r /t 0` to **restart** immediately.
+          >
+          >    - `shutdown.exe /s /t 0` to **shut down** immediately.
+          >
+          > For more information, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+
+      - question: |
+          What are the key activities to perform when troubleshooting Windows Autopilot?
+        answer: |
+          The key activities to perform when troubleshooting are:
+
+          - Review configuration: Has Microsoft Entra ID and Microsoft Intune or a non-Microsoft mobile device management (MDM) service been configured as specified in [Windows Autopilot configuration requirements](requirements.md?tabs=configuration)?
+
+          - Check network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](requirements.md?tabs=networking)?
+
+          - Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
+
+          - Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](troubleshoot-aad-join.md)?
+
+          - MDM enrollment issues: Is the device able to [enroll in Microsoft Intune](troubleshoot-device-enrollment.md) or non-Microsoft MDM service?
+
+          - Review logs that are automatically collected upon Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+
   - name: Microsoft Entra join issues
     questions:
 
       - question: |
           What is the most common issue joining a device to Microsoft Entra ID?
         answer: |
-          The most common issue joining a device to Microsoft Entra ID is related to Microsoft Entra permissions. Make sure that [the correct configuration is in place](requirements.md?tabs=configuration) to allow users to join devices to Microsoft Entra ID.
+          The most common issue joining a device to Microsoft Entra ID is related to Microsoft Entra permissions. Make sure that the correct configuration is in place to allow users to join devices to Microsoft Entra ID. For more information, see [Configuration requirements](requirements.md?tabs=configuration).
 
       - question: |
           What happens if a user attempts to join more devices to Microsoft Entra ID than they are allowed?
@@ -42,3 +109,4 @@ sections:
           Why did deleting a device's object in Microsoft Entra ID cause the device to not be able to join Microsoft Entra ID any longer?
         answer: |
           A Microsoft Entra device is created upon import. It's important this object isn't deleted. The object acts as Windows Autopilot's anchor in Microsoft Entra ID for group membership and targeting, including the profile. Deleting it might lead to Microsoft Entra join errors. If this object is deleted, the issue can be fixed by deleting and reimporting the device as a Windows Autopilot device. Deleting and reimporting the device as a Windows Autopilot device will recreate the associated object in Microsoft Entra ID.
+
