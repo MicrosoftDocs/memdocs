@@ -34,29 +34,11 @@ sections:
           The most common issue joining a device to Microsoft Entra ID is related to Microsoft Entra permissions. Make sure that [the correct configuration is in place](requirements.md?tabs=configuration) to allow users to join devices to Microsoft Entra ID.
 
       - question: |
-          Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE).
+          What happens if a user attempts to join more devices to Microsoft Entra ID than they are allowed?
         answer: |
-          - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md?tabs=software#software-requirements). This requirement includes that the minimum required update is installed before starting the device for the first time:
+          Errors can happen if a user exceeds the number of devices that they're allowed to join. This default limit is 50 devices but can be configured in Microsoft Entra ID. For more information, see [Understand Intune and Microsoft Entra device limit restrictions](/mem/intune/enrollment/device-limit-intune-azure).
 
-            - Verify with OEMs that devices shipped from the OEM have the minimum required update installed.
-
-            - If installing Windows from installation media, verify that the media has the minimum required update installed. Updated Windows installation media with the latest cumulative update already installed is available at the [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/licensing/ServiceCenter/Default.aspx).
-
-          - Windows Autopilot device preparation doesn't use the Enrollment Status Page (ESP). Since Windows Autopilot device preparation doesn't use the ESP, the ESP shouldn't display during a Windows Autopilot device preparation deployment. If the ESP displays during the deployment, then the device isn't running a Windows Autopilot device preparation deployment. Instead, the device might be:
-
-            - A Windows Autopilot registered device.
-            - A Windows Autopilot profile is assigned to the device.
-
-            Verify that the device isn't registered as a Windows Autopilot device and that a Windows Autopilot profile isn't assigned to the device. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies.
-
-            If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../registration-overview.md#deregister-a-device).
-
-          - Verify that the user signing into the device during OOBE is a member of the user group specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a user group](tutorial/user-driven/entra-join-user-group.md).
-
-          - Verify that a device group is selected in the Windows Autopilot device preparation policy. A Windows Autopilot device preparation policy can be created without selecting a device group. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
-
-          - If using corporate identifiers in Intune, make sure that a corporate identifier is added for the device. For more information, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
-
-          - Verify that Windows automatic Intune enrollment is configured.
-
-          - Verify that users are allowed to join device to Microsoft Entra ID.
+      - question: |
+          Why did deleting a device's object in Microsoft Entra ID cause the device to not be able to join Microsoft Entra ID any longer?
+        answer: |
+          A Microsoft Entra device is created upon import. It's important this object isn't deleted. The object acts as Windows Autopilot's anchor in Microsoft Entra ID for group membership and targeting, including the profile. Deleting it might lead to Microsoft Entra join errors. If this object is deleted, the issue can be fixed by deleting and reimporting the device as a Windows Autopilot device. Deleting and reimporting the device as a Windows Autopilot device will recreate the associated object in Microsoft Entra ID.
