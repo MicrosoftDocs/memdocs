@@ -33,9 +33,9 @@ sections:
         answer: |
           Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues might arise. When troubleshooting an issue, it's helpful to understand:
 
-            - The Windows Autopilot [process flow](#windows-autopilot-flow).
-            - How Windows Autopilot [device profiles](#profile-download) are downloaded.
-            - [Key activities](#key-troubleshooting-activities) to perform during troubleshooting.
+            - The Windows Autopilot [process flow](#what-is-the-windows-autopilot-process-flow-).
+            - How Windows Autopilot [device profiles](#how-are-windows-autopilot-device-profiles-downloaded-) are downloaded.
+            - [Key activities](#what-are-the-key-activities-to-perform-when-troubleshooting-windows-autopilot-) to perform during troubleshooting.
 
       - question: |
           What is the Windows Autopilot process flow?
@@ -86,13 +86,83 @@ sections:
 
           - Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
 
-          - Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](troubleshoot-aad-join.md)?
+          - Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](#microsoft-entra-join-issues)?
 
           - MDM enrollment issues: Is the device able to [enroll in Microsoft Intune](troubleshoot-device-enrollment.md) or non-Microsoft MDM service?
 
-          - Review logs that are automatically collected upon Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+          - Review logs that are automatically collected upon Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics). # 1895390
 
-  - name: Microsoft Entra join issues
+  - name: Troubleshoot Windows Autopilot device import and enrollment
+    questions:
+
+      - question: |
+          After the initial Windows Autopilot deployment, devices with a targeted Windows Autopilot self-deployment mode or pre-provisioning mode profile can't automatically re-enroll using Windows Autopilot. If a device is redeployed, then the `0x80180014` error code is returned.
+
+          The Event Tracing for Windows (ETW) logs might show the following mobile device management (MDM) error:
+
+          `MDM Enroll: Server Returned Fault/Code/Subcode/Value=(DeviceNotSupported) Fault/Reason/Text=(Enrollment blocked for AP device by SDM One Time Limit Check)`
+
+          What is the cause of error code 0x80180014 and why can't the device re-enroll?
+
+        answer: |
+          Error code 0x80180014 can occur under either of the following scenarios:
+
+          1. Microsoft Intune changed the Windows Autopilot self-deployment mode and pre-provisioning mode experience. To reuse a device, the device record created by Intune must be deleted.
+
+            This change impacts all Autopilot deployments that use the self-deployment or pre-provisioning mode. This change impacts devices when they're reused, reset, or when redeploying a profile.
+
+            To resolve the issue in this scenario and redeploy the device using Windows Autopilot:
+
+            1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Intune admin center](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-admin-center).
+            1. Redeploy the Autopilot deployment profile.
+
+          1. Windows MDM enrollment is disabled in the Intune tenant.
+
+            To resolve and fix the issue in this scenario, follow these steps:
+
+            1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+            1. In the **Home** screen, select **Devices** in the left hand pane.
+
+            1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+            1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+            1. In the **Windows | Enrollment** screen, under **Enrollment options**, select **Device platform restriction**.
+
+            1. In the **Enrollment restrictions** screen, under **Device type restrictions**, select **All Users** under the **Name** column.
+
+            1. In the **All Users** screen that opens, under **Manage**, select **Properties**.
+
+            1. In the **Properties** screen that opens, next to **Platform settings**, select the **Edit** link.
+
+            1. In the **Edit restriction** screen that opens:
+
+              1. Locate **Windows (MDM)** under the **Type** column.
+
+              1. Make sure that **Windows (MDM)** is set to **Allow** under the **Platform** column.
+
+              1. If **Windows (MDM)** is set to **Block**, change it to **Allow**.
+
+              1. Select **Review + save**, and then either **Save** if a setting was changed, or **Cancel** if not settings were changed.
+
+            1. Repeat the above steps for any additional restrictions that might exist in the **Enrollment restrictions** screen other than **All Users**. Only restrictions for the **Windows** platform need to be verified.
+
+            > [!NOTE]
+            >
+            > When multiple restrictions exist, restrictions might exist that only allow certain groups MDM enrollment. Some of the restrictions blocking MDM enrollment might be valid based on what group they're assigned to. When experiencing this problem, verify that the device isn't a member of one of the groups where there's MDM enrollment is blocked, or if applicable, change the MDM enrollment setting for that restriction to **Allow**.
+
+
+
+
+
+
+
+
+
+
+
+  - name: Troubleshoot Microsoft Entra join issues
     questions:
 
       - question: |
