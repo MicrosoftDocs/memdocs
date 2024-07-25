@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/11/2024
+ms.date: 07/31/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -122,13 +122,12 @@ To unblock your tenant, open a ticket with support from the Intune portal.
 
 ### Monitor the concurrency buffer
 
-You can monitor the use of concurrency buffer with the Frontline connection hourly report. You can use the Frontline concurrency alert to receive alerts each time the concurrency buffer is activated.
+You can monitor the use of concurrency buffer with the Frontline connection hourly report. You can use the Frontline concurrency alert to receive alerts each time the concurrency buffer is activated. The concurrency buffer doesn't apply to GPU-enabled Cloud PCs.
 
 ## Features not yet supported Windows 365 Frontline
 
 The following features aren't yet supported for Windows 365 Frontline.
 
-- GPU Cloud PCs
 - Resize a Cloud PC remote action
 - [Move a Cloud PC](move-cloud-pc.md)
 
