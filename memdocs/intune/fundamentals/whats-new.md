@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/22/2024
+ms.date: 07/25/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -94,6 +94,26 @@ The Intune App SDK and Intune App Wrapping Tool have moved to a different GitHub
 
 ### Device configuration
 
+#### New clipboard transfer direction settings available in the Windows settings catalog <!-- 28748086 --> 
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type.
+
+**Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Device and Resource Redirection**:
+
+- Restrict clipboard transfer from server to client
+- Restrict clipboard transfer from server to client (User)
+- Restrict clipboard transfer from client to server
+- Restrict clipboard transfer from client to server (User)
+
+For more information on configuring the clipboard transfer direction in Azure Virtual Desktop, go to [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+
+Applies to:
+
+- Windows 11
+- Windows 10
+
 #### New settings available in the Apple settings catalog <!-- 28052449 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
@@ -150,7 +170,7 @@ For more information, see:
 
 #### Consolidation of Intune profiles for identity protection and account protection <!-- 24810271 -->
 
-We have consolidated the Intune profiles that were related to identify and account protection, into a single new profile named *Account protection*. This new profile is found in the [account protection policy node of endpoint security](../protect/endpoint-security-account-protection-policy.md), and is now the only profile template that remains available when creating new policy instances for identity and account protection. The new profile includes Windows Hello for Business settings for both users and devices, and settings for Windows Credential Guard.
+We have consolidated the Intune profiles that were related to identity and account protection, into a single new profile named *Account protection*. This new profile is found in the [account protection policy node of endpoint security](../protect/endpoint-security-account-protection-policy.md), and is now the only profile template that remains available when creating new policy instances for identity and account protection. The new profile includes Windows Hello for Business settings for both users and devices, and settings for Windows Credential Guard.
 
 Because this new profile uses Intune’s unified settings format for device management, the profiles settings are also available through the settings catalog, and help to improve the reporting experience in the Intune admin center.
 
