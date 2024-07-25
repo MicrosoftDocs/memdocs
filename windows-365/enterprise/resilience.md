@@ -41,19 +41,20 @@ In addition to the Azure Virtual Desktop connectivity layer, Windows 365 operate
 
 - The Windows 365 provisioning service processes deployment requests to provision Cloud PCs according to the specifications and locations defined by the administrator making the request.
 - The Entra ID notification service monitors administrator changes to Microsoft Entra ID groups, subscription and license changes that trigger new deployments.
-- Other services manage
-  - The administrator portal
-  - The end user portal
-  - Disaster recovery
-  - Diagnostics
-  - Troubleshooting
-  - Service monitoring
+- Other services manage:
+  - The administrator portal.
+  - The end user portal.
+  - Disaster recovery.
+  - Diagnostics.
+  - Troubleshooting.
+  - Service monitoring.
   - And all other functions of Windows 365.  
 
 Each of these services:
 
-- Use standard Azure services
+- Use standard Azure services.
 - Is architected to use Azure resilience services like Azure availability zones.
+- Is deployed and operates in a cross region active-active configuration for maximum resiliency, and supports full region failover in the event of a region failure.
 - Is its own web service that has a certain set of extra Azure infrastructure requirements like CosmosDB, Azure storage, and Event hubs.
 
 The following diagram shows the architecture of an example service. Windows 365 distributes its infrastructure across multiple availability zones within a region and across multiple Azure regions. The service operates in an active-active manner. This supports in-region and cross-region resiliency. If an outage occurs within a region, the service continues functioning. If a region fails, the service is transferred to the secondary region's infrastructure, and normal operations continue.
