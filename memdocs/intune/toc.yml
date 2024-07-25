@@ -872,7 +872,7 @@ items:
             href: ./protect/microsoft-cloud-pki-monitor.md  
           - name: Get audit logs  
             href: ./protect/microsoft-cloud-pki-audit-logs.md 
-          - name: Delete certificate authority   
+          - name: Delete, revoke, pause CA    
             href: ./protect/microsoft-cloud-pki-delete.md 
         - name: Certificates 
           items: 
