@@ -45,7 +45,7 @@ This feature applies to:
 
 > [!NOTE]
 >
-> - These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](./vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados).
+> - These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
 >
 > - The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 >

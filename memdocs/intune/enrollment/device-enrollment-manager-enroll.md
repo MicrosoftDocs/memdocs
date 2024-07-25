@@ -46,12 +46,12 @@ A device enrollment manager can use the following methods to enroll devices in I
 - DEM-initiated via Microsoft Entra join  
 
 > [!TIP]
-> To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](/mem/intune/fundamentals/deployment-guide-enrollment-windows).  
+> To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](../fundamentals/deployment-guide-enrollment-windows.md).  
 
 
 ## Role based access control   
 
-To manage device enrollment manager accounts in Microsoft Intune, you must be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). The Intune Administrator role can *update* and *read* device enrollment manager accounts.    
+To manage device enrollment manager accounts in Microsoft Intune, you must be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). The Intune Administrator role can *update* and *read* device enrollment manager accounts.
 
 |Permission| Description |
 |---------------|------------|
