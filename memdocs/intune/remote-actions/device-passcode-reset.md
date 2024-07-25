@@ -67,7 +67,7 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 
 ## Reset a passcode
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with any of the following roles: Microsoft Entra Global Admin, Microsoft Entra Intune Service Admin (also known as Intune Administrator), Helpdesk Operator, or Role Administrator.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with any of the following roles: Helpdesk Operator, or Role Administrator.
 2. Select **Devices**, and then select **All devices**.
 3. From the list of devices you manage, select a device, and choose **Reset passcode**.
 

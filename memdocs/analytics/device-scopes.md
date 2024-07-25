@@ -63,7 +63,7 @@ The new custom device scope appears in your list of saved device scopes. By defa
 > [!NOTE]
 > Once activated, custom device scopes can take up to 24 hours to process. During this period, custom device scopes that are still processing will not be usable.
 
-Only the user who created the custom device scopes or a Global administrator can delete the custom device scopes.
+Only the user who created the custom device scopes or a user assigned with an appropriate role can delete the custom device scopes.
 
 To delete custom device scopes:
 

@@ -47,7 +47,7 @@ This feature applies to:
 
 - The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
 
-- Only a Global administrator or Intune administrator in the Intune admin center can onboard TeamViewer.
+- Users must be assigned with appropriate roles and permissions in the Intune admin center to onboard TeamViewer.
 
 - Use a supported Intune-managed device:
 
