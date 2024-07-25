@@ -52,13 +52,35 @@ In addition to the Azure Virtual Desktop connectivity layer, Windows 365 operate
 
 Each of these services:
 
-- Use standard Azure services
-- Is architected to use Azure resilience services like Azure availability zones.
-- Is its own web service that has a certain set of extra Azure infrastructure requirements like CosmosDB, Azure storage, and Event hubs.
+- Is its own web service that use standard Azure infrastructure services and each has a certain set of extra Azure infrastructure requirements like CosmosDB, Azure storage, and Event hubs.
+- Each of these is architected for resiliency. For example for the services storage requirements we use Azure Storage accounts with Globally Redundant Storage (GRS).For database services such as CosmosDB, the data store is replicated across regions.
+- Is architected to use Azure resilience services like Azure availability zones, and cross region failover.
+
 
 The following diagram shows the architecture of an example service. Windows 365 distributes its infrastructure across multiple availability zones within a region and across multiple Azure regions. The service operates in an active-active manner. This supports in-region and cross-region resiliency. If an outage occurs within a region, the service continues functioning. If a region fails, the service is transferred to the secondary region's infrastructure, and normal operations continue.
 
 <!-- ########################## -->
+
+# Client resiliency
+<!-- ########################## -->
+
+# Virtual Machine resiliency
+
+Each Windows 365 Cloud PC is a single instance Azure virtual machine. Resilience is provided at the Azure host level to mitigate any compute continuity issues. For further details please refer to [Business continuity and disaster recovery overview](https://learn.microsoft.com/windows-365/business-continuity-disaster-recovery).
+
+# Customer best practices
+
+As Windows 365 has a shared responsibility for overall service delivery, there are some best practices that customers should follow to increase the resiliency of the overall service.
+
+Microsoft recommends using the Microsoft Hosted Network (MHN) network type when creating a Provisioning Policy. Microsoft Hosted Network is a Microsoft managed networking option, where no Azure vNet or subscription is required for Cloud PC network connectivity. This allows Microsoft to make the placement decisions for the Cloud PC virtual machines decreasing the possibility of any provisioning issues. For further details please refer to [Microsoft-hosted network](https://learn.microsoft.com/windows-365/enterprise/deployment-options#microsoft-hosted-network)
+
+If you need granular control of your corporate network traffic – firewall rules, custom routes or on-prem network access – the Azure Network Connection feature allows you to bring your own Azure vNet/subscription to Windows 365. For customers using the Azure Network Connection (ANC) Microsoft recommends creating multiple connections and prioritizing these in order of failover usage, in order to provide a network connection failover in the case of a networking outage. For further details please refer to [Windows 365 Azure network connection](https://learn.microsoft.com/en-us/azure/architecture/guide/virtual-desktop/windows-365-azure-network-connection)
+
+There are two additional features that provide customer driven resilience for your Cloud PCs. 
+The first is Point-in-time restore. This service allows you to fully restore your Cloud PC to a previous state. You can configure the service to automatically create restore points across short and longer time windows. For further details please refer to [Point-in-time restore](https://learn.microsoft.com/windows-365/enterprise/restore-overview).
+
+The second is Cross region disaster recovery. This feature is a Windows 365 add-on feature that creates snapshots of Cloud PCs. These snapshots are placed in customer-defined, geographically distant locations, and they can be recovered to Cloud PCs running in the selected location during a disaster recovery event. For further details please refer to [Cross region disaster recovery in Windows 365]([https://learn.microsoft.com/windows-365/enterprise/restore-overview](https://learn.microsoft.com/windows-365/enterprise/cross-region-disaster-recovery).
+
 ## Next steps
 
 [Windows 365 architecture](architecture.md)]
