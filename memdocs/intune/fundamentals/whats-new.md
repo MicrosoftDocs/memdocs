@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/22/2024
+ms.date: 07/25/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -93,6 +93,26 @@ The Enterprise App Catalog has updated to include additional apps. For a complet
 The Intune App SDK and Intune App Wrapping Tool have moved to a different GitHub repository and a new account. There are redirects in place for all existing repositories. In addition, the Intune sample applications are also included in this move. This change relates to both Android and iOS platforms.
 
 ### Device configuration
+
+#### New clipboard transfer direction settings available in the Windows settings catalog <!-- 28748086 --> 
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type.
+
+**Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Device and Resource Redirection**:
+
+- Restrict clipboard transfer from server to client
+- Restrict clipboard transfer from server to client (User)
+- Restrict clipboard transfer from client to server
+- Restrict clipboard transfer from client to server (User)
+
+For more information on configuring the clipboard transfer direction in Azure Virtual Desktop, go to [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+
+Applies to:
+
+- Windows 11
+- Windows 10
 
 #### New settings available in the Apple settings catalog <!-- 28052449 -->
 
