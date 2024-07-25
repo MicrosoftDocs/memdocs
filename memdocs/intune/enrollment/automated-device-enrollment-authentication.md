@@ -88,7 +88,7 @@ In both scenarios, the Company Portal installation option is hidden from the dev
 
 Multifactor authentication (MFA) will be required if a [conditional access policy that requires it](multi-factor-authentication.md) is applied at enrollment or during Company Portal sign-in. However, MFA is optional, based on the Microsoft Entra settings in the targeted conditional access policy.  
 
-MFA won't work for Setup Assistant with modern authentication if you're using a 3rd party MFA provider to present the MFA screen during enrollment. Only the Microsoft Entra multifactor authentication screen works during enrollment.  
+External authentication methods are supported in Microsoft Entra ID, which means you can use your preferred MFA solution to facilitate MFA during device enrollment. If you choose to use a third-party MFA provider, before you deploy enrollment profiles to all devices, do a test run to ensure that both the Microsoft Entra MFA screen and MFA work during enrollment. For more information and support details about external authentication methods, see [Public preview: External authentication methods in Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/public-preview-external-authentication-methods-in-microsoft/ba-p/4078808).  
 
 ### Company Portal action required  
 
