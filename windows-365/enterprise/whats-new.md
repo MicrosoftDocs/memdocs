@@ -60,7 +60,7 @@ For more information about public preview items, see [Public preview in Windows 
 
 ### Updated default settings for Windows 365 security baselines<!--49685126-->
 
-Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/memdocs/intune/protect/security-baseline-settings-windows-365).
+Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/mem/intune/protect/security-baseline-settings-windows-365).
 
 <!-- ########################## -->
 ## Week of July 15, 2024
