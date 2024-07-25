@@ -243,8 +243,7 @@ The ESP tracks the installation of apps deployed in a device context and targete
 - Per machine line-of-business (LoB) MSI apps.
 - LoB store apps where installation context = device.
 - Win32 applications for [currently supported versions of Windows](/windows/release-health/supported-versions-windows-client).
-
-- WinGet applications
+- WinGet applications.
 
   > [!NOTE]
   >
