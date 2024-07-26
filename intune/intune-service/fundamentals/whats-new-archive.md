@@ -393,7 +393,7 @@ Flip the toggle in the Microsoft Intune admin center to try out the new experien
 For more information, see:
 
 - [New Microsoft Intune Devices experience - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-devices-experience/ba-p/3777342)
-- [Try new Devices experience - Microsoft Learn](microsoft-intune-admin-center-devices.md)
+- [Try new Devices experience - Microsoft Learn](public-preview.md)<!-- Link updated to redirection target.-->
 
 ### Device security
 
@@ -2054,7 +2054,7 @@ Applies to:
 #### Renaming Proactive remediation to Remediations and moving to a new location<!-- 16526263  -->  
 Proactive remediations are now Remediations and are available from **Devices** > **Remediations**. You can still find Remediations in both the new location and the existing **Reports** > **Endpoint Analytics** location until the next Intune service update.
 
-Remediations are currently not available in the new [Devices experience preview](microsoft-intune-admin-center-devices.md).
+Remediations are currently not available in the new [Devices experience preview](public-preview.md).
 
 Applies to:
 
@@ -3066,7 +3066,7 @@ Some Fujitsu devices running Windows 10/11 are enabled for DFCI. Contact your de
 For more information about DFCI profiles, go to:
 
 - [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
-- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../../autopilot/dfci-management.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/autopilot/dfci-management)
 
 Applies to:
 
@@ -4201,7 +4201,7 @@ Applies to:
 - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 #### iOS/iPadOS settings catalog supports declarative device management (DDM)<!-- 15016105 -->
-On iOS/iPadOS 15+ devices enrolled using [User Enrollment](apple-user-enrollment-with-company-portal.md), the settings catalog automatically uses Apple's declarative device management (DDM) when configuring settings.
+On iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/apple-user-enrollment-with-company-portal.md), the settings catalog automatically uses Apple's declarative device management (DDM) when configuring settings.
 - No action is required to use DDM. The feature is built into the settings catalog.
 - There's no impact to existing policies in the settings catalog.
 - iOS/iPadOS devices that aren't enabled for DDM continue to use Apple's standard MDM protocol.

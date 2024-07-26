@@ -32,7 +32,7 @@ The following Microsoft management solutions are all now part of the **Microsoft
 - [Endpoint analytics](../../../analytics/index.yml)
 - [Autopilot](/autopilot/index)
 
-For more information, see [Microsoft Configuration Manager FAQ](microsoft-endpoint-manager.yml).
+For more information, see [Microsoft Configuration Manager FAQ](configuration-manager-faq.yml).
 
 ## Introduction
 
