@@ -96,7 +96,7 @@ sections:
     questions:
 
       - question: |
-          During a Windows Autopilot self-deployment or pre-provisioning deployment on a device that previously undergone a Windows Autopilot deployment, why is error code `0x80180014` occurring on the device when trying to re-enroll the device?
+          During a Windows Autopilot self-deployment or pre-provisioning deployment on a device that previously underwent a Windows Autopilot deployment, why is error code `0x80180014` occurring on the device when trying to re-enroll the device?
 
         answer: |
           Error code 0x80180014 can occur under either of the following scenarios:
@@ -152,10 +152,10 @@ sections:
           `MDM Enroll: Server Returned Fault/Code/Subcode/Value=(DeviceNotSupported) Fault/Reason/Text=(Enrollment blocked for AP device by SDM One Time Limit Check)`
 
       - question: |
-          When trying to import a CSV file with a device hardware hash, why does nothing happen when selecting **Import**?
+          When trying to import a CSV file with a device hardware hash, why does nothing happen when selecting Import ?
 
         answer: |
-          This issue usually occurs because the device hash in the CSV file is incorrectly formatted. The issue can be confirmed by running a network trace while the issue occurrs. If an error **400** occurs in the network trace with the message body of
+          This issue usually occurs because the device hash in the CSV file is incorrectly formatted. The issue can be confirmed by running a network trace while the issue occurs. If an error **400** occurs in the network trace with the message body of
 
           `Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'`
 
@@ -201,9 +201,34 @@ sections:
           Replace the collected hash with this new padded hash then try to import again.
 
 
+      - question: |
+          Why is the Windows Autopilot profile not applied after a hardware change occurred on a device?
 
+        answer: |
+          When a hardware change occurs on a device, the Windows Autopilot profiles isn't applied if a device is reimaged to a version of Windows prior to one of the following Windows versions:
 
+          - Windows 11, version 21H2 with [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393).
+          - [Windows 10, versions 22H2](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions).
 
+          This behavior is expected.
+
+          The message **Fix pending** or **Attention required** might also be displayed in the **Windows Autopilot devices** page for the device, which indicates that there was a hardware change on the device. When the link for the **Fix pending** status is selected, the following message appears:
+
+          `We've detected a hardware change on this device. We're trying to automatically register the new hardware. You don't need to do anything now; the status will be updated at the next check in with the result.`
+
+          To resolve and fix this issue, deregister and re-register the device. For more information including how to deregister a device, see the following articles:
+
+          - [Deregister a device](registration-overview.md#deregister-a-device).
+          - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
+          - [Windows Autopilot motherboard replacement scenario guidance](autopilot-motherboard-replacement.md).
+
+      - question: |
+          Why is the join type for a device showing as **Microsoft Entra registered** instead of **Microsoft Entra joined**? # MAXADO-8911669
+
+        answer: |
+          This issue occurs if the device was previously registered in Microsoft Entra ID before it was joined to Microsoft Entra ID. The device could've been registered in Microsoft Entra ID via something like a [Workplace join](/entra/identity/devices/concept-device-registration). If the Microsoft Entra ID registered device isn't deleted from Microsoft Entra ID before it's joined to Microsoft Entra ID, then the previous trust type is retained in the record. Joining an existing Microsoft Entra registered device to Microsoft Entra ID results in the Windows Autopilot device showing as **Microsoft Entra registered** instead of **Microsoft Entra joined**.
+
+          To resolve and fix this issue, before registering an existing Microsoft Entra ID registered device as Windows Autopilot device, make sure that any existing Microsoft Intune, Microsoft Entra ID, and Windows Autopilot device objects for the device are deleted. After all device objects are deleted, re-register the device as a Windows Autopilot device and then re-enroll the device. For more information on properly deleting all of the device objects, see [Deregister a device](registration-overview.md#deregister-a-device).
 
 
 
