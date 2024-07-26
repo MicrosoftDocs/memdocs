@@ -1,66 +1,61 @@
 items:
 - name: Microsoft Intune
-  tocHref: /intune/
-  topicHref: /intune/index
+  tocHref: /mem/
+  topicHref: /mem/index
   items:
   - name: Intune service
-    tocHref: /intune/intune-service/
-    topicHref: /intune/intune-service/
+    tocHref: /mem/intune/
+    topicHref: /mem/intune/
     items:
     - name: Intune user help
-      tocHref: /intune/intune-service/user-help/
-      topicHref: /intune/intune-service/user-help/
-
-    - name: Microsoft Defender for Endpoint settings management
-      tocHref: /defender-endpoint/ 
-      topicHref: /Microsoft Defender for Endpoint settings management 
-
+      tocHref: /mem/intune/user-help/
+      topicHref: /mem/intune/user-help/
+    - name: Endpoint settings management
+      tocHref: /defender-endpoint/
+      topicHref: /defender-endpoint/
   - name: Configuration Manager
-    tocHref: /intune/configmgr/
-    topicHref: /intune/configmgr/
+    tocHref: /mem/configmgr/
+    topicHref: /mem/configmgr/
     items:
     - name: Application management guide
-      tocHref: /intune/configmgr/apps/
-      topicHref: /intune/configmgr/apps/
+      tocHref: /mem/configmgr/apps/
+      topicHref: /mem/configmgr/apps/
     - name: Co-management
-      tocHref: /intune/configmgr/comanage/
-      topicHref: /intune/configmgr/comanage/
+      tocHref: /mem/configmgr/comanage/
+      topicHref: /mem/configmgr/comanage/
     - name: Device compliance
-      tocHref: /intune/configmgr/compliance/
-      topicHref: /intune/configmgr/compliance/
+      tocHref: /mem/configmgr/compliance/
+      topicHref: /mem/configmgr/compliance/
     - name: Cloud attach
-      tocHref: /intune/configmgr/cloud-attach/
-      topicHref: /intune/configmgr/cloud-attach/
+      tocHref: /mem/configmgr/cloud-attach/
+      topicHref: /mem/configmgr/cloud-attach/
     - name: Core infrastructure guide
-      tocHref: /intune/configmgr/core/
-      topicHref: /intune/configmgr/core/
-    - name: Desktop Analytics
-      tocHref: /intune/configmgr/desktop-analytics/
-      topicHref: /intune/configmgr/desktop-analytics/
+      tocHref: /mem/configmgr/core/
+      topicHref: /mem/configmgr/core/
     - name: Developer
-      tocHref: /intune/configmgr/develop/
-      topicHref: /intune/configmgr/develop/
+      tocHref: /mem/configmgr/develop/
+      topicHref: /mem/configmgr/develop/
     - name: Mobile Device Management
-      tocHref: /intune/configmgr/mdm/
-      topicHref: /intune/configmgr/mdm/
+      tocHref: /mem/configmgr/mdm/
+      topicHref: /mem/configmgr/mdm/
     - name: Operating System Deployment
-      tocHref: /intune/configmgr/osd/
-      topicHref: /intune/configmgr/osd/
+      tocHref: /mem/configmgr/osd/
+      topicHref: /mem/configmgr/osd/
     - name: Protect
-      tocHref: /intune/configmgr/protect/
-      topicHref: /intune/configmgr/protect/
+      tocHref: /mem/configmgr/protect/
+      topicHref: /mem/configmgr/protect/
     - name: Software updates
-      tocHref: /intune/configmgr/sum/
-      topicHref: /intune/configmgr/sum/
+      tocHref: /mem/configmgr/sum/
+      topicHref: /mem/configmgr/sum/
     - name: Tenant attach
-      tocHref: /intune/configmgr/tenant-attach/
-      topicHref: /intune/configmgr/tenant-attach/
+      tocHref: /mem/configmgr/tenant-attach/
+      topicHref: /mem/configmgr/tenant-attach/
     - name: Hotfix
-      tocHref: /intune/configmgr/hotfix
-      topicHref: /intune/configmgr/hotfix
+      tocHref: /mem/configmgr/hotfix
+      topicHref: /mem/configmgr/hotfix
   - name: Endpoint analytics
-    tocHref: /intune/analytics/
-    topicHref: /intune/analytics/
+    tocHref: /mem/analytics/
+    topicHref: /mem/analytics/
   - name: Autopilot
     tocHref: /autopilot/
     topicHref: /autopilot/
