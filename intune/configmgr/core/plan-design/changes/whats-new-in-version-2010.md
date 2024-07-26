@@ -80,7 +80,7 @@ For more information, see [About the service connection point](../../servers/dep
 
 ## Desktop Analytics
 
-For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
+For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../../intune-service/protect/windows-update-compatibility-reports.md).<!--Link updated to redirection target.-->
 
 ### Support for new Windows 10 diagnostic data levels
 
