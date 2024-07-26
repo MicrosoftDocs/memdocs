@@ -78,9 +78,11 @@ If you use Desktop Analytics or tenant attach, the service connection point now 
 
 For more information, see [About the service connection point](../../servers/deploy/configure/about-the-service-connection-point.md#validate-internet-access).
 
+<!--[Desktop Analytics was deactivated in November 2022.]
 ## Desktop Analytics
 
 For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
+-->
 
 ### Support for new Windows 10 diagnostic data levels
 
@@ -91,9 +93,9 @@ Microsoft is increasing transparency by categorizing the diagnostic data that Wi
 - **Basic** diagnostic data is recategorized as **Required**
 - **Full** is recategorized as **Optional**
 
-If you previously configured devices for **Enhanced** or **Enhanced (Limited)**, in an upcoming release of Windows 10, they'll use the **Required** level. This change may impact the functionality of Desktop Analytics.
+If you previously configured devices for **Enhanced** or **Enhanced (Limited)**, in an upcoming release of Windows 10, they'll use the **Required** level. <!--[Desktop Analytics was deactivated in November 2022.] This change may impact the functionality of Desktop Analytics.-->
 
-For more information, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#support-for-new-windows-10-diagnostic-data-levels).
+<!-- For more information, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#support-for-new-windows-10-diagnostic-data-levels). -->
 
 ### Support for Windows 10 Enterprise LTSC 2019
 
@@ -101,7 +103,7 @@ For more information, see [Enable data sharing](../../../desktop-analytics/enabl
 
 The Windows 10 long-term servicing channel (LTSC) was designed for devices where functionality and features don't change over time. This servicing model prevents Windows 10 Enterprise LTSC devices from receiving the usual feature updates. It provides only quality updates to make sure that device security stays up to date. Some customers want to shift from LTSC to the semi-annual servicing channel, to have access to new features, services, and other major changes. You can now use Configuration Manager to enroll LTSC devices to Desktop Analytics. Once you enroll these devices, you can evaluate them in your deployment plans.
 
-For more information, see [Desktop Analytics prerequisites](../../../desktop-analytics/overview.md#prerequisites)
+<!-- [Desktop Analytics was deactivated in November 2022] For more information, see [Desktop Analytics prerequisites](../../../desktop-analytics/overview.md#prerequisites)-->
 
 ## Site infrastructure
 
