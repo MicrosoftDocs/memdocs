@@ -152,7 +152,7 @@ To better align with the Desktop Analytics requirements for Windows diagnostic d
 
 If you previously configured any devices at the **Enhanced** level, when you upgrade to version 2006, they'll revert to **Optional (limited)**. They will then send less data to Microsoft. This change shouldn't impact what you see in Desktop Analytics.
 
-For more information, see [Enable data sharing for Desktop Analytics](../../../desktop-analytics/enable-data-sharing.md).
+For more information, see [Enable data sharing for Desktop Analytics](../../../../intune-service/protect/windows-update-compatibility-reports.md).<!--Link updated to redirection target.-->
 
 ## <a name="bkmk_real"></a> Real-time management
 
