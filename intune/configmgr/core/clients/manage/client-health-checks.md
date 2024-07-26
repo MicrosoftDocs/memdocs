@@ -159,4 +159,4 @@ The following checks have the most commonly reported failures. The numbers are i
 
 [How to deploy clients to Windows computers](../deploy/deploy-clients-to-windows-computers.md)
 
-[Configuration Manager troubleshooting](/troubleshoot/intune/configmgr/welcome-configuration-manager)
+[Configuration Manager troubleshooting](/troubleshoot/mem/configmgr/welcome-configuration-manager)

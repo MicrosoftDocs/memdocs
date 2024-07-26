@@ -32,7 +32,7 @@ Microsoft® Deployment Toolkit (MDT) 2013 allows you to automate the deployment 
 |--------------|-----------------|
 |[Microsoft Deployment Toolkit Samples Guide](samples-guide.md)|Provides scenario-based samples of how to solve common deployment issues using MDT. Most samples include example configuration files and step-by-step processes for implementing the solution. Use this document to help solve difficult deployment problems.|
 |[Toolkit Reference](toolkit-reference.md)|Provides information about the task sequence steps, properties, support files, utilities, and databases used in MDT deployments. Use this document to help customize MDT deployments for your organization.|
-|[Troubleshooting Reference](/troubleshoot/intune/configmgr/troubleshooting-reference)|Provides information to assist in troubleshooting common problems with MDT deployments, including lists of known issues, reviewing logs, and identifying issues by error code.|
+|[Troubleshooting Reference](/troubleshoot/mem/configmgr/mdt/troubleshooting-reference)|Provides information to assist in troubleshooting common problems with MDT deployments, including lists of known issues, reviewing logs, and identifying issues by error code.|
 
  This document is organized to help you through the planning, building, and deploying processes in your organization. The following sections in this guide help you perform LTI, ZTI, and UDI deployments and customize the deployment process. Table 2 lists each section in this guide, with a brief overview of each.
 

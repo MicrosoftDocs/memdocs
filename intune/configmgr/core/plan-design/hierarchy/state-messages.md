@@ -637,4 +637,4 @@ The following topic types have no state IDs:
 
 ## Next steps
 
-[Description of state messaging in Configuration Manager](/troubleshoot/intune/configmgr/state-messaging-description)
+[Description of state messaging in Configuration Manager](/troubleshoot/mem/configmgr/update-management/state-messaging-description)

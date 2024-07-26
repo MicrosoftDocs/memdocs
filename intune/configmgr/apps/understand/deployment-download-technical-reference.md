@@ -48,7 +48,7 @@ Reply Message Body : <Reply XML Body>
 
 Location reply XML contains the list of distribution points based on the client's boundary group. This list is parsed and persisted in WMI on the client according to the [Content Source Priority](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#content-source-priority). This activity can be seen in **ContentTransferManager.log**, by using the Content Unique ID and looking for `Persisted location`.
 
-If the location reply XML doesn't contain any distribution points, **ContentTransferManager.log** would show `Received empty location update` and the client may get stuck at 0% while downloading the application. This reply can typically occur because of boundary group configuration issues. For more information, see [Download failures](/troubleshoot/intune/configmgr/troubleshoot-application-deployment#download-failures).
+If the location reply XML doesn't contain any distribution points, **ContentTransferManager.log** would show `Received empty location update` and the client may get stuck at 0% while downloading the application. This reply can typically occur because of boundary group configuration issues. For more information, see [Download failures](/troubleshoot/mem/configmgr/app-management/troubleshoot-application-deployment#download-failures).
 
 ## Content Download
 

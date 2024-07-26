@@ -71,7 +71,7 @@ All WSUS maintenance needs to be run manually on secondary site WSUS databases. 
 - Computers not contacting the server
 - Unneeded update files
 
-  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/intune/configmgr/wsus-maintenance-guide) blog post.
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/update-management/wsus-maintenance-guide) blog post.
 
 ## WSUS cleanup behavior starting in version 1810
 
@@ -94,7 +94,7 @@ The following **WSUS Server Cleanup Wizard** options aren't run on the CAS, prim
 - Computers not contacting the server
 - Unneeded update files
 
-  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/intune/configmgr/wsus-maintenance-guide) blog post.
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/update-management/wsus-maintenance-guide) blog post.
 
 ## WSUS cleanup starting in version 1906
 <!--41101009-->
@@ -160,7 +160,7 @@ Starting in version 1906, the following **WSUS Server Cleanup Wizard** options a
 - Computers not contacting the server
 - Unneeded update files
 
-  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/intune/configmgr/wsus-maintenance-guide) blog post.
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/update-management/wsus-maintenance-guide) blog post.
 
 
 ## Known issue

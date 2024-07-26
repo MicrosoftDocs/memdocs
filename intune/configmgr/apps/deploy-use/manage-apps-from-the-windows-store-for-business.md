@@ -129,4 +129,4 @@ After the Microsoft Store for Business and Education administrator acquires an o
 
 ## Next steps
 
-[Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager](/troubleshoot/intune/configmgr/troubleshoot-microsoft-store-for-business-integration)
+[Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager](/troubleshoot/mem/configmgr/app-management/troubleshoot-microsoft-store-for-business-integration)

@@ -190,9 +190,9 @@ Use the following resources and additional information to help you troubleshoot 
 
 - Make sure to target your software update deployments to the same collection as the task sequence deployment.
 
-- Make sure to include software update points in boundary groups. For more information, see [Configuration Manager clients don't get software updates](/troubleshoot/intune/configmgr/clients-not-get-software-updates).
+- Make sure to include software update points in boundary groups. For more information, see [Configuration Manager clients don't get software updates](/troubleshoot/mem/configmgr/update-management/clients-not-get-software-updates).
 
-- To help you troubleshoot the software update management process, see [Troubleshoot software update management in Configuration Manager](/troubleshoot/intune/configmgr/troubleshoot-software-update-management).
+- To help you troubleshoot the software update management process, see [Troubleshoot software update management in Configuration Manager](/troubleshoot/mem/configmgr/update-management/troubleshoot-software-update-management).
 
 - To help improve overall performance, reduce the size of the software update catalog. For example:
 

@@ -50,7 +50,7 @@ When configuring WSUS servers and their software update points to use TLS/SSL, y
 This tutorial covers the most common method to obtain a certificate for use with Internet Information Services (IIS). Whichever method your organization uses, ensure that the certificate meets the [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md) for a Configuration Manager software update point. As with any certificate, the certificate authority must be trusted by devices communicating with the WSUS server.
 
 - A WSUS server with the software update point role installed
-- Verify you've followed [best practices](/troubleshoot/intune/configmgr/windows-server-update-services-best-practices#disable-recycling-and-configure-memory-limits) on disabling recycling and configuring memory limits for WSUS before enabling TLS/SSL.
+- Verify you've followed [best practices](/troubleshoot/mem/configmgr/update-management/windows-server-update-services-best-practices#disable-recycling-and-configure-memory-limits) on disabling recycling and configuring memory limits for WSUS before enabling TLS/SSL.
 - One of the two following options:
    - An appropriate PKI certificate already in the WSUS server's **Personal** certificate store.
    - The ability to request and obtain an appropriate PKI certificate for the WSUS server from your Enterprise root certificate authority (CA).

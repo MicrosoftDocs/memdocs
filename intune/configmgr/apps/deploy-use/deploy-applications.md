@@ -183,7 +183,7 @@ On the **Alerts** page, configure how Configuration Manager generates alerts for
 
 - [Monitor applications](monitor-applications-from-the-console.md)
 - [Disable and delete application deployments](disable-delete-deployments.md)
-- [Troubleshoot application deployments](/troubleshoot/intune/configmgr/troubleshoot-application-deployment?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)
+- [Troubleshoot application deployments](/troubleshoot/mem/configmgr/app-management/troubleshoot-application-deployment?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)
 - [Common error codes for app installation](../../tenant-attach/app-install-error-reference.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)
 - [Management tasks for applications](management-tasks-applications.md)
 - [Software Center user guide](../../core/understand/software-center.md)
