@@ -61,7 +61,7 @@ For more information about public preview items, see [Public preview in Windows 
 <!-- ########################## -->
 ### Apps
 
-### Remaining Cloud PC gallery images update to new Microsoft Teams<!--50394023-->
+#### Remaining Cloud PC gallery images update to new Microsoft Teams<!--50394023-->
 
 All of the remaining Windows 365 Cloud PC gallery images with Microsoft 365 applications now use the new Microsoft Teams. The final images updated this week include:
 
