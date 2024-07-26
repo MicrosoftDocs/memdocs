@@ -97,7 +97,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
 - **Microsoft Entra Device MDM settings**
   When you join a Windows device to Microsoft Entra, Microsoft Entra can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Windows Autopilot to work.
 
-  To check your Microsoft Entra Device MDM settings are enabled properly, go to [Quickstart - Set up automatic enrollment in Intune](../../intune/enrollment/quickstart-setup-auto-enrollment.md).
+  To check your Microsoft Entra Device MDM settings are enabled properly, go to [Quickstart - Set up automatic enrollment in Intune](../../intune-service/enrollment/quickstart-setup-auto-enrollment.md).
 
 - **Microsoft Entra company branding**
   Adding your corporate logo and images to Microsoft Entra ensures that users see a familiar and consistent look-and-feel when they sign-in to Microsoft 365. This configuration is required for Windows Autopilot to work.
@@ -270,7 +270,7 @@ Your cloud-native endpoint needs some applications. To get started, we recommend
   To deploy **Company Portal** as required, see [Add and assign the Windows Company Portal app for Intune managed devices](../../intune-service/apps/store-apps-company-portal-autopilot.md).
 
 - **Microsoft Store App** (Whiteboard)
-  While Intune can deploy a wide variety of apps, we deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](../../intune/apps/store-apps-microsoft.md) to install **Microsoft Whiteboard**.
+  While Intune can deploy a wide variety of apps, we deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](../../intune-service/apps/store-apps-microsoft.md) to install **Microsoft Whiteboard**.
 
 ## Phase 2 - Build a cloud-native Windows endpoint
 

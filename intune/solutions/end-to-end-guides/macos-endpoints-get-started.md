@@ -205,9 +205,9 @@ For more information on this feature and ADE enrollment, go to [Automatically en
 
 In Intune, you can configure settings that reduce the number of sign-in prompts end users receive when using apps, including Microsoft 365 apps. There are two parts to this configuration:
 
-- **Part 1** - Use the [Microsoft Enterprise SSO plug-in](../../intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md) to provide single sign-on (SSO) to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps.
+- **Part 1** - Use the [Microsoft Enterprise SSO plug-in](../../intune-service/configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md) to provide single sign-on (SSO) to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps.
 
-  There are two options for configuring SSO for Mac - [Enterprise SSO plug-in](../../intune/configuration/use-enterprise-sso-plug-in-macos-with-intune.md) and [Platform SSO](../../intune/configuration/platform-sso-macos.md).
+  There are two options for configuring SSO for Mac - [Enterprise SSO plug-in](../../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md) and [Platform SSO](../../intune-service/configuration/platform-sso-macos.md).
 
   # [Enterprise SSO plug-in](#tab/esso)
   
@@ -240,7 +240,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   For more information, go to:
 
-  - [Configure Platform SSO for macOS devices in Microsoft Intune](../../intune/configuration/platform-sso-macos.md)
+  - [Configure Platform SSO for macOS devices in Microsoft Intune](../../intune-service/configuration/platform-sso-macos.md)
 
   - [Platform SSO on Apple's web site](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website)
 

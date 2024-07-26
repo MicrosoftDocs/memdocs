@@ -248,7 +248,7 @@ For Delivery Optimization peer-to-peer:
 
 - For apps managed in Intune, this feature only supports the Intune Win32 app type.
 
-  - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Win32 app management in Microsoft Intune](../../../../intune/apps/apps-win32-app-management.md).
+  - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Win32 app management in Microsoft Intune](../../../../intune-service/apps/apps-win32-app-management.md).
 
 - Enable co-management, and switch the **Client apps** workload to **Pilot Intune** or **Intune**. For more information, see the following articles:
 

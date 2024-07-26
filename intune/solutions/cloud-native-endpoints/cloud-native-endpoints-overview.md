@@ -70,7 +70,7 @@ A cloud-native endpoint doesn't necessarily live exclusively in the cloud. Inste
 
 These endpoints can be located anywhere that has internet access. They can also be physical devices or virtual machines.
 
-From a technical perspective, cloud-native endpoints are Windows devices that are deployed using [Windows Autopilot](/autopilot/overview), joined to Microsoft Entra ([Microsoft Entra joined devices](/entra/identity/devices/concept-directory-join)), and are automatically enrolled in a Mobile Device Management (MDM) solution, like [Microsoft Intune](../../intune/fundamentals/what-is-intune.md).
+From a technical perspective, cloud-native endpoints are Windows devices that are deployed using [Windows Autopilot](/autopilot/overview), joined to Microsoft Entra ([Microsoft Entra joined devices](/entra/identity/devices/concept-directory-join)), and are automatically enrolled in a Mobile Device Management (MDM) solution, like [Microsoft Intune](../../intune-service/fundamentals/what-is-intune.md).
 
 A cloud-native endpoint has the following characteristics:
 
