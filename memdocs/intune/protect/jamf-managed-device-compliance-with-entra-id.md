@@ -56,8 +56,14 @@ To complete the procedures in this article, your account must have the following
 
 - **Jamf Pro Administrator** or a **Jamf Pro user account** with **Device Compliance Privileges**
 - **Intune administrator**
-- **Microsoft Entra Global Administrator**
+- **Microsoft Entra Roles -** To implement least privilege, the following Entra roles should be available to allow the configurations contained in this article. 
 
+  - Groups Administrator - To create the required device groups.
+    
+  - Conditional Access Administrator - To create and update the Conditional Access Policies which will allow user device registration.
+    
+  - Application Administrator - To create the applications the JAMF will communicate device compliance state information to Entra via Intune.
+    
 <a name='common-questions-about-jamf-pro-integration-with-entra-id'></a>
 
 ## Common questions about Jamf Pro integration with Microsoft Entra ID
