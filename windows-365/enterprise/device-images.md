@@ -65,7 +65,7 @@ They're replicated to all Azure regions to give you a quick provisioning experie
 
 There are two sets of images available to choose from across the different versions of Windows Enterprise:
 
-- **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and Teams optimizations are already installed. The following settings are pre-applied:
+- **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and [Teams optimizations](teams-on-cloud-pc.md) are already installed. The following settings are pre-applied:
   - IsWVDEnvironment reg key (Teams).
   - C++ Runtime (Teams).
   - WebRTC Redirector (Teams).
