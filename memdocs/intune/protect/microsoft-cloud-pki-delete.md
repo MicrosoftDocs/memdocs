@@ -31,60 +31,78 @@ ms.collection:
 - IntuneSuite
 ---
 # Delete certification authority 
-Stop the use of a certification authority (CA) in the Microsoft Cloud PKI service. This article describes how to use the following actions in the Microsoft Intune admin center to manage a CA: 
+Delete an issuing CA and root CA from the Microsoft Cloud PKI service in Microsoft Intune. To delete a CA, you must take the following actions in the Microsoft Intune admin center:    
 
-* Delete 
-* Pause 
-* Revoke  
+1. Pause CA: Pause the CA to stop the initial use of it. 
+2. Revoke CA: Revoke the CA and its active leaf certificates.   
+3. Delete CA: Delete and remove the CA from Microsoft Intune.  
 
-## Prerequisites  
-Review the following requirements to successfully delete a CA in the Microsoft Intune admin center.  
+All steps are required. You can resume use of a paused CA anytime. However, once you delete or revoke a CA, the action is permanent and can't be undone.    
 
-- All leaf certificates issued by the CA must be revoked. 
-- A root CA cannot be deleted until all anchored issuing CAs are deleted. 
-- A CA in a paused state can't issue leaf certificates.
-- A CA in a paused or revoked state continues to respond to CRL requests and AIA requests.
-- Once you revoke a CA, it can't be undone. 
-- Once you delete a CA, it can't be undone.  
+
+## You should know 
+
+### Delete  
+A root CA can't be deleted until all anchored issuing CAs are deleted. 
+
+### Pause  
+A CA in a paused state can't issue leaf certificates. The paused CA continues to respond to certificate revocation list (CRL) requests and AIA requests. 
+
+### Revoke 
+The revoke action can't be undone. When you revoke an issuing CA:
+ - All existing leaf certificates issued by the CA stop being authenticated. 
+ - The CA is no longer trusted to the relying parties performing a trust chain operation. 
+ - The CRL of the root CA shows that the issuing CA cert has been revoked.
+ 
+The revoked CA continues to respond to certificate revocation list (CRL) requests and AIA requests.
+
 
 ## Role based access control for deleting a CA
-A Microsoft Entra Intune Administrator role has permission to view and disable/enable a CA, and revoke issued leaf certificates. Custom Intune roles with the following permissions can do the same thing:  
+The following roles can view CAs in the Intune admin center, pause a CA, and revoke issued leaf certificates:
+
+- Intune Administrator, a built-in Microsoft Entra role  
+- Custom Intune role assigned the following permissions: 
   - Read CAs  
   - Disable and reenable CAs  
   - Revoke issued leaf certificates  
 
 
-## Delete issuing certificate  
+## Delete issuing CA 
+Complete the following steps to remove an issuing certificate from Microsoft Intune. 
 
-1. Sign in to the Microsoft Intune admin center and go to **Tenant administration** > **Cloud PKI**. 
-1. Select an Issuing CA from the list of CA’s
-2. Select the “Pause” button. A confirmation dialog will appear, select the “Pause” button to continue
-3. Go back to the CA list, be sure to “Refresh” the CA list. The Status column will show “Paused”
+> [!TIP]
+> Want to delete a root CA? Complete these steps first to delete the issuing CA anchored to it. 
 
-4. Select the “Paused” CA. Two options are now available, “Resume” or “Revoke”. The “Resume” button will make the CA active again. The “Revoke” button will revoke the Issuing CA certificate. All existing leaf certificates issued by this CA will stop being authenticated. The CA will no longer be trusted by relying parties performing a trust chain operation. The Certificate Revocation List (CRL) of the Root CA will show the issuing CA cert has been revoked. 
+1. Go to **Tenant administration** > **Cloud PKI**.  
+1. Select an active issuing CA from the list of available CAs. Selecting a CA opens its available actions. 
+1. Choose **Pause**, and then select **Pause** again when prompted to confirm. 
+1. Go back to your list of CAs and choose **Refresh**. Then look under the **Status** column to confirm that the issuing CA is paused. 
+1. Select the paused CA to open all available options again. Two new options appear: 
+   - Resume: This option unpauses the CA and makes it active again. 
+   - Revoke: This option revokes the issuing CA certificate, and is required to eventually delete the CA.
+1. Select **Revoke**, and then select **Revoke** again when prompted to confirm.  
 
-   >[!NOTE]
-   > To successfully “Revoke” the CA, all active leaf certificates must first be revoked. To revoke leaf certificates, use the “View all certificates” button to revoke each active leaf certificate. Alternatively, refer to the sample PowerShell script to bulk revoke all leaf certificates <LINK>.
+    >[!IMPORTANT]
+    > This action cannot be undone.
 
-   A confirmation dialog will appear, select the “Revoke” button to continue.  
+    Remember, for the revoke action to work, all active leaf certificates must first be revoked. For more information and steps, see [Revoke active leaf certificates](#revoke-active-leaf-certificates) in this article.    
 
-   >[!IMPORTANT]
-   > This action cannot be undone.
+1. Go back to your list of CAs and choose **Refresh**. Then look under the **Status** column to confirm that the issuing CA is revoked. 
 
-5. After the CA is “Revoked”, the CA list “Status” column will show “Revoked” for the CA. If not, click on the “Refresh” button to update the CA list.
+1. Select the revoked CA to open all available options again. The delete option should be available now.  
+1. Select **Delete** to remove the CA from Microsoft Intune. Then select **Delete** again when prompted to confirm.  
 
-6. Click on the revoked CA in the list. The “Delete” button will now be active. Click on “Delete” button:
+    >[!IMPORTANT]
+    > This action cannot be undone.
 
-   A confirmation dialog will appear, click on the “Delete” button to remove the CA from Intune.
-
-
-7. “Refresh” the CA list, the deleted Issuing CA will no longer appear.  
+1. Go back to your list of CAs and choose **Refresh**. Confirm that the issuing CA no longer appears in the list. 
 
 ## Delete root CA  
 In to the Microsoft Intune admin center, go to **Tenant administration** > **Cloud PKI**.  
 
-1. Sign in to the Microsoft Intune admin center and go to **Tenant administration** > **Cloud PKI**. 
-1. Select a Root CA from the list of CA’s  
+
+1. Go to **Tenant administration** > **Cloud PKI**.  
+1. Select a Root CA from the list of CAs. Selecting a CA opens its available actions.    
 
 2. Select the “Delete” button  
 
@@ -95,11 +113,28 @@ In to the Microsoft Intune admin center, go to **Tenant administration** > **Clo
    > [!div class="mx-imgBorder"]
    > ![Image of the admin center, highlighting delete action for a root CA.](./media/microsoft-cloud-pki/.png)  
 
-## Bulk revoke leaf certificates 
-You can use the following sample script to revoke more than one leaf certificate at a time from an issuing CA. 
+## Revoke active leaf certificates  
+
+You can revoke one leaf certificate at a time from an issuing CA, or you can bulk revoke leaf certificates.   
+
+### Revoke each leaf certificate  
+
+1. Select an issuing CA. 
+2. Select **View all certificates**. 
+3. Select an active leaf certificate, and then choose **Revoke**. Repeat this step until every active leaf certificate has been revoked. 
+
+### Revoke all leaf certificates 
+
+You can use the following Powershell script to revoke all leaf certificates belonging to a CA.  
 
  >[!CAUTION]
- > Use the script with caution. You can't undo the revoke action for any of the leaf certificates.  
+ > Use this script with caution. You can't undo the revoke action for any of the leaf certificates.  
+
+
+
+
+
+
 
 
 
