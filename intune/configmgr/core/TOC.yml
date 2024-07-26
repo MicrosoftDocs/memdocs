@@ -6,7 +6,7 @@ items:
   - name: What is Configuration Manager?
     href: understand/introduction.md
   - name: Microsoft Configuration Manager FAQ
-    href: understand/microsoft-endpoint-manager.yml
+    href: understand/configuration-manager-faq.yml
   - name: Introduction
     items:
     - name: Find help for Configuration Manager
