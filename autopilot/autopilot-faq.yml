@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 06/11/2024
+  ms.date: 07/29/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -19,8 +19,8 @@ title: Windows Autopilot FAQ
 summary: |
   **Applies to:**
 
-  - Windows 11
-  - Windows 10
+  - [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions).
+  - [Windows 10](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions).
 
   This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Autopilot.
 
