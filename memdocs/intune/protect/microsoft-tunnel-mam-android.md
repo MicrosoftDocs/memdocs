@@ -325,6 +325,15 @@ Microsoft Tunnel for MAM isn't supported for GCC High environments
 Microsoft Tunnel for MAM doesn't support Federal Information Processing Standard (FIPS).
 Microsoft Tunnel for MAM isn't supported in Fairfax environments
 
+### Auto-Disconnect with Line of Business Apps 
+We do not support auto disconnect in Line-of-Business (LOB) scenarios.
+
+If Edge is the only application listed in the per-app VPN configuration, the auto disconnect feature will function correctly.
+If there are other applications included in the per-app VPN configuration, the auto disconnect feature will not work. In this case, users must manually disconnect to ensure all connections are terminated.
+
+**Workaround**: Users must manually disconnect connections in LOB scenarios.
+
+
 ## Next steps
 
 - [Overview of Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
