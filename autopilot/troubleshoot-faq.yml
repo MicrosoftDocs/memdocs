@@ -19,8 +19,8 @@ title: Windows Autopilot troubleshooting FAQ
 summary: |
   **Applies to:**
 
-  - Windows 11
-  - Windows 10
+  - [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions).
+  - [Windows 10](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions).
 
   This article provides troubleshooting for common Windows Autopilot issues.
 
@@ -63,7 +63,7 @@ sections:
           >
           > At this stage, it's important that a Windows Autopilot profile exists in the tenant so that a blank profile isn't cached locally on the device. If necessary, a new Windows Autopilot profile can be retrieved by rebooting the device.
           >
-          > If a computer needs to be rebooted during OOBE to retrieve a new Autopilot profile:
+          > If a computer needs to be rebooted during the Windows out-of-box experience (OOBE) to retrieve a new Windows Autopilot profile:
           >
           > 1. Select Shift-F10 to open a command prompt window.
           >
@@ -84,13 +84,33 @@ sections:
 
           - Check network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](requirements.md?tabs=networking)?
 
-          - Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
+          - Windows out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
 
           - Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](#troubleshoot-microsoft-entra-join-issues)?
 
           - MDM enrollment issues: Is the device able to [enroll in Microsoft Intune](troubleshoot-device-enrollment.md) or non-Microsoft MDM service?
 
           - Review logs that are automatically collected upon Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics). <!-- MAXADO-1895390 -->
+
+      - question: |
+          How can additional detailed troubleshooting information be enabled?
+        answer: |
+          On [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions), the Autopilot diagnostic page can be opened to view additional detailed troubleshooting information about the Autopilot provisioning process. To enable the Autopilot diagnostics page:
+
+          1. Go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status) where the Autopilot diagnostics page needs to be enabled.
+
+          1. Make sure that **Show app and profile configuration progress** is selected to **Yes**.
+
+          1. Make sure that **Turn on log collection and diagnostics page for end users** is selected to **Yes**.
+
+          Once the diagnostic page is enabled, select the **View Diagnostics button** or enter the keystroke <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>D</kbd> to access any diagnostic information. The Autopilot diagnostics page is currently supported when OOBE runs for Work or School accounts, and Autopilot user-driven mode.
+
+          > [!NOTE]
+          >
+          > - By default diagnostics are automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+          >
+          > - For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` isn't blocked on the network.
+
 
   - name: Troubleshoot Windows Autopilot device import and enrollment
     questions:
@@ -232,11 +252,40 @@ sections:
 
           To resolve and fix this issue, before registering an existing Microsoft Entra ID registered device as Windows Autopilot device, make sure that any existing Microsoft Intune, Microsoft Entra ID, and Windows Autopilot device objects for the device are deleted. After all device objects are deleted, re-register the device as a Windows Autopilot device and then re-enroll the device. For more information on properly deleting all of the device objects, see [Deregister a device](registration-overview.md#deregister-a-device).
 
+      - question: |
+          Why is enrollment in Microsoft Intune or a non-Microsoft MDM solution failing with an error code "80180018" in the **Something went wrong** error page?
+
+        answer: |
+          For troubleshooting enrollment issues in Microsoft Intune, see [Troubleshooting Windows device enrollment errors in Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors). Common issues can include:
+
+          - Incorrect or missing licenses assigned to the user.
+          - Too many devices enrolled for the user.
+
+      - question: |
+          Why is Windows Autopilot Reset failing immediately with the error "Ran into trouble. Please sign in with an administrator account to see why and reset manually"?
+
+        answer: |
+          If Autopilot Reset fails immediately with the error **Ran into trouble. Please sign in with an administrator account to see why and reset manually**, see [Troubleshoot Autopilot Reset](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) for more help.
 
 
+  - name: Troubleshoot Windows out-of-box (OOBE) issues during Windows Autopilot
+    questions:
 
+      - question: |
+          Why is the Windows out-of-box experience (OOBE) not running as expected during?
+        answer: |
+          It's useful to check if the device received a Windows Autopilot profile. If the device did receive a Windows Autopilot profile, verify that the settings in the profile are correct.
 
+      - question: |
+          During OOBE, why is the error message "Something went wrong - Can't connect to the URL of your organization's MDM terms of use. Try again, or contact your system administrator with the problem information from this page." occurring?
+        answer: |
+          Licensing issues are usually associated with the following error message:
 
+          ` **Something went wrong**
+
+          Can't connect to the URL of your organization's MDM terms of use. Try again, or contact your system administrator with the problem information from this page.`
+
+          Verify that the user who is signing into the device has a valid Intune, EMS, or Microsoft 365 license.
 
 
   - name: Troubleshoot Microsoft Entra join issues
