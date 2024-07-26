@@ -960,11 +960,11 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [Quickly testing with changing policy]:app-sdk-android-appendix.md#quickly-testing-with-changing-policy
 
 <!-- Microsoft Learn documentation -->
-[App Protection CA]:/intune/intune-service/protect/app-based-conditional-access-intune
-[issuing a selective wipe]:/intune/intune-service/apps/apps-selective-wipe
-[Set up app-based Conditional Access policies with Intune]:/intune/intune-service/protect/app-based-conditional-access-intune-create
-[Microsoft Tunnel with Mobile Application Management]: /intune/intune-service/protect/microsoft-tunnel-mam
-[Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune]: /intune/intune-service/protect/microsoft-tunnel-mam-android
+[App Protection CA]:../protect/app-based-conditional-access-intune.md
+[issuing a selective wipe]:../apps/apps-selective-wipe.md
+[Set up app-based Conditional Access policies with Intune]:../protect/app-based-conditional-access-intune-create.md
+[Microsoft Tunnel with Mobile Application Management]:../protect/microsoft-tunnel-mam.md
+[Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune]: ../protect/microsoft-tunnel-mam-android.md
 
 <!-- 3rd party links -->
 [app private storage]:https://developer.android.com/training/data-storage

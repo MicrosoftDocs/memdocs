@@ -164,7 +164,7 @@ An SDK-integrated app can have an account enrolled for App Protection Policy wit
 Likewise, a user can have enrolled a device for Device Management without having any SDK-integrated apps with accounts enrolled for App Protection Policy.
 
 Typically, when developers and administrators refer to enrollment, they're referring to MDM enrollment, as App Protection Policy enrollment is largely invisible to both developers and end users.
-See [Enroll Android devices] for more details on MDM enrollment.
+See [Enrollment guide] for more details on MDM enrollment.
 
 ## Integration Tips
 
@@ -340,9 +340,9 @@ If you need to test your application under Robolectric, the recommended workarou
 [Stage 4's Registration vs Enrollment]:app-sdk-android-phase4.md#registration-vs-enrollment
 
 <!-- Other Intune docs -->
-[Review client app protection logs]:/intune/intune-service/apps/app-protection-policy-settings-log#android-app-protection-policy-settings
-[Android app protection policy settings in Microsoft Intune]:/intune/intune-service/apps/app-protection-policy-settings-android
-[Enroll Android devices]:/intune/intune-service/enrollment/android-enroll
+[Review client app protection logs]:../apps/app-protection-policy-settings-log.md#android-app-protection-policy-settings
+[Android app protection policy settings in Microsoft Intune]:../apps/app-protection-policy-settings-android.md
+[Enrollment guide]:../fundamentals/deployment-guide-enrollment-android.md
 
 <!-- Class links -->
 [MAMActivity]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html

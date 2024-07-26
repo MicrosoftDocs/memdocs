@@ -20,7 +20,7 @@ ms.reviewer: mstewart,aaroncz,frankroj
 
 When you deploy operating systems with Configuration Manager, the Windows Assessment and Deployment Kit (ADK) is a required external dependency. For more information, see the following articles:
 
-- [Infrastructure requirements for OS deployment](/intune/configmgr/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#windows-adk)
+- [Infrastructure requirements for OS deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk)
 
 - [Download the Windows ADK](/windows-hardware/get-started/adk-install)
 

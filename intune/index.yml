@@ -97,7 +97,7 @@ productDirectory:
     - title: Deploy devices with Windows Autopilot
       imageSrc: ./media/index/windows-autopilot.svg
       links:
-        - url: /intune/autopilot/windows-autopilot
+        - url: /autopilot/overview
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
           text: View the interactive demo        

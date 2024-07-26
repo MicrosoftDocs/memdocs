@@ -35,7 +35,7 @@ The **Create Boot Image using MDT** wizard was created when Configuration Manage
 
 Additionally, boot images created using the **Create Boot Image using MDT** wizard aren't required for task sequences created using the **Create MDT Task Sequence** wizard. These boot images and task sequences are commonly called "MDT" boot images and "MDT" task sequences. However, there's nothing special about an "MDT" boot image and they're binary equivalent to a Configuration Manager boot image. "MDT" task sequences are also not special. They're just Configuration Manager task sequences that happen to run MDT scripts. In other words, "MDT" boot images are not required for "MDT" task sequences to work. There are no additional binaries in an "MDT" boot image that are required by "MDT" task sequences. Configuration Manager boot images will work without issue with "MDT" task sequences.
 
-Instead of using the **Create Boot Image using MDT** wizard to create boot images in Configuration Manager, use the out of box functionality in Configuration Manager to create boot images. For more information, see [Managing boot images with Configuration Manager: Update distribution points with the boot image](/intune/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+Instead of using the **Create Boot Image using MDT** wizard to create boot images in Configuration Manager, use the out of box functionality in Configuration Manager to create boot images. For more information, see [Managing boot images with Configuration Manager: Update distribution points with the boot image](../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 
 To create a new boot image using the out of box Configuration Manager functionality:
 
@@ -47,7 +47,7 @@ To create a new boot image using the out of box Configuration Manager functional
 
 4. Right-click on **Boot Images** and select **Add Boot Image**.
 
-5. Follow the **Add Boot Image Wizard** to import the copy of `boot.wim` created in Step 2 as a new boot image. For more information on adding a boot image using the **Add Boot Image Wizard**, see [Manage boot images with Configuration Manager: Add a boot image](/intune/configmgr/osd/get-started/manage-boot-images#add-a-boot-image).
+5. Follow the **Add Boot Image Wizard** to import the copy of `boot.wim` created in Step 2 as a new boot image. For more information on adding a boot image using the **Add Boot Image Wizard**, see [Manage boot images with Configuration Manager: Add a boot image](../osd/get-started/manage-boot-images.md#add-a-boot-image).
 
 6. Once the **Add Boot Image Wizard** completes and the new boot image has been added, right-click on the newly created boot image and select **Update Distribution Points**.
 
@@ -67,7 +67,7 @@ If additional components need to be added to the boot image:
 
 2. In the boot image properties window, select the **Optional Components** tab
 
-3. Add in the desired optional components. For more information, see [Manage boot images with Configuration Manager: Optional components](/intune/configmgr/osd/get-started/manage-boot-images#optional-components).
+3. Add in the desired optional components. For more information, see [Manage boot images with Configuration Manager: Optional components](../osd/get-started/manage-boot-images.md#optional-components).
 
 Make any additional desired changes to the newly created boot image, such as adding drivers, and then distribute the boot image to distribution points.
 

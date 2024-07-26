@@ -37,10 +37,10 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 The following Microsoft management solutions are all now part of the Microsoft Intune family of products:
 
-- [Configuration Manager](/configmgr)
-- [Intune](/intune)
+- [Configuration Manager](../../../index.yml)
+- [Intune](../../../../index.yml)
 - [Desktop Analytics](../../../../intune-service/protect/windows-update-compatibility-reports.md).<!--Link updated to redirection target.-->
-- [Autopilot](/intune-service/enrollment/enrollment-autopilot)
+- [Autopilot](/autopilot/enrollment-autopilot)
 - Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 For more information, see the following posts from Brad Anderson, Microsoft corporate vice president for Microsoft 365:
