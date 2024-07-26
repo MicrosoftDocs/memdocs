@@ -61,9 +61,9 @@ For more information about public preview items, see [Public preview in Windows 
 <!-- ########################## -->
 ### Apps
 
-### Cloud PC gallery images update to Microsoft Teams 2.1<!--50394023-->
+### Remaining Cloud PC gallery images update to new Microsoft Teams<!--50394023-->
 
-Windows 365 Cloud PC gallery images with Microsoft 365 applications now use Microsoft Teams 2.1. These images include:
+All of the remaining Windows 365 Cloud PC gallery images with Microsoft 365 applications now use the new Microsoft Teams. The final images updated this week include:
 
 - Windows 11 Enterprise + Microsoft 365 Apps  21H2
 - Windows 10 Enterprise + Microsoft 365 Apps 22H2
