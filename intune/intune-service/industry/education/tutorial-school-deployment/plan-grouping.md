@@ -72,7 +72,7 @@ The following table provides guidance about which iOS device grouping options to
 ::: zone-end
 
 > [!TIP]
-> For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](../../../fundamentals/filters-performance-recommendations).
+> For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](../../../fundamentals/filters-performance-recommendations.md).
 
 ## Create groups and filters
 
@@ -83,7 +83,7 @@ With your enrollment and grouping plan in place, you can create your groups.
 ### [Intune](#tab/intune)
 
 - [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../../../fundamentals/filters)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../../../fundamentals/filters.md)
 - [Create or update a dynamic group in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
 - [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
@@ -93,7 +93,7 @@ With your enrollment and grouping plan in place, you can create your groups.
 - [Create groups in Intune for Education][EDU-1]
 - [Manually add or remove users and devices to an existing assigned group][EDU-2]
 - [Edit dynamic group rules to accommodate for new devices, locations, or school years][EDU-3]
-- [Create Filters](../../../fundamentals/filters)
+- [Create Filters](../../../fundamentals/filters.md)
 
 ---
 

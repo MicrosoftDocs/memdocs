@@ -23,7 +23,7 @@ For more information on configuring Automated Device Enrollment, see:
 
 ## [Intune](#tab/intune)
 
-[Set up automated device enrollment in Intune](../../../enrollment/device-enrollment-program-enroll-ios).
+[Set up automated device enrollment in Intune](../../../enrollment/device-enrollment-program-enroll-ios.md).
 
 ## [Intune For Education](#tab/intune-for-education)
 

@@ -30,12 +30,12 @@ Intune supports the deployment several application types including desktop apps 
 
 #### Enterprise Application Management
 
-Enterprise App Management enables you to easily discover and deploy applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of prepared Microsoft and non-Microsoft applications. These apps are Win32 apps that are [prepared as Win32 apps](../../../apps/apps-win32-prepare) and hosted by Microsoft.
+Enterprise App Management enables you to easily discover and deploy applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of prepared Microsoft and non-Microsoft applications. These apps are Win32 apps that are [prepared as Win32 apps](../../../apps/apps-win32-prepare.md) and hosted by Microsoft.
 
 > [!IMPORTANT]
 > Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../../../fundamentals/intune-add-ons.md).
 
-For more information, see [Enterprise Application Management](../../../apps/apps-enterprise-app-management).
+For more information, see [Enterprise Application Management](../../../apps/apps-enterprise-app-management.md).
 
 #### Win32 apps (MSI, exe)
 
@@ -57,7 +57,7 @@ To create Microsoft Store apps in Intune:
     > Most administrators choose to deploy store apps in the **system** context on education devices for the fastest installation to all users of a device.
 1. Select **Save**.
 
-For more information, see [Add Microsoft Store apps](../../../apps/store-apps-microsoft).
+For more information, see [Add Microsoft Store apps](../../../apps/store-apps-microsoft.md).
 
 #### Web apps
 
@@ -70,7 +70,7 @@ To create web applications in Intune:
 1. Provide a URL for the web app, a name, and optionally an icon and description.
 1. Select **Save**
 
-For more information, see [Add web apps](../../../apps/web-app).
+For more information, see [Add web apps](../../../apps/web-app.md).
 
 ### [Intune For Education](#tab/intune-for-education)
 
@@ -113,7 +113,7 @@ To create Microsoft Store apps in Intune for Education:
     > Most customers choose to deploy store apps in the **system** context on education devices for the fastest installation to all users of a device.
 1. Select **Save**.
 
-For more information, see [Add Microsoft Store apps](../../../apps/store-apps-microsoft).
+For more information, see [Add Microsoft Store apps](../../../apps/store-apps-microsoft.md).
 
 ::: zone-end
 
@@ -128,7 +128,7 @@ For more information, see [Add Microsoft Store apps](../../../apps/store-apps-mi
 
 To add apps from VPP, set up a connection to Apple School Manager and add your apps in Apple School Manager.
 
-For more information, see [Configure VPP tokens](../../../apps/vpp-apps-ios).
+For more information, see [Configure VPP tokens](../../../apps/vpp-apps-ios.md).
 
 #### iOS App
 
@@ -157,7 +157,7 @@ To create web applications:
 1. Click **Select**. The **Add app** steps are displayed.
 1. Follow the steps remaining steps and select **Create**.
 
-For more information, see [Add web apps](../../../apps/web-app).
+For more information, see [Add web apps](../../../apps/web-app.md).
 
 ### [Intune For Education](#tab/intune-for-education)
 
@@ -197,7 +197,7 @@ For more information, see [Add web apps][INT-2].
 
 ### Other apps
 
-Intune also supports deploying **[iOS/iPadOS LOB apps](../../../apps/lob-apps-ios)** from the Intune admin center. A line-of-business (LOB) app is an app that you add to Intune from an IPA app installation file.
+Intune also supports deploying **[iOS/iPadOS LOB apps](../../../apps/lob-apps-ios.md)** from the Intune admin center. A line-of-business (LOB) app is an app that you add to Intune from an IPA app installation file.
 
 ::: zone-end
 

@@ -12,7 +12,7 @@ ms.manager: dougeby
 
 Intune supports the enrollment of iOS/iPadOS devices using Apple Configurator running on a Mac computer. Enrolling with Apple Configurator requires that you USB-connect each iOS/iPadOS device to a Mac computer to set up corporate enrollment.
 
-See [Set up iOS/iPadOS device enrollment with Apple Configurator](../../../enrollment/apple-configurator-enroll-ios) for more information.
+See [Set up iOS/iPadOS device enrollment with Apple Configurator](../../../enrollment/apple-configurator-enroll-ios.md) for more information.
 
 ---
 
