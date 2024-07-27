@@ -247,7 +247,7 @@ conceptualContent:
         - url: ./fundamentals/monitor-audit-logs.md
           itemType: how-to-guide
           text: Use audit logs to track and monitor events
-        - url: /intune/analytics/
+        - url: ../analytics/index.yml
           itemType: concept
           text: Endpoint analytics docs
       footerLink:
@@ -314,18 +314,18 @@ conceptualContent:
 
     - title: Troubleshoot
       links:
-        - url: /troubleshoot/intune/intune-service/device-enrollment/troubleshoot-device-enrollment-in-intune
+        - url: /troubleshoot/mem/intune/device-enrollment/troubleshoot-device-enrollment-in-intune
           itemType: concept
           text: Troubleshoot device enrollment     
-        - url: /troubleshoot/intune/intune-service/app-management/troubleshoot-app-install
+        - url: /troubleshoot/mem/intune/app-management/troubleshoot-app-install
           itemType: concept
           text: Troubleshoot app installation issues
-        - url: /troubleshoot/intune/intune-service/device-configuration/troubleshoot-policies-in-microsoft-intune
+        - url: /troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune
           itemType: concept
           text: Troubleshoot policies and profiles in Intune
       footerLink:
         text: Browse all troubleshooting articles
-        url: /troubleshoot/intune/intune-service/welcome-intune/
+        url: /troubleshoot/mem/intune/welcome-intune/
 
   - title: Platform and industry guides
     items:

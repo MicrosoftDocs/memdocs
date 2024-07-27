@@ -47,7 +47,7 @@ Before Configuration Manager version 1806, the WSUS cleanup option runs the foll
 - A cleanup for software update configuration items in the Configuration Manager database occurs every seven days and removes unneeded updates from the console.
   - This cleanup won't remove expired updates from the Configuration Manager console if they're currently deployed.
 
-Additional maintenance is still needed on the top-level WSUS database and all other WSUS databases in the environment. For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/intune/configmgr/wsus-maintenance-guide) blog post.
+Additional maintenance is still needed on the top-level WSUS database and all other WSUS databases in the environment. For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 ## WSUS cleanup behavior starting in version 1806
 

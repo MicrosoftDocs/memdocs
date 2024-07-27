@@ -67,7 +67,7 @@ Before you start integrating the Intune App SDK into your iOS application, take 
 
 ### Do I need to register my application with the Microsoft identity platform?
  
-Yes, all apps integrating with the Intune SDK are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
+Yes, all apps integrating with the Intune SDK are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an application with the Microsoft identity platform].
 
 ### Do I have access to my application's source code?
 
@@ -77,7 +77,7 @@ See [App Wrapping Tool for iOS] for more details.
 
 ### Should my application integrate the Microsoft Authentication Library (MSAL)?
 
-Yes, you are required to integrate with MSAL before integrating the Intune SDK. Before integrating with MSAL, all apps are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
+Yes, you are required to integrate with MSAL before integrating the Intune SDK. Before integrating with MSAL, all apps are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an application with the Microsoft identity platform].
 
 See [Stage 2: MSAL prerequisite and setup] for instructions on integrating MSAL and additional details on identity scenarios inside your application.
 
@@ -198,10 +198,10 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 <!-- Microsoft Learn documentation: Intune testing -->
 [Microsoft partner]:https://partner.microsoft.com/business-opportunities/why-microsoft
 [Microsoft CDX tenant creation site]:https://cdx.transform.microsoft.com/my-tenants/create-tenant
-[Set up Intune]:../fundamentals/media/deployment-plan-setup.md
+[Set up Intune]:../fundamentals/deployment-plan-setup.md
 [Create users]:../fundamentals/users-add.md
 [Create groups]:../fundamentals/groups-add.md
 [Assign licenses]:../fundamentals/licenses-assign.md
 [Create and assign app protection policies]:../apps/app-protection-policies.md
 [app configuration policy]:../apps/app-configuration-policies-overview.md
-[Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/develop/quickstart-register-app.md
+[Quickstart: Register an application with the Microsoft identity platform]:/entra/identity-platform/quickstart-register-app

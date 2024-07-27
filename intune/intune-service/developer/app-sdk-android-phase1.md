@@ -266,7 +266,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer
 [Microsoft Entra ID]:https://azure.microsoft.com/services/active-directory/
 [App Protection CA]:/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection
-[application configuration policies for managed Android Enterprise devices]:/intune/intune-service/apps/app-configuration-policies-use-android
+[application configuration policies for managed Android Enterprise devices]:../apps/app-configuration-policies-use-android.md
 [application configuration policies for managed apps]:../apps/app-configuration-policies-managed-app.md
 [App Wrapping Tool for Android]:app-wrapper-prepare-android.md
 [Prepare line-of-business apps for app protection policies]:apps-prepare-mobile-application-management.md

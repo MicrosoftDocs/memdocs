@@ -193,7 +193,7 @@ additionalContent:
         url: /answers/tags/417/configuration-manager
       - title: Configuration Manager troubleshooting
         summary: Support articles to help you diagnose and fix issues
-        url: /troubleshoot/intune/configmgr/welcome-configuration-manager
+        url: /troubleshoot/mem/configmgr/welcome-configuration-manager
       - title: In-console feedback
         summary: Send a smile or frown to the engineering team
         url: ./core/understand/product-feedback.md

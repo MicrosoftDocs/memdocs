@@ -9,4 +9,4 @@ items:
     items:
     - name: Enrollment
       tocHref: /intune/intune-service/enrollment/
-      topicHref: /troubleshoot/intune/intune-service/
+      topicHref: /troubleshoot/mem/intune/

@@ -55,9 +55,9 @@ items:
       topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /troubleshoot/intune/
+        tocHref: /troubleshoot/mem/
         topicHref: /intune/configmgr/index
         items:
         - name: Application management
-          tocHref: /troubleshoot/intune/configmgr/
+          tocHref: /troubleshoot/mem/configmgr/
           topicHref: /intune/configmgr/apps/index

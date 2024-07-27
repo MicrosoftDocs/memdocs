@@ -54,7 +54,7 @@ landingContent:
           - text: Toolkit reference
             url: toolkit-reference.md
           - text: Troubleshoot MDT
-            url: /troubleshoot/intune/configmgr/troubleshooting-reference
+            url: /troubleshoot/mem/configmgr/troubleshooting-reference
           - text: Task Sequence Steps
             url: task-sequence-steps.md
           - text: Properties

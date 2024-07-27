@@ -18,7 +18,7 @@ Microsoft Intune and Intune for Education can configure the settings to redirect
 
 To learn more, see:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/intune/intune-service/configuration/settings-catalog)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](../../../configuration/settings-catalog.md)
 - [Redirect and move Windows known folders to OneDrive](/sharepoint/redirect-known-folders).
 
 > [!TIP]

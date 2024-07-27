@@ -71,12 +71,12 @@ ________________________________________________________
 
 <!-- Reference links in article -->
 [MEM-1]: /intune/get-support
-[MEM-2]: /troubleshoot/intune/intune-service/troubleshoot-device-enrollment-in-intune
-[MEM-3]: /troubleshoot/intune/intune-service/troubleshoot-device-actions
-[MEM-4]: /troubleshoot/intune/intune-service/troubleshoot-bitlocker-admin-center
-[MEM-5]: /troubleshoot/intune/intune-service/troubleshoot-policies-in-microsoft-intune
-[MEM-6]: /troubleshoot/intune/intune-service/troubleshoot-wi-fi-profiles#troubleshoot-windows-wi-fi-profiles
-[MEM-7]: /troubleshoot/intune/intune-service/troubleshoot-win32-app-install
-[MEM-8]: /troubleshoot/intune/intune-service/troubleshoot-csp-custom-settings
+[MEM-2]: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune
+[MEM-3]: /troubleshoot/mem/intune/troubleshoot-device-actions
+[MEM-4]: /troubleshoot/mem/intune/troubleshoot-bitlocker-admin-center
+[MEM-5]: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
+[MEM-6]: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#troubleshoot-windows-wi-fi-profiles
+[MEM-7]: /troubleshoot/mem/intune/troubleshoot-win32-app-install
+[MEM-8]: /troubleshoot/mem/intune/troubleshoot-csp-custom-settings
 [MEM-9]: /intune/autopilot/troubleshooting
 [MEM-10]: /intune/intune-service/remote-actions/collect-diagnostics

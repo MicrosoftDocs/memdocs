@@ -63,7 +63,7 @@ items:
     - name: Disable and delete app deployments
       href: deploy-use/disable-delete-deployments.md
     - name: Troubleshooting tips for app deployment
-      href: /troubleshoot/intune/configmgr/troubleshoot-application-deployment?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
+      href: /troubleshoot/mem/configmgr/troubleshoot-application-deployment?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
   - name: Monitor applications
     items:
     - name: Monitor applications from the console
@@ -126,7 +126,7 @@ items:
     - name: Common error codes for application installation
       href: ../tenant-attach/app-install-error-reference.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
   - name: Troubleshoot Microsoft Store for Business and Education integration
-    href: /troubleshoot/intune/configmgr/troubleshoot-microsoft-store-for-business-integration?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
+    href: /troubleshoot/mem/configmgr/troubleshoot-microsoft-store-for-business-integration?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
   - name: Troubleshoot Package Conversion Manager
     items:
     - name: Troubleshoot Package Conversion Manager

@@ -15,17 +15,17 @@ no-loc: [Microsoft, Windows, Autopatch, Autopilot, Edge]
 Intune is a powerful tool that can help Education organizations manage their devices and data efficiently. However, configuring the right settings can be a time-consuming task, especially for those new to the platform. To help accelerate the process, we have assembled common configurations based on customer engagements into this reference document. These settings can help ensure the security and compliance of your devices and data, while maximizing the user experience for your students and staff. Whether you're setting up a new tenant or need a quick reference guide, this document is a valuable resource for any Education organization looking to optimize their use of Intune.
 
 > [!CAUTION]
-> Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies. For more information, see [Compliance and device configuration policies that conflict](/intune/intune-service/configuration/device-profile-troubleshoot#conflicts).
+> Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies. For more information, see [Compliance and device configuration policies that conflict](../../../configuration/device-profile-troubleshoot.md#conflicts).
 
 ## Configuration sections
 
-- [Device restrictions](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions)
-- [Windows Update](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-windows-update)
-- [Microsoft Edge](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-edge)
-- [Delivery Optimization](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization)
+- [Device restrictions](./common-config-settings-catalog-device-restrictions.md)
+- [Windows Update](./common-config-windows-update.md)
+- [Microsoft Edge](./common-config-settings-catalog-edge.md)
+- [Delivery Optimization](./common-config-settings-catalog-delivery-optimization.md)
 
 ### Optional
 
-- [Windows privacy](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-windows-privacy)
-- [Start menu customization](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu)
-- [OneDrive Known Folder Move](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove)
+- [Windows privacy](./common-config-settings-catalog-windows-privacy.md)
+- [Start menu customization](./common-config-settings-catalog-start-menu.md)
+- [OneDrive Known Folder Move](./common-config-settings-catalog-onedrive-knownfoldermove.md)

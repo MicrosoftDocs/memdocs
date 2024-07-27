@@ -689,7 +689,7 @@ Beginning in March, the Company Portal app for Android will follow [material des
 * __Navigation__: All Apps shows a tabbed view of __Featured__, __All__ and __Categories__ for easier navigation. __Contact IT__ has been streamlined for improved readability.  
 
  > [!div class="mx-imgBorder"]
- > ![Screenshot of Company Portal app for Android showing an updated version of the Contact IT tab. The tab shows available contact information for IT, including phone number, email address, IT website, and IT contact information.](/intune-service/media/cp_android_contactit_after.png)  
+ > ![Screenshot of Company Portal app for Android showing an updated version of the Contact IT tab. The tab shows available contact information for IT, including phone number, email address, IT website, and IT contact information.](/intune/media/cp_android_contactit_after.png)  
 
 ## January 2017
 
