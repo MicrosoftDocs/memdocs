@@ -76,22 +76,22 @@ productDirectory:
         - url: fundamentals/protection-configuration-levels.md
           text: Recommended levels of protection and configuration
 
-    # Card
+    # Card (The build says this bookmark doesn't exist, but it works in the published page.)
     - title: How-to guides
       imageSrc: ./media/icons/tasks.svg
       summary: Guides to help you perform common tasks in Intune
       url: index.yml#how-to-guides
-    # Card
+    # Card (The build says this bookmark doesn't exist, but it works in the published page.)
     - title: Platform and industry guides
       imageSrc: ./media/icons/tasks.svg
       summary: Guides that consolidate information specific to a platform or industry.
       url: index.yml#platform-and-industry-guides
-    # Card
+    # Card (The build says this bookmark doesn't exist, but it works in the published page.)
     - title: Related services
       imageSrc: ./media/icons/cloud-services.svg
       summary: Resource to find information about related services, such as Microsoft 365.
       url: index.yml#related-services
-    # Card
+    # Card (The build says this bookmark doesn't exist, but it works in the published page.)
     - title: Intune community resources
       imageSrc: ./media/icons/community.svg
       summary: Resources to help you connect with the Intune community.
