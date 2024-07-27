@@ -217,7 +217,7 @@ To set up an Apple MDM certificate in Intune for Education, see [Add an MDM push
 
 #### [Intune](#tab/intune)
 
-To set up an Apple VPP, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../../../apps/vpp-apps-ios).
+To set up an Apple VPP, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../../../apps/vpp-apps-ios.md).
 
 #### [Intune for Education](#tab/intune-for-education)
 
@@ -234,7 +234,7 @@ If you plan to integrate Apple School Manager and use Automated Device Enrollmen
 
 #### [Intune](#tab/intune)
 
-To set up an Apple MDM certificate, see [Set up automated device enrollment in Intune](../../../enrollment/device-enrollment-program-enroll-ios).
+To set up an Apple MDM certificate, see [Set up automated device enrollment in Intune](../../../enrollment/device-enrollment-program-enroll-ios.md).
 
 #### [Intune for Education](#tab/intune-for-education)
 
@@ -258,9 +258,9 @@ With the Intune service configured, you can configure policies and applications 
 
 <!-- Reference links in article -->
 
-[MEM-1]: /intune/intune-service/fundamentals/licenses
-[MEM-2]: /intune/intune-service/enrollment/enrollment-restrictions-set
-[MEM-4]: /intune/intune-service/protect/windows-hello#create-a-windows-hello-for-business-policy
+[MEM-1]: ../../../fundamentals/licenses.md
+[MEM-2]: ../../../enrollment/enrollment-restrictions-set.md
+[MEM-4]: ../../../protect/windows-hello.md#create-a-windows-hello-for-business-policy
 
 [INT-1]: /intune-education/what-is-intune-for-education
 

@@ -342,10 +342,10 @@ Now that you've configured your device settings, you can configure applications 
 
 [WIN-1]: /windows/deployment/update/waas-manage-updates-wufb
 
-[MEM-1]: /intune/intune-service/protect/windows-update-for-business-configure
-[MEM-2]: /intune/intune-service/protect/endpoint-security-antivirus-policy
-[MEM-3]: /intune/intune-service/protect/encrypt-devices
-[MEM-4]: /intune/intune-service/protect/endpoint-security-firewall-policy
-[MEM-5]: /intune/intune-service/protect/endpoint-security-edr-policy
-[MEM-6]: /intune/intune-service/protect/endpoint-security-asr-policy
-[MEM-7]: /intune/intune-service/protect/endpoint-security-account-protection-policy
+[MEM-1]: ../../../protect/windows-update-for-business-configure.md
+[MEM-2]: ../../../protect/endpoint-security-antivirus-policy.md
+[MEM-3]: ../../../protect/encrypt-devices.md
+[MEM-4]: ../../../protect/endpoint-security-firewall-policy.md
+[MEM-5]: ../../../protect/endpoint-security-edr-policy.md
+[MEM-6]: ../../../protect/endpoint-security-asr-policy.md
+[MEM-7]: ../../../protect/endpoint-security-account-protection-policy.md
