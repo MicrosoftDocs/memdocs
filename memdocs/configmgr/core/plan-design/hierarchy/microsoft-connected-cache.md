@@ -14,7 +14,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz
 ---
 
-# Microsoft Connected Cache in Configuration Manager
+# Microsoft Connected Cache with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -101,7 +101,7 @@ You need one of the following license subscriptions for each device that gets co
 
 ### Distribution point
 
-Connected Cache in Configuration Manager requires an *on-premises* distribution point, with the following configurations:
+Connected Cache with Configuration Manager requires an *on-premises* distribution point, with the following configurations:
 
 - Running a [currently supported version](/windows-server/get-started/windows-server-release-info) of Windows Server.
 
@@ -200,7 +200,7 @@ On supported versions of Windows 10 or later, verify this behavior with the **Ge
 
 If the cache server returns any HTTP failure, the Delivery Optimization client falls back to the original cloud source.
 
-For more detailed information, see [Troubleshoot Microsoft Connected Cache in Configuration Manager](../../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md).
+For more detailed information, see [Troubleshoot Microsoft Connected Cache with Configuration Manager](../../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md).
 
 ## Support for Intune Win32 apps
 
@@ -272,4 +272,4 @@ When you enable this policy for cloud-managed devices, either type of device can
 
 [Optimize Windows updates with Delivery Optimization](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)
 
-[Troubleshoot Microsoft Connected Cache in Configuration Manager](../../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md)
+[Troubleshoot Microsoft Connected Cache with Configuration Manager](../../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md)

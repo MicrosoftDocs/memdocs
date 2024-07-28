@@ -71,7 +71,7 @@ For example, devices that are used for augmented or virtual reality typically do
 
 **Android Enterprise** enrollment devices require and support [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site). These devices are also used in countries/regions that allow GMS.
 
-✔️ If the device is GMS enabled and is in the [Android Enterprise recommended list](https://www.android.com/enterprise/recommended/) (opens Android's web site), then use Android Enterprise enrollment.
+✅ If the device is GMS enabled and is in the [Android Enterprise recommended list](https://www.android.com/enterprise/recommended/) (opens Android's web site), then use Android Enterprise enrollment.
 
 ❌ If these devices are used in a country/region that blocks GMS, then Android Enterprise enrollment isn't supported. Instead, use Android (AOSP) enrollment.
 
@@ -83,7 +83,7 @@ For example, devices that are used for augmented or virtual reality typically do
 - Don't support GMS.
 - Are used in countries/regions that block GMS.
 
-✔️ If your devices meet these criteria, then use Android (AOSP) enrollment. Make sure your devices are supported for Android (AOSP) management with Intune. For a list of supported devices, go to [AOSP supported devices](../../intune/fundamentals/android-os-project-supported-devices.md).
+✅ If your devices meet these criteria, then use Android (AOSP) enrollment. Make sure your devices are supported for Android (AOSP) management with Intune. For a list of supported devices, go to [AOSP supported devices](../../intune/fundamentals/android-os-project-supported-devices.md).
 
 ❌ If these devices support GMS and don't meet these criteria, then use Android Enterprise enrollment.
 
@@ -194,7 +194,7 @@ The following scenarios are common for FLW:
 
   2. Use a [device restrictions configuration profile](../../intune/configuration/device-restrictions-configure.md) to set the kiosk mode to multi-app, and select your apps. This step locks the device to only the apps you select:
 
-      In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Temmplates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** > **Multi-app** > **Add**. Add the apps you want in multi-app kiosk mode:
+      In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** > **Multi-app** > **Add**. Add the apps you want in multi-app kiosk mode:
 
       :::image type="content" source="./media/android-dedicated-device-kiosk-multi-app.png" alt-text="Enrollment profile type is set to dedicated device, and kiosk mode is set to multi app in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android-dedicated-device-kiosk-multi-app.png":::
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/01/2024
+ms.date: 07/26/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -56,8 +56,48 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of July 23, 2024
+
+<!-- ########################## -->
+### Apps
+
+#### Remaining Cloud PC gallery images update to new Microsoft Teams<!--50394023-->
+
+All of the remaining Windows 365 Cloud PC gallery images with Microsoft 365 applications now use the new Microsoft Teams. The final images updated this week include:
+
+- Windows 11 Enterprise + Microsoft 365 Apps  21H2
+- Windows 10 Enterprise + Microsoft 365 Apps 22H2
+- Windows 10 Enterprise + Microsoft 365 Apps 21H2
+
+<!-- ########################## -->
+### Device security
+
+### Updated default settings for Windows 365 security baselines<!--49685126-->
+
+Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/mem/intune/protect/security-baseline-settings-windows-365).
+
+<!-- ########################## -->
+## Week of July 15, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Cloud PC support for FIDO devices and passkeys on macOS and iOS (preview)<!--51858977-->
+
+Windows 365 Cloud PCs now support FIDO devices and passkeys for Microsoft Entra ID sign in on macOS and iOS.
+
+<!-- ########################## -->
+## Week of July 8, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+### Chroma subsampling default change to 4:2:0<!--50308895-->
+
+To reduce monitor support issues, the Windows 365 service now defaults the chroma subsampling at 4:2:0. (instead of the previous 4:4:4). For more information, see [Change the default chroma value for Windows 365 Cloud PCs](chroma-value-change-default.md).
+
+<!-- ########################## -->
 ## Week of July 1, 2024
 
+<!-- ########################## -->
 ### Apps
 
 #### Windows 365 Cloud PC gallery images use new Teams VDI<!--51726416-->
@@ -71,20 +111,15 @@ Windows 365 Cloud PC gallery images now use the new Teams Virtualized Desktop In
 
 Windows 365 now supports cross region disaster recovery. For more information, see [Cross region disaster recovery in Windows 365](cross-region-disaster-recovery.md).
 
-
 <!-- ########################## -->
 ## Week of June 24, 2024 (Service release 2406)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+#### Windows 365 Boot and Windows 365 Switch now support battery status redirection<!--51748880-->
 
-Windows 365 now supports AVC mixed mode when MMR isn't enabled.
-
-#### Windows 365 Boot and Windows 365 Switch now support battery direction<!--51748880-->
-
-Windows 365 Boot and Windows 365 Switch now support battery redirection. Cloud PCs now show the local PC's battery status.
+Windows 365 Boot and Windows 365 Switch now support battery status redirection. Cloud PCs now show the local PC's battery status.
 
 #### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
 
@@ -1084,7 +1119,7 @@ You can now create on-demand Cloud PC restore points and copy them to an Azure S
 
 #### Permission changes for Azure network connection operations<!--43251193-->
 
-The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. For more information, see [Azure network connections](azure-network-connections.md).
+The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator) or [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference) permissions. For more information, see [Azure network connections](azure-network-connections.md).
 
 <!-- ########################## -->
 ## Week of February 27, 2023 (Service release 2302)

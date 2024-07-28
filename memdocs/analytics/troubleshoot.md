@@ -52,7 +52,7 @@ Rollback transaction: XXXX
 
 ### Script requirements for Remediations
 
-If the option **Enforce script signature check** is enabled in the [Settings](/mem/intune/fundamentals/remediations) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
+If the option **Enforce script signature check** is enabled in the [Settings](../intune/fundamentals/remediations.md) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
@@ -62,12 +62,12 @@ First, ensure devices meet the prerequisites:
 
 - [Prerequisites for Intune managed devices](enroll-intune.md#bkmk_prereq)
 - [Prerequisites for Configuration Manager managed devices](enroll-configmgr.md#bkmk_prereq)
-- [Prerequisites for Remediations](/mem/intune/fundamentals/remediations)
+- [Prerequisites for Remediations](../intune/fundamentals/remediations.md)
 
 For Intune or co-managed devices configured with the Intune data collection policy:
 
 1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices.
-1. Look for devices that haven't been successfully configured for data collection. You can also see this information in the profiles overview page.  
+1. Look for devices that haven't been successfully configured for data collection. You can also see this information in the profiles overview page.
    - There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. For more information, see the [Error code -2016281112](#bkmk_2016281112) section.
 1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](data-collection.md#bkmk_flow)
 1. If your device has been successfully configured for data collection, has later restarted, and after 25 hours you're still not seeing it, then the device might not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
@@ -76,7 +76,7 @@ For Configuration Manager-managed devices:
 
 1. Ensure all devices you want to see performance data are [enrolled](enroll-configmgr.md#bkmk_cm_enroll).
 1. Check if the data upload from Configuration Manager to the Gateway Service was successful by looking at the error messages on the **UXAnalyticsUploadWorker.log** file on the site system hosting Service Connection Point role.
-1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client setting. Find the overriding client settings and enable endpoint analytics on it.  
+1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client setting. Find the overriding client settings and enable endpoint analytics on it.
 1. Check if missing client devices are sending data to the site server by reviewing the **SensorEndpoint.log** file located in `C:\Windows\CCM\Logs\` on client devices. Look for *Message sent* messages.
 1. Check and resolve any errors occurring during processing of the boot events by reviewing the **SensorManagedProvider.log** file located in `C:\Windows\CCM\Logs\` on client devices.
 1. Client devices require a restart to fully enable all analytics. <!--7698085-->
@@ -93,11 +93,11 @@ If your environment uses a proxy server, configure your proxy server to allow th
 
 ### Proxy server authentication
 
-If your organization uses proxy server authentication for internet access, make sure that it doesn't block the data because of authentication. If your proxy doesn't allow devices to send this data, they won't show in Desktop Analytics.
+If your organization uses proxy server authentication for internet access, make sure that it doesn't block the data because of authentication. If your proxy doesn't allow devices to send this data, they won't show in Endpoint analytics.
 
 ### Bypass (recommended)
 
-Configure your proxy servers to not require proxy authentication for traffic to the data sharing endpoints. This option is the most comprehensive solution. It works for all versions of Windows 10 or later.  
+Configure your proxy servers to not require proxy authentication for traffic to the data sharing endpoints. This option is the most comprehensive solution. It works for all versions of Windows 10 or later.
 
 ### User proxy authentication
 
@@ -136,7 +136,7 @@ This approach is the most complex because it requires the following configuratio
 
   - Routed connection, or that uses network address translation (NAT)
 
-- Configure proxy servers to allow the computer accounts in Active Directory to access the data endpoints. This configuration requires proxy servers to support Windows-Integrated Authentication.  
+- Configure proxy servers to allow the computer accounts in Active Directory to access the data endpoints. This configuration requires proxy servers to support Windows-Integrated Authentication.
 
 ## <a name="bkmk_faq"></a> Frequently asked questions
 
@@ -162,4 +162,4 @@ The maximum allowed output size limit for Remediation scripts is 2048 characters
 
 ## Next steps
 
-Use [Remediations](/mem/intune/fundamentals/remediations) to help fix common support issues before end-users notice issues.
+Use [Remediations](../intune/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.

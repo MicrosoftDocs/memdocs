@@ -62,7 +62,6 @@ Before you can enable SSO, you must meet the following prerequisites:
 - To configure your Microsoft Entra tenant, you must be assigned one of the following [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/manage-roles-portal):
   - [Application Administrator](/entra/identity/role-based-access-control/permissions-reference#application-administrator)
   - [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)
-  - [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)
 
 - The Cloud PCs must be running one of the following operating systems with the relevant cumulative update installed:
   - Windows 11 Enterprise with the [2022-10 Cumulative Updates for Windows 11 (KB5018418)](https://support.microsoft.com/kb/KB5018418) or later installed.
@@ -193,6 +192,6 @@ When SSO is turned on, a new Microsoft Entra ID app is introduced to authenticat
 
 ## Turn on SSO for all Cloud PCs in your account
 
-1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an account that has either a Global Administrator or Windows 365 Administrator role.
+1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an account that has the Windows 365 Administrator role.
 1. Select **Your organization’s Cloud PCs**, and then select **Update organization settings**.
 1. Select the **Single sign-on** option under **Cloud PC settings**.
