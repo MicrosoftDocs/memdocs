@@ -16,8 +16,8 @@
     },
     {
       "docset_name": "memdocs",
-      "build_source_folder": "memdocs",
-      "build_output_subfolder": "memdocs",
+      "build_source_folder": "intune",
+      "build_output_subfolder": "intune",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -88,5 +88,8 @@
   "docs_build_engine": {},
   "skip_source_output_uploading": false,
   "contribution_branch_mappings": {},
-  "need_generate_pdf_url_template": true
+  "need_generate_pdf_url_template": true,
+  "redirection_files": [
+    ".openpublishing.redirection.json"
+  ]
 }
