@@ -144,7 +144,7 @@ conceptualContent:
           url: https://www.microsoft.com/en-us/download/details.aspx?id=105665
         - text: Customize your migration instructions with the setup wizard
           itemType: how-to-guide
-          url: https://setup.microsoft.com/intune-service/deploy-and-set-up-microsoft-intune
+          url: https://setup.microsoft.com/intune/deploy-and-set-up-microsoft-intune
 
       - title: Blog and community resources
         summary: Checkout Intune community resources for blogs, announcements, discussions, and more.
