@@ -221,7 +221,7 @@ To set up an Apple VPP, see [How to manage iOS and macOS apps purchased through 
 
 #### [Intune for Education](#tab/intune-for-education)
 
-To set up an Apple VPP in Intune for Education, see [Configure VPP tokens](/intune-education/setup-ios-device-management.md#configure-vpp-tokens).
+To set up an Apple VPP in Intune for Education, see [Configure VPP tokens](/intune-education/setup-ios-device-management#configure-vpp-tokens).
 
 ---
 
@@ -238,7 +238,7 @@ To set up an Apple MDM certificate, see [Set up automated device enrollment in I
 
 #### [Intune for Education](#tab/intune-for-education)
 
-To set up an Apple ADE in Intune for Education, see [Configure enrollment program token](/intune-education/setup-ios-device-management.md#configure-enrollment-program-token).
+To set up an Apple ADE in Intune for Education, see [Configure enrollment program token](/intune-education/setup-ios-device-management#configure-enrollment-program-token).
 
 ---
 

@@ -161,6 +161,6 @@ ________________________________________________________
 
 <!-- Reference links in article -->
 
-[MEM-1]: ../../../remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal
-[MEM-2]: ../../../remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal
-[MEM-3]: ../../../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal
+[MEM-1]: ../../../remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center
+[MEM-2]: ../../../remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center
+[MEM-3]: ../../../remote-actions/devices-wipe.md#delete-devices-from-the-microsoft-entra-admin-center
