@@ -260,7 +260,7 @@ With the Intune service configured, you can configure policies and applications 
 
 [MEM-1]: ../../../fundamentals/licenses.md
 [MEM-2]: ../../../enrollment/enrollment-restrictions-set.md
-[MEM-4]: ../../../protect/windows-hello.md#create-a-windows-hello-for-business-policy
+[MEM-4]: ../../../protect/windows-hello.md#create-a-windows-hello-for-business-policy-for-device-enrollment
 
 [INT-1]: /intune-education/what-is-intune-for-education
 
