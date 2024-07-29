@@ -2607,22 +2607,22 @@
     },
     {
       "source_path": "autopilot/troubleshooting.md",
-      "redirect_url": "/autopilot/troubleshoot-faq.yml",
+      "redirect_url": "/autopilot/troubleshoot-faq",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/troubleshooting-device-enrollment.md",
-      "redirect_url": "/autopilot/troubleshoot-faq.yml",
+      "redirect_url": "/autopilot/troubleshoot-faq",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/troubleshooting-oobe.md",
-      "redirect_url": "/autopilot/troubleshoot-faq.yml",
+      "redirect_url": "/autopilot/troubleshoot-faq",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/troubleshooting-aad-join.md",
-      "redirect_url": "/autopilot/troubleshoot-faq.yml",
+      "redirect_url": "/autopilot/troubleshoot-faq",
       "redirect_document_id": false
     }
   ]
