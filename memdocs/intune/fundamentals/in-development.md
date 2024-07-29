@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 07/23/2024
+ms.date: 08/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -73,6 +73,10 @@ You’ll be able to access all new actions in the Microsoft Intune admin center 
 
 ## App management
 
+### Managed Home Screen for Android Enterprise Fully Managed devices<!-- 15603355 -->
+
+Managed Home Screen (MHS) will be supported on Android Enterprise Fully Managed devices. This capability will offer organizations the ability to leverage MHS in scenarios where a device is associated with a single user.
+
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
@@ -83,11 +87,151 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
+
+### Enhancements to multiple administrative approval <!--  25174473 -->
+
+Multi administrative approval (MAA) adds the ability to limit application access policies to Windows applications or all non-Windows applications or both. We're adding a new access policy to the multiple administrative approval feature.
+
+For more information, see [multiple admin approval](../fundamentals/multi-admin-approval.md).
+
+
+### New settings available in the Apple settings catalog <!-- 28308531 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Apple Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+#### iOS/iPadOS
+
+**Declarative Device Management (DDM) > Safari Extension Settings**:
+
+- Managed Extensions
+  - Allowed Domains
+  - Denied Domains
+  - Private Browsing
+  - State
+
+**Declarative Device Management (DDM) > Software Update Settings**:
+
+- Automatic Actions
+  - Download
+  - Install OS Updates
+
+- Deferrals
+  - Combined Period In Days
+
+- Notifications
+
+- Rapid Security Response
+  - Enable
+  - Enable Rollback
+
+- Recommended Cadence
+
+**Restrictions**:
+
+- Allow ESIM Outgoing Transfers
+- Allow Personalized Handwriting Results
+- Allow Video Conferencing Remote Control
+- Allow Genmoji
+- Allow Image Playground
+- Allow Image Wand
+- Allow iPhone Mirroring
+- Allow Writing Tools
+
+#### macOS
+
+**Authentication > Extensible Single Sign On (SSO)**:
+
+- Platform SSO
+  - Authentication Grace Period
+  - FileVault Policy
+  - Non Platform SSO Accounts
+  - Offline Grace Period
+  - Unlock Policy
+
+**Authentication > Extensible Single Sign On Kerberos**:
+
+- Allow Password
+- Allow SmartCard
+- Identity Issuer Auto Select Filter
+- Start In Smart Card Mode
+
+**Declarative Device Management (DDM) > Disk Management**:
+
+- External Storage
+- Network Storage
+
+**Declarative Device Management (DDM) > Safari Extension Settings**:
+
+- Managed Extensions
+  - Allowed Domains
+  - Denied Domains
+  - Private Browsing
+  - State
+
+**Declarative Device Management (DDM) > Software Update Settings**:
+
+- Allow Standard User OS Updates
+
+- Automatic Actions
+  - Download
+  - Install OS Updates
+  - Install Security Update
+
+- Deferrals
+  - Major Period In Days
+  - Minor Period In Days
+  - System Period In Days
+
+- Notifications
+
+- Rapid Security Response
+  - Enable
+  - Enable Rollback
+
+**Restrictions**:
+
+- Allow Genmoji
+- Allow Image Playground
+- Allow iPhone Mirroring
+- Allow Writing Tools
+
+**System Policy > System Policy Control**:
+
+- Enable XProtect Malware Upload
 
 <!-- *********************************************** -->
 
 ## Device enrollment
+
+### Support ending for Apple User Enrollment with Company Portal<!-- 28361917 -->
+
+After the release of iOS/iPadOS 18, Apple will no longer support profile-based Apple User Enrollment. As a result, Intune will end support for [user enrollment with Company Portal](../enrollment/apple-user-enrollment-with-company-portal.md) shortly after the release of iOS/iPadOS 18.
+
+After Intune ends support for user enrollment with Company Portal:
+
+- Existing enrolled devices won't be impacted.
+- Users won't be able to enroll devices if they're targeted with this enrollment profile type.
+- Microsoft Intune technical support will be available for existing enrolled devices with this enrollment profile type. Technical support won't be available for new enrollments.
+
+To prepare, use a different management method to enroll devices. We recommend account-driven Apple User Enrollment for similar functionality and an improved user experience. For a simpler enrollment experience, try web- based device enrollment. For more information, see:
+
+- [Set up account-driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md)
+- [Set up web-based device enrollment for iOS/iPadOS](../enrollment/web-based-device-enrollment-ios.md)
+
+### ACME protocol support for iOS/iPadOS and macOS enrollment<!-- 25140355 -->
+
+As we prepare to support managed device attestation in Intune, we are starting a phased rollout of an infrastructure change for new enrollments that includes support for the *Automated Certificate Management Environment (ACME) protocol*. When new Apple devices enroll, the management profile from Intune will have an ACME certificate instead of a SCEP certificate.  ACME provides better protection than SCEP against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
+
+Existing OS and hardware eligible devices will not get the ACME certificate unless they re-enroll. There will be no change to the end user's enrollment experience, and no changes to the Microsoft Intune admin center. This change only impacts enrollment certificates and has no impact on any device configuration policies.
+
+ACME will be supported for Apple Automated Device Enrollment, Apple Device Enrollment, and Apple Configurator enrollment methods. Eligible OS versions include:
+
+- iOS 16.0+
+- iPadOS 16.1+
+- macOS 13.1+
 
 ### Account-driven Apple User Enrollment to be generally available for iOS/iPadOS 15+ devices<!-- 10277062 -->
 
@@ -102,6 +246,46 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device management
+
+### Intune will support macOS 13.x as the minimum version<!-- 28391869 -->
+
+With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Big Sur) and later.
+
+For more information on this change, see [Plan for change:  Intune is moving to support macOS 13 and later](whats-new#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year).
+
+> [!NOTE]
+> macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
+
+Applies to:
+
+- macOS
+
+### Intune supports iOS/iPadOS 16.x as the minimum version<!-- 28391935 -->
+
+Later this year, we expect iOS18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require iOS/iPadOS 16 and higher shortly after the iOS/iPadOS 18 release.
+
+For more information on this change, see [Plan for change: Intune is moving to support iOS/iPadOS 16 and later](whats-new#plan-for-change-intune-is-moving-to-support-iosipados-16-and-later).
+
+> [!NOTE]
+> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
+
+Applies to:
+
+- iOS/iPadOS
+
+### 21 Vianet support for Mobile Threat Defense connector support on 21Vianet<!-- 10355489 -->
+
+Intune operated by 21Vianet will soon support Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices for MTD vendors that also have support in that environment.  When an MTD partner is supported and you sign in to a 21Vianet tenant, the supported connectors will be available.
+
+Applies to:
+
+- Android
+- iOS/iPadOS
+
+For more information see:
+
+- [Intune operated by 21Vianet in China](../fundamentals/china.md)
+- [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md)
 
 ### New `cpuArchitecture` filter device property for app and policy assignments<!-- 7423106 -->
 
