@@ -31,7 +31,7 @@ ms.collection:
 
 # Remoting connection report
 
-The Remoting connection report in [Endpoint analytics](/mem/analytics/overview) helps you monitor key performance metrics for connecting to the Cloud PCs. There are two metrics in this report:
+The Remoting connection report in [Endpoint analytics](/intune/analytics/overview) helps you monitor key performance metrics for connecting to the Cloud PCs. There are two metrics in this report:
 
 - **Round trip time (ms)**
 - **Sign in time (sec)**
@@ -40,7 +40,7 @@ Resource performance score also contributes to your organization's [Microsoft Pr
 
 ## Prerequisites
 
-Before you can use this report, you'll need to [enroll your Cloud PC devices in Endpoint analytics](/mem/analytics/enroll-intune).
+Before you can use this report, you'll need to [enroll your Cloud PC devices in Endpoint analytics](/intune/analytics/enroll-intune).
 
 ## Use the Remoting connection report
 

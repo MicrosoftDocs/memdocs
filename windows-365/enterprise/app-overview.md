@@ -35,10 +35,10 @@ As an IT admin, one of the easiest ways to get started with Windows 365 is to cr
 
 The following apps are available with no need to upload:
 
-- [Microsoft 365 Apps for Enterprise](/mem/intune/apps/apps-add-office365) (formerly Office 365 Pro Plus)
+- [Microsoft 365 Apps for Enterprise](/intune/intune-service/apps/apps-add-office365) (formerly Office 365 Pro Plus)
 - Microsoft Teams
 - Microsoft OneDrive
-- [Microsoft Edge](/mem/intune/apps/apps-windows-edge)
+- [Microsoft Edge](/intune/intune-service/apps/apps-windows-edge)
 
 ## Supported application formats in Windows 365
 

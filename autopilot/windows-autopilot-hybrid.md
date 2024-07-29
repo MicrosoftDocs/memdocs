@@ -24,7 +24,7 @@ appliesto:
 
 > [!IMPORTANT]
 >
-> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
 Intune and Windows Autopilot can be used to set up Microsoft Entra hybrid joined devices. To do so, follow the steps in this article. For more information about Microsoft Entra hybrid join, see [Understanding Microsoft Entra hybrid join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 
@@ -77,7 +77,7 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
   >
   > Managed service accounts aren't supported for the service account. The service account must be a domain account.
 
-- The Intune Connector requires the [same endpoints as Intune](/mem/intune/fundamentals/intune-endpoints).
+- The Intune Connector requires the [same endpoints as Intune](/intune/intune-service/fundamentals/intune-endpoints).
 
 ## Set up Windows automatic MDM enrollment
 
@@ -204,7 +204,7 @@ After the Intune Connector for Active Directory is installed, it will start logg
 
 ### Configure web proxy settings
 
-If there is a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](/mem/intune/enrollment/autopilot-hybrid-connector-proxy).
+If there is a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](/intune/intune-service/enrollment/autopilot-hybrid-connector-proxy).
 
 ## Create a device group
 
@@ -340,7 +340,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. Select **Next**.
 
-1. On the **Scope tags** page, select [scope tags](/mem/intune/fundamentals/scope-tags) for this profile.
+1. On the **Scope tags** page, select [scope tags](/intune/intune-service/fundamentals/scope-tags) for this profile.
 
 1. Select **Next**.
 
@@ -406,7 +406,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. Select **OK** > **Create**. The profile is created and displayed in the list.
 
-1. [Assign a device profile](/mem/intune/configuration/device-profile-assign#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
+1. [Assign a device profile](/intune/intune-service/configuration/device-profile-assign#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
 
 > [!NOTE]
 >
@@ -427,16 +427,16 @@ To uninstall the ODJ Connector from the computer, follow these steps:
 
 ## Next steps
 
-After Windows Autopilot is configured, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](/mem/intune/remote-actions/device-management).
+After Windows Autopilot is configured, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](/intune/intune-service/remote-actions/device-management).
 
 ## Related content
 
 <!-- Intune 12378279 -->
 
 - [What is a device identity?](/azure/active-directory/devices/overview).
-- [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
-- [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
-- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
+- [Learn more about cloud-native endpoints](/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
+- [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints](/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
+- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/intune/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
 - [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/device-join-plan).
 - [A framework for Windows endpoint management transformation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684).
 - [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
