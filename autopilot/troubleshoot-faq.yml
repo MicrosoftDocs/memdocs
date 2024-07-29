@@ -115,7 +115,7 @@ sections:
           > - For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` isn't blocked on the network.
 
 
-  - name: Troubleshoot Windows Autopilot device import and enrollment
+  - name: Windows Autopilot device import and enrollment troubleshooting
     questions:
       - question: |
           Why is error code "0x80180014" occurring when trying to re-enroll a device that has previously enrolled?
@@ -266,7 +266,7 @@ sections:
           `Ran into trouble. Please sign in with an administrator account to see why and reset manually.`
 
 
-  - name: Troubleshoot Windows out-of-box (OOBE) issues during Windows Autopilot
+  - name: Windows out-of-box experience (OOBE) issues during Windows Autopilot troubleshooting
     questions:
       - question: |
           Why is the Windows out-of-box experience (OOBE) not running as expected during?
@@ -285,7 +285,7 @@ sections:
           Verify that the user who is signing into the device has a valid Intune, EMS, or Microsoft 365 license.
 
 
-  - name: Troubleshoot Microsoft Entra join issues
+  - name: Microsoft Entra join issues troubleshooting
     questions:
       - question: |
           What is the most common issue joining a device to Microsoft Entra ID?
