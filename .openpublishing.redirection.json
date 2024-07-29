@@ -116,8 +116,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "memdocs/intune/apps/store-apps-microsoft.md",
-      "redirect_url": "/intune/intune-service/apps/store-apps-microsoft",
+      "source_path": "memdocs/intune/apps/windows-store-for-business.md",
+      "redirect_url": "/mem/intune/apps/store-apps-microsoft",
       "redirect_document_id": false
     },
     {
