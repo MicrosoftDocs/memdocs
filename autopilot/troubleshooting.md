@@ -31,7 +31,7 @@ Windows Autopilot is designed to simplify all parts of the Windows device lifecy
 
 On Windows 11, the Autopilot diagnostic page can be opened to view additional detailed troubleshooting information about the Autopilot provisioning process. To enable the Autopilot diagnostics page:
 
-1. Go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status) where the Autopilot diagnostics page needs to be enabled.
+1. Go to the [ESP profile](/intune/intune-service/enrollment/windows-enrollment-status) where the Autopilot diagnostics page needs to be enabled.
 
 1. Make sure that **Show app and profile configuration progress** is selected to **Yes**.
 
@@ -41,7 +41,7 @@ Once the diagnostic page is enabled, select the **View Diagnostics button** or e
 
 > [!NOTE]
 >
-> By default diagnostics are automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+> By default diagnostics are automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/intune/intune-service/remote-actions/collect-diagnostics).
 
 > [!NOTE]
 >
@@ -92,7 +92,7 @@ Key activities to perform when troubleshooting are:
 - Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
 - Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](troubleshoot-aad-join.md)?
 - MDM enrollment issues: IS the device able to [enroll in Microsoft Intune](troubleshoot-device-enrollment.md) (or an equivalent MDM service)?
-- Review logs that are automatically collected upon Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics). <!--1895390-->
+- Review logs that are automatically collected upon Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/intune/intune-service/remote-actions/collect-diagnostics). <!--1895390-->
 
 ## Next steps
 
@@ -102,7 +102,7 @@ See the following articles for help with troubleshooting specific issues:
 - [Troubleshoot OOBE issues](troubleshoot-oobe.md).
 - [Troubleshoot Microsoft Entra join issues](troubleshoot-aad-join.md).
 - [Policy conflicts](policy-conflicts.md).
-- [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+- [Collect diagnostics from a Windows device](/intune/intune-service/remote-actions/collect-diagnostics).
 - [Known issues](known-issues.md).
 
 ## Related content
