@@ -146,14 +146,32 @@ When trying to revoke an issuing CA, it's important to revoke all of its active 
 <!-- alternate if no repo
 You can use the following Powershell script to revoke all leaf certificates belonging to a CA.  --->
 
-You can use the RevokeAllLeafCerts.ps1 PowerShell script to revoke all leaf certificates belonging to a CA.  
+You can use the sample PowerShell script belo to revoke all leaf certificates belonging to a CA.  
 
  >[!CAUTION]
- > Use this script with caution. You can't undo the revoke action for any of the leaf certificates.  
+ > Use this script with caution. You can't undo the revoke action for any of the leaf certificates.
 
-1. Download the **RevokeAllLeafCerts.ps1** PowerShell script from [download.microsoft.com](). 
+**Disclaimer**
+The script sample below retrieves information from your Intune tenant Microsoft Cloud PKI, and will revoke leaf certificates for a specified Issuing Certification Authority in your Intune tenant.  Understand the impact of the sample script prior to running it; the sample script should be run using a non-production or "test" tenant account. 
 
-2. Run this script on ---. 
+Read through the script and understand the actions it is performing prior to running.
+
+**Script overview:** 
+
+Run the sample powershell script from an administrative workstation. The sample script requires specific permissions and information to run: 
+- Request the Issuing CA ID.
+  
+ >[!NOTE]
+   > The CA id will be required to run the script. This information can be found when using the Intune admin console.
+   > Go to "Tenant administration > Cloud PKI" Select an Issuing CA, the browser URL will display the CA id.
+   > The last part of the URL will be the CA id. In the example below the CA id is "f12345-acf1-12ab-1b2a-1a1234567a89"
+   > Example: "https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/CaDetails.ReactView/id/f12345-acf1-12ab-1b2a-1a1234567a89" 
+
+- The script will install the Microsoft powershell graph module - Microsoft.Graph .  This action requires administrative privileges on the device the script is running on.
+- The Connect-MgGraph command requires an admin to login with permissions to revoke leaf certificates on the issuing CA. 
+- The script will get all leaf certificates and perform a revoke on each.
+- The script will prompt the admin to confirm the revoke of all leaf certificates.
+- The script has a section that can be uncommented if you wish to prompt for each certificate prior to revoking.
 
 
  powershell script sample 
