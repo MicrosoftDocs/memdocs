@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/16/2024
+ms.date: 07/25/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -54,6 +54,13 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of July 23, 2024
+
+### Updated default settings for Windows 365 security baselines<!--49685126-->
+
+Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/mem/intune/protect/security-baseline-settings-windows-365).
 
 <!-- ########################## -->
 ## Week of July 15, 2024
