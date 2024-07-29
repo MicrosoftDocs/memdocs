@@ -2611,17 +2611,17 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "autopilot/troubleshooting-device-enrollment.md",
+      "source_path": "autopilot/troubleshoot-device-enrollment.md",
       "redirect_url": "/autopilot/troubleshoot-faq",
       "redirect_document_id": false
     },
     {
-      "source_path": "autopilot/troubleshooting-oobe.md",
+      "source_path": "autopilot/troubleshoot-oobe.md",
       "redirect_url": "/autopilot/troubleshoot-faq",
       "redirect_document_id": false
     },
     {
-      "source_path": "autopilot/troubleshooting-aad-join.md",
+      "source_path": "autopilot/troubleshoot-aad-join.md",
       "redirect_url": "/autopilot/troubleshoot-faq",
       "redirect_document_id": false
     }
