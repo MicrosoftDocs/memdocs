@@ -56,18 +56,28 @@ Permanently remove an issuing certificate from Microsoft Intune. If you're tryin
 1. Go to **Tenant administration** > **Cloud PKI**.  
 1. Select an active issuing CA from the list of available CAs. Selecting a CA opens its available actions. 
 1. Choose **Pause**. 
-![alt text](image.png)
 
-1. Select **Pause** again when prompted to confirm. 
+   ![alt text](image.png)  
+
+1. Select **Pause** again when prompted to confirm.   
+
    >[!NOTE]
    > When you pause an issuing CA: 
    > - It can't issue leaf certificates. 
-   > - It continues to respond to certificate revocation list (CRL) requests and AIA requests. 
+   > - It continues to respond to certificate revocation list (CRL) requests and AIA requests.  
+
 1. Go back to your list of CAs and choose **Refresh**. Then look under the **Status** column to confirm that the issuing CA is paused. 
+
+    ![alt text](image-2.png)  
+
 1. Select the paused CA to open all available options again. Two new options appear: 
    - **Resume**: This option unpauses the CA and makes it active again. 
    - **Revoke**: This option revokes the issuing CA. For this action to work, all active leaf certificates belonging to the CA must already be revoked. For more information and steps, see [Revoke active leaf certificates](#revoke-active-leaf-certificates) in this article.   
-1. Select **Revoke**, and then select **Revoke** again when prompted to confirm.  
+1. Select **Revoke**. 
+
+   ![alt text](image-3.png)  
+
+1. Select **Revoke** again when prompted to confirm.  
 
     >[!IMPORTANT]
     > This action can't be undone. When you revoke an issuing CA: 
@@ -76,15 +86,23 @@ Permanently remove an issuing certificate from Microsoft Intune. If you're tryin
     > - The CRL of the root CA shows that the issuing CA cert is revoked. 
     > - All existing leaf certificates issued by the CA stop being authenticated.    
 
-1. Go back to your list of CAs and choose **Refresh**. Then look under the **Status** column to confirm that the issuing CA is revoked. 
+1. Go back to your list of CAs and choose **Refresh**. Then look under the **Status** column to confirm that the issuing CA is revoked.  
+
+   ![alt text](image-4.png)  
 
 1. Select the revoked CA to open all available options again. The delete option should be available now.  
-1. Select **Delete** to remove the CA from Microsoft Intune. Then select **Delete** again when prompted to confirm.  
+1. Select **Delete** to remove the CA from Microsoft Intune. 
+
+   ![alt text](image-5.png)  
+
+1. Select **Delete** again when prompted to confirm.  
 
     >[!IMPORTANT]
     > This action can't be undone.  
 
-1. Go back to your list of CAs and choose **Refresh**. Confirm that the issuing CA no longer appears in the list. 
+1. Go back to your list of CAs and choose **Refresh**. Confirm that the issuing CA no longer appears in the list.  
+
+   ![alt text](image-6.png)  
 
 ## Delete root CA  
 Permanently remove a root CA from Microsoft Intune. 
@@ -94,11 +112,23 @@ Permanently remove a root CA from Microsoft Intune.
 
 1. Go to **Tenant administration** > **Cloud PKI**.  
 1. Select a root CA from the list of available CAs. Selecting a CA opens its available actions.    
-1. Select **Delete** to remove the CA from Microsoft Intune. Then select **Delete** again when prompted to confirm.    
+
+   ![alt text](image-7.png)  
+
+1. Select **Delete** to remove the CA from Microsoft Intune. 
+
+   ![alt text](image-8.png)  
+
+1. Select **Delete** again when prompted to confirm.    
+
+   ![alt text](image-9.png)  
+
 1. Go back to your list of CAs and choose **Refresh**. Confirm that the root CA no longer appears in the list. 
 
-   > [!div class="mx-imgBorder"]
-   > ![Image of the admin center, highlighting delete action for a root CA.](./media/microsoft-cloud-pki/.png)  
+  <!-- > > [!div class="mx-imgBorder"]
+   > ![Image of the admin center, highlighting delete action for a root CA.](./media/microsoft-cloud-pki/.png) -->
+
+   ![alt text](image-10.png)
 
 ## Revoke active leaf certificates  
 
@@ -126,7 +156,7 @@ You can use the RevokeAllLeafCerts.ps1 PowerShell script to revoke all leaf cert
 2. Run this script on ---. 
 
 
-<!-- powershell script sample  -----------------------------------------------------
+ powershell script sample 
 
  ``powershell
  param (
@@ -176,4 +206,4 @@ foreach ($leafCert in $leafCerts.value)
 	Invoke-MgGraphRequest -Method POST -Uri "https://graph.microsoft.com/beta/devicemanagement/cloudCertificationAuthority/$caId/revokeLeafCertificate" -Body ($revokeParams|ConvertTo-Json) -ContentType "application/json"
 }
 
- ```powershell  ----------- >
+ ```powershell  
