@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/08/2024
+ms.date: 07/31/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -116,6 +116,15 @@ The following URLs and ports are required for the provisioning of Cloud PCs and 
   - hm-iot-in-4-prod-prna01.azure-devices.net (443 & 5671 outbound)
   
 All endpoints connect over port 443 unless otherwise specified.
+
+##### Port 3389
+
+Port 3389 is disabled by default for all newly-provisioned Cloud PCs. Microsoft recommends that you keep port 3389 closed. However, if you need port 3389 to be open for any reprovisioned or newly provisioned Cloud PCs using the Azure Network Connection (ANC) deployment option, you can review the following options:
+
+- Windows 365 Security Baselines. Customers can use the Windows 365 Security Baselines to effectively manage port 3389 for Windows 365 Cloud PCs. These baselines provide comprehensive tools and configurations designed to enhance security measures while allowing necessary access. By adjusting Firewall Settings and setting the **Default Inbound Action for Public Profile** to *Allow*, organizations can make sure that port 3389 is appropriately configured to meet operational needs. Review and customize these settings according to your specific organizational requirements.
+- Create a custom Firewall rule in Microsoft Intune. Customers can use custom Firewall rules in Microsoft Intune to configure port 3389 for Windows 365 Cloud PCs. This involves creating a custom rule within Intune's security policies specifically tailored to allow inbound traffic on port 3389, which is used for access to Cloud PCs. By defining the rule parameters such as port number, protocol (TCP), and restricting specific IP addresses or networks, you can make sure that access to port 3389 is tightly controlled and limited to authorized entities only.
+
+The options outlined above are not applicable for customers using a Microsoft-hosted network. 
 
 ### [Windows 365 Government](#tab/gov)
 
