@@ -60,6 +60,9 @@ To manage device enrollment manager accounts in Microsoft Intune, you must be an
 
 ## Add a device enrollment manager
 
+> [!TIP]
+> Only use dedicated accounts that are not assigned to an individual user as Device enrollment manager accounts. 
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **Enrollment**.  
 3. Select the **Device enrollment managers** tab.  
@@ -67,7 +70,10 @@ To manage device enrollment manager accounts in Microsoft Intune, you must be an
 3. In the **User name** field, enter the user principal name of the user you're adding.
 6. Select **Add**. The new device enrollment manager is added to the list of DEM users. 
 
-To remove someone as a device enrollment manager, select their name in the list and then choose **Delete**.  
+To remove someone as a device enrollment manager, select their name in the list and then choose **Delete**.
+
+> [!TIP]
+> Do not delete accounts assigned as a Device enrollment manager if any devices were enrolled using the account. Doing so will lead to issues with these devices. 
 
 ## Limitations 
 

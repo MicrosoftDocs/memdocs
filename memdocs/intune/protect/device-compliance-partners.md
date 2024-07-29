@@ -62,7 +62,7 @@ The following compliance partners are supported as generally available:
 - Citrix Workspace device compliance
 - IBM MaaS360
 - Jamf Pro
-- Kandji Device Compliance
+- Kandji
 - MobileIron Device Compliance Cloud
 - MobileIron Device Compliance On-prem
 - Mosyle Fuse
