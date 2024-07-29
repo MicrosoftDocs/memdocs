@@ -55,7 +55,10 @@ Permanently remove an issuing certificate from Microsoft Intune. If you're tryin
 
 1. Go to **Tenant administration** > **Cloud PKI**.  
 1. Select an active issuing CA from the list of available CAs. Selecting a CA opens its available actions. 
-1. Choose **Pause**, and then select **Pause** again when prompted to confirm. 
+1. Choose **Pause**. 
+![alt text](image.png)
+
+1. Select **Pause** again when prompted to confirm. 
    >[!NOTE]
    > When you pause an issuing CA: 
    > - It can't issue leaf certificates. 
@@ -113,16 +116,14 @@ When trying to revoke an issuing CA, it's important to revoke all of its active 
 <!-- alternate if no repo
 You can use the following Powershell script to revoke all leaf certificates belonging to a CA.  --->
 
-You can use the RevokeAllLeafCerts.ps1 PowerShell script to remove all leaf certificates belonging to a CA.  
+You can use the RevokeAllLeafCerts.ps1 PowerShell script to revoke all leaf certificates belonging to a CA.  
 
  >[!CAUTION]
  > Use this script with caution. You can't undo the revoke action for any of the leaf certificates.  
 
-1. Download the **RevokeAllLeafCerts.ps1** PowerShell script from [download.microsoft.com]( https://aka.ms/intune_WDAC/CatCleanAll). 
+1. Download the **RevokeAllLeafCerts.ps1** PowerShell script from [download.microsoft.com](). 
 
-2. Run this script on devices that have ---. 
-
-For information about how to run PowerShell scripts on devices using Intune, see [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](../apps/intune-management-extension.md).  
+2. Run this script on ---. 
 
 
 <!-- powershell script sample  -----------------------------------------------------
