@@ -158,7 +158,7 @@ You can use the RevokeAllLeafCerts.ps1 PowerShell script to revoke all leaf cert
 
  powershell script sample 
 
- ``powershell
+```powershell
  param (
 	[string]$caId = $(Read-Host "Input CaId")
 	)
@@ -206,4 +206,4 @@ foreach ($leafCert in $leafCerts.value)
 	Invoke-MgGraphRequest -Method POST -Uri "https://graph.microsoft.com/beta/devicemanagement/cloudCertificationAuthority/$caId/revokeLeafCertificate" -Body ($revokeParams|ConvertTo-Json) -ContentType "application/json"
 }
 
- ```powershell  
+ ```powershell   
