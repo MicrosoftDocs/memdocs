@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2024
+ms.date: 06/28/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -62,6 +62,14 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 ### Chroma subsampling default change to 4:2:0<!--50308895-->
 
 To reduce monitor support issues, the Windows 365 service will default the chroma subsampling at 4:2:0 (instead of the previous 4:4:4).
+
+### Cloud PC gallery images update to Microsoft Teams 2.1<!--50394023-->
+
+In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 applications will be updated to use Microsoft Teams 2.1. These images include:
+
+- Windows 11 Enterprise + Microsoft 365 Apps  21H2
+- Windows 10 Enterprise + Microsoft 365 Apps 22H2
+- Windows 10 Enterprise + Microsoft 365 Apps 21H2
 
 <!-- ***********************************************-->
 ## Device security
