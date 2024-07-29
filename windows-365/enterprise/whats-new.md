@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2024
+ms.date: 07/25/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -58,23 +58,9 @@ For more information about public preview items, see [Public preview in Windows 
 <!-- ########################## -->
 ## Week of July 23, 2024
 
-<!-- ########################## -->
-### Apps
-
-#### Remaining Cloud PC gallery images update to new Microsoft Teams<!--50394023-->
-
-All of the remaining Windows 365 Cloud PC gallery images with Microsoft 365 applications now use the new Microsoft Teams. The final images updated this week include:
-
-- Windows 11 Enterprise + Microsoft 365 Apps  21H2
-- Windows 10 Enterprise + Microsoft 365 Apps 22H2
-- Windows 10 Enterprise + Microsoft 365 Apps 21H2
-
-<!-- ########################## -->
-### Device security
-
 ### Updated default settings for Windows 365 security baselines<!--49685126-->
 
-Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/intune/intune-service/protect/security-baseline-settings-windows-365).
+Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/mem/intune/protect/security-baseline-settings-windows-365).
 
 <!-- ########################## -->
 ## Week of July 15, 2024
@@ -220,7 +206,7 @@ The **Cloud PCs that aren't available report** has moved out of preview and into
 
 #### Intune scope tags (preview)<!--48907552-->
 
-Windows 365 now supports [Intune scope tags](/intune/intune-service/fundamentals/scope-tags). For more information, see [Scope tags](role-based-access.md#scope-tags).
+Windows 365 now supports [Intune scope tags](/mem/intune/fundamentals/scope-tags). For more information, see [Scope tags](role-based-access.md#scope-tags).
 
 <!-- ########################## -->
 ## Week of April 10, 2024
@@ -767,7 +753,7 @@ All Cloud PC reports can now be accessed from the **Cloud PC overview** section 
 
 #### Use VMWare Horizon clients and the Blast protocol with Windows 365 Enterprise (public preview)<!--44716096-->
 
-VMWare Horizon clients and the Blast protocol can be used with Windows 365 Enterprise Cloud PCs. This is a [public preview](..\public-preview.md). For more information, see [Set up VMware Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md).
+VMWare Horizon clients and the Blast protocol can be used with Windows 365 Enterprise Cloud PCs. This is a [public preview](..\public-preview.md). For more information, see [Set up VMware Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md). To submit a request to join this preview, see [Tech Preview – VMware Horizon extending Microsoft Windows 365](https://www.vmware.com/learn/1733900_REG.html).
 
 <!-- ########################## -->
 ## Week of August 7, 2023
@@ -1684,7 +1670,7 @@ A Cloud PC’s name is now appended to the network interface name within the Azu
 
 #### New remote action: Remote Help<!--38310389-->
 
-The [Remote Help remote action](/intune/intune-service/remote-actions/remote-help) (in the Microsoft Intune admin center) lets admins start a remote session into an end user’s Cloud PC.
+The [Remote Help remote action](/mem/intune/remote-actions/remote-help) (in the Microsoft Intune admin center) lets admins start a remote session into an end user’s Cloud PC.
 
 <!-- ########################## -->
 ## Week of February 28, 2022 (Service release 2202)
@@ -1745,7 +1731,7 @@ The new details for Windows 365 Cloud PCs include the following registry data:
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
 
-To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/intune/intune-service/remote-actions/collect-diagnostics).
+To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning

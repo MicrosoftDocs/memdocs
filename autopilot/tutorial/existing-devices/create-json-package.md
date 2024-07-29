@@ -131,5 +131,5 @@ Once the package containing the Autopilot profile JSON file is created, the pack
 For more information on creating and distributing the JSON package in Configuration Manager, see the following articles:
 
 - [Create a package containing the JSON file](../../existing-devices.md#create-a-package-containing-the-json-file).
-- [Packages and programs in Configuration Manager](/intune/configmgr/apps/deploy-use/packages-and-programs).
+- [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
 - [Distribute content to distribution points](../../existing-devices.md#distribute-content-to-distribution-points).

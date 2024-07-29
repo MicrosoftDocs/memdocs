@@ -39,8 +39,8 @@ Windows 365 is a cloud-based service that lets you provision and manage Cloud PC
 Windows 365 provides its service to customers by gathering and using data from the sources listed below. These sources provide a comprehensive view of the devices that Windows 365 manages.
 
 - [Microsoft Windows Enterprise](/windows/resources/) - for managing the device setup experience, managing connections to other services, and operational support for IT pros.
-- [Microsoft Intune product family](/intune/endpoint-manager-overview) – for device and app management, data security, and device configurations.
-- [Endpoint analytics](/intune/analytics/overview) – part of the Microsoft Intune product family, specifically for analytical insights about device and app usage.
+- [Microsoft Intune product family](/mem/endpoint-manager-overview) – for device and app management, data security, and device configurations.
+- [Endpoint analytics](/mem/analytics/overview) – part of the Microsoft Intune product family, specifically for analytical insights about device and app usage.
 - [Microsoft 365 apps for enterprise](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans?rtc=1) – for management of Microsoft 365 Apps.
 
 To protect and maintain enrolled devices, Windows 365 processes and copies data from online services and data pipelines configured by the customer to Windows 365. After data is integrated from these services into Windows 365, the [Product Terms](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/all) and [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement) applicable to Windows 365 also applies to the data. Windows 365 ensures appropriate data confidentiality, security, and resilience. Windows 365 employs extra internal privacy and security measures to ensure proper handling of personal data.
@@ -51,7 +51,7 @@ Depending on a tenant's region and preference, Windows 365 stores its customer c
 
 To manage the Cloud PC, certain data relating to the Cloud PC (like the machine’s name, diagnostic data, and service-generated data) is stored in Azure data centers in North America, Europe, or Asia Pacific, as defined by the tenant's location. This storage is mapped based on Microsoft Online tenant's country/region to the nearest Azure region.
 
-Other customer data, diagnostic data, or service-generated data may be collected by [Azure Virtual Desktop](/azure/virtual-desktop/data-locations) or [Intune](/intune/intune-service/protect/privacy-personal-data) because Windows 365 depends on these services.
+Other customer data, diagnostic data, or service-generated data may be collected by [Azure Virtual Desktop](/azure/virtual-desktop/data-locations) or [Intune](/mem/intune/protect/privacy-personal-data) because Windows 365 depends on these services.
 
 For more information on where your data is located, see:
 
@@ -68,15 +68,15 @@ When a user is removed from Windows 365, Windows 365 keeps non-alert personal da
 
 For more information on data retention, see [Data retention, deletion, and destruction in Microsoft 365](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
 
-Windows 365 defaults to Microsoft Intune’s standard practice to [audit, export, or delete personal data](/intune/intune-service/protect/privacy-data-audit-export-delete).
+Windows 365 defaults to Microsoft Intune’s standard practice to [audit, export, or delete personal data](/mem/intune/protect/privacy-data-audit-export-delete).
 
 Personal data is processed in the audited compliance boundary of the Intune service under the technical security measures assured through [Microsoft Online Services Terms](https://www.microsoft.com/licensing/docs).
 
 For more information about individual data retention and storage policies of all dependent service, see:
 
 - [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations)
-- [Data collection in Intune](/intune/intune-service/protect/privacy-data-collect)
-- [Data storage and processing in Intune](/intune/intune-service/protect/privacy-data-store-process)
+- [Data collection in Intune](/mem/intune/protect/privacy-data-collect)
+- [Data storage and processing in Intune](/mem/intune/protect/privacy-data-store-process)
 
 ## Isolation and access control
 
