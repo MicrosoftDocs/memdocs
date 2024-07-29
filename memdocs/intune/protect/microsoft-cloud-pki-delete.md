@@ -80,6 +80,7 @@ Permanently remove an issuing certificate from Microsoft Intune. If you're tryin
 1. Select **Revoke** again when prompted to confirm.  
 
     >[!IMPORTANT]
+    > For this action to work, all active leaf certificates belonging to the CA must already be revoked. For more information and steps, see [Revoke active leaf certificates](#revoke-active-leaf-certificates) in this article.
     > This action can't be undone. When you revoke an issuing CA: 
     > - It continues to respond to certificate revocation list (CRL) requests and AIA requests.
     > - It's no longer trusted to the relying parties performing a trust chain operation.
@@ -146,7 +147,7 @@ When trying to revoke an issuing CA, it's important to revoke all of its active 
 <!-- alternate if no repo
 You can use the following Powershell script to revoke all leaf certificates belonging to a CA.  --->
 
-You can use the sample PowerShell script belo to revoke all leaf certificates belonging to a CA.  
+You can use the sample PowerShell script below to revoke all leaf certificates belonging to a CA.  
 
  >[!CAUTION]
  > Use this script with caution. You can't undo the revoke action for any of the leaf certificates.
