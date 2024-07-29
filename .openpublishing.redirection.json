@@ -2604,6 +2604,26 @@
       "source_path": "memdocs/configmgr/core/clients/manage/monitor-windows-analytics.md",
       "redirect_url": "/mem/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/troubleshooting.md",
+      "redirect_url": "/autopilot/troubleshoot-faq.yml",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/troubleshooting-device-enrollment.md",
+      "redirect_url": "/autopilot/troubleshoot-faq.yml",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/troubleshooting-oobe.md",
+      "redirect_url": "/autopilot/troubleshoot-faq.yml",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/troubleshooting-aad-join.md",
+      "redirect_url": "/autopilot/troubleshoot-faq.yml",
+      "redirect_document_id": false
     }
   ]
 }
