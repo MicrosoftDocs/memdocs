@@ -48,7 +48,8 @@ For a user to use Device query, you must assign the **Managed Devices** - **Quer
 
 To use Device query, devices must be Intune managed and corporate owned.
 
-Note: Device query is currently not supported in Government Community Cloud (GCC) High. 
+> [!NOTE]
+> Device query is currently not supported in Government Community Cloud (GCC) High. 
 
 ## Supported platforms
 
