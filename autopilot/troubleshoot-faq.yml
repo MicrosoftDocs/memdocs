@@ -27,7 +27,6 @@ summary: |
 sections:
   - name: Windows Autopilot troubleshooting overview
     questions:
-
       - question: |
           What concepts should be understood when troubleshooting Windows Autopilot?
         answer: |
@@ -118,10 +117,8 @@ sections:
 
   - name: Troubleshoot Windows Autopilot device import and enrollment
     questions:
-
       - question: |
           Why is error code "0x80180014" occurring when trying to re-enroll a device that has previously enrolled?
-
         answer: |
           Error code **0x80180014** can occur under either of the following scenarios:
 
@@ -177,7 +174,6 @@ sections:
 
       - question: |
           When trying to import a CSV file with a device hardware hash, why does nothing happen when selecting Import ?
-
         answer: |
           This issue usually occurs because the device hash in the CSV file is incorrectly formatted. The issue can be confirmed by running a network trace while the issue occurs. If an error **400** occurs in the network trace with the message body of
 
@@ -227,7 +223,6 @@ sections:
 
       - question: |
           Why is the Windows Autopilot profile not applied after a hardware change occurred on a device?
-
         answer: |
           When a hardware change occurs on a device, the Windows Autopilot profiles isn't applied if a device is reimaged to a version of Windows prior to one of the following Windows versions:
 
@@ -250,7 +245,6 @@ sections:
 
       - question: |
           Why is the join type for a device showing as "Microsoft Entra registered" instead of "Microsoft Entra joined"?
-
         answer: |
           This issue occurs if the device was previously registered in Microsoft Entra ID before it was joined to Microsoft Entra ID. The device could've registered in Microsoft Entra ID via something like a [Workplace join](/entra/identity/devices/concept-device-registration). If the Microsoft Entra ID registered device isn't deleted from Microsoft Entra ID before it's joined to Microsoft Entra ID, then the previous trust type is retained in the record. Joining an existing Microsoft Entra registered device to Microsoft Entra ID results in the Windows Autopilot device showing as **Microsoft Entra registered** instead of **Microsoft Entra joined**.
 
@@ -258,7 +252,6 @@ sections:
 
       - question: |
           Why is enrollment in Microsoft Intune or a non-Microsoft MDM solution failing with an error code "80180018"?
-
         answer: |
           To troubleshoot enrollment issues in Microsoft Intune such as the error code **80180018** in the **Something went wrong** error page, see [Troubleshooting Windows device enrollment errors in Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors). Common issues can include:
 
@@ -267,7 +260,6 @@ sections:
 
       - question: |
           Why does Windows Autopilot Reset fail immediately with an error?
-
         answer: |
           See [Troubleshoot Autopilot Reset](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) for more help if Autopilot Reset fails immediately with the error:
 
@@ -276,7 +268,6 @@ sections:
 
   - name: Troubleshoot Windows out-of-box (OOBE) issues during Windows Autopilot
     questions:
-
       - question: |
           Why is the Windows out-of-box experience (OOBE) not running as expected during?
         answer: |
@@ -296,7 +287,6 @@ sections:
 
   - name: Troubleshoot Microsoft Entra join issues
     questions:
-
       - question: |
           What is the most common issue joining a device to Microsoft Entra ID?
         answer: |
@@ -311,6 +301,7 @@ sections:
           Why did deleting a device's object in Microsoft Entra ID cause the device to not be able to join Microsoft Entra ID any longer?
         answer: |
           A Microsoft Entra device is created upon import. It's important this object isn't deleted. The object acts as Windows Autopilot's anchor in Microsoft Entra ID for group membership and targeting, including the profile. Deleting it might lead to Microsoft Entra join errors. If this object is deleted, the issue can be fixed by deleting and reimporting the device as a Windows Autopilot device. Deleting and reimporting the device as a Windows Autopilot device will recreate the associated object in Microsoft Entra ID.
+
 additionalContent: |
     ## Related content
 
