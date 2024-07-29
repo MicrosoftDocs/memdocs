@@ -2672,7 +2672,7 @@
     },
     {
       "source_path": "memdocs/analytics/index.yml",
-      "redirect_url": "/intune/analytics/index",
+      "redirect_url": "/intune/analytics/",
       "redirect_document_id": true
     },
     {
@@ -2862,7 +2862,7 @@
     },
     {
       "source_path": "memdocs/configmgr/apps/index.yml",
-      "redirect_url": "/intune/configmgr/apps/index",
+      "redirect_url": "/intune/configmgr/apps/",
       "redirect_document_id": true
     },
     {
@@ -2972,7 +2972,7 @@
     },
     {
       "source_path": "memdocs/configmgr/cloud-attach/index.yml",
-      "redirect_url": "/intune/configmgr/cloud-attach/index",
+      "redirect_url": "/intune/configmgr/cloud-attach/",
       "redirect_document_id": true
     },
     {
@@ -3027,7 +3027,7 @@
     },
     {
       "source_path": "memdocs/configmgr/comanage/index.yml",
-      "redirect_url": "/intune/configmgr/comanage/index",
+      "redirect_url": "/intune/configmgr/comanage/",
       "redirect_document_id": true
     },
     {
@@ -3182,7 +3182,7 @@
     },
     {
       "source_path": "memdocs/configmgr/compliance/index.yml",
-      "redirect_url": "/intune/configmgr/compliance/index",
+      "redirect_url": "/intune/configmgr/compliance/",
       "redirect_document_id": true
     },
     {
@@ -4307,7 +4307,7 @@
     },
     {
       "source_path": "memdocs/configmgr/core/index.yml",
-      "redirect_url": "/intune/configmgr/core/index",
+      "redirect_url": "/intune/configmgr/core/",
       "redirect_document_id": true
     },
     {
@@ -6167,7 +6167,7 @@
     },
     {
       "source_path": "memdocs/configmgr/desktop-analytics/index.yml",
-      "redirect_url": "/intune/configmgr/desktop-analytics/index",
+      "redirect_url": "/intune/configmgr/desktop-analytics/",
       "redirect_document_id": true
     },
     {
@@ -6232,7 +6232,7 @@
     },
     {
       "source_path": "memdocs/configmgr/develop/adminservice/index.yml",
-      "redirect_url": "/intune/configmgr/develop/adminservice/index",
+      "redirect_url": "/intune/configmgr/develop/adminservice/",
       "redirect_document_id": true
     },
     {
@@ -7857,7 +7857,7 @@
     },
     {
       "source_path": "memdocs/configmgr/develop/index.yml",
-      "redirect_url": "/intune/configmgr/develop/index",
+      "redirect_url": "/intune/configmgr/develop/",
       "redirect_document_id": true
     },
     {
@@ -14352,12 +14352,12 @@
     },
     {
       "source_path": "memdocs/configmgr/hotfix/index.yml",
-      "redirect_url": "/intune/configmgr/hotfix/index",
+      "redirect_url": "/intune/configmgr/hotfix/",
       "redirect_document_id": true
     },
     {
       "source_path": "memdocs/configmgr/index.yml",
-      "redirect_url": "/intune/configmgr/index",
+      "redirect_url": "/intune/configmgr/",
       "redirect_document_id": true
     },
     {
@@ -14432,7 +14432,7 @@
     },
     {
       "source_path": "memdocs/configmgr/mdm/index.yml",
-      "redirect_url": "/intune/configmgr/mdm/index",
+      "redirect_url": "/intune/configmgr/mdm/",
       "redirect_document_id": true
     },
     {
@@ -14462,7 +14462,7 @@
     },
     {
       "source_path": "memdocs/configmgr/mdt/index.yml",
-      "redirect_url": "/intune/configmgr/mdt/index",
+      "redirect_url": "/intune/configmgr/mdt/",
       "redirect_document_id": true
     },
     {
@@ -14817,7 +14817,7 @@
     },
     {
       "source_path": "memdocs/configmgr/osd/index.yml",
-      "redirect_url": "/intune/configmgr/osd/index",
+      "redirect_url": "/intune/configmgr/osd/",
       "redirect_document_id": true
     },
     {
@@ -15127,7 +15127,7 @@
     },
     {
       "source_path": "memdocs/configmgr/protect/index.yml",
-      "redirect_url": "/intune/configmgr/protect/index",
+      "redirect_url": "/intune/configmgr/protect/",
       "redirect_document_id": true
     },
     {
@@ -15202,7 +15202,7 @@
     },
     {
       "source_path": "memdocs/configmgr/security/index.yml",
-      "redirect_url": "/intune/configmgr/security/index",
+      "redirect_url": "/intune/configmgr/security/",
       "redirect_document_id": true
     },
     {
@@ -15352,7 +15352,7 @@
     },
     {
       "source_path": "memdocs/configmgr/sum/index.yml",
-      "redirect_url": "/intune/configmgr/sum/index",
+      "redirect_url": "/intune/configmgr/sum/",
       "redirect_document_id": true
     },
     {
@@ -15507,7 +15507,7 @@
     },
     {
       "source_path": "memdocs/configmgr/tenant-attach/index.yml",
-      "redirect_url": "/intune/configmgr/tenant-attach/index",
+      "redirect_url": "/intune/configmgr/tenant-attach/",
       "redirect_document_id": true
     },
     {
@@ -15587,7 +15587,7 @@
     },
     {
       "source_path": "memdocs/index.yml",
-      "redirect_url": "/intune/index",
+      "redirect_url": "/intune/",
       "redirect_document_id": true
     },
     {
@@ -17662,7 +17662,7 @@
     },
     {
       "source_path": "memdocs/intune/index.yml",
-      "redirect_url": "/intune/intune-service/index",
+      "redirect_url": "/intune/intune-service/",
       "redirect_document_id": true
     },
     {
@@ -17763,7 +17763,7 @@
     {
       "source_path": "memdocs/intune/industry/education/tutorial-school-deployment/introduction.md",
       "redirect_url": "/intune/intune-service/industry/education/tutorial-school-deployment/introduction",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/industry/education/tutorial-school-deployment/manage-overview.md",
@@ -19097,7 +19097,7 @@
     },
     {
       "source_path": "memdocs/intune/user-help/index.yml",
-      "redirect_url": "/intune/intune-service/user-help/index",
+      "redirect_url": "/intune/intune-service/user-help/",
       "redirect_document_id": true
     },
     {
