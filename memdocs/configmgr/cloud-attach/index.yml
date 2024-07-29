@@ -1,0 +1,57 @@
+### YamlMime:Landing
+
+title: Cloud attach documentation
+summary: Cloud attach your Configuration Manager environment to extend its capabilities.
+
+metadata:
+  title: Cloud attach documentation
+  titleSuffix: Configuration Manager
+  description: Cloud attach your Configuration Manager environment to extend its capabilities.
+  ms.subservice: core-infra
+  ms.service: configuration-manager
+  ms.topic: landing-page
+  author: banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  - title: About cloud attach
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: What is cloud attach
+            url: overview.md
+      - linkListType: deploy
+        links:
+          - text: Enable cloud attach
+            url: enable.md
+
+# Card
+  - title: Cloud attach features
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Endpoint analytics
+            url: ../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+          - text: Co-management
+            url: ../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+          - text: Tenant attach
+            url: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+
+
+ # Card
+  - title: Use cloud attach features
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Run scripts on uploaded devices
+            url: ../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+          - text: Display the work from anywhere report
+            url: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+          - text: Monitor co-management
+            url: ../comanage/how-to-monitor.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json            
+         

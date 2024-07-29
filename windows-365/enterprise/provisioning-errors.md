@@ -97,7 +97,7 @@ If Intune enrollment is failing, make sure that:
 - All of the required Intune endpoints are available on the vNet of your Cloud PCs.
 - There are no MDM enrollment restrictions on the tenant. Windows corporate device enrollment is allowed in custom and default policies.
 - The Intune tenant is active and healthy.
-- If co-managing Cloud PCs with Intune and Configuration Manager, ensure that the Cloud PC OU isn't targeted for client push installation. Instead deploy the Configuration Manager agent from Intune. For more information, see Configuration Manager [client installation methods](/intune/configmgr/core/clients/deploy/plan/client-installation-methods#microsoft-intune-mdm-installation).
+- If co-managing Cloud PCs with Intune and Configuration Manager, ensure that the Cloud PC OU isn't targeted for client push installation. Instead deploy the Configuration Manager agent from Intune. For more information, see Configuration Manager [client installation methods](/mem/configmgr/core/clients/deploy/plan/client-installation-methods#microsoft-intune-mdm-installation).
 
 **Suggested test**: Attempt an Intune enrollment using a test device or VM.
 

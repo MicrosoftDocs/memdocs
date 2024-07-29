@@ -1,0 +1,50 @@
+items:
+- name: MDM documentation
+  href: index.yml
+- name: On-premises MDM
+  items:
+  - name: What is on-premises MDM
+    href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+  - name: Plan for on-premises MDM
+    href: plan-design/plan-on-premises-mdm.md
+  - name: Setup
+    items:
+    - name: Install on-premises roles
+      href: get-started/install-site-system-roles-for-on-premises-mdm.md
+    - name: Set up certificates
+      href: get-started/set-up-certificates-on-premises-mdm.md
+    - name: Set up for enrollment
+      href: get-started/set-up-device-enrollment-on-premises-mdm.md
+  - name: Enroll devices
+    items:
+    - name: Enrollment overview
+      href: deploy-use/enroll-devices-on-premises-mdm.md
+    - name: User enrollment
+      href: deploy-use/user-enroll-devices-on-premises-mdm.md
+    - name: Bulk enrollment
+      href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
+  - name: Manage devices and protect data
+    href: deploy-use/wipe-lock-reset-devices.md
+  - name: Manage applications
+    href: deploy-use/management-tasks-applications.md
+  - name: Manage configuration settings
+    href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
+  - name: Manage resource access
+    items:
+    - name: Create PFX certificate profiles
+      href: deploy-use/create-pfx-certificate-profiles.md
+    - name: Import PFX certificate profiles
+      href: deploy-use/import-pfx-certificate-profiles.md
+    - name: Wi-Fi profiles
+      href: ../protect/deploy-use/create-wifi-profiles.md?toc=/mem/configmgr/mdm/toc.json&bc=/mem/configmgr/mdm/breadcrumb/toc.json
+    - name: VPN profiles
+      href: ../protect/deploy-use/vpn-profiles.md?toc=/mem/configmgr/mdm/toc.json&bc=/mem/configmgr/mdm/breadcrumb/toc.json
+- name: Exchange Server connector
+  items:
+    - name: Device management with Exchange
+      href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+    - name: Install the Exchange connector
+      href: deploy-use/install-configure-exchange-connector.md
+- name: What happened to hybrid MDM?
+  href: understand/what-happened-to-hybrid.md
+  

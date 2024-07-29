@@ -28,7 +28,7 @@ The most common issue joining a device to Microsoft Entra ID is related to Micro
 
 ## Maximum number of devices
 
-Errors can also happen if the user exceeds the [number of devices](/intune/intune-service/enrollment/device-limit-intune-azure) that they're allowed to join. This limit is configured in Microsoft Entra ID.
+Errors can also happen if the user exceeds the [number of devices](/mem/intune/enrollment/device-limit-intune-azure) that they're allowed to join. This limit is configured in Microsoft Entra ID.
 
 ## Deleted objects
 

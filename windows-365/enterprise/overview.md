@@ -34,7 +34,7 @@ ms.collection:
 
 Windows 365 Enterprise is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. It provides the productivity, security, and collaboration benefits of Microsoft 365. Windows 365 Enterprise uses:
 
-- [Microsoft Intune](/intune/) to manage the Cloud PCs.
+- [Microsoft Intune](/mem/) to manage the Cloud PCs.
 - Microsoft Entra ID for identity and access control.
 - Azure Virtual Desktop for remote connectivity.
 
