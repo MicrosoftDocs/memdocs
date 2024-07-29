@@ -15,7 +15,7 @@
       "template_folder": "_themes"
     },
     {
-      "docset_name": "intune",
+      "docset_name": "memdocs",
       "build_source_folder": "intune",
       "build_output_subfolder": "intune",
       "locale": "en-us",
