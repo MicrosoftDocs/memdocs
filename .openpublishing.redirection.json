@@ -17763,7 +17763,7 @@
     {
       "source_path": "memdocs/intune/industry/education/tutorial-school-deployment/introduction.md",
       "redirect_url": "/intune/intune-service/industry/education/tutorial-school-deployment/introduction",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/industry/education/tutorial-school-deployment/manage-overview.md",
