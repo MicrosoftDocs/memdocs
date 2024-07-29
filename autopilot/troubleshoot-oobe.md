@@ -24,7 +24,7 @@ When the out-of-box-experience (OOBE) includes unexpected Autopilot behavior, it
 
 > [!NOTE]
 >
-> With Windows 11, additional detailed troubleshooting information about the Autopilot provisioning process can be enabled. The [Windows Autopilot diagnostics page](whats-new.md#windows-autopilot-diagnostics-page) provides IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. This feature can be enabled by going to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status) and selecting **Yes** to **Allow users to collect logs about installation errors**. This feature is currently supported for commercial OOBE, and Autopilot user-driven mode.
+> With Windows 11, additional detailed troubleshooting information about the Autopilot provisioning process can be enabled. The [Windows Autopilot diagnostics page](whats-new.md#windows-autopilot-diagnostics-page) provides IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. This feature can be enabled by going to the [ESP profile](/intune/intune-service/enrollment/windows-enrollment-status) and selecting **Yes** to **Allow users to collect logs about installation errors**. This feature is currently supported for commercial OOBE, and Autopilot user-driven mode.
 
 ## Can't connect to MDM terms of use error
 

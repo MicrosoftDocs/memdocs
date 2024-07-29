@@ -46,7 +46,7 @@ To ensure that the device can run a Windows Autopilot deployment after a reset, 
 
 1. [Manually register devices with Windows Autopilot](../../add-devices.md): Manually registering a device includes manually registering devices into Intune as an Autopilot device via the hardware hash. The hardware hash of a device can be collected via one of the following methods:
 
-   - [Configuration Manager](/mem/configmgr/comanage/how-to-prepare-Win10#windows-autopilot)
+   - [Configuration Manager](/intune/configmgr/comanage/how-to-prepare-Win10#windows-autopilot)
    - [PowerShell script](../../add-devices.md#powershell)
    - [Diagnostics page hash export](../../add-devices.md#diagnostics-page-hash-export)
    - [Desktop hash export](../../add-devices.md#desktop-hash-export)

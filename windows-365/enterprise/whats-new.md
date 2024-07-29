@@ -74,7 +74,7 @@ All of the remaining Windows 365 Cloud PC gallery images with Microsoft 365 appl
 
 ### Updated default settings for Windows 365 security baselines<!--49685126-->
 
-Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/mem/intune/protect/security-baseline-settings-windows-365).
+Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/intune/intune-service/protect/security-baseline-settings-windows-365).
 
 <!-- ########################## -->
 ## Week of July 15, 2024
@@ -220,7 +220,7 @@ The **Cloud PCs that aren't available report** has moved out of preview and into
 
 #### Intune scope tags (preview)<!--48907552-->
 
-Windows 365 now supports [Intune scope tags](/mem/intune/fundamentals/scope-tags). For more information, see [Scope tags](role-based-access.md#scope-tags).
+Windows 365 now supports [Intune scope tags](/intune/intune-service/fundamentals/scope-tags). For more information, see [Scope tags](role-based-access.md#scope-tags).
 
 <!-- ########################## -->
 ## Week of April 10, 2024
@@ -1684,7 +1684,7 @@ A Cloud PC’s name is now appended to the network interface name within the Azu
 
 #### New remote action: Remote Help<!--38310389-->
 
-The [Remote Help remote action](/mem/intune/remote-actions/remote-help) (in the Microsoft Intune admin center) lets admins start a remote session into an end user’s Cloud PC.
+The [Remote Help remote action](/intune/intune-service/remote-actions/remote-help) (in the Microsoft Intune admin center) lets admins start a remote session into an end user’s Cloud PC.
 
 <!-- ########################## -->
 ## Week of February 28, 2022 (Service release 2202)
@@ -1745,7 +1745,7 @@ The new details for Windows 365 Cloud PCs include the following registry data:
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
 
-To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/intune/intune-service/remote-actions/collect-diagnostics).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning

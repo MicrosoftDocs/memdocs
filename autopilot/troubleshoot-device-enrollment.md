@@ -41,7 +41,7 @@ This change impacts all Autopilot deployments that use the self-deployment or pr
 
 To redeploy the device through Autopilot:
 
-1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Intune admin center](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-admin-center).
+1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Intune admin center](/intune/intune-service/remote-actions/devices-wipe#delete-devices-from-the-intune-admin-center).
 1. Redeploy the Autopilot deployment profile.
 
 ### Cause B for error code 0x80180014

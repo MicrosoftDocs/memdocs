@@ -78,7 +78,7 @@ If you choose to provision Microsoft Entra hybrid joined Cloud PCs, then the fol
 - User accounts that are assigned Cloud PCs must have a synced identity available in both Active Directory and Microsoft Entra ID.
 
 > [!NOTE]
-> For the user account used to join the Cloud PCs to the Active Directory Domain Services, make sure to set up appropriate delegation following the instructions in [Increase the computer account limit in the Organizational Unit](/mem/autopilot/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit).
+> For the user account used to join the Cloud PCs to the Active Directory Domain Services, make sure to set up appropriate delegation following the instructions in [Increase the computer account limit in the Organizational Unit](/intune/autopilot/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit).
 
 ## Licensing requirements
 
