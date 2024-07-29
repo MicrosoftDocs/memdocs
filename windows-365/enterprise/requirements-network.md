@@ -89,7 +89,7 @@ You must allow traffic in your network configuration to the following service UR
 | Device or service | Network connectivity required URLs and ports | Notes |
 | --- | --- | --- |
 | Physical device | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#remote-desktop-clients) | For Remote Desktop client connectivity and updates. |
-| Microsoft Intune service | [Link](/intune/intune-service/fundamentals/intune-endpoints) | For Intune cloud services like device management, application delivery, and endpoint analytics. |
+| Microsoft Intune service | [Link](/mem/intune/fundamentals/intune-endpoints) | For Intune cloud services like device management, application delivery, and endpoint analytics. |
 | Azure Virtual Desktop session host virtual machine | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#session-host-virtual-machines) | For remote connectivity between Cloud PCs and the backend Azure Virtual Desktop service. |
 | Windows 365 service | [Link](#windows-365-service) | For provisioning and health checks. |
 
@@ -126,9 +126,9 @@ You must allow traffic in your Azure network configuration to:
 
 All endpoints connect over port 443 unless specified otherwise.
 
-- GCC: [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints).
+- GCC: [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
 - GCC: [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list).
-- GCCH: [Microsoft Intune network endpoints for US government deployments](/intune/intune-service/fundamentals/intune-us-government-endpoints).
+- GCCH: [Microsoft Intune network endpoints for US government deployments](/mem/intune/fundamentals/intune-us-government-endpoints).
 - GCCH: [Required URLs for Azure Virtual Desktop for US government deployments](/azure/virtual-desktop/safe-url-list?tabs=azure-for-us-government).
 
 #### Cloud PC required URLs

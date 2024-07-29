@@ -50,7 +50,7 @@ You can change these defaults by following these steps:
     - **Language and region**: Sets the display language, time/date formats, and automatically installs any [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-language-fod) like text-to-speech and speech recognition. If the user signs in and doesn't see the correct language, [reset](remotely-manage-business-cloud-pcs.md) the Cloud PC.
     - **Enroll new Cloud PCs in Intune**: Select this option to automatically enroll new Cloud PCs in Intune. This option is only visible to admin accounts that have:
         - An Intune license subscription. For more information, see [Microsoft Intune licensing]( /mem/intune/fundamentals/licenses).
-        - [Set up Intune](/intune/intune-service/fundamentals/setup-steps) through step 6 (Set the MDM authority).
+        - [Set up Intune](/mem/intune/fundamentals/setup-steps) through step 6 (Set the MDM authority).
 4. Select **Save**.
 
 When single sign-on is modified, it applies to all new and existing Cloud PCs. For all the other options, the option only applies to new Cloud PCs created after the chosen setting was modified. When these settings are changed, they won’t change the operating system, account type, language/region, or Intune enrollment of existing Cloud PCs.
@@ -69,7 +69,7 @@ To change the language settings on an already-created Cloud PC, see [Language pa
 
 ### Enrolling Cloud PCs in Intune
 
-To enroll devices that have already been created, ask your users to follow this [guide for enrollment in Intune](/intune/intune-service/enrollment/quickstart-enroll-windows-device).
+To enroll devices that have already been created, ask your users to follow this [guide for enrollment in Intune](/mem/intune/enrollment/quickstart-enroll-windows-device).
 
 Windows 365 Enterprise-specific features, like custom images and provisioning policies, aren’t available to Windows 365 Business customers, even if Cloud PCs are enrolled in Intune.  
 

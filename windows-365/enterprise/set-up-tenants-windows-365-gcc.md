@@ -33,7 +33,7 @@ ms.collection:
 
 The fastest way to use Windows 365 is to use AADJ, gallery images and the Microsoft Hosted Network option. The instructions on this page are only if you must use either or both:
 
-- **Custom images**. Windows 365 provides optimized gallery images, including [images with Microsoft 365 apps preinstalled](/windows-365/enterprise/device-images). After the gallery image is deployed, Intune can be used for further customization of [common settings](/intune/intune-service/configuration/settings-catalog-common-features) and [application deployment](/intune/intune-service/apps/apps-windows-10-app-deploy). If you must use your existing custom image, for more information, see [add a custom image](./add-device-images.md).
+- **Custom images**. Windows 365 provides optimized gallery images, including [images with Microsoft 365 apps preinstalled](/windows-365/enterprise/device-images). After the gallery image is deployed, Intune can be used for further customization of [common settings](/mem/intune/configuration/settings-catalog-common-features) and [application deployment](/mem/intune/apps/apps-windows-10-app-deploy). If you must use your existing custom image, for more information, see [add a custom image](./add-device-images.md).
 - **Azure Network Connections (ANC)**. ANCs let you provision Cloud PCs that are attached to a virtual network that you manage. Examples include:
     - Azure Virtual Network (VNet).
     - Azure VPN Gateway or a dedicated connection via ExpressRoute.
@@ -108,7 +108,7 @@ Follow these steps to configure tenant mapping using the Windows 365 GCC Setup T
 If you have issues running the Windows 365 GCC Setup Tool:
 
 1. In the same folder where the GCCSetupTool.exe is run, navigate to the **Log** folder and review the `GCCAdminTool.log` file.
-2. If you continue to have issues, [contact support](/intune/get-support#contact-support) and provide the GCCADminTool.log file.
+2. If you continue to have issues, [contact support](/mem/get-support#contact-support) and provide the GCCADminTool.log file.
 
 ### Subsequent use of the GCC Setup Tool
 
