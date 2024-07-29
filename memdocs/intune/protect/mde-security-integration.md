@@ -127,7 +127,7 @@ Security settings management doesn't work on and isn't supported with the follow
 
 > [!IMPORTANT]
 >
-> In some cases, Domain Controllers that run a down level server operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn't happen in your environment, we recommend making sure your domain controllers are neither tagged "MDE-Management" or managed by MDE.
+> In some cases, Domain Controllers can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn't happen in your environment, we recommend making sure your domain controllers are neither tagged "MDE-Management" or managed by MDE.
 
 ### Licensing and subscriptions
 
@@ -515,7 +515,7 @@ Because a Microsoft Entra ID trust is required, domain controllers aren't curren
 
 > [!IMPORTANT]
 >
-> In some cases, Domain Controllers that are run a down level server Operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn't happen in your environment, we recommend making sure your domain controllers are neither tagged "MDE-Management" or managed by MDE.
+> In some cases, Domain Controllers can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn't happen in your environment, we recommend making sure your domain controllers are neither tagged "MDE-Management" or managed by MDE.
 
 ### Server Core installation
 
