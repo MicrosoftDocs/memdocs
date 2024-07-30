@@ -192,7 +192,7 @@ Investigate how the enrollment status page failed while waiting for Configuratio
 - The **Device setup** phase fails while waiting on the task sequence to complete. For more information, see [The task sequence doesn't complete](#the-task-sequence-doesnt-complete).
 
 > [!TIP]
-> For more information on troubleshooting Autopilot, see [Troubleshooting Windows Autopilot overview](/autopilot/troubleshoot-faq#troubleshooting-windows-autopilot-overview).
+> For more information on troubleshooting Autopilot, see [Troubleshooting Windows Autopilot overview](/autopilot/troubleshoot-faq.yml#troubleshooting-windows-autopilot-overview).
 
 ### The client installation doesn't complete
 
