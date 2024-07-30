@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-updates
 ---
 
 # Update rings for Windows 10 and later policy in Intune
