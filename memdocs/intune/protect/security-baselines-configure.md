@@ -27,6 +27,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - ContentEnagagementFY24
+- sub-secure-endpoints
 ---
  
 # Manage security baseline profiles in Microsoft Intune

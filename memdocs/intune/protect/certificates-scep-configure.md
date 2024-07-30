@@ -27,6 +27,7 @@ ms.collection:
 - highpri
 - highseo
 - certificates
+- sub-certificates
 ---
 
 # Configure infrastructure to support SCEP with Intune

@@ -25,6 +25,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-secure-endpoints
 ms.reviewer: mattcall
 
 ---
@@ -97,6 +98,7 @@ To view the report, select a device and then select **Device configuration**, wh
 ![View endpoint security policy details](./media/endpoint-security-manage-devices/view-policy-details.png)
 
 Devices that are managed by Configuration Manager don’t display policy details in the report. To view additional information for these devices, use the Configuration Manager console.
+
 ## Remote actions for devices
 
 Remote actions are actions you can start or apply to a device from the Microsoft Intune admin center. When you view details for a device, you can access remote actions that apply to the device.

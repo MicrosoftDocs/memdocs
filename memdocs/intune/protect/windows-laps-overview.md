@@ -24,6 +24,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-secure-endpoints
 ---
 
 # Microsoft Intune support for Windows LAPS

@@ -28,6 +28,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - conditional-access
+- sub-mtd-apps
 ---
 
 # Integrate Jamf Pro with Microsoft Intune to report device compliance to Microsoft Entra ID

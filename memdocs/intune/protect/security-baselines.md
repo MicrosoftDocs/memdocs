@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- sub-secure-endpoints
 ---
 
 # Use security baselines to help secure Windows devices you manage with Microsoft Intune
