@@ -6,7 +6,7 @@ ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.date: 06/11/2024
+ms.date: 07/30/2024
 ms.reviewer: jubaptis
 manager: aaroncz
 ms.collection:
@@ -22,7 +22,7 @@ appliesto:
 
 The following table displays support information for the Windows Autopilot program.
 
-Before contacting the following resources listed for Windows Autopilot-related issues, check the [Windows Autopilot FAQ](autopilot-faq.yml).
+Before contacting the following resources listed for Windows Autopilot-related issues, check the [Windows Autopilot FAQ](faq.yml) and [Windows Autopilot troubleshooting FAQ](troubleshooting-faq.yml).
 
 | **Audience**   |   **Support contact**     |
 |------------|---------------------------------------|

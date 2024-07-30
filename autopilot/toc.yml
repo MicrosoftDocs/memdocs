@@ -54,7 +54,7 @@ items:
   - name: Requirements
     href: requirements.md
   - name: FAQ
-    href: autopilot-faq.yml
+    href: faq.yml
   - name: Troubleshooting FAQ
     href: troubleshooting-faq.yml
   - name: Known issues
