@@ -207,5 +207,5 @@ The following articles are tutorials on configuring and assigning a Windows Auto
 
 ## Related content
 
-- [How are Windows Autopilot device profiles downloaded?](troubleshoot-faq.yml#how-are-windows-autopilot-device-profiles-downloaded-)
+- [How are Windows Autopilot device profiles downloaded?](troubleshooting-faq.yml#how-are-windows-autopilot-device-profiles-downloaded-)
 - [Registering devices](add-devices.md).

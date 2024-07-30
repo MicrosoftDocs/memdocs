@@ -53,6 +53,12 @@ items:
     href: whats-new.md
   - name: Requirements
     href: requirements.md
+  - name: FAQ
+    href: autopilot-faq.yml
+  - name: Troubleshooting FAQ
+    href: troubleshooting-faq.yml
+  - name: Known issues
+    href: known-issues.md
 
   - name: Overview
     items:
@@ -104,21 +110,6 @@ items:
         href: bitlocker.md
       - name: DFCI management
         href: dfci-management.md
-
-      - name: Troubleshoot Windows Autopilot
-        items:
-        - name: Troubleshooting overview
-          href: troubleshooting.md
-        - name: Troubleshoot device enrollment
-          href: troubleshoot-device-enrollment.md
-        - name: Troubleshoot OOBE issues
-          href: troubleshoot-oobe.md
-        - name: Troubleshoot Microsoft Entra join issues
-          href: troubleshoot-aad-join.md
-        - name: Policy conflicts
-          href: policy-conflicts.md
-        - name: Known issues
-          href: known-issues.md
 
   - name: Tutorial
     items:
@@ -270,8 +261,6 @@ items:
         href: deployment-process.md
       - name: Support information
         items:
-          - name: FAQ
-            href: autopilot-faq.yml
           - name: Contacts
             href: autopilot-support.md
           - name: Registration authorization

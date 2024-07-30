@@ -225,7 +225,7 @@ To resolve this error, use one of the following work around methods:
 - Delete the device record in Intune, and then redeploy the device so that it reruns the Autopilot deployment. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
 - Remove the device enrollment restriction for **Windows (MDM)** personally owned devices. For more information, see [Set enrollment restrictions in Microsoft Intune](/mem/intune/enrollment/enrollment-restrictions-set).<!-- MEMDocs #2748 -->
 
-For more information on this issue, see [Troubleshooting Windows Autopilot device import and enrollment](troubleshoot-faq.yml#troubleshooting-windows-autopilot-device-import-and-enrollment).
+For more information on this issue, see [Troubleshooting Windows Autopilot device import and enrollment](troubleshooting-faq.yml#troubleshooting-windows-autopilot-device-import-and-enrollment).
 
 ### A non-assigned user can sign in when using user-driven mode with Active Directory Federation Services (ADFS)
 
@@ -253,7 +253,7 @@ Confirm that all of the information is correct in the registry key:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot`
 
-For more information, see [Where are the Windows Autopilot profile settings received from the Windows Autopilot deployment service stored?](troubleshoot-faq.yml#where-are-the-windows-autopilot-profile-settings-received-from-the-windows-autopilot-deployment-service-stored-).
+For more information, see [Where are the Windows Autopilot profile settings received from the Windows Autopilot deployment service stored?](troubleshooting-faq.yml#where-are-the-windows-autopilot-profile-settings-received-from-the-windows-autopilot-deployment-service-stored-).
 
 ### Windows Autopilot user-driven hybrid Microsoft Entra deployments don't grant users Administrator rights even when specified in the Windows Autopilot profile
 
@@ -329,4 +329,4 @@ Using PPKGs in combination with Windows Autopilot isn't recommended.
 ## Related content
 
 - [Collect MDM logs](/windows/client-management/mdm-collect-logs).
-- [Troubleshooting Windows Autopilot overview](troubleshoot-faq.yml#troubleshooting-windows-autopilot-overview).
+- [Troubleshooting Windows Autopilot overview](troubleshooting-faq.yml#troubleshooting-windows-autopilot-overview).

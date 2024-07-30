@@ -2607,27 +2607,27 @@
     },
     {
       "source_path": "autopilot/troubleshooting.md",
-      "redirect_url": "/autopilot/troubleshoot-faq#troubleshooting-windows-autopilot-overview",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/troubleshoot-device-enrollment.md",
-      "redirect_url": "/autopilot/troubleshoot-faq#troubleshooting-windows-autopilot-device-import-and-enrollment",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-device-import-and-enrollment",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/troubleshoot-oobe.md",
-      "redirect_url": "/autopilot/troubleshoot-faq#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/troubleshoot-aad-join.md",
-      "redirect_url": "/autopilot/troubleshoot-faq#troubleshooting-microsoft-entra-join-issues",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-microsoft-entra-join-issues",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/policy-conflicts.md",
-      "redirect_url": "/autopilot/troubleshoot-faq#troubleshooting-policy-conflicts-with-windows-autopilot",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-policy-conflicts-with-windows-autopilot",
       "redirect_document_id": false
     }
   ]

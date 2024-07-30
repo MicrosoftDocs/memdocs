@@ -89,7 +89,7 @@ Key activities to perform when troubleshooting are:
 
 - Review configuration: Has Microsoft Entra ID and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](requirements.md?tabs=configuration)?
 - Check network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](requirements.md?tabs=networking)?
-- Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-faq.yml#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
+- Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshooting-faq.yml#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
 - Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](troubleshoot-aad-join.md)?
 - MDM enrollment issues: IS the device able to [enroll in Microsoft Intune](troubleshoot-device-enrollment.md) (or an equivalent MDM service)?
 - Review logs that are automatically collected upon Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics). <!--1895390-->
@@ -99,7 +99,7 @@ Key activities to perform when troubleshooting are:
 See the following articles for help with troubleshooting specific issues:
 
 - [Troubleshoot device enrollment](troubleshoot-device-enrollment.md).
-- [Troubleshooting Windows out-of-box experience (OOBE) issues during Windows Autopilot](troubleshoot-faq.yml#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot).
+- [Troubleshooting Windows out-of-box experience (OOBE) issues during Windows Autopilot](troubleshooting-faq.yml#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot).
 - [Troubleshoot Microsoft Entra join issues](troubleshoot-aad-join.md).
 - [Policy conflicts](policy-conflicts.md).
 - [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
