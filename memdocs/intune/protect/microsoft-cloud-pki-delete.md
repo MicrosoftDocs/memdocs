@@ -154,7 +154,7 @@ You can use the sample PowerShell script in this section to revoke all leaf cert
 - The script has an optional configuration you can include that sends a confirmation prompt for each certificate. The section in the script is commented-out in the sample so add it back in if you want to run that part.  
 
 #### Important  
-Use this script with caution.  You can't undo the revoke action for any of the leaf certificates.
+Use this script with caution. You can't undo the revoke action for any of the leaf certificates.
   - Review the sample script before running it to better understand how it works, and to consider how it impacts your tenant.
   - Run the sample script in a nonproduction or test tenant account first. 
 
