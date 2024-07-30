@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 07/23/2024
+ms.date: 07/30/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,18 +58,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 -->
 
 <!-- ***********************************************-->
-
-## Microsoft Intune Suite
-
-### New actions for Microsoft Cloud PKI<!-- 24231040 -->
-
-The following actions will be added to Microsoft Cloud PKI:
-
-- Delete: Delete a certification authority (CA).
-- Pause: Temporarily suspend use of a CA.
-- Revoke a CA certificate: Revoke a CA certificate.
-
-You’ll be able to access all new actions in the Microsoft Intune admin center and Graph API.
 
 ## App management
 

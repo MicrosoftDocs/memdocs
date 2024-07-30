@@ -28,6 +28,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - certificates
+- sub-certificates
 ---
 # Set up the Certificate Connector for Microsoft Intune to support the DigiCert PKI Platform
 

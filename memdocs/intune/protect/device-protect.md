@@ -28,6 +28,7 @@ ms.custom: intune-classic
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-secure-endpoints
 ---
 
 # Protect data and devices with Microsoft Intune

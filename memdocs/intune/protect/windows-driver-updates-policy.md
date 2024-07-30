@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - ContentEnagagementFY24
+- sub-updates
 ---
 
 # Manage policy for Windows Driver updates with Microsoft Intune

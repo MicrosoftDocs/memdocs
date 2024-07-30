@@ -23,6 +23,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - certificates
+- sub-certificates
 ---
 
 # Use APIs to add third-party CAs for SCEP to Intune

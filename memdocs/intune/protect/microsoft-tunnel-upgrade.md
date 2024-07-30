@@ -23,6 +23,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-infrastructure
 ---
 
 # Upgrade Microsoft Tunnel for Microsoft Intune

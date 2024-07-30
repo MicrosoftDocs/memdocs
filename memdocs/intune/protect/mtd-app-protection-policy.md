@@ -28,6 +28,7 @@ ms.custom:
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Create Mobile Threat Defense app protection policy with Intune

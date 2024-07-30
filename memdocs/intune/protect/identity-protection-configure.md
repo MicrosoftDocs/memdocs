@@ -25,6 +25,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - identity-protection
+- sub-secure-endpoints
 ---
 
 # Use identity protection profiles to manage Windows Hello for Business in Microsoft Intune

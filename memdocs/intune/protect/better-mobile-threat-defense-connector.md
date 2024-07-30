@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Better Mobile Threat Defense connector with Intune
@@ -63,7 +64,7 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 
 - Better Mobile Threat Defense subscription
 
-  - For more information, see the [Better Mobile website](https://www.better.mobi/).
+  - For more information, see the Better Mobile website.
 
 ## Sample scenarios
 
