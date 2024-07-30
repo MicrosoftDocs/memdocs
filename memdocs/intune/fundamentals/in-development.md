@@ -61,6 +61,39 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
+### Endpoint Privilege Management support in US GCC High environment <!-- 25230811 -->
+
+Endpoint Privilege Management (EPM) will soon be supported in US Government Community Cloud (GCC) High tenants.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+For more information, see:
+
+- [Endpoint Privilege Management overview](../protect/epm-overview.md)
+- [Intune US Government service description](../fundamentals/intune-govt-service-description.md)
+
+### Easy creation of Endpoint Privilege Management elevation rules based on support approval requests<!-- 28196775 -->
+
+You’ll soon be able to create Endpoint Privilege Management (EPM) elevation rules directly from a support approval request or from details found in the Elevation report. This new process will replace the need to manually enter details about an elevation and how it should be managed, and supports creation of a new rules policy or adding the new rules to an existing policy.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+For information about using EPM, see [Endpoint Privilege Management overview](../protect/epm-overview.md).
+
+### Resource performance report for physical devices in Advanced Analytics<!-- 12659827 -->
+
+We're introducing a Resource performance report for Windows physical devices in Intune Advanced Analytics. The report will be included as an Intune-add on under Microsoft Intune Suite.
+
+The resource performance scores and insights for physical devices are aimed to help IT admins make CPU/RAM asset management and purchase decisions that improve the user experience while balancing hardware costs.
+
+For more information, see [Microsoft Intune Suite](../fundamentals/intune-add-ons.md).
+
 ### New actions for Microsoft Cloud PKI<!-- 24231040 -->
 
 The following actions will be added to Microsoft Cloud PKI:
@@ -89,7 +122,7 @@ Applies to:
 
 ## Device configuration
 
-### Enhancements to multiple administrative approval <!--  25174473 -->
+### Enhancements to multiple administrative approval <!-- 25174473 -->
 
 Multi administrative approval (MAA) adds the ability to limit application access policies to Windows applications or all non-Windows applications or both. We're adding a new access policy to the multiple administrative approval feature.
 
@@ -223,9 +256,9 @@ To prepare, use a different management method to enroll devices. We recommend ac
 
 ### ACME protocol support for iOS/iPadOS and macOS enrollment<!-- 25140355 -->
 
-As we prepare to support managed device attestation in Intune, we are starting a phased rollout of an infrastructure change for new enrollments that includes support for the *Automated Certificate Management Environment (ACME) protocol*. When new Apple devices enroll, the management profile from Intune will have an ACME certificate instead of a SCEP certificate.  ACME provides better protection than SCEP against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
+As we prepare to support managed device attestation in Intune, we're starting a phased rollout of an infrastructure change for new enrollments that includes support for the *Automated Certificate Management Environment (ACME) protocol*. When new Apple devices enroll, the management profile from Intune will have an ACME certificate instead of a SCEP certificate. ACME provides better protection than SCEP against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
-Existing OS and hardware eligible devices will not get the ACME certificate unless they re-enroll. There will be no change to the end user's enrollment experience, and no changes to the Microsoft Intune admin center. This change only impacts enrollment certificates and has no impact on any device configuration policies.
+Existing OS and hardware eligible devices won't get the ACME certificate unless they re-enroll. There will be no change to the end user's enrollment experience, and no changes to the Microsoft Intune admin center. This change only impacts enrollment certificates and has no impact on any device configuration policies.
 
 ACME will be supported for Apple Automated Device Enrollment, Apple Device Enrollment, and Apple Configurator enrollment methods. Eligible OS versions include:
 
@@ -251,8 +284,8 @@ Applies to:
 
 With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Big Sur) and later.
 
-For more information on this change, see [Plan for change:  Intune is moving to support macOS 13 and later](whats-new#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year).
-
+For more information on this change, see [Plan for change: Intune is moving to support macOS 13 and later](whats-new#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year).
+====
 > [!NOTE]
 > macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
 
@@ -275,14 +308,14 @@ Applies to:
 
 ### 21 Vianet support for Mobile Threat Defense connector support on 21Vianet<!-- 10355489 -->
 
-Intune operated by 21Vianet will soon support Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices for MTD vendors that also have support in that environment.  When an MTD partner is supported and you sign in to a 21Vianet tenant, the supported connectors will be available.
+Intune operated by 21Vianet will soon support Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices for MTD vendors that also have support in that environment. When an MTD partner is supported and you sign in to a 21Vianet tenant, the supported connectors will be available.
 
 Applies to:
 
 - Android
 - iOS/iPadOS
 
-For more information see:
+For more information, see:
 
 - [Intune operated by 21Vianet in China](../fundamentals/china.md)
 - [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md)
@@ -311,7 +344,7 @@ Applies to:
 
 ### Defender for Endpoint security settings support in government cloud environments<!-- 24191406 -->
 
-Customer tenants in US Government Community (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
+Customer tenants in US Government Community Cloud (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
 
 For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
 
