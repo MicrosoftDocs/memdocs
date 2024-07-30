@@ -160,7 +160,7 @@ Use this script with caution.  You can't undo the revoke action for any of the l
 
 The script installs the Microsoft Graph PowerShell module, *Microsoft.Graph*. The device that's running the script must have administrative privileges to successfully install the module. 
 
-The `Connect-MgGraph` command must issued by an administrator with permissions to revoke leaf certificates on the issuing CA.  
+The `Connect-MgGraph` command must be issued by an administrator who has permission to revoke leaf certificates on the issuing CA.  
 
 The CA ID is required to run the script. To find this information in the admin center: 
 
