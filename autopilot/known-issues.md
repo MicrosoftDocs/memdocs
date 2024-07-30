@@ -249,7 +249,11 @@ The services responsible for determining the list of apps that should be blockin
 
 ### That username looks like it belongs to another organization. Try signing in again or start over with a different account
 
-Confirm that all of the information is correct at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot`. For more information, see [Troubleshoot OOBE issues](troubleshoot-oobe.md#registry).
+Confirm that all of the information is correct in the registry key:
+
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot`
+
+For more information, see [Where are the Windows Autopilot profile settings received from the Windows Autopilot deployment service stored?](troubleshoot-faq.yml#where-are-the-windows-autopilot-profile-settings-received-from-the-windows-autopilot-deployment-service-stored-).
 
 ### Windows Autopilot user-driven hybrid Microsoft Entra deployments don't grant users Administrator rights even when specified in the Windows Autopilot profile
 

@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 07/29/2024
+  ms.date: 07/30/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -123,6 +123,7 @@ sections:
           What do the different Event IDs mean in the Windows Autopilot event log entries in Event Viewer?
         answer: |
           The following events might be recorded, depending on the scenario and profile configuration:
+
           | **Event ID** | **Type** | **Message** |**Description** |
           |----------|------|-------------|-------------|
           | **100** | Warning | **Autopilot policy [name] not found.** | This error is typically a temporary problem, while the device is waiting for an Autopilot profile to be downloaded. |
@@ -146,6 +147,7 @@ sections:
           `HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot`
 
           Available registry entries include:
+
           | **Value** | **Description** |
           |-------|-------------|
           | **AadTenantId** | The GUID of the Microsoft Entra tenant the user signed into. The user receives an error if this entry doesn't match the tenant that was used to register the device. |

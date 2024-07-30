@@ -126,4 +126,4 @@ When using Windows Autopilot to deploy in self-deploying mode, the following end
 >
 > Deploying Exchange ActiveSync (EAS) policies using self-deploying mode for kiosk deployments causes autologon functionality to fail.
 
-In case the observed results don't match these expectations, consult the [Windows Autopilot Troubleshooting](troubleshooting.md) documentation.
+In case the observed results don't match these expectations, consult the [Troubleshooting Windows Autopilot overview](troubleshoot-faq.yml#troubleshooting-windows-autopilot-overview) documentation.
