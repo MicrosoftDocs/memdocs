@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 07/30/2024
+  ms.date: 07/31/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -134,10 +134,14 @@ sections:
           | **153** | Info | **AutopilotManager reported the state changed from [original state] to [new state].** | Usually, this message says **ProfileState_Unknown to ProfileState_Available**. This case indicates that a profile was available and downloaded for the device and that the device is ready to deploy using Autopilot. |
           | **160** | Info | **AutopilotRetrieveSettings beginning acquisition.** | This message shows that Autopilot is getting ready to download the needed Autopilot profile settings. |
           | **161** | Info | **AutopilotManager retrieve settings succeeded.** | The Autopilot profile was successfully downloaded. |
-          | **163** | Info | **AutopilotManager determined download isn't required and the device is already provisioned. Clean or reset the device to change this.** | This message indicates that an Autopilot profile is resident on the device; it typically would only be removed by the **Sysprep /Generalize** process. |
+          | **163** | Info | **AutopilotManager determined download isn't required and the device is already provisioned. Clean or reset the device to change this.** | This message indicates that an Autopilot profile is resident on the device. It typically would only be removed by the **Sysprep /Generalize** process. |
           | **164** | Info | **AutopilotManager determined Internet is available to attempt policy download.** | |
           | **171** | Error | **AutopilotManager failed to set TPM identity confirmed. HRESULT=[error code].** | This message indicates an issue performing TPM attestation, needed to complete the self-deploying mode process. |
           | **172** | Error | **AutopilotManager failed to set Autopilot profile as available. HRESULT=[error code].** | This error is typically related to event ID 171. |
+          | **807** |  | **ZtdDeviceIsNotRegistered** | This error indicates that the device isn't registered as a Windows Autopilot device. If the device is registered as a Windows Autopilot device, there might have been a hardware change on the device that caused its HWID to change. Delete the existing Windows Autopilot device object and then re-registering the device might fix the issue. |
+          | **809** |  | **ZtdDeviceHasNoAssignedProfile - Assigned profile does not exist** | The assigned Windows Autopilot profile might have been deleted without getting cleaned up. Assign a different Windows Autopilot profile to the device. |
+          | **815** |  | **ZtdDeviceHasNoAssignedProfile - No profile assigned to the device, and no default profile found in the tenant** | No Windows Autopilot profiles were found assigned to the device. Assign a Windows Autopilot profile to device. |
+          | **908** |  | **SerialNumberMismatch**,**ProductKeyIdMismatch** | There was a hardware mismatch on the device. Reregister the device. |
 
       - question: |
           Where are the Windows Autopilot profile settings received from the Windows Autopilot deployment service stored?

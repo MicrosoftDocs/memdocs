@@ -83,18 +83,21 @@ items:
       href: windows-autopilot-scenarios.md
     - name: Enrollment Status Page
       href: enrollment-status.md
-    - name: Deployment scenarios
-      items:
-      - name: User-driven mode
-        href: user-driven.md
-      - name: Self-deploying mode
-        href: self-deploying.md
-      - name: Windows Autopilot Reset
-        href: windows-autopilot-reset.md
-      - name: Pre-provisioning
-        href: pre-provision.md
-      - name: Support for existing devices
-        href: existing-devices.md
+    - name: Deployment processes
+      href: deployment-process.md
+
+  - name: Deployment scenarios
+    items:
+    - name: User-driven mode
+      href: user-driven.md
+    - name: Self-deploying mode
+      href: self-deploying.md
+    - name: Windows Autopilot Reset
+      href: windows-autopilot-reset.md
+    - name: Pre-provisioning
+      href: pre-provision.md
+    - name: Support for existing devices
+      href: existing-devices.md
 
   - name: How-to guides
     items:
@@ -113,10 +116,13 @@ items:
 
   - name: Tutorial
     items:
+
       - name: Autopilot scenarios
         href: tutorial/autopilot-scenarios.md
+
       - name: Windows Autopilot user-driven mode
         items:
+
         - name: User-driven Microsoft Entra join
           href: tutorial/user-driven/azure-ad-join-workflow.md
           items:
@@ -136,6 +142,7 @@ items:
               href: tutorial/user-driven/azure-ad-join-assign-device-to-user.md
             - name: Step 8 - Deploy the device
               href: tutorial/user-driven/azure-ad-join-deploy-device.md
+
         - name: User-driven Microsoft Entra hybrid join
           href: tutorial/user-driven/hybrid-azure-ad-join-workflow.md
           items:
@@ -159,8 +166,10 @@ items:
               href: tutorial/user-driven/hybrid-azure-ad-join-assign-device-to-user.md
             - name: Step 10 - Deploy the device
               href: tutorial/user-driven/hybrid-azure-ad-join-deploy-device.md
+
       - name: Windows Autopilot for pre-provisioned deployment
         items:
+
         - name: Pre-provisioned Microsoft Entra join
           href: tutorial/pre-provisioning/azure-ad-join-workflow.md
           items:
@@ -182,6 +191,7 @@ items:
               href: tutorial/pre-provisioning/azure-ad-join-technician-flow.md
             - name: Step 9 - User flow
               href: tutorial/pre-provisioning/azure-ad-join-user-flow.md
+
         - name: Pre-provisioned Microsoft Entra hybrid join
           href: tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md
           items:
@@ -207,6 +217,7 @@ items:
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-technician-flow.md
             - name: Step 11 - User flow
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-user-flow.md
+
       - name: Windows Autopilot self-deploying mode
         items:
         - name: Windows Autopilot self-deploying mode
@@ -223,6 +234,7 @@ items:
           href: tutorial/self-deploying/self-deploying-autopilot-profile.md
         - name: Step 6 - Deploy the device
           href: tutorial/self-deploying/self-deploying-deploy-device.md
+
       - name: Windows Autopilot deployment for existing devices
         items:
         - name: Windows Autopilot deployment for existing devices
@@ -247,6 +259,7 @@ items:
           href: tutorial/existing-devices/run-autopilot-task-sequence.md
         - name: Step 10 - Register device for Windows Autopilot
           href: tutorial/existing-devices/register-device.md
+
       - name: Windows Autopilot Reset
         items:
         - name: Windows Autopilot Reset
@@ -255,17 +268,20 @@ items:
           href: tutorial/reset/local-autopilot-reset.md
         - name: Remote Windows Autopilot Reset
           href: tutorial/reset/remote-autopilot-reset.md
-  - name: Reference
+
+  - name: Support information
     items:
-      - name: Deployment processes
-        href: deployment-process.md
-      - name: Support information
-        items:
-          - name: Contacts
-            href: autopilot-support.md
-          - name: Registration authorization
-            href: registration-auth.md
-          - name: Device guidelines
-            href: autopilot-device-guidelines.md
-          - name: Motherboard replacement
-            href: autopilot-motherboard-replacement.md
+    - name: FAQ
+      href: faq.yml
+    - name: Troubleshooting FAQ
+      href: troubleshooting-faq.yml
+    - name: Known issues
+      href: known-issues.md
+    - name: Contacts
+      href: autopilot-support.md
+    - name: Registration authorization
+      href: registration-auth.md
+    - name: Device guidelines
+      href: autopilot-device-guidelines.md
+    - name: Motherboard replacement
+      href: autopilot-motherboard-replacement.md
