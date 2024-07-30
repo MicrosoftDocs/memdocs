@@ -2607,22 +2607,22 @@
     },
     {
       "source_path": "autopilot/troubleshooting.md",
-      "redirect_url": "/autopilot/troubleshoot-faq",
+      "redirect_url": "/autopilot/troubleshoot-faq#windows-autopilot-troubleshooting-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/troubleshoot-device-enrollment.md",
-      "redirect_url": "/autopilot/troubleshoot-faq",
+      "redirect_url": "/autopilot/troubleshoot-faq#windows-autopilot-device-import-and-enrollment-troubleshooting",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/troubleshoot-oobe.md",
-      "redirect_url": "/autopilot/troubleshoot-faq",
+      "redirect_url": "/autopilot/troubleshoot-faq#windows-out-of-box-experience--oobe--issues-during-windows-autopilot-troubleshooting",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/troubleshoot-aad-join.md",
-      "redirect_url": "/autopilot/troubleshoot-faq",
+      "redirect_url": "/autopilot/troubleshoot-faq#microsoft-entra-join-issues-troubleshooting",
       "redirect_document_id": false
     }
   ]
