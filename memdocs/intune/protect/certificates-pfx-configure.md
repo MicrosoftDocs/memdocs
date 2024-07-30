@@ -27,6 +27,8 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - certificates
+- sub-certificates
+- sub-certificates
 ---
 # Configure and use PKCS certificates with Intune
 

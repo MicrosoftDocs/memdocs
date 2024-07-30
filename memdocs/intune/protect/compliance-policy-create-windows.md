@@ -29,6 +29,7 @@ ms.collection:
 - highpri
 - highseo
 - compliance
+- sub-device-compliance
 ---
 
 # Device Compliance settings for Windows 10/11 in Intune

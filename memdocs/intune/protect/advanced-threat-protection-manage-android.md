@@ -25,6 +25,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-secure-endpoints
 ---
 
 # Configure Microsoft Defender for Endpoint web protection on Android devices managed by Intune
