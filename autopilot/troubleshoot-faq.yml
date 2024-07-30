@@ -353,7 +353,7 @@ sections:
   - name: Troubleshooting policy conflicts with Windows Autopilot
     questions:
       - question: |
-          Can any policies conflict with Windows Autopilot working correctly?
+          Can policies conflict with Windows Autopilot working correctly?
         answer: |
           There are a significant number of policy settings available for Windows, including:
 
@@ -380,23 +380,9 @@ sections:
           | **[PreferredAadTenantDomainName](/windows/client-management/mdm/policy-csp-authentication#preferredaadtenantdomainname)** | When this policy is enabled, it adds the preferred domain to **DefaultUser0**, which causes autologon to fail. |
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 additionalContent: |
     ## Related content
 
     - [Windows Autopilot - known issues](known-issues.md).
-    - [Policy conflicts](policy-conflicts.md).
     - [Collect MDM logs](/windows/client-management/mdm-collect-logs).
     - [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).

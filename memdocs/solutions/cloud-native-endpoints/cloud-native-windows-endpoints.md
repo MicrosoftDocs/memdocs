@@ -470,7 +470,7 @@ The following settings in the **Windows security baseline** can cause issues wit
 - Local Policies Security Options\Administrator elevation prompt behavior (default = Prompt for consent on the secure desktop)
 - Standard user elevation prompt behavior (default = Automatically deny elevation requests)
 
-For more information, go to [Windows Autopilot policy conflicts](/autopilot/policy-conflicts).
+For more information, see [Troubleshooting policy conflicts with Windows Autopilot](/autopilot/troubleshoot-faq#troubleshooting-policy-conflicts-with-windows-autopilot).
 
 ### Windows Update for Business
 
