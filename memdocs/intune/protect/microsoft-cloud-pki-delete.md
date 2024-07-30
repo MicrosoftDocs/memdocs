@@ -149,7 +149,7 @@ Use this script with caution.  You can't undo the revoke action for any of the l
   - Review the sample script prior to running it to better understand how it works, and to consider how it will impact your tenant.
   - Run the sample script in a nonproduction or test tenant account first. 
 
-The script installs the Microsoft Graph PowerShell module, *Microsoft.Graph*. The device that's running the script must have administrative privileges to sucessfully install the module. 
+The script installs the Microsoft Graph PowerShell module, *Microsoft.Graph*. The device that's running the script must have administrative privileges to successfully install the module. 
 
 The `Connect-MgGraph` command must be done by an administrator who has permissions to revoke leaf certificates on the issuing CA.  
 
@@ -163,7 +163,7 @@ The CA ID is required to run the script. To find this information in the admin c
 
 #### Sample script  
 
-Run the sample PowerShell script from an administrative workstation. To run it, you must be assigned the **Request the issuing CA ID** permission in Microsoft Intune. 
+Run the sample PowerShell script from an administrative workstation. To run it, you must have Intune permissions to "Read CAs", and "Revoke issued leaf certifcates". 
 
 
 ```powershell
