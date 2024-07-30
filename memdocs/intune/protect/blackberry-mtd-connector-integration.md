@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Connect BlackBerry Protect Mobile MTD connector in Microsoft Intune

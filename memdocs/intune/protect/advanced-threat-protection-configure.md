@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- sub-secure-endpoints
 ---
 
 # Configure Microsoft Defender for Endpoint in Intune

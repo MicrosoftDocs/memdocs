@@ -26,6 +26,7 @@ ms.collection:
 - highpri
 - highseo
 - certificates
+- sub-certificates
 ---
 
 # Create and assign SCEP certificate profiles in Intune
