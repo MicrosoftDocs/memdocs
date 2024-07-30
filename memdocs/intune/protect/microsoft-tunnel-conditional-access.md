@@ -22,6 +22,7 @@ ms.custom: intune-azure, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-infrastructure
 ---
 
 # Use Conditional Access with Microsoft Tunnel in Intune

@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-updates
 ---
 
 # Managed software updates with the settings catalog

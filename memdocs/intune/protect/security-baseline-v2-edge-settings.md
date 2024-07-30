@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-secure-endpoints
 
 zone_pivot_groups: dcv2-edge-baselines
 

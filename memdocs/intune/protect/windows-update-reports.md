@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- sub-updates
 ---
 
 # Windows Update reports for Microsoft Intune
