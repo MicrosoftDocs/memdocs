@@ -78,5 +78,5 @@ ________________________________________________________
 [MEM-6]: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#troubleshoot-windows-wi-fi-profiles
 [MEM-7]: /troubleshoot/mem/intune/troubleshoot-win32-app-install
 [MEM-8]: /troubleshoot/mem/intune/troubleshoot-csp-custom-settings
-[MEM-9]: /autopilot/troubleshoot-faq.yml#troubleshooting-windows-autopilot-overview
+[MEM-9]: /autopilot/troubleshoot-faq#troubleshooting-windows-autopilot-overview
 [MEM-10]: /mem/intune/remote-actions/collect-diagnostics

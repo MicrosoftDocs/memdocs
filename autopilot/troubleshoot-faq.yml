@@ -85,7 +85,7 @@ sections:
 
           - Windows out-of-box experience (OOBE) behavior: Are the [expected OOBE](#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
 
-          - Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](#troubleshoot-microsoft-entra-join-issues)?
+          - Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](#troubleshooting-microsoft-entra-join-issues)?
 
           - MDM enrollment issues: Is the device able to [enroll in Microsoft Intune](#troubleshooting-windows-autopilot-device-import-and-enrollment) or non-Microsoft MDM service?
 
