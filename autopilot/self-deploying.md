@@ -77,7 +77,7 @@ Self-deploying mode uses a device's Trusted Platform Module (TPM) 2.0 hardware t
 >
 > If a self-deploying mode deployment is attempted on a device that doesn't have support for TPM 2.0 or on a virtual machine, the process fails when verifying the device with an **0x800705B4** timeout error. This limitation includes Hyper-V virtual TPMs.
 >
-> See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review other known errors and solutions.
+> See [Windows Autopilot known issues](known-issues.md) and [Troubleshooting Windows Autopilot device import and enrollment](troubleshoot-faq#troubleshooting-windows-autopilot-device-import-and-enrollment) to review other known errors and solutions.
 
 An organization-specific logo and organization name can be displayed during the Autopilot process. To do so, Microsoft Entra Company Branding must be configured with the images and text that need to be displayed. See [Quickstart: Add company branding to your sign-in page in Microsoft Entra ID](/azure/active-directory/fundamentals/customize-branding) for more details.
 
