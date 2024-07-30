@@ -28,6 +28,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-certificates
 ---
 
 # Use derived credentials with Microsoft Intune

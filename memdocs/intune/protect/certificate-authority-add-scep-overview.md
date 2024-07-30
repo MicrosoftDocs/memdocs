@@ -24,6 +24,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - certificates
+- sub-certificates
 ---
 
 # Add partner certification authority in Intune using SCEP

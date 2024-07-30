@@ -29,6 +29,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - conditional-access
+- sub-device-compliance
 ---
 
 # Manually Integrate Jamf Pro with Intune for compliance

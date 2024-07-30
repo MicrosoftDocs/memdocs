@@ -26,6 +26,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - compliance
+- sub-device-compliance
 ---
 
 # Custom compliance discovery scripts for Microsoft Intune
