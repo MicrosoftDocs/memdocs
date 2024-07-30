@@ -48,7 +48,7 @@ In addition to [Windows Autopilot requirements](requirements.md), Windows Autopi
 >
 > - Because the OEM or vendor performs the pre-provisioning process, this process **doesn't require access to an end-user's on-prem domain infrastructure**. The pre-provisioning process is unlike a typical Microsoft Entra hybrid joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected. Instead the domain network is contacted when the device is unboxed on-premises by the end-user.
 >
-> - See [Windows Autopilot known issues](known-issues.md) and [Troubleshooting Windows Autopilot device import and enrollment](troubleshoot-faq#troubleshooting-windows-autopilot-device-import-and-enrollment) to review known issues and their solutions.
+> - See [Windows Autopilot known issues](known-issues.md) and [Troubleshooting Windows Autopilot device import and enrollment](troubleshoot-faq.yml#troubleshooting-windows-autopilot-device-import-and-enrollment) to review known issues and their solutions.
 
 ## Preparation
 
