@@ -341,6 +341,21 @@ Applies to:
 
 ## Device security
 
+### Target Date Time setting for Apple software update enforcement will schedule updates using the local time on devices <!-- 28865232 -->
+
+You will be able to specify the time that OS updates are enforced on devices in their local time zone. For example, configuring an OS update to be enforced at 5pm will schedule the update for 5pm in the device's local time zone. Currently, this setting uses the time zone that the policy is configured.
+
+This change will only apply to new policies that are created in the August 2408 release and later. The **Target Date Time** setting is in the settings catalog at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative Device Management** > Software Update.
+
+In a future release, the **UTC** text will be removed from the **Target Date Time** setting.
+
+For more information on using the settings catalog to configure software updates, see [Managed software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
 ### Defender for Endpoint security settings support in government cloud environments<!-- 24191406 -->
 
 Customer tenants in US Government Community Cloud (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
