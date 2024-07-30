@@ -30,7 +30,7 @@ ms.collection:
 - certificates
 - IntuneSuite
 ---
-# Delete certification authority 
+# Delete Microsoft Cloud PKI certification authority 
 Delete an issuing and root certification authority (CA) from the Microsoft Cloud PKI service in Microsoft Intune. You can use the following actions in the Microsoft Intune admin center to manage certification authorities (CAs) in your tenant: 
 
 * Pause CA - Pause the CA to stop use of it. 
