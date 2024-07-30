@@ -31,7 +31,7 @@ ms.collection:
 - IntuneSuite
 ---
 # Delete certification authority 
-Delete an issuing and root certification authority (CA) from the Microsoft Cloud PKI service in Microsoft Intune. You can use the following actions in the Microsoft Intune admin center to manage existing CAs in you tenant: 
+Delete an issuing and root certification authority (CA) from the Microsoft Cloud PKI service in Microsoft Intune. You can use the following actions in the Microsoft Intune admin center to manage existing CAs in your tenant: 
 
 * Pause CA - Pause the CA to stop use of it. 
 * Revoke CA - Revoke the CA and its active leaf certificates.   
@@ -138,7 +138,7 @@ When trying to revoke an issuing CA, it's important to revoke all of its active 
 
 ### Revoke all leaf certificates 
 
-You can use the sample PowerShell script in this section to revoke all leaf certificates belonging to a CA. The script retrieves information from your Microsoft Intune tenant about Microsoft Cloud PKI, and revokes leaf certificates for an issuing certification authority in your tenant.  
+You can use the sample PowerShell script in this section to revoke all leaf certificates belonging to a CA. The script retrieves information from your Microsoft Intune tenant about Microsoft Cloud PKI, and revokes leaf certificates for an issuing certification authority in your tenant.  hyp
 
 - The script retrieves all leaf certificates and performs the revoke action on each one.
 - The script prompts you, as the admin, to confirm that you want to revoke all leaf certificates.
@@ -146,24 +146,27 @@ You can use the sample PowerShell script in this section to revoke all leaf cert
 
 #### Important  
 Use this script with caution.  You can't undo the revoke action for any of the leaf certificates.
-  - Review the sample script prior to running it to better understand how it works, and to consider how it will impact your tenant.
+  - Review the sample script before running it to better understand how it works, and to consider how it impacts your tenant.
   - Run the sample script in a nonproduction or test tenant account first. 
 
-The script installs the Microsoft Graph PowerShell module, *Microsoft.Graph*. The device that's running the script must have administrative privileges to sucessfully install the module. 
+The script installs the Microsoft Graph PowerShell module, *Microsoft.Graph*. The device that's running the script must have administrative privileges to successfully install the module. 
 
 The `Connect-MgGraph` command must be done by an administrator who has permissions to revoke leaf certificates on the issuing CA.  
 
 The CA ID is required to run the script. To find this information in the admin center: 
 
 1. Go to **Tenant administration** > **Cloud PKI"**.
-1. Select an issuing CA. Look at the browser URL. The hyphentated alphanumeric number listed at the end of the URL is the CA ID. For example, in the following URL, the CA ID is *f12345-acf1-12ab-1b2a-1a1234567a89*: 
+1. Select an issuing CA. Look at the browser URL. The hyphenated alphanumeric string at the end of the URL is the CA ID. For example, in the following URL, the CA ID is *f12345-acf1-12ab-1b2a-1a1234567a89*: 
 
    `https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/CaDetails.ReactView/id/f12345-acf1-12ab-1b2a-1a1234567a89` 
 
 
 #### Sample script  
 
-Run the sample PowerShell script from an administrative workstation. To run it, you must be assigned the **Request the issuing CA ID** permission in Microsoft Intune. 
+Run the sample PowerShell script from an administrative workstation. To run it, you must have the following Intune permissions:  
+
+- Read CAs  
+- Revoke issued leaf certifcates   
 
 
 ```powershell
@@ -214,4 +217,4 @@ foreach ($leafCert in $leafCerts.value)
 	Invoke-MgGraphRequest -Method POST -Uri "https://graph.microsoft.com/beta/devicemanagement/cloudCertificationAuthority/$caId/revokeLeafCertificate" -Body ($revokeParams|ConvertTo-Json) -ContentType "application/json"
 }
 
- ```powershell   
+```   
