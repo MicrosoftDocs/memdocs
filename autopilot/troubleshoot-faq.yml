@@ -123,7 +123,6 @@ sections:
           What do the different Event IDs mean in the Windows Autopilot event log entries in Event Viewer?
         answer: |
           The following events might be recorded, depending on the scenario and profile configuration:
-
           | **Event ID** | **Type** | **Message** |**Description** |
           |----------|------|-------------|-------------|
           | **100** | Warning | **Autopilot policy [name] not found.** | This error is typically a temporary problem, while the device is waiting for an Autopilot profile to be downloaded. |
@@ -147,7 +146,6 @@ sections:
           `HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot`
 
           Available registry entries include:
-
           | **Value** | **Description** |
           |-------|-------------|
           | **AadTenantId** | The GUID of the Microsoft Entra tenant the user signed into. The user receives an error if this entry doesn't match the tenant that was used to register the device. |
@@ -160,7 +158,7 @@ sections:
       - question: |
           Can ETW tracing be used with Windows Autopilot?
         answer: |
-          ETW tracing can be used to get detailed information from Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [Troubleshooting Windows Autopilot](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
+          ETW tracing can be used to get detailed information from Windows Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [Troubleshooting Windows Autopilot](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
 
 
   - name: Troubleshooting Windows Autopilot device import and enrollment
@@ -353,4 +351,7 @@ sections:
 additionalContent: |
     ## Related content
 
-    To learn more, see.
+    - [Windows Autopilot - known issues](known-issues.md).
+    - [Policy conflicts](policy-conflicts.md).
+    - [Collect MDM logs](/windows/client-management/mdm-collect-logs).
+    - [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
