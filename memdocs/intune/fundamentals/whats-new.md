@@ -76,7 +76,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of July 22, 2024 (Service release 2407)
+## Week of July 22, 2024 (Service release 2407) 
+
+### Microsoft Intune Suite  
+
+#### New actions for Microsoft Cloud PKI<!-- 24231040 --> 
+
+The following actions have been added for Microsoft Cloud PKI issuing and root certification authorities (CA):  
+
+* Delete: Delete a CA.  
+* Pause: Temporarily suspend use of a CA.
+* Revoke: Revoke a CA certificate.  
+
+You can access all new actions in the Microsoft Intune admin center and Graph API. For more information, see [Delete Microsoft Cloud PKI certification authority](../protect/microsoft-cloud-pki-delete.md).  
 
 ### App management
 
@@ -274,7 +286,7 @@ To view the new baselines included settings with their default configurations, s
 
 ### Intune apps
 
-#### Newly available protected apps for Intune<!-- 28334000, 28157519, 28311088, 28156655, 28246919, 28246936 -->
+#### Newly available protected apps for Intune<!-- 28334000, 28157519, 28311088, 28156655, 28246919, 28246936, 28100886 -->
 
 The following protected apps are now available for Microsoft Intune:
 
@@ -284,6 +296,7 @@ The following protected apps are now available for Microsoft Intune:
 - Beakon Mobile App by Beakon Mobile Team
 - HCSS Plans: Revision control (iOS) by Heavy Construction Systems Specialists, Inc.
 - HCSS Field: Time, cost, safety (iOS) by Heavy Construction Systems Specialists, Inc.
+- Synchrotab for Intune (iOS) by Synchrotab, LLC
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).  
 
