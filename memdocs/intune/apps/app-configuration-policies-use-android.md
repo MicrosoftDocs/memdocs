@@ -69,14 +69,14 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**.
 
     > [!NOTE]
-    > As of Android 12, configuring **Auto grant** for the following permissions is only supported for corporated-owned fully managed devices:
+    > As of Android 12, configuring **Auto grant** for the following permissions is not supported for coporate-owned work profile or corporate-owned dedicated devices.
     > * SMS (read)
     > * Location access (coarse)
     > * Location access (fine)
     > * Camera
     > * Record audio
     > * Allow body sensor data
-    >
+
 11. If the managed app supports configuration settings, the **Configuration settings format** dropdown box is visible. Select one of the following methods to add configuration information:
     - **Use configuration designer**
     - **Enter JSON data**
