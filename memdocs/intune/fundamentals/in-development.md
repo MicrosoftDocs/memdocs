@@ -128,7 +128,6 @@ Multi administrative approval (MAA) adds the ability to limit application access
 
 For more information, see [multiple admin approval](../fundamentals/multi-admin-approval.md).
 
-
 ### New settings available in the Apple settings catalog <!-- 28308531 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
@@ -284,8 +283,8 @@ Applies to:
 
 With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Big Sur) and later.
 
-For more information on this change, see [Plan for change: Intune is moving to support macOS 13 and later](whats-new#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year).
-====
+For more information on this change, see [Plan for change: Intune is moving to support macOS 13 and later](../fundamentals/whats-new.md#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year).
+
 > [!NOTE]
 > macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
 
@@ -297,7 +296,7 @@ Applies to:
 
 Later this year, we expect iOS18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require iOS/iPadOS 16 and higher shortly after the iOS/iPadOS 18 release.
 
-For more information on this change, see [Plan for change: Intune is moving to support iOS/iPadOS 16 and later](whats-new#plan-for-change-intune-is-moving-to-support-iosipados-16-and-later).
+For more information on this change, see [Plan for change: Intune is moving to support iOS/iPadOS 16 and later](../fundamentals/whats-new.md#plan-for-change-intune-is-moving-to-support-iosipados-16-and-later).
 
 > [!NOTE]
 > Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
