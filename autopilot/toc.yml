@@ -51,6 +51,9 @@ items:
   items:
   - name: What's new
     href: whats-new.md
+    name: Overview
+    href: overview.md
+
   - name: Requirements
     href: requirements.md
   - name: FAQ
@@ -60,23 +63,6 @@ items:
   - name: Known issues
     href: known-issues.md
 
-  - name: Overview
-    items:
-    - name: Windows Autopilot overview
-      href: overview.md
-    - name: Device registration
-      items:
-      - name: Registration overview
-        href: registration-overview.md
-      - name: OEM registration
-        href: oem-registration.md
-      - name: Partner registration
-        href: partner-registration.md
-      - name: Automatic registration
-        href: automatic-registration.md
-      - name: Manual registration
-        href: manual-registration.md
-
   - name: Concepts
     items:
     - name: Scenarios and capabilities
@@ -85,6 +71,19 @@ items:
       href: enrollment-status.md
     - name: Deployment processes
       href: deployment-process.md
+
+  - name: Device registration
+    items:
+    - name: Registration overview
+      href: registration-overview.md
+    - name: OEM registration
+      href: oem-registration.md
+    - name: Partner registration
+      href: partner-registration.md
+    - name: Automatic registration
+      href: automatic-registration.md
+    - name: Manual registration
+      href: manual-registration.md
 
   - name: Deployment scenarios
     items:
