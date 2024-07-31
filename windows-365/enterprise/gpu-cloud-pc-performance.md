@@ -67,13 +67,13 @@ While the software rendering of non-GPU-enabled Windows 365 Cloud PCs does a gre
 
 | GPU offering | Intended for | Displays supported | Comparable to | AI development support |
 | --- | --- | --- | --- |
-| Windows 365 GPU Standard | Graphics applications requiring 8-GB vRAM or less. | One 3840x2160 display or up to two 1920x1080 displays. | Laptops with dedicated graphics GPUs. | No. |
+| Windows 365 GPU Standard | Graphics applications requiring 8-GB vRAM or less. | One 3840x2160 display or up to two 1920x1080 displays. | Devices with entry level dedicated graphics GPUs. | No. |
 | Windows 365 GPU Super | High-end graphics workloads requiring 12-GB vRAM or less. | Up to four 3840x2160 displays. | Desktop devices with dedicated graphics GPUs. | No. |
 | Windows 365 GPU Max | Maximum performance requiring up to 24-GB vRAM. | Multiple display support at higher resolutions. | Desktop graphics workstations servicing the most demanding graphics workloads. | Yes, with VSCode AI Toolkit, Phi-3 with ONNX, and more. |
 
 All GPU-enabled Cloud PCs are compatible with and support AI functionalities that are integrated into widely used software applications like Copilot. For AI development or for running AI tasks that require intensive GPU processing, use Windows 365 GPU Max.
 
-Microsoft hosts GPU-enabled Cloud PCs using the most recent iteration of Microsoft Hyper-V. Each Cloud PC is equipped with a solid-state drive (SSD) storage drive (C:) for your files and programs, in addition to a substantial ephemeral disk (D:). It’s advisable to use the D: drive for caching temporary files, which can enhance the performance of applications requiring "scratch" disks for handling extensive data sets.
+Microsoft hosts GPU-enabled Cloud PCs using the most recent iteration of Microsoft Hyper-V. Each Cloud PC is equipped with a storage drive (C:) for your files and programs, in addition to a substantial ephemeral disk (D:). It’s advisable to use the D: drive for caching temporary files, which can enhance the performance of applications requiring "scratch" disks for handling extensive data sets.
 
 Be sure to review your software vendors’ system requirements before deciding which GPU-enabled Cloud PC offering is best for you. If you find that the current GPU-enabled Cloud PC size doesn't meet your needs, you can choose an offering with a higher configuration.
 
