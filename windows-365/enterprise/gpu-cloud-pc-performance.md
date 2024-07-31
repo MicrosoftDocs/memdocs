@@ -52,10 +52,10 @@ Windows 365 GPU-enabled Cloud PCs are provisioned with state-of-the-art and high
 
 To assess the performance of the Windows 365 GPU-enabled Cloud PCs, we conduct various industry standard graphics tests:
 
-- Rendering performance tests to evaluate GPU stability and performance. We use various sample files to measure rendering speed and quality. This helps us understand how well the GPU handles complex visual tasks.
+- Rendering performance tests to evaluate GPU stability and performance. We use various sample files to measure rendering speed and quality. These tests help us understand how well the GPU handles complex visual tasks.
 - Rendering resolution test to evaluate frame rate and latency. We test different resolutions (like 1080p and 4K) to observe how the GPU performs under varying display demands. High resolutions can stress the GPU more.
 - CPU tests to understand the impact of CPU performance on graphics tasks. We analyze how well the CPU offloads to the GPU during rendering and other graphics-intensive operations.
-- Stress tests to evaluate overall system performance and reliability. We subject the system to heavy workloads, simulating real-world usage. These tests help identify any bottlenecks or issues.
+- Stress tests to evaluate overall system performance and reliability. The system is subjected to heavy workloads, simulating real-world usage. These tests help identify any bottlenecks or issues.
 
 All GPU-enabled Cloud PC configurations are tested in the same production environment within the same region. Specific third-party agents deployed by customers aren't considered in the routine testing, as they may have their own resource requirements affecting performance.
 
