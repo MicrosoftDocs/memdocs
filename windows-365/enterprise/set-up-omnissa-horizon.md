@@ -57,4 +57,4 @@ To turn on the Omnissa connector, follow these steps:
 <!-- ########################## -->
 ## Next steps
 
-Proceed to the Omnissa Horizon Cloud to complete the integration. For more information about Omnissa Horizon set up, see [Setting up Omnissa Horizon Cloud for Windows 365 integration](https://go.microsoft.com/fwlink/?linkid=2242843).
+To complete the integration, proceed to the Omnissa Horizon Cloud. For more information about Omnissa Horizon set up, see [Setting up Omnissa Horizon Cloud for Windows 365 integration](https://go.microsoft.com/fwlink/?linkid=2242843).
