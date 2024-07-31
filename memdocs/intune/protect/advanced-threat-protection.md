@@ -37,15 +37,15 @@ You can integrate Microsoft Defender for Endpoint with Microsoft Intune as a Mob
 
 See the Microsoft Defender for Endpoint [requirements](/defender-endpoint/minimum-requirements#hardware-and-software-requirements) for the list of supported operating systems and versions.
 
-To be successful, use the following configurations in concert, which are detailed in [Defender for Endpoint in Intune](/protect/advanced-threat-protection-configure.md):
+To be successful, use the following configurations in concert, which are detailed in [Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md):
 
-- **Establish a service-to-service connection between Intune and Microsoft Defender for Endpoint**. This connection lets Microsoft Defender for Endpoint collect data about machine risk from supported devices you manage with Intune. See [Connect Microsoft Defender for Endpoint to Intune](/intune/protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune).
+- **Establish a service-to-service connection between Intune and Microsoft Defender for Endpoint**. This connection lets Microsoft Defender for Endpoint collect data about machine risk from supported devices you manage with Intune. See [Connect Microsoft Defender for Endpoint to Intune](../intune/protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune).
 
-- **Use an Intune policy to onboard devices with Microsoft Defender for Endpoint**. You onboard devices to configure them to communicate with Microsoft Defender for Endpoint and to provide data that helps assess their risk level. See [Onboard devices](/protect/advanced-threat-protection-configure.md#onboard-devices).
+- **Use an Intune policy to onboard devices with Microsoft Defender for Endpoint**. You onboard devices to configure them to communicate with Microsoft Defender for Endpoint and to provide data that helps assess their risk level. See [Onboard devices](../protect/advanced-threat-protection-configure.md#onboard-devices).
 
-- **Use a device compliance policy to set the level of risk you want to allow**. Risk levels are reported by Microsoft Defender for Endpoint. Devices that exceed the allowed risk level are identified as noncompliant. See [Create and assign compliance policy to set device risk level](/protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level) and [Create and assign app protection policy to set device risk level](/protect/advanced-threat-protection-configure.md#create-and-assign-app-protection-policy-to-set-device-risk-level).
+- **Use a device compliance policy to set the level of risk you want to allow**. Risk levels are reported by Microsoft Defender for Endpoint. Devices that exceed the allowed risk level are identified as noncompliant. See [Create and assign compliance policy to set device risk level](../protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level) and [Create and assign app protection policy to set device risk level](../protect/advanced-threat-protection-configure.md#create-and-assign-app-protection-policy-to-set-device-risk-level).
 
-- **Use a conditional access policy** to block users from accessing corporate resources from devices that are noncompliant. See [Create a conditional access policy](/protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy).
+- **Use a conditional access policy** to block users from accessing corporate resources from devices that are noncompliant. See [Create a conditional access policy](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy).
 
 When you integrate Intune with Microsoft Defender for Endpoint, you can take advantage of Microsoft Defender for Endpoints Threat & Vulnerability Management (TVM) and [use Intune to remediate endpoint weakness identified by TVM](atp-manage-vulnerabilities.md).
 
@@ -104,4 +104,4 @@ Learn more from the Intune documentation:
 Learn more from the Microsoft Defender for Endpoint documentation:
 
 - [Microsoft Defender for Endpoint Conditional Access](/defender-endpoint/conditional-access)
-- [Microsoft Defender portal](defender-xdr/microsoft-365-defender-portal)
+- [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal)
