@@ -141,7 +141,7 @@ sections:
           | **807** |  | **ZtdDeviceIsNotRegistered** | This error indicates that the device isn't registered as a Windows Autopilot device. If the device is registered as a Windows Autopilot device, there might have been a hardware change on the device that caused its HWID to change. Delete the existing Windows Autopilot device object and then re-registering the device might fix the issue. |
           | **809** |  | **ZtdDeviceHasNoAssignedProfile - Assigned profile does not exist** | The assigned Windows Autopilot profile might have been deleted without getting cleaned up. Assign a different Windows Autopilot profile to the device. |
           | **815** |  | **ZtdDeviceHasNoAssignedProfile - No profile assigned to the device, and no default profile found in the tenant** | No Windows Autopilot profiles were found assigned to the device. Assign a Windows Autopilot profile to device. |
-          | **908** |  | **SerialNumberMismatch**,**ProductKeyIdMismatch** | There was a hardware mismatch on the device. Reregister the device. |
+          | **908** |  | **SerialNumberMismatch**<br>**ProductKeyIdMismatch** | There was a hardware mismatch on the device. Reregister the device. |
 
       - question: |
           Where are the Windows Autopilot profile settings received from the Windows Autopilot deployment service stored?
