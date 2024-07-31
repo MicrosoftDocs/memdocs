@@ -39,11 +39,10 @@ To set up Omnissa Horizon for Windows 365 Enterprise, follow these steps. The fi
 
 1. [Fulfill requirements](requirements-vmware-horizon.md).
 2. [Turn on the Windows 365 Omnissa connector in Intune](#turn-on-the-windows-365-omnissa-connector-in-intune).
-3. [Sign up for the Tech Preview – Omnissa Horizon extending Microsoft Windows 365](https://www.omnissa.com/learn/1733900_REG.html).
-4. [Configure your Horizon Cloud Service Tenant](https://go.microsoft.com/fwlink/?linkid=2242843).
-5. [Configure identity provider](https://go.microsoft.com/fwlink/?linkid=2242843).
-6. [Connect Horizon Cloud Service with Windows 365](https://go.microsoft.com/fwlink/?linkid=2242843).
-7. [Assign Omnissa licenses to Microsoft Entra users or groups](https://go.microsoft.com/fwlink/?linkid=2242843).
+3. [Configure your Horizon Cloud Service Tenant](https://go.microsoft.com/fwlink/?linkid=2242843).
+4. [Configure identity provider](https://go.microsoft.com/fwlink/?linkid=2242843).
+5. [Connect Horizon Cloud Service with Windows 365](https://go.microsoft.com/fwlink/?linkid=2242843).
+6. [Assign Omnissa licenses to Microsoft Entra users or groups](https://go.microsoft.com/fwlink/?linkid=2242843).
 
 ### Turn on the Windows 365 Omnissa connector in Intune
 
