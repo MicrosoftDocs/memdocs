@@ -67,7 +67,7 @@ Uni-directional clipboard support for Cloud PCs has moved out of preview and is 
 
 #### Resize support for Windows 365 Business is now generally available<!--50220049-->
 
-Resize remote action support for Windows 365 Business Cloud PCs has moved out of preview and is now generally available. For more information, see [Remote management actions](remotely-manage-business-cloud-pcs.md#remote-management-actions).
+Resize remote action support for Windows 365 Business Cloud PCs has moved out of preview and is now generally available. For more information, see [Remote management actions](../business/remotely-manage-business-cloud-pcs.md#remote-management-actions).
 
 #### Closing port 3389 by default for newly provisioned and reprovisioned Cloud PCs<!--51154043-->
 
