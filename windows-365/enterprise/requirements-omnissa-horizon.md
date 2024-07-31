@@ -36,7 +36,7 @@ To use Omnissa Horizon for Windows 365, you must meet the following requirements
 ## Omnissa requirements
 
 - An Omnissa Horizon Cloud Service – Next Gen tenant
-- An Horizon Cloud Service Subscription that includes:
+- A Horizon Cloud Service Subscription that includes:
   - Horizon Universal Licenses for Apps
   - Horizon Universal License for Desktops and Apps support brokering to Windows 365 Cloud PCs
 - An Omnissa Cloud Service Portal (CSP) account
