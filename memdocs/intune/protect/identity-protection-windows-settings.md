@@ -25,6 +25,8 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - identity-protection
+- sub-secure-endpoints
+
 ms.reviewer: mattcall
 
 ---

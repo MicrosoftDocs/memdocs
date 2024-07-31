@@ -96,6 +96,8 @@ You might consider resizing a Cloud PC when a user needs:
 
 Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin. Contact your end users and have them save their work and sign out before you begin resizing.
 
+Resizing 16vCPU isn't supported. 
+
 **Restart**: Restart a user’s Cloud PC on their behalf.
 
 ## Grant remote action permissions to another user

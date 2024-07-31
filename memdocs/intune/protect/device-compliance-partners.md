@@ -27,6 +27,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - compliance
+- sub-device-compliance
 ---
 
 # Support third-party device compliance partners in Intune
