@@ -71,7 +71,7 @@ Resize remote action support for Windows 365 Business Cloud PCs has moved out of
 
 #### Closing port 3389 by default for newly provisioned and reprovisioned Cloud PCs<!--51154043-->
 
-To help secure your Windows 365 environment, the inbound port 3389 will be closed by default.
+To help secure your Windows 365 environment, the inbound port 3389 is now closed by default.
 
 #### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
 
@@ -89,6 +89,13 @@ Windows 365 support for encrypting Cloud PCs by setting up Microsoft Purview Cus
 Windows 365 Government now supports Microsoft Purview Customer Lockbox.
 
 For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Frontline
+
+#### Windows 365 Frontline sign in time and shift change buffer improvements are now generally available<!--50220027-->
+
+Sign in time and shift change buffer improvements have moved out of preview and into general availability.
 
 <!-- ########################## -->
 ## Week of July 23, 2024
