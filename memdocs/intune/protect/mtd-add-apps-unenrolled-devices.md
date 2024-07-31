@@ -28,6 +28,7 @@ ms.custom:
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Add Mobile Threat Defense apps to unenrolled devices

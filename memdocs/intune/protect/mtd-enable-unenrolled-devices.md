@@ -28,6 +28,7 @@ ms.custom:
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Enable the Mobile Threat Defense connector in Intune for unenrolled devices

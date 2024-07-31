@@ -25,6 +25,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - ContentEnagagementFY24 
+- sub-secure-endpoints
 
 ms.reviewer: 
 ---

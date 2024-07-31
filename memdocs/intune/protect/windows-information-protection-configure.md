@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - Windows
 - privacy
+- sub-data-privacy
 ---
 
 # Learn about Windows Information Protection and Microsoft Intune

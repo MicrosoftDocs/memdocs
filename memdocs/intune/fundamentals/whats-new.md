@@ -76,7 +76,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of July 22, 2024 (Service release 2407)
+## Week of July 22, 2024 (Service release 2407) 
+
+### Microsoft Intune Suite  
+
+#### New actions for Microsoft Cloud PKI<!-- 24231040 --> 
+
+The following actions have been added for Microsoft Cloud PKI issuing and root certification authorities (CA):  
+
+* Delete: Delete a CA.  
+* Pause: Temporarily suspend use of a CA.
+* Revoke: Revoke a CA certificate.  
+
+You can access all new actions in the Microsoft Intune admin center and Graph API. For more information, see [Delete Microsoft Cloud PKI certification authority](../protect/microsoft-cloud-pki-delete.md).  
 
 ### App management
 
@@ -94,9 +106,9 @@ The Intune App SDK and Intune App Wrapping Tool have moved to a different GitHub
 
 ### Device configuration
 
-#### New clipboard transfer direction settings available in the Windows settings catalog <!-- 28748086 --> 
+#### New clipboard transfer direction settings available in the Windows settings catalog <!-- 28748086 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type.
 
@@ -107,7 +119,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 - Restrict clipboard transfer from client to server
 - Restrict clipboard transfer from client to server (User)
 
-For more information on configuring the clipboard transfer direction in Azure Virtual Desktop, go to [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+For more information on configuring the clipboard transfer direction in Azure Virtual Desktop, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
 
 Applies to:
 
@@ -134,7 +146,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 #### Android Enterprise has new values for the Allow access to all apps in Google Play store setting<!-- 28367525 -->
 
-In an Intune device restrictions configuration policy, you can configure the **Allow access to all apps in Google Play store** setting using the **Allow** and **Not configured** options (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Fully managed, dedicated and corporate-owned work profile > Device restrictions** for profile type > **Applications).
+In an Intune device restrictions configuration policy, you can configure the **Allow access to all apps in Google Play store** setting using the **Allow** and **Not configured** options (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Fully managed, dedicated and corporate-owned work profile > Device restrictions** for profile type > **Applications**).
 
 The available options are updated to **Allow**, **Block**, and **Not configured**.
 
@@ -147,6 +159,10 @@ Applies to:
 - Android Enterprise Fully managed, dedicated and corporate-owned work profile
 
 ### Device enrollment
+
+#### Use corporate Microsoft Entra account to enable Android Enterprise management options in Intune<!-- 25231452 -->  
+
+Managing Intune-enrolled devices with Android Enterprise management options previously required you to connect your Intune tenant to your managed Google Play account using a personal Gmail account.  Now you can use a corporate Microsoft Entra account to establish the connection. This change is happening in new tenants, and doesn't affect tenants that have already established a connection. For more information, see [Connect Intune account to Managed Google Play account - Microsoft Intune | Microsoft Learn](../enrollment/connect-intune-android-enterprise.md).  
 
 #### New support for Red Hat Enterprise Linux<!-- 25160548 -->
 
@@ -165,6 +181,10 @@ For more information, see:
 
 - [Windows enrollment attestation](../enrollment/windows-enrollment-attestation.md)
 - [Intune Reports](../fundamentals/reports.md#device-attestation-status-report)
+
+#### Just-in-time registration and compliance remediation available for all iOS/iPadOS enrollments<!-- 27759589 -->
+
+You can now configure just-in-time (JIT) registration and JIT compliance remediation for all Apple iOS and iPadOS enrollments. These Intune-supported features improve the enrollment experience because they can take the place of the Intune Company Portal app for device registration and compliance checks. We recommend setting up JIT registration and compliance remediation for new enrollments, and to improve the experience for existing enrolled devices. For more information, see [Set up just in time registration in Microsoft Intune](../enrollment/set-up-just-in-time-registration.md).  
 
 ### Device management
 
@@ -266,7 +286,7 @@ To view the new baselines included settings with their default configurations, s
 
 ### Intune apps
 
-#### Newly available protected apps for Intune<!-- 28334000, 28157519, 28311088, 28156655, 28246919, 28246936 -->
+#### Newly available protected apps for Intune<!-- 28334000, 28157519, 28311088, 28156655, 28246919, 28246936, 28100886 -->
 
 The following protected apps are now available for Microsoft Intune:
 
@@ -276,15 +296,9 @@ The following protected apps are now available for Microsoft Intune:
 - Beakon Mobile App by Beakon Mobile Team
 - HCSS Plans: Revision control (iOS) by Heavy Construction Systems Specialists, Inc.
 - HCSS Field: Time, cost, safety (iOS) by Heavy Construction Systems Specialists, Inc.
+- Synchrotab for Intune (iOS) by Synchrotab, LLC
 
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-## Week of July 22, 2024  
-
-### Device enrollment  
-
-#### Just-in-time registration and compliance remediation available for all iOS/iPadOS enrollments<!-- 27759589 -->  
-
-You can now configure just-in-time (JIT) registration and JIT compliance remediation for all Apple iOS and iPadOS enrollments. These Intune-supported features improve the enrollment experience because they can take the place of the Intune Company Portal app for device registration and compliance checks. We recommend setting up JIT registration and compliance remediation for new enrollments, and to improve the experience for existing enrolled devices. For more information, see [Set up just in time registration in Microsoft Intune](../enrollment/set-up-just-in-time-registration.md).   
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).  
 
 ## Week of July 15, 2024
 
@@ -305,6 +319,7 @@ This setting controls whether the user is allowed to use the storage card for de
 ### Device management
 
 #### Copilot in Intune now has the device query feature using Kusto Query Language (KQL) (public preview)<!-- 24874816 -->
+
 When you use Copilot in Intune, there's a new device query feature that uses KQL.
 Use this feature to ask questions about your devices using a natural language. If device query can answer your question, Copilot generates the KQL query you can run to get the data you want.
 
