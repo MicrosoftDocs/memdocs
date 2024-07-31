@@ -63,7 +63,7 @@ Conducting your own testing can provide valuable insights that closely resemble 
 
 ## Graphics workload targets
 
-While the software rendering of non-GPU-enabled Windows 365 Cloud PCs does a great job for most applications, there are some applications that might require the performance of direct calls into APIs that use a GPU. Common examples include products from Adobe, ArcGIS, Autodesk, and Dassault Systèmes, among others. Other products might necessitate the use of a dedicated GPU or are optimized to perform more efficiently with one, according to their published system requirements on their respective websites. 
+While the software rendering of non-GPU-enabled Windows 365 Cloud PCs does a great job for most applications, there are some applications that might require the performance of direct calls into APIs that use a GPU. Common examples include products from Adobe, ArcGIS, Autodesk, and Dassault Systèmes, among others. Other products might necessitate the use of a dedicated GPU or are optimized to perform more efficiently with one, according to their published system requirements on their respective websites.
 
 | GPU offering | Intended for | Displays supported | Comparable to | AI development support |
 | --- | --- | --- | --- |
