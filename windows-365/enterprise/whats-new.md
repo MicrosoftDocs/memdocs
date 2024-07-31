@@ -65,10 +65,6 @@ For more information about public preview items, see [Public preview in Windows 
 
 Uni-directional clipboard support for Cloud PCs has moved out of preview and is now generally available. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
 
-#### Resize support for Windows 365 Business is now generally available<!--50220049-->
-
-Resize remote action support for Windows 365 Business Cloud PCs has moved out of preview and is now generally available. For more information, see [Remote management actions](../business/remotely-manage-business-cloud-pcs.md#remote-management-actions).
-
 #### Closing port 3389 by default for newly provisioned and reprovisioned Cloud PCs<!--51154043-->
 
 To help secure your Windows 365 environment, the inbound port 3389 is now closed by default.
