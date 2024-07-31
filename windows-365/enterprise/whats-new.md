@@ -56,6 +56,29 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of July 29, 2024 (Service release 2407)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Uni-directional clipboard support is now generally available<!--49083399-->
+
+Uni-directional clipboard support for Cloud PCs has moved out of preview and is now generally available. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows 365 support for Microsoft Purview Customer Key is now generally available<!--46980464-->
+
+Windows 365 support for encrypting Cloud PCs by setting up Microsoft Purview Customer Key has moved out of preview and into general availability. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
+
+#### Windows 365 Government now supports Customer Lockbox<!--48802385-->
+
+Windows 365 Government now supports Microsoft Purview Customer Lockbox.
+
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- ########################## -->
 ## Week of July 23, 2024
 
 ### Updated default settings for Windows 365 security baselines<!--49685126-->
