@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/17/2024
+ms.date: 07/31/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -61,8 +61,17 @@ We recommend using the latest updates for a more successful attestation rate.
 
 - Physical devices are supported.
 
-  > [!NOTE]
-  > Virtual machines can't attest.  
+- The following virtual machines don’t support TPM attestation, even if they use virtual TPMs (vTPM):
+
+  - Hyper-V and Azure virtual machines  
+
+  - Azure Virtual Desktop session hosts  
+
+  - Windows 365 Cloud PCs  
+
+  - Microsoft Dev Box
+
+  To exclude any virtual machine from the enrollment restrictions, don’t use the *isTpmAttested* assignment filter for any of your workflows. If you want to utilize the **isTpmAttested** state for physical machines only, you can define your filter rules to [exclude Cloud PCs](/windows-365/enterprise/create-filter) and other virtual machines.  
 
 - Attestation with TPM in this feature is during Intune device management enrollment, after the TPM attestation that occurs in Autopilot pre-provision and Shared device mode (SDM).
 
@@ -71,6 +80,8 @@ We recommend using the latest updates for a more successful attestation rate.
   - [Windows InitiateRecovery CSP](/windows/client-management/mdm/dmclient-csp#deviceproviderprovideridrecoveryinitiaterecovery)
   - [Windows RecoveryStatus CSP](/windows/client-management/mdm/dmclient-csp#deviceproviderprovideridrecoveryrecoverystatus)
   - [Windows MDMClientCertAttestation CSP](/windows/client-management/mdm/devicestatus-csp#certattestationmdmclientcertattestation)
+
+
 
 ## How Windows enrollment attestation works
 
