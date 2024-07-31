@@ -56,6 +56,41 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of July 29, 2024 (Service release 2407)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Uni-directional clipboard support is now generally available<!--49083399-->
+
+Uni-directional clipboard support for Cloud PCs has moved out of preview and is now generally available. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+
+#### Resize support for Windows 365 Business is now generally available<!--50220049-->
+
+Resize remote action support for Windows 365 Business Cloud PCs has moved out of preview and is now generally available. For more information, see [Remote management actions](../business/remotely-manage-business-cloud-pcs.md#remote-management-actions).
+
+#### Closing port 3389 by default for newly provisioned and reprovisioned Cloud PCs<!--51154043-->
+
+To help secure your Windows 365 environment, the inbound port 3389 will be closed by default.
+
+#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+
+Windows 365 now supports AVC mixed mode when MMR is not enabled.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows 365 support for Microsoft Purview Customer Key is now generally available<!--46980464-->
+
+Windows 365 support for encrypting Cloud PCs by setting up Microsoft Purview Customer Key has moved out of preview and into general availability. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
+
+#### Windows 365 Government now supports Customer Lockbox<!--48802385-->
+
+Windows 365 Government now supports Microsoft Purview Customer Lockbox.
+
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- ########################## -->
 ## Week of July 23, 2024
 
 ### Updated default settings for Windows 365 security baselines<!--49685126-->
@@ -753,7 +788,7 @@ All Cloud PC reports can now be accessed from the **Cloud PC overview** section 
 
 #### Use VMWare Horizon clients and the Blast protocol with Windows 365 Enterprise (public preview)<!--44716096-->
 
-VMWare Horizon clients and the Blast protocol can be used with Windows 365 Enterprise Cloud PCs. This is a [public preview](..\public-preview.md). For more information, see [Set up VMware Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md). To submit a request to join this preview, see [Tech Preview – VMware Horizon extending Microsoft Windows 365](https://www.vmware.com/learn/1733900_REG.html).
+VMWare Horizon clients and the Blast protocol can be used with Windows 365 Enterprise Cloud PCs. This is a [public preview](..\public-preview.md). For more information, see [Set up VMware Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md).
 
 <!-- ########################## -->
 ## Week of August 7, 2023
