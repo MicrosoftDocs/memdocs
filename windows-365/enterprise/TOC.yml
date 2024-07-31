@@ -71,6 +71,8 @@ items:
         href: cloud-pc-size-recommendations.md
       - name: GPU Cloud PC
         href: gpu-cloud-pc.md
+      - name: GPU Cloud PC performance
+        href: gpu-cloud-pc-performance.md
     - name: Deploy
       items:
       - name: Deployment overview
