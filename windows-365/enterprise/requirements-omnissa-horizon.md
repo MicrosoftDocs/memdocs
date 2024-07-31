@@ -65,4 +65,4 @@ Omnissa Horizon for Windows 365 supports integrating with Windows 365 deployment
 <!-- ########################## -->
 ## Next steps
 
-[Set up Omnissa Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md).
+[Set up Omnissa Horizon for Windows 365 Enterprise](set-up-omnissa-horizon.md).

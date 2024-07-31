@@ -86,4 +86,4 @@ You can now test the connectivity by using RDP, and raise a support case with th
 
 [Learn about Citrix HDX Plus for Windows 365](set-up-citrix.md).
 [Learn about HP Anyware for Windows 365](hp-anyware-set-up.md).
-[Learn about Omnissa Horizon for Windows 365](set-up-vmware-horizon.md).
+[Learn about Omnissa Horizon for Windows 365](set-up-omnissa-horizon.md).

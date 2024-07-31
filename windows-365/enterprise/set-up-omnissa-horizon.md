@@ -37,7 +37,7 @@ Omnissa Horizon is a cloud-based service that lets you deliver Windows 365 Enter
 
 To set up Omnissa Horizon for Windows 365 Enterprise, follow these steps. The first two steps are explained here at learn.microsoft.com. The remaining steps are explained on the Omnissa web site.
 
-1. [Fulfill requirements](requirements-vmware-horizon.md).
+1. [Fulfill requirements](requirements-omnissa-horizon.md).
 2. [Turn on the Windows 365 Omnissa connector in Intune](#turn-on-the-windows-365-omnissa-connector-in-intune).
 3. [Configure your Horizon Cloud Service Tenant](https://go.microsoft.com/fwlink/?linkid=2242843).
 4. [Configure identity provider](https://go.microsoft.com/fwlink/?linkid=2242843).
