@@ -15,7 +15,7 @@ items:
     href: device-preparation/requirements.md
   - name: Reporting and Monitoring
     href: device-preparation/reporting-monitoring.md
-  - name: FAQ
+  - name: Product FAQ
     href: device-preparation/faq.yml
   - name: Troubleshooting FAQ
     href: device-preparation/troubleshooting-faq.yml
@@ -55,7 +55,7 @@ items:
     href: overview.md
   - name: Requirements
     href: requirements.md
-  - name: FAQ
+  - name: Product FAQ
     href: faq.yml
   - name: Troubleshooting FAQ
     href: troubleshooting-faq.yml
