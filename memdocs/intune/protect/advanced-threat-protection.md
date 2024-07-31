@@ -37,7 +37,7 @@ You can integrate Microsoft Defender for Endpoint with Microsoft Intune as a Mob
 
 See the Microsoft Defender for Endpoint [requirements](/defender-endpoint/minimum-requirements#hardware-and-software-requirements) for the list of supported operating systems and versions.
 
-To be successful, use the following configurations in concert, which are detailed in [Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md):
+To be successful, use the following configurations in concert, which are detailed in [Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md):
 
 - **Establish a service-to-service connection between Intune and Microsoft Defender for Endpoint**. This connection lets Microsoft Defender for Endpoint collect data about machine risk from supported devices you manage with Intune. See [Connect Microsoft Defender for Endpoint to Intune](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune).
 
