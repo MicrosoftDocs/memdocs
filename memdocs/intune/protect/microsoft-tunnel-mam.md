@@ -37,6 +37,14 @@ Applies to:
 - Android
 - iOS/iPadOS
 
+
+## Government cloud support
+
+Endpoint Privilege Management is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
 ## Platform requirements and feature overview
 
 Before you begin, you must already have deployed the Microsoft Tunnel gateway. To learn more about Microsoft Tunnel gateway and how to install and configure it,  see:

@@ -1,3 +1,5 @@
+Edits for FOTA main article, not published today:
+
 ---
 # required metadata
 
@@ -7,7 +9,7 @@ keywords:
 author: Smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/10/2023
+ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,6 +39,17 @@ You can use Microsoft Intune to manage software updates on the following Android
 - Dedicated  
 - Corporate-Owned Work Profile devices
 
+## Government cloud support
+
+Firmware Over-the-Air updates are supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
+
+## Options to manage software updates on Android
+
 You have two ways to manage software updates on android:  
 
 - Use Firmware Over-the-Air (FOTA), which works for some OEMs.
@@ -64,5 +77,6 @@ In addition, Microsoft Intune supports FOTA update management for supported devi
 
 - **Zebra**: Go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md). 
 - **Samsung**: Go to [Samsung E-FOTA Update Management with Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/samsung-e-fota-update-management-with-microsoft-endpoint-manager/ba-p/2002552)
+
 
 
