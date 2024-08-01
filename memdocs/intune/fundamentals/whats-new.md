@@ -92,7 +92,7 @@ Add-on capabilities:
 Plan 2 capabilities:
 
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
-- [Firmware-over-the-air update](../protect/fota-updates-android.md)
+- [Firmware-over-the-air update](../protect/zebra-lifeguard-ota-integration.md)
 - [Specialty devices management](../fundamentals/specialty-devices-with-intune.md)
 
 For more information, see:
