@@ -30,11 +30,13 @@ ms.collection:
 
 # Company Portal device setting requirements for Windows              
 
-This article describes the Windows device setting requirements that the Intune Company Portal can enforce on behalf of your workplace or school. Requirements are determined by your organization and help keep your device secure while you're using it for work or school purposes. You only need to update settings flagged by Company Portal. 
+This article describes the Windows device setting requirements Intune Company Portal can enforce on behalf of your workplace or school. Requirements are specific to each organization, and designed to keep your device secure while you're using it for work or school purposes. 
+
+You only need to update device settings that Company Portal flags.   
 
 ## Update operating system   
 
-To get the latest updates for Windows, see [[Microsoft Support: Get the latest Windows update](https://support.microsoft.com/windows/get-the-latest-windows-update-7d20e88c-0568-483a-37bc-c3885390d212).  
+To get the latest updates for Windows, see [Microsoft Support: Get the latest Windows update](https://support.microsoft.com/windows/get-the-latest-windows-update-7d20e88c-0568-483a-37bc-c3885390d212).  
 
 We recommend keeping both personal and corporate devices used for work up-to-date with the latest updates. Before updating a device, back up all of the information on it. Keeping a backup can help you recover your data if something interrupts the update, or let you transfer your information to a replacement device. 
 
@@ -73,15 +75,15 @@ For more information and how-to instructions, see [Microsoft Support: Turn Micro
 4. Select **Turn on Windows Defender Firewall** for domain, private, and public network settings.    -->
 
 ## Access point restrictions not set up  
-Your company applied access point restrictions on your device. This setting requires the Company Portal app to verify a few network settings on your device. Tap **Resolve** and wait while the Company Portal app checks that you're connected to a company-approved network. 
+Your company applied access point restrictions on your device. This setting requires the Company Portal app to verify a few network settings on your device. Tap **Resolve** and wait while the Company Portal app checks for an approved network connection.  
 
 ## Not connected to an approved network  
 
-You're connected to a network that isn't approved for work access. As long as you're connected to this network, you can't access work email, apps, and other protected corporate resources. To meet this compliance requirement, connect to a company-approved network. Then tap **Resolve** to retry.  
+Your device is connected to a network that isn't approved for work access. While connected to this network, you can't access work email, apps, and other protected resources. To meet this compliance requirement, connect to a company-approved network. Then tap **Resolve** in Company Portal to retry.  
 
 ## Restrictions couldn't be enforced  
 
-Intune can't determine if you're connected to an approved network. This error could be a result of poor network connectivity, low battery, battery saver mode, or a Company Portal error. To resolve, verify that you have a strong network reception. Turn off battery saver mode and make sure your battery life has at least 30% remaining. Then tap **Resolve** to retry. 
+Company Portal can't determine if your device is connected to an approved network. This error could be a result of poor network connectivity, low battery, battery saver mode, or a Company Portal error. To resolve, verify that you have a strong network reception. Turn off battery saver mode and make sure your battery life has at least 30% remaining. Then tap **Resolve** to retry. 
 
 ## Enable Secure Boot  
 
@@ -132,7 +134,7 @@ Complete the following steps to update your antivirus definitions.
 
 ## Change User Access Control setting  
 
-The User Access Control settings prevent potentially harmful programs and software from making changes to your device. To meet this compliance requirement, adjust these settings on your device so that your device has more protection. User Access Control settings are in the Control Panel under **System and Security**. For more information, see [Microsoft Support: User Account Control settings](https://support.microsoft.com/windows/user-account-control-settings-d5b2046b-dcb8-54eb-f732-059f321afe18).  
+The User Access Control settings prevent potentially harmful programs and software from making changes to your device. To meet this compliance requirement, adjust User Access Control so that your device has more protection. User Access Control settings are in Control Panel under **System and Security**. For more information, see [Microsoft Support: User Account Control settings](https://support.microsoft.com/windows/user-account-control-settings-d5b2046b-dcb8-54eb-f732-059f321afe18).  
 
 <!-- Removing steps 8/1/24
 You can adjust User Account Control settings in the Control Panel.  
