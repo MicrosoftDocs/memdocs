@@ -28,6 +28,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - certificates
+- sub-certificates
 ---
 
 # Prerequisites for the Certificate Connector for Microsoft Intune

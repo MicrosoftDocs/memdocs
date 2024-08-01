@@ -80,16 +80,6 @@ The resource performance scores and insights for physical devices are aimed to h
 
 For more information, see [Microsoft Intune Suite](../fundamentals/intune-add-ons.md).
 
-### New actions for Microsoft Cloud PKI<!-- 24231040 -->
-
-The following actions will be added to Microsoft Cloud PKI:
-
-- Delete: Delete a certification authority (CA).
-- Pause: Temporarily suspend use of a CA.
-- Revoke a CA certificate: Revoke a CA certificate.
-
-You’ll be able to access all new actions in the Microsoft Intune admin center and Graph API.
-
 ## App management
 
 ### Managed Home Screen for Android Enterprise Fully Managed devices<!-- 15603355 -->

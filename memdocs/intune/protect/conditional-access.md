@@ -29,6 +29,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - conditional-access
+- sub-device-compliance
 ---
 
 # Learn about Conditional Access and Intune

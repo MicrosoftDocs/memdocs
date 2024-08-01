@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - compliance
+- sub-device-compliance
 ---
 # Monitor results of your Intune Device compliance policies
 

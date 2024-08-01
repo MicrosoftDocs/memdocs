@@ -29,6 +29,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - conditional-access
+- sub-device-compliance
 ---
 
 # Set up app-based Conditional Access policies with Intune

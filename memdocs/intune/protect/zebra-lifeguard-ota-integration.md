@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-updates
 ---
 # Zebra LifeGuard Over-the-Air Integration with Microsoft Intune
 

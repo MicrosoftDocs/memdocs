@@ -26,6 +26,8 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - certificates
+- sub-certificates
+
 ms.reviewer: lacranda
 ---
 

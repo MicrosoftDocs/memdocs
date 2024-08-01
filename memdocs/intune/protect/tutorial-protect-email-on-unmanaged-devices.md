@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-device-compliance
 ---
 
 # Tutorial: Protect Exchange Online email on unmanaged iOS devices with Microsoft Intune
