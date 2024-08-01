@@ -51,6 +51,17 @@ Registry keys are automatically set during the provisioning process.
 
 Supported drivers are automatically installed as part of the provisioning process. You don't need to manually install drivers. However, drivers aren't automatically updated, so must manually update drivers as needed.
 
+## Allowlist
+
+You must allow the following URLs on each Windows 365 GPU Cloud PC:
+ 
+| URL | Hardware |
+| --- | --- |
+| download.microsoft.com | Nvidia, AMD |
+| go.microsoft.com | Nvidia, AMD |
+| raw.githubusercontent.com/Azure/azhpc-extensions/master/NvidiaGPU/resources.json<br>(Nvidia driver resource file) | Nvidia |
+| raw.githubusercontent.com/Azure/azhpc-extensions/master/AmdGPU/resources.json (AMD driver resource file) | AMD |
+
 ## Supported regions
 
 The GPU offerings are available in all [Windows 365 supported regions](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning) except for the following:
