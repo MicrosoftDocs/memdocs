@@ -61,7 +61,7 @@ We recommend using the latest updates for a more successful attestation rate.
 
 - Physical devices are supported.
 
-- The following virtual machines don’t support TPM attestation, even if they use virtual TPMs (vTPM):
+- The following virtual machines don’t support attestation, even if they use virtual TPMs (vTPM):
 
   - Hyper-V and Azure virtual machines  
 
@@ -69,9 +69,7 @@ We recommend using the latest updates for a more successful attestation rate.
 
   - Windows 365 Cloud PCs  
 
-  - Microsoft Dev Box
-
-  To exclude any virtual machine from the enrollment restrictions, don’t use the *isTpmAttested* assignment filter for any of your workflows. If you want to utilize the **isTpmAttested** state for physical machines only, you can define your filter rules to [exclude Cloud PCs](/windows-365/enterprise/create-filter) and other virtual machines.  
+  - Microsoft Dev Box  
 
 - Attestation with TPM in this feature is during Intune device management enrollment, after the TPM attestation that occurs in Autopilot pre-provision and Shared device mode (SDM).
 
@@ -80,8 +78,6 @@ We recommend using the latest updates for a more successful attestation rate.
   - [Windows InitiateRecovery CSP](/windows/client-management/mdm/dmclient-csp#deviceproviderprovideridrecoveryinitiaterecovery)
   - [Windows RecoveryStatus CSP](/windows/client-management/mdm/dmclient-csp#deviceproviderprovideridrecoveryrecoverystatus)
   - [Windows MDMClientCertAttestation CSP](/windows/client-management/mdm/devicestatus-csp#certattestationmdmclientcertattestation)
-
-
 
 ## How Windows enrollment attestation works
 
@@ -142,7 +138,7 @@ The following table lists status details and their descriptions:
 | AIK certificate wasn't provided| AIK certificate is missing on the device. Could be due to network issue. If temporary, attestation would retry successfully once device receives AIK cert.  |
 | Client didn't provide all required parameters | Both AIK certificate and AIK public key are missing.                                                                                     |
 | MDM key is already in TPM       | Device indicates that the MDM key is already stored in TPM. But Intune is unable to attest it because AIK certificate or AIK public key is missing, or ENTRA key can't be attested. |
-| Feature isn't supported        | This status shows for devices that aren't yet attestable. Examples include Win 365, AVD, or Hyper-V machines.                     |
+| Feature isn't supported        | This status shows for devices that aren't yet attestable. Examples include Hyper-V and Azure virtual machines, Azure Virtual Desktop session hosts, Windows 365 Cloud PCs, Microsoft Dev Box.                     |
 | Entra token doesn't match device identity | ENTRA token for enrollment doesn't match the ENTRA key presented in the enrollment request. You can fix this issue by upgrading to the latest Windows build and by retrying attestation.                                          |
 | Entra token is missing device identity | ENTRA token for enrollment is missing ENTRA device identity.                                                               |
 
