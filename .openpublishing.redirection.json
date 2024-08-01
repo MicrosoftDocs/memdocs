@@ -2646,6 +2646,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "windows-365/enterprise/set-up-vmware-horizon.md",
+      "redirect_url": "/windows-365/enterprise/set-up-omnissa-horizon",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/requirements-vmware-horizon.md",
+      "redirect_url": "/windows-365/enterprise/requirements-omnissa-horizon",
+      "redirect_document_id": false
+    },
+   {
       "source_path": "memdocs/configmgr/core/clients/manage/monitor-windows-analytics.md",
       "redirect_url": "/mem/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove",
       "redirect_document_id": false
