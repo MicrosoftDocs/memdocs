@@ -61,20 +61,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Endpoint Privilege Management support in US GCC High environment <!-- 25230811 -->
-
-Endpoint Privilege Management (EPM) will soon be supported in US Government Community Cloud (GCC) High tenants.
-
-Applies to:
-
-- Windows 10
-- Windows 11
-
-For more information, see:
-
-- [Endpoint Privilege Management overview](../protect/epm-overview.md)
-- [Intune US Government service description](../fundamentals/intune-govt-service-description.md)
-
 ### Easy creation of Endpoint Privilege Management elevation rules based on support approval requests<!-- 28196775 -->
 
 You’ll soon be able to create Endpoint Privilege Management (EPM) elevation rules directly from a support approval request or from details found in the Elevation report. This new process will replace the need to manually enter details about an elevation and how it should be managed, and supports creation of a new rules policy or adding the new rules to an existing policy.
