@@ -63,7 +63,7 @@ For more information about public preview items, see [Public preview in Windows 
 
 #### Uni-directional clipboard support is now generally available<!--49083399-->
 
-Uni-directional clipboard support for Cloud PCs has moved out of preview and is now generally available. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktopwww.omnissa.com/learn/1733900_REG.html/clipboard-transfer-direction-data-types).
+Uni-directional clipboard support for Cloud PCs has moved out of preview and is now generally available. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
 
 #### Closing port 3389 by default for newly provisioned and reprovisioned Cloud PCs<!--51154043-->
 
