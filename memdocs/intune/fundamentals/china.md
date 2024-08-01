@@ -28,6 +28,7 @@ ms.custom: intune-classic; get-started
 ms.collection:
 - tier2
 - M365-identity-device-management
+- government
 ---
 
 # Intune operated by 21Vianet in China  
