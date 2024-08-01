@@ -61,15 +61,12 @@ We recommend using the latest updates for a more successful attestation rate.
 
 - Physical devices are supported.
 
-- The following virtual machines don’t support attestation, even if they use virtual TPMs (vTPM):
-
-  - Hyper-V and Azure virtual machines  
-
-  - Azure Virtual Desktop session hosts  
-
-  - Windows 365 Cloud PCs  
-
-  - Microsoft Dev Box  
+    > [!NOTE]
+    > Virtual machines can't attest, including the following, even if they use vTPMs:
+    >  - Hyper-V and Azure virtual machines  
+    >  - Azure Virtual Desktop session hosts  
+    >  - Windows 365 Cloud PCs  
+    >  - Microsoft Dev Box  
 
 - Attestation with TPM in this feature is during Intune device management enrollment, after the TPM attestation that occurs in Autopilot pre-provision and Shared device mode (SDM).
 
