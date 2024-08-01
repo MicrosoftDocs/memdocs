@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2024
+ms.date: 08/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,30 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of July 29, 2024
+
+### Microsoft Intune Suite
+
+#### Endpoint Privilege Management, Advanced Analytics, and Intune Plan 2 is available for GCC High and DoD<!-- 25230811, 25300700, 27030977, 27234960 -->
+
+We are excited to announce that the following capabilities from the Microsoft Intune Suite are now supported in U.S. Government Community Cloud (GCC) High and U.S. Department of Defense (DoD) environments.
+
+Add-on capabilities:
+
+- [Endpoint Privilege Management](../protect/epm-overview.md)
+- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)  - With this release, GCC High and DoD support for Advanced Endpoint Analytics not include the [*Device query*](../../analytics/device-query.md) functionality.
+
+Plan 2 capabilities:
+
+- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
+- [Firmware-over-the-air update](../protect/fota-updates-android.md)
+- [Specialty devices management](../fundamentals/specialty-devices-with-intune.md)
+
+For more information, see:
+
+- [Use Microsoft Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
+- [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md)
 
 ## Week of July 22, 2024 (Service release 2407) 
 
