@@ -28,6 +28,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - network-access-control
+- sub-infrastructure
 ---
 
 # Network access control (NAC) integration with Intune

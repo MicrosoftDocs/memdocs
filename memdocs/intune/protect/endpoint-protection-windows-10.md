@@ -24,6 +24,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - conditional-access
+- sub-secure-endpoints
 ---
 
 # Windows settings you can manage through an Intune Endpoint Protection profile

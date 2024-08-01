@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2023
+ms.date: 07/31/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,11 +24,12 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-secure-endpoints
 ---
 
 # Reports for LAPS policy in Intune
 
-After devices are assigned Microsoft Intune policy for Windows LAPS, you can view policy details from within the Microsoft Intune admin center. Reports for LAPS include details about the devices and users that have been assigned policies, which settings from those policies  have been set successfully, have errors or conflicts, and which devices are pending the submission of device status for assigned policy.
+After devices are assigned Microsoft Intune [policy for Windows LAPS](../protect/windows-laps-policy.md), you can view policy details from within the Microsoft Intune admin center. Reports for LAPS include details about devices and users that are assigned LAPS policies, the status of the policy settings like success, errors, or conflicts, and which devices are pending the submission of device status for assigned policy.
 
 Reports for Windows LAPS policies are found in the Endpoint security node for Account protection policies. The Reports node of the Intune admin center doesn't have dedicated reports for Windows LAPS.
 
@@ -42,27 +43,27 @@ To use the report, sign into the Intune admin center and navigate to the Account
 
 When you select any row from the list of policies, Intune displays details for that policy that include:
 
-- A summarization of the *Device and user check-in status* that displays the count of devices that the policy targets and that have succeeded in reporting status, have errors, and so forth.
+- A summarization of the *Device and user check-in status* that displays the count of devices that the policy targets and that successfully report a status, have errors or conflicts, and so forth.
 
-- A link labeled **View report** that opens a detailed report for each device or user that’s been assigned the policy.  This report can help you understand the policy configuration and identify the source of conflicts that might prevent the policy from applying to a device.  
+- A link labeled **View report** that opens a detailed report for each device or user that’s been assigned the policy. This report can help you understand the policy configuration and identify the source of conflicts that might prevent the policy from applying to a device.
 
 - Each policy includes tiles you can use to investigate specific aspects of the LAPS report:
 
-  - **Device assignment status** - This tile opens a customized report you can use to review details for a subset of assignment status, like devices with Success, Conflict, or devices that are Pending and haven’t yet reported their status.
+  - **Device assignment status** - This tile opens a customized report you can use to review details for a subset of assignment status, like devices with a status of *Success*, *Conflict*, or devices that are *Pending* and have yet to report a status.
 
     To use this report option, select one or more *Assignment status* options and then select **Generate again** to run the report for current details.
 
-    The results you see are a subset of the results that are available from the *View report* option. This custom view includes support to drill in to device details to view more information about the selected assignment status that was selected for this report.  
+    The results you see are a subset of the results that are available from the *View report* option. This custom view includes support to drill in to device details to view more information about the selected assignment status that was selected for this report.
 
-  - **Per setting status** - A report that lists each setting in policy, and the count of devices that have Success in applying the setting, have an Error, or a Conflict. This report view doesn’t support drilling in for more detail.  
+  - **Per setting status** - A report that lists each setting in policy, and the count of devices that have Success in applying the setting, have an Error, or a Conflict. This report view doesn’t support drilling in for more detail.
 
-In the following image, we’ve selected the policy named *LAPSSHTest*. We use this policy as we examine what you can learn by using the **View report** button to drill in for more information:
+The following image displays a policy instance named *LAPSSHTest*. We use this policy as we examine what you can learn by using the **View report** button to drill in for more information:
 
 :::image type="content" source="./media/windows-laps-reports/check-in-status.png" alt-text="Screen shot of the Device and user check-in status view for a Windows LAPS policy." lightbox="./media/windows-laps-reports/check-in-status.png":::
 
-While viewing the details for a policy, select the **View report** button to view a list that identifies each device that has been assigned the policy. The device list includes the following information:
+While viewing the details for a policy, select the **View report** button to view a list that identifies each device that is assigned the policy. The device list includes the following information:
 
-- Device name - Devices that have been assigned this policy.
+- Device name - Devices that are assigned this policy.
 
 - Logged in user – Identifies the name of the user logged into the device at the time the policy last reported status.
 
@@ -77,13 +78,13 @@ In the following image, we see that our example policy is assigned to a single d
 
 When you select the name of a device from the *Device name* column Intune displays details about the settings assigned to that device. In the following image, we see that the device we selected has two assigned settings. Of the twos settings, *Password Age Days* is identified as being in conflict per the Setting status column. When you select a setting from the setting name column, Intune opens the *Settings Details* pane where you can view details about that setting.
 
-In the following image, we’ve selected *Password Age Days* so we can learn more about its conflict:
+In the following image, *Password Age Days* is selected so we can learn more about its conflict:
 
 :::image type="content" source="./media/windows-laps-reports/profile-settings.png" alt-text="Screen shot of settings from a LAPS policy, with the Settings Details pane." lightbox="./media/windows-laps-reports/profile-settings.png":::
 
-The Settings Details pane shows us that the selected setting, *Password Age Days*,  is configured through two profiles, one named *LAPSSHTest* (the profile we have been viewing), and the other named *Lapsshtestapril*.
+The Settings Details pane shows us that the selected setting, *Password Age Days*, is configured through two profiles, one named *LAPSSHTest* (the profile we have been viewing), and the other named *Lapsshtestapril*.
 
-With the *source profiles* that are in conflict now identified by name, you can go back to the list of policies to  view the *Password Age Days*,  setting from each, and resolve the conflict.
+With the *source profiles* that are in conflict now identified by name, you can go back to the list of policies to view the *Password Age Days*, setting from each, and resolve the conflict.
 
 ## Events and Audit logs
 
