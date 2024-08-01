@@ -11,7 +11,7 @@ ms.date: 03/04/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.assetid: e6c4fedc-47b6-44b1-8c59-2fb81417f978
+ms.assetid: 
 searchScope:
  - User help
 
