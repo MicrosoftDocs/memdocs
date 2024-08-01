@@ -76,10 +76,6 @@ Windows 365 now supports AVC mixed mode when MMR is not enabled.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### Windows 365 support for Microsoft Purview Customer Key is now generally available<!--46980464-->
-
-Windows 365 support for encrypting Cloud PCs by setting up Microsoft Purview Customer Key has moved out of preview and into general availability. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
-
 #### Windows 365 Government now supports Customer Lockbox<!--48802385-->
 
 Windows 365 Government now supports Microsoft Purview Customer Lockbox.
