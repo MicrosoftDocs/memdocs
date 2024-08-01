@@ -1,5 +1,3 @@
-Edits for FOTA main article, not published today:
-
 ---
 # required metadata
 

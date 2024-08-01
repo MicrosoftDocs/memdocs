@@ -55,9 +55,9 @@ Advanced Endpoint Analytics is supported with the following sovereign cloud envi
 
 > [!NOTE]
 >
-> Support for Advanced Endpoint Analytics in GCC High and DoD environments does not include the [*Device query*](../../analytics/device-query.md) functionality.
+> Support for Advanced Endpoint Analytics in GCC High and DoD environments does not include the [*Device query*](/../analytics/device-query.md) functionality.
 
-For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../../fundamentals/intune-govt-service-description.md).
 
 ## Mixed licensing scenarios
 
