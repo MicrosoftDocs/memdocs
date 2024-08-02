@@ -138,10 +138,10 @@ sections:
           | **164** | Info | **AutopilotManager determined Internet is available to attempt policy download.** | |
           | **171** | Error | **AutopilotManager failed to set TPM identity confirmed. HRESULT=[error code].** | This message indicates an issue performing TPM attestation, needed to complete the self-deploying mode process. |
           | **172** | Error | **AutopilotManager failed to set Autopilot profile as available. HRESULT=[error code].** | This error is typically related to event ID 171. |
-          | **807** |  | **ZtdDeviceIsNotRegistered** |  Validate that the device's hardware hash is properly uploaded to Intune and that the device is assigned to a deployment profile. |
-          | **809** |  | **ZtdDeviceHasNoAssignedProfile - Assigned profile does not exist.** | The Windows Autopilot profile assigned to the device was deleted without first getting cleaned up. Assign a different Windows Autopilot profile to the device and then attempt to re-enroll the device. |
-          | **815** |  | **ZtdDeviceHasNoAssignedProfile - No profile assigned to the device, and no default profile found in the tenant.** | A Windows Autopilot profile wasn't found assigned to the device. Validate that a Windows Autopilot profile is assigned to the device. |
-          | **908** |  | **SerialNumberMismatch**<br>**ProductKeyIdMismatch** | There's a mismatch between the serial number or product key recorded in Windows Autopilot and the physical hardware that is preventing enrollment. Reregister the device and then attempt to re-enroll the device. |
+          | **807** | Error | **ZtdDeviceIsNotRegistered** |  Validate that the device's hardware hash is properly uploaded to Intune and that the device is assigned to a deployment profile. |
+          | **809** | Error | **ZtdDeviceHasNoAssignedProfile - Assigned profile does not exist.** | The Windows Autopilot profile assigned to the device was deleted without first getting cleaned up. Assign a different Windows Autopilot profile to the device and then attempt to re-enroll the device. |
+          | **815** | Error | **ZtdDeviceHasNoAssignedProfile - No profile assigned to the device, and no default profile found in the tenant.** | A Windows Autopilot profile wasn't found assigned to the device. Validate that a Windows Autopilot profile is assigned to the device. |
+          | **908** | Error | **SerialNumberMismatch**<br>**ProductKeyIdMismatch** | There's a mismatch between the serial number or product key recorded in Windows Autopilot and the physical hardware that is preventing enrollment. Reregister the device and then attempt to re-enroll the device. |
 
       - question: |
           Where are the Windows Autopilot profile settings received from the Windows Autopilot deployment service stored?
