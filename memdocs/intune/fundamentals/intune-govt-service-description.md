@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/18/2024
+ms.date: 08/01/2024
 ms.topic: article
 ms.service: microsoft-intune
 ms.suite: ems
@@ -77,6 +77,7 @@ The following features are available and supported in Microsoft GCC High and/or 
 | Remote Help | ✅ <br/><br/> Remote Help is supported in GCC on Android, macOS, and Windows devices. It's not supported in GCC High or DoD.<br/><br/> For more information on this feature, go to [Remote Help in Microsoft Intune](../fundamentals/remote-help.md). |
 | Windows Autopilot device preparation | ✅ <br/><br/> Some features are available now, such as user-driven deployments, and some are still [in the planning phase](#in-the-planning-phase). For more information on the recent changes to Windows Autopilot device preparation, go to [Blog: Windows deployment with the next generation of Windows Autopilot](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/windows-deployment-with-the-next-generation-of-windows-autopilot/ba-p/4148169). <br/><br/> To get started with Windows Autopilot device preparation, go to [Windows Autopilot Device Preparation overview](/autopilot/device-preparation/overview). |
 | Log Analytics | ✅ <br/><br/> You can send Intune log data to Azure Storage, Event Hubs, or Log Analytics. <br/><br/> For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](review-logs-using-azure-monitor.md). |
+| Microsoft Intune Plan 2 </br>and Microsoft Intune Suite | For more information on these plans, go to [Use Intune Suite add-on capabilities](intune-add-ons.md). <br/><br/> The following Plan 2 features support the GCC High and DoD environements: </br>- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md) </br>- [Firmware-over-the-air update](../protect/fota-updates-android.md) </br>- [Specialty devices management](../fundamentals/specialty-devices-with-intune.md) </br></br>  The following Microsoft Intune Suite features support the GCC High and DoD environements: </br>- [Endpoint Privilege Management](../protect/epm-overview.md) </br>- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)  - With this release, GCC High and DoD support for Advanced Endpoint Analytics not include the [*Device query*](../../analytics/device-query.md) functionality.|
 
 ### In the planning phase
 
@@ -86,7 +87,6 @@ The following features are currently not available and aren't supported in GCC H
 | --- | --- |
 | Expedited updates | For more information on this feature, go to [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md). |
 | Feature updates | For more information on this feature, go to [Feature updates for Windows in Intune](../protect/windows-10-feature-updates.md). |
-| Microsoft Intune Plan 2 </br>and Microsoft Intune Suite | For more information on these plans, go to [Use Intune Suite add-on capabilities](intune-add-ons.md). <br/><br/> Some features are being added. When support is added, these features are listed at [Available and supported](#available-and-supported) (in this article). |
 | Organizational Messages | For more information on this feature, go to [Organizational messages in Microsoft Intune](../remote-actions/organizational-messages-overview.md). |
 | Windows Autopilot | The following features are in the planning phase: </br></br>- Customize out-of-box experience (OOBE) and rename devices during provisioning based on organizational structure </br>- Self-deploying and pre-provisioning mode </br> - More admin-specified configurations delivered before allowing desktop access. </br> - Enhanced optional desktop onboarding experience inside the Windows Company Portal app </br> - The ability to associate a device with a tenant. </br></br>For information about Windows Autopilot, go to [Windows Autopilot overview](/autopilot/overview). |
 
