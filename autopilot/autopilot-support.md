@@ -6,7 +6,7 @@ ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.date: 07/31/2024
+ms.date: 08/02/2024
 ms.reviewer: jubaptis
 manager: aaroncz
 ms.collection:

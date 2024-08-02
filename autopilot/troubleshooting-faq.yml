@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 07/31/2024
+  ms.date: 08/02/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -43,7 +43,7 @@ sections:
 
           1. A network connection is established. The connection can be a wireless (Wi-fi) or wired (Ethernet) connection.
 
-          1. The Windows Autopilot profile is downloaded. When a wired connection is used, or a wireless connection is established, the profile downloads from the Autopilot deployment service as soon as the network connection is in place.
+          1. The Windows Autopilot profile is downloaded. When a wired connection is used, or a wireless connection is established, the profile downloads from the Windows Autopilot deployment service as soon as the network connection is in place.
 
           1. User authentication occurs. During a user-driven deployment, the user enters their Microsoft Entra credentials, which is then validated.
 
@@ -56,7 +56,7 @@ sections:
       - question: |
           How are Windows Autopilot device profiles downloaded?
         answer: |
-          When an Internet-connected Windows device boots up, it attempts to connect to the Autopilot service and download an Autopilot profile. The Autopilot profile is downloaded as soon as possible, and again after each reboot.
+          When an Internet-connected Windows device boots up, it attempts to connect to the Windows Autopilot service and download a Windows Autopilot profile. The Windows Autopilot profile is downloaded as soon as possible, and again after each reboot.
 
           > [!NOTE]
           >
@@ -77,7 +77,7 @@ sections:
       - question: |
           What are the key activities to perform when troubleshooting Windows Autopilot?
         answer: |
-          The key activities to perform when troubleshooting are:
+          The key troubleshooting activities to perform are:
 
           - Review configuration: Are Microsoft Entra ID and Microsoft Intune or a non-Microsoft mobile device management (MDM) service configured as specified in [Windows Autopilot configuration requirements](requirements.md?tabs=configuration)?
 
@@ -89,20 +89,20 @@ sections:
 
           - MDM enrollment issues: Is the device able to [enroll in Microsoft Intune](#troubleshooting-windows-autopilot-device-import-and-enrollment) or non-Microsoft MDM service?
 
-          - Review logs that are automatically collected upon Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics). <!-- MAXADO-1895390 -->
+          - Review logs that are automatically collected upon Windows Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics). <!-- MAXADO-1895390 -->
 
       - question: |
           How can additional detailed troubleshooting information be enabled?
         answer: |
-          On [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions), the Autopilot diagnostic page can be opened to view additional detailed troubleshooting information about the Autopilot provisioning process. To enable the Autopilot diagnostics page:
+          On [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions), the Windows Autopilot diagnostic page can be opened to view additional detailed troubleshooting information about the Windows Autopilot provisioning process. To enable the Windows Autopilot diagnostics page:
 
-          1. Go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status) where the Autopilot diagnostics page needs to be enabled.
+          1. Go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status) where the Windows Autopilot diagnostics page needs to be enabled.
 
           1. Make sure that **Show app and profile configuration progress** is selected to **Yes**.
 
           1. Make sure that **Turn on log collection and diagnostics page for end users** is selected to **Yes**.
 
-          Once the diagnostic page is enabled, select the **View Diagnostics button** or enter the keystroke <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>D</kbd> to access any diagnostic information. The diagnostics page is currently supported under the following conditions:
+          To access any diagnostic information once the diagnostic page is enabled, select the **View Diagnostics** button or enter the keystroke <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>D</kbd>. The diagnostics page is currently supported under the following conditions:
 
           - Windows 11.
           - Windows Autopilot user-driven mode.
@@ -110,7 +110,7 @@ sections:
 
           > [!NOTE]
           >
-          > - By default diagnostics are automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+          > - By default diagnostics are automatically collected upon a Windows Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
           >
           > - For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` isn't blocked on the network.
 
@@ -126,22 +126,22 @@ sections:
 
           | **Event ID** | **Type** | **Message** |**Description** |
           |----------|------|-------------|-------------|
-          | **100** | Warning | **Autopilot policy [name] not found.** | This error is typically a temporary problem, while the device is waiting for an Autopilot profile to be downloaded. |
-          | **101** | Info | **AutopilotGetPolicyDwordByName succeeded: policy name = [setting name]; policy value = [value].** | This message shows Autopilot retrieving and processing numeric OOBE settings. |
-          | **103** | Info | **AutopilotGetPolicyStringByName succeeded: policy name = [name]; value = [value].** | This message shows Autopilot retrieving and processing OOBE setting strings such as the Microsoft Entra tenant name. |
-          | **109** | Info | **AutopilotGetOobeSettingsOverride succeeded: OOBE setting [setting name]; state = [state].** | This message shows Autopilot retrieving and processing state-related OOBE settings. |
-          | **111** | Info | **AutopilotRetrieveSettings succeeded.** | This message means that the settings stored in the Autopilot profile that control the OOBE behavior were retrieved successfully. |
-          | **153** | Info | **AutopilotManager reported the state changed from [original state] to [new state].** | Usually, this message says **ProfileState_Unknown to ProfileState_Available**. This case indicates that a profile was available and downloaded for the device and that the device is ready to deploy using Autopilot. |
-          | **160** | Info | **AutopilotRetrieveSettings beginning acquisition.** | This message shows that Autopilot is getting ready to download the needed Autopilot profile settings. |
-          | **161** | Info | **AutopilotManager retrieve settings succeeded.** | The Autopilot profile was successfully downloaded. |
-          | **163** | Info | **AutopilotManager determined download isn't required and the device is already provisioned. Clean or reset the device to change this.** | This message indicates that an Autopilot profile is resident on the device. It typically would only be removed by the **Sysprep /Generalize** process. |
+          | **100** | Warning | **Autopilot policy [name] not found.** | This error is typically a temporary problem, while the device is waiting for a Windows Autopilot profile to be downloaded. |
+          | **101** | Info | **AutopilotGetPolicyDwordByName succeeded: policy name = [setting name]; policy value = [value].** | This message shows Windows Autopilot retrieving and processing numeric OOBE settings. |
+          | **103** | Info | **AutopilotGetPolicyStringByName succeeded: policy name = [name]; value = [value].** | This message shows Windows Autopilot retrieving and processing OOBE setting strings such as the Microsoft Entra tenant name. |
+          | **109** | Info | **AutopilotGetOobeSettingsOverride succeeded: OOBE setting [setting name]; state = [state].** | This message shows Windows Autopilot retrieving and processing state-related OOBE settings. |
+          | **111** | Info | **AutopilotRetrieveSettings succeeded.** | This message means that the settings stored in the Windows Autopilot profile that control the OOBE behavior were retrieved successfully. |
+          | **153** | Info | **AutopilotManager reported the state changed from [original state] to [new state].** | Usually, this message says **ProfileState_Unknown to ProfileState_Available**. This case indicates that a profile was available and downloaded for the device and that the device is ready to deploy using Windows Autopilot. |
+          | **160** | Info | **AutopilotRetrieveSettings beginning acquisition.** | This message shows that Windows Autopilot is getting ready to download the needed Windows Autopilot profile settings. |
+          | **161** | Info | **AutopilotManager retrieve settings succeeded.** | The Windows Autopilot profile was successfully downloaded. |
+          | **163** | Info | **AutopilotManager determined download isn't required and the device is already provisioned. Clean or reset the device to change this.** | This message indicates that a Windows Autopilot profile is present on the device. The **Sysprep /Generalize** process typically removes a Windows Autopilot profile. |
           | **164** | Info | **AutopilotManager determined Internet is available to attempt policy download.** | |
           | **171** | Error | **AutopilotManager failed to set TPM identity confirmed. HRESULT=[error code].** | This message indicates an issue performing TPM attestation, needed to complete the self-deploying mode process. |
           | **172** | Error | **AutopilotManager failed to set Autopilot profile as available. HRESULT=[error code].** | This error is typically related to event ID 171. |
-          | **807** |  | **ZtdDeviceIsNotRegistered** | This error indicates that the device isn't registered as a Windows Autopilot device. If the device is registered as a Windows Autopilot device, there might have been a hardware change on the device that caused its HWID to change. Delete the existing Windows Autopilot device object and then re-registering the device might fix the issue. |
-          | **809** |  | **ZtdDeviceHasNoAssignedProfile - Assigned profile does not exist** | The assigned Windows Autopilot profile might have been deleted without getting cleaned up. Assign a different Windows Autopilot profile to the device. |
-          | **815** |  | **ZtdDeviceHasNoAssignedProfile - No profile assigned to the device, and no default profile found in the tenant** | No Windows Autopilot profiles were found assigned to the device. Assign a Windows Autopilot profile to device. |
-          | **908** |  | **SerialNumberMismatch**<br>**ProductKeyIdMismatch** | There was a hardware mismatch on the device. Reregister the device. |
+          | **807** |  | **ZtdDeviceIsNotRegistered** |  Validate that the device's hardware hash is properly uploaded to Intune and that the device is assigned to a deployment profile. |
+          | **809** |  | **ZtdDeviceHasNoAssignedProfile - Assigned profile does not exist.** | The Windows Autopilot profile assigned to the device was deleted without first getting cleaned up. Assign a different Windows Autopilot profile to the device and then attempt to re-enroll the device. |
+          | **815** |  | **ZtdDeviceHasNoAssignedProfile - No profile assigned to the device, and no default profile found in the tenant.** | A Windows Autopilot profile wasn't found assigned to the device. Validate that a Windows Autopilot profile is assigned to the device. |
+          | **908** |  | **SerialNumberMismatch**<br>**ProductKeyIdMismatch** | There's a mismatch between the serial number or product key recorded in Windows Autopilot and the physical hardware that is preventing enrollment. Reregister the device and then attempt to re-enroll the device. |
 
       - question: |
           Where are the Windows Autopilot profile settings received from the Windows Autopilot deployment service stored?
@@ -155,11 +155,11 @@ sections:
           | **Value** | **Description** |
           |-------|-------------|
           | **AadTenantId** | The GUID of the Microsoft Entra tenant the user signed into. The user receives an error if this entry doesn't match the tenant that was used to register the device. |
-          | **CloudAssignedTenantDomain** | The Microsoft Entra tenant the device is registered with, for example, `contosomn.onmicrosoft.com`. If the device isn't registered with Autopilot, this value is blank. |
-          | **CloudAssignedTenantId** | The GUID of the Microsoft Entra tenant the device registered with. The GUID corresponds to the tenant domain from the CloudAssignedTenantDomain registry value. If the device isn't registered with Autopilot, this value is blank.|
-          | **IsAutopilotDisabled** | If set to 1, this registry value indicates that the device isn't registered with Autopilot. This state could also indicate that the Autopilot profile couldn't be downloaded because of network connectivity or firewall issues, or network timeouts. |
+          | **CloudAssignedTenantDomain** | The Microsoft Entra tenant the device is registered with, for example, `contosomn.onmicrosoft.com`. If the device isn't registered with Windows Autopilot, this value is blank. |
+          | **CloudAssignedTenantId** | The GUID of the Microsoft Entra tenant the device registered with. The GUID corresponds to the tenant domain from the CloudAssignedTenantDomain registry value. If the device isn't registered with Windows Autopilot, this value is blank.|
+          | **IsAutopilotDisabled** | If set to 1, this registry value indicates that the device isn't registered with Windows Autopilot. This state could also indicate that the Windows Autopilot profile couldn't be downloaded because of network connectivity or firewall issues, or network timeouts. |
           | **TenantMatched** | This entry is set to 1 if the user's tenant ID matches the tenant ID that the device was registered with. If this registry value is 0, the user would be shown an error and forced to start over. |
-          | **CloudAssignedOobeConfig** | A bitmap that shows which Autopilot settings were configured. Values include: **SkipCortanaOptIn** = 1, **OobeUserNotLocalAdmin** = 2, **SkipExpressSettings** = 4, **SkipOemRegistration** = 8, **SkipEula** = 16 |
+          | **CloudAssignedOobeConfig** | A bitmap that shows which Windows Autopilot settings were configured. Values include: **SkipCortanaOptIn** = 1, **OobeUserNotLocalAdmin** = 2, **SkipExpressSettings** = 4, **SkipOemRegistration** = 8, **SkipEula** = 16 |
 
       - question: |
           Can ETW tracing be used with Windows Autopilot?
@@ -170,18 +170,18 @@ sections:
   - name: Troubleshooting Windows Autopilot device import and enrollment
     questions:
       - question: |
-          Why is error code "0x80180014" occurring when trying to re-enroll a device that has previously enrolled?
+          Why is error code "0x80180014" occurring when trying to re-enroll a previously enrolled device?
         answer: |
           Error code **0x80180014** can occur under either of the following scenarios:
 
           1. Microsoft Intune changed the Windows Autopilot self-deployment mode and pre-provisioning mode experience. To reuse a device, the device record created by Intune must be deleted.
 
-              This change impacts all Autopilot deployments that use the self-deployment or pre-provisioning mode. This change impacts devices when they're reused, reset, or when redeploying a profile.
+              This change impacts all Windows Autopilot deployments that use the self-deployment or pre-provisioning mode. This change impacts devices when they devices are reused, reset, or when redeploying a profile.
 
               To resolve and fix the issue in this scenario and redeploy the device using Windows Autopilot, follow these steps:
 
               1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Intune admin center](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-admin-center).
-              1. Redeploy the Autopilot deployment profile.
+              1. Redeploy the Windows Autopilot deployment profile.
 
           1. Windows MDM enrollment is disabled in the Intune tenant.
 
@@ -217,7 +217,7 @@ sections:
 
               > [!NOTE]
               >
-              > When multiple restrictions exist, restrictions might exist that only allow certain groups MDM enrollment. Some of the restrictions blocking MDM enrollment might be valid based on what group they're assigned to. When experiencing this problem, verify that the device isn't a member of one of the groups where there's MDM enrollment is blocked, or if applicable, change the MDM enrollment setting for that restriction to **Allow**.
+              > When multiple restrictions exist, restrictions might exist that only allow certain groups MDM enrollment. Some of the restrictions blocking MDM enrollment might be valid based on what group the restrictions are assigned to. When experiencing this problem, verify that the device isn't a member of one of the groups where there's MDM enrollment is blocked. Alternatively, if applicable change the MDM enrollment setting for that restriction to **Allow**.
 
 
           In both of these scenarios, in addition to error **0x80180014** occurring, the Event Tracing for Windows (ETW) logs might also show the following mobile device management (MDM) error:
@@ -225,19 +225,19 @@ sections:
           `MDM Enroll: Server Returned Fault/Code/Subcode/Value=(DeviceNotSupported) Fault/Reason/Text=(Enrollment blocked for AP device by SDM One Time Limit Check)`
 
       - question: |
-          When trying to import a CSV file with a device hardware hash, why does nothing happen when selecting Import ?
+          When trying to import a CSV file with a device hardware hash, why does nothing happen when selecting Import?
         answer: |
-          This issue usually occurs because the device hash in the CSV file is incorrectly formatted. The issue can be confirmed by running a network trace while the issue occurs. If an error **400** occurs in the network trace with the message body of
+          This issue usually occurs because the device hash in the CSV file is incorrectly formatted. The issue can be confirmed by running a network trace while the issue occurs. Most likely the device hash in the CSV file is incorrectly formatted if an error **400** occurs in the network trace. The message body of the **400** error message shows:
 
           `Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'`
 
-          then most likely the device hash in the CSV file is incorrectly formatted. Anything that corrupts the collected hash can cause this error. One possibility is that the hash itself fails to be decoded, even if the hash is valid.
+          Anything that corrupts the collected hash can cause this error. One possibility is that the hash itself fails to be decoded, even if the hash is valid.
 
-          The device hash is Base64. At the device level, it's encoded as unpadded Base64, but Windows Autopilot expects padded Base64. Usually, the payload doesn't require padding and the process works. Sometimes, however, the payload doesn't line up cleanly and padding is necessary. In this case, the above error is displayed. PowerShell's Base64 decoder also expects padded Base64, so this decoder can be used to validate that the hash is properly padded.
+          The device hash is Base64. At the device level, it's encoded as unpadded Base64, but Windows Autopilot expects padded Base64. Usually, the payload doesn't require padding and the process works. Sometimes, however, the payload doesn't line up cleanly and padding is necessary. In this case, the **400** error message occurs. PowerShell's Base64 decoder also expects padded Base64, so this decoder can be used to validate that the hash is properly padded.
 
           The "A" characters at the end of the hash are effectively empty data. Each character in Base64 is 6 bits. A in Base64 is 6 bits equal to 0. Deleting or adding **A**s at the end doesn't change the actual payload data.
 
-          To resolve and fix this issue, the hash needs to be modified. The new value then needs to be tested until PowerShell succeeds in decoding the hash. The result is mostly illegible, which is fine as long as the the error **Invalid length for a Base-64 char array or string** isn't displayed.
+          To resolve and fix this issue, the hash needs to be modified. The new value then needs to be tested until PowerShell succeeds in decoding the hash. The result is mostly illegible, which is fine as long as the error **Invalid length for a Base-64 char array or string** isn't displayed.
 
           To test the base64, use the following PowerShell:
 
@@ -261,7 +261,7 @@ sections:
               - No: Add another "=" character at the end, then try again
           - No: That hash is valid
 
-          Looping the above logic on the previous example hash, we get the following permutations:
+          Looping the logic on the previous example hash, we get the following permutations:
 
           - Q29udG9zbwAAA
           - Q29udG9zbwAAA=
@@ -276,14 +276,19 @@ sections:
       - question: |
           Why is the Windows Autopilot profile not applied after a hardware change occurred on a device?
         answer: |
-          When a hardware change occurs on a device, the Windows Autopilot profiles isn't applied if a device is reimaged to a version of Windows prior to one of the following Windows versions:
+          The Windows Autopilot profile isn't applied if the following conditions are met:
 
-          - Windows 11, version 21H2 with [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393).
-          - [Windows 10, versions 22H2](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions).
+          - A hardware change occurs on a device.
+
+          - The device is reimaged to a Windows version before one of the following versions:
+
+            - Windows 11, version 21H2 with [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393).
+
+            - [Windows 10, versions 22H2](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions).
 
           This behavior is expected.
 
-          The message **Fix pending** or **Attention required** might also be displayed in the **Windows Autopilot devices** page for the device, which indicates that there was a hardware change on the device. When the link for the **Fix pending** status is selected, the following message appears:
+          The message **Fix pending** or **Attention required** might also be displayed in the **Windows Autopilot devices** page for the device. These messages indicate that a hardware change occurred on the device. When the link for the **Fix pending** status is selected, the following message appears:
 
           `We've detected a hardware change on this device. We're trying to automatically register the new hardware. You don't need to do anything now; the status will be updated at the next check in with the result.`
 
@@ -298,9 +303,15 @@ sections:
       - question: |
           Why is the join type for a device showing as "Microsoft Entra registered" instead of "Microsoft Entra joined"?
         answer: |
-          This issue occurs if the device was previously registered in Microsoft Entra ID before it was joined to Microsoft Entra ID. The device could've registered in Microsoft Entra ID via something like a [Workplace join](/entra/identity/devices/concept-device-registration). If the Microsoft Entra ID registered device isn't deleted from Microsoft Entra ID before it's joined to Microsoft Entra ID, then the previous trust type is retained in the record. Joining an existing Microsoft Entra registered device to Microsoft Entra ID results in the Windows Autopilot device showing as **Microsoft Entra registered** instead of **Microsoft Entra joined**.
+          This issue occurs if the device was previously registered in Microsoft Entra ID before it was joined to Microsoft Entra ID. The device possibly registered in Microsoft Entra ID via something like a [Workplace join](/entra/identity/devices/concept-device-registration). If the Microsoft Entra ID registered device isn't deleted from Microsoft Entra ID before the device is joined to Microsoft Entra ID, then the previous trust type is retained in the record. Joining an existing Microsoft Entra registered device to Microsoft Entra ID results in the Windows Autopilot device showing as **Microsoft Entra registered** instead of **Microsoft Entra joined**.
 
-          To resolve and fix this issue, before registering an existing Microsoft Entra ID registered device as Windows Autopilot device, make sure that any existing Microsoft Intune, Microsoft Entra ID, and Windows Autopilot device objects for the device are deleted. After all device objects are deleted, re-register the device as a Windows Autopilot device and then re-enroll the device. For more information on properly deleting all of the device objects, see [Deregister a device](registration-overview.md#deregister-a-device).
+          To resolve and fix this issue, before registering an existing Microsoft Entra ID registered device as a Windows Autopilot device, the following existing device objects for the device should be deleted:
+
+          - Microsoft Intune.
+          - Microsoft Entra ID.
+          - Windows Autopilot.
+
+          After all device objects are deleted, re-register the device as a Windows Autopilot device and then re-enroll the device. For more information on properly deleting all of the device objects, see [Deregister a device](registration-overview.md#deregister-a-device).
 
       - question: |
           Why is enrollment in Microsoft Intune or a non-Microsoft MDM solution failing with an error code "80180018"?
@@ -313,7 +324,7 @@ sections:
       - question: |
           Why does Windows Autopilot Reset fail immediately with an error?
         answer: |
-          See [Troubleshoot Autopilot Reset](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) for more help if Autopilot Reset fails immediately with the error:
+          See [Windows Autopilot Reset: Troubleshooting](windows-autopilot-reset.md#troubleshooting) for more help if Windows Autopilot Reset fails immediately with the error:
 
           `Ran into trouble. Please sign in with an administrator account to see why and reset manually.`
 
@@ -328,7 +339,7 @@ sections:
       - question: |
           What is the cause of the error message "Can't connect to the URL of your organization's MDM terms of use."?
         answer: |
-          Licensing issues are usually associated with the error message:
+          This error message usually indicates an issue with licensing. The complete error message reads:
 
           `Something went wrong`
 
@@ -345,14 +356,14 @@ sections:
           The most common issue joining a device to Microsoft Entra ID is related to Microsoft Entra permissions. Make sure that the correct configuration is in place to allow users to join devices to Microsoft Entra ID. For more information, see [Configuration requirements](requirements.md?tabs=configuration).
 
       - question: |
-          What happens if a user attempts to join more devices to Microsoft Entra ID than they are allowed?
+          What happens if a user attempts to join more devices to Microsoft Entra ID then allowed?
         answer: |
-          Errors can happen if a user exceeds the number of devices that they're allowed to join. This default limit is 50 devices but can be configured in Microsoft Entra ID. For more information, see [Understand Intune and Microsoft Entra device limit restrictions](/mem/intune/enrollment/device-limit-intune-azure).
+          Errors occur if a user exceeds the allowed number of devices they can join. This default limit is 50 devices but can be configured in Microsoft Entra ID. For more information, see [Understand Intune and Microsoft Entra device limit restrictions](/mem/intune/enrollment/device-limit-intune-azure).
 
       - question: |
           Why did deleting a device's object in Microsoft Entra ID cause the device to not be able to join Microsoft Entra ID any longer?
         answer: |
-          A Microsoft Entra device is created upon import. It's important this object isn't deleted. The object acts as Windows Autopilot's anchor in Microsoft Entra ID for group membership and targeting, including the profile. Deleting it might lead to Microsoft Entra join errors. If this object is deleted, the issue can be fixed by deleting and reimporting the device as a Windows Autopilot device. Deleting and reimporting the device as a Windows Autopilot device will recreate the associated object in Microsoft Entra ID.
+          A Microsoft Entra device is created upon import. It's important this object isn't deleted. The object acts as Windows Autopilot's anchor in Microsoft Entra ID for group membership and targeting, including the profile. Deleting it might lead to Microsoft Entra join errors. If this object is deleted, the issue can be fixed by deleting and reimporting the device as a Windows Autopilot device. Deleting and reimporting the device as a Windows Autopilot device recreates the associated object in Microsoft Entra ID.
 
   - name: Troubleshooting policy conflicts with Windows Autopilot
     questions:
@@ -373,7 +384,7 @@ sections:
 
           | **Policy** | **More information** |
           |-------|---------------|
-          | **Disallow changing of language/region/keyboard** | This group policy object (GPO) isn't supported during the out-of-box experience (OOBE) flow as it impacts the autologon experience. If this policy needs to be set for users, select to hide these pages in the Autopilot profile to prevent users from making changes. |
+          | **Disallow changing of language/region/keyboard** | This group policy object (GPO) isn't supported during the out-of-box experience (OOBE) flow as it impacts the autologon experience. If this policy needs to be set for users, select to hide these pages in the Windows Autopilot profile to prevent users from making changes. |
           | **[AppLocker CSP](/windows/client-management/mdm/applocker-csp)** | The AppLocker configuration service provider (CSP) isn't supported in the Enrollment Status Page as it triggers a reboot when a policy is applied or a deletion occurs. |
           |**Device restriction/[Password Policy](/windows/client-management/mdm/devicelock-csp)** | The out-of-box experience (OOBE) or user desktop autologon can fail when a device reboots during the device Enrollment Status Page (ESP). This failure can occur when certain [DeviceLock policies](/windows/client-management/mdm/policy-csp-devicelock) are applied to a device. Such policies can include:<ul><li>Minimum password length and password complexity</li><li>Any similar group policy settings (including any that disable autologon)</li></ul>This possible failure is especially true for kiosk scenarios where passwords are automatically generated. |
           |**Windows Security Baseline/[Administrator elevation prompt behavior](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)<br><br>Windows Security Baseline/[Require admin approval mode for administrators](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)<br><br>Windows Security Baseline / [Enable virtualization based security](/windows/client-management/mdm/policy-csp-deviceguard)** | These policies require a reboot, as a result more prompts might appear when modifying user account control (UAC) settings during the OOBE using the device Enrollment Status Page (ESP). Increased prompts are more likely if the device reboots after policies are applied. To work around this issue, the policies can be targeted to users instead of devices so that they apply later in the process. |
