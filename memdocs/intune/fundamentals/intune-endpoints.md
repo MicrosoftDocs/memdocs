@@ -1,4 +1,4 @@
----
+![image](https://github.com/user-attachments/assets/c340ec84-9232-4a90-b9fb-d3db1549c125)---
 # required metadata
 
 title: Network endpoints for Microsoft Intune
@@ -348,6 +348,26 @@ The **Installer Url** property either shows the external download location or th
 For details, see the following resource:
 
 - [Microsoft Connected Cache content and services endpoints](/windows/deployment/do/delivery-optimization-endpoints)
+
+**Other endpoints**
+login.windows.net
+msedge.b.tlu.dl.delivery.mp.microsoft.com
+bat.bing.com
+ocsp.digicert.com
+slscr.update.microsoft.com
+fe3cr.delivery.mp.microsoft.com
+da.xboxservices.com
+slscr.update.microsoft.com
+fe3cr.delivery.mp.microsoft.com
+kv501.prod.do.dsp.mp.microsoft.com
+cp501.prod.do.dsp.mp.microsoft.com
+tlu.dl.delivery.mp.microsoft.com
+pti.store.microsoft.com
+msedge.b.tlu.dl.delivery.mp.microsoft.com
+mobile.events.data.microsoft.com
+fe3cr.delivery.mp.microsoft.com
+ocsp.digicert.com
+
 
 ## Migrating device health attestation compliance policies to Microsoft Azure attestation
 
