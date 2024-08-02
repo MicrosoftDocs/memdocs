@@ -71,14 +71,14 @@ To manage any of the redirections by using the Settings Catalog, create and assi
 
 4. On the **Configuration settings** page, select **+ Add settings** to list and select settings to manage.
 
-    - To manage printer redirection settings, search for “Printer Redirection”, select the resulting category, and select the settings you want to manage.
+    - To manage printer redirection settings, search for *Printer Redirection*, select the resulting category, and select the settings you want to manage.
     - To manage other redirection settings, search for “Device and Resource Redirection”, select the resulting category, and select the settings you want to manage.
 
-5. After you've selected all the redirection settings that you want to manage, close the **Settings picker** view, configure the settings on the **Configuration settings** page, then select **Next**.
+5. After you select all the redirection settings that you want to manage, close the **Settings picker** view, configure the settings on the **Configuration settings** page, then select **Next**.
 
 6. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
-7. On the **Assignments** page, select the users or groups that will receive the redirection policy, then select **Next**.
+7. On the **Assignments** page, select the users or groups that you want to receive the redirection policy, then select **Next**.
 
 8. On the *Review + create** page, select **Create**.
 
