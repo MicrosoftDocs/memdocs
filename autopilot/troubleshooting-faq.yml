@@ -83,7 +83,7 @@ sections:
 
           - Check network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](requirements.md?tabs=networking)?
 
-          - Windows out-of-box experience (OOBE) behavior: Are the [expected OOBE](#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
+          - Windows out-of-box experience (OOBE) behavior: Are the [expected OOBE](#troubleshooting-windows-oobe-issues-during-windows-autopilot) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
 
           - Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](#troubleshooting-microsoft-entra-join-issues)?
 
@@ -117,7 +117,7 @@ sections:
       - question: |
           Where does Windows Autopilot log to?
         answer: |
-          Windows Autopilot logs entries into the event log. The log entries can be used to see details related to the Windows Autopilot profile settings and [OOBE](#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot) flow. These entries can be viewed using Event Viewer. Review the information in Event Viewer at **Application and Services Logs** -> **Microsoft** -> **Windows** -> **ModernDeployment-Diagnostics-Provider** -> **Autopilot**.
+          Windows Autopilot logs entries into the event log. The log entries can be used to see details related to the Windows Autopilot profile settings and [OOBE](#troubleshooting-windows-oobe-issues-during-windows-autopilot) flow. These entries can be viewed using Event Viewer. Review the information in Event Viewer at **Application and Services Logs** -> **Microsoft** -> **Windows** -> **ModernDeployment-Diagnostics-Provider** -> **Autopilot**.
 
       - question: |
           What do the different Event IDs mean in the Windows Autopilot event log entries in Event Viewer?
@@ -329,10 +329,10 @@ sections:
           `Ran into trouble. Please sign in with an administrator account to see why and reset manually.`
 
 
-  - name: Troubleshooting Windows out-of-box experience (OOBE) issues during Windows Autopilot
+  - name: Troubleshooting Windows OOBE issues during Windows Autopilot
     questions:
       - question: |
-          Why is the Windows out-of-box experience (OOBE) not running as expected during?
+          Why is the Windows out-of-box experience (OOBE) not running as expected during Windows Autopilot?
         answer: |
           It's useful to check if the device received a Windows Autopilot profile. If the device did receive a Windows Autopilot profile, verify that the settings in the profile are correct.
 
