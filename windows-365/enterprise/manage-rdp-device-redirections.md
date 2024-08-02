@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 08/02/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -90,6 +90,10 @@ For more help using the settings catalog to create a device configuration policy
 ## Use a GPO to manage RDP device redirections
 
 To manage any of the redirections by using GPO, create and assign a GPO in your Windows Server Active Directory domain. Make sure to use the corresponding policies as shown in the [RDP device redirection settings table](#rdp-device-redirection-settings). To learn more about the policies, download the [Group Policy Settings Reference Spreadsheet](https://www.microsoft.com/download/101451).
+
+## Clipboard redirections
+
+Clipboard redirection in Azure Virtual Desktop and Windows 365 lets users copy and paste content (like text, images, and files) between the user's device and the remote session in either direction. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types?tabs=intune).
 
 <!-- ########################## -->
 ## Next steps
