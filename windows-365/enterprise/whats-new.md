@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/25/2024
+ms.date: 08/1/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -76,15 +76,25 @@ Windows 365 now supports AVC mixed mode when MMR is not enabled.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### Windows 365 support for Microsoft Purview Customer Key is now generally available<!--46980464-->
-
-Windows 365 support for encrypting Cloud PCs by setting up Microsoft Purview Customer Key has moved out of preview and into general availability. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
-
 #### Windows 365 Government now supports Customer Lockbox<!--48802385-->
 
 Windows 365 Government now supports Microsoft Purview Customer Lockbox.
 
 For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Support for Omnissa Horizon clients and the Blast protocol with Windows 365 Enterprise is now generally available<!--51899029-->
+
+Support for Omnissa (previously VMware) Horizon clients and the Blast protocol with Windows 365 Enterprise Cloud PCs has moved out of preview and into general availability. For more information, see [Set up Omnissa Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New GPU offerings for Cloud PCs are now generally available<!--46699074-->
+
+New GPU offerings for Window 365 Enterprise Cloud PCs have moved out of preview adn into general availability. For more information, see [GPU Cloud PCs](gpu-cloud-pc.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Frontline
