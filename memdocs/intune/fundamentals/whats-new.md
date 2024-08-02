@@ -80,7 +80,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Microsoft Intune Suite
 
-#### ACME protocol support for iOS/iPadOS and macOS enrollment<!-- 25140355 -->
+#### Endpoint Privilege Management, Advanced Analytics, and Intune Plan 2 is available for GCC High and DoD<!-- 25230811, 25300700, 27030977, 27234960  -->
 
 We are excited to announce that the following capabilities from the Microsoft Intune Suite are now supported in U.S. Government Community Cloud (GCC) High and U.S. Department of Defense (DoD) environments.
 
@@ -102,7 +102,7 @@ For more information, see:
 
 ### Device enrollment  
 
-#### ACME protocol support for iOS/iPadOS and macOS enrollment
+#### ACME protocol support for iOS/iPadOS and macOS enrollment<!-- 25140355  -->
 As we prepare to support managed device attestation in Intune, we are starting a phased rollout of an infrastructure change for new enrollments that includes support for the *Automated Certificate Management Environment (ACME) protocol*. Now when new Apple devices enroll, the management profile from Intune receives an ACME certificate instead of a SCEP certificate.  ACME provides better protection than SCEP against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management. 
 
 Existing OS and hardware eligible devices do not get the ACME certificate unless they re-enroll. There is no change to the end user's enrollment experience, and no changes to the Microsoft Intune admin center. This change only impacts enrollment certificates and has no impact on any device configuration policies. 
