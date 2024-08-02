@@ -62,7 +62,7 @@ sections:
       - question: |
           Is it required to become a CSP to participate in Windows Autopilot?
         answer: |
-          This requirement doesn't apply to top volume OEMs because they can use the OEM Direct API. All others who choose to use the Microsoft Partnet Center (MPC) to register devices must become CSPs to access MPC.
+          This requirement doesn't apply to top volume OEMs because they can use the OEM Direct API. All others who choose to use the Microsoft Partner Center (MPC) to register devices must become CSPs to access MPC.
 
       - question: |
           Do the different CSP levels have all the same capabilities when it comes to Windows Autopilot?
