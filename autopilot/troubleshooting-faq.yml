@@ -332,7 +332,7 @@ sections:
   - name: Troubleshooting Windows out-of-box experience (OOBE) issues during Windows Autopilot
     questions:
       - question: |
-          Why is the Windows out-of-box experience (OOBE) not running as expected during?
+          Why is the Windows out-of-box experience (OOBE) not running as expected during Windows Autopilot?
         answer: |
           It's useful to check if the device received a Windows Autopilot profile. If the device did receive a Windows Autopilot profile, verify that the settings in the profile are correct.
 
