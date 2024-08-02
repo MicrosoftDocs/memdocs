@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/01/2024
+ms.date: 08/02/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -80,7 +80,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Microsoft Intune Suite
 
-#### Endpoint Privilege Management, Advanced Analytics, and Intune Plan 2 is available for GCC High and DoD<!-- 25230811, 25300700, 27030977, 27234960 -->
+#### ACME protocol support for iOS/iPadOS and macOS enrollment<!-- 25140355 -->
 
 We are excited to announce that the following capabilities from the Microsoft Intune Suite are now supported in U.S. Government Community Cloud (GCC) High and U.S. Department of Defense (DoD) environments.
 
@@ -99,6 +99,21 @@ For more information, see:
 
 - [Use Microsoft Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
 - [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md)
+
+### Device enrollment  
+
+#### ACME protocol support for iOS/iPadOS and macOS enrollment
+As we prepare to support managed device attestation in Intune, we are starting a phased rollout of an infrastructure change for new enrollments that includes support for the *Automated Certificate Management Environment (ACME) protocol*. Now when new Apple devices enroll, the management profile from Intune receives an ACME certificate instead of a SCEP certificate.  ACME provides better protection than SCEP against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management. 
+
+Existing OS and hardware eligible devices do not get the ACME certificate unless they re-enroll. There is no change to the end user's enrollment experience, and no changes to the Microsoft Intune admin center. This change only impacts enrollment certificates and has no impact on any device configuration policies. 
+
+ACME is supported for Apple Device Enrollment and Apple Configurator enrollment methods. Eligible OS versions include:  
+
+* iOS 16.0 or later  
+
+* iPadOS 16.1 or later  
+
+* macOS 13.1 or later    
 
 ## Week of July 22, 2024 (Service release 2407) 
 
