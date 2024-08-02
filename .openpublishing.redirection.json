@@ -2627,7 +2627,7 @@
     },
     {
       "source_path": "autopilot/troubleshoot-oobe.md",
-      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-oobe-issues-during-windows-autopilot",
       "redirect_document_id": false
     },
     {
