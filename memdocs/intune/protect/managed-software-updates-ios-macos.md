@@ -166,7 +166,7 @@ Managed software updates have precedence over other policies that configure soft
 
 ## Monitoring managed software updates
 
-Managed software updates use the same reporting as device configuration policies. For more information, go to [Monitor device configuration policies.](../configuration/device-profile-monitor.md).
+Managed software updates use the same reporting as device configuration policies. For more information, go to [Monitor device configuration policies](../configuration/device-profile-monitor.md).
 
 > [!IMPORTANT]
 > A policy that reports Success only means that the configuration successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy will report error as the device sees this as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
