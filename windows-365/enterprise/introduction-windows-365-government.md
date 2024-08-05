@@ -66,7 +66,6 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 - Windows 365 Switch
 - Windows 365 Frontline (available for GCC, not available for GCC High)
 - Cloud PC connection quality report
-- Cloud PC recommendation report
 - Cross region disaster recovery
 - [Microsoft Purview Customer Key](purview-customer-key.md) 
 
