@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/01/2024
+ms.date: 08/05/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -30,19 +30,17 @@ ms.collection:
 
 # Company Portal device setting requirements for Windows              
 
-This article describes the Windows device setting requirements Intune Company Portal can enforce on behalf of your workplace or school. Requirements are specific to each organization, and designed to keep your device secure while you're using it for work or school purposes. 
-
-You only need to update device settings that Company Portal flags.   
+This article describes the Windows device setting requirements in Intune Company Portal. Company Portal enforces these requirements on behalf of your workplace or school to ensure your device is secure while accessing their network. Requirements are specific to each organization. You only need to update the device settings that Company Portal flags. 
 
 ## Update operating system   
 
 To get the latest updates for Windows, see [Microsoft Support: Get the latest Windows update](https://support.microsoft.com/windows/get-the-latest-windows-update-7d20e88c-0568-483a-37bc-c3885390d212).  
 
-We recommend keeping both personal and corporate devices used for work up-to-date with the latest updates. Before updating a device, back up all of the information on it. Keeping a backup can help you recover your data if something interrupts the update, or let you transfer your information to a replacement device. 
+We recommend keeping the operating system (OS) on work and school devices up-to-date. Before updating a device, back up all of the information on it. Keep a backup so that you can recover your data if something interrupts the update, or transfer your information to a replacement device. 
 
 ## Operating system isn't supported  
 
-The operating system (OS) version that's on your device isn't supported. The current version of Windows might not work with your organization's apps, tools, or other internal infrastructure. To resolve this issue, either upgrade or downgrade to an OS version supported by your organization. OS requirements vary by organization. Contact your IT support person to find out what requirements you need to meet.   
+The operating system (OS) version running on your device isn't supported. The current version of Windows might not work with your organization's apps, tools, or other internal infrastructure. To resolve this issue, either upgrade or downgrade to an OS version supported by your organization. OS requirements vary by organization. Contact your IT support person to find out what requirements you need to meet.   
 
 For information about how to upgrade to Windows 11, see:  
 
@@ -53,11 +51,11 @@ For information about how to upgrade to Windows 11, see:
 
 Anti-malware is an important factor in making sure your device is protected. To meet this compliance requirement, enable the anti-malware software and features required by your organization. On devices running Windows 10 and later, the built-in anti-malware software is Microsoft Defender Antivirus. 
 
-Additionally, remember to only download apps from verified sources, such as the Company Portal app and the Microsoft Store. For more information about anti-malware for Windows, see [Microsoft Support: Getting started with anti-malware in Microsoft Defender](https://support.microsoft.com/topic/getting-started-with-anti-malware-in-microsoft-defender-f5219ae5-abb7-4985-a149-1ec1bb304eda). 
+Remember to only download apps from verified sources, such as the Company Portal app and the Microsoft Store. For more information about anti-malware for Windows, see [Microsoft Support: Getting started with anti-malware in Microsoft Defender](https://support.microsoft.com/topic/getting-started-with-anti-malware-in-microsoft-defender-f5219ae5-abb7-4985-a149-1ec1bb304eda). 
 
 ## Enable Window Code Integrity  
 
-Contact your IT support person to enable code integrity on your work or school device. Code integrity is a threat protection feature that checks the drivers and system files on your device for signs of corruption or malicious software. For it to work on your device, another security feature called *Secure Boot* must be enabled. Your IT support person can help you enable Secure Boot, which will in turn trigger code integrity the next time you start up your device.  
+Contact your IT support person to enable code integrity on your work or school device. Code integrity is a threat protection feature that checks the drivers and system files on your device for signs of corruption or malicious software. For it to work on your device, another security feature called *Secure Boot* must be enabled. Your IT support person can also help you enable Secure Boot, which will in turn trigger code integrity the next time you start up your device.  
 
 <!-- Admin info commented out 
 If you're a Microsoft Intune administrator and want to learn more about Intune's device health compliance settings, see [Add Windows 10/11 device compliance policy](../protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results). -->  
@@ -83,7 +81,7 @@ Your device is connected to a network that isn't approved for work access. While
 
 ## Restrictions couldn't be enforced  
 
-Company Portal can't determine if your device is connected to an approved network. This error could be a result of poor network connectivity, low battery, battery saver mode, or a Company Portal error. To resolve, verify that you have a strong network reception. Turn off battery saver mode and make sure your battery life has at least 30% remaining. Then tap **Resolve** to retry. 
+Company Portal can't determine if your device is connected to an approved network. This error could be a result of poor network connectivity, low battery, battery saver mode, or a Company Portal error. To resolve, verify that you have a strong network reception. Turn off battery saver mode and make sure your battery life has at least 30% remaining. Then tap **Resolve** in Company Portal to retry. 
 
 ## Enable Secure Boot  
 
