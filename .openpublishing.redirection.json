@@ -2,47 +2,47 @@
   "redirections": [
     {
       "source_path": "memdocs/intune/user-help/you-need-to-enable-uac-windows.md",
-      "redirect_url": "mem/intune/user-help/update-device-settings-windows",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/turn-on-defender-windows.md",
-      "redirect_url": "mem/intune/user-help/update-device-settings-windows",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-enable-secure-boot-windows.md",
-      "redirect_url": "mem/intune/user-help/update-device-settings-windows",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/resolve-access-point-restrictions.md",
-      "redirect_url": "mem/intune/user-help/update-device-settings-windows",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-enable-defender-firewall-windows.md",
-      "redirect_url": "mem/intune/user-help/update-device-settings-windows",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-enable-code-integrity.md",
-      "redirect_url": "mem/intune/user-help/update-device-settings-windows",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/your-device-needs-antimalware-software.md",
-      "redirect_url": "mem/intune/user-help/update-device-settings-windows",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-update-os-build-version-windows.md",
-      "redirect_url": "mem/intune/user-help/update-device-settings-windows",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/your-windows-version-isnt-yet-supported.md",
-      "redirect_url": "mem/intune/user-help/update-device-settings-windows",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
       "redirect_document_id": false
     },
     {
