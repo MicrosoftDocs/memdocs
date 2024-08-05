@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 08/21/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,9 +41,18 @@ Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an inform
 
 Intune can use this same data as a source for unenrolled devices using Intune app protection policies. As such, admins can use this information to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), and issue a block or selective wipe.
 
-> [!NOTE]
->
-> Intune for GCC High only supports the Mobile Threat Defense (MTD) connector for Android and iOS devices with MTD vendors that also have support in this environment. You will see connectors enabled for those specific vendors when you log in with a GCC-H tenant. Learn more about [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
+## Government cloud support
+
+Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices are available in the following sovereign clouds, provided that the MTD partners also support these environments. Upon logging into your tenant, you will be able to view the available connectors in that specific environment:
+
+- U.S. Government Community Cloud (GCC) High
+- 21Vianet
+
+Learn more about Intune and government clouds:
+
+- [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description). and 
+- [Microsoft Intune for US Government GCC High and DoD service description](../fundamentals/intune-govt-service-description.md)
+- [Microsoft Intune operated by 21Vianet in China](../fundamentals/china.md)
 
 ## Protect corporate resources
 
@@ -136,4 +145,3 @@ Learn how to protect access to company resource based on device, network, and ap
 - [Trend Micro Mobile Security as a Service](trend-micro-mobile-threat-defense-connector.md)
 - [Windows Security Center](../apps/protect-mam-windows.md) *(Supports integration with Windows MAM)*
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)
-
