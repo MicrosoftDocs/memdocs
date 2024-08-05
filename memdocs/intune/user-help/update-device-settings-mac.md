@@ -30,7 +30,7 @@ ms.collection:
 
 # Company Portal device setting requirements for Macs              
 
-This article describes the macOS device setting requirements that the Intune Company Portal can enforce on behalf of your workplace or school. Requirements are determined by your organization, and help keep your device secure while you're using it for work or school purposes. You only need to update settings flagged by Company Portal. 
+This article describes the macOS device setting requirements that the Intune Company Portal can enforce on behalf of your workplace or school. Company Portal enforces these requirements on behalf of your workplace or school to ensure your device is secure while accessing their network. Requirements are specific to each organization. You only need to update the device settings that Company Portal flags.
 
 ## Device limit reached    
 
@@ -38,7 +38,7 @@ To prevent unauthorized access to internal data, your school or workplace might 
 
 * Remove a device in Company Portal.  
 
-* Contact your IT support person and ask if they can increase the number of devices you're allowed to register.  
+* Contact your IT support person and ask if they can increase the number of devices allowed to register.  
 
 ## Identify device  
 
@@ -58,7 +58,7 @@ Keeping your device up-to-date lets you access the newest features, and it also 
 To check your Mac for available software updates, go to **App Store** > **Updates**. Select the newest macOS update available, and then select **Update**.  
 
 ## Operating system isn't supported  
-The operating system (OS) version that's on your device isn't supported. It's possible that the latest version of macOS doesn't work with your organization's apps, tools, and other internal infrastructure. To resolve this issue, contact your IT support person and find out what the OS requirements are for your device.   
+The operating system (OS) version running on your device isn't supported. It's possible that the latest version of macOS doesn't work with your organization's apps, tools, and other internal infrastructure. To resolve this issue, contact your IT support person and find out what the OS requirements are for your device.   
 
 ## Unable to get macOS device managed
 
