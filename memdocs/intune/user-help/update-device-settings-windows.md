@@ -42,7 +42,7 @@ We recommend keeping both personal and corporate devices used for work up-to-dat
 
 ## Operating system isn't supported  
 
-The operating system (OS) version that's on your device isn't supported. It's possible that the latest version of Windows doesn't work with your organization's apps, tools, and other internal infrastructure. To resolve this issue, upgrade the OS, or contact your IT support person to find out what the OS requirements are for your device.   
+The operating system (OS) version that's on your device isn't supported. The current version of Windows might not work with your organization's apps, tools, or other internal infrastructure. To resolve this issue, either upgrade or downgrade to an OS version supported by your organization. OS requirements vary by organization. Contact your IT support person to find out what requirements you need to meet.   
 
 For information about how to upgrade to Windows 11, see:  
 
