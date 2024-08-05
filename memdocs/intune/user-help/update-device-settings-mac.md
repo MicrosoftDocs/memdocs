@@ -42,7 +42,7 @@ To prevent unauthorized access to internal data, your school or workplace might 
 
 ## Identify device  
 
-If Company Portal prompts you to identify your device during enrollment, then you have at least one device that's already enrolled and assigned to your account. In this case, the device was enrolled via a method other than the Company Portal app. To resolve this message, select your device from the list in Company Portal.  
+If Company Portal prompts you to identify your device during enrollment, then there is another enrolled device associated with your work account. In this case, the device was enrolled via a method other than the Company Portal app. To resolve this message, select your device from the list in Company Portal.  
 
 If your device isn't listed:  
 
