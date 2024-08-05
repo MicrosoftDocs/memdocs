@@ -43,14 +43,14 @@ Intune can use this same data as a source for unenrolled devices using Intune ap
 
 ## Government cloud support
 
-Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices are available in the following sovereign clouds, provided that the MTD partners also support these environments. Upon logging into your tenant, you will be able to view the available connectors in that specific environment:
+Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices are available in the following sovereign clouds, provided that the MTD partners also support these environments. Upon logging into your tenant, you'll be able to view the available connectors in that specific environment:
 
 - U.S. Government Community Cloud (GCC) High
 - 21Vianet
 
 Learn more about Intune and government clouds:
 
-- [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description). and 
+- [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description)
 - [Microsoft Intune for US Government GCC High and DoD service description](../fundamentals/intune-govt-service-description.md)
 - [Microsoft Intune operated by 21Vianet in China](../fundamentals/china.md)
 
@@ -73,7 +73,7 @@ Once you add a Mobile Threat Defense connector to your tenant, the status displa
 | Connector status     | Definition | Device threat messages blocked?     | AppSync request messages blocked? |
 |--------------|-----------|------------|------------|
 | **Unavailable**| Connector is/was deprovisioned. The MTD partner needs to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308) |
-| **Not Set Up**| Connector setup isn't complete.  There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309) |
+| **Not Set Up**| Connector setup isn't complete. There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309) |
 | **Available**| Connector setup is complete. At least one platform toggle must be turned on for this status to change to **Enabled**. | No | No |
 | **Enabled**| Connector setup is complete, and at least one platform toggle is currently turned on for this connector. | No | No |
 | **Unresponsive**| Connector isn't responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune ignores the compliance state.| No | No |
