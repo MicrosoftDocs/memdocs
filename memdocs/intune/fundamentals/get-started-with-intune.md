@@ -52,7 +52,7 @@ This article provides an overview of the steps to start your Intune deployment.
 
   The following articles are good resources:
 
-  - [Move to cloud-native endpoints](/mem/cloud-native-endpoints-overview)
+  - [Move to cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
   - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
   - [Deployment guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
   - [Microsoft Intune fundamentals online training](/training/paths/endpoint-manager-fundamentals/).
@@ -172,8 +172,6 @@ When a device enrolls, the device is issued a secure MDM certificate. This certi
 
 Different platforms have different enrollment requirements. The following articles can help you learn more about device enrollment, including platform-specific guidance:
 
-- [What is device enrollment in Intune?](/mem/intune/fundamentals/deployment-guide-enrollment)
-- [Enrolled device management capabilities of Microsoft Intune](/mem/intune/enrollment/device-enrollment)
 - [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
   - [Deployment guide: Enroll Android devices](deployment-guide-enrollment-android.md)
   - [Deployment guide: Enroll iOS/iPadOS devices](deployment-guide-enrollment-ios-ipados.md)
@@ -187,9 +185,9 @@ Microsoft Configuration Manager helps protect on-premises Windows Server, device
 
 If you use Configuration Manager, then there are two steps to cloud attach your on-premises devices:
 
-1. [Tenant attach](/mem/configmgr/tenant-attach/prerequisites): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based Intune admin center.
+1. [Tenant attach](../../configmgr/tenant-attach/prerequisites.md): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based Intune admin center.
 
-2. [Co-management](/mem/configmgr/comanage/overview): Manage Windows client devices with Configuration Manager and Microsoft Intune. Configuration Manager manages some workloads, and Intune manages other workloads.
+2. [Co-management(../../configmgr/comanage/overview.md): Manage Windows client devices with Configuration Manager and Microsoft Intune. Configuration Manager manages some workloads, and Intune manages other workloads.
 
     For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage compliance & Conditional Access policies.
 

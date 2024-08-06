@@ -48,7 +48,7 @@ Make sure your tenant is set up to support organizational messages.
 3. Spend some time in the **Overview** tab to learn about messaging options and prerequisites. 
 
 ### Confirm license requirements  
-Confirm that your tenant has the license required to support organizational messages. This step only has to be done once. You must be assigned the [Organization/Update permission](../fundamentals/create-custom-role.md#custom-role-permissions) or be a global administrator to complete this step.      
+Confirm that your tenant has the license required to support organizational messages. This step only has to be done once. You must be assigned the [Organization/Update permission](../fundamentals/create-custom-role.md#custom-role-permissions) or be a Microsoft Entra Global Administrator to complete this step.    
 1. Go to the **Message** tab.  
 2. Review and verify that your tenant meets all licensing requirements. Select **I confirm that my organization owns the appropriate license and I understand the Windows device requirements.**  
 3. Select **Confirm**.  

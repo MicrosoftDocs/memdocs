@@ -20,7 +20,7 @@ Microsoft Intune provides many tools that can help you troubleshoot devices.
 ::: zone pivot="windows"
 Here's a collection of resources to help you troubleshoot Windows devices managed by Intune:
 
-- [Troubleshooting Windows Autopilot][MEM-9]
+- [Troubleshooting Windows Autopilot overview][MEM-9]
 - [Troubleshoot Windows Wi-Fi profiles][MEM-6]
 - [Troubleshooting BitLocker with the Intune encryption report][MEM-4]
 - [Troubleshooting custom settings][MEM-8]
@@ -78,5 +78,5 @@ ________________________________________________________
 [MEM-6]: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#troubleshoot-windows-wi-fi-profiles
 [MEM-7]: /troubleshoot/mem/intune/troubleshoot-win32-app-install
 [MEM-8]: /troubleshoot/mem/intune/troubleshoot-csp-custom-settings
-[MEM-9]: /mem/autopilot/troubleshooting
+[MEM-9]: /autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview
 [MEM-10]: /mem/intune/remote-actions/collect-diagnostics

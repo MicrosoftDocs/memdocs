@@ -25,6 +25,7 @@ search.appverid: MET150
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-updates
 ---
 
 # Rollout options for Windows Updates in Microsoft Intune

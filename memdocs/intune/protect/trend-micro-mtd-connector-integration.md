@@ -28,6 +28,7 @@ search.appverid: MET150
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Connect Trend Micro Mobile Security as a Service with Microsoft Intune
