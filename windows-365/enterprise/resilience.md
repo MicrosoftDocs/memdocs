@@ -37,7 +37,7 @@ Windows 365 uses the [Azure Virtual Desktop service](/azure/virtual-desktop/serv
 
 Example architecture of a Windows 365 service that enables administrators or end user operations:
 
-![Example diagram.](media/resilience/resilience.png)
+![Example diagram.](media/resilience/diagram.png)
 
 Windows 365 is a software-as-a-service (SaaS) service, where customers of the service don't have to architect, deploy, or manage complex infrastructure. As a SaaS service, Microsoft manages the underlying infrastructure for all of the individual Windows 365 services. This management maintains a global, fully available, resilient service that customers can rely upon for the daily use of their Cloud PCs. Microsoft continually works to improve the architecture of the service to improve the resilience and recovery times should there be an outage in any of the related Azure services. However, as a SaaS service, Windows 365 requires shared responsibility in overall service delivery to end users. Windows 365 aligns to the [Microsoft 365 guidance and recommendations for business continuity and cloud partner responsibilities](/compliance/assurance/assurance-customer-and-cloud-partner-ebcm-responsibilities)
 
