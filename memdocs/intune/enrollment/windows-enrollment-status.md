@@ -249,7 +249,7 @@ The ESP tracks the installation of apps deployed in a device context and targete
 >
 > Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller, which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps when using Windows Autopilot.
 >
-> If mixing LOB and Win32 apps is required, consider using [Windows Autopilot device preparation](/autopilot/device-preparation/overview), which does support mixing of LOB and Win32 apps.
+> If mixing LOB and Win32 apps is required, consider using [Windows Autopilot device preparation](/autopilot/device-preparation/overview), which doesn't use ESP so therefore supports mixing of LOB and Win32 apps.
 
 ### Account setup
 
