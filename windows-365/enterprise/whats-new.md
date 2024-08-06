@@ -8,10 +8,14 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 <<<<<<< HEAD
+<<<<<<< HEAD
 ms.date: 07/16/2024
 =======
 ms.date: 08/1/2024
 >>>>>>> 18f85a5ca627a90690a1b4b707379431575180fe
+=======
+ms.date: 08/1/2024
+>>>>>>> fff23686003d544e1d7d44a0347745eeddec2b3b
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
