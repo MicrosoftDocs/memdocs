@@ -94,7 +94,7 @@ Support for Omnissa (previously VMware) Horizon clients and the Blast protocol w
 
 #### New GPU offerings for Cloud PCs are now generally available<!--46699074-->
 
-New GPU offerings for Window 365 Enterprise Cloud PCs have moved out of preview adn into general availability. For more information, see [GPU Cloud PCs](gpu-cloud-pc.md).
+New GPU offerings for Window 365 Enterprise Cloud PCs have moved out of preview and into general availability. For more information, see [GPU Cloud PCs](gpu-cloud-pc.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Frontline
