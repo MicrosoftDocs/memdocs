@@ -49,7 +49,20 @@ This article describes the different [managed device properties](#managed-device
 
 You can use the following device properties in your managed device filter rules:
 
-- **`cpuArchitecture` (CPU Architecture)**: Create a filter rule based on Intune device cpu architecture property. For Windows, choose between amd64, x86, arm64, or unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators). For macOS, choose between x64, arm64, or unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators).
+- **`cpuArchitecture` (CPU Architecture)**: Create a filter rule based on the Intune device CPU architecture property.
+
+  For Windows, your options are (with `-eq`, `-ne`, `-in`, `-notIn` operators):
+
+  - amd64
+  - x86
+  - arm64
+  - unknown
+
+  For macOS, your options are (with `-eq`, `-ne`, `-in`, `-notIn` operators):
+
+  - x64
+  - arm64
+  - unknown
 
   Examples:
 
@@ -64,7 +77,7 @@ You can use the following device properties in your managed device filter rules:
   - Windows 10
 
   > [!NOTE]
-  > Currently, enrollment scenarios don't support the `cpuArchitecture` property. Support will be added in future update (no ETA).
+  > Currently, enrollment scenarios don't support the `cpuArchitecture` property. Support will be added in a future update (no ETA).
 
 - **`deviceCategory` (Device Category)**: Create a filter rule based on the Intune device category property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
