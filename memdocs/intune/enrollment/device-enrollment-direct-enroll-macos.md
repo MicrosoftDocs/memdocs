@@ -54,11 +54,7 @@ Apps requiring user affinity, such as the Intune Company Portal app, aren't supp
 ## Certificates  
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
-Devices already enrolled in Intune do not get an ACME certificate unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 
-
-- iOS 16.0 or later  
-
-- iPadOS 16.1 or later  
+Devices that are already enrolled in Intune do not get an ACME certificate unless they re-enroll into Microsoft Intune. ACME is supported on devices running macOS 13.1 or later.   
 
 ## Prerequisites
    
