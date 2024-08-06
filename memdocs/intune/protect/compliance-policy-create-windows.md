@@ -29,6 +29,7 @@ ms.collection:
 - highpri
 - highseo
 - compliance
+- sub-device-compliance
 ---
 
 # Device Compliance settings for Windows 10/11 in Intune
@@ -48,12 +49,11 @@ As an Intune administrator, use these compliance settings to help protect your o
 [Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Windows 10 and later**.
 
 ## Device health
-To ensure devices boot to a trusted state, Intune utilizes Microsoft device attestation services.  Devices across Intune commercial, US Government GCC High, and DoD services running Windows 10 use the Device Health Attestation (DHA) service. Devices in the Intune commercial service running Windows 11 use the Microsoft Azure Attestation (MAA) service. 
+To ensure devices boot to a trusted state, Intune utilizes Microsoft device attestation services.  Devices across Intune commercial, US Government GCC High, and DoD services running Windows 10 use the Device Health Attestation (DHA) service. 
 
 For more information, see:  
 
 - [Device Health Attestation](/windows-server/security/device-health-attestation)  
-- [Microsoft Azure Attestation](/azure/attestation/overview)  
   
 ### Windows Health Attestation Service evaluation rules
 
@@ -83,7 +83,6 @@ For more information, see:
 For more information, see:  
 
 - For details about how the Health Attestation service works, see [Health Attestation CSP](/windows/client-management/mdm/healthattestation-csp).  
-- For the Microsoft Azure Attestation service, ensure there are no firewall rules blocking outbound HTTPS/443 traffic, and that SSL traffic inspection is not in place for your Intune tenant's geo-region. For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md?tabs=north-america#migrating-device-health-attestation-compliance-policies-to-microsoft-azure-attestation).  
 - [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).  
 
 ## Device Properties

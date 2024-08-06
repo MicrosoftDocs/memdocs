@@ -6,7 +6,7 @@ description: Learn about Windows 365 service resilience.
 keywords:
 author: ErikjeMS 
 ms.author: erikje
-manager: dougeby
+manager: dougeby 
 ms.date: 08/06/2024
 ms.topic: conceptual
 ms.service: windows-365

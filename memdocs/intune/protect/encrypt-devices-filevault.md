@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - highpri
+- sub-secure-endpoints
 
 ---
 

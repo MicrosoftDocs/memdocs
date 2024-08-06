@@ -28,6 +28,7 @@ ms.collection:
 - highpri
 - highseo
 - compliance
+- sub-device-compliance
 ---
 
 # Use compliance policies to set rules for devices you manage with Intune
@@ -40,7 +41,7 @@ Intune compliance policies are divided into two areas:
 
 - [Compliance policy settings](#compliance-policy-settings) are tenant-wide configurations that act like a built-in compliance policy that every device receives. Compliance policy settings establish how compliance policy works in your Intune environment, including how to treat devices that aren't assigned an explicit device compliance policy.
 
-- [Device compliance policies](#device-compliance-policies) are discrete sets of platform-specific rules and settings you deploy to groups of users or devices. Devices evaluate the rules I the policy to report a device compliance status. A noncompliant status can result in one or more actions for noncompliance. Microsoft Entra Conditional Access policies can also use that status to block access to organizational resources from that device.
+- [Device compliance policies](#device-compliance-policies) are discrete sets of platform-specific rules and settings you deploy to groups of users or devices. Devices evaluate the rules in the policy to report a device compliance status. A noncompliant status can result in one or more actions for noncompliance. Microsoft Entra Conditional Access policies can also use that status to block access to organizational resources from that device.
 
 ## Compliance policy settings
 

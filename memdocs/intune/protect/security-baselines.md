@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- sub-secure-endpoints
 ---
 
 # Use security baselines to help secure Windows devices you manage with Microsoft Intune
@@ -117,7 +118,8 @@ The following security baseline instances are available for use with Intune. Use
   - [Preview: Microsoft Edge version 77 and later](../protect/security-baseline-settings-edge.md?pivots=edge-october-2019) - October 2019
 
 - **Windows 365 Security Baseline**:
-  - [October 2021](security-baseline-settings-windows-365.md)
+  - [Version 24H1](security-baseline-settings-windows-365.md?pivots=win365-24h1)
+  - [November 2021](security-baseline-settings-windows-365.md?pivots=win365-nov21)
 
 When a new version for a profile becomes available, settings in profiles based on the older versions become read-only. You can continue to use those older profiles. You can also edit the profile names, description, and assignments, but they don't support a change to their settings configuration and you can't create new profiles based on the older versions.
 

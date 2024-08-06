@@ -28,13 +28,15 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - compliance
+- sub-certificates
+
 ---
 
 # Configure actions for noncompliant devices in Intune
 
 As part of a [compliance policy](../protect/device-compliance-get-started.md) that protects your organizations resources from devices that don't meet your security requirements, compliance policies also include **Actions for noncompliance**. Actions for noncompliance are one or more time-ordered actions that are taken by a policy to help protect devices and your organization. As an example, an action for noncompliance can remotely lock a device to ensure it's protected, or send a notification to devices or users to help them understand and resolve the noncompliant status.
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Overview
 
@@ -231,7 +233,7 @@ Notifications that have been created are available in the *Compliance policies* 
 
 - Select **Send preview email** to send a preview of the notification email to the account you've used to sign in to Intune.
 
-  To successfully send the preview email, your account must have permissions equal to those of the following Microsoft Entra groups or Intune roles: *Microsoft Entra Global Administrator*, Intune *Administrator* (Intune Microsoft Entra Intune Service Administrator), or  Intune *Policy and Profile Manager*.
+  To successfully send the preview email, your account must have permissions equal to those of the following Microsoft Entra groups or Intune roles: *Intune Administrator* (also known as Intune Service Administrator) or *Policy and Profile Manager*.  
 - Select **Edit** for *Basics* or *Scope tags* to make a change.
 
 > [!NOTE]
@@ -269,7 +271,7 @@ You can add optional actions when you create a compliance policy, or update an e
 
 5. Configure a **Schedule**: Enter the number of days (0 to 365) after noncompliance to trigger the action on users' devices. After this grace period, you can enforce a [conditional access](conditional-access-intune-common-ways-use.md) policy. If you enter **0** (zero) number of days, then conditional access takes effect **immediately**. For example, if a device is noncompliant, use conditional access to block access to email, SharePoint, and other organization resources immediately.
 
-   When you create a compliance policy, the **Mark device noncompliant** action is automatically created, and automatically set to **0** days (immediately). With this action, when the device checks-in with Intune and evaluates the policy, if it isn't compliant to that policy Intune immediately marks that device as noncompliant. If the client checks-in at a later time after remediating the issues that lead to noncompliance, its status will update to its new compliance status. If you use Conditional Access, those policies also apply as soon as a device is marked as noncompliant. To set a grace period to allow for a condition of noncompliance to be remediated before the device is marked as noncompliant, change the **Schedule** on the **Mark device noncompliant** action.
+   When you create a compliance policy, the **Mark device noncompliant** action is automatically created, and automatically set to **0** days (immediately). With this action, when the device checks in with Intune and evaluates the policy, if it isn't compliant to that policy Intune immediately marks that device as noncompliant. If the client checks in at a later time after remediating the issues that lead to noncompliance, its status will update to its new compliance status. If you use Conditional Access, those policies also apply as soon as a device is marked as noncompliant. To set a grace period to allow for a condition of noncompliance to be remediated before the device is marked as noncompliant, change the **Schedule** on the **Mark device noncompliant** action.
 
    In your compliance policy, for example, you also want to notify the user. You can add the **Send email to end user** action. On this **Send email** action, you set the **Schedule** to two days. If the device or end user is still evaluated as noncompliant on day two, then your email is sent on day two. If you want to email the user again on day five of noncompliance, then add another action, and set the **Schedule** to five days.
 

@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 07/08/2024
+ms.date: 07/23/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -42,7 +42,8 @@ This article describes known issues that can often be resolved with:
 
 ## Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
 
-Date added: *July 8, 2024*
+Date added: *July 8, 2024* <br>
+Date updated: *July 23, 2024*
 
 Autopilot device preparation deployments fail when devices aren't in the UTC time zone. The issue is being investigated.
 
@@ -52,6 +53,8 @@ As a workaround, customers can manually set the time zone in OOBE via Windows Po
 Set-TimeZone -Id "UTC"
 ```
 
+**This issue was resolved in July 2024.**
+
 ## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
 
 Date added: *July 8, 2024*
@@ -60,7 +63,8 @@ In some Windows Autopilot device preparation deployments, BitLocker encryption m
 
 ## Windows Autopilot device preparation policy shows 0 groups assigned
 
-Date added: *June 18, 2024*
+Date added: *June 18, 2024* <br>
+Date updated: *July 23, 2024*
 
 There's a known issue that the Windows Autopilot device preparation policy shows **0 groups assigned** even when:
 
@@ -69,9 +73,12 @@ There's a known issue that the Windows Autopilot device preparation policy shows
 
 The issue is being investigated. As a workaround, create a new assigned device security group with the **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner, and then assign the new device group to the Windows Autopilot device preparation policy. For more information on creating the assigned device group, see [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
 
+**This issue was resolved in July 2024.**
+
 ## Unable to assign Windows Autopilot device preparation policy to user group
 
-Date added: *June 18, 2024*
+Date added: *June 18, 2024* <br>
+Date updated: *July 23, 2024*
 
 There's a known issue where an administrator might not be able to assign the Windows Autopilot device preparation policy to a user group. When the issue occurs, the following error might occur:
 
@@ -86,7 +93,9 @@ For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#
 
 > [!NOTE]
 >
-> The [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions) article doesn't list the **Device configurations** - **Assign** permission. The requirement of this permission is only temporary until the issue is resolved. However, the article can be used as a guide on how to properly add this permission.
+> The [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions) article doesn't list the **Device configurations** - **Assign** permission. This permission requirement is only temporary until the issue is resolved. However, the article can be used as a guide on how to properly add this permission.
+
+**This issue was resolved in July 2024.**
 
 ### Device is stuck at 100% during the out-of-box experience (OOBE)
 
@@ -108,24 +117,29 @@ There's a compatibility problem between the Windows Autopilot device preparation
 
 Until the issue is fixed, for users to be standard non-administrators on their device, make sure that the settings are set to one of the following three setting combinations:
 
-- The Microsoft Entra ID **Local administrator settings** is set to **None**.
-- The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
+- **Standard user option 1**
+  - The Microsoft Entra ID **Local administrator settings** is set to **None**.
+  - The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
 
-- The Microsoft Entra ID **Local administrator settings** is set to **Selected** and the standard non-administrator users aren't selected.
-- The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
+- **Standard user option 2**
+  - The Microsoft Entra ID **Local administrator settings** is set to **Selected** and the standard non-administrator users aren't selected.
+  - The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
 
-- The Microsoft Entra ID **Local administrator settings** is set to **All**.
-- The Windows Autopilot device preparation policy **User account type** is set to **Standard user**.
+- **Standard user option 3**
+  - The Microsoft Entra ID **Local administrator settings** is set to **All**.
+  - The Windows Autopilot device preparation policy **User account type** is set to **Standard user**.
 
 In all three cases, the end result is that the user is a standard non-administrative user on the device.
 
 If the intention is for the user to be a local administrator user on the device, make sure that the settings are set to one of the following two setting combinations:
 
-- The Microsoft Entra ID **Local administrator settings** is set to **All**.
-- The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
+- **Administrator user option 1**
+  - The Microsoft Entra ID **Local administrator settings** is set to **All**.
+  - The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
 
-- The Microsoft Entra ID **Local administrator settings** is set to **Selected** and the administrator users are selected.
-- The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
+- **Administrator user option 2**
+  - The Microsoft Entra ID **Local administrator settings** is set to **Selected** and the administrator users are selected.
+  - The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
 
 ### Initial release of Windows Autopilot device preparation
 

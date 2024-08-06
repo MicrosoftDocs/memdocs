@@ -26,6 +26,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - compliance
+- sub-device-compliance
 ---
 
 # Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune
@@ -34,8 +35,11 @@ To expand on Intune’s built-in device compliance options, you can use policies
 
 This feature applies to:
 
-- Linux – Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
-- Windows 10/11 (excluding Windows 10/11 Home)
+- Windows 10/11 (excluding Windows 10/11 Home)  
+- Linux 
+  - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS  
+  - RedHat Enterprise Linux 8  
+  - RedHat Enterprise Linux 9  
 
 Before you can add custom settings to a policy, you must prepare a JSON file, and a discovery script for use with each supported platform. Both the script and JSON become part of the compliance policy. Each compliance policy supports a single script, and each script can discover multiple settings:
 
