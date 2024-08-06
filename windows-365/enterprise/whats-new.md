@@ -63,9 +63,6 @@ For more information about public preview items, see [Public preview in Windows 
 
 Windows 365 Cloud PCs now support FIDO devices and passkeys for Microsoft Entra ID sign in on macOS and iOS.
 
-<!-- ########################## -->
-## Week of July 8, 2024
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
