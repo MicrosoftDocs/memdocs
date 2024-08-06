@@ -81,4 +81,5 @@ As Windows 365 has a shared responsibility for overall service delivery, there a
 ## Next steps
 
 [Windows 365 architecture](architecture.md)
+
 [High-level architecture diagram for Windows 365](high-level-architecture.md)
