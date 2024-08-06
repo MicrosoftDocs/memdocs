@@ -66,7 +66,7 @@ Each Windows 365 Cloud PC is a single instance Azure virtual machine. Resilience
 
 As Windows 365 has a shared responsibility for overall service delivery, there are some best practices that customers should follow to increase the resiliency of the overall service.
 
-**[Microsoft hosted network](deployment-options.md#microsoft-hosted-network)**. Use a Microsoft hosted network when creating a rovisioning policy. Microsoft hosted network is a Microsoft managed networking option, where no Azure vNet or subscription is required for Cloud PC network connectivity. This lets Microsoft make the placement decisions for the Cloud PC virtual machines and decreases the possibility of provisioning issues.
+**[Microsoft hosted network](deployment-options.md#microsoft-hosted-network)**. Use a Microsoft hosted network when creating a provisioning policy. Microsoft hosted network is a Microsoft managed networking option, where no Azure vNet or subscription is required for Cloud PC network connectivity. This lets Microsoft make the placement decisions for the Cloud PC virtual machines and decreases the possibility of provisioning issues.
 
 **[Azure Network Connection](/azure/architecture/guide/virtual-desktop/windows-365-azure-network-connection)**. If you need granular control of your corporate network traffic – firewall rules, custom routes, or on-prem network access – the Azure Network Connection (ANC) feature lets you bring your own Azure vNet/subscription to Windows 365. For customers using the ANC, create multiple connections and prioritize these in order of failover usage. This prioritization provides a network connection failover in the case of a networking outage.
 
