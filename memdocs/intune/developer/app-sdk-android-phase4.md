@@ -65,7 +65,7 @@ MAM Strict Mode looks for anomalies in your application's usage of MAM APIs and 
 Loosely patterned after Android's StrictMode, MAM Strict Mode runs a predefined set of checks that raise runtime errors when they fail.
 MAM Strict Mode isn't intended to be left enabled in production builds; instead, use it in your app's internal development, debug, and/or dogfood builds.
 
-To enable MAM Strict Mode, call the following method early in application initialization (for example, `Application.onCreate`).
+To enable MAM Strict Mode, call the following method early in application initialization (for example, `Application.onCreate`):
 
 ```java
 MAMStrictMode.enable();
