@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/18/2024
+ms.date: 08/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -203,7 +203,58 @@ Deploy a *Windows elevation rules policy* to users or devices to deploy one or m
 - Specifies if the elevation type of the file as automatic (silently) or requiring user confirmation. With user confirmation, you can add additional user actions that must be completed before the file is run.
 In addition to this policy, a device must also be assigned a Windows elevation settings policy that enables Endpoint Privilege Management.
 
-### Create a Windows elevation rules policy
+Use either of the following methods to create new elevation rules, which are added to elevation rules policy:
+
+- [**Automatically configure elevation rules**](#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) – Use this method to save time when creating an elevation rule by auto-populating the file detection details that Intune has already collected. The file details are identified by Intune from either The *[Elevation report](../protect/epm-reports.md#elevation-report)* or from a *[support approved](../protect/epm-support-approved.md)* elevation requests record.
+
+  With this method, you:  
+  - Select the file for which you want to create an elevation rule from the Elevation report or *support approved* elevation request.  
+  - Choose to add the new elevation rule to an existing elevation rules policy or create a new elevation rules policy that includes the new rule.
+    - When added to an existing policy, the new rule is immediately available to the policies assigned groups.
+    - When a new policy is created, you must edit that policy to assign groups before it becomes available for use.
+
+- [**Manually configure elevation rules**](#manually-configure-elevation-rules-for-windows-elevation-rules-policy) – This method requires you to have identified the file details you want to use for detection and to manually enter them as part of the rule creation workflow. For information about detection criteria, see [Defining rules for use with Endpoint Privilege Management](../protect/epm-guidance-for-creating-rules.md#defining-rules-for-use-with-endpoint-privilege-management).
+
+  With this method, you:
+  - Manually determine the file details to use and then add them to the elevation rule for file identification.
+  - Configure all aspects of the policy during policy creation, including assigning the policy to groups for use.
+
+### Automatically configure elevation rules for Windows elevation rules policy
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management**. To select a file to use for an elevation rule, choose one of the following starting paths:
+
+   **Start from a Report:**
+   1. Select the **Reports** tab and then the **Elevation report** tile. Locate the file you want to create a rule for in the *File* column.
+   2. Select the linked name of the file to open that files **Elevation detail** pane.
+
+   **Start from a support approved elevation request:**
+   1. Select the **Elevation request** tab.
+   2. From the *File* column, select the file that you want to use for the elevation rule, which opens that files **Elevation detail** pane.
+
+      The status of the elevation request doesn’t matter. You can use a pending request or one that was previously approved or denied.
+
+2. On the **Elevation detail** pane, review the file details. This information is used by the elevation rule to identify the correct file. When ready, select **Create a rule with these file details**.
+
+   :::image type="content" source="./media/epm-policies/elevation-detail-pane.png" alt-text="Image from the admin center UI of a file selected from the Elevation report." lightbox="./media/epm-policies/elevation-detail-pane.png":::
+
+3. Select a policy option the new elevation rule you're creating:
+
+   **Create a new policy:**  
+   With this option you create a new policy that includes an elevation rule for the file you selected.
+
+   1. For the rule, configure the **Type** and **Child process behavior**, and then select **OK** to create the policy.
+   2. When prompted, provide a **Policy name** for the new policy and confirm creation of what will be a new and unassigned elevation rules policy.
+   3. After the policy is created, you can edit the policy to assign it and add additional configurations if needed.
+
+   **Add to an existing policy:**  
+   With this option, use the drop-down list and select an existing elevation policy to which the new elevation rule is added for the file you selected.
+
+   1. For the rule, configure the elevation **Type** and **Child process behavior**, and then select **OK**. The policy is updated with the new rule.
+   2. After the rule is added to the policy, you can edit the policy to gain access to the rule and then modify it to make additional configurations if needed.
+ 
+   :::image type="content" source="./media/epm-policies/create-a-rule.png" alt-text="Image from the admin center UI of the create a rule pane." lightbox="./media/epm-policies/create-a-rule.png":::
+
+### Manually configure elevation rules for Windows elevation rules policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Policies** tab > and then select **Create Policy**.
    Set the *Platform* to **Windows 10 and later**, *Profile* to **Windows elevation rules policy**, and then select **Create**.
@@ -314,7 +365,7 @@ If a device receives two rules targeting the same application, both rules are co
 - Rules deployed to a user take precedence over rules deployed to a device.
 - Rules with a hash defined are always deemed the most *specific* rule.
 - If more than one rule applies (with no hash defined), the rule with the most defined attributes wins (most *specific*).
-- If applying the above logic results in more than one rule, the following order determines the elevation behavior: User Confirmed, Support Approved, and then Automatic.
+- If applying the proceeding logic results in more than one rule, the following order determines the elevation behavior: User Confirmed, Support Approved, and then Automatic.
 
 > [!NOTE]
 > If a rule does not exist for an elevation and that elevation was requested through the *Run with elevated access* right-click context menu, then the *Default Elevation Behavior* will be used.
