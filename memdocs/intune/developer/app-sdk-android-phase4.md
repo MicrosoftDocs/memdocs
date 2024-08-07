@@ -71,7 +71,7 @@ To enable MAM Strict Mode, call
 MAMStrictMode.enable();
 ```
 
- Early in application initialization (for example, `Application.onCreate`).
+ early in application initialization (for example, `Application.onCreate`).
 
 When a MAM Strict Mode check fails, try to determine whether it's a
 real issue that can be fixed in your app or a false positive.
@@ -92,7 +92,7 @@ If your app would like to handle violations differently, it can supply its own h
 MAMStrictMode.global().setHandler(handler);
 ```
 
-Where `handler` implements `MAMStrictViolationHandler`.
+where `handler` implements `MAMStrictViolationHandler`.
 
 ### Suppressing Checks
 
@@ -103,7 +103,7 @@ The check, which failed will be shown in the error raised by the default handler
 
 Although suppressions can be done globally, temporarily disabling per-thread at the specific call site is preferred.
 The following examples show various ways to disable [MAMStrictCheck.IDENTITY_NO_SUCH_FILE][MAMStrictCheck] (raised if an
-attempt is made to protect a file, which doesn't exist).
+attempt is made to protect a file which doesn't exist).
 
 #### Per-Thread Temporary Suppression
 
@@ -520,7 +520,7 @@ If your app has these capabilities, you'll need to implement additional support.
 
 Your app may actively import data from other apps, like Microsoft Outlook attaching a file from Microsoft OneDrive.
 Your app may also passively receive data from other apps, like Microsoft Office opening a document from a Microsoft Outlook attachment.
-The received app protection policy setting covers both scenarios.
+The "receive data from other apps" policy setting covers both scenarios.
 
 For these tests:
 
