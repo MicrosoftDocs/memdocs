@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2023
+ms.date: 08/07/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -65,13 +65,11 @@ MAM Strict Mode looks for anomalies in your application's usage of MAM APIs and 
 Loosely patterned after Android's StrictMode, MAM Strict Mode runs a predefined set of checks that raise runtime errors when they fail.
 MAM Strict Mode isn't intended to be left enabled in production builds; instead, use it in your app's internal development, debug, and/or dogfood builds.
 
-To enable MAM Strict Mode, call
+To enable MAM Strict Mode, call the following method early in application initialization (for example, `Application.onCreate`).
 
 ```java
 MAMStrictMode.enable();
 ```
-
- early in application initialization (for example, `Application.onCreate`).
 
 When a MAM Strict Mode check fails, try to determine whether it's a
 real issue that can be fixed in your app or a false positive.
@@ -86,13 +84,11 @@ When a check fails, it runs a [MAMStrictViolationHandler].
 The default handler throws an `Error`, which is expected to crash the app.
 This is to make failures as noisy as possible and fits with the intention that strict mode shouldn't be enabled in production builds.
 
-If your app would like to handle violations differently, it can supply its own handler by calling:
+If your app would like to handle violations differently, it can supply its own handler by calling the following method where `handler` implements `MAMStrictViolationHandler`:
 
 ```java
 MAMStrictMode.global().setHandler(handler);
 ```
-
-where `handler` implements `MAMStrictViolationHandler`.
 
 ### Suppressing Checks
 
