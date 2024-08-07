@@ -405,10 +405,10 @@ sections:
 
           or more information, see [Set up the Enrollment Status Page - Device setup: Apps](/mem/intune/enrollment/windows-enrollment-status#device-setup-apps).
 
-          If mixing LOB and Win32 apps is required, consider using [Windows Autopilot device preparation](/device-preparation/overview.md), which doesn't use ESP so therefore supports mixing of LOB and Win32 apps.
+          If mixing LOB and Win32 apps is required, consider using [Windows Autopilot device preparation](device-preparation/overview.md), which doesn't use ESP so therefore supports mixing of LOB and Win32 apps.
 
       - question: |
-          During the ESP of a Windows Autopilot deployment, why does the Microsoft 365 Click-to-Run version of Office fail to install the [Teams Machine-Wide Installer](/microsoftteams/msi-deployment), or cause other Win32 app MSI based installs to fail?
+          During the ESP of a Windows Autopilot deployment, why does the Microsoft 365 Click-to-Run version of Office fail to install the Teams Machine-Wide Installer, or cause other Win32 app MSI based installs to fail?
         answer: |
           The [Teams Machine-Wide Installer](/microsoftteams/msi-deployment) component of the Microsoft 365 Click-to-Run version of Office includes an MSI installation which isn't tracked by the ESP. This can cause a conflict when other Win32 app MSI based installs attempt to install during ESP. This conflict can cause either the Teams Machine-Wide Installer to fail or other MSI based installs to fail. MSIs install via **TrustedInstaller** which doesn't allow simultaneous installations. For more information, see [Set up the Enrollment Status Page - Device setup: Apps](/mem/intune/enrollment/windows-enrollment-status#device-setup-apps).
 
@@ -417,7 +417,7 @@ sections:
           1. Don't install **Teams** as part of the Microsoft 365 Click-to-Run install of Office.
           1. Don't install the Microsoft 365 Click-to-Run version of Office during ESP.
           1. Use a custom PowerShell script for Intune Management Engine (IME) MSIs that checks if **TrustedInstaller** is currently installing another MSI. If it is, then wait for the current MSI to finish installing before launching a new MSI install.
-          1. Use [Windows Autopilot device preparation](/device-preparation/overview.md), which doesn't use ESP so therefore supports mixing of LOB and Win32 apps.
+          1. Use [Windows Autopilot device preparation](device-preparation/overview.md), which doesn't use ESP so therefore supports mixing of LOB and Win32 apps.
           1. Continue on error for ESP failures. Note that if the problem occurs with this option enabled, some applications might not install but ESP continues and won't fail.
 
 
