@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 06/11/2024
+  ms.date: 08/02/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -19,8 +19,8 @@ title: Windows Autopilot FAQ
 summary: |
   **Applies to:**
 
-  - Windows 11
-  - Windows 10
+  - [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions).
+  - [Windows 10](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions).
 
   This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Autopilot.
 
@@ -62,7 +62,7 @@ sections:
       - question: |
           Is it required to become a CSP to participate in Windows Autopilot?
         answer: |
-          This requirement doesn't apply to top volume OEMs because they can use the OEM Direct API. All others who choose to use the Microsoft Partnet Center (MPC) to register devices must become CSPs to access MPC.
+          This requirement doesn't apply to top volume OEMs because they can use the OEM Direct API. All others who choose to use the Microsoft Partner Center (MPC) to register devices must become CSPs to access MPC.
 
       - question: |
           Do the different CSP levels have all the same capabilities when it comes to Windows Autopilot?

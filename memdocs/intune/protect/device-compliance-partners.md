@@ -27,6 +27,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - compliance
+- sub-device-compliance
 ---
 
 # Support third-party device compliance partners in Intune
@@ -62,7 +63,7 @@ The following compliance partners are supported as generally available:
 - Citrix Workspace device compliance
 - IBM MaaS360
 - Jamf Pro
-- Kandji Device Compliance
+- Kandji
 - MobileIron Device Compliance Cloud
 - MobileIron Device Compliance On-prem
 - Mosyle Fuse

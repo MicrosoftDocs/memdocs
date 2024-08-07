@@ -28,6 +28,7 @@ ms.collection:
   - highpri
   - highseo
   - compliance
+  - sub-device-compliance
 ---
 
 # Device compliance settings for Linux in Intune

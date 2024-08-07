@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/16/2024
+ms.date: 08/1/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -56,6 +56,61 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of July 29, 2024 (Service release 2407)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Uni-directional clipboard support is now generally available<!--49083399-->
+
+Uni-directional clipboard support for Cloud PCs has moved out of preview and is now generally available. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+
+#### Closing port 3389 by default for newly provisioned and reprovisioned Cloud PCs<!--51154043-->
+
+To help secure your Windows 365 environment, the inbound port 3389 is now closed by default.
+
+#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+
+Windows 365 now supports AVC mixed mode when MMR is not enabled.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows 365 Government now supports Customer Lockbox<!--48802385-->
+
+Windows 365 Government now supports Microsoft Purview Customer Lockbox.
+
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Support for Omnissa Horizon clients and the Blast protocol with Windows 365 Enterprise is now generally available<!--51899029-->
+
+Support for Omnissa (previously VMware) Horizon clients and the Blast protocol with Windows 365 Enterprise Cloud PCs has moved out of preview and into general availability. For more information, see [Set up Omnissa Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New GPU offerings for Cloud PCs are now generally available<!--46699074-->
+
+New GPU offerings for Window 365 Enterprise Cloud PCs have moved out of preview and into general availability. For more information, see [GPU Cloud PCs](gpu-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Frontline
+
+#### Windows 365 Frontline sign in time and shift change buffer improvements are now generally available<!--50220027-->
+
+Sign in time and shift change buffer improvements have moved out of preview and into general availability.
+
+<!-- ########################## -->
+## Week of July 23, 2024
+
+### Updated default settings for Windows 365 security baselines<!--49685126-->
+
+Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/mem/intune/protect/security-baseline-settings-windows-365).
+
+<!-- ########################## -->
 ## Week of July 15, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -65,6 +120,11 @@ Windows 365 Cloud PCs now support FIDO devices and passkeys for Microsoft Entra 
 
 <!-- ########################## -->
 ## Week of July 8, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Cloud PC public preview support for FIDO devices and passkeys on macOS and iOS<!--51858977-->
+
+Windows 365 Cloud PCs now support FIDO devices and passkeys for Microsoft Entra ID sign in on macOS and iOS.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -746,7 +806,7 @@ All Cloud PC reports can now be accessed from the **Cloud PC overview** section 
 
 #### Use VMWare Horizon clients and the Blast protocol with Windows 365 Enterprise (public preview)<!--44716096-->
 
-VMWare Horizon clients and the Blast protocol can be used with Windows 365 Enterprise Cloud PCs. This is a [public preview](..\public-preview.md). For more information, see [Set up VMware Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md). To submit a request to join this preview, see [Tech Preview – VMware Horizon extending Microsoft Windows 365](https://www.vmware.com/learn/1733900_REG.html).
+VMWare Horizon clients and the Blast protocol can be used with Windows 365 Enterprise Cloud PCs. This is a [public preview](..\public-preview.md). For more information, see [Set up VMware Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md).
 
 <!-- ########################## -->
 ## Week of August 7, 2023

@@ -25,6 +25,7 @@ search.appverid: MET150
 ms.custom:
 - tier2
 - M365-identity-device-management
+- sub-secure-endpoints
 
 ---
 

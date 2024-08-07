@@ -25,6 +25,8 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-secure-endpoints
+
 ms.reviewer: laarrizz
 
 ---

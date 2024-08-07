@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-data-privacy
 ---
 # Prevent data leaks on non-managed devices using Microsoft Intune
 
