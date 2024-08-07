@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/1/2024
+ms.date: 08/7/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -81,6 +81,13 @@ Windows 365 now supports AVC mixed mode when MMR is not enabled.
 Windows 365 Government now supports Microsoft Purview Customer Lockbox.
 
 For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### New Intune report and device action for Windows enrollment attestation (public preview)<!--51490340-->
+
+Use the new device attestation status report in Microsoft Intune to find out if a device has attested and enrolled securely while being hardware-backed. For more information, see [Device attestation status report](/mem/intune/fundamentals/reports#device-attestation-status-report).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Partners
