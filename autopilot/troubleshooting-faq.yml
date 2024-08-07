@@ -414,17 +414,17 @@ sections:
 
           This issue might be random and might not always occur. The issue occurs due to a timing issue between the **Teams Machine-Wide Installer** MSI install and other Win32 app MSI installs.
 
-          To work around the issue, use one of the following solutions:
+          To work around the issue or avoid the error, use one of the following solutions:
 
-          1. Don't install **Teams** as part of the Microsoft 365 Click-to-Run install of Office.
+          1. Don't install **Teams** as part of the Microsoft 365 Click-to-Run install of Office. Instead, deploy **Teams** as a Win32 app after the Windows Autopilot deployment completes.
 
-          1. Don't install the Microsoft 365 Click-to-Run version of Office during ESP.
+          1. Don't install the Microsoft 365 Click-to-Run version of Office during ESP. Instead, deploy the Microsoft 365 Click-to-Run install of Office after the Windows Autopilot deployment completes.
 
           1. Use a custom PowerShell script for Intune Management Extension (IME) that checks if **TrustedInstaller** is currently installing another MSI. If it is, then wait for the current MSI to finish installing before launching a new MSI install.
 
-          1. Use [Windows Autopilot device preparation](device-preparation/overview.md), which doesn't use ESP so therefore supports mixing of LOB and Win32 apps.
+          1. For Windows 11 deployments, use [Windows Autopilot device preparation](device-preparation/overview.md). Windows Autopilot device preparation doesn't use ESP so therefore supports mixing of LOB and Win32 apps.
 
-          1. Continue on error for ESP failures. If the problem occurs with this option enabled, some applications might not install but ESP continues and doesn't fail.
+          1. Continue on error for ESP failures. If the problem occurs with this option enabled, some applications including **Teams** might not install. However, ESP continues and doesn't fail.
 
 
 additionalContent: |
