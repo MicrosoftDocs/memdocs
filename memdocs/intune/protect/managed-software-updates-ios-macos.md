@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/17/2024
+ms.date: 08/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -125,23 +125,27 @@ Managed software updates have precedence over other policies that configure soft
 
     :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-update-category.png" alt-text="Screenshot that shows the settings catalog software update settings for Apple devices in Microsoft Intune.":::
 
-1. Configure the settings:
+7. Configure the settings:
 
     - **Details URL**: Enter a web page URL that has more information on the update. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.
     - **Target Build Version**: Enter the target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`.
 
       If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
 
-   - **Target Date Time (UTC)**: Select or manually enter the date and the time that specifies when to force the installation of the software update.
+   - **Target Date Time**: Select or manually enter the date and the time that specifies when to force the installation of the software update.
+
+     > [!NOTE]
+     > In a future release, the **UTC** text is being removed from the **Target Date Time** setting in the settings catalog UI.
    
-     The **Target Date Time (UTC)** setting schedules the update using the UTC timezone. This will take the configured time and convert it to UTC before sending the policy to be scheduled in the device's local timezone. For example, an Admin located in Eastern US configures an update to install at 2PM. The Eastern US timezone is 5 hours behind UTC, so the time would be converted to 5 hours after 2PM (EST) which is 7PM (UTC). Then, the policy will schedule the update to happen at 7PM in the local timezone of devices that receive the policy. 
-     
+     The **Target Date Time** setting schedules the update using the local timezone of the device. For example, an admin configures an update to install at 2PM. The policy schedules the update to happen at 2PM in the local timezone of devices that receive the policy. 
+
      - If the user doesn't trigger the software update before this time, then a one-minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
      - If the device is powered off when the deadline is met, when the device powers back on, there's a one hour grace period. When the grace period ends, the device force installs the update and forces a restart.
 
       > [!IMPORTANT]
-      > If you create a policy using this setting before the January 2024 release, then this setting shows *Invalid Date* for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows *Invalid Date*.
-      > To configure a new date and time, you can delete the *Invalid Date* values, and select a new date and time. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
+      > If you create a policy using this setting before the January 2024 release, then this setting shows **Invalid Date** for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows **Invalid Date**.
+      > 
+      > To configure a new date and time, you can delete the **Invalid Date** values, and select a new date and time. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
 
     - **Target OS Version**: Select or manually enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
@@ -162,7 +166,7 @@ Managed software updates have precedence over other policies that configure soft
 
 ## Monitoring managed software updates
 
-Managed software updates use the same reporting as device configuration policies. For more information, go to [Monitor device configuration policies.](../configuration/device-profile-monitor.md).
+Managed software updates use the same reporting as device configuration policies. For more information, go to [Monitor device configuration policies](../configuration/device-profile-monitor.md).
 
 > [!IMPORTANT]
 > A policy that reports Success only means that the configuration successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy will report error as the device sees this as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
