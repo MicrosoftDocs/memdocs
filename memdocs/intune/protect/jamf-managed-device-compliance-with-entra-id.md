@@ -53,18 +53,27 @@ The process to establish integration between Jamf Pro and Microsoft Intune is ev
 - Configure the Intune Connector.
 - Prepare Microsoft Entra ID required components.
 
-To complete the procedures in this article, your account must have the following permissions:
+## Role-based access control for JAMF integration 
 
-- **Jamf Pro Administrator** or a **Jamf Pro user account** with **Device Compliance Privileges**
-- **Intune administrator**
-- **Microsoft Entra Roles -** To implement least privilege, the following Entra roles should be available to allow the configurations contained in this article. 
+To complete the procedures in this article, you must have:
 
-  - Groups Administrator - To create the required device groups.
+- A Jamf Pro user account with device compliance privileges or a Jamf Pro administrator account. 
+
+- A Microsoft Entra account, assigned a role with sufficient permissions. Available roles include:   
+
+  - Intune Administrator - This built-in role can perform all steps in this article. 
+
+    >[!TIP]
+    > The Intune Administrator is a highly privileged role with full access in Microsoft Intune. When you delegate roles to other accounts, consider assigning a built-in role with fewer privileges.
+  
+  - Groups Administrator - This built-in role can create the required device groups.
     
-  - Conditional Access Administrator - To create and update the Conditional Access Policies which will allow user device registration.
+  - Conditional Access Administrator - This built-in role can create and update the Microsoft Entra Conditional Access policies that enable user-device registration. 
     
-  - Application Administrator - To create the applications the JAMF will communicate device compliance state information to Entra via Intune.
-    
+  - Application Administrator - This built-in role can create apps that communicate with JAMF about the device compliance state.
+
+  For more information about these roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).  
+
 <a name='common-questions-about-jamf-pro-integration-with-entra-id'></a>
 
 ## Common questions about Jamf Pro integration with Microsoft Entra ID
