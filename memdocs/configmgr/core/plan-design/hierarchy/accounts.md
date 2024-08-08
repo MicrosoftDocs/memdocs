@@ -2,7 +2,7 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
-ms.date: 03/29/2022
+ms.date: 08/08/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
@@ -366,7 +366,8 @@ The management point uses the **Management point connection account** to connect
 Create the account as a low-right local account on the computer that runs Microsoft SQL Server.
 
 > [!IMPORTANT]
-> Don't grant interactive sign-in rights to this account.
+> - Don't grant interactive sign-in rights to this account.
+> - If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name.  For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName.  This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system.  Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 ### Multicast connection account
 
