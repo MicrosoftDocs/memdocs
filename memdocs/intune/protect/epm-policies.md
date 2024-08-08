@@ -237,17 +237,17 @@ Use either of the following methods to create new elevation rules, which are add
 
    :::image type="content" source="./media/epm-policies/elevation-detail-pane.png" alt-text="Image from the admin center UI of a file selected from the Elevation report." lightbox="./media/epm-policies/elevation-detail-pane.png":::
 
-3. Select a policy option the new elevation rule you're creating:
+3. Select a policy option for the new elevation rule you're creating:
 
    **Create a new policy:**  
-   With this option you create a new policy that includes an elevation rule for the file you selected.
+   This option creates a new policy that includes an elevation rule for the file you selected.
 
    1. For the rule, configure the **Type** and **Child process behavior**, and then select **OK** to create the policy.
    2. When prompted, provide a **Policy name** for the new policy and confirm creation of what will be a new and unassigned elevation rules policy.
    3. After the policy is created, you can edit the policy to assign it and add additional configurations if needed.
 
    **Add to an existing policy:**  
-   With this option, use the drop-down list and select an existing elevation policy to which the new elevation rule is added for the file you selected.
+   With this option, use the drop-down list and select an existing elevation policy to which the new elevation rule is added.
 
    1. For the rule, configure the elevation **Type** and **Child process behavior**, and then select **OK**. The policy is updated with the new rule.
    2. After the rule is added to the policy, you can edit the policy to gain access to the rule and then modify it to make additional configurations if needed.
