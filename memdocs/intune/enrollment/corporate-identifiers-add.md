@@ -7,7 +7,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/25/2024
+ms.date: 08/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,7 +31,7 @@ ms.collection:
 
 # Identify devices as corporate-owned  
 
-*Applies to: Android, iOS/iPadOS, Windows 10, Windows 11
+*Applies to: Android, iOS/iPadOS, Windows 10, Windows 11*  
 
 Ensure that corporate devices are marked as *corporate-owned* as soon as they enroll by adding their corporate identifiers ahead of time in the Microsoft Intune admin center. The benefit of managing corporate devices is that they enable more device management capabilities than personal devices. For example, Microsoft Intune can collect full phone number and app inventory from a corporate device, but can only collect partial phone number and app inventory for personal devices. To add corporate identifiers to Microsoft Intune, you can upload a file of corporate identifiers in the admin center or enter each identifier separately.
 
