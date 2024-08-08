@@ -41,7 +41,7 @@ Both marketplace and custom images must meet the following requirements:
 - Generation 2 images.
     > [!Note]
     > We recently made the change to **generation 2** (Gen2) virtual machine images. Newly created custom images must be Gen2. Existing custom images uploaded based on generation 1 will remain active.
-- The image must never have been Active Directory, Microsoft Entra ID joined, Intune-enrolled, or enrolled for co-management. For more information, see [Sysprep will not run correctly on a device that has been MDM enrolled](/troubleshoot/mem/intune/device-enrollment/troubleshoot-sysprep-windows-10-device-enrolled-mdm).
+- The image must never have been Active Directory, Microsoft Entra ID joined, Intune-enrolled, or enrolled for co-management. For more information, see [Sysprep won't run correctly on a device that has been MDM enrolled](/troubleshoot/mem/intune/device-enrollment/troubleshoot-sysprep-windows-10-device-enrolled-mdm).
 - Generalized VM image.
 - Single Session VM images (multi-session isn’t supported).
 - No recovery partition. For information about how to remove a recovery partition, see the [Windows Server command: delete partition](/windows-server/administration/windows-commands/delete-partition).
@@ -56,7 +56,7 @@ Storing a managed image on Azure incurs storage costs. However, customers can de
 
 ## Gallery images
 
-Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the [provisioning policy creation flow](create-provisioning-policy.md). Each image helps admins with pre-set audit policies already enabled, like account policies, logon/logoff, object access, and policy change.
+Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the [provisioning policy creation flow](create-provisioning-policy.md). Each image helps admins with preset audit policies already enabled, like account policies, logon/logoff, object access, and policy change.
 
 They're replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with:
 
@@ -65,7 +65,7 @@ They're replicated to all Azure regions to give you a quick provisioning experie
 
 There are two sets of images available to choose from across the different versions of Windows Enterprise:
 
-- **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and Teams optimizations are already installed. The following settings are pre-applied:
+- **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and Teams optimizations are already installed. The following settings are preapplied:
   - IsWVDEnvironment reg key (Teams).
   - C++ Runtime (Teams).
   - WebRTC Redirector (Teams).
