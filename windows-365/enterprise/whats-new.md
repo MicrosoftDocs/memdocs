@@ -56,16 +56,6 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
-## Week of August 5, 2024
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Documentation
-
-#### Updated documentation article: Windows 365 service resilience<!--51365224-->
-
-We’ve created a new article explaining Windows 365 service resilience. For more information, see [Windows 365 service resilience](resilience.md).
-
-<!-- ########################## -->
 ## Week of July 29, 2024 (Service release 2407)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
