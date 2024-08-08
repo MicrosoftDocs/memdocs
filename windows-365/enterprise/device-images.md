@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/21/2024
+ms.date: 08/09/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -78,12 +78,13 @@ Both types of images are harmonized in GPOs. Any differences are due to preinsta
 
 ### Gallery image update cycle
 
-All supported Windows 365 gallery images are updated monthly after the security patch release schedule of Windows Servicing & Delivery. This update happens around the middle of each month.
+All supported Windows 365 gallery images are updated monthly after the security patch release schedule of Windows Servicing & Delivery. This update happens around the middle of each month. Updated Windows 365 images are made available in Intune for provisioning around the end of the third week of the month.
 
 Each updated image includes:
 
 - [Windows 10/11 monthly image updates](https://support.microsoft.com/topic/windows-10-release-on-azure-marketplace-update-history-da826e21-45ae-f6b9-de71-5f0ee2ec1563)
 - [Microsoft 365 Apps security updates](/officeupdates/microsoft365-apps-security-updates) and [feature updates](/officeupdates/monthly-enterprise-channel)
+  - Windows 365 gallery images include the latest Monthly Enterprise Channel release with the latest security updates.
 - [Microsoft Teams updates](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-d7092a6d-c896-424c-b362-a472d5f105de)
 - [WebRTC redirector service updates](/azure/virtual-desktop/teams-on-avd#install-the-teams-websocket-service)
 
