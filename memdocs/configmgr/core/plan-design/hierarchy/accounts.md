@@ -2,7 +2,7 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
-ms.date: 03/29/2022
+ms.date: 08/08/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
@@ -19,6 +19,9 @@ ms.reviewer: mstewart,aaroncz
 *Applies to: Configuration Manager (current branch)*
 
 Use the following information to identify the Windows groups, accounts, and SQL Server objects that are used in Configuration Manager, how they're used, and any requirements.
+
+> [!IMPORTANT]
+> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name. For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName. This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system. Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 - [Windows groups that Configuration Manager creates and uses](#bkmk_groups)
   - [Configuration Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)
@@ -366,7 +369,8 @@ The management point uses the **Management point connection account** to connect
 Create the account as a low-right local account on the computer that runs Microsoft SQL Server.
 
 > [!IMPORTANT]
-> Don't grant interactive sign-in rights to this account.
+> - Don't grant interactive sign-in rights to this account.
+> - If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name. For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName. This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system. Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 ### Multicast connection account
 
@@ -514,7 +518,7 @@ The site server uses the **Site system installation account** to install, reinst
 This account requires local administrative permissions on the target site systems. Additionally, this account must have **Access this computer from the network** in the security policy on the target site systems.
 
 > [!IMPORTANT]
-> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name.  For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName.  This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system.  Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
+> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name. For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName. This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system. Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 > [!TIP]
 > If you have many domain controllers and these accounts are used across domains, before you set up the site system, check that Active Directory has replicated these accounts.
