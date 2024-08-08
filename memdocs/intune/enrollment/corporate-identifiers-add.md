@@ -31,7 +31,7 @@ ms.collection:
 
 # Identify devices as corporate-owned  
 
-*Applies to: Android, iOS/iPadOS, Windows 10 and 11 (see requirements)*
+*Applies to: Android, iOS/iPadOS, Windows 10, Windows 11
 
 Ensure that corporate devices are marked as *corporate-owned* as soon as they enroll by adding their corporate identifiers ahead of time in the Microsoft Intune admin center. The benefit of managing corporate devices is that they enable more device management capabilities than personal devices. For example, Microsoft Intune can collect full phone number and app inventory from a corporate device, but can only collect partial phone number and app inventory for personal devices. To add corporate identifiers to Microsoft Intune, you can upload a file of corporate identifiers in the admin center or enter each identifier separately.
 
@@ -120,7 +120,7 @@ Android serial numbers aren't guaranteed to be unique or present. Check with you
 ### Add Windows corporate identifiers  
 
 > [!IMPORTANT]
-> Corporate identifiers are now supported for devices running Windows 10 KB5039299 (OS Build 19045.4598) and above. If you're enrolling Windows 10 devices below that build, do not use the corporate identifier feature.
+> Corporate identifiers are supported for devices running Windows 10 KB5039299 (with OS Build 19045.4598) and later. If you're enrolling Windows 10 devices with an earlier build, do not use the corporate identifier feature.
 
 To add corporate identifiers for corporate devices running Windows 11, list the manufacturer, model, and serial number for each device as shown in the following example.  
 
@@ -247,7 +247,7 @@ To confirm the reason for an enrollment failure, go to **Devices** > **Enrollmen
 
 ## Known issues and limitations  
 
-- Windows corporate device identifiers are only supported for devices running Windows 10 and 11 version 22H2 and later. Earlier versions can't render the model and manufacturer property. As a result, the property appears in the admin center as **Unknown**. We're working on expanding corporate identifer support to devices running earlier versions of Windows.  
+- Windows corporate device identifiers are only supported for devices running Windows 10 version 22H2 and later and Windows 11 version 22H2 and later. Earlier versions can't render the model and manufacturer property. As a result, the property appears in the admin center as **Unknown**. We're working on expanding corporate identifer support to devices running earlier versions of Windows.  
 
 - You can upload up to 10 CSV files for Windows corporate identifiers in the admin center. If you need to upload more data, we recommend using PowerShell or the Microsoft Intune Graph API to add corporate identifiers.  
 
