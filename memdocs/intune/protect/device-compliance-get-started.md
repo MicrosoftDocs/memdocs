@@ -28,6 +28,7 @@ ms.collection:
 - highpri
 - highseo
 - compliance
+- sub-device-compliance
 ---
 
 # Use compliance policies to set rules for devices you manage with Intune

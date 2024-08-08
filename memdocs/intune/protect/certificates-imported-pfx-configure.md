@@ -25,6 +25,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - certificates
+- sub-certificates
 ---
 
 # Configure and use imported PKCS certificates with Intune

@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/07/2023
+ms.date: 08/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -44,6 +44,15 @@ For **Microsoft Teams Rooms** devices including Microsoft Surface Hub, organizat
 For **Microsoft HoloLens**, subscribers of Microsoft Intune (Plan 1) aren't required to proactively add the Intune Plan 2 license. Microsoft is exploring ways to use their Microsoft 365 subscription that includes Intune to ensure licensing compliance. In the interim, there won't be any disruption to their ability to manage and protect HoloLens devices.
 
 For specialty devices that run in Microsoft Entra shared device Mode (SDM), organizations need to have the same volume of Intune Suite or Intune Plan 2 licenses as their core Intune license (Intune Plan 1 for either Microsoft E or F plans) for those users. For example, if 10 frontline workers are sharing one device and they're all covered by Intune Plan 1 core licenses, the organization should also have 10 Intune Plan 2 licenses.
+
+## Government cloud support
+
+Specialty device management is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
 ## Next Steps
 

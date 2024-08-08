@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 07/29/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -238,16 +238,18 @@ The ESP tracks VPN and Wi-Fi profiles targeted at devices.
 
 #### Device setup: Apps
 
-The ESP tracks the installation of apps deployed in a device context, and includes:
+The ESP tracks the installation of apps deployed in a device context and targeted to devices, and includes:
 
-- Per machine line-of-business (LoB) MSI apps
-- LoB store apps where installation context = device
-- Win32 applications for Windows 10, version 1903 and later, and Windows 11.
-- Winget application installed during Windows Autopilot
+- Per machine line-of-business (LoB) MSI apps.
+- LoB store apps where installation context = device.
+- Win32 applications for [currently supported versions of Windows](/windows/release-health/supported-versions-windows-client).
+- WinGet applications.
 
-  > [!NOTE]
-  >
-  > Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller, which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps in any type of Autopilot enrollment.  
+> [!NOTE]
+>
+> Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller, which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps when using Windows Autopilot.
+>
+> If mixing LOB and Win32 apps is required, consider using [Windows Autopilot device preparation](/autopilot/device-preparation/overview), which doesn't use ESP so therefore supports mixing of LOB and Win32 apps.
 
 ### Account setup
 

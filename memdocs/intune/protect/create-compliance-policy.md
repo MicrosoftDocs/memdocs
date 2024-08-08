@@ -27,6 +27,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - compliance
+- sub-device-compliance
 ---
 
 # Create a compliance policy in Microsoft Intune

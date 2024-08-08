@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - certificates
 - IntuneSuite
+- sub-intune-suite
 ---
 # Configure Microsoft Cloud PKI - Bring your own CA
 
