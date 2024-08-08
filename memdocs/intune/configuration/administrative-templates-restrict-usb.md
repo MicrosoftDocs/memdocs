@@ -38,7 +38,7 @@ This article shows you:
 - How to create an ADMX policy with USB settings in the Intune admin center
 - How to use a log file to troubleshoot devices that shouldn't be blocked
 
-Applies to:
+This article applies to:
 
 - Windows 11
 - Windows 10
@@ -51,7 +51,7 @@ This policy gives an example of how to block (or allow) features that affect USB
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Windows 10 and later**.
+    - **Platform**: Select **Windows**.
     - **Profile type**: Select **Templates** > **Administrative Templates**.
 
 4. Select **Create**.

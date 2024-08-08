@@ -58,6 +58,13 @@ This article:
 - Describes applicability rules on Windows client devices, and shows you how to create a rule.
 - Has more information on the check-in refresh cycle times when devices receive profiles and any profile updates.
 
+This feature applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Windows
+
 ## Create the profile
 
 Profiles are created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In this admin center, select **Devices**. You have the following options:
@@ -75,7 +82,7 @@ When you create a profile (**Configuration** > **Create**), choose your platform
 - **Android Enterprise**
 - **iOS/iPadOS**
 - **macOS**
-- **Windows 10 and later**
+- **Windows**
 - **Windows 8.1 and later**
 
 Then, choose the profile. Depending on the platform you choose, the settings you can configure are different. The following articles describe the different profiles:
@@ -115,7 +122,7 @@ For example, if you select **Android Enterprise** for the platform, your options
 
 :::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Screenshot that shows how to create an iOS/iPadOS device configuration policy and profile in Microsoft Intune.":::
 
-If you select **Windows 10 and later** for the platform, your options look similar to the following profile:
+If you select **Windows** for the platform, your options look similar to the following profile:
 
 :::image type="content" source="./media/device-profile-create/windows-create-device-profile.png" alt-text="Screenshot that shows how to create a Windows device configuration policy and profile in Microsoft Intune.":::
 

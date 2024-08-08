@@ -60,7 +60,7 @@ This article shows you how to create a custom device configuration profile in In
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
-        - **Windows 10 and later**
+        - **Windows**
 
     - **Profile type**: Select **Custom**. Or, select **Templates** > **Custom**.
 

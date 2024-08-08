@@ -46,6 +46,14 @@ In Intune, you can create and assign the following policies:
 
 This article shows you how to assign a policy, includes some information on using scope tags, describes when to assign policies to user groups or device groups, and more.
 
+This feature applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Linux
+- Windows
+
 ## Before you begin
 
 - Be sure you have the correct role that can assign policies and profiles. For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
@@ -69,13 +77,13 @@ This article shows you how to assign a policy, includes some information on usin
 
        :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
 
-3. Under **Included groups** or **Excluded groups**, choose **Add groups** to select one or more Microsoft Entra groups. If you intend to deploy the policy broadly to all applicable devices, select **Add all users** or **Add all devices**.
+4. Under **Included groups** or **Excluded groups**, choose **Add groups** to select one or more Microsoft Entra groups. If you intend to deploy the policy broadly to all applicable devices, select **Add all users** or **Add all devices**.
 
     > [!NOTE]
     > If you select "All Devices" and "All Users", the option to add additional Microsoft Entra groups disables. 
 
-4. Select **Review + Save**. This step doesn't assign your policy.
-5. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
+5. Select **Review + Save**. This step doesn't assign your policy.
+6. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
 
 ## Assignment features you should know and use
 
@@ -98,7 +106,7 @@ This article shows you how to assign a policy, includes some information on usin
 
 - **[Scope tags](../fundamentals/scope-tags.md)** are a great way to filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-- On Windows 10/11 devices, you can add **[applicability rules](device-profile-create.md#applicability-rules)** so the policy only applies to a specific OS version or a specific Windows edition. For more information, go to [Applicability rules](device-profile-create.md#applicability-rules).
+- On Windows devices, you can add **[applicability rules](device-profile-create.md#applicability-rules)** so the policy only applies to a specific OS version or a specific Windows edition. For more information, go to [Applicability rules](device-profile-create.md#applicability-rules).
 
 ## User groups vs. device groups
 

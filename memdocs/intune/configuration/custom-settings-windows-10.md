@@ -28,7 +28,7 @@ ms.collection:
 - highpri
 ---
 
-# Use custom settings for Windows 10/11 client devices in Intune
+# Use custom settings for Windows client devices in Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -48,11 +48,11 @@ Windows client custom profiles use Open Mobile Alliance Uniform Resource Identif
 
 Windows client makes many Configuration Service Provider (CSP) settings available, such as [Policy Configuration Service Provider (Policy CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
 
-If you're looking for a specific setting, the [Windows 10/11 device restriction profile](device-restrictions-windows-10.md) and the [Settings catalog](settings-catalog.md) include many built-in settings. So, you may not need to enter custom values.
+If you're looking for a specific setting, the [Windows device restriction profile](device-restrictions-windows-10.md) and the [Settings catalog](settings-catalog.md) include many built-in settings. So, you may not need to enter custom values.
 
 ## Before you begin
 
-[Create a Windows 10/11 custom profile](custom-settings-configure.md#create-the-profile).
+- [Create a Windows custom profile](custom-settings-configure.md#create-the-profile).
 
 ## OMA-URI settings
 

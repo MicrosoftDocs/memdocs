@@ -40,7 +40,8 @@ For example, you want to prevent end users from reimaging the device and getting
 
 This feature applies to:
 
-- Windows 10 and later
+- Windows 11
+- Windows 10
 - Dell devices
 
 This article includes more information on the configuration file and Win32 app, and shows you how to create the **BIOS configuration and other settings** policy in Intune.
@@ -101,7 +102,7 @@ This policy is where you add the configuration file you created in [Step 1 with 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-   - **Platform**: Select **Windows 10 and later**.
+   - **Platform**: Select **Windows**.
    - **Profile type**: Select **Templates** > **BIOS configuration and other settings**.
 
 4. Select **Create**.

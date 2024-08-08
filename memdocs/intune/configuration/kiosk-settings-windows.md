@@ -44,7 +44,7 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
 
 ## Before you begin
 
-- Create a [Windows 10/11 kiosk device configuration profile](kiosk-settings.md#create-the-profile).
+- Create a [Windows kiosk device configuration profile](kiosk-settings.md#create-the-profile).
 
 - This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older). To summarize:
 
