@@ -20,6 +20,9 @@ ms.reviewer: mstewart,aaroncz
 
 Use the following information to identify the Windows groups, accounts, and SQL Server objects that are used in Configuration Manager, how they're used, and any requirements.
 
+> [!IMPORTANT]
+> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name. For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName. This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system. Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
+
 - [Windows groups that Configuration Manager creates and uses](#bkmk_groups)
   - [Configuration Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)
   - [Configuration Manager_DViewAccess](#configmgr_dviewaccess)
