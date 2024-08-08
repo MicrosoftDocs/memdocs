@@ -33,7 +33,7 @@ With Intune, you can use Delivery Optimization settings for your Windows devices
 - View the list of the [Delivery Optimization settings](delivery-optimization-settings.md) that Intune supports.
 - Learn about [Delivery Optimization updates](/windows/deployment/update/waas-delivery-optimization) in the Windows documentation.
 
-Applies to:
+This feature applies to:
 
 - Windows 10
 - Windows 11
@@ -46,7 +46,7 @@ Applies to:
 
 3. Enter the following properties:
 
-   - **Platform**: Select **Windows 10 and later**.
+   - **Platform**: Select **Windows**.
    - **Profile type**: Select **Templates** > **Delivery optimization**.
 
 4. Select **Create**.

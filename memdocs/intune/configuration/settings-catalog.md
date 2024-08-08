@@ -91,7 +91,7 @@ You create the policy by using the settings catalog profile type.
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **iOS/iPadOS**, **macOS**, or **Windows 10 and later**.
+    - **Platform**: Select **iOS/iPadOS**, **macOS**, or **Windows**.
     - **Profile type**: Select **Settings catalog**.
 
 4. Select **Create**.
@@ -104,7 +104,7 @@ You create the policy by using the settings catalog profile type.
 
 7. In **Configuration settings**, select **Add settings**. In the settings picker, select a category to see all the available settings.
 
-    For example, select **Windows 10 and later**, and then select **Authentication** to see all the settings in this category:
+    For example, select **Windows**, and then select **Authentication** to see all the settings in this category:
 
     :::image type="content" source="./media/settings-catalog/settings-picker-authentication.png" alt-text="Screenshot that shows the Settings Catalog when you select Windows and Authentication in Microsoft Intune and Intune admin center.":::
 
@@ -217,7 +217,8 @@ After you give the new profile a name, you can edit the profile to adjust the se
 
 This feature applies to:
 
-- Windows 10 and later
+- Windows 11
+- Windows 10
 
 When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you export a policy, import it to create a new policy, and then make changes to the new policy.
 

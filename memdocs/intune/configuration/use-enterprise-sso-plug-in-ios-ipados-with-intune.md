@@ -31,7 +31,7 @@ ms.collection:
 
 [!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
 
-This article applies to:
+This feature applies to:
 
 - iOS/iPadOS
 

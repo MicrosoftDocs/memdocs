@@ -134,4 +134,4 @@ Select the **type of automatic VPN** you want. Your options:
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [iOS/iPadOS](vpn-settings-ios.md), and [Windows 10](vpn-settings-windows-10.md) devices.
+- Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [iOS/iPadOS](vpn-settings-ios.md), and [Windows](vpn-settings-windows-10.md) devices.
