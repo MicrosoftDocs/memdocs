@@ -208,7 +208,6 @@ MDT acts as a repository for the operating system files deployed to the referenc
 
    |**On this wizard page**|**Do this**|
    |-|-|
-   |**On this wizard page**|**Do this**|
    |**OS Type**|Select **Full set of source files**, and then select **Next**.|
    |**Source**|In **Source directory**, type ***source_path*** (where *source_path* is the fully qualified path to the Windows 8.1 distribution files), and then select **Next**.|
    |**Destination**|Select **Next**.|
