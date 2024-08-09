@@ -348,6 +348,8 @@ Create an SCEP certificate profile for each OS platform you're targeting, like y
    - **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.  
 
    - **Extended Key Usage**: Microsoft Cloud PKI doesn't support the **Any Purpose** option.
+      > [!NOTE]
+      > The EKU(s) selected must already be configured on the Cloud PKI issuing CA.  If an EKU is selected here that is not present on the Cloud PKI issuing CA, an error will result in the SCEP profile, and a certificate will not be issued to the device.
 
    - **SCEP Server URLs**: Don't combine NDES/SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
 1. Assign and review the profile. When you're ready to finalize everything, select **Create**.
