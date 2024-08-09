@@ -45,7 +45,7 @@ The settings in the Windows 365 Cloud PC security baseline version 24H1 apply to
 4. On the **Basics** page, provide a **Name** > **Next**.
 5. On the **Configuration settings** tab, view the groups of settings that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
     - Select a group to expand and review the available settings.
-    - Use the Search bar and specify keywords that filter the view to display only those groups that contain your search criteria.
+    - To display only those groups that contain your search criteria, use the Search bar and specify keywords that filter the view.
 
     Each setting in a baseline has a default configuration for that baseline version. Reconfigure the default settings to meet your business needs. Different baselines might contain the same setting, and use different default values for the setting, depending on the intent of the baseline.
 5. Select **Next**.
@@ -53,7 +53,7 @@ The settings in the Windows 365 Cloud PC security baseline version 24H1 apply to
 7. On the **Assignments** tab, select a device group with the Cloud PCs to include and then assign the baseline to one or more groups with your Cloud PCs. Use **Add groups** under **Excluded groups** to fine-tune the assignment. Select **Next**.
 8. When you're ready to deploy the baseline, advance to the **Review + create** tab and review the details for the baseline. Select **Create** to save and deploy the profile.
 
-As soon as you create the profile, it's pushed to the assigned group and will apply immediately.
+As soon as you create the profile, it's pushed to the assigned group and is applied immediately.
 
 <!-- ########################## -->
 ## Next steps
