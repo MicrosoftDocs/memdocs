@@ -105,7 +105,7 @@ Additional configuration might be required to grant access to required services 
 
 > [!NOTE]
 >
-> Smart card and certificate based authentication isn't supported during the out-of-box experience (OOBE). For more information, see [Smartcards and certificate-based authentication](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
+> During the out-of-box experience (OOBE), certificate authentication is supported when using the Microsoft Entra Certificate Based Authentication (CBA). For more information, see [Windows smart card sign-in using Microsoft Entra certificate-based authentication](/entra/identity/authentication/concept-certificate-based-authentication-smartcard).
 
 #### Service requirements
 
