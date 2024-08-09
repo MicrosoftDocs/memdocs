@@ -24,6 +24,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier 1
 - M365-identity-device-management
+- sub-intune-suite
 ---
 
 # Data collection and privacy for Endpoint Privilege Management

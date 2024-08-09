@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Add and assign Mobile Threat Defense (MTD) apps with Intune

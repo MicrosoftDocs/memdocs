@@ -26,6 +26,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - compliance
+- sub-device-compliance
 ---
 
 # Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune

@@ -2,7 +2,7 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
-ms.date: 03/29/2022
+ms.date: 08/08/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
@@ -19,6 +19,9 @@ ms.reviewer: mstewart,aaroncz
 *Applies to: Configuration Manager (current branch)*
 
 Use the following information to identify the Windows groups, accounts, and SQL Server objects that are used in Configuration Manager, how they're used, and any requirements.
+
+> [!IMPORTANT]
+> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name. For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName. This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system. Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 - [Windows groups that Configuration Manager creates and uses](#bkmk_groups)
   - [Configuration Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)
@@ -366,7 +369,8 @@ The management point uses the **Management point connection account** to connect
 Create the account as a low-right local account on the computer that runs Microsoft SQL Server.
 
 > [!IMPORTANT]
-> Don't grant interactive sign-in rights to this account.
+> - Don't grant interactive sign-in rights to this account.
+> - If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name. For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName. This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system. Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 ### Multicast connection account
 
@@ -423,9 +427,11 @@ The network access account is still required for the following actions (includin
 
 - Task sequence deployment option to **Access content directly from a distribution point when needed by the running task sequence**. For more information, see [Task sequence deployment options](../../../osd/deploy-use/deploy-a-task-sequence.md#bkmk_deploy-options).
 
-- **Request State Store** task sequence step. If the task sequence can't communicate with the state migration point using the device's computer account, it falls back to using the network access account. For more information, see [Request State Store](../../../osd/understand/task-sequence-steps.md#BKMK_RequestStateStore).
-
 - **Apply the OS Image** task sequence step option to **Access content directly from the distribution point**. This option is primarily for Windows Embedded scenarios with low disk space where caching content to the local disk is costly. For more information, see [Access content directly from the distribution point](../../../osd/understand/task-sequence-steps.md#access-content-directly-from-the-distribution-point).
+
+- If downloading a package from a distribution point using HTTP/HTTPS fails, it has the ability to fall back to downloading the package using SMB from the package share on the distribution point. Downloading the package using SMB from the package share on the distribution point requires use of the network access account. This fallback behavior only occurs if the option **Copy the content in this package to a package share on distribution points** is enabled under the **Data Access** tab in the properties of a package. To retain this behavior, make sure that the network access account isn't disabled or removed. If this behavior is no longer desired, make sure the option **Copy the content in this package to a package share on distribution points** isn't enabled on any package.
+
+- **Request State Store** task sequence step. If the task sequence can't communicate with the state migration point using the device's computer account, it falls back to using the network access account. For more information, see [Request State Store](../../../osd/understand/task-sequence-steps.md#BKMK_RequestStateStore).
 
 - Task Sequence properties setting to **Run another program first**. This setting runs a package and program from a network share before the task sequence starts. For more information, see [Task sequences properties: Advanced tab](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#advanced-tab).
 
@@ -512,7 +518,7 @@ The site server uses the **Site system installation account** to install, reinst
 This account requires local administrative permissions on the target site systems. Additionally, this account must have **Access this computer from the network** in the security policy on the target site systems.
 
 > [!IMPORTANT]
-> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name.  For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName.  This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system.  Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
+> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name. For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName. This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system. Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 > [!TIP]
 > If you have many domain controllers and these accounts are used across domains, before you set up the site system, check that Active Directory has replicated these accounts.

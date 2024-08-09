@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,6 +23,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-intune-suite
 ---
 
 # Microsoft Tunnel for Mobile Application Management for Android
@@ -74,6 +75,17 @@ For your Line of Business (LOB) apps, integrate them with the MAM SDK. Later, yo
 **MAM SDK Version**:
 
 To use the Android Trusted Roots Functionality for Microsoft Tunnel for MAM requires a MAM SDK version of 9.5.0 or later, go to [Release Version 9.5.0 · msintuneappsdk/ms-intune-app-sdk-android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/releases/tag/9.5.0) on github.com.
+
+## Government cloud support
+
+Microsoft Tunnel for MAM on Android is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
+Microsoft Tunnel for MAM on Android doesn't support Federal Information Processing Standard (FIPS).
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
 ## Configure policies to support Microsoft Tunnel for MAM
 
@@ -319,12 +331,6 @@ Using two or more app configuration policies for Microsoft Defender that specify
 
 **Workaround**: Target each device with a single app configuration policy for Microsoft Defender, ensuring each unenrolled device is configured to use only one Site.
 
-### GCC High and FIPS support
-
-Microsoft Tunnel for MAM isn't supported for GCC High environments 
-Microsoft Tunnel for MAM doesn't support Federal Information Processing Standard (FIPS).
-Microsoft Tunnel for MAM isn't supported in Fairfax environments
-
 ### Auto-Disconnect with Line of Business Apps 
 We do not support auto disconnect in Line-of-Business (LOB) scenarios.
 
@@ -332,7 +338,6 @@ If Edge is the only application listed in the per-app VPN configuration, the aut
 If there are other applications included in the per-app VPN configuration, the auto disconnect feature will not work. In this case, users must manually disconnect to ensure all connections are terminated.
 
 **Workaround**: Users must manually disconnect connections in LOB scenarios.
-
 
 ## Next steps
 

@@ -25,6 +25,7 @@ search.appverid: MET150
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-updates
 ---
 
 # Expedite Windows quality updates in Microsoft Intune
