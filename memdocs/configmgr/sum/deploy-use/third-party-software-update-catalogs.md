@@ -32,7 +32,7 @@ To make it easier to find custom catalogs, we're providing a list of links as a 
 |Fujitsu| https://support.ts.fujitsu.com/GFSMS/globalflash/FJSVUMCatalogForSCCM.cab |
 |HP| *Partner catalog* available in the **Third-Party Software Update Catalogs** node <br> https://hpia.hpcloud.hp.com/downloads/sccmcatalog/HpCatalogForSms.latest.cab</br></br> `http://ftp.hp.com/pub/softlib/software/sms_catalog/HpCatalogForSms.latest.cab` |
 |Ivanti Patch for MEM | https://www.ivanti.com.au/products/patch-management-for-mem |
-|Lenovo | *Partner catalog* available in the **Third-Party Software Update Catalogs** node </br> https://download.lenovo.com/luc/v3/LenovoUpdatesCatalogv3.cab </br></br> Lenovo updates catalog V3 information </br> https://thinkdeploy.blogspot.com/2020/06/lenovo-updates-catalog-v3-for-sccm.html </br></br> Lenovo Patch </br> https://www.lenovo.com/us/en/software/lenovo-patch-sccm |
+|Lenovo | *Partner catalog* available in the **Third-Party Software Update Catalogs** node </br> https://download.lenovo.com/luc/v3/LenovoUpdatesCatalogv3.cab </br></br> Lenovo updates catalog V3 information </br> https://blog.lenovocdrt.com/lenovo-updates-catalog-v3-for-sccm </br></br> Lenovo Patch </br> https://www.lenovo.com/us/en/software/lenovo-patch-sccm |
 |ManageEngine Patch Connect Plus| https://www.manageengine.com/sccm-third-party-patch-management |
 |Patch My PC| Full catalog </br> https://patchmypc.com/third-party-patch-management-for-sccm-and-intune </br></br> Limited catalog </br> https://patchmypc.com/frequently-asked-questions#trial-catalog |
 |SolarWinds Patch Manager| https://www.solarwinds.com/patch-manager/use-cases/third-party-patch-management-sccm |
