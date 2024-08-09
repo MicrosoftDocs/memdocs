@@ -72,7 +72,7 @@ Regardless of whether the device is enrolled in a unified endpoint management (U
 - Determine which framework level meets your requirements. Most organizations should implement the settings defined in **Enterprise enhanced data protection** (Level 2) as that enables data protection and access requirements controls.
 
 > [!NOTE]
-> One of the settings related to browsers is 'Restrict web content transfer with other apps.' In **Enterprise enhanced data protection** (Level 2), the value of this setting is configured to Microsoft Edge.
+> One of the settings related to browsers is 'Restrict web content transfer with other apps'. In **Enterprise enhanced data protection** (Level 2), the value of this setting is configured to Microsoft Edge.
 > When Outlook and Microsoft Teams are protected by App Protection Policies (APP), Microsoft Edge will be used to open links from these apps, ensuring that the links are secure and protected. 
 > For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
 
