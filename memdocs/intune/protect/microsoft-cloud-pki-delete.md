@@ -34,7 +34,7 @@ ms.collection:
 Delete an issuing and root certification authority (CA) from the Microsoft Cloud PKI service in Microsoft Intune. You can use the following actions in the Microsoft Intune admin center to manage certification authorities (CAs) in your tenant: 
 
 * Pause CA - Pause the CA to stop use of it. 
-* Revoke CA - Revoke the CA and its active leaf certificates.   
+* Revoke CA - Revoke all active leaf certificates and then revoke the CA.
 * Delete CA - Delete and remove the CA from Microsoft Intune.  
 
 A root CA can't be deleted until all anchored issuing CAs are deleted. If you change your mind after you pause a CA, you can unpause it to resume use. However, revoking and deleting a CA are permanent actions and can't be undone.  
