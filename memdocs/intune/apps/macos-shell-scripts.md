@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2024
+ms.date: 08/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -111,7 +111,7 @@ The following items are required to collect logs on a macOS device:
 #### Collect device logs
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Navigate to **Devices** > **Scripts** and select a macOS shell script.
+2. Navigate to **Devices** > **Manage devices** > **Scripts and remediations** > **Platform scripts** and select a macOS shell script.
 3. In **Device status** or **User status** report, select a device.
 4. Select **Collect logs**, provide folder paths of log files separated only by a semicolon (;) without spaces or newlines in between paths.<br>For example, multiple paths should be written as `/Path/to/logfile1.zip;/Path/to/logfile2.log`.
 

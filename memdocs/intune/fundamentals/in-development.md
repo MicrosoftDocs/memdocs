@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/01/2024
+ms.date: 08/05/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -227,19 +227,7 @@ After Intune ends support for user enrollment with Company Portal:
 To prepare, use a different management method to enroll devices. We recommend account-driven Apple User Enrollment for similar functionality and an improved user experience. For a simpler enrollment experience, try web- based device enrollment. For more information, see:
 
 - [Set up account-driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md)
-- [Set up web-based device enrollment for iOS/iPadOS](../enrollment/web-based-device-enrollment-ios.md)
-
-### ACME protocol support for iOS/iPadOS and macOS enrollment<!-- 25140355 -->
-
-As we prepare to support managed device attestation in Intune, we're starting a phased rollout of an infrastructure change for new enrollments that includes support for the *Automated Certificate Management Environment (ACME) protocol*. When new Apple devices enroll, the management profile from Intune will have an ACME certificate instead of a SCEP certificate. ACME provides better protection than SCEP against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
-
-Existing OS and hardware eligible devices won't get the ACME certificate unless they re-enroll. There will be no change to the end user's enrollment experience, and no changes to the Microsoft Intune admin center. This change only impacts enrollment certificates and has no impact on any device configuration policies.
-
-ACME will be supported for Apple Automated Device Enrollment, Apple Device Enrollment, and Apple Configurator enrollment methods. Eligible OS versions include:
-
-- iOS 16.0+
-- iPadOS 16.1+
-- macOS 13.1+
+- [Set up web-based device enrollment for iOS/iPadOS](../enrollment/web-based-device-enrollment-ios.md)  
 
 ### Account-driven Apple User Enrollment to be generally available for iOS/iPadOS 15+ devices<!-- 10277062 -->
 
