@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/7/2024
+ms.date: 08/09/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -54,6 +54,16 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of August 5, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### Updated documentation article: Windows 365 service resilience<!--51365224-->
+
+We’ve created a new article explaining Windows 365 service resilience. For more information, see [Windows 365 service resilience](resilience.md).
 
 <!-- ########################## -->
 ## Week of July 29, 2024 (Service release 2407)
