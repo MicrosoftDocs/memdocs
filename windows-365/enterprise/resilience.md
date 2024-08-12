@@ -35,10 +35,6 @@ Windows 365 is designed to provide a resilient and reliable service for organiza
 
 Windows 365 uses the [Azure Virtual Desktop service](/azure/virtual-desktop/service-architecture-resilience) to connect and broker end user connections to their Cloud PC in any of the supported Azure regions from anywhere, on any device. To minimize outages and support end user and administrator requests, resilience is architected into these services. In addition to this, Windows 365 operates another set of platform infrastructure that provides the many administrator and end user features that manage and control the overall Windows 365 experience. Microsoft fully manages this infrastructure.
 
-Example architecture of a Windows 365 service that enables administrators or end user operations:
-
-![Diagram of example architecture of a Windows 365 service.](media/resilience/diagram.png)
-
 Windows 365 is a software-as-a-service (SaaS) service, where customers of the service don't have to architect, deploy, or manage complex infrastructure. As a SaaS service, Microsoft manages the underlying infrastructure for all of the individual Windows 365 services. This management maintains a global, fully available, resilient service that customers can rely upon for the daily use of their Cloud PCs. Microsoft continually works to improve the architecture of the service to improve the resilience and recovery times should there be an outage in any of the related Azure services. However, as a SaaS service, Windows 365 requires shared responsibility in overall service delivery to end users. Windows 365 aligns to the [Microsoft 365 guidance and recommendations for business continuity and cloud partner responsibilities](/compliance/assurance/assurance-customer-and-cloud-partner-ebcm-responsibilities)
 
 In addition to the Azure Virtual Desktop connectivity layer, Windows 365 operates many dedicated services that are architected as microservices to support agile operations and independence. Each of these services performs specific tasks related to administrator or end user requests. Some examples include:
@@ -57,10 +53,14 @@ In addition to the Azure Virtual Desktop connectivity layer, Windows 365 operate
 Each of these services:
 
 - Is its own web service that uses standard Azure infrastructure services. Each service has a certain set of extra Azure infrastructure requirements like CosmosDB, Azure storage, and Event hubs.
-- Is architected for resiliency. For example, for the services storage requirements an Azure Storage accounts with Globally Redundant Storage (GRS) is used. For database services such as CosmosDB, the data store is replicated across regions.
+- Is architected for resiliency. For example, for the services storage requirements an Azure Storage account with Globally Redundant Storage (GRS) is used. For database services such as CosmosDB, the data store is replicated across regions.
 - Is architected to use Azure resilience services like Azure availability zones, and cross region failover.
 
 The following diagram shows the architecture of an example service. Windows 365 distributes its infrastructure across multiple availability zones within a region and across multiple Azure regions. The service operates in an active-active manner. This supports in-region and cross-region resiliency. If an outage occurs within a region, the service continues functioning. If a region fails, the service is transferred to the secondary region's infrastructure, and normal operations continue.
+
+Example architecture of a Windows 365 service that enables administrators or end user operations:
+
+![Diagram of example architecture of a Windows 365 service.](media/resilience/diagram.png)
 
 ## Virtual machine resiliency
 
@@ -76,7 +76,7 @@ As Windows 365 has a shared responsibility for overall service delivery, there a
 
 **[Point-in-time restore](restore-overview.md)**. This service allows you to fully restore your Cloud PC to a previous state. You can configure the service to automatically create restore points across short and longer time windows.
 
-**[Cross region disaster recovery](cross-region-disaster-recovery.md)**. This Windows 365 add-on feature that creates snapshots of Cloud PCs. These snapshots are placed in customer-defined, geographically distant locations. The snapshots can be recovered to Cloud PCs running in the selected location during a disaster recovery event.
+**[Cross region disaster recovery](cross-region-disaster-recovery.md)**. This Windows 365 add-on feature creates snapshots of Cloud PCs. These snapshots are placed in customer-defined, geographically distant locations. The snapshots can be recovered to Cloud PCs running in the selected location during a disaster recovery event.
 
 ## Next steps
 
