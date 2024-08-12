@@ -214,7 +214,7 @@ There are new settings in the Apple Settings Catalog. To see these settings, in 
 
 ## Device enrollment  
 
-#### Use corporate Microsoft Entra account to enable Android Enterprise management options in Intune<!-- 25231452 -->  
+### Use corporate Microsoft Entra account to enable Android Enterprise management options in Intune<!-- 25231452 -->  
 
 Managing Intune-enrolled devices with Android Enterprise management options currently requires you to connect your Intune tenant to your managed Google Play account using a personal Gmail account. Soon you will be able to use a corporate Microsoft Entra account to establish the connection. This change is happening in new tenants, and doesn't affect tenants that have already established a connection. 
 
