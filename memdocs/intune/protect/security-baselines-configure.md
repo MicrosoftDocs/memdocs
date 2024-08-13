@@ -181,9 +181,9 @@ With the information from the export, you can rapidly reconfigure the new baseli
 
    :::image type="content" source="./media/security-baselines-configure/csv-export-of-baseline-configuration.png" alt-text="Screen shot that shows an export of the Microsoft Edge baseline profile as a .csv file." lightbox="./media/security-baselines-configure/csv-export-of-baseline-configuration.png":::
 
-   In the preceding image, there are three columns of information. The information identifies the settings in the new profile, and the configuration for each of them that you had in the old profile.
+   In the preceding image, there are three columns of information. The information identifies the settings in the old profile, and the configuration for each of them that you had in the old profile.
 
-   - **DefinitionId** – This column displays the settings registry name. The information after the underscore ( _ ) identifies the settings name as it appears in the new baseline profile and format, but without spaces in the name. This value is also the name of the CSP setting that this baseline setting manages.
+   - **DefinitionId** – This column displays the settings registry name. The information after the underscore ( _ ) identifies the settings name as it appears in the old baseline profile and format, but without spaces in the name. This value is also the name of the CSP setting that this baseline setting manages.
 
      For example, our modified setting of *Enable site isolation for every site* appears in this export as *admx--microsoftedge_SitePerProcess*. The last portion, *SitePerProcess*, helps identify the setting.
 
