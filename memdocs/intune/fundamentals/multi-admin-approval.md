@@ -85,7 +85,7 @@ If your organization allows unlicensed administrators for Intune roles, all appr
 
 To submit a request when MAA is enabled, use your normal process to create or edit a resource.
 
-On the final page before you can save your changes, add details to the *Business justification* field and then submit the request. For urgent requests, consider reaching out to a known list of approvers to ensure your request is seen in a timely manner.
+On the final page before you can save your changes, add details to the *Business justification* field and then submit the request. Set the expiration time to allow sufficient time for approvers to review and respond to the request. For urgent requests, consider reaching out to a known list of approvers to ensure your request is seen in a timely manner.
 
 When there's a request for the same object that is already pending approval, you won't be able to submit your request. Intune displays a message to alert you to this situation.
 
