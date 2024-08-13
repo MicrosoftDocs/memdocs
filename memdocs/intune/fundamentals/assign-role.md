@@ -33,7 +33,12 @@ ms.collection:
 
 You can assign a [built-in](role-based-access-control.md#built-in-roles) or [custom](create-custom-role.md) role to an Intune user.
 
-To create, edit, or assign roles, your account must have an appropriate role assigned. For information about role and assignment, see [Role Based Access Control](role-based-access-control.md).
+To create, edit, or assign roles, your account must have one of the following permissions in Microsoft Entra ID:
+
+- Global Administrator
+- Intune Service Administrator
+
+For information about role and assignment, see [Role Based Access Control](role-based-access-control.md).
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles**.
 
