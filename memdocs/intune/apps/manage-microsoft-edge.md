@@ -173,7 +173,7 @@ Edge for iOS and Android offers organizations several options for adjusting the 
 
 #### Organization logo and brand color
 
-These settings allow you to customize the New Tab Page for Edge for iOS and Android to display your organization's logo and brand color as the page background. The **Banner logo** will be used as your organization's logo and the **Page background color** will be used as your organization's brand color. For more information, see [Configure your company branding](/entra/fundamentals/how-to-customize-branding). 
+The organization logo and brand color settings allow you to customize the **New Tab Page** for Edge on iOS and Android devices. The **Banner logo** is used as your organization's logo and the **Page background color** is used as your organization's brand color. For more information, see [Configure your company branding](/entra/fundamentals/how-to-customize-branding). 
 
 Next, use the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
 
