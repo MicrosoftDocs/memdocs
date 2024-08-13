@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 06/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,6 +24,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier 1
 - M365-identity-device-management
+- sub-intune-suite
 ---
 
 # Configure policies for Endpoint Privilege Management
@@ -97,6 +98,11 @@ Use *Windows elevation settings policy* when you want to:
 ### About Windows elevation rules policy
 
 Use profiles for *Windows elevation rules policy* to manage the identification of specific files, and how elevation requests for those files are handled. Each *Windows elevation rule policy* includes one or more *elevation rules*. It's with elevation rules that you configure details about the file being managed and requirements for it to be elevated.
+
+The following types of files are supported:
+
+- Executable files with the `.exe` or `.msi` extension.
+- PowerShell scripts with the `.ps1` extension.
 
 Each elevation rule instructs EPM on how to:
 

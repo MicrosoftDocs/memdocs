@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/21/2024
+ms.date: 08/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -314,6 +314,18 @@ You can view the **Incomplete user enrollments** report using the following step
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Incomplete user enrollments**.
 
+### Device attestation status report
+
+This report provides a summary of devices that have either *Completed*, *Failed* or *Not started* enrollment attestation.
+
+You can view the **Device attestation status report** report using the following steps:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Device management** > **Device attestation status**.
+3. Use the drop-downs to filter by attestation status or device ownership.
+4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
+5. For more information on the report, see [Windows enrollment attestation](../enrollment/windows-enrollment-attestation.md#device-attestation-status-report).
+
 ### Windows Autopilot deployments report (Operational)
 
 This report provides a summary of deployment details for Windows Autopilot enrolled devices for the last 30 days.
@@ -388,7 +400,7 @@ To view the **Feature update failures** report, use the following steps:
 > [!NOTE]
 > This report is also known as the **iOS update installation failures** report.
 
-Policies with one or more Windows devices with feature update alerts.
+View update installation failures on iOS devices.
 
 You can view the **Installation failures for iOS devices** report using the following steps:
 
@@ -668,6 +680,9 @@ To see the report for a device, you can use the following steps:
 2. Select **Devices** > **All devices** > *select a device* > **Managed Apps**.
 3. To see the managed apps for a specific user, select a user from the dropdown box near the top of the report.
 
+> [!NOTE]
+> The **Managed Apps** report also includes Enterprise App Catalog apps.
+
 ### Device group membership report (Organizational)
 
 The **Group membership** report provides the group membership of all Microsoft Entra groups for a specific managed device. The report provides the following columns:
@@ -783,7 +798,7 @@ Workbooks combine text, Analytics queries, Azure Metrics, and parameters into 
 
 ### Device actions report
 
-Use the **Device Action** report to view a list of requested device actions and their statuses. For example, you can determine when a device delete action has been triggered, who initiated it, and the status of the action. For each device action, the report provides the **id**, **Device Name**, **User ID**, **IMEI**, **Action Status**, **Initiated By**, and **Date/Time**. This device information is valuable to help maintain compliance, ensure security, and streamline your audit processes.
+Use the **Device Action** report to view a list of requested device actions and their statuses. For each device action, the report provides the **id**, **Device Name**, **User ID**, **IMEI**, **Action Status**, **Initiated By**, and **Date/Time**. This device information is valuable to help maintain compliance, ensure security, and streamline your audit processes.
 
 You can view the **Device action** report using the following steps:
 

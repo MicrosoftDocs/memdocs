@@ -29,6 +29,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - privacy
+- sub-data-privacy
 ---
 
 # Data collection in Intune
@@ -157,7 +158,7 @@ Examples of the optional data fall into the following categories as defined by t
 
 Intune doesn't collect nor allow an Admin to see the following data:
 
-- An end users’ calling or web browsing history
+- An end users' calling or web browsing history
 - Personal email
 - Text messages
 - Contacts
@@ -165,7 +166,7 @@ Intune doesn't collect nor allow an Admin to see the following data:
 - Calendar events
 - Photos, including those in a photo app or camera
 
-For more information, see [Getting started enrolling devices](/mem/intune/fundamentals/deployment-guide-enrollment).
+For more information, see [Getting started enrolling devices](../fundamentals/deployment-guide-enrollment.md).
 
 For more information on the data types and definition, see [How Microsoft categorizes data for online services](https://www.microsoft.com/trust-center/privacy/customer-data-definitions).
 

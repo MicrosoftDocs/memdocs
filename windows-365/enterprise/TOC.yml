@@ -15,6 +15,8 @@ items:
     href: architecture.md
   - name: Architecture diagram
     href: high-level-architecture.md
+  - name: Service resilience
+    href: resilience.md
   - name: Identity and authentication
     href: identity-authentication.md
   - name: Lifecycle
@@ -71,6 +73,8 @@ items:
         href: cloud-pc-size-recommendations.md
       - name: GPU Cloud PC
         href: gpu-cloud-pc.md
+      - name: GPU Cloud PC performance
+        href: gpu-cloud-pc-performance.md
     - name: Deploy
       items:
       - name: Deployment overview
@@ -121,10 +125,10 @@ items:
           href: set-up-citrix.md
         - name: Retry Citrix agent installation
           href: retry-citrix-agent-installation.md
-        - name: VMware requirements
-          href: requirements-vmware-horizon.md
-        - name: Set up VMware Horizon for Windows 365
-          href: set-up-vmware-horizon.md
+        - name: Omnissa requirements
+          href: requirements-omnissa-horizon.md
+        - name: Set up Omnissa Horizon for Windows 365
+          href: set-up-omnissa-horizon.md
         - name: HP Anyware requirements
           href: hp-anyware-requirements.md
         - name: Set up HP Anyware for Windows 365
@@ -161,6 +165,8 @@ items:
         href: deploy-security-baselines.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
+      - name: Client device redirection
+        href: /azure/virtual-desktop/client-device-redirection-intune
       - name: Microsoft Purview Customer Key
         href: purview-customer-key.md
       - name: Enable screen capture protection
@@ -223,6 +229,8 @@ items:
         href: move-cloud-pc.md
       - name: Set idle session time limits
         href: frontline-cloud-pc-session-time-limits.md
+      - name: Change default chroma value
+        href: chroma-value-change-default.md
       - name: Restore a Cloud PC
         items:
         - name: Overview
@@ -237,6 +245,14 @@ items:
           href: restore-bulk.md
         - name: Share restore points to a storage account
           href: share-restore-points-storage.md
+      - name: Cross region disaster recovery
+        items:
+        - name: Overview
+          href: cross-region-disaster-recovery.md
+        - name: Set up cross region disaster recovery
+          href: cross-region-disaster-recovery-set-up.md
+        - name: Activate/deactivate cross region disaster recovery
+          href: cross-region-disaster-recovery-activate.md
       - name: End grace period
         href: end-grace-period.md
       - name: Digital forensics
@@ -263,6 +279,8 @@ items:
         href: report-resource-performance.md
       - name: Remoting connection report
         href: report-remoting-connection.md
+      - name: Cloud PCs cross region disaster recovery status report
+        href: cross-region-disaster-recovery-report.md
     - name: Windows updates
       items:
       - name: Windows 10 quality updates

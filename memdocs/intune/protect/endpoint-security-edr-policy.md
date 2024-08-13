@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2024
+ms.date: 06/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,6 +25,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---
@@ -78,6 +79,10 @@ Based on the platform a policy targets, EDR policies for devices you manage with
   To set up tenant attach, including the synchronization of Configuration Manager collections to the Microsoft Intune admin center and enabling them to work with policies for endpoint security, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
   For more information about using EDR polices with tenant attached devices, see [Set up Configuration Manager to support EDR policy](#set-up-configuration-manager-to-support-edr-policy) in this article.
+
+## Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to manage Intune endpoint detection and response policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## About the endpoint detection and response node
 
@@ -216,15 +221,17 @@ For more information about the Tenant attach scenario, see [Enable tenant attach
 
 If you're planning to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management](../../configmgr/comanage/overview.md) in the Configuration Manager documentation.
 
+To enable tenant attach when co-management isn’t enabled, you’ll need to sign-in to the *AzurePublicCloud* for your environment. Before proceeding, review [Permissions and roles](../../configmgr/comanage/overview.md#permissions-and-roles) in the Configuration Manager documentation to ensure you have an account available that can complete the procedure.
+
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
 2. In the ribbon, select **Configure co-management** to open the wizard.
 3. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government cloud isn't supported.
-   1. Select **Sign In**. Use your *Global Administrator* account to sign in.
+   1. Select **Sign In** and specify an account that has sufficient permissions to to your *AzurePublicCloud* environment.
 
 The following are supported for devices you manage with Intune:
 
 - Platform: **Windows 10, Windows 11, and Windows Server** - Intune deploys the policy to devices in your Microsoft Entra groups.
-  - Profile: **Endpoint detection and response**
+- Profile: **Endpoint detection and response**
 
 ## Use a preconfigured EDR policy
 

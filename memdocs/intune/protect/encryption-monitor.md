@@ -25,6 +25,7 @@ search.appverid: MET150
 ms.custom:
 - tier2
 - M365-identity-device-management
+- sub-secure-endpoints
 
 ---
 
@@ -39,7 +40,7 @@ The Microsoft Intune encryption report is a centralized location to view details
 > - [Manage BitLocker policy](../protect/encrypt-devices.md)
 > - [Manage FileVault policy](encrypt-devices-filevault.md)
 
-To find the report, Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Configuration**, select the *Monitor** tab, and then select **Device encryption status**.
+To find the report, Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Manage devices** > **Configuration**, select the *Monitor** tab, and then select **Device encryption status**.
 
 ## View encryption details
 
@@ -112,7 +113,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
 - **Profile state summary** – A summary of the profiles that apply to this device. The summary represents the least favorable condition across the applicable profiles. For example, if only one out of several applicable profiles results in an error, the *Profile state summary* displays *Error*.
 
-  To view more details of a status in the Intune admin center, go to **Devices** > **Configuration** > select the profile. Optionally, select **Device status** and then select a device.
+  To view more details of a status in the Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > select the profile. Optionally, select **Device status** and then select a device.
 
 - **Status details** – Advanced details about the device's encryption state.
 

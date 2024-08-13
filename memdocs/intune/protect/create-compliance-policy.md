@@ -27,6 +27,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - compliance
+- sub-device-compliance
 ---
 
 # Create a compliance policy in Microsoft Intune
@@ -87,7 +88,7 @@ For more information about using custom compliance settings, including supported
    - **Android (AOSP)**
    - **Android Enterprise**
    - **iOS/iPadOS**
-   - **Linux** - (Ubuntu Desktop, version 20.04 LTS and 22.04 LTS)
+   - **Linux** - (Ubuntu Desktop, version 20.04 LTS and 22.04 LTS, RedHat Enterprise Linux 8, or RedHat Enterprise Linux 9) 
    - **macOS**
    - **Windows 8.1 and later**
    - **Windows 10 and later**   

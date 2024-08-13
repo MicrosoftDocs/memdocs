@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Tutorial - Protect Exchange Online email on managed devices
+title: Tutorial - Protect Exchange Online email on managed iOS devices
 titleSuffix: Microsoft Intune
 description: Learn to secure Exchange Online with iOS Intune compliance policies and Microsoft Entra Conditional Access to require managed devices and the Outlook app.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2023
+ms.date: 07/18/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,22 +28,26 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-device-compliance
 ---
 
-# Tutorial: Protect Exchange Online email on managed devices with Microsoft Intune
+# Tutorial: Protect Exchange Online email on managed iOS devices with Microsoft Intune
 
-This tutorial demonstrates how to use Microsoft device compliance policies with Microsoft Entra conditional access policy, to allow iOS devices access to Exchange  only when they're managed by Intune and use an approved email app.
+This tutorial demonstrates how to use Microsoft device compliance policies with Microsoft Entra Conditional Access policy, to allow iOS devices access to Exchange  only when they're managed by Intune and use an approved email app.
 
 In this tutorial, you'll learn how to:
 
 > [!div class="checklist"]
-> * Create an Intune iOS device compliance policy to set the conditions that a device must meet to be considered compliant.
-> * Create a Microsoft Entra Conditional Access policy that requires iOS devices to enroll in Intune, comply with Intune policies, and use the approved Outlook mobile app to access Exchange Online email.
-
+> - Create an Intune iOS device compliance policy to set the conditions that a device must meet to be considered compliant.
+> - Create a Microsoft Entra Conditional Access policy that requires iOS devices to enroll in Intune, comply with Intune policies, and use the approved Outlook mobile app to access Exchange Online email.
 
 ## Prerequisites
 
-You need a test tenant with the following subscriptions for this tutorial:
+For this tutorial, we recommend using nonproduction trial subscriptions.
+
+Trial subscriptions help you avoid affecting a production environment with wrong configurations during this tutorial. Trials also allow us to use only the account you created when creating the trial subscription to configure and manage Intune, as it has permissions to complete each task for this tutorial. Use of this account eliminates the need to make and manage administrative accounts as part of the tutorial.
+
+This tutorial requires a test tenant with the following subscriptions:
 
 - Microsoft Intune Plan 1 subscription ([sign up for a free trial account](../fundamentals/free-trial-sign-up.md))
 - Microsoft Entra ID P1 ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
@@ -51,11 +55,11 @@ You need a test tenant with the following subscriptions for this tutorial:
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you have an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+For this tutorial, when you sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in with the account that was created when you signed up for the Intune trial subscription. You'll continue to use this account to sign in to the admin center throughout this tutorial.
 
 ## Create an email device profile
 
-This tutorial requires you to create an iOS/iPadOS device Email profile. TO do so, follow the guidance in [Step 11 – Create a device profile](../configuration/quickstart-email-profile.md) from the *Try Intune tasks* area of the Intune documentation. The email profile is used to require iOS/iPad devices to use work email.
+This tutorial requires you to create an iOS/iPadOS device Email profile. To do so, follow the guidance in [Step 11 – Create a device profile](../configuration/quickstart-email-profile.md) from the *Try Intune tasks* area of the Intune documentation. The email profile is used to require iOS/iPad devices to use work email.
 
 When you create the email profile, assign the profile to the same group of devices that you use later for the *device compliance* policy and *Conditional Access* policies that you create in subsequent steps of this tutorial.
 
@@ -68,7 +72,7 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Compliance**.  
-3. On the **Policies** tab, choose **Create policy**. 
+3. On the **Policies** tab, choose **Create policy**.
 4. On the *Create a policy* page, for *Platform* select **iOS/iPadOS**. Select **Create** to continue.  
 
 5. On the **Basics** tab, enter the following properties:
@@ -136,7 +140,7 @@ Conditional Access policies are configurable in either the Microsoft Entra admin
    2. For the **Select** category, select **None** to open the *Select* pane with its applications list.
    3. From the applications list, select the checkbox for **Office 365 Exchange Online**, and then choose **Select**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-apps.png" alt-text="Select Office 365 Exchange Online.":::
+   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-apps.png" alt-text="Select Office 365 Exchange Online to add to the policy.":::
 
 6. Also under **Assignments**, select **Conditions** > **Device platforms** to open the *Device platforms* pane.
    1. Set **Configure** to **Yes**.
@@ -152,8 +156,8 @@ Conditional Access policies are configurable in either the Microsoft Entra admin
 
    3. Select **Done**, and then select **Done** again.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png" alt-text="Select apps and clients.":::
- 
+   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png" alt-text="Select apps and clients as conditions for the policy.":::
+
 8. Under **Access controls**, select **Grant**.
 
    1. On the **Grant** pane, select **Grant access**.
@@ -170,9 +174,17 @@ Conditional Access policies are configurable in either the Microsoft Entra admin
 
 9. Under **Enable policy**, select **On**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png" alt-text="Enable policy.":::
+   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png" alt-text="To enable policy, set the Enable policy slider to On.":::
 
 10. Select **Create** to save your changes. The profile is assigned.
+
+> [!NOTE]
+>
+> Some dependent services, like Microsoft Teams, integrate with Exchange Online resources and are governed by Early-bound Policy enforcement. Consequently, users must comply with Exchange policies before signing into Microsoft Teams.
+>
+> If you have a Conditional Access Policy that restricts authentication requests for Exchange Online resources, users must meet the Exchange Policy requirements before signing into Teams. Failure to comply with these policies affects the ability to sign into Teams.
+>
+> For more information, see [Microsoft documentation on service dependencies and policy enforcement](/entra/identity/conditional-access/service-dependencies#policy-enforcement).
 
 ## Try it out
 
@@ -192,13 +204,13 @@ With the policies you've created, any iOS device that attempts to sign in to Mic
 
 When the test policies are no longer needed, you can remove them.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Compliance**.
 
 3. In the **Policy name** list, select the context menu (**...**) for your test policy, and then select **Delete**. Select **OK** to confirm.
 
-4. Select **Endpoint security** > **Conditional access** > **policies**. 
+4. Select **Endpoint security** > **Conditional access** > **policies**.
 
 5. In the **Policy name** list, select the context menu (**...**) for your test policy, and then select **Delete**. Select **Yes** to confirm.
 

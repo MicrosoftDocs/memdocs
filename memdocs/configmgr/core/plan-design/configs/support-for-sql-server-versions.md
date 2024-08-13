@@ -120,16 +120,16 @@ You can use this version with the minimum service pack and cumulative update sup
 - A primary site  
 - A secondary site
 
-### SQL Server 2012: Standard, Enterprise
+<!--### SQL Server 2012: Standard, Enterprise
 
 You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
 - A central administration site
 - A primary site
-- A secondary site
+- A secondary site-->
 
 > [!IMPORTANT]
-> Starting in version 2107, support for SQL Server 2012 is deprecated.<!--10092858--> Its support lifecycle ends in July 2022. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
+> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
 
 ### SQL Server 2017 Express
 
@@ -150,14 +150,14 @@ You can use this version with the minimum service pack and cumulative update sup
 
 - A secondary site  
 
-### SQL Server 2012 Express
+<!--### SQL Server 2012 Express
 
 You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
-- A secondary site
+- A secondary site-->
 
 > [!IMPORTANT]
-> Starting in version 2107, support for SQL Server 2012 is deprecated.<!--10092858--> Its support lifecycle ends in July 2022. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
+> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
 
 ## <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server
 
@@ -187,7 +187,7 @@ The following table identifies the recommended compatibility levels for Configur
 | SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
 | SQL Server 2017 | 140, 130, 120, 110 | 140 |
 | SQL Server 2016 | 130, 120, 110 | 130 |
-| SQL Server 2014 | 120, 110 | 110 |
+<!--| SQL Server 2014 | 120, 110 | 110 |-->
 
 To identify the SQL Server cardinality estimation compatibility level in use for your site database, run the following SQL query on the site database server:  
 

@@ -1,22 +1,22 @@
 ---
 # required metadata
 
-title: Tutorial-Get started with cloud-native Windows endpoints 
+title: Tutorial-Get started with cloud-native Windows endpoints
 titleSuffix: Microsoft Intune
 description: Set up secure cloud-native Windows endpoints that are Microsoft Entra joined, enrolled in Intune, and then deploy at scale with Windows Autopilot.
 keywords:
 author: scottbreenmsft
-  
+
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/30/2024
+ms.date: 07/31/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
-ms.subservice: 
+ms.subservice:
 ms.localizationpriority: high
-ms.assetid: 
+ms.assetid:
 # optional metadata
- 
+
 #audience:
 #ms.devlang:
 ms.reviewer: scbree;rogerso
@@ -36,22 +36,22 @@ ms.collection:
 > [!TIP]
 > [!INCLUDE [cloud-native-endpoints-definitions](../../includes/cloud-native-endpoints-definitions.md)]
 
-This guide walks you through the steps to create a cloud-native Windows endpoint configuration for your organization. For an overview of cloud-native endpoints, and their benefits, go to [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
+This guide walks you through the steps to create a cloud-native Windows endpoint configuration for your organization. For an overview of cloud-native endpoints, and their benefits, see [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
 
 This feature applies to:
 
 - Windows cloud-native endpoints
 
 > [!TIP]
-> If you want a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). In Intune, you can configure Windows in cloud configuration using a [Guided Scenario](../../intune/fundamentals/guided-scenarios-overview.md).
+> If you want a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). For an Intune [Guided Scenario](../../intune/fundamentals/guided-scenarios-overview.md), see [Windows 10/11 in cloud configuration](../../intune/fundamentals/cloud-configuration.md).
 >
 > The following table describes the key difference between this guide and *Windows in cloud configuration*:
 >
 > ---
 > | Solution | Objective |
 > | --- | --- |
-> | Tutorial: Get started with cloud-native Windows endpoints (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing. |
-> | [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies pre-built configuration based on Microsoft best practices for frontline, remote, and other workers with more focused needs. |
+> | **Tutorial: Get started with cloud-native Windows endpoints** (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing. |
+> | [**Windows in cloud configuration**](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies a pre-built configuration based on Microsoft best practices for frontline, remote, and other workers with more focused needs. |
 >
 > ---
 >
@@ -65,11 +65,11 @@ Use the five ordered phases in this guide, which build on each other to help you
 
 :::image type="content" source="../media/cloud-native-windows-endpoints/phases.png" alt-text="Five phases for setting up cloud-native Windows endpoints using Microsoft Intune and Windows Autopilot.":::
 
-- Phase 1 – Set up your environment
-- Phase 2 – Build your first cloud-native Windows endpoint
-- Phase 3 – Secure your cloud-native Windows endpoint
-- Phase 4 – Apply your custom settings and applications
-- Phase 5 – Deploy at scale with Windows Autopilot
+- [Phase 1](#phase-1--set-up-your-environment) – Set up your environment
+- [Phase 2](#phase-2---build-a-cloud-native-windows-endpoint) – Build your first cloud-native Windows endpoint
+- [Phase 3](#phase-3--secure-your-cloud-native-windows-endpoint) – Secure your cloud-native Windows endpoint
+- [Phase 4](#phase-4--apply-customizations-and-review-your-on-premises-configuration) – Apply your custom settings and applications
+- [Phase 5](#phase-5--deploy-at-scale-with-windows-autopilot) – Deploy at scale with Windows Autopilot
 
 At the end of this guide, you have a cloud-native Windows endpoint ready to start testing in your environment. Before you get started, you might want to check out the Microsoft Entra join planning guide at [How to plan your Microsoft Entra join implementation](/entra/identity/devices/device-join-plan).
 
@@ -77,11 +77,11 @@ At the end of this guide, you have a cloud-native Windows endpoint ready to star
 
 :::image type="content" source="../media/cloud-native-windows-endpoints/phase-1.png" alt-text="Image that shows phase 1, set up your environment for cloud native endpoints with Microsoft Intune":::
 
-Before you build your first cloud-native Windows endpoint, there are some key requirements and configuration that need to be checked. This phase walks you through checking the requirements, configuring [Windows Autopilot](/autopilot/windows-autopilot), and creating some settings and applications.
+Before you build your first cloud-native Windows endpoint, there are some key requirements and configuration that need to be checked. This phase walks you through checking the requirements, configuring [Windows Autopilot](/autopilot/overview), and creating some settings and applications.
 
 ### Step 1 - Network requirements
 
-Your cloud-native Windows endpoint needs access to several internet services. Start your testing on an open network. Or, use your corporate network after providing access to all the endpoints that are listed at [Windows Autopilot networking requirements](/autopilot/networking-requirements).
+Your cloud-native Windows endpoint needs access to several internet services. Start your testing on an open network. Or, use your corporate network after providing access to all the endpoints that are listed at [Windows Autopilot networking requirements](/autopilot/requirements?tabs=networking#networking-requirements).
 
 If your wireless network requires certificates, you can start with an Ethernet connection during testing while you determine the best approach for wireless connections for device provisioning.
 
@@ -89,22 +89,22 @@ If your wireless network requires certificates, you can start with an Ethernet c
 
 Before you can join Microsoft Entra and enroll in Intune, there are a few things you need to check. You could create a new Microsoft Entra group, such as the name **Intune MDM Users**. Then, add specific test user accounts and target each of the following configurations at that group to limit who can enroll devices while you set up your configuration. To create a Microsoft Entra group, go to [Manage Microsoft Entra groups and group membership](/entra/fundamentals/how-to-manage-groups).
 
-- **Enrollment restrictions**  
+- **Enrollment restrictions**
 Enrollment restrictions allow you to control what types of devices can enroll into management with Intune. For this guide to be successful, make sure *Windows (MDM)* enrollment is allowed, which is the default configuration.
 
   For information on configuring Enrollment Restrictions, go to [Set enrollment restrictions in Microsoft Intune](../../intune/enrollment/enrollment-restrictions-set.md).
 
-- **Microsoft Entra Device MDM settings**  
+- **Microsoft Entra Device MDM settings**
   When you join a Windows device to Microsoft Entra, Microsoft Entra can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Windows Autopilot to work.
-  
+
   To check your Microsoft Entra Device MDM settings are enabled properly, go to [Quickstart - Set up automatic enrollment in Intune](../../intune/enrollment/quickstart-setup-auto-enrollment.md).
-  
-- **Microsoft Entra company branding**  
+
+- **Microsoft Entra company branding**
   Adding your corporate logo and images to Microsoft Entra ensures that users see a familiar and consistent look-and-feel when they sign-in to Microsoft 365. This configuration is required for Windows Autopilot to work.
 
   For information on configuring custom branding in Microsoft Entra, go to [Add branding to your organization's Microsoft Entra sign-in page](/entra/fundamentals/how-to-customize-branding).
 
-- **Licensing**  
+- **Licensing**
   Users enrolling Windows devices from the Out Of Box Experience (OOBE) into Intune require two key capabilities.
 
   Users require the following licenses:
@@ -194,7 +194,7 @@ Now we can create the Windows Autopilot profile and assign it to our test device
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Enrollment** > **Windows Autopilot** > **Deployment profiles**.
+2. Select **Devices** > **Device onboarding** > **Enrollment** > **Windows** > **Windows Autopilot** > **Deployment profiles**.
 
 3. Select **Create profile** > **Windows PC**.
 
@@ -212,7 +212,7 @@ The Windows Autopilot service synchronizes several times a day. You can also tri
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Enrollment** > **Windows Autopilot** > **Devices**.
+2. Select **Devices** > **Device onboarding** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**.
 
 3. Select **Sync**.
 
@@ -224,20 +224,20 @@ We've selected a few settings to configure. These settings demonstrate an optima
 
 After you've created the profile and added your settings, assign the profile to the **Autopilot Cloud-Native Windows Endpoints** group created previously.
 
-- **Microsoft Outlook**  
+- **Microsoft Outlook**
   To improve the first run experience for Microsoft Outlook, the following setting automatically configures a profile when Outlook is opened for the first time.
 
   - Microsoft Outlook 2016\Account Settings\Exchange (User setting)
     - Automatically configure only the first profile based on Active Directory primary SMTP address - **Enabled**
 
-- **Microsoft Edge**  
+- **Microsoft Edge**
   To improve the first run experience for Microsoft Edge, the following settings configure Microsoft Edge to sync the user's settings and skip the first run experience.
 
   - Microsoft Edge
     - Hide the first-run experience and splash screen - **Enabled**
     - Force synchronization of browser data and do not show the sync consent prompt - **Enabled**
 
-- **Microsoft OneDrive**  
+- **Microsoft OneDrive**
 
   To improve the first sign-in experience, the following settings configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive. Files On-Demand (FOD) is also recommended. It's enabled by default and isn't included in the following list. For more information on the recommended configuration for the OneDrive sync app, go to [Recommended sync app configuration for Microsoft OneDrive](/onedrive/ideal-state-configuration).
 
@@ -250,13 +250,13 @@ After you've created the profile and added your settings, assign the profile to 
 
 The following screenshot shows an example of a settings catalog profile with each of the suggested settings configured:
 
-:::image type="content" source="../media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Image that shows an example of a settings catalog profile in Microsoft Intune.":::
+:::image type="content" source="../media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Screenshot that shows an example of a settings catalog profile in Microsoft Intune.":::
 
 ### Step 9 - Create and assign some applications
 
 Your cloud-native endpoint needs some applications. To get started, we recommend configuring the following applications and targeting them at the **Autopilot Cloud-Native Windows Endpoints** group created previously.
 
-- **Microsoft 365 Apps** (formerly Office 365 ProPlus)  
+- **Microsoft 365 Apps** (formerly Office 365 ProPlus)
   Microsoft 365 Apps such as Word, Excel, and Outlook can easily be deployed to devices using the built-in *Microsoft 365 apps for Windows* app profile in Intune.
 
   - Select **configuration designer** for the settings format, as opposed to XML.
@@ -264,12 +264,12 @@ Your cloud-native endpoint needs some applications. To get started, we recommend
 
   To deploy Microsoft 365 Apps, go to [Add Microsoft 365 apps to Windows devices using Microsoft Intune](../../intune/apps/apps-add-office365.md)
 
-- **Company Portal app**  
+- **Company Portal app**
   Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal app is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the Company Portal app to sync their device with Intune, check compliance status, and so on.
 
   To deploy **Company Portal** as required, see [Add and assign the Windows Company Portal app for Intune managed devices](../../intune/apps/store-apps-company-portal-autopilot.md).
 
-- **Microsoft Store App** (Whiteboard)  
+- **Microsoft Store App** (Whiteboard)
   While Intune can deploy a wide variety of apps, we deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](../../intune/apps/store-apps-microsoft.md) to install **Microsoft Whiteboard**.
 
 ## Phase 2 - Build a cloud-native Windows endpoint
@@ -374,7 +374,7 @@ Use Endpoint Security in Microsoft Intune to configure encryption with BitLocker
 - For more information about managing BitLocker, go to [Encrypt Windows 10/11 devices with BitLocker in Intune](../../intune/protect/encrypt-devices.md).
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
-These settings can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
+These settings can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Manage** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
 
 When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../intune/protect/encrypt-devices.md) for more settings.
 
@@ -455,7 +455,7 @@ Windows Local Administrator Password Solution (LAPS) is one of the features you 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
     2. Select **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows 10 and later** > **Local admin password solution (Windows LAPS)** > **Create**.
 
-    For more information, go to [Create a LAPS policy in Intune](/mem/intune/protect/windows-laps-policy#create-a-laps-policy).
+    For more information, go to [Create a LAPS policy in Intune](../../intune/protect/windows-laps-policy.md#create-a-laps-policy).
 
 ### Security Baselines
 
@@ -470,7 +470,7 @@ The following settings in the **Windows security baseline** can cause issues wit
 - Local Policies Security Options\Administrator elevation prompt behavior (default = Prompt for consent on the secure desktop)
 - Standard user elevation prompt behavior (default = Automatically deny elevation requests)
 
-For more information, go to [Windows Autopilot policy conflicts](/autopilot/policy-conflicts).
+For more information, see [Troubleshooting policy conflicts with Windows Autopilot](/autopilot/troubleshooting-faq#troubleshooting-policy-conflicts-with-windows-autopilot).
 
 ### Windows Update for Business
 
@@ -563,21 +563,21 @@ The settings catalog is a single location where all configurable Windows setting
 
 Following are some settings available in the settings catalog that might be relevant to your organization:
 
-- **Azure Active Directory preferred tenant domain**  
+- **Azure Active Directory preferred tenant domain**
   This setting configures the preferred tenant domain name to be appended to a user's username. A preferred tenant domain allows users to sign in to Microsoft Entra endpoints with only their username rather than their whole UPN so long as the user's domain name matches the preferred tenant domain. For users that have different domain names, they can type their whole UPN.
 
   The setting can be found in:
   - Authentication
     - Preferred AAD Tenant Domain Name - Specify domain name, like `contoso.onmicrosoft.com`.
 
-- **Windows Spotlight**  
+- **Windows Spotlight**
   By default, several consumer features of Windows are enabled which results in selected Store apps installing and third-party suggestions on the lock screen. You can control this using the Experience section of the settings catalog.
 
   - Experience
     - Allow Windows Consumer Features - **Block**
     - Allow Third-Party Suggestions in Windows Spotlight (user) - **Block**
 
-- **Microsoft Store**  
+- **Microsoft Store**
   Organizations typically want to restrict the applications that can install on endpoints. Use this setting if your organization wants to control which applications can install from the Microsoft Store. This setting prevents users from installing applications unless they're approved.
   - Microsoft App Store
     - Require Private Store Only - **Only Private store is enabled**
@@ -588,7 +588,7 @@ Following are some settings available in the settings catalog that might be rele
       > - [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077)
       > - [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286)
 
-- **Block Gaming**  
+- **Block Gaming**
   Organizations might prefer that corporate endpoints can't be used to play games. The Gaming page within the Settings app can be hidden entirely using the following setting.
   For additional information on the settings page visibility, go to the [CSP documentation](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) and the ms-settings [URI scheme reference](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference).
   - Settings
@@ -596,14 +596,14 @@ Following are some settings available in the settings catalog that might be rele
 
 - **Control Chat Icon Visibility in Taskbar**
   The visibility of the Chat icon in the Windows 11 taskbar can be controlled using the [Policy CSP](/windows/client-management/mdm/policy-csp-Experience#experience-configurechaticonvisibilityonthetaskbar).
-  
+
   - Experience
     - Configure Chat Icon - **Disabled**
 
 - **Control which tenants the Teams desktop client can sign in to**
 
   When this policy is configured on a device, users can only sign in with accounts homed in a Microsoft Entra tenant that is included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Microsoft Entra tenant IDs. By specifying this policy and defining a Microsoft Entra tenant, you also block sign in to Teams for personal use. For more information, go to [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
-  
+
   - Administrative Templates \ Microsoft Teams
     - Restrict sign in to Teams to accounts in specific tenants (User) - **Enabled**
 
@@ -611,12 +611,12 @@ Following are some settings available in the settings catalog that might be rele
 
 Windows Device restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, go to [Device Restrictions](../../intune/configuration/device-restrictions-configure.md).
 
-To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > Select **Windows 10 and later** for or *Platform* and **Templates** for *Profile type* > **Device restrictions**.
+To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > Select **Windows 10 and later** for platform > **Templates** **Device restrictions** for profile type.
 
-- **Desktop background picture URL (Desktop only)**  
+- **Desktop background picture URL (Desktop only)**
   Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You host the file online or reference a file that has been copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization* and configure **Desktop background picture URL (Desktop only)**.
 
-- **Require users to connect to a network during device setup**  
+- **Require users to connect to a network during device setup**
   This setting reduces the risk that a device can skip Windows Autopilot if the computer is reset. This setting requires devices to have a network connection during the out of box experience phase. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *General* and configure **Require users to connect to network during device setup**.
 
   > [!NOTE]
@@ -706,10 +706,10 @@ If you have applications that use MSI, EXE, or script installers, you can deploy
 
 Now that you've configured your cloud-native Windows endpoint and provisioned it with Windows Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
 
-- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+- [Overview of Windows Autopilot](/autopilot/overview)
 - [Module 6.4 - Windows Autopilot Fundamentals - YouTube](https://www.youtube.com/watch?v=wNmLvqZ21AE)
 
-If for some reason Windows Autopilot isn't the right option for you, there are other enrollment methods for Windows. For more information, go to [Intune enrollment methods for Windows devices](/mem/intune/fundamentals/deployment-guide-enroll).
+If for some reason Windows Autopilot isn't the right option for you, there are other enrollment methods for Windows. For more information, go to [Intune enrollment methods for Windows devices](../../intune/fundamentals/deployment-guide-enroll.md).
 
 ## Follow the cloud-native endpoints guidance
 

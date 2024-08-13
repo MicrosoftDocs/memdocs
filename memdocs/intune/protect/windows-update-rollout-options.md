@@ -25,6 +25,7 @@ search.appverid: MET150
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-updates
 ---
 
 # Rollout options for Windows Updates in Microsoft Intune
@@ -92,7 +93,7 @@ To learn more, see [Manage safeguards using the Windows Update for Business depl
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **Configuration** > **Create**.
+2. Go to **Devices** > **Manage devices** > **Configuration** > **Create**.
 
 3. For Platform, select **Windows 10 and later** and then for Profile type, select **Settings catalog**.
 

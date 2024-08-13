@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/02/2024
+ms.date: 07/15/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - ContentEnagagementFY24 
+- sub-updates
 ---
 
 # Windows Driver update management in Microsoft Intune
@@ -73,8 +74,6 @@ To use Windows Driver Update management, your organization must have the followi
 
 - **Microsoft Entra ID**: *Microsoft Entra ID Free* (or greater) subscription.
 
-### Device & Edition requirements
-
 **Windows subscriptions and licenses**:
 
 Your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
@@ -86,7 +85,9 @@ Your organization must have one of the following subscriptions that include a li
 
 *Review your subscription details for applicability to Windows 11*.
 
-If you’re blocked when creating new policies for capabilities that require WUfB-DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants’ licenses meet the WUfB-DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+If you're blocked when creating new policies for capabilities that require WUfB-DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants' licenses meet the WUfB-DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+
+### Device & Edition requirements
 
 **Windows editions**:
 
@@ -99,7 +100,7 @@ Driver updates are supported for the following Windows 10/11 editions:
 
 > [!NOTE]  
 > **Unsupported versions and editions**:  
-> *Windows 10/11 Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, available under the **Windows 10 and later** blade don’t support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
+> *Windows 10/11 Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, available under the **Windows 10 and later** blade don't support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
 
 **Devices must**:
 
@@ -128,7 +129,7 @@ To enable the use of Windows diagnostic data:
 
 2. Expand *Windows data* and ensure the setting **Enable features that require Windows diagnostic data in processor configuration** is toggled to **On**.
 
-For more information, see [Enable use of Windows diagnostic data by Intune](../protect/data-enable-windows-data.md).
+For more information, see [Enable use of Windows diagnostic data by Intune](data-enable-windows-data.md).
 
 ### GCC High support
 
@@ -154,7 +155,7 @@ For more information, see [Role-based access control for Microsoft Intune](../fu
 
 Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides for other capabilities that aren't supported for WPJ devices.
 
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](../protect/windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 
 ## Architecture
 
@@ -179,7 +180,7 @@ Before you create policies and manage the approval of drivers in your policies, 
 
   - Using policy deferral periods for automatic updates and the *make available date* for manually approved updates, to align to your update rings for quality and feature updates schedules.
 
-  You might also set the update availability for manually approved updates to match common update cycles like Microsoft’s Patch Tuesday release. Alignment of schedules can help reduce extra system restarts that some driver updates require.
+  You might also set the update availability for manually approved updates to match common update cycles like Microsoft's Patch Tuesday release. Alignment of schedules can help reduce extra system restarts that some driver updates require.
 
 - Assign devices to only one driver update policy to help prevent a device from having its drivers managed through more than one policy. This can help avoid having a driver installed by one policy when you previously declined or paused that same update in a separate policy.
 For more information about planning deployments, see [Create a deployment plan](/windows/deployment/update/create-deployment-plan) in the Windows deployment documentation.
@@ -205,13 +206,13 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 ### Can I manage a device through multiple driver update policies?
 
-- While the use of multiple policies per device is supported, we don’t recommend doing so. Instead, we recommend adding devices to a single policy to avoid confusion about whether a driver for a device is or isn’t approved.
+- While the use of multiple policies per device is supported, we don't recommend doing so. Instead, we recommend adding devices to a single policy to avoid confusion about whether a driver for a device is or isn't approved.
 
   Consider a device that receives driver updates from two policies. In one policy, a specific update is approved and in the other policy, that update is paused. Because the status of *approved* always wins, the driver installs on the device despite any other status for that update that is set in any other policy.
 
 ### How can I reduce reboots on devices that receive driver updates?
 
-- Because it’s not always clear in advance when an OEM releases a new update, or if that update requires a reboot, consider a regular pattern of update reviews.
+- Because it's not always clear in advance when an OEM releases a new update, or if that update requires a reboot, consider a regular pattern of update reviews.
 
   - For policies with manual approval, when you approve drivers and set an *approval available date*, you can set that date to an event like the monthly Patch Tuesday, or any other time of your choosing. 
   - For policies with automatic approval, you could pause a newly added and then return to approve it. When you reapprove any paused update, you can set an *approval available date*.
@@ -248,13 +249,13 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 ### Why do my devices have driver updates installed that didn't pass through an updates policy?
 
-- These are likely *extension* drivers, which are “sub drivers” that a main driver can reference to be installed when the main driver is installed or updated. Extension drivers show up in the installed drivers or update history on the device, but aren't directly manageable. Because extension drivers don't function without base drivers, it's safe to allow them to install.
+- These are likely *extension* drivers, which are "sub drivers" that a main driver can reference to be installed when the main driver is installed or updated. Extension drivers show up in the installed drivers or update history on the device, but aren't directly manageable. Because extension drivers don't function without base drivers, it's safe to allow them to install.
 
 ### How quickly are paused updates actually paused?
 
-- Pause is a best effort, and when an update is paused, WUfB-DS removes the approval. However, devices won’t know that an update is paused until it’s next scan for updates.
-  - If a device hasn't yet scanned for the update, then the paused update isn’t offered, and *Pause* works as expected.
-  - If a device scans for updates and discovers an update is paused and that the device is in the process of downloading, installing, or waiting to restart, then Windows Update on the device attempts a “best effort” to remove that driver update from being installed. If it can't halt the installation, the update completes its installation.
+- Pause is a best effort, and when an update is paused, WUfB-DS removes the approval. However, devices won't know that an update is paused until it's next scan for updates.
+  - If a device hasn't yet scanned for the update, then the paused update isn't offered, and *Pause* works as expected.
+  - If a device scans for updates and discovers an update is paused and that the device is in the process of downloading, installing, or waiting to restart, then Windows Update on the device attempts a "best effort" to remove that driver update from being installed. If it can't halt the installation, the update completes its installation.
   - If an update completes its installation before the next scan for updates, nothing happens, and the update remains installed.
 
 ### Where can I learn more about the available drivers?
@@ -267,15 +268,18 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 ### Which driver updates can my device users see?
 
-- After a device is assigned to a driver update policy, optional drivers aren't shown to the end user. When the admin approves a driver update, it effectively becomes “required” and installs the next time the device scans for updates.
+- After a device is assigned to a driver update policy, optional drivers aren't shown to the end user. When the admin approves a driver update, it effectively becomes "required" and installs the next time the device scans for updates.
 
-### How do I use driver management if I’m currently using Configuration Manager for updates?
+### How do I use driver management if I'm currently using Configuration Manager for updates?
 
-You can continue to use Configuration Manager for updates other than Drivers, or start to move other update types to cloud management in Intune one at a time. To do this, first, enable [cloud attach](/mem/configmgr/cloud-attach/overview) or co-management in your Configuration Manager hierarchy to enroll your managed devices in Intune.
+You can continue to use Configuration Manager for updates other than Drivers, or start to move other update types to cloud management in Intune one at a time. To do this, first, enable [cloud attach](../../configmgr/cloud-attach/overview.md) or co-management in your Configuration Manager hierarchy to enroll your managed devices in Intune.
 
-The recommended and preferred path to embrace cloud based updates is to move the [Windows Update](/mem/configmgr/comanage/workloads#windows-update-policies) workload to Intune. If your organization isn't ready for this, you can use the Driver and Firmware management capability in Intune without moving the workload by completing the following steps:
+The recommended and preferred path to embrace cloud based updates is to move the [Windows Update](../../configmgr/comanage/workloads.md#windows-update-policies) workload to Intune. If your organization isn't ready for this, you can use the Driver and Firmware management capability in Intune without moving the workload by completing the following steps:
 
-   1. Leave the [Windows Update](/mem/configmgr/comanage/workloads#windows-update-policies) workload set to Configuration Manager.
+> [!NOTE]
+> The following procedure only works and is supported for managed Windows 11 devices. For Windows 10 devices, we recommend moving the Windows Update workload in the Configuration Manager co-management settings to Intune. Alternatively, configure the Windows Update workload to the Pilot setting and specify a collection containing the in-scope Windows 10 managed devices.
+
+   1. Leave the [Windows Update](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Configuration Manager.
 
    2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](windows-driver-updates-policy.md).
 
@@ -300,7 +304,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
    6. [Optional] Enable device name collection in diagnostic data. For more information on configuration using a domain-based group policy or Intune, see [Diagnostic data requirements](/windows/deployment/update/wufb-reports-prerequisites#diagnostic-data-requirements).
 
       > [!NOTE]
-      > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](/mem/configmgr/comanage/workloads#device-configuration) co-management workload to Intune.
+      > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](../../configmgr/comanage/workloads.md#device-configuration) co-management workload to Intune.
 
    You can move Feature update management to the cloud in Intune by configuring a [Feature update](windows-10-feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
    
@@ -308,7 +312,17 @@ The recommended and preferred path to embrace cloud based updates is to move the
 
 ### Is there a way to set a deadline for drivers?
 
-- The Quality Update deadline and grace period settings apply to drivers. The deadline starts from the time the driver is first offered to the device, but isn't a deferral period. The deferral period delays when updates are first offered to a device.
+The Quality Update deadline and grace period settings apply to drivers.
+
+Here are some more details on when deadlines are applied to drivers:
+
+- A driver is approved to be made available (manually or automatically) on a date. This is shown as the First Deployment.
+- On first or initial scan the approved driver is offered to the device. The date the client's update scan initially discovered the update is also the start date and time for the deadline.
+- The deadline calculation for both quality and feature updates is based off the time the client's update scan initially discovered the update. See [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines)
+
+### How do I set deferrals for drivers?
+
+- The deferral period set for Quality Updates within the Update Rings policy does not apply to drivers that are approved using the Driver Update Policy. Instead, use the deferral setting in the Driver policy to set a deferral.  In fact, using multiple driver policies with different deferral settings to create driver deployment rings is highly recommended. Remember to only assign a device to one driver policy.
 
 ### Are the user experience settings from an Update Ring policy applied for driver updates?
 
@@ -320,5 +334,5 @@ The recommended and preferred path to embrace cloud based updates is to move the
 
 ## Next steps
 
-- [Create a Windows driver update policy](../protect/windows-driver-updates-policy.md)
-- [Use Windows driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-updates-policy)
+- [Create a Windows driver update policy](windows-driver-updates-policy.md)
+- [Use Windows driver update reports](windows-update-reports.md#reports-for-windows-driver-updates-policy)

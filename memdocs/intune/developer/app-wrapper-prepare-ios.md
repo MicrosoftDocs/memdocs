@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2023
+ms.date: 08/08/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -36,16 +36,16 @@ Use the Microsoft Intune App Wrapping Tool for iOS to enable Intune app protecti
 
 The tool is a macOS command-line application that creates a wrapper around an app. Once an app is processed, you can change the app's functionality by deploying [app protection policies](../apps/app-protection-policies.md) to it.
 
-To download the tool, see [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) on GitHub.
+To download the tool, see [Microsoft Intune App Wrapping Tool for iOS](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios) on GitHub.
 
 > [!NOTE]
-> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios/issues) on GitHub.
+> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/issues) on GitHub.
 
 ## General prerequisites for the App Wrapping Tool
 
 Before you run the App Wrapping Tool, you need to fulfill some general prerequisites:
 
-* Download the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) from GitHub.
+* Download the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios) from GitHub.
 
 * A macOS computer that has the Xcode toolset version 14.0 or later installed.
 
@@ -190,7 +190,7 @@ You'll need the following to distribute apps wrapped by Intune:
 
 ## Download the App Wrapping Tool
 
-1. Download the files for the App Wrapping Tool from [GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) to a macOS computer.
+1. Download the files for the App Wrapping Tool from [GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios) to a macOS computer.
 
 2. Double-click **Microsoft Intune Application Restrictions Packager for iOS.dmg**. A window with the End User License Agreement (EULA) will appear. Read the document carefully.
 
@@ -199,7 +199,7 @@ You'll need the following to distribute apps wrapped by Intune:
 ## Run the App Wrapping Tool
 
 > [!IMPORTANT]
-> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
+> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool for iOS](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 ### Use terminal
 
@@ -293,7 +293,7 @@ You can now deploy the app to your user groups and target app protection policie
 The main scenarios in which you would need to rewrap your applications are as follows:
 
 * The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Intune admin center.
-* The Intune App Wrapping Tool for iOS has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens after 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
+* The Intune App Wrapping Tool for iOS has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens after 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios).
 
 For iOS/iPadOS, while it's possible to wrap with different cert/provisioning profile than the original used to sign the app, if the entitlements specified in the app aren't included in the new provisioning profile, wrapping will fail. Using the "-e" command-line option, which removes any missing entitlements from the app, to force wrapping to not fail in this scenario can cause broken functionality in the app.
 

@@ -7,7 +7,7 @@ keywords:
 ms.author: smbhardwaj
 author: smritib17 
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -48,6 +48,10 @@ For a user to use Device query, you must assign the **Managed Devices** - **Quer
 
 To use Device query, devices must be Intune managed and corporate owned.
 
+> [!NOTE]
+>
+> Device query is currently not supported in U.S. Government Community Cloud (GCC) High, or U.S. Department of Defense (DoD) environments.
+
 ## Supported platforms
 
 Device query is currently only supported on devices running Windows 10 and later.
@@ -59,6 +63,9 @@ To use Device query, navigate to **Devices** and select the device on which you 
 The supported properties you can query are listed in the **Properties** section. To run a query, enter a Kusto Query Language (KQL) query, and select **Run**. Results are displayed in the **Results** tab area.
 
 For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
+
+> [!TIP]
+> You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune/copilot/copilot-intune-overview.md#query-with-copilot-in-device-query).
 
 ## Supported Operators  
 
@@ -105,7 +112,6 @@ The following table summarizes operators:
 |/|Divide|`2 / 1`|
 |%|Modulo|`2 % 1`|
 |like|Left Hand Side (LHS) contains a match for Right Hand Side (RHS)|`'abc' like '%B%'`|
-|!like|LHS doesn't contain a match for RHS|`'abc' !like '_d_'`|
 |contains|RHS occurs as a subsequence of LHS|`'abc' contains 'b'`|
 |!contains|RHS doesn't occur in LHS|`'team' !contains 'i'`|
 |startswith|RHS is an initial subsequence of LHS|`'team' startswith 'tea'`|
@@ -209,6 +215,8 @@ Device query supports the following entities. To learn more about what propertie
 - Query inputs have a length limit of 2048 characters. If you encounter a *query too long* error, then refine your query to have fewer characters and try again.
 
 - The now() scalar function doesn't support the offset parameter.
+
+- The !like operator is not supported. 
 
 - The input window auto-recommends double quotes when only single quotes are supported on the following operators:
   - contains

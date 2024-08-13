@@ -94,7 +94,6 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [Email](email-settings-configure.md)
 - [Endpoint protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
 - [Extensions (macOS)](kernel-extensions-overview-macos.md)
-- [Identity protection (Windows)](../protect/identity-protection-configure.md)
 - [Kiosk](kiosk-settings.md)
 - [Microsoft Defender for Endpoint (Windows)](../protect/advanced-threat-protection.md)
 - [Mobility Extensions (MX) profile (Android device administrator)](android-zebra-mx-overview.md)
@@ -112,7 +111,7 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [Windows health monitoring](windows-health-monitoring.md)
 - [Wired networks (macOS)](wired-network-settings-macos.md)
 
-For example, if you select **iOS/iPadOS** for the platform, your options look similar to the following profile:
+For example, if you select **Android Enterprise** for the platform, your options look similar to the following profile:
 
 :::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Screenshot that shows how to create an iOS/iPadOS device configuration policy and profile in Microsoft Intune.":::
 

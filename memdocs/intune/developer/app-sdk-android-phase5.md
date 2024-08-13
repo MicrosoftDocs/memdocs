@@ -80,15 +80,17 @@ If your application already supports multiple accounts logged in simultaneously,
 ### "Identity" to the SDK
 
 When an SDK-integrated application registers an account using the [registerAccountForMAM], the SDK saves all of the provided parameters (upn, aadId, tenantId, and authority) as the identity.
-However, most of the SDK's identity APIs only use the provided upn string as shorthand for the identity.
-These APIs will return just the upn string as the identity and only require the upn string parameter for the identity.
+However, most of the SDK's identity APIs use the provided OID (also known as Microsoft Entra ID or AAD ID) as the identifier for the identity.
+The MAM SDK APIs will return the OID string as the identity and will require the OID string parameter for the identity.
+Some methods may also take or return a UPN string, in which case the UPN is for informational purposes only.
 
-Identities are case-insensitive.
+Identity parameters are case-insensitive.
 Requests to the SDK for an identity may not return the same casing that was used when either registering or setting the identity.
 
-> [!TIP]
-> In the future, the SDK APIs may present a more holistic identity structure that includes all fields provided at account registration time, not just upn.
-> When integrating multi-identity support, ensure that your app also has access to aadId, tenantId, and authority when setting the identity using the current APIs.
+> [!CAUTION]
+> For apps using deprecated methods that take or return a UPN string, apps must
+> make sure that the identity UPN string passed to various API calls is
+> consistent. Passing inconsistent UPN strings may result in data leaks.
 
 ### Managed vs Unmanaged Identities
 
@@ -193,18 +195,18 @@ If your `JobService` processes jobs for multiple identities, consider setting th
 The following methods in [MAMPolicyManager] may be used to set the active identity and retrieve the identity values previously set.
 
 ```java
-public static void setUIPolicyIdentity(final Context context, final String identity, final MAMSetUIIdentityCallback mamSetUIIdentityCallback,
-final EnumSet<IdentitySwitchOption> options);
+public static void setUIPolicyIdentityOID(final Context context, final String oid,
+                    final MAMSetUIIdentityCallback mamSetUIIdentityCallback, final EnumSet<IdentitySwitchOption> options);
 
-public static String getUIPolicyIdentity(final Context context);
+public static String getUIPolicyIdentityOID(final Context context);
 
-public static MAMIdentitySwitchResult setProcessIdentity(final String identity);
+public static MAMIdentitySwitchResult setProcessIdentityOID(final String oid);
 
-public static String getProcessIdentity();
+public static String getProcessIdentityOID();
 
-public static MAMIdentitySwitchResult setCurrentThreadIdentity(final String identity);
+public static MAMIdentitySwitchResult setCurrentThreadIdentityOID(final String oid);
 
-public static String getCurrentThreadIdentity();
+public static String getCurrentThreadIdentityOID();
 
 /**
  * Get the current app policy. This does NOT take the UI (Context) identity into account.
@@ -219,16 +221,16 @@ public static AppPolicy getCurrentThreadPolicy();
 public static AppPolicy getPolicy(final Context context);
 
 
-public static AppPolicy getPolicyForIdentity(final String identity);
+public static AppPolicy getPolicyForIdentityOID(final String oid);
 
-public static boolean getIsIdentityManaged(final String identity);
+public static boolean getIsIdentityOIDManaged(final String oid);
 ```
 
-As a convenience, you can also set the identity of an activity directly through a method in [MAMActivity] instead of calling `MAMPolicyManager.setUIPolicyIdentity`.
+As a convenience, you can also set the identity of an activity directly through a method in [MAMActivity] instead of calling `MAMPolicyManager.setUIPolicyIdentityOID`.
 Use following method to do so:
 
 ```java
-     public final void switchMAMIdentity(final String newIdentity, final EnumSet<IdentitySwitchOption> options);
+     public final void switchMAMIdentityOID(final String newIdentityOid, final EnumSet<IdentitySwitchOption> options);
 ```
 
 > [!NOTE]
@@ -257,12 +259,12 @@ All the methods used to set the identity report back result values via [MAMIdent
 The app should verify the [MAMIdentitySwitchResult] is `SUCCEEDED` before displaying or using a managed account's data.
 
 Most methods for setting the active identity return  [MAMIdentitySwitchResult] synchronously.
-In the case of setting a `Context` identity via [setUIPolicyIdentity], the result is reported asynchronously.
+In the case of setting a `Context` identity via [setUIPolicyIdentityOID], the result is reported asynchronously.
 The app may implement a [MAMSetUIIdentityCallback] to receive this result, or may pass null for the callback object.
-If a call is made to `setUIPolicyIdentity` while the result from a previous call to `setUIPolicyIdentity` *on the same context* hasn't yet been delivered, the new callback will supersede the old one and the original callback will never receive a result.
+If a call is made to `setUIPolicyIdentityOID` while the result from a previous call to `setUIPolicyIdentityOID` *on the same `Context`* hasn't yet been delivered, the new callback will supersede the old one and the original callback will never receive a result.
 
 > [!CAUTION]
-> If the `Context` provided to [setUIPolicyIdentity] is an `Activity`, the SDK does not know if the identity change succeeded until after it performs the admin configured conditional launch checks.
+> If the `Context` provided to [setUIPolicyIdentityOID] is an `Activity`, the SDK does not know if the identity change succeeded until after it performs the admin configured conditional launch checks.
 > This may require the user to enter a PIN or corporate credentials.
 
 Currently, process and thread identity switches will always succeed for a multi-identity-enabled app.
@@ -296,7 +298,7 @@ If these identities don't match, the SDK will typically(*) fail the identity swi
 The SDK performs this check because it assumes that the app is still displaying content from the intent that belongs to the identity tagged on the intent.
 This assumption protects against the app unintentionally turning protections off when displaying managed data; however this assumption may not be correct to the app's actual behavior.
 
-The optional [IdentitySwitchOption] enums can be passed to the [setUIPolicyIdentity] and [switchMAMIdentity] APIs to modify the SDK's default behavior.
+The optional [IdentitySwitchOption] enums can be passed to the [setUIPolicyIdentityOID] and [switchMAMIdentityOID] APIs to modify the SDK's default behavior.
 
 - **`IGNORE_INTENT`**: when requesting an identity switch at the UI layer, this option informs the SDK to skip comparing the requested identity parameter against the most recently stored intent identity.
 This is useful when your app is no longer displaying content belonging to that identity, and the SDK shouldn't block this identity switch.
@@ -331,10 +333,10 @@ Your application may have scenarios that are account-agnostic.
 Your application may also have scenarios for local unmanaged scenarios that don't require any log in.
 In both of these cases, your app may not want the SDK to enforce the managed identity's policies, but you may not have an explicit identity to switch to.
 
-You can clear the active identity by calling any of the set identity methods with the identity parameter set to `null`.
+You can clear the active identity by calling any of the set identity methods with the identity OID parameter set to `null`.
 Clearing the identity at one level will cause the SDK to look for the active identity at other levels, based on the order of precedence.
 
-Alternately, you can pass empty string as the identity parameter, which sets the identity to a special empty value which is treated as an unmanaged identity.
+Alternately, you can pass empty string as the identity OID parameter, which sets the identity to a special empty value which is treated as an unmanaged identity.
 Setting the active identity to empty string tells the SDK not to enforce *any* app protection policy.
 
 ### Implicit Identity Changes
@@ -348,7 +350,7 @@ The SDK will never change the active identity without providing these implicit i
 
 > [!CAUTION]
 > If your app choses not to listen for implicit identity changes, be extra careful not to assume the active identity.
-> When in doubt, use the `getCurrentThreadIdentity`, `getUIPolicyIdentity`, and `getProcessIdentity` methods to confirm the active identity.
+> When in doubt, use the `getCurrentThreadIdentityOID`, `getUIPolicyIdentityOID`, and `getProcessIdentityOID` methods to confirm the active identity.
 
 #### Sources of Implicit Identity Changes
 
@@ -373,7 +375,7 @@ Alternately, your app's handler could display an error dialog and block the iden
 Your app can implement the [MAMIdentityRequirementListener] interface on a `Service` or `ContextProvider` for identity changes applying to this thread. Your implementation must override:
 
 ```java
-public abstract void onMAMIdentitySwitchRequired(String identity,
+public abstract void onMAMIdentitySwitchRequired(String upn, String oid,
         AppIdentitySwitchResultCallback callback);
 ```
 
@@ -381,7 +383,7 @@ Your app can implement the [MAMActivityIdentityRequirementListener] interface on
 Your implementation must override:
 
 ```java
-public abstract void onMAMIdentitySwitchRequired(String identity,
+public abstract void onMAMIdentitySwitchRequired(String upn, String oid,
         AppIdentitySwitchReason reason,
         AppIdentitySwitchResultCallback callback);
 ```
@@ -428,9 +430,9 @@ It isn't expected that most apps will need to block or delay an identity switch 
 > A multi-identity app can receive incoming data from both managed and unmanaged apps.
 > **It is the responsibility of the app to treat data from managed identities in a managed manner.**
 
-If a requested identity is managed (use [MAMPolicyManager.getIsIdentityManaged][getIsIdentityManaged] to check), but the app isn't able to use that account (for example, because accounts, such as email accounts, must be set up in the app first) then the identity switch should be refused.
+If a requested identity is managed (use [MAMPolicyManager.getIsIdentityOIDManaged][getIsIdentityOIDManaged] to check), but the app isn't able to use that account (for example, because accounts, such as email accounts, must be set up in the app first) then the identity switch should be refused.
 
-The default behavior for `MAMActivity.onMAMIdentitySwitchRequired` can be accessed by calling the static method `MAMActivity.defaultOnMAMIdentitySwitchRequired(activity, identity,
+The default behavior for `MAMActivity.onMAMIdentitySwitchRequired` can be accessed by calling the static method `MAMActivity.defaultOnMAMIdentitySwitchRequired(activity, upn, oid,
 reason, callback)`.
 
 Similarly, if you need to override `MAMActivity.onSwitchMAMIdentityComplete`, you may implement `MAMActivityIdentitySwitchListener` without explicitly inheriting from `MAMActivity`.
@@ -495,15 +497,15 @@ ExecutorService wrappedService = MAMIdentityExecutors.wrapExecutorService(origin
 As mentioned in [Organizing App Data by Identity] above, the Intune App SDK associates the active identity (from the thread/process level) with files as they're written.
 It is critical to have the correct identity set at file creation time to ensure proper encryption and selective wipe functionality.
 
-Your app may query or change a file’s identity using the [MAMFileProtectionManager] class, specifically `MAMFileProtectionManager.getProtectionInfo` for querying and `MAMFileProtectionManager.protect` for changing.
+Your app may query or change a file’s identity using the [MAMFileProtectionManager] class, specifically `MAMFileProtectionManager.getProtectionInfo` for querying and `MAMFileProtectionManager.protectForOID` for changing.
 
-The `protect` method can also be used to protect directories.
+The `protectForOID` method can also be used to protect directories.
 Directory protection applies recursively to all files and subdirectories contained in the directory.
 When a directory is protected, all new files created within the directory will automatically have the same protection applied.
-Because directory protection is applied recursively, the `protect` call can take some time to complete for large directories.
-For that reason, apps applying protection to a directory that contains a large number of files might wish to run `protect` asynchronously on a background thread.
+Because directory protection is applied recursively, the `protectForOID` call can take some time to complete for large directories.
+For that reason, apps applying protection to a directory that contains a large number of files might wish to run `protectForOID` asynchronously on a background thread.
 
-Calling `protect` with empty string for the identity parameter will tag the file/directory with the unmanaged identity.
+Calling `protectForOID` with empty string for the identity parameter will tag the file/directory with the unmanaged identity.
 This operation will remove encryption from the file/directory if it was previously encrypted.
 When a selective wipe command is issued, the file/directory won't be deleted.
 
@@ -518,8 +520,8 @@ If a file comes from outside the app (either from a
 `ContentProvider` or read from a publicly writable location), the app *must* attempt to determine the file identity (using the correct
 [MAMFileProtectionManager.getProtectionInfo][MAMFileProtectionManager] overload for the data source) before displaying information read from the file.
 
-If `getProtectionInfo` reports a non-null, non-empty identity, the app *must* set the UI identity to match this identity using either [MAMActivity.switchMAMIdentity][switchMAMIdentity] or
-[MAMPolicyManager.setUIPolicyIdentity][setUIPolicyIdentity].
+If `getProtectionInfo` reports a non-null, non-empty identity, the app *must* set the UI identity to match this identity using either [MAMActivity.switchMAMIdentityOID][switchMAMIdentityOID] or
+[MAMPolicyManager.setUIPolicyIdentityOID][setUIPolicyIdentityOID].
 If the identity switch fails, data from the file *must not* be displayed.
 
 When reading from a content URI, it may be necessary to first read the identity (via the `getProtectionInfo` overload taking a `Uri`), then set the context or thread identity appropriately.
@@ -533,7 +535,7 @@ An example flow might look something like the following:
     ```java
     MAMFileProtectionInfo info = MAMFileProtectionManager.getProtectionInfo(docPath)
     if (info != null)
-        MAMPolicyManager.setUIPolicyIdentity(activity, info.getIdentity(), callback, EnumSet.noneOf<IdentitySwitchOption.class>)
+        MAMPolicyManager.setUIPolicyIdentityOID(activity, info.getIdentityOID(), callback, EnumSet.noneOf<IdentitySwitchOption.class>)
     ```
 
 - The app waits until a result is reported to callback.
@@ -545,7 +547,7 @@ the SDK will attempt to protect these files automatically using
 the [identity priority described previously](#setting-the-active-identity).
 The context used to retrieve the `DownloadManager` will be used if
 the thread identity is unset.
-If the downloaded files contain corporate data, it is the app's responsibility to call [protect] if the files are moved or recreated after download.
+If the downloaded files contain corporate data, it is the app's responsibility to call [protectForOID] if the files are moved or recreated after download.
 
 #### Single-Identity to Multi-Identity Transition
 
@@ -559,21 +561,21 @@ All files created before the transition will continue being regarded as managed 
 If you don't want all previous app data to be associated with the managed identity, you can detect this transition and explicitly remove protection.
 
 - Detect the upgrade by comparing your app's version to a known version where multi-identity support was added.
-- Call `protect` with empty string for the identity parameter on files or directories that you don't want associated with the managed identity.
+- Call `protectForOID` with empty string for the identity parameter on files or directories that you don't want associated with the managed identity.
 
 #### Offline Scenarios
 
 The Intune App SDK runs in "offline" mode when the Company Portal app isn't installed.
 File identity tagging is sensitive to offline mode:
 
-- If the Company Portal isn't installed, files can't be identity-tagged. Calling [MAMFileProtectionManager.protect][protect] in offline mode is safe, but it will have no effect.
+- If the Company Portal isn't installed, files can't be identity-tagged. Calling [MAMFileProtectionManager.protectForOID][protectForOID] in offline mode is safe, but it will have no effect.
 
 - If the Company Portal is installed, but the app doesn't have App Protection Policy, files can't reliably be identity-tagged.
 
 - When file identity tagging becomes available, all previously created files are treated as personal/unmanaged (belonging to the empty-string identity), except in cases where the app was previously installed as a single-identity managed app, as described in [Single-Identity to Multi-Identity Transition].
 
 To avoid these cases, apps should avoid creating files containing account data until account registration completes successfully.
-If your app absolutely must create files while offline, it can use [MAMFileProtectionManager.protect][protect] to correct the file's associated identity once the SDK is online.
+If your app absolutely must create files while offline, it can use [MAMFileProtectionManager.protectForOID][protectForOID] to correct the file's associated identity once the SDK is online.
 
 ### Data Buffer Protection
 
@@ -583,7 +585,7 @@ If your app absolutely must create files while offline, it can use [MAMFileProte
 
 The SDK's [MAMDataProtectionManager] provides methods for checking and changing the tagged identity on specific data buffers in either `byte[]` or `InputStream` format.
 
-`MAMDataProtectionManager.protect` allows an app to associate data with an identity and, if the identity is currently targeted with encryption policy, encrypt the data.
+`MAMDataProtectionManager.protectForOID` allows an app to associate data with an identity and, if the identity is currently targeted with encryption policy, encrypt the data.
 This encrypted data is suitable for storing to disk in a file.
 
 `MAMDataProtectionManager` also allows you to query the data associated with the identity and unencrypt it.
@@ -592,17 +594,17 @@ Apps that make use of `MAMDataProtectionManager` should implement a receiver for
 
 After this notification completes, buffers that were protected via this class will no longer be readable (if file encryption was enabled when the buffers were protected).
 An app can prevent these buffers becoming unreadable by calling `MAMDataProtectionManager.unprotect` on all buffers when handling the `MANAGEMENT_REMOVED` notification.
-It is also safe to call `protect` during this notification, if you wish to preserve identity information.
-Encryption is guaranteed to be disabled during the notification and calling `protect` in the handler won't encrypt data buffers.
+It is also safe to call `protectForOID` during this notification, if you wish to preserve identity information.
+Encryption is guaranteed to be disabled during the notification and calling `protectForOID` in the handler won't encrypt data buffers.
 
 ### Content Providers
 
 A multi-identity app must also protect data shared through `ContentProvider`s to prevent inappropriately sharing managed content.
 
-Your app must call the static [MAMContentProvider] method `isProvideContentAllowed(provider, contentIdentity)` before returning content.
+Your app must call the static [MAMContentProvider] method `isProvideContentAllowedForOid(provider, oid)` before returning content.
 If this function returns false, the content *must not* be returned to the caller.
 
-Calling `isProvideContentAllowed` isn't required if your `ContentProvider` is returning a `ParcelFileDescriptor`.
+Calling `isProvideContentAllowedForOid` isn't required if your `ContentProvider` is returning a `ParcelFileDescriptor`.
 File descriptors returned through a content provider are handled automatically based on the file identity.
 
 ### Selective Wipe
@@ -642,7 +644,7 @@ Your app will be fully responsible for removing all data associated with the man
 - If the managed identity was protected with encryption, and your app's custom wipe handler doesn't fully remove all managed data, any remaining managed files will remain encrypted. This data will become inaccessible, and your app may not handle attempting to read encrypted data gracefully.
 - Your app's wipe handler may result in data loss for unmanaged users, if it removes files that aren't tagged with the managed identity.
 
-If your app's custom wipe handler removes managed data from a file but wishes to leave other data in the file, it *must* change the identity of the file (via [MAMFileProtectionManager.protect][protect]) to either an unmanaged identity or empty string.
+If your app's custom wipe handler removes managed data from a file but wishes to leave other data in the file, it *must* change the identity of the file (via [MAMFileProtectionManager.protectForOID][protectForOID]) to either an unmanaged identity or empty string.
 
 Your overridden wipe handler should clear data synchronously and not return until all cleanup is complete.
 
@@ -653,7 +655,7 @@ Consider closing your app manually after completing your custom wipe handler ste
 Plan to dedicate significant time for validating your app's integration of multi-identity. Before you start testing:
 
 - Create and assign app protection policy to an account. This will be your test managed account.
-- Create, but don't assign app protection policy to, another account. This will be your test unmanaged account. Alternately, if your app supports multiple account types beyond Microsoft Entra accounts, you can use an existing non-AAD account as the unmanaged test account.
+- Create, but don't assign app protection policy to, another account. This will be your test unmanaged account. Alternately, if your app supports multiple account types beyond Microsoft Entra accounts, you can use an existing non-Entra account as the unmanaged test account.
 - Refamiliarize yourself with how policy is enforced inside your app. Multi-identity testing requires you to easily distinguish when your app is and isn't operating with policy enforced. The app protection policy setting to block screenshots is effective at quickly testing policy enforcement.
 - Consider the entire set of UI your app offers. Enumerate the screens where account data is displayed. Does your app only ever present a single account's data at once, or can it present data belonging to multiple accounts at the same time?
 - Consider the entire set of files your app creates. Enumerate which of these files contain data belonging to an account, as opposed to system-level data.
@@ -756,7 +758,7 @@ Your multi-identity app may have supplemented or overridden the SDK's default wi
 These tests help ensure your multi-identity integration properly removes managed data when wipes are initiated, without impacting unmanaged data.
 
 > [!WARNING]
-> Reminder, if your app leveraged `MAMDataProtectionManager.protect`, it **must** implement a handler for either `WIPE_USER_AUXILIARY_DATA` or `WIPE_USER_DATA`.
+> Reminder, if your app leveraged `MAMDataProtectionManager.protectForOID`, it **must** implement a handler for either `WIPE_USER_AUXILIARY_DATA` or `WIPE_USER_DATA`.
 
 For these tests, install your app and the Intune Company Portal; log in with both a managed and unmanaged account before starting the test. For both accounts, exercise app scenarios that store account data.
 
@@ -764,8 +766,8 @@ For these tests, install your app and the Intune Company Portal; log in with bot
 | - | - | - |
 | Supplemental wipe handler | Your app has implemented a handler for `WIPE_USER_AUXILIARY_DATA` | - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm (typically via logging) that your wipe handler has executed successfully. <br> - Confirm that the managed account is removed from your app and all that account's data has been removed. <br> - Confirm that the unmanaged account is still logged in, none of the unmanaged account's data has been removed, and policy is still not applied.
 | Overridden wipe handler | Your app has implemented a handler for `WIPE_USER_DATA` | - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm (typically via logging) that your wipe handler has executed successfully. <br> - Confirm that the managed account is removed from your app and all that account's data has been removed. <br> - Confirm that the unmanaged account is still logged in, none of the unmanaged account's data has been removed, and policy is still not applied. <br> - Confirm that your app has either exited gracefully or is still in a healthy state after your wipe handler finishes.
-| Manual file protection | - Your app calls `MAMFileProtectionManager.protect` <br> - Your app has implemented a handler for `WIPE_USER_DATA` | - Ensure you have exercised scenarios where your app would manually protect at least one file belonging to the managed account. <br> - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm that the files are removed. |
-| Manual data buffer protection | - Your app calls `MAMDataProtectionManager.protect` <br> - Your app has implemented a handler for either `WIPE_USER_AUXILIARY_DATA` or `WIPE_USER_DATA` | - Ensure you have exercised scenarios where your app would manually protect at least one data buffer belonging to the managed account. <br> - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm that the data buffers are removed from whatever files they were stored in, and your app can still read the unmanaged data from those files. |
+| Manual file protection | - Your app calls `MAMFileProtectionManager.protectForOID` <br> - Your app has implemented a handler for `WIPE_USER_DATA` | - Ensure you have exercised scenarios where your app would manually protect at least one file belonging to the managed account. <br> - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm that the files are removed. |
+| Manual data buffer protection | - Your app calls `MAMDataProtectionManager.protectForOID` <br> - Your app has implemented a handler for either `WIPE_USER_AUXILIARY_DATA` or `WIPE_USER_DATA` | - Ensure you have exercised scenarios where your app would manually protect at least one data buffer belonging to the managed account. <br> - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm that the data buffers are removed from whatever files they were stored in, and your app can still read the unmanaged data from those files. |
 
 ## Next Steps
 
@@ -794,28 +796,32 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [Issue a selective wipe from the Microsoft Intune admin center]:/mem/intune/apps/apps-selective-wipe
 
 <!-- Class links -->
-[AppIdentitySwitchResultCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html
-[IdentitySwitchOption]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/IdentitySwitchOption.html
-[MAMActivity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
-[MAMActivityIdentityRequirementListener]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html
-[MAMAsyncTask]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMAsyncTask.html
-[MAMContentProvider]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/content/MAMContentProvider.html
-[MAMDataProtectionManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html
-[MAMFileProtectionManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html
-[MAMIdentityExecutors]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html
-[MAMIdentityRequirementListener]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMIdentityRequirementListener.html
-[MAMIdentitySwitchResult]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/MAMIdentitySwitchResult.html
-[MAMNotificationType]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMNotificationType.html
-[MAMPolicyManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html
-[MAMSetUIIdentityCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html
+[AppIdentitySwitchResultCallback]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html
+[IdentitySwitchOption]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/IdentitySwitchOption.html
+[MAMActivity]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
+[MAMActivityIdentityRequirementListener]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html
+[MAMAsyncTask]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMAsyncTask.html
+[MAMContentProvider]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/content/MAMContentProvider.html
+[MAMDataProtectionManager]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html
+[MAMFileProtectionManager]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html
+[MAMIdentityExecutors]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html
+[MAMIdentityRequirementListener]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMIdentityRequirementListener.html
+[MAMIdentitySwitchResult]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/MAMIdentitySwitchResult.html
+[MAMNotificationType]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMNotificationType.html
+[MAMPolicyManager]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html
+[MAMSetUIIdentityCallback]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html
 
 <!-- Method links -->
-[getIsIdentityManaged]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getIsIdentityManaged(java.lang.String)
-[protect]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protect(android.os.ParcelFileDescriptor,%20java.lang.String)
-[onMAMIdentitySwitchRequired]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String,%20com.microsoft.intune.mam.client.app.AppIdentitySwitchReason,%20com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)
-[registerAccountForMAM]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAccountForMAM(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
-[setUIPolicyIdentity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentity(android.content.Context,%20java.lang.String,%20com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
-[switchMAMIdentity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html#switchMAMIdentity(java.lang.String,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
+<!-- MMI TODO: fix links when javadocs are published to github 
+  https://dev.azure.com/msazure/Intune/_workitems/edit/26505930
+-->
+[getIsIdentityOIDManaged]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getIsIdentityOIDManaged(java.lang.String)
+[protectForOID]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protectForOID(android.os.ParcelFileDescriptor,%20java.lang.String)
+[onMAMIdentitySwitchRequired]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String,%20java.lang.String,%20com.microsoft.intune.mam.client.app.AppIdentitySwitchReason,%20com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)
+[registerAccountForMAM]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAccountForMAM(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
+[setUIPolicyIdentityOID]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentityOID(android.content.Context,%20java.lang.String,%20com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
+[switchMAMIdentityOID]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html#switchMAMIdentityOID(java.lang.String,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
+
 
 <!-- Other Microsoft links -->
 [Microsoft Intune admin center]:https://go.microsoft.com/fwlink/?linkid=2109431

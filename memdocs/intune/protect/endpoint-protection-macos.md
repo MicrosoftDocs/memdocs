@@ -26,6 +26,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - endpoint-protection
+- sub-secure-endpoints
 ---
 
 # macOS endpoint protection settings in Intune

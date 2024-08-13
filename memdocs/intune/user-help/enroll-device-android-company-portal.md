@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/21/2023
+ms.date: 07/01/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -31,18 +31,20 @@ ms.collection:
 # Enroll your device with Company Portal  
 Enroll your personal or corporate-owned Android device with Intune Company Portal to get secure access to company email, apps, and data. 
 
-Company Portal supports devices running Android 8.0 and later, including devices secured by Samsung KNOX Standard 2.4 and later. To learn how to update your Android device, see [Check & update your Android version](https://support.google.com/android/answer/7680439).  
+
+
+## Prerequisites  
+The Intune Company Portal app supports devices running Android 8.0 and later, including devices secured by Samsung Knox Standard 2.4 and later. To learn how to update your Android device to meet requirements, see [Check & update your Android version](https://support.google.com/android/answer/7680439).  
   
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o]
 
 > [!NOTE]
-> Samsung Knox is a type of security that certain Samsung devices use for additional 
-> protection outside of what native Android provides. To check if you have a Samsung Knox device, go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.  
+> Samsung Knox is a type of security that certain Samsung devices use for additional protection outside of what native Android provides. To check if you have a Samsung Knox device, go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.  
 
 ## Install Company Portal app  
 Install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md) for a list of stores that offer the app in People's Republic of China.
 
-1. Tap **Home** > **Play Store**.
+1. On your device, open the **Play Store** app.
 
 2. Search for and install **Intune Company Portal**.  
 
@@ -51,9 +53,9 @@ Install the Intune Company Portal app [from Google Play](https://play.google.com
 3. When prompted about app permissions, tap **ACCEPT**.  
 
 ## Enroll device  
-During enrollment, you might be asked to choose a category that best describes how you use your device. Your company support uses your answer to check the apps that you have access to.  
+During enrollment, you might be asked to choose a category that best describes how you use your device. Company Portal uses your answer to check for work and school apps relevant to you.  
 
-1. Open the Company Portal app and sign in with your work or school account. If prompted to, review notification permissions for Company Portal. You can adjust notification permissions anytime in the Settings app.  
+1. Open the Company Portal app and sign in with your work or school account.  If prompted to, review notification permissions for Company Portal. You can adjust notification permissions anytime in the Settings app.  
 
 2. If you're prompted to accept your organization's terms and conditions, tap **ACCEPT ALL**.  
 
@@ -105,7 +107,7 @@ During enrollment, you might be asked to choose a category that best describes h
 
 ## Next steps  
 
-Before you try to install a school or work app, modify device settings to allow app installations from unknown sources. If you don't make this change on your device, apps installations will be blocked. Go to **Settings** > **Security and privacy** > **Install unknown apps**.  
+Before you try to install a school or work app, modify device settings to allow app installations from unknown sources. If you don't make this change on your device, apps installations will be blocked. Open the **Settings** app on your device. Then go to **Security and privacy** > **Install unknown apps**.  
 
 If you get an error while you try to enroll your device in Intune, you can [email your company support](send-logs-to-your-it-admin-by-email-android.md).  
 

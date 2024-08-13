@@ -28,6 +28,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - network-access-control
+- sub-infrastructure
 ---
 
 # Network access control (NAC) integration with Intune
@@ -37,7 +38,8 @@ Intune integrates with network access control (NAC) partners to help organizatio
 >[!NOTE]
 > A new NAC service (CR service) was released in July 2021 and many of our NAC partners are transitioning to this new service. While we have extended the timeline for supporting the legacy NAC service through **March 31, 2024**, we recommend you to migrate to the new CR service to avoid service disruption.Currently, the following NAC partner product supports the new NAC service:
 >
-> - Extreme Networks ExtremeCloud Site Engine (XIQ-SE) version 24.2
+> - ExtremeCloud Universal ZTNA
+> - Extreme Networks ExtremeCloud IQ-Site Engine version 24.2
 > - Cisco ISE 3.1 and later
 > - Citrix Gateway 13.0-84.11 and later
 > - Citrix Gateway 13.1-12.50 and later
@@ -135,6 +137,7 @@ Also, the data returned will be limited if:
 
 ## Next steps
 
+- [Integrate Extreme Networks ExtremeCloud Universal ZTNA](https://documentation.extremenetworks.com/UZTNA/24.1.0/UserGuide/GUID-E325F6BE-1D6C-4523-B21E-024C48353802.shtml)
 - [Integrate Extreme Networks ExtremeCloud with Intune](https://www.extremenetworks.com/products/network-management/extremecloud-iq-site-engine/extremecloud-iq---site-engine) 
 - [Integrate Cisco ISE with Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/UEM-MDM-Server-Integration/b_MDM_UEM_Servers_CiscoISE/chapter.html#task_og1_5zx_cqb)
 - [Integrate Citrix Gateway with Intune](https://docs.citrix.com/en-us/citrix-gateway/current-release/microsoft-intune-integration/configuring-network-access-control-device-check-for-citrix-gateway-virtual-server-for-single-factor-authentication-deployment.html)

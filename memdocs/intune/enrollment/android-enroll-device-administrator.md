@@ -34,7 +34,7 @@ ms.collection:
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
 
-Android device administrator (sometimes referred to *legacy* Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is available with [Android Enterprise](https://www.android.com/enterprise/management/) in [countries where Android Enterprise is available](https://support.google.com/work/android/answer/6270910). In an effort to move to modern, richer, and more secure device management, Google deprecated Android device administrator management in 2020 and Intune will be ending support for device administrator devices with access to Google Mobile Services in August 2024.
+Android device administrator (sometimes referred to *legacy* Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is available with [Android Enterprise](https://www.android.com/enterprise/management/) in [countries where Android Enterprise is available](https://support.google.com/work/android/answer/6270910). In an effort to move to modern, richer, and more secure device management, Google deprecated Android device administrator management in 2020 and Intune will be ending support for device administrator devices with access to Google Mobile Services at the end of 2024.
 
 Therefore, we advise against enrolling new devices using the device administrator process described here and we also recommend that you migrate devices off of device administrator management.
 
@@ -55,7 +55,7 @@ If you still decide to have users enroll their Android devices with device admin
 After a user has enrolled, you can begin managing their devices in Intune, including [assigning compliance policies](../protect/compliance-policy-create-android.md), [managing apps](../apps/app-management.md), and more.
 
 For information about other user tasks, see these articles:
-- [Resources about the end-user experience with Microsoft Intune](/mem/intune/fundamentals/intune-planning-guide)
+- [Resources about the end-user experience with Microsoft Intune](../fundamentals/intune-planning-guide.md)
 - [Using your Android device with Intune](../user-help/why-enroll-android-device.md)  
 
 ## Block device administrator enrollment

@@ -21,6 +21,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-updates
 ---
 
 # Software updates planning guide for managed macOS devices in Microsoft Intune
@@ -158,7 +159,7 @@ The [Intune settings catalog](../configuration/settings-catalog.md) also include
 
 This settings catalog policy works with [Step 1 - Use a software update policy to manage when updates are installed](#-step-1---use-a-software-update-policy-to-manage-when-updates-are-installed) (in this article). It makes sure the devices are checking for updates and prompting users to install them. End users still need to take action to finish the installation.
 
-In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Settings catalog > Software Update**. Configure the following settings:
+In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Manage devices > Configuration > Settings catalog > Software Update**. Configure the following settings:
 
 - **Allow Pre Release Installation**: False
 - **Automatic Download**: True
