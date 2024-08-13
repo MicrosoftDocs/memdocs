@@ -36,6 +36,9 @@ After [enrollment](enroll-intune.md), client devices require a restart to fully 
 > [!NOTE]
 > It may take up to 48 hours after you buy licenses or start a trial to see Resource performance data in your tenant.
 
+> [!NOTE]
+> Resource performance report is currently not supported in US Government Community Cloud (GCC) High or U.S. Department of Defense (DoD) environments.
+
 ## Resource performance report
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
