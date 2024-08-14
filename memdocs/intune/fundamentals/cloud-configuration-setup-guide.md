@@ -105,7 +105,7 @@ In this step, you enable MDM automatic enrollment in Intune and configure how de
 
 If you already use Windows Autopilot, then skip this step, and go to [Step 3 - Deploy a script to configure Known Folder Move and remove built-in apps](#step-3---configure-onedrive-known-folder-move-and-deploy-a-script-to-remove-built-in-apps) (in this article).
 
-### ✔️ 1 - Enable automatic enrollment
+### ✅ 1 - Enable automatic enrollment
 
 Enable automatic enrollment for the organization users that you want to use cloud config. Automatic enrollment is required for cloud config. For more information on automatic enrollment, go to [Enrollment guide -  Windows automatic enrollment](../fundamentals/deployment-guide-enrollment-windows.md#windows-automatic-enrollment).
 
@@ -119,7 +119,7 @@ Enable automatic enrollment for the organization users that you want to use clou
 4. Don't configure the MAM user scope, MAM terms of user URL, MDM discovery URL, and MAM compliance URL settings. Leave these settings blank. MAM settings aren't configured for cloud config.
 5. Select **Save** to save your changes.
 
-### ✔️ 2 - Choose how devices enroll and configure users to be standard users on devices
+### ✅ 2 - Choose how devices enroll and configure users to be standard users on devices
 
 After Windows automatic enrollment is enabled in Intune, the next step is to determine how devices enroll in Intune. When they enroll, they're available to receive your cloud config policies. You also need to configure users to be standard users on their devices. Standard users can only install apps that your organization approves.
 
@@ -238,7 +238,7 @@ When you configure OneDrive **Known Folder Move**, user files and data are autom
 
 This step helps simplify the Windows user experience. 
 
-### ✔️ 1 - Configure OneDrive Known Folder Move with an Administrative Template
+### ✅ 1 - Configure OneDrive Known Folder Move with an Administrative Template
 
 With **Known Folder Move**, users data (files and folders) is saved to OneDrive. When users sign in to another device, OneDrive automatically synchronizes the data to the new device. Users don't have to manually move their files.
 
@@ -265,7 +265,7 @@ To configure **Known Folder Move**, use an ADMX template in Intune:
 
 7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
-### ✔️ 2 - Deploy a script to remove built-in apps
+### ✅ 2 - Deploy a script to remove built-in apps
 
 Microsoft created a Windows PowerShell script that:
 
@@ -321,13 +321,13 @@ To prevent these outside apps, use the following steps:
 
 This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essential apps in this step. Remember, only deploy what users need.
 
-### ✔️ 1 - Deploy Microsoft Edge
+### ✅ 1 - Deploy Microsoft Edge
 
 1. [Add Microsoft Edge to Intune](../apps/apps-windows-edge.md).
 2. For **App settings**, select the **Stable Channel**.
 3. Assign the Microsoft Edge app to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
-### ✔️ 2- Deploy Microsoft Teams
+### ✅ 2- Deploy Microsoft Teams
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Windows**.
@@ -364,7 +364,7 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
 
 This step configures endpoint security settings to help keep devices secure, including the built-in Windows security baseline and BitLocker settings.
 
-### ✔️ 1 - Deploy the Windows 10/11 MDM security baseline
+### ✅ 1 - Deploy the Windows 10/11 MDM security baseline
 
 For Windows in cloud configuration, it's recommended to use the Windows 10/11 [security baseline](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines). There are some setting values you can change based on your organization's preference.
 
@@ -387,7 +387,7 @@ Configure the security baseline in Intune:
 6. In **Assignments**, select the group that you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 7. Select **Create** to create and assign the baseline.
 
-### ✔️ 2 - Deploy more BitLocker settings with a drive encryption endpoint security profile
+### ✅ 2 - Deploy more BitLocker settings with a drive encryption endpoint security profile
 
 There are more BitLocker settings that help keep your devices secure. Configure these BitLocker settings in Intune:
 
@@ -501,7 +501,7 @@ Create the compliance policy in Intune:
 
 There are optional policies you can create and deploy with your cloud config. This section describes these optional policies.
 
-### ✔️ Configure a tenant domain name
+### ✅ Configure a tenant domain name
 
 Configure devices to automatically use your tenant's domain name for user sign-ins. When you add a domain name, users don't have to type their full UPN to sign in.
 
@@ -515,7 +515,7 @@ Add the tenant domain name in Intune:
 6. In **Configuration settings**, for **Password**, configure the **Preferred Microsoft Entra tenant domain**. Enter the Microsoft Entra domain name that users should use to sign in to devices.
 7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
-### ✔️ Deploy other essential productivity and line of business (LOB) apps
+### ✅ Deploy other essential productivity and line of business (LOB) apps
 
 You might have a few essential LOB apps that all devices need. Choose a minimum number of these apps to deploy. If you deliver apps using a virtualization solution, then also deploy the virtualization client app to devices.
 
@@ -525,19 +525,19 @@ You might need specific LOB apps on some of your devices. Or, there might be som
 
 Cloud config is recommended for devices that need just a few key apps, along with collaboration and browsing.
 
-### ✔️ Deploy resources that users need for organization access
+### ✅ Deploy resources that users need for organization access
 
 Configure essential resources that users might need, which depends on your organization's processes. Essential resources can include certificates, printers, VPN connections, and Wi-Fi profiles.
 
 In Intune, assign these resources to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
-### ✔️ Configure recommended settings for OneDrive Known Folder Move
+### ✅ Configure recommended settings for OneDrive Known Folder Move
 
 There are more settings that improve the user experience for OneDrive **Known Folder Move**. The settings aren't required for **Known Folder Move** to work but are helpful.
 
 For more information on these settings, go to [OneDrive settings recommended for Known Folder Move](/sharepoint/ideal-state-configuration).
 
-### ✔️ Configure recommended Microsoft Edge settings
+### ✅ Configure recommended Microsoft Edge settings
 
 There are some Microsoft Edge app settings that can be configured for a better user experience. You can configure these settings based on requirements or preference for the end user experience.
 
