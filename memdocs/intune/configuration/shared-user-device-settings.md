@@ -67,7 +67,7 @@ This feature applies to:
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-   - **Platform**: Select **Windows**.
+   - **Platform**: Select **Windows 10 and later**.
    - **Profile type**: Select **Templates** > **Shared multi-user device**.
 
 4. Select **Create**.

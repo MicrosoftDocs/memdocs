@@ -46,7 +46,7 @@ This feature applies to:
 
 3. Enter the following properties:
 
-   - **Platform**: Select **Windows**.
+   - **Platform**: Select **Windows 10 and later**.
    - **Profile type**: Select **Templates** > **Delivery optimization**.
 
 4. Select **Create**.
