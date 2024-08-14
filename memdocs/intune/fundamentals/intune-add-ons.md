@@ -47,14 +47,14 @@ The following table provides a list of add-on capabilities and associated Intune
 
 |Capability|Standalone add-on|Intune Plan 2|Intune Suite|
 |:---|:---:|:---:|:---:|
-|Endpoint Privilege Management |✔️| |✔️|
-|Enterprise App Management |✔️| |✔️|
-|Advanced Analytics|✔️ | |✔️|
-|Remote Help|✔️| |✔️|
-|Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
-|Microsoft Cloud PKI |✔️ ||✔️|
-|Firmware-over-the-air update| |✔️ |✔️ |
-|Specialized devices management| |✔️|✔️|
+|Endpoint Privilege Management |✅ | |✅ |
+|Enterprise App Management |✅ | |✅ |
+|Advanced Analytics|✅  | |✅ |
+|Remote Help|✅ | |✅ |
+|Microsoft Tunnel for Mobile Application Management| |✅ |✅ |
+|Microsoft Cloud PKI |✅  ||✅ |
+|Firmware-over-the-air update| |✅  |✅  |
+|Specialized devices management| |✅ |✅ |
 
 ### Microsoft Intune Endpoint Privilege Management
 
