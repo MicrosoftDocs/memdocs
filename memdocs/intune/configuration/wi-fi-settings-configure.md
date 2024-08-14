@@ -75,7 +75,7 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
       - **Android Enterprise**
       - **iOS/iPadOS**
       - **macOS**
-      - **Windows**
+      - **Windows 10 and later**
       - **Windows 8.1 and later**
 
     - **Profile type**: Select **Wi-Fi**. Or, select **Templates** > **Wi-Fi**.

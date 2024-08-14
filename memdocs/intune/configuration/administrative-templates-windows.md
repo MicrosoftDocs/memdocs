@@ -81,7 +81,7 @@ This article describes the steps to create a template for Windows client devices
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Windows**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: To use a logical grouping of settings, select **Templates** > **Administrative Templates**. To see all the settings, select **Settings catalog**.
 
 4. Select **Create**.
