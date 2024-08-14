@@ -41,7 +41,7 @@ The Microsoft Intune app is supported with the following operating systems:
  - RedHat Enterprise Linux 8  
  - RedHat Enterprise Linux 9    
 
-## Install Intune app  
+## Install Intune app for Ubuntu Desktop
 Run the following commands in a command line to manually install the Intune app and its dependencies on your device.  
 
 1. Install Curl:
@@ -75,9 +75,7 @@ Run the following commands in a command line to manually install the Intune app 
     ```bash
     sudo apt update
     sudo apt install intune-portal
-    ```
-
-4. Reboot your device.   
+    ``` 
 
 ## Update Intune app 
 The Microsoft Intune app automatically updates when updates become available in Software Updater.   
@@ -109,3 +107,50 @@ Run these commands to update the Microsoft Intune app manually:
     ```bash
     sudo apt purge intune-portal
     ```
+
+## Install Intune app for RedHat Enterprise Linux
+
+1. Add the Microsoft repository:
+
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+   sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/microsoft-rhel9.0-prod
+   ```
+
+2. Install the Intune app:
+
+   ```bash
+   sudo dnf install intune-portal
+   ```
+
+### Update the Intune app
+
+To update the Intune app, run:
+
+   ```bash
+   sudo dnf update
+   ```
+
+or
+
+   ```bash
+   sudo dnf update intune-portal
+   ```
+
+### Uninstall the Intune app
+
+To uninstall the Intune app and remove local registration data:
+
+1. Remove the Intune portal package:
+
+   ```bash
+   sudo dnf remove intune-portal
+   ```
+
+2. Remove local registration data:
+
+   ```bash
+   sudo rm -rf /var/opt/microsoft/mdatp
+   sudo rm -rf /etc/opt/microsoft/mdatp
+   sudo rm -rf /opt/microsoft/mdatp
+   ```
