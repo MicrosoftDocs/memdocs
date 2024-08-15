@@ -208,7 +208,7 @@ If you want to remove devices from the Intune admin center, you can delete them 
 | OS      | Enrollment Type                                | Action triggered                                                                           |
 |---------|--------------------------------------------|--------------------------------------------------------------------------------------------|
 | Android | Device administrator                       | RETIRE - All Profiles are deleted, Company Portal (CP) app is signed out.           |
-| Android | Personally-owned devices with work profile | RETIRE - All Profiles are deleted, CP app is deleted.                               |
+| Android | Personally owned devices with work profile | RETIRE - All Profiles are deleted, CP app is deleted.                               |
 | Android | Corporate-owned devices with work profile  | WIPE                                                                       |
 | Android | Dedicated devices                          | WIPE                                                                       |
 | Android | Dedicated w/ Entra ID Shared Mode          | WIPE                                  |
