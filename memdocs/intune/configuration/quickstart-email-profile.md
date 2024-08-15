@@ -62,7 +62,7 @@ For more information on the different roles in Intune, go to [Role-based access 
 3. Enter the following properties:
 
    - **Platform**: Select **iOS/iPadOS**.
-   - **Profile type**: Select **Temmplates** > **Email**.
+   - **Profile type**: Select **Templates** > **Email**.
   
 4. Select **Create**.
 
