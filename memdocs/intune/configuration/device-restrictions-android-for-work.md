@@ -249,7 +249,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
     > - Device navigation buttons, like the home and overview buttons, are disabled and removed from view.
     > - The device's lock screen, like the keyguard, is disabled.
     >
-    > To use dialer & phone applications, or for your users to receive push notifications in kiosk mode, use the [Dedicated devices](#dedicated-devices) > **Enabled system navigation features** (with **Home button** options) and **System notifications and information** settings (in this article). These features are available on Android devices running 9.0 and newer.
+    > To use dialer & phone applications, or for your users to receive push notifications in kiosk mode, use the [Fully managed and Dedicated devices (kiosk mode only](#dedicated-devices) > **Enabled system navigation features** (with **Home button** options) and **System notifications and information** settings (in this article). These features are available on Android devices running 9.0 and newer.
     >
     > On OS 9 and newer, the [Device password](#device-password) > **Disable lock screen** (in this article) setting manages the device's lock screen behavior.
 
