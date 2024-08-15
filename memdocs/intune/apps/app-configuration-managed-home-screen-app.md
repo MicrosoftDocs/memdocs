@@ -710,4 +710,4 @@ You can access the Managed Home Screen's debug screen by selecting the **back** 
 
 ## Next steps
 
-- For more information about Android Enterprise dedicated devices, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
+- For more information about Android Enterprise dedicated devices, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md). For more information about Android Enterprise fully managed devices, see [Set up enrollment for Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md).
