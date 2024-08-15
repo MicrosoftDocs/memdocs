@@ -53,6 +53,8 @@ The following workarounds are available until the issue is resolved:
 1. Apply the autologon registry entries via either a script that runs during Windows Autopilot or manually after Windows Autopilot completes.
 1. Exclude items the required reboots during OOBE from Windows Autopilot.
 
+For additional assistance, contact support.
+
 For more information, see [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
 
 ## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
