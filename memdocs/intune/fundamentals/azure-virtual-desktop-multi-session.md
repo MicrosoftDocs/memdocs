@@ -256,7 +256,7 @@ The following sections provide troubleshooting guidance for common issues.
 Configuration policy reports as Not applicable|Some policies aren't applicable to Azure Virtual Desktop VMs.|
 |Microsoft Edge/Microsoft Office ADMX policy doesn't show up when I apply the filter for Windows 10 or Windows 11 Enterprise multi-session edition|Applicability for these settings isn't based on the Windows version or edition but on whether those apps have been installed on the device. To add these settings to your policy, you may have to remove any filters applied in the settings picker.|
 |App configured to install in system context didn't apply|Confirm the app doesn't have a dependency or supersedence relationship on any apps configured to install in user context. User context apps aren't currently supported on Windows 10 or Windows 11 Enterprise multi-session.|
-|Update rings for Windows 10 and later policy didn't apply|Windows update rings policies aren't currently supported.|
+|Update rings for Windows 10 and later policy didn't apply|Windows update rings policies aren't currently supported. Quality updates can be managed via settings available in the [settings catalog](../configuration/settings-catalog.md).|
 
 ## Next steps
 
