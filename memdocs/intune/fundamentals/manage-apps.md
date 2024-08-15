@@ -121,7 +121,6 @@ The app features in the Intune admin center make it easier to deploy these diffe
 
   For more specific information, go to:
 
-  - [Manage volume purchased apps from the Microsoft Store for Business](../apps/windows-store-for-business.md)
   - [Add Microsoft 365 apps to Windows client devices](../apps/apps-add-office365.md)
   - [Win32 app management](../apps/apps-win32-app-management.md)
 
