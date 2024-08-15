@@ -184,7 +184,7 @@ The [Full delegation model](#full-delegation-model) is recommended.
 #### Windows update rings
 
 - We recommend that Windows update rings are managed centrally. The Central team should create as many common Windows update ring policies as they need to support the variance of the local admins.
-- The local admins shouldn't create their own Windows update rings. When you delegate to a large numbers of administrators, the total number of objects may become large and difficult to manage. Best practices vary for each feature. For more information, go to [Windows update rings](../protect/windows-10-update-rings.md).
+- The local admins shouldn't create their own Windows update rings. When you delegate to a large number of administrators, the total number of objects may become large and difficult to manage. Best practices vary for each feature. For more information, go to [Windows update rings](../protect/windows-10-update-rings.md).
 
 #### Feature updates
 
@@ -260,19 +260,19 @@ In this section:
 #### Autopilot
 
 - Grant local admins the permissions to read Autopilot devices and upload new Autopilot devices.
-- Local admins shouldn't create Autopilot profiles. When you delegate to a large numbers of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area.
+- Local admins shouldn't create Autopilot profiles. When you delegate to a large number of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area.
 For more information on Autopilot, go to [Use Autopilot to enroll Windows devices in Intune](../enrollment/tutorial-use-autopilot-enroll-devices.md).
 
 #### Enrollment status page
 
 - Local admins should select from existing Enrollment status page profiles to assign, or they should request the Central team to create an exception profile, only if necessary.
-- Local admins shouldn't create Enrollment status page profiles. When you delegate to a large numbers of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area. For information on Enrollment status page, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
+- Local admins shouldn't create Enrollment status page profiles. When you delegate to a large number of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area. For information on Enrollment status page, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
 #### Apple Business Manager
 
 If possible, local admins shouldn't be granted create, update or delete permissions on enrollment profiles. If local admins are given permissions to create Apple Business Manager profiles it also gives them create, update and delete permissions in Autopilot. However, local admins shouldn't create Autopilot profiles.
 
-When you delegate to a large numbers of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area. For more information, go to [Use Apple Business Manager to enroll Apple devices in Intune](../enrollment/tutorial-use-device-enrollment-program-enroll-ios.md).  
+When you delegate to a large number of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area. For more information, go to [Use Apple Business Manager to enroll Apple devices in Intune](../enrollment/tutorial-use-device-enrollment-program-enroll-ios.md).  
 
 #### Android Enterprise profiles
 
@@ -298,5 +298,5 @@ For more information, go to [Device categories](../enrollment/device-group-mappi
 ### Endpoint analytics
 
 - The Central team should create as many common Endpoint Analytics baselines as they need to support the variance of the Local admins.
-- If possible, local admins shouldn't create their own Endpoint Analytics baselines. When you delegate to a large numbers of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area.
+- If possible, local admins shouldn't create their own Endpoint Analytics baselines. When you delegate to a large number of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area.
 - For more information, go to [Configuring settings in Endpoint analytics](../../analytics//settings.md#bkmk_baselines).
