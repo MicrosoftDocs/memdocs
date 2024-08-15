@@ -236,8 +236,6 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 Use these settings to configure a kiosk-style experience on your dedicated or fully managed devices, or to customize the home screen experiences on your fully managed devices.  If you’re not sure which experience to configure, the diagram below can help you decide on the right option for your devices. If you’re still uncertain, see [Selecting a home screen experience for your Android Enterprise corporate-owned devices](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess). 
 
-:::image type="content" source="./media/device-restrictions-android-for-work/decision-process-for-enroll-and-launcher.png" alt-text="Decision process for enrollment type plus launcher selection.":::
-
 **Device experience type**: Select a device experience type to start configuring Microsoft Launcher or the Microsoft Managed Home Screen on your devices. Your options:
 
 - **Not configured**: Intune doesn't change or update this setting. By default, users might see the device's default home screen experience.
