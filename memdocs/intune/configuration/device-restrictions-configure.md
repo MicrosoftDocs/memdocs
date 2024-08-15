@@ -71,7 +71,7 @@ This article shows you how to create a device restrictions profile. You can also
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
-        - **Windows**
+        - **Windows 10 and later**
         - **Windows 8.1 and later**
 
     - **Profile type**: Select **Device restrictions**. Or, select **Templates** > **Device restrictions**.
