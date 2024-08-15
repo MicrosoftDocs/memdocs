@@ -182,7 +182,7 @@ Use on organization-owned devices running Windows 10/11.
 
 Windows Autopilot uses the Windows client OEM version preinstalled on the device. You don't have to wipe the devices or use custom OS images. Windows Autopilot also requires Automatic enrollment, and uses the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to create an enrollment profile. When users sign in with their organization account, they're automatically enrolled.
 
-For more information about Windows Autopilot, go to [Windows Autopilot overview](/autopilot/windows-autopilot) or [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios).
+For more information about Windows Autopilot, go to [Windows Autopilot overview](/autopilot/overview) or [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios).
 
 ---
 | Feature | Use this enrollment option when |
@@ -199,13 +199,13 @@ For more information about Windows Autopilot, go to [Windows Autopilot overview]
 | Devices are user-less, like kiosk, dedicated, or shared. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
 | Devices are personal or BYOD. | ❌ <br/><br/> Windows Autopilot is only for organization-owned devices. For BYOD or personal devices, use [Windows automatic enrollment](#windows-automatic-enrollment) (in this article) or a [User enrollment option](#byod-user-enrollment) (in this article). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
-| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to Windows Autopilot. If the admin will enroll and prepare devices before giving them to users, then you can use a DEM account. |
+| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to Windows Autopilot. |
 
 ---
 
 ### Windows Autopilot administrator tasks
 
-- Be sure your devices are running Windows 10/11. For a complete list, go to [software requirements](/autopilot/software-requirements).
+- Be sure your devices are running a currently supported version of Windows. For a complete list, go to [software requirements](/autopilot/requirements?tabs=software#software-requirements).
 
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), register the devices in to Windows Autopilot. This step joins the devices to Microsoft Entra ID. For more specific information, go to [Windows Autopilot registration overview](/autopilot/registration-overview) and [Manual registration overview](/autopilot/manual-registration).
 
@@ -223,7 +223,7 @@ For more information about Windows Autopilot, go to [Windows Autopilot overview]
 
   For more specific information, go to [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
 
-After the profile is assigned, the devices start showing in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Windows**).
+After the profile is assigned, the devices start showing in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **By platform** > **Windows**).
 
 ### Windows Autopilot end user tasks
 

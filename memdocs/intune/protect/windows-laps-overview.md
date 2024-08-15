@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2023
+ms.date: 06/13/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,6 +24,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-secure-endpoints
 ---
 
 # Microsoft Intune support for Windows LAPS
@@ -166,11 +167,20 @@ When a device is deleted in Microsoft Entra, the LAPS credential that was tied t
 
 ### What roles are needed to recover LAPS passwords?
 
-The following built-in roles Microsoft Entra roles have permission to recover LAPS passwords: Global Admin, Cloud Device Admin, and Intune Service Admin.
+The following [built-in Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference) have permission to recover LAPS passwords: *Cloud Device Administrator*, and *Intune Administrator*.
 
 ### What roles are needed to read LAPS metadata?
 
-The following built-in roles are supported to view metadata about LAPS including the device name, last password rotation, and next password rotation: Global Admin, Cloud Device Admin, Intune Service Admin, Helpdesk Admin, Security Reader, Security Admin, and Global Reader.
+The following [built-in Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference) roles are supported to view metadata about LAPS including the device name, last password rotation, and next password rotation:
+
+- *Security Reader*
+
+You can also use following roles:
+
+- *Cloud Device Administrator*
+- *Intune Administrator*
+- *Helpdesk Administrator*
+- *Security Administrator*
 
 ### Why is the Local admin password button greyed out and inaccessible?
 Currently, access to this area requires the Rotate local Administrator password Intune permission. See [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).

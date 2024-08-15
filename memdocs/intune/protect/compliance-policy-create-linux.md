@@ -28,6 +28,7 @@ ms.collection:
   - highpri
   - highseo
   - compliance
+  - sub-device-compliance
 ---
 
 # Device compliance settings for Linux in Intune
@@ -42,7 +43,9 @@ To learn more about compliance policies, and what they do, see [get started with
 
 This feature applies to:
 
-- Linux
+* Ubuntu Desktop 22.04 or 20.04 LTS (physical or Hyper-V machine with x86/64 CPUs)  
+* RedHat Enterprise Linux 8  
+* RedHat Enterprise Linux 9    
 
 ## Linux settings categories
 

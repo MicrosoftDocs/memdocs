@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Tutorial - Protect Exchange Online email on unmanaged devices with Microsoft Intune
+title: Tutorial - Use Microsoft Intune to protect Exchange Online email from unmanaged iOS devices 
 titleSuffix: Microsoft Intune
-description: Use Microsoft Intune app protection policies and Conditional Access to secure Microsoft 365 Exchange Online.
+description: Learn how to use Microsoft Intune app protection policies and Conditional Access to prevent unmanaged iOS devices from accessing Exchange Online.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/04/2023
+ms.date: 07/18/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,11 +27,12 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-device-compliance
 ---
 
-# Tutorial: Protect Exchange Online email on unmanaged devices with Microsoft Intune
+# Tutorial: Protect Exchange Online email on unmanaged iOS devices with Microsoft Intune
 
-This tutorial demonstrates how to use Microsoft Intune app protection policies with Microsoft Entra Conditional Access to protect access to Exchange Online. This protection prevents access to Exchange by users who use are using an unmanaged device or an app other than the Outlook mobile app to access Microsoft 365 email. The result of these policies apply when devices aren't enrolled in a device management solution like Intune.
+This tutorial demonstrates how to use Microsoft Intune app protection policies with Microsoft Entra Conditional Access to block access to Exchange Online by users who are using an unmanaged iOS device or an app other than the Outlook mobile app to access Microsoft 365 email. The results of these policies apply when the iOS devices aren't enrolled in a device management solution like Intune.
 
 In this tutorial, you'll learn how to:
 
@@ -42,15 +43,19 @@ In this tutorial, you'll learn how to:
 
 ## Prerequisites
 
-To complete this tutorial, you need a test tenant with the following subscriptions for this tutorial:
+For this tutorial, we recommend using nonproduction trial subscriptions.
 
-- Microsoft Entra ID P1 - [free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)
-- Microsoft Intune Plan 1 subscription - [free trial](../fundamentals/free-trial-sign-up.md)
-- Microsoft 365 Apps for business subscription that includes Exchange - [free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938)
+Trial subscriptions help you avoid affecting a production environment with wrong configurations during this tutorial. Trials also allow us to use only the account you created when creating the trial subscription to configure and manage Intune, as it has permissions to complete each task for this tutorial. Use of this account eliminates the need to make and manage administrative accounts as part of the tutorial.
+
+This tutorial requires a test tenant with the following subscriptions:
+
+- Microsoft Intune Plan 1 subscription ([sign up for a free trial account](../fundamentals/free-trial-sign-up.md))
+- Microsoft Entra ID P1 ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+- Microsoft 365 Apps for business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## Sign in to Intune
 
-For this tutorial, when you sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+For this tutorial, when you sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in with the account that was created when you signed up for the Intune trial subscription. Continue to use this account to sign in to the admin center throughout this tutorial.
 
 ## Create the app protection policy
 
@@ -78,7 +83,7 @@ In this tutorial, we set up an Intune [app protection policy](../apps/app-protec
 
       The *Select apps to target* pane closes and Microsoft Outlook now appears under *Public apps* on the Apps page.
 
-      :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/add-outlook-to-app-protection-policy.png" alt-text="Outlook has been added to the Public apps list for this policy.":::
+      :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/add-outlook-to-app-protection-policy.png" alt-text="Select Outlook to add it to the Public apps list for this policy.":::
 
    Select **Next** to continue.
 
@@ -125,15 +130,15 @@ Next, use the Microsoft Intune admin center to create two Conditional Access pol
 
 When you configure Conditional Access policies in the Microsoft Intune admin center, you're really configuring those policies in the Conditional Access blades from the Azure portal. Therefore, the user interface is a bit different than the interface you use for other policies for Intune.
 
-### Create an MFA policy for Modern Authentication clients  
+### Create a multi-factor authentication policy for Modern Authentication clients
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** >  **Conditional access** > **Create new policy**.  
+2. Select **Endpoint security** >**Conditional access** > **Create new policy**.
 
-3. For **Name**, enter **Test policy for modern auth clients**.  
+3. For **Name**, enter **Test policy for modern auth clients**.
 
-4. Under **Assignments**, for *Users*, select **0 users and groups selected**. On the **Include** tab, select **All users**.  The value for *Users* updates to *All users*.
+4. Under **Assignments**, for *Users*, select **0 users and groups selected**. On the **Include** tab, select **All users**. The value for *Users* updates to *All users*.
 
    :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/conditional-access-users.png" alt-text="Begin configuration of the conditional access policy.":::
 
@@ -159,7 +164,7 @@ When you configure Conditional Access policies in the Microsoft Intune admin cen
    3. Clear the other check boxes.
    4. Select **Done** to return to the New policy pane.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png" alt-text="Select Mobile apps and clients.":::
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png" alt-text="Select Mobile apps and clients as conditions.":::
 
 8. Under **Access controls**, for *Grant*, select **0 conditions selected**, and then:
 
@@ -169,17 +174,17 @@ When you configure Conditional Access policies in the Microsoft Intune admin cen
    4. Set *For multiple controls* to **Require all the selected controls**. This setting ensures that both requirements you selected are enforced when a device tries to access email.
    5. Choose **Select** to save the Grant configuration.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png" alt-text="Select access controls.":::
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png" alt-text="To configure Grant, select access controls.":::
 
 9. Under **Enable policy**, select **On**, and then select **Create**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png" alt-text="Create policy.":::
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png" alt-text="To enable policy, set the Enable policy slider to On.":::
 
 The Conditional Access policy for Modern Authentication clients is created. Now you can create a policy for Exchange Active Sync clients.
 
 ### Create a policy for Exchange Active Sync clients
 
-The process to configure this policy is  similar to the previous Conditional Access policy:
+The process to configure this policy is similar to the previous Conditional Access policy:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -205,10 +210,10 @@ The process to configure this policy is  similar to the previous Conditional Acc
    1. Set the *Configure* toggle to **Yes**.
    2. Select **Mobile apps and desktop clients**.
    3. Select **Exchange ActiveSync clients**.
-   4. Clear all other check boxes.  
+   4. Clear all other check boxes.
    5. Select **Done**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png" alt-text="Apply to supported platforms.":::
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png" alt-text="Configure client apps for the Conditions category.":::
 
 8. Under **Access controls**, expand **Grant** and then:
 
@@ -216,7 +221,7 @@ The process to configure this policy is  similar to the previous Conditional Acc
    2. Select **Require approved client app**. Clear all other check boxes, but leave the configuration *For multiple controls* set to *Require all the selected controls*.
    3. Choose **Select**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png" alt-text="Require approved client app.":::
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png" alt-text="configure Require approved client app for the Grant category.":::
 
 9. Under **Enable policy**, select **On**, and then select **Create**.
 
@@ -228,12 +233,12 @@ With the policies that you created in this tutorial, devices must enroll in Intu
 
 1. To test on an iPhone, go to **Settings** > **Passwords & Accounts** > **Add Account** > **Exchange**.
 
-2. Enter the email address for a user in your test tenant, and then press **Next**.  
+2. Enter the email address for a user in your test tenant, and then press **Next**.
 3. Press **Sign In**.
 
 4. Enter the test user's password, and press **Sign in**.
 
-5. The message **More information is required** appears, which means you're being prompted to set up MFA. Go ahead and set up an additional verification method.
+5. The message **More information is required** appears, which means you're being prompted to set up MFA. Go ahead and set up another verification method.
 
 6. Next you'll see a message that says you're trying to open this resource with an app that isn't approved by your IT department. The message means you're being blocked from using the native mail app. Cancel the sign-in.
 
@@ -241,7 +246,7 @@ With the policies that you created in this tutorial, devices must enroll in Intu
 
 8. Enter the email address for a user in your test tenant, and then press **Next**.
 
-9. Press **Sign in with Office 365**. You'll be prompted for additional authentication and registration. Once you've signed in, you can test actions such as cut, copy, paste, and *Save As*.
+9. Press **Sign in with Office 365**. You'll be prompted for another authentication and registration. Once you've signed in, you can test actions such as cut, copy, paste, and *Save As*.
 
 ## Clean up resources
 
@@ -251,7 +256,7 @@ When the test policies are no longer needed, you can remove them.
 
 2. Select **Devices** > **Compliance**.
 
-3. In the **Policy name** list, select the context menu (**...**) for your test policy, and then select **Delete**. Select **OK** to confirm.  
+3. In the **Policy name** list, select the context menu (**...**) for your test policy, and then select **Delete**. Select **OK** to confirm.
 
 4. Go to **Endpoint security** > **Conditional access** > Policies.
 

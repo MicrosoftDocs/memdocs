@@ -28,6 +28,7 @@ ms.custom:
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Add Mobile Threat Defense apps to unenrolled devices
@@ -45,7 +46,7 @@ Optionally, you can use Intune to add and deploy the Microsoft Authenticator, an
 > - Better Mobile (Android, iOS/iPadOS)
 > - BlackBerry Mobile (CylancePROTECT for Android, iOS/iPadOS)
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
-> - Jamf (Android, iOS/iPadOS) *(formerly Wandera)*
+> - Jamf (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - SentinelOne (Android, iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)

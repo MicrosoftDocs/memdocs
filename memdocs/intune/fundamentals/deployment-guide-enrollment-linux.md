@@ -50,6 +50,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 | --- | --- |
 | You use Ubuntu Desktop (20.04 or 22.04 LTS on x86/64). | ✅ |
 | You use Ubuntu Server. | ❌ |
+| You use RedHat Enterprise Linux 8 or 9. |✅ |
 | Devices are owned by the organization or school. | ✅ |
 | Devices are personal or BYOD. | ✅  |
 | You have new or existing devices. | ✅ |
@@ -66,7 +67,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 Other than having Intune setup, there are minimal administrator tasks with Linux enrollment.
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
-- Intune admins don't do anything to enable Linux enrollment in the Microsoft Intune admin center. It's automatically enabled. When users enroll their Linux devices, you see them in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Linux**.
+- Intune admins don't do anything to enable Linux enrollment in the Microsoft Intune admin center. It's automatically enabled. When users enroll their Linux devices, you see them in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **By platform** > **Linux**.
 
 ## End user tasks
 

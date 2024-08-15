@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 06/03/2024
+  ms.date: 07/29/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -19,7 +19,7 @@ title: Windows Autopilot device preparation FAQ
 summary: |
   **Applies to:**
 
-  - Windows 11
+  - [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions).
 
   This article provides OEMs, partners, administrators, and users with answers to some frequently asked questions about deploying Windows with Windows Autopilot device preparation.
 
@@ -134,7 +134,7 @@ sections:
         answer: |
           During a Windows Autopilot device preparation deployment, a **Setting up for work or school** window with a round progress bar displays on the device:
 
-          :::image type="content" source="../images/device-preparation/apdp-status.png" alt-text="Status screen for Windows Autopilot device preparation deployment.":::
+          :::image type="content" source="../images/device-preparation/apdp-status.png" alt-text="Screenshot that shows the Status screen for Windows Autopilot device preparation deployment.":::
 
           Windows Autopilot device preparation doesn't use the Enrollment Status Page (ESP) like Windows Autopilot. If the ESP displays during the deployment, then the device isn't running a Windows Autopilot device preparation deployment. Instead, the device might be:
 

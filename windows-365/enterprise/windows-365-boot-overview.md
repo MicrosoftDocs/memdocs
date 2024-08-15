@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/28/2024
+ms.date: 06/26/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -75,7 +75,7 @@ Windows 365 Boot doesn't automatically set these policies to fully restrict end 
 
 ## User sign-in authentication modes
 
-Support for Windows 365 Boot authentication modes when users sign in to their Cloud CPs is shown of the following table:
+Support for Windows 365 Boot authentication modes when users sign in to their Cloud PCs is shown of the following table:
 
 | Authentication mode | Dedicated mode supported | Shared mode supported |
 | :---: | :---: | :---: |
@@ -99,6 +99,10 @@ To connect to Bluetooth devices from your Windows 365 Boot Cloud PC:
 
 1. Open **Quick Settings** > **Bluetooth**.
 2. In the **Settings** window, pair and connect to bluetooth devices.
+
+## Battery redirection
+
+ When in Windows 365 Boot mode, the Cloud PC desktop shows the local PC's battery status in the taskbar.
 
 <!-- ########################## -->
 ## Next steps

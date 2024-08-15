@@ -44,9 +44,8 @@ To see alerts, your account must meet the following requirements:
 
 - Windows 365 Enterprise
 - One of the following roles:
-  - Global administrator
-  - Intune administrator
-  - Windows 365 administrator
+  - Intune Administrator
+  - Windows 365 Administrator
 
 ## View alerts
 

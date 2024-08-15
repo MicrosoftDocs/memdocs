@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/26/2024
+ms.date: 06/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - certificates
 - IntuneSuite
+- sub-intune-suite
 ---
 # Configure root and issuing CA for Microsoft Cloud PKI
 
@@ -45,7 +46,7 @@ For more information about how to prepare your tenant for Microsoft Cloud PKI, i
 
 ## Role based access control
 
-The account you use to sign into the Microsoft Intune admin center must have permission to create CAs. The roles with built-in permissions include Microsoft Entra Global administrator and Intune service administrator account. Alternatively, you can assign Cloud PKI CA permissions to an admin user.  
+The account you use to sign into the Microsoft Intune admin center must have permission to create a certification authority (CA). The Microsoft Entra Intune Administrator (also known as Intune service administrator) role has the built-in permissions to create CAs. Alternatively, you can assign Cloud PKI CA permissions to an admin user. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md). 
 
 ## Step 1: Create root CA in admin center
 
@@ -85,7 +86,6 @@ Before you can start to issue certificates to managed devices, you need to creat
 
 1. Under **Subject attributes** enter a **Common name (CN)** for the root CA. Optionally, you can enter other attributes including:
    - Organization (O)  
-   - Organizational unit (OU)  
    - Country (C)  
    - State or province (ST)
    - Locality (L)  
@@ -242,11 +242,14 @@ Just like you did for the trusted certificate profiles, create an SCEP certifica
       > [!div class="mx-imgBorder"]
       > ![Image of the root certificate setting, with a root CA certificate selected.](./media/microsoft-cloud-pki/scep-root-certificate.png)
 
-1. For **SCEP Server URLS**, paste the SCEP URI. It's important to leave the string `{{CloudPKIFQDN}}` as-is. Intune replaces this placeholder string with the appropriate FQDN when the profile is delivered to the device.
+1. For **SCEP Server URLS**, paste the SCEP URI. It's important to leave the string `{{CloudPKIFQDN}}` as-is. Intune replaces this placeholder string with the appropriate FQDN when the profile is delivered to the device. The FQDN will appear within the *.manage.microsoft.com namespace, a core Intune endpoint. For more information about Intune endpoints, see [Network Endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).  
 1. Configure the remaining settings, following these best practices:  
    - **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.  
 
-   - **Extended Key Usage**: Microsoft Cloud PKI doesn't support the **Any Purpose** option.
+   - **Extended Key Usage** (EKU): Microsoft Cloud PKI doesn't support the **Any Purpose** option.
+
+      > [!NOTE]
+      > Make sure the EKU(s) you select is configured on the Cloud PKI issuing certificate authority (CA). If you select an EKU that isn't present on the Cloud PKI issuing CA, then an error occurs with the SCEP profile. And, a certificate isn't issued to the device.
 
    - **SCEP Server URLs**: Don't combine NDES and SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
 

@@ -1,5 +1,5 @@
 ---
-title: Enroll devices with Company Portal
+title: Education iOS device enrollment with Company Portal
 description: Learn how to enroll iOS/iPadOS devices using Company Portal.
 ms.date: 5/2/2024
 ms.topic: tutorial

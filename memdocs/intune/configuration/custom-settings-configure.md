@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/11/2023
+ms.date: 07/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,7 +30,7 @@ ms.collection:
 
 # Create a profile with custom settings in Intune
 
-Microsoft Intune includes many built-in settings to control different features on a device. You can also create custom profiles, which are created similar to built-in profiles. Use custom profiles when you want to use device settings and features that aren't built in to Intune.
+Microsoft Intune includes many built-in settings to control different features on a device. If there are device settings and features that aren't built in to Intune, then you can create custom profiles. Custom profiles are created similar to built-in profiles.
 
 This feature applies to:
 
@@ -51,7 +51,7 @@ This article shows you how to create a custom device configuration profile in In
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Choose the platform of your devices. Your options:
@@ -96,8 +96,8 @@ This article shows you how to create a custom device configuration profile in In
 
 In the following example, the **Connectivity/AllowVPNOverCellular** setting is enabled. This setting allows a Windows client device to open a VPN connection when on a cellular network.
 
-:::image type="content" source="./media/custom-settings-configure/custom-policy-example.png" alt-text="Screenshot that shows an example of a custom policy containing VPN settings in Intune.":::
+:::image type="content" source="./media/custom-settings-configure/custom-policy-example.png" alt-text="Screenshot that shows an example of a custom policy containing VPN settings in Microsoft Intune.":::
 
-## Next step
+## Related articles
 
-The profile is created, but it may not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).

@@ -149,6 +149,8 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
   - West US 2 (Restricted)
   - West US 3
 
+Some features might not be available in some regions.
+
 ### [Windows 365 Government](#tab/gov)
 
 - US Government

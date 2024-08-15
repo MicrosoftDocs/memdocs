@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/28/2024
+ms.date: 06/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,15 +28,12 @@ search.appverid: MET150
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Integrate Jamf Mobile Threat Protection with Intune
 
 Complete the following steps to integrate the Jamf Mobile Threat Defense solution with Intune.
-
-> [!NOTE]
->
-> In July of 2021, Jamf completed acquisition of Wandera, and more recently began rebranding and updates to move Wandera to the Jamf portfolio. Work to update the Intune admin center to reflect the new branding remains in progress. This content will reflect the new branding Jamf where possible, but continue to reflect the Wandera branding when necessary to retain accuracy to the current user interface in the admin center.
 
 ## Before you begin
 
@@ -72,9 +69,9 @@ Setting up integration between Jamf and Intune doesn't require any support from 
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > **Add**.
 
-3. On the **Add Connector** page, use the dropdown and select **Wandera**. And then select **Create**.
+3. On the **Add Connector** page, use the dropdown and select **Jamf**. And then select **Create**.
 
-4. On the Mobile Threat Defense pane, select the **Wandera** MTD Connector from the list of connectors to open the **Edit connector** pane. Select **Open the Wandera admin console** to open Jamf Security Cloud portal, and sign in.
+4. On the Mobile Threat Defense pane, select the **Jamf** MTD Connector from the list of connectors to open the **Edit connector** pane. Select **Open the Jamf admin console** to open Jamf Security Cloud portal, and sign in.
 
 5. In the Jamf Security Cloud portal, go to **Integrations > UEM Integration**, and select the **UEM Connect** tab. Use the EMM Vendor drop-down and select **Microsoft Intune**.
 

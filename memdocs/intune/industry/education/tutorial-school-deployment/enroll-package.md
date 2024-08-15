@@ -1,5 +1,5 @@
 ---
-title: Enrollment of Windows devices with provisioning packages
+title: Education Windows device enrollment with provisioning packages
 description: Learn about how to enroll Windows devices with provisioning packages using SUSPCs and Windows Configuration Designer.
 ms.date: 5/2/2024
 ms.topic: tutorial
@@ -45,9 +45,6 @@ The Set Up School PCs app guides you through configuration choices for school-ow
 Set Up School PCs configures many settings, allowing you to optimize devices for shared use and other scenarios.
 
 For more information on prerequisites, configuration, and recommendations, see [Use the Set Up School PCs app][EDU-1].
-
-> [!TIP]
-> To learn more and practice with Set up School PCs, try the [Set Up School PCs demo](https://www.microsoft.com/en-us/education/interactive-demos/enroll-devices-at-scale), which provides detailed steps to create a provisioning package and deploy a device.
 
 ## Enroll devices with the provisioning package
 
