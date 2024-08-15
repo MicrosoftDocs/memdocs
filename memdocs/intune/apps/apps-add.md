@@ -207,7 +207,7 @@ When you add an app to Intune, you're given the option to select the category yo
 Previously, Intune contained a number of built-in apps that you could quickly assign. Based on Intune customer feedback, we removed this list, and the built-in apps are no longer displayed. However, if you have already assigned any built-in apps, the apps remain visible in the list of apps. You can continue to assign the apps as required.
 
 > [!NOTE]
-> For the installation of a required non-Line-of-Business app, Intune will attempt to install the app by sending an install command whenever the device checks-in, given that the app is not detected and the app's install state is not *Install Pending*.
+> For the installation of a required non-Line-of-Business app, Intune will attempt to install the app by sending an install command whenever the device checks in, given that the app is not detected and the app's install state is not *Install Pending*.
 
 ## Installing, updating, or removing required apps
 
