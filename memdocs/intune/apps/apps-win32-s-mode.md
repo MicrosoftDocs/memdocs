@@ -47,8 +47,6 @@ The steps to allow Win32 apps to run on a Windows 10 device in S mode are the fo
    - Intune applies the signed app catalog to install the Win32 app on the S mode device using the [Intune Management Extension](intune-management-extension.md).
 
 > [!NOTE]
-> Line-of-business (LOB) `.appx` and `.appx` bundles on Windows 10 S mode will be supported via Microsoft Store for Business (MSFB) signing.
->
 > **S mode supplemental policy** for apps must be delivered via Intune Management Extension.
 >
 > S mode policies are enforced at the device level. Multiple targeted policies will be merged on the device. The merged policy will be enforced on the device.
