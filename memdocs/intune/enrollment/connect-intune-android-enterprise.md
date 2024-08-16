@@ -81,7 +81,7 @@ Complete these steps to enable Android Enterprise management options in Microsof
 7. On the Google sign-in page, enter the Google email address you want to associate with all Android Enterprise management tasks for this tenant. This Google account will be the one that your company's IT admins share to manage and publish apps in the Google Play console. You can use an existing Google account or create a new one. The account you choose must not be associated with a G-Suite domain.
 
   >[!Important]
-   > Be sure to use or create an Enterprise account rather than a personal GMail account. Keep in mind that the account you use should be one that is easily shared or
+   > Be sure to use or create an enterprise account rather than a personal Gmail account. Keep in mind that the account you use should be one that is easily shared or
    > transferred in the case that the person setting up the Managed Google Play connection leaves the company or moves teams.  
     
    > [!Note]
@@ -94,7 +94,10 @@ Complete these steps to enable Android Enterprise management options in Microsof
 > [!TIP]
 > To choose a scope tag for your managed Google Play apps, go to **Tenant administration** > **Connectors and tokens** > **Managed Google Play** in the Microsoft Intune admin center.  Then select a scope tag to apply to all newly-approved Managed Google Play apps. You must have the following permissions to interact with this area in the admin center and to remove the selected scope tag. Tenant admins, or admins who are in charge of giving admin permissions to others, can go to **Tenant Administration** > **Roles** to edit permissions.   
    >  - Android Sync - Read
-   >  - Android Sync – UpdateOnBoarding  
+   >  - Android Sync – UpdateOnBoarding
+
+ > [!Important]
+   > Only link one Intune account to a managed Google Play account. Linking multiple accounts is unsupported and prevents basic functionality from working as expected. Disconnecting a managed Google Play account from just one of its multilinked Intune accounts could cause it to disconnect from all Intune accounts. In addition, Android Enterprise devices that already enrolled in those tenants could stop working properly.  
 
 ## Disconnect your Android Enterprise administrative account
 
