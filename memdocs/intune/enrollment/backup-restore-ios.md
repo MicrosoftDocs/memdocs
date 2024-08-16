@@ -99,6 +99,9 @@ Other details to consider when migrating a device without wiping it:
 * The Apple Activation Lock bypass code is only generated when the device is erased, so Activation Lock can't be managed on these devices once they migrate MDM vendors. 
 * The new Intune management profile can't be *locked*, meaning the user must be able to remove the management profile via device settings.
 
+>[!NOTE]
+>After an ADE device completes the setup assistant phase if a backup is then restored on the device which was taken from an unmanaged device it can affect the current management state of the device once the backup restore is complete. 
+
 ### Corporate identifiers  
 Devices enroll into Intune as personal devices, rather than corporate-owned devices. This condition has an impact on the device details, such as app inventory and phone number, gathered from the device. For more information that you can share with end users about what's visible on enrolled devices, see [What can my organization see on my enrolled device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
 
