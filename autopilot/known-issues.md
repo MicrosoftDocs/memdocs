@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2024
+ms.date: 08/08/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -21,7 +21,7 @@ appliesto:
 
 # Windows Autopilot - known issues
 
-This article describes known issues that can often be resolved with configuration changes, through cumulative updates, or might be resolved automatically in a future release.
+This article describes known issues that can often be resolved with configuration changes or via cumulative updates. Some known issues might also be resolved automatically in a future release.
 
 > [!TIP]
 >
@@ -45,13 +45,13 @@ This article describes known issues that can often be resolved with configuratio
 
 Date added: *July 8, 2024*
 
-In some Windows Autopilot deployments of unregistered devices, BitLocker encryption may default to 128-bit even though the admin configured 256-bit encryption due to a known race condition. The issue is being investigated. Microsoft recommends that customers who need 256-bit BitLocker encryption register devices for Autopilot.
+In some Windows Autopilot deployments of unregistered devices, BitLocker encryption might default to 128-bit even though the admin configured 256-bit encryption due to a known race condition. The issue is being investigated. Microsoft recommends that customers who need 256-bit BitLocker encryption register devices for Autopilot.
 
 ### Required apps aren't shown on the Enrollment Status Page (ESP) after an Autopilot Reset
 
 Date added: *May 17, 2024*
 
-When an Autopilot Reset happens, the required apps aren't installed on the Enrollment Status Page (ESP) before the user reaches the desktop. The apps aren't tracked on the ESP, but they're installed when the user signs in to the desktop.
+When an Autopilot Reset happens, the required apps aren't installed on the Enrollment Status Page (ESP) before the user reaches the desktop. The apps aren't tracked on the ESP, but the apps are installed when the user signs in to the desktop.
 
 ### Enrolled date for Autopilot device is incorrect
 
@@ -145,7 +145,7 @@ If there isn't an issue with the recovery environment, enter administrator crede
 
 Date added: *March 3, 2022*
 
-1. The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn't supported.  See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
+1. The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn't supported. See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
 
 1. Exceptions to Conditional Access policies to exclude **Microsoft Intune Enrollment** and **Microsoft Intune** cloud apps are needed to complete Autopilot enrollment in cases where restrictive polices are present such as:
 
@@ -156,9 +156,9 @@ Date added: *March 3, 2022*
 
     If a policy is in place such that **all cloud apps** require a compliant device (there's no exclusion list), by default Microsoft Intune Enrollment is excluded, so that the device can register with Microsoft Entra ID and enroll with Intune and avoid a circular dependency.
 
-1. **Hybrid Microsoft Entra devices**: When Hybrid Microsoft Entra devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Microsoft Entra ID and one hybrid.  The hybrid compliance state displays as **N/A** when viewed from the devices list in the [Azure portal](https://portal.azure.com) until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
+1. **Hybrid Microsoft Entra devices**: When Hybrid Microsoft Entra devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Microsoft Entra ID and one hybrid. The hybrid compliance state displays as **N/A** when viewed from the devices list in the [Azure portal](https://portal.azure.com) until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
 
-    The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or Microsoft Entra hybrid joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
+    The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, this behavior of Conditional Access is intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or Microsoft Entra hybrid joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
 
 1. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices. This grace period is needed because until the device is rebooted, the status of BitLocker and Secure Boot aren't captured. Since the status isn't't captured, it can't be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
 
@@ -225,7 +225,7 @@ To resolve this error, use one of the following work around methods:
 - Delete the device record in Intune, and then redeploy the device so that it reruns the Autopilot deployment. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
 - Remove the device enrollment restriction for **Windows (MDM)** personally owned devices. For more information, see [Set enrollment restrictions in Microsoft Intune](/mem/intune/enrollment/enrollment-restrictions-set).<!-- MEMDocs #2748 -->
 
-For more information on this issue, see [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md).
+For more information on this issue, see [Troubleshooting Windows Autopilot device import and enrollment](troubleshooting-faq.yml#troubleshooting-windows-autopilot-device-import-and-enrollment).
 
 ### A non-assigned user can sign in when using user-driven mode with Active Directory Federation Services (ADFS)
 
@@ -249,7 +249,11 @@ The services responsible for determining the list of apps that should be blockin
 
 ### That username looks like it belongs to another organization. Try signing in again or start over with a different account
 
-Confirm that all of the information is correct at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot`. For more information, see [Troubleshoot OOBE issues](troubleshoot-oobe.md#registry).
+Confirm that all of the information is correct in the registry key:
+
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot`
+
+For more information, see [Where are the Windows Autopilot profile settings received from the Windows Autopilot deployment service stored?](troubleshooting-faq.yml#where-are-the-windows-autopilot-profile-settings-received-from-the-windows-autopilot-deployment-service-stored-).
 
 ### Windows Autopilot user-driven hybrid Microsoft Entra deployments don't grant users Administrator rights even when specified in the Windows Autopilot profile
 
@@ -325,4 +329,4 @@ Using PPKGs in combination with Windows Autopilot isn't recommended.
 ## Related content
 
 - [Collect MDM logs](/windows/client-management/mdm-collect-logs).
-- [Troubleshooting Windows Autopilot](troubleshooting.md).
+- [Troubleshooting Windows Autopilot overview](troubleshooting-faq.yml#troubleshooting-windows-autopilot-overview).

@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 07/26/2023
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice: 
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -51,7 +51,7 @@ When managing settings, keep the following points in mind:
 3. Select the boxes for the settings that you want to enable for the users.
     - If you selected **Allow user to initiate restore service**, also select an option for **Frequency of restore-point service**.
 5. Select **Next**.  
-6. Under **Assignments**, choose **Select Groups**.
+6. Under **Assignments**, choose **Add Groups**.
 7. Under **Select groups to include**, choose a group of users to get the settings > **Select**.  
 8. Select **Next**.
 9. On the **Review + save** page, select **Create**.  
@@ -64,7 +64,7 @@ When managing settings, keep the following points in mind:
 5. To change the name of the policy or to turn settings on or off, select **Edit** next to **Settings**.
 6. Under **Settings**, make any changes you want, and then select **Next**.  
 7. On the **Review + Save** page, select **Update**.  
-8. To edit assignments, select **Edit** next to **Assignments** > **Select Groups** to add another group. To remove existing groups, select the ellipses (**…**) > **Delete**.  
+8. To edit assignments, select **Edit** next to **Assignments** > **Add Groups** to add another group. To remove existing groups, select the ellipses (**…**) > **Remove**.  
 9. Select **Next**.  
 10. On the **Review + Save** page, select **Update**.  
 

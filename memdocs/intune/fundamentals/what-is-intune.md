@@ -11,11 +11,10 @@ ms.date: 05/21/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.localizationpriority: high
 ms.custom:
-  - intro-overview
-  - get-started
-  - essentials-overview
+- intro-overview
+- get-started
+
 # optional metadata
 
 #ROBOTS:
@@ -26,6 +25,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- essentials-overview
 - tier1
 - M365-identity-device-management
 - highpri
@@ -238,7 +238,7 @@ With MAM, you can:
 
 For more information, go to:
 
-- [Device enrollment in Intune?](/mem/intune/fundamentals/deployment-guide-enrollment)
+- [Device enrollment in Intune?](deployment-guide-enrollment.md)
 - [App protection policies overview](../apps/app-protection-policy.md)
 
 ## Protect data on any device

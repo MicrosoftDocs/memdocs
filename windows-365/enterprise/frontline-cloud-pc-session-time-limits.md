@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2023
+ms.date: 07/25/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice: 
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -39,7 +39,7 @@ Windows 365 Frontline Cloud PCs remain active until:
 
 If a user forgets to disconnect, it might block others from their Frontline Cloud PCs if the max active session limit has been reached. To avoid this problem, you can create a configuration profile to enforce idle session time limits on all your Frontline Cloud PCs.
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** (under **Manage devices**) > **Create** > **New policy**.
 2. Under **Create a profile**, select the following options:
 
     - **Platform**: Windows 10 and later
@@ -49,7 +49,7 @@ If a user forgets to disconnect, it might block others from their Frontline Clou
 4. On the **Basics** page, provide a name and optional description > **Next**.
 5. On the **Configuration settings** page, select **Add settings**.
 6. Under **Settings picker**, search for "session time limits".
-7. Select the box for **Set time limit for active but idle Desktop Services session**.
+7. Select the box for **Set time limit for active but idle Remote Desktop Services session**.
 8. Under **Create profile**, expand **Administrative Templates** > enable **Set time limit for active but idle Remote Desktop Services sessions**.
 9. For **Idle session limit: (Device)**, select a time limit that meets your company's compliance requirements. When a Frontline Cloud PC has been idle for this period of time, the Cloud PC is automatically disconnected.
 10. Select **Next**.

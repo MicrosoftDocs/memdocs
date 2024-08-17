@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/16/2023
+ms.date: 07/25/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -33,7 +33,7 @@ ms.collection:
 
 To make sure that the correct language packs are available on the Cloud PC at first sign-in, you can configure a provisioning policy:
 
-- [Create a provisioning policy](create-provisioning-policy.md) and choose a **Language & Region pack** under **Configuration**. There are 38 Windows language packs available for Windows 365. Windows 365 will automatically use the default remote keyboard layout for the language pack.
+- [Create a provisioning policy](create-provisioning-policy.md) and choose a **Language & Region** under **Configuration**. There are 38 Windows language packs available for Windows 365. Windows 365 will automatically use the default remote keyboard layout for the language pack.
 
 All Cloud PCs provisioned with this policy will have the chosen language pack at the first sign-in experience.
 

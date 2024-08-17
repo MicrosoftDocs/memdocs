@@ -82,6 +82,15 @@ Employees and students can access management options for their personal devices 
 
 For more information about how employees and students can access these actions in the web version, see [Using the Intune Company Portal website](../user-help/using-the-intune-company-portal-website.md).  
 
+## Certificates  
+This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
+
+Devices that are already enrolled do not get an ACME certificate on unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 
+
+- iOS 16.0 or later  
+
+- iPadOS 16.1 or later  
+
 ## Known issues and limitations 
 
 Intune enrollment with Apple device enrollment has the following known issues and limitations. 

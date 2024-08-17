@@ -3,7 +3,7 @@
 
 title: Jamf Managed Device Compliance with Microsoft Entra ID
 titleSuffix: Microsoft Intune
-description: Configure a new integration to report Jamf device compliance to Microsoft Intune and Microsoft Entra ID.
+description: Integrate Jamf Pro with Microsoft Intune to report device compliance to Microsoft Entra ID. 
 author: jeffducasse
 ms.author: lanewsad
 manager: dougeby
@@ -28,6 +28,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - conditional-access
+- sub-mtd-apps
 ---
 
 # Integrate Jamf Pro with Microsoft Intune to report device compliance to Microsoft Entra ID
@@ -38,7 +39,7 @@ The process to establish integration between Jamf Pro and Microsoft Intune is ev
 >
 > **Jamf macOS device support for Conditional Access is being deprecated**.
 >
-> Beginning on September 1, 2024, the platform that Jamf Pro's Conditional Access feature is built on will no longer be supported.
+> Beginning on January 31, 2025, the platform that Jamf Pro's Conditional Access feature is built on will no longer be supported.
 >
 > If you use Jamf Pro's Conditional Access integration for macOS devices, follow Jamf's documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
 >
@@ -52,11 +53,26 @@ The process to establish integration between Jamf Pro and Microsoft Intune is ev
 - Configure the Intune Connector.
 - Prepare Microsoft Entra ID required components.
 
-To complete the procedures in this article, your account must have the following permissions:
+## Account permissions 
 
-- **Jamf Pro Administrator** or a **Jamf Pro user account** with **Device Compliance Privileges**
-- **Intune administrator**
-- **Microsoft Entra Global Administrator**
+To complete the procedures in this article, you must have:
+
+- A Jamf Pro user account with device compliance privileges or a Jamf Pro administrator account. 
+
+- A Microsoft Entra account, assigned a role with sufficient permissions. Available built-in roles include:   
+
+  - Intune Administrator - This role can perform all steps in this article. 
+
+    >[!TIP]
+    > The Intune Administrator is a highly privileged role with full access in Microsoft Intune. When you delegate roles to other accounts, consider assigning a built-in role with fewer privileges.
+  
+  - Groups Administrator - This role can create the required device groups.
+    
+  - Conditional Access Administrator - This role can create and update the Microsoft Entra Conditional Access policies that enable user-device registration. 
+    
+  - Application Administrator - This role can create apps that communicate with JAMF about the device compliance state.
+
+  For more information about these roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).  
 
 <a name='common-questions-about-jamf-pro-integration-with-entra-id'></a>
 

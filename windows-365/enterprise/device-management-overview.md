@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 07/25/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -40,7 +40,7 @@ The Overview tab is the landing page for managing your Cloud PCs. To see it, sig
 Here you'll see some info to give you a quick idea of how your Cloud PCs are doing:
 
 - **Provisioning** status: A summary of the Cloud PC state in your organization.
-- **Connection health**:  A summary of the Azure network connection health in your organization.  
+- **Azure network connection health**:  A summary of the Azure network connection health in your organization.  
 
 If you have more Frontline Cloud PCs provisioned than available licenses, a warning appears on this page. Also, you can't provision new Cloud PCs until you deprovision Cloud PCs to match the number allowed.
 
@@ -54,9 +54,9 @@ If a user has multiple Windows 365 SKUs assigned to them, they get multiple Clou
 
 ### Column details
 
-**Name**: The name of the Cloud PC, which is composed of the assigned provisioning policy and the assigned user’s name. For example, My first provisioning policy – Henry Ross.
-
 **Device name**: The Windows computer name, which is also used in Intune and Microsoft Entra ID.
+
+**Provisioning policy**: The policy used to create the device.
 
 **Image**: The image used during provisioning. This image might not be the current Cloud PC version. For example, an administrator may have updated Windows using Windows Update for Business and this update wouldn’t be reflected in this list view.  
 
@@ -97,6 +97,12 @@ If a user has multiple Windows 365 SKUs assigned to them, they get multiple Clou
 **Date modified**: The timestamp of the last change of state of the Cloud PC.
 
 **Third-party connector**: If the third-party connector is installed and used on the Cloud PC, the connector provider is displayed along with the connector status. By default, this column is hidden and needs to be selected from the list of columns to be displayed.
+
+**Azure network connection**: The Azure network connection, if any.
+
+**Encryption status**
+
+**Third party connector**
 
 <!-- ########################## -->
 ## Next steps

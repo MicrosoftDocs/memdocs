@@ -5,7 +5,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/28/2024
+ms.date: 08/09/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -15,12 +15,12 @@ ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
+ai-usage: ai-assisted
 ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Win32
-- AI-Assisted
 ---
 
 # Win32 app management in Microsoft Intune
@@ -137,6 +137,10 @@ Set the app availability and other app assignment properties using the following
     - **Time zone** to **UTC** or **Device time zone**
     - **App availability** to **As soon as possible** or **A specific date and time** and specify your date and time. This date and time specify when the app is downloaded to the user's device.
     - **App installation deadline** to **As soon as possible** or **A specific date and time** and select your date and time. This date and time specify when the app is installed on the targeted device. When more than one assignment is made for the same user or device, the app installation deadline time is picked based on the earliest time possible.
+      
+      > [!NOTE]
+      > If a win32 app is configured with a deadline to install, it will be downloaded but it won't install until the deadline. The Company Portal does not provide this level of detail. The Company Portal will show an **Installing** status for the app as soon as it is downloaded. Once the app is installed, the Company Portal will show the app installation status as **Installed**. The time between showing an **Installing** status verses an **Installed** status depends on the configuration for the deadline in Intune.
+
     - **Restart grace period** to **Enabled** or **Disabled**. The restart grace period starts as soon as the app installation has finished on the device. When the setting is disabled, the device can restart without warning.
 
       You can customize the following options:

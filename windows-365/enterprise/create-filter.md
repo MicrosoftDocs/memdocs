@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 07/25/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -40,7 +40,7 @@ You can create a filter to use when creating Intune policies and configurations.
 
 In these steps, you’ll use the Model device property to create the filter.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant Administration** > **Filters**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant Administration** > **Filters** > **Managed devices**.
 2. Select **Create**, then enter the following:
     1. **Filter name** = "All Cloud PCs" (or some other name indicating it will contain all Cloud PCs)
     2. **Description** = "A filter containing all Cloud PC devices"
@@ -49,10 +49,9 @@ In these steps, you’ll use the Model device property to create the filter.
     1. **Property** = "model (Model)"
     2. **Operator** = "Contains"
     3. **Value** = "Cloud PC". To create a filter for all GPU Cloud PCs, choose "GPU" here instead.
-4. To validate that it works, select **Preview devices**.
-5. After the validation completes, select **Next**.
-6. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
-7. On the **Review + create** page, select **Create**.
+4. To validate that it works, select **Preview**.
+5. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
+6. On the **Review + create** page, select **Create**.
 
 ## Create a filter for all Cloud PCs from a specific provisioning policy
 
@@ -66,14 +65,13 @@ In these steps, you’ll use the Enrollment Profile Name and Device Model device
     2. **Description** = "A filter containing all UX Engineering Cloud PC devices"
     3. **Platform** = "Windows 10 and later"
     4. Select **Next**.
-1. On the **Rules** page, enter the following:
+3. On the **Rules** page, enter the following:
     1. **Property** = "enrollmentProfileName (Enrollment profile name)"
     2. **Operator** = "Equals"
     3. **Value** = "UX Engineering"
-1. To validate that it works, select **Preview**.
-1. After the validation completes, select **Next**.
-1. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
-1. On the **Review + create** page, select **Create**.
+4. To validate that it works, select **Preview**.
+5. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
+6. On the **Review + create** page, select **Create**.
 
 ## Create a filter for all Cloud PCs with a specific configuration
 
@@ -87,16 +85,15 @@ In these steps, you'll use the Model device property to create the filter.
     2. **Description** = "A filter containing all Cloud PCs with the 2vCPU/4GB RAM configuration"
     3. **Platform** = "Windows 10 and later"
     5. Select **Next**.
-1. On the **Rules** page, enter the following:
+3. On the **Rules** page, enter the following:
     1. **Property** = "model (Model)"
     2. **Operator** = "Contains"
     3. **Value** = "2vCPU/4GB"
-1. To validate that it works, select **Preview**.
-1. After the validation completes, select **Next**.
-1. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
-1. On the **Review + create** page, select **Create**.
+4. To validate that it works, select **Preview**.
+5. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
+6. On the **Review + create** page, select **Create**.
 
-Once you've created the filter, you can use the filter in the assignment page in [supported policies](/mem/intune/fundamentals/filters-supported-workloads).
+After you've created the filter, you can use the filter in the assignment page in [supported policies](/mem/intune/fundamentals/filters-supported-workloads).
 
 For more information on using filters in Intune, see the following how-to guides:
 

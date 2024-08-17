@@ -7,11 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 07/31/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
-ms.localizationpriority: high
+ms.subservice: windows-365-enterprise
+ms.localizationpriority: high 
 ms.assetid: 
 
 # optional metadata
@@ -72,10 +72,15 @@ After core provisioning is complete, Windows 365 optimizes the configuration to 
     if((Get-Partition -DriveLetter $DriveLetter).Size -lt $MaxSize){
     Resize-Partition -DriveLetter $DriveLetter -Size $MaxSize
     }```
+7. **Disable port 3389 by default**: Disable inbound port 3389 to prevent data exfiltration to a user's home computer.
 
 Unlike core provisioning, if one or more of these optimizations fail for some reason, provisioning will still succeed. The Cloud PC will be marked as **Success with warnings** and the process will move onto the assignment stage.
 
 If an optimization fails, you can manually trigger a reprovisioning if you prefer to see post provisioning configuration succeed.
+
+## Disabled port 3389
+
+To help secure your Windows 365 environment, by default Windows 365 disables open inbound port 3389 on your Cloud PCs. Windows 365 doesn't require an open inbound port. If you must open port 3389 for troubleshooting purposes, it's best to use just-in-time access.
 
 ## Assignment
 

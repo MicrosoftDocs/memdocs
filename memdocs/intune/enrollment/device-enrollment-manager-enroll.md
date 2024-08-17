@@ -46,12 +46,12 @@ A device enrollment manager can use the following methods to enroll devices in I
 - DEM-initiated via Microsoft Entra join  
 
 > [!TIP]
-> To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](/mem/intune/fundamentals/deployment-guide-enrollment-windows).  
+> To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](../fundamentals/deployment-guide-enrollment-windows.md).  
 
 
 ## Role based access control   
 
-To manage device enrollment manager accounts in Microsoft Intune, you must be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). The Intune Administrator role can *update* and *read* device enrollment manager accounts.    
+To manage device enrollment manager accounts in Microsoft Intune, you must be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). The Intune Administrator role can *update* and *read* device enrollment manager accounts.
 
 |Permission| Description |
 |---------------|------------|
@@ -60,6 +60,9 @@ To manage device enrollment manager accounts in Microsoft Intune, you must be an
 
 ## Add a device enrollment manager
 
+> [!TIP]
+> Only use dedicated accounts that are not assigned to an individual user as Device enrollment manager accounts. 
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **Enrollment**.  
 3. Select the **Device enrollment managers** tab.  
@@ -67,7 +70,10 @@ To manage device enrollment manager accounts in Microsoft Intune, you must be an
 3. In the **User name** field, enter the user principal name of the user you're adding.
 6. Select **Add**. The new device enrollment manager is added to the list of DEM users. 
 
-To remove someone as a device enrollment manager, select their name in the list and then choose **Delete**.  
+To remove someone as a device enrollment manager, select their name in the list and then choose **Delete**.
+
+> [!TIP]
+> Do not delete accounts assigned as a Device enrollment manager if any devices were enrolled using the account. Doing so will lead to issues with these devices. 
 
 ## Limitations 
 

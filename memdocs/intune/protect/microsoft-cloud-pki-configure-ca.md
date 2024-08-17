@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - certificates
 - IntuneSuite
+- sub-intune-suite
 ---
 # Configure root and issuing CA for Microsoft Cloud PKI
 
@@ -45,7 +46,7 @@ For more information about how to prepare your tenant for Microsoft Cloud PKI, i
 
 ## Role based access control
 
-The account you use to sign into the Microsoft Intune admin center must have permission to create CAs. The roles with built-in permissions include Microsoft Entra Global administrator and Intune service administrator account. Alternatively, you can assign Cloud PKI CA permissions to an admin user.  
+The account you use to sign into the Microsoft Intune admin center must have permission to create a certification authority (CA). The Microsoft Entra Intune Administrator (also known as Intune service administrator) role has the built-in permissions to create CAs. Alternatively, you can assign Cloud PKI CA permissions to an admin user. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md). 
 
 ## Step 1: Create root CA in admin center
 
@@ -245,7 +246,10 @@ Just like you did for the trusted certificate profiles, create an SCEP certifica
 1. Configure the remaining settings, following these best practices:  
    - **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.  
 
-   - **Extended Key Usage**: Microsoft Cloud PKI doesn't support the **Any Purpose** option.
+   - **Extended Key Usage** (EKU): Microsoft Cloud PKI doesn't support the **Any Purpose** option.
+
+      > [!NOTE]
+      > Make sure the EKU(s) you select is configured on the Cloud PKI issuing certificate authority (CA). If you select an EKU that isn't present on the Cloud PKI issuing CA, then an error occurs with the SCEP profile. And, a certificate isn't issued to the device.
 
    - **SCEP Server URLs**: Don't combine NDES and SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
 

@@ -25,6 +25,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---
@@ -145,7 +146,7 @@ To use security settings management, you need:
 
 ### Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to administrators who manage Intune endpoint security policies from within the Intune admin center, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to administrators who manage Intune endpoint security policies from within the Intune admin center, see [Assign-role-based-access-controls-for-endpoint-security-policy](endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Architecture
 
@@ -264,13 +265,13 @@ To support use with Microsoft Defender security settings management, your polici
 
 **Each Intune endpoint security policy** is a discrete group of settings intended for use by security admins who focus on protecting devices in your organization. The following are descriptions of the policies that support security settings management:
 
-- **[Antivirus](/mem/intune/protect/endpoint-security-antivirus-policy)** policies manage the security configurations found in Microsoft Defender for Endpoint.
+- **[Antivirus](endpoint-security-antivirus-policy.md)** policies manage the security configurations found in Microsoft Defender for Endpoint.
 
   > [!NOTE]
   >
   > While endpoints do not require a restart in order to apply modified settings or new policies, we are aware of an issue where the *AllowOnAccessProtection* and *DisableLocalAdminMerge* settings might at times require end users to restart their devices for these settings to update. We are currently investigating this issue in order to provide a resolution.
 
-- **[Attack surface reduction (ASR)](/mem/intune/protect/endpoint-security-asr-policy)** policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. With security settings management, ASR rules apply to devices that run *Windows 10*, *Windows 11*, and *Windows Server*.
+- **[Attack surface reduction (ASR)](endpoint-security-asr-policy.md)** policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. With security settings management, ASR rules apply to devices that run *Windows 10*, *Windows 11*, and *Windows Server*.
 
   For current guidance about which settings apply to the different platforms and versions, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
@@ -281,11 +282,11 @@ To support use with Microsoft Defender security settings management, your polici
   Also see:
   - [Overview of attack surface reduction](/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
 
-- **[Endpoint detection and response (EDR)](/mem/intune/protect/endpoint-security-edr-policy)** policies manage the Defender for Endpoint capabilities that provide advanced attack detections that are near real-time and actionable. Based on EDR configurations, security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
+- **[Endpoint detection and response (EDR)](endpoint-security-edr-policy.md)** policies manage the Defender for Endpoint capabilities that provide advanced attack detections that are near real-time and actionable. Based on EDR configurations, security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
-- **[Firewall](/mem/intune/protect/endpoint-security-firewall-policy)** policies focus on the Defender firewall on your devices.
+- **[Firewall](endpoint-security-firewall-policy.md)** policies focus on the Defender firewall on your devices.
 
-- **Firewall Rules** are a type of profile for [Firewall](/mem/intune/protect/endpoint-security-firewall-policy) policy that are comprised of are granular rules for Firewalls, including specific ports, protocols, applications, and networks.
+- **Firewall Rules** are a type of profile for [Firewall](endpoint-security-firewall-policy.md) policy that are comprised of are granular rules for Firewalls, including specific ports, protocols, applications, and networks.
 
 ## Configure your tenant to support Defender for Endpoint security settings management
 
@@ -325,7 +326,7 @@ In Microsoft Defender for Endpoint portal, as a security administrator:
 
    > [!TIP]
    >
-   > To ensure your Microsoft Defender for Endpoint portal users have consistent permissions across portals, if not already provided, request that your IT administrator grant them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](/mem/intune/fundamentals/role-based-access-control).
+   > To ensure your Microsoft Defender for Endpoint portal users have consistent permissions across portals, if not already provided, request that your IT administrator grant them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](../fundamentals/role-based-access-control.md).
 
 ### Configure Intune
 
@@ -368,7 +369,7 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
    Instead of using system labels, you can use the management type attribute, and configure it to **MicrosoftSense**.
 
-You can create groups for these devices [in Microsoft Entra](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](/mem/intune/fundamentals/groups-add). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:  
+You can create groups for these devices [in Microsoft Entra](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](../fundamentals/groups-add.md). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:  
 
 - **Windows 10 and Windows 11** - The deviceOSType or OS displays as *Windows*
 - **Windows Server** - The deviceOSType or OS displays as *Windows Server*
@@ -433,7 +434,7 @@ For the list of policy and profile combinations supported for security settings 
 
    When you're done configuring settings, select **Next**.
 
-7. On the **Assignments** page, select the Microsoft Entra groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
+7. On the **Assignments** page, select the Microsoft Entra groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next** to continue.
 
@@ -533,5 +534,5 @@ If you previously had a third-party security tool on the machine and are now man
 
 ## Next steps
 
-- [Monitor Defender for Endpoint in Intune](../protect/advanced-threat-protection-monitor.md)
+- [Monitor Defender for Endpoint in Intune](advanced-threat-protection-monitor.md)
 - [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.

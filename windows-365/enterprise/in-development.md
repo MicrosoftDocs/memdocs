@@ -23,6 +23,7 @@ ms.custom: references_regions
 ms.collection:
 - M365-identity-device-management
 - tier2
+ms.subservice: windows-365-enterprise
 ---
 
 # In development for Windows 365 Enterprise
@@ -73,16 +74,6 @@ In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 appli
 
 <!-- ***********************************************-->
 ## Device security
-
-### Windows 365 Government support for Customer Lockbox<!--48802385-->
-
-Windows 365 Government will support Microsoft Purview Customer Lockbox.
-
-For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
-
-### Closing port 3389 by default for newly provisioned Cloud PCs<!--51154043-->
-
-To help secure your Windows 365 environment, the inbound port 3389 will be closed by default.
 
 ### Cloud PC support for FIDO devices and passkeys on macOS and iOS<!--51858977-->
 

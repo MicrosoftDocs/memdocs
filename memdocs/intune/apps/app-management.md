@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2024
+ms.date: 08/09/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -24,12 +24,12 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
+ai-usage: ai-assisted
 ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
 - highseo
-- AI-Assisted
 - FocusArea_Apps_AppManagement
 ---
 
@@ -105,7 +105,7 @@ The top of the App workload navigation menu provides commonly used app details:
 - **Overview**: Select this option to view the tenant name, the MDM authority, the tenant location, the account status, app installation status, and app protection policy status.
 - **All apps**: Select this option to display a list of all available apps. You can add additional apps from this page. Additionally, you can see the status of each app, as well as whether each app is assigned. For more information, see [Add apps](apps-add.md) and [Assign apps](apps-deploy.md).
 - **Monitor**
-    - **App licenses**: View, assign, and monitor volume-purchased apps from the app stores. For more information, see [iOS volume-purchased program (VPP) apps](vpp-apps-ios.md) and [Microsoft Store for Business volume-purchased apps](windows-store-for-business.md).
+    - **App licenses**: View, assign, and monitor volume-purchased apps from the app stores. For more information, see [iOS volume-purchased program (VPP) apps](vpp-apps-ios.md).
     - **Discovered apps**: View apps that were assigned by Intune or installed on a device. For more information, see [Intune discovered apps](app-discovered-apps.md).
     - **App install status**: View the status of an app assignment that you created. For more information, see [Monitor app information and assignments with Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
     - **App Protection status**: View the status of an app protection policy for a user that you select.
@@ -133,7 +133,6 @@ The top of the App workload navigation menu provides commonly used app details:
 ## Additional information
 
 The following items within the console provide app related functionality:
-- **Microsoft Store for Business**: Set up integration to the Microsoft Store for Business. Afterward, you can synchronize purchased applications to Intune, assign them, and track your license usage. For more information, see [Microsoft Store for Business volume-purchased apps](windows-store-for-business.md).
 - **Windows enterprise certificate**: Apply or view the status of a code-signing certificate that's used to distribute line-of-business apps to your managed Windows devices.
 - **Windows Symantec certificate**: Apply or view the status of a Symantec code-signing certificate.
 - **Windows side loading keys**: Add a Windows side-loading key that can be used to install an app directly to devices rather than publishing and downloading the app from the Windows store. For more information, see [Side-load a Windows app](app-sideload-windows.md).

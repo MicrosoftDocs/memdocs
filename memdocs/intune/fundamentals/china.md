@@ -28,6 +28,7 @@ ms.custom: intune-classic; get-started
 ms.collection:
 - tier2
 - M365-identity-device-management
+- government
 ---
 
 # Intune operated by 21Vianet in China  
@@ -49,7 +50,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Management of Windows 10 is supported by using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
 - Windows Autopilot and Business Store features aren't currently available.
-- Intune operated by 21Vianet supports the Microsoft Store app (legacy) with Available assignment. You can deploy the Company Portal for Windows from the Download Center. Download the Microsoft Intune Company Portal for Windows from the Official [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=105219) and deploy it via the LOB required app as a workaround.
+- Intune operated by 21Vianet supports the Company Portal for Windows app. Use WinGet to download the Company portal package and dependencies and then deploy as a Line-of-Business app via Intune. [Use the WinGet tool to install and manage applications](/windows/package-manager/winget/).
 - Microsoft Intune Endpoint Analytics and Log Analytics features aren't currently available.
 - Because Google Mobile Services isn't available in China, customers in Intune operated by 21Vianet can't use features that require Google Mobile Services. These features include:
   - Google Play Protect capabilities such as Play integrity verdict.
