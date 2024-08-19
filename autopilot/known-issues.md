@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/19/2024
+ms.date: 08/20/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -45,7 +45,7 @@ This article describes known issues that can often be resolved with configuratio
 
 ### Auto logon for Kiosk device profile only partially fixed
 
-Date added: *August 16, 2024*
+Date added: *August 20, 2024*
 
 A know issue of [Kiosk device profiles not auto logging in when auto logon was enabled](#kiosk-device-profile-not-auto-logging-in) was previously reported as fixed. However, there are scenarios where the issue might still occur. If multiple reboots or unexpected reboots occur during the Windows out-of-box experience (OOBE), the autologon entries in the registry might be deleted. The issue is being investigated.
 
