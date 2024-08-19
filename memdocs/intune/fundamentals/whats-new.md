@@ -78,6 +78,20 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of August 19, 2024 (Service release 2408)
 
+### Microsoft Intune Suite
+
+#### Introducing the Resource performance report for physical devices in Advanced Analytics<!-- 12659827 -->
+
+We're introducing the Resource performance report for Windows physical devices in Intune Advanced Analytics. The report is included as an Intune-add on under Microsoft Intune Suite.
+
+The resource performance scores and insights for physical devices are aimed to help IT admins make CPU/RAM asset management and purchase decisions that improve the user experience while balancing hardware costs.
+
+For more information, see:
+
+- [Resource Performance Report](../analytics/resource-performance-report.md)
+- [Microsoft Intune Suite](../fundamentals/intune-add-ons.md)
+
+
 ### App management
 
 #### Managed Home Screen for Android Enterprise Fully Managed devices<!-- 15603355 -->

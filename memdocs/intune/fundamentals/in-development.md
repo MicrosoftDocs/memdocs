@@ -72,14 +72,6 @@ Applies to:
 
 For information about using EPM, see [Endpoint Privilege Management overview](../protect/epm-overview.md).
 
-### Resource performance report for physical devices in Advanced Analytics<!-- 12659827 -->
-
-We're introducing a Resource performance report for Windows physical devices in Intune Advanced Analytics. The report will be included as an Intune-add on under Microsoft Intune Suite.
-
-The resource performance scores and insights for physical devices are aimed to help IT admins make CPU/RAM asset management and purchase decisions that improve the user experience while balancing hardware costs.
-
-For more information, see [Microsoft Intune Suite](../fundamentals/intune-add-ons.md).
-
 ## App management
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
