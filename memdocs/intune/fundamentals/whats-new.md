@@ -80,6 +80,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Microsoft Intune Suite
 
+#### Easy creation of Endpoint Privilege Management elevation rules from support approval requests and reports<!-- 28196775 -->
+
+You can now create Endpoint Privilege Management (EPM) elevation rules directly from a support approved elevation request or from details found in the EPM Elevation report. With this new capability, you won’t need to manually identify specific file detection details for elevation rules. Instead, for files that appear in the Elevation report or a support approved elevation request, you can select that file to open its elevation detail pane, and then select the option to **Create a rule with these file details**.
+
+When you use this option, you can then choose to add the new rule to one of your existing elevation policies, or create a new policy with only the new rule.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+
+For information about this new capability, see [Windows elevation rules policy](../protect/epm-policies.md) in the *Configure policies for Endpoint Privilege management* article.
 #### Introducing the Resource performance report for physical devices in Advanced Analytics<!-- 12659827 -->
 
 We're introducing the Resource performance report for Windows physical devices in Intune Advanced Analytics. The report is included as an Intune-add on under Microsoft Intune Suite.
