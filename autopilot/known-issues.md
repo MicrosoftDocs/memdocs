@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/08/2024
+ms.date: 08/19/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -41,6 +41,8 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+<!-- MAXADO-9270654 -->
+
 ### Auto logon for Kiosk device profile only partially fixed
 
 Date added: *August 16, 2024*
@@ -50,12 +52,22 @@ A know issue of [Kiosk device profiles not auto logging in when auto logon was e
 The following workarounds are available until the issue is resolved:
 
 1. Apply or reapply the kiosk profile after Windows Autopilot completes.
-1. Apply the autologon registry entries via either a script that runs during Windows Autopilot or manually after Windows Autopilot completes.
+
+1. Apply the autologon registry entries either manually or via a script. For example:
+
+    ```console
+    reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "AutoAdminLogon" /t REG_DWORD /d 1 /f
+
+    reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DefaultDomainName" /t REG_SZ /d "." /f
+
+    reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DefaultUserName" /t REG_SZ /d "kioskUser0" /f
+    ```
+
 1. Exclude items the required reboots during OOBE from Windows Autopilot.
 
-For additional assistance, contact support.
+1. Manually enter the kiosk user credentials.
 
-For more information, see [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
+For additional assistance, contact support. For more information, see [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
 
 ## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
 
