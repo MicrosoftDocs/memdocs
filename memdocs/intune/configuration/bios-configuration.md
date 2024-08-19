@@ -40,7 +40,8 @@ For example, you want to prevent end users from reimaging the device and getting
 
 This feature applies to:
 
-- Windows 10 and later
+- Windows 11
+- Windows 10
 - Dell devices
 
 This article includes more information on the configuration file and Win32 app, and shows you how to create the **BIOS configuration and other settings** policy in Intune.

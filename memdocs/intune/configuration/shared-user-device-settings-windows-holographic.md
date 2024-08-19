@@ -38,9 +38,9 @@ For more information on this feature in Intune, see [Control access, accounts, a
 
 ## Before your begin
 
-- [Create a Windows 10/11 shared multi-user device configuration profile](shared-user-device-settings.md).
+- [Create a Windows shared multi-user device configuration profile](shared-user-device-settings.md).
 
-- When you create a Windows 10/11 shared user device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
+- When you create a Windows shared user device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
 ## Shared multi-user device settings
 

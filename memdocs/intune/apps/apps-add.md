@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2024
+ms.date: 08/09/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
+ai-usage: ai-assisted
 ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Add
-- AI-Assisted
 ---
 
 # Add apps to Microsoft Intune
@@ -159,7 +159,6 @@ In addition to understanding web apps, store apps, and LOB apps, you should also
 
 - **Apple Volume Purchasing Program for Business (iOS)**: The iOS/iPadOS App Store lets you purchase multiple licenses for an app that you want to run in your company. Purchasing multiple copies helps you to efficiently manage apps in your company. For more information, see [Manage iOS/iPadOS volume-purchased apps](vpp-apps-ios.md).
 - **Android Enterprise fully managed work profile**: How you assign apps to Android Enterprise fully managed work profile devices differs from how you assign them to standard Android devices. All apps you install for Android Enterprise fully managed work profiles come from the Managed Google Play store. You use Intune to browse for the apps you want and approve them. The app then appears in the **Licensed apps** node of the portal, and you can manage assignment of the app as you would any other app.
-- **Microsoft Store for Business (Windows 10)**: Microsoft Store for Business gives you a place to find and purchase apps for your organization, individually or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps in the portal. For more information, see [Manage apps from Microsoft Store for Business](windows-store-for-business.md).
 
     > [!NOTE]
     > The file extensions for Windows apps include **.msi**, **.appx**, **.appxbundle**, **.msix** and **.msixbundle**.  
@@ -208,7 +207,7 @@ When you add an app to Intune, you're given the option to select the category yo
 Previously, Intune contained a number of built-in apps that you could quickly assign. Based on Intune customer feedback, we removed this list, and the built-in apps are no longer displayed. However, if you have already assigned any built-in apps, the apps remain visible in the list of apps. You can continue to assign the apps as required.
 
 > [!NOTE]
-> For the installation of a required non-Line-of-Business app, Intune will attempt to install the app by sending an install command whenever the device checks-in, given that the app is not detected and the app's install state is not *Install Pending*.
+> For the installation of a required non-Line-of-Business app, Intune will attempt to install the app by sending an install command whenever the device checks in, given that the app is not detected and the app's install state is not *Install Pending*.
 
 ## Installing, updating, or removing required apps
 
