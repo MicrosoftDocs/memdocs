@@ -112,14 +112,12 @@ Use the following procedure as guidance for reviewing and managing elevation req
 1. The elevation request details include the following information:
 
     1. **General details**:
-
        - **File** - The name of the file that was requested for elevation.
        - **Publisher** - The name of the publisher that signed the file that was requested for elevation. The name of the publisher is a link that retrieves the certificate chain for the file for download.
        - **Device** - The device where the elevation was requested from. The device name is a link that opens the device object in the admin center.
        - **Intune compliant** - The Intune compliance state of the device.
 
     1. **Request details**:
-
        - **Status** - Status of the request. Requests start as *Pending* and can be either *approved* or *denied* by an administrator.
        - **By** - The account of the administrator who *approved* or *denied* the request.
        - **Last modified** - The last time the request entry was modified.
@@ -129,7 +127,7 @@ Use the following procedure as guidance for reviewing and managing elevation req
 
     1. **File information** - Specifics of the metadata for the file that was requested for approval.
 
-       :::image type="content" source="./media/epm-support-approved/sample-request-detail.png" alt-text="Image that displays the detail of an elevation request." lightbox="./media/epm-support-approved/sample-request-detail.png":::
+   :::image type="content" source="./media/epm-support-approved/sample-request-detail.png" alt-text="Image that displays the detail of an elevation request." lightbox="./media/epm-support-approved/sample-request-detail.png":::
 
 1. After an admin reviews a request, they can select **Approve** or **Deny**. With either selection, they're presented with the **justification** dialog where they can provide a *Reason* with detail about their decision. Providing a reason is optional. The following displays the approval dialog:
 
