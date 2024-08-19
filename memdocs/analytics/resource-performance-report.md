@@ -94,6 +94,7 @@ These Windows physical devices experience higher CPU spike % than the rest of th
 This category has two sub-categories:
 
 1. Physical devices that experience high CPU spike %.
+
 2. Physical device models that experience high CPU spike %.
 
 Besides giving visibility into devices that aren’t supporting your user’s goals, these insights also allow you to identify devices with underperforming CPUs that are within warranty and eligible for replacement.
@@ -119,6 +120,7 @@ The Resource performance page has reporting tabs that provide support for insi
 The tabs are:
 
 - Device performance
+
 - Model performance
 
 #### Device performance tab
@@ -159,7 +161,11 @@ The device-level details page includes the CPU and RAM spike-time history over t
 For more information, go to:
 
 - [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
+
 - [Use Intune Suite add-on capabilities](../intune/fundamentals/intune-add-ons.md)
+
 - [Device scopes](device-scopes.md)
+
 - [Device query](device-query.md)
+
 - [Battery health](battery-health.md)
