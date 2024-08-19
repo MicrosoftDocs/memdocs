@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/18/2024
+ms.date: 08/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -155,7 +155,7 @@ A device must have an elevation settings policy that enables support for EPM bef
 ### Create a Windows elevation settings policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Policies** tab > and then select **Create Policy**.
-   Set the *Platform* to **Windows 10 and later**, *Profile* to **Windows elevation settings policy**, and then select **Create**.
+   Set the *Platform* to **Windows**, *Profile* to **Windows elevation settings policy**, and then select **Create**.
 
 2. On **Basics**, enter the following properties:
 
@@ -206,7 +206,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
 ### Create a Windows elevation rules policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Policies** tab > and then select **Create Policy**.
-   Set the *Platform* to **Windows 10 and later**, *Profile* to **Windows elevation rules policy**, and then select **Create**.
+   Set the *Platform* to **Windows**, *Profile* to **Windows elevation rules policy**, and then select **Create**.
 
 2. On **Basics**, enter the following properties:
 

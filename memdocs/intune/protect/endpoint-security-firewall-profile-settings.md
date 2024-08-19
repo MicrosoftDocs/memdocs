@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 08/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,7 +41,7 @@ Applies to:
 
 > [!NOTE]
 >
-> Beginning on April 5, 2022, the Firewall profiles for the *Windows 10 and later* platform were replaced by the *Windows 10, Windows 11, and Windows Server* platform and new instances of those same profiles. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+> Beginning on April 5, 2022, the Firewall profiles for the *Windows 10 and later* platform were replaced by the *Windows* platform and new instances of those same profiles. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 >

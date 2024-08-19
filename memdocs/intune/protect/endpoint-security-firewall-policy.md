@@ -68,14 +68,14 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 - **macOS firewall** – Enable and configure settings for the built-in firewall on macOS.
 
-**Platform: Windows 10, Windows 11, and Windows Server**:
+**Platform: Windows**:
 
  For information about configuring settings in the following profiles, see the [Firewall configuration service provider (CSP)](/windows/client-management/mdm/firewall-csp).
 
 > [!NOTE]  
-> Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
+> Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform that is now named more simply as *Windows*.
 >
-> The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+> The *Windows* platform supports devices communicating through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
 >
 > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
@@ -94,7 +94,8 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 In public preview, Windows Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
 
-- *Windows 10 and Windows 11*
+- Windows 10
+- Windows 11
 
 The following firewall rule profile settings are available in reusable settings groups:
 
@@ -210,6 +211,6 @@ Additional common firewall rule issues:
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
 
-View details for the settings in the deprecated Firewall profiles for the *Windows 10 and later* platform:  
+View details for the settings in the deprecated Firewall profiles for the deprecated *Windows 10 and later* platform:
 
 - [Firewall profile settings](../protect/endpoint-security-Firewall-profile-settings.md).
