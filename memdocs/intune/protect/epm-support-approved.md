@@ -112,12 +112,14 @@ Use the following procedure as guidance for reviewing and managing elevation req
 1. The elevation request details include the following information:
 
     1. **General details**:
+
         1. **File** - The name of the file that was requested for elevation.
         1. **Publisher** - The name of the publisher that signed the file that was requested for elevation. The name of the publisher is a link that retrieves the certificate chain for the file for download.
         1. **Device** - The device where the elevation was requested from. The device name is a link that opens the device object in the admin center.
         1. **Intune compliant** - The Intune compliance state of the device.
 
     1. **Request details**:
+
         1. **Status** - Status of the request. Requests start as *Pending* and can be either *approved* or *denied* by an administrator.
         1. **By** - The account of the administrator who *approved* or *denied* the request.
         1. **Last modified** - The last time the request entry was modified.

@@ -63,6 +63,7 @@ Use *Windows elevation settings policy* when you want to:
 - **Default elevation response** - Set a default response for an *elevation request* of any file that isn't managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must *explicitly request* elevation through the *Run with elevated access* right-click menu. By default, this option isn't configured. If no setting is delivered, the EPM components fall back to their built-in default, which is to **deny all requests**.
   
   Options include:
+
   - **Deny all requests** - This option blocks the *elevate request* action for files that aren't defined in a Windows elevation rules policy.
   - **Require user confirmation** - When user confirmation is required, you can choose from the same validation options as found for Windows elevation rules policy.
   - **Require support approval** - When support approval is required, an administrator must approve elevation requests without a matching rule prior to the elevation being required.
@@ -74,6 +75,7 @@ Use *Windows elevation settings policy* when you want to:
 - **Validation options** - Set validation options when the default elevation response is defined as *Require user confirmation*.
 
   Options include:
+
   - **Business justification** - This option requires the end user to provide a justification before completing an elevation that is facilitated by the default elevation response.
   - **Windows authentication** - This option requires the end user to authenticate before completing an elevation that is facilitated by the default elevation response.
 
@@ -85,12 +87,14 @@ Use *Windows elevation settings policy* when you want to:
   Diagnostic data is used by Microsoft to measure the health of the EPM client components. Usage data is used to show you elevations that happen within your tenant. For more information about the types of data and how it's stored, see [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md).
 
   Options include:
+
   - **Yes** - This option sends data to Microsoft based on the *Reporting Scope* setting.
   - **No** - This option does not send data to Microsoft.
 
 - **Reporting Scope** - This setting controls the amount of data being sent to Microsoft when *Send elevation data for reporting* is set to *Yes*. By default, *Diagnostic data and all endpoint elevations* is selected.
 
   Options include:
+
   - **Diagnostic data and managed elevations only** - This option sends diagnostic data to Microsoft about the health of the client components **AND** data about elevations being facilitated by Endpoint Privilege Management.
   - **Diagnostic data and all endpoint elevations** - This option sends diagnostic data to Microsoft about the health of the client components **AND** data about *all* elevations happening on the endpoint.
   - **Diagnostic data only** - This option sends only the diagnostic data to Microsoft about the health of the client components.
@@ -107,12 +111,16 @@ The following types of files are supported:
 Each elevation rule instructs EPM on how to:
 
 - **Identify the file using**:
+
   - *File name (including extension).* The rule also supports optional conditions like a minimum build version, product name, or internal name. Optional conditions are used to further validate the file when elevation is attempted.
   - *Certificate.* Certificates can be added directly to a rule, or by using a reusable settings group. When a certificate is used in a rule, it's also required to be valid. We recommend the use of reusable settings groups as they can be more efficient and simplify a future change to the certificate. For more information, see the next section [Reusable settings groups](#reusable-settings-group).
+
 - **Validate the file**:
+
   - *File hash.* A file hash is required for automatic rules. For user confirmed rules, you can choose to either use a certificate or a file hash, in which case the file hash becomes optional.
   - *Certificate.* If a certificate is provided Windows API's are used to validate the certificate and revocation status.
   - *Additional Properties.* Any additional properties specified in the rules must match.
+
 - **Configure the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*, which is our recommendation for elevations.
 
   - **User confirmed** (Recommended): A user confirmed elevation always requires the user to click on a confirmation prompt to run the file. There are more user confirmations you can add. One requires users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
@@ -188,9 +196,7 @@ A device must have an elevation settings policy that enables support for EPM bef
 
 4. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
-5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
-
-   Select **Next**.
+5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md). Select **Next**.
 
 6. For **Review + create**, review your settings and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 
@@ -208,6 +214,7 @@ Use either of the following methods to create new elevation rules, which are add
 - [**Automatically configure elevation rules**](#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) – Use this method to save time when creating an elevation rule by auto-populating the file detection details that Intune has already collected. The file details are identified by Intune from either The *[Elevation report](../protect/epm-reports.md#elevation-report)* or from a *[support approved](../protect/epm-support-approved.md)* elevation requests record.
 
   With this method, you:  
+
   - Select the file for which you want to create an elevation rule from the Elevation report or *support approved* elevation request.  
   - Choose to add the new elevation rule to an existing elevation rules policy or create a new elevation rules policy that includes the new rule.
     - When added to an existing policy, the new rule is immediately available to the policies assigned groups.
@@ -216,6 +223,7 @@ Use either of the following methods to create new elevation rules, which are add
 - [**Manually configure elevation rules**](#manually-configure-elevation-rules-for-windows-elevation-rules-policy) – This method requires you to have identified the file details you want to use for detection and to manually enter them as part of the rule creation workflow. For information about detection criteria, see [Defining rules for use with Endpoint Privilege Management](../protect/epm-guidance-for-creating-rules.md#defining-rules-for-use-with-endpoint-privilege-management).
 
   With this method, you:
+
   - Manually determine the file details to use and then add them to the elevation rule for file identification.
   - Configure all aspects of the policy during policy creation, including assigning the policy to groups for use.
 
@@ -224,10 +232,12 @@ Use either of the following methods to create new elevation rules, which are add
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management**. To select a file to use for an elevation rule, choose one of the following starting paths:
 
    **Start from a Report:**
+
    1. Select the **Reports** tab and then the **Elevation report** tile. Locate the file you want to create a rule for in the *File* column.
    2. Select the linked name of the file to open that files **Elevation detail** pane.
 
    **Start from a support approved elevation request:**
+
    1. Select the **Elevation request** tab.
    2. From the *File* column, select the file that you want to use for the elevation rule, which opens that files **Elevation detail** pane.
 
@@ -280,8 +290,10 @@ Use either of the following methods to create new elevation rules, which are add
    - **Elevation type**: By default, this option is set to *User confirmed*, which is the elevation type we recommend for most files.
 
      - **User confirmed**: We recommend this option for most rules. When a file is run, the user receives a simple prompt to confirm their intent to run the file. The rule can also include other prompts that are available from the *Validation* drop down:
+
        - *Business justification*: Require the user to enter a justification for running the file. There's no required format for the entry. The user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - *Windows authentication*: This option requires the user to authenticate using their organization credentials.
+
      - **Automatic**: This elevation type automatically runs the file in question with elevated permissions. Automatic elevation is transparent to the user, without prompting for confirmation or requiring justification or authentication by the user.
 
        > [!CAUTION]
@@ -306,9 +318,10 @@ Use either of the following methods to create new elevation rules, which are add
 
      - **Use a certificate file in reusable settings** (Default): This option uses a certificate file that has been added to a reusable settings group for Endpoint Privilege Management. You must [create a reusable settings group](#reusable-settings-groups) before you can use this option.
 
-        To identify the *Certificate*, select *Add or remove a certificate*, and then select the reusable group that contains the correct certificate. Then, specify the *Certificate type* of *Publisher* or *Certificate authority*.
+       To identify the *Certificate*, select *Add or remove a certificate*, and then select the reusable group that contains the correct certificate. Then, specify the *Certificate type* of *Publisher* or *Certificate authority*.
 
      - **Upload a certificate file**: Add a certificate file directly to the elevation rule. For *File upload*, specify a **.cer** file that can validate the integrity of the file that this rule applies to. Then, specify the *Certificate type* of *Publisher* or *Certificate authority*.
+
      - **Not configured**: Use this option when you don't want to use a certificate to validate the integrity of the file. When no certificate is used, you must provide a *file hash*.
 
    - **File hash**: The file hash is required when Signature source is set to *Not configured*, and optional when set to use a certificate.
@@ -321,8 +334,7 @@ Use either of the following methods to create new elevation rules, which are add
 
 4. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
-5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
-   Select **Next**.
+5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md). Select **Next**.
 
 6. In **Review + create**, review your settings and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 
