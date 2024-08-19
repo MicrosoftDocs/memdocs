@@ -26,14 +26,7 @@ ms.collection:
 
 # Control access, accounts, and power features on shared PC or multi-user Windows devices using Intune
 
-Devices that have multiple users are called shared devices, and are a common part of mobile device management (MDM) solutions. Using Microsoft Intune, you can create and configure shared devices on the following platforms:
-
-- Windows 10/11 Professional
-- Windows 10/11 Enterprise
-- Windows Holographic for Business, such as the HoloLens
-
-> [!TIP]
-> For iOS/iPadOS shared devices, go to [shared device solutions for iOS/iPadOS](../enrollment/device-enrollment-shared-ios.md).
+Devices that have multiple users are called shared devices, and are a common part of mobile device management (MDM) solutions. Using Microsoft Intune, you can create and configure shared devices.
 
 For example, schools have devices that are typically used by many students. School Intune admins can turn on the Shared PC feature to allow one user at a time. Students can't switch between different signed-in accounts on the device. When the student signs out, you also choose to remove all user-specific settings.
 
@@ -54,6 +47,15 @@ For example, you choose when the device goes in to sleep mode, if users can see 
 This article shows you how to create a shared multi-user device configuration profile, and includes links to the available settings.
 
 When you create the profile in Intune, you deploy or assign the profile to device groups in your organization. You can also assign this profile to device groups with mixed device types and operating system (OS) versions.
+
+This feature applies to:
+
+- Windows 10/11 Professional
+- Windows 10/11 Enterprise
+- Windows Holographic for Business, such as the HoloLens
+
+> [!TIP]
+> For iOS/iPadOS shared devices, go to [shared device solutions for iOS/iPadOS](../enrollment/device-enrollment-shared-ios.md).
 
 ## Prerequisites
 

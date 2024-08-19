@@ -35,7 +35,7 @@ In this scenario, you create an administrative template in Intune that updates M
 
 For more information on administrative templates, go to [Windows ADMX templates to configure group policy settings](administrative-templates-windows.md).
 
-Applies to:
+This feature applies to:
 
 - Windows 11
 - Windows 10
