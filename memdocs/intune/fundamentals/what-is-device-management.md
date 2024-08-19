@@ -80,13 +80,13 @@ For more information, go to:
 
 There are a couple of ways to approach device management.
 
-✔️ **Mobile device management (MDM)**
+✅ **Mobile device management (MDM)**
 
 First, you can manage different aspects of devices using the features built in to Intune. This approach is called mobile device management (MDM).
 
 Users "enroll" their devices, and use certificates to communicate with Intune. As an IT administrator, you push apps on devices, restrict devices to a specific operating system, block personal devices, and more. If a device is ever lost or stolen, you can also remove all data from the device.
 
-✔️ **Mobile application management (MAM)**
+✅ **Mobile application management (MAM)**
 
 In the second approach, you manage apps on devices. This approach is called mobile application management (MAM).
 

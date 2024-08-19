@@ -73,16 +73,16 @@ Profiles are created in the [Microsoft Intune admin center](https://go.microsoft
 
 - **Overview**: Lists the status of your profiles, and provides more details on the profiles you assigned to users and devices.
 - **Monitor**: Check the status of your profiles for success or failure, and also view logs on your profiles.
-- **By platform**: Create and view policies and profiles by your platform. This view can also show features specific to the platform. For example, select **Windows**. You see Windows-specific features, such as **Windows Update Rings** and **PowerShell scripts**.
+- **By platform**: Create and view policies and profiles by your platform. This view can also show features specific to the platform. For example, select **Windows 10 and later**. You see Windows-specific features, such as **Windows Update Rings** and **PowerShell scripts**.
 - **Manage devices**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run on devices, and add data plans to devices using [eSIM](esim-device-configuration.md).
 
-When you create a profile (**Configuration** > **Create**), choose your platform:
+When you create a profile (**Devices** > **Manage devices** > **Configuration** > **Create**), choose your platform:
 
 - **Android device administrator**
 - **Android Enterprise**
 - **iOS/iPadOS**
 - **macOS**
-- **Windows**
+- **Windows 10 and later**
 - **Windows 8.1 and later**
 
 Then, choose the profile. Depending on the platform you choose, the settings you can configure are different. The following articles describe the different profiles:
@@ -122,7 +122,7 @@ For example, if you select **Android Enterprise** for the platform, your options
 
 :::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Screenshot that shows how to create an iOS/iPadOS device configuration policy and profile in Microsoft Intune.":::
 
-If you select **Windows** for the platform, your options look similar to the following profile:
+If you select **Windows 10 and later** for the platform, your options look similar to the following profile:
 
 :::image type="content" source="./media/device-profile-create/windows-create-device-profile.png" alt-text="Screenshot that shows how to create a Windows device configuration policy and profile in Microsoft Intune.":::
 

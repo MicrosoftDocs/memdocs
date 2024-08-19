@@ -47,8 +47,8 @@ Remote Help is available for macOS as both a native application, and as a Web Ap
 
 |Capability|Client requirement|Helper app|
 |---|---|---|
-|**Screen sharing**: View the remote screen.|✔️Web app</br>✔️Native app|✔️Web app|
-|**Full control**: View the display and control the devices mouse and keyboard.|✔️Native app|✔️Web app|
+|**Screen sharing**: View the remote screen.|✅ Web app</br>✅ Native app|✅ Web app|
+|**Full control**: View the display and control the devices mouse and keyboard.|✅ Native app|✅ Web app|
 
 ### Remote Help capabilities
 
@@ -122,8 +122,8 @@ On macOS, applications that access and control the screen require permission. By
 
 |Permission|MDM control capabilities|
 |---|---|
-|Accessibility|✔️Allow</br>✔️Allow Standard User To Set System Service</br></br>macOS allows this property to be set on behalf of the user to *Allow*, reducing the number of steps required to use the Remote Help native client|
-|Screen sharing|✔️Allow Standard User To Set System Service</br></br>This permission by default requires administrator privileges to allow it. macOS doesn't allow this property to be set to *Allow* by MDM but you can enable the ability for standard users to accept this permission.|
+|Accessibility|✅ Allow</br>✅ Allow Standard User To Set System Service</br></br>macOS allows this property to be set on behalf of the user to *Allow*, reducing the number of steps required to use the Remote Help native client|
+|Screen sharing|✅ Allow Standard User To Set System Service</br></br>This permission by default requires administrator privileges to allow it. macOS doesn't allow this property to be set to *Allow* by MDM but you can enable the ability for standard users to accept this permission.|
 
 With settings catalog, we can streamline the end users experience for allowing these permissions.
 

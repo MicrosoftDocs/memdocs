@@ -51,7 +51,7 @@ This policy gives an example of how to block (or allow) features that affect USB
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Windows**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Administrative Templates**.
 
 4. Select **Create**.
