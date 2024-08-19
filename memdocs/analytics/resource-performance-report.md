@@ -2,7 +2,7 @@
 title: Resource Performance report in Microsoft Intune Advanced Analytics
 titleSuffix: Microsoft Intune
 description: This article provides an overview of the resource performance report for cloud-managed Windows devices
-ms.date: 08/13/2024
+ms.date: 08/19/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -45,13 +45,13 @@ After [enrollment](enroll-intune.md), client devices require a restart to fully 
 
 2. Select **Report** > **Endpoint analytics** > **Resource performance**.
 
-3. The Resource performance report page shows an **Resource performance score** tab, **Device performance** tab, and a **Model performance** tab. For more information on each of the tabs, see [Reporting Tabs](#reporting-tabs).
+3. The Resource performance report page shows a **Resource performance score** tab, **Device performance** tab, and a **Model performance** tab. For more information on each of the tabs, see [Reporting Tabs](#reporting-tabs).
 
 :::image type="content" source="media/resource-perf-report/report-home.png" lightbox="media/resource-perf-report/report-home.png" alt-text="This is a screenshot of the Resource performance report page":::
 
-## Resource performance score tab
+## Resource performance score
 
-The **Resource performance score** tab provides an overall performance rating (from 0 to 100) of CPU and RAM for your organization’s Windows physical devices and Cloud PCs.
+The Resource performance score provides an overall performance rating (from 0 to 100) of CPU and RAM for your organization’s Windows physical devices and Cloud PCs.
 
 This score is a weighted average of CPU spike time score and RAM Spike time score.
 
@@ -83,9 +83,9 @@ The RAM spike time score (from 0 to 100) is assigned based on the device’s usa
 
 **Insights and recommendations** suggest actions that you can take to improve your scores.
 
-## Insights
+## Insights and recommendations
 
-The Resource performance page provides a prioritized list of Insights and recommendations, described in this section:
+The Resource performance page provides a prioritized list of insights and recommendations, described in this section:
 
 #### High CPU usage in physical devices
 
