@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/19/2024
+ms.date: 08/20/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice:
@@ -48,13 +48,14 @@ Microsoft Intune is a family of products and services. The Intune family include
 
 These products and services offer a **cloud-based unified endpoint management** solution. It simplifies management across multiple operating systems, cloud, on-premises, mobile, desktop, and virtualized endpoints. It also:
 
+- Uses the Intune service for **cloud-native mobile device management (MDM) and mobile application management (MAM)**. End users and devices only need internet access; no need for on-premises infrastructure.
 - **Supports data protection on company-owned and bring your own devices** through nonintrusive mobile application management.
 - Empowers organizations to **provide data protection and endpoint compliance** that support a Zero Trust security model.
 - Brings together **device visibility, endpoint security, and data-driven insights** to increase IT efficiency. In hybrid work environments, admin tasks and end user experiences are improved.
 
 Intune integrates with other services, including Microsoft Entra, on-premises Configuration Manager, mobile threat defense (MTD) apps & services, Win32 & custom LOB apps, and more.
 
-If you're moving to the cloud or are adopting more cloud-based services, Intune is a great place to start.
+If you're moving to the cloud or are adopting more cloud-based services, then use Intune.
 
 For more information, go to:
 
@@ -63,11 +64,11 @@ For more information, go to:
 
 ## Configuration Manager and co-management
 
-Configuration Manager is an on-premises management solution that can **manage desktops, Windows servers, and laptops** that are on your network or are internet-based. You can use Configuration Manager to manage data centers, apps, software updates, and operating systems.
+Configuration Manager is an on-premises management solution that uses Active Directory and Group Policy Objects (GPOs). It can **manage desktops, Windows servers, and laptops** that are on your network or are internet-based. You can use Configuration Manager to manage data centers, apps, software updates, and operating systems.
 
-To benefit from all that's happening in Microsoft Intune, connect to the cloud with co-management. Co-management combines your existing on-premises Configuration Manager investment with some of the cloud-based features in Intune, including using the web-based Microsoft Intune admin center.
+To benefit from everything that's happening in Microsoft Intune, connect your Configuration Manager to the cloud with co-management. Co-management combines your existing on-premises Configuration Manager investment with some of the cloud-based features in Intune, including using the web-based Microsoft Intune admin center.
 
-Co-management is a great way to get started with Intune and to start moving some workloads to the cloud.
+Co-management is a great way to get started with cloud-based device management, and to start moving some workloads to the cloud.
 
 For more information, go to:
 
