@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/22/2024  
+ms.date: 08/21/2024  
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -161,8 +161,10 @@ After devices are set up, you can use supported remote actions to manage and tro
 | ---- | ------ | 
 |[Take remote action on devices](../remote-actions/device-management.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
 |[Use TeamViewer to remotely administer Intune devices](../remote-actions/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |  
-|[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. |  
-|[Use organizational messages](../remote-actions/organizational-messages-overview.md)|Use organizational messages to send important messages to employees on Intune-managed devices running Windows 11. Organizational messages can be used to communicate in remote and hybrid work scenarios.|
+|[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. | 
+
+<!-- org msg moved to m365 admin center
+|[Use organizational messages](/microsoft-365/admin/misc/organizational-messages-microsoft-365)|Set up organizational messages in the Microsoft 365 admin center to send important messages to employees on Intune-managed devices running Windows 11. You can use organizational messages to communicate in remote and hybrid work scenarios.| -->  
 
 ## Step 10: Help employees and students   
 
