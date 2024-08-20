@@ -44,7 +44,7 @@ Intune provides an aggregated list of detected apps on the Intune enrolled devic
 >[!NOTE]
 >You can export the list of discovered apps to a *.csv* file by selecting **Export** from the **Discovered apps** pane.
 
-The **Descovered apps** report provides the following details:
+The **Discovered apps** report provides the following details:
 
 - Application name
 - Platform
