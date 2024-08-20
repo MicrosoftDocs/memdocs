@@ -67,7 +67,7 @@ The following workarounds are available until the issue is resolved:
 
 1. Manually enter the kiosk user credentials.
 
-For additional assistance, contact support. For more information, see [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
+For additional assistance, contact support. For more information, see [Assigned Access recommendations - Automatic sign-in](/windows/configuration/assigned-access/recommendations#automatic-sign-in).
 
 ## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
 
@@ -109,7 +109,7 @@ Platforms with the Infineon SLB9672 TPM with firmware release 15.22 with EK cert
 
 ### Kiosk device profile not auto logging in
 
-Date added: *January 30, 2023*
+Date added: *January 30, 2023*<br>
 Date updated: *August 16, 2024*
 
 There's currently a known issue in the following Windows Updates released in January 2023:
