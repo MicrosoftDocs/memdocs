@@ -77,7 +77,7 @@ You can also let unlicensed admins sign in to the Intune admin center to help wi
 
 * After enrollment, you'll see two records in the Microsoft Intune admin center if automatic MDM enrollment is disabled and devices are joined to Microsoft Entra ID. To stop the duplicate records, instruct users on joined devices to **Settings** > **Accounts** > **Access work or school**. Then they can **Connect** using the same account.
 
-* Devices that were already Entra ID-joined before Automatic Enrollment was enabled won't automatically enroll. To trigger enrollment on these devices, instruct users on the devices to run **"deviceenroller.exe /c /AutoEnrollMDM"** from the Windows Run dialog. This command does not require administrative priveleges
+* Devices that were already Entra ID-joined before Automatic Enrollment was enabled won't automatically enroll. To trigger enrollment on these devices, run **"deviceenroller.exe /c /AutoEnrollMDM"** from an administrative command prompt.
 
 ## Next steps  
 
