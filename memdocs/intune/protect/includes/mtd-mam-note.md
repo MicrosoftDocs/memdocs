@@ -25,5 +25,5 @@ ms.date: 08/20/2024
 > - SentinelOne (Android, iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Trellix Mobile Security (Android, iOS/iPadOS)
-> - Windows Security Center (Windows) - *For information about the Windows versions that support this connector, see [Data protection for Windows MAM](../apps/protect-mam-windows).*
+> - Windows Security Center (Windows) - *For information about the Windows versions that support this connector, see [Data protection for Windows MAM](../apps/protect-mam-windows.md).*
 > - Zimperium (Android, iOS/iPadOS)

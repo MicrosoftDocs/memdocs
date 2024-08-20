@@ -134,5 +134,5 @@ Learn how to protect access to company resource based on device, network, and ap
 - [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Trellix Mobile Security](trellix-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Trend Micro Mobile Security as a Service](trend-micro-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [Windows Security Center](../apps/protect-mam-windows.md) - *(Windows)* - *For information about the Windows versions that support this connector, see [Data protection for Windows MAM](../apps/protect-mam-windows).*
+- [Windows Security Center](../apps/protect-mam-windows.md) - *(Windows)* - *For information about the Windows versions that support this connector, see [Data protection for Windows MAM](../apps/protect-mam-windows.md).*
 - [Zimperium](zimperium-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
