@@ -34,6 +34,11 @@ You can create a profile with specific wired network settings, and then deploy t
 
 This article describes the settings you can configure.
 
+This feature applies to:
+
+- Windows 11
+- Windows 10
+
 ## Before you begin
 
 - Create a [wired network device configuration profile](wired-networks-configure.md).

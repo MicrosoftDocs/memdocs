@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Windows 10 Delivery Optimization settings for Intune 
+title: Windows 10/11 Delivery Optimization settings for Intune 
 titleSuffix: Microsoft Intune
-description: Delivery Optimization settings for Windows 10 devices that you can deploy using Intune.
+description: Delivery Optimization settings for Windows 10/11 devices that you can deploy using Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -31,7 +31,7 @@ ms.collection:
 
 # Delivery Optimization settings for Windows devices in Intune
 
-Applies to:
+This feature applies to:
 
 - Windows 10
 - Windows 11
@@ -39,7 +39,7 @@ Applies to:
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-This article lists some of the settings for Delivery Optimization that Intune supports for devices that run Windows 10 or later.
+This article lists some of the settings for Delivery Optimization that Intune supports for devices that run Windows.
 
 Most options in the Microsoft Intune admin center directly map to Delivery Optimization settings that are covered in-depth in the Windows documentation. These options include links to relevant content. Settings or options that are specific to Intune don't contain links to additional content.
 
@@ -55,7 +55,7 @@ To configure Intune to use these settings, see [Deliver updates](delivery-optimi
 
 ## Before you begin
 
-[Create a Windows Delivery Optimization profile](delivery-optimization-windows.md).
+- [Create a Windows Delivery Optimization profile](delivery-optimization-windows.md).
 
 ## Delivery Optimization
 

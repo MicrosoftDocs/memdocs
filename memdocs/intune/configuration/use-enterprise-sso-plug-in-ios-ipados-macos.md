@@ -32,7 +32,7 @@ zone_pivot_groups: apple-enterprise-sso
 
 Apple devices can use single sign-on (SSO) to access devices, apps, and websites using their Microsoft Entra ID. SSO lets users sign in and get access without entering their credentials each time.
 
-This article applies to:
+This feature applies to:
 
 - iOS/iPadOS
 - macOS

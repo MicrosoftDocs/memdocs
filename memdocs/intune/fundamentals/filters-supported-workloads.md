@@ -40,7 +40,7 @@ This article assumes you're familiar with filters. If not, learn more at [Use fi
 
 ## Before you begin
 
-- ✔️: Supports filters.
+- ✅: Supports filters.
 - ❌: Doesn't support filters.
 - N/A: Doesn't apply to the platform.
 
@@ -58,10 +58,10 @@ You can use filters for some common app policies on the following platforms. For
 | Microsoft Defender for Endpoint | N/A |
 | Web link | N/A |
 | Line-of-business apps | N/A |
-| Android Enterprise system app  | ✔️ |
-| Managed Google Play store app | ✔️ |
-| Managed Google Play web link | ✔️ |
-| Managed Android line-of-business app | ✔️ |
+| Android Enterprise system app  | ✅ |
+| Managed Google Play store app | ✅ |
+| Managed Google Play web link | ✅ |
+| Managed Android line-of-business app | ✅ |
 
 > [!NOTE]
 > Filters aren't supported on Android Enterprise personally-owned devices with work profile (BYOD) when used in "Available" app assignments. If users are targeted with an "Available" app intent, then the app continues to show as available to install from the Google managed play store. Any include or exclude filtering is ignored.
@@ -70,12 +70,12 @@ You can use filters for some common app policies on the following platforms. For
 
 | App type | Supported |
 | --- | --- |
-| Store app | ✔️ |
+| Store app | ✅ |
 | Microsoft 365 apps | N/A |
 | Microsoft Edge version 77 and newer | N/A |
 | Microsoft Defender for Endpoint | N/A |
 | Web link | ❌ |
-| Line-of-business apps | ✔️ |
+| Line-of-business apps | ✅ |
 
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
@@ -84,39 +84,39 @@ You can use filters for some common app policies on the following platforms. For
 
 | App type | Supported |
 | --- | --- |
-| Store app | ✔️ |
+| Store app | ✅ |
 | Microsoft 365 apps | N/A |
 | Microsoft Edge version 77 and newer | N/A |
 | Microsoft Defender for Endpoint | N/A |
 | Web link | ❌ |
-| iOS/iPadOS web clip | ✔️ |
-| Line-of-business apps | ✔️ |
-| iOS/iPadOS volume purchase program (VPP) app | ✔️ |
+| iOS/iPadOS web clip | ✅ |
+| Line-of-business apps | ✅ |
+| iOS/iPadOS volume purchase program (VPP) app | ✅ |
 
 ### macOS
 
 | App type | Supported |
 | --- | --- |
 | Store app | N/A |
-| Microsoft 365 apps | ✔️ |
-| Microsoft Edge version 77 and newer | ✔️ |
-| Microsoft Defender for Endpoint | ✔️ |
+| Microsoft 365 apps | ✅ |
+| Microsoft Edge version 77 and newer | ✅ |
+| Microsoft Defender for Endpoint | ✅ |
 | Web link | ❌ |
-| Line-of-business apps | ✔️ |
+| Line-of-business apps | ✅ |
 
 ### Windows 10/11
 
 | App type | Supported |
 | --- | --- |
-| Store app | ✔️ |
-| Microsoft 365 apps | ✔️ |
-| Microsoft Edge version 77 and newer | ✔️ |
+| Store app | ✅ |
+| Microsoft 365 apps | ✅ |
+| Microsoft Edge version 77 and newer | ✅ |
 | Microsoft Defender for Endpoint | N/A |
 | Web link | ❌ |
-| Windows web link | ✔️ |
-| Line-of-business apps | ✔️ |
-| Windows app (Win32) | ✔️ |
-| Microsoft Store for Business | ✔️ |
+| Windows web link | ✅ |
+| Line-of-business apps | ✅ |
+| Windows app (Win32) | ✅ |
+| Microsoft Store for Business | ✅ |
 
 ## [App configuration policies](../apps/app-configuration-policies-overview.md)
 
@@ -170,23 +170,23 @@ You can use filters for some common app policies on the following platforms. For
 | Profile type | Supported |
 | --- | --- |
 | **Device configuration profile** | &nbsp; |
-| Custom | ✔️ |
+| Custom | ✅ |
 | Derived credential | N/A |
-| Device restrictions | ✔️ |
+| Device restrictions | ✅ |
 | Device restrictions (Windows 10 Team) | N/A |
 | Device features | N/A |
 | Email | N/A |
-| Email (Samsung KNOX only) | ✔️ |
+| Email (Samsung KNOX only) | ✅ |
 | Endpoint Protection | N/A |
 | Enrollment device platform restrictions | ❌ |
-| MX profile (Zebra only) | ✔️ |
-| PKCS certificate | ✔️ |
-| PKCS imported certificate | ✔️ |
-| SCEP certificate | ✔️ |
+| MX profile (Zebra only) | ✅ |
+| PKCS certificate | ✅ |
+| PKCS imported certificate | ✅ |
+| SCEP certificate | ✅ |
 | Settings catalog | N/A |
-| Trusted certificate | ✔️ |
-| VPN | ✔️ |
-| Wi-Fi | ✔️ |
+| Trusted certificate | ✅ |
+| VPN | ✅ |
+| Wi-Fi | ✅ |
 | &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
@@ -202,22 +202,22 @@ You can use filters for some common app policies on the following platforms. For
 | Profile type | Supported |
 | --- | --- |
 | **Device configuration profile** | &nbsp; |
-| Custom | ✔️ |
-| Derived credential | ✔️ |
-| Device restrictions | ✔️ |
+| Custom | ✅ |
+| Derived credential | ✅ |
+| Device restrictions | ✅ |
 | Device Restrictions (Windows 10 Team) | N/A |
 | Device Features | N/A |
-| Email | ✔️ |
+| Email | ✅ |
 | Endpoint Protection | N/A |
 | Enrollment device platform restrictions | ❌ |
-| OEMConfig | ✔️ |
-| PKCS certificate | ✔️ |
-| PKCS imported certificate | ✔️ |
-| SCEP certificate | ✔️ |
+| OEMConfig | ✅ |
+| PKCS certificate | ✅ |
+| PKCS imported certificate | ✅ |
+| SCEP certificate | ✅ |
 | Settings catalog | N/A |
-| Trusted certificate | ✔️ |
-| VPN | ✔️ |
-| Wi-Fi | ✔️ |
+| Trusted certificate | ✅ |
+| VPN | ✅ |
+| Wi-Fi | ✅ |
 | &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
@@ -233,31 +233,31 @@ You can use filters for some common app policies on the following platforms. For
 | Profile type | Supported |
 | --- | --- |
 | **Device configuration profile** | &nbsp; |
-| Device restrictions | ✔️ |
-| PKCS certificate | ✔️ |
-| SCEP certificate | ✔️ |
-| Trusted certificate | ✔️ |
+| Device restrictions | ✅ |
+| PKCS certificate | ✅ |
+| SCEP certificate | ✅ |
+| Trusted certificate | ✅ |
 
 ### iOS/iPadOS
 
 | Profile type | Supported |
 | --- | --- |
 | **Device configuration profile** | &nbsp; |
-| Custom | ✔️ |
-| Derived credential | ✔️ |
-| Device restrictions | ✔️ |
+| Custom | ✅ |
+| Derived credential | ✅ |
+| Device restrictions | ✅ |
 | Device Restrictions (Windows 10 Team) | N/A |
-| Device Features | ✔️ |
-| Email | ✔️ |
+| Device Features | ✅ |
+| Email | ✅ |
 | Endpoint Protection | N/A |
-| Enrollment device platform restrictions | ✔️ |
-| PKCS certificate | ✔️ |
-| PKCS imported certificate | ✔️ |
-| SCEP certificate | ✔️ |
+| Enrollment device platform restrictions | ✅ |
+| PKCS certificate | ✅ |
+| PKCS imported certificate | ✅ |
+| SCEP certificate | ✅ |
 | Settings catalog | N/A |
-| Trusted certificate | ✔️ |
-| VPN | ✔️ |
-| Wi-Fi | ✔️ |
+| Trusted certificate | ✅ |
+| VPN | ✅ |
+| Wi-Fi | ✅ |
 | &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
@@ -273,24 +273,24 @@ You can use filters for some common app policies on the following platforms. For
 | Profile type | Supported |
 | --- | --- |
 | **Device configuration profile** | &nbsp; |
-| Custom | ✔️ |
+| Custom | ✅ |
 | Derived credential | N/A |
-| Device restrictions | ✔️ |
+| Device restrictions | ✅ |
 | Device restrictions (Windows 10 Team) | N/A |
-| Device features | ✔️ |
+| Device features | ✅ |
 | Email | N/A |
-| Endpoint Protection | ✔️ |
-| Enrollment device platform restrictions | ✔️ |
-| Extensions | ✔️ |
-| PKCS certificate | ✔️ |
-| PKCS imported certificate | ✔️ |
-| Preference file | ✔️ |
-| SCEP certificate | ✔️ |
-| Settings catalog | ✔️ |
-| Trusted certificate | ✔️ |
-| VPN | ✔️ |
-| Wi-Fi | ✔️ |
-| Wired network | ✔️ |
+| Endpoint Protection | ✅ |
+| Enrollment device platform restrictions | ✅ |
+| Extensions | ✅ |
+| PKCS certificate | ✅ |
+| PKCS imported certificate | ✅ |
+| Preference file | ✅ |
+| SCEP certificate | ✅ |
+| Settings catalog | ✅ |
+| Trusted certificate | ✅ |
+| VPN | ✅ |
+| Wi-Fi | ✅ |
+| Wired network | ✅ |
 | &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
@@ -305,46 +305,46 @@ You can use filters for some common app policies on the following platforms. For
 
 | Profile type | Supported |
 | --- | --- |
-| Update rings for Windows 10/11 | ✔️ |
+| Update rings for Windows 10/11 | ✅ |
 | &nbsp; | &nbsp; |
 | **Device configuration profile** | &nbsp; |
-| Administrative Templates | ✔️ |
-| Custom | ✔️ |
+| Administrative Templates | ✅ |
+| Custom | ✅ |
 | Derived credential | N/A |
-| Delivery optimization | ✔️ |
-| Device restrictions | ✔️ |
-| Device Restrictions (Windows 10 Team) | ✔️ |
+| Delivery optimization | ✅ |
+| Device restrictions | ✅ |
+| Device Restrictions (Windows 10 Team) | ✅ |
 | Device Features | N/A |
-| Device Firmware Configuration Interface (DFCI) on Windows 11 and Windows 10 RS5 (1809)+ on supported UEFI | ✔️ |
-| Domain Join | ✔️ |
-| Edition upgrade and S mode switch | ✔️ |
-| Email | ✔️ |
-| Endpoint analytics Remediations scripts|✔️ |
-| Endpoint Protection | ✔️ |
-| Enrollment device platform restrictions | ✔️ <br/> Support for a subset of filter properties including device `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` |
-| Kiosk | ✔️ |
-| Network boundary | ✔️ |
-| PKCS certificate | ✔️ |
-| PKCS imported certificate | ✔️ |
-| SCEP certificate | ✔️ |
-| Secure assessment (Education) | ✔️ |
-| Settings catalog | ✔️ |
-| Shared multi-user device | ✔️ |
-| Trusted certificate | ✔️ |
-| VPN | ✔️ |
-| Wi-Fi | ✔️ |
+| Device Firmware Configuration Interface (DFCI) on Windows 11 and Windows 10 RS5 (1809)+ on supported UEFI | ✅ |
+| Domain Join | ✅ |
+| Edition upgrade and S mode switch | ✅ |
+| Email | ✅ |
+| Endpoint analytics Remediations scripts|✅ |
+| Endpoint Protection | ✅ |
+| Enrollment device platform restrictions | ✅ <br/> Support for a subset of filter properties including device `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` |
+| Kiosk | ✅ |
+| Network boundary | ✅ |
+| PKCS certificate | ✅ |
+| PKCS imported certificate | ✅ |
+| SCEP certificate | ✅ |
+| Secure assessment (Education) | ✅ |
+| Settings catalog | ✅ |
+| Shared multi-user device | ✅ |
+| Trusted certificate | ✅ |
+| VPN | ✅ |
+| Wi-Fi | ✅ |
 | Wired network | ❌ |
-| Windows health monitoring | ✔️ |
+| Windows health monitoring | ✅ |
 | &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
-| Account protection | ✔️ <br/> **Account protection**, **Local user group membership**, and **Local admin password solution (Windows LAPS)** |
-| Antivirus | ✔️ |
-| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, and **App and browser isolation** |
-| Disk encryption | ✔️ |
-| Endpoint detection and response | ✔️ |
-| Endpoint Privilege Management (EPM) |✔️ |
-| Firewall | ✔️ |
-| Microsoft Defender for Endpoint (Windows 10/11 Desktop) | ✔️ |
+| Account protection | ✅ <br/> **Account protection**, **Local user group membership**, and **Local admin password solution (Windows LAPS)** |
+| Antivirus | ✅ |
+| Attack surface reduction | ✅ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, and **App and browser isolation** |
+| Disk encryption | ✅ |
+| Endpoint detection and response | ✅ |
+| Endpoint Privilege Management (EPM) |✅ |
+| Firewall | ✅ |
+| Microsoft Defender for Endpoint (Windows 10/11 Desktop) | ✅ |
 | Security baselines | ❌ |
 
 ## Not supported on managed devices

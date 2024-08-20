@@ -103,3 +103,4 @@ For more information, go to:
 - [Anomaly detection](anomaly-detection.md)
 - [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)  
 - [Battery health](battery-health.md)
+- [Resource Performance report](resource-performance-report.md)
