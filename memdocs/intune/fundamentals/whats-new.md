@@ -91,8 +91,8 @@ Applies to:
 - Windows 10
 - Windows 11
 
-
 For information about this new capability, see [Windows elevation rules policy](../protect/epm-policies.md) in the *Configure policies for Endpoint Privilege management* article.
+
 #### Introducing the Resource performance report for physical devices in Advanced Analytics<!-- 12659827 -->
 
 We're introducing the Resource performance report for Windows physical devices in Intune Advanced Analytics. The report is included as an Intune-add on under Microsoft Intune Suite.
@@ -103,7 +103,6 @@ For more information, see:
 
 - [Resource Performance Report](../analytics/resource-performance-report.md)
 - [Microsoft Intune Suite](../fundamentals/intune-add-ons.md)
-
 
 ### App management
 
@@ -116,6 +115,12 @@ For related information, see:
 - [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md)
 - [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md)
 - [Configure permissions for the Managed Home Screen (MHS) on Android Enterprise devices using Microsoft Intune](../configuration/oemconfig-managed-home-screen-permissions-android.md)
+
+#### Updates to the Discovered Apps report<!-- 28898418 -->
+
+The **Discovered Apps** report, which provides a list of detected apps that are on Intune enrolled devices for your tenant, now provides publisher data for Win32 apps, in addition to Store apps. Rather than providing publisher information only in the exported report data, we are including it as a column in the **Discovered Apps** report.
+
+For more information, see [Intune Discovered apps](../apps/app-discovered-apps.md#monitor-discovered-apps-with-intune).
 
 ### Device configuration
 
