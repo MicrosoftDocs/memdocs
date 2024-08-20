@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 08/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -35,21 +35,8 @@ ms.collection:
 
 Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk on mobile and Windows devices. You can create an Intune app protection policy that assesses risk to determine if the application is allowed to access corporate data or not.
 
-> [!NOTE]
-> This article applies to all Mobile Threat Defense partners that support app protection policies:
->
-> - Better Mobile (Android, iOS/iPadOS)
-> - BlackBerry Mobile (Android, iOS/iPadOS)
-> - Check Point Harmony Mobile (Android, iOS/iPadOS)
-> - Jamf (Android, iOS/iPadOS)
-> - Microsoft Defender for Endpoint (Android, iOS/iPadOS)
-> - Lookout for Work (Android, iOS/iPadOS)
-> - Trellix Mobile Security (Android, iOS/iPadOS)
-> - SentinelOne (Android, iOS/iPadOS)
-> - Symantec Endpoint Security (Android, iOS/iPadOS)
-> - Windows Security Center (Windows)
-> - Zimperium (Android, iOS/iPadOS)
- 
+[!INCLUDE [mtd-mam-note](../../intune/protect/includes/mtd-mam-note.md)]
+
 ## Before you begin
 
 As part of the MTD setup, in the MTD partner console, you created a policy that classifies various threats as high, medium, and low. You now need to set the Mobile Threat Defense level in the Intune app protection policy.

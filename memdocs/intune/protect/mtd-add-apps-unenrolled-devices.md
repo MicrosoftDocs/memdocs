@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 08/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -39,19 +39,7 @@ End users need the Microsoft Authenticator (iOS) to register their device, and t
 
 Optionally, you can use Intune to add and deploy the Microsoft Authenticator, and Mobile Threat Defense (MTD) apps as well.
 
-> [!NOTE]
-> This article applies to all Mobile Threat Defense partners that support app protection policies:
->
-> - Microsoft Defender for Endpoint (Android, iOS/iPadOS)
-> - Better Mobile (Android, iOS/iPadOS)
-> - BlackBerry Mobile (CylancePROTECT for Android, iOS/iPadOS)
-> - Check Point Harmony Mobile (Android, iOS/iPadOS)
-> - Jamf (Android, iOS/iPadOS)
-> - Lookout for Work (Android, iOS/iPadOS)
-> - SentinelOne (Android, iOS/iPadOS)
-> - Symantec Endpoint Security (Android, iOS/iPadOS)
-> - Trellix Mobile Security (Android, iOS/iPadOS)
-> - Zimperium (Android, iOS/iPadOS)
+[!INCLUDE [mtd-mam-note](../../intune/protect/includes/mtd-mam-note.md)]
 >
 > For unenrolled devices, you **do not need an iOS app configuration policy** that sets up the Mobile Threat Defense for iOS app you use with Intune. This is a key difference compared to Intune enrolled devices.
 
@@ -141,21 +129,6 @@ However, should you wish to make the app available to end users via the Intune C
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Zimperium - Play Store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) when completing the **Configure app information** section.
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Zimperium - App Store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) when completing the **Configure app information** section.
-
-<!-- ### Making Pradeo available to end users
-- **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Pradeo - Play Store URL](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) when completing the **Configure app information** section.
-
-- **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Pradeo - App Store URL](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) when completing the **Configure app information** section. -->
-
-
-<!-- ### Making Sophos available to end users
-- **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Sophos - Play Store URL](https://play.google.com/store/apps/details?id=com.sophos.smsec) when completing the **Configure app information** section.
-
-- **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) when completing the **Configure app information** section.  -->
 
 ## Next steps
 
