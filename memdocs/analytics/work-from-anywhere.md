@@ -80,6 +80,7 @@ Cloud provisioning provides a simpler initial provisioning experience for Window
 
 > [!NOTE]
 > The **Autopilot profile assigned** metric indicates whether an Autopilot deployment profile is assigned to the device. If a device inherits a default Autopilot profile, it will not receive credit for having a deployment profile assigned.
+> The Autopilot Deployment profile becomes the default, when it is assigned to the All Devices security group.
 
 The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](/autopilot/enrollment-autopilot).
 
