@@ -98,7 +98,7 @@ The data columns shown in the tables are:
 ID |Desc |Category |ER |Addresses |Ports
 -- |---------------------------------------------------------------- |---------------------|--- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------|
 163 | Endpoint Manager client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.71.199.64/28, 13.73.244.48/28, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 20.49.93.160/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29` | **TCP:** 80, 443|
-172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR> `*.dl.delivery.mp.microsoft.com`<BR> `*.emdl.ws.microsoft.com`<BR> `kv801.prod.do.dsp.mp.microsoft.com`<BR> `geo.prod.do.dsp.mp.microsoft.com`<BR> `emdl.ws.microsoft.com`<BR> `2.dl.delivery.mp.microsoft.com`<BR> `bg.v4.emdl.ws.microsoft.com`<BR> | **TCP:** 80, 443|
+172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR> `*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443|
 170 | MEM - Win32Apps| Default<BR>Required | False | `swda01-mscdn.manage.microsoft.com`<br>`swda02-mscdn.manage.microsoft.com`<br>`swdb01-mscdn.manage.microsoft.com`<br>`swdb02-mscdn.manage.microsoft.com`<br>`swdc01-mscdn.manage.microsoft.com`<br>`swdc02-mscdn.manage.microsoft.com`<br>`swdd01-mscdn.manage.microsoft.com`<br>`swdd02-mscdn.manage.microsoft.com`<br>`swdin01-mscdn.manage.microsoft.com`<BR>`swdin02-mscdn.manage.microsoft.com` | **TCP:** 443|
 97 | Consumer Outlook.com, OneDrive, Device authentication and Microsoft account | Default<BR>Required | False | `account.live.com`<BR>`login.live.com`<BR> |**TCP:** 443  |
 190 | Endpoint discovery | Default<BR>Required | False | `go.microsoft.com` | **TCP:** 80, 443|
@@ -110,7 +110,7 @@ ID |Desc |Category |ER |Addresses |Ports
 
 ID |Desc |Category |ER |Addresses |Ports|
 -- |-- |-----|--- |--------------|--------------------------------|
-164 | Autopilot - Windows Update| Default<BR>Required | False | `*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`adl.windows.com`<BR> | **TCP:** 80, 443|
+164 | Autopilot - Windows Update| Default<BR>Required | False | `*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`adl.windows.com`<BR> | **TCP:** 80, 443|
 165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` |**UDP:** 123|
 169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
 173 | Autopilot - Third party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
@@ -152,9 +152,9 @@ For Intune-managed Windows devices managed using Mobile Device Management (MDM),
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 | --- | ---- | -------- | ----- | --------- | ----- |
-| 172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.emdl.ws.microsoft.com`<BR>`kv801.prod.do.dsp.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`bg.v4.emdl.ws.microsoft.com`<BR> | **TCP:** 80, 443 |
+| 172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
 
-**Port requirements** - For peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP or 3544 for NAT traversal (optionally Teredo).
+**Port requirements** - For peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP. It uses Teredo on port 3544 for NAT traversal (use of Teredo is optional)
 For client-service communication, it uses HTTP or HTTPS over port 80/443.
 
 **Proxy requirements** - To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Windows Update](/windows/deployment/update/windows-update-troubleshooting).
@@ -166,7 +166,6 @@ For client-service communication, it uses HTTP or HTTPS over port 80/443.
 For Delivery Optimization metadata:
 
 - \*.dl.delivery.mp.microsoft.com
-- \*.emdl.ws.microsoft.com
 
 #### Apple dependencies
 
@@ -221,9 +220,7 @@ You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. F
 |*.update.microsoft.com| Windows Update and Delivery Optimization |
 |*.delivery.mp.microsoft.com| Windows Update and Delivery Optimization |
 |tsfe.trafficshaping.dsp.mp.microsoft.com| Windows Update and Delivery Optimization |
-|emdl.ws.microsoft.com| Delivery Optimization |
 |*.do.dsp.mp.microsoft.com| Delivery Optimization |
-|*.emdl.ws.microsoft.com| Delivery Optimization |
 |*.notify.windows.com| Push Notifications |
 |*.wns.windows.com| Push Notifications |
 |devicelistenerprod.microsoft.com| Windows Update for Business deployment service |

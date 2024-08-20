@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/27/2024
+ms.date: 08/15/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -35,9 +35,9 @@ By using the **Retire** or **Wipe** actions, you can remove devices from Intune 
 
 ## Wipe
 
-The **Wipe** device action restores a device to its factory default settings. The user data is kept if you choose the **Retain enrollment state and user account** checkbox. Otherwise, all data, apps, and settings are removed.
+The **Wipe** device action restores a device to its factory default settings. The user data is kept if you choose the **Wipe device, but keep enrollment state and associated user account** checkbox. Otherwise, all data, apps, and settings are removed.
 
-|Wipe action|**Retain enrollment state and user account**|Removed from Intune management|Description|
+|Wipe action|**Wipe device, but keep enrollment state and associated user account**|Removed from Intune management|Description|
 |:-------------:|:------------:|:------------:|------------|
 |**Wipe**| Not checked | Yes | Wipes all user accounts, data, MDM policies, and settings. Resets the operating system to its default state and settings.|
 |**Wipe**| Checked | No | Wipes all MDM Policies. Keeps user accounts and data. Resets user settings back to default. Resets the operating system to its default state and settings.|
@@ -208,7 +208,7 @@ If you want to remove devices from the Intune admin center, you can delete them 
 | OS      | Enrollment Type                                | Action triggered                                                                           |
 |---------|--------------------------------------------|--------------------------------------------------------------------------------------------|
 | Android | Device administrator                       | RETIRE - All Profiles are deleted, Company Portal (CP) app is signed out.           |
-| Android | Personally-owned devices with work profile | RETIRE - All Profiles are deleted, CP app is deleted.                               |
+| Android | Personally owned devices with work profile | RETIRE - All Profiles are deleted, CP app is deleted.                               |
 | Android | Corporate-owned devices with work profile  | WIPE                                                                       |
 | Android | Dedicated devices                          | WIPE                                                                       |
 | Android | Dedicated w/ Entra ID Shared Mode          | WIPE                                  |
