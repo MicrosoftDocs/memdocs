@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2023
+ms.date: 08/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection:
 
 # Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates
 
-In Intune, you can use [Windows ADMX templates to configure group policy settings](administrative-templates-windows.md). This article shows you how to update Microsoft 365 using an administrative template in Intune. It also gives guidance on confirming your policies apply successfully. This information also helps when troubleshooting.
+In Intune, you can use [Windows administrative (ADMX) templates to configure group policy settings](administrative-templates-windows.md). This article shows you how to update Microsoft 365 using an administrative template in Intune. It also gives guidance on confirming your policies apply successfully. This information also helps when troubleshooting.
 
 In this scenario, you create an administrative template in Intune that updates Microsoft 365 on your devices.
 
@@ -49,21 +49,22 @@ Be sure to [enable Microsoft 365 Apps Automatic Updates](/deployoffice/configure
 
 ## Set the Update Channel in the Intune administrative template
 
-1. In your [Intune administrative template](administrative-templates-windows.md#create-the-template), go to the **Update Channel** setting, and enter the channel you want. For example, choose `Semi-Annual Channel`:
+1. In your [Intune administrative template](administrative-templates-windows.md#create-the-template), go to the **Update Channel (2.0)** setting, and enter the channel you want. For example, select `Semi-Annual Enterprise Channel`:
 
     :::image type="content" source="./media/administrative-templates-update-office/admx-enable-update-channel-setting.png" alt-text="In Microsoft Intune and Intune admin center, create an administrative ADMX template that sets the Update Channel setting for Office.":::
 
-    > [!NOTE]
-    > It's recommended to update more frequently. Semi-annually is only used as an example.
+    > [!TIP]
+    > - It's recommended to update more frequently. Semi-annually is only used as an example.
+    > - For information on the different update channels, go to [Overview of update channels for Microsoft 365 Apps](/microsoft-365-apps/updates/overview-update-channels).
 
-2. Be sure to [assign the policy](device-profile-assign.md) to your Windows client devices. To test your policy sooner, you can also sync the policy:
+2. When the policy is ready, [assign the policy](device-profile-assign.md) to your Windows client devices. To test your policy sooner, you can also sync the policy:
 
     - [Sync the policy in Intune](../remote-actions/device-sync.md)
     - [Manually sync the policy on the device](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app-windows-10-or-later)  
 
 ## Check the Intune registry keys
 
-After you assign the policy and the device syncs, you can confirm the policy is applied:
+After you assign the policy and the device syncs, you can confirm the Intune policy is applied:
 
 1. On the device, open the **Registry Editor** app.
 2. Go to the Intune policy path: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates`.
@@ -76,7 +77,7 @@ After you assign the policy and the device syncs, you can confirm the policy is 
     - `L_UpdateBranch`
     - `L_UpdateTargetVersion`
 
-    Looking at the following example, you see `L_UpdateBranch` has a value similar to `<enabled /><data id="L_UpdateBranchID" value="Deferred" />`. This value means it's set to Semi-Annual Channel:
+    Looking at the following example, you see `L_UpdateBranch` has a value similar to `<enabled /><data id="L_UpdateBranchID" value="Deferred" />`. This value means the update channel is set to Semi-Annual Enterprise Channel:
 
     :::image type="content" source="./media/administrative-templates-update-office/admx-update-branch-registry-key.png" alt-text="Administrative template L_Updatebranch registry key example for Microsoft Office":::
 
@@ -107,7 +108,7 @@ At this point, the Intune policy is successfully applied to the device.
 
     :::image type="content" source="./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png" alt-text="Administrative template Office UpdateChannel registry key example":::
 
-    This example means the policy isn't applied yet, as it's still set to **monthly**, instead of **semi-annual**.
+    This example means the policy isn't applied yet, as the registry setting is still set to **monthly**, instead of **semi-annual**.
 
 This registry key is updated when the **Task Scheduler** > **Office Automatic Updates 2.0** runs, or when a user signs into the device. To confirm, open the **Office Automatic Updates 2.0** task > **Triggers**. Depending on your triggers, it can take at least a day and more before the `UpdateChannel` registry key is updated.
 
@@ -118,7 +119,7 @@ To test your policy, you can force the policy settings on the device. The follow
 1. Clear the registry key:
 
     1. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Updates`.
-    2. Double-select the `UpdateDetectionLastRunTime` key, delete the value data > **OK**.
+    2. Double-select the `UpdateDetectionLastRunTime` key > delete the value data > **OK**.
 
 2. Run the Office Automatic Updates task:
 
@@ -166,7 +167,7 @@ Consider using the following steps to test your policy before deploying the poli
 
     At this point, the Intune policy is successfully applied to the device.
 
-3. Next, you can force Office to update. Open an Office app, such as Excel. Choose to update now (possibly in the **Account** menu).
+3. Next, you can force Office to update. Open an Office app, such as Excel. Select to update now (possibly in the **Account** menu).
 
     The update takes several minutes. You can confirm Office is trying to get the version you enter:
 
@@ -177,10 +178,8 @@ Consider using the following steps to test your policy before deploying the poli
 
 4. After the update is installed, the Office app should show the new version (for example, on the **Account** menu)
 
-## Next steps
+## Related articles
 
-[Update channel values for Microsoft 365 clients](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel)
-
-[Overview of the Office cloud policy service for Microsoft 365 Apps](/deployoffice/overview-office-cloud-policy-service)
-
-[Use Windows 10/11 templates to configure group policy settings (ADMX templates) in Microsoft Intune](administrative-templates-windows.md)
+- [Update channel values for Microsoft 365 clients](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel)
+- [Overview of Cloud Policy service for Microsoft 365](/microsoft-365-apps/admin-center/overview-cloud-policy)
+- [Use Windows 10/11 templates to configure group policy settings (ADMX templates) in Microsoft Intune](administrative-templates-windows.md)
