@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/01/2024
+ms.date: 08/21/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -54,8 +54,8 @@ To use Omnissa Horizon for Windows 365, you must meet the following requirements
 - Microsoft Entra domain in the same tenant as Microsoft Intune
 - Windows 365 Enterprise licenses in the same tenant as Microsoft Intune
 - Azure admin account:
-  - Microsoft Entra Global Admin for required authorizations in the Omnissa Cloud.
-  - Intune Admin for enabling the Omnissa connector in Microsoft Intune.
+  - Intune Administrator for required authorizations in the Omnissa Cloud.
+  - Intune Administrator for enabling the Omnissa connector in Microsoft Intune.
   - For more information about the Windows 365 requirements, see [Windows 365 requirements](requirements.md).
 
 ## Supported configurations
