@@ -122,6 +122,12 @@ The **Discovered Apps** report, which provides a list of detected apps that are 
 
 For more information, see [Intune Discovered apps](../apps/app-discovered-apps.md#monitor-discovered-apps-with-intune).
 
+#### Improvements to Intune Management Extension logs<!-- 26113668 -->
+
+We have updated how log activities and events are made for Win32 apps and the Intune Management Extension (IME) logs. A new log file (*AppWorkload.log*) contains all logging information related to app deployment activities conducted by the IME. These improvements provide better troubleshooting and analysis of app management events on the client.
+
+For more information, see [Intune management extension logs](../apps/intune-management-extension.md#intune-management-extension-logs).
+
 ### Device configuration
 
 #### New settings available in the Apple settings catalog <!-- 28308531 -->
