@@ -35,7 +35,7 @@ appliesto:
 
 Date added: *August 21, 2024*
 
-Admins can now easily access the Autopilot device preparation report from the Monitor tab under Enrollment, in addition to the general Monitor blade. 
+Admins can now easily access the Autopilot device preparation report from the **Monitor** tab under **Enrollment**, in addition to the general **Monitor** blade. 
 
 ## Corporate identifiers can now be used with Windows Autopilot device preparation
 
