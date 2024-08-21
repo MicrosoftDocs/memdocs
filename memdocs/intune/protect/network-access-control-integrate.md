@@ -36,7 +36,7 @@ ms.collection:
 Intune integrates with network access control (NAC) partners to help organizations secure corporate data when devices try to access on-premises resources.
 
 >[!NOTE]
-> The *compliance retrieval service* was released in July 2021 to replace the Intune NAC service. Our NAC partners are transitioning to this new service. We extended the timeline for supporting the legacy Intune NAC service through **March 31, 2024**, and recommend that you migrate to the new compliance retrieval service to avoid service disruption. These partners support the compliance retrieval service:  
+> The *compliance retrieval service* was released in July 2021 and replaced the previous Intune NAC service. Microsoft Intune is providing support for the legacy Intune NAC service through March 31, 2024. Our NAC partners are transitioning to the compliance retrieval service and include: 
 >
 > - ExtremeCloud Universal ZTNA
 > - Extreme Networks ExtremeCloud IQ-Site Engine version 24.2
@@ -52,7 +52,7 @@ Intune integrates with network access control (NAC) partners to help organizatio
 > - Forescout eyeExtend Microsoft Module v1.0.1 and later
 > - Portnox Cloud
 >
-> Contact your NAC solution provider if you have questions about the new service or impact to your tenant. For more information and updates about the compliance retrieval service and NAC partners, see [Microsoft Tech Community: New Microsoft Intune service for network access control](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696). 
+> We will be deprecating the Intune NAC service in the future, so we recommend that you migrate to the compliance retrieval service to avoid service disruption. Contact your NAC solution provider if you have questions about the compliance retrieval service or impact to your tenant. For more information and updates about the compliance retrieval service and NAC partners, see [Microsoft Tech Community: New Microsoft Intune service for network access control](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696). 
 
 ## How do Intune and NAC solutions help protect your organization resources?
 
