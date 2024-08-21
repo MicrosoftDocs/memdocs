@@ -31,6 +31,12 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
+## Admins can now access the Windows Autopilot device preparation report from the Monitor tab under Enrollment
+
+Date added: *August 21, 2024*
+
+Admins can now easily access the Autopilot device preparation report from the Monitor tab under Enrollment, in addition to the general Monitor blade. 
+
 ## Corporate identifiers can now be used with Windows Autopilot device preparation
 
 Date added: *July 8, 2024*
