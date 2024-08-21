@@ -27,8 +27,8 @@ jobs:
         uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-AutoLabelAssign.yml@workflows-prod
         with:
             PayloadJson: ${{ needs.download-payload.outputs.WorkflowPayload }}
-            AutoAssignUsers: 1
-            AutoLabel: 1
+            AutoAssignUsers: 0
+            AutoLabel: 0
             ExcludedUserList: '["user1", "user2"]'
             ExcludedBranchList: '["branch1", "branch2"]'
         secrets:

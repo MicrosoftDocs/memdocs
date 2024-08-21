@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Windows devices 
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/25/2023
+ms.date: 08/19/2024
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -55,28 +55,30 @@ Use this article to get started with Windows FLW devices in Intune. Specifically
 
 These devices enroll in Intune, and are managed like any other device, including apps, configuration settings, and updates.
 
-For more information on Windows 365 Cloud PCs, and to learn more, go to:
+For information on Windows 365 Cloud PCs, and to learn more, go to:
 
 - [Windows 365 Cloud PCs overview - Enterprise](/windows-365/enterprise/overview)
 - [Windows 365 Cloud PCs overview - Small & medium business](/windows-365/business/get-started-windows-365-business)
 
 ## Step 1 - Select your enrollment option
 
-The first step is to determine the enrollment platform that's best for your organization.
+✅ **Determine the enrollment option** that's best for your organization.
 
-For FLW devices using the Windows platform, you can use **Windows Autopilot** enrollment or use a **provisioning package**. This section focuses on these enrollment options.
+Determining the enrollment option is the first step. Enrollment determines how the devices are added to Intune for you to manage. The option you choose depends on your business needs and the devices you have.
+
+For FLW devices using Windows, you can use **Windows Autopilot** enrollment or use a **provisioning package**. This section focuses on these enrollment options.
 
 # [Windows Autopilot](#tab/autopilot)
 
 **Windows Autopilot** is the recommended option for FLW devices. You can ship the devices directly to the location without ever touching the devices. With self-deploying mode, users turn on the device, and the enrollment automatically starts.
 
-✅ If you have Microsoft Entra Premium and you're getting new devices from an OEM, then use Windows Autopilot. You can use the Windows OEM version preinstalled on the devices to automatically enroll the devices. Other than turning on the device, no other end user interaction is required.
+✅ If you have Microsoft Entra Premium and you're getting new devices from an OEM, then use Windows Autopilot. You can use the Windows OEM version preinstalled on the devices to automatically enroll the devices. End users only need to turn on the device; no other end user interaction is required.
 
 You can use Windows Autopilot on existing devices. When the existing devices are reset, the Windows Autopilot enrollment can automatically start.
 
 ❌ Windows Autopilot requires Microsoft Entra Premium. If you don't have Entra Premium, then use a provisioning package. There are other Windows enrollment options available, but they're not commonly used for FLW devices.
 
-For more information on Windows Autopilot, go to [Windows Autopilot overview](/autopilot/overview) and [Windows Autopilot self-deploying mode](/autopilot/self-deploying).
+For information on Windows Autopilot, go to [Windows Autopilot overview](/autopilot/overview) and [Windows Autopilot self-deploying mode](/autopilot/self-deploying).
 
 # [Provisioning package](#tab/provpackage)
 
@@ -86,39 +88,45 @@ This option uses the Windows Configuration Designer (WCD) app to create a provis
 
 ❌ If you have Microsoft Entra Premium, then use Windows Autopilot. Windows Autopilot requires Entra Premium.
 
-For more information on using a provisioning package with Intune, go to [Bulk enrollment for Windows devices](../../intune/enrollment/windows-bulk-enroll.md).
+For information on using a provisioning package with Intune, go to [Bulk enrollment for Windows devices](../../intune/enrollment/windows-bulk-enroll.md).
 
 ---
 
 > [!NOTE]
-> There are other Windows enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the Windows enrollment options, go to [Enrollment guide: Enroll Windows client devices in Microsoft Intune](../../intune/fundamentals/deployment-guide-enrollment-windows.md).
+> There are other Windows enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For information on all the Windows enrollment options, go to [Enrollment guide: Enroll Windows client devices in Microsoft Intune](../../intune/fundamentals/deployment-guide-enrollment-windows.md).
 
 ## Step 2 - Shared device or user associated device
 
-The next decision is to determine if the devices are shared with many users or assigned to a single user. This decision depends on your business needs and the end user requirements. It also impacts how these devices are managed with Intune.
+✅ Determine if the devices are **shared with many users** or **assigned to a single user**.
+
+In this step, this decision depends on your business needs and the end user requirements. It also impacts how these devices are managed with Intune.
 
 These features are configured using Intune device configuration profiles. When the profile has the settings you want, you assign the profile to the devices. The profile can be deployed during Intune enrollment.
 
-- **Shared device**
+# [Shared device](#tab/shared)
 
-  **Shared PC** is a feature in Intune, and allows devices to be shared with many users, one user at a time. A user gets the device, completes their tasks, and gives the device to another user. End users sign in to these shared devices with their **Microsoft Entra organization account** or a **guest account**. With this feature, you can delete account information and allow (or prevent) users from saving & viewing files locally.
+**Shared PC** is a feature in Intune, and allows devices to be shared with many users, one user at a time. A user gets the device, completes their tasks, and gives the device to another user. End users sign in to these shared devices with their **Microsoft Entra organization account** or a **guest account**. With this feature, you can delete account information and allow (or prevent) users from saving & viewing files locally.
 
-  For example, shared Windows devices can be public computers in libraries, computer labs in schools & universities, shared workstations in offices, shared laptops in classrooms, and more.
+For example, shared Windows devices can be public computers in libraries, computer labs in schools & universities, shared workstations in offices, and shared laptops in classrooms.
 
-  For more information on this feature, and to get started, go to:
+For information on this feature, and to get started, go to:
 
-  - [Shared PC or multi-user Windows devices in Intune](../../intune/configuration/shared-user-device-settings-windows.md)
-  - [Shared PC or multi-user Windows devices in Intune - Settings list](../../intune/configuration/shared-user-device-settings.md)
+- [Shared PC or multi-user Windows devices in Intune](../../intune/configuration/shared-user-device-settings-windows.md)
+- [Shared PC or multi-user Windows devices in Intune - Settings list](../../intune/configuration/shared-user-device-settings.md)
 
-- **User associated device**
+# [User associated device](#tab/single)
 
-  These devices have one user. This user associates the device with themselves, which happens when the user signs in during the Intune enrollment. The device is associated with the user's identity in Microsoft Entra.
+These devices have one user. This user associates the device with themselves, which happens when the user signs in during the Intune enrollment. The device is associated with the user's identity in Microsoft Entra.
 
-  These devices are used in FLW scenarios where the device is only used by that user. Some examples include personal computers for support staff, design computers for architects & graphic artists, and work-from-home setups.
+These devices are used in FLW scenarios where the device is only used by that user. Some examples include personal computers for support staff, design computers for architects & graphic artists, and work-from-home setups.
+
+---
 
 ## Step 3 - Device experience and kiosk
 
-This step is optional and depends on your business scenario. If these devices are shared by many users, then it's recommended to use the device experience features described in this section.
+✅ **Configure the device experience**.
+
+This step is optional and depends on your business scenario. If many users share these devices, then we recommended you configure the device experience using the features described in this section.
 
 On Windows devices, you can configure the home screen and device experience. In this step, consider what frontline workers are doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
 
@@ -126,48 +134,48 @@ Some examples of kiosks include self-service terminals in airports, retail store
 
 These features are configured using device configuration profiles. When the profile has the settings you want, you assign the profile to the devices. The profile can be deployed during Intune enrollment.
 
-The following scenarios are common:
+The following scenarios are common.
 
-- **Scenario 1: Kiosk with one app or many apps**
+### Scenario 1 - Kiosk with one app or many apps
 
-  For this scenario, you configure the device as a kiosk, which allows you to customize the device experience.
+For this scenario, you configure the device as a kiosk, which allows you to customize the device experience.
 
-  For example, you can use the device in a lobby so customers can see your product catalog. Or, use the device to show visual content as a digital sign. For more information, go to [Configure kiosks and digital signs on Windows desktop editions](/windows/configuration/kiosk-methods) (opens another Microsoft web site).
+For example, you can use the device in a lobby so customers can see your product catalog. Or, use the device to show visual content as a digital sign. For information, go to [Configure kiosks and digital signs on Windows desktop editions](/windows/configuration/kiosk-methods) (opens another Microsoft web site).
 
-  You can pin one app or many apps, select a wallpaper, set icon positions, and more. This scenario is often used for dedicated devices, such as shared devices. You can create a Shared PC profile and configure it be a kiosk using the kiosk settings in Intune.
+You can pin one app or many apps, select a wallpaper, set icon positions, and more. This scenario is often used for dedicated devices, such as shared devices. You can create a Shared PC profile and configure it be a kiosk using the kiosk settings in Intune.
 
-  **What you need to know**:
+**What you need to know**:
 
-  - Only features added to the kiosk are available to end users. So, you can restrict end users from accessing settings and other device features.
-  - When you pin one app or pin many apps to the kiosk, only those apps open. They're the only apps users can access. Users are locked to those apps, can't close the apps, or do anything else on the devices. This scenario is used on devices dedicated to a specific use, like airport terminals.
+- Only features added to the kiosk are available to end users. So, you can restrict end users from accessing settings and other device features.
+- When you pin one app or pin many apps to the kiosk, only those apps open. They're the only apps users can access. Users are locked to those apps, can't close the apps, or do anything else on the devices. This scenario is used on devices dedicated to a specific use, like airport terminals.
 
-  To get started, use the following links:
+To get started, use the following links:
 
-  1. [Add apps to Microsoft Intune](../../intune/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
-  2. Create a device configuration [kiosk profile](../../intune/configuration/kiosk-settings.md) and configure the [Windows kiosk profile - settings list](../../intune/configuration/kiosk-settings.md).
+1. [Add apps to Microsoft Intune](../../intune/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
+2. Create a device configuration [kiosk profile](../../intune/configuration/kiosk-settings.md) and configure the [Windows kiosk profile - settings list](../../intune/configuration/kiosk-settings.md).
 
-      The following example shows the kiosk profile settings for a single app. Make sure you add the app to Intune before you configure the kiosk profile.
+    The following example shows the kiosk profile settings for a single app. Make sure you add the app to Intune before you configure the kiosk profile.
 
-      :::image type="content" source="./media/windows-kiosk-single-app.png" alt-text="The kiosk device configuration profile settings for a single app on Windows devices in Microsoft Intune." lightbox="./media/windows-kiosk-single-app.png":::
+    :::image type="content" source="./media/windows-kiosk-single-app.png" alt-text="The kiosk device configuration profile settings for a single app on Windows devices in Microsoft Intune." lightbox="./media/windows-kiosk-single-app.png":::
 
-      The following example shows the kiosk profile settings for multiple apps. Make sure you add the apps to Intune before you configure the kiosk profile.
+    The following example shows the kiosk profile settings for multiple apps. Make sure you add the apps to Intune before you configure the kiosk profile.
 
-      :::image type="content" source="./media/windows-kiosk-multi-app.png" alt-text="The kiosk device configuration profile settings for multiple apps on Windows devices in Microsoft Intune." lightbox="./media/windows-kiosk-multi-app.png":::
+    :::image type="content" source="./media/windows-kiosk-multi-app.png" alt-text="The kiosk device configuration profile settings for multiple apps on Windows devices in Microsoft Intune." lightbox="./media/windows-kiosk-multi-app.png":::
 
-- **Scenario 2: Device wide access with multiple apps**
+### Scenario 2 - Device wide access with many apps
 
-  This scenario is a good scenario for Windows 365 Cloud PCs. Users have access to the apps and settings on the device. You can restrict users from different features, such as simple passwords, features in the Settings app, and more.
+This scenario is a good scenario for Windows 365 Cloud PCs. Users have access to the apps and settings on the device. You can restrict users from different features, such as simple passwords, features in the Settings app, and more.
 
-  This scenario also applies to physical devices. It expands the boundary of traditional frontline worker scenarios by also including knowledge workers.
+This scenario also applies to physical devices. It expands the boundary of traditional frontline worker scenarios by also including knowledge workers.
 
-  To configure devices for this scenario, you deploy the apps to the devices. Then, use device configuration policies to allow or block device features.
+To configure devices for this scenario, you deploy the apps to the devices. Then, use device configuration policies to allow or block device features.
 
-  To get started, use the following links:
+To get started, use the following links:
 
-  1. [Add apps to Microsoft Intune](../../intune/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
-  2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../intune/configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../../intune/configuration/settings-catalog.md).
+1. [Add apps to Microsoft Intune](../../intune/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
+2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../intune/configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../../intune/configuration/settings-catalog.md).
 
-      :::image type="content" source="./media/windows-device-restrictions.png" alt-text="All the device restrictions settings for Windows devices in Microsoft Intune.":::
+    :::image type="content" source="./media/windows-device-restrictions.png" alt-text="All the device restrictions settings for Windows devices in Microsoft Intune.":::
 
 ## Related articles
 
