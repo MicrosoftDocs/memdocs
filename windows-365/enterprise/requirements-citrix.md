@@ -55,8 +55,8 @@ To use Citrix HDX Plus for Windows 365, you must meet the following requirements
 - Microsoft Entra domain in the same tenant as Microsoft Intune
 - Windows 365 Enterprise licenses in the same tenant as Microsoft Intune
 - Azure admin account:
-  - Microsoft Entra Global Admin for required authorizations in Citrix Cloud.
-  - Intune Admin for enabling Citrix connector in Microsoft Intune.
+  - Intune Administrator for required authorizations in Citrix Cloud.
+  - Intune Administrator for enabling Citrix connector in Microsoft Intune.
   - For more information about the Windows 365 requirements, see [Windows 365 requirements](requirements.md).
 
 Citrix HDX Plus doesn't currently support Windows 365 Frontline.
