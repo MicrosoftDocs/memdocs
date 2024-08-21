@@ -190,7 +190,7 @@ For details about the payload settings for the Extensible Single Sign-on extensi
     > [!TIP]
     > There are more Platform SSO settings you can configure in the policy:
     >
-    > - [Settings for non-Microsoft apps and Microsoft Enterprise SSO Extension](#settings-for-non--microsoft-apps-and-microsoft-enterprise-sso-extension) (in this article)
+    > - [Settings for non-Microsoft apps and Microsoft Enterprise SSO Extension](#settings-for-non-microsoft-apps-and-microsoft-enterprise-sso-extension) (in this article)
     > - [End user experience settings](#end-user-experience-settings) (in this article)
 
 8. Configure the following required settings:
