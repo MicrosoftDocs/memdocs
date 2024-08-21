@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2023
+ms.date: 08/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,10 +32,9 @@ ms.collection:
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
-
-Intune includes device restriction policies that help administrators control Android, iOS/iPadOS, macOS, and Windows devices. These restrictions let you control a wide range of settings and features to protect your organization's resources. For example, administrators can:
+Intune includes device restriction policies that help administrators control Android, iOS/iPadOS, macOS, and Windows devices. These restrictions let you control a wide range of settings and features to protect your organization's resources. For example, admins can:
 
 - Allow or block the device camera.
 - Control access to Google Play, app stores, viewing documents, and gaming.
@@ -43,7 +42,7 @@ Intune includes device restriction policies that help administrators control And
 - Allow or prevent backing up files to cloud and storage accounts.
 - Set a minimum password length, and block simple passwords.
 
-These features are available in Intune, and are configurable by the administrator. Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, you can then push or deploy the profile to devices in your organization.
+These features are available in Intune, and are configurable by the administrator. Intune uses **configuration profiles** to create and customize these settings for your organization's needs. After you add these features in a profile, you then assign the profile to devices in your organization.
 
 This feature applies to:
 
@@ -64,7 +63,7 @@ This article shows you how to create a device restrictions profile. You can also
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Choose the platform of your devices. Your options:  
+    - **Platform**: Select the platform of your devices. Your options:  
 
         - **Android device administrator**
         - **Android (AOSP)**
@@ -76,7 +75,7 @@ This article shows you how to create a device restrictions profile. You can also
 
     - **Profile type**: Select **Device restrictions**. Or, select **Templates** > **Device restrictions**.
 
-        To create a device restrictions profile for Windows 10 Team devices, such as Surface Hub, then choose **Device restrictions (Windows 10 Team)**.
+        To create a device restrictions profile for Windows 10 Team devices, like Surface Hub, then select **Device restrictions (Windows 10 Team)**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -86,7 +85,7 @@ This article shows you how to create a device restrictions profile. You can also
 
 6. Select **Next**.
 
-7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
+7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Select your platform for detailed settings:
 
     - [Android device administrator](device-restrictions-android.md)
     - [Android (AOSP)](device-restrictions-android-aosp.md)
@@ -99,26 +98,17 @@ This article shows you how to create a device restrictions profile. You can also
     - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, like `US-NC IT Team` or `JohnGlenn_ITDepartment`. For information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
 11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
-## Next steps
+## Related articles
 
-After the profile is created, it's ready to be assigned. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-
-<!--  Removing image as part of design review; retaining source until we known the disposition.
-
-## Example of device restriction settings
-
-In this high-level example, you'll create a device restriction policy that blocks the use of the built-in camera app on Android devices.
-
-![How to disable the camera on Android devices](./media/device-restrictions-configure/disable-android-camera.png)
-
--->
+- [Assign the profile](device-profile-assign.md).
+- [Monitor the profile status](device-profile-monitor.md).
