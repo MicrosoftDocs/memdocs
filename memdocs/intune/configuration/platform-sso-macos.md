@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/06/2024
+ms.date: 08/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -174,7 +174,6 @@ For details about the payload settings for the Extensible Single Sign-on extensi
     In the list, select the following settings:
 
     - **Authentication Method (Deprecated)** (macOS 13 only)
-    - **Extension Data**
     - **Extension Identifier**
     - Expand **Platform SSO**:
       - Select **Authentication Method** (macOS 14+)
@@ -189,7 +188,10 @@ For details about the payload settings for the Extensible Single Sign-on extensi
     Close the settings picker.
 
     > [!TIP]
-    > There are more optional Platform SSO settings you can configure in the policy. For a list, go to [More Platform SSO settings you can configure](#more-platform-sso-settings-you-can-configure) (in this article).
+    > There are more Platform SSO settings you can configure in the policy:
+    >
+    > - [Settings for non-Microsoft apps and Microsoft Enterprise SSO Extension](#settings-for-non--microsoft-apps-and-microsoft-enterprise-sso-extension) (in this article)
+    > - [End user experience settings](#end-user-experience-settings) (in this article)
 
 8. Configure the following required settings:
 
@@ -289,7 +291,50 @@ After you confirm that your settings catalog policy is working, unassign any exi
 
 If you keep both policies, conflicts can occur.
 
-## More Platform SSO settings you can configure
+## Settings for non-Microsoft apps and Microsoft Enterprise SSO Extension
+
+If you previously used the Microsoft Enterprise SSO Extension, and/or want to enable SSO on non-Microsoft apps, then add the **Extension Data** setting to your existing Platform SSO settings catalog policy.
+
+The **Extension Data** setting is a similar concept to an open text field; you can configure any values you need.
+
+In this section, we use the **Extension Data** setting to:
+
+- Configure settings you used in your previous Microsoft Enterprise SSO Extension Intune policy.
+- Configure settings that allow non-Microsoft apps to use SSO.
+
+This section lists the minimum recommended settings you should add. In your previous Microsoft Enterprise SSO Extension policy, you might have configured more settings. We recommend you add any other key & value pair settings you configured in your previous Microsoft Enterprise SSO Extension policy.
+
+Remember, there should only be one SSO policy assigned to your groups. So, if you're using Platform SSO, then you must configure the Platform SSO settings **and** the Microsoft Enterprise SSO Extension settings in the Platform SSO settings catalog policy you created in [Step 2 - Create the Platform SSO policy in Intune](#step-2---create-the-platform-sso-policy-in-intune) (in this article).
+
+The following settings are commonly recommended for configuring SSO settings, including configuring SSO support for non-Microsoft applications.
+
+1. In your existing Platform SSO settings catalog policy, add **Extension Data**:
+
+    1. In the Intune admin center (**Devices** > **Manage devices** > **Configuration**), select your existing Platform SSO settings catalog policy.
+    2. In **Configuration settings**, select **Edit** > **Add settings**.
+    3. In the settings picker, expand **Authentication**, and select **Extensible Single Sign On (SSO)**:
+
+        :::image type="content" source="./media/platform-sso-macos/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune.":::
+
+    4. In the list, select **Extension Data** and close the settings picker:
+
+        :::image type="content" source="./media/platform-sso-macos/settings-picker-authentication-extensible-sso-extension-data.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune, specifically Extension Data.":::
+
+2. In **Extension Data**, **Add** the following keys and values: 
+
+    | Key | Type  | Value | Description |
+    | --- | --- | --- | --- |
+    | **AppPrefixAllowList**  | String | `com.microsoft.,com.apple.` | **AppPrefixAllowList** lets you create a list of app vendors with apps that can use SSO. You can add more app vendors to this list as needed. |
+    | **browser_sso_interaction_enabled** | Integer | `1` | Configures a recommended broker setting. |
+    | **disable_explicit_app_prompt** | Integer | `1` | Configures a recommended broker setting. |
+
+    The following example shows the recommended configuration:
+
+    :::image type="content" source="./media/platform-sso-macos/extension-data-AppPrefixAllowList.png" alt-text="Screenshot that shows how to configure Extension Data settings, such as AppPrefixAllowList.":::
+
+3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](device-profile-troubleshoot.md#policy-refresh-intervals).
+
+## End user experience settings
 
 When you create the settings catalog profile in [Step 2 - Create the Platform SSO policy in Intune](#step-2---create-the-platform-sso-policy-in-intune), there are more optional settings that you can configure.
 
@@ -301,32 +346,6 @@ The following settings let you customize the end-user experience and give more g
 | **Enable Create User At Login** | **Enable** or **Disable**. | Allow any organizational user to sign in to the device using their Microsoft Entra credentials. When creating new local accounts, the provided username and password must be the same as the user's Entra ID UPN (e.g., `user@contoso.com`) and password.|
 | **New User Authorization Mode** | **Standard**, **Admin**, or **Groups** | One-time permissions the user has at sign-in when the account is created using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
 | **User Authorization Mode** | **Standard**, **Admin**, or **Groups** | Persistent permissions the user has at sign-in each time the user authenticates using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
-
-## Enterprise SSO Extension settings you can configure
-
-If you previously used the Microsoft Enterprise SSO Extension it is recommended that you copy those settings to your new Platform SSO profile. You should only deploy one profile that defines SSO settings related to Entra, and it should combine Platform SSO settings and Microsoft Enterprise SSO Extension settings if you are deploying Platform SSO. The following settings are commonly recommended for configuring SSO settings, including configuring SSO support for non-Microsoft applications.
-
-1. Validate that Extension Data is an available field in your Platform SSO MDM profile. If not, in **Configuration settings**, select **Add settings**. In the settings picker, expand **Authentication**, and select **Extensible Single Sign On (SSO)**:
-
-    :::image type="content" source="./media/platform-sso-macos/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune.":::
-
-    In the list, select the following settings:
-
-    - **Extension Data**
-
-    :::image type="content" source="./media/platform-sso-macos/settings-picker-authentication-extensible-sso-extension-data.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune, specifically Extension Data.":::
-
-2. Return to the MDM profile and configure **Extension Data** with the desired Enterprise SSO Extension settings by clicking **Add** and then **Edit  The following are recommended.
-
-    | Key | Type  | Value | Description |
-    | --- | --- | --- | --- |
-    | **AppPrefixAllowList**  | String | com.microsoft.,com.apple. | AppPrefixAllowList allows you to configure a list of app vendors whose apps should participate in SSO. Add additional app vendors to this list as necessary. |
-    | **browser_sso_interaction_enabled** | Integer | 1 | Configures a recommended broker setting. |
-    | **disable_explicit_app_prompt** | Integer | 1 | Configures a recommended broker setting. |
-
-    Below is an example of the recommended configuration.
-
-    :::image type="content" source="./media/platform-sso-macos/extension-data-AppPrefixAllowList.png" alt-text="Screenshot that shows how to configure Extension Data settings, such as AppPrefixAllowList.":::
 
 ## Common errors
 
