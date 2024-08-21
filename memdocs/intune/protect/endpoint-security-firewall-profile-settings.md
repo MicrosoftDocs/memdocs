@@ -508,7 +508,7 @@ Specifies the local and remote addresses to which this rule applies:
 
   Manage local address ranges for this rule. You can:
   - **Add** one or more addresses as a comma-separated list of local addresses that are covered by the rule.
-  - **Import** a .csv file that contains a list of addresses to use as local address ranges.
+  - **Import** a .csv file containing a list of local IP addresses ranges using the 'LocalAddressRanges' header.
   - **Export** your current list of local address ranges as a .csv file.
 
   Valid entries (tokens) include the following options:
@@ -529,7 +529,7 @@ Specifies the local and remote addresses to which this rule applies:
 
   Manage remote address ranges for this rule. You can:
   - **Add** one or more addresses as a comma-separated list of remote addresses that are covered by the rule.
-  - **Import** a .csv file that contains a list of addresses to use as remote address ranges.
+  - **Import** a .csv file containing a list of remote IP addresses ranges using the 'RemoteAddressRanges' header.
   - **Export** your current list of remote address ranges as a .csv file.
 
   Valid entries (tokens) include the following and aren't case-sensitive:

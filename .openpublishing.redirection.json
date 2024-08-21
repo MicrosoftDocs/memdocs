@@ -1,6 +1,31 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/remote-actions/organizational-messages-reporting.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/organizational-messages-prerequisites.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/organizational-messages-overview.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/organizational-messages-create.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/organizational-messages-cancel.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "memdocs/intune/user-help/you-need-to-enable-uac-windows.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
       "redirect_document_id": false

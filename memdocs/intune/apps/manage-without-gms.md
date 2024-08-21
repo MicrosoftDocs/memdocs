@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/23/2024
+ms.date: 08/20/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -75,7 +75,10 @@ In conditions where GMS isn't available:
 
 - If the device is enrolled with device administrator and running the Company Portal app version 5.0.5655.0 and newer, then Intune tries to check for new tasks and notifications approximately every 15 minutes.
 
-- If the device is enrolled with Android (AOSP) management and running the Intune app version 24.02.4 and newer, then Intune tries to check for new tasks and notifications approximately every 15 minutes.
+- If the device is enrolled with Android (AOSP) management and running the Intune app version 24.02.4 and newer, then Intune tries to check for new tasks and notifications normally every 15 minutes, however some tasks on AOSP devices may take up to 8 hours to complete.
+
+    > [!IMPORTANT]
+    > From mid-August 2024 until October 2024, some tasks on AOSP devices may take up to 8 hours to complete. Previously, it typically was 15 minutes. During this period, devices will continue to check-in every 8 hours. On AOSP devices, you may notice a decrease in the frequency of task completion. After October 2024, the sync time will return to about 15 minutes.
 
 This frequency is also affected by the device manufacturer, device usage patterns, and whether battery optimization is enabled for the Company Portal or Intune apps.
 
