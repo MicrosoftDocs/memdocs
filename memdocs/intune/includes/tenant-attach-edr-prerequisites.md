@@ -4,16 +4,16 @@ description: include file
 author: brenduns  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 05/29/2024
+ms.date: 08/19/2024
 ms.author: brenduns
 ms.custom: include file
 ---
 
 #### Endpoint detection and response
 
-To manage Endpoint detection and response policy settings for Configuration Manager devices when you use tenant attach.  
+To manage Endpoint detection and response policy settings for Configuration Manager devices when you use tenant attach.
 
-**Platform**: *Windows 10, Windows 11, and Windows Server (ConfigMgr)*
+**Platform**: *Windows (ConfigMgr)*
 
 **Profile**: *Endpoint detection and response (ConfigMgr)*
 

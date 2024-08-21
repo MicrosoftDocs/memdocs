@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/17/2024
+ms.date: 08/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,7 +87,7 @@ The available profiles for attack surface reduction policy depend on the platfor
 
 ### Devices managed by Intune
 
-**Platform: Windows 10, Windows 11, and Windows Server**:
+**Platform: Windows**:
 
 Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune.
 
@@ -127,10 +127,6 @@ Available profiles for this platform include:
   - [Deploy and manage device control with Microsoft Intune](/microsoft-365/security/defender-endpoint/device-control-deploy-manage-intune)
   - [Device control walkthroughs](/microsoft-365/security/defender-endpoint/device-control-walkthroughs)
 
-**Platform: Windows 10 and later**:
-
-Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune. Profiles include:
-
 - **App and browser isolation** – Manage settings for Windows Defender Application Guard (Application Guard), as part of Defender for Endpoint. Application Guard helps to prevent old and newly emerging attacks and can isolate enterprise-defined sites as untrusted while defining what sites, cloud resources, and internal networks are trusted.
 
   To learn more, see [Application Guard](/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview) in the Microsoft Defender for Endpoint documentation.
@@ -155,7 +151,7 @@ Profiles for this platform are supported on Windows 10 and Windows 11 devices en
 
 ### Devices managed by Defender for Endpoint security settings management
 
-When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows 10, Windows 11, and Windows Server* platform to manage settings on devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows* platform to manage settings on devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
 Profiles supported for this scenario include:
 
@@ -174,7 +170,7 @@ Profiles supported for this scenario include:
 
 ### Reusable settings groups for Device control profiles
 
-In public preview, Device control profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) to help manage settings for the following settings groups on devices for the *Windows 10, Windows 11, and Windows Server* platform:
+In public preview, Device control profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) to help manage settings for the following settings groups on devices for the *Windows* platform:
 
 - Printer device:
   The following device control profile settings are available for *printer device*:
