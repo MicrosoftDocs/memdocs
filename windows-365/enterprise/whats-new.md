@@ -139,11 +139,6 @@ Windows 365 Cloud PCs now support FIDO devices and passkeys for Microsoft Entra 
 ## Week of July 8, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Cloud PC public preview support for FIDO devices and passkeys on macOS and iOS<!--51858977-->
-
-Windows 365 Cloud PCs now support FIDO devices and passkeys for Microsoft Entra ID sign in on macOS and iOS.
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 ### Chroma subsampling default change to 4:2:0<!--50308895-->
