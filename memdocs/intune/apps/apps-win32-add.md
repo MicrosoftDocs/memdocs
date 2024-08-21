@@ -118,6 +118,9 @@ On the **Program** page, configure the app installation and removal commands for
     
     `msiexec /x "{12345A67-89B0-1234-5678-000001000000}"`
 
+    > [!NOTE]
+    > Environment variable expansion within the **Uninstall command** is not supported. If you require the use of environment variables, use a custom wrapper script within your Win32 package to wrap the appropriate command and use this script for the **Uninstall command**.
+
 - **Installation time required**: The number of minutes the system will wait for install program to finish. Default value is 60 minutes. If the app takes longer to install than the set installation time, the system will fail the app install. Max timeout value is 1440 minutes (1 day).
 
 - **Allow available uninstall**: Select **Yes** to provide the uninstall option for this app for users from the Company Portal. Select **No** to prevent users from uninstalling the app from the Company Portal.
