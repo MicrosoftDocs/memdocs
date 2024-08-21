@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/26/2024
+ms.date: 08/21/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -35,7 +35,7 @@ appliesto:
 
 Date added: *August 21, 2024*
 
-Admins can now easily access the Autopilot device preparation report from the **Monitor** tab under **Enrollment**, in addition to the general **Monitor** blade. 
+In addition to the [Devices | Monitor](reporting-monitoring.md#accessing-reports-and-near-real-time-monitoring) page, admins can now easily access the **Windows Autopilot device preparation deployment status** report from the **Monitor** tab in the **Devices | Enrollment** page (**Home** > **Devices** >  **Device onboarding | Enrollment** > **Monitor**).
 
 ## Corporate identifiers can now be used with Windows Autopilot device preparation
 
