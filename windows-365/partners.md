@@ -75,7 +75,7 @@ For more information, visit the [IGEL website](https://www.igel.com/windows365/)
 
 ![N-able image](./media/partners/nable.png)
 
-A multi-tenant solution for Microsoft's cloud. In a single console, it enables MSPs and CSPs to manage, secure, standardize, and automate:
+A multi-tenant solution for Microsoft's cloud. In a single console, it enables MSPs and CSPs to manage, secure, standardize, and automate: 
 
 - Microsoft 365 users
 - Azure resource
