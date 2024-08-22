@@ -93,14 +93,10 @@ In these steps, you'll use the Device Model device property to create the dynami
 5. Select **Add dynamic query**.
 6. On the **Dynamic membership rules** page, enter the following:
     1. **Property** = “deviceModel”
-    2. **Operator** = “Contains”
-    3. **Value** = “Cloud PC”
-7. Select **Add expression** and enter the following:
-    1. **Property** = “deviceModel”
-    2. **Operator** = “Contains”
-    3. **Value** = “2vCPU/4GB”
-8. To validate that it works, select **Validate Rules (Preview)** > **Add devices** > select some Cloud PCs that have the 2vCPU/4GB RAM configuration, some Cloud PCs that have a different configuration, and some non-Cloud PC devices.
-9. After the validation completes, select **Save** > **Create**.
+    2. **Operator** = “startsWith”
+    3. **Value** = “Cloud PC Enterprise 2vCPU/4GB”
+7. To validate that it works, select **Validate Rules (Preview)** > **Add devices** > select some Cloud PCs that have the 2vCPU/4GB RAM configuration, some Cloud PCs that have a different configuration, and some non-Cloud PC devices.
+8. After the validation completes, select **Save** > **Create**.
 
 <!-- ########################## -->
 ## Next steps
