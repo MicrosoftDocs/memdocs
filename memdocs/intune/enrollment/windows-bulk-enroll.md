@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2024
+ms.date: 08/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -84,9 +84,9 @@ Additionally, ensure that the service principal for Microsoft.Azure.SyncFabric (
 ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
    > [!NOTE]
-   > The account used to request the bulk token must be included in the [MDM user scope](windows-enroll.md#enable-windows-automatic-enrollment) that is specified in Microsoft Entra ID. If this account is removed from a group that is tied to the MDM user scope, bulk enrollment will stop working.  
-   > Federated user accounts enabled for staged rollout will not work for retrieval of bulk tokens.
-   > *//MSFT Internal Note, REMOVE before publish: please check [https://internal.evergreen.microsoft.com/en-us/topic/143d3008-632e-7624-a364-05b2e95fa2ee](https://internal.evergreen.microsoft.com/topic/143d3008-632e-7624-a364-05b2e95fa2ee)or [https://identitydivision.visualstudio.com/Engineering/_workitems/edit/1447235](https://identitydivision.visualstudio.com/Engineering/_workitems/edit/1447235) for the details of this limitation.*
+   > - The account you use to request the bulk token must be included in the [MDM user scope](windows-enroll.md#enable-windows-automatic-enrollment) in Microsoft Entra ID. If you remove this account from a group that's tied to the MDM user scope, bulk enrollment will stop working.  
+   > - Federated user accounts enabled for staged rollouts do not work for bulk token retrieval.
+   
 1. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**. If you keep the check box selected and press OK, the device you are using will become managed by your organization. If you do not intend for your device to be managed, make sure to select **No, sign in to this app only**. 
 
 1. Click **Next** when **Bulk Token** is fetched successfully.
