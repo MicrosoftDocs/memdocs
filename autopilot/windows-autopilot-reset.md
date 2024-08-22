@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot Reset
 description: Windows Autopilot Reset takes the device back to a business-ready state, allowing the next user to sign in and get productive quickly and easily.
-ms.subservice: itpro-deploy
+ms.subservice: itpro-autopilot
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj

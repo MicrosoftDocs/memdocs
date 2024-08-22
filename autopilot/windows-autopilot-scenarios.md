@@ -2,7 +2,7 @@
 title: Windows Autopilot scenarios and capabilities
 description: Follow along with several typical Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: itpro-autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

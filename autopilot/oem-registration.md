@@ -2,7 +2,7 @@
 title: Windows Autopilot OEM registration process
 description: How OEMs add devices to Windows Autopilot.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: itpro-autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

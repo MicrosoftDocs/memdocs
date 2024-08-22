@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot Enrollment Status Page
 description: Gives an overview of the Enrollment Status Page capabilities, configuration.
-ms.subservice: itpro-deploy
+ms.subservice: itpro-autopilot
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj

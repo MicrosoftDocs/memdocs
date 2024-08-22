@@ -2,7 +2,7 @@
 title: Windows Autopilot known issues
 description: Be informed about known issues that might occur during Windows Autopilot deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: itpro-autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

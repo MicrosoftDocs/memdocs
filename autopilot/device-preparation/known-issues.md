@@ -2,7 +2,7 @@
 title: Windows Autopilot device preparation known issues
 description: Information regarding known issues that might occur during a Windows Autopilot device preparation deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: itpro-autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

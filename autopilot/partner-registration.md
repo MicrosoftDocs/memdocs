@@ -2,7 +2,7 @@
 title: Reseller, distributor, or partner registration of Windows Autopilot devices
 description: How partners add devices to Windows Autopilot.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: itpro-autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

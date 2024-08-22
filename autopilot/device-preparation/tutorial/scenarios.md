@@ -13,7 +13,7 @@ ms.collection:
   - tier1
   - highpri
   - essentials-get-started
-ms.subservice: itpro-deploy
+ms.subservice: itpro-autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
