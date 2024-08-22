@@ -1542,7 +1542,7 @@ The EpmTools PowerShell module is now available for use with Intune Endpoint Pri
 For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
 
 #### Endpoint Privilege Management support to manage elevation rules for child processes<!-- 15931887 -->  
-With Intune Endpoint Privilege Management (EPM) you can manage which files and processes are allowed to *Run as Administrator* on your Windows devices.  Now, EPM [elevation rules](../protect/epm-policies.md#create-a-windows-elevation-rules-policy) support a new setting, **Child process behavior**.
+With Intune Endpoint Privilege Management (EPM) you can manage which files and processes are allowed to *Run as Administrator* on your Windows devices.  Now, EPM [elevation rules](../protect/epm-policies.md#windows-elevation-rules-policy) support a new setting, **Child process behavior**.
 
 With *Child process behavior*, your rules can manage the elevation context for any child processes created by the managed process. Options include:
 

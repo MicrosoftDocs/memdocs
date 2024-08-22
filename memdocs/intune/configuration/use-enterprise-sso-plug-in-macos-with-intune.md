@@ -31,11 +31,11 @@ ms.collection:
 
 [!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
 
-This article applies to:
+This feature applies to:
 
 - macOS
 
-    For iOS/iPadOS, go to [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](use-enterprise-sso-plug-in-ios-ipados-with-intune.md).
+  For iOS/iPadOS, go to [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](use-enterprise-sso-plug-in-ios-ipados-with-intune.md).
 
 On macOS devices, you can configure SSO app extension settings in two places in Intune:
 

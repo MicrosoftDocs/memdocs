@@ -36,6 +36,7 @@ Using Windows PowerShell and Microsoft Intune, you can use the WDAC CSP to allow
 This feature applies to:
 
 - HoloLens 2 devices running Windows Holographic for Business
+- Windows 10/11
 
 The WDAC CSP is based on the [Windows Defender Application Control (WDAC) feature](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). You can also [use multiple WDAC policies](/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
 
@@ -186,7 +187,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 
 In this step, you create a custom device configuration profile in Intune. In the custom policy, you add the **compiledPolicy.bin** binary file you created in [Step 1 - Create the WDAC policy using Windows PowerShell](#step-1---create-the-wdac-policy-using-windows-powershell). Then, use Intune to deploy the policy to HoloLens 2 devices.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows 10/11 custom device configuration profile.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows custom device configuration profile.
 
     For the specific steps, go to [Create a custom profile using OMA-URI in Intune](custom-settings-configure.md).
 
