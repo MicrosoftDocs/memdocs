@@ -39,7 +39,7 @@ Property list files, also called preference files, include information about you
 
 Property list files are typically used for web browsers, like Google Chrome, [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac), and custom apps.
 
-> ![WARNING]
+> [!WARNING]
 > There are sample `.plist` files at [ManagedPreferencesApplications examples on GitHub](https://github.com/ProfileCreator/ProfileManifests/tree/master/Manifests/ManagedPreferencesApplications). This GitHub repository is not owned, not maintained, and not created by Microsoft. Use the information at your own risk.
 
 > [!TIP]

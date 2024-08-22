@@ -69,7 +69,7 @@ This article shows you how to configure Platform SSO for macOS devices in Intune
   
     Using an [Intune preference file (.plist) policy](preference-file-settings-macos.md), you can force this extension to install. In your `.plist` file, you need some of the information at [Chrome Enterprise policy - ExtensionInstallForcelist](https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist) (opens Google's web site).
 
-    > ![WARNING]
+    > [!WARNING]
     > There are sample `.plist` files at [ManagedPreferencesApplications examples on GitHub](https://github.com/ProfileCreator/ProfileManifests/tree/master/Manifests/ManagedPreferencesApplications). This GitHub repository is not owned, not maintained, and not created by Microsoft. Use the information at your own risk.
 
   - Safari
