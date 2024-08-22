@@ -8,7 +8,7 @@ keywords: preference file, property list file, plist, macOS, microsoft intune, e
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2024
+ms.date: 08/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,7 +37,10 @@ This feature applies to:
 
 Property list files, also called preference files, include information about your macOS apps. You define app properties or settings that you want to preconfigure. When the file is ready, you can use Intune to deploy the file to your devices and configure the app settings in your file.
 
-Property list files are typically used for web browsers, [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac), and custom apps.
+Property list files are typically used for web browsers, like Google Chrome, [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac), and custom apps.
+
+> ![WARNING]
+> There are sample `.plist` files at [ManagedPreferencesApplications examples on GitHub](https://github.com/ProfileCreator/ProfileManifests/tree/master/Manifests/ManagedPreferencesApplications). This GitHub repository is not owned, not maintained, and not created by Microsoft. Use the information at your own risk.
 
 > [!TIP]
 > For Microsoft Edge version 77 and newer, you can use the settings catalog. You don't have to use a preference file. For more information, go to [Settings catalog](settings-catalog.md).
@@ -55,16 +58,16 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## What you need to know
 
-- These settings aren't validated. Test your changes before assigning the profile to your devices.
-- If you're not sure how to enter an app key, change the setting within the app. Then, review the app's preference file using [Xcode](https://developer.apple.com/xcode/) to see how the setting is configured.
+- Test your changes before assigning the profile to your devices. Intune doesn't validate the settings in the property list file.
+- Review the app's preference file using [Xcode](https://developer.apple.com/xcode/) to see how the setting is configured. If you're not sure how to enter an app key, change the setting within the app. Then, review the app's preference file using [Xcode](https://developer.apple.com/xcode/).
 
   Apple recommends removing nonmanageable settings using Xcode before importing the file.
 
 - Only some apps work with managed preferences, and might not allow you to manage all settings.
 - Be sure you upload property list files that target device channel settings, not user channel settings. Property list files target the entire device.
-- If you're configuring the Microsoft Edge version 77 and newer app, then use the [Settings catalog](settings-catalog.md). For a list of the settings you can configure, go to [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website).
+- Use the [Settings catalog](settings-catalog.md) to configure Microsoft Edge version 77 and newer. For a list of the settings you can configure, go to [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website).
 
-  Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the preference file.
+  Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then use the preference file.
 
 ## Create the profile
 
