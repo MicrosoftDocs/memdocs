@@ -38,6 +38,13 @@ You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overvie
 
 This article shows you how to check the assignment status of existing device configuration policies, make changes, troubleshoot conflicts, and how to use Copilot for some of these features.
 
+This feature applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Windows
+
 ## View existing policies
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

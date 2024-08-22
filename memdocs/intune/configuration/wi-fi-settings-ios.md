@@ -175,4 +175,4 @@ This article describes the settings you can configure.
 
 - Be sure to [assign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Configure Wi-Fi settings on [Android](wi-fi-settings-android.md), [Android Enterprise](wi-fi-settings-android-enterprise.md), [macOS](wi-fi-settings-macos.md), and [Windows 10](wi-fi-settings-windows.md) devices.
+- Configure Wi-Fi settings on [Android](wi-fi-settings-android.md), [Android Enterprise](wi-fi-settings-android-enterprise.md), [macOS](wi-fi-settings-macos.md), and [Windows](wi-fi-settings-windows.md) devices.
