@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/16/2023
+ms.date: 08/22/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -71,11 +71,11 @@ Secure access to Windows 365 is further enhanced with IGEL OS:
 
 For more information, visit the [IGEL website](https://www.igel.com/windows365/).
 
-## N-able Cloud Commander
+## N-able
 
 ![N-able image](./media/partners/nable.png)
 
-A multi-tenant solution for Microsoft's cloud. In a single console, it enables MSPs and CSPs to manage, secure, standardize, and automate: 
+The N-able Cloud Commander is a multi-tenant solution for Microsoft's cloud. In a single console, it enables MSPs and CSPs to manage, secure, standardize, and automate:
 
 - Microsoft 365 users
 - Azure resource
