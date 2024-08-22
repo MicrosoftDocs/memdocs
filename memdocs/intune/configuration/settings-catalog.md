@@ -91,7 +91,7 @@ You create the policy by using the settings catalog profile type.
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **iOS/iPadOS**, **macOS**, or **Windows**.
+    - **Platform**: Select **iOS/iPadOS**, **macOS**, or **Windows 10 and later**.
     - **Profile type**: Select **Settings catalog**.
 
 4. Select **Create**.
@@ -104,7 +104,7 @@ You create the policy by using the settings catalog profile type.
 
 7. In **Configuration settings**, select **Add settings**. In the settings picker, select a category to see all the available settings.
 
-    For example, select **Windows**, and then select **Authentication** to see all the settings in this category:
+    For example, select **Windows 10 and later**, and then select **Authentication** to see all the settings in this category:
 
     :::image type="content" source="./media/settings-catalog/settings-picker-authentication.png" alt-text="Screenshot that shows the Settings Catalog when you select Windows and Authentication in Microsoft Intune and Intune admin center.":::
 

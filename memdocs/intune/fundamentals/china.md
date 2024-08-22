@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/23/2022
+ms.date: 08/21/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,7 +31,7 @@ ms.collection:
 - government
 ---
 
-# Intune operated by 21Vianet in China  
+# Intune operated by 21Vianet in China
 
 Intune operated by 21Vianet is designed to meet the needs for secure, reliable, and scalable cloud services in China. Intune as a service is built on top of Microsoft Azure. Microsoft Azure operated by 21Vianet is a physically separated instance of cloud services located in China. It's independently operated and transacted by 21Vianet. This service is powered by technology that Microsoft has licensed to 21Vianet.
 
@@ -41,7 +41,7 @@ Microsoft doesn't operate the service itself. 21Vianet operates, provides, and m
 
 ## Feature differences in Intune operated by 21Vianet
 
-Because the China services are operated by a partner from inside China, there are some feature differences with Intune. 
+Because the China services are operated by a partner from inside China, there are some feature differences with Intune.
 
 - Intune operated by 21Vianet only supports standalone deployments. Customers can use co-management to attach their existing Configuration Manager deployment to the Microsoft Intune cloud.
 - Migrations from public clouds to sovereign clouds aren't supported. Customers interested in moving to Intune operated by 21Vianet must migrate manually.
@@ -50,29 +50,31 @@ Because the China services are operated by a partner from inside China, there ar
 - Management of Windows 10 is supported by using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
 - Windows Autopilot and Business Store features aren't currently available.
-- Intune operated by 21Vianet supports the Microsoft Store app (legacy) with Available assignment. You can deploy the Company Portal for Windows from the Download Center. Download the Microsoft Intune Company Portal for Windows from the Official [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=105219) and deploy it via the LOB required app as a workaround.
+- Intune operated by 21Vianet supports the Company Portal for Windows app. Use WinGet to download the Company portal package and dependencies and then deploy as a Line-of-Business app via Intune. [Use the WinGet tool to install and manage applications](/windows/package-manager/winget/).
 - Microsoft Intune Endpoint Analytics and Log Analytics features aren't currently available.
 - Because Google Mobile Services isn't available in China, customers in Intune operated by 21Vianet can't use features that require Google Mobile Services. These features include:
   - Google Play Protect capabilities such as Play integrity verdict.
   - Managing apps from the Google Play Store.
   - Android Enterprise capabilities. For more information, see this [Google documentation](https://support.google.com/work/android/answer/6270910?hl=en).
-- The Intune Company Portal app for Android uses Google Mobile Services  to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable). 
+- The Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable). 
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
 - Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
-- Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices. 
-- Intune operated by 21Vianet doesn't support Mobile Threat Defense (MTD) connector for Android and iOS devices with MTD vendors.
+- Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices are supported for the MTD partners that also support the 21Vianet environment. When you sign in to a 21Vianet tenant, you will see the connectors that are available in that environment.
+- Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices.
 - Intune operated by 21Vianet doesn't support partner device management integration with Jamf for macOS devices.
 
 ## You control customer data
 
 In Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, you have full control of your data:
+
 - You know where customer data is located.
 - You control access to your customer data.
 - You control your customer data if you leave the service.
 - You have options to control the security of your customer data.
 
 With Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, you’re the owner of your data:
+
 - 21Vianet doesn’t use customer data for advertising.
 - You control who has access to your customer data.
 - We use logical isolation to segregate each customer’s data.

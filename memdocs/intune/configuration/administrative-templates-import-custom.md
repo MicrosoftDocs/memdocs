@@ -136,7 +136,7 @@ When the import completes, your ADMX templates are shown in the list. You can al
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Windows**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Imported Administrative templates (Preview)**:
 
       :::image type="content" source="./media/administrative-templates-import-custom/select-imported-administrative-templates.png" alt-text="Screenshot that shows how to select imported administrative templates to create a device configuration profile using the imported ADMX settings in Microsoft Intune and Intune admin center.":::

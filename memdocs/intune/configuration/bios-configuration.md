@@ -102,7 +102,7 @@ This policy is where you add the configuration file you created in [Step 1 with 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-   - **Platform**: Select **Windows**.
+   - **Platform**: Select **Windows 10 and later**.
    - **Profile type**: Select **Templates** > **BIOS configuration and other settings**.
 
 4. Select **Create**.

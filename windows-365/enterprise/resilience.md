@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 08/06/2024
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -66,17 +66,27 @@ Example architecture of a Windows 365 service that enables administrators or end
 
 Each Windows 365 Cloud PC is a single instance Azure virtual machine. Resilience is provided at the Azure host level to mitigate any compute continuity issues. For more information, see [Business continuity and disaster recovery overview](business-continuity-disaster-recovery.md).
 
+## Client resiliency
+
+[Windows App](/windows-app/overview) is the Windows 365 client used to connect to your Cloud PC. Windows App can also be used for connectivity to any Windows in the Cloud service, such as Azure Virtual Desktop, Microsoft DevBox and Remote Desktop Services, as well as RemotePC or direct RDP connections. Windows App is regularly updated to provide new functionality to end users.
+
+There are two deployment mechanisms to test the client after it has gone through extensive internal testing:
+
+- An Insiders ring where the client is tested by a set of users who have opted into this ring. Feedback is then provided and bugs can be fixed before rolling out to the Public ring.
+- Windows App is hosted within the Windows Store, which enables a reliable global software distribution service. The Windows App uses the Microsoft Store gradual package rollout which lets Microsoft update groups of machines over a specified time period. By monitoring the feedback and usage analytics of these initial groups, we can ensure that the update is ready before rolling it out to a wider community. For more information, see [Gradual package rollout](/windows/apps/publish/gradual-package-rollout).
+
+
 ## Customer best practices
 
 As Windows 365 has a shared responsibility for overall service delivery, there are some best practices that customers should follow to increase the resiliency of the overall service.
 
-**[Microsoft hosted network](deployment-options.md#microsoft-hosted-network)**. Use a Microsoft hosted network when creating a provisioning policy. Microsoft hosted network is a Microsoft managed networking option, where no Azure vNet or subscription is required for Cloud PC network connectivity. This option lets Microsoft make the placement decisions for the Cloud PC virtual machines and decreases the possibility of provisioning issues.
+**Microsoft hosted network**. Use a Microsoft hosted network when creating a provisioning policy. Microsoft hosted network is a Microsoft managed networking option, where no Azure vNet or subscription is required for Cloud PC network connectivity. This option lets Microsoft make the placement decisions for the Cloud PC virtual machines and decreases the possibility of provisioning issues. For more information, see [Microsoft hosted network](deployment-options.md#microsoft-hosted-network)
 
-**[Azure Network Connection](/azure/architecture/guide/virtual-desktop/windows-365-azure-network-connection)**. If you need granular control of your corporate network traffic – firewall rules, custom routes, or on-premises network access – the Azure Network Connection (ANC) feature lets you bring your own Azure vNet/subscription to Windows 365. For customers using the ANC, create multiple connections and prioritize these connections in order of failover usage. This prioritization provides a network connection failover if there's a networking outage.
+**Azure Network Connection**. If you need granular control of your corporate network traffic – firewall rules, custom routes, or on-premises network access – the Azure Network Connection (ANC) feature lets you bring your own Azure vNet/subscription to Windows 365. For customers using the ANC, create multiple connections and prioritize these connections in order of failover usage. This prioritization provides a network connection failover if there's a networking outage. For more information, see [Azure Network Connection](/azure/architecture/guide/virtual-desktop/windows-365-azure-network-connection)
 
-**[Point-in-time restore](restore-overview.md)**. This service allows you to fully restore your Cloud PC to a previous state. You can configure the service to automatically create restore points across short and longer time windows.
+**Point-in-time restore**. This service allows you to fully restore your Cloud PC to a previous state. You can configure the service to automatically create restore points across short and longer time windows. For more information, see [Point-in-time restore](restore-overview.md)
 
-**[Cross region disaster recovery](cross-region-disaster-recovery.md)**. This Windows 365 add-on feature creates snapshots of Cloud PCs. These snapshots are placed in customer-defined, geographically distant locations. The snapshots can be recovered to Cloud PCs running in the selected location during a disaster recovery event.
+**Cross region disaster recovery**. This Windows 365 add-on feature creates snapshots of Cloud PCs. These snapshots are placed in customer-defined, geographically distant locations. The snapshots can be recovered to Cloud PCs running in the selected location during a disaster recovery event. For more information, see [Cross region disaster recovery](cross-region-disaster-recovery.md)
 
 ## Next steps
 

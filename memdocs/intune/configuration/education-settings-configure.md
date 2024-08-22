@@ -45,7 +45,7 @@ This article lists the steps to create a device configuration profile  in Micros
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Windows**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Secure assessment (Education)**.
 
 4. Select **Create**.

@@ -283,7 +283,7 @@ After the email app is assigned to the device, this next step creates the device
         - **Android device administrator** (Samsung Android Knox Standard only)
         - **Android Enterprise** personally owned work profiles
         - **iOS/iPadOS**
-        - **Windows**
+        - **Windows 10 and later**
 
     - **Profile type**: Select **Email**. Or, select **Templates** > **Email**.
 

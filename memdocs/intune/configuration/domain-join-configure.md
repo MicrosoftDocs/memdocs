@@ -48,7 +48,7 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Windows**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Domain Join**.
 
 4. Select **Create**.

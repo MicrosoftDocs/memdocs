@@ -99,7 +99,7 @@ This profile includes the DFCI settings you configure.
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-   - **Platform**: Select **Windows**.
+   - **Platform**: Select **Windows 10 and later**.
    - **Profile type**: Select **Templates** > **Device Firmware Configuration Interface**.
 
 4. Select **Create**.

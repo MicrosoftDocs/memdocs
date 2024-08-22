@@ -81,7 +81,7 @@ You can also use the [Intune settings catalog](settings-catalog.md) to configure
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Windows**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Administrative Templates**.
 
 4. Select **Create**.

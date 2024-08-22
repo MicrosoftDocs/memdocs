@@ -134,7 +134,7 @@ This profile uses the FQDN of your mobile operator's download server (SM-DP+), a
 
 3. Enter the following properties:
 
-    - **Platform**: Select **Windows**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Settings catalog**.
 
 4. Select **Create**.

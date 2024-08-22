@@ -211,7 +211,7 @@ After the VPN app is assigned to the device, this next step creates the device c
       - **Android Enterprise** > **Personally-owned work profile**
       - **iOS/iPadOS**
       - **macOS**
-      - **Windows**
+      - **Windows 10 and later**
       - **Windows 8.1 and later**
     - **Profile type**: Select **VPN**. Or, select **Templates** > **VPN**.
 

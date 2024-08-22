@@ -55,7 +55,7 @@ This article shows you how to create the profile, and add trusted sites.
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Windows**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Network boundary**.
 
 4. Select **Create**.

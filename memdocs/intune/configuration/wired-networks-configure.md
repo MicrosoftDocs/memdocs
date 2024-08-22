@@ -64,7 +64,7 @@ This article lists the steps to create a wired network profile in Intune. It als
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **macOS** or **Windows**.
+    - **Platform**: Select **macOS** or **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Wired network**.
 
 4. Select **Create**.

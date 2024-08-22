@@ -58,7 +58,7 @@ This article shows you how to run one app or many apps as a Windows kiosk device
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-   - **Platform**: Select **Windows**.
+   - **Platform**: Select **Windows 10 and later**.
    - **Profile type**: Select **Templates** > **Kiosk**.
 
 4. Select **Create**.

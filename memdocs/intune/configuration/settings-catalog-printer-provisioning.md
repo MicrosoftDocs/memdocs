@@ -83,7 +83,7 @@ This policy includes your printer information. When you assign the policy, the p
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Windows**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Settings catalog**.
 
 4. Select **Create**.

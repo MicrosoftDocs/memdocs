@@ -197,11 +197,7 @@ Applies to:
 
 - Android Enterprise Fully managed, dedicated and corporate-owned work profile
 
-### Device enrollment
-
-#### Use corporate Microsoft Entra account to enable Android Enterprise management options in Intune<!-- 25231452 -->  
-
-Managing Intune-enrolled devices with Android Enterprise management options previously required you to connect your Intune tenant to your managed Google Play account using a personal Gmail account.  Now you can use a corporate Microsoft Entra account to establish the connection. This change is happening in new tenants, and doesn't affect tenants that have already established a connection. For more information, see [Connect Intune account to Managed Google Play account - Microsoft Intune | Microsoft Learn](../enrollment/connect-intune-android-enterprise.md).  
+### Device enrollment  
 
 #### New support for Red Hat Enterprise Linux<!-- 25160548 -->
 

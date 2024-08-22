@@ -238,7 +238,7 @@ In this section, we create an administrative template in Intune, look at some se
 1. In the Intune admin center, select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 2. Enter the following properties:
 
-    - **Platform**: Select **Windows**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Administrative Templates**.
 
 3. Select **Create**.
@@ -384,7 +384,7 @@ In this section, you create a OneDrive admin template in Intune to control some 
 
 2. Enter the following properties:
 
-    - **Platform**: Select **Windows**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Administrative templates**.
 
 3. Select **Create**.
