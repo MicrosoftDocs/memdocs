@@ -34,7 +34,7 @@ ms.collection:
 
 On your macOS devices, you can configure Platform SSO to enable single sign-on (SSO) using passwordless authentication, Microsoft Entra ID user accounts, or smart cards. Platform SSO is an enhancement to the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) and the [SSO app extension](use-enterprise-sso-plug-in-macos-with-intune.md). Platform SSO can sign users into their managed Mac devices using their Microsoft Entra ID credentials and Touch ID.
 
-This article applies to:
+This feature applies to:
 
 - macOS
 

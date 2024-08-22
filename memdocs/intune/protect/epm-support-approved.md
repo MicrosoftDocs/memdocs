@@ -101,7 +101,7 @@ For more information about all the permissions for managing EPM, see [Role-based
 
 ## Create policy for support approved file elevations
 
-To create support-approved elevation policy, use the same workflow for creating other EPM elevation rule policies. See [Create a Windows elevation rules policy](../protect/epm-policies.md#create-a-windows-elevation-rules-policy) in *Configure policies for Endpoint Privilege Management*.
+To create support-approved elevation policy, use the same workflow for creating other EPM elevation rule policies. See [Windows elevation rules policy](../protect/epm-policies.md#windows-elevation-rules-policy) in *Configure policies for Endpoint Privilege Management*.
 
 ## Manage pending elevation requests
 
@@ -112,22 +112,22 @@ Use the following procedure as guidance for reviewing and managing elevation req
 1. The elevation request details include the following information:
 
     1. **General details**:
-        1. **File** - The name of the file that was requested for elevation.
-        1. **Publisher** - The name of the publisher that signed the file that was requested for elevation. The name of the publisher is a link that retrieves the certificate chain for the file for download.
-        1. **Device** - The device where the elevation was requested from. The device name is a link that opens the device object in the admin center.
-        1. **Intune compliant** - The Intune compliance state of the device.
+       - **File** - The name of the file that was requested for elevation.
+       - **Publisher** - The name of the publisher that signed the file that was requested for elevation. The name of the publisher is a link that retrieves the certificate chain for the file for download.
+       - **Device** - The device where the elevation was requested from. The device name is a link that opens the device object in the admin center.
+       - **Intune compliant** - The Intune compliance state of the device.
 
     1. **Request details**:
-        1. **Status** - Status of the request. Requests start as *Pending* and can be either *approved* or *denied* by an administrator.
-        1. **By** - The account of the administrator who *approved* or *denied* the request.
-        1. **Last modified** - The last time the request entry was modified.
-        1. **User's justification** - The justification provided by the user for the elevation request.
-        1. **Approval expiration** - The time that the approval expires. Until this expiry time is reached, elevation of the approved file is allowed.
-        1. **Admin's reason** - Justification provided by the admin when an *approval* or *denial* is completed.
+       - **Status** - Status of the request. Requests start as *Pending* and can be either *approved* or *denied* by an administrator.
+       - **By** - The account of the administrator who *approved* or *denied* the request.
+       - **Last modified** - The last time the request entry was modified.
+       - **User's justification** - The justification provided by the user for the elevation request.
+       - **Approval expiration** - The time that the approval expires. Until this expiry time is reached, elevation of the approved file is allowed.
+       - **Admin's reason** - Justification provided by the admin when an *approval* or *denial* is completed.
 
     1. **File information** - Specifics of the metadata for the file that was requested for approval.
 
-    :::image type="content" source="./media/epm-support-approved/sample-request-detail.png" alt-text="Image that displays the detail of an elevation request." lightbox="./media/epm-support-approved/sample-request-detail.png":::
+   :::image type="content" source="./media/epm-support-approved/sample-request-detail.png" alt-text="Image that displays the detail of an elevation request." lightbox="./media/epm-support-approved/sample-request-detail.png":::
 
 1. After an admin reviews a request, they can select **Approve** or **Deny**. With either selection, they're presented with the **justification** dialog where they can provide a *Reason* with detail about their decision. Providing a reason is optional. The following displays the approval dialog:
 
