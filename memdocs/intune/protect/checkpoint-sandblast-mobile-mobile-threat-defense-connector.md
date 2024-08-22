@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 08/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,12 +49,12 @@ You can configure Conditional Access policies based on Check Point Harmony Mobil
 
 - Microsoft Intune Plan 1 subscription
 
-- Check Point Harmony Mobile Threat Defense subscription
+- Check Point Harmony Mobile Threat Defense subscription  
   - See the [CheckPoint Harmony website](https://www.checkpoint.com/harmony).
 
 ## How do Intune and Check Point Harmony Mobile help protect your company resources?
 
-Check Point Harmony Mobile app for Android and iOS/iPadOS captures file system, network stack, device and application telemetry where available, then sends the telemetry data to the Check Point Harmony cloud service to assess the device's risk for mobile threats.
+Check Point Harmony Mobile app for Android and iOS/iPadOS captures file system, network stack, and device and application telemetry where available, then sends the telemetry data to the Check Point Harmony cloud service to assess the device's risk for mobile threats.
 
 The Intune device compliance policy includes a rule for Check Point Harmony Mobile Threat Defense, which is based on the Check Point Harmony risk assessment. When this rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Harmony Mobile Protect app installed in their devices to resolve the issue and regain access to corporate resources.
 

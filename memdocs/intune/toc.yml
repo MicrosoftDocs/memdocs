@@ -667,8 +667,6 @@ items:
                 href: ./protect/mde-security-integration.md
               - name: Manage endpoint security policies in Microsoft Defender
                 href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
-          - name: Firewall rule migration
-            href: ./protect/endpoint-security-firewall-rule-tool.md  
           - name: Tenant attach
             href: ./protect/tenant-attach-intune.md
           - name: Encrypt disks
