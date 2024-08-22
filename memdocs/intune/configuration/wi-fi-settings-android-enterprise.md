@@ -320,6 +320,6 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
 - The profile is created, but might not be doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows 10](wi-fi-settings-windows.md).
+- You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows](wi-fi-settings-windows.md).
 
 - [Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).
