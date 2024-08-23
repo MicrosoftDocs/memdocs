@@ -33,11 +33,17 @@ appliesto:
 
 <!-- INADO-28533819 -->
 
+## Diagnostics logs automatically available in Windows Autopilot device preparation deployment status report
+
+Date added: *August 23, 2024*
+
+Admins can now download diagnostics logs for failed Autopilot device preparation deployments directly from the **Windows Autopilot device preparation deployment status** report. Logs are available for download in the **Device deployment details** when you select a failed deployment under the **Device** tab. Logs are automatically collected when an error occurs during deployment.
+
 ## Windows Autopilot device preparation deployment status report available in the Monitor tab under Enrollment
 
 Date added: *August 21, 2024*
 
-In addition to the [Devices | Monitor](reporting-monitoring.md#accessing-reports-and-near-real-time-monitoring) page, admins can now easily access the **Windows Autopilot device preparation deployment status** report from the **Monitor** tab in the **Devices | Enrollment** page. The report can be found using the following steps:
+In addition to the [Devices | Monitor](reporting-monitoring.md#accessing-reports-and-near-real-time-monitoring) page, admins can now easily access the **Windows Autopilot device preparation deployment status** report from the **Monitor** tab in the **Devices | Enrollment** page starting with the Intune 2408 monthly release. The report can be found using the following steps:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Navigate to **Home** > **Devices** >  **Device onboarding | Enrollment**.
