@@ -149,7 +149,7 @@ With the **Password** authentication method:
 >
 > Make sure your Intune password policy and/or compliance policy matches your Microsoft Entra password policy. If the policies don't match, then the password might not sync and end users are denied access.
 
-### Configure keyvault recovery (optional)
+#### Configure keyvault recovery (optional)
 
 When using password sync authentication you can enable keyvault recovery to ensure that data can be recovered in the event that a user forgets their password. IT Admins should review Apple's documentation and evaluate whether using Institutional FileVault Recovery Keys is a good option for them.
 
