@@ -2,7 +2,7 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-autopilot
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
 ms.date: 06/28/2024

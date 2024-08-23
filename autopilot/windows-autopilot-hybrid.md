@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 ms.date: 08/22/2024
 ms.topic: how-to
 ms.service: windows-client
-ms.subservice: itpro-autopilot
+ms.subservice: autopilot
 ms.localizationpriority: medium
 ms.collection:
   - M365-identity-device-management

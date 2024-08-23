@@ -2,7 +2,7 @@
 title: Windows Autopilot for pre-provisioned deployment
 description: Windows Autopilot for pre-provisioned deployment.
 ms.service: windows-client
-ms.subservice: itpro-autopilot
+ms.subservice: autopilot
 ms.localizationpriority: medium
 ms.reviewer: jubaptis
 manager: aaroncz

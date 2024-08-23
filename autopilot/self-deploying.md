@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot self-deploying mode
 description: Self-deploying mode allows a device to be deployed with little to no user interaction. This mode is designed to deploy Windows as a kiosk, digital signage device, or a shared device.
-ms.subservice: itpro-autopilot
+ms.subservice: autopilot
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj

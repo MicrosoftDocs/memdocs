@@ -2,7 +2,7 @@
 title: Manually register devices with Windows Autopilot
 description: Learn how to manually add devices to Windows Autopilot.
 ms.service: windows-client
-ms.subservice: itpro-autopilot
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

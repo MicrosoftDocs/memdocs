@@ -3,7 +3,7 @@ metadata:
   title: Windows Autopilot device preparation troubleshooting FAQ
   description: Troubleshooting of common Windows Autopilot device preparation issues
   ms.service: windows-client
-  ms.subservice: itpro-autopilot
+  ms.subservice: autopilot
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj

@@ -2,7 +2,7 @@
 title: Windows Autopilot motherboard replacement
 description: Understand how Windows Autopilot deployments function when the motherboard is replaced on a device.
 ms.service: windows-client
-ms.subservice: itpro-autopilot
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

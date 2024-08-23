@@ -3,7 +3,7 @@ metadata:
   title: Windows Autopilot device preparation FAQ
   description: This article provides OEMs, partners, administrators, and users with answers to some frequently asked questions about deploying Windows with Windows Autopilot device preparation.
   ms.service: windows-client
-  ms.subservice: itpro-autopilot
+  ms.subservice: autopilot
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj
