@@ -57,7 +57,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 ## Next step: User flow
 
 > [!div class="nextstepaction"]
-> [Step 8: User flow](azure-ad-join-user-flow.md)
+> [Step 9: User flow](azure-ad-join-user-flow.md)
 
 ## Related content
 
