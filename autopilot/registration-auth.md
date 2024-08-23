@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot customer consent
 description: Learn how a cloud service provider (CSP) partner or an OEM can get customer authorization to register Windows Autopilot devices on the customer's behalf.
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
