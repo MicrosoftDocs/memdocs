@@ -85,7 +85,7 @@ Additionally, ensure that the service principal for Microsoft.Azure.SyncFabric (
 
    > [!NOTE]
    > - The account you use to request the bulk token must be included in the [MDM user scope](windows-enroll.md#enable-windows-automatic-enrollment) in Microsoft Entra ID. If you remove this account from a group that's tied to the MDM user scope, bulk enrollment will stop working.  
-   > - Federated user accounts enabled for staged rollouts do not work for bulk token retrieval.
+   > - Bulk token retrieval does not work for federated user accounts enabled for staged rollouts.  
    
 1. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**. If you keep the check box selected and press OK, the device you are using will become managed by your organization. If you do not intend for your device to be managed, make sure to select **No, sign in to this app only**. 
 
