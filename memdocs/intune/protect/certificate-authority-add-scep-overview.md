@@ -133,7 +133,7 @@ As the administrator, create a SCEP certificate profile to target to users or de
 
 ## Removing certificates
 
-When you unenroll or wipe the device, the certificates are removed. The certificates aren't revoked.
+When you unenroll or wipe the device, the certificates are removed and also revoked.
 
 ## Third-party certification authority partners
 
