@@ -43,7 +43,7 @@ For more information on AOSP, go to [Android Open Source Project](https://source
 
 ## Before you begin
 
-Create an [Android (AOSP) device configuration profile](wi-fi-settings-configure.md).
+- Create an [Android (AOSP) device configuration profile](wi-fi-settings-configure.md).
 
 ## Basic
 
@@ -173,6 +173,6 @@ Create an [Android (AOSP) device configuration profile](wi-fi-settings-configure
 
 The profile is created, but might not be doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
 
-You can also create Wi-Fi profiles for [Android Enterprise](wi-fi-settings-android-enterprise.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows 10/11](wi-fi-settings-windows.md).
+You can also create Wi-Fi profiles for [Android Enterprise](wi-fi-settings-android-enterprise.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows](wi-fi-settings-windows.md).
 
 [Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).
