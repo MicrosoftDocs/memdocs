@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -20,7 +20,7 @@ appliesto:
 
 # Step by step tutorial for Windows Autopilot user-driven Microsoft Entra join in Intune
 
-This step by step tutorial guides you through using Intune to perform a Windows Autopilot user-driven scenario when the devices are strictly Microsoft Entra joined.
+This step by step tutorial guides through using Intune to perform a Windows Autopilot user-driven scenario when the devices are strictly Microsoft Entra joined.
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot user-driven Microsoft Entra join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
@@ -49,7 +49,7 @@ Windows Autopilot user-driven deployments consist of two phases:
 - Device ESP phase: Windows is configured and applications and policies assigned to the device are applied.
 - User ESP phase: Applications and policies assigned to the user are applied.
 
-Once the Windows Autopilot user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop.
+Once the Windows Autopilot user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the desktop.
 
 ## Workflow
 
@@ -79,4 +79,4 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 For more information on Windows Autopilot user-driven Microsoft Entra join, see the following article:
 
-- [User-driven mode for Microsoft Entra join](/mem/autopilot/user-driven#user-driven-mode-for-microsoft-entra-join).
+- [User-driven mode for Microsoft Entra join](../../user-driven.md#user-driven-mode-for-microsoft-entra-join).

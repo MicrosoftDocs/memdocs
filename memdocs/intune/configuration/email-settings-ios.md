@@ -44,7 +44,7 @@ This article describes all the email settings available for devices running iOS/
 - Create an [iOS/iPadOS e-mail device configuration profile](email-settings-configure.md).
 - These settings:
 
-  - Are available for all enrollment types. For more information on the enrollment types, go to [iOS/iPadOS enrollment](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados).
+  - Are available for all enrollment types. For more information on the enrollment types, go to [iOS/iPadOS enrollment](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
   - Use the [Apple ExchangeActiveSync payload](https://developer.apple.com/documentation/devicemanagement/exchangeactivesync) (opens Apple's web site).
 
 ## Exchange ActiveSync account settings

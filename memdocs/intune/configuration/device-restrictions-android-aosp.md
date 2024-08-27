@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/11/2023
+ms.date: 06/25/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,7 +40,7 @@ This feature applies to:
 
 ## Before you begin
 
-Create an [AOSP device restrictions profile](device-restrictions-configure.md). For the platform, select **Android (AOSP)**.
+- Create an [AOSP device restrictions profile](device-restrictions-configure.md). For the platform, select **Android (AOSP)**.
 
 ## Device password  
 
@@ -73,9 +73,9 @@ Create an [AOSP device restrictions profile](device-restrictions-configure.md). 
 
 - **Block screen capture**: Prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.  
 
-- **Disable factory reset**: Prevents users from using the factory reset option in the device's settings.  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
+- **Disable factory reset**: Prevents users from using the factory reset option in the device's settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
 
-- **Block mounting of external media**: Prevents users from using or connecting any external media on the device.  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to connect external media.  
+- **Block mounting of external media**: Prevents users from using or connecting any external media on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to connect external media.  
 
 - **Block USB file transfer**: Prevents users from transferring files over USB. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to transfer files.  
 
@@ -89,7 +89,7 @@ Create an [AOSP device restrictions profile](device-restrictions-configure.md). 
 
 - **Block users from turning on unknown sources**: Prevents users from sideloading apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to sideload apps from unknown sources.
 
-## Next steps  
+## Related articles
 
 - [Create an Android (AOSP) device compliance policy](../protect/compliance-policy-create-android-aosp.md).
 - [Add actions for noncompliant devices](../protect/actions-for-noncompliance.md).  

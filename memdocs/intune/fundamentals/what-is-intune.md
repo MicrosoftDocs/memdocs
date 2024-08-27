@@ -11,11 +11,10 @@ ms.date: 05/21/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.custom: 
-  - intro-overview
-  - get-started
-  - essentials-overview
+ms.custom:
+- intro-overview
+- get-started
+
 # optional metadata
 
 #ROBOTS:
@@ -26,6 +25,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- essentials-overview
 - tier1
 - M365-identity-device-management
 - highpri
@@ -97,7 +97,7 @@ For more information, go to [Configure the Intune Company Portal apps, Company P
 
 ✅ **Integrate with mobile threat defense**
 
-Intune integrates with Microsoft Defender for Endpoint and third party partner services. With these services, the focus is on endpoint security. You can create policies that respond to threats, do real-time risk analysis, and automate remediation.  
+Intune integrates with Microsoft Defender for Endpoint and third party partner services. With these services, the focus is on endpoint security. You can create policies that respond to threats, do real-time risk analysis, and automate remediation.
 
 For more information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
@@ -140,13 +140,13 @@ Microsoft Intune integrates with other Microsoft products and services that focu
   - [Frequently asked questions about co-management](../../configmgr/comanage/faq.yml)
   - [How to enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md)
 
-- **[Windows Autopilot](/autopilot/windows-autopilot)** for modern OS deployment and provisioning
+- **[Windows Autopilot](/autopilot/overview)** for modern OS deployment and provisioning
 
   With Windows Autopilot, you can provision new devices and send these devices directly to users from an OEM or device provider. For existing devices, you can reimage these devices to use Windows Autopilot and deploy the latest Windows version.
 
   For more specific information, go to:
 
-  - [Windows Autopilot overview](/autopilot/windows-autopilot)
+  - [Windows Autopilot overview](/autopilot/overview)
   - [Windows Autopilot deployment for existing devices](/autopilot/existing-devices)
 
 - **[Endpoint analytics](../../analytics/overview.md)** for visibility and reporting on end user experiences, including device performance and reliability
@@ -238,7 +238,7 @@ With MAM, you can:
 
 For more information, go to:
 
-- [Device enrollment in Intune?](/mem/intune/fundamentals/deployment-guide-enrollment)
+- [Device enrollment in Intune?](deployment-guide-enrollment.md)
 - [App protection policies overview](../apps/app-protection-policy.md)
 
 ## Protect data on any device

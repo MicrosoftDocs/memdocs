@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - conditional-access
+- sub-device-compliance
 ---
 
 # Common ways to use Conditional Access with Intune

@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- sub-secure-endpoints
 ---
 
 # Configure Microsoft Defender for Endpoint in Intune
@@ -206,7 +207,7 @@ Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for 
 
 1. Download the .mobile profile, which is hosted here: [https://aka.ms/mdatpiossupervisedprofile](https://aka.ms/mdatpiossupervisedprofile).
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
+3. Select **Devices** > **Manage devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 4. For **Platform**, select **iOS/iPadOS**
 5. For **Profile type**, select **Custom**, and then select **Create**.
 6. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.

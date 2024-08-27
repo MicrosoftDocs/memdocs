@@ -10,10 +10,10 @@ author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
     - tier3
     - essentials-security
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Plan for security in Configuration Manager
@@ -113,8 +113,6 @@ Onboarding your site with Microsoft Entra ID supports the following Configuratio
 - [Manage Microsoft 365 Apps for enterprise](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ### Server scenarios
-
-- [Desktop Analytics](../../../desktop-analytics/overview.md)
 
 - [Tenant attach](../../../tenant-attach/device-sync-actions.md)
 

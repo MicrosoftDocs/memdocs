@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 07/25/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -38,9 +38,9 @@ In this example, we’ll apply a **Device restrictions** [device configuration p
 
 Now that you’ve created a dynamic device group or a filter for all Cloud PCs, you can target policies to apply to all Cloud PCs in the tenant. To do so, follow these steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration** (under **Manage devices**) > **Create** > **New Policy**.
 ![Screenshot of delete policy](./media/create-device-configuration-profile/create-profile.png)
-2. On the **Create profile** page, select **Windows 10 and later** for the **Platform**, **Templates** for the **Profile Type**, then **Device restrictions**.
+2. Under **Create a profile**, select **Windows 10 and later** for the **Platform**, **Templates** for the **Profile Type**, then **Device restrictions**.
 3. Select **Create**.
 4. Enter a **Name** for the policy, like "All Cloud PCs – Device restrictions" and a useful **Description**.
 5. Select **Next**.

@@ -1,14 +1,14 @@
 ---
 title: Windows Autopilot requirements
-description: Inform yourself about requirements for Windows Autopilot deployment.
+description: Software, Networking, Licensing, and Configuration requirements for Windows Autopilot.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/28/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -23,10 +23,21 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>
 ---
 
-
 # Windows Autopilot requirements
 
-The list of requirements for Windows Autopilot device preparation is organized into five different categories:
+> [!TIP]
+>
+> RSS can be used to notify when requirements are added or updated to this page. For example, the following RSS link includes this article:
+>
+> ``` url
+> https://learn.microsoft.com/en-us/search/?terms=%22The%20list%20of%20requirements%20for%20Windows%20Autopilot%20is%20organized%20into%20four%20different%20categories%22
+> ```
+>
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
+>
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+The list of requirements for Windows Autopilot is organized into four different categories:<!-- RSS subscription is based on this line so don't change. If the line needs to change, update RSS URL in the Tip in the article.-->
 
 - **Software** - OS requirements.
 - **Networking** - networking requirements.
@@ -47,29 +58,28 @@ Windows Autopilot depends on specific features available in Windows client, Micr
 
 #### Windows 11
 
-A [supported version](/windows/release-health/) of Windows 11 General Availability Channel is required.
+A [supported version](/windows/release-health/windows11-release-information) of Windows 11 General Availability Channel is required.
 
-The following editions are supported:
+The following editions of Windows 11 are supported:
 
-- Windows 11 Pro
-- Windows 11 Pro Education
-- Windows 11 Pro for Workstations
-- Windows 11 Enterprise
-- Windows 11 Education
+- Windows 11 Pro.
+- Windows 11 Pro Education.
+- Windows 11 Pro for Workstations.
+- Windows 11 Enterprise.
+- Windows 11 Education.
 
 #### Windows 10
 
-A [supported version](/windows/release-health/) of Windows 10 General Availability Channel is required.
+A [supported version](/windows/release-health/release-information) of Windows 10 is required.
 
-The following editions are supported:
+The following editions of Windows 10 are supported:
 
-- Windows 10 Pro
-- Windows 10 Pro Education
-- Windows 10 Pro for Workstations
-- Windows 10 Enterprise
-- Windows 10 Education
-
-Windows 10 LTSC/LTSB editions aren't supported.
+- Windows 10 Pro.
+- Windows 10 Pro Education.
+- Windows 10 Pro for Workstations.
+- Windows 10 Enterprise.
+- Windows 10 Education.
+- [Windows 10 Enterprise LTSC](/windows/whats-new/ltsc/overview).
 
 #### HoloLens
 
@@ -157,9 +167,9 @@ To resolve internet names for all services, the device communicates with a DNS s
 
 ##### Diagnostics data
 
-Diagnostic data collection is enabled by default. To disable Windows Analytics and related diagnostics capabilities, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm).
+Diagnostic data collection is enabled by default. For more information, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm).
 
-If the device can't send diagnostic data, the Autopilot process still continues. However, services that depend on diagnostic data, such as Desktop Analytics, doesn't work.
+If the device can't send diagnostic data, the Autopilot process still continues. However, services that depend on diagnostic data don't work.
 
 ##### Network Connection Status Indicator (NCSI)
 
@@ -219,9 +229,9 @@ Windows Autopilot depends on specific capabilities available in Windows client a
 
 To provide needed Microsoft Entra ID and MDM functionality, including automatic MDM enrollment and company branding features, one of the following subscriptions is required:
 
-- [Microsoft 365 Business Premium subscription](https://www.microsoft.com/microsoft-365/business)
-- [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline)
-- [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/buy-license/microsoft365/default.aspx)
+- [Microsoft 365 Business Premium subscription](https://www.microsoft.com/microsoft-365/business).
+- [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline).
+- [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/products/microsoft-365).
 - [Microsoft 365 Enterprise E3 or E5 subscription](https://www.microsoft.com/microsoft-365/enterprise), which include all Windows client, Microsoft 365, and EMS features (Microsoft Entra ID and Intune).
 - [Enterprise Mobility + Security E3 or E5 subscription](https://www.microsoft.com/cloud-platform/enterprise-mobility-security), which include all needed Microsoft Entra ID and Intune features.
 - [Intune for Education subscription](/intune-education/what-is-intune-for-education), which include all needed Microsoft Entra ID and Intune features.

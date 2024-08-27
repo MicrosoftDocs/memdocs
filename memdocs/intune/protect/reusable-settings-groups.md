@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/08/2024
+ms.date: 08/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,6 +25,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---
@@ -61,11 +62,11 @@ The following profiles support use of reusable settings groups:
 **Endpoint security policy**
 
 - **Firewall** > **Windows Firewall rules**:  
-  - Platforms: Windows 10, Windows 11, and Windows Server
+  - Platforms: Windows
   - Windows versions: Devices must run Windows 10 20H2 or later, or Windows 11
 
 - **Attack surface reduction** > **Device control**:
-  - Platforms: Windows 10, Windows 11, and Windows Server
+  - Platforms: Windows
 
 **Endpoint Privilege Management**
 

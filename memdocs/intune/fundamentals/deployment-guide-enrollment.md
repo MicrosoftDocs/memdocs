@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 06/24/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -94,7 +94,13 @@ Microsoft Intune automatically marks devices that meet certain criteria as corpo
 
 - Your devices [are supported](supported-devices-browsers.md). This requirement includes devices that are co-managed, or Microsoft Entra hybrid joined devices.
 
-- Sign in as a member of the **Global Administrator** or **Intune Service Administrator** Microsoft Entra roles. [Role-based access control (RBAC) with Intune](role-based-access-control.md) has more information. If you created an Intune trial subscription, then the account that created the subscription is the **Global administrator**.
+- Sign in as a member of the **Policy and Profile Manager** built-in Intune role. For information on the permissions in this role, go to [Built-in role permissions for Microsoft Intune - Policy and Profile manager](role-based-access-control-reference.md#policy-and-profile-manager).
+
+  If you created an Intune Trial subscription, then the account that created the subscription is the Global Administrator.
+
+  The Global Administrator has more permissions than needed to create enrollment policies. We recommend you use the least privileged role to complete this task, which is the **Policy and Profile Manager** built-in Intune role.
+
+  It's possible some enrollment platforms might require a more privileged Microsoft Entra role, like the **Intune Administrator** built-in role. For information on this role, go to [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
 - Different platforms can have other requirements. For example, iOS/iPadOS and macOS devices require an [MDM push certificate from Apple](../enrollment/apple-mdm-push-certificate-get.md). Any other platform requirements are listed.
 

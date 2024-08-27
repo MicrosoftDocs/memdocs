@@ -4,7 +4,7 @@ description: include file
 author: erikre 
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 01/30/2024
+ms.date: 07/31/2024
 ms.author: erikre
 ms.custom: include file
 ---
@@ -12,7 +12,8 @@ ms.custom: include file
 
 Level 2 is the data protection configuration recommended as a standard for devices where users access more sensitive information. These devices are a natural target in enterprises today. These recommendations don't assume a large staff of highly skilled security practitioners, and therefore should be accessible to most enterprise organizations. This configuration expands upon the configuration in Level 1 by restricting data transfer scenarios and requiring a minimum operating system version.
 
-The policy settings enforced in level 2 include all the policy settings recommended for level 1. However, Level 2 only lists those settings that have been added or changed to implement more controls and a more sophisticated configuration than level 1. While these settings may have a slightly higher impact to users or to applications, they enforce a level of data protection more commensurate with the risks facing users with access to sensitive information on mobile devices.
+> [!IMPORTANT]
+> The policy settings enforced in level 2 include all the policy settings recommended for level 1. However, Level 2 only lists those settings that have been added or changed to implement more controls and a more sophisticated configuration than level 1. While these settings may have a slightly higher impact to users or to applications, they enforce a level of data protection more commensurate with the risks facing users with access to sensitive information on mobile devices.
 
 #### Data protection
 
@@ -30,7 +31,7 @@ The policy settings enforced in level 2 include all the policy settings recommen
 | Data   Transfer |       Allow cut, copy, and paste for  |  No destination or source  |             Windows        |
 | Data Transfer |       Screen   capture and Google Assistant  |          Block  |          Android  |                  |
 | Functionality |       Restrict   web content transfer with other apps  |          Microsoft   Edge  |          iOS/iPadOS,   Android  |                  |
-| Functionality |       Org data   notifications  |          Block Org   Data  |          iOS/iPadOS,   Android  |          For a list   of apps that support this setting, see [iOS app protection policy   settings](/mem/intune/apps/app-protection-policy-settings-ios) and [Android   app protection policy   settings](/mem/intune/apps/app-protection-policy-settings-android).       |
+| Functionality |       Org data   notifications  |          Block Org   Data  |          iOS/iPadOS,   Android  |          For a list   of apps that support this setting, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios) and [Android app protection policy settings](/mem/intune/apps/app-protection-policy-settings-android).       |
 
 #### Conditional launch
 

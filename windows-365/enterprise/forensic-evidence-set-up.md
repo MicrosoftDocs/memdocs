@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 05/31/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -43,7 +43,7 @@ Forensic evidence capturing is off by default and policy creation requires dual 
 
 ## Requirements
 
-If the following requirements aren't met, you might run into Microsoft Purview client issues and the quality of forensic captures might not be reliabel.
+If the following requirements aren't met, you might run into Microsoft Purview client issues and the quality of forensic captures might not be reliable.
 
 To set up Microsoft Purview forensic evidence, your environment must meet the following requirements:
 
@@ -53,6 +53,7 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
   - Windows 11 Enterprise + Microsoft 365 Apps 23H2 or later
 - Licensing options
   - Microsoft 365 E5
+  - Microsoft 365 E5 (no Teams)
   - Microsoft 365 E5 Compliance
   - Microsoft 365 E5 Insider Risk Management
 - Join type and network
@@ -67,18 +68,21 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 ### Role requirements
 
 - Account must have at least one of these roles:
-    - Microsoft Entra ID Global Administrator role
     - Microsoft Entra ID Compliance Administrator role
+    - Microsoft Entra ID Global Administrator role
     - Microsoft Purview Organization Management role group
     - Microsoft Purview Compliance Administrator role group
     - Insider Risk Management role group
     - Insider Risk Management Admins role group
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 For more information about insider risk management roles, see [Enable permissions for insider risk management](/purview/insider-risk-management-configure?tabs=purview-portal#step-1-required-enable-permissions-for-insider-risk-management).
 
 ## Turn on device onboarding
 
-1. Open the [Microsoft Purview compliance portal](https://compliance.microsoft.com). Choose **Settings** > **Device onboarding** > **Devices** > **Onboarding**.
+1. Open the [Microsoft Purview portal](https://purview.microsoft.com). Choose **Settings** > **Device onboarding** > **Devices** > **Onboarding**.
 
 2. Select which **Deployment method** to use to deploy the configuration package:
 
@@ -125,7 +129,7 @@ Follow the instructions in  [Onboard Windows 10 and Windows 11 devices using a l
 
 ## View onboarding devices list
 
-1. Open the [Microsoft Purview compliance portal](https://compliance.microsoft.com) > **Settings** > **Device onboarding** > **Devices**.
+1. Open the [Microsoft Purview portal](https://purview.microsoft.com) > **Settings** > **Device onboarding** > **Devices**.
 
 2. Check the following columns:
 

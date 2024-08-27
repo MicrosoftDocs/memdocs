@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2023
+ms.date: 07/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
@@ -78,13 +78,13 @@ When a Windows endpoint, like a Windows 10/11 device, joins an on-premises Activ
 
 These machine accounts are local to the on-premises environment and can't be used on devices that are joined to Microsoft Entra ID. In this situation, you need to switch to user-based authentication to authenticate to on-premises programs, services, and apps.
 
-For more information and guidance, go to [Known issues and limitations with cloud-native endpoints](/mem/cloud-native-endpoints-known-issues).
+For more information and guidance, go to [Known issues and limitations with cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md).
 
 ## Roles and permissions control access
 
 For the different admin-type of tasks, Intune uses role-based access control (RBAC). The roles you assign determine the resources an admin can access in the Intune admin center, and what they can do with those resources. There are some built-in roles that focus on endpoint management, such as Application Manager, Policy and Profile Manager, and more.
 
-Since Intune uses Microsoft Entra ID, you also have access to the built-in Microsoft Entra roles, such as Global Administrator and Intune Service Administrator.
+Since Intune uses Microsoft Entra ID, you also have access to the built-in Microsoft Entra roles, like the Intune Service Administrator.
 
 Each role has its own create, read, update or delete permissions as needed. You can also create custom roles if your admins need a specific permission. When you add or create your administrator-type of users and groups, you can assign these accounts to the different roles. The Intune admin center has this information in a central location and can be easily updated.
 
@@ -136,7 +136,12 @@ Your user and group accounts access organization resources. You need to keep the
 
   - [Windows Hello for Business Overview](/windows/security/identity-protection/hello-for-business/hello-overview)
   - [Manage Windows Hello for Business on devices when devices enroll with Intune](../protect/windows-hello.md)
-  - [Use identity protection profiles to manage Windows Hello for Business in Microsoft Intune](../protect/identity-protection-configure.md)
+
+  To manage Windows Hello for Business, you use one of the following options:
+
+  - [During device enrollment](../protect/windows-hello.md): Configure tenant-wide policy that applies Windows Hello settings to devices at the time the device enrolls with Intune.
+  - [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the baselines for *Microsoft Defender for Endpoint security* or *Security Baseline for Windows 10 and later*.
+  - [Settings catalog](../configuration/settings-catalog.md): The settings from endpoint security Account protection profiles are available in the Intune settings catalog.
 
 - **Certificate-based authentication** is also a part of a password-less strategy. You can use certificates to authenticate your users to applications and organization resources through a VPN, a Wi-Fi connection, or email profiles. With certificates, users don't need to enter usernames and passwords, and can make access to these resources easier.
 

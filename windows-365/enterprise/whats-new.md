@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/05/2024
+ms.date: 08/09/2024
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -54,6 +54,145 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of August 5, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### Updated documentation article: Windows 365 service resilience<!--51365224-->
+
+We’ve created a new article explaining Windows 365 service resilience. For more information, see [Windows 365 service resilience](resilience.md).
+
+<!-- ########################## -->
+## Week of July 29, 2024 (Service release 2407)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Uni-directional clipboard support is now generally available<!--49083399-->
+
+Uni-directional clipboard support for Cloud PCs has moved out of preview and is now generally available. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+
+#### Closing port 3389 by default for newly provisioned and reprovisioned Cloud PCs<!--51154043-->
+
+To help secure your Windows 365 environment, the inbound port 3389 is now closed by default.
+
+#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+
+Windows 365 now supports AVC mixed mode when MMR is not enabled.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows 365 Government now supports Customer Lockbox<!--48802385-->
+
+Windows 365 Government now supports Microsoft Purview Customer Lockbox.
+
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### New Intune report and device action for Windows enrollment attestation (public preview)<!--51490340-->
+
+Use the new device attestation status report in Microsoft Intune to find out if a device has attested and enrolled securely while being hardware-backed. For more information, see [Device attestation status report](/mem/intune/fundamentals/reports#device-attestation-status-report).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Support for Omnissa Horizon clients and the Blast protocol with Windows 365 Enterprise is now generally available<!--51899029-->
+
+Support for Omnissa (previously VMware) Horizon clients and the Blast protocol with Windows 365 Enterprise Cloud PCs has moved out of preview and into general availability. For more information, see [Set up Omnissa Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New GPU offerings for Cloud PCs are now generally available<!--46699074-->
+
+New GPU offerings for Window 365 Enterprise Cloud PCs have moved out of preview and into general availability. For more information, see [GPU Cloud PCs](gpu-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Frontline
+
+#### Windows 365 Frontline sign in time and shift change buffer improvements are now generally available<!--50220027-->
+
+Sign in time and shift change buffer improvements have moved out of preview and into general availability.
+
+<!-- ########################## -->
+## Week of July 23, 2024
+
+### Updated default settings for Windows 365 security baselines<!--49685126-->
+
+Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/mem/intune/protect/security-baseline-settings-windows-365).
+
+<!-- ########################## -->
+## Week of July 15, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Cloud PC support for FIDO devices and passkeys on macOS and iOS (preview)<!--51858977-->
+
+Windows 365 Cloud PCs now support FIDO devices and passkeys for Microsoft Entra ID sign in on macOS and iOS.
+
+<!-- ########################## -->
+## Week of July 8, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+### Chroma subsampling default change to 4:2:0<!--50308895-->
+
+To reduce monitor support issues, the Windows 365 service now defaults the chroma subsampling at 4:2:0. (instead of the previous 4:4:4). For more information, see [Change the default chroma value for Windows 365 Cloud PCs](chroma-value-change-default.md).
+
+<!-- ########################## -->
+## Week of July 1, 2024
+
+<!-- ########################## -->
+### Apps
+
+#### Windows 365 Cloud PC gallery images use new Teams VDI<!--51726416-->
+
+Windows 365 Cloud PC gallery images now use the new Teams Virtualized Desktop Infrastructure (VDI). For more information, see [Microsoft Teams on a Cloud PC](teams-on-cloud-pc.md) and [New VDI solution for Teams](/MicrosoftTeams/vdi-2).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Cross region disaster recovery<!--5184001500-->
+
+Windows 365 now supports cross region disaster recovery. For more information, see [Cross region disaster recovery in Windows 365](cross-region-disaster-recovery.md).
+
+<!-- ########################## -->
+## Week of June 24, 2024 (Service release 2406)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 365 Boot and Windows 365 Switch now support battery status redirection<!--51748880-->
+
+Windows 365 Boot and Windows 365 Switch now support battery status redirection. Cloud PCs now show the local PC's battery status.
+
+#### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
+
+Customers that have Modern Microsoft Cloud Agreements can upgrade their existing Windows 365 licenses in the Microsoft Admin Center.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Single sign-on Windows 365 clients authentication change<!--49918010-->
+
+Single sign-on for Windows 365 is transitioning to use the Windows Cloud Login Entra ID cloud app for Windows authentication starting with the Windows and Web clients. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Windows 365 Government now supports Cloud PC utilization report<!--49200860-->
+
+Windows 365 Government now supports the Cloud PC utilization report. For more information,  see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### Cloud PC size recommendation report is now generally available<!--50219942-->
+
+The Cloud PC size recommendation report has moved out of preview and is now generally available. For more information, see [Cloud PC recommendations report](report-cloud-pc-recommendations.md).
 
 <!-- ########################## -->
 ## Week of June 3, 2024 (Service release 2405)
@@ -344,7 +483,7 @@ Connection status and timeout information on the connection screen for Windows 3
 
 #### FQDN requirement changes<!--46731885-->
 
-Many required FQDNs have been moved to the *.infra.windows365.microsoft.com wildcard FQDN. This move reduces the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs were moved to *.infra.windows365.microsoft.us. To avaoid any issues when provisioning new Cloud PCs, you must make sure that *.infra.windows365.microsoft.com (*.infra.windows365.microsoft.us for Windows 365 Government) is an accessible endpoint in your network allow list.
+Many required FQDNs have been moved to the *.infra.windows365.microsoft.com wildcard FQDN. This move reduces the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs were moved to *.infra.windows365.microsoft.us. To avoid any issues when provisioning new Cloud PCs, you must make sure that *.infra.windows365.microsoft.com (*.infra.windows365.microsoft.us for Windows 365 Government) is an accessible endpoint in your network allow list.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### End user experience
@@ -548,7 +687,7 @@ These 16 vCPU licenses can be purchased and assigned in the same way that you pu
 Two new gallery images are now available for Windows 365 Cloud PCs:
 
 - Windows 11 Preview + Microsoft 365 Apps 23H2
-- Winodws 11 Preview + OS Optimizations 23H2
+- Windows 11 Preview + OS Optimizations 23H2
 
 You can choose the new gallery images when [creating a provisioning policy](create-provisioning-policy.md).
 
@@ -627,7 +766,7 @@ The following updates related to single sign-on are now available:
 - [Public preview features](..\public-preview.md).
   - Single sign-on for Microsoft Entra hybrid join Cloud PCs.
   - You can turn on single sign-on separately for each provisioning policy.
-  - A new Azure Network Connection check to make sure that the network is properly configured for single sign on.
+  - A new Azure Network Connection check to make sure that the network is properly configured for single sign-on.
   - Apply single sign-on to existing Microsoft Entra joined and Microsoft Entra hybrid joined Cloud PCs.
 
 For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
@@ -679,7 +818,7 @@ All Cloud PC reports can now be accessed from the **Cloud PC overview** section 
 
 #### Use VMWare Horizon clients and the Blast protocol with Windows 365 Enterprise (public preview)<!--44716096-->
 
-VMWare Horizon clients and the Blast protocol can be used with Windows 365 Enterprise Cloud PCs. This is a [public preview](..\public-preview.md). For more information, see [Set up VMware Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md). To submit a request to join this preview, see [Tech Preview – VMware Horizon extending Microsoft Windows 365](https://www.vmware.com/learn/1733900_REG.html).
+VMWare Horizon clients and the Blast protocol can be used with Windows 365 Enterprise Cloud PCs. This is a [public preview](..\public-preview.md). For more information, see [Set up VMware Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md).
 
 <!-- ########################## -->
 ## Week of August 7, 2023
@@ -887,7 +1026,7 @@ Users can now change multiple monitor setting in the Windows 365 app.
 
 #### Windows 365 Government Azure Network Connection set up improvement<!--44237227-->
 
-During Azure network connection (ANC) creation or editing, instead of copying and pasting details (like Subscription ID, and VNET name) for the ANC, you can now select options from a drop down menu. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
+During Azure network connection (ANC) creation or editing, instead of copying and pasting details (like Subscription ID, and VNET name) for the ANC, you can now select options from a drop-down menu. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
 
 <!-- ########################## -->
 ## Week of May 22, 2023
@@ -1031,7 +1170,7 @@ You can now create on-demand Cloud PC restore points and copy them to an Azure S
 
 #### Permission changes for Azure network connection operations<!--43251193-->
 
-The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. For more information, see [Azure network connections](azure-network-connections.md).
+The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator) or [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference) permissions. For more information, see [Azure network connections](azure-network-connections.md).
 
 <!-- ########################## -->
 ## Week of February 27, 2023 (Service release 2302)

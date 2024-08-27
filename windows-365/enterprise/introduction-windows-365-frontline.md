@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/15/2024
+ms.date: 07/31/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -43,11 +43,11 @@ Windows 365 Frontline is designed specifically for workers who don't need 24/7 a
 - Part-time workers.
 - Contingent staff.
 
-The maximum number of active Windows 365 Frontline Cloud PC sessions in your organization is equal to the number of Windows 365 Frontline licenses that you’ve purchased. For example, if you purchase 10 licenses, up to 30 Cloud PCs can be provisioned. Ten of those Cloud PCs can be active at a given time. The active sessions are managed automatically. When a user signs off from their Cloud PC, the session is released for another user to start using their Cloud PC. A concurrency buffer exists to exceed this maximum a limited number of times per day. For more information, see [Exceeding the maximum concurrency limit ](#exceeding-the-maximum-concurrency-limit).
+The maximum number of active Windows 365 Frontline Cloud PC sessions in your organization is equal to the number of Windows 365 Frontline licenses that you purchased. For example, if you purchase 10 licenses, up to 30 Cloud PCs can be provisioned. Ten of those Cloud PCs can be active at a given time. The active sessions are managed automatically. When a user signs off from their Cloud PC, the session is released for another user to start using their Cloud PC. A concurrency buffer exists to exceed the maximum a limited number of times per day. For more information, see [Exceeding the maximum concurrency limit ](#exceeding-the-maximum-concurrency-limit).
 
 Windows 365 Frontline is currently only available for Azure Global Cloud.
 
-Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead, you must use the Windows 365 web portal if you want to access your Frontline Cloud PC with the Remote Desktop app.
+Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead, you must use the Windows 365 web portal if you want to access your Frontline Cloud PC.
 
 ## Licensing
 
@@ -106,9 +106,11 @@ The concurrency buffer can be used up to four times per day with maximum of one 
 
 ### Temporary blocks
 
-Excessive use of the concurrency buffer will temporarily block its further use for the next 48 hours. A temporary block is imposed when:
+Excessive use of the concurrency buffer temporarily blocks its further use for the next 48 hours. A temporary block is imposed when:
 
-- On two or more occasions within a 24-hour period, the concurrency buffer is used for more than one hour.
+- On four or more occasions within a 24-hour period, the concurrency buffer is used for more than one hour.
+
+While temporarily blocked, you can still use your Windows 365 Frontline Cloud PCs up to the maximum concurrency limit.
 
 ### Permanent blocks
 
@@ -120,13 +122,12 @@ To unblock your tenant, open a ticket with support from the Intune portal.
 
 ### Monitor the concurrency buffer
 
-You can monitor the use of concurrency buffer with the Frontline connection hourly report. You can use the Frontline concurrency alert to receive alerts each time the concurrency buffer is activated.
+You can monitor the use of concurrency buffer with the Frontline connection hourly report. You can use the Frontline concurrency alert to receive alerts each time the concurrency buffer is activated. The concurrency buffer doesn't apply to GPU-enabled Cloud PCs.
 
 ## Features not yet supported Windows 365 Frontline
 
 The following features aren't yet supported for Windows 365 Frontline.
 
-- GPU Cloud PCs
 - Resize a Cloud PC remote action
 - [Move a Cloud PC](move-cloud-pc.md)
 

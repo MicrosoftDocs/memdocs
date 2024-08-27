@@ -36,6 +36,8 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 
 > [!TIP]
 > For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune/fundamentals/filters-performance-recommendations).
+>
+> For tips on avoiding policy conflicts, see [Avoid policy conflicts](manage-avoid-policy-conflicts.md).
 
 ## Choose grouping methods
 

@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -32,7 +32,7 @@ Before beginning, refer to the [Plan your Microsoft Entra hybrid join implementa
 
 > [!NOTE]
 >
-> Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join builds on top of [Windows Autopilot user-driven Microsoft Entra hybrid join](../user-driven/hybrid-azure-ad-join-workflow.md). For this reason, Microsoft recommends that the Windows Autopilot user-driven Microsoft Entra hybrid join scenario is working before attempting to use the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join scenario. If the Windows Autopilot user-driven Microsoft Entra hybrid join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment Microsoft Entra hybrid join scenario won't work either.
+> Before attempting the Windows Autopilot pre-provisioned Microsoft Entra hybrid join scenario, Microsoft recommends that the [Windows Autopilot user-driven Microsoft Entra hybrid join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario is first configured, tested, and working. The Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join builds on top of Windows Autopilot user-driven Microsoft Entra hybrid join scenario. If the Windows Autopilot user-driven Microsoft Entra hybrid join scenario isn't working, then most likely the Windows Autopilot pre-provisioned deployment Microsoft Entra hybrid join scenario won't work either.
 
 ## Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview
 
@@ -114,5 +114,5 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 For more information on Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join, see the following articles:
 
-- [Windows Autopilot for pre-provisioned deployment](/mem/autopilot/pre-provision).
-- [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/mem/autopilot/windows-autopilot-hybrid).
+- [Windows Autopilot for pre-provisioned deployment](../../pre-provision.md).
+- [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../windows-autopilot-hybrid.md).

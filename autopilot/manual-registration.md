@@ -2,7 +2,7 @@
 title: Manual registration of devices for Windows Autopilot
 description: Manual registration overview.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -46,7 +46,7 @@ After the hardware hashes are captured from existing devices, they can be upload
 
 - [Microsoft Intune](add-devices.md) - Intune is the preferred mechanism for all customers.
 
-  - The Microsoft Intune admin center is used for Intune device enrollment.
+  - The [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is used for Intune device enrollment.
 
 - Partner Center - Partner Center is used by CSP partners to register devices on behalf of customers.
 

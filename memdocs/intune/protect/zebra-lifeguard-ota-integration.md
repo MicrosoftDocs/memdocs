@@ -7,7 +7,7 @@ keywords:
 author: Smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/10/2023
+ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-updates
 ---
 # Zebra LifeGuard Over-the-Air Integration with Microsoft Intune
 
@@ -38,19 +39,6 @@ Microsoft Intune supports/provides integration with Zebra LifeGuard Over-the-Air
 Microsoft Intune allows you to manage firmware updates for supported Zebra devices directly through the Intune admin center.  
 
 Intune manages the creation, management, and monitoring of these deployments through APIs provided by Zebra. Zebra's services and on-device clients handle other complexities (such as evaluating customer entitlements and device compatibility), update hosting, update delivery, and installation.
-
-## Supported Devices
-
-LG OTA is supported on the following devices:
-
-- [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices)
-- [Android Enterprise fully managed devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-fully-managed)
-
-For more specific information on supported devices, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
-
-The following aren't supported in public preview:
-
-- Graph assignment with inclusions/exclusions
 
 ## Prerequisites
 
@@ -66,6 +54,29 @@ The following aren't supported in public preview:
 - Access to all appropriate Zebra licenses, and entitlements to use the LG OTA service. For more information, contact Zebra support or see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/faq/).
 - For information about services ports and endpoints used by Zebra OTA updates, refer to [Zebra Lifeguard Over the Air FOTA Updates Ports](https://supportcommunity.zebra.com/s/article/000022419?language=en_US).
 - For more information about which Zebra devices work with the service based on the platform, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
+
+## Government cloud support
+
+Zebra LifeGuard Over-the-Air updates are supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
+
+## Supported Devices
+
+LG OTA is supported on the following devices:
+
+- [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices)
+- [Android Enterprise fully managed devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-fully-managed)
+
+For more specific information on supported devices, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
+
+The following aren't supported in public preview:
+
+- Graph assignment with inclusions/exclusions
+
 
 ## Process overview  
 
@@ -174,7 +185,7 @@ After synchronization is complete, the devices that support LG OTA will contact 
 > LG OTA deployments are fire and forget actions and are not persistent policies that enforce compliance. Therefore, Microsoft refers to them as deployments rather than policy. For example, if an upgrade fails initially but later the issue is remediated, LG OTA will not try to update the device even after the issue is remediated.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Android** > **Android FOTA deployments** to create and manage FOTA deployments.
+2. Select **Devices** > **By platform** > **Android** > **Manage updates** > **Android FOTA deployments** to create and manage FOTA deployments.
 3. Select **Create deployment**.
 4. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.  
 5. On the **Settings** tab, configure the deployment settings you'd like to use.

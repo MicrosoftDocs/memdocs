@@ -51,7 +51,7 @@ These settings are only used on devices that run Samsung Knox Standard.
 ## Create an allowed or blocked app list
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Android device administrator**.

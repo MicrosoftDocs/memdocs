@@ -46,6 +46,14 @@ In Intune, you can create and assign the following policies:
 
 This article shows you how to assign a policy, includes some information on using scope tags, describes when to assign policies to user groups or device groups, and more.
 
+This feature applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Linux
+- Windows
+
 ## Before you begin
 
 - Be sure you have the correct role that can assign policies and profiles. For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
@@ -59,23 +67,23 @@ This article shows you how to assign a policy, includes some information on usin
 ## Assign a policy to users or groups
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration**. All the profiles are listed.
+2. Select **Devices** > **Manage devices** > **Configuration**. All the profiles are listed.
 3. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
 
     For example, to assign a device configuration profile:
 
-    1. Go to **Devices** > **Configuration**. All the profiles are listed.
+    1. Go to **Devices** > **Manage devices** > **Configuration**. All the profiles are listed.
     2. Select the policy you want to assign > **Properties** > **Assignments** > **Edit**:
 
        :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
 
-3. Under **Included groups** or **Excluded groups**, choose **Add groups** to select one or more Microsoft Entra groups. If you intend to deploy the policy broadly to all applicable devices, select **Add all users** or **Add all devices**.
+4. Under **Included groups** or **Excluded groups**, choose **Add groups** to select one or more Microsoft Entra groups. If you intend to deploy the policy broadly to all applicable devices, select **Add all users** or **Add all devices**.
 
     > [!NOTE]
     > If you select "All Devices" and "All Users", the option to add additional Microsoft Entra groups disables. 
 
-4. Select **Review + Save**. This step doesn't assign your policy.
-5. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
+5. Select **Review + Save**. This step doesn't assign your policy.
+6. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
 
 ## Assignment features you should know and use
 
@@ -98,7 +106,7 @@ This article shows you how to assign a policy, includes some information on usin
 
 - **[Scope tags](../fundamentals/scope-tags.md)** are a great way to filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-- On Windows 10/11 devices, you can add **[applicability rules](device-profile-create.md#applicability-rules)** so the policy only applies to a specific OS version or a specific Windows edition. For more information, go to [Applicability rules](device-profile-create.md#applicability-rules).
+- On Windows devices, you can add **[applicability rules](device-profile-create.md#applicability-rules)** so the policy only applies to a specific OS version or a specific Windows edition. For more information, go to [Applicability rules](device-profile-create.md#applicability-rules).
 
 ## User groups vs. device groups
 
@@ -196,7 +204,7 @@ When you assign your policies and policies, apply the following general principl
 
 Use the following matrix to understand support for excluding groups:
 
-- ✔️: Supported
+- ✅: Supported
 - ❌: Not supported
 - ❕ : Partially supported
 
@@ -205,22 +213,22 @@ Use the following matrix to understand support for excluding groups:
 | Scenario | Support|
 | --- | --- |
 | 1 | ❕ Partially supported </br></br> Assigning policies to a dynamic device group while excluding another dynamic device group is supported. But, it's not recommended in scenarios that are sensitive to latency. Any delay in exclude group membership calculation can cause policies to be offered to devices. In this scenario, we recommend using [filters](../fundamentals/filters.md) instead of dynamic device groups for excluding devices. </br></br> For example, you have a device policy that's assigned to **All devices**. Later, you have a requirement that new marketing devices don't receive this policy. So, you create a dynamic device group called **Marketing devices** based on the `enrollmentProfilename` property (`device.enrollmentProfileName -eq "Marketing_devices"`). In the policy, you add the **Marketing devices** dynamic group as an excluded group.  </br></br> A new marketing device enrolls in Intune for the first time, and a new Microsoft Entra device object is created. The dynamic grouping process puts the device into the **Marketing devices** group with a possible delayed calculation. At the same time, the device enrolls into Intune, and starts receiving all applicable policies. The Intune policy can be deployed before the device is put in the exclusion group. This behavior results in an unwanted policy (or app) being deployed to the **Marketing devices** group.  </br></br> As a result, it's not recommended to use dynamic device groups for exclusions in latency sensitive scenarios. Instead, use [filters](../fundamentals/filters.md). |
-| 2 | ✔️ Supported </br></br> Assigning a policy to a dynamic device group while excluding a static device group is supported. |
+| 2 | ✅ Supported </br></br> Assigning a policy to a dynamic device group while excluding a static device group is supported. |
 | 3 | ❌ Not supported </br></br> Assigning a policy to a dynamic device group while excluding user groups (both dynamic and static) isn't supported. Intune doesn't evaluate user-to-device group relationships, and devices of the included users aren't excluded. |
 | 4 | ❌ Not supported </br></br> Assigning a policy to a dynamic device group and excluding user groups (both dynamic and static) isn't supported. Intune doesn't evaluate user-to-device group relationships, and devices of the included users aren't excluded. |
 | 5 | ❕ Partially supported </br></br> Assigning a policy to a static device group while excluding a dynamic device group is supported. But, it's not recommended in scenarios that are sensitive to latency. Any delay in exclude group membership calculation can cause policies to be offered to devices. In this scenario, we recommend using [filters](../fundamentals/filters.md) instead of dynamic device groups for excluding devices. |
-| 6 | ✔️ Supported </br></br> Assigning a policy to a static device group and excluding a different static device group is supported. |
+| 6 | ✅ Supported </br></br> Assigning a policy to a static device group and excluding a different static device group is supported. |
 | 7 | ❌ Not supported </br></br> Assigning a policy to a static device group and excluding user groups (both dynamic and static) isn't supported. Intune doesn't evaluate user-to-device group relationships, and devices of the included users aren't excluded. |
 | 8 | ❌ Not supported </br></br> Assigning a policy to a static device group and excluding user groups (both dynamic and static) isn't supported. Intune doesn't evaluate user-to-device group relationships, and devices of the included users aren't excluded. |
 | 9 | ❌ Not supported </br></br> Assigning a policy to a dynamic user group and excluding device groups (both dynamic and static) isn't supported. |
 | 10 | ❌ Not supported </br></br> Assigning a policy to a dynamic user group and excluding device groups (both dynamic and static) isn't supported. |
-| 11 | ✔️ Supported </br></br> Assigning a policy to a dynamic user group while excluding other user groups (both dynamic and static) is supported. |
-| 12 | ✔️ Supported </br></br> Assigning a policy to a dynamic user group while excluding other user groups (both dynamic and static) is supported. |
+| 11 | ✅ Supported </br></br> Assigning a policy to a dynamic user group while excluding other user groups (both dynamic and static) is supported. |
+| 12 | ✅ Supported </br></br> Assigning a policy to a dynamic user group while excluding other user groups (both dynamic and static) is supported. |
 | 13 | ❌ Not supported </br></br> Assigning a policy to a static user group while excluding device groups (both dynamic and static) isn't supported. |
 | 14 | ❌ Not supported </br></br> Assigning a policy to a static user group while excluding device groups (both dynamic and static) isn't supported. |
-| 15 | ✔️ Supported </br></br> Assigning a policy to a static user group while excluding other user groups (both dynamic and static) is supported. |
-| 16 | ✔️ Supported </br></br> Assigning a policy to a static user group while excluding other user groups (both dynamic and static) is supported. |
+| 15 | ✅ Supported </br></br> Assigning a policy to a static user group while excluding other user groups (both dynamic and static) is supported. |
+| 16 | ✅ Supported </br></br> Assigning a policy to a static user group while excluding other user groups (both dynamic and static) is supported. |
 
-## Next steps
+## Related articles
 
 See [monitor device profiles](device-profile-monitor.md) for guidance on monitoring your policies, and the devices running your policies.

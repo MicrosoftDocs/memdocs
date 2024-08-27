@@ -1,14 +1,14 @@
 ---
 title: Windows Autopilot customer consent
 description: Learn how a cloud service provider (CSP) partner or an OEM can get customer authorization to register Windows Autopilot devices on the customer's behalf.
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/28/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -69,7 +69,7 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
 
     > [!NOTE]
     >
-    > A user without global admin privileges who selects the link sees a message similar to the following message:
+    > A user without global administrator privileges who selects the link sees a message similar to the following message:
 
     :::image type="content" source="images/csp4.png" alt-text="Screenshot of permission page.":::
 
@@ -78,6 +78,12 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
 1. To check that the authorization request is complete, the CSP can check the **Customers** list in their Microsoft Partner Center account. If the customer is in the list, the request is complete. For example:
 
     :::image type="content" source="images/csp5.png" alt-text="Customers.":::
+
+<!-- MAXADO-9048730 -->
+
+> [!IMPORTANT]
+>
+> Microsoft recommends using roles with the fewest permissions. Using lower permissioned accounts helps improve security for an organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when an existing role can't be used.
 
 ## OEM authorization
 

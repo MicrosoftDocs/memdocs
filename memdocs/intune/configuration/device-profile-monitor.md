@@ -38,10 +38,17 @@ You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overvie
 
 This article shows you how to check the assignment status of existing device configuration policies, make changes, troubleshoot conflicts, and how to use Copilot for some of these features.
 
+This feature applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Windows
+
 ## View existing policies
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Policies** tab.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Policies** tab.
 
 All of your policies are shown. You also see the platform, the type of policy, and if the policy is assigned.
 
@@ -54,7 +61,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
 # [By policy](#tab/policy)
 
-1. In **Devices** > **Configuration** > **Policies** tab, select an existing policy.
+1. In **Devices** > **Manage devices** > **Configuration** > **Policies** tab, select an existing policy.
 
 2. **Device and user check-in status** shows the number of all users or devices that checked-in with the policy. If one device has multiple users, this report shows the status for each user. When the user or device checks in with Intune, they receive the settings in your policy.
 
@@ -102,7 +109,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
 # [Copilot](#tab/copilot-devices)
 
-1. Go to **Devices** > **Configuration** > **Policies** > select an existing policy.
+1. Go to **Devices** > **Manage devices** > **Configuration** > **Policies** tab > select an existing policy.
 
 2. Select **Summarize with Copilot**:
 
@@ -126,7 +133,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
 ## View details on all device configuration policies
 
-1. Go to **Devices** > **Configuration** > **Monitor** tab:
+1. Go to **Devices** > **Manage devices** > **Configuration** > **Monitor** tab:
 
     :::image type="content" source="./media/device-profile-monitor/device-configuration-monitor-tab.png" alt-text="Screenshot that shows to select the monitor tab in device configuration profiles in Microsoft Intune and Intune admin center.":::
 
@@ -161,7 +168,7 @@ Now that you know the conflicting setting, and the policies that include that se
 
 You can use Copilot to help troubleshoot conflicts at the setting level.
 
-1. Select **Devices** > **Configuration** > select an existing policy in the list.
+1. Select **Devices** > **Manage devices** > **Configuration** > select an existing policy in the list.
 
 2. Scroll to the **Configuration settings** area and expand a setting category:
 

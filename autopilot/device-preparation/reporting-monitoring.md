@@ -2,20 +2,19 @@
 title: Windows Autopilot device preparation reporting and monitoring
 description: Reporting and monitoring in Windows Autopilot device preparation.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 06/03/2024
-ms.topic: article
+ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
   - highpri
   - tier1
-  - essentials-overview
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -28,7 +27,7 @@ Out of the box reporting and monitoring with near real-time status of deployment
 
 To access Windows Autopilot device preparation reports and monitor deployments in near real-time:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 

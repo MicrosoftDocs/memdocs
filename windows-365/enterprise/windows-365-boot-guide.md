@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 08/05/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -44,7 +44,7 @@ For more information about guided scenarios in general, see [Intune guided scena
 
 ## Prerequisites
 
-- Each physical device and Cloud PC must be running Windows 11 Enterprise or Professional, version 22621.3227 or later.
+- Each physical device and Cloud PC must be running Windows 11 Enterprise or Professional, version 22621.3374 or later.
 - You must have the Intune Service Administrator role.
 
 Before adding physical devices to the group, you must ensure that they meet the [Windows 365 Boot requirements](windows-365-boot-physical-device-requirements.md).
@@ -98,7 +98,7 @@ Windows 365 Boot supports [Windows Autopatch](/windows/deployment/windows-autopa
 
 ![Screenshot of Windows 365 Boot guided scenario Settings tab.](./media/windows-365-boot-guide/settings-tab.png)
 
-1. (Optional) On the **Settings** page, select the **VPN profile** and **Wifi profile** to use for Windows 365 Boot physical devices.
+1. (Optional) On the **Settings** page, select the **VPN profile** and **Wifi profile** to use for Windows 365 Boot physical devices. When you select an existing WiFi or VPN profile, if the profile is already assigned to **All Users** or **All Devices**, this assignment will be removed and replaced with a new assignment that only targets the Windows 365 group created or selected in this guided scenario.
 2. (Optional) If you don't want to use the operating system's default language, select a specific **Language (region)** > **Next: Assignments**.
 3. (Optional) Select the **Security baseline profile** to use for Windows 365 Boot physical devices.
 4. (Optional) Select a value for the **Set the maximum connection timeout value** for Windows 365 Boot. The operating system waits for a connection until the selected timeout value has been reached. For more information, see [SetMaxConnectionTimeout policy CSP](/windows/client-management/mdm/policy-csp-clouddesktop#setmaxconnectiontimeout).

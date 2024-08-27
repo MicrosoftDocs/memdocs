@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/05/2024
+ms.date: 08/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-updates
 ---
 
 # Managed software updates with the settings catalog
@@ -60,20 +61,20 @@ Use the following information to help you decide which policy type to use.
 | Feature | Managed software update policy | Software update policy|
 | --- | --- | --- |
 | **Configure a specific update to install** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ✔️ | ✔️ |
-| macOS | ✔️ | ❌ |
+| iOS/iPadOS | ✅ | ✅ |
+| macOS | ✅ | ❌ |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Enforces an update deadline** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ✔️ | ❌ |
-| macOS | ✔️ | ❌ |
+| iOS/iPadOS | ✅ | ❌ |
+| macOS | ✅ | ❌ |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Enter a help URL** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ✔️ | ❌ |
-| macOS | ✔️ | ❌ |
+| iOS/iPadOS | ✅ | ❌ |
+| macOS | ✅ | ❌ |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Auto deploy latest update** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ❌ | ✔️ |
-| macOS | ❌ | ✔️ |
+| iOS/iPadOS | ❌ | ✅ |
+| macOS | ❌ | ✅ |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Downgrade versions** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ❌ | ❌ |
@@ -106,7 +107,7 @@ Managed software updates have precedence over other policies that configure soft
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
 
 3. Enter the following properties and select **Create**:
 
@@ -118,45 +119,54 @@ Managed software updates have precedence over other policies that configure soft
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later.
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
-1. In **Configuration settings**, select **Add settings** > expand **Declarative Device Management** > **Software Update**.
+5. In **Configuration settings**, select **Add settings** > expand **Declarative Device Management** > **Software Update**.
 
-    Configure the following settings:
+6. Choose **Select all these settings** and then close the settings picker.
 
-   - **Details URL**: Enter a web page URL that has more information on the update. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.
-   - **Target Build Version**: Enter the target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`.
+    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-update-category.png" alt-text="Screenshot that shows the settings catalog software update settings for Apple devices in Microsoft Intune.":::
+
+7. Configure the settings:
+
+    - **Details URL**: Enter a web page URL that has more information on the update. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.
+    - **Target Build Version**: Enter the target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`.
+
+      If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
+
+   - **Target Date Time**: Select or manually enter the date and the time that specifies when to force the installation of the software update.
+
+     > [!NOTE]
+     > In a future release, the **UTC** text is being removed from the **Target Date Time** setting in the settings catalog UI.
    
-     If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
-     
-   - **Target Local Date Time**: Select the local date time value that specifies when to force the installation of the software update.
-   
-     The **Target Local Date Time** setting schedules the update using the UTC timezone. For example, an Admin located in Eastern US configures an update to install at 2PM UTC. Due to time conversion, the deadline for the update is actually for 7PM EST.
+     The **Target Date Time** setting schedules the update using the local timezone of the device. For example, an admin configures an update to install at 2PM. The policy schedules the update to happen at 2PM in the local timezone of devices that receive the policy. 
 
-     - If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
-     - If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
-            
-        > [!IMPORTANT]
-        > If you create a policy using this setting before the January 2024 release, then this setting shows `Invalid Date` for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows `Invalid Date`. To configure a new date and time, you can delete the `Invalid Date` values, and select a new date and time using the date time picker. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
+     - If the user doesn't trigger the software update before this time, then a one-minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
+     - If the device is powered off when the deadline is met, when the device powers back on, there's a one hour grace period. When the grace period ends, the device force installs the update and forces a restart.
 
-   - **Target OS Version**: Enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
-      
-6. Select **Next**.
+      > [!IMPORTANT]
+      > If you create a policy using this setting before the January 2024 release, then this setting shows **Invalid Date** for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows **Invalid Date**.
+      > 
+      > To configure a new date and time, you can delete the **Invalid Date** values, and select a new date and time. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
 
-7. In the **Scope tags** tab (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go to [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+    - **Target OS Version**: Select or manually enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
 8. Select **Next**.
 
-9. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
-
-  > [!IMPORTANT]
-  > Assignment filters are not supported for DDM-based policies.
+9. In the **Scope tags** tab (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go to [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 10. Select **Next**.
-   
-11. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+11. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+    > [!IMPORTANT]
+    > Assignment filters are not supported for DDM-based policies.
+
+12. Select **Next**.
+
+13. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Monitoring managed software updates
 
-Managed software updates use the same reporting as device configuration policies. For more information, go to [Monitor device configuration policies.](/mem/intune/configuration/device-profile-monitor).
+Managed software updates use the same reporting as device configuration policies. For more information, go to [Monitor device configuration policies](../configuration/device-profile-monitor.md).
 
 > [!IMPORTANT]
 > A policy that reports Success only means that the configuration successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy will report error as the device sees this as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
@@ -174,7 +184,7 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - Enforced Software Update Minor OS Deferred Install Delay (macOS)
 - Enforced Software Update Non OS Deferred Install Delay (macOS)
 
-:::image type="content" source="./media/software-updates-declarative-ios-macos/settings-catalog-restrictions-delay-updates.png" alt-text="Screenshot that shows the settings catalog restrictions policy settings to delay or defer software updates in Microsoft Intune.":::
+:::image type="content" source="./media/managed-software-updates-ios-macos/settings-catalog-restrictions-delay-updates.png" alt-text="Screenshot that shows the settings catalog restrictions policy settings to delay or defer software updates in Microsoft Intune.":::
 
 ## Related articles
 

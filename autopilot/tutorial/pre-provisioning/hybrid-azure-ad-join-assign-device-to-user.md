@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/19/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -21,6 +21,7 @@ appliesto:
 # Pre-provision Microsoft Entra hybrid join: Assign Autopilot device to a user (optional)
 
 Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join steps:
+
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector (OU)](hybrid-azure-ad-join-intune-connector.md)
 - Step 3: [Increase the computer account limit in the Organizational Unit](hybrid-azure-ad-join-computer-account-limit.md)
@@ -29,12 +30,15 @@ Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join ste
 - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
 - Step 7: [Create and assign Microsoft Entra hybrid join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
+
 > [!div class="checklist"]
+>
 > - **Step 9: Assign Autopilot device to a user (optional)**
+
 - Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
 - Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow).
 
 ## Assign Autopilot device to a user (optional)
 
@@ -49,8 +53,8 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 > [!div class="nextstepaction"]
 > [Step 10: Technician flow](hybrid-azure-ad-join-technician-flow.md)
 
-## More information
+## Related content
 
-For more information on assigning a user to an Autopilot device, see the following article(s):
+For more information on assigning a user to an Autopilot device, see the following article:
 
-- [Assign a user to a specific Autopilot device](/mem/autopilot/enrollment-autopilot#assign-a-user-to-a-specific-autopilot-device)
+- [Assign a user to a specific Autopilot device](../../enrollment-autopilot.md#assign-a-user-to-a-specific-autopilot-device).

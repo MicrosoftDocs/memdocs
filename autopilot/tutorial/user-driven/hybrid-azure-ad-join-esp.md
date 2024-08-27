@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/28/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -37,11 +37,11 @@ Autopilot user-driven Microsoft Entra hybrid join steps:
 - Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 - Step 10: [Deploy the device](hybrid-azure-ad-join-deploy-device.md)
 
-For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join workflow, see [Windows Autopilot user-driven Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join workflow, see [Windows Autopilot user-driven Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow).
 
 > [!NOTE]
 >
-> If an ESP is already configured and assigned from another Autopilot scenario and the same settings for the ESP should be used for the user-driven Microsoft Entra hybrid join scenario, skip this step and move on to [Step 7: Create and assign Microsoft Entra hybrid join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md).
+> If an ESP is already configured and assigned and the same settings for the ESP should be used for the user-driven Microsoft Entra hybrid join scenario, skip this step and move on to [Step 7: Create and assign Microsoft Entra hybrid join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md).
 
 ## The Enrollment Status Page (ESP)
 
@@ -52,6 +52,6 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 > [!div class="nextstepaction"]
 > [Step 7: Create and assign Microsoft Entra hybrid join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information ESP](../includes/more-info-esp.md)]

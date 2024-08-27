@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/10/2024
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -20,7 +20,7 @@ appliesto:
 
 # Step by step tutorial for Windows Autopilot deployment for existing devices in Intune and Configuration Manager
 
-This step by step tutorial guides you through using Intune and Microsoft Configuration Manager to perform a Windows Autopilot deployment for existing devices.
+This step by step tutorial guides through using Intune and Microsoft Configuration Manager to perform a Windows Autopilot deployment for existing devices.
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot deployment for existing devices using Intune and Microsoft Configuration Manager. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment. This tutorial assumes familiarity with Microsoft Configuration Manager and that Microsoft Configuration Manager is already set up and configured to support operating system deployments.
 
@@ -65,9 +65,10 @@ Windows Autopilot deployment for existing devices can be viewed as a method to p
 The following steps are needed to configure and then perform a Windows Autopilot deployment for existing devices deployment using Intune and Microsoft Configuration Manager:
 
 > [!div class="checklist"]
+>
 > - Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
-> - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
-> - Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)
+> - Step 2: [Install required modules to obtain Autopilot profiles from Intune](install-modules.md)
+> - Step 3: [Create JSON file for Autopilot profiles](create-json-file.md)
 > - Step 4: [Create and distribute package for JSON file in Configuration Manager](create-json-package.md)
 > - Step 5: [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md)
 > - Step 6: [Create collection in Configuration Manager](create-collection.md)
@@ -87,9 +88,9 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > [!div class="nextstepaction"]
 > [Step 1: Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 
-## More information
+## Related content
 
 For more information on Windows Autopilot deployment for existing devices, see the following articles:
 
-- [Windows Autopilot deployment for existing devices](/mem/autopilot/existing-devices)
-- [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)
+- [Windows Autopilot deployment for existing devices](../../existing-devices.md).
+- [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430).

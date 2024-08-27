@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/08/2024
+ms.date: 08/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,6 +26,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---
@@ -52,8 +53,6 @@ Applies to:
 
 ## Prerequisites for Attack surface reduction profiles
 
-**General**:
-
 - Devices must run Windows 10 or Windows 11
 - Defender antivirus must be the primary antivirus on the device
 
@@ -68,6 +67,10 @@ When you use [Security Management for Microsoft Defender for Endpoint](../protec
 - **Set up tenant attach for Configuration Manager devices** - To support deploying attack surface reduction policy to devices managed by Configuration Manager, configure tenant attach. Set up of tenant attach includes configuring Configuration Manager device collections to support endpoint security policies from Intune.
 
   To set up tenant attach, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
+
+## Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to manage Intune attack surface reduction policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Attack surface reduction profiles
 
@@ -84,7 +87,7 @@ The available profiles for attack surface reduction policy depend on the platfor
 
 ### Devices managed by Intune
 
-**Platform: Windows 10, Windows 11, and Windows Server**:
+**Platform: Windows**:
 
 Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune.
 
@@ -124,10 +127,6 @@ Available profiles for this platform include:
   - [Deploy and manage device control with Microsoft Intune](/microsoft-365/security/defender-endpoint/device-control-deploy-manage-intune)
   - [Device control walkthroughs](/microsoft-365/security/defender-endpoint/device-control-walkthroughs)
 
-**Platform: Windows 10 and later**:
-
-Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune. Profiles include:
-
 - **App and browser isolation** – Manage settings for Windows Defender Application Guard (Application Guard), as part of Defender for Endpoint. Application Guard helps to prevent old and newly emerging attacks and can isolate enterprise-defined sites as untrusted while defining what sites, cloud resources, and internal networks are trusted.
 
   To learn more, see [Application Guard](/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview) in the Microsoft Defender for Endpoint documentation.
@@ -152,7 +151,7 @@ Profiles for this platform are supported on Windows 10 and Windows 11 devices en
 
 ### Devices managed by Defender for Endpoint security settings management
 
-When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows 10, Windows 11, and Windows Server* platform to manage settings on devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows* platform to manage settings on devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
 Profiles supported for this scenario include:
 
@@ -171,7 +170,7 @@ Profiles supported for this scenario include:
 
 ### Reusable settings groups for Device control profiles
 
-In public preview, Device control profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) to help manage settings for the following settings groups on devices for the *Windows 10, Windows 11, and Windows Server* platform:
+In public preview, Device control profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) to help manage settings for the following settings groups on devices for the *Windows* platform:
 
 - Printer device:
   The following device control profile settings are available for *printer device*:

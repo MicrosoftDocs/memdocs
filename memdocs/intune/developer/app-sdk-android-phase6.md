@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/06/2023
+ms.date: 08/08/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -136,12 +136,12 @@ Applications can receive configurations from both channels using the [MAMAppConf
 
 ```java
 MAMAppConfigManager configManager = MAMComponents.get(MAMAppConfigManager.class);
-String identity = "user@contoso.com"
-MAMAppConfig appConfig = configManager.getAppConfig(identity);
+String oid = <OID of user account>;
+MAMAppConfig appConfig = configManager.getAppConfigForOID(oid);
 String fooValue = appConfig.getStringForKey("foo", MAMAppConfig.StringQueryType.Any);
 ```
 
-If there's no MAM-registered account, but your app would still like to retrieve Android Enterprise configuration values (which won't be targeted at a specific account), you can pass a `null` or empty string.
+If there's no MAM-registered account, but your app would still like to retrieve Android Enterprise configuration values (which won't be targeted at a specific account), you can pass a `null` or empty string for the OID.
 
 > [!NOTE]
 > If your app uses the Intune App SDK to retrieve Android Enterprise managed configurations and the Company Portal is not installed, these configurations will be delivered via a `MAMUserNotification` with an empty identity.
@@ -206,8 +206,8 @@ To validate that Intune is properly delivering app configuration policy:
     - For managed apps:
       1. Install both your app and the Intune Company Portal.
       2. Log in to your app with your test account.
-3. Navigate through your app to exercise each codepath that calls `MAMAppConfigManager`'s `getAppConfig` or `getFullData`.
-    - Logging the results of calls to `getAppConfig` is a simple way to validate which settings are delivered. However, because administrators can enter any data for app configuration settings, be careful not to log any private user data.
+3. Navigate through your app to exercise each codepath that calls `MAMAppConfigManager`'s `getAppConfigForOID` or `getFullData`.
+    - Logging the results of calls to `getAppConfigForOID` is a simple way to validate which settings are delivered. However, because administrators can enter any data for app configuration settings, be careful not to log any private user data.
 4. See [Validate the applied app configuration policy].
 
 Because app configurations are app-specific, only you know how to validate how your app should change behavior or UI for each app configuration setting.
@@ -217,7 +217,7 @@ When testing, consider the following:
 - Ensuring all scenarios are covered by creating different test app configuration policy with every value your app supports.
 - Validating your app's conflict resolution logic by creating multiple test app configuration policies with different values for each setting.
 - If your app has registered for the `REFRESH_APP_CONFIG` notification, updating the app configuration policy while your app is in active use, waiting for policy to update, and confirming this codepath is properly exercised.
-- If your app supports both types of app configuration, testing both scenarios to ensure your implementation provides the correct identity to `getAppConfig`.
+- If your app supports both types of app configuration, testing both scenarios to ensure your implementation provides the correct identity to `getAppConfigForOID`.
 
 ## Next Steps
 
@@ -251,5 +251,5 @@ If you're unsure if any of these features apply to your app, revisit [Key Decisi
 [Android's `RestrictionsManager`]:https://developer.android.com/reference/android/content/RestrictionsManager
 
 <!-- Class links -->
-[MAMAppConfigManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/appconfig/MAMAppConfigManager.html
-[MAMAppConfig]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/appconfig/MAMAppConfig.html
+[MAMAppConfigManager]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/appconfig/MAMAppConfigManager.html
+[MAMAppConfig]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/appconfig/MAMAppConfig.html

@@ -25,6 +25,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - compliance
+- sub-device-compliance
 ---
 
 # Device Compliance settings for Windows 8.1 in Intune

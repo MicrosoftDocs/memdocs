@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/28/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -35,7 +35,7 @@ Autopilot user-driven Microsoft Entra join steps:
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 - Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
 
-For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow).
 
 ## Create and assign user-driven Microsoft Entra join Autopilot profile
 
@@ -65,7 +65,7 @@ To create a user-driven Microsoft Entra join Autopilot profile, follow these ste
 
       - For **Hide change account options**, select **Hide**.
 
-      - For **User account type**, select the desired account type for the user (**Administrator** or **Standard** user). If **Administrator** is chosen, the user is added to the local Admin group.
+      - For **User account type**, select the desired account type for the user. The options are either **Administrator** or **Standard** user. If **Administrator** is chosen, the user is added to the local Administrator group for the device.
 
       - For **Allow pre-provisioned deployment**, select **No**.
 
@@ -86,11 +86,11 @@ To create a user-driven Microsoft Entra join Autopilot profile, follow these ste
 
       > [!NOTE]
       >
-      > The above settings have been selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired. For example, some regions may require that **Privacy settings** always be shown.
+      > The above settings are selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired. For example, some regions might require that **Privacy settings** always be shown.
 
       > [!NOTE]
       >
-      > If the language/region and keyboard screens are set to hidden, they might still be displayed if there's no network connectivity at the start of the Autopilot deployment. When there's no network connectivity at the start of the deployment, the Autopilot profile, where the settings to hide these screens is defined, hasn't downloaded yet. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
+      > If the language/region and keyboard screens are set to hidden, they might still be displayed if there's no network connectivity at the start of the Autopilot deployment. The settings to hide these screens are defined in the Autopilot profile. However, if there's no network connectivity, the Autopilot profile with the settings hasn't downloaded yet which results in the screens being displayed. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
 
 [!INCLUDE [Autopilot profiles after steps](../includes/autopilot-profile-steps-after.md)]
 
@@ -108,6 +108,6 @@ If a user isn't being assigned to the device, then skip to **[Step 8: Deploy the
 > [!div class="nextstepaction"]
 > [Step 8: Deploy the device](azure-ad-join-deploy-device.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]

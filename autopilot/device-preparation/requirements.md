@@ -1,14 +1,14 @@
 ---
 title: Windows Autopilot device preparation requirements
-description: Requirements for Windows Autopilot device preparation.
+description: Software, Networking, Licensing, Configuration, and RBAC requirements for Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/28/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -23,6 +23,18 @@ appliesto:
 
 
 # Windows Autopilot device preparation requirements
+
+> [!TIP]
+>
+> RSS can be used to notify when requirements are added or updated to this page. For example, the following RSS link includes this article:
+>
+> ``` url
+> https://learn.microsoft.com/en-us/search/?terms=%22Software%2C%20Networking%2C%20Licensing%2C%20Configuration%2C%20and%20RBAC%20requirements%20for%20Windows%20Autopilot%20device%22
+> ```
+>
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed another supported locale. For example, `&locale=es-es`.
+>
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 The list of requirements for Windows Autopilot device preparation is organized into five different categories:
 
@@ -136,9 +148,9 @@ To resolve internet names for all services, the device communicates with a DNS s
 
 #### Diagnostics data
 
-Diagnostic data collection is enabled by default. To disable Windows Analytics and related diagnostics capabilities, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm).
+Diagnostic data collection is enabled by default. For more information, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm).
 
-If the device can't send diagnostic data, the Windows Autopilot device preparation process still continues. However, services that depend on diagnostic data, such as Desktop Analytics, doesn't work.
+If the device can't send diagnostic data, the Windows Autopilot device preparation process still continues. However, services that depend on diagnostic data don't work.
 
 #### Network Connection Status Indicator (NCSI)
 
@@ -178,13 +190,13 @@ Windows Autopilot device preparation depends on specific capabilities available 
 
 To provide needed Microsoft Entra ID and MDM functionality, including automatic MDM enrollment and company branding features, one of the following subscriptions is required:
 
-- [Microsoft 365 Business Premium subscription](https://www.microsoft.com/microsoft-365/business)
-- [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline)
-- [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/buy-license/microsoft365/default.aspx)
+- [Microsoft 365 Business Premium subscription](https://www.microsoft.com/microsoft-365/business).
+- [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline).
+- [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/products/microsoft-365).
 - [Microsoft 365 Enterprise E3 or E5 subscription](https://www.microsoft.com/microsoft-365/enterprise), which include all Windows client, Microsoft 365, and EMS features (Microsoft Entra ID and Intune).
 - [Enterprise Mobility + Security E3 or E5 subscription](https://www.microsoft.com/cloud-platform/enterprise-mobility-security), which include all needed Microsoft Entra ID and Intune features.
 - [Intune for Education subscription](/intune-education/what-is-intune-for-education), which include all needed Microsoft Entra ID and Intune features.
-- [Microsoft Entra ID P1 or P2](https://azure.microsoft.com/services/active-directory/) and [Microsoft Intune subscription](https://www.microsoft.com/cloud-platform/microsoft-intune) (or an alternative MDM service).
+- [Microsoft Entra ID P1 or P2](https://azure.microsoft.com/services/active-directory/) and [Microsoft Intune subscription](https://www.microsoft.com/cloud-platform/microsoft-intune) or an alternative MDM service.
 
 > [!NOTE]
 >
@@ -231,12 +243,18 @@ The following role-based access control (RBAC) permissions are required in a rol
 - **Enrollment programs**
   - Enrollment time device membership assignment
 
+- **Managed apps**
+  - Read
+
+- **Mobile apps**
+  - Read
+
 - **Organization**
   - Read
 
 To create a custom role with these permissions for use with Windows Autopilot device preparation:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Tenant administration** in the left hand pane.
 
@@ -244,7 +262,7 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
 1. In the **Endpoint Manager roles | All roles** screen, make sure **All roles** is selected under **Manage**.
 
-1. Select the **+ Create** drop down menu and then select **Intune role**. The **Add Custom Role** screen opens.
+1. Select the **Create** drop down menu and then select **Intune role**. The **Add Custom Role** screen opens.
 
 1. In the **Add Custom Role** screen:
 
@@ -254,7 +272,7 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
       1. **Description** - enter a description for the custom role.
 
-   1. Select the **Next** button.
+   1. Select **Next**.
 
    1. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find the following settings. Once the setting is located, expand it, and then change to the following permissions:
 
@@ -274,21 +292,33 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
         All other permissions can be left at the default of **No**.
 
+      - **Managed apps**
+
+         - **Read**: Yes
+
+        All other permissions can be left at the default of **No**.
+
+      - **Mobile apps**
+
+         - **Read**: Yes
+
+        All other permissions can be left at the default of **No**.
+
       - **Organization**
 
          - **Read**: Yes
 
         All other permissions can be left at the default of **No**.
 
-   1. Once all permissions are set correctly, select the **Next** button.
+   1. Once all permissions are set correctly, select **Next**.
 
-   1. In the **Scope tags** page, select the **Next** button.
+   1. In the **Scope tags** page, select **Next**.
 
         > [!NOTE]
         >
         > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
-   1. In the **Review + create** page, verify that all permissions are correct, and then select the **Create** button.
+   1. In the **Review + create** page, verify that all permissions are correct, and then select **Create**.
 
 1. The new custom Windows Autopilot device preparation role can now be assigned to users who administer Windows Autopilot device preparation.
 

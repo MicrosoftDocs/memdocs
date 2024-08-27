@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-updates
 ---
 
 # Manage macOS software update policies in Intune
@@ -178,7 +179,7 @@ You can edit an existing policy, including changing the restricted times:
 
 ## Configure more macOS software update settings using the Settings Catalog
 
-The *Restrictions* category contains the following settings that can be used to delay visibility of macOS software updates on devices (**Devices** > **macOS** > **Configuration profiles** > **Create** > **New policy** > **Settings catalog** > **Restrictions**):
+The *Restrictions* category contains the following settings that can be used to delay visibility of macOS software updates on devices (**Devices** > **By platform** > **macOS** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Settings catalog** > **Restrictions**):
 
 - *Enforced Software Update Delay*:  Sets how many days to delay a software update on the device. With this restriction in place, the user doesn't see a software update until the specified number of days after the software update release date. This value is used by *Force Delayed App Software Updates* and *Force Delayed Software Updates*.
 
@@ -194,7 +195,7 @@ The *Restrictions* category contains the following settings that can be used to 
 
 - *Enforced Software Update Minor OS Deferred Install Delay*:  This restriction allows the admin to set how many days to delay a minor OS software update on the devices. Minor software updates are intermediate updates that are released between major OS upgrades; for example, macOS 13.1 and macOS 13.2. When this restriction is in place, the user sees a software update only after the specified delay after the release of the software update. This value controls the delay for *Force Delayed Software Updates*.
 
-The Software Update category contains the following settings that can be used to configure the user experience for macOS software update options on devices (**Devices** > **macOS** > **Configuration profiles** > **Create** > **New policy** > **Settings catalog** > **System Updates** > **Software Update**):
+The Software Update category contains the following settings that can be used to configure the user experience for macOS software update options on devices (**Devices** > **By platform** > **macOS** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Settings catalog** > **System Updates** > **Software Update**):
 
 - *Allow Pre Release Installation*:  If true, prerelease software can be installed on this computer.
 

@@ -26,6 +26,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - certificates
+- sub-certificates
 ---
 
 # S/MIME overview to sign and encrypt email in Intune

@@ -24,6 +24,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier 1
 - M365-identity-device-management
+- sub-intune-suite
 ---
 
 # Guidance for creating elevation rules with Endpoint Privilege Management
@@ -127,6 +128,6 @@ When moving users to run as standard users and utilizing Endpoint Privilege Mana
 
 - [Learn about Endpoint Privilege Management](../protect/epm-overview.md)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
 - [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)

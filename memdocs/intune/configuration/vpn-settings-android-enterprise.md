@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use VPN settings for Android Enterprise in Microsoft Intune
-description: See all the settings to create VPN connections on Android Enterprise devices in Microsoft Intune, including COBO, COSU, COPE, and BYOD. Enter the connection name, IP address or FQDN of the VPN server, choose how users authenticate, and choose Citrix, SonicWall, Check Point Capsule, and Pulse Secure connection types.
+description: See all the settings to create VPN connections on Android Enterprise devices in Microsoft Intune, including COBO, COSU, COPE, and BYOD. Enter the connection name, IP address, or FQDN of the VPN server. Choose how users authenticate and choose Citrix, SonicWall, Check Point Capsule, and Pulse Secure connection types.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2023
+ms.date: 06/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,7 +43,11 @@ This feature applies to:
 As an Intune administrator, you can create and assign VPN settings to Android Enterprise devices. To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-configure.md).
 
 > [!NOTE]
-> To configure always-on VPN, you need to create a VPN profile, and also create a [device restrictions](device-restrictions-android-for-work.md#connectivity) profile with the Always-on VPN setting configured.
+> To configure always-on VPN, you need to:
+>
+> 1. Create a VPN profile with your connection info, as described in this article.
+> 2. Create a [device restrictions](device-restrictions-android-for-work.md#connectivity) profile with the Always-on VPN setting configured.
+> 3. Assign both profiles to your groups.
 
 ## Before you begin
 
@@ -74,9 +78,9 @@ The available settings depend on the VPN client you choose. Some settings are on
 - **VPN server address or FQDN**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
   
-  - **Certificates**: Select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../protect/certificates-configure.md) lists the steps to create a certificate profile.
-  - **Username and password**: When end users sign into the VPN server, they're prompted to enter their user name and password.
-  - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one.
+  - **Certificates**: Select an existing SCEP or PKCS certificate profile that authenticates the connection. [Configure certificates](../protect/certificates-configure.md) lists the steps to create a certificate profile.
+  - **Username and password**: When end users sign into the VPN server, users are prompted to enter their user name and password.
+  - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one.
 
     For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
 
@@ -128,9 +132,9 @@ The available settings depend on the VPN client you choose. Some settings are on
 - **VPN server address**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
   
-  - **Certificates**: Select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../protect/certificates-configure.md) lists the steps to create a certificate profile.
-  - **Username and password**: When end users sign into the VPN server, they're prompted to enter their user name and password.
-  - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one.
+  - **Certificates**: Select an existing SCEP or PKCS certificate profile that authenticates the connection. [Configure certificates](../protect/certificates-configure.md) lists the steps to create a certificate profile.
+  - **Username and password**: When end users sign into the VPN server, users are prompted to enter their user name and password.
+  - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one.
 
     For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
 
@@ -162,10 +166,10 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 - **Address**: Enter the IP address or fully qualified host name of the proxy server. For example, enter `10.0.0.3` or `vpn.contoso.com`.
 - **Port number**: Enter the port number associated with the proxy server. For example, enter `8080`.
 
-## Next steps
+## Related articles
 
-[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create VPN profiles for [Android device administrator](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), and [Windows 10 and later](vpn-settings-windows-10.md).
+- Create VPN profiles for [Android device administrator](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), and [Windows](vpn-settings-windows-10.md).
 
-[Troubleshooting VPN profile issues in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles)
+- Learn how to [Troubleshoot VPN profile issues in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles).

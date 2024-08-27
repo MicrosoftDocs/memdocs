@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 12/05/2023
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -48,8 +48,6 @@ The following Windows 365 Enterprise and Business objects are automatically encr
 - Disks
 - Snapshots
 - Images
-
-When Windows 365 Enterprise customers use Microsoft Purview Customer Key, these objects are instead encrypted-at-rest with customer-managed keys. By default, new Cloud PC disks, snapshots, and images are encrypted using this method after Customer Key is set up. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
 
 Windows 365 as a service treats all data stored on Windows 365 disks as customer content. For more information, see [Privacy and personal data in Windows 365](./privacy-personal-data.md).
 

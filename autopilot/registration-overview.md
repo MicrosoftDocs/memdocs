@@ -2,13 +2,13 @@
 title: Windows Autopilot registration overview
 description: Overview of Windows Autopilot device registration.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -43,7 +43,7 @@ When an Autopilot device is registered, it automatically creates a Microsoft Ent
 
 [!INCLUDE [Registered device warning](includes/registered-vs-joined.md)]
 
-If a profile isn't assigned to an Autopilot device, it receives the default Autopilot profile. If you don't want a device to go through Autopilot, you must remove the Autopilot registration.
+If a profile isn't assigned to a Windows Autopilot device, it receives the default Windows Autopilot profile. If a device shouldn't go through Autopilot, remove the Windows Autopilot registration.
 
 ## Terms
 

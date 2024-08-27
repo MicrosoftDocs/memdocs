@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/12/2023
+ms.date: 08/07/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -40,6 +40,7 @@ Watermarking is configured on session hosts and enforced by the Remote Desktop c
 >[!Important]
 >- After watermarking is enabled on a session host, only clients that support watermarking can connect to that session host. If you try to connect from an unsupported client, the connection will fail and you'll get an error message that is not specific.
 >- Watermarking is for remote desktops and Cloud PCs only. With RemoteApp, watermarking is not applied and the connection is allowed.
+>- Watermarking and screen capture help deter unauthorized data leakage, assisting in maintaining data integrity. Unlike a security feature or an implementation of Digital Rights Management (DRM), there is no guarantee that using watermarking or screen capture protection will strictly protect windowed content, for example where someone takes a photograph of the screen.
 
 ## Requirements
 

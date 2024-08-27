@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -65,7 +65,7 @@ In addition, Windows Autopilot device preparation supports deploying both Win32 
 
 To assign the desired applications to the device group created for Windows Autopilot device preparation:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Apps** in the left hand pane.
 
@@ -79,19 +79,19 @@ To assign the desired applications to the device group created for Windows Autop
 
 1. In the **Edit application** screen:
 
-   1. Under the **Required** section, select **+ Add group**. The **Select groups** pane opens.
+   1. Under the **Required** section, select **Add group**. The **Select groups** pane opens.
 
    1. In the **Select groups** pane:
 
       1. Scroll through the list of groups. Once the Windows Autopilot device preparation device security group is located, select it. Alternatively, use the **Search** box to locate the Windows Autopilot device preparation device security group and then select it.
 
-      1. Once the Windows Autopilot device preparation device security group is selected, select the **Select** button.
+      1. Once the Windows Autopilot device preparation device security group is selected, select **Select**.
 
    1. Verify that the Windows Autopilot device preparation device security group is listed under the **Required** section. Additionally, verify that **Group mode** is set to **Included**. When applicable, also verify that **Install Context** is set to **Device context**.
 
-   1. Once everything is verified, select the **Review + save** button.
+   1. Once everything is verified, select **Review + save**.
 
-   1. In the **Review + save** screen, select the **Save** button.
+   1. In the **Review + save** screen, select **Save**.
 
 1. Repeat the steps for any additional applications that need to be installed during the Windows Autopilot device preparation deployment.
 
@@ -99,7 +99,7 @@ To assign the desired applications to the device group created for Windows Autop
 
 To assign the desired PowerShell scripts to the device group created for Windows Autopilot device preparation:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -123,13 +123,13 @@ To assign the desired PowerShell scripts to the device group created for Windows
 
       1. Scroll through the list of groups. Once the Windows Autopilot device preparation device security group is located, select it. Alternatively, use the **Search** box to locate the Windows Autopilot device preparation device security group and then select it.
 
-      1. Once the Windows Autopilot device preparation device security group is selected, select the **Select** button.
+      1. Once the Windows Autopilot device preparation device security group is selected, select **Select**.
 
    1. Verify that the Windows Autopilot device preparation device security group is listed under the **Included groups** section. Make sure that the Windows Autopilot device preparation device security group wasn't accidentally added under the **Excluded groups** section.
 
-   1. Once everything is verified, select the **Review + save** button.
+   1. Once everything is verified, select **Review + save**.
 
-   1. In the **Review + save** screen, select the **Save** button.
+   1. In the **Review + save** screen, select **Save**.
 
 ## Next step: Create Windows Autopilot device preparation policy
 

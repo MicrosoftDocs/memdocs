@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/16/2024
+ms.date: 07/15/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,6 +26,7 @@ search.appverid: MET150
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-updates
 ---
 
 
@@ -57,7 +58,7 @@ Update settings control what bits a device will download, and when. For more inf
   **Default**: 0  
   Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays)  
 
-  Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when it is first offered to a device.
+  Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deadline calculation for both quality and feature updates is based off the time the client's update scan initially discovered the update. See [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines)
 
   Quality Updates are typically fixes and improvements to existing Windows functionality.  
 
@@ -203,11 +204,13 @@ User experience settings control the end-user experience for device restart and 
 - **Use deadline settings**  
   **Default**: Not configured  
 
-  Allows user to use deadline settings.  
+  Allows configuration of deadline settings.
 
   - **Not configured**
   - **Allow**
-
+  
+  For more details about how deadlines and grace periods work together see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
+  
   When set to *Allow*, you can configure the following settings for deadlines:
 
   - **Deadline for feature updates**  
@@ -232,7 +235,8 @@ User experience settings control the end-user experience for device restart and 
     **Default**:  Yes
     Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot)
 
-    Specifies whether the device should auto reboot before deadline.
+    Specifies whether the device will attempt to automatically reboot outside of active hours before the deadline and grace period are expired. The recommended value is **Yes**, as it enables the system to reboot when the user isn't using the device. Setting this value to **No** forces the system to wait until the deadline and grace period are expired and then restarts the device and this could occur during active hours.
+
     - **Yes**
     - **No**
 

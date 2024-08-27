@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -21,10 +21,13 @@ appliesto:
 # Windows Autopilot deployment for existing devices: Set up a Windows Autopilot profile
 
 Autopilot user-driven Microsoft Entra join steps:
+
 > [!div class="checklist"]
+>
 > - **Step 1: Set up a Windows Autopilot profile**
-- Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
-- Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)
+
+- Step 2: [Install required modules to obtain Autopilot profiles from Intune](install-modules.md)
+- Step 3: [Create JSON file for Autopilot profiles](create-json-file.md)
 - Step 4: [Create and distribute package for JSON file in Configuration Manager](create-json-package.md)
 - Step 5: [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md)
 - Step 6: [Create collection in Configuration Manager](create-collection.md)
@@ -33,7 +36,7 @@ Autopilot user-driven Microsoft Entra join steps:
 - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 - Step 10: [Register device for Windows Autopilot](register-device.md)
 
-For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md#workflow)
+For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md#workflow).
 
 ## Set up a Windows Autopilot profile
 
@@ -52,13 +55,13 @@ The first step in a Windows Autopilot for existing devices deployment is to make
 >
 > In the above steps, it's not necessary to assign the Autopilot profile for Windows Autopilot deployment for existing devices scenario to work. The Autopilot profile only needs to be created so that the JSON file can then be created.
 
-Once a valid Windows Autopilot profile has been created and confirmed working on an existing Autopilot device, then proceed to [Step 2: Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md).
+Once a valid Windows Autopilot profile is created and confirmed working on an existing Autopilot device, then proceed to [Step 2: Install required modules to obtain Autopilot profiles from Intune](install-modules.md).
 
-## Next step: Install required modules to obtain Autopilot profile(s) from Intune
+## Next step: Install required modules to obtain Autopilot profiles from Intune
 
 > [!div class="nextstepaction"]
-> [Step 2: Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
+> [Step 2: Install required modules to obtain Autopilot profiles from Intune](install-modules.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]

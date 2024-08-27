@@ -2,20 +2,19 @@
 title: Compare Windows Autopilot device preparation and Windows Autopilot
 description: Compare Windows Autopilot device preparation and Windows Autopilot features and when to use each.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/12/2024
-ms.topic: article
+ms.date: 06/26/2024
+ms.topic: overview
 ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
   - highpri
   - tier1
-  - essentials-overview
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -52,6 +51,7 @@ In general, the following are some of the major factors when considering between
 | Autopilot reset support | ❌ | ✅ |
 | Microsoft Entra join | ✅ | ✅ |
 | Microsoft Entra hybrid join | ❌ | ✅ |
+| [Windows Autopilot Reset](../tutorial/reset/autopilot-reset-overview.md) | ❌ | ✅ |
 | Windows 11 | ✅ | ✅ |
 | Windows 10 | ❌ | ✅ |
 | Deploy Win32 and LOB applications<br>in the same deployment | ✅ | ❌ |

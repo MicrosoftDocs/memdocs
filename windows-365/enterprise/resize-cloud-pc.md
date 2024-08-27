@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2024
+ms.date: 07/09/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -65,14 +65,12 @@ Downsizing may impact support for nested virtualization. For more information, s
 To resize a Cloud PC, the admin must have certain built-in Microsoft Entra roles.
 
 - For a Cloud PC provisioned with a direct assigned license, at least one of the following roles
-  - Global Admin
-  - Intune Service Admin
+    - Intune Service Administrator
   - Intune Reader + Cloud PC Admin roles
-  - Intune Reader + Windows 365 Admin
+  - Intune Reader + Windows 365 Administrator
 - For a Cloud PC provisioned with a group-based license, at least one of the following roles
-  - Global Admin
-  - Intune Service Admin
-  - Intune Reader + Windows 365 Admin
+    - Intune Service Administrator
+  - Intune Reader + Windows 365 Administrator
   - In addition to one of the previous three roles, a role with Microsoft Entra group read/write membership and licensing permissions, like the Windows 365 Admin role.
 
 Alternatively, you can assign a custom role that includes the permissions of these built-in roles.
@@ -121,6 +119,7 @@ If there are available licenses, the resizing starts.
 6. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
 7. Select **Users** > search for the user name assigned to the Cloud PC and select it > **Groups**.
 8. To retrieve the old license, remove the users from the original source Microsoft Entra group. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
+    - When using Microsoft Entra ID hybrid in your environment, after removing the user from the original group, you must wait until Microsoft Entra Connect synchronizes  your on-premises Active Directory with with your Microsoft Entra ID. This can take up to 30 minutes. Then you can add the user to the new group.
 9. Assign the target license to the new target Microsoft Entra group. The resizing process now begins.
 
 ## Bulk resizing Cloud PCs
@@ -160,6 +159,7 @@ Up to 5,000 Cloud PCs can be resized at a time.
 7. Under **Select groups to include**, choose the groups containing the users who own the devices that you want to resize > **Next**.
 8. On the **Review + create** page, select **Create**. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
 9. To retrieve the old license, remove the users from the original source Microsoft Entra group. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
+    - When using Microsoft Entra ID hybrid in your environment, after removing the user from the original group, you must wait until Microsoft Entra Connect synchronizes  your on-premises Active Directory with with your Microsoft Entra ID. This can take up to 30 minutes. Then you can add the user to the new group.
 10. Assign the target license to the new target Microsoft Entra group. The resizing process now begins.
 
 ## Resizing details

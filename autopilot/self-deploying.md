@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot self-deploying mode
 description: Self-deploying mode allows a device to be deployed with little to no user interaction. This mode is designed to deploy Windows as a kiosk, digital signage device, or a shared device.
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -32,7 +32,7 @@ appliesto:
 
 Windows Autopilot self-deploying mode allows deployment of a device with little to no user interaction. For devices with an Ethernet connection, no user interaction is required. For devices connected via Wi-Fi, the user must only:
 
-- Choose the language, locale, and keyboard.
+- Select the language, locale, and keyboard.
 - Make a network connection.
 
 Self-deploying mode provides all the following features:
@@ -77,7 +77,7 @@ Self-deploying mode uses a device's Trusted Platform Module (TPM) 2.0 hardware t
 >
 > If a self-deploying mode deployment is attempted on a device that doesn't have support for TPM 2.0 or on a virtual machine, the process fails when verifying the device with an **0x800705B4** timeout error. This limitation includes Hyper-V virtual TPMs.
 >
-> See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review other known errors and solutions.
+> See [Windows Autopilot known issues](known-issues.md) and [Troubleshooting Windows Autopilot device import and enrollment](troubleshooting-faq.yml#troubleshooting-windows-autopilot-device-import-and-enrollment) to review other known errors and solutions.
 
 An organization-specific logo and organization name can be displayed during the Autopilot process. To do so, Microsoft Entra Company Branding must be configured with the images and text that need to be displayed. See [Quickstart: Add company branding to your sign-in page in Microsoft Entra ID](/azure/active-directory/fundamentals/customize-branding) for more details.
 
@@ -126,4 +126,4 @@ When using Windows Autopilot to deploy in self-deploying mode, the following end
 >
 > Deploying Exchange ActiveSync (EAS) policies using self-deploying mode for kiosk deployments causes autologon functionality to fail.
 
-In case the observed results don't match these expectations, consult the [Windows Autopilot Troubleshooting](troubleshooting.md) documentation.
+In case the observed results don't match these expectations, consult the [Troubleshooting Windows Autopilot overview](troubleshooting-faq.yml#troubleshooting-windows-autopilot-overview) documentation.

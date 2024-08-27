@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/18/2024
+ms.date: 06/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- sub-updates
 ---
 
 # Windows Update reports for Microsoft Intune
@@ -69,7 +70,7 @@ To support reporting, you must configure the following data collection settings:
 
 ## Reports for Update rings for Windows 10 and later policy
 
-Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **Windows** > **Update rings for Windows 10 and later** > and select an update ring policy.  Intune displays details similar to the following for the selected policy:
+Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > and select an update ring policy.  Intune displays details similar to the following for the selected policy:
 
 :::image type="content" source="./media/windows-10-update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./media/windows-10-update-rings/default-policy-view.png":::
 
@@ -225,7 +226,7 @@ To use the report:
    - **Service-side data**:
      - **Pending**:
        - **Validation** – The update can't be offered to the device because of a validation issue with the device and Windows Update.
-       - **Scheduled** – The update isn't ready to be offered to the device but is ready to be offered.
+       - **Scheduled** – The update isn't ready to be offered to the device but is scheduled for offering at a later date.
      - **On hold**:
        - **Admin paused** – The update is on hold because the Deployment being paused by an explicit Administrator action.
        - **ServicePaused** – The update is on hold because of an automatic action by Windows Update.

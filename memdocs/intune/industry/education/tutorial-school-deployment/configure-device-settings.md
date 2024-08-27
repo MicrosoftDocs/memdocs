@@ -100,7 +100,7 @@ With Express Configuration, you can get Intune for Education up and running in j
 To create a device configuration profile in Microsoft Intune, you need to follow these steps:
 
 - Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-- Go to **Devices** > **Configuration profiles** > **+ Create profile**.
+- Go to **Devices** > **Manage devices** > **Configuration** > **+ Create profile**.
 - Select **Platform** as **Windows 10 and later**.
 - Select **Profile type**:
   - For general settings, select [**Settings Catalog**](/mem/intune/configuration/settings-catalog).
@@ -136,7 +136,7 @@ For more information, see [Windows device settings in Intune for Education][INT-
 To create a device configuration profile in Microsoft Intune, you need to follow these steps:
 
 - Sign in to the Microsoft Intune admin center.
-- Go to **Devices** > **Configuration profiles** > **+ Create profile**.
+- Go to **Devices** > **Manage devices** > **Configuration** > **+ Create profile**.
 - Select **Platform** as **iOS/iPadOS**.
 - Select **Profile type**:
   - For general settings, select **Settings Catalog**.
@@ -208,7 +208,7 @@ It is important to keep iOS devices up to date with the latest security updates.
 - **Option 2** - iOS and iPadOS 17.0 and older (recommended) - [Software update policy](/mem/intune/protect/software-updates-ios).
 - **Option 3** (not recommended) - End users manually install the updates.
 
-At **Devices** > **Configuration** > **Create** > **Settings catalog** > **Restrictions**, you can use the following settings to delay how long after an update is released that users can manually install the updates.
+At **Devices** > **Manage devices** > **Configuration** > **Create** > **Settings catalog** > **Restrictions**, you can use the following settings to delay how long after an update is released that users can manually install the updates.
 
 - **Defer software updates**: Yes/No
 - **Delay default visibility of software updates**: 0-90
@@ -292,7 +292,7 @@ In Intune, you can configure iOS security settings using Settings Catalog.
 To create a settings catalog device configuration profile in Microsoft Intune, you need to follow these steps:
 
 - Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-- Go to **Devices** > **Configuration profiles** > **+ Create profile**.
+- Go to **Devices** > **Manage devices** > **Configuration** > **+ Create profile**.
 - Select **Platform** as **iOS/iPadOS**.
 - Select **Profile type**.
 - Select **Settings Catalog**.

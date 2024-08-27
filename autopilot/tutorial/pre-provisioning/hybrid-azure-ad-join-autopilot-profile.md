@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/28/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -38,7 +38,7 @@ Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join ste
 - Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
 - Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow).
 
 ## Create and assign a pre-provisioned Microsoft Entra hybrid join Autopilot profile
 
@@ -119,8 +119,8 @@ The VPN solution would need to be installed and configured via Intune during the
 > [!div class="nextstepaction"]
 > [Step 8: Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]
-- [User-driven mode for Microsoft Entra hybrid join with VPN support](/mem/autopilot/user-driven#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
-- [VPNs](/mem/autopilot/windows-autopilot-hybrid#vpns).
+- [User-driven mode for Microsoft Entra hybrid join with VPN support](../../user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
+- [VPNs](../../windows-autopilot-hybrid.md#vpns).

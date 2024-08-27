@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 06/17/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,6 +25,8 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-secure-endpoints
+
 ms.reviewer: laarrizz
 
 ---
@@ -54,6 +56,10 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 >
 > On devices that run an earlier version of Windows, the CSP processes firewall rules in an Atomic block of rules, one rule (or setting) at a time. The intent is to apply all the rules in that Atomic block, or none of them. However, if the CSP encounters an issue with applying any rule from the block, the CSP stops applying subsequent rules but doesn't roll back a rule from that block that has already been applied successfully. This behavior can result in a partial deployment of firewall rules on a device.
 
+## Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to manage Intune firewall policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+
 ## Firewall profiles
 
 ### Devices managed by Intune
@@ -62,14 +68,14 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
 - **macOS firewall** – Enable and configure settings for the built-in firewall on macOS.
 
-**Platform: Windows 10, Windows 11, and Windows Server**:
+**Platform: Windows**:
 
  For information about configuring settings in the following profiles, see the [Firewall configuration service provider (CSP)](/windows/client-management/mdm/firewall-csp).
 
 > [!NOTE]  
-> Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
+> Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform that is now named more simply as *Windows*.
 >
-> The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+> The *Windows* platform supports devices communicating through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
 >
 > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
@@ -88,7 +94,8 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
 In public preview, Windows Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
 
-- *Windows 10 and Windows 11*
+- Windows 10
+- Windows 11
 
 The following firewall rule profile settings are available in reusable settings groups:
 
@@ -204,6 +211,6 @@ Additional common firewall rule issues:
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
 
-View details for the settings in the deprecated Firewall profiles for the *Windows 10 and later* platform:  
+View details for the settings in the deprecated Firewall profiles for the deprecated *Windows 10 and later* platform:
 
 - [Firewall profile settings](../protect/endpoint-security-Firewall-profile-settings.md).

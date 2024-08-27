@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2024
+ms.date: 06/28/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -23,6 +23,7 @@ ms.custom: references_regions
 ms.collection:
 - M365-identity-device-management
 - tier2
+ms.subservice: windows-365-enterprise
 ---
 
 # In development for Windows 365 Enterprise
@@ -63,24 +64,27 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 
 To reduce monitor support issues, the Windows 365 service will default the chroma subsampling at 4:2:0 (instead of the previous 4:4:4).
 
+### Cloud PC gallery images update to Microsoft Teams 2.1<!--50394023-->
+
+In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 applications will be updated to use Microsoft Teams 2.1. These images include:
+
+- Windows 11 Enterprise + Microsoft 365 Apps  21H2
+- Windows 10 Enterprise + Microsoft 365 Apps 22H2
+- Windows 10 Enterprise + Microsoft 365 Apps 21H2
+
 <!-- ***********************************************-->
 ## Device security
 
-### Windows 365 Government support for Customer Lockbox<!--48802385-->
+### Cloud PC support for FIDO devices and passkeys on macOS and iOS<!--51858977-->
 
-Windows 365 Government will support Microsoft Purview Customer Lockbox.
-
-For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+Windows 365 Cloud PCs will support FIDO devices and passkeys for Microsoft Entra ID sign in on macOS and iOS.
 
 <!--***********************************************-->
 <!-- ## End user experience -->
 
 <!-- ***********************************************-->
-## Miscellaneous
-
-### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
-
-In a future update, customers that have Modern Microsoft Cloud Agreements will be able to upgrade their existing Windows 365 licenses in the Microsoft Admin Center.
+<!--## Miscellaneous
+-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -88,12 +92,6 @@ In a future update, customers that have Modern Microsoft Cloud Agreements will b
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
-
-### Windows 365 Government support for Cloud PC utilization report<!--49200860-->
-
-Windows 365 Government will support the Cloud PC utilization report.
-
-For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
 
 ### Update to Cloud PC action status report<!--49451077-->
 

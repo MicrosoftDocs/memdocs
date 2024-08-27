@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/14/2023
+ms.date: 06/25/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,9 +38,8 @@ This article describes some of these settings.
 
 ## Before you begin
 
-Create a [Windows 10/11 Wi-Fi device configuration profile](wi-fi-settings-configure.md).
-
-These settings use the [Wi-Fi CSP](/windows/client-management/mdm/wifi-csp).
+- Create a [Windows 10/11 Wi-Fi device configuration profile](wi-fi-settings-configure.md).
+- These settings use the [Wi-Fi CSP](/windows/client-management/mdm/wifi-csp).
 
 ## Basic profile
 
@@ -80,7 +79,7 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
   - **Manually configure**: Enter the **Proxy server IP address** and its **Port number**.
   - **Automatically configure**: Enter the URL pointing to a proxy autoconfiguration (PAC) script. For example, enter `http://proxy.contoso.com/proxy.pac`.
 
-    For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
+    For more information on PAC files, go to [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
 ## Enterprise profile
 
@@ -116,13 +115,13 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable this feature, and cache the credentials.
   - **Enable**: Caches user credentials when entered the first time users connect to the Wi-Fi network. Cached credentials are used for future connections, and users don't need to reenter them.
-  - **Disable**: User credentials aren't remembered or cached. When connecting to Wi-Fi, users must enter their credentials every time.
+  - **Disable**: User credentials aren't remembered or cached. When devices connect to Wi-Fi, users must enter their credentials every time.
 
-- **Authentication period**: Enter the number of seconds devices must wait after trying to authenticate, from 1-3600. If the device doesn't connect in the time you enter, then authentication fails. If you leave this value empty or blank, then `18` seconds is used.
+- **Authentication period**: Enter the number of seconds devices must wait after trying to authenticate, from 1-3600. If the device doesn't connect in the time you enter, then authentication fails. If you leave this value empty or blank, then `18` seconds are used.
 
 - **Authentication retry delay period**: Enter the number of seconds between a failed authentication attempt and the next authentication attempt, from 1-3600. If you leave this value empty or blank, then `1` second is used.
 
-- **Start period**: Enter the number of seconds to wait before sending an EAPOL-Start message, from 1-3600. If you leave this value empty or blank, then `5` seconds is used.
+- **Start period**: Enter the number of seconds to wait before sending an EAPOL-Start message, from 1-3600. If you leave this value empty or blank, then `5` seconds are used.
 
 - **Maximum EAPOL-start**: Enter the number of EAPOL-Start messages, from 1 and 100. If you leave this value empty or blank, then a maximum of `3` messages are sent.
 
@@ -139,10 +138,10 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
   - **Maximum time a PMK is stored in cache**: Enter the number of minutes a pairwise master key (PMK) is stored in the cache, from 5-1440 minutes.
   - **Maximum number of PMKs stored in cache**: Enter the number of keys stored in cache, from 1-255.
-  - **Enable pre-authentication**: Pre-authentication allows the profile to authenticate to all access points for the network in the profile before connecting. When moving between access points, pre-authentication reconnects the user or devices more quickly. Select **Yes** for the profile to authenticate to all access points for this network that are within range. Select **No** to require the user or device to authenticate to each access point separately.
+  - **Enable pre-authentication**: Preauthentication allows the profile to authenticate to all access points for the network in the profile before connecting. When devices move between access points, preauthentication reconnects the user or devices more quickly. Select **Yes** for the profile to authenticate to all access points for this network that are within range. Select **No** to require the user or device to authenticate to each access point separately.
   - **Maximum pre-authentication attempts**: Enter the number of tries to preauthenticate, from 1-16.
 
-- **EAP type**: Select the Extensible Authentication Protocol (EAP) type to authenticate secured wireless connections. Your options:
+- **EAP type**: To authenticate secured wireless connections, select the Extensible Authentication Protocol (EAP) type. Your options:
 
   - **EAP-SIM**
   - **EAP-TLS**: Also enter:
@@ -153,7 +152,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
       - **SCEP certificate**: Select the SCEP client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
       - **PKCS certificate**: Select the PKCS **client certificate** profile and trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the connection.
-      - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
   - **EAP-TTLS**: Also enter:
 
@@ -162,21 +161,21 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. Also enter:
-        - **Non-EAP method (inner identity)**: Choose how you authenticate the connection. Be sure you choose the same protocol that's configured on your Wi-Fi network.
+        - **Non-EAP method (inner identity)**: Choose how you authenticate the connection. Be sure you choose the same protocol that your Wi-Fi network uses.
 
           Your options: **Unencrypted password (PAP)**, **Challenge Handshake (CHAP)**, **Microsoft CHAP (MS-CHAP)**, and **Microsoft CHAP Version 2 (MS-CHAP v2)**
 
-        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
+        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
       - **SCEP certificate**: Select the SCEP client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
-        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
+        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
       - **PKCS certificate**: Select the PKCS **client certificate** profile and trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the connection.
 
-        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
+        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
-      - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
   - **Protected EAP (PEAP)**: Also enter:
 
@@ -196,37 +195,33 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. Also enter:
 
-        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
+        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
       - **SCEP certificate**: Select the SCEP **client certificate** profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
-        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
+        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
       - **PKCS certificate**: Select the PKCS **client certificate** profile and trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the connection.
 
-        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
+        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
-      - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
 - **Company Proxy settings**: Select to use the proxy settings within your organization. Your options:
   - **None**: No proxy settings are configured.
   - **Manually configure**: Enter the **Proxy server IP address** and its **Port number**.
   - **Automatically configure**: Enter the URL pointing to a proxy auto configuration (PAC) script. For example, enter `http://proxy.contoso.com/proxy.pac`.
 
-    For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
+    For more information on PAC files, go to [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
 - **Force Wi-Fi profile to be compliant with the Federal Information Processing Standard (FIPS)**: Select **Yes** when validating against the FIPS 140-2 standard. This standard is required for all US federal government agencies that use cryptography-based security systems to protect sensitive but unclassified information stored digitally. Select **No** to not be FIPS-compliant.
 
 ## Use an imported settings file
 
-For any settings not available in Intune, you can export Wi-Fi settings from another Windows device. This export creates an XML file with all the settings. Then, import this file in to Intune, and use it as the Wi-Fi profile. See [Export and import Wi-Fi settings for Windows devices](wi-fi-settings-import-windows-8-1.md).
+For any settings not available in Intune, you can export Wi-Fi settings from another Windows device. This export creates an XML file with all the settings. Then, import this file in to Intune, and use it as the Wi-Fi profile. For information on importing the XML file, go to [Export and import Wi-Fi settings for Windows devices](wi-fi-settings-import-windows-8-1.md).
 
-## Next steps
+## Related articles
 
-The profile is created, but may not be doing anything. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
-
-[Wi-Fi settings overview](wi-fi-settings-configure.md), including other platforms
-
-## Additional resources
-
-[Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- Learn more about Wi-Fi profiles in Intune at [Wi-Fi settings overview](wi-fi-settings-configure.md).
+- Get information on the [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access).

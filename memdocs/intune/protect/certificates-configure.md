@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - certificates
+- sub-certificates
 ---
 
 # Use certificates for authentication in Microsoft Intune

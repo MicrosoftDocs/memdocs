@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2022  
+ms.date: 07/22/2024  
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -44,12 +44,13 @@ For each section in this guide, review the associated tasks. Some tasks are requ
 
  Microsoft Intune, Microsoft Entra ID, and Microsoft Edge power the feature and capabilities for Linux desktop management. Microsoft Intune powers the device management and compliance capabilities. Microsoft Entra ID powers conditional access, which is used alongside Microsoft Intune compliance policies. Microsoft Edge is the web browser app used to provide protected access to Microsoft 365 web apps. 
  
- Complete the following prerequisites to enable your tenant's endpoint management capabilities:   
+ Complete the following prerequisites as an Intune administrator to enable your tenant's endpoint management capabilities:   
 
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md) 
-* [Set mobile device management authority](mdm-authority-set.md) 
-* [Have Global Administrator or Intune administrator Microsoft Entra permissions](role-based-access-control.md)  
+* [Set mobile device management authority](mdm-authority-set.md)  
+
+For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. The Global Administrator has more permissions than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the *Policy and Profile Manager*, a built-in Intune role. 
 
  For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
 
@@ -58,7 +59,7 @@ For each section in this guide, review the associated tasks. Some tasks are requ
 Use the [Microsoft Intune planning guide](intune-planning-guide.md) to define your device management goals, use-case scenarios, and requirements. It will also help you plan for rollout, communication, support, testing, and validation. For example, because you don't have to be there when employees and students are enrolling their devices, we recommend having a communication plan so that people know where to find information about installing and using Company Portal and Microsoft Edge.  
 
 ## Step 3: Create device compliance policies    
-Create a device compliance policy to ensure that Linux devices accessing your data are secure and meet your organization's standards. The final stage of the enrollment process is the compliance evaluation, which verifies that the settings on the device meet your policies. Device users must resolve all compliance issues to get access to protected resources.  Intune marks devices that fall short of compliance requirements as *non-compliant* and takes additional action (such as sending the user a notification, restricting access, or wiping the device) according to your *action for noncompliance* configurations.  
+Create a device compliance policy to ensure that Linux devices accessing your data are secure and meet your organization's standards. The final stage of the enrollment process is the compliance evaluation, which verifies that the settings on the device meet your policies. Device users must resolve all compliance issues to get access to protected resources.  Intune marks devices that fall short of compliance requirements as *noncompliant* and takes additional action (such as sending the user a notification, restricting access, or wiping the device) according to your *action for noncompliance* configurations.  
 
 You can enforce device compliance policies based on Linux distribution type, version, device encryption, or password complexity. All available compliance settings for Linux are in the Microsoft Intune settings catalog. You can use Microsoft Entra Conditional Access policies in conjunction with device compliance policies to control access to Microsoft 365 web apps in Microsoft Edge. For example, if an employee tries to access Microsoft Teams in Edge without first enrolling or securing their device, they won't be able to sign in.    
 
@@ -74,7 +75,13 @@ You can enforce device compliance policies based on Linux distribution type, ver
 
 ## Step 4: Enroll devices  
 
-Enrollment is supported on Linux desktops running Ubuntu LTS, version 22.04 or 20.04. Employees assigned Intune licenses can enroll their personal Linux devices into Microsoft Intune whenever they want. During enrollment, their device is registered with Microsoft Entra ID and evaluated for compliance. If you've applied a conditional access policy to Edge, users will be prompted to enroll their devices before they can access Microsoft 365 web apps with their work account.    
+Enrollment is supported on Linux desktops running:
+
+* Ubuntu LTS, version 22.04 or 20.04. 
+* RedHat Enterprise Linux 8  
+* RedHat Enterprise Linux 9 
+
+Employees assigned Intune licenses can enroll their personal Linux devices into Microsoft Intune whenever they want. During enrollment, their device is registered with Microsoft Entra ID and evaluated for compliance. If you've applied a conditional access policy to Edge, users will be prompted to enroll their devices before they can access Microsoft 365 web apps with their work account.    
 
 As an Intune administrator, you don't need to do anything to enable enrollment for employees, other than what's described under [Prerequisites](deployment-guide-platform-linux.md#step-1-prerequisites). However, it's important to provide them with help resources in case they need guidance during enrollment.  
 

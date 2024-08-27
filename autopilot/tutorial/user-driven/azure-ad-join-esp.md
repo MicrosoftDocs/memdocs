@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/28/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -35,11 +35,11 @@ Autopilot user-driven Microsoft Entra join steps:
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 - Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
 
-For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow).
 
 > [!NOTE]
 >
-> If an ESP is already configured and assigned from another Autopilot scenario and the same settings for the ESP should be used for the user-driven Microsoft Entra join scenario, skip this step and move on to [Step 6: Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md).
+> If an ESP is already configured, assigned, and uses the same settings for the user-driven Microsoft Entra join scenario, skip this step and move on to [Step 6: Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md).
 
 ## The Enrollment Status Page (ESP)
 
@@ -50,6 +50,6 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 > [!div class="nextstepaction"]
 > [Step 6: Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information ESP](../includes/more-info-esp.md)]

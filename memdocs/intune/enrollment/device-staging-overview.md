@@ -72,9 +72,9 @@ In the second stage, an Intune admin or third-party vendor completes the followi
  
 1. Unbox, assemble, and power on the new device you're enrolling.      
 
-1. Complete the enrollment steps and setup wizard. When you get to the sign-in screen, stop. Don't sign in.  
-
 1. With the device, scan the staging token's QR code or enter the token string.  
+
+1. Complete the enrollment steps and setup wizard. When you get to the sign-in screen, stop. Don't sign in.
 
 1. Turn off the device and distribute it to the end user.   
 

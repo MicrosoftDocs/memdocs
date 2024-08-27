@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/12/2024
+ms.date: 07/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -92,17 +92,17 @@ Select the app package file:
     - **Notes**: Enter any notes that you want to associate with this app.
     - **Logo**: Upload an icon that is associated with the app. This icon is displayed with the app when users browse through the company portal.
 
-2. Click **Next** to set the requirements.
+2. Select **Next** to set the requirements.
 
 ## Step 2 – Program
 You can optionally configure a preinstall script and a post-install script to customize the app install.
 
-**Pre-install script**: Provide a script that runs before the app is installed. Only when the preinstall script returns zero (indicating success), the app proceeds to install. If the preinstall script returns a non-zero code (indicating failure), the app doesn't install and reports its installation status as "failed". The preinstall script runs again for failed installations at the next device check-in (sync).
+**Pre-install script**: Provide a script that runs before the app is installed. Only when the preinstall script returns zero (indicating success), the app proceeds to install. If the preinstall script returns a nonzero code (indicating failure), the app doesn't install and reports its installation status as "failed". The preinstall script runs again for failed installations at the next device check-in (sync).
 
 **Post-install script**: Provide a script that runs after the app installs successfully. If provided, the post-install script runs after a successful app installation. Irrespective of the post-install script run status, an installed app reports its installation status as "success".
 
 > [!NOTE]
-> - Each pre-install or post-install script must be less than 5121 characters long.
+> - Each pre-install or post-install script must be less than 15360 characters long.
 > - The Microsoft Intune management agent for macOS version 2309.007 or greater is required to configure pre-install and post-install scripts for macOS PKG apps.
 > - For more details on configuring pre-install and post-install scripts, refer to [Prerequisites of shell scripts](../apps/macos-shell-scripts.md#prerequisites).
 
@@ -116,7 +116,7 @@ You can choose the minimum operating system required to install this app.
 
 You can use detection rules to choose how an app installation is detected on a managed macOS device.
 
-**Ignore app version**: Select **Yes** to install the app if the app isn't already installed on the device. This will only look for the presence of the app bundle ID. For apps that have an auto-update mechanism, select **Yes**. Select **No** to install the app when it isn't already installed on the device, or if the deploying app's version number doesn't match the version that's already installed on the device.
+**Ignore app version**: Select **Yes** to install the app if the app isn't already installed on the device. This will only look for the presence of the app bundle ID. For apps that have an autoupdate mechanism, select **Yes**. Select **No** to install the app when it isn't already installed on the device, or if the deploying app's version number doesn't match the version that's already installed on the device.
 
 **Included apps**: Provide the apps that are contained in the uploaded file. Included app bundle IDs and build numbers are used for detecting and monitoring app installation status of the uploaded file. Included apps list should only contain the application(s) installed by the uploaded file. Any other type of file that isn't an application should be excluded from the **Included apps** list. If **Included apps** list contains files that aren't applications or if all the listed apps aren't installed, app installation status doesn't report success.
 
@@ -138,29 +138,30 @@ You can use detection rules to choose how an app installation is detected on a m
 
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
     1. Click **Select scope tags** to optionally add scope tags for the app.
-    2. Click **Next** to display the **Assignments** page.
+    2. Select **Next** to display the **Assignments** page.
 
 ## Step 6 - Assignments
 
-You can select the **Required** group assignment for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
+You can select either the **Required** or **Available** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
 
 > [!NOTE]
 > A macOS app deployed using Intune agent will not automatically be removed from the device when the device is retired. The app and data it contains will remain on the device. It is recommended that the app is removed prior to retiring the device.
 
-1. For the specific app, select **Required** assignment type.
-2. Click **Next** to display the **Review + create** page.
+1. For the specific app, select either the **Required** or **Available** assignment type.
+2. Select **Next** to display the **Review + create** page.
 
 ## Step 7 – Review + create
 
 1. Review the values and settings you entered for the app.
-2. When you're done, click **Create** to add the app to Intune.
+2. When you're done, select **Create** to add the app to Intune.
    The **Overview** pane for the macOS PKG app is displayed.
 
 The app you have created appears in the apps list where you can assign it to the groups you choose. For help, see [How to assign apps to groups](../apps/apps-deploy.md).
 
 ## Known issues
 
-- **"Available for enrolled devices" and "uninstall" assignment type are not available**: Only **Required** assignment type is currently supported.
+- The **Uninstall** assignment type isn't available. Only Required and Available assignments are currently supported.
+- The Intune Company Portal shows the **Pending** state even after a successful app install. Specifically, **Available** apps show as **Pending** after the user clicks the **Install** button in the Company Portal app even after apps have successfully installed. Users may reattempt installation by clicking **Check status** on the local device in the **Devices** tab of the Company Portal app. Reporting in the Intune Admin Console isn't affected by this issue. This issue is being actively addressed to be resolved.
 
 ## Troubleshooting
 

@@ -2,13 +2,13 @@
 title: Windows Autopilot for pre-provisioned deployment
 description: Windows Autopilot for pre-provisioned deployment.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 06/11/2024
+ms.date: 07/23/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -35,7 +35,7 @@ Pre-provisioned deployments use Microsoft Intune in currently supported versions
 
 ## Prerequisites
 
-In addition to [Windows Autopilot requirements](requirements.md?tabs=software), Windows Autopilot for pre-provisioned deployment also requires:
+In addition to [Windows Autopilot requirements](requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
 - A currently supported version of Windows.
 - Windows Pro, Enterprise, or Education editions.
@@ -48,7 +48,7 @@ In addition to [Windows Autopilot requirements](requirements.md?tabs=software), 
 >
 > - Because the OEM or vendor performs the pre-provisioning process, this process **doesn't require access to an end-user's on-prem domain infrastructure**. The pre-provisioning process is unlike a typical Microsoft Entra hybrid joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected. Instead the domain network is contacted when the device is unboxed on-premises by the end-user.
 >
-> - See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review known issues and their solutions.
+> - See [Windows Autopilot known issues](known-issues.md) and [Troubleshooting Windows Autopilot device import and enrollment](troubleshooting-faq.yml#troubleshooting-windows-autopilot-device-import-and-enrollment) to review known issues and their solutions.
 
 ## Preparation
 
@@ -107,7 +107,7 @@ Each of these scenarios consists of two parts, a technician flow and a user flow
 After the customer or IT Admin targets all the apps and settings they want for their devices through Intune, the pre-provisioning technician can begin the pre-provisioning process. The technician could be a member of the IT staff, a services partner, or an OEM - each organization can decide who should perform these activities. Regardless of the scenario, the process done by the technician is the same:
 
 - Boot the device.
-- From the first out-of-box experience (OOBE) screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
+- From the first out-of-box experience (OOBE) screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, select the **Windows Autopilot provisioning** option and then select **Continue**.
 
 - On the **Windows Autopilot Configuration** screen, it displays the following information about the device:
   - The Autopilot profile assigned to the device.
@@ -140,11 +140,15 @@ If the pre-provisioning process fails:
 
 ### User flow
 
-<!-- MAXADO 8850476 -->
+<!-- MAXADO 8850476 & 8911061 -->
 
 > [!IMPORTANT]
 >
 > - In order to make sure tokens are refreshed properly between the Technician flow and the User flow, wait at least 90 minutes after running the Technician flow before running the User flow. This scenario mainly affects lab and testing scenarios when the User flow is run within 90 minutes after the Technician flow completes.
+>
+> - The User flow should be run within six months after the Technician flow finishes. Waiting more than six months can cause the certificates used by the Intune Management Engine (IME) to no longer be valid leading to errors such as:
+>
+>   `Error code: [Win32App][DetectionActionHandler] Detection for policy with id: <policy_id> resulted in action status: Failed and detection state: NotComputed.`
 >
 > - Compliance in Microsoft Entra ID is reset during the User flow. Devices might show as compliant in Microsoft Entra ID after the Technician flow completes, but then show as noncompliant once the User flow starts. Allow enough time after the User flow completes for compliance to reevaluate and update.
 
@@ -171,6 +175,17 @@ The device ESP reruns during the user flow so that both device and user ESP run 
 > [!NOTE]
 >
 > If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Microsoft Entra sign-in option might not show. Instead, users are asked to accept the EULA, and create a local account, which might not be the desired behavior.
+
+## Deploying a device
+
+For more information on starting a deployment on a device when using Windows Autopilot for pre-provisioned, see the Technician flow and User flow steps of the Windows Autopilot for pre-provisioned deployment tutorials:
+
+- [Microsoft Entra join](tutorial/pre-provisioning/azure-ad-join-workflow.md):
+  - [Technician flow](tutorial/pre-provisioning/azure-ad-join-technician-flow.md).
+  - [User flow](tutorial/pre-provisioning/azure-ad-join-user-flow.md).
+- [Microsoft Entra hybrid](tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md):
+  - [Technician flow](tutorial/pre-provisioning/hybrid-azure-ad-join-technician-flow.md).
+  - [User flow](tutorial/pre-provisioning/hybrid-azure-ad-join-user-flow.md).
 
 ## Related content
 

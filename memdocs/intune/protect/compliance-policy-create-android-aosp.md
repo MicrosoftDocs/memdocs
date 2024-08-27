@@ -28,6 +28,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - compliance
+- sub-device-compliance
 ---
 
 # Device compliance settings for Android (AOSP) in Intune

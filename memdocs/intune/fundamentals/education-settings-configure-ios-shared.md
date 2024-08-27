@@ -77,7 +77,7 @@ You can import information into SDS by using one of the following methods:
 ### Configure general settings
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Configuration** > **Create**.
+2. Go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform:** Select **iOS/iPadOS**.
@@ -151,7 +151,7 @@ The profile is created and appears on the profiles list pane.
 
 ## Step 3 - Create a device category  
 
-In the admin center, go to **Devices** > **Device categories**.  For more information about how to categorize devices in Intune, see [Add device categories](../enrollment/device-group-mapping.md#step-1-create-device-category-in-intune).  
+In the admin center, go to **Devices** > **Manage devices** > **Device categories**.  For more information about how to categorize devices in Intune, see [Add device categories](../enrollment/device-group-mapping.md#step-1-create-device-category-in-intune).  
 
 ## Step 4 – Create a dynamic group
 

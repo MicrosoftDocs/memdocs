@@ -30,6 +30,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - conditional-access
+- sub-device-compliance
 ---
 
 # Set up the on-premises Intune Exchange connector

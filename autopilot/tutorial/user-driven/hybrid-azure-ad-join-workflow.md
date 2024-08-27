@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -87,4 +87,4 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 For more information on Windows Autopilot user-driven Microsoft Entra hybrid join, see the following article:
 
-- [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/mem/autopilot/windows-autopilot-hybrid).
+- [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../windows-autopilot-hybrid.md).

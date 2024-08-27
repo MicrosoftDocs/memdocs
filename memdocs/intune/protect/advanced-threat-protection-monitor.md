@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-secure-endpoints
 ---
 
 # Monitor device status when you integrate Microsoft Defender for Endpoint with Intune

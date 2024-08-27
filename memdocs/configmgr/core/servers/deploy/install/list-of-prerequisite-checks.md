@@ -11,9 +11,9 @@ ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
- 
+
 # List of prerequisite checks for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -80,11 +80,11 @@ When you expand a primary site to a hierarchy, the Asset Intelligence synchroniz
 
 Background Intelligent Transfer Service (BITS) is installed on the management point. This check can fail for one of the following reasons:
 
-- BITS isn't installed  
+- BITS isn't installed
 
-- The IIS 6.0 WMI compatibility component for IIS 7.0 isn't installed on the server or remote IIS host  
+- The IIS 6.0 WMI compatibility component for IIS 7.0 isn't installed on the server or remote IIS host
 
-- Setup was unable to verify remote IIS settings. IIS common components aren't installed on the site server.  
+- Setup was unable to verify remote IIS settings. IIS common components aren't installed on the site server.
 
 ### Case-insensitive collation on SQL Server
 
@@ -283,7 +283,7 @@ Microsoft .NET Framework 4.0 is installed on the Configuration Manager console c
 
 *Applies to: new site or when updating an existing one*
 
-Configuration Manager requires the installation of the ODBC driver for SQL server as a prerequisite. 
+Configuration Manager requires the installation of the ODBC driver for SQL server as a prerequisite.
 
 ### Parent database collation
 
@@ -303,15 +303,15 @@ The replication status of the parent site is **Replication active** (state **125
 
 Before you run setup, another program requires the server to be restarted.
 
-To see if the computer is in a pending restart state, it checks the following registry locations:<!--SCCMDocs-pr issue 3010-->  
+To see if the computer is in a pending restart state, it checks the following registry locations:<!--SCCMDocs-pr issue 3010-->
 
-- `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`  
+- `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`
 
-- `HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired`  
+- `HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired`
 
-- `HKLM:SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations`  
+- `HKLM:SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations`
 
-- `HKLM:Software\Microsoft\ServerManager, CurrentRebootAttempts`  
+- `HKLM:Software\Microsoft\ServerManager, CurrentRebootAttempts`
 
 ### Primary FQDN
 
@@ -330,8 +330,8 @@ For more information, see [Installing SQL Server on a domain controller](/sql/sq
 ### Resource access policies are no longer supported
 
 _Applies to: CAS, primary site_
- 
-Starting in version 2403, resource access policies workspace is removed and is no longer supported. The co-management resource access workload is defaulted to Intune. 
+
+Starting in version 2403, resource access policies workspace is removed and is no longer supported. The co-management resource access workload is defaulted to Intune.
 
 Remove the certificate registration point site system role and all policies for company resource access features:
 
@@ -617,7 +617,7 @@ The central administration site has the same version of Configuration Manager.
 
 *Applies to: Central administration site, primary site*
 
-Verifies consistency of the site database in SQL Server.  
+Verifies consistency of the site database in SQL Server.
 
 ### Windows Deployment Tools installed
 
@@ -631,7 +631,7 @@ The Windows Deployment Tools component of the Windows ADK is installed.
 
 Server with the site server, management point, or distribution point roles aren't part of a Windows Cluster.
 
-The Configuration Manager setup process doesn't block installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Server Always On availability groups require this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using an availability group and a site server in passive mode. For more information, see [High availability options](../configure/high-availability-options.md). <!--1359132-->  
+The Configuration Manager setup process doesn't block installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Server Always On availability groups require this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using an availability group and a site server in passive mode. For more information, see [High availability options](../configure/high-availability-options.md). <!--1359132-->
 
 ### Windows PE installed
 
@@ -730,8 +730,6 @@ Starting in version 2103, this check warns about the presence of the [Log Analyt
 
 The Upgrade Readiness service is retired as of January 31, 2020. For more information, see [Windows Analytics retirement on January 31, 2020](/lifecycle/announcements/windows-analytics-retirement).
 
-Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](../../../../desktop-analytics/overview.md).
-
 If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients. For more information, see [Remove Upgrade Readiness connection](../../../clients/manage/upgrade-readiness.md#bkmk_remove).
 
 If you ignore this prerequisite warning, Configuration Manager setup automatically removes the Upgrade Readiness connector.<!-- #4898 -->
@@ -768,7 +766,7 @@ The Configuration Manager computer is a member of a Windows domain.
 
 ### Desktop Analytics is being retired
 
-<!--14840670--> 
+<!--14840670-->
 Desktop Analytics will be retired on November 30, 2022. Check out the new reports in the Microsoft Intune admin center. For more information see: https://go.microsoft.com/fwlink/?linkid=2186861.
 
 <!--14840670-->
@@ -802,7 +800,7 @@ When you install site roles that require HTTPS, configure IIS site bindings on t
 
 There are discovery records that are no longer valid. These records will be marked for deletion.
 
-### Network Access Account (NAA) account usage alert 
+### Network Access Account (NAA) account usage alert
 
 *Applies to: central administration site, Primary site*
 
@@ -830,11 +828,11 @@ The disk drive is formatted with the NTFS file system. For better security, inst
 
 You may see this warning if you have many application deployments and at least one of them requires approval.
 
-You have two options:  
+You have two options:
 
-- Ignore the warning and continue with the update. This action causes higher processing on the site server during the update as it processes the policies. You may also see more processor load on the management point after the update.  
+- Ignore the warning and continue with the update. This action causes higher processing on the site server during the update as it processes the policies. You may also see more processor load on the management point after the update.
 
-- Revise one of the applications that has no requirements or a specific OS requirement. Pre-process some of the load on the site server at that time. Review **objreplmgr.log**, and then monitor the processor on the management point. After the processing is complete, update the site. There will still be some additional processing after the update, but less than if you ignore the warning with the first option.  
+- Revise one of the applications that has no requirements or a specific OS requirement. Pre-process some of the load on the site server at that time. Review **objreplmgr.log**, and then monitor the processor on the management point. After the processing is complete, update the site. There will still be some additional processing after the update, but less than if you ignore the warning with the first option.
 
 ### Pending system restart on the remote SQL Server
 
@@ -842,15 +840,15 @@ You have two options:
 
 Before you run setup, another program requires the server to be restarted.
 
-To see if the computer is in a pending restart state, it checks the following registry locations:<!--SCCMDocs-pr issue 3377-->  
+To see if the computer is in a pending restart state, it checks the following registry locations:<!--SCCMDocs-pr issue 3377-->
 
-- `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`  
+- `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`
 
-- `HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired`  
+- `HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired`
 
-- `HKLM:SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations`  
+- `HKLM:SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations`
 
-- `HKLM:Software\Microsoft\ServerManager, CurrentRebootAttempts`  
+- `HKLM:Software\Microsoft\ServerManager, CurrentRebootAttempts`
 
 ### PowerShell 2.0 on site server
 
@@ -921,7 +919,7 @@ For more information, see [Removed and deprecated for site servers: SQL Server](
 
 *Applies to: Site database server*
 
-Check if the site database has a backlog of SQL Server change tracking data.<!--SCCMDocs-pr issue 3023-->  
+Check if the site database has a backlog of SQL Server change tracking data.<!--SCCMDocs-pr issue 3023-->
 
 Manually verify this check by running a diagnostic stored procedure in the site database. First, create a [diagnostic connection](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators) to your site database. The easiest method is to use SQL Server Management Studio's Database Engine Query Editor, and connect to `admin:<instance name>`.
 
@@ -932,7 +930,7 @@ USE <ConfigMgr database name>
 EXEC spDiagChangeTracking
 ```
 
-Depending upon the size of your database and the backlog size, this stored procedure could run in a few minutes or several hours. When the query completes, you see two sections of data related to the backlog. First look at **CT_Days_Old**. This value tells you the age (days) of the oldest entry in your syscommittab table. It should be five days, which is the Configuration Manager default value. Don't change this default value. At times of heavy data processing or replication, the oldest entry in syscommittab could be over five days. If this value is above seven days, run a manual cleanup of change tracking data.  
+Depending upon the size of your database and the backlog size, this stored procedure could run in a few minutes or several hours. When the query completes, you see two sections of data related to the backlog. First look at **CT_Days_Old**. This value tells you the age (days) of the oldest entry in your syscommittab table. It should be five days, which is the Configuration Manager default value. Don't change this default value. At times of heavy data processing or replication, the oldest entry in syscommittab could be over five days. If this value is above seven days, run a manual cleanup of change tracking data.
 
 To clean up the change tracking data, run the following command in the dedicated administration connection:
 
@@ -1013,7 +1011,7 @@ Site system roles other than distribution points are installed on servers runnin
 
 For more information, see [Supported operating systems for Configuration Manager site system servers](../../../plan-design/configs/supported-operating-systems-for-site-system-servers.md).
 
-> [!NOTE]  
+> [!NOTE]
 > This check can't resolve the status of site system roles installed in Azure or for the cloud storage used by Microsoft Intune. Ignore warnings for these roles as false positives.
 
 ### Upgrade Assessment Toolkit is unsupported
@@ -1030,7 +1028,7 @@ The computer account for the site server has **Full Control** permissions to the
 
 For more information, see [Prepare Active Directory for site publishing](../../../plan-design/network/extend-the-active-directory-schema.md).
 
-> [!NOTE]  
+> [!NOTE]
 > If you manually verify the permissions, you can ignore this warning.
 
 ### Windows Remote Management (WinRM) v1.1

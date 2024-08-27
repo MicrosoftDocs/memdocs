@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - compliance
+- sub-device-compliance
 ---
 
 # Evaluate compliance for Windows Subsystem for Linux   

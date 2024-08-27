@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/17/2024
+ms.date: 06/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -56,12 +56,9 @@ The following example image shows what an enrollment notification looks like to 
 > ![Example image of an enrollment notification configured in Intune, notifying the recipient that a device named *Nia's iPhone" was enrolled, and includes HTML elements such as bolded font and a hyperlink, device details, contact information, and privacy statement.](./media/enrollment-notifications/enrollment-notification-message.png)  
 
 ## Prerequisites  
-To create an enrollment notification, you must: 
+Prior to creating enrollment notifications, you must [configure Microsoft Intune branding and customization settings](../apps/company-portal-app.md) under **Tenant administration** > **Customization**.  
 
-* Be a Global Administrator or Intune Administrator. 
-* [Configure branding and customization settings](../apps/company-portal-app.md) in **Tenant administration** > **Customization**.  
-
-Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios. 
+Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios.  
 
 ## You should know  
 Email notifications appear in the user's inbox. Push notifications appear in the Intune Company Portal apps for iOS/iPadOS, macOS, and Android.  Enrollment push notifications aren't supported in the Company Portal for Windows, so they'll never appear there.  
@@ -71,7 +68,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 > [!TIP]
 > Use the built-in HTML editor to format and style email notifications. Intune supports the following HTML tags: `<a>`, `<strong>`, `<b>`, `<u>`, `<ol>`, `<ul>`, `<li>`, `<p>`, `<br>`, `<code>`, `<table>`, `<tbody>`, `<tr>`, `<td>`, `<thead>`, and`<th>`. It also supports the `href` attribute for hyperlinks, but only for HTTPS links.  
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).    
 2. Go to **Devices** > **Enrollment**.
 3. Select the **Windows**, **Apple**, or **Android** tab. 
 3. Choose **Enrollment notifications**. 
@@ -119,7 +116,9 @@ Email notifications appear in the user's inbox. Push notifications appear in the
     * **Show Company portal website link**: Flip the switch **On** to show a link to the Company Portal website. The tenant value is automatically populated. 
 8. Select **Next**. 
 9. Optionally, assign a scope tag, like `US-NC IT Team` or `JohnGlenn_ITDepartment`, to limit management of the notification to specific IT groups. Then select **Next**.  
-10. In **Assignments**, select the users or groups receiving the notification.     
+10. In **Assignments**, select the users or groups receiving the notification.
+    > [!NOTE]
+    > The *exclude* feature isn't available for enrollment notifications.  
 11. Select **Next**. 
 12. In **Review + create**, review the notification details, and then select **Create**.  
 

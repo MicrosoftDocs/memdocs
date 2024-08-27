@@ -82,7 +82,7 @@ Most app participation features involve:
 - Calling an `AppPolicy` method to check if an action is allowed, based on currently configured policy.
 - Depending on the result, either allowing the action to complete, or modifying the app behavior when the action is blocked.
 
-To retrieve an `AppPolicy` instance, use one of the [MAMPolicyManager] methods, such as `getPolicy` or `getPolicyForIdentity(final String identity)`.
+To retrieve an `AppPolicy` instance, use one of the [MAMPolicyManager] methods, such as `getPolicy(final Context context)` or `getPolicyForIdentityOID(final String oid)`.
 
 ### Informational methods in AppPolicy
 
@@ -107,27 +107,27 @@ The Intune App SDK allows IT administrators to protect against data ingress and 
 
 ### Saving to device or cloud storage
 
-The `getIsSaveToLocationAllowed` API lets your app know whether saving to certain locations is allowed for a given identity, based on the configured policy:
+The `getIsSaveToLocationAllowedForOID` API lets your app know whether saving to certain locations is allowed for a given identity, based on the configured policy:
 
 ```java
-MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(
-SaveLocation service, String username);
+MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowedForOID(
+SaveLocation service, String oid);
 ```
 
-To determine whether your app should implement the `getIsSaveToLocationAllowed` check, determine if your app supports data egress by reviewing the following table:
+To determine whether your app should implement the `getIsSaveToLocationAllowedForOID` check, determine if your app supports data egress by reviewing the following table:
 
-| `service` Parameter: `SaveLocation` Enum  Value | Use Case | Associated Username |
+| `service` Parameter: `SaveLocation` Enum  Value | Use Case | Associated OID |
 | - | - | - |
-| `ONEDRIVE_FOR_BUSINESS` | The app is saving data to OneDrive. | A `username` for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
-| `SHAREPOINT` | The app is saving data to Sharepoint. | A `username` for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
-| `BOX` | This app is saving data to Box. | A `username` for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
-| `LOCAL` | The app is saving data to an external storage location on the device that is **not** the app's private storage. | The external storage isn't considered a cloud service and so should always be used with a `null` username parameter. |
-| `PHOTO_LIBRARY` | The app is saving data to Android local photo storage. | The Android local photo storage isn't considered a cloud service and so should always be used with a `null` username parameter. |
-| `ACCOUNT_DOCUMENT` | The app is saving data to a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | A `username` for an account that is used for Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
-| `OTHER` | The app is saving data to a location that isn't specified above and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `username` isn't evaluated for this location and so should be `null`. |
+| `ONEDRIVE_FOR_BUSINESS` | The app is saving data to OneDrive. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
+| `SHAREPOINT` | The app is saving data to Sharepoint. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
+| `BOX` | This app is saving data to Box. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
+| `LOCAL` | The app is saving data to an external storage location on the device that is **not** the app's private storage. | The external storage isn't considered a cloud service and so should always be used with a `null` oid parameter. |
+| `PHOTO_LIBRARY` | The app is saving data to Android local photo storage. | The Android local photo storage isn't considered a cloud service and so should always be used with a `null` oid parameter. |
+| `ACCOUNT_DOCUMENT` | The app is saving data to a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | An OID for an account that is used for Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
+| `OTHER` | The app is saving data to a location that isn't specified above and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `oid` isn't evaluated for this location and so should be `null`. |
 
 Files placed in private app storage that are either necessary for app
-operation or downloaded temporarily for display are always allowed; you don't need to check `getIsSaveToLocationAllowed`.
+operation or downloaded temporarily for display are always allowed; you don't need to check `getIsSaveToLocationAllowedForOID`.
 Do check `SaveLocation.LOCAL` for
 
 1. Files saved outside of private app storage.
@@ -136,41 +136,41 @@ Do check `SaveLocation.LOCAL` for
    device).
 
 > [!NOTE]
-> When checking the save policy, `username` should be the UPN/username/email associated with the cloud service being saved **to** (*not* necessarily the same as the account owning the document being saved).
+> When checking the save policy, `oid` should be the OID of the account associated with the cloud service being saved **to** (*not* necessarily the same as the account owning the document being saved).
 
 ### Opening data from a local or cloud storage location
 
-The `getIsOpenFromLocationAllowed` API lets your app know whether opening from certain locations is allowed for a given identity, based on the configured policy:
+The `getIsOpenFromLocationAllowedForOID` API lets your app know whether opening from certain locations is allowed for a given identity, based on the configured policy:
 
 ```java
-MAMPolicyManager.getPolicy(currentActivity).getIsOpenFromLocationAllowed(
-OpenLocation location, String username);
+MAMPolicyManager.getPolicy(currentActivity).getIsOpenFromLocationAllowedForOID(
+OpenLocation location, String oid);
 ```
 
-To determine whether your app should implement the `getIsOpenFromLocationAllowed` check, determine if your app supports data ingress by reviewing the following table:
+To determine whether your app should implement the `getIsOpenFromLocationAllowedForOID` check, determine if your app supports data ingress by reviewing the following table:
 
-| `location` Parameter: `OpenLocation` Enum Value | Use Case | Associated Username |
+| `location` Parameter: `OpenLocation` Enum Value | Use Case | Associated OID |
 | - | - | - |
-| `ONEDRIVE_FOR_BUSINESS` | The app is opening data from OneDrive. | A `username` for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
-| `SHAREPOINT` | The app is opening data from Sharepoint. | A `username` for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `ONEDRIVE_FOR_BUSINESS` | The app is opening data from OneDrive. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
+| `SHAREPOINT` | The app is opening data from Sharepoint. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
 | `CAMERA` | The app is opening data from the camera. | A `null` value, because the device camera isn't a cloud service. |
-| `LOCAL` | The app is opening data from an external storage location on the device that is **not** the app's private storage. | Although the external storage isn't a cloud service location, a `username` parameter is expected because it indicates ownership. <br>  When opening a file from local storage, the file owner must always be considered, because the file owner's save-as policy may or may not permit other identities to open the file: <br> - **For identity-tagged files,** `username` should be the file owner's identity. <br> - **For files without an identity tag,** `username` should be `null`. |
-| `PHOTO_LIBRARY` | The app is opening data from Android photo local storage. | The Android local photo storage isn't considered a cloud service and so should always be used with a `null` username parameter. |
-| `ACCOUNT_DOCUMENT` | The app is opening data from a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | A `username` for an account that is used for Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
-| `OTHER` | The app is opening data from a location that isn't specified above and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `username` isn't evaluated for this location and so should be `null`. |
+| `LOCAL` | The app is opening data from an external storage location on the device that is **not** the app's private storage. | Although the external storage isn't a cloud service location, an `oid` parameter is expected because it indicates ownership. <br>  When opening a file from local storage, the file owner must always be considered, because the file owner's save-as policy may or may not permit other identities to open the file: <br> - **For identity-tagged files,** `oid` should be the file owner's identity. <br> - **For files without an identity tag,** `oid` should be `null`. |
+| `PHOTO_LIBRARY` | The app is opening data from Android photo local storage. | The Android local photo storage isn't considered a cloud service and so should always be used with a `null` oid parameter. |
+| `ACCOUNT_DOCUMENT` | The app is opening data from a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | An OID for an account that is used for Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
+| `OTHER` | The app is opening data from a location that isn't specified above and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `oid` isn't evaluated for this location and so should be `null`. |
 
 > [!NOTE]
-> When checking the open policy, `username` should be the UPN/username/email associated with the file or cloud service being opened **from** (*not* necessarily the same as the account who is opening the document).
+> When checking the open policy, `oid` should be the OID of the account associated with the file or cloud service being opened **from** (*not* necessarily the same as the account who is opening the document).
 
 > [!TIP]
 > For convenience, the SDK provides the method `AppPolicy.isOpenFromLocalStorageAllowed` that takes a `File` parameter for a file in local storage.
-> It terms of enforcing policy, is functionally identical to calling `AppPolicy.isOpenFromLocationAllowed(OpenLocation.LOCAL, username)` except it handles parsing the file owner's `username` from the `File`.
+> It terms of enforcing policy, is functionally identical to calling `AppPolicy.getIsOpenFromLocationAllowedForOID(OpenLocation.LOCAL, oid)` except it handles parsing the file owner's `oid` from the `File`.
 
 ### Sharing blocked dialog
 
 The SDK provides a dialog to notify the user that a data transfer action was blocked by MAM policy.
 
-The dialog should be displayed to the user whenever the `isSaveToAllowedForLocation` or `isOpenFromAllowedForLocation` API call results in the save/open action being blocked.
+The dialog should be displayed to the user whenever the `getIsSaveToLocationAllowedForOID` or `getIsOpenFromLocationAllowedForOID` API call results in the save/open action being blocked.
 The dialog displays a generic message and will return to the calling `Activity` when dismissed.
 
 To display the dialog, add the following code:
@@ -197,7 +197,7 @@ To determine if the policy is enforced, make the following call:
 
 ```java
 NotificationRestriction notificationRestriction =
-    MAMPolicyManager.getPolicyForIdentity(notificationIdentity).getNotificationRestriction();
+    MAMPolicyManager.getPolicyForIdentityOID(notificationIdentityOid).getNotificationRestriction();
 ```
 
 The returned `NotificationRestriction` enum has the following values:
@@ -583,7 +583,7 @@ This section describes every type of notification the SDK can send, when and why
 
 All SDK notifications implement the [MAMNotification] interface, which has a single function, `getType()`, returning a [MAMNotificationType] enum.
 
-Most notifications are [MAMUserNotification]s, which provide information specific to a single identity, which can be retrieved via the `getUserIdentity()` function.
+Most notifications are [MAMUserNotification]s, which provide information specific to a single identity. The identity's OID can be retrieved via the `getUserOid()` function, and the identity's UPN can be retrieved via `getUserIdentity()`.
 
 [MAMEnrollmentNotification] and [MAMComplianceNotification] further extend `MAMUserNotification`, which contain results for attempts to enroll a user/device with the MAM Service and result for attempting to remediate compliance for App Protection CA, respectively.
 
@@ -715,12 +715,12 @@ If any of these applies to a domain that is being checked for trust, then Truste
 
 This class provides the following APIs:
 
-- `createSSLContext(String identity, String protocol)`: creates an `SSLContext` object that uses trusted root certificates for the specified identity and the specified SSL/TLS protocol. The returned `SSLContext` object from this class is already initialized correctly with `X509TrustManager` objects that use the combined trusted root certificates from the device and the MAM service.
-- `createSSLSocketFactory(String identity, String protocol)`: creates an `SSLSocketFactory` object that uses trusted root certificates for the specified identity and the specified SSL/TLS protocol. The returned `SSLSocketFactory` object is referenced from the same `SSLContext` object in this class.
-- `createX509TrustManagers(String identity)`: creates an array of `X509TrustManager` objects that use the combined trusted root certificates from the device and the MAM service for the specified identity.
+- `createSSLContextForOID(String oid, String protocol)`: creates an `SSLContext` object that uses trusted root certificates for the specified identity and the specified SSL/TLS protocol. The returned `SSLContext` object from this class is already initialized correctly with `X509TrustManager` objects that use the combined trusted root certificates from the device and the MAM service.
+- `createSSLSocketFactoryForOID(String oid, String protocol)`: creates an `SSLSocketFactory` object that uses trusted root certificates for the specified identity and the specified SSL/TLS protocol. The returned `SSLSocketFactory` object is referenced from the same `SSLContext` object in this class.
+- `createX509TrustManagersForOID(String oid)`: creates an array of `X509TrustManager` objects that use the combined trusted root certificates from the device and the MAM service for the specified identity.
 
 > [!NOTE]
-> The `identity` parameter is expected to be a string identifier for a particular user running the application such as their UPN. In the case the user identifier is unknown beforehand, a value of null can be passed in and MAM will attempt to discover the correct identity from the thread or process in which these APIs are invoked. The identity must be set on the process or thread correctly for MAM to discover the identity. To learn more about setting the active identity on a process or thread visit: [Stage 5: Multi-Identity]
+> The `oid` parameter is expected to be the Microsoft Entra User ID (OID) for a particular user running the application. In the case the user identifier is unknown beforehand, a value of null can be passed in and MAM will attempt to discover the correct identity from the thread or process in which these APIs are invoked. The identity must be set on the process or thread correctly for MAM to discover the identity. To learn more about setting the active identity on a process or thread visit: [Stage 5: Multi-Identity]
 > [!NOTE]
 > When the `protocol` parameter is not provided, the highest supported SSL/TLS protocol on the platform is used.
 
@@ -730,7 +730,7 @@ Here are some examples of using this class.
 
 ```java
 // Create an SSL socket factory using supplying the optional parameters identity and protocol
-SSLSocketFactory sslSocketFactory = MAMTrustedRootCertsManager.createSSLSocketFactory(identity, "TLSv1.3");
+SSLSocketFactory sslSocketFactory = MAMTrustedRootCertsManager.createSSLSocketFactoryForOID(oid, "TLSv1.3");
 
 // Create a URL object for the desired endpoint
 URL url = new URL("https://example.com");
@@ -749,7 +749,7 @@ httpsURLConnection.setSSLSocketFactory(sslSocketFactory);
 
 ```java
 // Get the TrustManager instances for an identity from the SDK
-TrustManager[] trustManagers = MAMTrustedRootCertsManager.createX509TrustManagers(identity);
+TrustManager[] trustManagers = MAMTrustedRootCertsManager.createX509TrustManagersForOID(oid);
 
 // Get SSLContext from the platform
 SSLContext sslContext = SSLContext.getInstance("TLSv1.3");
@@ -982,25 +982,26 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [Network security configuration]:https://developer.android.com/training/articles/security-config
 
 <!-- Class links -->
-[AppPolicy]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/AppPolicy.html
-[MAMBackupAgent]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupAgent.html
-[MAMBackupAgentHelper]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupAgentHelper.html
-[MAMBackupDataInput]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupDataInput.html
-[MAMDataProtectionManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html
-[MAMDefaultBackupAgent]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMDefaultBackupAgent.html
-[MAMEnrollmentNotification]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMEnrollmentNotification.html
-[MAMFileBackupHelper]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMFileBackupHelper.html
-[MAMFileProtectionManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html
-[MAMNotification]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMNotification.html
-[MAMNotificationType]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMNotificationType.html
-[MAMComplianceNotification]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMComplianceNotification.html
-[MAMNotificationReceiver]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/notification/MAMNotificationReceiver.html
-[MAMNotificationReceiverRegistry]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/notification/MAMNotificationReceiverRegistry.html
-[MAMPolicyManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html
-[MAMSharedPreferencesBackupHelper]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMSharedPreferencesBackupHelper.html
-[MAMUserNotification]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMUserNotification.html
-[MAMTrustedRootCertsManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html
-[MAMCertTrustWebViewClient]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html
+[AppPolicy]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/AppPolicy.html
+[MAMBackupAgent]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupAgent.html
+[MAMBackupAgentHelper]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupAgentHelper.html
+[MAMBackupDataInput]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupDataInput.html
+[MAMDataProtectionManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html
+[MAMDefaultBackupAgent]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMDefaultBackupAgent.html
+[MAMEnrollmentNotification]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMEnrollmentNotification.html
+[MAMFileBackupHelper]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMFileBackupHelper.html
+[MAMFileProtectionManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html
+[MAMNotification]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMNotification.html
+[MAMNotificationType]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMNotificationType.html
+[MAMComplianceNotification]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMComplianceNotification.html
+[MAMNotificationReceiver]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/notification/MAMNotificationReceiver.html
+[MAMNotificationReceiverRegistry]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/notification/MAMNotificationReceiverRegistry.html
+[MAMPolicyManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html
+[MAMSharedPreferencesBackupHelper]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMSharedPreferencesBackupHelper.html
+[MAMUserNotification]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMUserNotification.html
+[MAMTrustedRootCertsManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html
+[MAMCertTrustWebViewClient]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html
 
 <!-- Method links -->
-[unregisterAccountForMAM]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String)
+[unregisterAccountForMAM]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String,%20java.lang.String)
+

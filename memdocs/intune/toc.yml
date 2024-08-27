@@ -390,8 +390,6 @@ items:
                   href: ./apps/store-apps-microsoft.md
                 - name: Microsoft store apps (legacy)
                   href: ./apps/store-apps-windows.md
-                - name: Microsoft Store for Business apps
-                  href: ./apps/windows-store-for-business.md
                 - name: Managed Google Play apps
                   href: ./apps/apps-add-android-for-work.md
               - name: Microsoft 365 Suite
@@ -653,7 +651,6 @@ items:
                 href: ./protect/endpoint-security-edr-policy.md
               - name: Firewall
                 href: ./protect/endpoint-security-firewall-policy.md
-
           - name: Microsoft Defender for Endpoint
             items:
             - name: Microsoft Defender for Endpoint
@@ -665,9 +662,11 @@ items:
             - name: Monitor Defender for Endpoint
               href: ./protect/advanced-threat-protection-monitor.md
             - name: Microsoft Defender for Endpoint Security settings management
-              href: ./protect/mde-security-integration.md
-          - name: Firewall rule migration
-            href: ./protect/endpoint-security-firewall-rule-tool.md  
+              items:
+              - name: Microsoft Defender for Endpoint Security settings management
+                href: ./protect/mde-security-integration.md
+              - name: Manage endpoint security policies in Microsoft Defender
+                href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
           - name: Tenant attach
             href: ./protect/tenant-attach-intune.md
           - name: Encrypt disks
@@ -869,6 +868,8 @@ items:
             href: ./protect/microsoft-cloud-pki-monitor.md  
           - name: Get audit logs  
             href: ./protect/microsoft-cloud-pki-audit-logs.md 
+          - name: Pause, revoke, and delete CA    
+            href: ./protect/microsoft-cloud-pki-delete.md 
         - name: Certificates 
           items: 
           - name: Use certificates for authentication
@@ -1220,6 +1221,9 @@ items:
           - name: Profiles on Zebra devices
             displayName: original equipment manufacturers, oem, oemconfig, schema, android
             href: ./configuration/oemconfig-zebra-android-devices.md
+          - name: Managed Home Screen (MHS) permissions
+            displayName: original equipment manufacturers, oem, oemconfig, schema, android, auto-grant
+            href: ./configuration/oemconfig-managed-home-screen-permissions-android.md
         - name: Kiosks and dedicated devices
           href: ./configuration/kiosk-settings.md
           displayName: single app, multi app, windows, holographic
@@ -1238,9 +1242,9 @@ items:
         - name: eSIM cellular on Windows
           displayName: embedded sim, activation code
           items:
-          - name: eSIM bulk activation with download server
+          - name: eSIM bulk activation with download server (settings catalog)
             href: ./configuration/esim-device-configuration-download-server.md
-          - name: eSIM bulk activation with activation codes
+          - name: eSIM bulk activation with activation codes (import CSV)
             href: ./configuration/esim-device-configuration.md
 
       - name: Configuration profile settings lists
@@ -1528,7 +1532,9 @@ items:
           - name: Set up Intune Connector for Active Directory  
             href: ./enrollment/autopilot-hybrid-connector-proxy.md
           - name: Set up Enrollment Status Page
-            href: ./enrollment/windows-enrollment-status.md 
+            href: ./enrollment/windows-enrollment-status.md
+          - name: Set up Windows Enrollment Attestation
+            href: ./enrollment/windows-enrollment-attestation.md   
  
       - name: Set up Android enrollment
         items:
@@ -1719,20 +1725,10 @@ items:
           href: ./remote-actions/device-inventory.md
         - name: Collect diagnostics
           href: ./remote-actions/collect-diagnostics.md
+        - name: Remove apps and configuration
+          href: ./remote-actions/remove-apps-config.md  
         - name: Pause config refresh
           href: ./remote-actions/pause-config-refresh.md    
-        - name: Send organizational messages  
-          items: 
-          - name: Overview 
-            href: ./remote-actions/organizational-messages-overview.md
-          - name: Prerequisites for organizational messages    
-            href: ./remote-actions/organizational-messages-prerequisites.md
-          - name: Create organizational messages  
-            href: ./remote-actions/organizational-messages-create.md  
-          - name: Cancel or delete organizational message 
-            href: ./remote-actions/organizational-messages-cancel.md
-          - name: Monitor organizational messages  
-            href: ./remote-actions/organizational-messages-reporting.md  
       - name: Bulk device actions
         href: ./remote-actions/bulk-device-actions.md
       - name: Troubleshooting
@@ -1822,6 +1818,8 @@ items:
             href: ./industry/education/tutorial-school-deployment/manage-surface-devices.md       
           - name: Reset and wipe devices
             href: ./industry/education/tutorial-school-deployment/reset-wipe.md
+          - name: Avoid policy conflicts
+            href: ./industry/education/tutorial-school-deployment/manage-avoid-policy-conflicts.md
         - name: 6. Troubleshoot and get help
           href: ./industry/education/tutorial-school-deployment/troubleshoot-overview.md
         - name: 7. Common Education configuration

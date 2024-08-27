@@ -21,6 +21,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-updates
 ---
 
 # Software updates planning guide for managed Android Enterprise devices in Microsoft Intune
@@ -73,7 +74,7 @@ When users install their own updates (instead of admins managing the updates), i
 
 ### ✅ Configure the system update setting
 
-Manage OS updates using the **System update** setting in an Intune device configuration profile (**Devices** > **Configuration** > **Create** > **Device restrictions** > **General**).
+Manage OS updates using the **System update** setting in an Intune device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **Device restrictions** > **General**).
 
 For enrolled Android Enterprise devices, you can configure this setting and choose when the updates are installed. For example, you can:
 
@@ -88,7 +89,7 @@ For more specific information on this setting and the values you can configure, 
 
 ### ✅ Use freeze periods during critical times
 
-Configure the **Freeze periods for system updates** setting in an Intune device configuration profile (**Devices** > **Configuration** > **Create** > **Device restrictions** > **General**).
+Configure the **Freeze periods for system updates** setting in an Intune device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **Device restrictions** > **General**).
 
 During critical periods of the year, like holidays and other events, a freeze period prevents devices from receiving system updates, security patches, and notifications about pending updates. Users can't manually check for updates:
 

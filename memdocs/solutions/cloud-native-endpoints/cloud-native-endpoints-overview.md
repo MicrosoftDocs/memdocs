@@ -6,17 +6,17 @@ titleSuffix: Microsoft Intune
 description: Learn more about cloud-native endpoints and what they are. See a list of benefits, and the effect on end users and IT administrators. Cloud-native endpoints help with remote workers and hybrid workers, and use Microsoft Intune to manage devices.
 keywords:
 author: MandiOhlinger
-  
+
 ms.author: mandia
 manager: dougeby
 ms.date: 05/30/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
-ms.subservice: 
+ms.subservice:
 ms.localizationpriority: high
-ms.assetid: 
+ms.assetid:
 # optional metadata
- 
+
 #audience:
 #ms.devlang:
 ms.reviewer: ahamil, jasandys, wicale
@@ -70,7 +70,7 @@ A cloud-native endpoint doesn't necessarily live exclusively in the cloud. Inste
 
 These endpoints can be located anywhere that has internet access. They can also be physical devices or virtual machines.
 
-From a technical perspective, cloud-native endpoints are Windows devices that are deployed using [Windows Autopilot](/autopilot/windows-autopilot), joined to Microsoft Entra ([Microsoft Entra joined devices](/entra/identity/devices/concept-directory-join)), and are automatically enrolled in a Mobile Device Management (MDM) solution, like [Microsoft Intune](../../intune/fundamentals/what-is-intune.md).
+From a technical perspective, cloud-native endpoints are Windows devices that are deployed using [Windows Autopilot](/autopilot/overview), joined to Microsoft Entra ([Microsoft Entra joined devices](/entra/identity/devices/concept-directory-join)), and are automatically enrolled in a Mobile Device Management (MDM) solution, like [Microsoft Intune](../../intune/fundamentals/what-is-intune.md).
 
 A cloud-native endpoint has the following characteristics:
 

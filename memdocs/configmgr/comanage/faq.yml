@@ -14,9 +14,9 @@ metadata:
 
 title: Frequently asked questions about co-management
 summary: |
-  *Applies to: Configuration Manager (current branch)* 
+  *Applies to: Configuration Manager (current branch)*
 
-  This article answers your frequently asked questions about co-management.<!--9582670--> For more information, see [What is co-management?](overview.md). 
+  This article answers your frequently asked questions about co-management.<!--9582670--> For more information, see [What is co-management?](overview.md).
 
 sections:
   - name: Planning
@@ -25,7 +25,7 @@ sections:
           I want to enable co-management, what's the effect?
         answer: |
           When you enable co-management, Configuration Manager is still the management authority for all workloads. So you continue to manage your devices the same way. If you don't switch any workload to Intune, all of the Configuration Manager settings and apps continue to work the same as before you enabled co-management.
-          
+
           Enabling co-management is completely transparent to the end user. There's no reboot, no agent installation, no interruption, and no user notification.
 
           As an administrator, you can see co-managed devices in the Microsoft Intune admin center. You can do remote actions from the admin center, and can benefit from insights with [Endpoint analytics](../../analytics/overview.md).
@@ -38,7 +38,7 @@ sections:
           Should I use co-management or tenant attach?
         answer: |
           Both! You can use them independently, but they work great together.
-          
+
           _Co-management_ enables you to concurrently manage a Windows 10 or later device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. You can enable co-management and not use tenant attach to upload devices to the Microsoft Intune admin center.
 
           _Tenant attach_ sets up synchronization between your Configuration Manager site and your Intune tenant. Then you can see Configuration Manager devices in the Microsoft Intune admin center. This connection provides you with a single view for all devices that you manage with Microsoft Intune and Configuration Manager. This web-based console may be beneficial in some scenarios that don't want to use the full Configuration Manager console, such as with help desk staff. You can also benefit from insights in [Endpoint analytics](../../analytics/overview.md). You can configure the site to upload devices to the Microsoft Intune admin center and not enable co-management. However, those devices are still managed by ConfigMgr until you enable co-management.
@@ -88,11 +88,11 @@ sections:
       - question: |
           Does a user need to be signed in for automatic enrollment to happen?
         answer: |
-          No. A device token is used to enroll the device to Intune. There's no need for a user to sign in to Windows for the setting to apply. 
+          No. A device token is used to enroll the device to Intune. There's no need for a user to sign in to Windows for the setting to apply.
 
-          When you set up co-management, enable autoenrollment of devices currently managed by Configuration Manager. If needed, you can scope autoenrollment only for a pilot collection. 
+          When you set up co-management, enable autoenrollment of devices currently managed by Configuration Manager. If needed, you can scope autoenrollment only for a pilot collection.
 
-          For more information, see [How to enable co-management](how-to-enable.md). Make sure the co-management prerequisites are set up before you start this process. For more information, see [Prerequisites](overview.md#prerequisites). 
+          For more information, see [How to enable co-management](how-to-enable.md). Make sure the co-management prerequisites are set up before you start this process. For more information, see [Prerequisites](overview.md#prerequisites).
 
       - question: |
           Do I need to do anything with the deprecation of the Azure AD Graph API and Azure AD Authentication Library (ADAL)?
@@ -117,7 +117,7 @@ sections:
       - question: |
           Can I use Windows Autopilot with co-management?
         answer: |
-          Yes. One of the two [paths to co-management](quickstart-paths.md) is to bootstrap with modern provisioning. For a new or repurposed device, [Autopilot](/autopilot/windows-autopilot) joins it to Microsoft Entra ID and enrolls it to Intune. Intune can then deploy the Configuration Manager client and enable co-management.
+          Yes. One of the two [paths to co-management](quickstart-paths.md) is to bootstrap with modern provisioning. For a new or repurposed device, [Autopilot](/autopilot/overview) joins it to Microsoft Entra ID and enrolls it to Intune. Intune can then deploy the Configuration Manager client and enable co-management.
 
           For more information, see [How to prepare internet-based devices for co-management](how-to-prepare-win10.md).
 
@@ -129,11 +129,11 @@ sections:
         answer: |
           You can manage updates for Windows and Microsoft 365 apps with either Configuration Manager or Intune. Configuration Manager provides a very detailed and controlled process for managing these updates and their content, which is important to some customers. A modern approach is to just keep devices up to date, but still control the timing and user experiences.
 
-          If you switch the **Windows Update policies** workload to Intune, then it becomes the management authority for Windows quality and feature updates. Use Intune to configure settings for update rings and feature update settings. For more information, see [Manage Windows software updates in Intune](../../intune/protect/windows-update-for-business-configure.md). 
-          
+          If you switch the **Windows Update policies** workload to Intune, then it becomes the management authority for Windows quality and feature updates. Use Intune to configure settings for update rings and feature update settings. For more information, see [Manage Windows software updates in Intune](../../intune/protect/windows-update-for-business-configure.md).
+
           If you switch the **Office Click-to-Run apps** workload to Intune, then it becomes the management authority for Microsoft 365 apps and updates. When you create a new Microsoft 365 suite deployment, choose the update channel for your clients will be at. For more information, see the following articles:
-          
-          - [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune/apps/apps-add-office365.md) 
+
+          - [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune/apps/apps-add-office365.md)
           - [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates](../../intune/configuration/administrative-templates-update-office.md)
           - [Overview of update channels for Microsoft 365 Apps](/deployoffice/overview-update-channels)
 

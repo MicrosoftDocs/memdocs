@@ -5,11 +5,11 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/28/2024
 ms.topic: how-to
 ms.localizationpriority: high
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.suite: ems
 search.appverid: MET150
 ms.collection:
@@ -44,7 +44,7 @@ appliesto:
 
       For more information, see [Use cloud groups to manage role assignments in Microsoft Entra ID](/azure/active-directory/roles/groups-concept).
 
-    - **Membership type**: Choose how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add).
+    - **Membership type**: Select how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add).
 
     - **Owners**: Select users that own the group. Owners can also delete this group.
 
@@ -101,13 +101,23 @@ Prerequisites:
 >
 > Assigning a user to a specific Autopilot device doesn't work if using Active Directory Federation Services (ADFS).
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices** > choose the device > **Assign user**.
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Choose a Microsoft Entra ID user licensed to use Intune and choose **Select**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
+
+1. In the **Windows Autopilot devices** screen, select a device, and then in the toolbar select **Assign user**.
+
+1. Select a Microsoft Entra ID user licensed to use Intune and select **Select**.
 
 1. In the **User Friendly Name** box, enter a friendly name or just accept the default.
 
-1. Choose **Save**.
+1. Select **Save**.
 
 For a detailed tutorial on assigning a user for each of the Windows Autopilot scenarios via Intune, see the following articles:
 

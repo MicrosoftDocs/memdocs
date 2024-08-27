@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,6 +24,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier 1
 - M365-identity-device-management
+- sub-intune-suite
 ---
 
 # Use Endpoint Privilege Management with Microsoft Intune
@@ -74,6 +75,15 @@ Endpoint Privilege Management supports the following operating systems:
 >
 > - Elevation settings policy will show as not applicable for devices that don't run a supported operating system version.
 > - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
+
+## Government cloud support
+
+Endpoint Privilege Management is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
 ## Getting started with Endpoint Privilege Management
 
@@ -182,6 +192,6 @@ For more information about each cmdlet, review the **readme.txt** file from the 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
 - [Approving elevation requests](../protect/epm-support-approved.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
 - [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)

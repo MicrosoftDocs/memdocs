@@ -40,7 +40,7 @@ To learn more about the Windows kiosk feature in Intune, go to [configure kiosk 
 
 ## Before you begin
 
-- [Create a Windows 10/11 kiosk device configuration profile](kiosk-settings.md#create-the-profile).
+- [Create a Windows kiosk device configuration profile](kiosk-settings.md#create-the-profile).
 
   When you create a Windows client kiosk device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
@@ -94,7 +94,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
       For more information on these options, go to [Deploy Microsoft Edge kiosk mode](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
-      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device restrictions profile (**Devices** > **Configuration** > **Create** > **Windows 10** for platform > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) describes the available Holographic for Business settings.
+      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a device restrictions profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10** for platform > **Templates** > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) describes the available Holographic for Business settings.
 
     - **Add Kiosk browser**: Not supported on Windows Holographic for Business.
 
@@ -119,4 +119,4 @@ Apps in this mode are available on the start menu. These apps are the only apps 
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [Windows 10/11](kiosk-settings-windows.md) devices.
+- Create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [Windows](kiosk-settings-windows.md) devices.

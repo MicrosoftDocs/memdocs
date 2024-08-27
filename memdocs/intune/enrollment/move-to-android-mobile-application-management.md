@@ -7,11 +7,11 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/31/2024
+ms.date: 06/27/2024
 ms.topic: how-to 
 ms.service: microsoft-intune 
 ms.subservice: enrollment  
-ms.localizationpriority:
+ms.localizationpriority: Low
 ms.assetid: 
 
 # optional metadata
@@ -96,7 +96,7 @@ Removing an enrolled device from Intune can have the following effect:
 ### Retire device in admin center  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Android**.   
+2. Go to **Devices** > **By platform** > **Android**.   
 3. Select **Android devices**.  
 3. Select the name of the device that you want to retire. You can add an **OS** filter to make it easier to see all Android device administrator devices in your tenant.  
 4. Select **Retire**. Then select **Yes** to confirm that you want to remove the device from device management.   

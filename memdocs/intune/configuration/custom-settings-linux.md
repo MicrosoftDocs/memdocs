@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 05/15/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,15 +40,15 @@ This article lists the steps to add an existing script and has a GitHub repo wit
 
 ## Prerequisites
 
-- **Linux Ubuntu Desktop**: For a list of the supported versions, go to [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
-- **Linux devices are enrolled in Intune**. For more information on Linux enrollment, go to [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-linux.md).
+- **Linux Ubuntu Desktop**, **RedHat Enterprise Linux 8**, or **RedHat Enterprise Linux 9**: For a list of the supported versions, go to [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
+- **Linux devices are enrolled in Intune**. For more information on Linux enrollment, go to [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-linux.md).  
 
 ## Import the script
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Scripts and remediations** > **Add** > **Linux**:
+2. Select **Devices** > **Manage devices** > **Scripts and remediations** > **Platform scripts** tab > **Add** > **Linux**:
 
-    :::image type="content" source="./media/custom-settings-linux/add-linux-script.png" alt-text="Screenshot that shows the Microsoft Intune admin center and how to select devices, scripts, add, and select Linux from the drop-down list to add a custom Bash script.":::
+    :::image type="content" source="./media/custom-settings-linux/add-linux-script.png" alt-text="Screenshot that shows how to select devices, scripts, add, and select Linux from the drop-down list to add a custom Bash script in Microsoft Intune.":::
 
 3. In **Basics**, enter the following properties:
 

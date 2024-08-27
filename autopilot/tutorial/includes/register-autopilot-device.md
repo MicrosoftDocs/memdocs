@@ -2,10 +2,10 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/07/2024
+ms.date: 06/28/2024
 ms.localizationpriority: medium
 ---
 
@@ -19,29 +19,25 @@ user-driven/hybrid-azure-ad-join-register-device.md
 
 Headings are driven by article context. -->
 
-Before a device can use Autopilot, the device must be registered as an Autopilot device. Registering a device as an Autopilot device can be thought of as importing the device into Autopilot so that Autopilot service can be used on the device. Registering a device as an Autopilot device doesn't mean that the device has ever used the Autopilot service. It just makes the Autopilot service available to the device.
+Before a device can use Autopilot, the device must be registered as an Autopilot device. Registering a device as an Autopilot device can be thought of as importing the device into Autopilot so that Autopilot service can be used on the device. Registering a device as an Autopilot device doesn't mean that the device has used the Autopilot service. It just makes the Autopilot service available to the device.
 
-Also note that a device registered in Autopilot doesn't mean the device is enrolled in Intune. A device may be registered as an Autopilot device but may not exist in Intune. It's not until an Autopilot registered device goes through the Autopilot process for the first time that it becomes enrolled in Intune. After the Autopilot device undergoes the Autopilot process and enrolls in Intune, the Autopilot device appears as a device in both Microsoft Entra ID and Intune.
-
-> [!TIP]
->
-> For Configuration Manager admins, registering a device as an Autopilot device before undergoing the Autopilot process for the first time can be thought of as being similar to Unknown Computer support.
+Also note that a device registered in Autopilot doesn't mean the device is enrolled in Intune. A device might be registered as an Autopilot device but might not exist in Intune. It's not until an Autopilot registered device goes through the Autopilot process for the first time that it becomes enrolled in Intune. After the Autopilot device undergoes the Autopilot process and enrolls in Intune, the Autopilot device appears as a device in both Microsoft Entra ID and Intune.
 
 There are several methods to register a device as an Autopilot device in Intune:
 
 - Manually registering devices into Intune as an Autopilot device via the hardware hash. The hardware hash of a device can be collected via one of the following methods:
 
-  - [Configuration Manager](/mem/configmgr/comanage/how-to-prepare-Win10#windows-autopilot)
-  - [PowerShell script](/mem/autopilot/add-devices#powershell)
-  - [Diagnostics page hash export](/mem/autopilot/add-devices#diagnostics-page-hash-export)
-  - [Desktop hash export](/mem/autopilot/add-devices#desktop-hash-export)
+  - [Configuration Manager](/mem/configmgr/comanage/how-to-prepare-Win10#windows-autopilot).
+  - [PowerShell script](../../add-devices.md#powershell).
+  - [Diagnostics page hash export](../../add-devices.md#diagnostics-page-hash-export).
+  - [Desktop hash export](../../add-devices.md#desktop-hash-export).
 
   These methods of obtaining the hardware hash of a device are well documented. The corresponding documentation can be viewed by selecting the appropriate link from the above list.
 
 - Automatically registering device via:
 
-  - An [OEM](/mem/autopilot/oem-registration), including [Microsoft Surface](/surface/surface-autopilot-registration-support) devices
-  - A [partner](/mem/autopilot/partner-registration)
+  - An [OEM](../../oem-registration.md), including [Microsoft Surface](/surface/surface-autopilot-registration-support) devices.
+  - A [partner](../../partner-registration.md).
 
   Registering a device via an OEM or partner is also well documented. The corresponding documentation can be viewed by selecting the appropriate link from the above list.
 

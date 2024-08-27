@@ -49,7 +49,7 @@ This guide is for Android developers who are looking to add support for Microsof
 
 Before you start integrating the Intune App SDK into your Android application, take a moment to familiarize yourself with Microsoft Intune's Mobile Application Management solution:
 
-- [What is Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
+- [Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
   and where to find these features in the Microsoft Intune admin center.
 - [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
 - [Android app protection policy settings] describes each Android setting in detail.
@@ -260,7 +260,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 
 <!-- Microsoft Learn documentation: Intune overview -->
 [Intune App SDK overview]:/mem/intune/developer/app-sdk
-[What is Microsoft Intune app management]:/mem/intune/apps/app-management
+[Microsoft Intune app management]:/mem/intune/apps/app-management
 [Android app protection policy settings]:/mem/intune/apps/app-protection-policy-settings-android
 [Overview of the Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer

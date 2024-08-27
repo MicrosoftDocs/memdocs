@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - certificates
+- sub-certificates
 ---
 
 # Trusted root certificate profiles for Microsoft Intune
@@ -106,7 +107,7 @@ After naming the certificate, it can be saved.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select  and go to **Devices** > **Configuration** > **Create**.
+2. Select  and go to **Devices** > **Manage devices** > **Configuration** > **Create**.
 
    ![Navigate to Intune and create a new profile for a trusted certificate](./media/certificates-trusted-root/certificates-configure-profile-new.png)
 

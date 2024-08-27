@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 08/08/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -35,7 +35,7 @@ ms.custom: intune-classic
 The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!IMPORTANT]
-> Intune regularly releases updates to the [Intune App SDK](https://github.com/msintuneappsdk). We recommend subscribing to the [Intune App SDK](https://github.com/msintuneappsdk) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
+> Intune regularly releases updates to the [Intune App SDK](https://github.com/microsoftconnect/ms-intune-app-sdk-android). We recommend subscribing to the [Intune App SDK](https://github.com/microsoftconnect/ms-intune-app-sdk-android) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
 >
 > Plan to take mandatory Intune App SDK updates prior to every major OS release to ensure your app continues to run smoothly as OS updates can cause breaking changes. If you do not update to the latest version prior to a major OS release, you may run the risk of encountering a breaking change and/or being unable to apply app protection policies to your app.
 
@@ -345,4 +345,4 @@ If you need to test your application under Robolectric, the recommended workarou
 [Enroll Android devices]:/mem/intune/enrollment/android-enroll
 
 <!-- Class links -->
-[MAMActivity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
+[MAMActivity]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
