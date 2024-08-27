@@ -42,7 +42,7 @@ The Microsoft Intune app is supported with the following operating systems:
  - RedHat Enterprise Linux 9    
 
 ## Install Microsoft Intune app for Ubuntu Desktop
-Run the following commands in a command line to manually install the Intune app and its dependencies on your device.  
+Run the following commands in a command line to manually install the Microsoft Intune app and its dependencies on your device.  
 
 1. Install Curl. 
 
@@ -70,15 +70,18 @@ Run the following commands in a command line to manually install the Intune app 
     sudo rm microsoft.gpg
     ```
 
-3. Install the Microsoft Intune app. 
+3. Install the Intune app. 
 
     ```bash
     sudo apt update
     sudo apt install intune-portal
     ``` 
 
-## Update Microsoft Intune app for Ubuntu Desktop 
-The Microsoft Intune app automatically updates when updates become available in Software Updater.  Run the following commands to update the Microsoft Intune app manually.    
+4. Reboot your device.  
+
+### Update app for Ubuntu Desktop 
+The Microsoft Intune app automatically updates when updates become available in Software Updater. Run the following commands to update the app manually.    
+
 
 1. Update the package repo and metadata, which includes `intune-portal`, `msft-broker`, and `msft edge`.   
 
@@ -92,22 +95,20 @@ The Microsoft Intune app automatically updates when updates become available in 
     sudo apt-get dist-upgrade
     ```
 
-## Uninstall Microsoft Intune app for Ubuntu Desktop  
-Run the following commands to uninstall the Microsoft Intune app and remove local registration data on devices running Ubuntu Desktop.  
+### Uninstall app for Ubuntu Desktop  
+Run the following commands to uninstall the Microsoft Intune app and remove local registration data from devices running Ubuntu Desktop.  
 
-1. Remove the Microsoft Intune app from your system.  
+1. Remove the Intune app from your system.  
 
     ```bash
     sudo apt remove intune-portal
     ```
 
-2. Remove the local registration data.  
+2. Remove the local registration data. This command removes the local configuration data that contains your device registration.     
 
     ```bash
     sudo apt purge intune-portal
     ```  
-    This command removes the local configuration data that contains your device registration.  
-
 ## Install Microsoft Intune app for RedHat Enterprise Linux  
 
 1. Add the Microsoft repository.  
@@ -123,8 +124,10 @@ Run the following commands to uninstall the Microsoft Intune app and remove loca
    sudo dnf install intune-portal
    ```
 
-## Update Microsoft Intune app for RedHat Enterprise Linux  
-Run one of the following commands to update the Intune app.  
+3. Reboot your device.  
+
+### Update app for RedHat Enterprise Linux  
+Run one of the following commands to update the Microsoft Intune app.  
 
 **Option 1**:  
 
@@ -137,7 +140,7 @@ Run one of the following commands to update the Intune app.
    sudo dnf update intune-portal
    ```
 
-## Uninstall Microsoft Intune app for RedHat Enterprise Linux  
+### Uninstall app for RedHat Enterprise Linux  
 
 Run the following commands to uninstall the Microsoft Intune app and remove local registration data on devices running RedHat Enterprise Linux.    
 
@@ -153,4 +156,4 @@ Run the following commands to uninstall the Microsoft Intune app and remove loca
    sudo rm -rf /var/opt/microsoft/mdatp
    sudo rm -rf /etc/opt/microsoft/mdatp
    sudo rm -rf /opt/microsoft/mdatp
-   ```
+   ```  
