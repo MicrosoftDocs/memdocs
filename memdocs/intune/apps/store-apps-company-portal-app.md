@@ -54,10 +54,10 @@ To manage devices and install apps, your users can install the Company Portal ap
     1. For **App type**, choose **Other** > **Line-of-business app**.  
     1. Choose **Select** to continue.  
     1. On the **App information** page, choose **Select app package file**. \
-  `.1. In the new pane, select the **File** upload button, and then upload the app package file. The file you want to select has the .AppxBundle axtension.   
+    1. In the new pane, select the **File** upload button, and then upload the app package file. The file you want to select has the *.AppxBundle* axtension.   
 1. Detected dependencies appear. Under **Select dependency app files**, select all dependencies you downloaded in step 1. 
    1. **Shift + click** to select all dependencies.  
-   1.. Under the **Added** column, verify that **Yes** appears for the architectures you need.  
+   1. Under the **Added** column, verify that **Yes** appears for the architectures you need.  
 
      > [!NOTE]
      > If you don't add the dependencies, installation could fail for the selected device types.  
