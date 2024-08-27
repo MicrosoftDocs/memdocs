@@ -37,6 +37,7 @@ This table shows examples of the different sizes available for a Cloud PC.
 
 > [!NOTE]
 > If Microsoft 365 Apps and Microsoft Teams are included in the **Supported apps** column, they are pre-installed for those Cloud PC options.  Additional licensing is required for these apps.
+
 |CPUs, RAM, and storage|Example scenarios|Supported apps|
 |:-------------------------------------------------------------------------------|:----------------------------------|:----------------------------------|
 |2vCPU/4GB/256GB<br/> 2vCPU/4GB/128GB<br/> 2vCPU/4GB/64GB | Firstline workers, call centers, education/training/CRM access, mergers and acquisition, short-term and seasonal, customer services. |Microsoft 365 Apps, Microsoft Teams light (Chat and Audio only), OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support.  |
