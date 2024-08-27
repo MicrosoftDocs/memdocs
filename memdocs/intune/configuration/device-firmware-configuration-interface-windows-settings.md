@@ -41,7 +41,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-- [Create the Windows 10/11 DFCI profile](device-firmware-configuration-interface-windows.md). There are more requirements to creating DFCI profiles. For more specific information, go to [Use DFCI profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md).
+- [Create the Windows DFCI profile](device-firmware-configuration-interface-windows.md). There are more requirements to creating DFCI profiles. For more specific information, go to [Use DFCI profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md).
 - Some settings aren't available for all devices. To confirm if a setting is or isn't available on your device, contact your device manufacturer.
 - These settings use the [UEFI CSP](/windows/client-management/mdm/uefi-csp).
 

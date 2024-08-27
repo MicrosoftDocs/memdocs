@@ -340,13 +340,13 @@ There are some policy types that can't be exported. There are some policy types 
 | Windows app (Win32) | ❌ Export <br/>❌ Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.intunewin` application source files.|
 | **Compliance policies** | &nbsp; |
 | Actions for Non-Compliance | ❌ Export <br/>❌ Import<br/><br/>It's possible there could be a link to an e-mail template. When you import a policy that has non-compliance actions, the default actions for non-compliance are added instead. |
-| Assignments | ✔️ Export<br/>❌ Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
+| Assignments | ✅ Export<br/>❌ Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
 | **Configuration profiles** | &nbsp; |
-| Email |  ✔️ Export <br/> <br/>✔️ If an email profile doesn't use certificates, then the import should work. <br/>❌ If an email profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
-| SCEP certificate | ✔️ Export<br/><br/>❌ Import <br/><br/>SCEP certificate profiles use a root certificate. The root certificate ID is different in a new tenant. |
-| VPN |  ✔️ Export<br/><br/> ✔️ If a VPN profile doesn't use certificates, then the import should work.<br/> ❌ If a VPN profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
-| Wi-Fi |  ✔️ Export<br/><br/> ✔️ If a Wi-Fi profile doesn't use certificates, then the import should work. <br/>❌ If a Wi-Fi profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
-| Assignments | ✔️ Export<br/>❌ Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
+| Email |  ✅ Export <br/> <br/>✅ If an email profile doesn't use certificates, then the import should work. <br/>❌ If an email profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
+| SCEP certificate | ✅ Export<br/><br/>❌ Import <br/><br/>SCEP certificate profiles use a root certificate. The root certificate ID is different in a new tenant. |
+| VPN |  ✅ Export<br/><br/> ✅ If a VPN profile doesn't use certificates, then the import should work.<br/> ❌ If a VPN profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
+| Wi-Fi |  ✅ Export<br/><br/> ✅ If a Wi-Fi profile doesn't use certificates, then the import should work. <br/>❌ If a Wi-Fi profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
+| Assignments | ✅ Export<br/>❌ Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
 | **Endpoint Security** | &nbsp; |
 | Endpoint detection and response | ❌ Export <br/>❌ Import <br/><br/>This policy is linked to Microsoft Defender for Endpoint. In the new tenant, you configure Microsoft Defender for Endpoint, which automatically includes the **Endpoint detection and response** policy. |
 

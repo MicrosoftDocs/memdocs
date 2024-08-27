@@ -379,7 +379,7 @@ You can configure Podman to use the proxy to download (pull) updated images for 
 
    `systemctl edit --force mstunnel_monitor`  
 
-2. Add the following four lines to the file. Replace each instance of *[address]* with your proxy DN or address, and then save the file:
+2. Add the following three lines to the file. Replace each instance of *[address]* with your proxy DN or address, and then save the file:
 
    ```
    [Service]

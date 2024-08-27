@@ -102,7 +102,7 @@ You can optionally configure a preinstall script and a post-install script to cu
 **Post-install script**: Provide a script that runs after the app installs successfully. If provided, the post-install script runs after a successful app installation. Irrespective of the post-install script run status, an installed app reports its installation status as "success".
 
 > [!NOTE]
-> - Each pre-install or post-install script must be less than 5121 characters long.
+> - Each pre-install or post-install script must be less than 15360 characters long.
 > - The Microsoft Intune management agent for macOS version 2309.007 or greater is required to configure pre-install and post-install scripts for macOS PKG apps.
 > - For more details on configuring pre-install and post-install scripts, refer to [Prerequisites of shell scripts](../apps/macos-shell-scripts.md#prerequisites).
 

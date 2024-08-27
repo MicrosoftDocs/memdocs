@@ -81,7 +81,7 @@ This article provides an overview of the steps to start your Intune deployment.
 
 In this step:
 
-✔️ **Confirm your devices are supported, create your Intune tenant, add users & groups, assign licenses**, and more.
+✅ **Confirm your devices are supported, create your Intune tenant, add users & groups, assign licenses**, and more.
 
 This step focuses on setting up Intune and getting it ready for you to manage your user identities, apps, and devices. Intune uses many features in Microsoft Entra ID, including your domain, your users, and your groups.
 
@@ -91,9 +91,9 @@ For more information, go to [Step 1 - Set up Microsoft Intune](deployment-plan-s
 
 In this step:
 
-✔️ **On devices that will enroll** in Intune, create a baseline of apps that devices must have, and then assign these app policies during enrollment. On apps that need extra security, also use app protection policies.
+✅ **On devices that will enroll** in Intune, create a baseline of apps that devices must have, and then assign these app policies during enrollment. On apps that need extra security, also use app protection policies.
 
-✔️ **On devices that won't enroll** in Intune, use app protection policies and multifactor authentication (MFA):
+✅ **On devices that won't enroll** in Intune, use app protection policies and multifactor authentication (MFA):
 
 - App protection policies help protect organization data on personal devices.
 - MFA helps protect your organization's data from unauthorized access.
@@ -116,9 +116,9 @@ If users with their own personal devices access organization resources, then you
 
 In this step:
 
-✔️ **Create a baseline of compliance policies** that devices must have, and then assign these compliance policies during enrollment.
+✅ **Create a baseline of compliance policies** that devices must have, and then assign these compliance policies during enrollment.
 
-✔️ **Enable Conditional Access** to enforce your compliance policies.
+✅ **Enable Conditional Access** to enforce your compliance policies.
 
 For more information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
 
@@ -139,7 +139,7 @@ If you prefer, you can enroll your devices before checking compliance. It's your
 
 In this step:
 
-✔️ **Create baseline of security features and device features** that should be enabled or blocked. Assign these profiles during enrollment.
+✅ **Create baseline of security features and device features** that should be enabled or blocked. Assign these profiles during enrollment.
 
 For more information, go to [Step 4 - Create device configuration profiles to secure devices and access organization resources](deployment-plan-configuration-profile.md).
 
@@ -160,7 +160,7 @@ The following articles are good resources:
 
 In this step:
 
-✔️ **Enroll your devices** in Intune.
+✅ **Enroll your devices** in Intune.
 
 For more specific information, go to [Step 5 - Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 

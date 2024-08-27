@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Manage operating system versions of devices you manage with Intune
+title: Manage device operating system versions with Intune
 titleSuffix: Microsoft Intune
-description: Learn how to manage operating system versions across platforms with Microsoft Intune. 
+description: Learn about the methods for managing device operating system versions supported by Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/04/2023
+ms.date: 08/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -117,7 +117,7 @@ You can use the Intune capabilities described in this article to help you move y
 
 ## Next steps
 
-Use the following resources to manage operating system versions in your organization:
+Use the following resources to manage the operating system versions that are in use in your organization:
 
 - [Set device type restrictions](../enrollment/enrollment-restrictions-set.md)
 - [Get started with device compliance](../protect/device-compliance-get-started.md)
