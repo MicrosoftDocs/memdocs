@@ -90,5 +90,5 @@ The configuration of Trend Micro Mobile Security as a Service and Intune integra
 
 ## Next steps
 
-- [Customize Mobile Policies in Trend Micro Mobile Security as a Service](https://docs.trendmicro.com/en-us/enterprise/trend-vision-one/mobile-security/integration-with-mdm/mobile-policy/configuring-mobile-p.aspx)
+- [Customize Mobile Policies in Trend Micro Mobile Security as a Service](https://docs.trendmicro.com/documentation/article/trend-vision-one-configuring-mobile-policies)
 - [Create Mobile Threat Defense (MTD) device compliance policy with Intune](../protect/mtd-device-compliance-policy-create.md)
