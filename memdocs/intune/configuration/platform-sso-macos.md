@@ -66,9 +66,10 @@ This article shows you how to configure Platform SSO for macOS devices in Intune
   - Safari
 - To create the Intune policy, at a minimum, sign in with an account that has the following Intune permissions:
   - Device Configuration **Read**, **Create**, **Update**, and **Assign** permissions
-- Users performing the registration must be allowed to join devices to Entra ID. For more information, see [Configure your device settings](/entra/identity/devices/device-join-plan#configure-your-device-settings).
 
   There are some built-in roles that have these permissions, including the **Policy and Profile Manager** Intune RBAC role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+
+- Users performing the registration must be allowed to join devices to Entra ID. For more information, see [Configure your device settings](/entra/identity/devices/device-join-plan#configure-your-device-settings).
 
 ## Step 1 - Decide the authentication method
 
