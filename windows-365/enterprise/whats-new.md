@@ -63,7 +63,7 @@ For more information about public preview items, see [Public preview in Windows 
 
 #### Session lock experience configuration for single sign-on<!--48440155-->
 
-You can now configure the remote session lock experience when single sign-on is enabled between the default disconnect behavior and showing the remote lock screen. For more information, see [Configure single sign-on for Windows 365 using Microsoft Entra authentication](configure-single-sign-on.com).
+You can now configure the remote session lock experience when single sign-on is enabled between the default disconnect behavior and showing the remote lock screen. For more information, see [Configure single sign-on for Windows 365 using Microsoft Entra authentication](configure-single-sign-on.md).
 
 
 <!-- ########################## -->
