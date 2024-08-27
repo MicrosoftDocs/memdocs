@@ -79,7 +79,7 @@ Run the following commands in a command line to manually install the Microsoft I
 
 4. Reboot your device.  
 
-## Update Microsoft Intune app for Ubuntu Desktop 
+### Update app for Ubuntu Desktop 
 The Microsoft Intune app automatically updates when updates become available in Software Updater. Run the following commands to update the app manually.    
 
 1. Update the package repo and metadata, which includes `intune-portal`, `msft-broker`, and `msft edge`.   
@@ -94,7 +94,7 @@ The Microsoft Intune app automatically updates when updates become available in 
     sudo apt-get dist-upgrade
     ```
 
-## Uninstall Microsoft Intune app for Ubuntu Desktop  
+### Uninstall app for Ubuntu Desktop  
 Run the following commands to uninstall the Microsoft Intune app and remove local registration data from devices running Ubuntu Desktop.  
 
 1. Remove the Intune app from your system.  
@@ -127,7 +127,7 @@ Run the following commands to uninstall the Microsoft Intune app and remove loca
 
 3. Reboot your device.  
 
-## Update Microsoft Intune app for RedHat Enterprise Linux  
+### Update app for RedHat Enterprise Linux  
 Run one of the following commands to update the Microsoft Intune app.  
 
 **Option 1**:  
@@ -141,7 +141,7 @@ Run one of the following commands to update the Microsoft Intune app.
    sudo dnf update intune-portal
    ```
 
-## Uninstall Microsoft Intune app for RedHat Enterprise Linux  
+### Uninstall app for RedHat Enterprise Linux  
 
 Run the following commands to uninstall the Microsoft Intune app and remove local registration data on devices running RedHat Enterprise Linux.    
 
