@@ -80,7 +80,7 @@ Run the following commands in a command line to manually install the Microsoft I
 4. Reboot your device.  
 
 ## Update Microsoft Intune app for Ubuntu Desktop 
-The Microsoft Intune app automatically updates when updates become available in Software Updater.  Run the following commands to update the Intune app manually.    
+The Microsoft Intune app automatically updates when updates become available in Software Updater. Run the following commands to update the app manually.    
 
 1. Update the package repo and metadata, which includes `intune-portal`, `msft-broker`, and `msft edge`.   
 
