@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Set up the Pradeo integration with Intune
+title: Set up Pradeo Mobile Threat Defense to integrate with Intune
 titleSuffix: Intune on Azure
 description: How to set up the Pradeo Mobile Threat Protection solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 08/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
