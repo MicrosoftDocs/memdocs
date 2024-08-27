@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/15/2024
+ms.date: 08/27/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -41,10 +41,10 @@ The Microsoft Intune app is supported with the following operating systems:
  - RedHat Enterprise Linux 8  
  - RedHat Enterprise Linux 9    
 
-## Install Intune app for Ubuntu Desktop
+## Install Microsoft Intune app for Ubuntu Desktop
 Run the following commands in a command line to manually install the Intune app and its dependencies on your device.  
 
-1. Install Curl:
+1. Install Curl. 
 
     ```bash
     sudo apt install curl gpg
@@ -52,7 +52,7 @@ Run the following commands in a command line to manually install the Intune app 
 
 2. Install the Microsoft package signing key.  
 
-   For Ubuntu 20.04:
+   For Ubuntu 20.04:  
 
     ```bash
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -61,7 +61,7 @@ Run the following commands in a command line to manually install the Intune app 
     sudo rm microsoft.gpg
     ```
     
-    For Ubuntu 22.04:
+    For Ubuntu 22.04:  
 
     ```bash
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -70,84 +70,84 @@ Run the following commands in a command line to manually install the Intune app 
     sudo rm microsoft.gpg
     ```
 
-3. Install the Microsoft Intune app:
+3. Install the Microsoft Intune app. 
 
     ```bash
     sudo apt update
     sudo apt install intune-portal
     ``` 
 
-## Update Intune app 
-The Microsoft Intune app automatically updates when updates become available in Software Updater.   
+## Update Microsoft Intune app for Ubuntu Desktop 
+The Microsoft Intune app automatically updates when updates become available in Software Updater.  Run the following commands to update the Microsoft Intune app manually.    
 
-Run these commands to update the Microsoft Intune app manually:    
-
-1. Update the package repo and metadata, which includes intune-portal, msft-broker, and msft edge:
+1. Update the package repo and metadata, which includes `intune-portal`, `msft-broker`, and `msft edge`.   
 
     ```bash
     sudo apt update
     ```
  
-2. Upgrade the packages and clean up dependencies:
+2. Upgrade the packages and clean up dependencies.  
 
     ```bash
     sudo apt-get dist-upgrade
     ```
 
-## Uninstall Intune app 
+## Uninstall Microsoft Intune app for Ubuntu Desktop  
+Run the following commands to uninstall the Microsoft Intune app and remove local registration data on devices running Ubuntu Desktop.  
 
-1. Remove the Intune app from your system:
+1. Remove the Microsoft Intune app from your system.  
 
     ```bash
     sudo apt remove intune-portal
     ```
 
-2. Remove the local registration data. This command removes the local configuration data that contains your device registration:
+2. Remove the local registration data.  
 
     ```bash
     sudo apt purge intune-portal
-    ```
+    ```  
+    This command removes the local configuration data that contains your device registration.  
 
-## Install Intune app for RedHat Enterprise Linux
+## Install Microsoft Intune app for RedHat Enterprise Linux  
 
-1. Add the Microsoft repository:
+1. Add the Microsoft repository.  
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/microsoft-rhel9.0-prod
    ```
 
-2. Install the Intune app:
+2. Install the Microsoft Intune app.  
 
    ```bash
    sudo dnf install intune-portal
    ```
 
-### Update the Intune app
+## Update Microsoft Intune app for RedHat Enterprise Linux  
+Run one of the following commands to update the Intune app.  
 
-To update the Intune app, run:
+**Option 1**:  
 
    ```bash
    sudo dnf update
    ```
 
-or
-
+**Option 2**: 
    ```bash
    sudo dnf update intune-portal
    ```
 
-### Uninstall the Intune app
+## Uninstall Microsoft Intune app for RedHat Enterprise Linux  
 
-To uninstall the Intune app and remove local registration data:
+Run the following commands to uninstall the Microsoft Intune app and remove local registration data on devices running RedHat Enterprise Linux.    
 
-1. Remove the Intune portal package:
+1. Remove the Intune portal package.  
 
    ```bash
    sudo dnf remove intune-portal
    ```
 
-2. Remove local registration data:
+2. Remove local registration data.  
 
    ```bash
    sudo rm -rf /var/opt/microsoft/mdatp
