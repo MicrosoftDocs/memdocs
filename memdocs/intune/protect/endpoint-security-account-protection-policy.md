@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/18/2024
+ms.date: 08/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,8 +57,9 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 ## Account protection profiles
 
-**Windows 10/11 profiles**:
+Platform: **Windows**:
 
+Profiles:
 - **Account protection** – Settings for account protection policies help you protect user credentials. The account protection policy is focused on settings for Windows Hello for Business that include both *device-scoped* and *user-scoped* settings, and Credential Guard, which is part of Windows identity and access management.
 
   - *Windows Hello for Business* replaces passwords with strong two-factor authentication on PCs and mobile devices.

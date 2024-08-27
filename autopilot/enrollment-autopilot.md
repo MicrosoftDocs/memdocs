@@ -9,7 +9,7 @@ ms.date: 06/28/2024
 ms.topic: how-to
 ms.localizationpriority: high
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.suite: ems
 search.appverid: MET150
 ms.collection:

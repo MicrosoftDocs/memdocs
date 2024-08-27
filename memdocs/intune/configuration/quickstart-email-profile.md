@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2023
+ms.date: 08/14/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -62,7 +62,7 @@ For more information on the different roles in Intune, go to [Role-based access 
 3. Enter the following properties:
 
    - **Platform**: Select **iOS/iPadOS**.
-   - **Profile type**: Select **Temmplates** > **Email**.
+   - **Profile type**: Select **Templates** > **Email**.
   
 4. Select **Create**.
 
@@ -87,7 +87,7 @@ For more information on the different roles in Intune, go to [Role-based access 
 
 9. In **Scope tags** (optional), select **Next**. In this example, we don't use scope tags.
 
-10. In **Assignments**, use the drop-down for **Assign to** and select **All users and all devices**.  Then, select **Next**.
+10. In **Assignments**, use the drop-down for **Assign to** and select **All users and all devices**. Then, select **Next**.
 
 11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned.
 
