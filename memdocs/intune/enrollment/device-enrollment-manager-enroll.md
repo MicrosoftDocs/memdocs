@@ -34,13 +34,14 @@ ms.collection:
 # Add device enrollment managers  
 
 A device enrollment manager (DEM) is a nonadministrator user who can enroll devices in Intune. Device enrollment managers are useful to have when you need to enroll and prepare many devices for distribution. People signed in to a DEM account can enroll and manage up to 1,000 devices, while a standard nonadmin account can only enroll 15.  
-> [!IMPORTANT]
-> The Intune device limit does not apply to the following enrollment methods without the need of a DEM account:
-> - Co-management with Configuration Manager
-> - Automatic enrollment + group policy
-> - Windows Autopilot
->
-> Additionally, those methods are not part of the [supported enrollment methods for DEM accounts.](#supported-enrollment-methods)
+
+> [!TIP]
+> The following enrollment methods allow standard nonadmin accounts to enroll more than 15 devices:  
+>  - Co-management with Configuration Manager
+>  - Automatic enrollment + group policy 
+>  - Windows Autopilot
+>    
+> If you're using these methods to enroll devices, you do not need to use a DEM account.  
 
 A DEM account requires an Intune user or device license, and an associated Microsoft Entra user. Global Administrators and Intune Service Administrators can add and manage device enrollment managers in the Microsoft Intune admin center. 
 
