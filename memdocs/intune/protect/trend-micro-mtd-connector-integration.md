@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 08/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ ms.collection:
 
 # Connect Trend Micro Mobile Security as a Service with Microsoft Intune
 
-Connect Trend Micro Mobile Security as a Service to monitor and mitigate device risk levels on Intune-managed devices. Trend Micro Mobile Security as a Service works by reporting device risk levels to Microsoft Intune. Intune then uses that information to enforce the appropriate app configuration and risk assessment policies. For more information about Trend Micro Mobile Security as a Service, see [Getting Started with Mobile Security](https://docs.trendmicro.com/en-us/enterprise/trend-vision-one/mobile-security/getting-started-with_003.aspx) in the Trend Micro documentation.
+Connect Trend Micro Mobile Security as a Service to monitor and mitigate device risk levels on Intune-managed devices. Trend Micro Mobile Security as a Service works by reporting device risk levels to Microsoft Intune. Intune then uses that information to enforce the appropriate app configuration and risk assessment policies. For more information about Trend Micro Mobile Security as a Service, see [Getting Started with Mobile Security](https://docs.trendmicro.com/documentation/article/trend-vision-one-getting-started-mobile-security) in the Trend Micro documentation.
 
 This article describes the requirements and steps to connect Trend Micro Mobile Security as a Service in your tenant.
 
@@ -72,7 +72,7 @@ The configuration of Trend Micro Mobile Security as a Service and Intune integra
 
 2. **Select groups to install Trend Micro Mobile Security as a Service mobile app.** - Trend Micro Mobile Security as a Service mobile app installs automatically on devices in the selected groups.
 
-3. **(Optional) Create mobile policies.** - Optionally create customized mobile security policies provided by Trend Micro Mobile Security as a Service. For more information, see [Configuring Mobile Policies](https://docs.trendmicro.com/en-us/enterprise/trend-micro-xdr-help/configuringmobilepolicy).
+3. **(Optional) Create mobile policies.** - Optionally create customized mobile security policies provided by Trend Micro Mobile Security as a Service. For more information, see [Configuring Mobile Policies](https://docs.trendmicro.com/enterprise/trend-micro-xdr-help/configuringmobilepolicy).
 
 4. **Confirm mobile app status update.**
 
