@@ -75,12 +75,13 @@ Run the following commands in a command line to manually install the Microsoft I
     ```bash
     sudo apt update
     sudo apt install intune-portal
-    ```
+    ``` 
 
 4. Reboot your device.  
 
 ### Update app for Ubuntu Desktop 
 The Microsoft Intune app automatically updates when updates become available in Software Updater. Run the following commands to update the app manually.    
+
 
 1. Update the package repo and metadata, which includes `intune-portal`, `msft-broker`, and `msft edge`.   
 
@@ -108,8 +109,6 @@ Run the following commands to uninstall the Microsoft Intune app and remove loca
     ```bash
     sudo apt purge intune-portal
     ```  
-   
-
 ## Install Microsoft Intune app for RedHat Enterprise Linux  
 
 1. Add the Microsoft repository.  
