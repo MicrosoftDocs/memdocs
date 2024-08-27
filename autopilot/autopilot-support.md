@@ -2,7 +2,7 @@
 title: Windows Autopilot support
 description: Find out who to contact for help with Windows Autopilot installation.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

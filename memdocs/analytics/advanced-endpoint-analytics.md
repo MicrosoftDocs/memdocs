@@ -81,3 +81,4 @@ For more information, go to:
 - [Enhanced device timeline](enhanced-device-timeline.md)  
 - [Battery health](battery-health.md)
 - [Device query](device-query.md)
+- [Resource Performance report](resource-performance-report.md)

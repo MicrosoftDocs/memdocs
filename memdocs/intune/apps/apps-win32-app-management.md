@@ -5,7 +5,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/31/2024
+ms.date: 08/09/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -15,12 +15,12 @@ ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
+ai-usage: ai-assisted
 ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Win32
-- AI-Assisted
 ---
 
 # Win32 app management in Microsoft Intune

@@ -51,7 +51,9 @@ The richest and broadest protection capabilities for Microsoft 365 data are avai
 
 ## Create Intune app protection policies
 
-App Protection Policies (APP) define which apps are allowed and the actions they can take with your organization's data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
+As organizations increasingly adopt SaaS and web applications, browsers have become essential tools for businesses. Users often need to access these applications from mobile browsers while on the go. Ensuring that data accessed through mobile browsers is protected from intentional or unintentional leaks is crucial. For instance, users might inadvertently share organizations’ data with personal apps, leading to data leakage, or download it to local devices, which also poses a risk. 
+
+Organizations can protect data from being leaked when users browse with Microsoft Edge for mobile by configuring App Protection Policies (APP), which define what apps are allowed and the actions they can take with your organizations' data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
 
 The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
 
@@ -69,21 +71,17 @@ Regardless of whether the device is enrolled in a unified endpoint management (U
 
 - Determine which framework level meets your requirements. Most organizations should implement the settings defined in **Enterprise enhanced data protection** (Level 2) as that enables data protection and access requirements controls.
 
-For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
+> [!NOTE]
+> One of the settings related to browsers is 'Restrict web content transfer with other apps'. In **Enterprise enhanced data protection** (Level 2), the value of this setting is configured to Microsoft Edge.
+> When Outlook and Microsoft Teams are protected by App Protection Policies (APP), Microsoft Edge will be used to open links from these apps, ensuring that the links are secure and protected. 
+> For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 > [!IMPORTANT]
 > To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.  
 
-## Single sign-on to Microsoft Entra connected web apps in policy-protected browsers
-
-Edge for iOS and Android can take advantage of single sign-on (SSO) to all web apps (SaaS and on-premises) that are Microsoft Entra connected. SSO allows users to access Microsoft Entra connected web apps through Edge for iOS and Android, without having to re-enter their credentials.
-
-SSO requires your device to be registered by either the Microsoft Authenticator app for iOS devices, or the Intune Company Portal on Android. When users have either of these, they're prompted to register their device when they go to a Microsoft Entra connected web app in a policy-protected browser (this is only true if their device hasn't already been registered). After the device is registered with the user's account managed by Intune, that account has SSO enabled for Microsoft Entra connected web apps.
-
-> [!NOTE]
-> Device registration is a simple check-in with the Microsoft Entra service. It doesn't require full device enrollment, and doesn't give IT any additional privileges on the device.
-
 ## Apply Conditional Access
+While it's important to protect Microsoft Edge with App Protection Policies (APP), it's also crucial to ensure Microsoft Edge is the mandatory browser for opening corporate applications. Users might otherwise use other unprotected browsers to access corporate applications, potentially leading to data leaks.
+
 Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Edge for iOS and Android. To do this, you'll need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
 Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Edge for iOS and Android, but blocks other mobile device web browsers from connecting to Microsoft 365 endpoints.
@@ -95,6 +93,15 @@ With Conditional Access, you can also target on-premises sites that you have exp
 
 > [!NOTE]
 > To leverage app-based conditional access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
+
+## Single sign-on to Microsoft Entra connected web apps in policy-protected browsers
+
+Edge for iOS and Android can take advantage of single sign-on (SSO) to all web apps (SaaS and on-premises) that are Microsoft Entra connected. SSO allows users to access Microsoft Entra connected web apps through Edge for iOS and Android, without having to re-enter their credentials.
+
+SSO requires your device to be registered by either the Microsoft Authenticator app for iOS devices, or the Intune Company Portal on Android. When users have either of these, they're prompted to register their device when they go to a Microsoft Entra connected web app in a policy-protected browser (this is only true if their device hasn't already been registered). After the device is registered with the user's account managed by Intune, that account has SSO enabled for Microsoft Entra connected web apps.
+
+> [!NOTE]
+> Device registration is a simple check-in with the Microsoft Entra service. It doesn't require full device enrollment, and doesn't give IT any additional privileges on the device.
 
 ## Use app configuration to manage the browsing experience
 
@@ -166,16 +173,7 @@ Edge for iOS and Android offers organizations several options for adjusting the 
 
 #### Organization logo and brand color
 
-These settings allow you to customize the New Tab Page for Edge for iOS and Android to display your organization's logo and brand color as the page background.
-
-To upload your organization's logo and color, first complete the following steps:
-1. Within [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to **Tenant Administration** > **Customization**. Next to **Settings**, click **Edit**.
-2. To set your brand's logo, next to **Show in header**, choose "Organization logo only". Transparent background logos are recommended.
-3. To set your brand's background color, select a **Theme color**. Edge for iOS and Android applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability.
-
-> [!NOTE]
-> As Azure Active Directory (Azure AD) Graph is deprecated, it has entered its retire phase. See details on [Migrate Azure AD Graph Overview](/graph/migrate-azure-ad-graph-overview). As a result, organization logo and brand color maintained within Intune Admin center will be inaccessible when Azure Active Directory (Azure AD) Graph is completely retired.
-> Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps](/azure/active-directory/fundamentals/how-to-customize-branding). **Banner logo** will be used as your organization and **Page background color** will be used as brand color.
+The organization logo and brand color settings allow you to customize the **New Tab Page** for Edge on iOS and Android devices. The **Banner logo** is used as your organization's logo and the **Page background color** is used as your organization's brand color. For more information, see [Configure your company branding](/entra/fundamentals/how-to-customize-branding). 
 
 Next, use the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
 
@@ -282,7 +280,7 @@ Edge for iOS and Android allows organizations to disable certain features that a
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br>**coupons** disables coupons <br>**extensions** disables extensions (Edge for Android only) <br>**developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br>**UIRAlert** suppress re-verify account popups in new tab page screen and in account settings page <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
+|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br>**coupons** disables coupons <br>**extensions** disables extensions (Edge for Android only) <br>**developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br>**UIRAlert** suppress re-verify account popups in new tab page screen <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
 
 #### Disable import passwords feature
 

@@ -390,8 +390,6 @@ items:
                   href: ./apps/store-apps-microsoft.md
                 - name: Microsoft store apps (legacy)
                   href: ./apps/store-apps-windows.md
-                - name: Microsoft Store for Business apps
-                  href: ./apps/windows-store-for-business.md
                 - name: Managed Google Play apps
                   href: ./apps/apps-add-android-for-work.md
               - name: Microsoft 365 Suite
@@ -669,8 +667,6 @@ items:
                 href: ./protect/mde-security-integration.md
               - name: Manage endpoint security policies in Microsoft Defender
                 href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
-          - name: Firewall rule migration
-            href: ./protect/endpoint-security-firewall-rule-tool.md  
           - name: Tenant attach
             href: ./protect/tenant-attach-intune.md
           - name: Encrypt disks
@@ -1733,18 +1729,6 @@ items:
           href: ./remote-actions/remove-apps-config.md  
         - name: Pause config refresh
           href: ./remote-actions/pause-config-refresh.md    
-        - name: Send organizational messages  
-          items: 
-          - name: Overview 
-            href: ./remote-actions/organizational-messages-overview.md
-          - name: Prerequisites for organizational messages    
-            href: ./remote-actions/organizational-messages-prerequisites.md
-          - name: Create organizational messages  
-            href: ./remote-actions/organizational-messages-create.md  
-          - name: Cancel or delete organizational message 
-            href: ./remote-actions/organizational-messages-cancel.md
-          - name: Monitor organizational messages  
-            href: ./remote-actions/organizational-messages-reporting.md  
       - name: Bulk device actions
         href: ./remote-actions/bulk-device-actions.md
       - name: Troubleshooting

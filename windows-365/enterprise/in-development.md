@@ -23,6 +23,7 @@ ms.custom: references_regions
 ms.collection:
 - M365-identity-device-management
 - tier2
+ms.subservice: windows-365-enterprise
 ---
 
 # In development for Windows 365 Enterprise
