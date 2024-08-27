@@ -64,7 +64,7 @@ When using iPad devices for FLW, use the following information to help you decid
 
 Shared iPads are a feature in Intune, and are the recommended and preferred device type for frontline worker devices. These devices are shared among many users, such as in a hospital or school. Each user has their own profile and data, and they can sign in and out of the device.
 
-✔️ If the device is an iPad, then use the Shared iPad feature in Intune. For more information on Shared iPads in Intune, go to [Shared iPad devices in Intune](../../intune/enrollment/device-enrollment-shared-ipad.md).
+✅ If the device is an iPad, then use the Shared iPad feature in Intune. For more information on Shared iPads in Intune, go to [Shared iPad devices in Intune](../../intune/enrollment/device-enrollment-shared-ipad.md).
 
 ❌ If the device is an iOS device, then use Entra shared device mode. For more information, go to [Microsoft Entra shared device mode for FLW](frontline-worker-overview.md#microsoft-entra-shared-device-mode-for-flw) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).
 
@@ -79,9 +79,9 @@ For more information on Entra shared device mode (SDM), go to [Microsoft Entra s
 
 When to use Entra SDM:
 
-✔️ If the device is an iOS device, then use Entra shared device mode.
+✅ If the device is an iOS device, then use Entra shared device mode.
 
-✔️ If the device is an iPad, then you can use Entra shared device mode **OR** Shared iPad in Intune.
+✅ If the device is an iPad, then you can use Entra shared device mode **OR** Shared iPad in Intune.
 
 ❌ If you configured an iPad to be a Shared iPad in Intune, then don't use Entra shared device mode. It's not supported.
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 05/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -59,13 +59,13 @@ After you set up Intune for your organization, you can create an Office app poli
 3. Add the following values:
     - **Name:** Type a name (required) for your new policy.
     - **Description:** (Optional) Type a description.
-    - **Select type:** Select how this policy configuration will be applied.
-    - **Select group:** Select the group for this policy configuration.
-    - **Configure policies:** Select the Office policy that you want to apply. You can sort the provided list based on policy, platform, application, recommendation, and status.
-4. Select **Create**. The policy is created and appears in the table on the **Policy configurations** pane.
+    - **Select the scope:** Select how this policy configuration will be applied.
+    - **Select the groups:** If applicable, select the group for this policy configuration.
+    - **Configure settings:** Select the Office policy that you want to apply. You can sort the provided list based on policy, platform, application, recommendation, and status.
+4. Select **Create** after reviewing the configuration. The policy is created and appears in the table on the **Policy configurations** pane.
 
    > [!TIP]
-   > The **Policy configurations** pane provides the **Health status** for each policy.
+   > The **Policy configurations** pane provides the **Priority** for each policy.
 
 ## Quiet time notification policies
 

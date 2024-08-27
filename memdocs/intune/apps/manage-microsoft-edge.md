@@ -49,22 +49,11 @@ The richest and broadest protection capabilities for Microsoft 365 data are avai
 > [!NOTE]
 > New web clips (pinned web apps) on iOS devices will open in Edge for iOS and Android instead of the Intune Managed Browser when required to open in a protected browser. For older iOS web clips, you must re-target these web clips to ensure they open in Edge for iOS and Android rather than the Managed Browser.
 
-## Apply Conditional Access
-Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Edge for iOS and Android. To do this, you'll need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
-
-Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Edge for iOS and Android, but blocks other mobile device web browsers from connecting to Microsoft 365 endpoints.
-
->[!NOTE]
-> This policy ensures mobile users can access all Microsoft 365 endpoints from within Edge for iOS and Android. This policy also prevents users from using InPrivate to access Microsoft 365 endpoints.
-
-With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started).
-
-> [!NOTE]
-> To leverage app-based conditional access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
-
 ## Create Intune app protection policies
 
-App Protection Policies (APP) define which apps are allowed and the actions they can take with your organization's data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
+As organizations increasingly adopt SaaS and web applications, browsers have become essential tools for businesses. Users often need to access these applications from mobile browsers while on the go. Ensuring that data accessed through mobile browsers is protected from intentional or unintentional leaks is crucial. For instance, users might inadvertently share organizations’ data with personal apps, leading to data leakage, or download it to local devices, which also poses a risk. 
+
+Organizations can protect data from being leaked when users browse with Microsoft Edge for mobile by configuring App Protection Policies (APP), which define what apps are allowed and the actions they can take with your organizations' data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
 
 The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
 
@@ -82,12 +71,28 @@ Regardless of whether the device is enrolled in a unified endpoint management (U
 
 - Determine which framework level meets your requirements. Most organizations should implement the settings defined in **Enterprise enhanced data protection** (Level 2) as that enables data protection and access requirements controls.
 
-For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
+> [!NOTE]
+> One of the settings related to browsers is 'Restrict web content transfer with other apps'. In **Enterprise enhanced data protection** (Level 2), the value of this setting is configured to Microsoft Edge.
+> When Outlook and Microsoft Teams are protected by App Protection Policies (APP), Microsoft Edge will be used to open links from these apps, ensuring that the links are secure and protected. 
+> For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 > [!IMPORTANT]
 > To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.  
 
-<a name='single-sign-on-to-azure-ad-connected-web-apps-in-policy-protected-browsers'></a>
+## Apply Conditional Access
+While it's important to protect Microsoft Edge with App Protection Policies (APP), it's also crucial to ensure Microsoft Edge is the mandatory browser for opening corporate applications. Users might otherwise use other unprotected browsers to access corporate applications, potentially leading to data leaks.
+
+Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Edge for iOS and Android. To do this, you'll need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+
+Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Edge for iOS and Android, but blocks other mobile device web browsers from connecting to Microsoft 365 endpoints.
+
+>[!NOTE]
+> This policy ensures mobile users can access all Microsoft 365 endpoints from within Edge for iOS and Android. This policy also prevents users from using InPrivate to access Microsoft 365 endpoints.
+
+With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started).
+
+> [!NOTE]
+> To leverage app-based conditional access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
 
 ## Single sign-on to Microsoft Entra connected web apps in policy-protected browsers
 
@@ -168,16 +173,7 @@ Edge for iOS and Android offers organizations several options for adjusting the 
 
 #### Organization logo and brand color
 
-These settings allow you to customize the New Tab Page for Edge for iOS and Android to display your organization's logo and brand color as the page background.
-
-To upload your organization's logo and color, first complete the following steps:
-1. Within [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to **Tenant Administration** > **Customization**. Next to **Settings**, click **Edit**.
-2. To set your brand's logo, next to **Show in header**, choose "Organization logo only". Transparent background logos are recommended.
-3. To set your brand's background color, select a **Theme color**. Edge for iOS and Android applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability.
-
-> [!NOTE]
-> As Azure Active Directory (Azure AD) Graph is deprecated, it has entered its retire phase. See details on [Migrate Azure AD Graph Overview](/graph/migrate-azure-ad-graph-overview). As a result, organization logo and brand color maintained within Intune Admin center will be inaccessible when Azure Active Directory (Azure AD) Graph is completely retired.
-> Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps](/azure/active-directory/fundamentals/how-to-customize-branding). **Banner logo** will be used as your organization and **Page background color** will be used as brand color.
+The organization logo and brand color settings allow you to customize the **New Tab Page** for Edge on iOS and Android devices. The **Banner logo** is used as your organization's logo and the **Page background color** is used as your organization's brand color. For more information, see [Configure your company branding](/entra/fundamentals/how-to-customize-branding). 
 
 Next, use the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
 
@@ -284,7 +280,7 @@ Edge for iOS and Android allows organizations to disable certain features that a
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br>**coupons** disables coupons <br>**extensions** disabled extensions (Edge for Android only) <br>**developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
+|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br>**coupons** disables coupons <br>**extensions** disables extensions (Edge for Android only) <br>**developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br>**UIRAlert** suppress re-verify account popups in new tab page screen <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
 
 #### Disable import passwords feature
 
@@ -358,23 +354,49 @@ Organizations can modify their network stack preference by configuring the follo
 > [!NOTE]
 > Using the Chromium network stack is recommended. If you experience sync issues or failure when sending feedback with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may solve the issues.
 
-#### Set a proxy .pac file URL
+### Set a proxy .pac file URL
 
-Organizations can specify a URL to a proxy auto-config (PAC) file for Microsoft Edge for Android.
+Organizations can specify a URL to a proxy auto-config (PAC) file for Microsoft Edge for iOS and Android
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.proxyPacUrl |Specify a valid URL to a proxy .pac file.  <br>For example: `https://internal.site/example.pac` |
 
-#### PAC failed-open support 
+### PAC failed-open support 
 
-By default, Microsoft Edge for Android will block network access with invalid or unavailable PAC script. However, organizations can modify the default behavior to PAC failed open.
+By default, Microsoft Edge for iOS and Android will block network access with invalid or unavailable PAC script. However, organizations can modify the default behavior to PAC failed open.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**true** Allow network access |
 
-#### Proxy for users to sign in to Edge in Android.
+### Configure network relays
+
+Edge for iOS now supports network relays on iOS 17. These are a special type of proxy that can be used for remote access and privacy solutions. They support secure and transparent tunneling of traffic, serving as a modern alternative to VPNs when accessing internal resources. For more information about network relays, see [Use network relays on Apple devices](https://support.apple.com/guide/deployment/use-network-relays-dep91a6e427d/web).
+
+Organizations can configure relay proxy URLs to route traffic based on matched and excluded domains. 
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.ProxyRelayUrl |Specify a valid URL to a relay configuration json file.  <br>For example: `https://yourserver/relay_config.json` |
+
+A json file example for network relays <br>
+{ <br>
+ "default": [{ <br>
+            "proxy_type": "http", <br>
+            "host_name": "170.200.50.300", <br>
+            "port": "3128",  <br>
+            "failover_allowed":0, <br>
+            "match_domains": [ <br>
+                "domain1.com", <br>
+                "domain2.com" ], <br>
+            "excluded_domains": [ <br>
+                "domain3.com", <br>
+                "domain4.com" ] <br>
+        } ] <br>
+} <br>
+
+### Proxy for users to sign in to Edge in Android
 
 A Proxy Auto-Configuration (PAC) is typically configured in the VPN profile. However, due to platform limitation, the PAC cannot be recognized by Android WebView, which is used during Edge sign-in process. Users may not be able to sign in to Edge in Android. 
 
@@ -384,7 +406,7 @@ Organizations can specify dedicated proxy via MDM policy for users to sign in to
 |:---------|:---------|
 |EdgeOneAuthProxy |  The corresponding value is a string <br> **Example** `http://MyProxy.com:8080` |
 
-#### iOS Website data store
+### iOS Website data store
 
 The website data store in Edge for iOS is essential for managing cookies, disk and memory caches, and various types of data. However, there is only one persistent website data store in Edge for iOS. By default, this data store is exclusively used by personal accounts, leading to a limitation where work or school accounts cannot utilize it. Consequently, browsing data, excluding cookies, is lost after each session for work or school accounts. To improve the user experience, organizations can configure the website data store for use by work or school accounts, ensuring the persistence of browsing data.
 
@@ -395,7 +417,7 @@ The website data store in Edge for iOS is essential for managing cookies, disk a
 > [!NOTE]
 > With the release of iOS 17, multiple persistent stores are now supported. Work and personal account have its own designated persistent store. Therefore, this policy is no longer valid from version 122.
 
-#### Microsoft Defender SmartScreen
+### Microsoft Defender SmartScreen
 
 Microsoft Defender SmartScreen is a feature that helps users avoid malicious sites and downloads. It is enabled by default. Organizations can disable this setting.
 
@@ -403,7 +425,7 @@ Microsoft Defender SmartScreen is a feature that helps users avoid malicious sit
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled |**true** (default) Microsoft Defender SmartScreen is enabled. <br>**false**  Microsoft Defender SmartScreen is disabled.|
 
-#### Certificate verification
+### Certificate verification
 
 By default, Microsoft Edge for Android verifies server certificates using the built-in certificate verifier and the Microsoft Root Store as the source of public trust. Organizations can switch to system certificate verifier and system root certificates.
 
@@ -435,12 +457,16 @@ If this policy is not configured, the value from the **DefaultPopupsSetting** po
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://[*.]contoso.com`|
 
+For more information about the URLs format, see [Enterprise policy URL pattern format](/deployedge/edge-learnmore-ent-policy-url-patterns).
+
 ### Block pop-up on specific sites
 If this policy is not configured, the value from the **DefaultPopupsSetting** policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that are blocked from opening pop-up.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://[*.]contoso.com`|
+
+For more information about the URLs format, see [Enterprise policy URL pattern format](/deployedge/edge-learnmore-ent-policy-url-patterns).
 
 ### Default search provider
 By default, Edge uses the default search provider to perform a search when users enter non-URL texts in the address bar. Users can change the search provider list. Organizations can manage the search provider behavior.
@@ -457,7 +483,7 @@ Organizations can configure a search provider for users. To configure a search p
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | The corresponding value is a string <br> **Example** `My Intranet Search`  |
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | The corresponding value is a string <br> **Example** `https://search.my.company/search?q={searchTerms}`|
 
-#### Open external apps
+### Open external apps
 When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
 
 |Key |Value |
@@ -467,14 +493,14 @@ When a web page requests to open an external app, users will see a pop-up asking
 > [!NOTE]
 > As of version 120.2210.99, the app jump blocker feature is removed. External apps will be opened from Edge by default. Therefore, this policy is no longer valid from version 120.2210.99.
 
-#### Copilot
+### Copilot
 
 > [!NOTE]
-> Copilot is also known as Bing Chat Enterprise.
+> Copilot is also known as Bing Chat Enterprise. Only Copilot eligible users can use Copilot. For more information, see [Frequently asked questions about Copilot](/copilot/faq)
 
 Copilot is available on Microsoft Edge for iOS and Android. Users can start Copilot by clicking on Copilot button in bottom bar. 
 
-There are three settings in **Settings**->**General**->**Copilot** for Copilot.
+There are three settings in **Settings**->**General**->**Copilot**.
 
 - **Show Copilot** – Control whether to show Bing button on bottom bar
 - **Allow access to any web page or PDF** – Control whether to allow Copilot to access page content or PDF
@@ -484,8 +510,8 @@ You can manage the settings for Copilot.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users can see Bing button in bottom bar. Setting **Show Copilot** is on by default and can be turned off by users <br>**false** Users cannot see Bing button in bottom bar. Setting **Show Copilot** is disabled and cannot be turned on by users|
-|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Copilot can access to page content. **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings are on by default and can be turned off by users <br>**false** Copilot cannot access to page content.  **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings will be disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users can see Copilot button in bottom bar. Setting **Show Copilot** is on by default and can be turned off by users <br>**false** Users cannot see Copilot button in bottom bar. Setting **Show Copilot** is disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) **Allow access to any web page or PDF** and **Quick access on text selection** can be turned on by users <br>**false** **Allow access to any web page or PDF** and **Quick access on text selection** will be disabled and cannot be turned on by users|
 
 ## Data protection app configuration scenarios
 
@@ -521,7 +547,7 @@ Organizations can define which sites users can access within the work or school 
 Organizations also define what happens when a user attempts to navigate to a restricted web site. By default, transitions are allowed. If the organization allows it, restricted web sites can be opened in the personal account context, the Microsoft Entra account’s InPrivate context, or whether the site is blocked entirely. For more information on the various scenarios that are supported, see [Restricted website transitions in Microsoft Edge mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). By allowing transitioning experiences, the organization's users stay protected, while keeping corporate resources safe.
 
 > [!NOTE]
-> Edge for iOS and Android can block access to sites only when they're accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site. URL that launch Edge, such as `Edge://*`, `Edge://flags`, and `Edge://net-export`, aren't supported in app configuration policy **AllowListURLs** or **BlockListURLs** for managed apps. Instead, you can use app configuration policy [URLAllowList](/deployedge/microsoft-edge-mobile-policies#urlallowlist) or [URLBlocklist](/deployedge/microsoft-edge-mobile-policies#urlblocklist) for managed devices. For related information, see [Microsoft Edge mobile policies](/deployedge/microsoft-edge-mobile-policies).
+> Edge for iOS and Android can block access to sites only when they're accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site. URLs that start with **Edge**, such as `Edge://*`, `Edge://flags`, and `Edge://net-export`, aren't supported in app configuration policy **AllowListURLs** or **BlockListURLs** for managed apps. You can disable these URLs with **com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList**. <br><br> If your devices are managed, you can also use app configuration policy [URLAllowList](/deployedge/microsoft-edge-mobile-policies#urlallowlist) or [URLBlocklist](/deployedge/microsoft-edge-mobile-policies#urlblocklist) for managed devices. For related information, see [Microsoft Edge mobile policies](/deployedge/microsoft-edge-mobile-policies).
 
 Use the following key/value pairs to configure either an allowed or blocked site list for Edge for iOS and Android. 
 
@@ -560,10 +586,10 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   |`http://contoso.com`|Matches a single page |`contoso.com/`|`host.contoso.com` <br>`www.contoso.com/images` <br>`www.contoso.com` |
   |`http://www.contoso.com/*`|Matches all URLs that begin with `www.contoso.com`|`www.contoso.com` <br>`www.contoso.com/images` <br>`www.contoso.com/videos/tvshows` |`host.contoso.com` <br>`host.contoso.com/images`|
   |`http://*.contoso.com/*`|Matches all subdomains under `contoso.com`|`developer.contoso.com/resources` <br>`news.contoso.com/images` <br>`news.contoso.com/videos` |`contoso.host.com` <br>`news-contoso.com`|
-  |`http://*contoso.com/*`|Matches all subdomains ending with `contoso.com/`|`news-contoso.com` <br>`news-contoso.com.com/daily` |`news-contoso.host.com` <br>`news.contoso.com`|
+  |`http://*contoso.com/*`|Matches all subdomains ending with `contoso.com/`|`news-contoso.com` <br>`news-contoso.com/daily` |`news-contoso.host.com` <br>`news.contoso.com`|
   |`http://www.contoso.com/images`|Matches a single folder |`www.contoso.com/images`|`www.contoso.com/images/dogs`|
   |`http://www.contoso.com:80`|Matches a single page, by using a port number |`www.contoso.com:80`| |
-  |`https://www.contoso.com`|Matches a single, secure page|`www.contoso.com`|`www.contoso.com`|
+  |`https://www.contoso.com`|Matches a single, secure page|`www.contoso.com`|`www.contoso.com/images`|
   |`http://www.contoso.com/images/*` |Matches a single folder and all subfolders |`www.contoso.com/images/dogs` <br>`www.contoso.com/images/cats` | `www.contoso.com/videos`|
   
 - The following are examples of some of the inputs that you can't specify:
@@ -578,22 +604,19 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
+### Disable Edge internal pages
+You can disable Edge internal pages such as `Edge://flags` and `Edge://net-export`. More pages can be found from `Edge://about`
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList | The corresponding value for the key is a list of page names. You can enter the internal pages you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`flags|net-export`|
+
 ### Control the behavior of the Site Blocked popup
-When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites，depending on the AllowTransitionOnBlock and OpenInPrivateIfBlocked policy configurations. You can choose preferences between InPrivate and personal account.
+When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites. You can choose preferences between InPrivate and personal account.
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account  when it is signed in.<br>**2**: Automatically switch to personal account if it is signed in and InPrivate is simultaneously enabled.<br>**3**:Automatically switch to InPrivate if it is signed in and InPrivate is simultaneously enabled. |
-
-> [!NOTE]
-> AutoTransitionModeOnBlock policy is currently only avaiable to Edge for iOS.
-
-### Control the behavior of opening unmanaged URLs
-This policy is to control the behavior of opening Intune unmanaged URL.
-
-|Key |Value |
-|:--|:----|
-|com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitch |**0**: (Default) URLs will be  opened in normal tabs with work accounts. <br> <br> **1**: Microsoft Edge adheres to Intune’s protection policy; the behavior is determined by the **Receive data from other apps** configuration within the Intune protection policy.<br><br>When the value is **All apps**, setting the value to **1** will fall back to behavior for policy value 0. When the value is **None** or **Policy managed apps**, and the personal account is signed-in, URLs will be opened in normal tabs with personal profile. If the personal account isn't signed-in, URLs will be opened in InPrivate. If InPrivate is disabled, the URLs will not be opened.<br><br>**2**: (Android only) Microsoft Edge will check URLAllowlist or URLBlocklist. The allowed URLs will be opened in normal tabs with work accounts. The blocked URLs may be opened in InPrivate or normal tabs with personal accounts, however the functionality depends on how openInPrivateIfBlocked is configured. |
+|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in.If personal account is not signed in, the behavior will be changed to value 2. <br>**2**:Automatically switch to InPrivate if InPrivate switch is allowed by com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true. |
 
 ### Manage websites to allow upload files
 There may be scenarios where users are only allowed to view websites, without the ability to upload files. Organizations have the option to designate which websites can receive file uploads.
@@ -609,6 +632,8 @@ The example to block all websites, including internal websites, from uploading f
 An example to allow specific websites to upload files
 - com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`https://[*.]contoso.com/|[*.]sharepoint.com/`
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
+
+For more information about the URLs format, see [Enterprise policy URL pattern format](/deployedge/edge-learnmore-ent-policy-url-patterns).
 
 > [!NOTE]
 > For Edge on iOS, the paste action will be blocked in addition to uploads. Users will not see the paste option in the action menu.
@@ -678,7 +703,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled	| DefaultSearchProviderEnabled|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | DefaultSearchProviderName|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | DefaultSearchProviderSearchURL|
-|com.microsoft.intune.mam.managedbrowser.Chat | EdgeChat|
+|com.microsoft.intune.mam.managedbrowser.Chat | EdgeCopilotEnabled |
 |com.microsoft.intune.mam.managedbrowser.ChatPageContext	| EdgeChatPageContext|
 
 ## Deploy app configuration scenarios with Microsoft Intune

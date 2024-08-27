@@ -34,7 +34,7 @@ ms.collection:
 
 *Applies to iOS/iPadOS*  
 
-Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment. This enrollment option applies your organization's settings from Apple Business Manager and Apple School Manager and enrolls devices without you needing to touch them. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Apple Setup Assistant guides them through setup and enrollment. 
+Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment. This enrollment option applies your organization's settings from Apple Business Manager and Apple School Manager and enrolls devices without you needing to touch them. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, the Apple Setup Assistant guides them through setup and enrollment. 
 
 This article describes how to prepare and set up automated device enrollment in Microsoft Intune.    
 
@@ -62,13 +62,15 @@ Before you create the enrollment profile, you must have:
     * For steps, see [Get an Apple Automated Device Enrollment token](device-enrollment-program-enroll-ios.md#get-an-apple-automated-device-enrollment-token) (in this article).  
 * An [Apple MDM push certificate in Intune](../enrollment/apple-mdm-push-certificate-get.md).  
 * New or wiped devices purchased from Apple Business Manager or Apple School Manager.  
-     >[!Tip]
-     >Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.  
+     > [!Tip]
+     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state. 
+ 
 ## Before you begin      
 Read through these enrollment requirements and best practices to prepare for a successful setup and deployment.    
 
-### Choose an authentication method  
-Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication, and has features like multi-factor authentication. 
+### Choose an authentication method
+
+Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication and has features like multi-factor authentication. 
 
 Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app for Microsoft Entra registration and compliance. To use JIT Registration, you'll need to create a device configuration policy *before* you create the Apple enrollment profile and configure Setup Assistant with modern authentication. 
 
@@ -77,6 +79,7 @@ Setup Assistant with modern authentication is supported on devices running iOS/i
 For more information about your authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
 
 ### What is supervised mode?  
+
 Supervised mode provides more management control over corporate-owned devices, so you can do things like block screen captures and restrict AirDrop. 
 
 Corporate-owned devices running iOS/iPadOS 11+ and enrolled via automated device enrollment should always be in supervised mode, which you can turn on in the enrollment profile. For more information about supervised mode, see [Turn on iOS/iPadOS supervised mode](../remote-actions/device-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment. 
@@ -95,28 +98,27 @@ You can set up automated device enrollment for devices in [shared device mode](/
 Deploying the Intune Company Portal app through Intune is the best way to provide the app to users and the only way to: 
 
 * Ensure all ADE devices, including already-enrolled ones, receive the app. 
-* Enable automatic app updates for Company Portal on ADE devices. 
+* Enable automatic app updates for the Company Portal on ADE devices. 
 
-Deploy the app as a required, VPP app [with device licensing](../apps/vpp-apps-ios.md#how-are-purchased-apps-licensed). For information about how to sync, assign, and manage a VPP app, see [assign a volume-purchased app](../apps/vpp-apps-ios.md#assign-a-volume-purchased-app). 
+Deploy the app as a required VPP app [with device licensing](../apps/vpp-apps-ios.md#how-are-purchased-apps-licensed). For information about how to sync, assign, and manage a VPP app, see [assign a volume-purchased app](../apps/vpp-apps-ios.md#assign-a-volume-purchased-app). 
 
 To enable automatic app updates for Company Portal, go to your app token settings in the admin center and change **Automatic app updates** to **Yes**. See [Upload an Apple VPP or Apple Business Manager location token](../apps/vpp-apps-ios.md#upload-an-apple-vpp-or-apple-business-manager-location-token) for the steps to access your token settings. If you don't enable automatic updates, the device user will need to manually check for them on their own.  
 
-*Device staging* is used to transition a device without user affinity, to a device with user affinity. To stage a device, set up VPP deployment as described earlier in this section. Then configure and deploy an [app configuration policy](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment). Make sure the policy only targets those ADE devices without user affinity.  
+*Device staging* is used to transition a device without user affinity to a device with user affinity. To stage a device, set up VPP deployment as described earlier in this section. Then configure and deploy an [app configuration policy](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment). Make sure the policy only targets those ADE devices without user affinity.  
 
 > [!IMPORTANT]
-> During initial enrollment, Intune automatically pushes the app configuration policy settings for devices enrolled with Setup Assistant with modern authentication, configured in [Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment), when the enrollment profile setting **Install Company Portal** is set to yes. This configuration should not be deployed manually to users because it will cause a conflict with the configuration sent during the initial enrollment. If both are deployed, Intune will incorrectly prompt device users to sign in to Company Portal and download a management profile they've already installed. 
+> During initial enrollment, Intune automatically pushes the app configuration policy settings for devices enrolled with Setup Assistant with modern authentication, configured in the [Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment), when the enrollment profile setting **Install Company Portal** is set to yes. This configuration should not be deployed manually to users because it will cause a conflict with the configuration sent during the initial enrollment. If both are deployed, Intune will incorrectly prompt device users to sign in to the Company Portal and download a management profile they've already installed. 
 
 ### Limits     
 - Maximum enrollment profiles per token: 1,000   
 - Maximum Automated Device Enrollment devices per profile: 200,000 (same as the maximum number of devices per token).
 - Maximum Automated Device Enrollment tokens per Intune account: 2,000  
 - Maximum Automated Device Enrollment devices per token: 200,000
-    - We recommend that you don't exceed 200,000 devices per token. Otherwise you might have sync problems. If you have more than 200,000 devices, split the devices into multiple ADE tokens.  
+    - We recommend that you don't exceed 200,000 devices per token. Otherwise, you might have sync problems. If you have more than 200,000 devices, split the devices into multiple ADE tokens.  
     - Apple Business Manager and Apple School Manager sync about 3,000 devices over to Intune per minute. We recommend that you hold off manually syncing from the admin center again until enough time has passed for all of the devices to finish syncing (total number of devices/3,000 devices per minute).  
 
 ### Troubleshoot enrollment   
 If you experience sync problems during the enrollment process, you can look for solutions at [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages). 
-
 
 ## Get an Apple automated device enrollment token
 
@@ -135,7 +137,7 @@ Use [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School
 
 1. On the **Basics** tab:
 
-    1. Select **I agree** to give permission to Microsoft to send user and device information to Apple:
+    1. Select **I agree** to give permission to Microsoft to send user and device information to Apple.
 
         :::image type="content" source="./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png" alt-text="Screenshot that shows the Add enrollment program token screen.":::
 
@@ -154,12 +156,12 @@ Use [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School
 Use the Apple Business Manager portal to create and renew your ADE token (MDM server). This token is added to Intune and communicates between Intune and Apple.
 
 > [!NOTE]
-> The following steps describe what you need to do in Apple Business Manager. For the specific steps, refer to Apple's documentation. [Apple Business Manager User Guide](https://support.apple.com/guide/apple-business-manager/welcome/web) (on Apple's website) might be helpful.
+> The following steps describe what you need to do in Apple Business Manager. For the specific steps, refer to Apple's documentation. The [Apple Business Manager User Guide](https://support.apple.com/guide/apple-business-manager/welcome/web) (on Apple's website) might be helpful.
 
 #### Download the Apple token  
 
 1. In [Apple Business Manager](https://business.apple.com), sign in with your company's Apple ID.
-2. In this portal, complete the following steps.
+2. In this portal, complete the following steps:
 
     - In settings, all tokens are shown. Add an MDM server, and upload the public key certificate (.pem file) that you downloaded from Intune in [Step 1: Download the Intune public key certificate](#step-1-download-the-intune-public-key-certificate) (in this article).
 
@@ -196,7 +198,7 @@ With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pu
 Now that you've installed your token, you can create an enrollment profile for automated device enrollment. A device enrollment profile defines the settings applied to a group of devices during enrollment. There's a limit of 1,000 enrollment profiles per enrollment token.  
 
 > [!NOTE]
-> Devices will be blocked from enrolling if there aren't enough Company Portal licenses for a VPP token, or if the token expires. Intune alerts you when a token is about to expire or licenses are running low.  
+> Devices will be blocked from enrolling if there aren't enough Company Portal licenses for a VPP token or if the token expires. Intune alerts you when a token is about to expire or licenses are running low.  
 
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to   **Devices** > **Enrollment**. 
 1. Select the **Apple** tab. 
@@ -211,10 +213,10 @@ Now that you've installed your token, you can create an enrollment profile for a
 
 1. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
 
-    - **Enroll with User Affinity**: Select this option for devices that belong to users who want to use Company Portal for services like installing apps.
+    - **Enroll with User Affinity**: Select this option for devices that belong to users who want to use the Company Portal for services like installing apps.
     - **Enroll without User Affinity**: Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.  
 
-      In some situations, you might want to associate a primary user on devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
+      In some situations, you might want to associate a primary user with devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
     - **Enroll with Microsoft Entra ID shared mode**: Select this option to enroll devices that will be in shared mode. 
 
 1. If you selected **Enroll with User Affinity** for the **User Affinity** field, you have the option to choose the authentication method employees must use. For more information about each authentication method, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).   
@@ -227,9 +229,9 @@ Now that you've installed your token, you can create an enrollment profile for a
      - **Setup Assistant (legacy)**
      - **Setup Assistant with modern authentication**  
 
-1. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Microsoft Entra registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate in to the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
+1. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Microsoft Entra registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate into the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
 
-1. If you select a token for **Install Company Portal with VPP**, you can lock the device in Single App Mode (specifically, the Company Portal app) right after the Setup Assistant completes. Select **Yes** for **Run Company Portal in Single App Mode until authentication** to set this option. To use the device, the user must first authenticate by signing in with Company Portal.
+1. If you select a token for **Install Company Portal with VPP**, you can lock the device in Single App Mode (specifically, the Company Portal app) right after the Setup Assistant completes. Select **Yes** for **Run Company Portal in Single App Mode until authentication** to set this option. To use the device, the user must first authenticate by signing in to the Company Portal.
 
     > [!NOTE]
     > Multifactor authentication isn't supported on a single device locked in Single App Mode. This limitation exists because the device can't switch to a different app to complete the second factor of authentication. If you want multifactor authentication on a Single App Mode device, the second factor must be on a different device.
@@ -238,7 +240,7 @@ Now that you've installed your token, you can create an enrollment profile for a
 
    :::image type="content" source="./media/device-enrollment-program-enroll-ios/single-app-mode.png" alt-text="Screenshot that shows the Run Company Portal in Single App Mode option.":::
 
-1. If you want devices using this profile to be supervised, select **Yes** in the **Supervised** list:
+1. If you want devices using this profile to be supervised, select **Yes** in the **Supervised** list.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/supervisedmode.png" alt-text="Screenshot that shows the Supervised option.":::
 
@@ -298,11 +300,11 @@ Now that you've installed your token, you can create an enrollment profile for a
     >
     >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a Mac device, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
 
-1. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import.  
+1. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import. The limit is 10 certificates.  
 1. For **Await final configuration**, your options are:  
       * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations.  
       
-         The amount of time that users are held on the Awaiting final configuration screen varies, and depends on the total number of policies and apps you apply to the device. The more policies and apps assigned to the device, the longer the waiting time. Neither Setup Assistant nor Intune enforce a minimum or maximum time limit during this portion of setup. During product validation, the majority of devices we tested were released and able to access the home screen within fifteen minutes. If you enable this feature and are using a third party to help you provision devices, tell them about the potential for increased provisioning time.     
+         The amount of time that users are held on the Awaiting final configuration screen varies, and depends on the total number of policies and apps you apply to the device. The more policies and apps assigned to the device, the longer the waiting time. Neither Setup Assistant nor Intune enforce a minimum or maximum time limit during this portion of setup. During product validation, the majority of devices we tested were released and able to access the home screen within fifteen minutes. If you enable this feature and are using a third party to help you provision devices, tell them about the potential for increased provisioning time. Note that only device configuration policies start installing during the awaiting final configuration screen, and applications are not included in this.     
 
          The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:      
          * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
@@ -391,7 +393,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Choose **Enrollment Program Tokens**.  
-1. Select a token in the list, and then select **Devices** > **Sync**:
+1. Select a token in the list, and then select **Devices** > **Sync**.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/image06.png" alt-text="Screenshot that shows how to sync iOS and iPadOS devices to an enrollment program token." lightbox="./media/device-enrollment-program-enroll-ios/image06.png":::
 
@@ -471,7 +473,7 @@ You'll sometimes need to renew your tokens:
 ### Renew your tokens
 
 1. Go to [business.apple.com](http://business.apple.com) and sign in with an account that has an Administrator or Device Enrollment Manager role.
-2. Select **Settings**. Under **MDM Servers**, select the MDM server associated with the token file that you want to renew. Select **Download Token**:
+2. Select **Settings**. Under **MDM Servers**, select the MDM server associated with the token file that you want to renew. Select **Download Token**.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-macos/download-token.png" alt-text="Screenshot that shows how to renew and download an Apple token in Apple Business Manager.":::
 
@@ -492,7 +494,7 @@ You'll sometimes need to renew your tokens:
 
 10. Select **Next** to go to the **Scope tags** page. Assign scope tags if you want to.
 
-11. Select **Renew token**. You'll see a confirmation that the token is renewed:
+11. Select **Renew token**. You'll see a confirmation that the token is renewed.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/confirmation.png" alt-text="Screenshot that shows the confirmation message.":::
 

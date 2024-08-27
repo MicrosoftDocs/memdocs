@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/23/2024
+ms.date: 05/13/2024
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: heenamac
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- magic-ai-copilot
 ---
 
 # Common questions, answers, and scenarios with policies and profiles in Microsoft Intune
@@ -45,7 +46,7 @@ This article applies to the following policies:
 
 ## Policy refresh intervals
 
-Intune notifies the device to check in with the Intune service. The notification times vary, including immediately up to a few hours. These notification times also vary between platforms. On Android devices, [Googe Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed).
+Intune notifies the device to check in with the Intune service. The notification times vary, including immediately up to a few hours. These notification times also vary between platforms. On Android devices, [Google Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed).
 
 If a device doesn't check in to get the policy or profile after the first notification, Intune makes three more attempts. An offline device, such as turned off, or not connected to a network, might not receive the notifications. In this case, the device gets the policy or profile on its next scheduled check-in with the Intune service. The same applies to checks for noncompliance, including devices that move from a compliant to a noncompliant state.
 
@@ -87,6 +88,10 @@ The settings in the policy or profile are applied at every check-in. A [Windows 
 
 Conflicts can happen when different policies update the same setting to different values. For example, you have two policies that update the copy/paste setting to different values. The conflict is handled differently depending on the type of policy.
 
+If you use Microsoft Copilot in Intune, then Copilot can help you resolve conflicts. For more information, go to [Policy and setting management in Copilot in Intune](../copilot/copilot-intune-overview.md#policy-and-setting-management).
+
+You can also use Microsoft Copilot in Intune to get more information about your policies and the settings configured in your policies.
+
 ### App protection policies that conflict
 
 Conflict values are the most restrictive settings available in an app protection policy. The exception is numeric entry fields, such as PIN attempts before reset. Numeric entry fields are set the same as the values, as if you created a MAM policy using the recommended settings option.
@@ -99,7 +104,7 @@ A policy is deployed to the app and takes effect. A second policy is deployed. I
 
 When two or more policies are assigned to the same user or device, then the setting that applies happens at the individual setting level:
 
-- If you use custom compliance policies to set device settings, then the settings within the custom compliance policy take precedence over the same setting within device configuration policies. Compliance policy settings always have precedence over configuration profile settings.
+- If you use compliance policies to evaluate device settings, then the settings within the compliance policy take precedence over the same setting within device configuration policies. Compliance policy settings always have precedence over configuration profile settings.
 
 - If a compliance policy evaluates against the same setting in another compliance policy, then the most restrictive compliance policy setting applies.
 
@@ -167,7 +172,7 @@ For more information on dynamic groups, go to:
 - [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters-performance-recommendations.md)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership)
 
-## Next steps
+## Related articles
 
 - [Troubleshoot policies and profiles](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune).
 - Need extra help? See [How to get support in Microsoft Intune](../../get-support.md).

@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Collect diagnostics from a Windows device
+title: Collect diagnostics from an Intune managed device
 titleSuffix: Microsoft Intune
-description: Learn how to collect diagnostics from a Windows device.
+description: Learn how to collect diagnostics from an Intune managed device.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
@@ -30,12 +30,48 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Collect diagnostics from a Windows device
+# Collect diagnostics from an Intune managed device
 
-The **Collect diagnostics** remote action lets you collect and download Windows device logs without interrupting the user. Only non-user locations and file types are accessed.
+The **Collect diagnostics** remote action lets you collect and download managed device logs without interrupting the user. Only nonuser locations and file types are accessed.
+
+> [!NOTE]
+>  Intune App Protection logs are available to download from the diagnostics tab in the **Troubleshooting** pane. However, M365 remote application logs are only available to their specific support engineers.
+> 
+> The data is stored in Microsoft support systems and isn't subject to Intune data management policies or protections. Some applications might collect and store data using systems other than Intune.
+
+## Collect diagnostics for Microsoft 365 remote applications
+
+The Microsoft 365 remote application diagnostics allows Intune admins to request Intune app protection logs and Microsoft 365 application logs (where applicable) directly from the Intune console. Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application. 
+
+### Collect diagnostics from a M365 Application
+
+To use the *Collect diagnostics* action:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+2. Navigate to **Troubleshooting + support** > **Troubleshoot** > *select a user*.
+3. On the **Summary** page, select **App Protection** >  **Checked-in**.
+4. Find the application to collect diagnostics on and use the **"..."** option to select **Collect diagnostics**.
+5. When prompted, select **Yes**.
+
+To check status of the *Collect diagnostics* action:
+
+1. On the "App Protection" summary, select **refresh**.
+2. Find the application you want the status for and select the hyperlink in the Diagnostic Status column.
+
+To download diagnostics:
+
+1. Navigate to **Troubleshooting + support** > **Troubleshoot** > *select a user*.
+2. On the **Summary** page, select the **Diagnostics** page and download the diagnostics.
+
+> [!IMPORTANT]
+> For Android devices, if the Company Portal isn't signed in by the user, logs will not be available for download in the Intune portal. Diagnostic uploads exceeding 50 diagnostics or 4MB in diagnostic data cannot be downloaded directly from the Intune portal. For access to larger diagnostic uploads, reach out to [Microsoft Intune support](/mem/get-support). 
+
+Diagnostics take approximately 30 minutes to be delivered from an end user's device. The user may be required to close and reopen the app if prompted for a pin when opening the app for the diagnostics request to prompt.
+
+## Collect diagnostics from a Windows device
 
 <!--1895390-->
-The **Collect diagnostics** remote action can also be configured to automatically collect and upload Windows devices logs upon an Autopilot failure on a device. When an Autopilot failure occurs, logs will be processed on the failed device and then automatically captured and uploaded to Intune. A device can automatically capture one set of logs per day.
+The **Collect diagnostics** remote action can also be configured to automatically collect and upload Windows devices logs upon an Autopilot failure on a device. When an Autopilot failure occurs, logs are processed on the failed device and then automatically captured and uploaded to Intune. A device can automatically capture one set of logs per day.
 
 The diagnostic collection is stored for 28 days and then deleted. Each device can have up to 10 collections stored at one time.
 
@@ -44,7 +80,7 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 > [!NOTE]
 > Microsoft personnel may access device diagnostics to assist in troubleshooting and resolving incidents.
 
-## Requirements
+### Requirements for Windows devices
 
 The *Collect diagnostics* remote action is supported for:
 
@@ -65,31 +101,31 @@ The *Collect diagnostics* remote action is supported for:
 > `lgmsapeind.blob.core.windows.net`
 
 
-## Collect diagnostics
+### Collect diagnostics
 
 To use the *Collect diagnostics* action:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Windows** > select a supported device.
+2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
 3. On the device’s **Overview** page, select **…** >  **Collect diagnostics** > **Yes**. A pending notification appears on the device’s **Overview** page.
 4. To see the status of the action, select **Device diagnostics monitor**.
 5. After the  action completes, select **Download** in the row for the action > **Yes**.
 6. The data zip file is added to your download tray and you can save it to your computer.
 
-## Diagnostics collection on Autopilot failure
+### Diagnostics collection on Autopilot failure
 <!--1895390-->
 
- For Autopilot diagnostics collection, no additional action is required. Autopilot diagnostics will be automatically captured when devices experience a failure as long as the Autopilot automatic capture diagnostic feature is enabled.
+ For Autopilot diagnostics collection, no additional action is required. Autopilot diagnostics are automatically captured when devices experience a failure as long as the Autopilot automatic capture diagnostic feature is enabled.
 
 To view the diagnostics collected after an Autopilot failure:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Windows**.
+2. Navigate to **Devices** > **By platform** > **Windows**.
 3. Select a device.
 4. Select **Diagnostics** > **Download**.
 5. The data zip file is added to your download tray and you can save it to your computer.
 
-## Data collected
+### Data collected
 
 <!--1895390-->
 While there's no intent to collect personal data, diagnostics may include user identifiable information such as user or device name.
@@ -188,7 +224,7 @@ Files:
 - %windir%\temp\officeclicktorun*.log
 - %TEMP%\winget\defaultstate*.log
 
-## Disable device diagnostics
+### Disable device diagnostics
 
 The **Collect diagnostics** remote action is enabled by default. You can disable the **Collect diagnostics** remote action for all devices by following these steps:
 
@@ -198,7 +234,7 @@ The **Collect diagnostics** remote action is enabled by default. You can disable
 
      :::image type="content" source="./media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for device diagnostics set to Disabled." lightbox="./media/collect-diagnostics/disable-device-diagnostics.png":::
 
-## Disable Autopilot automatic collection of diagnostics
+### Disable Autopilot automatic collection of diagnostics
 <!--1895390-->
 
 Autopilot automatic diagnostic capture is enabled by default. You can disable Autopilot automatic diagnostic capture by following these steps:
@@ -209,7 +245,7 @@ Autopilot automatic diagnostic capture is enabled by default. You can disable Au
 
      :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Autopilot automatic diagnostics collection set to Disabled." lightbox="./media/collect-diagnostics/disable-autopilot-diagnostics.png":::
 
-## Known issues with device diagnostics
+### Known issues with device diagnostics
 
 Currently there are the two main issues that may cause device diagnostics to fail:
 

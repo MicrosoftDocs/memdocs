@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/20/2023
+ms.date: 07/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -109,7 +109,8 @@ There are two ways to add LOB apps to Managed Google Play:
 6. Click the **"+"** button at the lower right to add a new app.
 7. Add an app **Title** and click **Upload APK** add the APK app package.
    > [!NOTE]
-   > Your app's package name must be globally unique in Google Play (not just unique within your enterprise or Google Play Developer account). Otherwise, you will receive the **Upload a new APK file with a different package name** error.
+   > - Your app's package name must be globally unique in Google Play (not just unique within your enterprise or Google Play Developer account). Otherwise, you will receive the **Upload a new APK file with a different package name** error.
+   > - Your app's APK must not be marked as debuggable. Otherwise, you will receive the **APK is marked as debuggable** error. 
 8. Click **Create**.
 1. Click **Select** for the private app you want to sync. 
 
@@ -223,14 +224,14 @@ By default, an Android Enterprise fully managed device will not allow employees 
 
 By default, Managed Google Play apps will not update unless the following conditions are met:
 
-- The device is connected to wi-fi
+- The device is connected to Wi-Fi
 - The device is charging
 - The device is not actively being used
 - The app to be updated is not running on the foreground
 
 For more information, see the [Manage App Updates](https://support.google.com/googleplay/work/answer/9350374?hl=en) documentation from Google.
 
-You can choose to configure the wi-fi requirement for dedicated, fully managed, corporate-owned, and personally-owned work profile devices by configuring app auto-updates in [device configurations policies](../configuration/device-restrictions-android-for-work.md).
+You can choose to configure the Wi-Fi requirement for dedicated, fully managed and corporate-owned work profile devices by configuring app auto-updates in [device configurations policies](../configuration/device-restrictions-android-for-work.md).
 
 For dedicated, fully managed, corporate-owned, and personally-owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
 

@@ -1,16 +1,16 @@
 ---
 # required metadata
-title: Convert custom device images to generation 2 virtual machines in Windows 365
+title: Convert custom device images to Generation 2 virtual machines in Windows 365
 titleSuffix:
-description: Learn how to convert custom device images to generation 2 virtual machines in Windows 365.
+description: Learn how to convert custom device images to Generation 2 virtual machines in Windows 365.
 keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 08/26/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chbrinkh
+ms.reviewer: evas
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,11 +29,11 @@ ms.collection:
 - tier1
 ---
 
-# Convert an existing custom device image to a generation 2 virtual machine
+# Convert an existing custom device image to a Generation 2 virtual machine
 
-To support Windows 11, your custom device images must be based on generation 2 (Gen2) virtual machines (VMs). If you already have custom device images based on generation 1 (Gen1) virtual machines, you can convert those custom device images by following the steps below. After you've completed these steps, all future Cloud PCs provisioned from the converted device image will be based on Gen2 virtual machines.
+To support Windows 11, your custom device images must be based on Generation 2 (Gen2) virtual machines (VMs). If you already have custom device images based on Generation 1 (Gen1) virtual machines, you can convert those custom device images by following the steps below. After you've completed these steps, all future Cloud PCs provisioned from the converted device image will be based on Generation 2 virtual machines.
 
-Windows 365 won't prevent you from provisioning new Cloud PCs from existing custom images based on Gen1 VMs. However, when you want to add new custom images, Windows 365 will only accept Gen2-based images. Gen 2 VMs are required to support Windows 11.
+Windows 365 won't prevent you from provisioning new Cloud PCs from existing custom images based on Generation 1 VMs. However, when you want to add new custom images, Windows 365 will only accept Generation 2-based images. Generation 2 VMs are required to support Windows 11.
 
 There are four main steps to this process:
 
@@ -44,7 +44,7 @@ There are four main steps to this process:
 
 ## Create a new virtual machine
 
-1. Make sure that Hyper-V is installed on your management PC. For information on how to install Hyper-V, see [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+1. Make sure that Hyper-V is installed on your management PC. For information on how to install Hyper-V, see [Install Hyper-V on Windows](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 2. Download your existing custom image virtual hard drive (VHD) file from the Azure storage blob URL to your PC where you have Hyper-V available.
     The VHD file is the exact size of the OS disk, which can be a large file size. Make sure to use a fast, stable internet connection to download the VHD file, and prepare for long download times.
     For information on how to download a managed disk, see [Download a VHD from Azure](/azure/virtual-machines/windows/download-vhd#generate-download-url).
@@ -55,9 +55,9 @@ There are four main steps to this process:
 5. On the **Before You Begin** page, select **Next**.
 6. On the **Specify Name and Location** page, type a friendly name, like CustomFinanceImageg2, and then select **Next**.
     ![Screenshot of Hyper-V specify name](./media/device-images-convert-generation-2/specify-name.png)
-7. On the **Specify Generation** page, select **Generation 1** (not **Generation 2**). Gen2 is needed here to mount the disk and change the partition model to GUID Partition Table (GPT). Select **Next**.
+7. On the **Specify Generation** page, select **Generation 1** (not **Generation 2**). Generation 2 is needed here to mount the disk and change the partition model to GUID Partition Table (GPT). Select **Next**.
     ![Screenshot of Specify Generation page](./media/device-images-convert-generation-2/specify-generation.png)
-  Hyper-V only supports Gen 2 images in VHDX and Gen 1 images in VHD. Azure only supports Gen 2 images in VHD. Therefore, we're creating a Gen 1 VHD image here in order to convert it to a Gen 2 VHD image.
+  Hyper-V only supports Generation 2 images in VHDX and Generation 1 images in VHD. Azure only supports Generation 2 images in VHD. Therefore, we're creating a Generation 1 VHD image here in order to convert it to a Generation 2 VHD image.
 8. On the **Assign Memory** page, set **Startup memory** to at least 1024 MB, preferably 4096 MB. Select **Next**.
     ![Screenshot of Hyper-V assign memory](./media/device-images-convert-generation-2/assign-memory.png)
 9. On the **Configure Networking** page, select **Default Switch** > **Next**.
@@ -76,7 +76,7 @@ There are four main steps to this process:
 6. Select **OK**.
 7. Under **Actions**, select **Start**.
 8. Wait for the wpeinit command prompt to open.
-9. To convert the Master Boot Record (MBR) to the GUID Partition Table (GPT) partition, run the following two commands in the wpeinit window. The GPT is the new standard for gen2 based VMs.
+9. To convert the Master Boot Record (MBR) to the GUID Partition Table (GPT) partition, run the following two commands in the wpeinit window. The GPT is the new standard for Generation 2 based VMs.
     1. To determine the correct disk for conversion and validate it, run ````mbr2gpt /validate /disk:0````.
     2. To convert the disk to the GUID Partition Table (GPT), run ````mbr2gpt /convert /disk:0````
     For more information on MBR2GPT, see the [MBR2GPT.exe documentation](/windows/deployment/mbr-to-gpt).

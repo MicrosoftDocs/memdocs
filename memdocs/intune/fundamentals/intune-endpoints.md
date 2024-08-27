@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/6/2024
+ms.date: 07/11/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,7 +56,7 @@ Managed devices require configurations that let **All Users** access services th
 
 ## PowerShell script
 
-To make it easier to configure services through firewalls, we have onboarded with the Office 365 Endpoint service. At this time, the Intune endpoint information is accessed through a PowerShell script. There are other dependent services for Intune, which are already covered as part of the Microsoft 365 Service and are marked as 'required'. Services already covered by Microsoft 365 aren't included in the script to avoid duplication.
+To make it easier to configure services through firewalls, we onboarded with the Office 365 Endpoint service. At this time, the Intune endpoint information is accessed through a PowerShell script. There are other dependent services for Intune that are already covered as part of the Microsoft 365 Service and are marked as 'required'. Services already covered by Microsoft 365 aren't included in the script to avoid duplication.
 
 By using the following PowerShell script, you can retrieve the list of IP addresses for the Intune service.
 
@@ -74,40 +74,46 @@ The script provides a convenient method to list and review all services required
 
 ## Endpoints
  
-You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following tables show the service they're tied to, and the list of URLs returned.
+You also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following tables show the service they're tied to, and the list of URLs returned.
 
 The data columns shown in the tables are:
 
-**ID**: The ID number of the row, also known as an endpoint set. This ID is the same as is returned by the web service for the endpoint set.
+- **ID**: The ID number of the row, also known as an endpoint set. This ID is the same as is returned by the web service for the endpoint set.
 
-**Category**: Shows whether the endpoint set is categorized as **Optimize**, **Allow**, or **Default**. This column also lists which endpoint sets are required to have network connectivity. For endpoint sets that aren't required to have network connectivity, we provide notes in this field to indicate what functionality would be missing if the endpoint set is blocked. If you're excluding an entire service area, the endpoint sets listed as required don't require connectivity.
+- **Category**: Shows whether the endpoint set is categorized as **Optimize**, **Allow**, or **Default**. This column also lists which endpoint sets are required to have network connectivity. For endpoint sets that aren't required to have network connectivity, we provide notes in this field to indicate what functionality would be missing if the endpoint set is blocked. If you're excluding an entire service area, the endpoint sets listed as required don't require connectivity.
 
-You can read about these categories and guidance for their management in [New Microsoft 365 endpoint categories](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?#new-office-365-endpoint-categories).
+  You can read about these categories and guidance for their management in [New Microsoft 365 endpoint categories](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?#new-office-365-endpoint-categories).
 
-**ER**: This is Yes/True if the endpoint set is supported over Azure ExpressRoute with Microsoft 365 route prefixes. The BGP community that includes the route prefixes shown aligns with the service area listed. When ER is No / False, then ExpressRoute isn't supported for this endpoint set.
+- **ER**: This is Yes/True if the endpoint set is supported over Azure ExpressRoute with Microsoft 365 route prefixes. The BGP community that includes the route prefixes shown aligns with the service area listed. When ER is No / False, then ExpressRoute isn't supported for this endpoint set.
 
-**Addresses**: Lists the FQDNs or wildcard domain names and IP address ranges for the endpoint set. Note that an IP address range is in CIDR format and may include many individual IP addresses in the specified network.
+- **Addresses**: Lists the FQDNs or wildcard domain names and IP address ranges for the endpoint set. Note that an IP address range is in CIDR format and may include many individual IP addresses in the specified network.
 
-**Ports**: Lists the TCP or UDP ports that are combined with listed IP addresses to form the network endpoint. You may notice some duplication in IP address ranges where there are different ports listed.
+- **Ports**: Lists the TCP or UDP ports that are combined with listed IP addresses to form the network endpoint. You may notice some duplication in IP address ranges where there are different ports listed.
 
 ### Intune core service
+
+>[!NOTE]
+> If the firewall that you are using allows you to create firewall rules using a domain name, then use the *.manage.microsoft.com and manage.microsoft.com domain. However, if the firewall provider that you are using, does not allow you to create a firewall rule using a domain name, we recommend that you use the approved list of all subnets in this section.
 
 ID |Desc |Category |ER |Addresses |Ports
 -- |---------------------------------------------------------------- |---------------------|--- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------|
 163 | Endpoint Manager client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.71.199.64/28, 13.73.244.48/28, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 20.49.93.160/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29` | **TCP:** 80, 443|
-172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR> `*.dl.delivery.mp.microsoft.com`<BR> `*.emdl.ws.microsoft.com`<BR> `kv801.prod.do.dsp.mp.microsoft.com`<BR> `geo.prod.do.dsp.mp.microsoft.com`<BR> `emdl.ws.microsoft.com`<BR> `2.dl.delivery.mp.microsoft.com`<BR> `bg.v4.emdl.ws.microsoft.com`<BR> | **TCP:** 7680, 3544, 80, 443|
-170 | MEM - PS and Win32Apps| Default<BR>Required | False | `swda01-mscdn.azureedge.net`<BR>`swda02-mscdn.azureedge.net`<BR>`swdb01-mscdn.azureedge.net`<BR>`swdb02-mscdn.azureedge.net`<BR>`swdc01-mscdn.azureedge.net`<BR>`swdc02-mscdn.azureedge.net`<BR>`swdd01-mscdn.azureedge.net`<BR>`swdd02-mscdn.azureedge.net`<BR>`swdin01-mscdn.azureedge.net`<BR>`swdin02-mscdn.azureedge.net`<BR> | **TCP:** 443|
-97 | Consumer Outlook.com and OneDrive | Default<BR> | False | `account.live.com`<BR>`login.live.com`<BR> |**TCP:** 443  |
+172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR> `*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443|
+170 | MEM - Win32Apps| Default<BR>Required | False | `swda01-mscdn.manage.microsoft.com`<br>`swda02-mscdn.manage.microsoft.com`<br>`swdb01-mscdn.manage.microsoft.com`<br>`swdb02-mscdn.manage.microsoft.com`<br>`swdc01-mscdn.manage.microsoft.com`<br>`swdc02-mscdn.manage.microsoft.com`<br>`swdd01-mscdn.manage.microsoft.com`<br>`swdd02-mscdn.manage.microsoft.com`<br>`swdin01-mscdn.manage.microsoft.com`<BR>`swdin02-mscdn.manage.microsoft.com` | **TCP:** 443|
+97 | Consumer Outlook.com, OneDrive, Device authentication and Microsoft account | Default<BR>Required | False | `account.live.com`<BR>`login.live.com`<BR> |**TCP:** 443  |
+190 | Endpoint discovery | Default<BR>Required | False | `go.microsoft.com` | **TCP:** 80, 443|
+189 | Dependency - Feature Deployment| Default<BR>Required | False |`config.edge.skype.com`<BR> | **TCP:** 443|
 <!--170 | Organizational messages| Default<BR>Required | False | `fd.api.orgmsg.microsoft.com`<BR>`ris.prod.api.personalization.ideas.microsoft.com`<BR>`contentauthassetscdn-prod.azureedge.net`<BR>`contentauthassetscdn-prodeur.azureedge.net`<BR>`contentauthrafcontentcdn-prod.azureedge.net`<BR>`contentauthrafcontentcdn-prodeur.azureedge.net`<BR> | **TCP:** 443|check if it's been added by 27th March in the tool-->
+
 
 ### Autopilot dependencies
 
 ID |Desc |Category |ER |Addresses |Ports|
 -- |-- |-----|--- |--------------|--------------------------------|
-164 | Autopilot - Windows Update| Default<BR>Required | False | `*.download.windowsupdate.com`<BR>`*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`au.download.windowsupdate.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`download.windowsupdate.com`<BR>`dl.delivery.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`catalog.update.microsoft.com`<BR> | **TCP:** 443|
-165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com`<BR>`www.msftncsi.com`<BR>`www.msftconnecttest.com` | |
-169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`www.msftncsi.com`<BR>`c.s-microsoft.com` |  |
-173 | Autopilot - 3rd party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
+164 | Autopilot - Windows Update| Default<BR>Required | False | `*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`adl.windows.com`<BR> | **TCP:** 80, 443|
+165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` |**UDP:** 123|
+169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
+173 | Autopilot - Third party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
 182 | Autopilot - Diagnostics upload| Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR> | **TCP:** 443|
 
 ### Remote Help
@@ -129,13 +135,12 @@ ID |Desc |Category |ER |Addresses |Ports|Notes|
 
 In this section, the following tables list the Intune dependencies and the ports and services that the Intune client accesses.
 
-- [Windows Push Notification Services dependencies](#windows-push-notification-serviceswns-dependencies)
+- [Windows Push Notification Services dependencies](#windows-push-notification-services-wns-dependencies)
 - [Delivery optimization dependencies](#delivery-optimization-dependencies)
 - [Apple dependencies](#apple-dependencies)
 - [Android AOSP dependencies](#android-aosp-dependencies)
-- [Microsoft Azure Attestation](#microsoft-azure-attestation)
 
-#### Windows Push Notification Services(WNS) dependencies
+#### Windows Push Notification Services (WNS) dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 | --- | ---- | -------- | ----- | --------- | ----- |
@@ -147,9 +152,9 @@ For Intune-managed Windows devices managed using Mobile Device Management (MDM),
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 | --- | ---- | -------- | ----- | --------- | ----- |
-| 172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.emdl.ws.microsoft.com`<BR>`kv801.prod.do.dsp.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`bg.v4.emdl.ws.microsoft.com`<BR> | **TCP:** 443 |
+| 172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
 
-**Port requirements** - For peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP or 3544 for NAT traversal (optionally Teredo).
+**Port requirements** - For peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP. It uses Teredo on port 3544 for NAT traversal (use of Teredo is optional)
 For client-service communication, it uses HTTP or HTTPS over port 80/443.
 
 **Proxy requirements** - To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Windows Update](/windows/deployment/update/windows-update-troubleshooting).
@@ -161,7 +166,6 @@ For client-service communication, it uses HTTP or HTTPS over port 80/443.
 For Delivery Optimization metadata:
 
 - \*.dl.delivery.mp.microsoft.com
-- \*.emdl.ws.microsoft.com
 
 #### Apple dependencies
 
@@ -169,7 +173,11 @@ For Delivery Optimization metadata:
 | --- | ---- | -------- | ----- | --------- | ----- |
 | 178 | MEM - Apple Dependencies | Default<BR>Required | False | `itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`5-courier.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR> |**TCP:** 80, 443, 5223|
 
-For more information, see [Use Apple products on enterprise networks](https://support.apple.com/HT210060), [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944), [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999), and [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609).
+For more information, see the following resources:
+- [Use Apple products on enterprise networks](https://support.apple.com/HT210060)
+- [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944)
+- [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999)
+- [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609)
 
 #### Android AOSP dependencies
 
@@ -179,19 +187,15 @@ For more information, see [Use Apple products on enterprise networks](https://su
 
 > [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as SafetyNet device attestation, Managing apps from the Google Play Store, 
-Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
+Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 
-**Android port information** - Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](/mem/intune/fundamentals/deployment-guide-enrollment-android).
+**Android port information** - Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](deployment-guide-enrollment-android.md).
+
+#### Android Enterprise dependencies
 
 **Google Android Enterprise** - Google provides documentation of required network ports and destination host names in their [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf), under the **Firewall** section of that document.
 
-**Android push notification** - Intune leverages Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. This is required by both Android Device Administrator and Android Enterprise. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
-
-#### Microsoft Azure Attestation
-
-| ID  | Desc | Category | ER    | Addresses | Ports |
-| --- | ---- | -------- | ----- | --------- | ----- |
-| 186 | Microsoft Azure Attestation | Default<BR>Required | False | `intunemaape1.eus.attest.azure.net`<BR>`intunemaape2.eus2.attest.azure.net`<BR>`intunemaape3.cus.attest.azure.net`<BR>`intunemaape4.wus.attest.azure.net`<BR>`intunemaape5.scus.attest.azure.net`<BR>`intunemaape6.ncus.attest.azure.net`<BR>`intunemaape7.neu.attest.azure.net`<BR>`intunemaape8.neu.attest.azure.net`<BR>`intunemaape9.neu.attest.azure.net`<BR>`intunemaape10.weu.attest.azure.net`<BR>`intunemaape11.weu.attest.azure.net`<BR>`intunemaape12.weu.attest.azure.net`<BR>`intunemaape13.jpe.attest.azure.net`<BR>`intunemaape17.jpe.attest.azure.net`<BR>`intunemaape18.jpe.attest.azure.net`<BR>`intunemaape19.jpe.attest.azure.net` | **TCP:** 443 |
+**Android push notification** - Intune uses Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. This is required by both Android Device Administrator and Android Enterprise. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
 
 ### Authentication dependencies
 
@@ -201,7 +205,7 @@ ID |Desc |Category |ER |Addresses |Ports|
 150 | Office Customization Service provides Office 365 ProPlus deployment configuration, application settings, and cloud based policy management. | Default | False |`*.officeconfig.msocdn.com`<BR>`config.office.com`| **TCP:** 443|
 59 | Identity supporting services & CDNs. | Default<BR>Required | False |`enterpriseregistration.windows.net`<BR>| **TCP:** 80, 443|
 
-For More information, go to [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)
+For more information, go to [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2).
 
 <!-- Older table. Will be removed soon after all the other new tables are finalized. This may take until April 2024
 You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following table is the list of URLs returned, and the service they're tied to. When you run the script, the URL list in the script output can be different then the URLs in the following table. At a minimum, make sure you include the URLs in the following table.
@@ -216,9 +220,7 @@ You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. F
 |*.update.microsoft.com| Windows Update and Delivery Optimization |
 |*.delivery.mp.microsoft.com| Windows Update and Delivery Optimization |
 |tsfe.trafficshaping.dsp.mp.microsoft.com| Windows Update and Delivery Optimization |
-|emdl.ws.microsoft.com| Delivery Optimization |
 |*.do.dsp.mp.microsoft.com| Delivery Optimization |
-|*.emdl.ws.microsoft.com| Delivery Optimization |
 |*.notify.windows.com| Push Notifications |
 |*.wns.windows.com| Push Notifications |
 |devicelistenerprod.microsoft.com| Windows Update for Business deployment service |
@@ -292,29 +294,32 @@ The following tables list the ports and services that the Intune client accesses
 
 ## Network requirements for PowerShell scripts and Win32 apps  
 
-If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
+If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need to grant access to endpoints in which your tenant currently resides.
 
-To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
+To find your tenant location (or Azure Scale Unit (ASU), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row tells you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
 
 > [!NOTE]
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
-|Azure Scale Unit (ASU) | Storage name | CDN |
-| --- | --- |--- |
-|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net |
-| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net |
-| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |
+|Azure Scale Unit (ASU) | Storage name | CDN | Port |
+| --- | --- |--- | --- |
+|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net | **TCP:** 443 |
+| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net | **TCP:** 443 |
+| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |**TCP:** 443 |
 
 ## Microsoft Store
 
-Managed Windows devices using the Microsoft Store – either to acquire, install, or update apps – will need access to these endpoints.
+Managed Windows devices using the Microsoft Store – either to acquire, install, or update apps – need access to these endpoints.
 
 **Microsoft Store API (AppInstallManager):**
 
-- displaycatalog.md.mp.microsoft.com
+- displaycatalog.mp.microsoft.com
 - purchase.md.mp.microsoft.com
 - licensing.mp.microsoft.com
 - storeedgefd.dsx.mp.microsoft.com
+
+**Proxy configuration**
+- [Prerequisites for Microsoft Store for Business and Education](/microsoft-store/prerequisites-microsoft-store-for-business)
 
 **Windows Update Agent:**
 
@@ -329,7 +334,7 @@ Win32 content download locations and endpoints are unique per application and ar
 
 `winget show [PackageId]`
 
-The **Installer Url** property will either show the external download location or the region-based (Microsoft-hosted) fallback cache based on whether the cache is in-use. Note that the content download location can change between the cache and external location.
+The **Installer Url** property either shows the external download location or the region-based (Microsoft-hosted) fallback cache based on whether the cache is in-use. Note that the content download location can change between the cache and external location.
 
 **Microsoft-hosted Win32 app fallback cache:**
 
@@ -392,25 +397,29 @@ To find your tenant location navigate to the Intune admin center > **Tenant admi
 
 ---
 
+## Windows Update for Business deployment service
+
+For more information on the required endpoints for Windows Update for Business deployment service, see [Windows Update for Business deployment service prerequisites](/windows/deployment/update/deployment-service-prerequisites#required-endpoints).
+
 ## Endpoint analytics
 
 For more information on the required endpoints for Endpoint analytics, see [Endpoint analytics proxy configuration](../../analytics/troubleshoot.md#bkmk_endpoints).
 
 ## Microsoft Defender for Endpoint
 
-For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements)
+For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements).
 
-Allow the following hostnames through your firewall to support Defender for Endpoint security settings management.
+To support Defender for Endpoint security settings management, allow the following hostnames through your firewall.
 For communication between clients and the cloud service:
 
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
   > [!IMPORTANT]
-  > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+  > SSL Inspection is not supported on endpoints required for Microsoft Defender for Endpoint.
 
 ## Microsoft Intune Endpoint Privilege Management
 
-Allow the following hostnames on tcp port 443 through your firewall to support Endpoint Privilege Management.
+To support Endpoint Privilege Management, allow the following hostnames on tcp port 443 through your firewall 
 
 For communication between clients and the cloud service:
 
@@ -418,9 +427,9 @@ For communication between clients and the cloud service:
 - \*.events.data.microsoft.com - Used by Intune-managed devices to send [optional reporting data](../protect/epm-data-collection.md) to the Intune data collection endpoint.
 
   > [!IMPORTANT]
-  > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+  > SSL Inspection is not supported on endpoints required for Endpoint Privilege Management.
 
-For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md)
+For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).
 
 ## Related topics
 

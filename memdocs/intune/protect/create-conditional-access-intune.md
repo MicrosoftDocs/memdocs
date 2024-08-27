@@ -28,6 +28,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - conditional-access
+- sub-device-compliance
 ---
 
 # Create a device-based Conditional Access policy
@@ -41,9 +42,8 @@ From within the Intune admin center, you can access the Conditional Access polic
 
 To Create a device-based Conditional Access policy your account must have one of the following permissions in Microsoft Entra:
 
-- Global administrator
 - Security administrator
-- Conditional Access administrator
+- Conditional Access administrator  
 
 To take advantage of device compliance status, configure Conditional Access policies to **Require device to be marked as compliant**. This option is set while configuring *Grant* access during step 6 of the following procedure.
 

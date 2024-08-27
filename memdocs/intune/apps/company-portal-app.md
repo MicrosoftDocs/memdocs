@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/06/2023
+ms.date: 06/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -43,7 +43,7 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 
 ## Customizing the user experience
 
-By customizing the end-user experience, you will help to provide a familiar and helpful experience for your end users. To do this, sign in as a Global administrator or an Intune service administrator. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant Administration** > **Customization** where you can either edit the default policy or create up to 10 user group targeted policies. Note that targeting policies to device groups is not supported. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
+By customizing the end-user experience, you will help to provide a familiar and helpful experience for your end users. To do this, sign in as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant Administration** > **Customization** where you can either edit the default policy or create up to 10 user group targeted policies. Note that targeting policies to device groups is not supported. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
 
 ## Branding
 
@@ -92,7 +92,7 @@ Enter your organization's support information, so employees can reach out with q
 | Contact name | 40 | This name is who users will reach when they contact support. |
 | Phone number | 20 | This number enables users to call for support. |
 | Email address | 40 | This email address is where users can send emails for   support. You must enter a valid email address in the format `alias@domainname.com`. |
-| Website name | 40 | This is the friendly name that is displayed in some   locations for the URL to the support website. If you specify a support   website URL and no friendly name, then the URL itself is displayed in the end-user experiences.  |
+| Website name | 40 | This is the friendly name that is displayed in some   locations for the URL to the support website. If you specify a support   website URL and no friendly name, then the URL itself is displayed in the end-user experiences. Note that this setting does not apply to the Intune app for Android.  |
 | Website URL | 150 | The support website that users should use. The URL must be   in the format `https://www.contoso.com`.  |
 | Additional information | 120 | Include any additional support-related messaging to users   here. |
 

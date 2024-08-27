@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/11/2023
+ms.date: 04/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -48,13 +48,14 @@ Use for personal/BYOD and organization-owned devices running Linux.
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| You use Ubuntu Desktop (20.04 or 22.04 LTS on x86/64). | ✔️ |
+| You use Ubuntu Desktop (20.04 or 22.04 LTS on x86/64). | ✅ |
 | You use Ubuntu Server. | ❌ |
-| Devices are owned by the organization or school. | ✔️ |
-| Devices are personal or BYOD. | ✔️  |
-| You have new or existing devices. | ✔️ |
+| You use RedHat Enterprise Linux 8 or 9. |✅ |
+| Devices are owned by the organization or school. | ✅ |
+| Devices are personal or BYOD. | ✅  |
+| You have new or existing devices. | ✅ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ❌ <br/><br/> Bulk enrollment isn't supported. Each device needs to be enrolled using the Microsoft Intune App. |
-| Devices are associated with a single user. | ✔️ |
+| Devices are associated with a single user. | ✅ |
 | Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/> The enrollment requires a user to sign in with an organization account. |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> It might be possible to enroll Linux devices in Intune that are already enrolled in another MDM provider. This scenario hasn't been tested by Microsoft. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to Linux. |
@@ -66,7 +67,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 Other than having Intune setup, there are minimal administrator tasks with Linux enrollment.
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
-- Intune admins don't do anything to enable Linux enrollment in the Microsoft Intune admin center. It's automatically enabled. When users enroll their Linux devices, you'll see them in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Linux**.
+- Intune admins don't do anything to enable Linux enrollment in the Microsoft Intune admin center. It's automatically enabled. When users enroll their Linux devices, you see them in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **By platform** > **Linux**.
 
 ## End user tasks
 
@@ -77,10 +78,10 @@ The following steps provide an overview. For the specific steps, go to [Enroll a
 
 1. [Download and install Microsoft Edge browser](https://www.microsoft.com/edge) version 102.x and newer.
 2. [Download and install the Microsoft Intune app for Linux](../user-help/microsoft-intune-app-linux.md). The install can take several minutes and requires a reboot. This app registers the device with Intune.
-3. Users open the Intune app, and sign in with their organization account (`user@contoso.com`). After they sign in, the enrollment process starts. It's possible users may be prompted to configure other settings based on your compliance policies.
+3. Users open the Intune app, and sign in with their organization account (`user@contoso.com`). After they sign in, the enrollment process starts. It's possible users might be prompted to configure other settings based on your compliance policies.
 4. Users open Microsoft Edge and sign in with their organization account (`user@contoso.com`). After they sign in, they can access your organization's resources, like internal websites and Microsoft 365 apps.
 
-## Related content
+## Related articles
 
 - [MAM](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)

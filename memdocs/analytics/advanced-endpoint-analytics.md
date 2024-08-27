@@ -2,7 +2,7 @@
 title: What is Microsoft Intune Advanced Analytics
 titleSuffix: Microsoft Intune
 description: Learn about Intune Advanced Analytics
-ms.date: 01/26/2024
+ms.date: 08/01/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.localizationpriority: high
 # What is Microsoft Intune Advanced Analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](/mem/intune/fundamentals/intune-add-ons).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).
 
 Microsoft Intune Advanced Analytics provides comprehensive visibility of the end-user experience in your organization and optimizes it with data driven insights. With Intune Advanced Analytics, your organization can proactively detect and resolve endpoint issues, streamline troubleshooting process, and improve your users' technology experience.
 
@@ -44,7 +44,20 @@ Intune Advanced Analytics features build on top of the existing base Endpoint an
 
 In addition to [license requirements](enroll-intune.md#licensing-prerequisites) for Endpoint analytics, an add-on license is required to use features in Intune Advanced Analytics.
 
-The Advanced Analytics features are included under [Microsoft Intune Suite](/mem/intune/fundamentals/intune-add-ons) and requires an extra cost to the licensing options that include Microsoft Intune. The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune. Global and billing administrators can use the centralized experience (Intune add-ons) in the Intune admin center to easily access trial licenses (up to 250 users for 90 days) and licenses to purchase.
+The Advanced Analytics features are included under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune. The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune. Global and billing administrators can use the centralized experience (Intune add-ons) in the Intune admin center to easily access trial licenses (up to 250 users for 90 days) and licenses to purchase.
+
+## Government cloud support
+
+Advanced Endpoint Analytics is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
+> [!NOTE]
+>
+> Support for Advanced Endpoint Analytics in GCC High and DoD environments does not include the [*Device query*](device-query.md) functionality.
+
+For more information, see [Microsoft Intune for US Government GCC service description](../intune/fundamentals/intune-govt-service-description.md).
 
 ## Mixed licensing scenarios
 
@@ -68,3 +81,4 @@ For more information, go to:
 - [Enhanced device timeline](enhanced-device-timeline.md)  
 - [Battery health](battery-health.md)
 - [Device query](device-query.md)
+- [Resource Performance report](resource-performance-report.md)

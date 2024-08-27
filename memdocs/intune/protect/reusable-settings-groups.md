@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/14/2023
+ms.date: 08/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,6 +25,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---
@@ -37,10 +38,10 @@ Intune supports *reusable settings groups* that you can add to configuration pol
 
 When you edit the settings in a reusable group, the changes you make automatically apply to each profile that includes the group. When you save your changes to the reusable settings group, Intune updates the profiles with those new configurations and deploys the updated profile to devices based on the profile’s assignments.
 
-The following profiles support reusable groups.
+The following profiles support reusable groups:
 
-- [Device control](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles) (Attack Surface Reduction policy)
-- [Windows Firewall Rules](../protect/endpoint-security-firewall-policy.md#firewall-profiles) (Firewall policy)
+- [**Device control**](#add-reusable-groups-to-a-device-control-profile), available through endpoint security [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles) policy.
+- [**Windows Firewall Rules**](#add-reusable-groups-to-a-windows-firewall-rule-profile), available through endpoint security [Firewall](../protect/endpoint-security-firewall-policy.md#firewall-profiles) policy.
 
 ## Overview of reusable settings groups
 
@@ -61,25 +62,25 @@ The following profiles support use of reusable settings groups:
 **Endpoint security policy**
 
 - **Firewall** > **Windows Firewall rules**:  
-  - Platforms: Windows 10 and Windows 11
-  - Windows versions: Devices must run Windows 10 20H2 or later, or Windows 11.
+  - Platforms: Windows
+  - Windows versions: Devices must run Windows 10 20H2 or later, or Windows 11
 
 - **Attack surface reduction** > **Device control**:
-  - Platforms: Windows 10 and later
+  - Platforms: Windows
 
 **Endpoint Privilege Management**
 
 - Windows elevation rules policy
 
-> [!NOTE]  
-> Reusable settings groups are not currently supported for use with [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md)
-
+> [!NOTE]
+>
+> Reusable settings groups are not currently supported for use with [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
 ## Create a reusable group
 
 Each reusable settings group includes a subset of settings from the full profile you’re creating the group for. Use the following links to view the settings you can configure in a settings group for each profile:
 
-- [Device Control](../protect/endpoint-security-asr-policy.md#add-reusable-settings-groups-to-profiles-for-device-control)
+- [Device Control](../protect/endpoint-security-asr-policy.md#reusable-settings-groups-for-device-control-profiles)
 - [Windows Firewall rules](../protect/endpoint-security-firewall-policy.md#add-reusable-settings-groups-to-profiles-for-firewall-rules)
 
 **To create a reusable settings group**:
@@ -111,7 +112,7 @@ When you edit the configuration of a reusable group, each profile that uses that
 
 3. On the *Basics* page you can rename the group, and on the *Configuration settings* page you can reconfigure settings. On the last page, select **Save** to save your configuration and update the profiles that use the settings group.
 
-## Add reusable groups to a Microsoft Windows rule profile
+## Add reusable groups to a Windows firewall rule profile
 
 Add reusable settings groups to profiles while editing or creating the profile. On the profiles Configuration settings page, use an option that supports adding one or more previously created groups.
 
@@ -127,7 +128,7 @@ Add reusable settings groups to profiles while editing or creating the profile. 
 
    :::image type="content" source="./media/reusable-settings-groups/add-reusable-group-to-profile.png" alt-text="Screenshot of the Configuration settings workflow for configuring a reusable group.":::
 
-5. Select one or more of the available groups to add them to this rule, and then save your selections. 
+5. Select one or more of the available groups to add them to this rule, and then save your selections.
 
    :::image type="content" source="./media/reusable-settings-groups/select-groups.png" alt-text="Screenshot that shows the Select Reusable settings pane.":::
 

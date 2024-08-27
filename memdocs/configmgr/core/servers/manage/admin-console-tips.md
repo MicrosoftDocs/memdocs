@@ -2,12 +2,12 @@
 title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 08/12/2022
+ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: banreet
-ms.author: banreetkaur
+author: PalikaSingh
+ms.author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -166,6 +166,29 @@ Your user account needs at least **Read** permission to these objects.
 For more information, see [Use the status system](use-status-system.md).
 
 ### Improvements to console search
+
+<!--24501008-->
+
+*(Introduced in version 2403)*
+
+We have added a new Global Search bar where users can search from anywhere in the console with an option to quickly see and execute the 5 most recent searches.
+The default search will now include all workspaces that are when you search to any node in the console, by default, search results will include items from that workspace as well as from all nodes folders and subfolders.
+
+**Global search view**
+- Open the console.
+- Global Search bar will be visible at the top.
+- Enter your string and press enter.
+- Search execution will start and you will start seeing the search results.
+- Whenever the Search Box is active, you can see a dropdown which contains the Recent Searches with a limit of 5.
+- Search should work from all across the console be it any child node, parent node etc.
+- Search should also work when switching from Parent Node to child node.
+   - Search for any string say "Devices" from any node n1 (Assume n1 is a parent node containing other nodes)
+   - Search for any string say "Computer" from any node n2 (Assume n2 is a child node with no node inside it)
+
+ :::image type="content" source="./media/24501008-recentsearch.png" alt-text="Screenshot showing recent search list of global search box in the CM console."::: 
+ 
+  > [!NOTE]
+  > Recent searches dropdown can be collapsed by clicking outside on the window
 
 **Note:** The path criteria are not editable and they just show the search criteria.
 

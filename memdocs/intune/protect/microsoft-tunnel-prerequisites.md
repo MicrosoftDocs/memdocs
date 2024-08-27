@@ -23,6 +23,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-infrastructure
 ---
 
 # Prerequisites for the Microsoft Tunnel in Intune
@@ -44,12 +45,16 @@ After configuring the prerequisites, we recommend you run the [readiness tool](#
 
 The following sections detail the prerequisites for the Microsoft Tunnel, and provide guidance on using the readiness tool.
 
+> [!NOTE]
+> Tunnel and Global Secure Access (GSA) cannot be use simultaneously on the same device.
+
+
 ## Linux server
 
 Set up a Linux based virtual machine or a physical server on which to install the Microsoft Tunnel Gateway.
 
 > [!NOTE]
-> Only the operating systems and container versions that are listed in the following table are supported. Versions not listed are not supported. Only after testing and supportability are verified are newer versions added to this list.
+> Only the operating systems and container versions that are listed in the following table are supported. Versions not listed are not supported. Only after testing and supportability are verified are newer versions added to this list. Keep OS up to date with security updates as well.
 
 - **Supported Linux distributions** - The following table details which versions of Linux are supported for the Tunnel server, and the container they require:
 
@@ -57,14 +62,16 @@ Set up a Linux based virtual machine or a physical server on which to install th
   |-----------------------|--------------------------|--------------------|
   | CentOS 7.4+           | Docker CE                | Support ends June 2024. CentOS 8+ isn't supported |
   | Red Hat (RHEL) 7.4+   | Docker CE                | Support ends June 2024    |
-  | Red Hat (RHEL) 8.6    | Podman 4.0 *(default)* </br> Podman 3.0  | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.6_release_notes/index#enhancement_containers) aren't usable with Podman v4.0. If upgrading and changing containers from v3 to v4.0, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
+  | Red Hat (RHEL) 8.6    | Support ends June 2024 Podman 4.0 *(default)* </br> Podman 3.0  | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.6_release_notes/index#enhancement_containers) aren't usable with Podman v4.0. If upgrading and changing containers from v3 to v4.0, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Red Hat (RHEL) 8.7  <!-- This entry is pending podman version details from PM -->  | Podman 4.2 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Red Hat (RHEL) 8.8  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
    | Red Hat (RHEL) 8.9  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
-  | Red Hat (RHEL) 9.0  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. </br></br> Support ends Feb 2024.  |
+   | Red Hat (RHEL) 8.10  <!-- This entry is pending podman version details from PM -->  | Podman 4.9.4-rhel *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
+  | Red Hat (RHEL) 9.0  <!-- This entry is pending podman version details from PM -->  | Support ends June 2024  Podman 4.4.1 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. </br></br> Support ends Feb 2024.  |
   | Red Hat (RHEL) 9.1  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Red Hat (RHEL) 9.2  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Red Hat (RHEL) 9.3  | Podman 4.6.1. *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
+   | Red Hat (RHEL) 9.4  | Podman 4.9.4-rhel *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Ubuntu 20.04           | Docker CE               |                    |
   | Ubuntu 22.04           | Docker CE               |                    |
 
@@ -372,13 +379,12 @@ You can configure Podman to use the proxy to download (pull) updated images for 
 
    `systemctl edit --force mstunnel_monitor`  
 
-2. Add the following four lines to the file. Replace each instance of *[address]* with your proxy DN or address, and then save the file:
+2. Add the following three lines to the file. Replace each instance of *[address]* with your proxy DN or address, and then save the file:
 
    ```
    [Service]
    Environment="http_proxy=[address]"
    Environment="https_proxy=[address]"
-   PassEnvironment=http_proxy, https_proxy
    ```
 
 3. Next, run the following at the command prompt:
@@ -394,7 +400,6 @@ You can configure Podman to use the proxy to download (pull) updated images for 
    ```
    Environment="http_proxy=address:port"
    Environment="https_proxy=address:port"
-   PassEnvironment=http_proxy https_proxy
    ```
 
 ### Update the proxy server in use by the tunnel server

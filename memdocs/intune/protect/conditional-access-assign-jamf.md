@@ -29,6 +29,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - conditional-access
+- sub-device-compliance
 ---
 
 # Enforce compliance on Macs managed with Jamf Pro
@@ -37,14 +38,14 @@ ms.collection:
 >
 > **Jamf macOS device support for Conditional Access is being deprecated**.
 >
-> Beginning on September 1, 2024, the platform that Jamf Pro’s Conditional Access feature is built on will no longer be supported.
+> Beginning on September 1, 2024, the platform that Jamf Pro's Conditional Access feature is built on will no longer be supported.
 >
-> If you use Jamf Pro’s Conditional Access integration for macOS devices, follow Jamf’s documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
+> If you use Jamf Pro's Conditional Access integration for macOS devices, follow Jamf's documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
 >
 > If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
 
 > [!TIP]
-> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).
+> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](jamf-managed-device-compliance-with-entra-id.md).
 
 After you integrate Jamf Pro with Intune, configure Intune compliance policies and Microsoft Entra Conditional Access policies to enforce compliance of macOS devices with your organizational requirements.
 
@@ -116,7 +117,7 @@ To complete the following procedure, you need access to a macOS device and the J
 
 After you [deploy the Company Portal](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) for macOS through Jamf Pro Self-Service, you can create the Jamf Pro policy that registers a user's device with Microsoft Entra ID.
 
-Device registration requires a device user to manually select the Intune Company Portal app from within Jamf Self Service. We recommend you [contact your end users](/mem/intune/fundamentals/intune-planning-guide) through email, Jamf Pro notifications, or any other method your organization uses to direct them to complete this action to get their devices registered.
+Device registration requires a device user to manually select the Intune Company Portal app from within Jamf Self Service. We recommend you [contact your end users](../fundamentals/intune-planning-guide.md) through email, Jamf Pro notifications, or any other method your organization uses to direct them to complete this action to get their devices registered.
 
 > [!WARNING]
 > Launching the Company Portal app manually (such as from the Applications or Downloads folders) won't register the device. If device user launches the Company Portal manually, they'll see a warning, **'AccountNotOnboarded'**.

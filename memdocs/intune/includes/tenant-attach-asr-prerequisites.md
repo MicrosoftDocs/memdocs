@@ -1,10 +1,10 @@
 ---
-title: include file
-description: include file
+title: Include file
+description: Include file
 author: brenduns  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 01/20/2023
+ms.date: 08/19/2024
 ms.author: brenduns
 ms.custom: include file
 ---
@@ -17,14 +17,14 @@ Manage [attack surface reduction settings for Configuration Manager devices](../
 
 **Policy path**:
 
-- Endpoint security > Attach surface reduction > Windows 10 and later (ConfigMgr)  
+- Endpoint security > Attach surface reduction > Windows (ConfigMgr)
 
 **Profiles**:
 
-- Attack Surface Reduction Rules (ConfigMgr)
+- App and Browser Isolation(ConfigMgr)
+- Attack Surface Reduction Rules(ConfigMgr)
 - Exploit Protection(ConfigMgr)(preview)
 - Web Protection (ConfigMgr)(preview)
-
 
 **Required version of Configuration Manager**:
 

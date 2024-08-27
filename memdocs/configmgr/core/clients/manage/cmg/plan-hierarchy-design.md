@@ -50,7 +50,7 @@ As clients roam onto the internet, they communicate with the CMG in the West US 
 > [!TIP]
 > You don't need to deploy more than one CMG for the purposes of geolocation. The Configuration Manager client is mostly unaffected by the slight latency that can occur with the cloud service, even when geographically distant.
 
-## Test environments
+## Multiple environments
 <!-- SCCMDocs#1225 -->
 Many organizations have separate environments for production, test, development, or quality assurance. When you plan your CMG deployment, consider the following questions:
 

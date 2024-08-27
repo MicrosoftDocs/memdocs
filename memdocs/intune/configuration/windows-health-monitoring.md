@@ -50,10 +50,10 @@ This article shows you how to create the profile, and enable the monitoring.
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Choose **Windows 10 and later**.
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Windows health monitoring**.
 
     > [!NOTE]
@@ -72,7 +72,7 @@ This article shows you how to create the profile, and enable the monitoring.
 6. Select **Next**.
 7. In **Configuration settings**, configure the following settings:
 
-    - **Health monitoring**: This setting turns on health monitoring to track Windows updates and events. Your options:
+    - **Health monitoring**: This setting turns on health monitoring to track events. Your options:
       - **Not configured**: Intune doesn't change or update this setting.
       - **Enable**: Event information is collected from the devices, and sent to Microsoft for analytics and insights.
       - **Disable**: Event information isn't collected from the devices.
@@ -80,9 +80,7 @@ This article shows you how to create the profile, and enable the monitoring.
       [DeviceHealthMonitoring/AllowDeviceHealthMonitoring CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#allowdevicehealthmonitoring)
 
     - **Scope**: Choose the event information you want collected and evaluated. Your options:
-      - **Windows updates**: This option configures devices to send Windows Update data to Intune. This data is then used in a [compliance policy](../protect/windows-update-reports.md) that reports on Windows updates.
       - **Endpoint analytics**
-
       [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#configdevicehealthmonitoringscope)
 
 8. Select **Next**.

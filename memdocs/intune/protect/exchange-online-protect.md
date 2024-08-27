@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-device-compliance
 ---
 # Protect Microsoft 365 Exchange Online without requiring device management
 

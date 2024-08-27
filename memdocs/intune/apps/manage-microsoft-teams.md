@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 06/11/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -150,7 +150,7 @@ Use the following options to configure your notifications on the portal through 
    |---|---|
    | com.microsoft.teams.chat.notifications.IntuneMAMOnly | **1** for on, **0** for off |
    | com.microsoft.teams.channel.notifications.IntuneMAMOnly | **1** for on, **0** for off |
-   | com.microsoft.teams.others.notifications.IntuneMAMOnly | **1** for on, **0** for off |
+   | com.microsoft.teams.other.notifications.IntuneMAMOnly | **1** for on, **0** for off |
 
    :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-02.png" alt-text="app-configuration-properties-at-a-glance" border="true" :::
 

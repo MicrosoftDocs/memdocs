@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/06/2023
+ms.date: 07/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Set up Lookout Mobile Endpoint Security integration with Intune

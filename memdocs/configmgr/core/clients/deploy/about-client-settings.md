@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 10/31/2023
+ms.date: 03/28/2024
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: reference
@@ -11,7 +11,7 @@ ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # About client settings in Configuration Manager
@@ -22,7 +22,7 @@ Manage all client settings in the Configuration Manager console from the **Clien
 
 The following sections describe settings and options in further detail.
 
-## Background Intelligent Transfer Service (BITS)  
+## Background Intelligent Transfer Service (BITS)
 
 ### Limit the maximum network bandwidth for BITS background transfers
 
@@ -30,23 +30,23 @@ When this option is **Yes**, clients use BITS bandwidth throttling. To configure
 
 ### Throttling window start time
 
-Specify the local start time for the BITS throttling window.  
+Specify the local start time for the BITS throttling window.
 
 ### Throttling window end time
 
-Specify the local end time for the BITS throttling window. If the end time is equal to the **Throttling window start time**, BITS throttling is always enabled.  
+Specify the local end time for the BITS throttling window. If the end time is equal to the **Throttling window start time**, BITS throttling is always enabled.
 
 ### Maximum transfer rate during throttling window (Kbps)
 
-Specify the maximum transfer rate that clients can use during the window.  
+Specify the maximum transfer rate that clients can use during the window.
 
 ### Allow BITS downloads outside the throttling window
 
-Allow clients to use separate BITS settings outside the specified window.  
+Allow clients to use separate BITS settings outside the specified window.
 
 ### Maximum transfer rate outside the throttling window (Kbps)
 
-Specify the maximum transfer rate that clients can use outside the BITS throttling window.  
+Specify the maximum transfer rate that clients can use outside the BITS throttling window.
 
 
 
@@ -81,9 +81,12 @@ Enables [peer cache](../../plan-design/hierarchy/client-peer-cache.md) for Confi
 
 - **Port for initial network broadcast** (default UDP 8004): Configuration Manager uses this port in Windows PE or the full Windows OS. The task sequence engine in Windows PE sends the broadcast to get content locations before it starts the task sequence.<!--SCCMDocs issue 910-->
 
-- **Port for content download from peer** (default TCP 8003): Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.  
+- **Port for content download from peer** (default TCP 8003): Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.
 
-    For more information, see [Ports used for connections](../../plan-design/hierarchy/ports.md#BKMK_PortsClient-ClientWakeUp).  
+    For more information, see [Ports used for connections](../../plan-design/hierarchy/ports.md#BKMK_PortsClient-ClientWakeUp).
+
+> [!NOTE]
+> We configure the port to download content from peer as (default TCP 8003) which binds to self-signed cert even in an environment where PKI certificate is enabled.
 
 ### Minimum duration before cached content can be removed (minutes)
 
@@ -95,15 +98,15 @@ The maximum value for this setting is 10,080 minutes (one week).
 
 This setting gives you greater control over the client cache on different types of devices. You might reduce the value on clients that have small hard drives and don't need to keep existing content before another deployment runs.
 
-## Client policy  
+## Client policy
 
 ### Client policy polling interval (minutes)
 
 Specifies how frequently the following Configuration Manager clients download client policy:
 
-- Windows computers (for example, desktops, servers, laptops)  
-- Mobile devices that Configuration Manager enrolls  
-- Mac computers  
+- Windows computers (for example, desktops, servers, laptops)
+- Mobile devices that Configuration Manager enrolls
+- Mac computers
 
 This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With many clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](../../plan-design/configs/size-and-scale-numbers.md) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
 
@@ -117,20 +120,20 @@ This setting applies to users when their computer is on either the intranet or t
 
 ### Enable user policy requests from internet clients
 
-Set this option to **Yes** for users to receive the user policy on internet-based computers. The following requirements also apply:  
+Set this option to **Yes** for users to receive the user policy on internet-based computers. The following requirements also apply:
 
-- The client and site are configured for [internet-based client management](../manage/plan-internet-based-client-management.md) or a [cloud management gateway](../manage/cmg/overview.md).  
+- The client and site are configured for [internet-based client management](../manage/plan-internet-based-client-management.md) or a [cloud management gateway](../manage/cmg/overview.md).
 
-- The **Enable user policy on clients** setting is **Yes**.  
+- The **Enable user policy on clients** setting is **Yes**.
 
-- The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
+- The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).
 
 - The cloud management gateway successfully authenticates the user by using Microsoft Entra ID. For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
-If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
+If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.
 
-> [!NOTE]  
-> For internet-based client management, application approval requests from users don't require user policies or user authentication. The cloud management gateway doesn't support application approval requests.  
+> [!NOTE]
+> For internet-based client management, application approval requests from users don't require user policies or user authentication. The cloud management gateway doesn't support application approval requests.
 
 ### Enable user policy for multiple user sessions
 
@@ -161,7 +164,7 @@ By default, all internet-roaming clients use any available [cloud management gat
 
 
 
-## Compliance settings  
+## Compliance settings
 
 ### Enable compliance evaluation on clients
 
@@ -169,7 +172,7 @@ Set this option to **Yes** to configure the other settings in this group.
 
 ### Schedule compliance evaluation
 
-Select **Schedule** to create the default schedule for configuration baseline deployments. This value is configurable for each baseline in the **Deploy Configuration Baseline** dialog box.  
+Select **Schedule** to create the default schedule for configuration baseline deployments. This value is configurable for each baseline in the **Deploy Configuration Baseline** dialog box.
 
 ### Enable User Data and Profiles
 
@@ -178,7 +181,7 @@ Choose **Yes** if you want to deploy [user data and profiles](../../../complianc
 ## Script Execution Timeout (seconds)
 
 Starting in version 2207, you can define a **Script Execution Timeout (seconds)**. The timeout value can be set from a minimum of 60 seconds to a maximum of 600 seconds. This new setting allows you more flexibility for configuration items when you need to run scripts that may exceed the default of 60 seconds. <!--14120481-->
-## Computer agent  
+## Computer agent
 
 ### User notifications for required deployments
 
@@ -200,7 +203,7 @@ For more information, see [Removed and deprecated features](../../plan-design/ch
 
 ### Organization name displayed in Software Center
 
-Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).  
+Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).
 
 ### Use new Software Center
 
@@ -214,23 +217,23 @@ Set this option to **Yes** for Windows 10 or later devices to use [Health attest
 
 ### Use on-premises Health Attestation Service
 
-Set this option to **Yes** for devices to use an on-premises service. Set to **No** for devices to use the Microsoft cloud-based service.  
+Set this option to **Yes** for devices to use an on-premises service. Set to **No** for devices to use the Microsoft cloud-based service.
 
 ### Install permissions
 
-Configure how users can install software, software updates, and task sequences:  
+Configure how users can install software, software updates, and task sequences:
 
-- **All Users**: Users with any permission except Guest.  
+- **All Users**: Users with any permission except Guest.
 
-- **Only Administrators**: Users must be a member of the local Administrators group.  
+- **Only Administrators**: Users must be a member of the local Administrators group.
 
-- **Only Administrators and primary users**: Users must be a member of the local Administrators group, or a primary user of the computer.  
+- **Only Administrators and primary users**: Users must be a member of the local Administrators group, or a primary user of the computer.
 
-- **No Users**: No users signed in to a client computer can install software, software updates, and task sequences. Required deployments for the computer always install at the deadline. Users can't install software from Software Center.  
+- **No Users**: No users signed in to a client computer can install software, software updates, and task sequences. Required deployments for the computer always install at the deadline. Users can't install software from Software Center.
 
 ### Suspend BitLocker PIN entry on restart
 
-If computers require BitLocker PIN entry, then this option bypasses the requirement to enter a PIN when the computer restarts after a software installation.  
+If computers require BitLocker PIN entry, then this option bypasses the requirement to enter a PIN when the computer restarts after a software installation.
 
 - **Always**: Configuration Manager temporarily suspends BitLocker after it has installed software that requires a restart, and it restarts the computer. This setting only applies when Configuration Manager restarts the computer. This setting doesn't suspend the requirement to enter the BitLocker PIN when the user restarts the computer. The BitLocker PIN entry requirement resumes after Windows startup.
 
@@ -238,11 +241,11 @@ If computers require BitLocker PIN entry, then this option bypasses the requirem
 
 ### Additional software manages the deployment of applications and software updates
 
-Enable this option only if one of the following conditions applies:  
+Enable this option only if one of the following conditions applies:
 
-- You use a vendor solution that requires this setting to be enabled.  
+- You use a vendor solution that requires this setting to be enabled.
 
-- You use the Configuration Manager software development kit (SDK) to manage client agent notifications, and the installation of applications and software updates.  
+- You use the Configuration Manager software development kit (SDK) to manage client agent notifications, and the installation of applications and software updates.
 
 > [!WARNING]
 > If you choose this option when neither of these conditions apply, the client doesn't install software updates and required applications. This setting doesn't prevent users from installing available software from Software Center, including applications, packages, and task sequences.
@@ -251,22 +254,22 @@ Enable this option only if one of the following conditions applies:
 
 ### PowerShell execution policy
 
-Configure how Configuration Manager clients can run Windows PowerShell scripts. You might use these scripts for detection in configuration items for compliance settings. You might also send the scripts in a deployment as a standard script.  
+Configure how Configuration Manager clients can run Windows PowerShell scripts. You might use these scripts for detection in configuration items for compliance settings. You might also send the scripts in a deployment as a standard script.
 
-- **Bypass**: The Configuration Manager client bypasses the Windows PowerShell configuration on the client computer, so that unsigned scripts can run.  
+- **Bypass**: The Configuration Manager client bypasses the Windows PowerShell configuration on the client computer, so that unsigned scripts can run.
 
-- **Restricted**: The Configuration Manager client uses the current PowerShell configuration on the client computer. This configuration determines whether unsigned scripts can run.  
+- **Restricted**: The Configuration Manager client uses the current PowerShell configuration on the client computer. This configuration determines whether unsigned scripts can run.
 
-- **All Signed**: The Configuration Manager client runs scripts only if a trusted publisher has signed them. This restriction applies independently from the current PowerShell configuration on the client computer.  
+- **All Signed**: The Configuration Manager client runs scripts only if a trusted publisher has signed them. This restriction applies independently from the current PowerShell configuration on the client computer.
 
-This option requires at least Windows PowerShell version 2.0. The default is **All Signed**.  
+This option requires at least Windows PowerShell version 2.0. The default is **All Signed**.
 
-> [!TIP]  
-> If unsigned scripts fail to run because of this client setting, Configuration Manager reports this error in the following ways:  
+> [!TIP]
+> If unsigned scripts fail to run because of this client setting, Configuration Manager reports this error in the following ways:
 >
-> - The **Monitoring** workspace in the console displays deployment status error ID **0x87D00327**. It also displays the description **Script is not signed**.  
-> - Reports display the error type **Discovery Error**. Then reports display either error code **0x87D00327** and the description **Script is not signed**, or error code **0x87D00320** and the description **The script host has not been installed yet**. An example report is: **Details of errors of configuration items in a configuration baseline for an asset**.  
-> - The **DcmWmiProvider.log** file displays the message **Script is not signed (Error: 87D00327; Source: CCM)**.  
+> - The **Monitoring** workspace in the console displays deployment status error ID **0x87D00327**. It also displays the description **Script is not signed**.
+> - Reports display the error type **Discovery Error**. Then reports display either error code **0x87D00327** and the description **Script is not signed**, or error code **0x87D00320** and the description **The script host has not been installed yet**. An example report is: **Details of errors of configuration items in a configuration baseline for an asset**.
+> - The **DcmWmiProvider.log** file displays the message **Script is not signed (Error: 87D00327; Source: CCM)**.
 
 ### Show notifications for new deployments
 
@@ -274,9 +277,9 @@ Choose **Yes** to display a notification for deployments available for less than
 
 ### Disable deadline randomization
 
-After the deployment deadline, this setting determines whether the client uses an activation delay of up to two hours to install required software updates. By default, the activation delay is disabled. 
+After the deployment deadline, this setting determines whether the client uses an activation delay of up to two hours to install required software updates. By default, the activation delay is disabled.
 
-For virtual desktop infrastructure (VDI) scenarios, this delay helps distribute the CPU processing and data transfer for a host machine with multiple virtual machines. Even if you don't use VDI, having many clients installing the same updates at the same time can negatively increase CPU usage on the site server. This behavior can also slow down distribution points, and significantly reduce the available network bandwidth.  
+For virtual desktop infrastructure (VDI) scenarios, this delay helps distribute the CPU processing and data transfer for a host machine with multiple virtual machines. Even if you don't use VDI, having many clients installing the same updates at the same time can negatively increase CPU usage on the site server. This behavior can also slow down distribution points, and significantly reduce the available network bandwidth.
 
 If clients must install required software updates at the deployment deadline without delay, then configure this setting to **Yes**.
 
@@ -318,7 +321,7 @@ Choose **Yes** to apply the boundary group identifier as the Delivery Optimizati
 ### Enable devices managed by Configuration Manager to use Microsoft Connected Cache servers for content download
 
 <!--3555764-->
-Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Microsoft Connected Cache server. For more information, see [Microsoft Connected Cache in Configuration Manager](../../plan-design/hierarchy/microsoft-connected-cache.md).
+Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Microsoft Connected Cache server. For more information, see [Microsoft Connected Cache with Configuration Manager](../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 ## Endpoint Protection
 
@@ -327,16 +330,16 @@ Choose **Yes** to allow clients to download content from an on-premises distribu
 
 ### Manage Endpoint Protection client on client computers
 
-Choose **Yes** if you want to manage existing Endpoint Protection and Windows Defender clients on computers in your hierarchy.  
+Choose **Yes** if you want to manage existing Endpoint Protection and Windows Defender clients on computers in your hierarchy.
 
 Choose this option if you've already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program. Windows 10 or later devices don't need to have the Endpoint Protection agent installed. However, those devices will still need **Manage Endpoint Protection client on client computers** enabled. <!--503654-->
 
 ### Install Endpoint Protection client on client computers
 
-Choose **Yes** to install and enable the Endpoint Protection client on client computers that aren't already running the client. Windows 10 or later clients don't need to have the Endpoint Protection agent installed.  
+Choose **Yes** to install and enable the Endpoint Protection client on client computers that aren't already running the client. Windows 10 or later clients don't need to have the Endpoint Protection agent installed.
 
-> [!NOTE]  
-> If the Endpoint Protection client is already installed, choosing **No** doesn't uninstall the Endpoint Protection client. To uninstall the Endpoint Protection client, set the **Manage Endpoint Protection client on client computers** client setting to **No**. Then, deploy a package and program to uninstall the Endpoint Protection client.  
+> [!NOTE]
+> If the Endpoint Protection client is already installed, choosing **No** doesn't uninstall the Endpoint Protection client. To uninstall the Endpoint Protection client, set the **Manage Endpoint Protection client on client computers** client setting to **No**. Then, deploy a package and program to uninstall the Endpoint Protection client.
 
 ### Allow Endpoint Protection client installation and restarts outside maintenance windows. Maintenance windows must be at least 30 minutes long for client installation
 
@@ -344,16 +347,16 @@ Set this option to **Yes** to override typical installation behaviors with maint
 
 ### For Windows Embedded devices with write filters, commit Endpoint Protection client installation (requires restarts)
 
-Choose **Yes** to disable the write filter on the Windows Embedded device, and restart the device. This action commits the installation on the device.  
+Choose **Yes** to disable the write filter on the Windows Embedded device, and restart the device. This action commits the installation on the device.
 
-If you choose **No**, the client installs on a temporary overlay that clears when the device restarts. In this scenario, the Endpoint Protection client doesn't fully install until another installation commits changes to the device. This configuration is the default.  
+If you choose **No**, the client installs on a temporary overlay that clears when the device restarts. In this scenario, the Endpoint Protection client doesn't fully install until another installation commits changes to the device. This configuration is the default.
 
 ### Suppress any required computer restarts after the Endpoint Protection client is installed
 
-Choose **Yes** to suppress a computer restart after the Endpoint Protection client installs.  
+Choose **Yes** to suppress a computer restart after the Endpoint Protection client installs.
 
-> [!IMPORTANT]  
-> If the Endpoint Protection client requires a computer restart and this setting is **No**, then the computer restarts regardless of any configured maintenance windows.  
+> [!IMPORTANT]
+> If the Endpoint Protection client requires a computer restart and this setting is **No**, then the computer restarts regardless of any configured maintenance windows.
 
 ### Allowed period of time users can postpone a required restart to complete the Endpoint Protection installation (hours)
 
@@ -361,7 +364,7 @@ If a restart is necessary after the Endpoint Protection client installs, this se
 
 ### Disable alternate sources (such as Microsoft Windows Update, Microsoft Windows Server Update Services, or UNC shares) for the initial definition update on client computers
 
-Choose **Yes** if you want Configuration Manager to install only the initial definition update on client computers. This setting can be helpful to avoid unnecessary network connections, and reduce network bandwidth, during the initial installation of the definition update.  
+Choose **Yes** if you want Configuration Manager to install only the initial definition update on client computers. This setting can be helpful to avoid unnecessary network connections, and reduce network bandwidth, during the initial installation of the definition update.
 
 
 
@@ -389,7 +392,7 @@ To enable user-based enrollment of modern devices, set this option to **Yes**, a
 
 
 
-## Hardware inventory  
+## Hardware inventory
 
 ### Enable hardware inventory on clients
 
@@ -405,26 +408,26 @@ Specify the maximum number of minutes for the Configuration Manager client to ra
 
 ### Maximum custom MIF file size (KB)
 
-Specify the maximum size, in kilobytes (KB), allowed for each custom Management Information Format (MIF) file that the client collects during a hardware inventory cycle. The Configuration Manager hardware inventory agent doesn't process any custom MIF files that exceed this size. You can specify a size of 1 KB to 5,120 KB. By default, this value is set to 250 KB. This setting doesn't affect the size of the regular hardware inventory data file.  
+Specify the maximum size, in kilobytes (KB), allowed for each custom Management Information Format (MIF) file that the client collects during a hardware inventory cycle. The Configuration Manager hardware inventory agent doesn't process any custom MIF files that exceed this size. You can specify a size of 1 KB to 5,120 KB. By default, this value is set to 250 KB. This setting doesn't affect the size of the regular hardware inventory data file.
 
-> [!NOTE]  
-> This setting is available only in the default client settings.  
+> [!NOTE]
+> This setting is available only in the default client settings.
 
 ### Hardware inventory classes
 
-Select **Set Classes** to extend the hardware information that you collect from clients without manually editing the sms_def.mof file. For more information, see [How to configure hardware inventory](../manage/inventory/configure-hardware-inventory.md).  
+Select **Set Classes** to extend the hardware information that you collect from clients without manually editing the sms_def.mof file. For more information, see [How to configure hardware inventory](../manage/inventory/configure-hardware-inventory.md).
 
 ### Collect MIF files
 
-Use this setting to specify whether to collect MIF files from Configuration Manager clients during hardware inventory.  
+Use this setting to specify whether to collect MIF files from Configuration Manager clients during hardware inventory.
 
-For a MIF file to be collected by hardware inventory, it must be in the correct location on the client computer. By default, the files are located in the following paths:  
+For a MIF file to be collected by hardware inventory, it must be in the correct location on the client computer. By default, the files are located in the following paths:
 
 - **IDMIF files** should be in the Windows\System32\CCM\Inventory\Idmif folder.
 
 - **NOIDMIF files** should be in the Windows\System32\CCM\Inventory\Noidmif folder.
 
-> [!NOTE]  
+> [!NOTE]
 > This setting is available only in the default client settings.
 
 ## Metered internet connections
@@ -434,8 +437,8 @@ Manage how Windows 8 and later computers use metered internet connections to com
 > [!NOTE]
 > The configured client setting isn't applied in the following scenarios:
 >
-> - If the computer is on a roaming data connection, the Configuration Manager client doesn't perform any tasks that require data to be transferred to Configuration Manager sites.  
-> - If the Windows network connection properties are configured as non-metered, the Configuration Manager client behaves as if the connection is non-metered, and so transfers data to the site.  
+> - If the computer is on a roaming data connection, the Configuration Manager client doesn't perform any tasks that require data to be transferred to Configuration Manager sites.
+> - If the Windows network connection properties are configured as non-metered, the Configuration Manager client behaves as if the connection is non-metered, and so transfers data to the site.
 
 ### Client communication on metered internet connections
 
@@ -465,7 +468,7 @@ Choose one of the following options for this setting:
 
 Client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter `/AllowMetered`. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
-## Power management  
+## Power management
 
 ### Allow power management of devices
 
@@ -473,7 +476,7 @@ Set this option to **Yes** to enable power management on clients. For more infor
 
 ### Allow users to exclude their device from power management
 
-Choose **Yes** to let users of Software Center exclude their computer from any configured power management settings.  
+Choose **Yes** to let users of Software Center exclude their computer from any configured power management settings.
 
 ### Allow network wake-up
 
@@ -481,59 +484,59 @@ When you enable this setting, the client configures the power settings on the co
 
 ### Enable wake-up proxy
 
-Specify **Yes** to supplement the site's Wake On LAN setting, when it's configured for unicast packets.  
+Specify **Yes** to supplement the site's Wake On LAN setting, when it's configured for unicast packets.
 
-For more information about wake-up proxy, see [Plan how to wake up clients](plan/plan-wake-up-clients.md).  
+For more information about wake-up proxy, see [Plan how to wake up clients](plan/plan-wake-up-clients.md).
 
-> [!WARNING]  
-> Don't enable wake-up proxy in a production network without first understanding how it works and evaluating it in a test environment.  
+> [!WARNING]
+> Don't enable wake-up proxy in a production network without first understanding how it works and evaluating it in a test environment.
 
 Then, configure the following additional settings as needed:
 
-- **Wake-up proxy port number (UDP)**: The port number that clients use to send wake-up packets to sleeping computers. Keep the default port 25536, or change the number to a value of your choice.  
+- **Wake-up proxy port number (UDP)**: The port number that clients use to send wake-up packets to sleeping computers. Keep the default port 25536, or change the number to a value of your choice.
 
-- **Wake On LAN port number (UDP)**: Keep the default value of 9, unless you've changed the Wake On LAN (UDP) port number on the **Ports** tab of the site **Properties**.  
+- **Wake On LAN port number (UDP)**: Keep the default value of 9, unless you've changed the Wake On LAN (UDP) port number on the **Ports** tab of the site **Properties**.
 
-    > [!IMPORTANT]  
-    > This number must match the number in the site **Properties**. If you change this number in one place, it isn't automatically updated in the other place.  
+    > [!IMPORTANT]
+    > This number must match the number in the site **Properties**. If you change this number in one place, it isn't automatically updated in the other place.
 
-- **Windows Defender Firewall exception for wake-up proxy**: The Configuration Manager client automatically configures the wake-up proxy port number on devices that run Windows Defender Firewall. Select **Configure** to specify the firewall profiles.  
+- **Windows Defender Firewall exception for wake-up proxy**: The Configuration Manager client automatically configures the wake-up proxy port number on devices that run Windows Defender Firewall. Select **Configure** to specify the firewall profiles.
 
-    If clients run a different firewall, manually configure it to allow the **Wake-up proxy port number (UDP)**.  
+    If clients run a different firewall, manually configure it to allow the **Wake-up proxy port number (UDP)**.
 
 - **IPv6 prefixes if required for DirectAccess or other intervening network devices. Use a comma to specify multiple entries**: Enter the necessary IPv6 prefixes for wake-up proxy to function on your network.
 
-### Reduce network packets for Modern Standby devices 
+### Reduce network packets for Modern Standby devices
 
 Windows 10 and later operating systems support a low power mode known as **Modern Standby**, and includes wake on lan enabled by default. Some Modern Standby-capable devices may constantly send DHCP and DNS registration packets when in low power state and the legacy method of enabling wake on lan is used by Configuration Manager.
 
   Choose **No** to continue to use the legacy wake on lan settings (may cause DHCP/DNS registration packets on some Modern Standby devices)
-  
+
   Choose **Yes** to allow Configuration Manager to detect if a device is Modern Standby capable and default to using Modern Standby wake on lan implementation.
 
 
-## Remote tools  
+## Remote tools
 
 ### Enable Remote Control on clients, and Firewall exception profiles
 
-Select **Configure** to enable the Configuration Manager remote control feature. Optionally, configure firewall settings to allow remote control to work on client computers.  
+Select **Configure** to enable the Configuration Manager remote control feature. Optionally, configure firewall settings to allow remote control to work on client computers.
 
-Remote control is disabled by default.  
+Remote control is disabled by default.
 
-> [!IMPORTANT]  
-> If you don't configure firewall settings, remote control might not work correctly.  
+> [!IMPORTANT]
+> If you don't configure firewall settings, remote control might not work correctly.
 
 ### Users can change policy or notification settings in Software Center
 
-Choose whether users can change remote control options from within Software Center.  
+Choose whether users can change remote control options from within Software Center.
 
 ### Allow Remote Control of an unattended computer
 
-Choose whether an admin can use remote control to access a client computer that is logged off or locked. Only a logged-on and unlocked computer can be remotely controlled when this setting is disabled.  
+Choose whether an admin can use remote control to access a client computer that is logged off or locked. Only a logged-on and unlocked computer can be remotely controlled when this setting is disabled.
 
 ### Prompt user for Remote Control permission
 
-Choose whether the client computer shows a message asking for the user's permission before allowing a remote control session.  
+Choose whether the client computer shows a message asking for the user's permission before allowing a remote control session.
 
 ### Prompt user for permission to transfer content from shared clipboard
 
@@ -541,27 +544,27 @@ Before transferring content from the shared clipboard in a remote control sessio
 
 ### Grant Remote Control permission to local Administrators group
 
-Choose whether local admins on the server that starts the remote control connection can establish remote control sessions to client computers.  
+Choose whether local admins on the server that starts the remote control connection can establish remote control sessions to client computers.
 
 ### Access level allowed
 
-Specify the level of remote control access to allow. Choose from the following settings:  
+Specify the level of remote control access to allow. Choose from the following settings:
 
 - **No Access**
 - **View Only**
-- **Full Control**  
+- **Full Control**
 
 ### Permitted viewers of Remote Control and Remote Assistance
 
-Select **Set Viewers** to specify the names of the Windows users who can establish remote control sessions to client computers.  
+Select **Set Viewers** to specify the names of the Windows users who can establish remote control sessions to client computers.
 
 ### Show session notification icon on taskbar
 
-Configure this setting to **Yes** to show an icon on the client's Windows taskbar to indicate an active remote control session.  
+Configure this setting to **Yes** to show an icon on the client's Windows taskbar to indicate an active remote control session.
 
 ### Show session connection bar
 
-Set this option to **Yes** to show a high-visibility session connection bar on clients, to indicate an active remote control session.  
+Set this option to **Yes** to show a high-visibility session connection bar on clients, to indicate an active remote control session.
 
 ### Play a sound on client
 
@@ -569,19 +572,19 @@ Set this option to use sound to indicate when a remote control session is active
 
 - **No sound**
 - **Beginning and end of session** (default)
-- **Repeatedly during session**  
+- **Repeatedly during session**
 
 ### Manage unsolicited Remote Assistance settings
 
-Configure this setting to **Yes** to let Configuration Manager manage unsolicited Remote Assistance sessions.  
+Configure this setting to **Yes** to let Configuration Manager manage unsolicited Remote Assistance sessions.
 
-In an unsolicited Remote Assistance session, the user at the client computer didn't request assistance to start the session.  
+In an unsolicited Remote Assistance session, the user at the client computer didn't request assistance to start the session.
 
 ### Manage solicited Remote Assistance settings
 
-Set this option to **Yes** to let Configuration Manager manage solicited Remote Assistance sessions.  
+Set this option to **Yes** to let Configuration Manager manage solicited Remote Assistance sessions.
 
-In a solicited Remote Assistance session, the user at the client computer sent a request to the admin for remote assistance.  
+In a solicited Remote Assistance session, the user at the client computer sent a request to the admin for remote assistance.
 
 ### Level of access for Remote Assistance
 
@@ -591,20 +594,20 @@ Choose the level of access to assign to Remote Assistance sessions that are star
 - **Remote Viewing**
 - **Full Control**
 
-> [!NOTE]  
-> The user at the client computer must always grant permission for a Remote Assistance session to occur.  
+> [!NOTE]
+> The user at the client computer must always grant permission for a Remote Assistance session to occur.
 
 ### Manage Remote Desktop settings
 
-Set this option to **Yes** to let Configuration Manager manage Remote Desktop sessions for computers.  
+Set this option to **Yes** to let Configuration Manager manage Remote Desktop sessions for computers.
 
 ### Allow permitted viewers to connect by using Remote Desktop connection
 
-Set this option to **Yes** to add users specified in the permitted viewer list to the Remote Desktop local user group on clients.  
+Set this option to **Yes** to add users specified in the permitted viewer list to the Remote Desktop local user group on clients.
 
 ### Require network level authentication on computers that run Windows Vista operating system and later versions
 
-Set this option to **Yes** to use network-level authentication (NLA) to establish Remote Desktop connections to client computers. NLA initially requires fewer remote computer resources, because it finishes user authentication before it establishes a Remote Desktop connection. Using NLA is a more secure configuration. NLA helps protect the computer from malicious users or software, and it reduces the risk from denial-of-service attacks.  
+Set this option to **Yes** to use network-level authentication (NLA) to establish Remote Desktop connections to client computers. NLA initially requires fewer remote computer resources, because it finishes user authentication before it establishes a Remote Desktop connection. Using NLA is a more secure configuration. NLA helps protect the computer from malicious users or software, and it reduces the risk from denial-of-service attacks.
 
 
 
@@ -709,20 +712,20 @@ If you don't enable this option, Software Center uses the Windows built-in Inter
 
 For more information on the appearance of these settings, see the [Software Center user guide](../../understand/software-center.md#applications).
 
-## Software deployment  
+## Software deployment
 
 ### Schedule re-evaluation for deployments
 
-Configure a schedule for when Configuration Manager reevaluates the requirement rules for all deployments. The default value is every seven days.  
+Configure a schedule for when Configuration Manager reevaluates the requirement rules for all deployments. The default value is every seven days.
 
-> [!IMPORTANT]  
-> This setting is more invasive to the local client than it is to the network or site server. A more aggressive reevaluation schedule negatively affects the performance of your network and client computers. Microsoft doesn't recommend setting a lower value than the default. If you change this value, closely monitor performance.  
+> [!IMPORTANT]
+> This setting is more invasive to the local client than it is to the network or site server. A more aggressive reevaluation schedule negatively affects the performance of your network and client computers. Microsoft doesn't recommend setting a lower value than the default. If you change this value, closely monitor performance.
 
-Start this action from a client as follows: in the **Configuration Manager** control panel, from the **Actions** tab, select **Application Deployment Evaluation Cycle**.  
+Start this action from a client as follows: in the **Configuration Manager** control panel, from the **Actions** tab, select **Application Deployment Evaluation Cycle**.
 
 
 
-## Software inventory  
+## Software inventory
 
 ### Enable software inventory on clients
 
@@ -742,65 +745,65 @@ Specify one of the following levels of file information to inventory:
 
 ### Inventory these file types
 
-If you want to specify the types of file to inventory, select **Set Types**, and then configure the following options:  
+If you want to specify the types of file to inventory, select **Set Types**, and then configure the following options:
 
-> [!NOTE]  
-> If multiple custom client settings are applied to a computer, the inventory that each setting returns is merged.  
+> [!NOTE]
+> If multiple custom client settings are applied to a computer, the inventory that each setting returns is merged.
 
-- Select **New** to add a new file type to inventory. Then specify the following information in the **Inventoried File Properties** dialog box:  
+- Select **New** to add a new file type to inventory. Then specify the following information in the **Inventoried File Properties** dialog box:
 
-    - **Name**: Provide a name for the file that you want to inventory. Use an asterisk (`*`) wildcard to represent any string of text, and a question mark (`?`) to represent any single character. For example, if you want to inventory all files with the extension .doc, specify the file name `*.doc`.  
+    - **Name**: Provide a name for the file that you want to inventory. Use an asterisk (`*`) wildcard to represent any string of text, and a question mark (`?`) to represent any single character. For example, if you want to inventory all files with the extension .doc, specify the file name `*.doc`.
 
-    - **Location**: Select **Set** to open the **Path Properties** dialog box. Configure software inventory to search all client hard disks for the specified file, search a specified path (for example, `C:\Folder`), or search for a specified variable (for example, `%windir%`). You can also search all subfolders under the specified path.  
+    - **Location**: Select **Set** to open the **Path Properties** dialog box. Configure software inventory to search all client hard disks for the specified file, search a specified path (for example, `C:\Folder`), or search for a specified variable (for example, `%windir%`). You can also search all subfolders under the specified path.
 
-    - **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files aren't inventoried.  
+    - **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files aren't inventoried.
 
-    - **Exclude files in the Windows folder**: When you choose this option, any files in the Windows folder and its subfolders aren't inventoried.  
+    - **Exclude files in the Windows folder**: When you choose this option, any files in the Windows folder and its subfolders aren't inventoried.
 
-    Select **OK** to close the **Inventoried File Properties** dialog box. Add all the files that you want to inventory, and then select **OK** to close the **Configure Client Setting** dialog box.  
+    Select **OK** to close the **Inventoried File Properties** dialog box. Add all the files that you want to inventory, and then select **OK** to close the **Configure Client Setting** dialog box.
 
 ### Collect files
 
-If you want to collect files from client computers, select **Set Files**, and then configure the following settings:  
+If you want to collect files from client computers, select **Set Files**, and then configure the following settings:
 
-> [!NOTE]  
-> If multiple custom client settings are applied to a computer, the inventory that each setting returns is merged.  
+> [!NOTE]
+> If multiple custom client settings are applied to a computer, the inventory that each setting returns is merged.
 
-- In the **Configure Client Setting** dialog box, select **New** to add a file to be collected.  
+- In the **Configure Client Setting** dialog box, select **New** to add a file to be collected.
 
-- In the **Collected File Properties** dialog box, provide the following information:  
+- In the **Collected File Properties** dialog box, provide the following information:
 
-    - **Name**: Provide a name for the file that you want to collect. Use an asterisk (`*`) wildcard to represent any string of text, and a question mark (`?`) to represent any single character.  
+    - **Name**: Provide a name for the file that you want to collect. Use an asterisk (`*`) wildcard to represent any string of text, and a question mark (`?`) to represent any single character.
 
-    - **Location**: Select **Set** to open the **Path Properties** dialog box. Configure software inventory to search all client hard disks for the file that you want to collect, search a specified path (for example, `C:\Folder`), or search for a specified variable (for example, `%windir%`). You can also search all subfolders under the specified path.  
+    - **Location**: Select **Set** to open the **Path Properties** dialog box. Configure software inventory to search all client hard disks for the file that you want to collect, search a specified path (for example, `C:\Folder`), or search for a specified variable (for example, `%windir%`). You can also search all subfolders under the specified path.
 
-    - **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files aren't collected.  
+    - **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files aren't collected.
 
-    - **Stop file collection when the total size of the files exceeds (KB)**: Specify the file size, in kilobytes (KB), after which the client stops collecting the specified files.  
+    - **Stop file collection when the total size of the files exceeds (KB)**: Specify the file size, in kilobytes (KB), after which the client stops collecting the specified files.
 
-    > [!NOTE]  
-    > The site server collects the five most recently changed versions of collected files, and stores them in the `<ConfigMgr installation directory>\Inboxes\Sinv.box\Filecol` directory. If a file hasn't changed since the last software inventory cycle, the file isn't collected again.  
+    > [!NOTE]
+    > The site server collects the five most recently changed versions of collected files, and stores them in the `<ConfigMgr installation directory>\Inboxes\Sinv.box\Filecol` directory. If a file hasn't changed since the last software inventory cycle, the file isn't collected again.
     >
-    > Software inventory doesn't collect files larger than 20 MB.  
+    > Software inventory doesn't collect files larger than 20 MB.
     >
-    > The value **Maximum size for all collected files (KB)** in the **Configure Client Setting** dialog box shows the maximum size for all collected files. When this size is reached, file collection stops. Any files already collected are retained and sent to the site server.  
+    > The value **Maximum size for all collected files (KB)** in the **Configure Client Setting** dialog box shows the maximum size for all collected files. When this size is reached, file collection stops. Any files already collected are retained and sent to the site server.
 
     > [!IMPORTANT]
-    > If you configure software inventory to collect many large files, this configuration might negatively affect the performance of your network and site server.  
+    > If you configure software inventory to collect many large files, this configuration might negatively affect the performance of your network and site server.
 
-    For information about how to view collected files, see [How to use Resource Explorer to view software inventory](../manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
+    For information about how to view collected files, see [How to use Resource Explorer to view software inventory](../manage/inventory/use-resource-explorer-to-view-software-inventory.md).
 
-    Select **OK** to close the **Collected File Properties** dialog box. Add all the files that you want to collect, and then select **OK** to close the **Configure Client Setting** dialog box.  
+    Select **OK** to close the **Collected File Properties** dialog box. Add all the files that you want to collect, and then select **OK** to close the **Configure Client Setting** dialog box.
 
 ### Set Names
 
-The software inventory agent retrieves manufacturer and product names from file header information. These names aren't always standardized in the file header information. When you view software inventory in Resource Explorer, different versions of the same manufacturer or product name can appear. To standardize these display names, select **Set Names**, and then configure the following settings:  
+The software inventory agent retrieves manufacturer and product names from file header information. These names aren't always standardized in the file header information. When you view software inventory in Resource Explorer, different versions of the same manufacturer or product name can appear. To standardize these display names, select **Set Names**, and then configure the following settings:
 
-- **Name type**: Software inventory collects information about both manufacturers and products. Choose whether you want to configure display names for a **Manufacturer** or a **Product**.  
+- **Name type**: Software inventory collects information about both manufacturers and products. Choose whether you want to configure display names for a **Manufacturer** or a **Product**.
 
-- **Display name**: Specify the display name that you want to use in place of the names in the **Inventoried names** list. To specify a new display name, select **New**.  
+- **Display name**: Specify the display name that you want to use in place of the names in the **Inventoried names** list. To specify a new display name, select **New**.
 
-- **Inventoried names**: To add an inventoried name, select **New**. This name is replaced in software inventory by the name chosen in the **Display name** list. You can add multiple names to replace.  
+- **Inventoried names**: To add an inventoried name, select **New**. This name is replaced in software inventory by the name chosen in the **Display name** list. You can add multiple names to replace.
 
 
 
@@ -816,35 +819,35 @@ Select **Schedule** to adjust the frequency that clients run the software meteri
 
 
 
-## Software updates  
+## Software updates
 
 ### Enable software updates on clients
 
-Use this setting to enable software updates on Configuration Manager clients. When you disable this setting, Configuration Manager removes existing deployment policies from clients. When you re-enable this setting, the client downloads the current deployment policy.  
+Use this setting to enable software updates on Configuration Manager clients. When you disable this setting, Configuration Manager removes existing deployment policies from clients. When you re-enable this setting, the client downloads the current deployment policy.
 
-> [!IMPORTANT]  
-> When you disable this setting, compliance policies that rely on software updates will no longer function.  
+> [!IMPORTANT]
+> When you disable this setting, compliance policies that rely on software updates will no longer function.
 
 ### Software update scan schedule
 
-Select **Schedule** to specify how often the client starts a compliance assessment scan. This scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
+Select **Schedule** to specify how often the client starts a compliance assessment scan. This scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).
 
-By default, this scan uses a simple schedule to start every seven days. You can create a custom schedule. You can specify an exact start day and time, use Universal Coordinated Time (UTC) or the local time, and configure the recurring interval for a specific day of the week.  
+By default, this scan uses a simple schedule to start every seven days. You can create a custom schedule. You can specify an exact start day and time, use Universal Coordinated Time (UTC) or the local time, and configure the recurring interval for a specific day of the week.
 
-> [!NOTE]  
-> If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.  
+> [!NOTE]
+> If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.
 
-> [!WARNING]  
-> The actual start time on client computers is the start time plus a random amount of time, up to two hours. This randomization prevents client computers from initiating the scan and simultaneously connecting to the active software update point.  
+> [!WARNING]
+> The actual start time on client computers is the start time plus a random amount of time, up to two hours. This randomization prevents client computers from initiating the scan and simultaneously connecting to the active software update point.
 
 ### Schedule deployment re-evaluation
 
 Select **Schedule** to configure how often the software updates client agent reevaluates software updates for installation status on Configuration Manager client computers. When previously installed software updates are no longer found on clients but are still required, the client reinstalls the software updates.
 
-Adjust this schedule based on company policy for software update compliance, and whether users can uninstall software updates. Every deployment re-evaluation cycle results in network and client computer processor activity. By default, this setting uses a simple schedule to start the deployment re-evaluation scan every seven days.  
+Adjust this schedule based on company policy for software update compliance, and whether users can uninstall software updates. Every deployment re-evaluation cycle results in network and client computer processor activity. By default, this setting uses a simple schedule to start the deployment re-evaluation scan every seven days.
 
-> [!NOTE]  
-> If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.  
+> [!NOTE]
+> If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.
 
 ### Allow user proxy for software update scans
 <!--8379199-->
@@ -862,13 +865,13 @@ Further increase the security of HTTPS scans against WSUS by enforcing certifica
 
 ### When any software update deployment deadline is reached, install all other software update deployments with deadline coming within a specified period of time
 
-Set this option to **Yes** to install all software updates from required deployments with deadlines occurring within a specified period of time. When a required software update deployment reaches a deadline, the client starts installation for the software updates in the deployment. This setting determines whether to install software updates from other required deployments that have a deadline within the specified time.  
+Set this option to **Yes** to install all software updates from required deployments with deadlines occurring within a specified period of time. When a required software update deployment reaches a deadline, the client starts installation for the software updates in the deployment. This setting determines whether to install software updates from other required deployments that have a deadline within the specified time.
 
-Use this setting to speed up installation for required software updates. This setting also has the potential to increase client security, decrease notifications to the user, and decrease client restarts. By default, this setting is set to **No**.  
+Use this setting to speed up installation for required software updates. This setting also has the potential to increase client security, decrease notifications to the user, and decrease client restarts. By default, this setting is set to **No**.
 
 ### Period of time for which all pending deployments with deadline in this time will also be installed
 
-Use this setting to specify the period of time for the previous setting. You can enter a value from 1 to 23 hours, and from 1 to 365 days. By default, this setting is configured for seven days.  
+Use this setting to specify the period of time for the previous setting. You can enter a value from 1 to 23 hours, and from 1 to 365 days. By default, this setting is configured for seven days.
 
 ### Allow clients to download delta content when available
 
@@ -882,9 +885,9 @@ Set this option to **Yes** to allow clients to use delta content files. This set
 
 > [!NOTE]
 >For Operating System that can support delta download (Win 10 Version 10.0.16299 or up), delta download endpoint will always get turned on regardless of the Client Agent Settings, and the port number will be honored even if Delta downloads not enabled.
-> 
+>
 >If Delta Download disabled, only UUP update will do delta download, all other updates, regardless of if express or not, will all do full file download.
-> 
+>
 >If Delta Download enabled, all updates will go with delta download code path regardless of if express or not, unless the only DP available is cloud DP.
 
 ### Port that clients use to receive requests for delta content
@@ -921,7 +924,7 @@ You can configure the end-user experience for Microsoft 365 Apps updates. This c
 - **No**: Doesn't display Microsoft 365 Apps updates notifications from Microsoft 365 Apps (default)
 - **Yes**: Displays Microsoft 365 Apps updates notifications from Microsoft 365 Apps
 
-Which notifications are displayed to the user about updates for Microsoft 365 Apps is also determined by the settings for per deployment notifications from Software Center. If the deployment's user notifications from Software Center are disabled (found on the [**User Experience** page for the deployment](../../../sum/deploy-use/manually-deploy-software-updates.md#BKMK_4DeployUpdateGroup)), then the end user won't receive any notifications from either Software Center or Microsoft 365 Apps, regardless of how notifications from Microsoft 365 Apps are set. If notifications from both Software Center and Microsoft 365 Apps are enabled, then the end user will receive notifications from Software Center and Microsoft 365 Apps. Below is a chart of which notifications for Microsoft 365 Apps updates are displayed to the end user for these settings:</br></br>  
+Which notifications are displayed to the user about updates for Microsoft 365 Apps is also determined by the settings for per deployment notifications from Software Center. If the deployment's user notifications from Software Center are disabled (found on the [**User Experience** page for the deployment](../../../sum/deploy-use/manually-deploy-software-updates.md#BKMK_4DeployUpdateGroup)), then the end user won't receive any notifications from either Software Center or Microsoft 365 Apps, regardless of how notifications from Microsoft 365 Apps are set. If notifications from both Software Center and Microsoft 365 Apps are enabled, then the end user will receive notifications from Software Center and Microsoft 365 Apps. Below is a chart of which notifications for Microsoft 365 Apps updates are displayed to the end user for these settings:</br></br>
 
 | &nbsp; | **Display** per deployment Software Center notifications| **Hide** per deployment Software Center notifications|
 |---|---|--|
@@ -957,11 +960,11 @@ This client setting provides the following options:
 
 - **Not Configured**: Configuration Manager doesn't change the setting. Admins can pre-stage their own setupconfig.ini file. This value is the default.
 
-- **Normal**: Windows Setup uses more system resources and updates faster. It uses more processor time, so the total installation time is shorter, but the user's outage is longer.  
+- **Normal**: Windows Setup uses more system resources and updates faster. It uses more processor time, so the total installation time is shorter, but the user's outage is longer.
 
   Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
-- **Low**: You can continue to work on the device while it downloads and updates in the background. The total installation time is longer, but the user's outage is shorter. You may need to increase the update max run time to avoid a time-out when you use this option.  
+- **Low**: You can continue to work on the device while it downloads and updates in the background. The total installation time is longer, but the user's outage is shorter. You may need to increase the update max run time to avoid a time-out when you use this option.
 
    Removes the `/Priority` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) from the setupconfig.ini file.
 
@@ -998,7 +1001,7 @@ Specifies how often clients report state messages. This setting is 15 minutes by
 
 
 
-## User and device affinity  
+## User and device affinity
 
 ### User device affinity usage threshold (minutes)
 
@@ -1008,12 +1011,12 @@ Specify the number of minutes before Configuration Manager creates a user device
 
 Specify the number of days over which the client measures the threshold for usage-based device affinity. By default, this value is 30 days.
 
-> [!NOTE]  
-> For example, you specify **User device affinity usage threshold (minutes)** as **60** minutes, and **User device affinity usage threshold (days)** as **5** days. Then the user must use the device for 60 minutes over a period of 5 days to create automatic affinity with the device.  
+> [!NOTE]
+> For example, you specify **User device affinity usage threshold (minutes)** as **60** minutes, and **User device affinity usage threshold (days)** as **5** days. Then the user must use the device for 60 minutes over a period of 5 days to create automatic affinity with the device.
 
 ### Automatically configure user device affinity from usage data
 
-Choose **Yes** to create automatic user device affinity based on the usage information that Configuration Manager collects.  
+Choose **Yes** to create automatic user device affinity based on the usage information that Configuration Manager collects.
 
 ### Allow user to define their primary devices
 <!--3485366-->
@@ -1026,9 +1029,3 @@ When this setting is **Yes**, users can identify their own primary devices in So
 > - Automatically configure user device affinity from usage data: No
 > - Allow user to define their primary devices: No
 
-## Windows Diagnostic Data
-
-> [!IMPORTANT]
-> This group was previously called **Windows Analytics**. Microsoft retired the Windows Analytics service on January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
->
-> Desktop Analytics is the evolution of Windows Analytics. Use Desktop Analytics to manage Windows diagnostic data settings. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).

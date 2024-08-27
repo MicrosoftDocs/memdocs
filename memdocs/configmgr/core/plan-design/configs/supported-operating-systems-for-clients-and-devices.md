@@ -2,12 +2,12 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 12/01/2023
+ms.date: 05/01/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: Banreet
-ms.author: banreetkaur
+author: Baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -66,47 +66,43 @@ For more information, see the following articles:
 
 ### Supported server OS versions
 
-- **Windows Server 2022**: IoT, Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> (_starting in Configuration Manager version 2107_)<!-- 10200029 -->
+- **Windows Server 2022**: IoT, Standard, Datacenter (_starting in Configuration Manager version 2107_)<!-- 10200029 -->
 
-- **Windows Server 2019**: IoT, Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
+- **Windows Server 2019**: IoT, Standard, Datacenter 
 
-- **Windows Server 2016**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
+- **Windows Server 2016**: Standard, Datacenter 
 
 - **Windows Storage Server 2016**: Workgroup, Standard, IoT
 
-- **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
+- **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
 - **Windows Storage Server 2012 R2** (x64) <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Server 2012** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
+- **Windows Server 2012** (x64): Standard, Datacenter <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
 - **Windows Storage Server 2012** (x64) <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
 #### Server Core
 
-The following versions specifically refer to the Server Core installation of the OS. <sup>[Note 3](#bkmk_note3)</sup>
+The following versions specifically refer to the Server Core installation of the OS. <sup>[Note 2](#bkmk_note2)</sup>
 
 Windows Server semi-annual channel versions are Server Core installations, such as Windows Server, version 1809. As a Configuration Manager client, they're supported the same as the associated Windows 11 or Windows 10 semi-annual channel version. For more information, see [Support for Windows 11](support-for-windows-11.md) or [Support for Windows 10](support-for-windows-10.md).
 
-- **Windows Server 2022** (x64) <sup>[Note 2](#bkmk_note2)</sup> (_starting in version 2107_)<!-- 10200029 -->
+- **Windows Server 2022** (x64) <sup>[Note 1](#bkmk_note1)</sup> (_starting in version 2107_)<!-- 10200029 -->
 
-- **Windows Server 2019** (x64) <sup>[Note 2](#bkmk_note2)</sup>
+- **Windows Server 2019** (x64) <sup>[Note 1](#bkmk_note1)</sup>
 
-- **Windows Server 2016** (x64) <sup>[Note 2](#bkmk_note2)</sup>
+- **Windows Server 2016** (x64) <sup>[Note 1](#bkmk_note1)</sup>
 
-- **Windows Server 2012 R2** (x64) <sup>[Note 2](#bkmk_note2)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
+- **Windows Server 2012 R2** (x64) <sup>[Note 1](#bkmk_note1)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Server 2012** (x64) <sup>[Note 2](#bkmk_note2)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
+- **Windows Server 2012** (x64) <sup>[Note 1](#bkmk_note1)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
 #### <a name="bkmk_note1"></a> Note 1
 
-Configuration Manager tests and supports Windows Server Datacenter editions, but isn't officially certified for Windows Server. Configuration Manager hotfix support isn't offered for issues that are specific to Windows Server Datacenter Edition. For more information on the Windows Server certification program, see [Windows Server Catalog](https://www.windowsservercatalog.com/).
-
-#### <a name="bkmk_note2"></a> Note 2
-
 To support [client push installation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation), add the File Server service of the File and Storage Services server role. For more information about installing Windows features on Server Core, see [Install roles, role services, and features by using Windows PowerShell cmdlets](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).
 
-#### <a name="bkmk_note3"></a> Note 3
+#### <a name="bkmk_note2"></a> Note 2
 
 The Software Center app isn't supported on any version of Windows Server Core.<!--SCCMDocs issue 683-->
 

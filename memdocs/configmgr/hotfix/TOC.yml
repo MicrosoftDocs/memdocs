@@ -1,6 +1,14 @@
 items:
 - name: Hotfix documentation
   href: index.yml
+- name: Version 2403
+  items:
+  - name: KB 26186448 Summary of changes in 2403
+    href: 2403/26186448.md
+  - name: KB 28290310 CMG update for 2403
+    href: 2403/28290310.md
+  - name: KB 28458746 Software update client fix for 2403
+    href: 2403/28458746.md 
 - name: Version 2309
   items:
   - name: KB 24341484 Summary of changes in 2309

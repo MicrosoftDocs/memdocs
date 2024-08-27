@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2024
+ms.date: 05/30/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
@@ -57,15 +57,15 @@ Cloud-native endpoints are joined to Microsoft Entra, and don't exist in on-prem
 
 ### Switch to user-based authentication
 
-- When creating new projects, don't use machine authentication. It's not common or a recommended practice, but it's something you need to know and be aware. Instead, use user-based authentication.
+- When creating new projects, don't use machine authentication. Using machine authentication isn't common and isn't a recommended practice. But it's something you need to know and be aware. Instead, use user-based authentication.
 - Review your environment and identify any applications and services that currently use machine authentication. Then, change the access to user-based authentication or service account-based authentication.
 
 > [!IMPORTANT]
 > The Microsoft Entra Connect device writeback feature tracks devices that are registered in Microsoft Entra. These devices are shown in on-premises AD as registered devices.
 >
 > Microsoft Entra Connect device writeback doesn't create identical on-premises AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication.
->  
-> For information on scenarios supported with device writeback, go to [Microsoft Entra Connect: Enabling device writeback](/azure/active-directory/hybrid/how-to-connect-device-writeback).
+>
+> For information on scenarios supported with device writeback, go to [Microsoft Entra Connect: Enabling device writeback](/entra/identity/hybrid/connect/how-to-connect-device-writeback).
 
 ### Common services that use machine accounts
 
@@ -75,7 +75,7 @@ The following list includes common features and services that might use machine 
 
   **Recommendation**:
 
-  - **Server and workstation file shares**: Update permissions to use user account-based security. When you do, use [Microsoft Entra single sign-on (SSO)](/azure/active-directory/devices/azuread-join-sso) to access resources that use Windows integrated authentication.
+  - **Server and workstation file shares**: Update permissions to use user account-based security. When you do, use [Microsoft Entra single sign-on (SSO)](/entra/identity/devices/device-sso-to-on-premises-resources) to access resources that use Windows integrated authentication.
 
     Move file share content to SharePoint Online or OneDrive. For more specific information, go to [Migrate file shares to SharePoint and OneDrive](/sharepointmigration/fileshare-to-odsp-migration-guide).
 
@@ -87,7 +87,7 @@ The following list includes common features and services that might use machine 
   - Won't work if the apps access resources that are secured with groups that include only machine accounts.
 
   **Recommendation**:
-  - If your Win32 apps use machine authentication, then update the app to use Microsoft Entra authentication. For more information, go to [Migrate application authentication to Microsoft Entra](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
+  - If your Win32 apps use machine authentication, then update the app to use Microsoft Entra authentication. For more information, go to [Migrate application authentication to Microsoft Entra](/entra/identity/enterprise-apps/migrate-adfs-apps-phases-overview).
   - Check the authentication and identities of your applications and kiosk devices. Update the authentication and identities to use user account-based security.
 
   For more information, go to [Authentication and Win32 apps](/windows/win32/secauthn/authentication-portal).
@@ -96,7 +96,7 @@ The following list includes common features and services that might use machine 
 
   **Recommendation**:
   - On your web sites, enable Negotiate authentication.
-  - Update your web server apps to use Microsoft Entra authentication. For more information, go to [Migrate application authentication to Microsoft Entra](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
+  - Update your web server apps to use Microsoft Entra authentication. For more information, go to [Migrate application authentication to Microsoft Entra](/entra/identity/enterprise-apps/migrate-adfs-apps-phases-overview).
   
   More resources:
 
@@ -155,7 +155,7 @@ Currently, synchronized user accounts with passwords that have **User must chang
 
 Use Password Hash Sync and Microsoft Entra connect, which forces the **force password change at logon** attribute to sync.
 
-For more specific information, go to [Implement password hash synchronization with Microsoft Entra Connect sync](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon).
+For more specific information, go to [Implement password hash synchronization with Microsoft Entra Connect sync](/entra/identity/hybrid/connect/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon).
 
 ## Follow the cloud-native endpoints guidance
 

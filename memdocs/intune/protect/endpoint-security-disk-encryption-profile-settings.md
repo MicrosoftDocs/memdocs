@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Intune endpoint security disk encryption policy settings | Microsoft Docs
-description: Endpoint security disk encryption policy settings for BitLocker and FileVault in Microsoft Intune 
+title: Intune endpoint security disk encryption policy settings
+description: View the list of settings that are available in Microsoft Intune endpoint security disk encryption policy settings for BitLocker and FileVault.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/31/2023
+ms.date: 08/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,6 +24,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-secure-endpoints
 ms.reviewer: aanavath
 
 ---
@@ -32,10 +33,19 @@ ms.reviewer: aanavath
 
 View the settings you can configure in profiles for *Disk Encryption* policy in the Endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
 
+> [!NOTE]
+>
+> Beginning on June 19, 2023, the BitLocker profile for Windows was updated to use the settings format as found in the Settings Catalog. The new profile format includes the same settings as the older profile, but due to the new format, settings names in the Intune admin center have updated. With this change you can no longer create new versions of the old profile. Your existing instances of the old profile remain available to use and edit.
+>
+> The settings details in this article apply only to BitLocker profiles created before June 19, 2023.
+>
+> With the new profile format, we no longer publish a dedicated list of settings as found in the profile. Instead, use the *Learn more* link in the UI while viewing information  for a setting, to open [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation, where the setting is detailed in full.
+
 Applies to:
 
 - macOS
-- Windows 10/11
+- Windows 10
+- Windows 11
 
 Supported platforms and profiles:
 
@@ -49,10 +59,11 @@ Supported platforms and profiles:
 ### Encryption
 
 **Enable FileVault**  
+
 - **Not configured** (*default*)
 - **Yes** - Enable Full Disk Encryption using XTS-AES 128 with FileVault on devices that run macOS 10.13 and later. FileVault is enabled when the user signs off of the device.
 
-  When set to *Yes*, you can configure additional settings for FileVault.
+  When set to *Yes*, you can configure more settings for FileVault.
 
   - **Recovery key type**
     *Personal key* recovery keys are created for devices. Configure the following settings for the personal key:

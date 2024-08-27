@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/12/2023
+ms.date: 05/29/2024
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -21,6 +21,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-updates
 ---
 
 # Software updates planning guide for managed Android Enterprise devices in Microsoft Intune
@@ -59,9 +60,9 @@ Corporate or organization-owned devices should be enrolled and managed by the or
 
 This section lists the Microsoft-recommended policies to install software updates on managed Android devices.
 
-### ✔️ Manage updates with policies
+### ✅ Manage updates with policies
 
-It's recommended you create policies that update your devices. It's not recommended to put this responsibility on end users.
+Do create policies that update your devices. Don't put this responsibility on end users.
 
 When users install their own updates (instead of admins managing the updates), it can disrupt user productivity and business tasks. For example:
 
@@ -71,11 +72,11 @@ When users install their own updates (instead of admins managing the updates), i
 
 - Users can avoid applying required updates that affect security or app compatibility. This situation can leave the devices at risk and/or prevent the devices from functioning.
 
-### ✔️ Configure the system update setting
+### ✅ Configure the system update setting
 
-For enrolled Android Enterprise devices, you can manage OS updates using the **System update** setting. This setting is configurable in an Intune device restrictions configuration profile.
+Manage OS updates using the **System update** setting in an Intune device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **Device restrictions** > **General**).
 
-When you configure this setting, you choose when the updates are installed. For example, you can:
+For enrolled Android Enterprise devices, you can configure this setting and choose when the updates are installed. For example, you can:
 
 - Use the device's default behavior, which automatically installs updates if the device is connected to Wi-Fi, is charging, and is idle.
 - Automatically install updates without user interaction. Pending updates install immediately.
@@ -86,21 +87,23 @@ When you configure this setting, you choose when the updates are installed. For 
 
 For more specific information on this setting and the values you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md#general).
 
-### ✔️ Use freeze periods during critical times
+### ✅ Use freeze periods during critical times
 
-During critical periods of the year, like holidays and other events, you can configure a freeze period for system updates. During this time, the devices don't receive system updates, security patches, and notifications about pending updates. Users can't manually check for updates:
+Configure the **Freeze periods for system updates** setting in an Intune device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **Device restrictions** > **General**).
+
+During critical periods of the year, like holidays and other events, a freeze period prevents devices from receiving system updates, security patches, and notifications about pending updates. Users can't manually check for updates:
 
 :::image type="content" source="./media/software-updates-guide-android/android-enterprise-freeze-period-settings.png" alt-text="Screenshot that shows the freeze period start date and end date for Android Enterprise devices in the Microsoft Intune admin center.":::
 
 For more information on this setting, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md#general).
 
-### ✔️ Use OEMConfig for firmware updates
+### ✅ Use OEMConfig for firmware updates
 
 For some rugged Android devices, you can use OEMConfig to configure firmware updates and other settings that are specific to that OEM. If an OEM provides an OEMConfig app, then in Intune, you can deploy the app and configure its settings using a configuration profile.
 
-To see the Intune-supported OEMConfig apps, go to [Supported OEMConfig apps in Intune](../configuration/android-oem-configuration-overview.md#supported-oemconfig-apps). Contact the manufacturer for the firmware and other settings available in the configuration schema.
+To get started, go to [Use and manage Android Enterprise devices with OEMConfig in Intune](../configuration/android-oem-configuration-overview.md). This article also lists the [Intune-supported OEMConfig apps](../configuration/android-oem-configuration-overview.md#supported-oemconfig-apps).
 
-For more information on OEMConfig in Intune, go to [Use and manage Android Enterprise devices with OEMConfig in Intune](../configuration/android-oem-configuration-overview.md)
+Contact the manufacturer for the firmware and other settings available in the configuration schema.
 
 ## Upgrade older devices
 
@@ -115,7 +118,7 @@ If you currently have devices running older Android versions in your organizatio
 
 For more version information, go to [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
 
-## Next steps
+## Related articles
 
 - [Software updates planning guide and scenarios for BYOD and personal devices](software-updates-guide-personal-byod.md)
 - [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)

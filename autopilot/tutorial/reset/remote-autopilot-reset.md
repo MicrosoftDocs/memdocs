@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/19/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -20,7 +20,7 @@ appliesto:
 
 # Reset devices with remote Windows Autopilot Reset
 
-You can use Intune to start the remote Windows Autopilot Reset process. Resetting in this way avoids the need for someone to visit each device that needs to be reset to start the Windows Autopilot Reset process. Unlike [local Windows Autopilot reset](local-autopilot-reset.md), a configuration profile doesn't need to be configured or assigned for remote Windows Autopilot Reset to work. Remote Windows Autopilot Reset is available on any Microsoft Entra join device that is an Autopilot device without any additional configuration.
+Intune can be used to start the remote Windows Autopilot Reset process. Resetting in this way avoids the need for someone to visit each device that needs to be reset to start the Windows Autopilot Reset process. Unlike [local Windows Autopilot reset](local-autopilot-reset.md), a configuration profile doesn't need to be configured or assigned for remote Windows Autopilot Reset to work. Remote Windows Autopilot Reset is available on any Microsoft Entra join device that is an Autopilot device without any additional configuration.
 
 ## Workflow
 
@@ -43,7 +43,7 @@ To trigger a remote Windows Autopilot Reset via Intune, follow these steps:
 
 1. Make sure the Intune admin initiating the remote Windows Autopilot Reset is a member of the Intune Service Administrator role. For more information, see [Add users and grant administrative permission to Intune](/mem/intune/fundamentals/users-add).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
@@ -51,17 +51,17 @@ To trigger a remote Windows Autopilot Reset via Intune, follow these steps:
 
 1. In the **Windows | Windows devices** screen, under **Device name** select the targeted devices to perform the Windows Autopilot Reset.
 
-1. In the page that opens that displays the properties of the device, select **Autopilot Reset** in the toolbar at the top of the window to start the Autopilot reset.
+1. In the page that opens that displays the properties of the device, select **Autopilot Reset** in the toolbar at the top of the window.
 
 1. An Autopilot Reset warning message is displayed. Select **Yes** to continue.
 
-1. A message should display confirming that the Autopilot reset has been initiated.
+1. A message should display confirming that the Autopilot reset is initiated. The Windows Autopilot Reset should start shortly thereafter on the device.
 
 Once the Autopilot Reset is complete, the device is again ready for use.
 
 ## Forcing a device to start the remote Windows Autopilot Reset
 
-Unlike [local Windows Autopilot reset](local-autopilot-reset.md), when the remote Windows Autopilot Reset is initiated for a device, the reset may not start immediately. Instead, the reset will occur when the device next checks in with Intune and gets updated policy. For more information, see [Policy refresh intervals](/mem/intune/configuration/device-profile-troubleshoot#policy-refresh-intervals)
+Unlike [local Windows Autopilot reset](local-autopilot-reset.md), when the remote Windows Autopilot Reset is initiated for a device, the reset might not start immediately. Instead, the reset will occur when the device next checks in with Intune and gets updated policy. For more information, see [Policy refresh intervals](/mem/intune/configuration/device-profile-troubleshoot#policy-refresh-intervals)
 
 A Windows Autopilot Reset can be forced to start sooner on a device by forcing the device to obtain the latest Intune policy. Forcing remote Windows Autopilot Reset to start sooner can be done either remotely or locally on the device.
 
@@ -69,7 +69,7 @@ A Windows Autopilot Reset can be forced to start sooner on a device by forcing t
 
 To force the device to obtain the latest Intune policy remotely, follow these steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
@@ -77,7 +77,7 @@ To force the device to obtain the latest Intune policy remotely, follow these st
 
 1. In the **Windows | Windows devices** screen, under **Device name** select the devices where the remote Windows Autopilot Reset was initiated.
 
-1. In the page that opens that displays the properties of the device, select **Sync** in the toolbar at the top of the window to start the Autopilot reset.
+1. In the page that opens that displays the properties of the device, select **Sync** in the toolbar at the top of the window.
 
 1. A Sync warning message is displayed. Select **Yes** to continue.
 
@@ -85,30 +85,55 @@ These steps should force the device to obtain the latest Intune policy. The Auto
 
 ### Locally force a device to start the remote Windows Autopilot Reset
 
-To force the device to obtain the latest Intune policy locally on the device, follow these steps:
+To force the device to obtain the latest Intune policy locally on the device, sign into the device where the remote Autopilot Reset was initiated. Once signed into the device, open the **Accounts** > **Access work or school** pane in the **Settings** app by selecting the following link:
 
-1. Sign into the device where the remote Autopilot Reset was initiated.
+> [!div class="nextstepaction"]
+> [Access work or school](ms-settings:workplace)
 
-1. Right click on the Start Menu and select **Settings**.
+Or
 
-1. In **Settings**, select **Accounts** in the left hand pane.
+1. Right-click on the **Start** menu and select **Run**.
 
-1. In the **Accounts** page, select **Access work or school**.
+1. In the **Run** window, next to **Open:**, enter:
 
-1. In the **Accounts > Access work or school** page, select **Connected by \<user@domain\>** to open a new section.
+   ```console
+   ms-settings:workplace
+   ```
 
-1. In the new section, next to **Managed by \<organization\>**, select the **Info** button.
+   and then select **OK**.
+
+Or
+
+1. Right-click on the **Start** menu and select **Settings**.
+
+1. In the **Settings** app:
+
+    - Windows 11
+
+      1. Select **Accounts** in the left hand pane.
+      1. In the **Accounts** page, select **Access work or school**.
+
+    - Windows 10
+
+      1. Select **Accounts**.
+      1. In the left hand pane, select **Access work or school**.
+
+Once the **Access work or school** pane is open in the **Settings** app, follow these steps:
+
+1. In the **Accounts > Access work or school** pane, select **Connected by \<user@domain\>** to expand the section.
+
+1. In the expanded section, next to **Managed by \<organization\>**, select the **Info** button.
 
 1. In the **Accounts > Access work or school > Managed by \<organization\>** page, under **Device sync status**, select the **Sync** button.
 
 These steps should force the device to obtain the latest Intune policy. The Autopilot Reset should start shortly thereafter.
 
-## More information
+## Related content
 
-For more information on local Windows Autopilot Reset, see the following article(s):
+For more information on local Windows Autopilot Reset, see the following articles:
 
-- [Reset devices with remote Windows Autopilot Reset](../../windows-autopilot-reset.md#reset-devices-with-remote-windows-autopilot-reset)
-- [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
-- [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options)
-- [Add users and grant administrative permission to Intune](/mem/intune/fundamentals/users-add)
-- [Policy refresh intervals](/mem/intune/configuration/device-profile-troubleshoot#policy-refresh-intervals)
+- [Reset devices with remote Windows Autopilot Reset](../../windows-autopilot-reset.md#reset-devices-with-remote-windows-autopilot-reset).
+- [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+- [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options).
+- [Add users and grant administrative permission to Intune](/mem/intune/fundamentals/users-add).
+- [Policy refresh intervals](/mem/intune/configuration/device-profile-troubleshoot#policy-refresh-intervals).

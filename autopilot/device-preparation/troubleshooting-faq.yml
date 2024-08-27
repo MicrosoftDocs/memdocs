@@ -1,0 +1,105 @@
+### YamlMime:FAQ
+metadata:
+  title: Windows Autopilot device preparation troubleshooting FAQ
+  description: Troubleshooting of common Windows Autopilot device preparation issues
+  ms.service: windows-client
+  ms.subservice: autopilot
+  ms.localizationpriority: medium
+  author: frankroj
+  ms.author: frankroj
+  ms.reviewer: jubaptis
+  manager: aaroncz
+  ms.date: 08/07/2024
+  ms.collection:
+    - M365-modern-desktop
+    - highpri
+    - tier1
+  ms.topic: faq
+title: Windows Autopilot device preparation troubleshooting FAQ
+summary: |
+  **Applies to:**
+
+  - [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions).
+
+  This article provides troubleshooting for common Windows Autopilot device preparation issues.
+
+sections:
+  - name: Windows Autopilot device preparation troubleshooting FAQ
+    questions:
+
+      - question: |
+          Device isn't being added to the device group specified in the Windows Autopilot device preparation policy.
+        answer: |
+          - Verify that **Intune Provisioning Client** is set as the owner for the device group specified in the Windows Autopilot device preparation policy. For more information, [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
+
+          - Verify that the correct device group is specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
+
+          - Verify that **Microsoft Entra roles can be assigned to the group** setting in the device group is set to **No**. For more information, see [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
+
+          - Verify that the admin creating the Autopilot device preparation policy has the **Enrollment time device membership assignment** RBAC permission. For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
+
+      - question: |
+          Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE).
+        answer: |
+          - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md?tabs=software#software-requirements). This requirement includes that the minimum required update is installed before starting the device for the first time:
+
+            - Verify with OEMs that devices shipped from the OEM have the minimum required update installed.
+
+            - If installing Windows from installation media, verify that the media has the minimum required update installed. Updated Windows installation media with the latest cumulative update already installed is available at the [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/licensing/ServiceCenter/Default.aspx).
+
+          - Windows Autopilot device preparation doesn't use the Enrollment Status Page (ESP). Since Windows Autopilot device preparation doesn't use the ESP, the ESP shouldn't display during a Windows Autopilot device preparation deployment. If the ESP displays during the deployment, then the device isn't running a Windows Autopilot device preparation deployment. Instead, the device might be:
+
+            - A Windows Autopilot registered device.
+            - A Windows Autopilot profile is assigned to the device.
+
+            Verify that the device isn't registered as a Windows Autopilot device and that a Windows Autopilot profile isn't assigned to the device. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies.
+
+            If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../registration-overview.md#deregister-a-device).
+
+          - Verify that the user signing into the device during OOBE is a member of the user group specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a user group](tutorial/user-driven/entra-join-user-group.md).
+
+          - Verify that a device group is selected in the Windows Autopilot device preparation policy. A Windows Autopilot device preparation policy can be created without selecting a device group. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
+
+          - If using corporate identifiers in Intune, make sure that a corporate identifier is added for the device. For more information, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
+
+          - Verify that Windows automatic Intune enrollment is configured.
+
+          - Verify that users are allowed to join device to Microsoft Entra ID.
+
+      - question: |
+          Applications or PowerShell scripts aren't getting installed.
+        answer: |
+          - If the applications or PowerShell scripts are showing **Skipped** in the details of the Windows Autopilot device preparation deployment report, verify that they're assigned to the device group specified in the Windows Autopilot device preparation policy. For more information, see [Windows Autopilot device preparation policy configuration settings](tutorial/user-driven/entra-join-autopilot-policy.md#configuration-settings) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
+
+          - Verify that the application or PowerShell script is configured to install in the **System** context. During OOBE, applications are installed and PowerShell scripts run when no user is signed in. For this reason, they must be configured to install in the **System** context.
+
+      - question: |
+          Device security group isn't saving in Windows Autopilot device preparation policy.
+        answer: |
+          This issue usually occurs if **Intune Provisioning Client** with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** isn't the owner of the device group specified in the Windows Autopilot device preparation policy. When the issue occurs, one of the following error messages might display when saving the Windows Autopilot device preparation policy:
+
+          - **`There was a problem with the device security group for <policy_name>. Check the group meets the requirements.`**
+
+          - **`Failed to update security group device preparation setting: Updating security group for device preparation setting <policy_name> failed. Something went wrong.`**
+
+          Additionally, **Device group** in the Windows Autopilot device preparation policy shows **0 groups assigned**.
+
+          To fix the issue, add the **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner of the device security group specified in the Windows Autopilot device preparation policy. For more information, see [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
+
+      - question: |
+          Unable to find Intune Provisioning Client with AppID of f1346770-5b25-470b-88bd-d5744ab7952c when trying to set the owner of the Windows Autopilot device preparation policy device group.
+        answer: |
+          - In some tenants, the service principal might have the name of **Intune Autopilot ConfidentialClient** instead of **Intune Provisioning Client**. As long as the AppID of the service principal is **f1346770-5b25-470b-88bd-d5744ab7952c**, it's the correct service principal.
+
+          - If either **Intune Provisioning Client** or **Intune Autopilot ConfidentialClient** with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** doesn't exist in the tenant, it must be added via PowerShell commands. For more information, see [Adding the Intune Provisioning Client service principal](tutorial/user-driven/entra-join-device-group.md#adding-the-intune-provisioning-client-service-principal).
+
+      - question: |
+          Multiple Windows Autopilot device preparation policies exist and the device is getting the wrong policy.
+        answer: |
+          If multiple Windows Autopilot device preparation policies are deployed to a user, the policy with the highest priority gets priority. Policy priorities are displayed at the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
+
+
+additionalContent: |
+    ## Related content
+
+    - [Windows Autopilot device preparation - known issues](known-issues.md).

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2023
+ms.date: 06/13/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,6 +23,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-secure-endpoints
 ---
 
 # Manage Windows LAPS policy with Microsoft Intune
@@ -129,9 +130,8 @@ To view account and password details, an account must have one of the following 
 
 Use the following methods to grant accounts these permissions:
 
-- Assign one of the following built-in Microsoft Entra roles:
-  - Global Admin
-  - Cloud Device Admin
+- Assign the following [built-in Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference):
+  - *Cloud Device Administrator*
 
 Create and assign a custom role in Microsoft Entra ID that grants these permissions. See [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra documentation.
 

@@ -2,13 +2,13 @@
 # required metadata
 
 title: Linux device compliance settings in Microsoft Intune
-description: View the device compliance settings that are available for Linux in Microsoft Intune.
+description: View the device compliance settings for Linux that you can manage with Microsoft Intune compliance policies.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/15/2023
-ms.topic: conceptual
+ms.date: 05/15/2024
+ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -28,13 +28,14 @@ ms.collection:
   - highpri
   - highseo
   - compliance
+  - sub-device-compliance
 ---
 
 # Device compliance settings for Linux in Intune
 
-This article lists and describes the different compliance settings you can configure for Linux devices in Intune.
+This article lists and describes the different compliance settings you can configure for Linux devices in Microsoft Intune.
 
-For Linux, compliance settings are available from the [settings catalog](../configuration/settings-catalog.md) instead of from a pre-determined template as seen for other platforms. Therefore, when configuring a compliance policy for Linux you choose the settings you want to include in your policy by browsing the catalog and selecting them.
+For Linux, compliance settings are available from the [settings catalog](../configuration/settings-catalog.md) instead of from a predetermined template as seen for other platforms. Therefore, when configuring a compliance policy for Linux you choose the settings you want to include in your policy by browsing the catalog and selecting them.
 
 In addition to the platform-specific compliance policy, devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Intune admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
 
@@ -42,13 +43,15 @@ To learn more about compliance policies, and what they do, see [get started with
 
 This feature applies to:
 
-- Linux
+* Ubuntu Desktop 22.04 or 20.04 LTS (physical or Hyper-V machine with x86/64 CPUs)  
+* RedHat Enterprise Linux 8  
+* RedHat Enterprise Linux 9    
 
 ## Linux settings categories
 
 Compliance policies for Linux can include settings from the following categories. Where applicable, guidance on configuring the setting is provided.
 
-### Allowed Distros
+### Allowed Distributions
 
 Add entries that define a maximum and minimum OS version for a Linux distribution type.
 

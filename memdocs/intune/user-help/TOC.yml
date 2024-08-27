@@ -200,26 +200,7 @@ items:
       href: enroll-windows-10-device.md
     - name: Unenroll device
       href: unenroll-your-device-from-intune-windows.md
-  - name: Update device settings
-    items:
-    - name: Resolve access point restrictions
-      href: resolve-access-point-restrictions.md
-    - name: Enable antimalware software
-      href: your-device-needs-antimalware-software.md
-    - name: Enable Secure Boot
-      href: you-need-to-enable-secure-boot-windows.md
-    - name: Turn on Windows Code Integrity
-      href: you-need-to-enable-code-integrity.md
-    - name: Turn on Windows Firewall
-      href: you-need-to-enable-defender-firewall-windows.md
-    - name: Change User Access Control setting
-      href: you-need-to-enable-uac-windows.md
-    - name: Update OS build versions
-      href: you-need-to-update-os-build-version-windows.md
-    - name: Turn on Microsoft Defender Antivirus 
-      href: turn-on-defender-windows.md
-    - name: My version of Windows isn't supported
-      href: your-windows-version-isnt-yet-supported.md
+
   - name: Company Portal app for Windows
     items:
     - name: Install apps from Company Portal
@@ -236,6 +217,8 @@ items:
       href: reset-device-company-portal-windows.md
     - name: Turn off Microsoft usage data collection
       href: turn-off-microsoft-usage-data-collection-windows.md
+    - name: Update device settings
+      href: update-device-settings-windows.md
     - name: Help and support page
       href: help-support-windows-cpapp.md
   - name: Get help
@@ -253,10 +236,12 @@ items:
     href: check-status-company-portal-website.md 
   - name: Manage apps
     href: manage-apps-cpweb.md
-  - name: Store recovery key
+  - name: Store recovery key for Mac
     href: store-recovery-key.md
-  - name: Get recovery key
+  - name: Get recovery key for Mac
     href: get-recovery-key-cpweb.md
+  - name: Get recovery key for Windows 
+    href: get-recovery-key-windows.md  
   - name: Remote lock device
     href: remote-lock-your-device-cpwebsite.md
   - name: Rename device

@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2024
+ms.date: 08/09/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,6 +17,7 @@ ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
+ai-usage: ai-assisted
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -30,7 +31,22 @@ ms.collection:
 
 Before you can configure, assign, protect, or monitor apps, you must add them to Microsoft Intune.
 
-The users of apps and devices at your company (your company's workforce) might have several app requirements. Before adding apps to Intune and making them available to your workforce, you may find it helpful to assess and understand a few app fundamentals. There are various types of apps that are available for Intune. You must determine app requirements that are needed by the users at your company, such as the platforms and capabilities that your workforce needs. You must determine whether to use Intune to manage the devices (including apps) or have Intune manage the apps without managing the devices. Also, you must determine the apps and capabilities that your workforce needs, and who needs them. The information in this article helps you get started.
+Intune apps refer to the applications that are managed by Microsoft Intune. These apps can be deployed, configured, protected, and updated to access your organization’s resources. Intune supports various app types, such as store apps, web apps, and line-of-business (LOB) apps. Intune also supports several platforms, such as iOS/iPadOS and Android. 
+
+Managing Microsoft Intune apps offers several benefits for your organization, including the following:
+- Data protection for your managed apps
+- Broad app support
+- Access control to your managed apps
+- App configuration for your managed apps
+- App updates for your managed apps
+
+Examples of when you should add, configure, protect, and deploy managed apps using Intune include the following:
+- Your organization needs to configure the app with specific settings for your organization.
+- Your organization must protect sensitive data used within a managed app.
+- Your organization must protect access to a managed app.
+- Your organization must monitor your managed apps to ensure data is protected and apps are updated as needed.
+
+The users of apps and devices at your organization might have several app requirements. Before adding apps to Intune and making them available to your workforce, you may find it helpful to assess and understand a few app fundamentals. There are various types of apps that are available for Intune. You must determine app requirements that are needed by the users at your organization, such as the platforms and capabilities that your workforce needs. You must determine whether to use Intune to manage the devices (including apps) or have Intune manage the apps without managing the devices. Also, you must determine the capabilities and apps that your workforce needs, and who needs them. The information in this article helps you get started.
 
 ## App types in Microsoft Intune
 
@@ -143,7 +159,6 @@ In addition to understanding web apps, store apps, and LOB apps, you should also
 
 - **Apple Volume Purchasing Program for Business (iOS)**: The iOS/iPadOS App Store lets you purchase multiple licenses for an app that you want to run in your company. Purchasing multiple copies helps you to efficiently manage apps in your company. For more information, see [Manage iOS/iPadOS volume-purchased apps](vpp-apps-ios.md).
 - **Android Enterprise fully managed work profile**: How you assign apps to Android Enterprise fully managed work profile devices differs from how you assign them to standard Android devices. All apps you install for Android Enterprise fully managed work profiles come from the Managed Google Play store. You use Intune to browse for the apps you want and approve them. The app then appears in the **Licensed apps** node of the portal, and you can manage assignment of the app as you would any other app.
-- **Microsoft Store for Business (Windows 10)**: Microsoft Store for Business gives you a place to find and purchase apps for your organization, individually or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps in the portal. For more information, see [Manage apps from Microsoft Store for Business](windows-store-for-business.md).
 
     > [!NOTE]
     > The file extensions for Windows apps include **.msi**, **.appx**, **.appxbundle**, **.msix** and **.msixbundle**.  
@@ -154,6 +169,9 @@ Before you begin to add and assign apps, consider the following points:
 
 - When you add and assign an app from a store, your users must have an account with that store to be able to install the app.
 - Some apps or items that you assign might depend on built-in iOS/iPadOS apps. For example, if you assign a book in the iOS/iPadOS store, the iBooks app must be present on the device. If you have removed the iBooks built-in app, you cannot use Intune to reinstate it.
+- There are limits to the number of apps you can add to Intune.
+  - For trial Intune tenants, you can create 500 apps per tenant.
+  - For licensed Intune tenants, you can create 10,000 apps per tenant. Certain apps, including [iOS/iPadOS volume-purchased apps](../apps/vpp-apps-ios.md) and [Managed Google Play apps](../apps/apps-add-android-for-work.md), don't count towards this limit. 
 
 > [!IMPORTANT]
 > If you change the name of the app through Intune after you have deployed and installed the app, the app will no longer be able to be targeted using commands.
@@ -189,7 +207,7 @@ When you add an app to Intune, you're given the option to select the category yo
 Previously, Intune contained a number of built-in apps that you could quickly assign. Based on Intune customer feedback, we removed this list, and the built-in apps are no longer displayed. However, if you have already assigned any built-in apps, the apps remain visible in the list of apps. You can continue to assign the apps as required.
 
 > [!NOTE]
-> For the installation of a required non-Line-of-Business app, Intune will attempt to install the app by sending an install command whenever the device checks-in, given that the app is not detected and the app's install state is not *Install Pending*.
+> For the installation of a required non-Line-of-Business app, Intune will attempt to install the app by sending an install command whenever the device checks in, given that the app is not detected and the app's install state is not *Install Pending*.
 
 ## Installing, updating, or removing required apps
 

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Manage attack surface reduction settings with Microsoft Intune
-description: Configure and deploy policies for devices you manage with endpoint security attack surface reduction policy settings in Microsoft Intune 
+description: Configure and deploy policies for devices you manage with endpoint security attack surface reduction policy settings in Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/15/2024
+ms.date: 08/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,7 +26,8 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-ms.reviewer: mattcall
+- sub-secure-endpoints
+ms.reviewer: laarrizz
 
 ---
 
@@ -42,19 +43,22 @@ You can use attack surface reduction (ASR) policies to reduce the attack surface
 
 For more information, see [Overview of attack surface reduction]( /windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
 
- Attack surface reduction polices are found in the the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+ Attack surface reduction polices are found in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 Applies to:
 
 - Windows 10
 - Windows 11
+- Windows Server *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
 
 ## Prerequisites for Attack surface reduction profiles
 
-**General**:
-
 - Devices must run Windows 10 or Windows 11
 - Defender antivirus must be the primary antivirus on the device
+
+**Support for Security Management for Microsoft Defender for Endpoint**:
+
+When you use [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) to support devices you've onboarded to Defender without enrollment with Intune, Attack surface reduction applies to devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
 **Support for Configuration Manager clients**:
 
@@ -64,11 +68,13 @@ Applies to:
 
   To set up tenant attach, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
-**Support for Security Management for Microsoft Defender for Endpoint**:
+## Role-based access controls (RBAC)
 
-When you use [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) to support managed by Defender that aren't enrolled with Intune, Attack surface reduction applies to devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+For guidance on assigning the right level of permissions and rights to manage Intune attack surface reduction policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Attack surface reduction profiles
+
+The available profiles for attack surface reduction policy depend on the platform you select.
 
 > [!NOTE]
 >
@@ -81,11 +87,13 @@ When you use [Security Management for Microsoft Defender for Endpoint](../protec
 
 ### Devices managed by Intune
 
-**Platform: Windows 10, Windows 11, and Windows Server**:
+**Platform: Windows**:
 
-Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune, and on devices not enrolled with Intune that you manage with [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
+Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune.
 
- Profiles include:
+- Attack Surface Reduction Rules
+
+Available profiles for this platform include:
 
 - **Attack Surface Reduction Rules** – Configure settings for attack surface reduction rules that target behaviors that malware and malicious apps typically use to infect computers, including:
   - Executable files and scripts used in Office apps or web mail that attempt to download or run files
@@ -108,9 +116,16 @@ Profiles for this platform are supported on Windows 10 and Windows 11 devices en
   - When two or more policies have conflicting settings, the conflicting settings aren't added to the combined policy, while settings that don't conflict are added to the superset policy that applies to a device.
   - Only the configurations for conflicting settings are held back.
 
-**Platform: Windows 10 and later**:
+- **Device Control** – With settings for device control, you can configure devices for a layered approach to secure removable media. Microsoft Defender for Endpoint provides multiple monitoring and control features to help prevent threats in unauthorized peripherals from compromising your devices.
 
-Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune. Profiles include:
+  Intune profiles for device control support:
+  - [Policy merge](#policy-merge-for-settings) for USB device IDs.
+  - [Reusable settings](#reusable-settings-groups-for-device-control-profiles)
+
+  To learn more about Microsoft Defender for Endpoint  device control, see the following articles in the Defender documentation:
+  - [Overview of device control](/microsoft-365/security/defender-endpoint/device-control-overview)
+  - [Deploy and manage device control with Microsoft Intune](/microsoft-365/security/defender-endpoint/device-control-deploy-manage-intune)
+  - [Device control walkthroughs](/microsoft-365/security/defender-endpoint/device-control-walkthroughs)
 
 - **App and browser isolation** – Manage settings for Windows Defender Application Guard (Application Guard), as part of Defender for Endpoint. Application Guard helps to prevent old and newly emerging attacks and can isolate enterprise-defined sites as untrusted while defining what sites, cloud resources, and internal networks are trusted.
 
@@ -123,60 +138,71 @@ Profiles for this platform are supported on Windows 10 and Windows 11 devices en
     > [!NOTE]
     > If you use this setting, AppLocker CSP behavior currently prompts end user to reboot their machine when a policy is deployed.
 
-- **Device Control** – With settings for device control, you can configure devices for a layered approach to secure removable media. Microsoft Defender for Endpoint provides multiple monitoring and control features to help prevent threats in unauthorized peripherals from compromising your devices.
-
-  Device control profiles support [policy merge](#policy-merge-for-settings) for USB device IDs.
-
-  To learn more, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](/windows/security/threat-protection/device-control/control-usb-devices-using-intune) in the Microsoft Defender for Endpoint documentation.
-
 - **Exploit Protection** - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of many mitigations that can apply to either the operating system or individual apps.
 
-- **Web protection (Microsoft Edge Legacy)** – Settings you can manage for Web protection in Microsoft Defender for Endpoint configure network protection to secure your machines against web threats. By integrating with Microsoft Edge and popular third-party browsers like Chrome and Firefox, web protection stops web threats without a web proxy and can protect machines while they're away or on-premises. Web protection stops access to:
+- **Web protection (Microsoft Edge Legacy)** – Settings you can manage for Web protection in Microsoft Defender for Endpoint configure network protection to secure your machines against web threats. When  you integrate Microsoft Edge or third-party browsers like Chrome and Firefox, web protection stops web threats without a web proxy and can protect machines while they're away or on-premises. Web protection stops access to:
   - Phishing sites
   - Malware vectors
   - Exploit sites
   - Untrusted or low-reputation sites
-  - Sites that you've blocked in your custom indicator list.
+  - Sites that you blocked by using a custom indicator list.
 
   To learn more, see [Web protection](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) in the Microsoft Defender for Endpoint documentation.
 
-#### Add reusable settings groups to profiles for Device control
+### Devices managed by Defender for Endpoint security settings management
 
-In public preview, Device control profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) to help manage settings for the following settings groups on devices for the *Windows 10 and later* platform:
+When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows* platform to manage settings on devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
-- Printer device
-- Removable storage
+Profiles supported for this scenario include:
 
-The following device control profile settings are available for *printer device*:
+- **Attack Surface Reduction Rules** - Configure settings for attack surface reduction rules that target behaviors that malware and malicious apps typically use to infect computers, including:
+  - Executable files and scripts used in Office apps or web mail that attempt to download or run files.
+  - Obfuscated or otherwise suspicious scripts.
+  - Behaviors that apps don't usually start during normal day-to-day work Reducing your attack surface means offering attackers fewer ways to perform attacks.
 
-- PrimaryId
-- PrinterConnectionID
-- VID_PID
+> [!IMPORTANT]
+>
+> Only the *Attack surface reduction rules* profile is supported by the Security Management for Microsoft Defender for Endpoint. All other Attack surface reduction profiles aren't supported.
 
-The following device control profile settings are available in for *removable storage*:
+### Devices managed by Configuration Manager
 
-- Device class
-- Device ID
-- Hardware ID
-- Instance ID
-- Primary ID
-- Product ID
-- Serial number
-- Vendor ID
-- Vendor ID and Product ID
+[!INCLUDE [Attack surface reduction prerequisites](../includes/tenant-attach-asr-prerequisites.md)]
 
-For information about these options, see the following articles in the Microsoft Defender for Endpoint documentation:
+### Reusable settings groups for Device control profiles
 
-- [Printer Protection Overview](/microsoft-365/security/defender-endpoint/printer-protection-overview)
-- [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](/microsoft-365/security/defender-endpoint/device-control-removable-storage-access-control)
+In public preview, Device control profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) to help manage settings for the following settings groups on devices for the *Windows* platform:
 
-When you configure a Device control profile and one or more reusable settings groups, you also configure *Actions* to define how the settings in those groups are used.
+- Printer device:
+  The following device control profile settings are available for *printer device*:
+
+  - PrimaryId
+  - PrinterConnectionID
+  - VID_PID
+
+  For information about printer device options, see [Printer Protection Overview](/microsoft-365/security/defender-endpoint/printer-protection-overview) in the Microsoft Defender for Endpoint documentation.
+
+- Removable storage:
+  The following device control profile settings are available in for *removable storage*:
+
+  - Device class
+  - Device ID
+  - Hardware ID
+  - Instance ID
+  - Primary ID
+  - Product ID
+  - Serial number
+  - Vendor ID
+  - Vendor ID and Product ID
+
+  For information about removable storage options, see [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](/microsoft-365/security/defender-endpoint/device-control-removable-storage-access-control) in the Microsoft Defender for Endpoint documentation.
+
+When you use a reusable settings group with a device control profile, you configure *Actions* to define how the settings in those groups are used.
 
 Each rule you add to the profile can include both reusable settings groups and individual settings that are added directly to the rule. However, consider using each rule for either reusable settings groups or to manage settings you add directly to the rule. This separation can help simplify future configurations or changes you might make.
 
 For guidance on configuring reusable groups, and then adding them to this profile, see [Use reusable groups of settings with Intune policies](../protect/reusable-settings-groups.md).
 
-#### Exclusions for Attack Surface Reduction Rules
+### Exclusions for Attack Surface Reduction Rules
 
 Intune supports the following two settings to exclude specific file and folder paths from evaluation by Attack Surface Reduction rules:
 
@@ -184,7 +210,7 @@ Intune supports the following two settings to exclude specific file and folder p
 
   :::image type="content" source="./media/endpoint-security-asr-policy/global-asr-rule-exclusion.png" alt-text="Screen capture of the Attack Surface Reduction Only Exclusions setting.":::
 
-  When a device is assigned at least one policy that configures **Attack Surface Reduction Only Exclusions**, the configured exclusions apply to all attack surface reduction rules that target that device. This occurs because devices receive a superset of attack surface reduction rule settings from all applicable policies, and the settings exclusions can't be managed for individual settings. To avoid having exclusions applied to all settings on a device, don't use this setting and instead configure **ASR Only Per Rule Exclusions** for individual settings.
+  When a device is assigned at least one policy that configures **Attack Surface Reduction Only Exclusions**, the configured exclusions apply to all attack surface reduction rules that target that device. This behavior occurs because devices receive a superset of attack surface reduction rule settings from all applicable policies, and the settings exclusions can't be managed for individual settings. To avoid having exclusions applied to all settings on a device, don't use this setting. Instead, configure **ASR Only Per Rule Exclusions** for individual settings.
 
   For more information, see the documentation for the Defender CSP: [Defender/AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-Defender#defender-attacksurfacereductiononlyexclusions).
 
@@ -198,34 +224,6 @@ Intune supports the following two settings to exclude specific file and folder p
   
   > [!IMPORTANT]
   > ASR policies do not support merge functionality for *ASR Only Per Rule Exclusions* and a policy conflict can result when multiple policies that configure *ASR Only Per Rule Exclusions* for the same device conflict. To avoid conflicts, combine the configurations for *ASR Only Per Rule Exclusions* into a single ASR policy. We are investigating adding policy merge for *ASR Only Per Rule Exclusions* in a future update.
-
-  <!-- 
-  For more information, see the documentation for the Defender CSP [Defender/ASROnlyPerRuleExclusions](/windows/client-management/mdm/policy-csp-Defender#defender-asronlyperruleexclusions). 
-  -->
-
-<!--
-**When both settings are configured and apply to a device**:
-Behavior details pending. 
--->
-
-### Devices managed by Configuration Manager
-
-[!INCLUDE [Attack surface reduction prerequisites](../includes/tenant-attach-asr-prerequisites.md)]
-
-### Devices managed by Defender for Endpoint security settings management
-
-When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows 10, Windows 11, and Windows Server* platform to manage settings on devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
-
-Profiles supported for this scenario include:
-
-- **Attack Surface Reduction Rules** - Configure settings for attack surface reduction rules that target behaviors that malware and malicious apps typically use to infect computers, including:
-  - Executable files and scripts used in Office apps or web mail that attempt to download or run files.
-  - Obfuscated or otherwise suspicious scripts.
-  - Behaviors that apps don't usually start during normal day-to-day work Reducing your attack surface means offering attackers fewer ways to perform attacks.
-
-> [!IMPORTANT]
->
-> Only the *Attack surface reduction rules* profile is supported by the Security Management for Microsoft Defender for Endpoint. All other Attack surface reduction profiles aren't supported.
 
 ## Policy merge for settings
 
@@ -259,10 +257,10 @@ Policy merge doesn't compare or merge the configurations from different settings
   - The allowlist for *setup classes* isn't compared nor merged with the blocklist for *setup classes*.
   - Instead, the device receives both lists, as they are from two distinct settings. The device then enforces the most restrictive setting for *installation by setup classes*.
 
-  With this example, a setup class defined in the blocklist will override the same setup class if found on the allowlist. The result would be that the setup class is blocked on the device.
+  With this example, a setup class defined in the blocklist overrides the same setup class if found on the allowlist. The result would be that the setup class is blocked on the device.
 
 ## Next steps
 
-[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy).
 
 View details for the settings in profiles for [Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md).

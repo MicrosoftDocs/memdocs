@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 07/01/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user

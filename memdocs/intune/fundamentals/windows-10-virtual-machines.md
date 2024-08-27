@@ -8,7 +8,7 @@ keywords:
 author: Smritib17  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 04/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,7 +31,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Using Windows 10 virtual machines with Intune
+# Using Windows 10/11 virtual machines with Intune
 
 Intune supports managing virtual machines running Windows 10 Enterprise with certain limitations. Intune management doesn't depend on, or interfere with Azure Virtual Desktop management of the same virtual machine.
 
@@ -41,11 +41,10 @@ Intune supports managing virtual machines running Windows 10 Enterprise with cer
 
 - Windows Autopilot Self-deploying and pre-provisioning deployment types aren't supported because they require a physical Trusted Platform Module (TPM).
 
-- Out of Box Experience (OOBE) enrollment isn't supported on VMs that can only be accessed by using RDP (such as VMs that are hosted on Azure).
+- Out of Box Experience (OOBE) enrollment isn't supported on non-persistent VMs that can only be accessed by using RDP (such as VMs that are hosted on Azure).
 This restriction means:
-  - Windows Autopilot and Commercial OOBE aren't supported.
+- Windows Autopilot and Commercial OOBE aren't supported.
   - Enrollment Status Page isn't supported.
-
 
 ## Configuration
 
@@ -63,6 +62,14 @@ Deallocated virtual machines may contribute to noncompliant device reports becau
 ## Retirement
 
 If you only have RDP access, don't use the [Wipe action](../remote-actions/devices-wipe.md#wipe). The Wipe action deletes the virtual machine's RDP settings and prevents you from ever connecting again.
+
+## Limitations
+
+Intune does not support using a cloned image of a computer that is already enrolled. This includes both physical and virtual devices such as Azure Virtual Desktop (AVD). When device enrollment or identity tokens are replicated between devices, Intune device enrollment or synchronization failures will occur.
+
+- For more information, see [Mobile device enrollment - Windows Client Management](/windows/client-management/mobile-device-enrollment) and [Certificate authentication device enrollment - Windows Client Management](/windows/client-management/certificate-authentication-device-enrollment).
+- For information on disabling token roaming in AVD, see [Using Azure Virtual Desktop multi-session with Microsoft Intune](azure-virtual-desktop-multi-session.md#prerequisites).
+- For information on troubleshooting issues related to image cloning, see [Error hr 0x8007064c: The machine is already enrolled](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors#error-hr-0x8007064c-the-machine-is-already-enrolled).
 
 ## Next steps
 

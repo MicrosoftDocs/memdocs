@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/05/2023
+ms.date: 08/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -66,7 +66,17 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 7. Click **Next** to display the **Settings** page.
 8. Click **Add** to display the **Add permissions** pane.
 9. Click the permissions that you want to override. Permissions granted will override the "Default app permissions" policy for the selected apps.
-10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**.  
+10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**.
+
+    > [!NOTE]
+    > As of Android 12, configuring **Auto grant** for the following permissions is not supported for coporate-owned work profile or corporate-owned dedicated devices.
+    > * SMS (read)
+    > * Location access (coarse)
+    > * Location access (fine)
+    > * Camera
+    > * Record audio
+    > * Allow body sensor data
+
 11. If the managed app supports configuration settings, the **Configuration settings format** dropdown box is visible. Select one of the following methods to add configuration information:
     - **Use configuration designer**
     - **Enter JSON data**
@@ -146,6 +156,7 @@ As the Microsoft Intune administrator, you can control which work or school acco
 
    > [!NOTE]
    > The following apps process the above app configuration and only allow organization accounts:
+   > - Copilot for Android (28.1.420328045 and later)
    > - Edge for Android (42.0.4.4048 and later)
    > - Office, Word, Excel, PowerPoint for Android (16.0.9327.1000 and later)
    > - OneDrive for Android (5.28 and later)

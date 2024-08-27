@@ -2,10 +2,10 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/26/2023
+ms.date: 06/19/2024
 ms.localizationpriority: medium
 ---
 
@@ -18,9 +18,9 @@ user-driven\hybrid-azure-ad-join-deploy-device.md
 
 Headings are driven by article context. -->
 
-- Before starting the Autopilot deployment, you may want to have:<br>
+- Before the Windows Autopilot deployment is started, Microsoft recommends having:<br>
 <br>
-  - At least one type of policy and at least one application assigned to the device(s).
-  - At least one type of policy and at least one application assigned to the user(s).
+  - At least one type of policy and at least one application assigned to the devices.
+  - At least one type of policy and at least one application assigned to the users.
 
-  These assignments ensure proper testing of the Autopilot deployment during both the device ESP phase and user ESP phase of the ESP. It may also prevent possible issues when there are either no policies or no applications assigned to the device(s) or the user(s).
+  These assignments ensure proper testing of the Windows Autopilot deployment during both the device ESP phase and user ESP phase of the ESP. It might also prevent possible issues when there are either no policies or no applications assigned to the devices or the users.

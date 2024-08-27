@@ -2,13 +2,13 @@
 title: Windows Autopilot for pre-provisioned deployment
 description: Windows Autopilot for pre-provisioned deployment.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 03/26/2024
+ms.date: 07/23/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -35,30 +35,30 @@ Pre-provisioned deployments use Microsoft Intune in currently supported versions
 
 ## Prerequisites
 
-In addition to [Windows Autopilot requirements](software-requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
+In addition to [Windows Autopilot requirements](requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
 - A currently supported version of Windows.
 - Windows Pro, Enterprise, or Education editions.
 - An Intune subscription.
-- Physical devices that support Trusted Platform Module (TPM) 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
-- Network connectivity. Using wireless connectivity requires selecting region, language and keyboard before you're able to connect and start provisioning.
+- Physical devices that support Trusted Platform Module (TPM) 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](requirements.md?tabs=networking#autopilot-self-deploying-mode-and-autopilot-pre-provisioning).
+- Network connectivity. Using wireless connectivity requires selecting region, language and keyboard before being able to connect and start provisioning.
 - An enrollment status page (ESP) profile must be targeted to the device.
 
 > [!IMPORTANT]
 >
-> - Because the OEM or vendor performs the pre-provisioning process, this process **doesn't require access to an end-user's on-prem domain infrastructure**. The pre-provisioning process is unlike a typical Microsoft Entra hybrid joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected, and the domain network is contacted when the device is unboxed on-premises by the end-user.
+> - Because the OEM or vendor performs the pre-provisioning process, this process **doesn't require access to an end-user's on-prem domain infrastructure**. The pre-provisioning process is unlike a typical Microsoft Entra hybrid joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected. Instead the domain network is contacted when the device is unboxed on-premises by the end-user.
 >
-> - See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review known issues and their solutions.
+> - See [Windows Autopilot known issues](known-issues.md) and [Troubleshooting Windows Autopilot device import and enrollment](troubleshooting-faq.yml#troubleshooting-windows-autopilot-device-import-and-enrollment) to review known issues and their solutions.
 
 ## Preparation
 
 Devices slated for pre-provisioning are registered for Autopilot via the normal registration process.
 
-To be ready to try out Windows Autopilot for pre-provisioned deployment, make sure that you can first successfully use existing Windows Autopilot user-driven scenarios:
+To be ready to try out Windows Autopilot for pre-provisioned deployment, make sure that existing Windows Autopilot user-driven scenarios can be successfully used:
 
-- User-driven Microsoft Entra join. Make sure that you can deploy devices using Windows Autopilot and join them to a Microsoft Entra ID tenant.
+- User-driven Microsoft Entra join. Make sure that devices can be deployed using Windows Autopilot and join them to a Microsoft Entra ID tenant.
 
-- User-driven with Microsoft Entra hybrid join. To enable the features of Microsoft Entra hybrid join, make sure that you can:
+- User-driven with Microsoft Entra hybrid join. To enable the features of Microsoft Entra hybrid join, make sure that the following actions can be performed:
 
   - Deploy devices using Windows Autopilot.
   - Join the devices to an on-premises Active Directory domain.
@@ -70,23 +70,23 @@ To be ready to try out Windows Autopilot for pre-provisioned deployment, make su
 
 If these scenarios can't be completed, Windows Autopilot for pre-provisioned deployment also doesn't succeed since it builds on top of these scenarios.
 
-Before starting the pre-provisioning process in the provisioning service facility, you must configure another Autopilot profile setting by using your Intune account. A detailed tutorial on how to configure an Autopilot profile for pre-provisioning is available in the following articles:
+Before the pre-provisioning process can be started in the provisioning service facility, another Autopilot profile setting must be configured. A detailed tutorial on how to configure an Autopilot profile for pre-provisioning is available in the following articles:
 
 - [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune](tutorial/pre-provisioning/azure-ad-join-workflow.md)
 - [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join in Intune](tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md)
 
-The pre-provisioning process applies all device-targeted policies from Intune. Those policies include certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps are installed if they meet the following conditions:
+The pre-provisioning process applies all device-targeted policies from Intune. Those policies include certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or line-of-business (LOB) apps are installed if they meet the following conditions:
 
 - Configured to install in the device context.
 - Assigned to either the device or to the user preassigned to the Autopilot device.
 
 > [!IMPORTANT]
 >
-> Make sure not to target both Win32 and LOB apps to the same device. For more information, see [Add a Windows line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-windows).
+> Make sure not to target both Win32 and LOB apps to the same device. If both Win32 and LOB apps need to be targeted to the device, consider using [Windows Autopilot device preparation](device-preparation/overview.md). For more information, see [Add a Windows line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-windows).
 
 > [!NOTE]
 >
-> Select the language mode as user specified in Autopilot profiles to ensure easy access into pre-provisioning mode. The pre-provisioning technician phase installs all device-targeted apps and any user-targeted, device-context apps that are targeted to the assigned user. If there's no assigned user, then it only installs the device-targeted apps. Other user-targeted policies aren't applied until the user signs into the device. To verify these behaviors, be sure to create appropriate apps and policies targeted to devices and users.
+> To ensure easy access into pre-provisioning mode, select the language mode as user specified in Autopilot profiles. The pre-provisioning technician phase installs all device-targeted apps and any user-targeted, device-context apps that are targeted to the assigned user. If there's no assigned user, then it only installs the device-targeted apps. Other user-targeted policies aren't applied until the user signs into the device. To verify these behaviors, be sure to create appropriate apps and policies targeted to devices and users.
 
 ## Scenarios
 
@@ -107,13 +107,13 @@ Each of these scenarios consists of two parts, a technician flow and a user flow
 After the customer or IT Admin targets all the apps and settings they want for their devices through Intune, the pre-provisioning technician can begin the pre-provisioning process. The technician could be a member of the IT staff, a services partner, or an OEM - each organization can decide who should perform these activities. Regardless of the scenario, the process done by the technician is the same:
 
 - Boot the device.
-- From the first out-of-box experience (OOBE) screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
+- From the first out-of-box experience (OOBE) screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, select the **Windows Autopilot provisioning** option and then select **Continue**.
 
 - On the **Windows Autopilot Configuration** screen, it displays the following information about the device:
   - The Autopilot profile assigned to the device.
   - The organization name for the device.
   - The user assigned to the device (if there's one).
-  - A QR code containing a unique identifier for the device. You can use this code to look up the device in Intune, which you might want to do to make configuration changes. For example, assign a user or add the device to groups needed for app or policy targeting.
+  - A QR code containing a unique identifier for the device. This code can be used to look up the device in Intune, which might be needed to make configuration changes. For example, assign a user or add the device to groups needed for app or policy targeting.
 
     > [!NOTE]
     >
@@ -140,15 +140,19 @@ If the pre-provisioning process fails:
 
 ### User flow
 
-<!-- MAXADO 8850476 -->
+<!-- MAXADO 8850476 & 8911061 -->
 
 > [!IMPORTANT]
 >
 > - In order to make sure tokens are refreshed properly between the Technician flow and the User flow, wait at least 90 minutes after running the Technician flow before running the User flow. This scenario mainly affects lab and testing scenarios when the User flow is run within 90 minutes after the Technician flow completes.
 >
+> - The User flow should be run within six months after the Technician flow finishes. Waiting more than six months can cause the certificates used by the Intune Management Engine (IME) to no longer be valid leading to errors such as:
+>
+>   `Error code: [Win32App][DetectionActionHandler] Detection for policy with id: <policy_id> resulted in action status: Failed and detection state: NotComputed.`
+>
 > - Compliance in Microsoft Entra ID is reset during the User flow. Devices might show as compliant in Microsoft Entra ID after the Technician flow completes, but then show as noncompliant once the User flow starts. Allow enough time after the User flow completes for compliance to reevaluate and update.
 
-If the pre-provisioning process completed successfully and the device was resealed, you can deliver to the end user. The end user completes the normal Windows Autopilot user-driven process following these steps:
+If the pre-provisioning process completed successfully and the device was resealed, deliver the device to the end user. The end user completes the normal Windows Autopilot user-driven process following these steps:
 
 - Power on the device.
 
@@ -162,7 +166,7 @@ If the pre-provisioning process completed successfully and the device was reseal
 
   > [!NOTE]
   >
-  > In certain circumstances, Microsoft Entra credentials can also be prompted for during a Microsoft Entra hybrid join scenario. For example, if ADFS isn't being used.
+  > In certain circumstances, Microsoft Entra credentials might also be prompted for during a Microsoft Entra hybrid join scenario. For example, if ADFS isn't being used.
 
 - More policies and apps are delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
@@ -170,9 +174,20 @@ The device ESP reruns during the user flow so that both device and user ESP run 
 
 > [!NOTE]
 >
-> If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Microsoft Entra sign-in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be the desired behavior.
+> If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Microsoft Entra sign-in option might not show. Instead, users are asked to accept the EULA, and create a local account, which might not be the desired behavior.
 
-## Related articles
+## Deploying a device
+
+For more information on starting a deployment on a device when using Windows Autopilot for pre-provisioned, see the Technician flow and User flow steps of the Windows Autopilot for pre-provisioned deployment tutorials:
+
+- [Microsoft Entra join](tutorial/pre-provisioning/azure-ad-join-workflow.md):
+  - [Technician flow](tutorial/pre-provisioning/azure-ad-join-technician-flow.md).
+  - [User flow](tutorial/pre-provisioning/azure-ad-join-user-flow.md).
+- [Microsoft Entra hybrid](tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md):
+  - [Technician flow](tutorial/pre-provisioning/hybrid-azure-ad-join-technician-flow.md).
+  - [User flow](tutorial/pre-provisioning/hybrid-azure-ad-join-user-flow.md).
+
+## Related content
 
 <!-- Intune 12378279 -->
 

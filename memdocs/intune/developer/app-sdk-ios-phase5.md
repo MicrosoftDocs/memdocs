@@ -91,7 +91,7 @@ The `protect` method accepts an identity that can be a managed or unmanaged user
 
 ### Share extensions
 
-If the app has a share extension, the owner of the item being shared can be retrieved through the  `protectionInfoForItemProvider` method in `IntuneMAMDataProtectionManager`. If the shared item is a file, the SDK will handle setting the file owner. If the shared item is data, the app is responsible for setting the file owner if this data is persisted to a file, and for calling the `setUIPolicyIdentity` API before showing this data in the UI.
+If the app has a share extension, the owner of the item being shared can be retrieved through the  `protectionInfoForItemProvider` method in `IntuneMAMDataProtectionManager`. If the shared item is a file, the SDK will handle setting the file owner. If the shared item is data, the app is responsible for setting the file owner if this data is persisted to a file, and for calling the `setUIPolicyAccountId` API before showing this data in the UI.
 
 ### Turn on multi-identity
 
@@ -106,23 +106,23 @@ By default, apps are considered single identity. The SDK sets the process identi
 
     At launch, multi-identity apps are considered to be running under an unknown, unmanaged account. The conditional launch UI won't run, and no policies will be enforced on the app. The app is responsible for notifying the SDK whenever the identity should be changed. Typically, this will happen whenever the app is about to show data for a specific user account.
 
-    An example is when the user attempts to open a document, a mailbox, or a tab in a notebook. The app needs to notify the SDK before the file, mailbox, or tab is actually opened. This is done through the `setUIPolicyIdentity` API in `IntuneMAMPolicyManager`. This API should be called whether or not the user is managed. If the user is managed, the SDK will perform the conditional launch checks, like jailbreak detection, PIN, and authentication.
+    An example is when the user attempts to open a document, a mailbox, or a tab in a notebook. The app needs to notify the SDK before the file, mailbox, or tab is actually opened. This is done through the `setUIPolicyAccountId` API in `IntuneMAMPolicyManager`. This API should be called whether or not the user is managed. If the user is managed, the SDK will perform the conditional launch checks, like jailbreak detection, PIN, and authentication.
 
     The result of the identity switch is returned to the app asynchronously through a completion handler. The app should postpone opening the document, mailbox, or tab until a success result code is returned. If the identity switch failed, the app should cancel the task.
     
-    Multi-identity apps should avoid using `setProcessIdentity` as a way to set the identity. Apps that use UIScenes should use the `setUIPolicyIdentity:forWindow` API to set the identity.
+    Multi-identity apps should avoid using `setProcessAccountId` as a way to set the identity. Apps that use UIScenes should use the `setUIPolicyAccountId:forWindow` API to set the identity.
     
-    Apps can also set the identity for the current thread using `setCurrentThreadIdentity:` and `setCurrentThreadIdentity:forScope:`. For example the app may spawn a background thread, set the identity to the managed identity, and then perform file operations on managed files. If the app uses `setCurrentThreadIdentity:`, the app should also use `getCurrentThreadIdentity` so that it may restore the original identity once it's done. However if the app uses `setCurrentThreadIdentity:forScope:` then restoring the old identity occurs automatically. It's preferred to use `setCurrentThreadIdentity:forScope:`.
+    Apps can also set the identity for the current thread using `setCurrentThreadIdentity:` and `setCurrentThreadIdentity:forScope:`. For example the app may spawn a background thread, set the identity to the managed identity, and then perform file operations on managed files. If the app uses `setCurrentThreadAccountId:`, the app should also use `getCurrentThreadAccountId` so that it may restore the original identity once it's done. However if the app uses `setCurrentThreadAccountId:forScope:` then restoring the old identity occurs automatically. It's preferred to use `setCurrentThreadAccountId:forScope:`.
     
-    In swift, due to async/await, `[IntuneMAMPolicyManager setCurrentThreadIdentity:]` and `[IntuneMAMPolicyManager setCurrentThreadIdentity:forScope:]` are not available. Instead in swift to set the current identity use `IntuneMAMSwiftContextManager.setIdentity(_, forScope:)`. There are variants of this API for async, throwing, and async throwing closures to be passed in.
+    In swift, due to async/await, `[IntuneMAMPolicyManager setCurrentThreadAccountId:]` and `[IntuneMAMPolicyManager setCurrentThreadAccountId:forScope:]` are not available. Instead in swift to set the current identity use `IntuneMAMSwiftContextManager.setAccountId(_, forScope:)`. There are variants of this API for async, throwing, and async throwing closures to be passed in.
 
 * **SDK-initiated identity switch**:
 
-    Sometimes, the SDK needs to ask the app to switch to a specific identity. Multi-identity apps must implement the `identitySwitchRequired` method in `IntuneMAMPolicyDelegate` to handle this request.
+    Sometimes, the SDK needs to ask the app to switch to a specific identity. Multi-identity apps must implement the `identitySwitchRequiredForAccountId` method in `IntuneMAMPolicyDelegate` to handle this request.
 
     When this method is called, if the app can handle the request to switch to the specified identity, it should pass `IntuneMAMAddIdentityResultSuccess` into the completion handler. If it can't handle switching the identity, the app should pass `IntuneMAMAddIdentityResultFailed` into the completion handler.
 
-    The app doesn't have to call `setUIPolicyIdentity` in response to this call. If the SDK needs the app to switch to an unmanaged user account, the empty string will be passed into the `identitySwitchRequired` call.
+    The app doesn't have to call `setUIPolicyAccountId` in response to this call. If the SDK needs the app to switch to an unmanaged user account, the empty string will be passed into the `identitySwitchRequiredForAccountId` call.
 
 * **SDK-initiated identity auto-enroll**:
 
@@ -130,7 +130,7 @@ By default, apps are considered single identity. The SDK sets the process identi
 
 * **Selective wipe**:
 
-    When the app is selectively wiped, the SDK will call the `wipeDataForAccount` method in `IntuneMAMPolicyDelegate`. The app is responsible for removing the specified user's account and any data associated with it. The SDK is capable of removing all files owned by the user and will do so if the app returns FALSE from the `wipeDataForAccount` call.
+    When the app is selectively wiped, the SDK will call the `wipeDataForAccountId` method in `IntuneMAMPolicyDelegate`. The app is responsible for removing the specified user's account and any data associated with it. The SDK is capable of removing all files owned by the user and will do so if the app returns FALSE from the `wipeDataForAccountId` call.
 
     Note that this method is called from a background thread. The app shouldn't return a value until all data for the user has been removed (with the exception of files if the app returns FALSE).
 

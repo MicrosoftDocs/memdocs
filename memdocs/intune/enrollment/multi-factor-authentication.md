@@ -57,7 +57,7 @@ Complete these steps to enable multi-factor authentication during Microsoft Intu
 > Don't configure **Device based access rules** for Microsoft Intune enrollment.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Go to **Devices** > **Conditional access**. This area is the same as the conditional access area available in Microsoft Entra ID. For more information about the available settings, see [Cloud apps or actions](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#authentication-context-preview).  
+1. Go to **Devices** > **Conditional Access**. This area is the same as the Conditional Access area available in the Microsoft Entra admin center. For more information about the available settings, see [Building a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies).  
 1. Choose **Create new policy**.  
 1. Name your policy.      
 1. Select the **Users** category.

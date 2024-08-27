@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/30/2023
+ms.date: 08/09/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -25,11 +25,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, get-started
+ai-usage: ai-assisted
 ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-- AIreviewed
 ---
 
 # App protection policies overview
@@ -84,7 +84,7 @@ The important benefits of using App protection policies are the following:
 
 There are additional benefits to using MDM with App protection policies, and companies can use App protection policies with and without MDM at the same time. For example, consider an employee that uses both a phone issued by the company, and their own personal tablet. The company phone is enrolled in MDM and protected by App protection policies while the personal device is protected by App protection policies only.
 
-If you apply a MAM policy to the user without setting the device state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply a MAM policy based on the managed state. So when you create an app protection policy, next to **Target to all app types**, you'd select **No**. Then do any of the following:
+If you apply a MAM policy to the user without setting the device state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply MAM policies based on the device management state. For more information see, [Target app protection policies based on device management state](../apps/app-protection-policies.md#target-app-protection-policies-based-on-device-management-state). When you create an app protection policy, select **No** next to **Target to all app types**. Then, do any of the following:
 
 - Apply a less strict MAM policy to Intune managed devices, and apply a more restrictive MAM policy to non MDM-enrolled devices.
 - Apply a MAM policy to unenrolled devices only.
@@ -182,6 +182,17 @@ The following list provides the end-user requirements to use app protection poli
 
 There are a few additional requirements that you want to be aware of when using App protection policies with Microsoft 365 (Office) apps.
 
+> [!IMPORTANT]
+> Intune mobile application management (MAM) on Android requires Microsoft Entra ID device registration for Microsoft 365 apps. To improve security, Android devices must be registered with Microsoft Entra ID to continue receiving MAM policy for Microsoft 365 apps. 
+>
+> When accessing Microsoft 365 apps that are targeted with a MAM policy, users might be prompted to authenticate if the device is not already registered with Entra ID. Users will need to complete the authentication and registration process to access their Microsoft 365 MAM-enabled applications.
+> 
+> ![Screenshot of how to register device with Intune.](./media/app-protection-policy/register-device.png)
+>
+> If you have Conditional Access policies or multi-factor authentication enabled, devices should already be registered, and users will not notice any change.
+>
+> To view which devices are registered, navigate to the [Microsoft Entra admin center](https://entra.microsoft.com/) > **Devices** > **All devices** report, filter by **OS** and sort by **Registered**. For related information, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
+
 ### Outlook mobile app
 
 The additional requirements to use the [Outlook mobile app](https://products.office.com/outlook) include the following:
@@ -248,7 +259,7 @@ Consider the following examples for the work or "corporate" context:
 > Outlook has a combined email view of both "personal" and "corporate" emails. In this situation, the Outlook app prompts for the Intune PIN on launch.
 
 > [!IMPORTANT]
-> Although Edge is in "corporate" context, users can intentionally move OneDrive "corporate" context files to an unknown personal cloud storage location. To avoid this, see [Manage restricted web sites](manage-microsoft-edge.md#manage-restricted-web-sites) and configure the allowed/blocked site list for Edge.
+> Although Edge is in "corporate" context, users can intentionally move OneDrive "corporate" context files to an unknown personal cloud storage location. To avoid this, see [Manage websites to allow upload files](manage-microsoft-edge.md#manage-websites-to-allow-upload-files) and configure the allowed/blocked site list for Edge.
 
 ### Intune app PIN
 

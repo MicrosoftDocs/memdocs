@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/22/2023
+ms.date: 04/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-updates
 ---
 
 # Update rings for Windows 10 and later policy in Intune
@@ -87,7 +88,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows** > **Update rings for Windows 10 and later** > **Create profile**.
+2. Select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > **Create profile**.
 
 3. Under *Basics*, specify a name, a description (optional), and then select **Next**.
   ![Create an update ring](./media/windows-10-update-rings/basics-tab.png)
@@ -110,7 +111,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 ## Manage your Windows Update rings
 
-In the portal, navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later** and select the ring policy that you want to manage. Intune displays details similar to the following for the selected policy:
+In the portal, navigate to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab and select the ring policy that you want to manage. Intune displays details similar to the following for the selected policy:
 
 :::image type="content" source="./media/windows-10-update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./media/windows-10-update-rings/default-policy-view.png":::
 

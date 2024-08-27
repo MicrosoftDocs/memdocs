@@ -2,12 +2,12 @@
 title: Optional features
 titleSuffix: Configuration Manager
 description: Updates to Configuration Manager include optional features, which you have to enable before use.
-ms.date: 12/05/2022
+ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: banreet
-ms.author: banreetkaur
+author: baladelli  
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

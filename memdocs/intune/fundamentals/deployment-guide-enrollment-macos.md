@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 04/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -64,12 +64,12 @@ Use for personal or bring your own devices (BYOD). This enrollment option is als
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Devices are personal or BYOD. | ✔️ |
-| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
-| You have new or existing devices. | ✔️ |
-| Devices are associated with a single user. | ✔️ |
-| You use the device enrollment manager (DEM) account. | ✔️ <br/><br/> Be aware of impact and any limitations using DEM account. |
-| Devices are managed by another MDM provider. | ❌ <br/><br/> When a device enrolls, MDM providers install certificates and other files. These files must be removed. The quickest way may be to unenroll, or factory reset the devices. If you don't want to factory reset, then contact the MDM provider for guidance. |
+| Devices are personal or BYOD. | ✅ |
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
+| You have new or existing devices. | ✅ |
+| Devices are associated with a single user. | ✅ |
+| You use the device enrollment manager (DEM) account. | ✅ <br/><br/> Be aware of impact and any limitations using DEM account. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> When a device enrolls, MDM providers install certificates and other files. These files must be removed. The quickest way might be to unenroll, or factory reset the devices. If you don't want to factory reset, then contact the MDM provider for guidance. |
 | Devices are owned by the organization or school. | ❌ <br/><br/> Not recommended for organization-owned devices. Organization-owned devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article) or Apple Configurator. <br/><br/> You can add the MacBook serial numbers to the corporate device identifiers to mark the devices as corporate. But, by default, devices are marked personal. |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/> These devices are organization-owned. User-less devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article) or Apple Configurator. |
 
@@ -94,7 +94,7 @@ Your users must do the following steps. For more specific information on the end
 1. Download and run [the Company Portal app installer package](https://go.microsoft.com/fwlink/?linkid=853070).
 2. Open the Company Portal app, and sign in with their organization account (`user@contoso.com`). Once they sign in, they must approve the enrollment policy (System preferences). When users approve, the device is enrolled, and considered managed. If they don't approve, then they're not enrolled, and won't receive your policies.
 
-For more specific information on the end user steps, go to [Enroll your macOS device using the Company Portal app](../user-help/enroll-your-device-in-intune-macos-cp.md).
+The Company Portal app detects the installation of the management profile and automatically registers the device, unless it is manually closed by the user. The user must reopen the app to complete device registration. If you're using dynamic groups, which rely on device registration, it's important for users to return to the app and register. Plan to communicate these steps to end users. If you're using Conditional Access (CA) policies, no action is required because any CA-protected app users try to sign into will prompt them to return to Company Portal to complete device registration. 
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
@@ -107,14 +107,14 @@ For more specific information on this enrollment type, go to [Automatically enro
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Devices are owned by the organization or school. | ✔️ |
-| You have new devices. | ✔️ |
-| You have existing devices. | ✔️ <br/><br/> To enroll existing devices, go to [Enroll Macs after Setup Assistant](../enrollment/device-enrollment-program-enroll-macos.md#distribute-devices) (opens another Microsoft article). |
-| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
-| Devices are associated with a single user. | ✔️ |
-| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are owned by the organization or school. | ✅ |
+| You have new devices. | ✅ |
+| You have existing devices. | ✅ <br/><br/> To enroll existing devices, go to [Enroll Macs after Setup Assistant](../enrollment/device-enrollment-program-enroll-macos.md#distribute-devices) (opens another Microsoft article). |
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
+| Devices are associated with a single user. | ✅ |
+| Devices are user-less, such as kiosk or dedicated device. | ✅ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using [Device enrollment](#byod-device-enrollment) (in this article). |
-| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use [Device enrollment](#byod-device-enrollment) to manage specifics apps on the device. Since these devices are organization-owned, it's recommended to enroll in Intune. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use [Device enrollment](#byod-device-enrollment) to manage specifics apps on the device. Since these devices are organization-owned, we recommended to enroll in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
@@ -125,7 +125,7 @@ This task list provides an overview. For more specific information, go to [Autom
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - You need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
-- Be sure the Apple token (.p7m) is active. For more specific information, go to [Create enrollment program token](../enrollment/device-enrollment-program-enroll-macos.md#create-enrollment-program-token).  
+- Be sure the Apple token (`.p7m`) is active. For more specific information, go to [Create enrollment program token](../enrollment/device-enrollment-program-enroll-macos.md#create-enrollment-program-token).  
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Intune, and is active. This certificate is required to enroll macOS devices. For more information, go to [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
 - Decide how users will authenticate on their devices: **Setup Assistant (legacy)** or **Setup Assistant with modern authentication**. Make this decision before you create the enrollment policy. Using the **Setup Assistant with modern authentication** is considered modern authentication. Microsoft recommends using **Setup Assistant with modern authentication**.
 
@@ -146,7 +146,7 @@ This task list provides an overview. For more specific information, go to [Autom
   - Select the **Setup Assistant with modern authentication** when:
 
     - You want to wipe the device.
-    - You want to use multi-factor authentication (MFA).
+    - You want to use multifactor authentication (MFA).
     - You want to prompt users to update their expired password when they first sign in.
     - You want to prompt users to reset their expired passwords during enrollment.
     - You want devices registered in Microsoft Entra ID. When they're registered, you can use features available with Microsoft Entra ID, such as conditional access.
@@ -189,7 +189,7 @@ For more specific information on the end user steps, go to [Enroll your macOS de
 
       When users enter their Microsoft Entra credentials, the enrollment starts.
 
-  2. The Setup Assistant may prompt the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete and user device affinity is established. Users will see your apps and policies on the device.
+  2. The Setup Assistant can prompt the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete and user device affinity is established. Users will see your apps and policies on the device.
 
   3. Users open the Company Portal app [you installed](../apps/apps-company-portal-macos.md), and sign in with their organization credentials (`user@contoso.com`) again.
 
@@ -208,14 +208,14 @@ For more specific information on this enrollment type, go to [Use Direct Enrollm
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| You need a wired connection, or are having a network issue. | ✔️ |
-| Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements.  | ✔️ <br/><br/> The idea of *not* using the ABM or ASM portals is to give administrators less control.|
-| A country/region doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM). | ✔️ <br/><br/> If your country/region supports ABS or ASM, then devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article). |
-| Devices are owned by the organization or school. | ✔️ |
-| You have new or existing devices. | ✔️ |
-| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> If you have a large number of devices, then this method takes some time. |
+| You need a wired connection, or are having a network issue. | ✅ |
+| Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements.  | ✅ <br/><br/> The idea of *not* using the ABM or ASM portals is to give administrators less control.|
+| A country/region doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM). | ✅ <br/><br/> If your country/region supports ABS or ASM, then devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article). |
+| Devices are owned by the organization or school. | ✅ |
+| You have new or existing devices. | ✅ |
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ <br/><br/> If you have a large number of devices, then this method takes some time. |
 | Devices are associated with a single user. | ❌ <br/><br/> Not recommended. Devices that need user affinity should be enrolled using [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised). |
-| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are user-less, such as kiosk or dedicated device. | ✅ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using [MAM](deployment-guide-enrollment-mamwe.md) (opens another Microsoft article), or [BYOD: Device enrollment](#byod-device-enrollment) (in this article). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
@@ -243,7 +243,7 @@ For more information on this enrollment option, and its prerequisites, go to [ma
 
   :::image type="content" source="./media/deployment-guide-enrollment-ios-ipados/configurator-enroll-without-user-affinity.png" alt-text="In the Intune admin center and Microsoft Intune, enroll macOS devices using Direct enrollment. Select enroll without user affinity.":::
 
-## Next steps
+## Related articles
 
 - [MAM](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)

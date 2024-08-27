@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2023
+ms.date: 02/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,35 +43,17 @@ This feature applies to:
 - macOS
 - Windows 10
 - Windows 11
-
-  > [!IMPORTANT]
-  > For Windows 11 devices, there is an issue between the Windows 11 client and the Windows VPNv2 CSP. A device with one or more Intune VPN profiles loses its VPN connectivity when the device processes multiple changes to VPN profiles for the device simultaneously. When the device checks-in with Intune a second time, it processes the VPN profile changes, and connectivity is restored.
-  >
-  > The following changes can cause a loss of VPN functionality:
-  >
-  > - Changes to a VPN profile that was previously processed by the Windows 11 device. This action deletes the original profile, and applies the updated profile.
-  > - Two new VPN profiles apply to the device at the same time.
-  > - An active VPN profile is removed at the same time a new VPN profile is assigned.
-  >
-  > This issue doesn't apply when:
-  >
-  > - A Windows 11 device doesn't have an existing VPN profile assigned, and it receives one Intune VPN profile.
-  > - Windows 11 devices with a VPN profile assigned, and are assigned another VPN profile with no other profile changes.
-  > - A Windows 10 device upgrades to Windows 11, and if there are no changes to that device's VPN profiles. After the upgrade to Windows 11, any changes to the devices VPN profiles or adding new VPN profiles will trigger the issue.
-  >
-  > This issue and warning remain until Windows updates the Windows 11 client that resolves this issue.
-
 - Windows 8.1 and newer
 
 For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. You assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
 
-This article lists the VPN apps you can use, shows you how to create a VPN profile, and includes guidance on securing your VPN profiles. You must deploy the VPN app before you create the VPN profile. If you need help with deploying apps using Microsoft Intune, see [What is app management in Microsoft Intune?](../apps/app-management.md).
+This article lists the VPN apps you can use, shows you how to create a VPN profile, and includes guidance on securing your VPN profiles. You must deploy the VPN app before you create the VPN profile. If you need help with deploying apps using Microsoft Intune, go to [What is app management in Microsoft Intune?](../apps/app-management.md).
 
 ## Before you begin
 
 - VPN profiles for a device tunnel are supported for [Windows 10/11 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
-- If you use certificate based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This step makes sure that each device can recognize the legitimacy of your certificate authority. For more information, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
+- If you use certificate based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This step makes sure that each device can recognize the legitimacy of your certificate authority. For more information, go to [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
 
 - User enrollment for iOS/iPadOS and macOS only support [per-app VPN](vpn-setting-configure-per-app.md).
 
@@ -82,6 +64,31 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
   - Enrolled devices that run Windows 10/11
   - Windows Holographic for Business
 
+- **For Windows 11 devices, there is an issue** between the Windows 11 client and the [Windows VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
+
+  A device with one or more Intune VPN profiles loses its VPN connectivity when the device processes multiple changes to VPN profiles for the device simultaneously. When the device checks-in with Intune a second time, it processes the VPN profile changes, and connectivity is restored.
+
+  **The following changes can cause a loss of VPN functionality**:
+
+  - You change or update an existing VPN profile that was previously processed by the Windows 11 device. This action deletes the original profile, and applies the updated profile.
+  - Two new VPN profiles apply to the device at the same time.
+  - An active VPN profile is removed at the same time a new VPN profile is assigned.
+
+  **This issue doesn't apply and VPN connectivity remains in the following scenarios**: 
+
+  - A Windows 11 device doesn't have an existing VPN profile assigned, and the devices receives one Intune VPN profile.
+  - Windows 11 devices have an existing VPN profile assigned, and are assigned another VPN profile with no other profile changes.
+  - A Windows 10 device upgrades to Windows 11, and there are no changes to that device's VPN profiles. After the upgrade to Windows 11, any changes to the devices VPN profiles or adding new VPN profiles will trigger the issue.
+  - Windows 11 requires that:
+
+    - All of the [IKE Security Association Parameters](vpn-settings-windows-10.md#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](vpn-settings-windows-10.md#child-security-association-parameters-ikev2-only) settings are configured
+
+      **OR**
+
+    - None of the [IKE Security Association Parameters](vpn-settings-windows-10.md#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](vpn-settings-windows-10.md#child-security-association-parameters-ikev2-only) settings are configured
+
+    If you only configure one of the **IKE Security Association Parameters** or **Child Security Association Parameters** settings, then there's a loss of VPN functionality.
+
 ## Step 1 - Deploy your VPN app
 
 Before you can use VPN profiles assigned to a device, you must install the VPN app. This VPN app connects to your VPN server.
@@ -90,7 +97,7 @@ There are different VPN apps available. On user devices, you deploy the VPN app 
 
 Some platforms and VPN apps require an app configuration policy to preconfigure the VPN app, instead of a VPN device configuration profile. This section also lists the platforms and VPN apps that must use an app configuration policy.
 
-To help you assign the app using Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+To help you assign the app using Intune, go to [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 ### VPN connection types
 
@@ -195,7 +202,7 @@ You can create VPN profiles using the following VPN connection types:
 After the VPN app is assigned to the device, this next step creates the device configuration policy that configures the VPN connection. If your VPN app connection type uses an app configuration policy to configure the app, then skip this step.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Choose the platform of your devices. Your options:
@@ -225,11 +232,11 @@ After the VPN app is assigned to the device, this next step creates the device c
     - [Windows 8.1](vpn-settings-windows-8-1.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the user or groups that receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the user or groups that receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
@@ -245,7 +252,7 @@ When you create the VPN profile, you choose a SCEP or PKCS certificate profile t
 
 If you use certificate-based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This assignment makes sure each device recognizes the legitimacy of your certificate authority.
 
-For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
+For more information about how to create and use certificate profiles in Intune, go to [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
 
 > [!NOTE]
 > Certificates added using the **PKCS imported certificate** profile aren't supported for VPN authentication. Certificates added using the **PKCS certificates** profile are supported for VPN authentication.

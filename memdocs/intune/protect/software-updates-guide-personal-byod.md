@@ -21,6 +21,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-updates
 ---
 
 # Software updates planning guide for BYOD and personal devices in Microsoft Intune
@@ -51,7 +52,7 @@ Users can enroll their personal devices in Microsoft Intune.
 
 - When they enroll iOS/iPadOS devices, the behavior depends on the enrollment option you use. For information on the different iOS/iPadOS enrollment options for personal devices, go to [iOS/iPadOS enrollment guide](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
-✔️ Create an enrollment restrictions policy that requires a minimum and maximum operating system version. This policy helps create a good baseline for new enrollments.
+✅ Create an enrollment restrictions policy that requires a minimum and maximum operating system version. This policy helps create a good baseline for new enrollments.
 
 The following example shows an enrollment device platform restrictions policy for Android Enterprise devices:
 
@@ -65,7 +66,7 @@ For more information on this feature, go to [Device platform restrictions in Int
 
 Compliance policies help keep devices up-to-date. If a device isn't using a version you define, then the device is marked as noncompliant. Noncompliant devices are shown in the Microsoft Intune admin center.
 
-✔️ Create compliance policies. Use the built-in reporting to see noncompliant devices and see the individual settings that aren't compliant.
+✅ Create compliance policies. Use the built-in reporting to see noncompliant devices and see the individual settings that aren't compliant.
 
 In your compliance policy, you can:
 
@@ -84,7 +85,7 @@ For more information on compliance policies, go to:
 
 ## Use app protection policies
 
-✔️ Use app protection policies on unmanaged personal devices that access organization resources.
+✅ Use app protection policies on unmanaged personal devices that access organization resources.
 
 At the app level, you can use app protection policies to determine the minimum OS and patch versions.
 
@@ -96,7 +97,7 @@ For more information on app protection policies, go to [App protection policies 
 
 ## Use custom notifications
 
-✔️ Create a custom notification to alert users of upcoming OS version requirements. Use this feature to proactively communicate to users to update their devices so they don't lose access:
+✅ Create a custom notification to alert users of upcoming OS version requirements. Use this feature to proactively communicate to users to update their devices so they don't lose access:
 
 :::image type="content" source="./media/software-updates-guide-android/custom-notification.png" alt-text="Screenshot that shows a custom notification message in the Microsoft Intune admin center.":::
 
@@ -107,7 +108,7 @@ For more information on these features, go to:
 - [Conditional launch actions with app protection policies in Intune](../apps/app-protection-policies-access-actions.md)
 - [Using custom notifications in Intune](../remote-actions/custom-notifications.md#considerations-for-using-custom-notifications)
 
-## Next steps
+## Related articles
 
 - [Software updates planning guide for managed Android devices](software-updates-guide-android.md)
 - [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)

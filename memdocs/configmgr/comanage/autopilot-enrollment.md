@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: gowdhamankarthikeyan
 ms.author: gokarthi
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 manager: apoorvseth
 ms.collection: tier3
 ---
@@ -18,9 +18,9 @@ ms.collection: tier3
 
 <!-- Intune 11300628 -->
 
-When you use [Windows Autopilot](/autopilot/windows-autopilot) to provision a device, it first joins Microsoft Entra and enrolls in Microsoft Intune. Previously, if the intended end-state of the device was co-management, the experience was difficult because the installation of the Configuration Manager client as a Win32 app introduces component timing and policy delays.
+When you use [Windows Autopilot](/autopilot/overview) to provision a device, it first joins Microsoft Entra and enrolls in Microsoft Intune. Previously, if the intended end-state of the device was co-management, the experience was difficult because the installation of the Configuration Manager client as a Win32 app introduces component timing and policy delays.
 
-Now you can configure co-management settings in Intune, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. This feature and its functionality are referred to as Autopilot into co-management. 
+Now you can configure co-management settings in Intune, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. This feature and its functionality are referred to as Autopilot into co-management.
 
 > [!NOTE]
 > While it is still possible to enable co-management on Windows devices during Autopilot without the Autopilot into co-management feature, the documentation, guidance, and requirements below are specific to this feature alone and do not apply specifically to any other method.
@@ -192,7 +192,7 @@ Investigate how the enrollment status page failed while waiting for Configuratio
 - The **Device setup** phase fails while waiting on the task sequence to complete. For more information, see [The task sequence doesn't complete](#the-task-sequence-doesnt-complete).
 
 > [!TIP]
-> For more information on troubleshooting Autopilot, see [Troubleshooting overview](/autopilot/troubleshooting).
+> For more information on troubleshooting Autopilot, see [Troubleshooting Windows Autopilot overview](/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview).
 
 ### The client installation doesn't complete
 

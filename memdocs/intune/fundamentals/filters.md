@@ -110,7 +110,7 @@ There are some general restrictions when creating filters:
 
     You can also create filters in:
 
-    - **Devices** > **Filters**
+    - **Devices** > **Organize devices** > **Filters**
     - **Apps** > **Filters**
 
 3. Select **Managed devices** or **Managed apps**:
@@ -229,7 +229,7 @@ After you create a filter, you can filter the existing list of filters by platfo
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
 
-    You can also go to **Devices** > **Filters**, or **Apps** > **Filters**.
+    You can also go to **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
 
 2. Select **Add filters**:
 
@@ -255,7 +255,7 @@ After the filter is assigned to your policies, you can see all the policies that
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
 
-    You can also go to **Devices** > **Filters**, or **Apps** > **Filters**.
+    You can also go to **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
 
 2. Select the filter you want to review > **Associated Assignments** tab.
 
@@ -269,7 +269,7 @@ After a filter is created, it can also be changed or updated.
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
 
-    You can also update filters in **Devices** > **Filters**, or **Apps** > **Filters**.
+    You can also update filters in **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
 
 2. To update an existing filter, select the filter you want to change. Select **Rules** > **Edit**, and make your changes:
 
@@ -281,7 +281,7 @@ After a filter is created, it can also be changed or updated.
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
 
-    You can also delete filters in **Devices** > **Filters**, or **Apps** > **Filters**.
+    You can also delete filters in **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
 
 2. Next to the filter, select the ellipses (**...**), and select **Delete**:
 

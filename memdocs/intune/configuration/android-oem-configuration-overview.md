@@ -7,11 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/04/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
-ms.localizationpriority:
+ms.localizationpriority: Low
 ms.assetid: 
 
 # optional metadata
@@ -60,7 +60,11 @@ When the OEM adds and improves management features, the OEM also updates the app
 
 When using OEMConfig, be familiar with the following information:
 
-- The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. To reduce the size, you can try one or more of the following options:
+- The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. When you try to create a new profile that exceeds 500 KB in the Intune admin center, then the following error is shown:
+
+  `Profile is larger than 500KB. Adjust profile settings to decrease the size.`
+
+  To reduce the size, you can try one or more of the following options:
 
   - Reduce the number of settings configured in the profile.
   - In the built-in JSON editor in the Intune admin center, reduce the size of the value entered for the keys.
@@ -127,7 +131,7 @@ You get the OEMConfig app from the Managed Google Play Store, add the app to Int
 After the app is added to Intune, you create an OEMConfig profile to configure the features defined in the app.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Android Enterprise**.
@@ -196,7 +200,7 @@ The next time the device checks for configuration updates, the OEM-specific sett
 
 After your profile is deployed, you can check its status:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**. A list of all your profiles is shown.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**. A list of all your profiles is shown.
 2. Select your OEMConfig profile. You can get more information on your profile, including successful and failed deployments:
 
     - **Overview**: Shows the profile assignment statuses. For more information on what the statuses mean, go to [Monitor device profiles in Microsoft Intune](device-profile-monitor.md).
@@ -232,6 +236,7 @@ Intune supports the following OEMConfig apps:
 | Ecom - Smart-Ex 02 | com.ecom.econfig.smart | |
 | Elo | com.elotouch.oemconfig | [Elo OEMConfig Configurations](https://www.elotouch.com/oemconfig-configurations) |
 | Getac | com.getac.app.getacoemconfig | |
+| Handheld | com.handheldgroup.oemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
 | Honeywell - Scanpal EDA | com.honeywell.oemconfig.scanpal | |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 |
@@ -246,6 +251,7 @@ Intune supports the following OEMConfig apps:
 | Motorola Solutions | com.motorolasolutions.lexoemconfig | |
 | Motorola Mobility | com.motorola.oemconfig.rel | [Moto OEMConfig Guide](https://motorola-global-portal.custhelp.com/app/answers/prod_answer_detail/a_id/160503 ) |
 | Panasonic | com.panasonic.mobile.oemconfig | |
+| Pepperl+Fuchs SE | com.ecom.econfig.smart0x | |
 | Point Mobile | device.apps.emkitagent | |
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/welcome/) |
 | Seuic | com.seuic.seuicoemconfig | | 

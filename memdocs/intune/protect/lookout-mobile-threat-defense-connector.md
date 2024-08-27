@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 07/31/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Lookout Mobile Endpoint Security connector with Intune
@@ -61,8 +62,6 @@ The following platforms are supported for Lookout when enrolled in Intune:
 
 - **Android 5.0 and later**
 - **iOS 12 and later**
-
-For additional information about platform and language support, visit the [Lookout website](https://personal.support.lookout.com/hc/articles/114094140253).
 
 ## Prerequisites
 

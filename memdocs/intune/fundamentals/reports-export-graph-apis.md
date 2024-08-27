@@ -40,6 +40,7 @@ Microsoft Intune will export reports using the following Microsoft Graph API end
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
+https://graph.microsoft.com/v1.0/deviceManagement/reports/exportJobs
 ```
 
 ## Example devices report request and response

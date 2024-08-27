@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/28/2024
+ms.date: 04/10/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -98,10 +98,15 @@ Policy sets, new to 1910, have the following known issues.
   - Android store app
   - Android line-of-business app
   - Managed Android line-of-business app
-  - Microsoft 365 Apps (Windows 10)
+  - Microsoft 365 Apps (Windows 10 and later)
+  - Microsoft 365 Apps (macOS)
+  - Microsoft Edge (Windows 10 and later)
+  - Microsoft Edge (macOS)
+  - Microsoft Defender ATP (macOS)
+  - Windows MSI line-of-business app
   - Web link
-  - Built-in iOS/iPadOS app
-  - Built-in Android app
+  - Built-In iOS/iPadOS app
+  - Built-In Android app
 
 > [!NOTE]
 > Policy sets supports a  subset of Intune App, Policy and Platform types. If an app or policy type is not available in the Policy Set picker experience, it is not officially supported.

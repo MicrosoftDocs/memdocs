@@ -27,6 +27,7 @@ ms.collection:
 - highpri
 - highseo
 - certificates
+- sub-certificates
 ---
 
 # Configure infrastructure to support SCEP with Intune
@@ -71,6 +72,7 @@ To support SCEP, the following on-premises infrastructure must run on servers th
 - **NDES server role** – To support using the Certificate Connector for Microsoft Intune with SCEP, you must configure the Windows Server that hosts the certificate connector with the Network Device Enrollment Service (NDES) server role. The connector supports installation on Windows Server 2012 R2 or later. In a later section of this article, we guide you through [installing NDES](#set-up-ndes).
 
   - The server that hosts NDES and the connector must be domain-joined and in the same forest as your Enterprise CA.
+  - The server that hosts NDES must not be a domain controller.
   - Don't use NDES that's installed on the server that hosts the Enterprise CA. This configuration represents a security risk when the CA services internet requests, and installation of the connector isn't supported on the same server as your issuing Certification Authority (CA).
   - Internet Explorer Enhanced Security Configuration [must be disabled on the server that hosts NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) and the Microsoft Intune Connector.
 
@@ -329,17 +331,11 @@ For more information about NDES, see [Network Device Enrollment Service Guidance
 
       - **Management Tools** > **IIS 6 Management Compatibility** > **IIS 6 Metabase Compatibility**
       - **Management Tools** > **IIS 6 Management Compatibility** > **IIS 6 WMI Compatibility**
-      - On the server, add the NDES service account as a member of the local **IIS_IUSR** group.
+      - On the server, add the NDES service account as a member of the local **IIS_IUSRS** group.
 
-2. On the computer that hosts the NDES service, run the following command in an elevated command prompt. The following command sets the SPN of the NDES Service account:
+2. Configure a service principal name (SPN) in Active Directory, if necessary. For information about how to set the SPN, see [Verify if it's necessary to set a service principal name for NDES](/windows-server/identity/ad-cs/create-domain-user-account-ndes-service-account).  
 
-   `setspn -s http/<DNS name of the computer that hosts the NDES service> <Domain name>\<NDES Service account name>`
-
-   For example, if the computer that hosts the NDES service is named **Server01**, your domain is **Contoso.com**, and the service account is **NDESService**, use:
-
-   `setspn –s http/Server01.contoso.com contoso\NDESService`  
-
-### Configure the NDES service
+### Configure the NDES service  
 
 To configure the NDES service, use an account that is an *Enterprise Administrator*.
  

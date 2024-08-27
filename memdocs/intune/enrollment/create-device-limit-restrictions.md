@@ -8,11 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
-ms.localizationpriority: 
+ms.localizationpriority: Low
 ms.assetid: 
 
 # optional metadata

@@ -1,14 +1,14 @@
 ---
 title: Windows Autopilot motherboard replacement
-description: Understand how Windows Autopilot deployments function when you replace the motherboard on a device.
+description: Understand how Windows Autopilot deployments function when the motherboard is replaced on a device.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/21/2024
+ms.date: 06/19/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -24,13 +24,13 @@ This document offers guidance for Windows Autopilot device repair scenarios that
 
 Repairing Autopilot enrolled devices is complex, as it tries to balance OEM requirements with Windows Autopilot requirements. Specifically, OEM requirements include strict uniqueness across motherboards, MAC addresses, etc. Windows Autopilot requires strict uniqueness at the hardware hash level for each device to enable successful registration. The hardware hash doesn't always accommodate all the OEM hardware component requirements. These requirements are sometimes at odds, which can cause issues with some repair scenarios. The hardware hash is also known as the hardware ID.
 
-If the OEM resets the OS, the device needs to be re-registered. Additionally, if a motherboard is replaced on an Autopilot registered device, then the following process is recommended:
+If a motherboard is replaced on an Autopilot registered device, then the following process is recommended:
 
-1. If the device isn't going back to the original tenant, [deregister it from Windows Autopilot](#deregister-the-autopilot-device-from-the-autopilot-program). If it's going back to the same tenant, you don't need to deregister it.
+1. [Deregister the device from Windows Autopilot](#deregister-the-autopilot-device-from-the-autopilot-program).
 
 1. [Replace the motherboard](#replace-the-motherboard).
 
-1. If the device needs to be re-registered because of a reimage or because it will be used in a new tenant, [capture a new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
+1. [Capture the new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
 
 1. [Reregister the device](#reregister-the-repaired-device-using-the-new-device-id) with Windows Autopilot.
 
@@ -44,7 +44,7 @@ Each of these steps is described in the following sections.
 
 Before the device arrives at the repair facility, the entity that registered the device must deregister it.
 
-- If the **IT Admin** registered the device, they likely did so via Intune, Microsoft 365 admin center, or a legacy portal such as Microsoft Store for Business (MSfB). If so, they should deregister the device from Intune or Microsoft 365 admin center because devices registered in Intune don't show up in Microsoft Partner Center (MPC).
+- If the **IT Admin** registered the device, they likely did so via Intune, [Microsoft 365 admin center](https://admin.microsoft.com/), or a legacy portal such as Microsoft Store for Business (MSfB). If so, they should deregister the device from Intune or the [Microsoft 365 admin center](https://admin.microsoft.com/) because devices registered in Intune don't show up in Microsoft Partner Center (MPC).
 
 - If the **OEM or CSP partner** registered the device, they likely did so via the Microsoft Partner Center (MPC). In that case, they should deregister the device from MPC, which also removes it from the customer IT Admin's Intune account.
 
@@ -125,9 +125,15 @@ To use the **WindowsAutopilotInfo** PowerShell script, follow these steps:
    Get-WindowsAutopilotInfo.ps1 -OutputFile AutopilotHWID.csv
    ```
 
-   - If you're prompted to install the **NuGet** package, choose **Yes**.
-   - If after installing the script you get an error that `Get-WindowsAutopilotInfo.ps1` isn't found, verify that `C:\Program Files\WindowsPowerShell\Scripts` is present in your `PATH` variable.
-   - If the `Install-Script` cmdlet fails, verify that you have the default PowerShell repository registered (**Get-PSRepository**) or register the default repository with the following command:
+   - If prompted to install the **NuGet** package, select **Yes**.
+   - If after installing the script an error occurs reporting that `Get-WindowsAutopilotInfo.ps1` isn't found, verify that `C:\Program Files\WindowsPowerShell\Scripts` is present in the `PATH` variable.
+   - If the `Install-Script` cmdlet fails, verify that the default PowerShell repository is registered with the following command:
+
+    ```powershell
+    Get-PSRepository
+    ```
+
+    If the default PowerShell repository isn't registered, register it with the following command:
 
     ```powershell
     Register-PSRepository -Default -Verbose
@@ -135,13 +141,13 @@ To use the **WindowsAutopilotInfo** PowerShell script, follow these steps:
 
    > [!NOTE]
    >
-   > The `Get-WindowsAutopilotInfo` script was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure you're using the latest version of the script. The Microsoft Graph PowerShell modules may require approval of additional permissions in Microsoft Entra ID when they're first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
+   > The `Get-WindowsAutopilotInfo` script was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure to use the latest version of the script. The Microsoft Graph PowerShell modules might require approval of additional permissions in Microsoft Entra ID when they're first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
 
-The script creates a `.csv` file that contains the device information, including the complete 4K HH. Save this file so that you can access it later. The service facility uses this 4K HH to reregister device as described in the following sections. Be sure to use the `-OutputFile` parameter when saving the file, which ensures that file formatting is correct. Don't attempt to pipe the command output to a file manually.
+The script creates a `.csv` file that contains the device information, including the complete 4K HH. Save this file so that it can be accessed later. The service facility uses this 4K HH to reregister device as described in the following sections. Be sure to use the `-OutputFile` parameter when saving the file, which ensures that file formatting is correct. Don't attempt to pipe the command output to a file manually.
 
 > [!NOTE]
 >
- If the repair facility can't run the OA3 tool or PowerShell script to capture the new 4K HH, then the OEM or CSP partners must do it for them. Without some entity capturing the new 4K HH, there's no way to reregister this device as an Autopilot device.
+> If the repair facility can't run the OA3 tool or PowerShell script to capture the new 4K HH, then the OEM or CSP partners must do it for them. Without some entity capturing the new 4K HH, there's no way to reregister this device as an Autopilot device.
 
 ## Reregister the repaired device using the new device ID
 
@@ -156,11 +162,11 @@ Both ways of reregistering a device are shown in the following sections.
 
 To reregister an Autopilot device from Intune, an IT Admin would:
 
-1. Sign in to Intune.
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Navigate to **Device enrollment** > **Windows enrollment** > **Devices** > **Import**.
+1. Navigate to **Devices** > **Device onboarding** | **Enrollment** > **Windows Autopilot** | **Devices**.
 
-1. Select the **Import** button to upload a csv file containing the device ID of the device to be reregistered. The device ID was the 4K HH captured by the PowerShell script or OA3 tool described in the section [Capture a new Autopilot device ID (4K HH) from the device](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
+1. Select the **Import** option in the toolbar at the top to upload a CSV file containing the device ID of the device to be reregistered. The device ID was the 4K HH captured by the PowerShell script or OA3 tool described in the section [Capture a new Autopilot device ID (4K HH) from the device](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
 
 ### Reregister from the Microsoft Partner Center (MPC)
 
@@ -170,16 +176,13 @@ To reregister an Autopilot device from the Microsoft Partner Center MPC, an OEM 
 
 1. Navigate to the **Customer** > **Devices** page.
 
-1. Select **Add devices** to upload the csv file.
+1. Select **Add devices** to upload the CSV file.
 
-   ![Screenshot of Add devices button](images/device2.png)<br>
-   ![Screenshot of Add devices page](images/device3.png)
+When a repaired device is reregistering through MPC, the uploaded CSV file must contain the 4K HH for the device, and not just the PKID or Tuple (SerialNumber + OEMName + ModelName). If only the PKID or Tuple was used, the Autopilot service would be unable to find a match in the Autopilot database. No match would be found because no 4K HH info was previously submitted for this essentially "new" device and the upload fails, likely returning a **ZtdDeviceNotFound** error. For this reason, only upload the 4K HH. Don't upload the Tuple or PKID.
 
-When a repaired device is reregistering through MPC, the uploaded csv file must contain the 4K HH for the device, and not just the PKID or Tuple (SerialNumber + OEMName + ModelName). If only the PKID or Tuple was used, the Autopilot service would be unable to find a match in the Autopilot database. No match would be found because no 4K HH info was previously submitted for this essentially "new" device and the upload fails, likely returning a **ZtdDeviceNotFound** error. For this reason, only upload the 4K HH. Don't upload the Tuple or PKID.
+When including the 4K HH in the CSV file, the PKID or Tuple don't also need to be included. Those columns might be left blank, as shown in the following example:
 
-When including the 4K HH in the csv file, you don't also need to include the PKID or Tuple. Those columns might be left blank, as shown in the following example:
-
-![Screenshot of a CSV file in Excel with a hash value in the Hardware Hash column.](images/hh.png)
+:::image type="content" source="images/hh.png" alt-text="Screenshot of a CSV file in Excel with a hash value in the Hardware Hash column.":::
 
 ## Reset the device
 
@@ -199,7 +202,7 @@ To use the reset feature in Windows on a device:
 
    1. Under **How would you like to reinstall Windows?**, select either option.
 
-   1. Under **Additional settings**, select the **Next** button.
+   1. Under **Additional settings**, select **Next**.
 
    1. Under **Ready to reset this PC**, select the **Reset** button.
 
@@ -215,7 +218,7 @@ To use the reset feature in Windows on a device:
 
    1. Under **How would you like to reinstall Windows?**, select either option.
 
-   1. Under **Additional settings**, select the **Next** button.
+   1. Under **Additional settings**, select **Next**.
 
    1. Under **Ready to reset this PC**, select the **Reset** button.
 
@@ -241,7 +244,7 @@ If the profiles status of a device shows **Fix pending**, Autopilot is in the pr
 1. Manually deregister the device using the steps in the [Deregister a device](#deregister-a-device) section.
 1. Reregister the device.
 
-For more information, see [Troubleshoot Autopilot device import and enrollment: Autopilot profile not applied after reimaging to an older OS version](troubleshoot-device-enrollment.md#autopilot-profile-not-applied-after-reimaging-to-an-older-os-version).
+For more information, see [Why is the Windows Autopilot profile not applied after a hardware change occurred on a device?](troubleshooting-faq.yml#why-is-the-windows-autopilot-profile-not-applied-after-a-hardware-change-occurred-on-a-device-).
 
 ## Specific repair scenarios
 
@@ -253,7 +256,7 @@ This section covers the most common repair scenarios, and their impact on Autopi
 > - In most test scenarios, the repaired and reregistered device needed to go through OOBE again for Autopilot to be enabled.
 > - Motherboard replacement scenarios often result in lost data. Repair centers or customers should be reminded to back up data before repair.
 > - When a repair facility can't write device info into the BIOS of the repaired device, new processes need to be created to successfully enable Autopilot.
-> - Repaired device should have the Product Key (DPK) preinjected in the BIOS before capturing the new 4K HH (device ID).
+> - Repaired device should have the Product Key (DPK) pre-injected in the BIOS before capturing the new 4K HH (device ID).
 
 For the **Supported** column in the following table:
 
@@ -271,7 +274,7 @@ For the **Supported** column in the following table:
 | **Motherboard replacement where only the motherboard is replaced. All other parts remain same. The new motherboard was taken from a previously used device that has never been enabled for Autopilot.** | Yes | 1. Deregister damaged device. <br> 2. Replace motherboard (with new RDPK preinjected in BIOS). <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
 | **Motherboard replacement where only the motherboard is replaced. All other parts remain same. The new motherboard was taken from a previously used device that has been Autopilot-enabled before.** | Yes | 1. Deregister old device which motherboard is taken from. <br> 2. Deregister damaged device that needs to be repaired. <br> 3. Replace motherboard in repair device with motherboard from other Autopilot device (with new RDPK preinjected in BIOS). <br> 4. To gain access, reimage device or sign-in using customer's credentials. <br> 5. Write old device info into BIOS (same s/n, model, etc.) <br> 6. Capture new 4K HH. <br> 7. Reregister repaired device. <br> 8. Reset device back to OOBE. <br> 9. Go through Autopilot OOBE (customer). <br> 10. Autopilot successfully enabled. <br><br> The repaired device can also be used successfully as a normal, non-Autopilot device. |
 | **BIOS info excluded from motherboard replacement device** | No | Repair facility doesn't have BIOS tool to write device info into BIOS after Motherboard replacement. <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard (BIOS does NOT contain device info). <br> 3. Reimage and write DPK into image. <br> 4. Capture new 4K HH. <br> 5. Reregister repaired device. <br> 6. Create Autopilot profile for device. <br> 7. Go through Autopilot OOBE (customer). <br> 8. Autopilot FAILS to recognize repaired device. |
-| **Motherboard replacement when there's no TPM** | Yes | Enabling Autopilot devices without a TPM isn't recommended. However, it's possible to enable an Autopilot device that doesn't have a TPM via user-driven mode. Pre-provision and self-deploying modes aren't supported without a TPM. When using user-driven mode, you would: <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
+| **Motherboard replacement when there's no TPM** | Yes | Enabling Autopilot devices without a TPM isn't recommended. However, it's possible to enable an Autopilot device that doesn't have a TPM via user-driven mode. Pre-provision and self-deploying modes aren't supported without a TPM. When using user-driven mode: <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
 | **New DPK written into image on repaired Autopilot device with a new motherboard** | Yes | Repair facility replaces normal motherboard on damaged device. motherboard doesn't contain any DPK in the BIOS. Repair facility writes DPK into image after motherboard replacement. <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard - BIOS does NOT contain DPK info. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reset or reimage device to pre-OOBE and write DPK into image. <br> 7. Reregister repaired device. <br> 8. Go through Autopilot OOBE. <br> 9. Autopilot successfully enabled. |
 | **New Repair Product Key (RDPK)** | Yes | Using a motherboard with a new RDPK preinjected results in a successful Autopilot refurbishment scenario. <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard (with new RDPK preinjected in BIOS). <br> 3. Reimage or rest image to pre-OOBE. <br> 4. Write device info into BIOS. <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reimage or reset image to pre-OOBE. <br> 8. Go through Autopilot OOBE. <br> 9. Autopilot successfully enabled. |
 | **No Repair Product Key (RDPK) injected** | No | This scenario violates Microsoft policy and breaks the Windows Autopilot experience. |
@@ -288,30 +291,30 @@ For the **Supported** column in the following table:
 
 The following parts can be replaced without compromising Autopilot enablement or requiring special additional repair steps:
 
-- Memory (RAM or ROM)
-- Power Supply
-- Video Card
-- Card Reader
-- Sound card
-- Expansion card
-- Microphone
-- Webcam
-- Fan
-- Heat sink
-- CMOS battery
+- Memory (RAM or ROM).
+- Power Supply.
+- Video Card.
+- Card Reader.
+- Sound card.
+- Expansion card.
+- Microphone.
+- Webcam.
+- Fan.
+- Heat sink.
+- CMOS battery.
 
 Other repair scenarios not yet tested and verified include:
 
-- Daughterboard replacement
-- CPU replacement
-- Wifi replacement
-- Ethernet replacement
+- Daughterboard replacement.
+- CPU replacement.
+- Wifi replacement.
+- Ethernet replacement.
 
 ## FAQ
 
 | Question | Answer |
 | --- | --- |
-| What to do if you see another customer's welcome page? | If you continue seeing another customer's welcome page on a replacement device or refurbished motherboard, a ticket needs to be raised to Microsoft to fix the device ownership. You can open a ticket through the Microsoft Intune admin center by selecting the Help and Support option outlined [here](/mem/get-support). If you don't have access to Microsoft Intune, you can submit a ticket through Microsoft Store for Business by selecting Manage > Support and selecting Technical Support. You can also submit a ticket through your Microsoft Volume Licensing Center agreement, instructions outlined [here](https://support.microsoft.com/topic/microsoft-software-assurance-support-incident-submission-74a9a148-9a75-ecc8-4420-14191e634d65). Title all tickets **Autopilot Deregistration Request** to streamline requests. |
+| What to do if another customer's welcome page is displayed? | If another customer's welcome page is displayed on a replacement device or refurbished motherboard, a case needs to be raised to Microsoft to fix the device ownership. A case can be opened through the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting the Help and Support option outlined [here](/mem/get-support). If there isn't access to Microsoft Intune, a case can be submitted through Microsoft Store for Business by selecting **Manage** > **Support** and selecting **Technical Support**. A case can also be submitted through the Microsoft Volume Licensing Center agreement. Instructions on how to submit a case  are outlined at [Microsoft Software Assurance - Support Incident Submission](https://support.microsoft.com/topic/microsoft-software-assurance-support-incident-submission-74a9a148-9a75-ecc8-4420-14191e634d65). Title all cases **Autopilot Deregistration Request** to streamline requests. |
 | We have a tool that programs product information into the BIOS after the motherboard replacement. Do we still need to submit a CBR report for the device to be Autopilot-capable? | No. Not if the in-house tool writes the minimum necessary information into the BIOS that the Autopilot program looks for to identify the device, as described earlier in this document. |
 | What if only some components are replaced rather than the full motherboard? | It's true that some limited repairs don't prevent the Autopilot algorithm from successfully matching the post-repair device with the pre-repair device. However, Microsoft recommends to always go through the motherboard replacement steps described in the previous sections to ensure success. |
 | How does a repair technician gain access to a broken device if they don't have the customer's sign-in credentials? | The technician has to reimage the device and use their own credentials during the repair process. |

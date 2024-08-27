@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/06/2023  
+ms.date: 08/21/2024  
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -41,9 +41,10 @@ For each section in this guide, review the associated tasks. Some tasks are requ
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md) 
 * [Set mobile device management authority](mdm-authority-set.md) 
-* [Have Global Administrator or Intune administrator Microsoft Entra permissions](role-based-access-control.md)  
 
- For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management, see [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md).    
+For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. These roles are highly privileged and have more access than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged built-in role that's available to complete tasks. 
+
+For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management, see [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md).    
 
 ## Step 2: Plan for your deployment  
 
@@ -52,7 +53,7 @@ Use the Microsoft Intune planning guide to define your device management goals, 
 For more information, see [Microsoft Intune planning guide](intune-planning-guide.md).  
 
 ## Step 3: Create compliance policies    
-Use compliance policies to ensure that devices accessing your data are secure and meet your organization's standards. The final stage of the enrollment process is the compliance evaluation, which verifies that the settings on the device meet your policies. Device users must resolve all compliance issues to get access to protected resources.  Intune marks devices that fall short of compliance requirements as *non-compliant* and takes additional action (such as sending the user a notification, restricting access, or wiping the device) according to your *action for noncompliance* configurations.  
+Use compliance policies to ensure that devices accessing your data are secure and meet your organization's standards. The final stage of the enrollment process is the compliance evaluation, which verifies that the settings on the device meet your policies. Device users must resolve all compliance issues to get access to protected resources.  Intune marks devices that fall short of compliance requirements as *noncompliant* and takes additional action (such as sending the user a notification, restricting access, or wiping the device) according to your *action for noncompliance* configurations.  
 
 You can use Microsoft Entra Conditional Access policies in conjunction with device compliance policies to control access to Windows PCs, corporate email, and Microsoft 365 services. For example, you can create a policy that blocks employees from accessing Microsoft Teams in Edge without first enrolling or securing their device.    
 
@@ -160,8 +161,10 @@ After devices are set up, you can use supported remote actions to manage and tro
 | ---- | ------ | 
 |[Take remote action on devices](../remote-actions/device-management.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
 |[Use TeamViewer to remotely administer Intune devices](../remote-actions/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |  
-|[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. |  
-|[Use organizational messages](../remote-actions/organizational-messages-overview.md)|Use organizational messages to send important messages to employees on Intune-managed devices running Windows 11. Organizational messages can be used to communicate in remote and hybrid work scenarios.|
+|[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. | 
+
+<!-- org msg moved to m365 admin center
+|[Use organizational messages](/microsoft-365/admin/misc/organizational-messages-microsoft-365)|Set up organizational messages in the Microsoft 365 admin center to send important messages to employees on Intune-managed devices running Windows 11. You can use organizational messages to communicate in remote and hybrid work scenarios.| -->  
 
 ## Step 10: Help employees and students   
 

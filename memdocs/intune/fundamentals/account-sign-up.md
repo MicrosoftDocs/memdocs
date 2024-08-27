@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/19/2023
+ms.date: 06/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- get-started
 ---
 
 

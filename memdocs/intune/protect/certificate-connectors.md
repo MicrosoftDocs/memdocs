@@ -30,6 +30,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - certificates
+- sub-certificates
 ---
 
 # Certificate connectors for Microsoft Intune

@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 09/27/2023
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -29,7 +29,7 @@ ms.collection:
 - tier2
 ---
 
-# Cloud PCs that aren't available report (preview)
+# Cloud PCs that aren't available report
 
 The **Cloud PCs that aren't available** helps Windows 365 administrators identify Cloud PCs that might be currently unavailable.
 
@@ -37,7 +37,7 @@ This report displays recent conditions up to 5 to 15 minutes ago. Therefore, Clo
 
 ## Use the Cloud PCs that aren't available report
 
-To get to the **Cloud PCs that aren't available** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Overview** > **Cloud PC performance (preview)** > **View report** (under **Cloud PCs that aren't available**).
+To get to the **Cloud PCs that aren't available** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Overview** > **Cloud PC performance** > **View report** (under **Cloud PCs that aren't available**).
 
 ![Screenshot of getting to the Cloud PCs that aren't available report](./media/report-cloud-pcs-not-available/view-report-cloud-pcs-not-available.png)
 

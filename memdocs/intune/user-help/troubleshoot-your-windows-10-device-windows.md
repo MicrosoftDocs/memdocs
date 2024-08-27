@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 04/30/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -51,13 +51,13 @@ If your account isn't appearing in the **Settings** app, go through the setup st
 3. Identify the version of Windows you're using and then:   
     * Windows 10 (version 1607 and later) and Windows 11: Select **Access work or school**.
     * Windows 10, version 1511 and earlier: Select **Work access**.  
-4. Check for your account. If it's not listed, select the **Connect** plus sign button to add it. 
-5. Sign in with your work or school credentials. 
-6. Follow the onscreen prompts to finish connecting.  
-7. When complete, your account will be added as a connection. You'll have access to any resources your organization makes available.   
+4. Check for your account. If it's not listed, select **Connect** to add it. 
+5. Sign in with your work or school account, and then follow the onscreen prompts to finish connecting.  
+
+When complete, your account appears as a connection, and you have access to any resources your organization makes available.   
 
 ## Contact IT support for access problems   
-If you see your work or school account listed in the Settings app, then your device and account are already connected. Contact your IT support person for further help. They may have put restrictions or requirements in place that prevent you from accessing certain resources.  
+If you see your work or school account listed in the Settings app, then your device and account are already connected. Contact your IT support person for further help. They may have put restrictions or requirements in place that prevent you from accessing certain resources. Sign in the Company Portal app or [website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's helpdesk details.  
 
 ## Error messages  
 
@@ -68,16 +68,14 @@ If you see your work or school account listed in the Settings app, then your dev
 #### Resolution
 1. Re-enter your username and password. 
 2. If it still doesn't work, contact your IT support person to get the correct URL (example: <code>www.yourcompany.onmicrosoft.com</code>). 
-3. When prompted, enter the provided URL. 
+3. When prompted to, enter the provided URL. 
 
 ### It looks like you're not connected. Make sure you're connected to the network.
 
 **Cause**: Your device isn't connected to Wi-Fi and a connection is required to add a work or school account.     
 
 #### Resolution
-1. From your device toolbar or settings, select the **Network status** globe icon.
-2. Select a Wi-Fi network > **Connect**.  
-3. Try to connect your account again.  
+Connect to a Wi-Fi network and then try adding your account again.  
 
 ### Your device is already being managed by an organization.  
 
@@ -87,6 +85,3 @@ If you see your work or school account listed in the Settings app, then your dev
 Contact your IT support person to find out how they want you to proceed.    
 
 
-## Next steps  
-
-Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

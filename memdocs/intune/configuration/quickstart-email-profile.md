@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2023
+ms.date: 08/14/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,7 +43,11 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator. If you created an Intune Trial subscription, then the account that created the subscription is the Global admin.
+- To configure this policy, at a minimum, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the **Policy and Profile Manager** built-in Intune role.
+
+  If you created an Intune Trial subscription, then the account that created the subscription is the Global Administrator.
+
+  The Global Administrator has more permissions than needed to create this policy. We recommend you use the least privileged role to complete this task, which is the **Policy and Profile Manager** built-in Intune role.
 
 For more information on the different roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
@@ -51,14 +55,14 @@ For more information on the different roles in Intune, go to [Role-based access 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **Configuration** > **Create**:
+2. Go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**:
 
     :::image type="content" source="./media/quickstart-email-profile/ios-create-profile.png" alt-text="Create a new device configuration profile in Microsoft Intune using the Intune admin center.":::
 
 3. Enter the following properties:
 
    - **Platform**: Select **iOS/iPadOS**.
-   - **Profile type**: Select **Email**.
+   - **Profile type**: Select **Templates** > **Email**.
   
 4. Select **Create**.
 
@@ -67,7 +71,7 @@ For more information on the different roles in Intune, go to [Role-based access 
    - **Name**: Enter a descriptive name for the new profile. For this example, enter **iOS require work email**.
    - **Description**: Enter **Require iOS/iPadOS devices to use work email**.
 
-   :::image type="content" source="./media/quickstart-email-profile/ios-email-profile-name.png" alt-text="Create an email device configuration profile for iOS/iPadOS devices in Microsoft Intune and Intune admin center. Enter the profile name and description.":::
+   :::image type="content" source="./media/quickstart-email-profile/ios-email-profile-name.png" alt-text="Create an email device configuration profile for iOS/iPadOS devices in Microsoft Intune and Intune admin center.":::
 
 6. Select **Next**.
 
@@ -83,7 +87,7 @@ For more information on the different roles in Intune, go to [Role-based access 
 
 9. In **Scope tags** (optional), select **Next**. In this example, we don't use scope tags.
 
-10. In **Assignments**, use the drop-down for **Assign to** and select **All users and all devices**.  Then, select **Next**.
+10. In **Assignments**, use the drop-down for **Assign to** and select **All users and all devices**. Then, select **Next**.
 
 11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned.
 
@@ -91,7 +95,7 @@ For more information on the different roles in Intune, go to [Role-based access 
 
 If you don't use this profile for other tutorials or testing, then you can delete it:
 
-1. In the Intune admin center, select **Devices** > **Configuration**.
+1. In the Intune admin center, select **Devices** > **Manage devices** > **Configuration**.
 2. Select the **iOS/iPadOS require work email** profile you created, and then select **Delete**.
 
 ## Next steps

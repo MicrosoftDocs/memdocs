@@ -50,7 +50,7 @@ Class SMS_ObjectContainerItem : SMS_BaseClass
 
  Qualifiers: [Not_null]  
 
- The unique id of the folder.  
+ The unique ID of the folder.  
 
  `InstanceKey`  
  Data type: `String`  
@@ -77,7 +77,7 @@ Class SMS_ObjectContainerItem : SMS_BaseClass
 
  Qualifiers: [key, Not_null]  
 
- The unique id of the relation.  
+ The unique ID of the relation.  
 
  `ObjectType`  
  Data type: `UInt32`  
@@ -105,7 +105,9 @@ Class SMS_ObjectContainerItem : SMS_BaseClass
 |23|TYPE_DRIVERPACKAGE|  
 |25|TYPE_DRIVER|  
 |1011|TYPE_SOFTWAREUPDATE|  
-|2011|TYPE_CONFIGURATIONBASELINE|  
+|2011|TYPE_CONFIGURATIONBASELINE|
+|5000|TYPE_DEVICE_COLLECTION|
+|5001|TYPE_USER_COLLECTION|
 
  `ObjectTypeName`  
  Data type: `String`  
@@ -126,7 +128,7 @@ Class SMS_ObjectContainerItem : SMS_BaseClass
  The sitecode of the site that the relation was originally created from.  
 
 ## Remarks  
-
+When attempting to move an item from a root node such as a user collection or device collection, the item doesn't exist as an SMS_ObjectContainerItem. As such a new instance will need to be created instead.
 ## Requirements  
 
 ## Runtime Requirements  

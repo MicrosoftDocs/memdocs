@@ -138,11 +138,13 @@ With these additional optional prerequisites, recipients can approve or deny the
 
     1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Microsoft Entra ID**, and select **App registrations**.
 
-    1. Select the Client (Native) application that you created for Configuration Manager **Cloud Management** integration.
+    1. Select the **Client** application created for Configuration Manager **Cloud Management** integration.
 
     1. In the **Manage** menu, select **Authentication**.
 
-        1. Go to Single-Page application - **Redirect URIs**; paste in the following path: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`
+        1. Add a new **Single-page application** type if not already present.
+          
+        1. In the **Redirect URIs** section, paste in the following path: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`
 
         1. Replace `<CMG FQDN>` with the fully qualified domain name (FQDN) of your cloud management gateway (CMG) service. For example, GraniteFalls.Contoso.com.
 

@@ -27,40 +27,41 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- magic-ai-copilot
 ---
 
 # Use Windows 10/11 templates to configure group policy settings in Microsoft Intune
 
-**Administrative Templates** in Microsoft Intune include thousands of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Google Chrome, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings allow administrators to create group policies using the cloud.
+**Administrative Templates** in Microsoft Intune include thousands of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Google Chrome, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings enable administrators to create group policies using the cloud.
 
 This feature applies to:
 
 - Windows 11
 - Windows 10
 
-The Intune templates are 100% cloud-based, are built in to Intune (no downloading), and don't require any customizations, including using OMA-URI. They offer a straight-forward way to configure the settings, and find the settings you want:
+The Intune templates are 100-percent cloud-based, are built in to Intune (no downloading), and don't require any customizations, including using OMA-URI. They offer a straight-forward way to find and configure the settings you want:
 
-- The **Windows settings** are similar to group policy (GPO) settings in on-premises Active Directory (AD). These settings are built in to Windows, and are [ADMX-backed settings](/windows/client-management/mdm/understanding-admx-backed-policies) that use XML.
+- The **Windows settings** are similar to group policy (GPO) settings in on-premises Active Directory (AD). These settings are built in to Windows. They're [ADMX-backed settings](/windows/client-management/mdm/understanding-admx-backed-policies) that use XML.
 
-- The **Office, Microsoft Edge, and Visual Studio** settings are ADMX-ingested, and use the same administrative template files that you would download in on-premises environments.
+- The **Office, Microsoft Edge, and Visual Studio** settings are ADMX-ingested and use the same administrative template files that you would download in on-premises environments.
 
-- You can import custom and third party ADMX and ADML files. For more information, including the steps, go to [Import custom or partner ADMX files](administrative-templates-import-custom.md).
+- You can import custom and third-party ADMX and ADML files. For more information, see [Import custom or partner ADMX files](administrative-templates-import-custom.md).
 
-When managing devices in your organization, you want to create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task using **Administrative Templates** in Microsoft Intune. 
+When managing devices in your organization, you should create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task by using **Administrative Templates** in Microsoft Intune. 
 
-As part of your mobile device management (MDM) solution, use these template settings as a one-stop shop to manage your Windows client devices.
+As part of your mobile device management (MDM) solution, use these template settings to manage your Windows client devices.
 
-This article lists the steps to create a template for Windows client devices, and shows how to filter all the available settings in Intune. When you create the template, it creates a device configuration profile. You can then assign or deploy this profile to Windows client devices in your organization.
+This article describes the steps to create a template for Windows client devices, and it shows how to filter all the settings in Intune. When you create the template, it creates a device configuration profile. You can then assign or deploy this profile to Windows client devices in your organization.
 
 ## Before you begin
 
-- Some of these settings are available starting with Windows 10 version 1709 (RS2/build 15063). Some settings aren't included in all the Windows editions. For the best experience, we suggest using Windows 10 Enterprise version 1903 (19H1/build 18362) and newer.
+- Some of these settings are available starting with Windows 10 version 1709 (RS2/build 15063). Some settings aren't included in all Windows editions. For the best experience, we recommend Windows 10 Enterprise version 1903 (19H1/build 18362) or newer.
 
 - The Windows settings use the [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). The CSPs work on different editions of Windows, such as Home, Professional, Enterprise, and so on. To see if a CSP works on a specific edition, go to [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
-- There are two ways to create an administrative template: Using a template, or using the Settings Catalog. This article focuses on using the **Administrative Templates** template. The Settings Catalog has more Administrative Template settings available.
+- There are two ways to create an administrative template: Using a template or using the settings catalog. This article focuses on using the **Administrative Templates** template. The settings catalog offers more Administrative Template settings.
 
-  For the specific steps to use the Settings Catalog, and how to use Microsoft Copilot in the settings catalog, go to [Use the settings catalog to configure settings](settings-catalog.md).
+  To use the settings catalog and learn how to use Microsoft Copilot with it, see [Use the settings catalog to configure settings](settings-catalog.md).
 
 - The ADMX templates use the following sources:
 
@@ -71,13 +72,13 @@ This article lists the steps to create a template for Windows client devices, an
   - **Microsoft Edge**: [Microsoft Edge policy file](https://www.microsoftedgeinsider.com/enterprise)
   - **OneDrive**: [OneDrive policies to control sync settings - policy list](/sharepoint/use-group-policy#list-of-policies-by-string-id)
   - **Visual Studio**: [Visual Studio Administrative Templates (ADMX)](/visualstudio/install/administrative-templates)
-  - **Windows**: Built in to the Windows client OS.
+  - **Windows**: Built in to the Windows client OS
   - **Windows Subsystem for Linux**: [Windows Subsystem for Linux](/windows/wsl/enterprise#enterprise-security-and-control-options)
 
 ## Create the template
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
@@ -86,31 +87,38 @@ This article lists the steps to create a template for Windows client devices, an
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **ADMX: Windows 10/11 admin template that configures xyz settings in Microsoft Edge**.
-    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+    - **Name**: Name your profiles so you can easily identify them later. For example, a good profile name is *ADMX: Windows 10/11 admin template that configures xyz settings in Microsoft Edge*.
+    - **Description**: This setting is optional but recommended.
 
 6. Select **Next**.
 
-7. In **Configuration settings**, select **All settings** to see an alphabetical list of all the settings. Or, configure settings that apply to devices (**Computer configuration**), and settings that apply to users **(User configuration**):
+7. Add the settings:<br/>
 
-    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Apply ADMX template settings to users and devices in Microsoft Intune and Intune admin center.":::
 
-    > [!NOTE]
-    >
-    > If you're using the **Settings catalog**, then select **Add settings**, and expand **Administrative Templates**. Select any setting to see what you can configure.
-    > 
-    > :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Expand administrative templates in Settings catalog in Microsoft Intune and Intune admin center.":::
-    > 
-    > For more information on creating policies using the Settings Catalog, go to [Use the settings catalog to configure settings](settings-catalog.md).
+    # [ADMX template](#tab/template)
+
+    To see an alphabetical list of all the settings, go to **Configuration settings** and select **All settings** . Or, configure settings that apply to devices (**Computer configuration**), or settings that apply to users **(User configuration**):
+
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Screenshot that shows how to select All Settings using ADMX template policy in Microsoft Intune.":::
+
+    # [Settings catalog](#tab/settingscatalog)
+
+    In the **Settings catalog**, select **Add settings**, and expand **Administrative Templates**. Select any setting to see what you can configure.
+
+    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Screenshot that shows how to expand administrative templates in a settings catalog policy in Microsoft Intune.":::
+
+    For more information about creating policies by using the settings catalog, see [Use the settings catalog to configure settings](settings-catalog.md).
+
+    ---
 
 8. When you select **All settings**, every setting is listed. Scroll down to use the before and next arrows to see more settings:
 
-    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-sample-settings-list.png" alt-text="See a sample list of settings and use previous and next buttons in Intune admin center and Microsoft Intune.":::
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-sample-settings-list.png" alt-text="See a sample list of settings and use the previous and next buttons in Intune admin center and Microsoft Intune.":::
 
-9. Select any setting. For example, filter on **Office**, and select **Activate Restricted Browsing**. A detailed description of the setting is shown. Choose **Enabled**, **Disabled**, or leave the setting as **Not configured** (default). The detailed description also explains what happens when you choose **Enabled**, **Disabled**, or **Not configured**.
+9. Select any setting. For example, filter on **Office**, and then select **Activate Restricted Browsing**. A detailed description of the setting is shown. Choose **Enabled** or **Disabled**, or leave the setting as **Not configured** (default). The detailed description also explains what happens when you choose **Enabled**, **Disabled**, or **Not configured**.
 
-    > [!TIP]
-    > The Windows settings in Intune correlate to the on-premises group policy path you see in Local Group Policy Editor (`gpedit`).
+   > [!TIP]
+   > The Windows settings in Intune correlate to the on-premises group policy path you see in Local Group Policy Editor (`gpedit`).
 
 10. When you select **Computer configuration** or **User configuration**, the setting categories are shown. You can select any category to see the available settings.
 
@@ -120,26 +128,26 @@ This article lists the steps to create a template for Windows client devices, an
 
 11. Select **OK** to save your changes.
 
-    Continue to go through the list of settings, and configure the settings you want in your environment. Here are some examples:
+    Continue to go through the list of settings and configure the settings you want in your environment. Here are some examples:
 
     - Use the **VBA Macro Notification Settings** setting to handle VBA macros in different Microsoft Office programs, including Word and Excel.
     - Use the **Allow file downloads** setting to allow or prevent downloads from Internet Explorer.
     - Use **Require a password when a computer wakes (plugged in)** to prompt users for a password when devices wake from sleep mode.
     - Use the **Download unsigned ActiveX controls** setting to block users from downloading unsigned ActiveX controls from Internet Explorer.
-    - Use the **Turn off System Restore** setting to allow or prevent users from running a system restore on the device.
+    - Use the **Turn off System Restore** setting to allow or prevent users from running system restore on the device.
     - Use the **Allow importing of favorites** setting to allow or block users from importing favorites from another browser into Microsoft Edge.
-    - And more...
+    - And more ...
 
 12. Select **Next**.
-13. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+13. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-14. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles in Intune](device-profile-assign.md).
+14. In **Assignments**, select the user or groups that receive your profile. For more information, see [Assign user and device profiles in Intune](device-profile-assign.md).
 
-    If the profile is assigned to user groups, then configured ADMX settings apply to any device that the user enrolls, and signs in to. If the profile is assigned to device groups, then configured ADMX settings apply to any user that signs into that device. This assignment happens if the ADMX setting is a computer configuration (`HKEY_LOCAL_MACHINE`), or a user configuration (`HKEY_CURRENT_USER`). With some settings, a computer setting assigned to a user can also affect the experience of other users on that device.
+    If the profile is assigned to user groups, configured ADMX settings apply to any device that the user enrolls and signs in to. If the profile is assigned to device groups, configured ADMX settings apply to any user that signs in to that device. This assignment happens if the ADMX setting is a computer configuration (`HKEY_LOCAL_MACHINE`) or a user configuration (`HKEY_CURRENT_USER`). With some settings, a computer setting assigned to a user can also affect the experience of other users on that device.
 
-    For more information, go to [User groups vs. device groups when assigning policies](device-profile-assign.md#user-groups-vs-device-groups).
+    For more information, see [User groups vs. device groups when assigning policies](device-profile-assign.md#user-groups-vs-device-groups).
 
     Select **Next**.
 
@@ -153,7 +161,7 @@ There are thousands of settings available in these templates. To make it easier 
 
 - In your template, select the **Settings**, **State**, **Setting type**, or **Path** columns to sort the list. For example, select the **Path** column, and use the next arrow to see the settings in the `Microsoft Excel` path.
 
-- In your template, use the **Search** box to find specific settings. You can search by setting, or path. For example, select **All settings**, and search for `copy`. All the settings with `copy` are shown:
+- In your template, use the **Search** box to find specific settings. You can search by setting or path. For example, select **All settings** and search for `copy`. All the settings with `copy` are shown:
 
   :::image type="content" source="./media/administrative-templates-windows/search-copy-settings.png" alt-text="Search for copy to show all the device settings in administrative templates in Microsoft Intune and Intune admin center.":::
 
@@ -161,23 +169,24 @@ There are thousands of settings available in these templates. To make it easier 
 
 - You can also narrow your search by only selecting **Computer configuration** or **User configuration**.
 
-  For example, to see all the available Internet Explorer user settings, select  **User configuration**, and search for `Internet Explorer`. Only the IE settings that apply to users are shown:
+  For example, to see all the available Internet Explorer user settings, select  **User configuration** and search for `Internet Explorer`. Only the Internet Explorer settings that apply to users are shown:
 
-  :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="In the ADMX template, select user configuration, and search or filter for Internet Explorer in Microsoft Intune.":::
+  :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="In the ADMX template, select user configuration and search or filter for Internet Explorer in Microsoft Intune.":::
 
-## Create a Known Issue Rollback (KIR) policy
+## Create a Known Issue Rollback policy
 
-On your enrolled devices, you can use administrative templates to create a Known Issue Rollback (KIR) policy, and deploy this policy to your Windows devices. For the specific steps, go to [Deploy a KIR activation using Microsoft Intune ADMX policy ingestion to managed devices](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback#deploy-a-kir-activation-using-microsoft-intune-admx-policy-ingestion-to-the-managed-devices).
+On your enrolled devices, you can use administrative templates to create a Known Issue Rollback (KIR) policy and deploy this policy to your Windows devices. See [Deploy a KIR activation using Microsoft Intune ADMX policy ingestion to managed devices](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback#deploy-a-kir-activation-using-microsoft-intune-admx-policy-ingestion-to-the-managed-devices).
 
-For more information on KIR, and what it is, go to:
+For more information about KIR, see:
 
 - [Known Issue Rollback: Helping you keep Windows devices protected and productive](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/known-issue-rollback-helping-you-keep-windows-devices-protected/ba-p/2176831)
 - [How to use on-premises Group Policy or Intune to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback)
 
 ## Next steps
 
-- The template is created, but might not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
+The template is created but might not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
 
+See also:
 - [Update Office using administrative templates](administrative-templates-update-office.md).
 - [Restrict USB devices using administrative templates](administrative-templates-restrict-usb.md).
 - [Create Microsoft Edge policy using ADMX](administrative-templates-configure-edge.md).

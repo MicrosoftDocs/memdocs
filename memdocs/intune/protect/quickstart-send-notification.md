@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/19/2023
+ms.date: 06/07/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-device-compliance
 ---
 
 # Step 7: Send notifications to noncompliant devices
@@ -54,7 +55,7 @@ When using device compliance policies to block devices from corporate resources,
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create a notification message template
 
@@ -112,7 +113,7 @@ After you have created a noncompliance policy, you can set an action to take pla
 
 The following steps will create an action for noncompliance for Windows 10 devices:
 
-1. In the Intune admin center, select **Devices** > **Windows** > **Compliance policies**.  
+1. In the Intune admin center, select **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance**.  
 2. Select your Windows 10 compliance policy from the list.
 3. Select **Properties**.  
 4. Next to the **Action for noncompliance** section, choose **Edit**.

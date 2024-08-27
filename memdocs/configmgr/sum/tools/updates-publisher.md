@@ -29,7 +29,12 @@ Using Updates Publisher, you can:
 After you publish updates to an update server, you can then use Configuration Manager to detect and deploy those updates to your managed devices.
 
 >[!Important] 
-> The System Center Updates Publisher (SCUP) and Integration with Configuration manager will be deprecated on January 31, 2024. 
+> The System Center Updates Publisher (SCUP) and Integration with Configuration manager is unsupported starting January 31, 2024.
+>
+>"Support" in this context refers to both engineering and assisted technical support. No further engineering development will occur, and users are unable to receive phone or online assisted technical support.
+>
+>The information in this section is provided to help you plan for alternatives to using this feature, and will be removed in the future. 
+
 
 ## Workspaces
 When you open Updates Publisher, it defaults to the Overview node of the *Updates Workspace.*

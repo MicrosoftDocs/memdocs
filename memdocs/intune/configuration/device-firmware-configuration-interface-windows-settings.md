@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2022
+ms.date: 04/15/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,24 +41,26 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-- [Create the Windows 10/11 DFCI profile](device-firmware-configuration-interface-windows.md). There are more requirements to creating DFCI profiles. For more specific information, go to [Use DFCI profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md).
+- [Create the Windows DFCI profile](device-firmware-configuration-interface-windows.md). There are more requirements to creating DFCI profiles. For more specific information, go to [Use DFCI profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md).
 - Some settings aren't available for all devices. To confirm if a setting is or isn't available on your device, contact your device manufacturer.
 - These settings use the [UEFI CSP](/windows/client-management/mdm/uefi-csp).
 
 > [!WARNING]
 > Be careful. Configuring and assigning DFCI profiles can lock the device beyond repair. The DFCI profile settings change the device hardware, and can't be fixed by re-imaging the OS.
 
-## Security features
+## UEFI access
 
 - **Allow local user to change UEFI settings**: Your options:
   - **Only not configured settings**: The local user can change any setting *except* those settings explicitly set to **Enable** or **Disable** by Intune.
-  - **None**: The local user may not change any UEFI (BIOS) settings, including settings not shown in the DFCI profile.
+  - **None**: The local user can't change any UEFI (BIOS) settings, including settings not shown in the DFCI profile.
+
+## Security features
 
 - **CPU and IO virtualization**: Your options:
   - **Not configured**: Intune doesn't change or update this setting.
   - **Enabled**: The BIOS enables the platform's CPU and IO virtualization capabilities for use by the OS. It turns on Windows Virtualization Based Security and Device Guard technologies.
 
-- **Windows Platform Binary Table** (WPBT): The WPBT allows vendors and OEMs to run an `.exe` program in the UEFI layer. Every time Windows boots, it looks at the UEFI, and runs the `.exe`. It's used to run programs that aren't included with the Windows media.
+- **Windows Platform Binary Table** (WPBT): The WPBT allows vendors and OEMs to run an `.exe` program in the UEFI layer. Every time Windows boots, it looks at the UEFI, and runs the `.exe`. Use this feature to run programs that aren't included with the Windows media.
 
   Your options:
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS might allow vendors and OEMs to run programs using the WPBT.
@@ -106,8 +108,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Microphones and speakers
 
-> [!TIP]
-> Configure the category setting (**Microphones and speakers**) **or** the granular settings (**Microphones**). If you configure all the settings, these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
+We recommend you configure the **Microphones and speakers** category settings **or** the **Microphones** granular settings. If you configure all the settings, then these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
 
 - **Microphones and speakers**: This setting manages all the microphones and speakers built into the device. It doesn't manage attached peripherals, such as USB devices.
 
@@ -127,8 +128,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Radios
 
-> [!TIP]
-> Configure the category setting (**Radios (Bluetooth, Wi-Fi, NFC, etc.)**) **or** the granular settings (**Bluetooth**, **Wi-Fi**). If you configure all the settings, these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
+We recommend you configure the **Radios (Bluetooth, Wi-Fi, NFC, etc.)** category settings **or** the **Bluetooth**, **Wi-Fi**, etc. granular settings. If you configure all the settings, these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
 
 - **Radios (Bluetooth, Wi-Fi, NFC, etc.)**: This setting manages all the built-in radios managed by UEFI (BIOS). It doesn't manage attached peripherals.
 
@@ -138,8 +138,7 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: All built-in radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
   - **Disabled**: All built-in radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
 
-    > [!WARNING]
-    > If you disable the **Radios** setting, the device requires a wired network connection. Otherwise, the device may be unmanageable.
+    When set to **Disabled**, the device requires a wired network connection. Otherwise, the device can be unmanageable.
 
 - **Bluetooth**: This setting manages the built-in Bluetooth radios managed by UEFI (BIOS). It doesn't manage attached peripherals.
 
@@ -176,7 +175,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ## Boot Options
 
 > [!WARNING]
-> Disabling all external boot options or all external ports significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to physically open the device and replace the hardware storage.
+> Disabling all external boot options or all external ports significantly complicates OS recovery. To recover a device that can no longer boot Windows, you might have to physically open the device and replace the hardware storage.
 
 - **Boot from external media (USB, SD)**: Your options:
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS might allow booting from external media.
@@ -193,7 +192,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ## Ports
 
 > [!WARNING]
-> Disabling all external boot options or all external ports significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to physically open the device and replace the hardware storage.
+> Disabling all external boot options or all external ports significantly complicates OS recovery. To recover a device that can no longer boot Windows, you might have to physically open the device and replace the hardware storage.
 
 - **USB type A**: This setting manages the built-in USB type A ports managed by UEFI (BIOS). It doesn't manage attached peripherals.
 
@@ -227,10 +226,10 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: UEFI (BIOS) allows waking a device when it's connected to a power source.
   - **Disabled**: UEFI (BIOS) prevents waking a device when it's connected to a power source.
 
-## Next steps
+## Related articles
 
-For other technical details on each setting and what editions of Windows are supported, see [Windows 10/11 Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider).
+- For other technical details on each setting and what editions of Windows are supported, go to [Windows 10/11 Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider).
 
-[Use DFCI profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md).
+- [Use DFCI profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md).
 
-[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).

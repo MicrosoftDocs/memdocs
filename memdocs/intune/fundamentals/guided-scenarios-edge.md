@@ -60,8 +60,8 @@ This guided scenario will automatically enable **MyApps** to appear in the Micro
 
 We'll ask you about the workplace favorites your users need, and the filters you require for web browsing. Make sure you complete the following tasks before you continue:
 
-- Add users to Microsoft Entra groups. For more information, see [Create a basic group and add members using Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
-- Enroll iOS/iPadOS or Android devices in Intune. For more information, see [Device enrollment](/mem/intune/fundamentals/deployment-guide-enrollment).
+- Add users to Microsoft Entra groups. For more information, see [Create a basic group and add members using Microsoft Entra ID](/entra/fundamentals/how-to-manage-groups).
+- Enroll iOS/iPadOS or Android devices in Intune. For more information, see [Device enrollment](deployment-guide-enrollment.md).
 - Gather a list of workplace favorites to add in Microsoft Edge.
 - Gather a list of website filters to enforce in Microsoft Edge.
 

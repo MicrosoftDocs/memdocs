@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/27/2024
+ms.date: 04/30/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -45,7 +45,7 @@ This feature applies to:
 
 > [!NOTE]
 >
-> - These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](./vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados).
+> - These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
 >
 > - The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 >
@@ -182,6 +182,8 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - **No**: Forces all Captive Networking (CN) app traffic through the VPN tunnel​.
     - **Yes, all apps**: Allows all CN app traffic to bypass the VPN​.
     - **Yes, specific apps**: **Add** a list of CN apps whose traffic can bypass the VPN​. Enter the bundle identifiers of CN app. For example, enter `com.contoso.app.id.package`.
+
+      To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
   - **Traffic from Captive Websheet app to pass outside VPN**: Captive WebSheet is a built-in web browser that handles captive sign-on. **Enable** allows the browser app traffic to bypass the VPN. **Disable** (default) forces WebSheet traffic to use the always-on VPN. The default value is the most secure option.
   - **Network address translation (NAT) keepalive interval (seconds)**: To stay connected to the VPN, the device sends network packets to remain active. Enter a value in seconds on how often these packets are sent, from 20-1440. For example, enter a value of `60` to send the network packets to the VPN every 60 seconds. By default, this value is set to `110` seconds.
@@ -412,4 +414,4 @@ If you use a proxy, then configure the following settings.
 
 The profile is created, but may not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md), and [Windows 10](vpn-settings-windows-10.md) devices.
+Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md), and [Windows](vpn-settings-windows-10.md) devices.

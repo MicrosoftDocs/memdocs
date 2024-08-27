@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/05/2023
+ms.date: 05/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -218,6 +218,7 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS/iPadOS devices)
 - \{\{aaddeviceid\}\}—for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 - \{\{issupervised\}\}—for example, **True** (for iOS/iPadOS devices)
+- \{\{OnPremisesSamAccountName\}\}—for example, **contoso\John**
 
 ## Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment
 

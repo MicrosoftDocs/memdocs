@@ -2,7 +2,7 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
-ms.date: 03/29/2022
+ms.date: 08/08/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
@@ -19,6 +19,9 @@ ms.reviewer: mstewart,aaroncz
 *Applies to: Configuration Manager (current branch)*
 
 Use the following information to identify the Windows groups, accounts, and SQL Server objects that are used in Configuration Manager, how they're used, and any requirements.
+
+> [!IMPORTANT]
+> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name. For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName. This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system. Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 - [Windows groups that Configuration Manager creates and uses](#bkmk_groups)
   - [Configuration Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)
@@ -85,7 +88,7 @@ Use the following information to identify the Windows groups, accounts, and SQL 
 
 ## <a name="bkmk_groups"></a> Windows groups that Configuration Manager creates and uses
 
-Configuration Manager automatically creates, and in many cases automatically maintains, the following Windows groups:
+Configuration Manager automatically creates, and in many cases, automatically maintains, the following Windows groups:
 
 > [!NOTE]
 > When Configuration Manager creates a group on a computer that's a domain member, the group is a local security group. If the computer is a domain controller, the group is a domain local group. This type of group is shared among all domain controllers in the domain.
@@ -134,11 +137,11 @@ By default, there are no members in this group. When you add users to the **Perm
 
 Use the **Permitted Viewers** list to manage the membership of this group instead of adding users or groups directly to this group.
 
-In addition to being a permitted viewer, an administrative user must have the **Remote Control** permission to the **Collection** object. Assign this permission by using the **Remote Tools Operator** security role.
+In addition to being a permitted viewer, an administrative user must have **Remote Control** permission for the **Collection** object. Assign this permission by using the **Remote Tools Operator** security role.
 
 #### Permissions for remote control users
 
-By default, this group doesn't have permissions to any locations on the computer. It's used only to hold the **Permitted Viewers** list.
+By default, this group doesn't have permission to access any locations on the computer. It's used only to hold the **Permitted Viewers** list.
 
 ### SMS Admins
 
@@ -161,13 +164,13 @@ Configuration Manager automatically manages the group membership. By default, ea
 
 #### Permissions for SMS Admins
 
-You can view the rights and permissions for the SMS Admins group in the **WMI Control** MMC snap-in. By default, this group is granted **Enable Account** and **Remote Enable** on the `Root\SMS` WMI namespace. Authenticated users have **Execute Methods**, **Provider Write**, and **Enable Account**.
+You can view the rights and permissions for the SMS Admins group in the **WMI Control** MMC snap-in. By default, this group is granted **Enable Account** and **Remote Enable** in the `Root\SMS` WMI namespace. Authenticated users have **Execute Methods**, **Provider Write**, and **Enable Account**.
 
 When you use a remote Configuration Manager console, configure **Remote Activation** DCOM permissions on both the site server computer and the SMS Provider. Grant these rights to the **SMS Admins** group. This action simplifies administration instead of granting these rights directly to users or groups. For more information, see [Configure DCOM permissions for remote Configuration Manager consoles](../../servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole).
 
 ### <a name="bkmk_remotemp"></a> SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>
 
-Management points that are remote from the site server use this group to connect to the site database. This group provides a management point access to the inbox folders on the site server and the site database.
+Management points that are remote from the site server use this group to connect to the site database. This group provides management point access to the inbox folders on the site server and the site database.
 
 #### Type and location for SMS_SiteSystemToSiteServerConnection_MP
 
@@ -195,7 +198,7 @@ When you uninstall a site, this group isn't automatically removed. Manually dele
 
 #### Membership for SMS_SiteSystemToSiteServerConnection_SMSProv
 
-Configuration Manager automatically manages the group membership. By default, membership includes the computer account or a domain user account. It uses this account to connect to the site server from each remote SMS Provider.
+Configuration Manager automatically manages the group membership. By default, membership includes a computer account or a domain user account. It uses this account to connect to the site server from each remote SMS Provider.
 
 #### Permissions for SMS_SiteSystemToSiteServerConnection_SMSProv
 
@@ -254,16 +257,16 @@ By default, this group has **Full control** to the following folder: `C:\Program
 You can set up the following accounts for Configuration Manager.
 
 > [!TIP]
-> Don't use the percentage character (`%`) in the password for accounts that you specify in the Configuration Manager console. The account will fail to authenticate.<!-- SCCMDocs#1032 -->
+> Don't use the percentage character (`%`) in the password for accounts that you specify in the Configuration Manager console. The account will fail to authenticate.
 
 ### Active Directory group discovery account
 
 The site uses the **Active Directory group discovery account** to discover the following objects from the locations in Active Directory Domain Services that you specify:
 
-- Local, global, and universal security groups
-- The membership within these groups
-- The membership within distribution groups
-  - Distribution groups aren't discovered as group resources
+- Local, global, and universal security groups.
+- The membership within these groups.
+- The membership within distribution groups.
+  - Distribution groups aren't discovered as group resources.
 
 This account can be a computer account of the site server that runs discovery, or a Windows user account. It must have **Read** access permission to the Active Directory locations that you specify for discovery.
 
@@ -294,18 +297,20 @@ The site uses the **Active Directory forest account** to discover network infras
 
 To discover and publish to untrusted forests, the Active Directory forest account must be a global account. If you don't use the computer account of the site server, you can select only a global account.
 
-This account must have **Read** permissions to each Active Directory forest where you want to discover network infrastructure.
+This account must have **Read** permissions for each Active Directory forest where you want to discover network infrastructure.
 
-This account must have **Full Control** permissions to the **System Management** container and all its child objects in each Active Directory forest where you want to publish site data. For more information, see [Prepare Active Directory for site publishing](../network/extend-the-active-directory-schema.md).
+This account must have **Full Control** permissions to the **System Management** container and all its child objects in each Active Directory forest where you want to publish site data. 
+
+For more information, see [Prepare Active Directory for site publishing](../network/extend-the-active-directory-schema.md).
 
 For more information, see [Active Directory forest discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest).
 
 ### Certificate registration point account
 
 > [!WARNING]
-> Starting in version 2203, the certificate registration point is no longer supported.<!--13951253--> For more information, see [Frequently asked questions about resource access deprecation](../../../protect/plan-design/resource-access-deprecation-faq.yml).
+> Starting in version 2203, the certificate registration point is no longer supported. For more information, see [Frequently asked questions about resource access deprecation](../../../protect/plan-design/resource-access-deprecation-faq.yml).
 
-The certificate registration point uses the **Certificate registration point account** to connect to the Configuration Manager database. It uses its computer account by default, but you can configure a user account instead. When the certificate registration point is in an untrusted domain from the site server, you must specify a user account. This account requires only **Read** access to the site database, because the state message system handles write tasks.
+The certificate registration point uses the **Certificate registration point account** to connect to the Configuration Manager database. It uses its computer account by default, but you can configure a user account instead. When the certificate registration point is in an untrusted domain from the site server, you must specify a user account. This account requires only **Read** access to the site database because the state message system handles write tasks.
 
 For more information, see [Introduction to certificate profiles](../../../protect/deploy-use/introduction-to-certificate-profiles.md).
 
@@ -337,13 +342,13 @@ You can specify more than one client push installation account. Configuration Ma
 > [!TIP]
 > If you have a large Active Directory environment and need to change this account, use the following process to more effectively coordinate this account update:
 >
-> 1. Create a new account with a different name
-> 2. Add the new account to the list of client push installation accounts in Configuration Manager
-> 3. Allow sufficient time for Active Directory Domain Services to replicate the new account
-> 4. Then remove the old account from Configuration Manager and Active Directory Domain Services
+> 1. Create a new account with a different name.
+> 2. Add the new account to the list of client push installation accounts in Configuration Manager.
+> 3. Allow sufficient time for Active Directory Domain Services to replicate the new account.
+> 4. Then remove the old account from Configuration Manager and Active Directory Domain Services.
 
 > [!IMPORTANT]
-> Use domain or local group policy to assign the Windows user right to **Deny log on locally**. As a member of the Administrators group, this account will have the right to sign in locally, which isn't needed. For better security, explicitly deny the right for this account. The deny right supersedes the allow right.<!--MEMDocs#744-->
+> Use the domain or local group policy to assign the Windows user the right to **Deny log on locally**. As a member of the Administrators group, this account will have the right to sign in locally, which isn't needed. For better security, explicitly deny the right to this account. The deny right supersedes the allow right.
 
 For more information, see [Client push installation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation).
 
@@ -355,7 +360,7 @@ For more information, see [Install site system roles for on-premises MDM](../../
 
 ### Exchange Server connection account
 
-The site server uses the **Exchange Server connection account** to connect to the specified Exchange Server. It uses this connection to find and manage mobile devices that connect to Exchange Server. This account requires Exchange PowerShell cmdlets that provide the required permissions to the Exchange Server computer. For more information about the cmdlets, see [Install and configure the Exchange connector](../../../mdm/deploy-use/install-configure-exchange-connector.md).
+The site server uses the **Exchange Server connection account** to connect to the specified Exchange Server. It uses this connection to find and manage mobile devices that connect to the Exchange Server. This account requires Exchange PowerShell cmdlets that provide the required permissions to the Exchange Server computer. For more information about the cmdlets, see [Install and configure the Exchange connector](../../../mdm/deploy-use/install-configure-exchange-connector.md).
 
 ### Management point connection account
 
@@ -364,7 +369,8 @@ The management point uses the **Management point connection account** to connect
 Create the account as a low-right local account on the computer that runs Microsoft SQL Server.
 
 > [!IMPORTANT]
-> Don't grant interactive sign-in rights to this account.
+> - Don't grant interactive sign-in rights to this account.
+> - If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name. For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName. This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system. Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 ### Multicast connection account
 
@@ -386,16 +392,16 @@ Client computers use the **network access account** when they can't use their lo
 
 A Configuration Manager client first tries to use its computer account to download the content. If it fails, it then automatically tries the network access account.
 
-If you configure the site for HTTPS or [Enhanced HTTP](enhanced-http.md), a workgroup or Microsoft Entra joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center.<!--1358228,1358278--> For more information, see [Client to management point communication](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
+If you configure the site for HTTPS or [Enhanced HTTP](enhanced-http.md), a workgroup or Microsoft Entra joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or the Software Center. For more information, see [Client to management point communication](communications-between-endpoints.md#bkmk_client2mp).
 
 > [!NOTE]
-> If you enable **Enhanced HTTP** to not require the network access account, distribution points need to be running currently supported versions of Windows Server or Windows 10/11. <!--SCCMDocs-pr issue #2696-->
+> If you enable **Enhanced HTTP** to not require the network access account, distribution points need to be running currently supported versions of Windows Server or Windows 10/11. 
 
 #### Permissions for the network access account
 
-Grant this account the minimum appropriate permissions on the content that the client requires to access the software. The account must have the **Access this computer from the network** right on the distribution point. You can configure up to 10 network access accounts per site.
+Grant this account the minimum appropriate permissions for the content that the client requires to access the software. The account must have the **Access this computer from the network** right at the distribution point. You can configure up to 10 network access accounts per site.
 
-Create the account in any domain that provides the necessary access to resources. The network access account must always include a domain name. Pass-through security isn't supported for this account. If you have distribution points in multiple domains, create the account in a trusted domain.
+Create an account in any domain that provides the necessary access to resources. The network access account must always include a domain name. Pass-through security isn't supported for this account. If you have distribution points in multiple domains, create the account in a trusted domain.
 
 > [!TIP]
 > To avoid account lockouts, don't change the password on an existing network access account. Instead, create a new account and set up the new account in Configuration Manager. When sufficient time has passed for all clients to have received the new account details, remove the old account from the network shared folders and delete the account.
@@ -415,30 +421,31 @@ Create the account in any domain that provides the necessary access to resources
 
 #### Actions that require the network access account
 
-<!-- 4640345 -->
 The network access account is still required for the following actions (including eHTTP & PKI scenarios):
 
 - Multicast. For more information, see [Use multicast to deploy Windows over the network](../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).
 
 - Task sequence deployment option to **Access content directly from a distribution point when needed by the running task sequence**. For more information, see [Task sequence deployment options](../../../osd/deploy-use/deploy-a-task-sequence.md#bkmk_deploy-options).
 
-- **Request State Store** task sequence step. If the task sequence can't communicate with the state migration point using the device's computer account, it falls back to use the network access account. For more information, see [Request State Store](../../../osd/understand/task-sequence-steps.md#BKMK_RequestStateStore).
+- **Apply the OS Image** task sequence step option to **Access content directly from the distribution point**. This option is primarily for Windows Embedded scenarios with low disk space where caching content to the local disk is costly. For more information, see [Access content directly from the distribution point](../../../osd/understand/task-sequence-steps.md#access-content-directly-from-the-distribution-point).
 
-- **Apply OS Image** task sequence step option to **Access content directly from the distribution point**. This option is primarily for Windows Embedded scenarios with low disk space where caching content to the local disk is costly. For more information, see [Access content directly from the distribution point](../../../osd/understand/task-sequence-steps.md#access-content-directly-from-the-distribution-point)
+- If downloading a package from a distribution point using HTTP/HTTPS fails, it has the ability to fall back to downloading the package using SMB from the package share on the distribution point. Downloading the package using SMB from the package share on the distribution point requires use of the network access account. This fallback behavior only occurs if the option **Copy the content in this package to a package share on distribution points** is enabled under the **Data Access** tab in the properties of a package. To retain this behavior, make sure that the network access account isn't disabled or removed. If this behavior is no longer desired, make sure the option **Copy the content in this package to a package share on distribution points** isn't enabled on any package.
+
+- **Request State Store** task sequence step. If the task sequence can't communicate with the state migration point using the device's computer account, it falls back to using the network access account. For more information, see [Request State Store](../../../osd/understand/task-sequence-steps.md#BKMK_RequestStateStore).
 
 - Task Sequence properties setting to **Run another program first**. This setting runs a package and program from a network share before the task sequence starts. For more information, see [Task sequences properties: Advanced tab](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#advanced-tab).
 
-- Managing clients in untrusted domains and cross-forest scenarios allow multiple network access accounts.
+- Managing clients in untrusted domains and cross-forest scenarios allows for multiple network access accounts.
 
 ### Package access account
 
-A **Package access account** lets you set NTFS permissions to specify the users and user groups that can access package content on distribution points. By default, Configuration Manager grants access only to the generic access accounts **User** and **Administrator**. You can control access for client computers by using other Windows accounts or groups. Mobile devices always retrieve package content anonymously, so they don't use a package access account.
+A **Package access account** lets you set NTFS permissions to specify the users and user groups that can access package content on distribution points. By default, Configuration Manager grants access only to the generic access accounts **User** and **Administrator**. You can control access to client computers by using other Windows accounts or groups. Mobile devices always retrieve package content anonymously, so they don't use a package access account.
 
-By default, when Configuration Manager copies the content files to a distribution point, it grants **Read** access to the local **Users** group, and **Full Control** to the local **Administrators** group. The actual permissions required depend on the package. If you have clients in workgroups or in untrusted forests, those clients use the network access account to access the package content. Make sure that the network access account has permissions to the package by using the defined package access accounts.
+By default, when Configuration Manager copies the content files to a distribution point, it grants **Read** access to the local **Users** group and **Full Control** to the local **Administrators** group. The actual permissions required depend on the package. If you have clients in workgroups or in untrusted forests, those clients use the network access account to access the package content. Make sure that the network access account has permissions to the package by using the defined package access accounts.
 
 Use accounts in a domain that can access the distribution points. If you create or modify the account after you create the package, you must redistribute the package. Updating the package doesn't change the NTFS permissions on the package.
 
-You don't have to add the network access account as a package access account, because membership of the **Users** group adds it automatically. Restricting the package access account to only the network access account doesn't prevent clients from accessing the package.
+You don't have to add the network access account as a package access account because membership in the **Users** group adds it automatically. Restricting the package access account to only the network access account doesn't prevent clients from accessing the package.
 
 #### Manage package access accounts
 
@@ -486,7 +493,6 @@ For more information, see [Introduction to remote control](../../clients/manage/
 
 ### Site installation account
 
-<!--SCCMDocs issue #572-->
 Use a domain user account to sign in to the server where you run Configuration Manager setup and install a new site.
 
 This account requires the following rights:
@@ -501,7 +507,7 @@ This account requires the following rights:
 
 Configuration Manager setup automatically adds this account to the [SMS Admins](#sms-admins) group.
 
-After installation, this account is the only user with rights to the Configuration Manager console. If you need to remove this account, make sure to add its rights to another user first.
+After installation, this account is the only one with rights to the Configuration Manager console. If you need to remove this account, make sure to add its rights to another user first.
 
 When expanding a standalone site to include a central administration site, this account requires either **Full Administrator** or **Infrastructure Administrator** role-based administration rights at the standalone primary site.
 
@@ -512,7 +518,7 @@ The site server uses the **Site system installation account** to install, reinst
 This account requires local administrative permissions on the target site systems. Additionally, this account must have **Access this computer from the network** in the security policy on the target site systems.
 
 > [!IMPORTANT]
-> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name, and not just the domain NetBIOS name.  For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName.  This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system.  Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
+> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name and not just the domain NetBIOS name. For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName. This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system. Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 > [!TIP]
 > If you have many domain controllers and these accounts are used across domains, before you set up the site system, check that Active Directory has replicated these accounts.
@@ -521,7 +527,6 @@ This account requires local administrative permissions on the target site system
 
 ### Site system proxy server account
 
-<!--SCCMDocs issue #648-->
 The following site system roles use the **Site system proxy server account** to access the internet via a proxy server or firewall that requires authenticated access:
 
 - Asset Intelligence synchronization point
@@ -551,7 +556,7 @@ The site server uses the **Software update point connection account** for the fo
 
 - WSUS Synchronization Manager, which requests synchronization to an upstream WSUS server or Microsoft Update.
 
-The [site system installation account](#site-system-installation-account) can install components for software updates, but it can't do software update-specific functions on the software update point. If you can't use the site server computer account for this functionality because the software update point is in an untrusted forest, you must specify this account along with to the site system installation account.
+The [site system installation account](#site-system-installation-account) can install components for software updates, but it can't do software update-specific functions on the software update point. If you can't use the site server computer account for this functionality because the software update point is in an untrusted forest, you must specify this account along with the site system installation account.
 
 This account must be a local administrator on the computer where you install WSUS. It must also be part of the local **WSUS Administrators** group.
 
@@ -559,9 +564,9 @@ For more information, see [Plan for software updates](../../../sum/plan-design/p
 
 ### Source site account
 
-The migration process uses the **Source site account** to access the SMS Provider of the source site. This account requires **Read** permissions to site objects in the source site to gather data for migration jobs.
+The migration process uses the **Source site account** to access the SMS Provider of the source site. This account requires **Read** permissions to site objects on the source site to gather data for migration jobs.
 
-If you have Configuration Manager 2007 distribution points or secondary sites with colocated distribution points, when you upgrade them to Configuration Manager (current branch) distribution points, this account must also have **Delete** permissions to the **Site** class. This permission is to successfully remove the distribution point from the Configuration Manager 2007 site during the upgrade.
+If you have Configuration Manager 2007 distribution points or secondary sites with colocated distribution points, when you upgrade them to Configuration Manager (current branch) distribution points, this account must also have **Delete** permissions for the **Site** class. This permission is to successfully remove the distribution point from the Configuration Manager 2007 site during the upgrade.
 
 > [!NOTE]
 > Both the source site account and the [source site database account](#source-site-database-account) are identified as **Migration Manager** in the **Accounts** node of the **Administration** workspace in the Configuration Manager console.
@@ -574,9 +579,9 @@ The migration process uses the **Source site database account** to access the SQ
 
 If you use the Configuration Manager (current branch) computer account, make sure that all the following are true for this account:
 
-- It's a member of the **Distributed COM Users** security group in the same domain as the Configuration Manager 2012 site
-- It's a member of the **SMS Admins** security group
-- It has the **Read** permission to all Configuration Manager 2012 objects
+- It's a member of the **Distributed COM Users** security group in the same domain as the Configuration Manager 2012 site.
+- It's a member of the **SMS Admins** security group.
+- It has the **Read** permission for all Configuration Manager 2012 objects.
 
 > [!NOTE]
 > Both the source site account and the [source site database account](#source-site-database-account) are identified as **Migration Manager** in the **Accounts** node of the **Administration** workspace in the Configuration Manager console.
@@ -624,13 +629,12 @@ Set up the account to have the minimum permissions required to run the command l
 >
 > Never set up roaming profiles for this account. When the task sequence runs, it downloads the roaming profile for the account. This leaves the profile vulnerable to access on the local computer.
 >
-> Limit the scope of the account. For example, create different task sequence run as accounts for each task sequence. Then if one account is compromised, only the client computers to which that account has access are compromised.
+> Limit the scope of the account. For example, create different task sequences that run as accounts for each task sequence. Then, if one account is compromised, only the client computers to which that account has access are compromised.
 >
 > If the command line requires administrative access on the computer, consider creating a local administrator account solely for this account on all computers that run the task sequence. Delete the account once you no longer need it.
 
 ## <a name="bkmk_sqlusers"></a> User objects that Configuration Manager uses in SQL Server
 
-<!--SCCMDocs issue #1160-->
 Configuration Manager automatically creates and maintains the following user objects in SQL. These objects are located within the Configuration Manager database under Security/Users.
 
 > [!IMPORTANT]
@@ -650,15 +654,14 @@ This object is used to run SQL Server Reporting Executions. The following stored
 
 ## <a name="bkmk_sqlroles"></a>Database roles that Configuration Manager uses in SQL
 
-<!--SCCMDocs issue #1160-->
-Configuration Manager automatically creates and maintains the following role objects in SQL. These roles provide access to specific stored procedures, tables, views, and functions. These roles either get or add data in the Configuration Manager database. These objects are located within the Configuration Manager database under Security/Roles/Database Roles.
+Configuration Manager automatically creates and maintains the following role objects in SQL. These roles provide access to specific stored procedures, tables, views, and functions. These roles either get or add data to the Configuration Manager database. These objects are located within the Configuration Manager database under Security/Roles/Database Roles.
 
 > [!IMPORTANT]
 > Modifying or removing these objects may cause drastic issues within a Configuration Manager environment. Don't change these objects. The following list is for information purposes only.
 
 ### smsdbrole_AITool
 
-Configuration Manager grants this permission to administrative user accounts based on role-based access to import volume license information for Asset Intelligence. This account could be added by a Full Administrator, Operations Administrator or Asset Manager role, or any role with 'Manage Asset Intelligence' permission.
+Configuration Manager grants this permission to administrative user accounts based on role-based access to import volume license information for Asset Intelligence. This account could be added by a Full Administrator, Operations Administrator or, Asset Manager role, or any role with 'Manage Asset Intelligence' permission.
 
 ### smsdbrole_AIUS
 
@@ -736,8 +739,6 @@ Configuration Manager grants this permission to the computer account that hosts 
 Configuration Manager grants access to the account used for the reporting services point account to allow access to the SMS reporting views to display the Configuration Manager reporting data. The data is further restricted with the use of role-based access.
 
 ## Elevated permissions
-
-<!-- SCCMDocs#405 -->
 
 Configuration Manager requires some accounts to have elevated permissions for on-going operations. For example, see [Prerequisites for installing a primary site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). The following list summarizes these permissions and the reasons why they're needed.
 

@@ -7,11 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2022
+ms.date: 06/27/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
-ms.localizationpriority:
+ms.localizationpriority: Low
 # optional metadata
 
 #ROBOTS:
@@ -28,14 +28,19 @@ ms.collection:
 
 # Bundle IDs for built-in iOS and iPadOS apps you can use in Intune
 
-When you configure features on iOS/iPadOS devices, you can also add the built-in apps on these devices. This article lists the bundle IDs of some common built-in iOS/iPadOS apps. To find the bundle ID of other apps, contact your software vendor. See Apple's list of [iOS/iPadOS bundle IDs](https://support.apple.com/guide/deployment/bundle-ids-for-native-ios-and-ipados-apps-depece748c41/1/web/1.0) (opens Apple's web site).
+When you configure features on iOS/iPadOS devices, you can also add the built-in apps on these devices. This article lists the bundle IDs of some common built-in iOS/iPadOS apps.
+
+To get the bundle ID of other apps, you can:
+
+- [Get the app bundle ID using the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+- Go to Apple's list of [iOS/iPadOS bundle IDs](https://support.apple.com/guide/deployment/bundle-ids-for-native-ios-and-ipados-apps-depece748c41/1/web/1.0) (opens Apple's web site).
+
+> [!TIP]
+> On macOS devices, you can get the bundle ID using the Terminal app and AppleScript: `osascript -e 'id of app "AppName"'`.
 
 This feature applies to:
 
 - iOS/iPadOS
-
-> [!TIP]
-> On macOS devices, you can get the bundle ID using the Terminal app and AppleScript: `osascript -e 'id of app "AppName"'`.
 
 ## Bundle IDs
 
@@ -91,6 +96,7 @@ This feature applies to:
 | com.apple.Bridge            | Watch        | Apple     |
 | com.apple.weather           | Weather      | Apple     |
 | com.apple.barcodesupport.qrcode| QR Code Reader | Apple |
+
 
 ## Next steps
 

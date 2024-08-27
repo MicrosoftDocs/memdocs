@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/14/2024
+ms.date: 08/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -83,19 +83,19 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 The Intune management extension has the following prerequisites. Once they're met, the Intune management extension installs automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
 - Devices running Windows 10 version 1607 or later. If the device is enrolled using [bulk auto-enrollment](../enrollment/windows-bulk-enroll.md), devices must run Windows 10 version 1709 or later. The Intune management extension isn't supported on Windows 10 in S mode, as S mode doesn't allow running non-store apps.
-  
-- Devices joined to Microsoft Entra ID, including:  
-  
+
+- Devices joined to Microsoft Entra ID, including:
+
   - Microsoft Entra hybrid joined: Devices joined to Microsoft Entra ID, and also joined to on-premises Active Directory (AD). See [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
-  
-- Microsoft Entra registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school.
+
+  - Microsoft Entra registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school.
 
 - Devices enrolled in Intune, including:
 
   - Devices enrolled in a group policy (GPO). See [Enroll a Windows 10 device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) for guidance.
-  
+
   - Devices manually enrolled in Intune, which is when:
-  
+
     - [Auto-enrollment to Intune](../enrollment/quickstart-setup-auto-enrollment.md) is enabled in Microsoft Entra ID. Users sign in to devices using a local user account, and manually join the device to Microsoft Entra ID. Then, they sign in to the device using their Microsoft Entra account.
 
     OR  
@@ -115,7 +115,7 @@ The Intune management extension has the following prerequisites. Once they're me
 ## Create a script policy and assign it
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Scripts** > **Add** > **Windows 10 and later**.
+2. Select **Devices** > **Scripts and remediations** > **Platform scripts** > **Add** > **Windows 10 and later**.
 
     ![Screenshot that shows creating a new script for a Windows 10 device.](./media/intune-management-extension/create-script-windows.png)
 
@@ -149,7 +149,7 @@ The Intune management extension has the following prerequisites. Once they're me
 
         > [!NOTE]
         > PowerShell scripts in Intune can be targeted to Microsoft Entra device security groups or Microsoft Entra user security groups.
-        > However, when targeting workplace joined (WPJ) devices, only Microsoft Entra device security groups can be used (user targeting will be ignored). For more information, see [Win32 app support for Workplace join (WPJ) devices](../fundamentals/whats-new-archive.md#win32-app-support-for-workplace-join-wpj-devices-).
+        > However, when targeting workplace joined (WPJ) devices, only Microsoft Entra device security groups can be used (user targeting will be ignored).
 
     2. Select **Next**.
 
@@ -203,6 +203,8 @@ In **PowerShell scripts**, select the script to monitor, choose **Monitor**, and
 Agent logs on the client machine are typically in `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. You can use [CMTrace.exe](/configmgr/core/support/cmtrace) to view these log files.
 
 ![Screenshot or sample cmtrace agent logs in Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)  
+
+In addition, you can use the log file *AppWorkload.log* to help troubleshoot and analyze Win32 app management events on the client. This log file contains all logging information related to app deployment activities conducted by the IME.
 
 ## Delete a script
 

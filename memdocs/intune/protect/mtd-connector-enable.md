@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/31/2024
+ms.date: 07/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Enable the Mobile Threat Defense connector in Intune
@@ -38,34 +39,19 @@ Applies to:
 
 - All [Intune Mobile Threat Defense partners](../protect/mobile-threat-defense.md#mobile-threat-defense-partners).
 
-## Classic conditional access policies for Mobile Threat Defense (MTD) apps
-
-When you integrate a new Mobile Threat Defense application with Intune and enable the connection to Intune, Intune creates a classic Conditional Access policy in Microsoft Entra ID. Each third-party MTD partner you integrate with creates a new classic Conditional Access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled. 
-
-> [!NOTE]
->
-> As of the August 2023 Intune service release (2308), classic Conditional Access (CA) policies are no longer created for the **Microsoft Defender for Endpoint** connector. If your tenant has a classic CA policy that was previously created for integration with Microsoft Defender for Endpoint, it can be deleted. Classic CA policies continue to be needed for 3rd party MTD partners.
-
-If the classic policy is deleted, delete the connection to Intune that was responsible for its creation and then set it up again. This process recreates the classic policy. It isn't supported to migrate classic policies for MTD apps to the new policy type for Conditional Access.
-
-Classic Conditional Access policies for MTD apps:
-
-- Are used by Intune MTD to require that devices are registered in Microsoft Entra ID, and that they have a device ID before they communicate with the MTD partner. The ID is required so that devices and can successfully report their status to Intune.
-- Have no effect on any other Cloud apps or Resources.
-- Are distinct from Conditional Access policies you might create to help manage MTD.
-- By default, don't interact with other Conditional Access policies you use for evaluation.
-
-To view classic Conditional Access policies, in [Azure](https://portal.azure.com/#home), go to **Microsoft Entra ID** > **Conditional Access** > **Classic policies**.
-
 ## To enable the Mobile Threat Defense connector
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a third-party Mobile Threat Defense vendor, you must be a Microsoft Entra *Global administrator* or be assigned the *Endpoint Security Manager* built-in admin role for Intune. You can also use a custom role that includes the *Mobile Threat Defense* permission in Intune.
+2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a third-party Mobile Threat Defense vendor, your account must be assigned the *Endpoint Security Manager* built-in admin role for Intune, or be assigned a custom role that includes the *Read* and *Modify* rights for the Intune *Mobile Threat Defense* permission.
 
 3. On the **Mobile Threat Defense** pane, select **Add**.
 
 4. For **Mobile Threat Defense connector to setup**, select your MTD partner solution from the drop-down list.
+
+> [!NOTE]
+>
+> As of the August 2023 Intune service release (2308), classic Conditional Access (CA) policies are no longer created for the **Microsoft Defender for Endpoint** connector. As of April 2024 Intune service release (2404), classic CA policies are no longer needed for 3rd party **Mobile Threat Defense** connectors either. If your tenant has a classic CA policy that was previously created for integration with Microsoft Defender for Endpoint or 3rd party Mobile Threat Defense connectors, it can be deleted.
 
 5. Enable the toggle options according to your organization's requirements. The toggle options that are visible can vary depending on the MTD partner. For example, the following image shows the available options that are available for Symantec Endpoint Protection:
 

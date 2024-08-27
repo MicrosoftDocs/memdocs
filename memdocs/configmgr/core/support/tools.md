@@ -10,10 +10,10 @@ author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
     - tier3
     - essentials-manage
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Configuration Manager Tools
@@ -92,8 +92,6 @@ The following tools are in the `CD.Latest\SMSSETUP\TOOLS` folder on the site ser
 - [Configuration Manager group policy administrative template](../clients/deploy/deploy-clients-to-windows-computers.md#configure-and-assign-client-installation-properties-by-using-a-group-policy-object): Configure and assign client installation properties by using a group policy object.
 
 - [Content library cleanup tool](../plan-design/hierarchy/content-library-cleanup-tool.md): Remove orphaned content from a distribution point.
-
-- [Desktop Analytics log collector](../../desktop-analytics/log-collector.md): Helps to troubleshoot Desktop Analytics device enrollment issues.
 
 - [Extend and migrate on-premises site to Microsoft Azure](azure-migration-tool.md): Helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. <!--3556022-->
 

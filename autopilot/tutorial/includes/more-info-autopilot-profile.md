@@ -2,10 +2,10 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 04/24/2023
+ms.date: 06/19/2024
 ms.localizationpriority: medium
 ---
 
@@ -20,6 +20,6 @@ user-driven/hybrid-azure-ad-join-autopilot-profile.md
 
 Headings are driven by article context. -->
 
-For more information on configuring Autopilot profiles, see the following article(s):
+For more information on configuring Autopilot profiles, see the following articles:
 
-- [Configure Autopilot profiles](/mem/autopilot/profiles)
+- [Configure Autopilot profiles](/autopilot/profiles).

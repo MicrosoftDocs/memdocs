@@ -2,7 +2,7 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 10/31/2023
+ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -10,10 +10,10 @@ author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
-# Support for Windows 11 in Configuration Manager  
+# Support for Windows 11 in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -26,7 +26,7 @@ For more information about support for the Windows Assessment and Deployment Kit
 
 <!--
 > [!TIP]
-> Windows Server builds as a client are supported the same as the associated Windows 11 version. For example, Windows Server 2022 is the same build version as Windows 11 ..., and Windows Server version ... is the same build version as Windows 11, version .... 
+> Windows Server builds as a client are supported the same as the associated Windows 11 version. For example, Windows Server 2022 is the same build version as Windows 11 ..., and Windows Server version ... is the same build version as Windows 11, version ....
 >
 > For more information on Windows Server as a site system, see [Supported operating systems for Configuration Manager site system servers](supported-operating-systems-for-site-system-servers.md).
 -->
@@ -46,11 +46,11 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 11 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 11 version                         | ConfigMgr 2207 | ConfigMgr 2211 | ConfigMgr 2303 | ConfigMgr 2309 |
+| Windows 11 version                         | ConfigMgr 2211 | ConfigMgr 2303 | ConfigMgr 2309 | ConfigMgr 2403 |
 |--------------------------------------------|----------------|----------------|----------------|----------------|
 | **23H2**<br>(10.0.22631) <!--2026-10-31--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 | **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | 
+| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
 
@@ -83,7 +83,7 @@ Configuration Manager version 2107 with the [update rollup](../../../hotfix/2107
 
 The **All Windows 11 (ARM64)** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
 
-OS deployment isn't supported, except for a feature update task sequence. You can deploy a task sequence with a feature update to a Windows 11 on ARM64 device. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).
+Starting in version 2403 OS deployment is supported for **All Windows 11 (ARM64)**, you can deploy a task sequence with a feature update to a Windows 11 on ARM64 device. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).
 
 ## Support for Windows Insider
 
@@ -93,12 +93,7 @@ To provide feedback on Windows Insider, use the Windows [Feedback Hub](/windows-
 
 ## Known issues
 
-### Desktop Analytics
-
 <!-- 10797955 -->
-
-[Desktop Analytics](../../../desktop-analytics/overview.md) doesn't support Windows 11. For information about Windows 11 hardware readiness, Microsoft recommends that you enable tenant attach and [Endpoint analytics](../../../../analytics/overview.md).
-
 ### Windows servicing dashboard
 
 <!-- 10732387 -->

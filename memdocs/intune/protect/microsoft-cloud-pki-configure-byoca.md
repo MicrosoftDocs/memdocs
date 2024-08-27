@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/26/2024
+ms.date: 06/13/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - certificates
 - IntuneSuite
+- sub-intune-suite
 ---
 # Configure Microsoft Cloud PKI - Bring your own CA
 
@@ -49,7 +50,7 @@ For more information about how to prepare your tenant for Microsoft Cloud PKI, i
 
 ## Role based access control
 
-The account you use to sign into the Microsoft Intune admin center must have permission to create a certification authority (CA). The roles with built-in permissions include Microsoft Entra Global administrator and Intune service administrator account. Alternatively, you can assign Cloud PKI CA permissions to an admin user. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+The account you use to sign into the Microsoft Intune admin center must have permission to create a certification authority (CA). The Microsoft Entra Intune Administrator (also known as Intune service administrator) account has the appropriate built-in permissions to create CAs. Alternatively, you can assign Cloud PKI CA permissions to an admin user. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md). 
 
 ## Step 1: Create issuing CA and certificate signing request
 
@@ -134,7 +135,27 @@ A private CA is required to sign the certificate signing request (CSR) file you 
 
 - Option 2: Use the Windows ADCS command line tool `certreq.exe` executable file.  
 
-For more information about certificate signing, see the documentation provided by your CA.  
+The following table lists the object identifiers (OID) supported for signing certificates used in BYOCA deployments.        
+
+| Subject name property | Object identifier |
+| --- | --- |
+| Common name (CN) |  OID.2.5.4.3 |
+| Organization (O) |  OID.2.5.4.10 |
+| Organizational Unit (OU) |  OID.2.5.4.11 |
+| Locality (L) |  OID.2.5.4.7 |
+| State (ST) or Province |  OID.2.5.4.8 |
+| Country (C) |  OID.2.5.4.6 |
+| Title (T) |  OID.2.5.4.12 |
+| Serial Number | OID.2.5.4.5 |
+| Email (E) | OID.1.2.840.113549.1.9.1 |
+| Domain Component (DC) | OID.0.9.2342.19200300.100.1.25 |
+| Street | OID.2.5.4.9 |
+| Given name | OID.2.5.4.42 |
+| Initials | OID.2.5.4.43 |
+| Postal Code | OID.2.5.4.17 |
+| Distinguished Name Qualifier | OID.2.5.4.46 |
+
+For more information about certificate signing, see the help documentation provided by your CA.  
 
 ### Option 1: Certification authority web enrollment
 
@@ -321,12 +342,15 @@ Create an SCEP certificate profile for each OS platform you're targeting, like y
       > [!div class="mx-imgBorder"]
       > ![Image of the root certificate setting, with a root CA certificate selected.](./media/microsoft-cloud-pki/scep-root-certificate.png)  
 
-1. For **SCEP Server URLS**, paste the SCEP URI.  
+1. For **SCEP Server URLS**, paste the SCEP URI. It's important to leave the string `{{CloudPKIFQDN}}` as-is. Intune replaces this placeholder string with the appropriate FQDN when the profile is delivered to the device. The FQDN will appear within the *.manage.microsoft.com namespace, a core Intune endpoint. For more information about Intune endpoints, see [Network Endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).  
 1. Configure the remaining settings, following these best practices:  
 
    - **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.  
 
    - **Extended Key Usage**: Microsoft Cloud PKI doesn't support the **Any Purpose** option.
+
+      > [!NOTE]
+      > Make sure the EKU(s) you select is configured on the Cloud PKI issuing certificate authority (CA). If you select an EKU that isn't present on the Cloud PKI issuing CA, then an error occurs with the SCEP profile. And, a certificate isn't issued to the device.
 
    - **SCEP Server URLs**: Don't combine NDES/SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
 1. Assign and review the profile. When you're ready to finalize everything, select **Create**.

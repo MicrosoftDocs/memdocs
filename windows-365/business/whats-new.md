@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/28/2024
+ms.date: 07/31/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -47,6 +47,23 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of July 29, 2024
+
+#### Resize support for Windows 365 Business is now generally available<!--50220049-->
+
+Resize remote action support for Windows 365 Business Cloud PCs has moved out of preview and is now generally available. For more information, see [Remote management actions](../business/remotely-manage-business-cloud-pcs.md#remote-management-actions).
+
+<!-- ########################## -->
+## Week of June 3, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Single sign-on is now generally available<!--50103753-->
+
+Windows 365 Business now supports single sign-on. For more information, see [Configure single sign-on for Windows 365 Business](configure-single-sign-on.md). 
 
 <!-- ########################## -->
 ## Week of March 26, 2024

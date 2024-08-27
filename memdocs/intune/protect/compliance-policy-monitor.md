@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/05/2024
+ms.date: 05/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - compliance
+- sub-device-compliance
 ---
 # Monitor results of your Intune Device compliance policies
 
@@ -41,7 +42,7 @@ Compliance reports help you understand when devices fail to meet your [complianc
 This article applies to:
 
 - Android device administrator
-- Android opens source project (AOSP)  
+- Android open source platform (AOSP)   
 - Android Enterprise
 - iOS/iPadOS
 - Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
@@ -63,11 +64,9 @@ When viewing compliance status details and reports, be aware of the following im
 
 - Devices must be enrolled into Intune to receive device compliance policies.
 
-- The tenant-wide [compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings) include the setting **Mark devices with no compliance policy assigned as**. The default configuration marks devices without an assigned compliance policy as *compliant*. We recommend configuring this setting so that these devices are marked as *noncompliant*. Then you can easily identify and monitor the noncompliant devices in the [Devices without compliance policy organization report](../fundamentals/reports.md#devices-without-compliance-policy-organizational).  
+- The tenant-wide [compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings) include the setting **Mark devices with no compliance policy assigned as**. The default configuration marks devices without an assigned compliance policy as *compliant*. We recommend configuring this setting so that these devices are marked as *noncompliant*. Then you can identify the noncompliant devices in the [Devices without compliance policy organization report](../fundamentals/reports.md#devices-without-compliance-policy-organizational).  
 
-- If the system account shows up as the user principal name in a compliance report, it's because a policy is assigned to a device group, and no user is signed in when compliance was last evaluated. 
-
-- Compliance reports show the compliance status for the last user on the device. For device-targeted policies, the *system account* appears as the user principal name in the report if no user is signed in during the device's last compliance check. 
+- Compliance reports show the compliance status for the last user on the device. For device-targeted policies, *System account* appears as the user principal name in the report if no user is signed in during the device's last compliance check. 
 
 ## Device compliance dashboard
 
@@ -221,8 +220,7 @@ For more information about these reports, see [Device compliance reports](../fun
 In addition to reports from the *Compliance status* tab and from the *Reports* node of the admin center, the following older compliance reports are available:  
 
 - Noncompliant devices
-- Policy noncompliance
-- Windows health attestation report  
+- Policy noncompliance  
 
 Go to **Devices** > **Monitor** to access these reports. For faster viewing, sort the **Category** column, and then look for reports with the **Compliance** tag.  
 

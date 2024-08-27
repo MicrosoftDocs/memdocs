@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/17/2022
+ms.date: 04/15/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,42 +35,42 @@ This feature applies to:
 
 - Android Enterprise personally owned devices with a work profile (BYOD)
 
-On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use [app configuration policies](../apps/app-configuration-policies-use-android.md). For Android device administrator, see [Android device settings to configure email](email-settings-android.md).
+On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use [app configuration policies](../apps/app-configuration-policies-use-android.md). For Android device administrator, go to [Android device settings to configure email](email-settings-android.md).
 
-As an Intune administrator, you can create and assign email settings to Android Enterprise personally owned devices with a work profile. To learn more about email profiles in Intune, see [configure email settings](email-settings-configure.md).
+As an Intune administrator, you can create and assign email settings to Android Enterprise personally owned devices with a work profile. To learn more about email profiles in Intune, go to [configure email settings](email-settings-configure.md).
 
 ## Before you begin
 
 - Deploy your email app. For more information, go to [Configure email apps](email-settings-configure.md).
 
-  - If your profile will use Gmail and you want to use modern authentication, then you may have to deploy the Google Chrome app to the work profile.
+  - If your profile uses Gmail and you want to use modern authentication, then you might have to deploy the Google Chrome app to the work profile.
 
 - Create an [Android Enterprise email device configuration profile](email-settings-configure.md) > **Personally-owned work profile**.
 
 ## Android Enterprise
 
-- **Email app**: Select **Gmail** or **Nine Work**. This app is the client app that connects to the email server you enter.
+- **Email app**: Select **Gmail** or **Nine Work**. This client app connects to the email server you enter.
 - **Email server**: Enter the host name of your Exchange server. For example, enter `outlook.office365.com`.
-- **Username attribute from Microsoft Entra ID**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that's used by this profile. Make sure your users have email addresses that match the attribute you select. Your options:
+- **Username attribute from Microsoft Entra ID**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that this profile uses. Make sure your users have email addresses that match the attribute you select. Your options:
 
-  - **User Principal Name**: Gets the name, such as `user1` or `user1@contoso.com`.
-  - **User name**: Gets only the name, such as `user1`.
+  - **User Principal Name**: Gets the name, like `user1` or `user1@contoso.com`.
+  - **User name**: Gets only the name, like `user1`.
 
-- **Email address attribute from Microsoft Entra ID**: This name is the email attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the email address that's used by this profile. Your options:
-  - **User principal name**:  Uses the full principal name, such as `user1@contoso.com` or `user1`, as the email address.
-  - **Primary SMTP address**: Uses the primary SMTP address, such as `user1@contoso.com`, to sign in to Exchange.
+- **Email address attribute from Microsoft Entra ID**: This name is the email attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the email address this profile uses. Your options:
+  - **User principal name**:  Uses the full principal name, like `user1@contoso.com` or `user1`, as the email address.
+  - **Primary SMTP address**: Uses the primary Simple Mail Transfer Protocol (SMTP) address, like `user1@contoso.com`, to sign in to Exchange.
 
 - **Authentication method**: Select **Username and Password** or **Certificates** as the authentication method used by the email profile.
-  - If you select **Certificate**, select a client SCEP or PKCS certificate profile that you previously created to authenticate the Exchange connection.
-- **SSL**: Choose **Enable** to use Secure Sockets Layer (SSL) communication when sending emails, receiving emails, and communicating with the Exchange server.
-- **Amount of email to synchronize**: Choose the amount of time of email you want to synchronize. Or, select **Unlimited** to synchronize all available email.
-- **Content type to sync** (Nine Work only): Choose which data you want to synchronize on the devices. Your options:
-  - **Contacts**: Choose **Enable** to allow end users to sync contacts to their devices.
-  - **Calendar**: Choose **Enable** to allow end users to sync the calendar to their devices.
-  - **Tasks**: Choose **Enable** to allow end users to sync any tasks to their devices.
+  - If you select **Certificate**, select a client [SCEP](../protect/certificates-profile-scep.md) or [PKCS](../protect/certificates-pfx-configure.md) certificate profile that you previously created to authenticate the Exchange connection.
+- **SSL**: **Enable** uses Secure Sockets Layer (SSL) communication when sending emails, receiving emails, and communicating with the Exchange server. **Disable** doesn't use SSL.
+- **Amount of email to synchronize**: Select the amount of time of email you want to synchronize. Or, select **Unlimited** to synchronize all available email.
+- **Content type to sync** (Nine Work only): Select the data you want to synchronize on the devices. Your options:
+  - **Contacts**: **Enable** allows end users to sync contacts to their devices.
+  - **Calendar**: **Enable** allows end users to sync the calendar to their devices.
+  - **Tasks**: **Enable** allows end users to sync any tasks to their devices.
 
-## Next steps
+## Related articles
 
-[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create email profiles for [Android Samsung Knox](email-settings-android.md), [iOS/iPadOS](email-settings-ios.md), and [Windows 10 and later](email-settings-windows-10.md) devices.
+- Create email profiles for [Android Samsung Knox](email-settings-android.md), [iOS/iPadOS](email-settings-ios.md), and [Windows 10 and later](email-settings-windows-10.md) devices.

@@ -1,14 +1,14 @@
 ### YamlMime:Landing
 
 title: Windows Autopilot documentation
-summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
+summary: Windows Autopilot and Windows Autopilot device preparation is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
 metadata:
-  title: Windows Autopilot documentation
-  description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
+  title: Windows Autopilot and Windows Autopilot device preparation documentation
+  description: Windows Autopilot and Windows Autopilot device preparation is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
   ms.service: windows-client
-  ms.subservice: itpro-deploy
-  ms.topic: landing-page 
-  ms.collection: 
+  ms.subservice: autopilot
+  ms.topic: landing-page
+  ms.collection:
     - tier1
     - highpri
     - essentials-navigation
@@ -16,7 +16,7 @@ metadata:
   ms.author: frankroj
   manager: aaroncz
   ms.reviewer: jubaptis
-  ms.date: 11/30/2023
+  ms.date: 06/03/2024
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
@@ -24,122 +24,50 @@ metadata:
 landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
+
+  # Card (optional)
+  - title: Windows Autopilot solutions
+    linkLists:
+    - linkListType: get-started
+      links:
+      - text: Compare Windows Autopilot device preparation and Windows Autopilot
+        url:  device-preparation/compare.md
+
+  # Card (optional)
+  - title: Understand Windows Autopilot device preparation
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Overview of Windows Autopilot device preparation
+        url:  device-preparation/overview.md
+      - text: Requirements
+        url:  device-preparation/requirements.md
+      - text: Reporting and monitoring
+        url:  device-preparation/reporting-monitoring.md
+
   # Card (optional)
   - title: Understand Windows Autopilot
     linkLists:
     - linkListType: overview
       links:
       - text: Overview of Windows Autopilot
-        url:  windows-autopilot.md
+        url:  overview.md
+      - text: Requirements
+        url:  requirements.md
       - text: Device registration overview
         url:  registration-overview.md
       - text: Enrollment Status Page
         url: enrollment-status.md
-      - text: Requirements
-        url:  software-requirements.md
-      - text: What's new
-        url:  windows-autopilot-whats-new.md
-
-  # Card (optional)
-  - title: Deployment scenarios
-    linkLists:
-    - linkListType: concept
-      links:
-      - text: Windows Autopilot scenarios and capabilities
-        url: windows-autopilot-scenarios.md
-    - linkListType: learn
-      links:
-      - text: User-driven mode
-        url: user-driven.md
-      - text: Self-deploying mode
-        url: self-deploying.md
-      - text: Windows Autopilot Reset
-        url: windows-autopilot-reset.md
-      - text: Pre-provisioning
-        url: pre-provision.md
-      - text: Support for existing devices
-        url: existing-devices.md
-
-  # Card (optional)
-  - title: Support information
-    linkLists:
-    - linkListType: reference
-      links:
-      - text: Frequently asked questions
-        url: autopilot-faq.yml
-      - text: Support contacts
-        url: autopilot-support.md
-      - text: Registration authorization
-        url: registration-auth.md
-      - text: Device guidelines
-        url: autopilot-device-guidelines.md
-      - text: Motherboard replacement guidance
-        url: autopilot-motherboard-replacement.md
-
-  # Card (optional)
-  - title: Administer Windows Autopilot
-    linkLists:
-    - linkListType: how-to-guide
-      links:
       - text: Manually register devices
         url: add-devices.md
-      - text: Create device groups
-        url: enrollment-autopilot.md
-      - text: Create deployment profiles
-        url: profiles.md
-      - text: Deploy hybrid devices
-        url: windows-autopilot-hybrid.md
-      - text: BitLocker encryption
-        url: bitlocker.md
-      - text: DFCI management
-        url: dfci-management.md
 
   # Card (optional)
-  - title: Troubleshoot Windows Autopilot
-    linkLists:
-    - linkListType: reference
-      links:
-      - text: Troubleshooting overview
-        url: troubleshooting.md
-      - text: Policy conflicts
-        url: policy-conflicts.md
-      - text: Known issues
-        url: known-issues.md
-      - text: Resolved issues
-        url: resolved-issues.md
-
-  # Card (optional)
-  - title: Windows Autopilot Tutorials
+  - title: Tutorials
     linkLists:
     - linkListType: tutorial
       links:
-      - text: Windows Autopilot user-driven Microsoft Entra join
-        url: tutorial/user-driven/azure-ad-join-workflow.md
-      - text: Windows Autopilot user-driven Microsoft Entra hybrid join
-        url: tutorial/user-driven/hybrid-azure-ad-join-workflow.md
-      - text: Windows Autopilot for pre-provisioned deployment Microsoft Entra join
-        url: tutorial/pre-provisioning/azure-ad-join-workflow.md
-      - text: Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join
-        url: tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md
-      - text: Windows Autopilot self-deploying mode
-        url: tutorial/self-deploying/self-deploying-workflow.md
-      - text: Windows Autopilot Reset
-        url: tutorial/reset/autopilot-reset-overview.md
+      - text: Windows Autopilot scenarios
+        url:  tutorial/autopilot-scenarios.md
+      - text: Windows Autopilot device preparation scenarios
+        url:  device-preparation/tutorial/scenarios.md
 
-  # Card (optional)
-  - title: Resources
-    linkLists:
-    - linkListType: reference
-      links:
-      - text: Windows Autopilot deployment process poster
-        url: deployment-process.md
-      - text: Participant device manufacturers
-        url: https://www.microsoft.com/microsoft-365/windows/windows-autopilot#office-SecondaryMessaging-k4if896
-      - text: Introducing Windows Autopilot video
-        url: https://youtu.be/4K4hC5NchbE
-      - text: Windows Autopilot @ Windows IT Pro Blog
-        url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/Windows10Blog/label-name/Windows%20Autopilot
-      - text: Windows Autopilot and Surface devices
-        url: /surface/windows-autopilot-and-surface-devices
-      - text: Windows Autopilot for HoloLens 2
-        url: /hololens/hololens2-autopilot

@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - conditional-access
+- sub-device-compliance
 ---
 
 # Common ways to use Conditional Access with Intune
@@ -44,7 +45,7 @@ The information in this article can help you understand how to use the Intune mo
 
 Intune and Microsoft Entra ID work together to make sure only managed and compliant devices can access your organization's email, Microsoft 365 services, Software as a service (SaaS) apps, and [on-premises apps](/azure/active-directory/active-directory-application-proxy-get-started). Additionally, you can set a policy in Microsoft Entra ID to only enable domain-joined computers or mobile devices that are enrolled in Intune to access Microsoft 365 services.
 
-With Intune, you deploy device compliance policies to determine if a device meets your expected configuration and security requirements. The compliance policy evaluation determines the devices compliance status, which is reported to both Intune and Microsoft Entra ID. It's in Microsoft Entra ID that Conditional Access policies can use a device's compliance status to make decisions on whether to allow or block access to your organization's resources from that device.
+With Intune, you deploy device compliance policies to determine if a device meets your expected configuration and security requirements. The compliance policy evaluation determines the device's compliance status, which is reported to both Intune and Microsoft Entra ID. It's in Microsoft Entra ID that Conditional Access policies can use a device's compliance status to make decisions on whether to allow or block access to your organization's resources from that device.
 
 Device-based Conditional Access policies for Exchange online and other Microsoft 365 products are configured through the [Microsoft Intune admin center](../fundamentals/what-is-intune.md).
 

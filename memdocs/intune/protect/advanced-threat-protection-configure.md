@@ -7,7 +7,7 @@ keywords: configure, manage, capabilities, attack surface reduction, next-genera
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/18/2024
+ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- sub-secure-endpoints
 ---
 
 # Configure Microsoft Defender for Endpoint in Intune
@@ -107,18 +108,7 @@ Open the Microsoft Defender for Endpoint portal at [security.microsoft.com](http
 
 > [!TIP]
 >
-> When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy, such as Windows Defender ATP device policy, in Microsoft Entra ID. Each MTD app you integrate, including [Microsoft Defender for Endpoint](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but should not be edited, deleted, or disabled.
->
-> If the classic policy is deleted, you will need to delete the connection to Intune that was responsible for its creation, and then set it up again. This recreates the classic policy. It's not supported to migrate classic policies for MTD apps to the new policy type for conditional access.
->
-> Classic conditional access policies for MTD apps:
->
-> - Are used by Intune MTD to require that devices are registered in Microsoft Entra ID so that they have a device ID before communicating to MTD partners. The ID is required so that devices and can successfully report their status to Intune.
-> - Have no effect on any other Cloud apps or Resources.
-> - Are distinct from conditional access policies you might create to help manage MTD.
-> - By default, don't interact with other conditional access policies you use for evaluation.
->
-> To view classic Conditional Access policies, in [Azure](https://portal.azure.com/#home), go to **Microsoft Entra ID** > **Conditional Access** > **Classic policies**.
+> As of the August 2023 Intune service release (2308), classic Conditional Access (CA) policies are no longer created for the Microsoft Defender for Endpoint connector. If your tenant has a classic CA policy that was previously created for integration with Microsoft Defender for Endpoint, it can be deleted. To view classic Conditional Access policies, in [Azure](https://portal.azure.com/#home), go to **Microsoft Entra ID** > **Conditional Access** > **Classic policies**.
 
 ## Onboard devices
 
@@ -217,7 +207,7 @@ Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for 
 
 1. Download the .mobile profile, which is hosted here: [https://aka.ms/mdatpiossupervisedprofile](https://aka.ms/mdatpiossupervisedprofile).
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
+3. Select **Devices** > **Manage devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 4. For **Platform**, select **iOS/iPadOS**
 5. For **Profile type**, select **Custom**, and then select **Create**.
 6. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.

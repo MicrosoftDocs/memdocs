@@ -6,17 +6,17 @@ titleSuffix: Microsoft Intune
 description: To support hybrid and remote workers, convert or migrate your workloads to support cloud-native endpoints. This planning guide focuses on deploying apps and updates with Intune, moving from Group Policy Objects, and using Windows Autopilot.
 keywords:
 author: MandiOhlinger
-  
+
 ms.author: mandia
 manager: dougeby
 ms.date: 01/09/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
-ms.subservice: 
+ms.subservice:
 ms.localizationpriority: high
-ms.assetid: 
+ms.assetid:
 # optional metadata
- 
+
 #audience:
 #ms.devlang:
 ms.reviewer: ahamil, jasandys, wicale
@@ -103,7 +103,7 @@ The following workloads are configuration, tools, processes, and services for en
 Your exact workloads, details, and how to update the workloads for cloud-native endpoints might be different. Also, you don't need to transition every workload. But, you do need to consider each workload, its impact on user productivity, and the device management abilities. Converting some workloads to use cloud-native endpoints might take longer than others. Workloads may also have interdependencies on each other.
 
 - **Device identity**
-  
+
   A device's identity is determined by the identity providers (IdP) that have knowledge of the device and a security trust with the device. For Windows endpoints, the most common IdP's are on-premises Active Directory (AD) and Microsoft Entra ID. Endpoints with identities from one of these IdP's are typically joined to one or joined to both.
 
   - For cloud-native endpoints, Microsoft Entra join is the best choice for the device's identity. It doesn't require any connectivity to an on-premises network, resource, or service.
@@ -118,7 +118,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   For more information, go to:
 
-  - [Windows Autopilot overview](/autopilot/windows-autopilot)
+  - [Windows Autopilot overview](/autopilot/overview)
   - [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
 
 - **Deploy software and applications**
@@ -187,11 +187,11 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
   - Web browser favorites
   - Line of Business (LOB) application specific data
   - Line of Business (LOB) application specific configuration settings
-  
+
   Users need to create and access their data from any endpoint. This data also needs to be protected, and might need to be shared with other users.
-  
+
   - Store user data and settings in a cloud storage provider, like Microsoft OneDrive. Cloud storage providers can handle data synchronization, sharing, offline access, conflict resolution, and more.
-  
+
     For more information, go to [OneDrive guide for enterprises](/onedrive/plan-onedrive-enterprise).
 
   > [!IMPORTANT]
@@ -200,14 +200,14 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
   > It's possible these settings can be exported, and then imported in another device. For example, you can export user settings from Outlook, Word, and other Office apps.
 
 - **Access on-premises resources**
-  
+
   Some organizations can't transition some workloads to cloud-native solutions. The only option might be accessing existing on-premises resources or services from a cloud-native endpoint. For these scenarios, users need access.
-  
+
   For these on-premises services, resources, and applications, consider the following tasks:
 
   - **Authentication and authorization**: To access on-premises resources from cloud-native endpoints, users need to authenticate and verify who they are. For more specific information, go to [Authentication and access to on-premises resources with cloud-native endpoint](cloud-native-endpoints-on-premises.md#authentication-and-access-to-on-premises-resources).
 
-  - **Connectivity**: Review and evaluate apps & resources that only live on-premises. Connectivity and access to these resources should be available off-premises, and without any direct connectivity, like a VPN. This task might include moving to SaaS versions of your apps, using [Microsoft Entra Application Proxy](/azure/active-directory/app-proxy/application-proxy), [Azure Virtual Desktop](/azure/virtual-desktop/overview), [Windows 365](/windows-365/overview), [SharePoint](/sharepoint/introduction), [OneDrive](/onedrive/plan-onedrive-enterprise), or [Microsoft Teams](/microsoftteams/teams-overview).
+  - **Connectivity**: Review and evaluate apps & resources that only live on-premises. Connectivity and access to these resources should be available off-premises, and without any direct connectivity, like a VPN. This task might include moving to SaaS versions of your apps, using [Microsoft Entra Application Proxy](/entra/identity/app-proxy/overview-what-is-app-proxy), [Azure Virtual Desktop](/azure/virtual-desktop/overview), [Windows 365](/windows-365/overview), [SharePoint](/sharepoint/introduction), [OneDrive](/onedrive/plan-onedrive-enterprise), or [Microsoft Teams](/microsoftteams/teams-overview).
 
   > [!NOTE]
   > Microsoft Entra doesn't support the Kerberos authentication protocol. On-premises AD does support the Kerberos authentication protocol. In your planning, you may learn more about Microsoft Entra Kerberos. When configured, users sign in to a cloud-native endpoint using their Microsoft Entra account, and can access on-premises apps or services that use Kerberos authentication.
@@ -340,7 +340,7 @@ This phase is the first step for your organization migration to be fully cloud-n
 
     For more information, go to:
 
-    - [Windows Autopilot overview](/autopilot/windows-autopilot)
+    - [Windows Autopilot overview](/autopilot/overview)
     - [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
 
 ### ✅ Phase 2: Enable endpoint cloud hybrid identity (optional)
@@ -356,8 +356,8 @@ When endpoints are fully cloud-native, user data is stored in a cloud storage pr
 For more information, go to:
 
 - [Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-- [Configure hybrid Microsoft Entra join](/azure/active-directory/devices/howto-hybrid-azure-ad-join)
-  
+- [Configure hybrid Microsoft Entra join](/entra/identity/devices/how-to-hybrid-join)
+
 > [!NOTE]
 > Microsoft doesn't have a migration utility to convert existing endpoints from on-premises domain joined or hybrid Microsoft Entra joined to Microsoft Entra joined. Microsoft recommends these devices be reset and redeployed as part of a hardware refresh.
 
@@ -369,7 +369,7 @@ When you cloud attach, you can remotely manage your client endpoints, co-manage 
 
 For more specific information, go to [Cloud attach your Configuration Manager environment](../../configmgr/cloud-attach/overview.md) and [Walk through the Microsoft Intune admin center](../../intune/fundamentals/tutorial-walkthrough-endpoint-manager.md).
 
-### ✅ Phase 4: Create an Microsoft Entra joined proof of concept
+### ✅ Phase 4: Create a Microsoft Entra joined proof of concept
 
 This critical phase can start at any time. It helps identify potential issues, unknown issues, and validates overall functionality and resolutions to those issues. As with all POCs, the goal is to prove and validate functionality in an actual enterprise environment instead of a lab environment.
 
@@ -415,14 +415,14 @@ This phase transitions new Windows endpoint provisioning to Microsoft Entra join
 - **Option 2: Reset the Windows devices**. If your existing devices support the newer security features, then you can reset the devices. During the out of box experience (OOBE) or when users sign in, they can join the devices to Microsoft Entra.
 
   Before resetting an existing Windows endpoint, be sure to:
-  
+
   1. [Delete the device in Intune](../../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
   2. [Delete the Windows Autopilot device registration](/autopilot/add-devices).
-  3. [Delete the existing Microsoft Entra device object](/azure/active-directory/devices/manage-stale-devices).
-  
+  3. [Delete the existing Microsoft Entra device object](/entra/identity/devices/manage-stale-devices).
+
   Then, reset the device, and reprovision the endpoint.
 
-When the devices are ready, join these devices to Microsoft Entra using the option that best for your organization. For more specific information, go to [Microsoft Entra joined devices](/azure/active-directory/devices/concept-azure-ad-join) and [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan).
+When the devices are ready, join these devices to Microsoft Entra using the option that best for your organization. For more specific information, go to [Microsoft Entra joined devices](/entra/identity/devices/concept-directory-join) and [How to: Plan your Microsoft Entra join implementation](/entra/identity/devices/device-join-plan).
 
 ## Move from Group Policy Objects (GPOs)
 
@@ -504,9 +504,9 @@ Some of the benefits include:
 
 For more information on Windows Autopilot, go to:
 
-- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+- [Overview of Windows Autopilot](/autopilot/overview)
 - [Windows Autopilot scenarios and features](/autopilot/windows-autopilot-scenarios)
-- [Windows Autopilot FAQ](/autopilot/autopilot-faq)
+- [Windows Autopilot FAQ](/autopilot/faq)
 
 ## Follow the cloud-native endpoints guidance
 

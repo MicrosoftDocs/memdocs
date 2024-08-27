@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 06/26/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -75,7 +75,14 @@ Windows 365 Boot doesn't automatically set these policies to fully restrict end 
 
 ## User sign-in authentication modes
 
-Windows 365 Boot supports username/password-based authentication for user sign in to their Cloud PC. Windows Hello for Business, convenience PIN, and FIDO key authentication modes aren't supported.
+Support for Windows 365 Boot authentication modes when users sign in to their Cloud PCs is shown of the following table:
+
+| Authentication mode | Dedicated mode supported | Shared mode supported |
+| :---: | :---: | :---: |
+| Username/password | Yes | Yes |
+| Windows Hello for Business | Yes | No |
+| FIDO key | No | Yes |
+| Convenience pin | No | No |
 
 ## Multiple Cloud PCs
 
@@ -92,6 +99,10 @@ To connect to Bluetooth devices from your Windows 365 Boot Cloud PC:
 
 1. Open **Quick Settings** > **Bluetooth**.
 2. In the **Settings** window, pair and connect to bluetooth devices.
+
+## Battery redirection
+
+ When in Windows 365 Boot mode, the Cloud PC desktop shows the local PC's battery status in the taskbar.
 
 <!-- ########################## -->
 ## Next steps

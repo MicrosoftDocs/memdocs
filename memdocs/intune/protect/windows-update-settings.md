@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/03/2023
+ms.date: 07/15/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,6 +26,7 @@ search.appverid: MET150
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-updates
 ---
 
 
@@ -33,7 +34,7 @@ ms.collection:
 
 When you use Intune policies for *Update rings*, you're configuring the Windows settings that manage how and when devices will install Windows updates. If a Windows update setting has a Windows 10 or Windows 11 version dependency, the version dependency is noted in the settings details.
 
-Following are the Windows Update settings for Windows 10 and Windows 11 Updates that you can [manage with update rings](windows-10-update-rings.md) with Microsoft Intune. 
+Following are the Windows Update settings for Windows 10 and Windows 11 Updates that you can [manage with update rings](windows-10-update-rings.md) with Microsoft Intune.
 
 ## Update settings
 
@@ -41,29 +42,29 @@ Update settings control what bits a device will download, and when. For more inf
 
 - **Microsoft product updates**  
   **Default**:  Allow  
-  Windows Update CSP: [Update/AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
+  Windows Update CSP: [Update/AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice)
 
   - **Allow** - Select *Allow* to scan for app updates from Microsoft Update.  
   - **Block** - Select Block to prevent scanning for app updates.  
 
 - **Windows drivers**  
   **Default**:  Allow  
-  Windows Update CSP: [Update/ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
+  Windows Update CSP: [Update/ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate)  
 
   - **Allow** - Select *Allow* include Windows Update drivers during updates.  
   - **Block** - Select Block to prevent scanning for drivers.  
 
 - **Quality update deferral period (days)**  
   **Default**: 0  
-  Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
+  Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays)  
 
-  Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.  
+  Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deadline calculation for both quality and feature updates is based off the time the client's update scan initially discovered the update. See [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines)
 
   Quality Updates are typically fixes and improvements to existing Windows functionality.  
 
 - **Feature update deferral period (days)**  
   **Default**: 0  
-  Windows Update CSP: [Update/PauseFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
+  Windows Update CSP: [Update/DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays)  
 
   Specify the number of days for which Feature Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.
 
@@ -80,7 +81,7 @@ Update settings control what bits a device will download, and when. For more inf
 
 - **Set feature update uninstall period (2 – 60 days)**  
   **Default**: 10  
-  Windows Update CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
+  Windows Update CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#configurefeatureupdateuninstallperiod)  
 
   Configure a time after which feature updates can't be uninstalled.  
 
@@ -104,7 +105,7 @@ User experience settings control the end-user experience for device restart and 
 
 - **Automatic update behavior**  
   **Default**: Auto install at maintenance time  
-  Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate)  
 
   Choose how automatic updates are installed and, if necessary, when to restart the device.  
 
@@ -121,11 +122,11 @@ User experience settings control the end-user experience for device restart and 
 
     - **Active hours start** - Specify a start time for suppressing restarts due to update installations.  
       **Default**: 8 AM  
-      Windows Update CSP: [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+      Windows Update CSP: [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#activehoursstart)  
   
     - **Active hours end** - Specify an end time for suppressing reboots due to update installations.  
       **Default**: 5 PM  
-      Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+      Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#activehoursend)  
 
   - **Auto install and restart at maintenance time** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used, which is the default for unmanaged devices.
 
@@ -133,14 +134,14 @@ User experience settings control the end-user experience for device restart and 
 
     - **Active hours start** - Specify a start time for suppressing restarts due to update installations.  
       **Default**: 8 AM  
-      Windows Update CSP: [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+      Windows Update CSP: [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#activehoursstart)  
   
     - **Active hours end** - Specify an end time for suppressing reboots due to update installations.  
       **Default**: 5 PM  
-      Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+      Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#activehoursend)  
 
   - **Auto install and restart at scheduled time** - Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on users can delay countdown and restart.  
-    Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+    Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate)  
 
     When set to *Auto install and restart at scheduled time*, you can configure the following settings:
 
@@ -167,7 +168,7 @@ User experience settings control the end-user experience for device restart and 
   
   **Default**: Allow
 
-  Windows Update CSP: [Update/SetEDURestart](/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
+  Windows Update CSP: [Update/SetEDURestart](/windows/client-management/mdm/policy-csp-update#setedurestart)  
 
   - **Allow** - Perform restart checks: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc.
   - **Skip** - Will restrict updates to download and install outside of Active Hours. Updates will be allowed to start even if there is a signed-in user or the device is on battery power, providing there is more than 70% battery capacity. Windows will schedule the device to wake from sleep 1 hour after the [Active Hours End](/windows/client-management/mdm/policy-csp-update#activehoursend) time with a 60-minute random delay. Devices will reboot immediately after the updates are installed. If there are still pending updates, the device will continue to retry every hour for 4 hours.
@@ -176,21 +177,21 @@ User experience settings control the end-user experience for device restart and 
 
 - **Option to pause Windows updates**  
   **Default**: Enable  
-  Windows Update CSP: [Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
+  Windows Update CSP: [Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess)  
 
   - **Enable** - Allow device users to pause the installation of an update for a certain number of days.  
   - **Disable** - Prevent device users from pausing the installation of an update.  
 
 - **Option to check for Windows updates**  
   **Default**: Enable  
-  Windows Update CSP: [Update/SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess)
+  Windows Update CSP: [Update/SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess)
 
   - **Enable** - Allow device users to use Windows Update scan to find updates.
   - **Disable** - Prevent device users from accessing the Windows Update scan.  
 
 - **Change notification Update level**  
   **Default**: Use the default Windows Update notifications  
-  Windows Update CSP: [Update/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
+  Windows Update CSP: [Update/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#updatenotificationlevel)
   
   Specify what level of Windows Update notifications users see. This setting doesn't control how and when updates are downloaded and installed.  
 
@@ -203,36 +204,39 @@ User experience settings control the end-user experience for device restart and 
 - **Use deadline settings**  
   **Default**: Not configured  
 
-  Allows user to use deadline settings.  
+  Allows configuration of deadline settings.
 
   - **Not configured**
   - **Allow**
-
+  
+  For more details about how deadlines and grace periods work together see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
+  
   When set to *Allow*, you can configure the following settings for deadlines:
 
   - **Deadline for feature updates**  
     **Default**: *Not configured*  
-    Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
+    Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforfeatureupdates)  
 
     Specifies the number of days a user has before feature updates are installed on their devices automatically (2-30).
 
   - **Deadline for quality updates**  
     **Default**: *Not configured*  
-    Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
+    Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforqualityupdates)
 
     Specifies the number of days a user has before quality updates are installed on their devices automatically (2-30).
 
   - **Grace period**  
     **Default**: *Not configured*
-    Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( /windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( /windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiod)
 
     Specifies a minimum number of days after deadline until restarts occur automatically (0-7).
 
   - **Auto reboot before deadline**  
     **Default**:  Yes
-    Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+    Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot)
 
-    Specifies whether the device should auto reboot before deadline.
+    Specifies whether the device will attempt to automatically reboot outside of active hours before the deadline and grace period are expired. The recommended value is **Yes**, as it enables the system to reboot when the user isn't using the device. Setting this value to **No** forces the system to wait until the deadline and grace period are expired and then restarts the device and this could occur during active hours.
+
     - **Yes**
     - **No**
 

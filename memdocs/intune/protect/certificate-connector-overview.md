@@ -28,6 +28,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - certificates
+- sub-certificates
 ---
 
 
@@ -80,6 +81,7 @@ The Certificate Connector for Microsoft Intune supports:
   - Each instance of the connector should be at the same version. Because the connector supports automatic updates to the newest version, updates can be managed for you by Intune.  
   - Your infrastructure supports redundancy and load balancing, as any available connector instance that supports the same connector features can process your certificate requests.
   - You can configure a proxy to allow the connector to communicate with Intune.
+  - Certificate Connector should not be installed on the same server as Intune Connector for Active Directory.
 
     >[!NOTE]
     > Any instance of the connector that supports PKCS can be used to retrieve pending PKCS requests from the Intune Service queue, process Imported certificates, and handle revocation requests. It's not possible to define which connector handles each request. </br></br>

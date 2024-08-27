@@ -2,12 +2,12 @@
 # required metadata
 
 title: Set up Better Mobile integration with Intune
-description: How to set  up the Better Mobile solution with Microsoft Intune to control mobile device access to your corporate resources
+description: Integrate the third-party mobile threat defense solution of Better Mobile with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 07/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Integrate Better Mobile with Intune
@@ -35,7 +36,7 @@ Complete the following steps to integrate the Better Mobile Threat Defense solut
 
 ## Before you begin
 
-The following steps are to be completed in the [Better Mobile admin console](https://aad.bmobi.net) and will enable a connection to Better Mobile's service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
+The following steps are to be completed in the Better Mobile admin console and will enable a connection to Better Mobile's service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
 
 Before starting the process of integrating Better Mobile with Intune, make sure you have the following:
 
@@ -67,7 +68,7 @@ The Better Mobile app authorization process follows:
 
 ## To set up Better Mobile integration
 
-1. Go to the [Better Mobile admin console](https://aad.bmobi.net) and sign in with your credentials.
+1. Go to the Better Mobile admin console and sign in with your credentials.
 2. Choose **Integration** > **EMM/MDM** > **ADD ACCOUNT**.
 
      ![Image of the Better Mobile admin console](./media/better-mobile-mtd-connector-integration/better_mobile_console.png)

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 05/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,18 +27,28 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- magic-ai-copilot
 ---
 
 # Monitor device configuration policies in Microsoft Intune
 
-Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, go to the devices are assigned to the policy, and update the properties of an existing policy.
+Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, view the devices assigned to the policy, and update the properties of an existing policy.
 
-This article shows you how to view existing device configuration policies for assignment status, making changes, and how to troubleshoot any conflicts.
+You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md) to get more information about your policies and the settings configured in your policies.
+
+This article shows you how to check the assignment status of existing device configuration policies, make changes, troubleshoot conflicts, and how to use Copilot for some of these features.
+
+This feature applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Windows
 
 ## View existing policies
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Policies** tab.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Policies** tab.
 
 All of your policies are shown. You also see the platform, the type of policy, and if the policy is assigned.
 
@@ -47,11 +57,13 @@ All of your policies are shown. You also see the platform, the type of policy, a
 
 ## View details on a policy
 
-After you create your device configuration policy, Intune provides reporting data. These reports show the status of a policy, such as it being successfully assigned to devices, or if the policy shows a conflict.
+After you create your device configuration policy, Intune provides reporting data. These reports show the status of a policy, like it being successfully assigned to devices, or if the policy shows a conflict.
 
-1. In **Devices** > **Configuration** > **Policies** tab, select an existing policy.
+# [By policy](#tab/policy)
 
-2. The **Device and user check-in status** shows the number of all users or devices that checked-in with the policy. If one device has multiple users, this report shows the status for each user. When the user or device checks in with Intune, they receive the settings in your policy.
+1. In **Devices** > **Manage devices** > **Configuration** > **Policies** tab, select an existing policy.
+
+2. **Device and user check-in status** shows the number of all users or devices that checked-in with the policy. If one device has multiple users, this report shows the status for each user. When the user or device checks in with Intune, they receive the settings in your policy.
 
     The following statuses are shown:
 
@@ -61,11 +73,19 @@ After you create your device configuration policy, Intune provides reporting dat
     - **Pending**: The device hasn't checked in with Intune to receive the policy yet.
     - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to iOS 11.1, but the device is using iOS 10.
 
-3. **Device assignment status** shows information for the user that last checked-in. Select **Generate report** to see the latest policy assignment states for the devices that received the policy. You can also filter the assignment status to see only errors, conflicts, and more.
+3. Select **Device assignment status**:
+
+    :::image type="content" source="./media/device-profile-monitor/device-assignment-status.png" alt-text="Screenshot that shows the device assignment status report in Microsoft Intune and Intune admin center.":::
+
+    This report shows information about the user that last checked-in. Select **Generate report** to see the latest policy assignment states for the devices that received the policy. You can also filter the assignment status to see only errors, conflicts, and more.
 
     It's normal for the numbers in the **Device and user check-in status** and **Device assignment status** reports to be different.
 
-4. **Per setting status** shows the individual settings in the policy, and their status.
+4. Back in **Device and user check-in status**, select **Per setting status**:
+
+    :::image type="content" source="./media/device-profile-monitor/per-setting-status.png" alt-text="Screenshot that shows the per setting status report in Microsoft Intune and Intune admin center.":::
+
+    This report shows the individual settings in the policy, and their status.
 
 5. Back in **Device and user check-in status**, select **View report**:
 
@@ -87,9 +107,33 @@ After you create your device configuration policy, Intune provides reporting dat
     - **Configuration settings**: See the settings you configured in the policy.
     - **Applicability Rules**: On your Windows devices, go to the [applicability rules](device-profile-create.md#applicability-rules) used in the policy.
 
+# [Copilot](#tab/copilot-devices)
+
+1. Go to **Devices** > **Manage devices** > **Configuration** > **Policies** tab > select an existing policy.
+
+2. Select **Summarize with Copilot**:
+
+    :::image type="content" source="./media/device-profile-monitor/copilot-summarize-policy.png" alt-text="Screenshot that shows you can select Summarize with Copilot on a device configuration policy in Microsoft Intune and Intune admin center.":::
+
+    The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the effect of a policy and its settings on your users and devices.
+
+    For more information on the different ways you can use Copilot in Intune, go to [Microsoft Copilot in Intune overview](../copilot/copilot-intune-overview.md).
+
+3. Go to **Devices** > **All devices** > select an existing device.
+
+4. Select **Explore with Copilot**:
+
+    :::image type="content" source="./media/device-profile-monitor/explore-with-copilot.png" alt-text="Screenshot that shows how to select Explore with Copilot when you select a device in Microsoft Intune and Intune admin center.":::
+
+    In the set of prompts, you can get device-specific information, like the assigned policies and compare this device with another device.
+
+    For more information on using Copilot to troubleshoot devices, go to [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
+
+---
+
 ## View details on all device configuration policies
 
-1. Go to **Devices** > **Configuration** > **Monitor** tab:
+1. Go to **Devices** > **Manage devices** > **Configuration** > **Monitor** tab:
 
     :::image type="content" source="./media/device-profile-monitor/device-configuration-monitor-tab.png" alt-text="Screenshot that shows to select the monitor tab in device configuration profiles in Microsoft Intune and Intune admin center.":::
 
@@ -106,15 +150,37 @@ After you create your device configuration policy, Intune provides reporting dat
 
 ## View conflicts
 
-In **Devices** > **All devices**, you can see any settings that are causing a conflict. When there's a conflict, you also see all the configuration policies that contain this setting.
+To help with conflicts, there are features in Intune to help you troubleshoot any discrepancies with the policies. When there's a conflict, you also see all the configuration policies that contain this setting.
 
-Administrators can use this feature to help troubleshoot, and fix any discrepancies with the policies.
+# [By device](#tab/devices)
+
+In **Devices** > **All devices**, you can see any settings that are causing a conflict.
 
 1. In Intune, select **Devices** > **All Devices** > select an existing device in the list. An end user can get the device name from their Company Portal app.
 2. Select **Device configuration**. All configuration policies that apply to the device are listed.
-3. Select the policy. It shows you all the settings in that policy that apply to the device. If a device has a **Conflict** state, select that row. In the new window, you see all the policies, and the profile names that have the setting causing the conflict.
+3. Select a policy. It shows you all the settings in that policy that apply to the device.
+
+    If a device has a **Conflict** state, select that row. In the new window, you see all the policies, and the profile names that have the setting causing the conflict.
 
 Now that you know the conflicting setting, and the policies that include that setting, it should be easier to resolve the conflict.
+
+# [Copilot](#tab/copilot-setting)
+
+You can use Copilot to help troubleshoot conflicts at the setting level.
+
+1. Select **Devices** > **Manage devices** > **Configuration** > select an existing policy in the list.
+
+2. Scroll to the **Configuration settings** area and expand a setting category:
+
+    :::image type="content" source="./media/device-profile-monitor/copilot-configuration-settings-expand-category.png" alt-text="Screenshot that shows how to expand a category to see the Copilot tooltip in Microsoft Intune and Intune admin center.":::
+
+3. For each setting, there's a Copilot tooltip:
+
+    :::image type="content" source="./media/device-profile-monitor/copilot-tooltip.png" alt-text="Screenshot that shows the Copilot tooltip for a setting in Microsoft Intune and Intune admin center.":::
+
+    Select the tooltip to get more information about setting. The Copilot prompts can help you understand the effect of the setting, look for potential conflicts, and provide a recommended value.
+
+---
 
 ## Device Firmware Configuration Interface (DFCI) profile reporting
 
@@ -126,7 +192,7 @@ With your DFCI profile settings, you might see the following states:
 
   - The DFCI profile successful configured the setting in the profile.
   - The device doesn't have the hardware feature controlled by the setting, and the profile setting is **Disabled**.
-  - UEFI doesn't allow DFCI to disable the feature, and the profile setting is **Enabled**.
+  - Unified Extensible Firmware Interface (UEFI) doesn't allow DFCI to disable the feature, and the profile setting is **Enabled**.
   - The device lacks the hardware to disable the feature, and the profile setting is **Enabled**.
 
 - **Not Applicable**: This state shows when a setting value in the profile is **Enabled** or **Allowed**, and the matching setting on the device isn't found. This state can happen if the device hardware doesn't have the feature.

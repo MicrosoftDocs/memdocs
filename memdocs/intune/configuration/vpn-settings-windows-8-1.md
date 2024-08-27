@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 04/16/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -45,7 +45,7 @@ Depending on the settings you choose, not all values in the following list are c
 
 - **Connection name**: Enter a name for this connection. Users see this name when they browse their device for the list of available VPN connections. For example, enter `Contoso VPN`.
 - **Servers**: Add one or more VPN servers that devices connect to. When you add a server, you enter the following information:
-  - **Description**: Enter a descriptive name for the server, such as **Contoso VPN server**.
+  - **Description**: Enter a descriptive name for the server, like **Contoso VPN server**.
   - **IP address or FQDN**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect to. For example, enter `192.168.1.1` or `vpn.contoso.com`.
   - **Default server**: **True** sets this server as the default server that devices use to establish the connection. Set only one server as the default.
   - **Import**: Browse to a comma-separated file with the list of servers in the format: description, IP address or FQDN, Default server. Choose **OK** to import these servers into the **Servers** list.
@@ -57,13 +57,7 @@ Depending on the settings you choose, not all values in the following list are c
   - **F5 Access**
   - **Pulse Secure**
 
-<!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn't already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
-
 - **Login group or domain** (SonicWall Mobile Connect only): Enter the name of the login group or domain you want to connect to.
-
-- **Role** (Pulse Secure only): Enter the name of the user role that can access this connection. A user role defines personal settings and options, and it enables or disables certain access features.
-
-- **Realm** (Pulse Secure only): Enter the name of the authentication realm you want to use. An authentication realm is a grouping of authentication resources that the Pulse Secure connection type uses.
 
 - **Custom XML**: Enter any custom XML commands that configure the VPN connection.
 
@@ -91,9 +85,11 @@ Depending on the settings you choose, not all values in the following list are c
   <f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
   ```
 
-  For more information on writing custom XML commands, see the manufacturer's VPN documentation.
+  For more information on writing custom XML commands, go to the manufacturer's VPN documentation.
 
-- **Split tunneling**: **Enable** lets devices decide which connection to use depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but use the hotel's standard network for regular web browsing. If you want all traffic to use the VPN tunnel when the VPN connection is active, then set to **Disable**.
+- **Split tunneling**: **Enable** lets devices decide which connection to use depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but use the hotel's standard network for regular web browsing.
+
+  If you want all traffic to use the VPN tunnel when the VPN connection is active, then set to **Disable**.
 
 ## Proxy
 
@@ -109,8 +105,8 @@ Depending on the settings you choose, not all values in the following list are c
   - **Enable**: Don't use a proxy server for local addresses.
   - **Disable**: Use a proxy server for local addresses.
 
-## Next steps
+## Related articles
 
-[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md), and [Windows 10/11](vpn-settings-windows-10.md) devices.
+- Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md), and [Windows](vpn-settings-windows-10.md) devices.

@@ -10,7 +10,9 @@ items:
     - name: Intune user help
       tocHref: /mem/intune/user-help/
       topicHref: /mem/intune/user-help/
-
+    - name: Endpoint settings management
+      tocHref: /defender-endpoint/
+      topicHref: /defender-endpoint/
   - name: Configuration Manager
     tocHref: /mem/configmgr/
     topicHref: /mem/configmgr/
@@ -30,9 +32,6 @@ items:
     - name: Core infrastructure guide
       tocHref: /mem/configmgr/core/
       topicHref: /mem/configmgr/core/
-    - name: Desktop Analytics
-      tocHref: /mem/configmgr/desktop-analytics/
-      topicHref: /mem/configmgr/desktop-analytics/
     - name: Developer
       tocHref: /mem/configmgr/develop/
       topicHref: /mem/configmgr/develop/

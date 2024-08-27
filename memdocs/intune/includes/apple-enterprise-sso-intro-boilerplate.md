@@ -1,20 +1,20 @@
 ---
 title: include file
 description: include file
-author: miepping
+author: MandiOhlinger
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 04/18/2023
-ms.author: miepping
+ms.date: 05/01/2024
+ms.author: mandia
 ms.custom: include file
+ms.reviewer: miepping
 ---
 
-<!-- This include file is used in the Apple Enterprise SSO deployment guide docs. 4.10.2023 (mandia): Removed 'preview'. -->
+<!-- This include file is used in the Apple Enterprise SSO deployment guide docs. 4.10.2023 (mandia): Removed 'preview'. 4.16.2024 (mandia) Updated for platform SSO.-->
 
-The Microsoft Enterprise SSO plug-in provides single sign-on (SSO) to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365. This plug-in uses the Apple single sign-on app extension framework. It reduces the number of authentication prompts users get when using devices managed by Mobile Device Management (MDM), including any MDM that supports configuring SSO profiles.
+The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) is a feature in Microsoft Entra ID that provides single sign-on (SSO) features for Apple devices. This plug-in uses the Apple single sign-on app extension framework.
 
-Once set up, apps that support the Microsoft Authentication Library (MSAL) automatically take advantage of the Microsoft Enterprise SSO plug-in. Apps that don't support MSAL can be allowed to use the extension, including browsers like Safari and apps that use Safari web view APIs. Just add the application bundle ID or prefix to the extension configuration.
+- For iOS/iPadOS devices, the Enterprise SSO plug-in includes the **SSO app extension**.
+- For macOS devices, the Enterprise SSO plug-in includes **[Platform SSO and the SSO app extension](../configuration/platform-sso-macos.md)**.
 
-For example, to allow a Microsoft app that doesn't support MSAL, add `com.microsoft.` to the **AppPrefixAllowList** property. Be careful with the apps you allow, they'll be able to bypass interactive sign-in prompts for the signed in user.
-
-For more information, see [Microsoft Enterprise SSO plug-in for Apple devices - apps that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#applications-that-dont-use-msal).
+The **SSO app extension** provides single sign-on to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps. It reduces the number of authentication prompts users get when using devices managed by Mobile Device Management (MDM), including any MDM that supports configuring SSO profiles.

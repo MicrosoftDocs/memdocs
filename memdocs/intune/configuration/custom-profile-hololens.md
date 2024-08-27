@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2023
+ms.date: 06/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,11 +31,12 @@ ms.collection:
 
 Microsoft HoloLens 2 devices support the [Windows Defender Application Control (WDAC) CSP](/windows/client-management/mdm/applicationcontrol-csp), which replaces the [AppLocker CSP](/windows/client-management/mdm/applocker-csp).
 
-Using Windows PowerShell and Microsoft Intune, you can use the WDAC CSP to allow or block specific apps from opening on Microsoft HoloLens 2 devices. For example, you may want to allow or prevent an app from opening on HoloLens 2 devices in your organization.
+Using Windows PowerShell and Microsoft Intune, you can use the WDAC CSP to allow or block specific apps from opening on Microsoft HoloLens 2 devices. For example, you might want to allow or prevent an app from opening on HoloLens 2 devices in your organization.
 
 This feature applies to:
 
 - HoloLens 2 devices running Windows Holographic for Business
+- Windows 10/11
 
 The WDAC CSP is based on the [Windows Defender Application Control (WDAC) feature](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). You can also [use multiple WDAC policies](/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
 
@@ -51,22 +52,19 @@ Use the steps in this article as a template to allow or deny specific apps from 
 
 ## Prerequisites
 
-- Be familiar with Windows PowerShell.
-- Sign in to Intune as a member of:
+- Be familiar with Windows PowerShell. For information on the execution policy options, go to [Windows PowerShell about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+- To configure the Intune policy, at a minimum, sign into the Intune admin center as a member of the **Policy and Profile Manager** built-in Intune role.
 
-  - **Policy and Profile Manager** or **Intune Role Administrator** Intune role
+  For information on the Intune built-in roles, and what they can do, go to:
 
-    OR
+  - [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
+  - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
 
-  - **Global Administrator** or **Intune Service Administrator** Microsoft Entra role
+- Create a user group or devices group with your HoloLens 2 devices. For information on groups, go to [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
 
-  For more information on Intune roles, go to [Role-based access control (RBAC) with Intune](../fundamentals/role-based-access-control.md).
+## Step 1 - Create the WDAC policy using Windows PowerShell
 
-- Create a user group or devices group with your HoloLens 2 devices. For more information on groups, go to [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
-
-## Example
-
-This example uses Windows PowerShell to create a Windows Defender Application Control (WDAC) policy. The policy prevents specific apps from opening. Then, use Intune to deploy the policy to HoloLens 2 devices.
+This example uses Windows PowerShell to create a Windows Defender Application Control (WDAC) policy. The policy prevents specific apps from opening.
 
 1. On your desktop computer, open the **Windows PowerShell** app.
 2. Get information about the installed application package on your desktop computer and HoloLens:
@@ -131,7 +129,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 5. Convert the WDAC policy to **newPolicy.xml**:
 
     > [!NOTE]
-    > You can block apps that are only installed on HoloLens devices. For more information, go to [package family names for apps on HoloLens](/hololens/windows-defender-application-control-wdac#package-family-names-for-apps-on-hololens). 
+    > You can block apps that are only installed on HoloLens devices. For more information, go to [package family names for apps on HoloLens](/hololens/windows-defender-application-control-wdac#package-family-names-for-apps-on-hololens).
 
     ```powershell
     New-CIPolicy -rules $rule -f .\newPolicy.xml -UserPEs
@@ -177,41 +175,42 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
     Set-RuleOption -o 15 .\mergedPolicy.xml
     ```
 
-    For more information on these rules, go to [Understand WDAC policy rules and file rules](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
+    For information on these rules, go to [Understand WDAC policy rules and file rules](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
 
-10. Convert **mergedPolicy.xml** to binary format. This step creates **compiledPolicy.bin**. In a later step, you add this **compiledPolicy.bin** binary file to Intune.
+10. Convert **mergedPolicy.xml** to binary format. This step creates **compiledPolicy.bin**. In [Step 2 - Create an Intune policy and deploy the policy to HoloLens 2 devices](#step-2---create-an-intune-policy-and-deploy-the-policy-to-hololens-2-devices), you add this **compiledPolicy.bin** binary file to an Intune policy.
 
     ```powershell
     ConvertFrom-CIPolicy .\mergedPolicy.xml .\compiledPolicy.bin
     ```
 
-11. Create the custom device configuration profile in Intune:
+## Step 2 - Create an Intune policy and deploy the policy to HoloLens 2 devices
 
-    1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows 10/11 custom device configuration profile.
+In this step, you create a custom device configuration profile in Intune. In the custom policy, you add the **compiledPolicy.bin** binary file you created in [Step 1 - Create the WDAC policy using Windows PowerShell](#step-1---create-the-wdac-policy-using-windows-powershell). Then, use Intune to deploy the policy to HoloLens 2 devices.
 
-        For the specific steps, go to [Create a custom profile using OMA-URI in Intune](custom-settings-configure.md).
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows custom device configuration profile.
 
-    2. When you create the profile, enter the following settings:
+    For the specific steps, go to [Create a custom profile using OMA-URI in Intune](custom-settings-configure.md).
 
-      - **OMA-URI**: Enter `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>/Policy`. Replace `<PolicyGUID>` with the PolicyTypeID node in the **mergedPolicy.xml** file you created in step 6.
+2. When you create the profile, enter the following settings:
 
-        Using our example, enter `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076/Policy`.
+    - **OMA-URI**: Enter `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>/Policy`. Replace `<PolicyGUID>` with the PolicyTypeID node in the **mergedPolicy.xml** file you created in step 6.
 
-        The policy GUID **must match** the PolicyTypeID node in the **mergedPolicy.xml** file (created in step 6).
+      Using our example, enter `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076/Policy`.
 
-        The OMA-URI uses the [ApplicationControl CSP](/windows/client-management/mdm/applicationcontrol-csp). For more information on the nodes in this CSP, go to [ApplicationControl CSP](/windows/client-management/mdm/applicationcontrol-csp).
+      The policy GUID **must match** the PolicyTypeID node in the **mergedPolicy.xml** file (created in step 6).
 
-      - **Data type**: Set to **Base64 file**. It automatically converts the file from bin to base64.
-      - **Certificate file**: Upload the **compiledPolicy.bin** binary file (created in step 10).
+      The OMA-URI uses the [ApplicationControl CSP](/windows/client-management/mdm/applicationcontrol-csp). For information on the nodes in this CSP, go to [ApplicationControl CSP](/windows/client-management/mdm/applicationcontrol-csp).
 
-      Your settings look similar to the following settings:
+    - **Data type**: Set to **Base64 file**. It automatically converts the file from bin to base64.
+    - **Certificate file**: Upload the **compiledPolicy.bin** binary file (created in step 10).
 
-      :::image type="content" source="./media/custom-profile-hololens/custom-applicationcontrol-omauri.png" alt-text="Add a custom OMA-URI to configure ApplicationControl CSP in Microsoft Intune.":::
+    Your settings look similar to the following settings:
 
-12. When the profile is [assigned](device-profile-assign.md) to your HoloLens 2 group, check the profile status. After the profile successfully applies, reboot the HoloLens 2 devices.
+    :::image type="content" source="./media/custom-profile-hololens/custom-applicationcontrol-omauri.png" alt-text="Add a custom OMA-URI to configure ApplicationControl CSP in Microsoft Intune.":::
 
-## Next steps
+3. When the profile is [assigned](device-profile-assign.md) to your HoloLens 2 group, check the profile status. After the profile successfully applies, reboot the HoloLens 2 devices.
 
-[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+## Related articles
 
-[Learn more about custom profiles in Intune](custom-settings-configure.md).
+- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Learn more about custom profiles in Intune](custom-settings-configure.md).

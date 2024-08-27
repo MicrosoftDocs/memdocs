@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/05/2024
+ms.date: 08/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,135 +59,92 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-## App management
+## Microsoft Intune Suite
 
-### Auto update available with Win32 app supersedence<!-- 17644510  -->
+### Easy creation of Endpoint Privilege Management elevation rules based on support approval requests<!-- 28196775 -->
 
-Win32 app supersedence will provide the capability to supersede apps deployed as available with **auto-update** intent. For example, if you deploy a Win32 app (app A) as available and installed by users on their device, you will be able to create a new Win32 app (app B) to supersede app A using **auto-update**. All targeted devices and users with app A installed as available from the Company Portal will be superseded with app B. Also, only app B will show in the Company Portal. Currently, there was no **auto-update** option, superseding an available app only replaced app A in the Company Portal. You will be able to find the **auto-update** feature for available app supersedence as a toggle under the **Available assignment** in the **Assignments** tab.
-
-For more information about app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
-
-### Device IPv4 and IPv6 addresses available from Managed Home Screen<!-- 25994445  -->
-
-IPv4 and IPv6 addresses will both be available from the Device Information page of Managed Home Screen (MHS).
-
-### Migrated to .NET MAUI from Xamarin<!-- 27143739  -->
-
-Xamarin.Forms has evolved into .NET Multi-platform App UI (MAUI). Existing Xamarin projects should be migrated to .NET MAUI. For more information about upgrading Xamarin projects to .NET, see the [Upgrade from Xamarin to .NET & .NET MAUI](/dotnet/maui/migration/?WT.mc_id=dotnet-35129-website) documentation.
-
-Xamarin support will end on May 1, 2024 for all Xamarin SDKs including Xamarin.Forms and Intune App SDK Xamarin Bindings. For Intune support on Android and iOS platforms, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android) and [Microsoft Intune App SDK for MAUI.iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS).
-
-### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
-
-To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
-
-### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->
-
-Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users won't be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
-
-<!-- *********************************************** -->
-
-## Device configuration
-
-### Error message is shown when OEMConfig policy exceeds 500 KB on Android Enterprise devices<!-- 15326924  -->
-
-On Android Enterprise devices, you can use an OEMConfig device configuration profile to add, create and/or customize OEM specific settings.
-
-Currently, when you create and assign any OEMConfig policy that exceeds 500 KB, then these policies go into a pending state. Admins might not know about the policy size limit, as this information isn't shown.
-
-Now, when you create OEMConfig policy that exceeds 500 KB, then the following error is shown in the Intune admin center:
-
-`Profile is larger than 500KB. Adjust profile settings to decrease the size.`
-
-For more information on OEMConfig profiles, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
-
-Applies to:
-
-- Android Enterprise
-
-### New settings available in the macOS settings catalog<!-- 26970197  -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
-
-There are new settings in the macOS Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
-
-**Microsoft AutoUpdate (MAU)**:
-
-- Microsoft Teams (work or school)
-- Microsoft Teams classic
-
-**Microsoft Defender > Features**:
-
-- Use Data Loss Prevention
-- Use System Extensions
-
-For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-Applies to:
-
-- macOS
-
-### The macOS Company Portal app will support platform SSO (public preview)<!-- 24325427  -->
-
-In Intune, you can configure the Enterprise SSO plug-in on Apple devices using a device configuration profile (**Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings Catalog** for profile > **Authentication** > **Extensible Single sign-on (SSO)**).
-
-The Company Portal app version will support the platform SSO settings for macOS 13 and later. Platform SSO allows you to sync your Microsoft Entra ID password to local accounts on Macs using the Enterprise Single Sign-On extension.
-
-For more information on the Enterprise SSO plug-in, see:
-
-- [Use Intune to deploy the Microsoft Enterprise SSO plug-in for Apple devices](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
-- [Microsoft Entra ID and the Microsoft Enterprise SSO plug-in overview for Apple devices](/azure/active-directory/develop/apple-sso-plugin)
-
-Applies to:
-
-- macOS 13 and later
-
-<!-- *********************************************** -->
-
-## Device enrollment
-
-### Account-driven Apple User Enrollment to be generally available for iOS/iPadOS 15+ devices<!-- 10277062  -->
-
-Intune will support account-driven Apple User Enrollment, the new and improved version of Apple User Enrollment, for devices running iOS/iPadOS 15 and later. This new enrollment method utilizes just-in-time registration, removing the Company Portal app for iOS as an enrollment requirement. Device users will be able to initiate enrollment directly in the Settings app, resulting in a shorter and more efficient onboarding experience. For more information, see [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md) on Microsoft Learn.
-
-If you prefer, you can continue to target iOS/iPadOS devices using the Apple User Enrollment method that requires Company Portal. Devices running iOS/iPadOS 14.8.1 and earlier will be unaffected by this update and can continue to use the method with Company Portal.
-
-#### RBAC changes coming to enrollment platform restrictions for Windows<!-- 25036419  -->
-
-We're updating RBAC for Windows enrollment platform restrictions. Enrollment platform restrictions will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will  be able to create and edit enrollment platform restrictions.
-
-<!-- *********************************************** -->
-
-## Device management
-
-### End-user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
-
-End-users will be able to view the BitLocker Recovery Key for enrolled Windows devices in the Web Company Portal. This capability will reduce helpdesk calls in the event they get locked out of their corporate machines. End users can access their enrolled Windows device's Recovery Key by clicking on **View Recovery Key** under their device after logging into the Web Company Portal. This is a similar experience to the MyAccount website, which allows end users see their recovery keys as well.
-
-Access to BitLocker recovery keys by end-users can be prevented when not allowed within your organization by using the Microsoft Entra ID toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**. For more information about how to prevent access to BitLocker recovery keys, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
-
-<!-- *********************************************** -->
-
-## Device security
-
-### Defender for Endpoint security settings support in government cloud environments<!-- 24191406  -->
-
-Customer tenants in US Government Community (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you've onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
-
-For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
-
-### Updated security baseline for Windows 365 Cloud PC<!-- 26504698  -->
-
-We're working on an update to the Intune security baseline for **Windows 365 Cloud PC**.  The new baseline version will use the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
-
-Use of [Intune security baselines](../protect/security-baselines.md) can help you maintain best-practice configurations for your Windows devices and can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft.
-
-As with all baselines, the default baseline will represent the recommended configurations for each setting, which you can modify to meet the requirements of your organization.
+You’ll soon be able to create Endpoint Privilege Management (EPM) elevation rules directly from a support approval request or from details found in the Elevation report. This new process will replace the need to manually enter details about an elevation and how it should be managed, and supports creation of a new rules policy or adding the new rules to an existing policy.
 
 Applies to:
 
 - Windows 10
 - Windows 11
+
+For information about using EPM, see [Endpoint Privilege Management overview](../protect/epm-overview.md).
+
+## App management
+
+### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
+
+To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
+
+Applies to:
+
+- iOS/iPadOS
+
+<!-- *********************************************** -->
+
+<!-- ## Device configuration -->
+
+
+<!-- *********************************************** -->
+
+## Device enrollment  
+
+### Support ending for Apple User Enrollment with Company Portal<!-- 28361917 -->
+
+After the release of iOS/iPadOS 18, Apple will no longer support profile-based Apple User Enrollment. As a result, Intune will end support for [user enrollment with Company Portal](../enrollment/apple-user-enrollment-with-company-portal.md) shortly after the release of iOS/iPadOS 18.
+
+After Intune ends support for user enrollment with Company Portal:
+
+- Existing enrolled devices won't be impacted.
+- Users won't be able to enroll devices if they're targeted with this enrollment profile type.
+- Microsoft Intune technical support will be available for existing enrolled devices with this enrollment profile type. Technical support won't be available for new enrollments.
+
+To prepare, use a different management method to enroll devices. We recommend account-driven Apple User Enrollment for similar functionality and an improved user experience. For a simpler enrollment experience, try web- based device enrollment. For more information, see:
+
+- [Set up account-driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md)
+- [Set up web-based device enrollment for iOS/iPadOS](../enrollment/web-based-device-enrollment-ios.md)  
+
+<!-- *********************************************** -->
+
+## Device management
+
+### Intune will support macOS 13.x as the minimum version<!-- 28391869 -->
+
+With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Big Sur) and later.
+
+For more information on this change, see [Plan for change: Intune is moving to support macOS 13 and later](../fundamentals/whats-new.md#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year).
+
+> [!NOTE]
+> macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
+
+Applies to:
+
+- macOS
+
+### Intune supports iOS/iPadOS 16.x as the minimum version<!-- 28391935 -->
+
+Later this year, we expect iOS18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require iOS/iPadOS 16 and higher shortly after the iOS/iPadOS 18 release.
+
+For more information on this change, see [Plan for change: Intune is moving to support iOS/iPadOS 16 and later](../fundamentals/whats-new.md#plan-for-change-intune-is-moving-to-support-iosipados-16-and-later).
+
+> [!NOTE]
+> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
+
+Applies to:
+
+- iOS/iPadOS
+
+<!-- *********************************************** -->
+
+## Device security
+
+### Defender for Endpoint security settings support in government cloud environments<!-- 24191406 -->
+
+Customer tenants in US Government Community Cloud (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
+
+For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
@@ -204,36 +161,6 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Monitor and troubleshoot
-
-### Windows update distribution report<!--16579592  -->
-
-The Windows update distribution report in Intune will provide a summarized report to show the number of devices that are on each quality update level and the % coverage for each update across the devices managed by Intune (including co-managed devices).
-
-You will be able to drill down further in the report for each quality update that aggregates devices based on the Windows 10/11 feature version and the update statuses.
-
-Finally, the admins will be able to get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
-
-For more information on Windows update reports, go to [Windows Update reports on Intune](../protect/windows-update-reports.md).
-
-### Remote Help supports full control of a macOS device<!--22985205  -->
-
-Remote Help will support helpdesk connecting to a user's device and requesting full control of the macOS device.
-
-For more information on Remote Help, see [Remote Help on macOS](../fundamentals/remote-help-macos.md).
-
-Applies to:
-
-- macOS 11, 12, 13, and 14
-
-### Intune support of Microsoft 365 remote application diagnostics<!-- 17409991  -->
-
-The Microsoft 365 remote application diagnostics will allow Intune admins to request Intune App Protection logs and Microsoft 365 application logs (where applicable) directly from the Intune console. Admins will find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Summary** > *App protection**.
-
- This feature is exclusive to applications that are under Intune App Protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application. Outlook mobile logs will be supported in version 2404, with support for additional applications coming soon.
-
-<!-- *********************************************** -->
-
 <!-- ## Intune apps -->
 
 <!-- *********************************************** -->
@@ -242,13 +169,11 @@ The Microsoft 365 remote application diagnostics will allow Intune admins to req
 
 <!-- *********************************************** -->
 
-## Tenant administration
+<!-- ## Monitor and troubleshoot -->
+ 
+<!-- *********************************************** -->
 
-### Customize your Intune admin center experience<!-- 24155584  -->
-
-You will be able to better customize your Intune admin center experience by using collapsible navigation and favorites. The left navigation menus in the Intune admin center will be updated to support expanding and collapsing each subsection of the menu. In addition, you will be able to set admin center pages as favorites.
-
-By default, menu sections will be expanded and provide the same experience today. You will be able to choose your portal menu behavior by selecting the **Settings** gear icon at the top right to display the **Portal settings**. Then, you can select **Appearance + startup views** and set the **Service menu behavior** to **Collapsed or **Expanded** as the default portal option. Each menu section will retain the expanded or collapsed state that you choose.  Additionally, selecting the star icon next to a page on the left nav will add the page to a **Favorites** section near the top of the menu.
+<!-- ## Tenant administration -->
 
 <!-- *********************************************** -->
 

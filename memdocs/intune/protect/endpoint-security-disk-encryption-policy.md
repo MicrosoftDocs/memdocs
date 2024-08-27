@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Manage disk encryption with endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Configure and deploy policies for devices you manage with endpoint security disk encryption policy in Microsoft Intune. 
+title: Microsoft Intune endpoint security disk encryption policy
+description: Configure and deploy Microsoft Intune endpoint security policy disk encryption policies for BitLocker and FileVault.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/31/2023
+ms.date: 08/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,6 +25,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-secure-endpoints
 ms.reviewer: aanavath
 
 ---
@@ -33,14 +34,19 @@ ms.reviewer: aanavath
 
 Endpoint security Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault or BitLocker. This focus makes it easy for security admins to manage disk encryption settings without having to navigate a host of unrelated settings.
 
-While you can configure the same device settings by using *Endpoint Protection* profiles for device configuration, the device configuration profiles include additional categories of settings. These additional settings are unrelated to disk encryption and can complicate the task of configuring only disk encryption.
+While you can configure the same device settings by using *Endpoint Protection* profiles for device configuration, the device configuration profiles include other categories of settings. These other settings are unrelated to disk encryption and can complicate the task of configuring only disk encryption.
 
 Find the endpoint security policies for disk encryption under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Prerequisites for disk encryption policy
 
 - **macOS** - macOS 10.13 or later
-- **Windows** - Windows 10/11
+- **Windows** - Windows 10
+- **Windows** - Windows 11
+
+## Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to manage Intune Disk encryption policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Disk encryption profiles
 
@@ -58,11 +64,11 @@ Find the endpoint security policies for disk encryption under *Manage* in the **
 
   > [!NOTE]
   >
-  > Beginning on June 19, 2023, the BitLocker profile for Windows 10 and later was updated to use the settings format as found in the Settings Catalog. The new profile format includes the same settings as the older profile. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
+  > Beginning on June 19, 2023, the BitLocker profile for Windows was updated to use the settings format as found in the Settings Catalog. The new profile format includes the same settings as the older profile. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
   >
   > With the new profile format, we no longer publish a dedicated list of settings as found in the profile. Instead, use the *Learn more* link in the UI while viewing information  for a setting, to open [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation, where the setting is detailed in full.
-  > 
-  > You can continue to find a list of settings from the original BitLocker profile at [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker) in the Intune documentation.
+  >
+  > You can continue to find a list of settings in the original BitLocker profiles created before June 19, 2023, at [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker) in the Intune documentation.
 
   To create a BitLocker profile, see [Use BitLocker disk encryption for Windows](../protect/encrypt-devices.md).
 

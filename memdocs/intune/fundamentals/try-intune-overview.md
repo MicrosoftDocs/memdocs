@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 04/24/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -32,17 +32,13 @@ ms.collection:
 
 # Evaluate Microsoft Intune
 
-Microsoft Intune, which is a part of the Microsoft Intune family of products, provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. It lets you protect your organization by controlling features and settings on Android, Android Enterprise, iOS/iPadOS, macOS, and Windows 10/11 devices. It integrates closely with Microsoft Entra ID for identity and access control and Azure Information Protection and advanced threat protection products for data protection. When you use it with Microsoft 365, you can enable your workforce to be productive on all their devices while keeping your organization's information protected. If you have on-premises infrastructure, such as Exchange or an Active Directory, you can use Intune connectors to help you connect to external services. Intune is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security?azure-portal=true).
+Microsoft Intune, which is a part of the Microsoft Intune family of products, provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. It lets you protect your organization by controlling features and settings on Android, Android Enterprise, iOS/iPadOS, macOS, and Windows 10/11 devices. It integrates closely with Microsoft Entra ID for identity and access control and Azure Information Protection and advanced threat protection products for data protection. When you use it with Microsoft 365, you can enable your workforce to be productive on all their devices while keeping your organization's information protected. In addition, you can add a variety of Intune support apps for each supported platform. If you have on-premises infrastructure, such as Exchange or an Active Directory, you can use Intune connectors to help you connect to external services. Intune is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security?azure-portal=true).
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
-In the following diagram, you can see how Intune interacts with other components in both your on-premises and cloud infrastructure:
-
-[ ![Diagram of Intune infrastructure](media/try-intune-overview/try-intune-overview-01.png) ](media/try-intune-overview/try-intune-overview-01.png#lightbox)
-
 ## Prerequisites
 
-The following list includes recommended (but not required) prerequisites:
+The following list includes recommended (but not required) prerequisites when setting up Microsoft Intune:
 - Available devices (iOS device, Android device, Windows device, macOS device)
 - Familiarity with [Intune's supported operating systems](../fundamentals/supported-devices-browsers.md)
 - Familiarity with [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md)

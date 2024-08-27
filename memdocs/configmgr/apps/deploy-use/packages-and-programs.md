@@ -155,14 +155,17 @@ When clients receive the deployment policy, they'll display the icon in Software
 
     - **Run another program first**: Identify a package and program that runs before this package and program runs.  
 
-    - **Platform requirements**: Select **This program can run on any platform** or **This program can run only on specified platforms**. Then choose the OS versions that clients must have to install this package and program.  
+    - **Platform requirements**: Select **This program can run on any platform** or **This program can run only on specified platforms**. Then choose the OS versions that clients must have to install this package and program.
+
+        > [!NOTE]
+        > When you run a task sequence from boot media or PXE, Configuration Manager ignores this option. The task sequence runs as though the option **This program can run on any platform** is selected.
 
     - **Estimated disk space**: Specify the amount of disk space that the program requires to run on the computer. The default setting is **Unknown**. If necessary, specify a whole number greater than or equal to zero. If you set a value, also select units for the value.  
 
     - **Maximum allowed run time (minutes)**: Specify the maximum time that you expect the program to run on the client computer. The default value is **120** minutes. Only use whole numbers greater than zero.  
 
         > [!IMPORTANT]  
-        > If you use maintenance windows on the same collection to which you deploy this program, a conflict could occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If you set the maximum run time to **Unknown**, the program starts to run during the maintenance window. It then continues to run as needed after the maintenance window is closed. If you set the maximum run time to a specific period that's greater than the length of any available maintenance window, then the client doesn't run the program.  
+        > If the targeted computers to which you deploy this program have a maintenance window, a conflict could occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If you set the maximum run time to **Unknown**, the program starts to run during the maintenance window. It then continues to run as needed after the maintenance window is closed. If you set the maximum run time to a specific period that's greater than the length of any available maintenance window, then the client doesn't run the program.  
 
         If you set this value to **Unknown**, Configuration Manager sets the maximum allowed run time as 12 hours (720 minutes).  
 

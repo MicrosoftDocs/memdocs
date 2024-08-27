@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 10/20/2023
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice: 
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -37,9 +37,12 @@ Audit logs for Windows 365 include a record of activities that generate a change
 
 Users with the following permissions can review audit logs:
 
-- Global Administrator
 - Intune Service Administrator
+- Global Administrator
 - Administrators assigned to an Intune role with **Audit data - Read** permissions
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Send Windows 365 audit logs to diagnostic settings in Azure Monitor
 
@@ -55,7 +58,7 @@ Azure monitor's diagnostic settings let you export platform logs and metrics to 
 
 ## Use Graph API and PowerShell to retrieve audit events
 
-To get audit log events for up to seven days for your Windows 365 tenant, follow these steps:
+To get audit log events for your Windows 365 tenant, follow these steps:
 
 ### Install the SDK
 

@@ -7,8 +7,8 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/19/2022
-ms.topic: conceptual
+ms.date: 05/15/2024
+ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -26,13 +26,19 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - compliance
+- sub-device-compliance
 ---
 
 # Custom compliance JSON files for Microsoft Intune
 
-To support [custom settings for compliance](../protect/compliance-use-custom-settings.md) for Microsoft Intune, you create a JSON file that identifies the settings and value pairs that you want to use for custom compliance. The JSON defines what a discovery script will evaluate for compliance on the device.
+To support [custom settings for compliance](../protect/compliance-use-custom-settings.md) for Microsoft Intune, you create a JSON file that identifies the settings and value pairs that you want to use for custom compliance. The JSON defines what a discovery script evaluates for compliance on the device.
 
-You’ll upload the JSON file when you create a compliance policy that includes custom compliance settings.
+You include the JSON file in a compliance policy when you configure a policy to assess custom compliance settings.
+
+This feature applies to:
+
+- Linux – Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
+- Windows 10/11
 
 A correctly formatted JSON file must include the following information:
 
@@ -40,12 +46,13 @@ A correctly formatted JSON file must include the following information:
 - **Operator** - Represents a specific action that is used to build a compliance rule. For options, see the following list of *supported operators*.
 - **DataType** - The type of data that you can use to build your compliance rule. For options, see the following list of *supported DataTypes*.
 - **Operand** - Represent the values that the operator works on.
-- **MoreInfoURL** - A URL that’s shown to device users so they can learn more about the compliance requirement when their device is noncompliant for a setting. You can also use this to link to instructions to help users bring their device into compliance for this setting.
-- **RemediationStrings** - Information that gets displayed in the Company Portal when a device is noncompliant to a setting. This information is intended to help users understand the remediation options to bring a device to a compliant state. There must be at least one string for the language "en_US", but you can also specify additional remediation string languages as in the example below.
+- **MoreInfoURL** - A URL that device users can view and use to learn more about the compliance requirement should their device be noncompliant for a setting. You can also use this URL to link to instructions to help users bring their device into compliance for this setting.
+- **RemediationStrings** - Information that gets displayed in the Company Portal when a device is noncompliant to a setting. This information is intended to help users understand the remediation options to bring a device to a compliant state. There must be at least one string for the language `en_US`. Other remediation string languages can then be added as needed, as demonstrated in the [example](#example-json-file) provided later in this article.
 
-Your policy can be up to 100 KB and include 100 rules.  
+Your policy can be up to 100 KB and include 100 rules.
 
-**Supported operators**:  
+**Supported operators**:
+
 - IsEquals
 - NotEquals
 - GreaterThan
@@ -53,7 +60,8 @@ Your policy can be up to 100 KB and include 100 rules.
 - LessThan
 - LessEquals
 
-**Supported DataTypes**:  
+**Supported DataTypes**:
+
 - Boolean
 - Int64
 - Double
@@ -61,7 +69,8 @@ Your policy can be up to 100 KB and include 100 rules.
 - DateTime
 - Version
 
-**Supported Languages**:  
+**Supported Languages**:
+
 - cs_CZ
 - da_DK
 - de_DE
@@ -156,5 +165,5 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
 ## Next steps
 
 - [Use custom compliance settings](../protect/compliance-use-custom-settings.md)  
-- [Create a PowerShell script for discovery of custom compliance settings](../protect/compliance-custom-script.md)  
-- [Create a compliance policy](../protect/create-compliance-policy.md)  
+- [Create a discovery script for custom compliance settings](../protect/compliance-custom-script.md)  
+- [Create a compliance policy](../protect/create-compliance-policy.md)

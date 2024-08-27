@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/07/2024
+ms.date: 06/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -58,7 +58,7 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 ## Add and deploy a Microsoft Store app
 
-A Global administrator or Intune administrator can use the following steps to add and deploy a Microsoft Store app. 
+An [Intune administrator](../fundamentals/users-add.md#types-of-administrators) can use the following steps to add and deploy a Microsoft Store app. 
 
 > [!NOTE]
 > To ensure the Company Portal app is successfully installed on your end user's device, you may need to set the **Install behavior** to **User** and the deployment Entra ID group as **Only devices**. 
@@ -93,7 +93,6 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
     > - The app is not available if there is an age restriction.
     > - The app is a paid app, which is not supported.
     > - The app is an Android app.
-    > - The app is a Microsoft Store for Business app that is not available publicly in the consumer store.
 
 3. Choose the app that you want to deploy and choose **Select**.
 

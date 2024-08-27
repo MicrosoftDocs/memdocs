@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/14/2023
+ms.date: 04/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,11 +40,12 @@ MAM is available on the following platforms:
 
 - Android
 - iOS/iPadOS
+- Windows
 
-> [!NOTE]
-> To deploy or assign apps to Windows devices, the Windows devices must be enrolled in Microsoft Intune. For any additional requirements, including supported app types, go to [Windows 10/11 app deployment using Microsoft Intune](../apps/apps-windows-10-app-deploy.md).
+This article provides recommendations on when to use MAM. It also includes an overview of the administrator and user tasks. For more specific information on MAM, go to:
 
-This article provides recommendations on when to use MAM. It also includes an overview of the administrator and user tasks. For more specific information on MAM, see [Microsoft Intune app management](../apps/app-management.md).
+- [Microsoft Intune app management](../apps/app-management.md)
+- [Data protection for Windows MAM](../apps/protect-mam-windows.md)
 
 > [!TIP]
 > [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
@@ -53,20 +54,20 @@ This article provides recommendations on when to use MAM. It also includes an ov
 
 For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 
-## MAM 
+## MAM
 
 Use for personal or bring your own devices (BYOD). Or, use on organization-owned devices that need specific app configuration, or extra app security.
 
 | Feature | Use this enrollment option when |
 | --- | --- |
-| You want to configure specific apps, and control access to these apps, such as Outlook or Microsoft Teams. | ✔️ |
-| Devices are personal or BYOD. | ✔️ |
-| You have new or existing devices. | ✔️ |
-| Need to manage a few devices, or a large number of devices (bulk enrollment). | ✔️ |
-| Devices are associated with a single user. | ✔️ |
-| Devices are managed by another MDM provider. | ✔️ |
-| You use the device enrollment manager (DEM) account. | ✔️ |
-| Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended as the *only* enrollment method for organization-owned devices. Organization-owned devices should be enrolled and managed by Intune. If you want extra security for specific apps, then use enrollment and MAM together. |
+| You want to configure specific apps, and control access to these apps, such as Outlook or Microsoft Teams. | ✅ |
+| Devices are personal or BYOD. | ✅ |
+| You have new or existing devices. | ✅ |
+| Need to manage a few devices, or a large number of devices (bulk enrollment). | ✅ |
+| Devices are associated with a single user. | ✅ |
+| Devices are managed by another MDM provider. | ✅ |
+| You use the device enrollment manager (DEM) account. | ✅ |
+| Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended as the *only* enrollment method for organization-owned devices. Organization-owned devices should be enrolled and managed by Intune. If you want extra security for specific apps, then use MDM enrollment and MAM together. |
 | Devices are user-less, such as kiosk, or dedicated device. | ❌ <br/><br/>Typically, user-less or shared devices are organization-owned. These devices should be enrolled and managed by Intune. |
 
 ### MAM administrator tasks
@@ -88,15 +89,15 @@ The specific tasks depend on how you tell users to install the apps.
 
 - To install the apps, users can:
 
-  - Go to the app store, and download the app.
-  - Go to the app store, and download the Company Portal app. The Company Portal app authenticates the user. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). They see a list of available apps, including required apps.
+  - Go to the app store, and download the Company Portal app. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). The Company Portal app authenticates the user. Users see a list of available apps, including required apps.
   - Go to the Company Portal web site at `portal.manage.microsoft.com`, and sign in with their organization credentials (`user@contoso.com`). After users sign in, they see a list of available apps, including required apps.
+  - Go to the app store, and download the apps they need. This option is for users who don't want to use the Company Portal app or web site. End users might also have to buy the app.
 
-- After the app is installed, they open the app, and are prompted to sign in with their organization credentials (`user@contoso.com`). When users sign in, they may have to restart the app. After the restart, the app data is "managed" by Intune.
+- After the app is installed, they open the app, and are prompted to sign in with their organization credentials (`user@contoso.com`). When users sign in, they might have to restart the app. After the restart, the app data is "managed" by Intune.
 
-- Some platforms may require specific apps to install other apps, such as Outlook or Teams. For example, on iOS devices, users must install a broker app, such as the Microsoft Authenticator app. On Android devices, users must install the Company Portal app.
+- Some platforms can require specific apps to install other apps, such as Outlook or Teams. For example, on iOS devices, users must install a broker app, such as the Microsoft Authenticator app. On Android devices, users must install the Company Portal app.
 
-## Next steps
+## Related articles
 
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)

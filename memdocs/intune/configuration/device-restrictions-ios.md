@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2023
+ms.date: 04/30/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -55,7 +55,7 @@ When configuring device restriction policies, the broad range of settings enable
 When you're ready to proceed, create an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
 
 > [!NOTE]
-> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados).
+> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
 ## App Store, Doc Viewing, Gaming
 
@@ -143,7 +143,7 @@ For the ASAM configuration to apply, users must manually open the specific app. 
 ### Settings apply to: Automated device enrollment (supervised)
 
 - **App name**: Enter the name of the app you want.
-- **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want.
+- **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
 You can also **Import** a CSV file with the list of app names and their bundle IDs. Or, **Export** an existing list that includes the apps.
 
@@ -474,7 +474,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ## Kiosk
 
-[Single App Mode](https://support.apple.com/guide/mdm/mdm80a981/web) (opens Apple's web site) is referred to as Kiosk mode in Intune.
+[App Lock](https://support.apple.com/guide/deployment/app-lock-payload-settings-dep80a981) (opens Apple's web site) is referred to as Kiosk mode in Intune.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -482,7 +482,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might not apply kiosk settings. The device doesn't run in kiosk-mode.
   - **Store App**: Enter the URL to an app in the iTunes App store.
   - **Managed App**: Select an app you previously added to Intune.
-  - **Built-In App**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the built-in app.
+  - **Built-In App**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the built-in app. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
 - **Require Assistive touch**: **Yes** requires the Assistive Touch accessibility setting be on devices. This feature helps users with on-screen gestures that might be difficult for them. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not run or enable this feature in kiosk mode.
 - **Require invert colors**: **Yes** requires the Invert Colors accessibility setting so users with visual impairments can change the display screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not run or enable this feature in kiosk mode.
@@ -714,7 +714,13 @@ This feature applies to:
 
   You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
 
-- **App Bundle ID**: Enter the app [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
+- **App Bundle ID**: Enter the app [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. You can show or hide built-in apps and line-of-business apps.
+
+  To get the app bundle ID:
+
+  - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
+  - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+
 - **App name**: Enter the app name of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/en-us/HT211833).
 - **Publisher**: Enter the publisher of the app you want.
 

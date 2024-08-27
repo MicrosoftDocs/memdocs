@@ -7,7 +7,7 @@ keywords:
 author: erikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/03/2023
+ms.date: 04/15/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -40,7 +40,7 @@ Read through this important information before you contact [Windows 365 support]
   
 ## What happens to data when a subscription expires?
 
-When your subscription expires, it goes through the following stages: Expired > Disabled > Deleted. The Expired stage starts immediately after the subscription has reached its end date.
+When your subscription expires, it goes through the following stages: Expired > Disabled > Deleted. The Expired stage starts immediately after the subscription reaches its end date.
 
 - **Annual subscriptions.** If you turn off recurring billing on an annual subscription, it goes through the same stages as an expired subscription. The first stage starts on the anniversary of the annual subscription, not the date that you turned off the subscription's recurring billing setting.
 - **Monthly subscriptions.** If you cancel a monthly subscription, it immediately moves to the Disabled stage on the date you cancel it. In the Disabled stage, your users immediately lose access to the Windows 365 assets, and only admins have access to the data for the next 90 days.
@@ -64,7 +64,7 @@ The following table explains what you can expect when a paid Windows 365 subscri
 
 If you cancel your subscription before its term end date, the subscription skips the Expired stage and moves directly into the Disabled stage, which is 90 days for most subscriptions, in most countries and regions. We recommend that you [back up your data](/microsoft-365/commerce/subscriptions/move-users-different-subscription) before canceling. As an admin, you can still access and back up data for your organization while it is in the Disabled stage. Any customer data that you leave behind might be deleted after 90 days and will be deleted no later than 180 days after cancellation.
   
-If you're a partner who's an admin on behalf of (AOBO) a customer, and you've canceled a subscription, it can take up to 90 days for the admin center to reflect the status change.
+If you're a partner who's an admin on behalf of (AOBO) a customer, and you canceled a subscription, it can take up to 90 days for the admin center to reflect the status change.
 
 > [!NOTE]
 > If you want your subscription data to be deleted before the typical Disabled stage is over, you can [close your account](/microsoft-365/commerce/close-your-account).
@@ -73,7 +73,7 @@ Here's what to expect for you and your users if you cancel a subscription.
   
 - **Admin access** Admins can still sign in and access the admin center, and buy other subscriptions as needed. As a global or billing admin, you have 90 days to [reactivate the subscription](/microsoft-365/commerce/subscriptions/reactivate-your-subscription) with all data intact.
 
-- **User access** Users lose access to their Cloud PC which is deprovisioned right away. Data within the Cloud PC is deleted as well as [Unlicensed Product notifications](https://support.microsoft.com/office/0d23d3c0-c19c-4b2f-9845-5344fedc4380).
+- **User access** The Cloud PC is immediately deprovisioned and the users lose access to their Cloud PC. Data within the Cloud PC is deleted as well as [Unlicensed Product notifications](https://support.microsoft.com/office/0d23d3c0-c19c-4b2f-9845-5344fedc4380).
 
 To learn how to cancel, see  [Cancel your subscription](/microsoft-365/commerce/subscriptions/cancel-your-subscription).
   
@@ -84,7 +84,7 @@ While a subscription is active, you and your users have normal access to your da
 Before the subscription reaches its expiration date, you have a few options:
   
 - **Enable recurring billing for the subscription.**
-  - If **Recurring billing** is already turned on, you don't have to take any action. Your subscription is automatically billed, and you're charged for another year or month, depending on your current payment frequency. If for any reason you've turned **Recurring billing** off, you can always [turn Recurring billing back on](/microsoft-365/commerce/subscriptions/renew-your-subscription).
+  - If **Recurring billing** is already turned on, you don't have to take any action. Your subscription is automatically billed, and you're charged for another year or month, depending on your current payment frequency. If you turn **Recurring billing** off, you can always [turn Recurring billing back on](/microsoft-365/commerce/subscriptions/renew-your-subscription).
   - If you bought Windows 365 with a prepaid card, you can [turn on Recurring billing](/microsoft-365/commerce/subscriptions/renew-your-subscription) for your subscription.
   - If you're an Open Volume Licensing customer with a prepaid, one-year subscription, contact your partner to buy a new product key. You'll receive instructions via email to activate your key in the [Volume Licensing Service Center](https://go.microsoft.com/fwlink/p/?LinkID=282016). To learn how to find a new partner, or the partner you've worked with in the past, see [Find your partner or reseller](/microsoft-365/admin/manage/find-your-partner-or-reseller).
   - If you have Windows 365 Apps for business, see [Manage recurring billing for your subscription](/microsoft-365/commerce/subscriptions/renew-your-subscription).
@@ -143,6 +143,8 @@ When your trial ends, you can't continue using Windows 365 for free. You have a 
 
 ## Next steps
 
-[Cancel your subscription](/microsoft-365/commerce/subscriptions/cancel-your-subscription) (article)\
-[Renew Windows 365](/microsoft-365/commerce/subscriptions/renew-your-subscription) (article)\
-[Reactivate your subscription](/microsoft-365/commerce/subscriptions/reactivate-your-subscription) (article)
+[Cancel your subscription](/microsoft-365/commerce/subscriptions/cancel-your-subscription).
+
+[Renew Windows 365](/microsoft-365/commerce/subscriptions/renew-your-subscription).
+
+[Reactivate your subscription](/microsoft-365/commerce/subscriptions/reactivate-your-subscription).

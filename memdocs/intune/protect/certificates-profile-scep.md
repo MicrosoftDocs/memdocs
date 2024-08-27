@@ -26,6 +26,7 @@ ms.collection:
 - highpri
 - highseo
 - certificates
+- sub-certificates
 ---
 
 # Create and assign SCEP certificate profiles in Intune
@@ -54,7 +55,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select  and go to **Devices** > **Configuration** > **Create**.
+2. Select  and go to **Devices** > **Manage devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of your devices.
@@ -133,13 +134,13 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      > - =
 
      > [!NOTE]
-     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally-owned work profile* devices:
+     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally owned work profile* devices:
      >
      > - Serial number
      > - IMEI
      > - MEID
      >
-     > Intune certificate profiles for personally-owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
+     > Intune certificate profiles for personally owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
      >
      >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
@@ -220,13 +221,13 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      Variables available for the SAN value depend on the Certificate type you selected; either **User** or **Device**.
 
      > [!NOTE]
-     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally-owned work profile* devices:
+     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally owned work profile* devices:
      >
      > - Serial number
      > - IMEI
      > - MEID
      >
-     > Intune certificate profiles for personally-owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
+     > Intune certificate profiles for personally owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
      >
      >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
@@ -334,9 +335,9 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      - Android device administrator
      - Android Enterprise device owner
      - Android Enterprise corporate-owned work profile
-     - Android Enterprise personally-owned work profile
+     - Android Enterprise personally owned work profile
 
-     You can add additional SCEP URLs for load balancing as needed. Devices make three separate calls to the NDES server. The first is to get the servers capabilities, the next to get a public key, and then to submit a signing request. When you use multiple URLs its possible that load balancing might result in a different URL being used for subsequent calls to an NDES Server. If a different server is contacted for a subsequent call during the same request, the request will fail.
+     You can add additional SCEP URLs for load balancing as needed. Devices make three separate calls to the NDES server. The first is to get the servers capabilities, the next to get a public key, and then to submit a signing request. When you use multiple URLs, it's possible that load balancing might result in a different URL being used for subsequent calls to an NDES Server. If a different server is contacted for a subsequent call during the same request, the request will fail.  
 
      The behavior for managing the NDES server URL is specific to each device platform:
 
@@ -423,10 +424,9 @@ Consider the following before you continue:
 - If you use co-management for Intune and Configuration Manager, in Configuration Manager [set the workload slider](/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows 10/11 clients to start the process of requesting the certificate.
 
 > [!NOTE]
-> - On iOS/iPadOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS/iPadOS device having multiple certificates delivered by the SCEP or PKCS certificate request.
->
->   Certificates delivered by SCEP are each unique. Certificates delivered by PKCS are the same certificate, but appear different as each profile instance is represented by a separate line in the management profile.
-> - On iOS 13 and macOS 10.15, there are some [additional security requirements that are documented by Apple](https://support.apple.com/HT210176) to take into consideration.  
+> - On iOS/iPadOS and macOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the device having multiple certificates delivered by the SCEP or PKCS certificate request.
+> - Certificates delivered by SCEP are each unique. Certificates delivered by PKCS are the same certificate, but appear different as each profile instance is represented by a separate line in the management profile.
+> - On iOS 13 and macOS 10.15, there are [additional security requirements that are documented by Apple](https://support.apple.com/HT210176) to take into consideration.  
 
 ## Next steps
 

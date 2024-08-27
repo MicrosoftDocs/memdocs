@@ -2,13 +2,12 @@
 # required metadata
 
 title: Surface Hub Windows 10 Team device restrictions in Microsoft Intune
-titleSuffix:
-description: Add or configure Surface Hub devices settings running Windows 10 Team. Add a wake up screen, create a maintenance window, use Miracast, and more in Microsoft Intune.
+description: Add or configure Surface Hub devices settings running Windows 10 Team. Add a wake-up screen, create a maintenance window, use Miracast, and more in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 04/15/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,17 +36,17 @@ This article describes some of the Microsoft Intune device restrictions settings
 
 ## Before you begin
 
-Create a [Windows 10 Teams device restrictions configuration profile](device-restrictions-configure.md#create-the-profile).
+- Create a [Windows 10 Teams device restrictions configuration profile](device-restrictions-configure.md#create-the-profile).
 
 ## Apps and experience
 
 These settings use the [SurfaceHub CSP](/windows/client-management/mdm/surfacehub-csp).
 
 - **Wake screen when someone in room**: **Block** prevents the screen from waking automatically when its sensor detects someone in the room. When set to **Not configured** (default), Intune doesn't change or update this setting.
-- **Meeting information displayed on welcome screen**: Choose the information that's shown on the Meetings tile of the Welcome screen. Your options:
+- **Meeting information displayed on welcome screen**: Select the information that shows on the Meetings tile of the Welcome screen. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting.
-  - **Organizer and time only**
-  - **Organizer, time, and subject (subject hidden for private meetings)**
+  - **Organizer and time only**: Shows the organizer and time of the meeting.
+  - **Organizer, time, and subject (subject hidden for private meetings)**: Shows the organizer, time, and subject of the meeting. The subject is hidden for private meetings.
 - **Welcome screen background image URL**: Enter the URL of a `.png` image. On Windows 10 Team devices, this image shows as the background during user sessions, and on the **Welcome** screen. The image must be in PNG format, and the URL must begin with `https://`.
 - **Auto-launch Connect**: **Block** prevents the Connect app from automatically opening when a projection is started. If blocked, users can manually launch the Connect app from the Hub's settings. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Sign-in suggestions**: **Block** disables autofilling the sign-in dialog with invitees from scheduled meetings. When set to **Not configured** (default), Intune doesn't change or update this setting.
@@ -83,10 +82,10 @@ These settings use the [SurfaceHub CSP](/windows/client-management/mdm/surfacehu
 
 - **PIN for wireless projection**: **Require** forces users to enter a PIN before using the wireless projection features on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Miracast wireless projection**: **Block** prevents using Miracast-enabled devices to project. When set to **Not configured** (default), Intune doesn't change or update this setting.
-- **Miracast wireless projection channel**: Select the Miracast channel to establish the connection.
+- **Miracast wireless projection channel**: Select the Miracast channel that establishes the connection.
 
-## Next steps
+## Related articles
 
-For more information, see [How to configure device restriction settings](device-restrictions-configure.md).
+- [Create a device restriction configuration profile](device-restrictions-configure.md).
 
-[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).

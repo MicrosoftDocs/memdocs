@@ -169,7 +169,7 @@ This feature is supported on Android and Samsung Knox Standard devices.
   - **App store URL**: Enter the Google Play Store URL of the app you want. For example, to add the Microsoft Remote Desktop app for Android, enter `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`.
 
     To find the URL of an app, open the [Google Play store](https://play.google.com/store/apps), and search for the app. For example, search for `Microsoft Remote Desktop Play Store` or `Microsoft Planner`. Select the app, and copy the URL.
-  - **App bundle ID**: Enter the app bundle ID.
+  - **App bundle ID**: Enter the app bundle ID. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
   - **App name**: Enter the name you want. This name is shown to users.
   - **Publisher** (optional): Enter the publisher of the app, such as `Microsoft`.
 
@@ -243,4 +243,4 @@ Kiosk settings apply only to Samsung Knox Standard devices running Android 10 or
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create kiosk profiles for [Android Enterprise](device-restrictions-android-for-work.md#device-experience) and [Windows 10](kiosk-settings.md) devices.
+You can also create kiosk profiles for [Android Enterprise](device-restrictions-android-for-work.md#device-experience) and [Windows](kiosk-settings.md) devices.

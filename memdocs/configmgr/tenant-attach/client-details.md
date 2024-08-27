@@ -30,7 +30,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 - The user accounts triggering device actions have the following prerequisites:
    - The user account needs to be a synced user object in Microsoft Entra ID (hybrid identity). This means that the user is synced to Microsoft Entra ID from Active Directory.
      - For Configuration Manager version 2103, and later: </br>
-   Has been discovered with either [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) or [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). <!--9089764-->
+   Has been discovered with [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). <!--9089764-->
      - Starting in Configuration Manager version 2207, you can choose to implement [Intune role-based access control for tenant-attached clients](../cloud-attach/use-intune-rbac.md) to allow cloud-only users access to tenant attached clients
 
 ## Permissions
@@ -39,6 +39,9 @@ The user account accessing tenant attach features within the Microsoft Intune ad
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
+
+> [!IMPORTANT]
+> The "Enforce Configuration Manager RBAC for cloud console requests that interact with Configuration Manager" check box does not grant permissions to the user to perform cloud console requests that interact with Configuration Manager unless the user is assigned an Intune role.
 
 ## View ConfigMgr client details
 

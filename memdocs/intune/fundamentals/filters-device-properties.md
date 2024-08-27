@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/21/2024
+ms.date: 08/21/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,12 +43,59 @@ Advanced rule editing is also available. You can use common operators, such as `
 
 This article describes the different [managed device properties](#managed-device-properties), [managed app properties](#managed-app-properties), and [operators](#supported-operators) you can use in your filters, and gives examples.
 
-
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Managed device properties
 
 You can use the following device properties in your managed device filter rules:
+
+- **`cpuArchitecture` (CPU Architecture)**: Create a filter rule based on the Intune device CPU architecture property.
+
+  For Windows, your options are (with `-eq`, `-ne`, `-in`, `-notIn` operators):
+
+  - amd64
+  - x86
+  - arm64
+  - unknown
+
+  For macOS, your options are (with `-eq`, `-ne`, `-in`, `-notIn` operators):
+
+  - x64
+  - arm64
+  - unknown
+
+  Examples:
+
+  - `(device.cpuArchitecture -eq "arm64")`
+  - `(device.cpuArchitecture -in ["x64", "arm64"])`
+  - `(device.cpuArchitecture -eq "unknown")`
+
+  This property applies to:
+
+  - macOS
+  - Windows 11
+  - Windows 10
+
+  > [!NOTE]
+  > Currently, enrollment scenarios don't support the `cpuArchitecture` property. Support will be added in a future update (no ETA).
+
+- **`deviceCategory` (Device Category)**: Create a filter rule based on the Intune device category property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+
+  Examples:
+
+  - `(device.deviceCategory -eq "Engineering devices")`
+  - `(device.deviceCategory -contains "Engineering")`
+  - `(device.model -startsWith "E")`
+
+  This property applies to:
+
+  - Android device administrator
+  - Android Enterprise
+  - Android (AOSP)
+  - iOS/iPadOS
+  - macOS
+  - Windows 11
+  - Windows 10
 
 - **`deviceName` (Device Name)**: Create a filter rule based on the Intune device name property. Enter a string value for the device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -67,6 +114,69 @@ You can use the following device properties in your managed device filter rules:
   - macOS
   - Windows 11
   - Windows 10
+
+- **`deviceOwnership` (Ownership)**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators. 
+
+  Example:
+
+  - `(device.deviceOwnership -eq "Personal")`
+
+  This property applies to:
+
+  - Android device administrator
+  - Android Enterprise
+  - Android (AOSP)
+  - iOS/iPadOS
+  - macOS
+  - Windows 11
+  - Windows 10
+
+- **`deviceTrustType` (Microsoft Entra join type)**: Create a filter rule based on the device's Microsoft Entra join type. Choose between Azure AD joined, Azure AD registered, Hybrid Azure AD joined,  or Unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators).
+
+  Examples:
+
+  - `(device.deviceTrustType -eq "Azure AD joined")`
+  - `(device.deviceTrustType -ne "Azure AD registered")`
+  - `(device.deviceTrustType -in ["Hybrid Azure AD joined","Azure AD joined"])`
+
+  This property applies to:
+
+  - Windows 11
+  - Windows 10
+
+  > [!NOTE]
+  > The `deviceTrustType` property exists in Microsoft Entra ID and Intune. The values in this Intune filters article apply to Intune. They don't apply to Microsoft Entra ID.
+
+- **`enrollmentProfileName` (Enrollment profile name)**: Create a filter rule based on the enrollment profile name. This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Enroll devices**.
+
+  Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+
+  Examples:
+
+  - `(device.enrollmentProfileName -eq "DEP iPhones")`
+  - `(device.enrollmentProfileName -startsWith "Autopilot Profile")`
+  - `(device.enrollmentProfileName -ne $null)`
+
+  This property applies to:
+
+  - Android Enterprise
+  - Android (AOSP)
+  - iOS/iPadOS
+  - Windows 11
+  - Windows 10
+
+- **`IsRooted` (Rooted or jailbroken)**: Create a filter rule based on the device's rooted (Android) or jailbroken (iOS/iPadOS) device property. Select `True`, `False`, or unknown values using the `-eq` and `-ne` operators.
+
+  Example:
+
+  - `(device.isRooted -eq "True")`
+
+  This property applies to:
+
+  - Android device administrator
+  - Android Enterprise (Work profile only)
+  - Android (AOSP)
+  - iOS/iPadOS
 
 - **`manufacturer` (Manufacturer)**: Create a filter rule based on the Intune device manufacturer property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -96,7 +206,7 @@ You can use the following device properties in your managed device filter rules:
   - `(device.model -startsWith "Surface Book")`
   - `(device.model -startsWith "MacBookPro")`
   - `(device.model -startsWith "iPhone 8")`
-    
+
   This property applies to:
 
   - Android device administrator
@@ -107,13 +217,15 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
-- **`deviceCategory` (Device Category)**: Create a filter rule based on the Intune device category property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter a version value (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
 
   Examples:
 
-  - `(device.deviceCategory -eq "Engineering devices")`
-  - `(device.deviceCategory -contains "Engineering")`
-  - `(device.model -startsWith "E")`
+  - `(device.operatingSystemVersion -eq 14.2.1)`
+  - `(device.operatingSystemVersion -gt 10.0.22000.1000)`
+  - `(device.operatingSystemVersion -le 10.0.22631.3235)`
+
+  For a list of supported operators, go to [operatingSystemVersion supported operators](#operatingsystemversion-supported-operators) (in this article).
 
   This property applies to:
 
@@ -125,7 +237,13 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
+  > [!NOTE]
+  > The `operatingSystemVersion` property is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
+
 - **`osVersion` (OS Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+
+  > [!TIP]
+  > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new filters using this property. Existing filters that use `osVersion` continue to work.
 
   Examples:
 
@@ -146,69 +264,6 @@ You can use the following device properties in your managed device filter rules:
   > [!NOTE]
   > For Apple devices, the `OSversion` property doesn't include Apple's Security Patch Version (SPV) information. The SPV is the letter after the version number, like `14.1.2a`. When creating filters for Apple devices, don't include the SPV in the `OSversion` rule syntax.
 
-- **`IsRooted` (Rooted or jailbroken)**: Create a filter rule based on the device's rooted (Android) or jailbroken (iOS/iPadOS) device property. Select `True`, `False`, or unknown values using the `-eq` and `-ne` operators.
-
-  Example:
-
-  - `(device.isRooted -eq "True")`
-
-  This property applies to:
-
-  - Android device administrator
-  - Android Enterprise (Work profile only)
-  - Android (AOSP)
-  - iOS/iPadOS
-
-- **`deviceOwnership` (Ownership)**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators. 
-
-  Example:
-
-  - `(device.deviceOwnership -eq "Personal")`
-
-  This property applies to:
-
-  - Android device administrator
-  - Android Enterprise
-  - Android (AOSP)
-  - iOS/iPadOS
-  - macOS
-  - Windows 11
-  - Windows 10
-
-- **`enrollmentProfileName` (Enrollment profile name)**: Create a filter rule based on the enrollment profile name. This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Enroll devices**.
-
-  Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
-
-  Examples:
-
-  - `(device.enrollmentProfileName -eq "DEP iPhones")`
-  - `(device.enrollmentProfileName -startsWith "Autopilot Profile")`
-  - `(device.enrollmentProfileName -ne $null)`
-
-  This property applies to:
-
-  - Android Enterprise
-  - Android (AOSP)
-  - iOS/iPadOS
-  - Windows 11
-  - Windows 10
-
-- **`deviceTrustType` (Microsoft Entra join type)**: Create a filter rule based on the device's Microsoft Entra join type. Choose between Azure AD joined, Azure AD registered, Hybrid Azure AD joined,  or Unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators).
-
-  Examples:
-
-  - `(device.deviceTrustType -eq "Azure AD joined")`
-  - `(device.deviceTrustType -ne "Azure AD registered")`
-  - `(device.deviceTrustType -in ["Hybrid Azure AD joined","Azure AD joined"])`
-
-  This property applies to:
-
-  - Windows 11
-  - Windows 10
-
-  > [!NOTE]
-  > The `deviceTrustType` property exists in Microsoft Entra ID and Intune. The values in this Intune filters article apply to Intune. They don't apply to Microsoft Entra ID.
- 
 - **`operatingSystemSKU` (Operating System SKU)**: Create a filter rule based on the device's Windows client OS SKU. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
@@ -278,7 +333,7 @@ You can use the following app properties in your managed app filter rules:
   - iOS/iPadOS
   - Windows
 
-- **`deviceManagementType` (Device Management Type)**: On Intune enrolled devices, create a filter rule based on the Intune device management type. Devices must be Intune enrolled to use this app property. Select from the following values using the `-eq` and `-ne` operators: 
+- **`deviceManagementType` (Device Management Type)**: Create a filter rule based on the Intune device management type. Select from the following values using the `-eq` and `-ne` operators:
 
   | Value | Supported platforms |
   |-----------|------------------------|
@@ -326,7 +381,29 @@ You can use the following app properties in your managed app filter rules:
   - iOS/iPadOS
   - Windows
 
+- **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter a version value (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
+
+  Examples:
+
+  - `(app.operatingSystemVersion -eq 14.2.1)`
+  - `(app.operatingSystemVersion -gt 10.0.22000.1000)`
+  - `(app.operatingSystemVersion -le 10.0.22631.3235)`
+
+  For a list of supported operators, go to [operatingSystemVersion supported operators](#operatingsystemversion-supported-operators) (in this article).
+
+  This property applies to:
+
+  - Android
+  - iOS/iPadOS
+  - Windows
+
+  > [!NOTE]
+  > The `operatingSystemVersion` property is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
+
 - **`osVersion` (OS Version)**: Create a filter rule based on the client reported operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+
+  > [!TIP]
+  > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new filters using this property. Existing filters that use `osVersion` continue to work.
 
   Examples:
 
@@ -402,7 +479,41 @@ You can use the following operators in the rule syntax editor:
   - **Allowed values**: `-notContains` | `notContains`
   - **Example**: `(device.manufacturer -notContains "Samsung")`
 
-## Next steps
+#### operatingSystemVersion supported operators
+
+When you use the `operatingSystemVersion (Operating System Version)` property, you can use the following operators in the rule syntax editor:
+
+- **Equals**: Use for all value types, including simple rules, strings, arrays, and more.
+
+  - **Allowed values**: `-eq` | `eq`
+  - **Example**: `(device.operatingSystemVersion -eq "10.0.22000.1000")`
+
+- **NotEquals**: Use for all value types, including simple rules, strings, arrays, and more.
+
+  - **Allowed values**: `-ne` | `ne`
+  - **Example**: `(device.operatingSystemVersion -ne "10.0.22000.1000")`
+
+- **GreaterThan**: Use for version value types.
+
+  - **Allowed values**: `-gt` | `gt`
+  - **Example**: `(device.operatingSystemVersion -gt 10.0.22000.1000)`
+
+- **LessThan**: Use for version value types.
+
+  - **Allowed values**: `-lt` | `lt`
+  - **Example**: `(device.operatingSystemVersion -lt 10.0.22000.1000)`
+
+- **GreaterThanOrEquals**: Use for version value types.
+
+  - **Allowed values**: `-ge` | `ge`
+  - **Example**: `(device.operatingSystemVersion -ge 10.0.22000.1000)`
+
+- **LessThanOrEquals**: Use for version value types.
+
+  - **Allowed values**: `-le` | `le`
+  - **Example**: `(device.operatingSystemVersion -le 10.0.22000.1000)`
+
+## Related articles
 
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
 - [Supported workloads when creating filters](filters-supported-workloads.md)

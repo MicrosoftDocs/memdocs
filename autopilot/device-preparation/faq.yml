@@ -1,0 +1,146 @@
+### YamlMime:FAQ
+metadata:
+  title: Windows Autopilot device preparation FAQ
+  description: This article provides OEMs, partners, administrators, and users with answers to some frequently asked questions about deploying Windows with Windows Autopilot device preparation.
+  ms.service: windows-client
+  ms.subservice: autopilot
+  ms.localizationpriority: medium
+  author: frankroj
+  ms.author: frankroj
+  ms.reviewer: jubaptis
+  manager: aaroncz
+  ms.date: 07/29/2024
+  ms.collection:
+    - M365-modern-desktop
+    - highpri
+    - tier1
+  ms.topic: faq
+title: Windows Autopilot device preparation FAQ
+summary: |
+  **Applies to:**
+
+  - [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions).
+
+  This article provides OEMs, partners, administrators, and users with answers to some frequently asked questions about deploying Windows with Windows Autopilot device preparation.
+
+sections:
+  - name: Windows Autopilot device preparation FAQ
+    questions:
+
+      - question: |
+          How is Windows Autopilot device preparation different from Windows Autopilot?
+        answer: |
+          Windows Autopilot device preparation is a re-architecture of Windows Autopilot. While the experience to OEMs, IT admins, and users is similar, the underlying architecture is different. The updated architecture in Windows Autopilot Device preparation gives new capabilities that improves the deployment experience.
+
+      - question: |
+          Who does Windows Autopilot device preparation benefit?
+        answer: |
+          Windows Autopilot device preparation benefits government customers who can now use Windows Autopilot device preparation to streamline their deployments at scale. It also benefits new customers onboarding Windows Autopilot device preparation by reducing the complexity of setting up the deployment.
+
+      - question: |
+          Is Windows Autopilot device preparation available in all sovereign clouds?
+        answer: |
+          Windows Autopilot device preparation is available for Government Community Cloud (GCC) High and U.S. Department of Defense (DoD). It'll be available for Intune operated by 21Vianet in China later this year.
+
+      - question: |
+          What scenarios does Windows Autopilot device preparation support?
+        answer: |
+          Currently Windows Autopilot device preparation only supports the user-driven scenario.
+
+      - question: |
+          What about the other Windows Autopilot scenarios like pre-provisioning and self-deploying mode?
+        answer: |
+          The pre-provisioning mode and self-deploying mode scenarios will be supported in the future, but aren't part of the initial release.
+
+      - question: |
+          Why is there a limit on the number of applications and PowerShell scripts in the Windows Autopilot device preparation policy?
+        answer: |
+          We limited the number of applications that can be applied during the out-of-box experience (OOBE) to increase stability and achieve a higher success rate. Looking at our telemetry, almost 90% of all Autopilot deployments are deployed with 10 or less fewer apps. This limit is intended to improve the overall user experience so that users can become more productive quickly. We understand that there are outliers and companies that want to target more during setup. However, for the user-driven approach, we want to use the desktop experience for non-essential applications.
+
+      - question: |
+          Does Windows Autopilot device preparation support deploying both Win32 and line-of-business (LOB) applications in the same deployment?
+        answer: |
+          Yes. While we always recommend Win32 applications, mixing applications in Windows Autopilot deployments might result in errors. With the Windows Autopilot device preparation, we have streamlined the providers so different application types shouldn't affect each other.
+
+      - question: |
+          What is the guidance on user-based targeting vs device-based targeting?
+        answer: |
+          Only device-based configurations are delivered during OOBE. For this reason:
+          - Assign security policy to devices.
+          - Ensure all selected applications in the Windows Autopilot device preparation policy are set to install in the **System** context.
+          - Ensure all selected applications in the Windows Autopilot device preparation policy are targeted to the device security group specified in the Windows Autopilot device preparation policy.
+          - Ensure all selected PowerShell scripts in the Windows Autopilot device preparation policy are targeted to the device security group specified in the Windows Autopilot device preparation policy.
+
+      - question: |
+          How do users know when the required setup is complete?
+        answer: |
+          Many users aren't sure when the provisioning process is complete. To help mitigate confusion and calls to support, we added a completion page in OOBE. Administrators can configure the page to require a user to manually select **Continue** or set the page to auto-continue. This message lets the user know that OOBE setup is complete. However, additional installations that were assigned to the device group but not specified in the Windows Autopilot device preparation policy might still be occurring in the background.
+
+      - question: |
+          Can Windows Autopilot Device preparation be used by non-Microsoft mobile device management (MDM) providers?
+        answer: |
+          Windows Autopilot device preparation will support non-Microsoft MDMs. In this initial release, configuration is only possible via Intune.
+
+      - question: |
+          Is Windows Autopilot device preparation available on Windows 10 devices?
+        answer: |
+          Currently, Windows Autopilot device preparation is only available on:
+
+          - Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
+          - Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
+
+      - question: |
+          Do existing Windows Autopilot profiles need to be migrated to Windows Autopilot device preparation?
+        answer: |
+          There's no need to migrate from existing Windows Autopilot profiles to Windows Autopilot device preparation policies. We expect both solutions to exist in parallel for a while as we work to improve the experience and add more functionality.
+
+      - question: |
+          Does this mean that Windows Autopilot isn't being invested in any longer?
+        answer: |
+          Not at all! We're continuing to work on Windows Autopilot in parallel with developing Windows Autopilot device preparation. The first release of Windows Autopilot device preparation doesn't have all the scenarios of Windows Autopilot, specifically pre-provisioning and self-deploying modes, so we'll continue to invest in those areas. Additionally, in the future, we plan to add any high value features from Windows Autopilot device preparation to Windows Autopilot to improve the experience for all customers.
+
+      - question: |
+          Does Windows Autopilot device preparation support Microsoft Entra hybrid join?
+        answer: |
+          No. Windows Autopilot device preparation only supports Microsoft Entra join.
+
+      - question: |
+          What type of applications does Windows Autopilot device preparation support?
+        answer: |
+          The following types of applications are supported for use with Windows Autopilot device preparation:
+
+          - [Line-of-business (LOB)](/mem/intune/apps/lob-apps-windows).
+          - [Win32](/mem/intune/apps/apps-win32-prepare).
+          - [Microsoft Store](/mem/intune/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
+          - [Microsoft 365](/mem/intune/apps/apps-add-office365).
+
+      - question: |
+          Do devices need to be pre-staged with Windows Autopilot device preparation?
+        answer: |
+          No. Windows Autopilot device preparation policies are deployed to a user group and not a device group. Once a user in that user group signs into the device during OOBE, the Windows Autopilot device preparation deployment begins. During the deployment, the device is then automatically added to the device group specified in the Windows Autopilot device preparation policy.
+
+      - question: |
+          Which Windows Autopilot device preparation policy receives priority if multiple policies are deployed to a user?
+        answer: |
+          If multiple Windows Autopilot device preparation policies are deployed to a user, the policy with the highest priority gets priority. Policy priorities are displayed at the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
+
+      - question: |
+          What makes Windows Autopilot device preparation deployments faster and more efficient than Windows Autopilot?
+        answer: |
+          The key to making Windows Autopilot device preparation deployments faster and more efficient than Windows Autopilot is [Enrollment Time Grouping](overview.md#enrollment-time-grouping). With Enrollment Time Grouping, devices are automatically added to an assigned device group specified in the Windows Autopilot device preparation policy. Since the device group is assigned instead of dynamic as used in Windows Autopilot, anything assigned to the device group is processed faster and more efficiently. The assigned group eliminates the need to perform  queries that are required with dynamic groups.
+
+      - question: |
+          How does a user know that a Windows Autopilot device preparation deployment is running on their device?
+        answer: |
+          During a Windows Autopilot device preparation deployment, a **Setting up for work or school** window with a round progress bar displays on the device:
+
+          :::image type="content" source="../images/device-preparation/apdp-status.png" alt-text="Screenshot that shows the Status screen for Windows Autopilot device preparation deployment.":::
+
+          Windows Autopilot device preparation doesn't use the Enrollment Status Page (ESP) like Windows Autopilot. If the ESP displays during the deployment, then the device isn't running a Windows Autopilot device preparation deployment. Instead, the device might be:
+
+            - A Windows Autopilot registered device.
+            - A Windows Autopilot profile is assigned to the device.
+
+            Verify that the device isn't registered as a Windows Autopilot device and that a Windows Autopilot profile isn't assigned to the device. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies.
+
+            If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../registration-overview.md#deregister-a-device).

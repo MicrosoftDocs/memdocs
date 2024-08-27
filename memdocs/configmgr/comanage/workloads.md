@@ -11,7 +11,7 @@ ms.subservice: co-management
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Co-management workloads
@@ -105,12 +105,12 @@ To use Windows Autopatch with these devices, this workload needs to be managed b
 For more information on the Intune feature, see [Create a device profile in Microsoft Intune](../../intune/configuration/device-profile-create.md).
 
 > [!NOTE]
-> A policy created from the settings catalog is controlled by the Device Configuration workload slider regardless of the contents of the policy. 
-> 
+> A policy created from the settings catalog is controlled by the Device Configuration workload slider regardless of the contents of the policy.
+>
 > When you switch the device configuration workload, it also includes policies for the Windows Information Protection feature. Only policies from Intune will apply once the Device Configuration workload is moved to Intune.<!-- 4184095 -->
 
 > [!NOTE]
-> In order to tattoo remove Endpoint protection settings, Device Configuration workload also needs to be switched. 
+> In order to tattoo remove Endpoint protection settings, Device Configuration workload also needs to be switched.
 
 ## Office Click-to-Run apps
 
@@ -150,7 +150,7 @@ For more information on the Intune feature, see [What is Microsoft Intune app ma
 > [!NOTE]
 > In Windows 10 version 1903 and later, PowerShell scripts still run on co-managed devices even if you haven't switched the **Client Apps** workload to Intune.
 
-When you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients. For more information, see [Microsoft Connected Cache in Configuration Manager](../core/plan-design/hierarchy/microsoft-connected-cache.md#support-for-intune-win32-apps).
+When you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients. For more information, see [Microsoft Connected Cache with Configuration Manager](../core/plan-design/hierarchy/microsoft-connected-cache.md#support-for-intune-win32-apps).
 
 ## Diagram for app workloads
 

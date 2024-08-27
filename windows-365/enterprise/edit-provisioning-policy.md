@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2023
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -62,7 +62,9 @@ To apply a configuration change to existing Cloud PCs:
 4. Select Apply.
 
 >[!Important]
->Cloud PCs will be shutdown during the application process. Users will be disconnected and any unsaved work will be lost.
+>
+>- When applying a new region, Cloud PCs will be shutdown during the application process. Users will be disconnected and any unsaved work will be lost.
+>- When applying single sign-on, Cloud PCs deployed before April 2023 will be shutdown during the application process. As this operation takes time, applying SSO to a large number of Cloud PCs can restart the VMs over a long period of time and will not complete immediately.
 
 ## Next steps
 

@@ -49,7 +49,7 @@ Follow these steps to set up Shared iPad in your environment.
 1. Federate your Microsoft Entra instance with Apple Business Manager or Apple School Manager. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-apdb19317543/web).
 2. Create an enrollment profile.  
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-    1. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**.
+    1. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment**.
     1. Under **Bulk Enrollment Methods**, choose **Enrollment program tokens**.  
     1. Choose a token, and then select **Profiles**. 
     1. Select **Create profile** > **iOS/iPadOS**. 
@@ -159,8 +159,7 @@ The following limitations exist in Intune for Shared iPad:
 - Company Portal and available apps not supported: Intune Company Portal app and the Intune Company Portal website are not supported with Shared iPad.
 - App assignment requirements: You must assign apps as _required_ to device groups. *Available* apps are not supported with Shared iPad.  
 - Passcode complexity can't be managed with Shared iPad: Shared iPad passcodes must have eight alphanumeric characters, and can't be changed in Apple Business Manager. The passcode complexity and length settings available in Intune device configuration profiles don't apply to Shared iPad. An MDM administrator can set the grace period, which specifies the number of minutes a user has to unlock the iPad without a passcode.  
-- Some policies not supported: These Intune policies are not supported with Shared iPad: app-based and device-based conditional access policies, app protection policies, and compliance policies. 
-- Wallpaper not supported: Wallpapers aren't supported on Shared iPad devices. 
+- Some policies not supported: These Intune policies are not supported with Shared iPad: app-based and device-based conditional access policies, app protection policies, and compliance policies.  
 - Email profile not supported: Email profiles aren't supported with Shared iPad. An error occurs when you assign an email profile to a Shared iPad device.  
 - User-assigned policies don't appear in reports: Intune doesn't report device status or user status in reports for Shared iPad apps and profiles assigned to Microsoft Entra user groups.  
 - Microsoft Entra federation requirement not enforced: The Microsoft Entra federation requirement isn't enforced. If the Managed Apple ID matches the Microsoft Entra UPN, and the Microsoft Entra user is assigned a user applicable device configuration profile, the profile will apply to the user when they sign in to a shared iPad using their Managed Apple ID.  

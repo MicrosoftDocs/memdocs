@@ -1,170 +1,239 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/remote-actions/organizational-messages-reporting.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/organizational-messages-prerequisites.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/organizational-messages-overview.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/organizational-messages-create.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/organizational-messages-cancel.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-enable-uac-windows.md",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/turn-on-defender-windows.md",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-enable-secure-boot-windows.md",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/resolve-access-point-restrictions.md",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-enable-defender-firewall-windows.md",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-enable-code-integrity.md",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/your-device-needs-antimalware-software.md",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-update-os-build-version-windows.md",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/your-windows-version-isnt-yet-supported.md",
+      "redirect_url": "/mem/intune/user-help/update-device-settings-windows",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "memdocs/intune/enrollment/android-fully-managed-security-settings.md",
       "redirect_url": "/mem/intune/protect/device-restrictions-android-for-work",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/enrollment/android-work-profile-security-settings.md",
       "redirect_url": "/mem/intune/protect/compliance-policy-create-android-for-work",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/enrollment/android-app-configuration-policies.md",
       "redirect_url": "/mem/intune/apps/app-configuration-policies-use-android",
-      "redirect_document_id": false 
-    },       
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/enrollment/device-enrollment-restrictions.md",
       "redirect_url": "/mem/intune/enrollment/enrollment-restrictions-set",
-      "redirect_document_id": false 
-    },    
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/enrollment/android-configuration-framework.md",
       "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-android",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/fundamentals/security-copilot.md",
       "redirect_url": "/mem/intune/copilot/security-copilot",
-      "redirect_document_id": true 
+      "redirect_document_id": true
     },
-
     {
       "source_path": "memdocs/intune/user-help/allow-wi-fi-control-android.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/set-the-amount-of-time-before-your-device-is-locked-android.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/install-your-companys-virtual-private-network-vpn-android.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-update-your-android-device.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/your-android-version-isnt-yet-supported.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/your-device-is-rooted-and-you-cant-connect-android.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/your-device-is-missing-an-it-required-certificate-android.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-turn-off-usb-debugging-android.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
-      "redirect_document_id": false 
-    }, 
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-turn-on-scanning-for-security-threats-android.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
-      "redirect_document_id": false 
-    }, 
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-update-your-device-os-security-patch-android.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
-      "redirect_document_id": false 
-    }, 
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-update-your-macos-device.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-mac",
-      "redirect_document_id": false 
-    }, 
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/user-help/your-macos-version-isnt-yet-supported.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-mac",
-      "redirect_document_id": false 
-    }, 
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/user-help/unable-to-get-macos-device-managed.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-mac",
-      "redirect_document_id": false 
-    },  
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/user-help/your-ios-version-isnt-yet-supported.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
-      "redirect_document_id": false 
-    },  
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-update-your-ios-device.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
-      "redirect_document_id": false 
-    },  
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/user-help/existing-company-email-account-found.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
-      "redirect_document_id": false 
-    },    
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/fundamentals/migration-guide-app-protection-policies.md",
       "redirect_url": "/mem/intune/apps/app-configuration-policies-overview",
-      "redirect_document_id": false 
-    },    
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/apps/windows-store-for-business.md",
       "redirect_url": "/mem/intune/apps/store-apps-microsoft",
-      "redirect_document_id": false 
-    },    
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/apps/app-sideload-windows.md",
       "redirect_url": "/mem/intune/apps/lob-apps-windows",
-      "redirect_document_id": false 
-    },    
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/fundamentals/microsoft-intune-admin-center-devices.md",
       "redirect_url": "/mem/intune/fundamentals/public-preview",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/device-limit-wpj-ios.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/how-to-reconnect-a-compromised-ios-device.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/how-do-i-find-the-serial-number-on-my-device-macos.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/device-limit-wpj-macos.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/fundamentals/frontline-worker-overview.md",
       "redirect_url": "/mem/solutions/frontline-worker/frontline-worker-overview",
-      "redirect_document_id": true 
+      "redirect_document_id": true
     },
     {
       "source_path": "memdocs/intune/enrollment/ios-ipados-supervised-device-security-configurations.md",
@@ -194,27 +263,27 @@
     {
       "source_path": "memdocs/intune/apps/protect-edge-mam-windows.md",
       "redirect_url": "/mem/intune/apps/apps/protect-mam-windows",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/fundamentals/byod-technology-decisions.md",
       "redirect_url": "/mem/intune/fundamentals/intune-planning-guide#personal-devices-vs-organization-owned-devices",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/fundamentals/common-scenarios.md",
       "redirect_url": "/mem/intune/fundamentals/intune-planning-guide#step-1---determine-your-objectives",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-windows.md",
       "redirect_url": "/mem/intune/user-help/device-enrollment-overview-windows",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/enroll-your-w81-or-rt81-windows.md",
       "redirect_url": "/mem/intune/user-help/enroll-windows-10-device",
-      "redirect_document_id": false 
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/user-help/set-or-change-your-passcode-ios.md",
@@ -833,7 +902,7 @@
     },
     {
       "source_path": "memdocs/autopilot/windows-autopilot-requirements.md",
-      "redirect_url": "/autopilot/software-requirements",
+      "redirect_url": "/autopilot/requirements",
       "redirect_document_id": false
     },
     {
@@ -1698,7 +1767,7 @@
     },
     {
       "source_path": "memdocs/autopilot/autopilot-faq.yml",
-      "redirect_url": "/autopilot/autopilot-faq.yml",
+      "redirect_url": "/autopilot/faq.yml",
       "redirect_document_id": false
     },
     {
@@ -1718,7 +1787,7 @@
     },
     {
       "source_path": "memdocs/autopilot/configuration-requirements.md",
-      "redirect_url": "/autopilot/configuration-requirements",
+      "redirect_url": "/autopilot/requirements?tabs=configuration",
       "redirect_document_id": false
     },
     {
@@ -1758,7 +1827,7 @@
     },
     {
       "source_path": "memdocs/autopilot/licensing-requirements.md",
-      "redirect_url": "/autopilot/licensing-requirements",
+      "redirect_url": "/autopilot/requirements?tabs=licensing",
       "redirect_document_id": false
     },
     {
@@ -1768,7 +1837,7 @@
     },
     {
       "source_path": "memdocs/autopilot/networking-requirements.md",
-      "redirect_url": "/autopilot/networking-requirements",
+      "redirect_url": "/autopilot/requirements?tabs=networking",
       "redirect_document_id": false
     },
     {
@@ -1783,7 +1852,7 @@
     },
     {
       "source_path": "memdocs/autopilot/policy-conflicts.md",
-      "redirect_url": "/autopilot/policy-conflicts",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-policy-conflicts-with-windows-autopilot",
       "redirect_document_id": false
     },
     {
@@ -1818,27 +1887,27 @@
     },
     {
       "source_path": "memdocs/autopilot/software-requirements.md",
-      "redirect_url": "/autopilot/software-requirements",
+      "redirect_url": "/autopilot/requirements?tabs=software",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/troubleshoot-aad-join.md",
-      "redirect_url": "/autopilot/troubleshoot-aad-join",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-microsoft-entra-join-issues",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/troubleshoot-device-enrollment.md",
-      "redirect_url": "/autopilot/troubleshoot-device-enrollment",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-device-import-and-enrollment",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/troubleshooting.md",
-      "redirect_url": "/autopilot/troubleshooting",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/troubleshoot-oobe.md",
-      "redirect_url": "/autopilot/troubleshoot-oobe",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot",
       "redirect_document_id": false
     },
     {
@@ -2360,7 +2429,7 @@
       "source_path": "memdocs/intune/protect/index.yml",
       "redirect_url": "/mem/intune/",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "memdocs/intune/remote-actions/index.yml",
       "redirect_url": "/mem/intune/",
@@ -2414,6 +2483,241 @@
     {
       "source_path": "memdocs/intune/protect/wandera-mtd-connector-integration.md",
       "redirect_url": "/mem/intune/protect/jamf-mtd-connector-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/introduction-intune-education.md",
+      "redirect_url": "/mem/intune/industry/education/introduction-intune-education",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/troubleshoot-citrix-hdx-plus.md",
+      "redirect_url": "/windows-365/enterprise/troubleshoot-partner-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/security-baseline-settings-defender-atp.md",
+      "redirect_url": "/mem/intune/protect/security-baseline-settings-defender",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/software-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=software#software-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/networking-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=networking#networking-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/licensing-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=licensing#licensing-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/configuration-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=configuration#configuration-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/windows-autopilot-whats-new.md",
+      "redirect_url": "/autopilot/whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/resolved-issues.md",
+      "redirect_url": "/autopilot/known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/windows-autopilot.md",
+      "redirect_url": "/autopilot/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/software-requirements-old.md",
+      "redirect_url": "/autopilot/requirements?tabs=software",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/monitor-connection-health.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/enroll-devices.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/about-updates.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/tutorial-windows10.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/get-support.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/connect-configmgr.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/ready-for-windows.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/deploy-pilot.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/troubleshooting.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/group-policy-settings.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/deploy-prod.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/compat-assessment.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/account-reset.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/privacy.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/set-up.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/about-deployment-plans.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/faq.yml",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/overview.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/enable-data-sharing.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/whats-new.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/create-deployment-plans.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/index.yml",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/health-status-monitoring.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/account-close.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/log-collector.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/desktop-analytics/about-assets.md",
+      "redirect_url": "/mem/intune/protect/windows-update-compatibility-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/set-up-vmware-horizon.md",
+      "redirect_url": "/windows-365/enterprise/set-up-omnissa-horizon",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/requirements-vmware-horizon.md",
+      "redirect_url": "/windows-365/enterprise/requirements-omnissa-horizon",
+      "redirect_document_id": false
+    },
+   {
+      "source_path": "memdocs/configmgr/core/clients/manage/monitor-windows-analytics.md",
+      "redirect_url": "/mem/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/troubleshooting.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/troubleshoot-device-enrollment.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-device-import-and-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/troubleshoot-oobe.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-oobe-issues-during-windows-autopilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/troubleshoot-aad-join.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-microsoft-entra-join-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/policy-conflicts.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-policy-conflicts-with-windows-autopilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/autopilot-faq.yml",
+      "redirect_url": "/autopilot/faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/endpoint-security-firewall-rule-tool.md",
+      "redirect_url": "/mem/intune/protect/endpoint-security-firewall-policy",
       "redirect_document_id": false
     }
   ]

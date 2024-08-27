@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/20/2024
+ms.date: 04/30/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -302,7 +302,10 @@ This feature applies to:
 
   - **Identifier**: Enter the app bundle ID, or the installation file path of the process or executable. For example, enter `com.contoso.appname`.
 
-    To get the app bundle ID, open the Terminal app, and run the `codesign` command. This command identifies the code signature. So you can get the bundle ID and the code signature simultaneously.
+    To get the app bundle ID:
+
+    - Open the Terminal app, and run the `codesign` command. This command identifies the code signature. So you can get the bundle ID and the code signature simultaneously.
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
   - **Code requirement**: Enter the code signature for the application or process.
 
@@ -456,9 +459,13 @@ The restricted apps settings don't prevent users from installing and opening spe
     If an app is installed that's on the prohibited apps list, then the restricted apps setting reports an error.
 
 - **Apps list**: **Add** apps to your list:
-  - **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app. You can add built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app. You can add built-in apps and line-of-business apps.
 
-    To find the bundle ID of a macOS app, you can open the Terminal app, and use AppleScript (`osascript -e 'id of app "AppName"'`).
+    To get the bundle ID:
+
+    - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+    - Open the Terminal app, and use AppleScript (`osascript -e 'id of app "AppName"'`).
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
     To find the URL of an app, open the iTunes App Store, and search for the app. For example, search for `Microsoft Remote Desktop` or `Microsoft Word`. Select the app, and copy the URL. You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
 

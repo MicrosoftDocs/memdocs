@@ -24,8 +24,6 @@ This article details the Windows versions that you can use to host a Configurati
 
 _Applies to Datacenter: Azure Edition, Standard and Datacenter editions_
 
-Starting in version 2107<!-- 10200029 -->, this OS version is supported for the following servers.
-
 Site servers:
 
 - Central administration site
@@ -50,9 +48,6 @@ Site system servers:
 - SMS Provider
 - Software update point
 - State migration point
-
-> [!NOTE]
-> If you're installing a new site, you can use the latest baseline version 2103 on a Windows Server 2022 site server, and then immediately update the site to version 2107.<!--MEMDocs#1971-->
 
 ## Windows Server 2019
 
@@ -122,71 +117,19 @@ Site system server:
 
 _Applies to Standard and Datacenter_ 
 
-> [!NOTE]
-> On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 entered the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see [Extended Security Updates and Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
+On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 entered the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see [Extended Security Updates and Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
-Site servers:
-
-- Central administration site
-- Primary site
-- Secondary site
-
-Site system servers:
-
-- Asset Intelligence synchronization point
-- Certificate registration point
-- Cloud management gateway connection point
-- Data warehouse service point
-- Distribution point <sup>[Note 1](#bkmk_note1)</sup>
-- Endpoint Protection point
-- Enrollment point
-- Enrollment proxy point
-- Fallback status point
-- Management point
-- Reporting services point
-- Service connection point
-- Site database server <sup>[Note 2](#bkmk_note2)</sup>
-- SMS Provider
-- Software update point
-- State migration point
-
-## Windows Server 2012
-
-_Applies to Standard and Datacenter editions_
-
-> [!NOTE]
-> On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 entered the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see [Extended Security Updates and Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
-
-Site servers:
-
-- Central administration site
-- Primary site
-- Secondary site
-
-Site system servers:
-
-- Asset Intelligence synchronization point
-- Certificate registration point
-- Cloud management gateway connection point
-- Data warehouse service point
-- Distribution point <sup>[Note 1](#bkmk_note1)</sup>
-- Endpoint Protection point
-- Enrollment point
-- Enrollment proxy point
-- Fallback status point
-- Management point
-- Reporting services point
-- Service connection point
-- Site database server <sup>[Note 2](#bkmk_note2)</sup>
-- SMS Provider
-- Software update point
-- State migration point
+> [!TIP]
+>
+> Starting in Configuration Manager 2309, you'll be notified when performing a site upgrade about site systems with operating systems that are past the end of support date. 
+>
+> Starting in Configuration Manager 2403 you'll be blocked from performing a site upgrade if any site systems are detected with operating systems that are past the end of support date. For more information, see [Extended Security Updates and Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
 ## Client OS versions
 
 The following client OS versions are supported for use as a **distribution point** <sup>[Note 1](#bkmk_note1)</sup>:
 
-- Windows 11 (_starting in Configuration Manager version 2107_)
+- Windows 11 
 
     For more information on supported build versions and editions, see [Support for Windows 11](support-for-windows-11.md).
 

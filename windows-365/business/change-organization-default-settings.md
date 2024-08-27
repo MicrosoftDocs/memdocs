@@ -41,7 +41,7 @@ By default, new Cloud PCs are created with the following settings:
 
 You can change these defaults by following these steps:
 
-1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an account that has either a Global Administrator or Windows 365 Administrator role.
+1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an account that has the Windows 365 Administrator role.
 2. Select **Your organization’s Cloud PCs** > **Update organization settings**.
 3. Select your preferred option for the following settings:
     - **Single sign-on**: Select this option to enable a single sign-on experience for users when accessing their Cloud PC. Before turning this option on, review the information to [configure single sign-on](configure-single-sign-on.md).

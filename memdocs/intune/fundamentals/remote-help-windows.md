@@ -48,7 +48,7 @@ The Remote Help app is available from Microsoft to install on both devices enrol
 
 The Remote Help app supports the following capabilities on Windows:
 
-- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](#set-up-conditional-access-for-remote-help)
+- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Setup Conditional Access for Remote Help](#setup-conditional-access-for-remote-help)
 
 - **Compliance Warnings**: Before a helper can connect to a user's device, the helper sees a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
@@ -64,7 +64,7 @@ The Remote Help app supports the following capabilities on Windows:
 
 ## Prerequisites for Remote Help on Windows
 
-General prerequisites for Remote Help, are listed [here](remote-help.md#prerequisites).
+General prerequisites for Remote Help are listed [here](remote-help.md#prerequisites).
 
 The prerequisites for Remote Help on Windows are:
 
@@ -77,12 +77,12 @@ To remotely start a session:
   - Intune management extension is required for the remote launch feature and that is supported on Windows 10 and 11. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md)
 
 - Optional Windows updates for higher notification reliability:
-   - Win 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
-   - Win 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/en-us/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
+   - Win 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
+   - Win 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
 
 ### Network considerations
 
-Remote Help communicates over port 443 (https) and connects to the Remote Assistance Service at `https://remoteassistance.support.services.microsoft.com` by using the Remote Desktop Protocol (RDP). The traffic is encrypted with TLS 1.2.
+Remote Help communicates over port 443 (https) and connects to the Remote Assistance Service at `https://remotehelp.microsoft.com` by using the Remote Desktop Protocol (RDP). The traffic is encrypted with TLS 1.2.
 
 Both the helper and sharer must be able to reach these endpoints over port 443. Go to [Network endpoints for Remote Help](intune-endpoints.md#remote-help) for a list of endpoints needed for Remote Help.
 
@@ -115,13 +115,16 @@ Some users may choose to opt out of automatic updates. However, when a new versi
 
 Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of Remote Help is **5.0.1311.0**
+The most recent version of Remote Help is **5.1.1419.0**
 
 ### Deploy Remote Help as a Win32 app
 
-To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, and define a detection rule to identify devices that don't have the most current version of Remote Help installed.  Before you can add Remote Help as a Win32 app, you must repackage *remotehelpinstaller.exe* as a *.intunewin* file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Win32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
+To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, and define a detection rule to identify devices that don't have the most current version of Remote Help installed. Before you can add Remote Help as a Win32 app, you must repackage *remotehelpinstaller.exe* as a *.intunewin* file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Win32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
 
 After you repackage Remote Help as a *.intunewin* file, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md) with the following details to upload and deploy Remote Help. In the following, the repackaged remotehelpinstaller.exe file is named *remotehelp.intunewin*.
+
+   > [!IMPORTANT]
+   > Make sure the file you dowloaded is renamed to **remotehelpinstaller.exe**. 
 
 1. On the App information page, select **Select app package file**, and locate the *remotehelp.intunewin* file you've previously prepared, and then select **OK**.
 
@@ -151,8 +154,11 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
    - For *File or folder*, specify **RemoteHelp.exe**
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
-   - For *Value*, specify the [version of Remote Help](#download-remote-help) you're deploying. For example, **10.0.22467.1000**
+   - For *Value*, specify the Remote Help version that you're deploying. For example, **10.0.22467.1000**. See the following note for details on how to get the Remote Help version.
    - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
+     
+> [!NOTE]
+> To get the version of the **RemoteHelp.exe**, install RemoteHelp manually to a machine and run the following Powershell command **(Get-Item "$env:ProgramFiles\Remote Help\RemoteHelp.exe").VersionInfo**. From the output make a note of the FileVersion and use it to specify the *Value* in the detection rule.
 
 5. Proceed to the Assignments page, and then select an applicable device group or device groups that should install the Remote Help app. Remote Help is applicable when targeting group(s) of devices and not for User groups.
 
@@ -160,7 +166,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 
 ## How to use Remote Help
 
-The use of Remote Help depends on whether you're requesting help or providing help. In this section we'll cover both scenarios.
+The use of Remote Help depends on whether you're requesting help or providing help. In this section, both scenarios are covered.
 
 ### Request help
 
@@ -184,7 +190,7 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
 #### Request help on an unenrolled device
 
-The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you are trying to receive help, be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
+The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you're trying to receive help, be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
 
 As a sharer, when you've requested help and both you and the helper are ready to start:
 
@@ -196,7 +202,7 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
 4. At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to **Allow full control** or choose to **Decline the request**. Full control must be established before the help session starts.
 
-5. After establishing the type of session (full control or screen sharing), the session is established, and the helper can now assist in resolving any issues on the device.  
+5. After establishing the type of session (full control or screen sharing), the session is established, and the helper can now help resolving any issues on the device.  
 
 ### Provide help
 
@@ -207,16 +213,18 @@ As a helper, after receiving a request from a user who wants assistance by using
    1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed.
 
    2. From the remote actions bar across the top of the device view, select **New remote assistance session** and select **Remote Help**, and then **Continue**.
+
 > [!NOTE]
 > If you are launching the session from the Intune, login with the same credentials to the Remote Help app for a successful
-> connection. 
+> connection.
+
 2. A notification is sent to the sharer's device, and you'll see an update that the notification was successfully sent. Select **Launch Remote Help** to join the session.  
 
    a. If the notification is sent but not received by the user, you can resend the notification by selecting **Retry**.
 
-   b. If the sharer's device is not online or not connected to the internet, an error message is  displayed.
+   b. If the sharer's device isn't online or not connected to the internet, an error message is  displayed.
 
-   c. If the device that you are trying to connect to is noncompliant, a warning banner is displayed.
+   c. If the device that you're trying to connect to is noncompliant, a warning banner is displayed.
 
 2. When Remote Help opens, you must sign in to authenticate to your organization.
 
@@ -232,7 +240,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 #### Provide help on an unenrolled device
 
-If the device that you are trying to help is not enrolled in Intune, you'll have to follow the process described in this section to give help:
+If the device that you're trying to help isn't enrolled in Intune, you must follow the process described in this section to give help:
 
 1. Locate the Remote Help app on your device and manually start it. After the Remote Help app opens, you'll need to sign in to authenticate your organization.
 
@@ -268,7 +276,7 @@ Depending on the environment that Remote Help is utilized in, it may be necessar
 - C:\Program Files\Remote help\RHService.exe
 - C:\Program Files\Remote help\RemoteHelpRDP.exe
 
-## Set up Conditional Access for Remote Help
+## Setup conditional access for Remote Help
 
 This section outlines the steps for provisioning the Remote Help service on the tenant for conditional access.
 
@@ -276,19 +284,24 @@ This section outlines the steps for provisioning the Remote Help service on the 
     - It may be necessary to install [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation)  
 2. Within PowerShell enter the following commands:
 
-#### Installation
+### Installation
+
 ```powershell
 Install-Module Microsoft.Graph -Scope CurrentUser
 ```
-#### Sign in
+
+### Sign in
 
 Use the `Connect-MgGraph` command to sign in with the required scopes. You'll need to sign in with an admin account to consent to the required scopes.
 ```powershell
+
 Connect-MgGraph -Scopes "Application.ReadWrite.All"
 ```
 
-#### Create the Service Principal
+### Create the service principal
+
 Create a Service Principal using the `Remote Assistance Service` AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2".
+
 ```powershell
 New-MgServicePrincipal -AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2"
 ```
@@ -296,22 +309,23 @@ New-MgServicePrincipal -AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2"
 ```Output
 DisplayName                                     Id AppId                                   ServicePrincipalType
 ----                                         ------- -----------                                   ---------------
-RemoteAssistanceService                           3d5ff82b-a5f2-483a-xxxx-9514ed66f7c5    1dee7b72-b80d-4e56-933d-8b6b04f9a3e2                           Application
+RemoteAssistanceService                      3d5ff82b-a5f2-483a-xxxx-9514ed66f7c5        1dee7b72-b80d-4e56-933d-8b6b04f9a3e2
 ```
 
 This output has been shortened for readability.
 
-The ID corresponds to the app ID for the Remote Assistance Service
+The ID corresponds to the app ID for the Remote Assistance Service.
 
-The display name is **Remote Assistance Service**, which is the backend service for Remote Help  
+The display name is **Remote Assistance Service**, which is the backend service for Remote Help.  
 
-#### Sign out
+### Sign out
 
 Use the `Disconnect-MgGraph` command to sign out.
 
 ```powershell
 Disconnect-MgGraph
 ```
+
 
 ## Languages Supported
 
@@ -352,19 +366,44 @@ Remote Help is supported in the following languages:
 - Turkish
 - Ukrainian
 
+## Troubleshooting Remote Help on Windows for Edge WebView2
+
+You might see an error code in a dialog box if you're having trouble installing and running Remote Help. The error might be related to Microsoft Edge WebView 2, which is required to use Remote Help. Here are some error codes you might see along with a short description of the problem.
+
+|Error Code |General Problem |
+|-----------| ----------------|
+|1001|Remote Help failed to initialize one of its internal components.|
+|1002|Remote Help failed to load WebView2.|
+|1003|Remote Help failed to install WebView2.|
+
+### Solutions
+
+1. Ensure that Microsoft Edge is installed properly and is up to date.
+   
+Remote Help uses the Microsoft Edge browser control. If your device has Microsoft Edge installed, then it's likely that Remote Help will run properly. If you have problems, the common troubleshooting tips here may help get Remote Help working. Learn more about [Troubleshooting tips for installing and updating Microsoft Edge.](https://support.microsoft.com/microsoft-edge/troubleshooting-tips-for-installing-and-updating-microsoft-edge-a5eceb94-c2b1-dfab-6569-e79d0250317b)
+After installing or updating Microsoft Edge, try opening Remote Help again. If Remote Help doesn't run or you get an error message that Microsoft Edge WebView2 isn't installed, go to the next step.
+
+2. Install Microsoft Edge WebView 2
+   
+Microsoft Edge WebView2 is required to use Remote Help. If you get an error message that WebView2 isn't installed when you try to open Remote Help, then [download and install Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/consumer/?form=MA13LH) from the Microsoft website. After you've downloaded WebView2, try opening Remote Help again.
+
+> [!NOTE]
+> WebView2 should already be installed if your device is running Windows 11 or has Microsoft Edge.
+
 ## Known Issues
-
-When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session isn't established.
-If a conditional access policy is configured as described earlier and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant can't use Remote Help.
-
-For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service is not running.
-After the user's device is restarted, there is a delay for the service to start. You can either manually wait for the service to start (30-60 seconds after restart), or manually start the service through services.msc.
-For newly enrolled devices, there is a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
-
+For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service isn't running.
+After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30-60 seconds after restart), or manually start the service through services.msc.
+For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
 
 ## What's New for Remote Help
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
+
+### June 25, 2024
+
+Version 5.1.1419.0
+
+- Resolve issue where the screen may be blank on first launch. 
 
 ### March 13, 2024
 
@@ -372,15 +411,15 @@ Version: 5.1.1214.0
 
 - Changed the primary endpoint for Remote Help from https://remoteassistance.support.services.microsoft.com to https://remotehelp.microsoft.com.
   > [!NOTE]
-  > This could cause a breaking change for some organizations that have not yet allowed remotehelp.microsoft.com through their firewall.
-- Resolved various bugs including an issue with Conditional Access. If a tenant had a Terms of Use policy enabled for Office 365, Remote Help would not know how to respond and would instead present an authentication error message to the user.
+  > This could cause a breaking change for some organizations that have not yet allowed remotehelp.microsoft.com through their firewall after 5/30/2024.
+- Resolved various bugs including an issue with Conditional Access. If a tenant had a **Terms of Use** policy enabled for Office 365, Remote Help wouldn't know how to respond and would instead present an authentication error message to the user.
 - Enabled a shortcut to open context menus with the keyboard shortcut 'Alt + Space'
 
 ### October 25, 2023
 
 Version: 5.0.1311.0
 
-- Disabled the relaying of system audio from the Sharer device to the Helper device which caused an echo when both users were using another app to communicate (such as Teams).
+- Disabled the relaying of system audio from the Sharer device to the Helper device, which caused an echo when both users were using another app to communicate (such as Teams).
 - Added the capability for Helpers that have elevation permissions to also be able to elevate apps on devices where the Sharer is an Administrator.
 
 ### September 7, 2023
@@ -438,7 +477,7 @@ Version: 4.0.1.13 - Changes in this release:
 
 Fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use Remote Help with Intune](/mem/intune/fundamentals/remote-help)
+For more information, go to [Use Remote Help with Intune](remote-help.md).
 
 ### July 26, 2022
 
@@ -456,4 +495,4 @@ Version 4.0.0.0 - GA release
 
 ## Next steps
 
-[Get support in Microsoft Intune admin center](../../get-support.md)
+[Get support in Microsoft Intune admin center.](../../get-support.md)

@@ -75,7 +75,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
 ## Import GPOs and run analytics
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Group Policy analytics**.
 2. Select **Import**, select your saved XML file > **Next**.
 
     You can select multiple files at the same time.
@@ -167,7 +167,7 @@ Even though Group Policy analytics can parse the CSPs, there are some things you
 
 ## Group Policy migration readiness report
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Group policy analytics**:
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Device management** > **Group policy analytics**:
 
     :::image type="content" source="./media/group-policy-analytics/policy-analytics-reports.png" alt-text="Screenshot that shows how to review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Intune admin center.":::
 
@@ -198,7 +198,7 @@ Currently, the Group Policy analytics tool only supports non-ADMX settings in th
 
 ## Send product feedback
 
-You can provide feedback on Group Policy Analytics. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics** > **Got feedback**.
+You can provide feedback on Group Policy Analytics. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Group Policy analytics** > **Got feedback**.
 
 Examples of feedback areas:
 
@@ -214,7 +214,7 @@ Any use of customer data, such as the GPOs that your organization uses, is aggre
 
 At any time, you can delete imported GPOs:
 
-1. Go to **Devices** > **Group Policy analytics**.
+1. Go to **Devices** > **Manage devices** > **Group Policy analytics**.
 2. Select the context menu > **Delete**:
 
     :::image type="content" source="./media/group-policy-analytics/delete-imported-gpo.png" alt-text="Screenshot that shows how to delete or remove the group policy object (GPO) you imported in the Group Policy analyzer in Microsoft Intune and Intune admin center.":::

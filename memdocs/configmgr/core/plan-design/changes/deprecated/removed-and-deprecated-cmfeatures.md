@@ -5,9 +5,9 @@ description: Learn about the features that Configuration Manager no longer suppo
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-ms.date: 10/31/2023
-author: Banreet
-ms.author: banreetkaur
+ms.date: 04/05/2024
+author: baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -33,11 +33,8 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Planned end of support|
 |-------|---------------------------|----------------------|
-| [System Center Update Publisher (SCUP) and integration with ConfigMgr](../../../../sum/tools/updates-publisher.md) <!-- ADO-25642184 --> | October 2023 | Jan 31, 2024 |
-| [Community hub service and integration with ConfigMgr](../../../servers/manage/community-hub.md) <!-- ADO-15799335 --> | October 2022 | The first release after March 1, 2023 |
+| **Office 365 Client Management dashboard add-in support statement**.<!-- 12454890 --> For more information, see [Office 365 Client Management dashboard](../../../../sum/deploy-use/office-365-dashboard.md). | April 2024 | The first release after April 1, 2025 |
 | [Windows Information Protection](../../../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md#windows-information-protection) <!-- MAXADO-6010051 --> | July 2022 | TBD |
-| Upgrade from any version of System Center 2012 Configuration Manager to current branch. For more information, see [Upgrade to Configuration Manager current branch](../../../servers/deploy/install/upgrade-to-configuration-manager.md)<!-- 13846745 --> | April 2022 | Version 2303 |
-| The Configuration Manager client for **macOS** and Mac client management. For more information, see [Supported clients: Mac computers](../../configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).<!-- 12927803 --> Migrate management of macOS devices to Microsoft Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../../intune/fundamentals/deployment-guide-platform-macos.md). | January 2022 | December 31, 2022 |
 | The site system roles for on-premises MDM and macOS clients: **enrollment proxy point and enrollment point**.<!-- 12454901,12927803 --> | January 2022 | Mar 31, 2024 |
 | The **Microsoft Store for Business and Education**. For more information, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).<!-- 10884039 --> | November 2021 | The first release after March 1, 2023 |
 | **Asset intelligence**.<!-- 12454890 --> For more information, see [Asset intelligence deprecation](../../../clients/manage/asset-intelligence/deprecation.md). | November 2021 | The first release after November 1, 2022 |
@@ -45,7 +42,6 @@ The following features are deprecated. You can still use them now, but Microsoft
 | Azure Active Directory (Azure AD) Graph API and Azure AD Authentication Library (ADAL), which is used by Configuration Manager for some cloud-attached scenarios. If you use cloud-attached features such as co-management, tenant attach, or Microsoft Entra discovery, starting June 30, 2022, these features may not work correctly in Configuration Manager version 2107 or earlier. Stay current with Configuration Manager to make sure these features continue to work. For more information, see [CMG FAQ](../../../clients/manage/cmg/cloud-management-gateway-faq.yml#do-i-need-to-do-anything-with-the-deprecation-of-the-azure-ad-graph-api-and-azure-ad-authentication-library--adal--).<!--10488538-->|July 2021|June 30, 2022|
 | The BitLocker management implementation for the [recovery service](../../../../protect/deploy-use/bitlocker/recovery-service.md) has changed. The legacy MBAM-based service is replaced by the messaging processing engine on the management point. | March 2021 | The first release after Mar 2025 |
 |Older style of console extensions that haven't been approved in the **Console Extension** node, will no longer be supported. For more information about new console extensions, see [Manage console extensions](../../../servers/manage/admin-console-extensions.md). <!--3555909-->|April 2021|TBD<sup>[Note 1](#bkmk_note1)</sup>|
-| Sites that allow HTTP client communication. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 --> | March 2021 | The first release after April 1, 2024 |
 |The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway. Starting in version 2107, you can't create a traditional cloud distribution point.<!-- 10247883 -->|February 2019| The first release after October 5, 2022|
 |Cloud management gateway and cloud distribution point deployments with Azure Service Manager using a management certificate. For more information, see [Plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|November 2018|The first release after October 5, 2022|
 
@@ -59,9 +55,15 @@ The following features are no longer supported. In some cases, they're no longer
 
 |Feature|Deprecation first announced|Support&nbsp;removed|
 |-------|---------------------------|--------------------|
+| [System Center Update Publisher (SCUP) and integration with ConfigMgr](../../../../sum/tools/updates-publisher.md) <!-- ADO-25642184 --> | October 2023 | Jan 31, 2024 |
+| Sites that allow HTTP client communication. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 --> | March 2021 | The first release after April 1, 2024 |
+| Upgrade from any version of System Center 2012 Configuration Manager to current branch. For more information, see [Upgrade to Configuration Manager current branch](../../../servers/deploy/install/upgrade-to-configuration-manager.md)<!-- 13846745 --> | April 2022 | Version 2303 |
+| The Configuration Manager client for **macOS** and Mac client management. For more information, see [Supported clients: Mac computers](../../configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).<!-- 12927803 --> Migrate management of macOS devices to Microsoft Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../../intune/fundamentals/deployment-guide-platform-macos.md). | January 2022 | December 31, 2022 |
+| [Community hub service and integration with ConfigMgr](../../../servers/manage/community-hub.md) <!-- ADO-15799335 --> | October 2022 | The first release after March 1, 2023 |
 |The geographical view in the **Site Hierarchy** node of the **Monitoring** workspace in the Configuration Manager console.<!--8116777-->|August 2020|The first release after September 2023|
 | **Desktop Analytics**.<!--10946169--> For more information, see [Windows compatibility reports in Intune](https://go.microsoft.com/fwlink/?linkid=2212414). | November 2021 | November 30, 2022 |
 | The ability to deploy a cloud management gateway (CMG) as a **cloud service (classic)**. All CMG deployments should use a [virtual machine scale set](../../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586,13235079--> | September 2021 | Version 2203 |
+| Cloud management gateway (CMG) as a **cloud service (classic)**. All CMG deployments should use a [virtual machine scale set](../../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets). |  | Version 2403 |
 | The following compliance settings for **Company resource access**: <!-- 9315387 --> [Certificate profiles](../../../../protect/deploy-use/introduction-to-certificate-profiles.md), [VPN profiles](../../../../protect/deploy-use/vpn-profiles.md), [Wi-Fi profiles](../../../../protect/deploy-use/create-wifi-profiles.md), [Windows Hello for Business settings](../../../../protect/deploy-use/windows-hello-for-business-settings.md), and email profiles. This deprecation includes the [co-management resource access workload](../../../../comanage/workloads.md#resource-access-policies). Use Microsoft Intune to [deploy resource access profiles](../../../../../intune/configuration/device-profiles.md). For more information, see [Frequently asked questions about resource access deprecation](../../../../protect/plan-design/resource-access-deprecation-faq.yml). | March 2021 | Version 2203 |
 | Desktop Analytics data for Windows 7, Windows 8, and earlier versions of Windows 10 that don't support the [Windows diagnostic data processor configuration](../../../../desktop-analytics/whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).<!-- 10220671 -->|July 2021|January 31, 2022|
 | Third-party add-ons that use Microsoft .NET Framework version 4.6.1 or earlier, and rely on Configuration Manager libraries. Such add-ons need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../get-started/2021/technical-preview-2109.md#bkmk_dotnetsdk)<!--10529267-->. | September 2021 | Version 2111 |

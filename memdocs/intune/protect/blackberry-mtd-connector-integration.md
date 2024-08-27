@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 08/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Connect BlackBerry Protect Mobile MTD connector in Microsoft Intune
@@ -71,7 +72,7 @@ For more information about consent and Microsoft Entra applications, see [Introd
 ## Set up BlackBerry Protect Mobile MTD connector
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune administrator account.
-2. Go to ***Tenant administration**.
+2. Go to **Tenant administration**.
 3. Select **Connectors and tokens**.
 4. Under **Cross platform**, select **Mobile Threat Defense**.
 5. Select **Add**.
@@ -80,10 +81,10 @@ For more information about consent and Microsoft Entra applications, see [Introd
 8. Sign in with your Microsoft Entra account, and then follow the instructions in [Integrating UES with Intune to respond to mobile threats](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/setup/setup/Setting-up-BlackBerry-Protect/Integrating-EMM-to-respond-to-mobile-threats) (opens BlackBerry UES docs) to complete setup.
 9. After you finish setup in the UES management console, return to your tab in the Microsoft Intune admin center.
 10. Under **MDM Compliance Policy Settings**, turn on the following settings:
-    * **Connect Android devices to BlackBerry Protect Mobile**
-    * **Connect iOS devices to BlackBerry Protect Mobile**
+    - **Connect Android devices to BlackBerry Protect Mobile**
+    - **Connect iOS devices to BlackBerry Protect Mobile**
     These settings allow BlackBerry Protect Mobile to evaluate the devices in your organization.
- 11. Select **Create** to save your connector configurations.
+11. Select **Create** to save your connector configurations.
 
 ## Next steps
 

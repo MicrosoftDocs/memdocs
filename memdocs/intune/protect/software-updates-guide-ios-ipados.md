@@ -21,6 +21,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-updates
 ---
 
 # Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune
@@ -161,9 +162,11 @@ In scenarios like knowledge worker devices, the primary goal is for the update p
 
 An update strategy and priorities for these devices typically include:
 
-✅ Basic update configuration  
-✅ The latest most up-to-date version  
-✅ Automatic updates
+> [!div class="checklist"]
+>
+> * Basic update configuration
+> * The latest most up-to-date version
+> * Automatic updates
 
 **Scenario example**:
 
@@ -191,9 +194,11 @@ In kiosk-like scenarios, the primary goals for updating the devices are:
 
 An update strategy and priorities for these devices typically include:
 
-✅ Basic update configuration  
-✅ Predictable version control  
-✅ Predictable release cycles
+> [!div class="checklist"]
+>
+> * Basic update configuration
+> * Predictable version control
+> * Predictable release cycles
 
 **Scenario example**:
 
@@ -215,9 +220,11 @@ In factory machine scenarios, the primary goal is to make sure devices behave in
 
 An update strategy and priorities for these devices typically include:
 
-✅ Advanced policy configuration  
-✅ Strict version control  
-✅ Slow release cycles
+> [!div class="checklist"]
+>
+> * Advanced policy configuration
+> * Strict version control
+> * Slow release cycles
 
 **Scenario example**:
 
@@ -243,9 +250,11 @@ For iOS/iPadOS shared devices, to apply updates, all users must be signed out. T
 
 An update strategy and priorities for these devices typically include:
 
-✅ Advanced policy configuration  
-✅ Predictable version control  
-✅ Controlled update behavior
+> [!div class="checklist"]
+>
+> * Advanced policy configuration
+> * Predictable version control
+> * Controlled update behavior
 
 **Scenario example**:
 
@@ -265,7 +274,7 @@ To accomplish this task, this scenario involves two policies:
 
   :::image type="content" source="./media/software-updates-guide-ios-ipados/shared-devices-outside-scheduled-time-policy-settings.png" alt-text="Screenshot that shows installing the latest version and outside scheduled time software update settings for iOS/iPadOS devices in the Microsoft Intune admin center.":::
 
-## Next steps
+## Related articles
 
 - [Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md)
 - [Software updates planning guide and scenarios for BYOD and personal devices](software-updates-guide-personal-byod.md)

@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/22/2023
+ms.date: 06/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- sub-updates
 ---
 
 # Windows Update reports for Microsoft Intune
@@ -39,12 +40,15 @@ With Intune, you can deploy updates to Windows 10/11 devices by using policies f
 - [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
 - [Windows Driver updates for Windows 10 and later](../protect/windows-driver-updates-overview.md)
 
-Reports for these policy types are available to help you monitor and troubleshoot update deployments, Intune supports the following report options:
+Reports for these policy types are available to help you monitor and troubleshoot update deployments. To support reporting, you must configure [Data collection settings](#configuring-for-client-data-reporting).  
+
+Intune supports the following report options:
 
 - **Reports in Intune**:
   - **Windows 10 update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
   - **Windows 10 feature updates** – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
   - **Windows Driver updates** – Use the [built-in reports](#reports-for-windows-driver-updates-policy) to understand which driver updates are applicable to your devices and which of those updates have been approved, installed, or paused.
+  - **Windows update distribution** – Use the [three built-in reports](#windows-update-distribution-report) to understand the number of devices that are on each quality update level and the percentage coverage for each update across devices managed by Intune (including co-managed devices). The three distinct organizational reports function sequentially to provide insights on devices and their corresponding Windows update versions.
 
 - **Windows Update for Business reports**:
 
@@ -52,9 +56,21 @@ Reports for these policy types are available to help you monitor and troubleshoo
 
 For more information, see [Monitor Windows Updates with Windows Update for Business reports](/windows/deployment/update/wufb-reports-overview) in the Windows documentation.
 
+## Configuring for client data reporting
+
+This method of configuring data collection using Windows diagnostic data in Intune is shared across all the reports, including drivers, feature updates, and expedite updates.
+
+To support reporting, you must configure the following data collection settings:
+
+- Enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection from devices at a level of [*Required*](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher.
+- At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](../protect/data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
+
+>[!NOTE]
+> The [Windows update distribution reports](#windows-update-distribution-report) don’t require any additional configuration for client data reporting.
+
 ## Reports for Update rings for Windows 10 and later policy
 
-Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **Windows** > **Update rings for Windows 10 and later** > and select an update ring policy.  Intune displays details similar to the following for the selected policy:
+Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > and select an update ring policy.  Intune displays details similar to the following for the selected policy:
 
 :::image type="content" source="./media/windows-10-update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./media/windows-10-update-rings/default-policy-view.png":::
 
@@ -101,6 +117,7 @@ Intune offers integrated reports to view detailed Windows update deployment stat
 The data in the Intune reports for Feature updates for Windows 10 and later policy is used only for these reports and doesn't surface in other Intune reports.
 
 - [Windows 10 feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report)- This report provides an overall view of compliance for devices on a per-policy basis.
+
 - [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report) – This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to help troubleshoot and optimize your devices.
 
 Before you can use the feature updates policy reports, you must configure prerequisites for the report.
@@ -109,7 +126,7 @@ Before you can use the feature updates policy reports, you must configure prereq
 
 - **Data collection**:
 
-  Before a device can send the reporting data that's used in the Windows 10 feature updates report for Intune, you must [Configure data collection](#configure-data-collection):
+  Before a device can send the reporting data that's used in the Windows 10 feature updates report for Intune, you must [Configure data collection](#configuring-for-client-data-reporting):
 
   - Service-based data is collected for all feature update versions and doesn't require you to configure data collection.
   - Client-based data is collected from devices only after data collection is configured.
@@ -124,7 +141,7 @@ Before you can use the feature updates policy reports, you must configure prereq
   - Be Microsoft Entra joined, or Microsoft Entra hybrid joined to support submitting of data for reporting.
   - Run Windows 10 1903 or later, or Windows 11. Although Windows 10 and later feature updates policy supports earlier versions of Windows, earlier versions don't support reporting of the data that Intune uses for the feature updates reports.
 
-### Configure data collection
+<!-- ### Configure data collection
 
 The data that powers Intune's Windows feature updates reports isn't collected by the typical device sync with Intune. Instead, it's collected through the *[Windows health monitoring](../configuration/windows-health-monitoring.md)* device configuration policy, which uses the Windows 10/11 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
 
@@ -151,6 +168,7 @@ It can take up to 24 hours after setting up Windows health monitoring with Windo
 
 > [!TIP]
 > If you use [Endpoint Analytics](../../analytics/overview.md), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
+This section is now obsolete -->
 
 ### About reporting data latency
 
@@ -158,14 +176,14 @@ The data for these reports is generated at different times, which depend on the 
 
 - **Service-based data from Windows Update** – This data typically arrives in less than an hour after an event happens in the service. Events include Alerts for a device that can't register with Windows Update (which is viewable in the *Feature update failures report*), to status updates about when Windows Update began offering an update to clients. This data is available without configuring data collection.
 
-- **Client-based data from Intune devices that are configured to send data to Intune** – This data is processed in batches and refreshes every eight hours, but is only available after you configure data collection. The data contains information like when a client doesn't have enough disk space to install an update. This data is also used in the Windows 10 feature updates organizational report to show the various installation steps a device moves through when installing feature updates.
+- **Client-based data from Intune devices that are configured to send data to Intune** – This data is processed in batches and refreshes every eight hours, but is only available after you [configure data collection](#configuring-for-client-data-reporting). The data contains information like when a client doesn't have enough disk space to install an update. This data is also used in the Windows 10 feature updates organizational report to show the various installation steps a device moves through when installing feature updates.
 
 ### Use the Windows 10 feature updates (Organizational) report
 
 The **Windows 10 feature updates** report provides an overview of compliance for devices you target with a [Windows feature updates](../protect/windows-10-feature-updates.md) policy.
 
 > [!IMPORTANT]
-> Before this report can show data, you must [configure data collection](#configure-data-collection) for the Windows feature updates reports.
+> Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.
 
 This report provides you update installation status that's based on the update state from device and device-specific update details. The data in this report is timely, calls out the device name and state, and other update-related details. This report also supports filtering, searching, paging, and sorting.
 
@@ -208,7 +226,7 @@ To use the report:
    - **Service-side data**:
      - **Pending**:
        - **Validation** – The update can't be offered to the device because of a validation issue with the device and Windows Update.
-       - **Scheduled** – The update isn't ready to be offered to the device but is ready to be offered.
+       - **Scheduled** – The update isn't ready to be offered to the device but is scheduled for offering at a later date.
      - **On hold**:
        - **Admin paused** – The update is on hold because the Deployment being paused by an explicit Administrator action.
        - **ServicePaused** – The update is on hold because of an automatic action by Windows Update.
@@ -253,7 +271,7 @@ To use the report:
 The **Feature update failures** operational report provides details for devices that you target with a [Windows 10 and later feature updates](../protect/windows-10-feature-updates.md) policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
 
 > [!IMPORTANT]  
-> Before this report can show data, you must [configure data collection](#configure-data-collection) for the Windows feature updates reports.
+> Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.
 
 This report provides insights to update installation status, including the number of devices with errors. It also supports drilling in for more details to help you troubleshoot issues with the installation. This report supports filtering, searching, paging, and sorting.
 
@@ -445,6 +463,117 @@ By selecting that policy and entry, you can then view more information about the
 
 This view is a useful place to identify and start investigation of driver update installation failures.
 
+## Windows update distribution report
+
+The Windows update distribution report in Intune provide a summarized report to show the number of devices that are on each quality update level and the percentage coverage for each update across devices managed by Intune (including co-managed devices).
+
+The report provides a drill down for each quality update that aggregates devices based on windows 10/11 feature version and the update statuses. The admins can get the list of devices that aggregate to the numbers shown in the previous two reports, which they can export and use for troubleshooting and analysis.
+
+The report includes Intune managed and co-managed devices, and is based on the OS version updated at every device check-in. The report can slice the data based on device scope tags.
+
+>[!NOTE]
+> The Windows update distribution report can be used if you are using Update Rings, or not using any update policies in Intune.
+
+The Windows update distribution report comprises three distinct organizational reports that function sequentially to provide insights on devices and their corresponding Windows update versions. To access this feature, navigate to **Reports** > **Windows Updates** > **Reports tab** > **Windows Update Distribution Report**.
+
+The Windows update distribution report includes three nested reports:
+
+- Windows quality update distribution report
+- Windows quality update distribution per feature version report
+- Windows quality update device version report
+
+### Windows quality update distribution report
+
+The report displays the distribution of devices against different Quality Updates (QUs) for the selected scope. It shows the counts of devices corresponding to the displayed QUs.
+
+Select one or more scope tags from the drop-down list to generate the report. The drop-down list shows all the scope tags the user has access to, based on the user’s assigned scope tags.
+
+:::image type="content" source="./media/windows-update-reports/windows-quality-updates-page1.png" alt-text="Screen capture of the Windows quality update distribution report." lightbox="./media/windows-update-reports/windows-quality-updates-page1.png":::
+
+The report shows the number of devices under each QU level corresponding to the current month and the last 3 months from the day of reporting. The top rows typically represent the last three months, followed by other device data distributions.
+
+**Column details**:
+
+- **Update**: Monthly quality update version. The update format corresponds to YYYY-MM-UpdateType. For example, 2024-02-B.
+  - **Older releases**: All windows devices running valid feature version (non-preview/insider) and running older than 3 months of quality update level are combined into a single entity shown as *Older releases*.
+  - **Windows insider or other releases**: All those devices whose OS version does not align with the Windows 10/11 generally available feature release version and not on documented QU level, are combined under *Windows insider or other releases*.
+
+- **Update Type**: Monthly quality update type. For more information, go to [Windows monthly update explained](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-monthly-updates-explained/ba-p/3773544)
+  - B: Security Updates (released on patch Tuesday)
+  - D: Non-Security Updates (released on 4th week of month)
+  - OOB: Out of band updates
+
+- **Release Date**: Release date of the monthly quality update.
+
+- **Devices on this update**: Number of devices where the target quality update is installed.
+
+- **% of all devices**: Number of devices running a particular quality update represented in percentage of total managed devices in Intune.
+
+All QUs from this page are hyperlinked. When you select one of the current or last 3 months quality update (B, D or OOB), the [Windows quality update distribution per feature version](#windows-quality-update-distribution-per-feature-version) report is displayed.
+
+When you select **Older releases**, the [Windows quality update device version](#windows-quality-update-device-version) report is displayed with a list of devices that are on an older quality update level excluding insider builds and unknown builds.
+
+When you select **Windows insider or other releases**, the  [Windows quality update device version](#windows-quality-update-device-version) report is displayed with a list of devices whose feature version is insider release, or the quality update of the device cannot be mapped to documented quality update version in Windows 10/11 release information.
+
+### Windows quality update distribution per feature version
+
+The report provides the distribution of devices against Windows feature releases. The distribution of devices that are eligible to receive the selected quality update shown based on the Windows 10/11 feature versions that are generally available. The report aids IT administrators in making informed decisions for devices and managing devices that need attention.
+
+:::image type="content" source="./media/windows-update-reports/windows-quality-updates-page2.png" alt-text="Screen capture of the Windows quality update distribution per feature version." lightbox="./media/windows-update-reports/windows-quality-updates-page2.png":::
+
+The stacked chart displays the counts of devices that are up to date, those that need updates, and those for which the chosen quality update does not apply. Together, these counts make up the total Windows devices that Intune manages, including co-managed devices.
+
+The table lists each supported feature version that the selected quality update affects.
+
+Select **Columns** at the top of the table to toggle the visibility of columns, including the **Devices on this update** column, which is hidden by default. You can sort the data by the **Windows version** and **Build number** columns.
+
+**Column details**:
+
+- **Windows version**: Shows the Windows feature version.
+
+- **Total devices**: Total managed devices corresponding to the Windows feature version.
+
+- **Build Number**: Build number of the windows feature version. Devices running supported Windows 10/11 feature versions that the selected quality update does not cover are marked as **Not applicable**. Devices running unsupported Windows 10/11 feature versions, insider versions, or those with an unknown OS version, are grouped under one line item and marked as **Not applicable**.
+
+- **Devices on this update or later**: Number of devices where the target quality update or later is installed.
+
+- **Devices on this update**: Number of devices where the target quality update is installed.
+
+- **Devices need update**: Number of devices that are applicable for the update but do not currently have it installed.
+KB article: External link to target quality update’s KB Article for the corresponding Windows feature version.
+
+When you select any device count, the [Windows quality update device version report](#windows-quality-update-device-version) is displayed.
+
+### Windows quality update device version
+
+The report presents a list of devices based on the selections from the previous 2 reports. The  criteria that you selected in the previous reports are displayed at the top of the page.
+The report offers sortable columns and search options, along with an export feature allowing high volume data to be downloaded in CSV format.
+
+:::image type="content" source="./media/windows-update-reports/windows-quality-updates-page3.png" alt-text="Screen capture of the Windows quality update device version." lightbox="./media/windows-update-reports/windows-quality-updates-page3.png":::
+
+**Column details**:
+
+- **Device Name**: The name of the device.
+
+- **Intune Device Id**: Intune device identifier.
+
+- **Entra Device Id**: Microsoft Entra identifier for device.
+
+- **Primary UPN**: Intune user identifier (email).
+
+- **OS version**: Operating System (OS) version build number. The OS version corresponds to the Windows 10/11 Feature Version (For example, Windows 10 22H2, Windows 11 22H1) and the Quality Update level (For example, 2022-08 B, 2023-02 OOB, 2023-02 C).
+
+- **Windows feature version**: Windows feature version.
+
+- **Windows quality version**: Windows quality update.
+
+- **Managed by**: Management agent.
+
+- **Last check-in**: Device last check-in date time
+
+The search bar enables the search for a specific device or UPN. Select a device from the list to view the device’s details.
+
+All these reports are cached, and have an expiry time of three days, after which you must generate a new report. Select **Generate Again** to get fresh data.
 
 ## Use Windows Update for Business reports
 

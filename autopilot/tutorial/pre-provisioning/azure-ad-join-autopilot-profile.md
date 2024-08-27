@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/28/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -21,24 +21,26 @@ appliesto:
 # Pre-provision Microsoft Entra join: Create and assign a pre-provisioned Microsoft Entra join Autopilot profile
 
 Windows Autopilot for pre-provisioned deployment Microsoft Entra join steps:
+
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
 - Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
 - Step 4: [Create a device group](azure-ad-join-device-group.md)
 - Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
+
 > [!div class="checklist"]
+>
 > - **Step 6: Create and assign Autopilot profile**
+
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 - Step 8: [Technician flow](azure-ad-join-technician-flow.md)
 - Step 9: [User flow](azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra join overview](azure-ad-join-workflow.md#workflow)
-
-<a name='create-and-assign-a-pre-provisioned-azure-ad-join-autopilot-profile'></a>
+For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra join overview](azure-ad-join-workflow.md#workflow).
 
 ## Create and assign a pre-provisioned Microsoft Entra join Autopilot profile
 
-The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out of box experience (OOBE).
+The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
 
 When an admin creates an Autopilot profile for the pre-provisioned scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 
@@ -81,11 +83,11 @@ To create a pre-provisioned Microsoft Entra join Autopilot profile, follow these
 
       > [!NOTE]
       >
-      > The above settings have been selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired. For example, some regions may require that **Privacy settings** always be shown.
+      > The above settings are selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired. For example, some regions might require that **Privacy settings** always be shown.
 
       > [!NOTE]
       >
-      > If the language/region and keyboard screens are set to hidden, they may still be displayed if there's no network connectivity at the start of the Autopilot deployment. These screens are displayed because there's no network connectivity at the start of the deployment to download the Autopilot profile where the settings to hide these screens are specified. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
+      > If the language/region and keyboard screens are set to hidden, they might still be displayed if there's no network connectivity at the start of the Autopilot deployment. When there's no network connectivity at the start of the deployment, the Autopilot profile, where the settings to hide these screens is defined, hasn't downloaded yet. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
 
 [!INCLUDE [Autopilot profiles after steps](../includes/autopilot-profile-steps-after.md)]
 
@@ -98,11 +100,11 @@ To create a pre-provisioned Microsoft Entra join Autopilot profile, follow these
 > [!div class="nextstepaction"]
 > [Step 7: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
-If you don't plan to assign a user to the device, then skip to **[Step 8: Technician flow](azure-ad-join-technician-flow.md)**.
+If a user isn't being assigned to the device, then skip to **[Step 8: Technician flow](azure-ad-join-technician-flow.md)**.
 
 > [!div class="nextstepaction"]
 > [Step 8: Technician flow](azure-ad-join-technician-flow.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]

@@ -2,17 +2,18 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 03/28/2023
+ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: troubleshooting
-author: banreet
-ms.author: banreetkaur
-manager: sunitashaw
+ms.topic: conceptual
+author: PalikaSingh
+ms.author: palsi
+manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-
+ms.reviewer: mstewart,aaroncz 
 ---
+
 
 # Release notes for Configuration Manager
 
@@ -26,19 +27,37 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2403](../../../plan-design/changes/whats-new-in-version-2403.md)
 - [What's new in version 2309](../../../plan-design/changes/whats-new-in-version-2309.md)
 - [What's new in version 2303](../../../plan-design/changes/whats-new-in-version-2303.md)
 - [What's new in version 2211](../../../plan-design/changes/whats-new-in-version-2211.md)
-- [What's new in version 2207](../../../plan-design/changes/whats-new-in-version-2207.md)
-- [What's new in version 2203](../../../plan-design/changes/whats-new-in-version-2203.md)
 
 
 > [!TIP]
 > You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../../use-docs.md#notifications).
+
 <!-- > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://learn.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us` -->
 
 <!-- ## Client management -->
+## Endpoint Protection
+### Security configurations removed from Intune
+<!-- 27951696 -->
+_Applies to: version 2309 with KB25858444 and later_
+
+Microsoft Defender security configurations are no longer managed with Microsoft Intune after updating to Configuration Manager version 2403, or installing the [Update Rollup for 2309](../../../../hotfix/2309/25858444.md). 
+
+The symptom is seen as a drop in the Microsoft Security Score values when viewed in Intune. This issue happens because security policy configuration data is incorrectly removed from clients after Configuration Manager clients are upgraded. 
+
+An updated version of the Microsoft Security Client Policy Configuration Tool, ConfigSecurityPolicy.exe, is available to resolve the Endpoint Protection policy issue described in this note.
+
+The updated tool, version 4.18.24040.4, is distributed with the April 2024 monthly Microsoft Defender platform update. At the time of this writing, the platform update is in the process of global distribution, and should be broadly available in all regions by May 17, 2024.   
+Once the platform update is installed on affected clients, Endpoint Protection policies are reapplied from Intune within 8 hours. The "Manage Endpoint Protection client on client computers" setting in Configuration Manager can be changed back to "Yes" as required.
+#### Additional references
+
+- [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates#monthly-platform-and-engine-versions)
+- [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/topic/microsoft-defender-update-for-windows-operating-system-installation-images-1c89630b-61ff-00a1-04e2-2d1f3865450d).
+- [Sync devices to get the latest policies and actions with Intune](/mem/intune/remote-actions/device-sync#sync-a-device)
 
 ## Set up and upgrade
 
@@ -159,7 +178,7 @@ GO
  ```log
     The SELECT permission was denied on the object 'vSMS_DefaultBoundaryGroup', database 'CM_xxx', schema 'dbo'.
  ```
- To workaround the issue run the below SQL script on the SQL database on the primary sites where the MP reports.
+ To work around the issue run the below SQL script on the SQL database on the primary sites where the MP reports.
 
 ```sql
     GRANT SELECT ON vSMS_DefaultBoundaryGroup To smsdbrole_MP

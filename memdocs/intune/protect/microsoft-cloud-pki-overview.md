@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/26/2024
+ms.date: 06/03/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - certificates
 - IntuneSuite
+- sub-intune-suite
 ---
 # Overview of Microsoft Cloud PKI for Microsoft Intune
 
@@ -79,7 +80,7 @@ The following table lists the features and scenarios supported with Microsoft Cl
 | Bring your own CA (BYOCA)  | Anchor an Intune Issuing CA to a private CA through Active Directory Certificate Services or a non-Microsoft certificate service. If you have an existing PKI infrastructure, you can maintain the same root CA and create an issuing CA that chains to your external root. This option includes support for external private CA N+ tier hierarchies.  |
 | Signing and Encryption algorithms|  Intune supports RSA, key sizes 2048, 3072, and 4096. |
 | Hash algorithms  | Intune supports SHA-256, SHA-384, and SHA-512.   |
-|HSM keys (signing and encryption)|Keys are provisioned using [Azure Managed Hardware Security Module (Azure HSM)](https://azure.microsoft.com/products/azure-dedicated-hsm). <br/><br/> CAs created with a licensed Intune Suite or Cloud PKI Standalone Add-on automatically use HSM signing and encryption keys. No Azure subscription is required for Azure HSM.   |
+|HSM keys (signing and encryption)|Keys are provisioned using [Azure Managed Hardware Security Module (Azure Managed HSM)](/azure/key-vault/managed-hsm/overview). <br/><br/> CAs created with a licensed Intune Suite or Cloud PKI Standalone Add-on automatically use HSM signing and encryption keys. No Azure subscription is required for Azure HSM.   |
 |Software Keys (signing and encryption) |CAs created during a trial period of Intune Suite or Cloud PKI standalone Add-on use software-backed signing and encryption keys using `System.Security.Cryptography.RSA`. |
 | Certificate registration authority  | Providing a Cloud Certificate Registration Authority supporting Simple Certificate Enrollment Protocol (SCEP) for each Cloud PKI Issuing CA.|
 |Certificate Revocation List (CRL) distribution points | Intune hosts the CRL distribution point (CDP) for each CA. <br/><br/>  The CRL validity period is seven days. Publishing and refresh happens every 3.5 days. The CRL is updated with every certificate revocation. |
@@ -178,6 +179,5 @@ For the latest changes and additions, see [What's new in Microsoft Intune](../fu
   * Cloud PKI Root CA  
   * Cloud PKI Issuing CA  
   * BYOCA Issuing CA
-* The following CA actions are currently unavailable in the admin center, but we're actively working to provide them.
-  * Delete or disable a CA from your Intune tenant.  
-      Until these actions become available, we recommend making an Intune support request to delete a CA.
+* There isn't a way in the admin center to delete or disable a CA from your Intune tenant. We're actively working to provide these actions. Until they become available, we recommend making an Intune support request to delete a CA.  
+* In the admin center, when you select **View all certificates** for an issuing CA, Intune only shows the first 1000 issued certificates. We're actively working to address this limitation. As a workaround, go to **Devices** > **Monitor**. Then select **Certificates** to view all issued certificates.  

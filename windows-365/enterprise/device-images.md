@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/12/2024
+ms.date: 08/09/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: naramkri
+ms.reviewer: evas
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,11 +37,11 @@ Windows 365 uses both default and custom operating system images to automaticall
 
 Both marketplace and custom images must meet the following requirements:
 
-- Windows 10 Enterprise version 21H2 or later.
-- Windows 11 Enterprise 21H2 or later.
+- Supported versions of Windows 10 or Windows 11 Enterprise.
 - Generation 2 images.
     > [!Note]
     > We recently made the change to **generation 2** (Gen2) virtual machine images. Newly created custom images must be Gen2. Existing custom images uploaded based on generation 1 will remain active.
+- The image must never have been Active Directory, Microsoft Entra ID joined, Intune-enrolled, or enrolled for co-management. For more information, see [Sysprep won't run correctly on a device that has been MDM enrolled](/troubleshoot/mem/intune/device-enrollment/troubleshoot-sysprep-windows-10-device-enrolled-mdm).
 - Generalized VM image.
 - Single Session VM images (multi-session isn’t supported).
 - No recovery partition. For information about how to remove a recovery partition, see the [Windows Server command: delete partition](/windows-server/administration/windows-commands/delete-partition).
@@ -56,30 +56,35 @@ Storing a managed image on Azure incurs storage costs. However, customers can de
 
 ## Gallery images
 
-Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They're replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
+Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the [provisioning policy creation flow](create-provisioning-policy.md). Each image helps admins with preset audit policies already enabled, like account policies, logon/logoff, object access, and policy change.
+
+They're replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with:
+
+- Optimizations for improved user experience.
+- The latest security updates so that end users have a secure and seamless experience.
 
 There are two sets of images available to choose from across the different versions of Windows Enterprise:
 
-- **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and Teams optimizations are already installed. The following settings are pre-applied:
+- **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and Teams optimizations are already installed. The following settings are preapplied:
   - IsWVDEnvironment reg key (Teams).
   - C++ Runtime (Teams).
   - WebRTC Redirector (Teams).
   - Microsoft Teams (Teams).
   - Microsoft Edge settings like sleeping tabs, [forced browser sign-in](/deployedge/microsoft-edge-policies#browsersignin), startup boost, and first time optimizations based on Microsoft Entra ID and synchronization. For more information, see [Configure Microsoft Edge policy settings with Microsoft Intune](/deployedge/configure-edge-with-intune).
   - Microsoft Outlook first-time configuration settings (auto log on based on Microsoft Entra profile, support for other profiles).
-- **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
-  - Services optimized for virtualization.
-  - UWP packages removed.
-  - Task scheduler actions disabled.
+- **Images with no preinstalled applications**: A plain image without any preinstalled applications (look for images without the **M365 Apps** in the name).
+
+Both types of images are harmonized in GPOs. Any differences are due to preinstalled apps.
 
 ### Gallery image update cycle
 
-All supported Windows 365 gallery images are updated monthly after the security patch release schedule of Windows Servicing & Delivery. This update happens around the middle of each month.
+All supported Windows 365 gallery images are updated monthly after the security patch release schedule of Windows Servicing & Delivery. This update happens around the middle of each month. Updated Windows 365 images are made available in Intune for provisioning around the end of the third week of the month.
 
 Each updated image includes:
 
 - [Windows 10/11 monthly image updates](https://support.microsoft.com/topic/windows-10-release-on-azure-marketplace-update-history-da826e21-45ae-f6b9-de71-5f0ee2ec1563)
 - [Microsoft 365 Apps security updates](/officeupdates/microsoft365-apps-security-updates) and [feature updates](/officeupdates/monthly-enterprise-channel)
+  - Windows 365 gallery images include the latest Monthly Enterprise Channel release with the latest security updates.
 - [Microsoft Teams updates](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-d7092a6d-c896-424c-b362-a472d5f105de)
 - [WebRTC redirector service updates](/azure/virtual-desktop/teams-on-avd#install-the-teams-websocket-service)
 
@@ -89,7 +94,7 @@ Newly provisioned Cloud PCs are automatically created with the latest images. Fo
 
 If none of the default gallery images meet your requirements, you can upload up to 20 of your own custom device images.
 
-For more information on creating such a custom image, see [Create a managed image of a generalized VM in Azure](/azure/virtual-machines/windows/capture-image-resource). For best performance, you should also make sure to optimize your image for a virtual desktop role. For more information on this optimization, see [Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role](/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004).
+For more information on creating such a custom image, see [Create a managed image of a generalized VM in Azure](/azure/virtual-machines/windows/capture-image-resource).
 
 A custom image can be created using [any of the images mentioned previously as a starting point](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-ent-cpc). For example, you can start with one of those images and then install more applications and make more configuration changes.
 

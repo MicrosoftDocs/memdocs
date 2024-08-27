@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 05/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -131,7 +131,7 @@ The app you have created appears in the apps list where you can assign it to the
 
 To update a line-of-business app deployed as a *.pkg* file, you must increment the `CFBundleShortVersionString` of the *.pkg* file.
 
-Intune will update the app when this schedule elapses, provided that any previous version of the app is still present on the device.
+For the line-of-business (LOB) apps, if the app is targeted with required intent and admin updated the content update, app install will be attempted in the next check in and if it fails then the re-attempt will happen every 24 hours.
 
 ## Next steps
 

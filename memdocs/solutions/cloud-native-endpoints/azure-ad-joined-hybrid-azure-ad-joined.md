@@ -34,17 +34,17 @@ ms.collection:
 > [!TIP]
 > [!INCLUDE [cloud-native-endpoints-definitions](../../includes/cloud-native-endpoints-definitions.md)]
 
-Many critical and valuable services, including [Conditional Access](/azure/active-directory/conditional-access/overview) and [Microsoft Entra single sign-on](/azure/active-directory/manage-apps/what-is-single-sign-on), require endpoints to have a cloud identity. For organization owned Windows endpoints, a cloud identity is created when the device is Microsoft Entra joined or Hybrid Microsoft Entra joined.
+Many critical and valuable services, including [Conditional Access](/entra/identity/conditional-access/overview) and [Microsoft Entra single sign-on](/entra/identity/enterprise-apps/what-is-single-sign-on), require endpoints to have a cloud identity. For organization owned Windows endpoints, a cloud identity is created when the device is Microsoft Entra joined or Hybrid Microsoft Entra joined.
 
 When moving to cloud-native endpoints, you need to understand the differences between Microsoft Entra joined and hybrid Microsoft Entra joined devices:
 
 - **Microsoft Entra joined**: Devices are joined to Microsoft Entra. They're not joined to on-premises AD.
 
-  For more specific information, go to [Microsoft Entra joined devices](/azure/active-directory/devices/concept-azure-ad-join) (opens another Microsoft website).
+  For more specific information, go to [Microsoft Entra joined devices](/entra/identity/devices/concept-directory-join) (opens another Microsoft website).
 
 - **Hybrid Microsoft Entra joined**: Devices are registered in Microsoft Entra and joined to an on-premises AD domain.
 
-  For more specific information, go to [Hybrid Microsoft Entra joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (opens another Microsoft website).
+  For more specific information, go to [Hybrid Microsoft Entra joined devices](/entra/identity/devices/concept-hybrid-join) (opens another Microsoft website).
 
 This feature applies to:
 
@@ -94,25 +94,25 @@ To join Windows endpoints to Microsoft Entra, you have some options:
 
 ### Microsoft Entra joined resources
 
-- [What is device identity in Microsoft Entra?](/azure/active-directory/devices/overview)
-- [What is an Microsoft Entra joined device?](/azure/active-directory/devices/concept-azure-ad-join)
-- [How Microsoft Entra device registration works](/azure/active-directory/devices/device-registration-how-it-works)
-- [How to plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan)
+- [What is device identity in Microsoft Entra?](/entra/identity/devices/overview)
+- [What is an Microsoft Entra joined device?](/entra/identity/devices/concept-directory-join)
+- [How Microsoft Entra device registration works](/entra/identity/devices/device-registration-how-it-works)
+- [How to plan your Microsoft Entra join implementation](/entra/identity/devices/device-join-plan)
 - [Windows Hello for Business documentation - Windows security](/windows/security/identity-protection/hello-for-business/)
 
 ## Hybrid Microsoft Entra joined
 
-[Hybrid Microsoft Entra joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid) are joined to your on-premises AD domain and are registered with Microsoft Entra. These devices **require** a network line-of-sight to your on-premises domain controllers (DCs) for initial sign-in and for device management.
+[Hybrid Microsoft Entra joined devices](/entra/identity/devices/concept-hybrid-join) are joined to your on-premises AD domain and are registered with Microsoft Entra. These devices **require** a network line-of-sight to your on-premises domain controllers (DCs) for initial sign-in and for device management.
 
 If the devices can't connect to the DC, then users might be prevented from signing in, and may not receive policy updates.
 
-Many organizations with existing domain joined devices want the benefits and features of Microsoft Entra and endpoint management. If your devices can't be fully cloud-native yet, then you can register these existing devices with Microsoft Entra. When you register existing devices in Microsoft Entra, a [device identity](/azure/active-directory/devices/overview) is created, and your devices are hybrid Microsoft Entra joined. They're not considered cloud-native endpoints.
+Many organizations with existing domain joined devices want the benefits and features of Microsoft Entra and endpoint management. If your devices can't be fully cloud-native yet, then you can register these existing devices with Microsoft Entra. When you register existing devices in Microsoft Entra, a [device identity](/entra/identity/devices/overview) is created, and your devices are hybrid Microsoft Entra joined. They're not considered cloud-native endpoints.
 
 If your organization is ready and wants to be cloud-native, then [Microsoft Entra joined](#microsoft-entra-joined) (in this article) is the correct choice. Existing devices need to be reset. For more specific information and guidance, go to the [High level planning guide](cloud-native-endpoints-planning-guide.md).
 
 ### Hybrid Microsoft Entra joined resources
 
-For information on how to register your existing domain joined devices to Microsoft Entra, go to [Configure hybrid Microsoft Entra join](/azure/active-directory/devices/howto-hybrid-azure-ad-join). [Configure hybrid Microsoft Entra join](/azure/active-directory/devices/howto-hybrid-azure-ad-join) includes information for managed domains and federated domains.
+For information on how to register your existing domain joined devices to Microsoft Entra, go to [Configure hybrid Microsoft Entra join](/entra/identity/devices/how-to-hybrid-join). [Configure hybrid Microsoft Entra join](/entra/identity/devices/how-to-hybrid-join) includes information for managed domains and federated domains.
 
 ## Which option is right for your organization
 
@@ -185,7 +185,7 @@ Yes, there are limitations for Hybrid Microsoft Entra Join.
 
 These limitations are generally the same with on-premises only domain joined devices. Specifically, Hybrid Microsoft Entra Join endpoints require a line-of-sight to the on-premises AD domain controller for initial sign-in and to change passwords. If the domain is down or is unavailable, then users could be blocked from signing in to their endpoints. If your organization is moving away from having an on-premises domain, then you must also move away from Hybrid Microsoft Entra Join for your devices.
 
-If you use [passwordless authentication](/azure/active-directory/authentication/concept-authentication-passwordless), then users need internet access and a line of sight to the domain controllers (DCs). To authenticate, Hybrid Microsoft Entra Join endpoints can use kerberos and NTLM.
+If you use [passwordless authentication](/entra/identity/authentication/concept-authentication-passwordless), then users need internet access and a line of sight to the domain controllers (DCs). To authenticate, Hybrid Microsoft Entra Join endpoints can use kerberos and NTLM.
 
 #### Is Hybrid Microsoft Entra Join considered cloud-native?
 

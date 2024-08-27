@@ -26,6 +26,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - endpoint-protection
+- sub-secure-endpoints
 ---
 
 # macOS endpoint protection settings in Intune
@@ -116,12 +117,26 @@ Use the firewall to control connections per-application, rather than per-port. U
 
   **Apps allowed**: Configure a list of apps that are allowed to receive incoming connections.
 
-  - **Add apps by bundle ID**: Enter the *bundle ID* of the app. On macOS devices, you can get the bundle ID using the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add apps by bundle ID**: Enter the *bundle ID* of the app.
+
+    To get the app bundle ID:
+
+    - Use the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`.
+    - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+
   - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
   **Apps blocked**: Configure a list of apps that have incoming connections blocked.
 
-  - **Add apps by bundle ID**: Enter the *bundle ID* of the app. On macOS devices, you can get the bundle ID using the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add apps by bundle ID**: Enter the *bundle ID* of the app.
+
+    To get the app bundle ID:
+
+    - Use the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`.
+    - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+
   - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 - **Enable stealth mode**

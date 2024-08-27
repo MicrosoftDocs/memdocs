@@ -35,7 +35,7 @@ ms.collection:
 The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. A MAM-enabled application is one that is integrated with the Intune App SDK. IT administrators can deploy app protection policies to your mobile app when Intune actively manages the app.
 
 > [!IMPORTANT]
-> Intune regularly releases updates to the [Intune App SDK](https://github.com/msintuneappsdk). We recommend subscribing to the [Intune App SDK](https://github.com/msintuneappsdk) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
+> Intune regularly releases updates to the [Intune App SDK](https://github.com/microsoftconnect). We recommend subscribing to the [Intune App SDK](https://github.com/microsoftconnect) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
 > 
 > Plan to take mandatory Intune App SDK updates prior to every major OS release to ensure your app continues to run smoothly as OS updates can cause breaking changes. If you do not update to the latest version prior to a major OS release, you might run the risk of encountering a breaking change and/or being unable to apply app protection policies to your app.
 
@@ -165,7 +165,7 @@ To download the SDK, see [Download the SDK files](../developer/app-sdk-get-start
 
 ### Where do I report issues with integrating the Intune App SDK into my apps?
 
-Please submit a [request for assistance](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/issues) on GitHub.
+Please submit a [request for assistance](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/issues) on GitHub.
 
 ## Next Steps
 

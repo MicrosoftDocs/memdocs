@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/17/2023
+ms.date: 05/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -57,7 +57,7 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** types, select **Web link**. Other options include **iOS/iPadOS web clip**, **macOS web clip**, and **Windows web link**.
 4. Click **Select**. The **Add app** steps are displayed.
-5. On the **App information** page, add the following information:
+1. On the **App information** page, add the following information:
     - **Name**:  Enter the name of the app as it is to be displayed in the company portal. 
 
         > [!NOTE]
@@ -65,10 +65,17 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
 
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of this app.
-    - **App URL**: Enter the URL of the website that hosts the app that you want to assign.
-    - **Require a managed browser to open this link**: Select this option to assign to your users a link to a website or web app that they can open in the Intune managed browser. This browser must be installed on their device.
-    - **Full screen**: [iOS/iPadOS only] If configured to **Yes**, launches the web clip as a full-screen web app without a browser. Additionally, there’s no URL or search bar, and no bookmarks.
-    - **Ignore manifest scope**: [iOS/iPadOS only] If configured to **Yes**, a full screen web clip can navigate to an external web site without showing Safari UI. Otherwise, Safari UI appears when navigating away from the web clip’s URL. This setting has no effect when **Full screen** is set to **No**. Available in iOS 14 and later.
+   - **App URL**: Enter the URL of the website that hosts the app that you want to assign.
+
+        > [!NOTE]
+        > Once you deploy a web link app, the App URL cannot be modified, which is by design.
+
+   - **Require a managed browser to open this link**: Select this option to assign to your users a link to a website or web app that they can open in the Intune managed browser. This browser must be installed on their device. 
+
+      > [!NOTE]
+      > iOS/iPadOS web clips that require a managed browser will not work with [home screen layout policies.](../configuration/ios-device-features-settings.md)
+    - **Full screen**: [iOS/iPadOS only] If configured to **Yes**, launches the web clip as a full-screen web app without a browser. Additionally, there's no URL or search bar, and no bookmarks.
+    - **Ignore manifest scope**: [iOS/iPadOS only] If configured to **Yes**, a full screen web clip can navigate to an external web site without showing Safari UI. Otherwise, Safari UI appears when navigating away from the web clip's URL. This setting has no effect when **Full screen** is set to **No**. Available in iOS 14 and later.
     - **Precomposed**: [iOS/iPadOS only] If configured to **Yes**, prevents Apple's application launcher (SpringBoard) from adding "shine" to the icon.
     - **Target application bundle identifier**: [iOS/iPadOS only] Enter the application bundle identifier that specifies the application that opens the URL. Available in iOS 14 and later.
     - **Category**: Optionally, select one or more of the built-in app categories, or a category that you created. Doing so makes it easier for users to find the app when they browse the company portal.
@@ -82,11 +89,13 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
 6. Click **Next** to display the **Scope tags** page.
 7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 8. Click **Next** to display the **Assignments** page.
-9. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md). 
+1. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md). 
+> [!NOTE]
+> iOS/iPadOS and macOS web clips that are assigned as **Required** cannot be installed as removable. To remove these web clips, you must change their assignment to **Uninstall**. If you delete the assignment without first changing it to **Uninstall**, the web clip will remain on the device and cannot be removed by the user. 
 10. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
-11. When you are done, click **Create** to add the app to Intune.
+1. When you are done, click **Create** to add the app to Intune.
 
-    The **Overview** blade of the app you've created is displayed.
+   The **Overview** blade of the app you've created is displayed.
 
 End-users can launch web apps directly from the Windows Company Portal app by selecting the web app and then choosing the option **Open in browser**. The published web URL is opened directly in the web browser. 
 

@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Zimperium Mobile Threat Defense connector with Intune

@@ -34,7 +34,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/windows-365/breadcrumb/toc.json",
       "feedback_system": "Standard",
-            "feedback_product_url": "https://github.com/MicrosoftDocs/memdocs/issues",
+            "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/6ab53114-95ab-ec11-9840-000d3a1c7d74",
       "brand": "Windows 365",
       "uhfHeaderId": "MSDocsHeader-Windows365",
       "searchScope": ["Windows 365"],     
@@ -83,7 +83,9 @@
         "claydetels19",
       	"beccarobins",
         "Stacyrch140",
-        "American-Dipper"
+        "American-Dipper",
+        "padmagit77",
+        "aditisrivastava07"
       ]          
     },
     "fileMetadata": {

@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 05/07/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: naramkri
+ms.reviewer: evas
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -35,8 +35,9 @@ If you want to use a custom device image, you can add it into your Azure subscri
 
 > [!NOTE]
 >
-> - Windows 10 images should not contain Azure Virtual Desktop client components. Additionally, you can't import Windows 10 Multisession images into Windows 365.
+> - Windows 10 and Windows 11 images should not contain Azure Virtual Desktop client components. Additionally, you can't import Windows 10 and Windows 11 Multisession images into Windows 365.
 > - For information about support for Windows 11 custom device images, see [What's New for Windows 365 Enterprise](whats-new.md#support-for-windows-11).
+> - You can also use existing built-in [gallery images](device-images.md#gallery-images) without customization for a stream-lined experience.
 
 ## Add a custom device image
 
@@ -51,7 +52,7 @@ You can upload the custom image to the Windows 365 service by following these st
     - **Image name**: The name of the image you want to add.
     - **Image version**: A version number of the image with this format: Major(int).Minor(int).Patch(int) format. For example: 0.0.1, 1.5.13.
     - **Subscription**: Choose the Azure subscription where the image came from.
-    - **Source Image**: Choose an image to add. The list will populate with all custom images from your chosen subscription that meet the pre-requisites.
+    - **Source Image**: Choose an image to add. The list will populate with all custom images from your chosen subscription that meet the prerequisites.
 
 4. Select **Add** to add the image to your device image list.
 

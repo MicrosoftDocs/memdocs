@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/06/2023
+ms.date: 07/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,9 +40,12 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Simplify Windows enrollment for you and device users by enabling *automatic enrollment* in Microsoft Intune. This enrollment method enables devices to enroll automatically when they join or register in your Microsoft Entra ID. 
+Simplify device enrollment by enabling *automatic enrollment* in Microsoft Intune. This enrollment method enables devices to enroll automatically when they join or register in Microsoft Entra ID. Enrollment in Intune occurs when:  
 
-Automatic enrollment can be used in the following device management and provisioning scenarios:
+* A Microsoft Entra user adds their work or school account to their personal device.  
+* A corporate-owned device joins to your Microsoft Entra ID.  
+
+Automatic enrollment can be used in the following device management and provisioning scenarios:  
 
 * Bring-your-own-device (BYOD), personal devices   
 * Bulk enrollment 
@@ -50,13 +53,13 @@ Automatic enrollment can be used in the following device management and provisio
 * Windows Autopilot (user driven and self-deploying)
 * Co-management with Configuration Manager    
 
-This article describes how to enable MDM automatic enrollment for personal and corporate-owned devices.   
+This article describes how to enable automatic mobile device management (MDM) enrollment for personal and corporate-owned devices.   
 
 ## Prerequisites
-
-- Requires [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845) for automatic MDM enrollment and custom company branding    
-- Microsoft Intune subscription  
-- Global Administrator permissions  
+You must have: 
+- A [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium) or [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845) for automatic MDM enrollment and custom company branding.  
+- A Microsoft Intune subscription.  
+- A Microsoft Entra Global Administator or Intune Administrator role. For more information about role-based-access-control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).  
 
 [!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]  
 
@@ -67,13 +70,12 @@ The Microsoft Intune user-help docs provide conceptual information, tutorials, a
 Users on personal devices running Windows 11 or Windows 10 can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.  For more information, see [Enroll Windows 10/11 devices](../user-help/enroll-windows-10-device.md).  
 
 You can also let unlicensed admins sign in to the Intune admin center to help with troubleshooting and support. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).  
-  
 
-### Best practices and troubleshooting   
+## Best practices and troubleshooting   
 
-* Device users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
+* Device users must access the Company Portal website through Microsoft Edge to view apps assigned for specific versions of Windows. Other browsers such as Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.  
 
-* If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Microsoft Entra ID, two records will be visible in the Microsoft Intune admin center after enrollment. You can stop this by making sure that users with Microsoft Entra joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.  
+* After enrollment, you'll see two records in the Microsoft Intune admin center if automatic MDM enrollment is disabled and devices are joined to Microsoft Entra ID. To stop the duplicate records, instruct users on joined devices to **Settings** > **Accounts** > **Access work or school**. Then they can **Connect** using the same account.  
 
 ## Next steps  
 
@@ -83,4 +85,4 @@ For information about how to integrate and use automatic enrollment when provisi
 * [Enroll a Windows client device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 * [Enable co-management in Configuration Manager](../../configmgr/comanage/how-to-enable.md)  
 
-If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias (known as a *CNAME* record type) that redirects enrollment requests to Intune servers. For more information, see [Enable auto-discovery of Intune enrollment server](../enrollment/windows-enrollment-create-cname.md).
+If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias (known as a *CNAME* record type) that redirects enrollment requests to Intune servers. For more information, see [Enable automatic discovery of Intune enrollment server](../enrollment/windows-enrollment-create-cname.md).

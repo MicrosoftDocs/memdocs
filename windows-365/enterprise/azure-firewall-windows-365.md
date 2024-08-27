@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/02/2024
+ms.date: 04/22/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: feadebay
+ms.reviewer: ericor
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -81,6 +81,8 @@ The environment in the diagram was set up using the following Azure Firewall app
 | Windows Update | FQDN Tag | WindowsUpdate| HTTP: 80, HTTPS: 443 | [Not recommended](/windows/deployment/update/windows-update-security#securing-metadata-connections) | Optional|
 | Citrix HDX Plus | FQDN Tag | CitrixHDXPlusForWindows365 | HTTP: 80, HTTPS: 443 | [Not recommended](/windows/deployment/update/windows-update-security#securing-metadata-connections) | Optional (only required when using Citrix HDX Plus) |
 
+Azure Firewall can be associated with public IP addresses to provide outbound connectivity to the internet. The first Public IP is selected at random to provide [outbound SNAT](/azure/firewall/features#outbound-snat-support). The next available public IP will be used after all SNAT ports from the first IP are exhausted. In scenarios that require high throughput, it is recomended to leverage an [Azure NAT Gateway](/azure/nat-gateway/nat-overview). NAT Gateway dynamically scales outbound connectivity and can be [integrated with an Azure Firewall](/azure/firewall/integrate-with-nat-gateway). See the [integrate NAT Gateway with Azure Firewall tutorial](/azure/nat-gateway/tutorial-hub-spoke-nat-firewall) for guidance.
+
 ### Windows365 tag
 
 The Windows365 tag includes the required Azure Virtual Desktop (AVD) endpoints, except those endpoints with nonstandard ports that need to be entered manually (see the Network rules section).
@@ -109,6 +111,12 @@ Azure Firewall doesn’t currently handle nonstandard ports in an FQDN tag. Wind
 | UDP connectivity via TURN | IP | 20.202.0.0/16 | UDP | 3478 | Not recommended | Required |
 | TURN connectivity | IP | 20.202.0.0/16 | TCP | 443 | Not recommended | Required |
 | Registration | FQDN | hm-iot-in-4-prod-prna01.azure-devices.net | TCP | 443, 5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+
+## Partner security solution options
+
+Other ways to help protect your Windows 365 environment are partner security solution options that provide automated rulesets to access required endpoints for the Windows 365 service. Such options include:
+
+- Check Point Software Technologies [Updatable Objects](https://support.checkpoint.com/results/sk/sk131852)
 
 <!-- ########################## -->
 ## Next steps

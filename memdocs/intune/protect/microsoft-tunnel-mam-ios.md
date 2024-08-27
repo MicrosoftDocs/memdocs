@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,6 +23,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-intune-suite
 ---
 
 # Microsoft Tunnel for Mobile Application Management for iOS/iPadOS
@@ -45,6 +46,17 @@ In addition to using MAM Tunnel with unenrolled devices, you can also use it wit
 
 **Try the interactive demo**  
 The [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS]( https://regale.cloud/Microsoft/viewer/1976/microsoft-tunnel-for-mobile-application-management-for-ios-ipados/index.html#/0/0) interactive demo shows how Tunnel for MAM extends the Microsoft Tunnel VPN Gateway to support iOS and iPadOS devices not enrolled with Intune.
+
+## Government cloud support
+
+Microsoft Tunnel for MAM on iOS/iPadOS is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
+Microsoft Tunnel for MAM on iOS/iPadOS doesn't support Federal Information Processing Standard (FIPS).
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
 ## Required SDKs for iOS
 
@@ -100,6 +112,8 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
 
    > [!NOTE]  
    > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires a Microsoft Entra app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Microsoft Entra app registration and the Xcode app project. Xcode is the Apple Integrated Developer Environment that that runs on macOS and used to integrate the Tunnel for MAM iOS SDK with your app.
+   >
+   > To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
    After selecting an app, select **Next**.
 
@@ -200,6 +214,8 @@ This policy provides the necessary data protection and establishes a means of de
 
    > [!NOTE]  
    > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires a Microsoft Entra app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Microsoft Entra app registration and the Xcode app project.
+   >
+   > To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
 5. In the *Data protection*, *Access requirements*, and *Conditional launch* tabs, configure any remaining app protection policy settings based on your deployment and data protection requirements.
 

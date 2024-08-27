@@ -2,7 +2,7 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 04/08/2022
+ms.date: 06/20/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -10,10 +10,10 @@ author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
     - tier3
     - essentials-manage
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Management insights in Configuration Manager
@@ -29,6 +29,7 @@ To view the insights, your account needs the **Read** permission on the **Site**
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Management Insights**, and select **All Insights**.
 
     > [!NOTE]
+    >
     > When you select the **Management Insights** node, it shows the [Management insights dashboard](#bkmk_insights).
 
 1. Open the management insights group name you want to review.
@@ -79,7 +80,7 @@ Use the following filters at the top of the dashboard to refine the view:
 - Recommended
 - Critical
 
-The dashboard includes the following tiles:  
+The dashboard includes the following tiles:
 
 - **Management insights index**: Tracks overall progress on management insights. The index is a weighted average. Critical insights are worth the most. This index gives the least weight to optional insights.
 
@@ -89,9 +90,9 @@ The dashboard includes the following tiles:
 
 - **Top 10 applicable insight rules**: A table of insights including priority and state. Use the **Filter** field at the top of the table to match strings in any of the available columns. The dashboard sorts the table in the following order:
 
-  - Status: Action Needed, Completed, Unknown  
-  - Priority: Critical, Recommended, Optional  
-  - Last Changed: older dates on top  
+  - Status: Action Needed, Completed, Unknown
+  - Priority: Critical, Recommended, Optional
+  - Last Changed: older dates on top
 
 :::image type="content" source="media/1357979-management-insights-dashboard.png" alt-text="Screenshot of management insights dashboard." lightbox="media/1357979-management-insights-dashboard.png":::
 
@@ -113,6 +114,7 @@ Insights are organized into the following management insight groups:
 - [Windows 10](#windows-10)
 
 > [!NOTE]
+>
 > Your site may not show all of the following groups and insights. Some insights don't appear when you've already configured the site for the recommendation.
 
 ### Applications
@@ -133,7 +135,7 @@ Helps you integrate with many cloud services, which enable modern management of 
 
 - **Enable devices to be Microsoft Entra hybrid joined**: Microsoft Entra joined devices allow users to sign in with their domain credentials, and make sure devices meet the organization's security and compliance standards. For more information, see [Microsoft Entra hybrid identity design considerations](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
 
-- **Sites that don't have proper HTTPS configuration**: This insight lists sites in your hierarchy that aren't properly configured for HTTPS. This configuration prevents the site from [synchronizing collection membership results to Microsoft Entra groups](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync). It may cause Azure AD Sync to not upload all devices. Management of these clients may not function properly.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this insight doesn't appear.<!-- 73884047-3395-430E-B971-F853806D4349 -->
+- **Sites that don't have proper HTTPS configuration**: This insight lists sites in your hierarchy that aren't properly configured for HTTPS. This configuration prevents the site from [synchronizing collection membership results to Microsoft Entra groups](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync). It may cause Microsoft Entra ID Sync to not upload all devices. Management of these clients may not function properly.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this insight doesn't appear.<!-- 73884047-3395-430E-B971-F853806D4349 -->
 
 - **Update clients to the latest Windows 10 version**: Windows 10, version 1709 or above improves and modernizes the computing experience of your users. For more information, see [Stay current with Windows as a service](../../understand/configuration-manager-and-windows-as-service.md#windows-as-a-service).<!-- FD2C7B93-E5C6-4DCB-89AF-9EFCFCD01524 -->
 
@@ -159,6 +161,7 @@ Insights that help simplify management by cleaning up and reconfiguring collecti
   - **Collections with no query rules and schedule full evaluation selected**<!-- 8A401207-5A7C-4200-A1DB-990A197458FA -->
 
 > [!NOTE]
+>
 > For more information on managing collections and collection evaluation, see the following articles:<!-- MEMDocs#967 -->
 >
 > - [Best practices for collections](../../clients/manage/collections/best-practices-for-collections.md)
@@ -192,6 +195,7 @@ This group is courtesy of Microsoft Premier Field Engineering. These insights ar
 For more information on these insights, see [Remediation steps for Configuration Manager management insights](/services-hub/health/remediation-steps-configmgr).
 
 > [!TIP]
+>
 > If you're already a customer of Microsoft Unified or Microsoft Premier, sign in to the [Services Hub](https://serviceshub.microsoft.com/assessments/) for additional on-demand assessments.
 >
 > For more information about Microsoft Services, see [Support Solutions](https://www.microsoft.com/industrysolutions).
@@ -254,11 +258,12 @@ The insights in this group highlight potential configuration issues to avoid thr
 
 - **Update Microsoft .NET Framework on site systems**: <!--10402814-->Starting in version 2107, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8. For more information, [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
-- **Update servers running Windows Server 2012 and 2012 R2**:<!--9519162--> Detects servers that are running Windows Server 2012 or 2012 R2 operating systems. The support lifecycle for these operating systems ends on October 9, 2023. For more information, see the [Product lifecycle](/lifecycle/announcements/sql-server-2012-windows-server-2012-end-of-support).
+- **Update servers running Windows Server 2012 and 2012 R2**:<!--9519162--> Detects servers that are running Windows Server 2012 or 2012 R2 operating systems. The support lifecycle for these operating systems ended on October 9, 2023. For more information, see the [Product lifecycle](/lifecycle/announcements/sql-server-2012-windows-server-2012-end-of-support).
 
 - **Upgrade peer cache sources to the latest version of the Configuration Manager client**:<!--1358008--> Identify clients that serve as a peer cache source but haven't upgraded from a pre-1806 client version. Pre-1806 clients can't be used as a peer cache source for clients that run version 1806 or later. Select **Take action** to open a device view that displays the list of clients.<!-- B51C6733-F9FF-46BC-8F5E-624F2CBED719 -->
 
 > [!TIP]
+>
 > In version 2006, the insight for **Unused boot images** moved to the new [OS deployment](#operating-system-deployment) group.
 
 ### Security
@@ -301,4 +306,4 @@ Insights for managing Software Center.
 
 Insights related to the deployment and servicing of Windows 10. The Windows 10 management insight group is only available when more than half of clients are running Windows 7, Windows 8, or Windows 8.1.
 
-- **Configure Windows diagnostic data and commercial ID key**: To use data from Desktop Analytics, configure devices with a Commercial ID key and enable collection of diagnostic data. Set Windows 10 devices to **Enhanced (Limited)** level or higher. For more information, see [Enable data sharing for Desktop Analytics](../../../desktop-analytics/enable-data-sharing.md).<!-- B224393F-B255-4C80-A1D1-1014BE1DC7D4 -->
+- **Configure Windows diagnostic data and commercial ID key**: To use data from Desktop Analytics, configure devices with a Commercial ID key and enable collection of diagnostic data. Set Windows 10 devices to **Enhanced (Limited)** level or higher.<!-- B224393F-B255-4C80-A1D1-1014BE1DC7D4 -->

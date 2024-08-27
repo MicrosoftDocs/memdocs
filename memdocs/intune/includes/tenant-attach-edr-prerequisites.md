@@ -4,22 +4,18 @@ description: include file
 author: brenduns  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 04/08/2022
+ms.date: 08/19/2024
 ms.author: brenduns
 ms.custom: include file
 ---
 
 #### Endpoint detection and response
 
-Manage [Endpoint detection and response policy settings for Configuration Manager devices](../protect/endpoint-security-edr-profile-settings.md#endpoint-detection-and-response-configmgr), when you use tenant attach.
+To manage Endpoint detection and response policy settings for Configuration Manager devices when you use tenant attach.
 
-**Policy path**:
+**Platform**: *Windows (ConfigMgr)*
 
-- Endpoint security > Endpoint detection and response > Windows 10, Windows 11, and Windows Server (ConfigMgr)
-
-**Profiles**:
-
-- Endpoint detection and response (ConfigMgr) (Preview)
+**Profile**: *Endpoint detection and response (ConfigMgr)*
 
 **Required version of Configuration Manager**:
 

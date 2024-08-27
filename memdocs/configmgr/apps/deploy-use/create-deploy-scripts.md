@@ -28,7 +28,8 @@ Configuration Manager has an integrated ability to run PowerShell scripts. Power
 With this integration in Configuration Manager, you can use the *Run Scripts* functionality to do the following things:
 
 - Create and edit scripts for use with Configuration Manager.
-- Manage script usage through roles and security scopes. 
+- Manage script usage through roles and security scopes.
+- Folder support for scripts.
 - Run scripts on collections or individual on-premises managed Windows PCs.
 - Schedule scripts' runtime in UTC on collections or individual on-premises managed Windows PCs.
 - Get rapid aggregated script results from client devices.
@@ -150,7 +151,19 @@ The three security roles used for running scripts aren't created by default in C
 **Example of SMS Scripts permissions for the script authors role**  
 
  ![Example of SMS Scripts permissions for the script authors role](./media/run-scripts/script_authors_permissions.png)
+ 
+## Folder support for scripts
 
+Starting in version 2403, you can organize scripts by using folders. This change allows for better categorization and management of scripts.
+
+Open the Configuration Manager console and go to the Software Library workspace.
+From the ribbon or right-click menu, in the Scripts, select from the following options:
+
+- Create Folder
+- Delete Folder
+- Rename Folder
+- Move Folders
+- Set Security Scopes
 
 ## Create a script
 

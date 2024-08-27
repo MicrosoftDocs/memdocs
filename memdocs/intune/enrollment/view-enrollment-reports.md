@@ -8,11 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
-ms.localizationpriority: 
+ms.localizationpriority: Low
 ms.assetid: 
 
 # optional metadata
@@ -66,7 +66,7 @@ Use the enrollment failures report to view enrollment failures for all users or 
 ## Troubleshooting + support page  
 Use the enrollment failures report on the Troubleshooting + support page to view enrollment failures for a select user. This report shows every failed enrollment attempt the user encountered along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method. You can also view other data about the user on this page, including all assignments, devices, and app protection statuses they're associated with.    
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Troubleshooting + support**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Troubleshooting + support**.
 2. Search for the user by name or email address.  
 3. Select the **Enrollment failures** metric for more information about detected failures and recommended remediation steps.  
 
@@ -82,13 +82,10 @@ The device enrollment page shows the enrollment policies (both enrollment restri
 
 To access report data:   
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**.  
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**.  
 2. Select an enrolled iOS/iPadOS, macOS, or Windows device.  
 3. From the **Monitor** options, select **Enrollment**.  
 4. Review the report data. 
 
     > [!div class="mx-imgBorder"]
     > ![Example image of the Device enrollment page, showing a table of enrollment profiles.](./media/enrollment-restrictions-set/enrollment-page-report-2112.png)  
-
->[!NOTE]
->Report data is only available for devices enrolled after the Microsoft Intune 2112 service release. No results are available for devices enrolled prior to that release.  

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2024
+ms.date: 06/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,6 +24,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier 1
 - M365-identity-device-management
+- sub-intune-suite
 ---
 
 # Deployment Considerations and frequently asked questions for Endpoint Privilege Management
@@ -45,21 +46,32 @@ Applies to:
 
 ### Windows 10 devices might not immediately receive confirmation of support approvals
 
-We are working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations). We are working with the owner to resolve this as quickly as possible. 
+We're working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations). We're working with the owner to resolve this as quickly as possible.
+
+### Organization that disable User Account Control (UAC) might experience issues with Endpoint Privilege Management
+
+Endpoint Privilege Management doesn't support UAC being explicitly disabled. Windows policy controls for UAC Prompt Behavior exist to control the behavior of UAC. If organizations take extra steps to disable UAC outside of the existing policy controls, like disabling Windows services, they might experience issues with Endpoint Privilege Management.
 
 ### Organizations use Application Control for Business might experience issues running Endpoint Privilege Management
 
-Application Control for Business policies that do not account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function.
+Application Control for Business policies that don't account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function. For more information about troubleshooting application control, see [WDAC debugging and troubleshooting](/windows/security/application-security/application-control/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting).
 
-### Organizations restricting users who can log on interactively might see issues with Endpoint Privilege Management
+> [!Note]
+> EPM is not included in default policies for Application Control and may require creating custom policies.
 
-Endpoint Privilege Management uses an isolated account to facilitate elevations. This account requires the ability to create an interactive logon session. Organizations who limit the ability for users to create interactive sessions will need to make changes for EPM to function properly.
+### Organizations restricting users who can sign in interactively might see issues with Endpoint Privilege Management
+
+Endpoint Privilege Management uses an isolated account to facilitate elevations. This account requires the ability to create an interactive logon session. Organizations who limit the ability for users to create interactive sessions need to make changes for EPM to function properly.
+
+### Users requesting support approval for elevation must be the primary user on the device
+
+Endpoint Privilege Management currently requires the user requesting an elevation to be the primary user of the device. We're working to remove this limitation in a future release.
 
 ### Authoring files with a file name as one of the sole attributes for identification
 
 File name is an attribute that can be utilized to detect an application that needs to be elevated. However, it isn't protected by the signature of the file.
 
-File names are *highly susceptible* to change, and files that are signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which might not be your intended behavior.
+File names are *highly susceptible* to change, and files that are signed with a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which might not be your intended behavior.
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
@@ -76,7 +88,7 @@ To correct this behavior, unblock the file by unblocking the file from the file 
 
 ### Windows devices that are "workplace joined" fail to enable Endpoint Privilege Management
 
-Devices that are workplace joined are not supported by Endpoint Privilege Management. These devices will not show success or process EPM policies (elevation settings or elevation rules) when deployed to the device.
+Devices that are workplace joined aren't supported by Endpoint Privilege Management. These devices won't show success or process EPM policies (elevation settings or elevation rules) when deployed to the device.
 
 ### Rules for a network file might fail to elevate
 
@@ -104,7 +116,7 @@ Endpoint Privilege Management doesn’t manage elevation requests by users that 
 
 ### What files can be elevated to administrator?
 
-Endpoint Privilege Management supports executable files. Microsoft is currently working on extending support for other file types (MSI, etc.) and providing an easy method to elevate common operating system tasks.
+Endpoint Privilege Management supports executable files including those with the `.msi` extension and `.ps1` PowerShell scripts.
 
 ### Why doesn't 'Run with elevated access" show on start menu items?
 
@@ -119,5 +131,5 @@ Only one file can be elevated at a time. To launch multiple files elevated, righ
 - [Learn about Endpoint Privilege Management](../protect/epm-overview.md)
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)

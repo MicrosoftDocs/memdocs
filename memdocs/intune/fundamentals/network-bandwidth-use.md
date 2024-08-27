@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 04/30/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -74,23 +74,21 @@ The following are typical settings to use for a proxy server that caches content
 |----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         Cache size         |             5 GB to 30 GB             | The value varies based on the number of client computers in your network and the configurations you use. To prevent files from being deleted too soon, adjust the size of the cache for your environment. |
 | Individual cache file size |                950 MB                 |                                                                     This setting might not be available in all caching proxy servers.                                                                     |
-|   Object types to cache    | HTTP<br /><br />HTTPS<br /><br />BITS |                                               Intune packages are CAB files retrieved by Background Intelligent Transfer Service (BITS) download over HTTP.                                               |
+|   Object types to cache    | HTTP<br/><br />HTTPS<br/><br/>BITS |                                               Intune packages are CAB files retrieved by Background Intelligent Transfer Service (BITS) download over HTTP.                                               |
 > [!NOTE]
 > If you use a proxy server to cache content requests, communication is only encrypted between the client and the proxy and from the proxy to Intune. The connection from the client to Intune will not be encrypted end-to-end.
 
 For information about using a proxy server to cache content, see the documentation for your proxy server solution.
 
-
 ### Delivery Optimization
 
-Delivery Optimization lets you use Intune to reduce bandwidth consumption when your Windows 10 devices download applications and updates. By using a self-organizing distributed cache, downloads can be pulled from traditional servers and alternate sources (like network peers).
+Delivery Optimization lets you use Intune to reduce bandwidth consumption when your Windows 10 devices download applications and updates. Use a self-organizing distributed cache to pull downloads from traditional servers, and alternate sources (like network peers).
 
 To see the full list of Windows 10 versions and content types supported by Delivery Optimization, see the [Delivery Optimization for Windows 10 updates article](/windows/deployment/update/waas-delivery-optimization#requirements).
 
 You can [set up Delivery Optimization](../configuration/delivery-optimization-settings.md) as part of your device configuration profiles.
 
-
-### Background Intelligent Transfer Service (BITS) and BranchCache 
+### Background Intelligent Transfer Service (BITS) and BranchCache
 
 You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client. Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. When managed this way, BranchCache and BITS aren't supported. For more information, see [Compare managing Windows PCs as computers or mobile devices](./intune-legacy-pc-client.md).
 
@@ -102,7 +100,6 @@ During hours that you configure, you can use BITS on a Windows computer to reduc
 > For MDM management on Windows, only the OS's management interface for the MobileMSI app type uses BITS to download. AppX/MsiX use their own non-BITS download stack and Win32 apps via the Intune agent use Delivery Optimization rather than BITS.
 
 To learn more about BITS and Windows computers, see [Background Intelligent Transfer Service](/windows/win32/bits/background-intelligent-transfer-service-portal) in the TechNet Library.
-
 
 #### Use BranchCache on computers (requires Intune software client)
 
@@ -118,7 +115,6 @@ To use BranchCache, the client computer must have BranchCache enabled, and then 
 When the Intune client is installed on computers, BranchCache and distributed cache mode are enabled by default. However, if Group Policy has disabled BranchCache, Intune doesn't override that policy and BranchCache remains disabled.
 
 If you use BranchCache, work with other administrators in your organization to manage Group Policy and Intune Firewall policy. Ensure they don't deploy policy that disables BranchCache or Firewall exceptions. For more about BranchCache, see [BranchCache Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11)).
-
 
 ## Next steps
 

@@ -133,7 +133,10 @@ The following list provides details about how a boot image is selected for clien
 
     If it finds more than one boot image, it uses the *highest* or most recent task sequence deployment ID. In the case of a multi-site hierarchy, the *higher* letter site would take precedence in that string comparison. For example, if they're both matched otherwise, a year-old deployment from site ZZZ is selected over yesterday's deployment from site AAA.<!-- SCCMDocs issue 877 -->  
 
-4. If a boot image isn't found with the same architecture, Configuration Manager looks for a boot image that's compatible with the architecture of the client. It looks in the list of task sequences found in step 2. For example, a 64-bit BIOS/MBR client is compatible with 32-bit and 64-bit boot images. A 32-bit BIOS/MBR client is compatible with only 32-bit boot images. UEFI clients are only compatible with matching architecture. A 64-bit UEFI client is compatible with only 64-bit boot images and a 32-bit UEFI client is compatible with only 32-bit boot images.
+4. If a boot image isn't found with the same architecture, Configuration Manager looks for a boot image that's compatible with the architecture of the client. It looks in the list of task sequences found in step 2. For example, a 64-bit BIOS/MBR client is compatible with 64-bit boot images. UEFI clients are only compatible with matching architecture. A 64-bit UEFI client is compatible with only 64-bit boot images and Arm64 bit UEFI client is compatible with only Arm64 boot images.
+
+  > [!IMPORTANT]
+  > Starting with the ADK for Windows 11, version 22H2 the 32-bit versions of Windows PE are no longer included in the Windows PE add-ons. The last supported version of 32-bit Windows PE is available in the Windows PE add-on for Windows 10, version 2004.
 
 ## Next steps
 

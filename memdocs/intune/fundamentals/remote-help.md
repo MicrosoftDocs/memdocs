@@ -6,7 +6,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/01/2024
+ms.date: 07/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -53,7 +53,7 @@ The Remote Help app supports the following capabilities in general across the su
 > To know more about specific capabilities and requirements based on the platform that you're using, go to:
 >  - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#remote-help-capabilities-and-requirements-on-windows)
 >  - [Remote Help on Android with Microsoft Intune](remote-help-android.md#remote-help-capabilities-and-requirements-on-android)
->  - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-capabilities-and-requirements-on-macos)
+>  - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-capabilities)
 
 - **Enable Remote Help for your tenant**: By default, Intune tenants aren't enabled for Remote Help. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
 
@@ -73,26 +73,27 @@ The Remote Help app supports the following capabilities in general across the su
 
 ## Prerequisites
 
-- The following general prerequisites apply to Remote Help:
+General prerequisites that apply to Remote Help:
 
   - [Intune subscription](../fundamentals/licenses.md)
-  - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers)
+  - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.
   - [Supported platforms and devices](#supported-platforms-and-devices)
 
-  For specific prerequisites based on the platform that you're using, go to:
+For specific prerequisites based on the platform that you're using, go to:
 
-  - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#prerequisites-for-remote-help-on-windows)
-  - [Remote Help on Android with Microsoft Intune](remote-help-android.md#prerequisites-for-remote-help-on-android)
-  - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#prerequisites-for-remote-help-on-macos)
+- [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#prerequisites-for-remote-help-on-windows)
+- [Remote Help on Android with Microsoft Intune](remote-help-android.md#prerequisites-for-remote-help-on-android)
+- [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-requirements)
 
-- Remote Help has the following limitations:  
+Limitations:  
 
-  - Remote Help is supported in Government Community Cloud (GCC) environments on the following platforms:
+- Remote Help is supported in Government Community Cloud (GCC) environments on the following platforms:
 
-    - Windows 10/11
-    - Windows 10/11 on ARM64 devices
-    - Windows 365
-    - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
+  - Windows 10/11
+  - Windows 10/11 on ARM64 devices
+  - Windows 365
+  - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
+  - macOS 12, 13, 14
 
     Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
 
@@ -108,7 +109,7 @@ This feature applies to:
 - Windows 10 on ARM64 devices
 - Windows 365
 - Android Enterprise Dedicated (Samsung and Zebra devices)
-- macOS 11, 12, 13 and 14
+- macOS 12, 13 and 14
 
 ## Data and privacy
 
@@ -150,7 +151,7 @@ To configure your tenant to support Remote Help, review and complete the followi
 > When you purchase licenses or start a trial, it could take a while to become active (anywhere between 30 minutes to 8 hours).
 > When you try to create a Remote Help session you may continue to see messages indicating that Remote Help isn't enabled for the tenant even if you enabled Remote Help in the tenant after activation.
 
-### Task 2:  Configure permissions for Remote Help
+### Task 2: Configure permissions for Remote Help
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 

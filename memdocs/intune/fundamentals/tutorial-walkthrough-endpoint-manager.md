@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2024
+ms.date: 06/07/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -86,7 +86,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     The **Devices - Overview** pane provides device details, such as the following information:
     - **Manage devices by platform** - You can quickly see the number of devices that are managed for each platform. Selecting a platform allows you to see additional details.
     - **Configuration policy assignment failures** - You can check wither you have any profiles with errors or conflicts. 
-    - **Noncompliant devices** - You can see a count of nocompliant devices for your tenant.
+    - **Noncompliant devices** - You can see a count of noncompliant devices for your tenant.
     - **Deployment status per Windows update ring** - You can see if there are any Windows device with update errors or conflicts.  
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Devices." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-03.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-03.png":::
@@ -115,7 +115,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../protect/conditional-access.md)
 
-6. From the navigation pane, select **Devices** > **Configuration** to display details about device profiles in Intune.
+6. From the navigation pane, select **Devices** > **Manage devices** > **Configuration** to display details about device profiles in Intune.
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Configuration profiles." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png":::
 
@@ -223,7 +223,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Help and support." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-14.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-14.png":::
 
-    To create a support ticket, your account must be assigned as an administrator role in Microsoft Entra ID. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**.
+    To create a support ticket, your account must be assigned as an administrator role in Microsoft Entra ID. Administrator roles that can be used to create support tickets include, **Service support administrator**, **Intune administrator**, and **Global administrator**. Microsoft recommends granting the **Service support administrator** role to your administrators to create Intune support tickets, which is the lowest possible administrator rights needed to create support tickets. For more information, see an [Types of administrators](../fundamentals/users-add.md#types-of-administrators).
 
     For more information, see [How to get support in Microsoft Intune](../../get-support.md).
 
@@ -243,7 +243,7 @@ Microsoft Intune admin center allows you to customize and configure the view of 
 
 ### Change the Dashboard
 
-The **Dashboard** to display overall details about the devices and client apps in your Intune tenant. Dashboards provide a way for you to create a focused and organized view in the Microsoft Intune admin center. Use dashboards as a workspace where you can quickly launch tasks for day-to-day operations and monitor resources. Build custom dashboards based on projects, tasks, or user roles, for example. The Microsoft Intune admin center provides a default dashboard as a starting point. You can edit the default dashboard, create and customize additional dashboards, and publish and share dashboards to make them available to other users. 
+The **Dashboard** displays overall details about the devices and client apps in your Intune tenant. Dashboards provide a way for you to create a focused and organized view in the Microsoft Intune admin center. Use dashboards as a workspace where you can quickly launch tasks for day-to-day operations and monitor resources. Build custom dashboards based on projects, tasks, or user roles, for example. The Microsoft Intune admin center provides a default dashboard as a starting point. You can edit the default dashboard, create and customize additional dashboards, and publish and share dashboards to make them available to other users. 
 
 :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Update dashboard." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png":::
 
@@ -251,7 +251,7 @@ To modify your current dashboard, select **Edit**. If you don't want to change y
 
 ### Change the Portal settings
 
-You can customize the Microsoft Intune admin center selecting and modifying the following areas:
+The Microsoft Intune portal settings can be modified. On the **Microsoft Intune admin center** heading bar, select the **Settings** gear icon at the top right, between to the notifications and support icons. You can customize the Microsoft Intune admin center by selecting and modifying the following areas:
 - **Directories + subscriptions**
 - **Appearance + startup views**
 - **Language + region**

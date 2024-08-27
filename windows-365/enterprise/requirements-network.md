@@ -4,13 +4,13 @@ title: Network requirements for Windows 365
 titleSuffix:
 description: Learn about the network requirements for using Windows 365.
 keywords:
-author: ErikjeMS  
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 07/31/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -33,7 +33,7 @@ ms.collection:
 
 Windows 365 is a cloud-based service that lets users connect through the internet from any device, from any place, to a Windows Desktop running in Azure. To support these internet connections, you must follow the networking requirements listed in this article.
 
-Each customer has its specific requirements based on the workload they use to calculate the network requirements of their Cloud PC environment.  
+Each customer has its specific requirements based on the workload they use to calculate the network requirements of their Cloud PC environment.
 
 >[!Note]
 >This article only applies if you plan on provisioning Cloud PCs on your own Azure virtual network, as opposed to a Microsoft-hosted network.
@@ -64,7 +64,7 @@ All of the Windows 365 Enterprise **General network requirements** apply to [Win
 To use your own network and provision Microsoft Entra joined Cloud PCs, you must meet the following requirements:
 
 - The customer must have a subscription in the Azure Government environment.
-- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created.  For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this network is a US Gov region.
+- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created. For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this network is a US Gov region.
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
 
@@ -98,37 +98,7 @@ You must allow traffic in your network configuration to the following service UR
 The following URLs and ports are required for the provisioning of Cloud PCs and the Azure Network Connection (ANC) health checks:
 
 - \*.infra.windows365.microsoft.com
-- cpcsaamssa1prodprap01.blob.core.windows.net
-- cpcsaamssa1prodprau01.blob.core.windows.net
-- cpcsaamssa1prodpreu01.blob.core.windows.net
-- cpcsaamssa1prodpreu02.blob.core.windows.net
-- cpcsaamssa1prodprna01.blob.core.windows.net
-- cpcsaamssa1prodprna02.blob.core.windows.net
-- cpcstcnryprodprap01.blob.core.windows.net
-- cpcstcnryprodprau01.blob.core.windows.net
-- cpcstcnryprodpreu01.blob.core.windows.net
-- cpcstcnryprodpreu02.blob.core.windows.net
-- cpcstcnryprodprna01.blob.core.windows.net
-- cpcstcnryprodprna02.blob.core.windows.net
-- cpcstprovprodpreu01.blob.core.windows.net
-- cpcstprovprodpreu02.blob.core.windows.net
-- cpcstprovprodprna01.blob.core.windows.net
-- cpcstprovprodprna02.blob.core.windows.net
-- cpcstprovprodprap01.blob.core.windows.net
-- cpcstprovprodprau01.blob.core.windows.net
-- prna01.prod.cpcgateway.trafficmanager.net
-- prna02.prod.cpcgateway.trafficmanager.net
-- preu01.prod.cpcgateway.trafficmanager.net
-- preu02.prod.cpcgateway.trafficmanager.net
-- prap01.prod.cpcgateway.trafficmanager.net
-- prau01.prod.cpcgateway.trafficmanager.net
-- Cloud PC communication endpoints
-  - endpointdiscovery.cmdagent.trafficmanager.net
-  - registration.prna01.cmdagent.trafficmanager.net
-  - registration.preu01.cmdagent.trafficmanager.net
-  - registration.prap01.cmdagent.trafficmanager.net
-  - registration.prau01.cmdagent.trafficmanager.net
-  - registration.prna02.cmdagent.trafficmanager.net
+- *.cmdagent.trafficmanager.net
 - Registration endpoints
   - login.microsoftonline.com
   - login.live.com
@@ -144,8 +114,17 @@ The following URLs and ports are required for the provisioning of Cloud PCs and 
   - hm-iot-in-3-prod-preu01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-4-prod-prna01.azure-devices.net (443 & 5671 outbound)
-  
+
 All endpoints connect over port 443 unless otherwise specified.
+
+##### Port 3389
+
+Port 3389 is disabled by default for all newly provisioned Cloud PCs. Microsoft recommends that you keep port 3389 closed. However, if you need port 3389 to be open for any reprovisioned or newly provisioned Cloud PCs using the Azure Network Connection (ANC) deployment option, you can review the following options:
+
+- [Windows 365 Security Baselines](deploy-security-baselines.md). Customers can use the Windows 365 Security Baselines to effectively manage port 3389 for Windows 365 Cloud PCs. These baselines provide comprehensive tools and configurations designed to enhance security measures while allowing necessary access. By adjusting Firewall Settings and setting the **Default Inbound Action for Public Profile** to *Allow*, organizations can make sure that port 3389 is appropriately configured to meet operational needs. Review and customize these settings according to your specific organizational requirements.
+- [Create a custom Firewall rule in Microsoft Intune](/mem/intune/protect/endpoint-security-firewall-policy). Customers can use custom Firewall rules in Microsoft Intune to configure port 3389 for Windows 365 Cloud PCs. This option involves creating a custom rule within Intune's security policies tailored to allow inbound traffic on port 3389, which is used for access to Cloud PCs. By defining the rule parameters such as port number, protocol (TCP), and restricting specific IP addresses or networks, you can make sure that access to port 3389 is tightly controlled and limited to authorized entities only.
+
+These options aren't applicable for customers using a Microsoft-hosted network.
 
 ### [Windows 365 Government](#tab/gov)
 
@@ -165,11 +144,8 @@ All endpoints connect over port 443 unless specified otherwise.
 
 | Address:Port | Required for |
 | --- | --- | --- |
-| `https://ghp01.ghp.cpcgateway.usgovtrafficmanager.net` | GCCH |
-| `https://gcp01.gcp.cpcgateway.usgovtrafficmanager.net` | GCC |
-| cpcstprovghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1ghpghp01.blob.core.usgovcloudapi.net:443<br>cpcstcnryghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1ghpghp01.blob.core.usgovcloudapi.net:443<br> | GCCH |
-| cpcstprovgcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1gcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcstcnrygcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1gcpgcp01.blob.core.usgovcloudapi.net:443 | GCC |
 | *.infra.windows365.microsoft.us | GCC, GCCH |
+| *.cmdagent.usgovtrafficmanager.net | GCC, GCCH |
 
 #### Intune-dependent URLs
 
@@ -198,12 +174,10 @@ All endpoints connect over port 443 unless specified otherwise.
 | global.azure-devices-provisioning.us (port 443 and 5671) | GCC, GCCH |
 | hm-iot-in-ghp-ghp01.azure-devices.us (port 443 and 5671) | GCCH |
 | hm-iot-in-gcp-gcp01.azure-devices.us (port 443 and 5671) | GCC |
-| endpointdiscovery.ghp.cmdagent.usgovtrafficmanager.net (port 443) | GCCH |
-| endpointdiscovery.gcp.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
-| registration.ghp01.cmdagent.usgovtrafficmanager.net (port 443) | GCCH |
-| registration.gcp01.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
 | hm-iot-in-gcb-gcb01.azure-devices.us (port 443 and 5671) |GCC |
 | hm-iot-in-ghb-ghb01.azure-devices.us (port 443 and 5671) |GCCH |
+| enterpriseregistration.windows.net | GCCH |
+| enterpriseregistration.microsoftonline.us | GCCH |
 
 #### Azure Virtual Device-dependent URLs
 
@@ -256,14 +230,14 @@ Windows 365 uses the Remote Desktop Protocol (RDP).
 
 | Scenario | Default mode | H.264/AVC 444 mode | Description |
 | --- | --- | --- | --- |
-| Idle | 0.3 Kbps | 0.3 Kbps | User has paused their work and there are no active screen updates. |
+| Idle | 0.3 Kbps | 0.3 Kbps | User paused their work and there are no active screen updates. |
 | Microsoft Word | 100-150 Kbps | 200-300 Kbps | User is actively working with Microsoft Word: typing, pasting graphics, and switching between documents. |
 | Microsoft Excel | 150-200 Kbps | 400-500 Kbps | User is actively working with Microsoft Excel: multiple cells with formulas and charts are updated simultaneously |
 | Microsoft PowerPoint | 4-4.5 Mbps | 1.6-1.8 Mbps | User is actively working with Microsoft PowerPoint: typing, pasting, modifying rich graphics, and using slide transition effects. |
 | Web Browsing | 6-6.5 Mbps | 0.9-1 Mbps | User is actively working with a graphically rich website that contains multiple static and animated images. User scrolls the pages both horizontally and vertically |
 | Image Gallery | 3.3-3.6 Mbps | 0.7-0.8 Mbps | User is actively working with the image gallery application: browsing, zooming, resizing, and rotating images |
 | Video playback | 8.5-9.5 Mbps | 2.5-2.8 Mbps | User is watching a 30 FPS video that consumes 1/2 of the screen. |
-| Fullscreen Video playback | 7.5-8.5 Mbps | 2.5-3.1 Mbps | User is watching a 30 FPS video that’s maximized to a full screen. |
+| Fullscreen Video playback | 7.5-8.5 Mbps | 2.5-3.1 Mbps | User is watching a 30 FPS video maximized to a full screen. |
 
 ## Microsoft Teams requirements
 
@@ -280,6 +254,8 @@ Full HD (1920x1080p) isn’t a supported resolution for Microsoft Teams on Cloud
 | 500 kbps | Peer-to-peer quality video calling 360p at 30 fps. |
 | 1.2 Mbps | Peer-to-peer HD quality video calling with resolution of HD 720p at 30 fps. |
 | 500kbps/1Mbps | Group Video calling. |
+
+For more information on Microsoft Teams networking requirements, see [Networking considerations](/MicrosoftTeams/vdi-2#networking-considerations).
 
 ## Traffic interception technologies
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/11/2023
+ms.date: 05/29/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -65,13 +65,26 @@ Previously, to configure Google Chrome settings on Windows devices, you created 
 This feature applies to:
 
 - Windows 11
-- Windows 10 and later
+- Windows 10
 
 You can create a universal print policy, add printers, and then deploy this printer list to your managed users. When the policy is deployed, it automatically installs the printers you added. Users can see these printers, and select a printer from your list.
 
 For more information, go to [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md).
 
 Previously, to configure Universal Print settings, you used the [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool), which requires more manual steps, and has some limitations.
+
+## Use Apple's DDM to manage software updates
+
+<!-- ms.reviewer: beflamm -->
+
+This feature applies to:
+
+- iOS/iPadOS
+- macOS
+
+You can use the settings catalog to configure Apple's declarative device management (DDM) to manage software updates. With DDM, the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads, prepares the device for the installation, & installs the update.
+
+For more information, go to [Managed software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
 
 ## Built-in macOS features replacing plist files
 

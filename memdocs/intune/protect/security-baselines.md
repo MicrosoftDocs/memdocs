@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 05/21/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- sub-secure-endpoints
 ---
 
 # Use security baselines to help secure Windows devices you manage with Microsoft Intune
@@ -96,10 +97,11 @@ The following security baseline instances are available for use with Intune. Use
 
 - **Microsoft Defender for Endpoint baseline**:  
   *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites))*.
-  - [Version 6](security-baseline-settings-defender-atp.md?pivots=december-2020)
-  - [Version 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
-  - [Version 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
-  - [Version 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
+  - [Version 24H1](security-baseline-settings-defender.md?pivots=mde-v24h1)
+  - [Version 6](security-baseline-settings-defender.md?pivots=atp-december-2020)
+  - [Version 5](security-baseline-settings-defender.md?pivots=atp-sept-2020)
+  - [Version 4](security-baseline-settings-defender.md?pivots=atp-april-2020)
+  - [Version 3](security-baseline-settings-defender.md?pivots=atp-march-2020)
 
   > [!NOTE]
   > The Microsoft Defender for Endpoint security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
@@ -109,13 +111,15 @@ The following security baseline instances are available for use with Intune. Use
   - [May 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=office-may-2023)
 
 - **Microsoft Edge Baseline**:
-  - [May 2023 (Microsoft Edge Version 112 and later)](../protect/security-baseline-v2-edge-settings.md)
-  - [September 2020 (Microsoft Edge version 85 and later)](../protect/security-baseline-settings-edge.md?pivots-edge-sept-2020)
-  - [April 2020 (Microsoft Edge version 80 and later)](../protect/security-baseline-settings-edge.md?pivots-edge-april-2020)
-  - [Preview: October 2019 (Microsoft Edge version 77 and later)](../protect/security-baseline-settings-edge.md?pivots=edge-october-2019)
+  - [Microsoft Edge version 117](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) - November 2023
+  - [Microsoft Edge version 112 and later](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v112) - May 2023
+  - [Microsoft Edge version 85 and later](../protect/security-baseline-settings-edge.md?pivots-edge-sept-2020) - September 2020
+  - [Microsoft Edge version 80 and later](../protect/security-baseline-settings-edge.md?pivots-edge-april-2020) - April 2020
+  - [Preview: Microsoft Edge version 77 and later](../protect/security-baseline-settings-edge.md?pivots=edge-october-2019) - October 2019
 
 - **Windows 365 Security Baseline**:
-  - [October 2021](security-baseline-settings-windows-365.md)
+  - [Version 24H1](security-baseline-settings-windows-365.md?pivots=win365-24h1)
+  - [November 2021](security-baseline-settings-windows-365.md?pivots=win365-nov21)
 
 When a new version for a profile becomes available, settings in profiles based on the older versions become read-only. You can continue to use those older profiles. You can also edit the profile names, description, and assignments, but they don't support a change to their settings configuration and you can't create new profiles based on the older versions.
 
@@ -185,7 +189,7 @@ Within the Intune security baseline policy UI, Intune provides information text 
 
 - View the settings in the latest versions of the available baselines:
   - [Windows 10 and later - MDM security baseline](security-baseline-settings-mdm-all.md)
-  - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender.md)
   - [Microsoft 365 Apps for Enterprise security baseline (Office)](security-baseline-v2-office-settings.md)
   - [Microsoft Edge security baseline](security-baseline-settings-edge.md)
   - [Windows 365 Security Baseline](security-baseline-settings-windows-365.md)

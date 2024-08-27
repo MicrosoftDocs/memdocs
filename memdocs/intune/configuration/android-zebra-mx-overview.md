@@ -7,11 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/03/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
-ms.localizationpriority:
+ms.localizationpriority: Low
 ms.assetid: 
 
 # optional metadata
@@ -106,7 +106,7 @@ Continue to publish the profile, and consume it with the StageNow app on the dev
 
 After you complete the first two steps, the Company Portal app is installed on the device. The device is ready to be enrolled in to Intune.
 
-[Enroll Android devices](/mem/intune/fundamentals/deployment-guide-enrollment-android) lists the steps. If you have many Zebra devices, you may want to use a [device enrollment manager (DEM) account](../enrollment/device-enrollment-manager-enroll.md). Using a DEM account also removes the option to unenroll from the Company Portal app, so that users can't unenroll the device as easily.
+[Enroll Android devices](../fundamentals/deployment-guide-enrollment-android.md) lists the steps. If you have many Zebra devices, you may want to use a [device enrollment manager (DEM) account](../enrollment/device-enrollment-manager-enroll.md). Using a DEM account also removes the option to unenroll from the Company Portal app, so that users can't unenroll the device as easily.
 
 ## Step 4 - Create a device management profile in StageNow
 
@@ -140,17 +140,17 @@ After you test the file, the next step is to deploy the profile to devices using
 In Intune, create a device configuration profile:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Android device administrator**.
-    - **Profile type**: Select **MX profile (Zebra only)**.
+    - **Profile type**: Select **MX policy (Zebra only)**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the new profile.
-    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+    - **Name**: Enter a descriptive name for the new policy.
+    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.
 7. In **Configuration settings** > **Choose a valid Zebra MX XML file**, add the XML profile file [you exported from StageNow](#step-4---create-a-device-management-profile-in-stagenow) (in this article).

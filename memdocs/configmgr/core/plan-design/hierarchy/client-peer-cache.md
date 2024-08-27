@@ -2,16 +2,16 @@
 title: Client Peer Cache
 titleSuffix: Configuration Manager
 description: Use client peer cache for source locations when deploying content with Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: Banreet
-ms.author: banreetkaur
+author: baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Peer cache for Configuration Manager clients
@@ -88,6 +88,9 @@ When the peer cache source rejects a request for the content, the peer cache cli
 ## Requirements
 
 - Peer cache supports all Windows versions listed as supported in [Supported operating systems for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md). Non-Windows operating systems aren't supported as peer cache sources or peer cache clients.
+
+  > [!NOTE]
+  > Windows 10/11 Arm64 isn't supported as peer cache source or peer cache clients.<!-- 26688614 -->
 
 - A peer cache source must be a domain-joined Configuration Manager client. However, a client that's not domain-joined can get content from a domain-joined peer cache source.
 
@@ -213,7 +216,7 @@ Also use reports to view peer cache use. In the console, go to the **Monitoring*
 
 ## Next steps
 
-- [Microsoft Connected Cache in Configuration Manager](microsoft-connected-cache.md)
+- [Microsoft Connected Cache with Configuration Manager](microsoft-connected-cache.md)
 
 - [Support for Windows BranchCache](../configs/support-for-windows-features-and-networks.md#bkmk_branchcache)
 

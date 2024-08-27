@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 12/05/2023
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -49,8 +49,6 @@ The following Windows 365 Enterprise and Business objects are automatically encr
 - Snapshots
 - Images
 
-When Windows 365 Enterprise customers use Microsoft Purview Customer Key, these objects are instead encrypted-at-rest with customer-managed keys. By default, new Cloud PC disks, snapshots, and images are encrypted using this method after Customer Key is set up. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
-
 Windows 365 as a service treats all data stored on Windows 365 disks as customer content. For more information, see [Privacy and personal data in Windows 365](./privacy-personal-data.md).
 
 >[!NOTE]
@@ -66,7 +64,7 @@ Windows 365 uses the Transport Layer Security (TLS) protocol to protect data in 
 - Algorithm flexibility
 - Ease of deployment and use
 
-TLS 1.2 is used for all connections started from Windows 365 to the Azure Virtual Desktop infrastructure components. These components use the same TLS 1.2 ciphers as [Azure Front Door](/azure/frontdoor/concept-end-to-end-tls#supported-cipher-suites).
+TLS 1.2 is used for all connections started from Windows 365 to the Azure Virtual Desktop infrastructure components. These components use the same TLS 1.2 ciphers as [Azure Front Door](/azure/frontdoor/concept-end-to-end-tls#supported-cipher-suites). Additional technical details on the cipher suites are available at [Microsoft 365 technical reference details about encryption](/purview/technical-reference-details-about-encryption#tls-cipher-suites-supported-by-microsoft-365).
 
 <!-- ########################## -->
 ## Next steps

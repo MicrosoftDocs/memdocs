@@ -60,7 +60,7 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 
 ### Add individual Intune users in the Microsoft Intune admin center
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **New user** > **Create user**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **New user** > **Create new user**.
 2. Specify the following user details:
    - **User name** - The new name that the user will use to sign in to Microsoft Entra ID.
    - **Name** - The user's given name.
@@ -74,14 +74,20 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 8. Optionally, you can provide information for the **Job title**, **Department**, **Company name**, and **Manager** fields.
 9. Select **Create** to add the new user to Intune.
 
+> [!NOTE]
+> You can also invite guest users to your Intune tenant. For more information, see [Add Microsoft Entra B2B collaboration users in the Microsoft Entra admin center](/entra/external-id/add-users-administrator).
+
 ### Add multiple Intune users in the Microsoft Intune admin center
 
 You can add Intune users in bulk by uploading a csv file containing the full list of users. The following steps allow you to add multiple users to Intune:
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **Bulk operations** > **Bulk create**. The **Bulk create user** pane is displayed.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **Bulk operations** > **Bulk create**. The **Bulk create user** pane is displayed.
 2. Download, edit, and upload a *csv* template containing a list of users that you want to add to Intune. 
 
 The *csv* file is a comma-separated value list that can be edited in Notepad or Excel. For more information about using a *csv* file to add Intune users, see [Bulk create users in Microsoft Entra ID](/azure/active-directory/enterprise-users/users-bulk-add).
+
+> [!NOTE]
+> You can also invite multiple guest users to your Intune tenant. For more information, see [Tutorial: Bulk invite Microsoft Entra B2B collaboration users](/entra/external-id/tutorial-bulk-invite).
 
 ## Grant admin permissions
 
