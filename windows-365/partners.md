@@ -75,10 +75,10 @@ For more information, visit the [IGEL website](https://www.igel.com/windows365/)
 
 ![N-able image](./media/partners/nable.png)
 
-The N-able Cloud Commander is a multi-tenant solution for Microsoft's cloud. In a single console, it enables MSPs and CSPs to manage, secure, standardize, and automate:
+N-able Cloud Commander is a multi-tenant solution for Microsoft's cloud. In a single console, it enables MSPs and CSPs to manage, secure, standardize, and automate:
 
 - Microsoft 365 users
-- Azure resource
+- Azure resources
 - Intune devices
 - Windows 365 Business/Enterprise/Frontline Cloud PCs
 
