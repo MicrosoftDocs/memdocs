@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/12/2024
+ms.date: 08/28/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -100,7 +100,7 @@ Other details to consider when migrating a device without wiping it:
 * The new Intune management profile can't be *locked*, meaning the user must be able to remove the management profile via device settings.
 
 >[!NOTE]
->After an ADE device completes the setup assistant phase if a backup is then restored on the device which was taken from an unmanaged device it can affect the current management state of the device once the backup restore is complete. 
+> After a device completes the Setup Assistant phase of the automated device enrollment process, we don't recommend restoring a backup on the device if the backup is from a time when the device was unmanaged. Doing so could affect the current management state of the device. 
 
 ### Corporate identifiers  
 Devices enroll into Intune as personal devices, rather than corporate-owned devices. This condition has an impact on the device details, such as app inventory and phone number, gathered from the device. For more information that you can share with end users about what's visible on enrolled devices, see [What can my organization see on my enrolled device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
