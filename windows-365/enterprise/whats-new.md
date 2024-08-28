@@ -58,6 +58,10 @@ For more information about public preview items, see [Public preview in Windows 
 <!-- ########################## -->
 ## Week of August 28, 2024 (Service release 2408)
 
+#### Azure Monitor support on Windows 365 Cloud PCs<!--53421756-->
+
+Azure Monitor Agent can now  be installed on Windows 365 Enterprise and Windows 365 Government Cloud PCs. For more information, see [Azure Monitor overview](/azure/azure-monitor/overview).
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
