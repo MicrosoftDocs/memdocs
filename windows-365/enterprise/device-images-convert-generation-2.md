@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 08/26/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -44,7 +44,7 @@ There are four main steps to this process:
 
 ## Create a new virtual machine
 
-1. Make sure that Hyper-V is installed on your management PC. For information on how to install Hyper-V, see [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+1. Make sure that Hyper-V is installed on your management PC. For information on how to install Hyper-V, see [Install Hyper-V on Windows](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 2. Download your existing custom image virtual hard drive (VHD) file from the Azure storage blob URL to your PC where you have Hyper-V available.
     The VHD file is the exact size of the OS disk, which can be a large file size. Make sure to use a fast, stable internet connection to download the VHD file, and prepare for long download times.
     For information on how to download a managed disk, see [Download a VHD from Azure](/azure/virtual-machines/windows/download-vhd#generate-download-url).

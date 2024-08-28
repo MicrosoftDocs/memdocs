@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/19/2024
+ms.date: 08/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
