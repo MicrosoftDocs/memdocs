@@ -88,8 +88,10 @@ To view the token as a QR code, select your enrollment profile from the enrollme
 You can also export the enrollment profile JSON file. To create a JSON file, select Export**.  
 
 > [!IMPORTANT]
->- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
+>- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.
+>- Consider using a staging network for provisioning devices.  The staging network requires only Internet connectivity to complete the enrollment process. 
 >- On RealWear devices, you should skip the first time setup. The Intune QR codes is the only thing you need to set up the device.  
+
 
 ### Replace a token  
 You can generate a new token to replace one that's nearing its expiration date. The replacement token doesn't affect devices that are already enrolled.  
