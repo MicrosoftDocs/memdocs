@@ -133,7 +133,7 @@ As the administrator, create a SCEP certificate profile to target to users or de
 
 ## Removing certificates
 
-When you unenroll or wipe the device, the certificates are removed and also revoked.
+When you unenroll or wipe the device, the certificates are removed from the device by Intune and queued for revocations.  Revocation on the certificate authority depends on API implementation by each 3rd party. 
 
 ## Third-party certification authority partners
 
