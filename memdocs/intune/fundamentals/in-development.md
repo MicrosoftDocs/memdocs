@@ -117,6 +117,16 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
   - Keyboard Suggestions
   - Math Notes
 
+**Restrictions**:
+
+- Allow Personalized Handwriting Results
+- Allow Video Conferencing Remote Control
+- Allow Genmoji
+- Allow Image Playground
+- Allow Image Wand
+- Allow iPhone Mirroring
+- Allow Writing Tools
+
 **Web Content Filter**:
 
 - Hide Deny List URLs
@@ -135,10 +145,18 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
   - Keyboard Suggestions
   - Math Notes
 
+**Restrictions**:
+
+- Allow Genmoji
+- Allow Image Playground
+- Allow iPhone Mirroring
+- Allow Writing Tools
+
 **System Configuration > System Extensions**:
 
 - Non Removable From UI System Extensions
 - Non Removable System Extensions
+
 
 ### Device Firmware Configuration Interface (DFCI) supports VAIO devices <!-- 28186944 -->
 
