@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/21/2024
+ms.date: 08/29/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,6 +40,12 @@ This article describes known issues that can often be resolved with configuratio
 > For issues with Autopilot with Co-management, see [Windows Autopilot with co-management](/mem/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues
+
+### Autopilot deployment report doesn't support sorting
+
+Date added: *August 29, 2024*
+
+The Autopilot deployment report was updated to a new infrastructure that doesn't currently support column sorting. The issue will be addressed in the future.
 
 <!-- MAXADO-9270654 -->
 
