@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/21/2024
+ms.date: 08/29/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -41,13 +41,13 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
-<!-- MAXADO-9270654 -->
-
-### Autopilot deployment report does not support sorting
+### Autopilot deployment report doesn't support sorting
 
 Date added: *August 29, 2024*
 
-The Autopilot deployment report has been updated to a new infrastructure which does not currently support column sorting. The issue will be addressed in the future.
+The Autopilot deployment report was updated to a new infrastructure that doesn't currently support column sorting. The issue will be addressed in the future.
+
+<!-- MAXADO-9270654 -->
 
 ### Auto logon for Kiosk device profile only partially fixed
 
