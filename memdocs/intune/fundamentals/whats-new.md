@@ -166,13 +166,6 @@ There are new settings in the Apple Settings Catalog. To see these settings, in 
 **Restrictions**:
 
 - Allow ESIM Outgoing Transfers
-- Allow Personalized Handwriting Results
-- Allow Video Conferencing Remote Control
-- Allow Genmoji
-- Allow Image Playground
-- Allow Image Wand
-- Allow iPhone Mirroring
-- Allow Writing Tools
 
 ##### macOS
 
@@ -224,13 +217,6 @@ There are new settings in the Apple Settings Catalog. To see these settings, in 
 - Rapid Security Response
   - Enable
   - Enable Rollback
-
-**Restrictions**:
-
-- Allow Genmoji
-- Allow Image Playground
-- Allow iPhone Mirroring
-- Allow Writing Tools
 
 **System Policy > System Policy Control**:
 
