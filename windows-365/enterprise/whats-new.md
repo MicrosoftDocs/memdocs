@@ -56,7 +56,10 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
-## Week of August 28, 2024 (Service release 2408)
+## Week of August 26, 2024 (Service release 2408)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
 
 #### Azure Monitor support on Windows 365 Cloud PCs<!--53421756-->
 
