@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/19/2024
+ms.date: 08/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,18 +59,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-## Microsoft Intune Suite
+<!-- ## Microsoft Intune Suite -->
 
-### Easy creation of Endpoint Privilege Management elevation rules based on support approval requests<!-- 28196775 -->
-
-You’ll soon be able to create Endpoint Privilege Management (EPM) elevation rules directly from a support approval request or from details found in the Elevation report. This new process will replace the need to manually enter details about an elevation and how it should be managed, and supports creation of a new rules policy or adding the new rules to an existing policy.
-
-Applies to:
-
-- Windows 10
-- Windows 11
-
-For information about using EPM, see [Endpoint Privilege Management overview](../protect/epm-overview.md).
+<!-- ***********************************************-->
 
 ## App management
 
