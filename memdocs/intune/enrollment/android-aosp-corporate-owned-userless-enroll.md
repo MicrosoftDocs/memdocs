@@ -116,7 +116,7 @@ You can also export the enrollment profile JSON file. To create a JSON file:
 
 > [!IMPORTANT]
 >- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
->- Consider using a staging network for provisioning devices.  The staging network requires only Internet connectivity to complete the enrollment process. 
+>- Consider using a staging network with limited permissions for provisioning devices and completing the enrollment process. For example, you could use an internet-connected network with limited permissions and no corporate access to do the initial set up.
 >- Since you're managing the device via Intune, you should skip the RealWear first time setup. The Intune QR codes is the only thing you need to set up the device.   
 
 ### Replace token  
