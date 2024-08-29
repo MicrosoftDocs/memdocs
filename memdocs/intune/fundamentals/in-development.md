@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 09/03/2024
+ms.date: 08/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,8 +59,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-## Microsoft Intune Suite
+<!-- ## Microsoft Intune Suite -->
 
+<!-- ***********************************************-->
 
 ## App management
 
