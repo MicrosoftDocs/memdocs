@@ -67,10 +67,9 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 - Windows 365 Frontline (available for GCC, not available for GCC High)
 - Cloud PC connection quality report
 - Cross region disaster recovery
-- [Microsoft Purview Customer Key](purview-customer-key.md)
 - [Support for Omnissa Horizon clients and the Blast protocol](set-up-omnissa-horizon.md)
 - [Microsoft Purview Customer Key](purview-customer-key.md) 
-- 
+
 ## Next steps
 
 To learn more about Windows 365, see [What is Windows 365?](..\overview.md)
