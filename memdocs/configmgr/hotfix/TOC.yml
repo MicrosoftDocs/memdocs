@@ -8,13 +8,17 @@ items:
   - name: KB 28290310 CMG update for 2403
     href: 2403/28290310.md
   - name: KB 28458746 Software update client fix for 2403
-    href: 2403/28458746.md 
+    href: 2403/28458746.md
+  - name: KB 29166583 MP security update for 2403
+    href: 2403/29166583.md 
 - name: Version 2309
   items:
   - name: KB 24341484 Summary of changes in 2309
     href: 2309/24341484.md
   - name: KB 25858444 Update rollup for Configuration Manager version 2309
     href: 2309/25858444.md
+  - name: KB 29244296 MP security update for 2309
+    href: 2309/29244296.md
 - name: Version 2303
   items:
   - name: KB 16900870 Summary of changes in 2303
@@ -25,6 +29,8 @@ items:
     href: 2303/24721208.md
   - name: KB 25073607 Client update for Configuration Manager version 2303
     href: 2303/25073607.md
+  - name: KB 29244332 MP security update for 2303
+    href: 2303/29244332.md
 - name: Version 2211
   items:
   - name: KB 15582417  Summary of changes in 2211
