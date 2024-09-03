@@ -39,8 +39,8 @@ landingContent:
             url: 2309/26129847.md
           - text: 25858444 Update rollup for Configuration Manager version 2309
             url: 2309/25858444.md
-          - text: KB 29244296 MP security update for 2309
-            url: 2309/29244296.md  
+          - text: KB 29166583 MP security update for 2309
+            url: 2309/29166583.md  
   - title: Configuration Manager 2303
     linkLists:
       - linkListType: overview
@@ -53,8 +53,8 @@ landingContent:
             url: 2303/24721208.md
           - text: 25073607 Client update for Configuration Manager version 2303
             url: 2303/25073607.md
-          - text: KB 29244332 MP security update for 2303
-            url: 2303/29244332.md  
+          - text: KB 29166583 MP security update for 2303
+            url: 2303/29166583.md  
   - title: Configuration Manager 2211
     linkLists:
       - linkListType: overview
