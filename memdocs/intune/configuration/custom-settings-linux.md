@@ -61,7 +61,7 @@ This article lists the steps to add an existing script and has a GitHub repo wit
 
     - **Execution context**: Select the context the script is executed in. Your options:
       - **User** (default): When a user signs in to the device, the script runs. If a user never signs into the device, or there isn't any user affinity, then the script doesn't run.
-      - **Root**: The script always runs (with or without users logged in) at the device level.
+      - **Root**: The script always runs (with or without users logged in) at the device level. (**Note**: The user will have to give consent for the first time the script is executing, afterward it will continue to execute in its schedule) 
 
     - **Execution frequency**: Select how frequently the script is executed. The default is **Every 15 minutes**.
 
