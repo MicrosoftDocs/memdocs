@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2023
+ms.date: 08/28/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -37,7 +37,7 @@ This report displays recent conditions up to 5 to 15 minutes ago. Therefore, Clo
 
 ## Use the Cloud PCs that aren't available report
 
-To get to the **Cloud PCs that aren't available** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Overview** > **Cloud PC performance** > **View report** (under **Cloud PCs that aren't available**).
+To get to the **Cloud PCs that aren't available** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Overview** > **Cloud PC performance** > **Cloud PCs that aren't available**.
 
 ![Screenshot of getting to the Cloud PCs that aren't available report](./media/report-cloud-pcs-not-available/view-report-cloud-pcs-not-available.png)
 

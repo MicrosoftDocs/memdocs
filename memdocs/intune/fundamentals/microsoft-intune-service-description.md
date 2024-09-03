@@ -49,6 +49,8 @@ You can start to use Intune with a 30-day free trial that includes 100 user lice
 > [!NOTE]
 > If your organization has a Microsoft Online Services work or school account, and you might continue with this Intune subscription in production after the trial period ends, then choose the **Sign in** option on that page and authenticate by using the Global Administrator account for your organization. This action ensures that your Intune trial links to your existing work or school account.
 
+Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to the initial set up or emergency scenarios when you can't use an existing role.
+
 <!--- For a list of settings that you can set up on mobile devices, see:
 
 - [Enrolled device management capabilities of Microsoft Intune](introduction-intune.md)
