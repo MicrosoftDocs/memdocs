@@ -190,7 +190,11 @@ As an Intune administrator, use these compliance settings to help protect your o
 
   This setting specifies whether to require users to enter a password before access is granted to information on their mobile devices. Recommended value: *Require* (This compliance check is supported for devices with OS versions Android 4.0 and above, or KNOX 4.0 and above.)
 
-  - **Not configured** *(default)*
+  - **Not configured** *(default)* - This setting isn't evaluated for compliance or noncompliance.
+  - **Require** - Users must enter a password before they can access their device. When set to **require**, also configure:
+
+    - **Password complexity**
+    - **Required password type**
 
 #### Android 10 and later
 
@@ -218,15 +222,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 *The following settings are supported on Android 9.0 and earlier, and any Android OS version 15 and earlier.*
 
-- **Require a password to unlock mobile devices**  
-  This setting specifies whether to require users to enter a password before access is granted to information on their mobile devices. Recommended value: Require  
-
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  - **Require** - Users must enter a password before they can access their device.
-  
-  When set to *Require*, the following setting can be configured:
-
-  **Required password type**  
+- **Required password type**  
   Choose if a password should include only numeric characters, or a mix of numerals and other characters.
 
   - **Device Default** - To evaluate password compliance, be sure to select a password strength other than **Device default**.
