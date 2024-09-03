@@ -149,15 +149,6 @@ With the **Password** authentication method:
 >
 > Make sure your Intune password policy and/or compliance policy matches your Microsoft Entra password policy. If the policies don't match, then the password might not sync and end users are denied access.
 
-#### Configure keyvault recovery (optional)
-
-When using password sync authentication you can enable keyvault recovery to ensure that data can be recovered in the event that a user forgets their password. IT Admins should review Apple's documentation and evaluate whether using Institutional FileVault Recovery Keys is a good option for them.
-
-- [Manage FileVault with mobile device management](https://support.apple.com/en-ie/guide/deployment/dep0a2cb7686/web)
-
-- [FileVault MDM payload settings for Apple devices](https://support.apple.com/en-ie/guide/deployment/dep32bf53500/1/web/1.0)
-
-
 ### Smart Card
 
 When you configure Platform SSO with the **Smart card** authentication method, users can use the smart card certificate and the associated PIN to sign in to the device and authenticate to apps and websites.
@@ -168,6 +159,14 @@ This option:
 - Leaves the local account username and password as-is. These values aren't changed.​
 
 For more information, go to [Microsoft Entra certificate-based authentication on iOS and macOS](/entra/identity/authentication/concept-certificate-based-authentication-mobile-ios).
+
+### Configure keyvault recovery (optional)
+
+IT Admins can enable keyvault recovery to ensure that data can be recovered in the event that a user forgets their password. Admins should review Apple's documentation and evaluate whether using Institutional FileVault Recovery Keys is a good option for them.
+
+- [Manage FileVault with mobile device management](https://support.apple.com/en-ie/guide/deployment/dep0a2cb7686/web)
+
+- [FileVault MDM payload settings for Apple devices](https://support.apple.com/en-ie/guide/deployment/dep32bf53500/1/web/1.0)
 
 ## Step 2 - Create the Platform SSO policy in Intune
 
