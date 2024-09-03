@@ -107,7 +107,7 @@ Based on the above POST request, Graph returns a response message. The response 
 You can then use the `id` field to query the status of the export with a GET request: 
 
 For example:
-```https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('Devices_05e62361-783b-4cec-b635-0aed0ecf14a3') ```
+```https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('Devices_05e62361-783b-4cec-b635-0aed0ecf14a3')``` or ```https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs/Devices_05e62361-783b-4cec-b635-0aed0ecf14a3``` 
 
 You will need to continue calling this URL until you get a response with a `status: completed` attribute. It will look like the following example:
 

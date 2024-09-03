@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 10/20/2023
+ms.date: 08/28/2024
 audience: Admin
 ms.topic: article
 ms.service: windows-365
@@ -35,8 +35,8 @@ Windows 365 Business offers fixed-price licensing (through Microsoft 365) for 
 
 This table shows examples of the different sizes available for a Cloud PC.
 
-> [!NOTE]  
-> If Microsoft 365 Apps and Microsoft Teams are included in the **Supported apps** column, they are pre-installed for those Cloud PC options.
+> [!NOTE]
+> If Microsoft 365 Apps and Microsoft Teams are included in the **Supported apps** column, they are pre-installed for those Cloud PC options.  Additional licensing is required for these apps.
 
 |CPUs, RAM, and storage|Example scenarios|Supported apps|
 |:-------------------------------------------------------------------------------|:----------------------------------|:----------------------------------|

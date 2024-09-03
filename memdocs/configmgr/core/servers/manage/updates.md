@@ -53,14 +53,13 @@ Some updates for Configuration Manager are available as both an in-console updat
 
 #### Supported versions
 
-The following supported versions of Configuration Manager are currently available as a baseline, an update, or both:
+The following supported versions<sup>`*`</sup>, of Configuration Manager are currently available as a baseline, an update, or both:
 
 | Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |
 |-------------|-----------|------------|--------------|------------------------|
 | [**2403**](../../plan-design/changes/whats-new-in-version-2403.md)<br /> (5.00.9128) | April 22, 2024 | October 22, 2025 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2309**](../../plan-design/changes/whats-new-in-version-2309.md)<br /> (5.00.9122) | October 9, 2023 | April 9, 2025 | No | Yes |
 | [**2303**](../../plan-design/changes/whats-new-in-version-2303.md)<br /> (5.00.9106) | April 10, 2023 | October 10, 2024 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
-| [**2211**](../../plan-design/changes/whats-new-in-version-2211.md)<br /> (5.00.9096) | December 5, 2022 | June 5, 2024 | No | Yes |
 
 > [!NOTE]
 > The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2403.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
@@ -78,12 +77,17 @@ For example, search the VLSC for `Microsoft Configmgr (current branch)`. Find th
 > [!NOTE]
 > The search string may be different on other media sites. For example, on the [Visual Studio Subscriptions Portal](https://my.visualstudio.com/), search for `Microsoft Configuration Manager`.<!-- memdocs#1962 -->
 
+> [!NOTE]
+> `*` **Supported Versions in Configuration Manager**: In the context of Configuration Manager, the term `supported` encompasses both *engineering* and *assisted technical support*. While no further engineering development will occur for the versions in question, users will not have access to phone or online assisted technical support for these versions. However, Technical Support will assist with upgrading to a supported version of Configuration Manager. Users will resume their regular assisted technical support once Configuration Manager is upgraded to a supported version."
+
+
 #### Historical versions
 
 The following table lists historical versions of Configuration Manager current branch that are out of support:
 
 | Version                          | Availability date | Support end date   | Baseline | In-console update |
 |----------------------------------|-------------------|--------------------|----------|-------------------|
+| **2211** <br /> (5.00.9096))     |  December 5, 2022 | June 5, 2024       | No       | Yes               |
 | **2207** <br /> (5.00.9088))     | August 12, 2022   | February 12, 2024  | No       | Yes               |
 | **2203** <br /> (5.00.9078)      | April 6, 2022     | October 6, 2023    | Yes      | Yes               |
 | **2111** <br /> (5.00.9068)      | December 1, 2021  | June 1, 2023       | No       | Yes               |

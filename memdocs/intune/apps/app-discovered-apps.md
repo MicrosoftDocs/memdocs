@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/20/2024
+ms.date: 08/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -42,9 +42,15 @@ Intune provides an aggregated list of detected apps on the Intune enrolled devic
 2. Select **Apps** > **Monitor** > **Discovered apps**.
 
 >[!NOTE]
->You can export the list of discovered apps to a .csv file by selecting **Export** from the **Discovered apps** pane.
->
->For discovered Win32 apps, there currently is no aggregate count. This type of data can only be viewed on a per-device basis.
+>You can export the list of discovered apps to a *.csv* file by selecting **Export** from the **Discovered apps** pane.
+
+The **Discovered apps** report provides the following details:
+
+- Application name
+- Platform
+- Application version
+- Device count
+- Application publisher
 
 Intune also provides the list of discovered apps for the individual device in your tenant.
 
