@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2024
+ms.date: 08/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -400,7 +400,7 @@ To view the **Feature update failures** report, use the following steps:
 > [!NOTE]
 > This report is also known as the **iOS update installation failures** report.
 
-Policies with one or more Windows devices with feature update alerts.
+View update installation failures on iOS devices.
 
 You can view the **Installation failures for iOS devices** report using the following steps:
 

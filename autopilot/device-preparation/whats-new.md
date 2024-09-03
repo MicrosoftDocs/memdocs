@@ -2,13 +2,13 @@
 title: What's new in Windows Autopilot device preparation
 description: News and resources about the latest updates of Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/26/2024
+ms.date: 08/21/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -30,6 +30,18 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+<!-- INADO-28533819 -->
+
+## Windows Autopilot device preparation deployment status report available in the Monitor tab under Enrollment
+
+Date added: *August 21, 2024*
+
+In addition to the [Devices | Monitor](reporting-monitoring.md#accessing-reports-and-near-real-time-monitoring) page, admins can now easily access the **Windows Autopilot device preparation deployment status** report from the **Monitor** tab in the **Devices | Enrollment** page. The report can be found using the following steps:
+
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Navigate to **Home** > **Devices** >  **Device onboarding | Enrollment**.
+1. Select the **Monitor** tab in the **Devices | Enrollment** page.
 
 ## Corporate identifiers can now be used with Windows Autopilot device preparation
 

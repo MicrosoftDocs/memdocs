@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 05/31/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -53,6 +53,7 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
   - Windows 11 Enterprise + Microsoft 365 Apps 23H2 or later
 - Licensing options
   - Microsoft 365 E5
+  - Microsoft 365 E5 (no Teams)
   - Microsoft 365 E5 Compliance
   - Microsoft 365 E5 Insider Risk Management
 - Join type and network

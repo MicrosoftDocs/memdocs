@@ -31,6 +31,11 @@ ms.collection:
 
 Using Microsoft Intune, you can add or create custom settings for your Windows Holographic for Business devices using **custom profiles**. Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
+This article applies to:
+
+- Windows Holographic for Business
+- Windows 10/11
+
 Windows Holographic for Business custom profiles use Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings to configure different features. These settings are typically used by mobile device manufacturers to control features on the device.
 
 Windows Holographic for Business makes many configuration service providers (CSPs) settings available. For a CSP overview, go to [Introduction to configuration service providers (CSPs) for IT pros](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). For specific CSPs supported by Windows Holographic, go to [CSPs supported in Windows Holographic](/windows/client-management/mdm/configuration-service-provider-reference#hololens).
@@ -41,7 +46,7 @@ This article shows you how to create a custom profile for Windows Holographic fo
 
 ## Before you begin
 
-- [Create a Windows 10/11 custom profile](custom-settings-configure.md#create-the-profile).
+- [Create a Windows custom profile](custom-settings-configure.md#create-the-profile).
 
 ## Custom OMA-URI Settings
 
@@ -167,8 +172,8 @@ Also, Intune doesn't support all of the settings listed in [CSPs supported in Wi
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Create a [custom profile on Windows 10/11 devices](custom-settings-windows-10.md).
+- Create a [custom profile on Windows devices](custom-settings-windows-10.md).
 
 - Learn more about [custom profiles](custom-settings-configure.md) in Intune.

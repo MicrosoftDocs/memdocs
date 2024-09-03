@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 12/05/2023
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
