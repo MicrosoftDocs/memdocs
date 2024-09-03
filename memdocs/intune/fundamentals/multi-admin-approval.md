@@ -41,14 +41,15 @@ Access policies are supported for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
 - Scripts – Applies to deploying scripts to devices that run [Windows](../apps/intune-management-extension.md).
+- Access Policies - Applies to creating or managing multiple administrative approval policies.
 
 ## Prerequisites for access policies and approvers
 
-To use multi administrative approval, your tenant must have at least two administrator accounts.
+To use multi administrative approval, your tenant must have at least two administrator accounts. One account will be used to perform a change in the tenant, the second account will be used approve the change.
 
-To create an access policy, your account must be assigned a custom role with appropriate access policy permissions from the Multi admin approval category. For more information, see [Role Based Access Control](../fundamentals/role-based-access-control.md).
+To create an access policy, your account must be assigned the [*Intune Service Administrator* or *Azure Global Administrator*](../fundamentals/role-based-access-control.md) role, or be assigned the appropriate Multi Admin Approval permissions for an Intune role.  Administrators who manage the access policies specifically for multi-admin approval require the *Approval for Multi Admin Approval* permission.
 
-To be an approver, an account must be in the group that’s assigned to the access policy for a specific type of resource.
+To be an approver for access policies, an account must be in the approver group that’s assigned to the access policy for a specific type of resource.
 
 If your organization allows unlicensed administrators for Intune roles, all approver groups must also be a member group of one or more Intune role assignments.
 
