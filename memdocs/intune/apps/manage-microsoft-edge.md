@@ -496,7 +496,7 @@ When a web page requests to open an external app, users will see a pop-up asking
 ### Copilot
 
 > [!NOTE]
-> Copilot is also known as Bing Chat Enterprise. Only Copilot eligible users can use Copilot. For more information, see [Frequently asked questions about Copilot](/copilot/faq)
+> As of version 128, Copilot for work or school accounts has been deprecated. Therefore, the following policies will no longer be valid in version 128
 
 Copilot is available on Microsoft Edge for iOS and Android. Users can start Copilot by clicking on Copilot button in bottom bar. 
 
