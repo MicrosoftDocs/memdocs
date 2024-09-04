@@ -85,4 +85,4 @@ After you deploy policy to encrypt a device disk, see the following articles for
 ## Next steps
 
 - [To create a FileVault profile](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy-for-filevault)
-- [To create a BitLocker profile](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-bitlocker)
+- [To create a BitLocker profile](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-bit-windows)

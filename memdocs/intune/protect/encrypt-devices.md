@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2024
+ms.date: 09/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -44,7 +44,7 @@ Use one of the following policy types to configure encryption on your managed de
 
   - *Personal Data Encryption* - Personal Data Encryption (PDE) encrypts data at the folder level and can be used with other encryption methods, like BitLocker. For more information, see the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp).
 
-- **[Device configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. BitLocker settings are one of the available settings categories for Windows 10/11 endpoint protection.
+- **[Device configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-windows)**. BitLocker settings are one of the available settings categories for Windows 10/11 endpoint protection.
 
   View the BitLocker settings that are available for [BitLocker in endpoint protection profiles from device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
 
@@ -80,7 +80,6 @@ Use one of the following procedures to create the policy type you prefer.
    1. **Platform**: Windows
    2. **Profile**: Choose either *BitLocker* or *Personal Data Encryption*
 
-   ![Select the BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-es.png)
    :::image type="content" source="./media/encrypt-devices/select-windows-encpryption-profile.png" alt-text="Screen capture of the Windows encryption profile selection surface.":::
 
 4. On the **Configuration settings** page, configure settings for BitLocker to meet your business needs.  
@@ -101,7 +100,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 > [!TIP]
 >
-> The following procedure configures BitLocker through a device configuration template for Endpoint protection. To configure Personal Data Encryption, use the device configuration [settings catalog](../configuration/settings-catalog) and the *PDE* category.
+> The following procedure configures BitLocker through a device configuration template for Endpoint protection. To configure Personal Data Encryption, use the device configuration [settings catalog](../configuration/settings-catalog.md) and the *PDE* category.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -214,7 +213,7 @@ Three settings determine whether an OS drive will be encrypted by encrypting the
 - Configuration of the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp)
   - (Enforce drive encryption type on operating system drives)
 
-Assuming that SystemDrivesEncryptionType isn't configured, the following behavior is expected. When silent enablement is configured on a modern standby device, the OS drive is encrypted using the used space only encryption. When silent enablement is configured on a device that isn't capable of modern standby, the OS drive is encrypted using full disk encryption. The result is the same whether you're using an [Endpoint Security disk encryption policy for BitLocker](#create-an-endpoint-security-policy-for-bitlocker) or a [Device Configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-bitlocker). If a different end state is required, the encryption type can be controlled by configuring the SystemDrivesEncryptionType using settings catalog.
+Assuming that SystemDrivesEncryptionType isn't configured, the following behavior is expected. When silent enablement is configured on a modern standby device, the OS drive is encrypted using the used space only encryption. When silent enablement is configured on a device that isn't capable of modern standby, the OS drive is encrypted using full disk encryption. The result is the same whether you're using an [Endpoint Security disk encryption policy for BitLocker](#create-an-endpoint-security-policy-for-windows) or a [Device Configuration profile for endpoint protection for BitLocker](#create-a-device-configuration-profile-for-windows-encryption). If a different end state is required, the encryption type can be controlled by configuring the SystemDrivesEncryptionType using settings catalog.
 
 To verify whether the hardware is modern standby capable, run the following command from a command prompt:
 
