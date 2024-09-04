@@ -28,17 +28,21 @@ ms.collection:
 - sub-secure-endpoints
 ---
 
-# Manage BitLocker policy for Windows devices with Intune
+# Manage Disk Encryption policy for Windows devices with Intune
 
-Use Intune to configure BitLocker Drive Encryption on devices that run Windows 10/11.
+Use Intune to configure BitLocker encryption on devices that run Windows 10 or later, and Personal Data Encryption (PDE) on devices that run Windows 11 Version 22H2 or later.
 
-BitLocker is available on devices that run Windows 10/11. Some settings for BitLocker require the device have a supported TPM.
+> [!TIP]
+>
+> Some settings for BitLocker require the device have a supported TPM.
 
-Use one of the following policy types to configure BitLocker on your managed devices:
+Use one of the following policy types to configure encryption on your managed devices:
 
-- **[Endpoint security disk encryption policy for BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. The BitLocker profile in *Endpoint security* is a focused group of settings that is dedicated to configuring BitLocker.
+- **[Endpoint security > Windows  encryption policy](#create-an-endpoint-security-policy-for-windows)**. Choose from the following profiles:
 
-  View the BitLocker settings that are available in [BitLocker profiles from disk encryption policy](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
+  - *BitLocker* - A focused group of settings that are dedicated to configuring BitLocker. For more information, see the [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp).
+
+  - *Personal Data Encryption* - Personal Data Encryption (PDE) encrypts data at the folder level and can be used with other encryption methods, like BitLocker. For more information, see the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp).
 
 - **[Device configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. BitLocker settings are one of the available settings categories for Windows 10/11 endpoint protection.
 
@@ -66,17 +70,18 @@ You can add this permission and right to your own [custom RBAC roles](../fundame
 
 Use one of the following procedures to create the policy type you prefer.
 
-### Create an endpoint security policy for BitLocker
+### Create an endpoint security policy for Windows
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
 3. Set the following options:
-   1. **Platform**: Windows 10/11
-   2. **Profile**: BitLocker
+   1. **Platform**: Windows
+   2. **Profile**: Choose either *BitLocker* or *Personal Data Encryption*
 
    ![Select the BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-es.png)
+   :::image type="content" source="./media/encrypt-devices/select-windows-encpryption-profile.png" alt-text="Screen capture of the Windows encryption profile selection surface.":::
 
 4. On the **Configuration settings** page, configure settings for BitLocker to meet your business needs.  
 
@@ -92,7 +97,11 @@ Use one of the following procedures to create the policy type you prefer.
 
 7. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-### Create a device configuration profile for BitLocker
+### Create a device configuration profile for Windows encryption
+
+> [!TIP]
+>
+> The following procedure configures BitLocker through a device configuration template for Endpoint protection. To configure Personal Data Encryption, use the device configuration [settings catalog](../configuration/settings-catalog) and the *PDE* category.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -195,7 +204,6 @@ Following are the relevant settings for each profile type:
 > While neither the endpoint security or device configuration policies configure the TPM settings by default, some versions of the [security baseline for Microsoft Defender for Endpoint](../protect/security-baselines.md#available-security-baselines) will configure both *Compatible TPM startup PIN* and *Compatible TPM startup key* by default. These configurations might block silent enablement of BitLocker.
 >
 > If you deploy this baseline to devices on which you want to silently enable BitLocker, review your baseline configurations for possible conflicts. To remove conflicts, either reconfigure the settings in the baselines to remove the conflict, or remove applicable devices from receiving the baseline instances that configure TPM settings that block silent enablement of BitLocker.
-
 
 ### Full disk vs Used Space only encryption
 

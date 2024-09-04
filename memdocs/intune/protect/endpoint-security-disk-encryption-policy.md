@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/19/2024
+ms.date: 09/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,7 +32,7 @@ ms.reviewer: aanavath
 
 # Disk encryption policy for endpoint security in Intune
 
-Endpoint security Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault or BitLocker. This focus makes it easy for security admins to manage disk encryption settings without having to navigate a host of unrelated settings.
+Endpoint security Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault, BitLocker, and Personal Data Encryption (for Windows). This focus makes it easy for security admins to manage disk encryption settings without having to navigate a host of unrelated settings.
 
 While you can configure the same device settings by using *Endpoint Protection* profiles for device configuration, the device configuration profiles include other categories of settings. These other settings are unrelated to disk encryption and can complicate the task of configuring only disk encryption.
 
@@ -71,6 +71,8 @@ For guidance on assigning the right level of permissions and rights to manage In
   > You can continue to find a list of settings in the original BitLocker profiles created before June 19, 2023, at [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker) in the Intune documentation.
 
   To create a BitLocker profile, see [Use BitLocker disk encryption for Windows](../protect/encrypt-devices.md).
+
+- **Personal Data Encryption** - Personal Data Encryption (PDE) encrypts data at the folder level and is available for devices that run WIndows 11 version 22H2 or later. You can use the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp) with other encryption methods, like BitLocker.
 
 ## Manage device encryption
 
