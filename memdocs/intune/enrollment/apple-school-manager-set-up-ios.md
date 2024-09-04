@@ -181,5 +181,5 @@ Apple School Manager devices managed by Intune must be assigned an enrollment pr
 
 You have enabled management and syncing between Apple and Intune, and assigned a profile to  let your Apple School devices enroll. You can now distribute devices to users. When an iOS/iPadOS Apple School Manager device is turned on, it's enrolled for management by Intune. Profiles can't be applied to activated devices currently in use until the device is wiped.
 
-## School data sync
+## Connect School data sync
 Microsoft Education is transitioning to a new School Data Sync (SDS) experience with enhanced features, starting August 2024 for the Northern Hemisphere and January 2025 for the Southern Hemisphere. The current Apple School Manager support will be retired by December 31, 2024. This new experience offers various enhancements over SDS (Classic) including decoupled data ingestion, faster syncs with fewer errors, support for larger organizations, and a modern user interface. If you have further questions, please contact Microsoft Education support with questions regarding the transition to the new School Data Sync experience.
