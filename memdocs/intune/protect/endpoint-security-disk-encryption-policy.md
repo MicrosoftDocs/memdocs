@@ -70,19 +70,19 @@ For guidance on assigning the right level of permissions and rights to manage In
   >
   > You can continue to find a list of settings in the original BitLocker profiles created before June 19, 2023, at [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker) in the Intune documentation.
 
-  To create a BitLocker profile, see [Use BitLocker disk encryption for Windows](../protect/encrypt-devices.md).
+- **Personal Data Encryption** - Personal Data Encryption (PDE) encrypts data at the folder level and is available for devices that run Windows 11 version 22H2 or later. You can use the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp) with other encryption methods, like BitLocker.
 
-- **Personal Data Encryption** - Personal Data Encryption (PDE) encrypts data at the folder level and is available for devices that run WIndows 11 version 22H2 or later. You can use the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp) with other encryption methods, like BitLocker.
+To create a BitLocker or Personal Data Encryption profile, see [Use disk encryption for Windows](../protect/encrypt-devices.md).
 
 ## Manage device encryption
 
 After you deploy policy to encrypt a device disk, see the following articles for information on managing encryption:
 
-- [Manage BitLocker](../protect/encrypt-devices.md#manage-bitlocker)
-- [Manage FileVault](../protect/encrypt-devices-filevault.md#manage-filevault)
+- [Manage encryption on Windows](../protect/encrypt-devices.md)
+- [Manage encryption on macOS](../protect/encrypt-devices-filevault.md#manage-filevault)
 - [Monitor device encryption](../protect/encryption-monitor.md)
 
 ## Next steps
 
-- [To create a FileVault profile](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy-for-filevault)
-- [To create a BitLocker profile](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-windows)
+- [To create a macOS encryption profile](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy-for-filevault)
+- [To create a Windows encryption profile](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-windows)
