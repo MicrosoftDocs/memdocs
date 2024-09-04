@@ -2,12 +2,12 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
-ms.date: 08/08/2024
+ms.date: 09/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
+author: BalaDelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -364,7 +364,10 @@ The site server uses the **Exchange Server connection account** to connect to th
 
 ### Management point connection account
 
-The management point uses the **Management point connection account** to connect to the Configuration Manager site database. It uses this connection to send and retrieve information for clients. The management point uses its computer account by default, but you can configure a user account instead. When the management point is in an untrusted domain from the site server, you must specify a user account.
+The management point uses the **Management point connection account** to connect to the Configuration Manager site database. It uses this connection to send and retrieve information for clients. The management point uses its computer account by default, but you can configure an alternate account instead. When the management point is in an untrusted domain from the site server, you must specify a alternate user account.
+
+  > [!NOTE]
+  > For enhanced security posture it is recommended to leverage alternate account rather than Computer account for ‘Management point connection account’.
 
 Create the account as a low-right local account on the computer that runs Microsoft SQL Server.
 
