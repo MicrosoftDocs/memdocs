@@ -67,7 +67,7 @@ The following editions are supported:
 - Windows 11 Pro.
 - Windows 11 Pro Education.
 - Windows 11 Pro for Workstations.
-- Windows 11 Enterprise/[Windows 11 IoT Eneterprise](/windows/iot/iot-enterprise/overview).
+- Windows 11 Enterprise.
 - Windows 11 Education.
 
 ## [:::image type="icon" source="../images/icons/wifi-ethernet-18.svg"::: **Networking**](#tab/networking)
