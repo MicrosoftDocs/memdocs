@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/01/2024
+ms.date: 08/21/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -48,7 +48,7 @@ To set up Omnissa Horizon for Windows 365 Enterprise, follow these steps. The fi
 
 To turn on the Omnissa connector, follow these steps:
 
-1. As a Global administrator, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens**.
+1. As an Intune administrator, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens**.
 ![Screenshot of navigating to Connectors and tokens.](./media/set-up-citrix/connectors-tokens.png)
 2. Select **Windows partner connectors** > **Add**.
 3. Under **Add connector**, select **Omnissa** in the drop-down list.

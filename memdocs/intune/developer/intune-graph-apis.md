@@ -497,13 +497,13 @@ To invite the user to be a guest of your tenant:
 
 This sends an invite to the user.
 
-   <img src="../media/aad-multiple-tenant-invitation.png" width="624" height="523" alt="A sample guest invitation" />
+   <img src="../media/aad-multiple-tenant-invitation.png" width="624" height="523" alt="A sample guest invitation">
 
    The user needs to choose the **Get Started** link to accept your invitation.
 
 When the relationship is established (or your invitation has been accepted), add the user account to the **Directory role**.
 
-Remember to add the user to other roles as needed. For example, to allow the user to manage Intune settings, they need to be either a **Global Administrator** or an **Intune Service administrator**.
+Remember to add the user to other roles as needed. For example, to allow the user to manage Intune settings, they need to be at least an **Intune Service administrator**.
 
 Also:
 

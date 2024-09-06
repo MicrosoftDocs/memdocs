@@ -2,13 +2,13 @@
 title: Windows Autopilot known issues
 description: Be informed about known issues that might occur during Windows Autopilot deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/08/2024
+ms.date: 08/29/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,6 +40,40 @@ This article describes known issues that can often be resolved with configuratio
 > For issues with Autopilot with Co-management, see [Windows Autopilot with co-management](/mem/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues
+
+### Autopilot deployment report doesn't support sorting
+
+Date added: *August 29, 2024*
+
+The Autopilot deployment report was updated to a new infrastructure that doesn't currently support column sorting. The issue will be addressed in the future.
+
+<!-- MAXADO-9270654 -->
+
+### Auto logon for Kiosk device profile only partially fixed
+
+Date added: *August 21, 2024*
+
+The know issue of [Kiosk device profiles not auto logging in when auto logon was enabled](#kiosk-device-profile-not-auto-logging-in) was previously reported as fixed. However, there are scenarios where the issue might still occur when using autologon with Kiosks and [Assigned Access](/windows/configuration/assigned-access/overview). If multiple reboots or unexpected reboots occur during the Windows out-of-box experience (OOBE) when initially configuring the Kiosk, the autologon entries in the registry might be deleted. The issue is being investigated.
+
+The following workarounds are available until the issue is resolved:
+
+1. Apply or reapply the kiosk profile after Windows Autopilot completes.
+
+1. Apply the autologon registry entries either manually or via a script. For example:
+
+    ```cmd
+    reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "AutoAdminLogon" /t REG_DWORD /d 1 /f
+
+    reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DefaultDomainName" /t REG_SZ /d "." /f
+
+    reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DefaultUserName" /t REG_SZ /d "kioskUser0" /f
+    ```
+
+1. Exclude items the required reboots during OOBE from Windows Autopilot.
+
+1. Manually enter the kiosk user credentials.
+
+For more information, see [Assigned Access recommendations - Automatic sign-in](/windows/configuration/assigned-access/recommendations#automatic-sign-in). For additional assistance, contact support.
 
 ## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
 
@@ -81,7 +115,8 @@ Platforms with the Infineon SLB9672 TPM with firmware release 15.22 with EK cert
 
 ### Kiosk device profile not auto logging in
 
-Date added: *January 30, 2023*
+Date added: *January 30, 2023*<br>
+Date updated: *August 21, 2024*
 
 There's currently a known issue in the following Windows Updates released in January 2023:
 
@@ -89,11 +124,15 @@ There's currently a known issue in the following Windows Updates released in Jan
 - Windows 11, version 21H2: [KB5022287](https://support.microsoft.com/topic/january-10-2023-kb5022287-os-build-22000-1455-951898ec-2628-4d25-850e-9a44207bc139)
 - Windows 10, version 22H2: [KB5022282](https://support.microsoft.com/topic/january-10-2023-kb5022282-os-builds-19042-2486-19044-2486-and-19045-2486-9587e4e3-c2d7-48a6-86e2-8cd9146b47fd)
 
-If these updates are installed on a device, Kiosk device profiles that have auto sign-in enabled won't auto sign in. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, manually enter the kiosk user credentials with the username `kioskUser0` and no password. After the username is entered with no password, it should go to the desktop. This issue should be resolved in cumulative updates released for Windows 11 in April 2023 and Windows 10 in March 2023:
+If these updates are installed on a device, Kiosk device profiles that have auto logon enabled won't auto log on. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, manually enter the kiosk user credentials with the username `kioskUser0` and no password. After the username is entered with no password, it should go to the desktop. This issue should be resolved in cumulative updates released for Windows 11 in April 2023 and Windows 10 in March 2023:
 
 - Windows 11, version 22H2: [KB5025239](https://support.microsoft.com/topic/april-11-2023-kb5025239-os-build-22621-1555-5eaaaf42-bc4d-4881-8d38-97e0082a6982) or later.
 - Windows 11, version 21H2: [KB5025224](https://support.microsoft.com/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc) or later.
 - Windows 10, version 22H2: [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or later.
+
+> [!NOTE]
+>
+> This issue was only partially fixed and can still occur under certain conditions. For more information, see [Auto logon for Kiosk device profile only partially fixed](#auto-logon-for-kiosk-device-profile-only-partially-fixed).
 
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 

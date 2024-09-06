@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/24/2023
+ms.date: 08/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ ms.collection:
 Intune integrates with network access control (NAC) partners to help organizations secure corporate data when devices try to access on-premises resources.
 
 >[!NOTE]
-> A new NAC service (CR service) was released in July 2021 and many of our NAC partners are transitioning to this new service. While we have extended the timeline for supporting the legacy NAC service through **March 31, 2024**, we recommend you to migrate to the new CR service to avoid service disruption.Currently, the following NAC partner product supports the new NAC service:
+> The *compliance retrieval service* was released in July 2021 and replaced the previous Intune NAC service. Microsoft Intune is providing support for the legacy Intune NAC service through March 31, 2024. Our NAC partners are transitioning to the compliance retrieval service and include: 
 >
 > - ExtremeCloud Universal ZTNA
 > - Extreme Networks ExtremeCloud IQ-Site Engine version 24.2
@@ -52,7 +52,7 @@ Intune integrates with network access control (NAC) partners to help organizatio
 > - Forescout eyeExtend Microsoft Module v1.0.1 and later
 > - Portnox Cloud
 >
-> Contact your NAC partner if you have questions on the impact of this transition. For more information, see our [blog post on the new compliance retrieval service](https://aka.ms/new-compliance-retrieval-api/).
+> We will be deprecating the Intune NAC service in the future, so we recommend that you migrate to the compliance retrieval service to avoid service disruption. Contact your NAC solution provider if you have questions about the compliance retrieval service or impact to your tenant. For more information and updates about the compliance retrieval service and NAC partners, see [Microsoft Tech Community: New Microsoft Intune service for network access control](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696). 
 
 ## How do Intune and NAC solutions help protect your organization resources?
 
@@ -98,16 +98,16 @@ The following list is an overview on how NAC integration works when integrated w
 
 ## Enable NAC
 
-To enable use of NAC and the *compliance retrieval service* that became available in July 2021, reference your NAC product's most recent documentation for enabling NAC integration with Intune. This integration might require you to make changes after you upgrade to their new NAC product or version.
+To enable use of NAC and the compliance retrieval service, reference your NAC product's most recent documentation for enabling NAC integration with Intune. This integration might require you to make changes after you upgrade to a new NAC product or version. 
 
 The compliance retrieval service requires certificate-based authentication and the use of the *Intune device ID* as the subject alternative name of the certificates. For Simple Certificate Enrollment Protocol (SCEP) and Private and public key pair (PKCS) certificates, you can add an attribute of the **URI** type with a value defined by your NAC provider. For example, your NAC provider's instructions might say to include `IntuneDeviceId://{{DeviceID}}`as the **Subject alternative name**.
 
 Other NAC products might require you include a device ID when using NAC with iOS VPN profiles.
 
-> [!NOTE]
-> We have now added support for querying devices based on Mac addresses for customers who are unable to use certificate-based authentication. However, our recommendation is to use certificate-based authentication with Intune device id wherever possible.
+> [!TIP]
+> We recommend using certificate-based authentication with the Intune device ID wherever possible. If you're unable to use certificate-based authentication, Intune supports querying devices based on MAC addresses. 
 
-To learn more about certificate profiles, see: [Use SCEP certificate profiles with Microsoft Intune](../protect/certificates-profile-scep.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../protect/certificates-pfx-configure.md)
+For more information about certificate profiles, see [Use SCEP certificate profiles with Microsoft Intune](../protect/certificates-profile-scep.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../protect/certificates-pfx-configure.md).  
 
 ## Data shared with NAC partners
 

@@ -66,6 +66,16 @@ Example architecture of a Windows 365 service that enables administrators or end
 
 Each Windows 365 Cloud PC is a single instance Azure virtual machine. Resilience is provided at the Azure host level to mitigate any compute continuity issues. For more information, see [Business continuity and disaster recovery overview](business-continuity-disaster-recovery.md).
 
+## Client resiliency
+
+[Windows App](/windows-app/overview) is the Windows 365 client used to connect to your Cloud PC. Windows App can also be used for connectivity to any Windows in the Cloud service, such as Azure Virtual Desktop, Microsoft DevBox and Remote Desktop Services, as well as RemotePC or direct RDP connections. Windows App is regularly updated to provide new functionality to end users.
+
+There are two deployment mechanisms to test the client after it has gone through extensive internal testing:
+
+- An Insiders ring where the client is tested by a set of users who have opted into this ring. Feedback is then provided and bugs can be fixed before rolling out to the Public ring.
+- Windows App is hosted within the Windows Store, which enables a reliable global software distribution service. The Windows App uses the Microsoft Store gradual package rollout which lets Microsoft update groups of machines over a specified time period. By monitoring the feedback and usage analytics of these initial groups, we can ensure that the update is ready before rolling it out to a wider community. For more information, see [Gradual package rollout](/windows/apps/publish/gradual-package-rollout).
+
+
 ## Customer best practices
 
 As Windows 365 has a shared responsibility for overall service delivery, there are some best practices that customers should follow to increase the resiliency of the overall service.
