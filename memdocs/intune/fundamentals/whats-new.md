@@ -82,7 +82,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Big Sur) and later.
 
-For more information on this change, go to [Plan for change:  Intune is moving to support macOS 13 and later](../includes/intune-notices#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year)
+For more information on this change, go to [Plan for change:  Intune is moving to support macOS 13 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year)
 
 > [!NOTE]
 > macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
