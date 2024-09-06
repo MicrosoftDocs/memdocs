@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 09/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -257,14 +257,14 @@ When creating the Server configuration for the tunnel, you can specify a differe
 
 **More requirements**:
 
-- To access the security token service and Azure storage for logs, provide access to the following FQDNs:
+To access the security token service and Azure storage for logs, provide access to the following FQDNs:
 
-  - Security Token Service: `*.sts.windows.net`
-  - Azure storage for tunnel logs: `*.blob.core.windows.net`
-  - Other storage endpoint urls: `*.blob.storage.azure.net`
-
-- The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22, and graph.microsoft.com.
-
+- Security Token Service: `*.sts.windows.net`
+- Azure storage for tunnel logs: `*.blob.core.windows.net`
+- Other storage endpoint urls: `*.blob.storage.azure.net`
+- Microsoft Intune: `*.manage.microsoft.com`
+- Microsoft authentication: `login.microsoftonline.com`
+- Microsoft Graph: `graph.microsoft.com`
 - Configure firewall rules to support the configurations detailed in [Microsoft Artifact Registry (MAR) Client Firewall Rules Configuration](https://github.com/microsoft/containerregistry/blob/main/docs/client-firewall-rules.md).
 
 ## Proxy
