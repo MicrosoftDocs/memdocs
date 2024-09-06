@@ -114,6 +114,8 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
 
 ## Create the kernel extension policy
 
+> [!IMPORTANT]
+> The macOS extensions template has been deprecated in the August 2024 service release. Existing policies will remain unchanged; however, you can no longer create new policies using this template and it is recommended to use the settings catalog to create new policies that configure the System Extension payload. Learn more about configuring this payloads using the settings catalog. [insert link]
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
