@@ -76,7 +76,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of September 2, 2024
+## Week of September 9, 2024
 
 #### Intune now supports macOS 13.x as the minimum version<!-- 28391869 -->
 
