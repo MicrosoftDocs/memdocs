@@ -265,19 +265,6 @@ Applies to:
 
 ## Device management
 
-### Intune will support macOS 13.x as the minimum version<!-- 28391869 -->
-
-With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Big Sur) and later.
-
-For more information on this change, see [Plan for change: Intune is moving to support macOS 13 and later](../fundamentals/whats-new.md#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year).
-
-> [!NOTE]
-> macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
-
-Applies to:
-
-- macOS
-
 ### Intune supports iOS/iPadOS 16.x as the minimum version<!-- 28391935 -->
 
 Later this year, we expect iOS18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require iOS/iPadOS 16 and higher shortly after the iOS/iPadOS 18 release.
