@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 08/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,7 +41,7 @@ Applies to:
 
 > [!NOTE]
 >
-> Beginning on April 5, 2022, the Firewall profiles for the *Windows 10 and later* platform were replaced by the *Windows 10, Windows 11, and Windows Server* platform and new instances of those same profiles. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+> Beginning on April 5, 2022, the Firewall profiles for the *Windows 10 and later* platform were replaced by the *Windows* platform and new instances of those same profiles. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 >
@@ -508,7 +508,7 @@ Specifies the local and remote addresses to which this rule applies:
 
   Manage local address ranges for this rule. You can:
   - **Add** one or more addresses as a comma-separated list of local addresses that are covered by the rule.
-  - **Import** a .csv file that contains a list of addresses to use as local address ranges.
+  - **Import** a .csv file containing a list of local IP addresses ranges using the 'LocalAddressRanges' header.
   - **Export** your current list of local address ranges as a .csv file.
 
   Valid entries (tokens) include the following options:
@@ -529,7 +529,7 @@ Specifies the local and remote addresses to which this rule applies:
 
   Manage remote address ranges for this rule. You can:
   - **Add** one or more addresses as a comma-separated list of remote addresses that are covered by the rule.
-  - **Import** a .csv file that contains a list of addresses to use as remote address ranges.
+  - **Import** a .csv file containing a list of remote IP addresses ranges using the 'RemoteAddressRanges' header.
   - **Export** your current list of remote address ranges as a .csv file.
 
   Valid entries (tokens) include the following and aren't case-sensitive:

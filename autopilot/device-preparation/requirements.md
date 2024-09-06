@@ -2,13 +2,13 @@
 title: Windows Autopilot device preparation requirements
 description: Software, Networking, Licensing, Configuration, and RBAC requirements for Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 09/05/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -64,11 +64,11 @@ Windows Autopilot device preparation depends on specific features available in W
 
 The following editions are supported:
 
-- Windows 11 Pro
-- Windows 11 Pro Education
-- Windows 11 Pro for Workstations
-- Windows 11 Enterprise
-- Windows 11 Education
+- Windows 11 Pro.
+- Windows 11 Pro Education.
+- Windows 11 Pro for Workstations.
+- Windows 11 Enterprise.
+- Windows 11 Education.
 
 ## [:::image type="icon" source="../images/icons/wifi-ethernet-18.svg"::: **Networking**](#tab/networking)
 

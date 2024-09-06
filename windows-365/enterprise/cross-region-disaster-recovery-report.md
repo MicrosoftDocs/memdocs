@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/01/2023
+ms.date: 08/28/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -34,7 +34,7 @@ The **Cloud PCs cross region disaster recovery status** report shows you pertine
 
 ## Use the Cloud PCs cross region disaster recovery status report
 
-To get to the **Cloud PCs cross region disaster recovery status report**, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Cloud PC overview** > **Cross region disaster recovery status”.
+To get to the **Cloud PCs cross region disaster recovery status report**, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Cloud PC overview** > **Cross region disaster recovery status**.
 
 The device list shows the individual Cloud PCs with the following columns:
 
@@ -47,7 +47,7 @@ The device list shows the individual Cloud PCs with the following columns:
   - **No**
 - **Current restore point**
 - **Device name**
-- **Disaster recovery status**
+- **Disaster recover status**
   - **Active outage**
   - **Activation expiring**
   - **Not active**
@@ -64,7 +64,7 @@ You can use the **Columns** and **Add filter** options to customize the report. 
 - **Activation expiration**
 - **Configuration alert**
 - **Cross region enabled**
-- **Disaster recovery status**
+- **Disaster recover status**
 - **License type**
 
 <!-- ########################## -->
