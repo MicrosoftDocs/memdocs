@@ -526,7 +526,7 @@ This account requires local administrative permissions on the target site system
 > [!TIP]
 > If you have many domain controllers and these accounts are used across domains, before you set up the site system, check that Active Directory has replicated these accounts.
 >
-> When you specify a local account on each site system to be managed, this configuration is more secure than using domain accounts. It limits the damage that attackers can do if the account is compromised. However, domain accounts are easier to manage. Consider the trade-off between security and effective administration.
+> When you specify a service account on each site system to be managed, this configuration is more secure. It limits the damage that attackers can do. However, domain accounts are easier to manage. Consider the trade-off between security and effective administration.
 
 ### Site system proxy server account
 
