@@ -364,12 +364,12 @@ The site server uses the **Exchange Server connection account** to connect to th
 
 ### Management point connection account
 
-The management point uses the **Management point connection account** to connect to the Configuration Manager site database. It uses this connection to send and retrieve information for clients. The management point uses its computer account by default, but you can configure an alternate account instead. When the management point is in an untrusted domain from the site server, you must specify a alternate user account.
+The management point uses the **Management point connection account** to connect to the Configuration Manager site database. It uses this connection to send and retrieve information for clients. The management point uses its computer account by default, but you can configure an alternate service account instead. When the management point is in an untrusted domain from the site server, you must specify a alternate service account.
 
   > [!NOTE]
-  > For enhanced security posture it is recommended to leverage alternate account rather than Computer account for ‘Management point connection account’.
+  > For enhanced security posture it is recommended to leverage alternate service account rather than Computer account for ‘Management point connection account’.
 
-Create the account as a low-right local account on the computer that runs Microsoft SQL Server.
+Create the account as a low-right service account on the computer that runs Microsoft SQL Server.
 
 > [!IMPORTANT]
 > - Don't grant interactive sign-in rights to this account.
@@ -377,12 +377,15 @@ Create the account as a low-right local account on the computer that runs Micros
 
 ### Multicast connection account
 
-Multicast-enabled distribution points use the **Multicast connection account** to read information from the site database. The server uses its computer account by default, but you can configure a user account instead. When the site database is in an untrusted forest, you must specify a user account. For example, if your data center has a perimeter network in a forest other than the site server and site database, use this account to read the multicast information from the site database.
+Multicast-enabled distribution points use the **Multicast connection account** to read information from the site database. The server uses its computer account by default, but you can configure a service account instead. When the site database is in an untrusted forest, you must specify a service account. For example, if your data center has a perimeter network in a forest other than the site server and site database, use this account to read the multicast information from the site database.
 
-If you need this account, create it as a low-right local account on the computer that runs Microsoft SQL Server.
+If you need this account, create it as a low-right service account on the computer that runs Microsoft SQL Server.
+
+> [!NOTE]
+  > For enhanced security posture it is recommended to leverage service account rather than Computer account for ‘Multicast connection account’.
 
 > [!IMPORTANT]
-> Don't grant interactive sign-in rights to this account.
+> Don't grant interactive sign-in rights to this service account.
 
 For more information, see [Use multicast to deploy Windows over the network](../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).
 
