@@ -251,9 +251,9 @@ The following policy types support the *macOS* platform.
 | Antivirus                            | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Endpoint detection and response | Endpoint detection and response |  ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 
-### Windows 10, Windows 11, and Windows Server
+### Windows
 
-To support use with Microsoft Defender security settings management, your policies for Windows devices must use the *Windows 10, Windows 11, and Windows Server* platform. Each profile for the *Windows 10, Windows 11, and Windows Server* platform can apply to devices that are managed by Intune and to devices that are managed by security settings management.
+To support use with Microsoft Defender security settings management, your policies for Windows devices must use the *Windows* platform. Each profile for the *Windows* platform can apply to devices that are managed by Intune and to devices that are managed by security settings management.
 
 | Endpoint security policy | Profile | Defender for Endpoint security settings management  |  Microsoft Intune |
 |---------|----------|-----------|----------|
