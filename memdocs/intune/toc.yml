@@ -1169,7 +1169,7 @@ items:
         - name: Domain Join on Windows
           href: ./configuration/domain-join-configure.md
           displayName: enrollment, active directory, azure ad joined, join domain
-        - name: Update Windows
+        - name: Delivery Optimization
           href: ./configuration/delivery-optimization-windows.md
           displayName: delivery optimization, windows updates
         - name: Upgrade Windows and S mode
