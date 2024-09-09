@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 04/24/2024
+ms.date: 09/06/2024
 ms.localizationpriority: high
 ---
 
@@ -12,11 +12,11 @@ ms.localizationpriority: high
 
 - **User assigned devices** - devices enrolled with user affinity using Automated Device Enrollment or personally enrolled devices.
   - iOS/iPadOS 15.x and later
-  - macOS 12.0 and later
+  - macOS 13.0 and later
 - **User-less devices** - devices enrolled without user affinity using Automated Device Enrollment or Apple Configurator.
   - Supported:
     - iOS/iPadOS 15.x and later
-    - macOS 12.0 and later
+    - macOS 13.0 and later
   - Allowed to enroll:
     - iOS/iPadOS 12.x and later
     - macOS 10.14 and later
