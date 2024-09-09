@@ -80,7 +80,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 #### Intune now supports macOS 13.x as the minimum version<!-- 28391869 -->
 
-With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Big Sur) and later.
+With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Ventura) and later.
 
 For more information on this change, go to [Plan for change:  Intune is moving to support macOS 13 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year)
 
