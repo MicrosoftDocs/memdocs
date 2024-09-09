@@ -76,6 +76,36 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
+## Week of September 9, 2024
+
+### Device management
+
+#### Intune now supports iOS/iPadOS 16.x as the minimum version<!-- 28391935 -->
+
+Later this year, we expect iOS 18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require iOS/iPadOS 16 and higher shortly after the iOS/iPadOS 18 release.
+
+For more information on this change, go to [Plan for change: Intune is moving to support iOS/iPadOS 16 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-iosipados-16-and-later).
+
+> [!NOTE]
+> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
+
+Applies to:
+
+- iOS/iPadOS
+
+#### Intune now supports macOS 13.x as the minimum version<!-- 28391869 -->
+
+With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Ventura) and later.
+
+For more information on this change, go to [Plan for change:  Intune is moving to support macOS 13 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year)
+
+> [!NOTE]
+> macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
+
+Applies to:
+
+- macOS
+
 ## Week of August 19, 2024 (Service release 2408)
 
 ### Microsoft Intune Suite
