@@ -90,7 +90,7 @@ Complete these steps to enable multi-factor authentication during Microsoft Intu
 After you apply and deploy this policy, users will see a one-time MFA prompt when they enroll their device. 
 
 > [!NOTE]
-> A second device is required to complete the MFA challenge for these types of corporate-owned devices:  
+> A second device or a Temporary Access Pass is required to complete the MFA challenge for these types of corporate-owned devices:  
 >
 > - Android Enterprise fully managed devices  
 > - Android Enterprise corporate-owned devices with a work profile  
