@@ -97,6 +97,9 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 
 *Known issue*: With the Defender agent version **101.23052.0009**, Linux devices fail to enroll when they're missing the following filepath: `/sys/class/dmi/id/board_vendor`.
 
+*Known issue*: When a Linux device performs synthetic registration the Device Entra ID (formerly known as Device AAD ID) will not be visible in the Defender portal. This information can be viewed from the Intune or Entra portals. Administrators will still be able to manage devices with policies in this manner. 
+
+
 **macOS**:
 
 With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac#system-requirements) agent version **101.23052.0004** or later, security settings management supports the following macOS versions:
@@ -109,6 +112,8 @@ With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defende
 To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for macOS*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-updates).
 
 *Known issue*: With the Defender agent version **101.23052.0004**, macOS devices that are registered in Microsoft Entra ID before enrolling with security settings management receive a duplicate Device ID in Microsoft Entra ID, which is a synthetic registration. When you create a Microsoft Entra group for targeting policy, you must use the synthetic Device ID created by security settings management. In Microsoft Entra ID, the *Join Type* column for the synthetic Device ID  is blank.
+
+*Known issue*: When a macOS device performs synthetic registration the Device Entra ID (formerly known as Device AAD ID) will not be visible in the Defender portal. This information can be viewed from the Intune or Entra portals. Administrators will still be able to manage devices with policies in this manner. 
 
 **Windows**:
 
@@ -246,9 +251,9 @@ The following policy types support the *macOS* platform.
 | Antivirus                            | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Endpoint detection and response | Endpoint detection and response |  ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 
-### Windows 10, Windows 11, and Windows Server
+### Windows
 
-To support use with Microsoft Defender security settings management, your policies for Windows devices must use the *Windows 10, Windows 11, and Windows Server* platform. Each profile for the *Windows 10, Windows 11, and Windows Server* platform can apply to devices that are managed by Intune and to devices that are managed by security settings management.
+To support use with Microsoft Defender security settings management, your policies for Windows devices must use the *Windows* platform. Each profile for the *Windows* platform can apply to devices that are managed by Intune and to devices that are managed by security settings management.
 
 | Endpoint security policy | Profile | Defender for Endpoint security settings management  |  Microsoft Intune |
 |---------|----------|-----------|----------|
