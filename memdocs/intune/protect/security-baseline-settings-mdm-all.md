@@ -110,7 +110,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipsourceroutingprotectionlevel)
   - **DisableIPSourceRouting (Device)**  
-    Baseline default: *Enabled*  *Highest protection, source routing is completely disabled*
+    Baseline default: *Highest protection, source routing is completely disabled*
 
 - **MSS: (EnableCMPRedirect) Allow ICMP redirects to override OSPF generated routes**  
   Baseline default: *Disabled*  
