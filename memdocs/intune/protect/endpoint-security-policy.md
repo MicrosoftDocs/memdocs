@@ -183,8 +183,9 @@ After creating the new policy, review and edit the policy to make changes to its
 ### To duplicate a policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select the policy that you want to copy. Next, select **Duplicate**. If *Duplicate* isn't available, select the ellipsis (**…**) to the right of the policy and then select **Duplicate**.
-3. Provide a **New name** for the policy, and then select **Save**.
+2. Locate the policy that you want to copy from the policy list, and then select the ellipsis (**…**) for that line to open the *Context menu*.
+3. Select **Duplicate**.
+4. Provide a **New name** for the policy, and then select **Save**.
 
 ### To edit a policy
 

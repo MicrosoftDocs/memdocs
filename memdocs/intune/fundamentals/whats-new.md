@@ -78,6 +78,11 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of September 9, 2024
 
+### App management
+
+#### Managed Home Screen user experience update<!-- 28232751 -->
+All Android devices will be automatically migrated to the updated Managed Home Screen (MHS) user experience. For more information, see [Updates to the Managed Home Screen experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-managed-home-screen-experience/bc-p/3997842).
+
 ### Device management
 
 #### Intune now supports iOS/iPadOS 16.x as the minimum version<!-- 28391935 -->
