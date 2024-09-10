@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/23/2024
+ms.date: 09/10/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -241,25 +241,6 @@ Applies to:
 
 - iOS/iPadOS
 - macOS
-
-### Support ending for Apple User Enrollment with Company Portal<!-- 28361917 -->
-
-After the release of iOS/iPadOS 18, Apple will no longer support profile-based Apple User Enrollment. As a result, Intune will end support for [user enrollment with Company Portal](../enrollment/apple-user-enrollment-with-company-portal.md) shortly after the release of iOS/iPadOS 18.
-
-After Intune ends support for user enrollment with Company Portal:
-
-- Existing enrolled devices won't be impacted.
-- Users won't be able to enroll devices if they're targeted with this enrollment profile type.
-- Microsoft Intune technical support will be available for existing enrolled devices with this enrollment profile type. Technical support won't be available for new enrollments.
-
-To prepare, use a different management method to enroll devices. We recommend account-driven Apple User Enrollment for similar functionality and an improved user experience. For a simpler enrollment experience, try web- based device enrollment. For more information, see:
-
-- [Set up account-driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md)
-- [Set up web-based device enrollment for iOS/iPadOS](../enrollment/web-based-device-enrollment-ios.md)
-
-Applies to:
-
-- iOS/iPadOS
 
 <!-- *********************************************** -->
 
