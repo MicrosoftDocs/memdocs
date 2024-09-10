@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/23/2024
+ms.date: 09/10/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -81,9 +81,25 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### App management
 
 #### Managed Home Screen user experience update<!-- 28232751 -->
-All Android devices will be automatically migrated to the updated Managed Home Screen (MHS) user experience. For more information, see [Updates to the Managed Home Screen experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-managed-home-screen-experience/bc-p/3997842).
+All Android devices will be automatically migrated to the updated Managed Home Screen (MHS) user experience. For more information, see [Updates to the Managed Home Screen experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-managed-home-screen-experience/bc-p/3997842).  
 
-### Device management
+### Device enrollment  
+
+#### Support has ended for Apple User Enrollment with Company Portal<!-- 28361917 -->
+
+Apple supports two types of manual enrollment methods for users and devices in bring-your-own-device (BYOD) scenarios: *profile-driven enrollment* and *account-driven enrollment*.  Apple has ended support for profile-driven user enrollment, known in Intune as *user enrollment with Company Portal*. This method was their privacy-focused BYOD enrollment flow that used managed Apple IDs. As a result of this change, Intune has ended support for [profile-driven user enrollment with Company Portal](../enrollment/apple-user-enrollment-with-company-portal.md). Users can no longer enroll devices that are targeted with this enrollment profile type. Devices already enrolled with this profile type aren't impacted by this change, so you can continue to manage them in the admin center and receive Microsoft Intune technical support.  
+
+There is no change to profile-driven device enrollment with Company Portal, the default enrollment method for BYOD scenarios. Devices enrolled via Apple automated device enrollment also remain unaffected.  
+
+We recommend account-driven user enrollment as a replacement method for devices. For more information about your BYOD enrollment options, see: 
+
+* [Account-driven user enrollment](../enrollment/apple-account-driven-user-enrollment.md)
+
+* [Web-based device enrollment](../enrollment/web-based-device-enrollment-ios.md)
+
+* [Device enrollment with Company Portal](../enrollment/ios-device-enrollment#app-or-web-based-enrollment.md)(default enrollment method for BYOD scenarios)  
+
+### Device management  
 
 #### Intune now supports iOS/iPadOS 16.x as the minimum version<!-- 28391935 -->
 
