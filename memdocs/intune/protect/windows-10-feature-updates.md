@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/15/2024
+ms.date: 09/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
