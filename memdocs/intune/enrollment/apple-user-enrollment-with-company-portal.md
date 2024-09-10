@@ -32,6 +32,8 @@ ms.collection:
 
 # Set up user enrollment with Company Portal  
 
+>[!NOTE] Microsoft Intune doesn't support this enrollment profile type for newly enrolled devices. This article is only applicable for existing enrollment profiles in Intune.   
+
 Set up user enrollment with Company Portal for iOS/iPadOS personal devices enrolling in Microsoft Intune. This Apple User Enrollment method gives you access to a limited but appropriate set of device management settings and actions, so you can protect work data without affecting the device user's personal data or apps. 
 
 When the device owner attempts to sign into an app with their work or school account, Intune prompts them to enroll their device and provides instructions for next steps. The device user authenticates and initiates enrollment by signing into the Intune Company Portal app. From there, they're redirected to Safari and the device settings app, where they download and install the enrollment profile. 
