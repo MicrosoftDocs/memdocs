@@ -97,7 +97,7 @@ We recommend account-driven user enrollment as a replacement method for devices.
 
 * [Web-based device enrollment](../enrollment/web-based-device-enrollment-ios.md)
 
-* [Device enrollment with Company Portal](../enrollment/ios-device-enrollment#app-or-web-based-enrollment.md)(default enrollment method for BYOD scenarios)  
+* [Device enrollment with Company Portal](../enrollment/ios-device-enrollment#app-or-web-based-enrollment.md) (default enrollment method for BYOD scenarios)  
 
 ### Device management  
 
