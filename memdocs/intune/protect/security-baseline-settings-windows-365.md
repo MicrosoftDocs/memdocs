@@ -1328,7 +1328,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordenabled)
  
-  -  - **Device Password History**  
+  - **Device Password History**  
     Baseline default: *Configured*  
     Value: *24*  
     [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordhistory)
