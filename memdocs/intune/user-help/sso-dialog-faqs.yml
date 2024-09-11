@@ -115,10 +115,10 @@ sections:
       - question: |
           For administrator reference
         answer: |
-          [Conditional Access](/entra/identity/conditional-access/overview) policies are used by administrators to protect resources.
+          - [Conditional Access](/entra/identity/conditional-access/overview) policies are used by administrators to protect resources.
 
-          Applications configured to work with Windows [Web Account Manager](/entra/identity-platform/scenario-desktop-acquire-token-wam) authentication broker provide you with SSO and other [security features](/entra/identity/conditional-access/concept-token-protection).
+          - Applications configured to work with Windows [Web Account Manager](/entra/identity-platform/scenario-desktop-acquire-token-wam) authentication broker provide you with SSO and other [security features](/entra/identity/conditional-access/concept-token-protection).
 
-          All Microsoft Entra customers are prompted to sign in using Web Account Manager if the app and operating system support it.
+          - All Microsoft Entra customers are prompted to sign in using Web Account Manager if the app and operating system support it.
 
-          [Learn more about mobile device management](/mem/intune/fundamentals/what-is-device-management).
+          - [Learn more about mobile device management](/mem/intune/fundamentals/what-is-device-management).
