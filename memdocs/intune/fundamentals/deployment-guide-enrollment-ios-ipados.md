@@ -350,7 +350,7 @@ The tasks depend on the option you configured in the enrollment profile.
 
 These iOS/iPadOS devices are personal or BYOD (bring your own device) devices that can access organization email, apps, and other data. Starting with iOS 13 and newer, this enrollment option targets users or targets devices. It doesn't require resetting the devices.
 
-When you create the enrollment profile, you're asked to choose **User enrollment with Company Portal**, **Device enrollment with Company Portal**, **Account driven user enrollment**, or **Determine based on user choice**.
+When you create the enrollment profile, you're asked to choose **Device enrollment with Company Portal**, **Account driven user enrollment**, or **Determine based on user choice**.
 
 For the specific enrollment steps, and its prerequisites, go to [Set up iOS/iPadOS user enrollment](../enrollment/ios-user-enrollment.md) and [Set up iOS/iPadOS device enrollment](../enrollment/ios-device-enrollment.md).  
 
@@ -387,7 +387,7 @@ This task list provides an overview. For more specific information, go to [Set u
 
   - **Determine based on user choice**: Gives end users a choice when they enroll. Depending on their selection, **User enrollment** or **Device enrollment** is used.  
 
-  - **User enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, like password, per-app VPN, Wi-Fi, and Siri. If you use User enrollment, and to help secure apps and their data, then we recommend also using app protection policies.
+  - **Account driven user enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, like password, per-app VPN, Wi-Fi, and Siri. If you use this method, and to help secure apps and their data, then we recommend also using app protection policies.
 
     For the complete list of what you can and can't do, go to [Intune actions and options supported with Apple User Enrollment](../enrollment/ios-user-enrollment-supported-actions.md). For the specific user enrollment steps, go to [Set up iOS/iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).
 
