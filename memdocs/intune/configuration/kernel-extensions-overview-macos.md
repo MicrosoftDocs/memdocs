@@ -115,7 +115,7 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
 ## Create the kernel extension policy
 
 > [!IMPORTANT]
-> This macOS extensions template is deprecated in the August 2024 service release (2408). Existing policies continue to work. But, you cann't create new policies using this template.
+> This macOS extensions template is deprecated in the August 2024 service release (2408). Existing policies continue to work. But, you can't create new policies using this template.
 >
 > Instead, use the settings catalog to create new policies that configure the System Extension payload. To learn more about the settings catalog, go to [settings catalog](settings-catalog.md).
 
