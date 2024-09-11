@@ -8,7 +8,7 @@ keywords: macos, kernel extensions, system extensions, microsoft intune, endpoin
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 09/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -115,7 +115,9 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
 ## Create the kernel extension policy
 
 > [!IMPORTANT]
-> The macOS extensions template has been deprecated in the August 2024 service release. Existing policies will remain unchanged; however, you can no longer create new policies using this template and it is recommended to use the settings catalog to create new policies that configure the System Extension payload. Learn more about configuring this payloads using the [macOS settings catalog](https://learn.microsoft.com/en-us/mem/intune/configuration/settings-catalog?tabs=sc-search-filter%2Csc-reporting).
+> This macOS extensions template is deprecated in the August 2024 service release (2408). Existing policies continue to work. But, you cann't create new policies using this template.
+>
+> Instead, use the settings catalog to create new policies that configure the System Extension payload. To learn more about the settings catalog, go to [settings catalog](settings-catalog.md).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
