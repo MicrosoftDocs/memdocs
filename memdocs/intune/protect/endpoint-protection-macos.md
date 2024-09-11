@@ -32,7 +32,8 @@ ms.collection:
 # macOS endpoint protection settings in Intune
 
 > [!IMPORTANT]
-> This template has been deprecated in the August 2024 service release. Existing policies will remain unchanged; however, you can no longer create new policies using this template and it is recommended to use the settings catalog to create new policies that configure the FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. Learn more about configuring these payloads using the settings catalog. [insert link]
+> This template has been deprecated in the August 2024 service release. Existing policies will remain unchanged; however, you can no longer create new policies using this template and it is recommended to use the settings catalog to create new policies that configure the FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. Learn more about configuring these payloads using the [macOS settings catalog](https://learn.microsoft.com/en-us/mem/intune/configuration/settings-catalog?tabs=sc-search-filter%2Csc-reporting)
+
 This article shows you the endpoint protection settings that you can configure for devices that run macOS. You configure these settings by using a macOS device configuration profile for [endpoint protection](endpoint-protection-configure.md) in Intune.
 
 ## Before you begin
