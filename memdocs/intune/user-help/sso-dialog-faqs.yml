@@ -11,6 +11,8 @@ metadata:
   #customer intent: As an Entra account holder, I want to add my account to the device so that I am compliant with my organization's security requirements.
 title: Adding your Microsoft Entra account to a device
 summary: |
+    **The changes to the single sign-on enrollment page mentioned in this article are scheduled for October of 2024.**
+    
     This article provides answers to some frequently asked questions (FAQ) about adding your Microsoft Entra account to a device.
 
 sections:
@@ -24,7 +26,7 @@ sections:
           :::image type="content" source="media/sso-dialog-faqs/sso-consent-screen-no-mdm.png" alt-text="Screenshot of the SSO dialog enrollment page." lightbox="media/sso-dialog-faqs/sso-consent-screen-no-mdm.png":::
 
       - question: |
-          What does selecting **Yes, all apps** do?
+          What does selecting "Yes, all apps" do?
         answer: |
           You're automatically signed in to desktop apps that use your work or school account. You don't have to enter your credentials when you open these apps.
 
@@ -37,16 +39,16 @@ sections:
           > Signing out of any individual app doesn't remove your account from your device. Signing out of a desktop app doesn't remove your account from the device. You must sign out of all apps via settings or [https://account.microsoft.com/devices](https://account.microsoft.com/devices) to remove your account from the device.
     
       - question: |
-          What does selecting **No, this app only** do?
+          What does selecting "No, this app only" do?
         answer: |
-          You're signed in to the individual app that you're currently trying to sign in to. Your account isn't added to the device and it isn't shown in the Windows Settings app under Accounts. You aren't signed in to other apps and you aren't enrolled in [mobile device management](/windows/client-management/mdm-overview).  
+          You're signed in to the individual app that you're currently trying to sign in to. Your account isn't added to the device and it isn't shown in the Windows Settings app under Accounts. You aren't signed in to other apps.  
  
   - name: Mobile device management
     questions:
       - question: |
           What is mobile device management?
         answer: |
-          [Mobile device management (MDM)](/windows/client-management/mdm-overview) lets your administrator manage security and applications on your personal or corporate device without compromising your privacy. It's how organizations make sure only authorized people and devices access apps and resources. If your company enables mobile device management, you see the following version of the dialog and you can enroll by checking the **Allow my organization to manage this device** checkbox.
+          [Mobile device management (MDM)](/windows/client-management/mdm-overview) lets your administrator manage security and applications on your personal or corporate device without compromising your privacy. It's how organizations make sure only devices that are up to date and configured with required security policies are able to access apps and resources. If your company enables mobile device management, you see the following version of the dialog and you can enroll by checking the **Allow my organization to manage this device** checkbox.
 
           :::image type="content" source="media/sso-dialog-faqs/sso-consent-screen-mdm.png" alt-text="Screenshot of the SSO dialog enrollment page with MDM enrollment." lightbox="media/sso-dialog-faqs/sso-consent-screen-mdm.png":::
 
@@ -63,7 +65,7 @@ sections:
       - question: |
           What happens if I check the device management checkbox but don't sign in to all apps, I sign in to this app only?
         answer: |
-          [Mobile device management](/windows/client-management/mdm-overview) isn't activated. If you select **No, this app only**, mobile device management isn't activated even if the checkbox is checked. Mobile device management can only be turned on if you select **Yes, all apps**.
+          [Mobile device management](/windows/client-management/mdm-overview) isn't activated. If you select "No, this app only," mobile device management isn't activated even if the checkbox is checked. Mobile device management can only be turned on if you select "Yes, all apps."
 
       - question: |
           What happens if I uncheck the device management checkbox but sign in to all apps?
@@ -115,10 +117,10 @@ sections:
       - question: |
           For administrator reference
         answer: |
-          - [Conditional Access](/entra/identity/conditional-access/overview) policies are used by administrators to protect resources.
+          [Conditional Access](/entra/identity/conditional-access/overview) policies are used by administrators to protect resources.
 
-          - Applications configured to work with Windows [Web Account Manager](/entra/identity-platform/scenario-desktop-acquire-token-wam) authentication broker provide you with SSO and other [security features](/entra/identity/conditional-access/concept-token-protection).
+          Applications configured to work with Windows [Web Account Manager](/entra/identity-platform/scenario-desktop-acquire-token-wam) authentication broker provide you with SSO and other [security features](/entra/identity/conditional-access/concept-token-protection).
 
-          - All Microsoft Entra customers are prompted to sign in using Web Account Manager if the app and operating system support it.
+          All Microsoft Entra customers are prompted to sign in using Web Account Manager if the app and operating system support it.
 
-          - [Learn more about mobile device management](/mem/intune/fundamentals/what-is-device-management).
+          [Learn more about mobile device management](/mem/intune/fundamentals/what-is-device-management).
