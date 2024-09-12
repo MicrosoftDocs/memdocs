@@ -3,7 +3,7 @@ metadata:
   title: Windows Autopilot troubleshooting FAQ
   description: Troubleshooting of common Windows Autopilot issues
   ms.service: windows-client
-  ms.subservice: itpro-deploy
+  ms.subservice: autopilot
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj

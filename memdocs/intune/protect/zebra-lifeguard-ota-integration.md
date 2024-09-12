@@ -111,6 +111,9 @@ In the Microsoft Intune admin center, you can link Intune and Zebra.
 
 6. After the authorization process is complete, an enrollment token will auto-populate within the context panel. If the token doesn't appear, select **Refresh**. Copy the enrollment token to your clipboard, as you'll need the token later.
 
+  > [!NOTE]
+  > Before you select **Copy** from the context panel, make sure to select **Show Token**. Not doing this will send asterisks to your clipboard rather than the token value.
+
 ## Step 2: Enroll Devices with Zebra LG OTA Service
 
 You must enroll devices separately with the Zebra LG OTA service before devices can be updated. We recommend that you identify which devices need to be updated and used with LG OTA. Then create a group containing only those devices, to make the enrollment process easier.

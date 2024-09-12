@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/18/2024
+ms.date: 08/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -34,12 +34,12 @@ You can utilize Apple User Enrollment to enroll and manage user-owned iOS/iPadOS
 
 This article provides an overview of the Apple User Enrollment features and functionality supported by Microsoft Intune. 
 
-## Apple User Enrollment methods 
+## Apple User Enrollment methods  
 
-> [!IMPORTANT]
-> The account driven user enrollment feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+>[!IMPORTANT]
+> Apple user enrollment with Company Portal has been deprecated as an enrollment option, and is no longer available for newly enrolled devices. Microsoft Intune product and technical support remains available to devices that already have the enrollment profile. For new enrollments, we recommend account-driven user enrollment. 
 
-Microsoft Intune supports account driven Apple User Enrollment and Apple User Enrollment with Company Portal.   
+Microsoft Intune supports account driven Apple User Enrollment and profile based Apple User Enrollment with Company Portal. 
 
 * Account driven user enrollment: Also referred to as *account-based enrollment*. The device user initiates enrollment by going to the **Settings** app > **VPN & Device Management** and adding their work or school account. After the device user approves device management, the enrollment profile silently installs, and Intune policies are applied.
 

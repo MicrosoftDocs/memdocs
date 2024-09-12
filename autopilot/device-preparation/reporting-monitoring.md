@@ -2,7 +2,7 @@
 title: Windows Autopilot device preparation reporting and monitoring
 description: Reporting and monitoring in Windows Autopilot device preparation.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

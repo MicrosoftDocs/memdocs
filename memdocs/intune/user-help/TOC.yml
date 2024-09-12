@@ -200,6 +200,8 @@ items:
       href: enroll-windows-10-device.md
     - name: Unenroll device
       href: unenroll-your-device-from-intune-windows.md
+    - name: Enrollment dialog FAQs
+      href: sso-dialog-faqs.yml
 
   - name: Company Portal app for Windows
     items:
