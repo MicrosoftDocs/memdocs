@@ -207,6 +207,8 @@ This feature supports:
 
 ## Endpoint protection
 
+> [!IMPORTANT]
+> This template has been deprecated in the August 2024 service release. Existing policies will remain unchanged; however, you can no longer create new policies using this template and it is recommended to use the settings catalog to create new policies that configure the FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. Learn more about configuring these payloads using the [macOS settings catalog](/mem/intune/configuration/settings-catalog?tabs=sc-search-filter%2Csc-reporting).
 [Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows client devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
 
 To onboard Microsoft Defender for Endpoint with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
@@ -228,6 +230,8 @@ This feature supports:
 
 ## Extensions
 
+> [!IMPORTANT]
+> This template has been deprecated in the August 2024 service release. Existing policies will remain unchanged; however, you can no longer create new policies using this template and it is recommended to use the settings catalog to create new policies that configure the System Extensions payload. Learn more about configuring this payload using the [macOS settings catalog](/mem/intune/configuration/settings-catalog?tabs=sc-search-filter%2Csc-reporting).
 [macOS system extensions and kernel extensions](kernel-extensions-overview-macos.md) allows administrators to add features or programs that extend the native capabilities of the operating system. Configure these settings to trust all extensions from a specific developer or partner, or allow specific extensions.
 
 This feature supports:
