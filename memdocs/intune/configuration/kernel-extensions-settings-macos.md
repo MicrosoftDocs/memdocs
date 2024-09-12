@@ -29,8 +29,8 @@ ms.collection:
 # macOS device settings to configure and use kernel and system extensions in Intune
 
 > [!IMPORTANT]
-> This template has been deprecated in the August 2024 service release. Existing policies will remain unchanged; however, you can no longer create new policies using this template and it is recommended to use the settings catalog to create new policies that configure the System Extension payload. Learn more about configuring this payloads using the settings catalog. [insert link]
-> 
+> This template has been deprecated in the August 2024 service release. Existing policies will remain unchanged; however, you can no longer create new policies using this template and it is recommended to use the settings catalog to create new policies that configure the System Extensions payload. Learn more about configuring this payload using the [macOS settings catalog](/mem/intune/configuration/settings-catalog?tabs=sc-search-filter%2Csc-reporting).
+
 > [!NOTE]
 >
 > - [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
