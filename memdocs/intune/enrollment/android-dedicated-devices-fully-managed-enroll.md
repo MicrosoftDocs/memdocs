@@ -160,9 +160,12 @@ For corporate-owned work profile (COPE) devices, the NFC enrollment method is on
 ## Enroll by using a token  
 We recommend this method for new or factory-reset devices, in scenarios where the QR code or NFC method aren't available. It requires the person provisioning the device to type in the enrollment token string (example: `12345`) that they're provided. When you're ready for enrollment, share the token directly with targeted users or post it to your organization's support site for easy retrieval. The token works for all Intune-licensed users and doesn't expire.   
 
-This method is supported on corporate-owned devices running Android 8.0 and later. It isn't supported with device enrollment manager accounts. 
+This method is supported on corporate-owned devices running Android 8.0 and later. It isn't supported on: 
 
-You can use this method in conjunction with the Microsoft Intune DPC identifier to set up fully managed devices. The DPC identifier method isn't supported on corporate-owned, personally enabled (COPE) devices running Android 11 and later.    
+* Corporate-owned, personally enabled (COPE) devices running Android 11 and later.  
+* Devices enrolled via device enrollment manager accounts.    
+
+You can use this method in conjunction with the Microsoft Intune DPC identifier to set up fully managed devices.
 
 1. Turn on the device.  
 2. On the **Welcome** screen, select your language.  

@@ -39,7 +39,7 @@ Use the information and procedures in this article to configure integration of M
 - **Use Intune policy to onboard devices with Microsoft Defender for Endpoint**. You onboard devices to configure them to communicate with Microsoft Defender for Endpoint and to provide data that helps assess their risk level.
 - **Use Intune device compliance policies to set the level of risk you want to allow**. Microsoft Defender for Endpoint reports a devices risk level. Devices that exceed the allowed risk level are identified as noncompliant.
 - **Use a conditional access policy** to block users from accessing corporate resources from devices that are noncompliant.
-- **Use** [**app protection policies**](../protect/mtd-app-protection-policy.md) for Android and iOS/iPadOS, to set device risk levels. App protection polices work with both enrolled and unenrolled devices.
+- **Use** [**app protection policies**](../protect/mtd-app-protection-policy.md) for Android and iOS/iPadOS, to set device risk levels. App protection policies work with both enrolled and unenrolled devices.
 
 In addition to managing settings for Microsoft Defender for Endpoint on devices that enroll with Intune, you can manage Defender for Endpoint security configurations on devices that aren’t enrolled with Intune. This scenario is called *Security Management for Microsoft Defender for Endpoint* and requires configuring the *Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations* toggle to *On*. For more information, see [MDE Security Configuration Management](../protect/mde-security-integration.md).
 
