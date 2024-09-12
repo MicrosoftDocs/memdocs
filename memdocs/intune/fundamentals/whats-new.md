@@ -1029,7 +1029,7 @@ When frontline workers receive the devices, all they have to do is connect to Wi
 
 End users can now view the BitLocker Recovery Key for enrolled Windows devices from the Company Portal website. This capability can reduce helpdesk calls in the event the end user gets locked out of their corporate machines. End users can access the recovery key for an enrolled device by signing into the Company Portal website and selecting **Show recovery key**. This experience is similar to the MyAccount website, which also allows end users to see recovery keys.
 
-You can prevent end users within your organization from accessing BitLocker recovery keys by configuring the Entra ID toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**.
+You can prevent end users within your organization from accessing BitLocker recovery keys by configuring the Microsoft Entra toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**.
 
 For more information, see:
 
