@@ -48,8 +48,7 @@ Before you create a profile, review the following articles that detail the Endpo
 ## Create a device profile containing Endpoint protection settings
 
 > [!IMPORTANT]
-> The macOS endpoint protection template has been deprecated in the August 2024 service release. Existing policies will remain unchanged; however, you can no longer create new policies using this template and it is recommended to use the settings catalog to create new policies that configure the FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. Learn more about configuring these payloads using the settings catalog. [insert link]
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> The macOS endpoint protection template has been deprecated in the August 2024 service release. Existing policies will remain unchanged; however, you can no longer create new policies using this template and it is recommended to use the settings catalog to create new policies that configure the FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. Learn more about configuring these payloads using the [macOS settings catalog](https://learn.microsoft.com/en-us/mem/intune/configuration/settings-catalog?tabs=sc-search-filter%2Csc-reporting)
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
 
