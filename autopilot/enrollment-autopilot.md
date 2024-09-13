@@ -5,7 +5,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 09/13/2024
 ms.topic: how-to
 ms.localizationpriority: high
 ms.service: windows-client
