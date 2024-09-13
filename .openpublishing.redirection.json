@@ -2742,12 +2742,12 @@
     },
     {
       "source_path": "autopilot/windows-autopilot-hybrid.md#device-enrollment-prerequisites",
-      "redirect_url": "autopilot/windows-autopilot-hybrid#device-enrollment-prerequisites",
+      "redirect_url": "autopilot/windows-autopilot-hybrid#device-enrollment-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/windows-autopilot-hybrid.md#intune-connector-server-prerequisites",
-      "redirect_url": "autopilot/windows-autopilot-hybrid#intune-connector-server-prerequisites",
+      "redirect_url": "autopilot/windows-autopilot-hybrid#intune-connector-server-requirements",
       "redirect_document_id": false
     }
   ]
