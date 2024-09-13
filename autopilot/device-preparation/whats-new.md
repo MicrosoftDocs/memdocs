@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 08/21/2024
+ms.date: 09/13/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -30,6 +30,14 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+<!-- MAXADO-9313795 / INADO-28687730 -->
+
+## enrollmentProfileName property is now populated with the Device preparation policy name
+
+Date added: *September 13, 2024*
+
+As part of the 2409 Intune release, the **enrollmentProfileName** property is now populated with the Device preparation policy name during Autopilot device preparation deployments. The Enrollment profile property of Intune and Microsoft Entra device objects will automatically be populated with the name of the Device preparation policy that was applied to the device during provisioning. This will enable admins to configure assignment filters and dynamic groups based on the **enrollmentProfileName** property for configurations post-enrollment.
 
 <!-- INADO-28533819 -->
 
