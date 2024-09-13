@@ -5,7 +5,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 09/13/2024
 ms.topic: how-to
 ms.localizationpriority: high
 ms.service: windows-client
@@ -92,10 +92,6 @@ For more information including a list of supported OEMs, see [Return of key func
 > [!NOTE]
 >
 > Assigning a licensed user to a specific Autopilot device only affects pre-populating the UPN and setting of a custom greeting name. It doesn't affect assigned policies and applications that are deployed to the device or to the user. The assigned policies and applications are still deployed regardless of the OEM. For more information, see [Windows Autopilot for pre-provisioned deployment](pre-provision.md#preparation).
-
-Prerequisites:
-
-- Microsoft Entra ID [Company Branding](/azure/active-directory/fundamentals/customize-branding) is configured.
 
 > [!IMPORTANT]
 >
