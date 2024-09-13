@@ -75,7 +75,7 @@ For devices that run Android, you can use Intune policy to modify the configurat
 **Subscriptions**:  
 To use Microsoft Defender for Endpoint with Intune, you must have the following subscriptions:
 
-- **Microsoft Defender for Endpoint** - This subscription provides you access to the Microsoft Defender Security Center ([Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139)).
+- **Microsoft Defender for Endpoint** - This subscription provides you access to the Microsoft [Defender Security Center](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
   For Defender for Endpoint licensing options, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) and [How to set up a Microsoft 365 E5 Trial Subscription](/microsoft-365/security/defender/setup-m365deval#enable-microsoft-365-trial-subscription).
 

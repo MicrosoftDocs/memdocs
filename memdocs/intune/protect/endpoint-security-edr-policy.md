@@ -61,7 +61,7 @@ Based on the platform a policy targets, EDR policies for devices you manage with
 > [!TIP]
 > In addition to EDR policy, you can use [device configuration](../protect/advanced-threat-protection-configure.md) policy to onboard devices to Microsoft Defender for Endpoint. However, device configuration policies don't support tenant attached devices.
 >
-> When using multiple polices or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
+> When using multiple policies or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
 
 ## Prerequisites for EDR policies
 
@@ -78,7 +78,7 @@ Based on the platform a policy targets, EDR policies for devices you manage with
 
   To set up tenant attach, including the synchronization of Configuration Manager collections to the Microsoft Intune admin center and enabling them to work with policies for endpoint security, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
-  For more information about using EDR polices with tenant attached devices, see [Set up Configuration Manager to support EDR policy](#set-up-configuration-manager-to-support-edr-policy) in this article.
+  For more information about using EDR policies with tenant attached devices, see [Set up Configuration Manager to support EDR policy](#set-up-configuration-manager-to-support-edr-policy) in this article.
 
 ## Role-based access controls (RBAC)
 

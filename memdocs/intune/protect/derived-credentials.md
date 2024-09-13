@@ -120,7 +120,7 @@ Depending on the issuer you choose, you might need staff to be available at the 
 
 For example, you might use conditional access to block access to email for noncompliant devices. If you rely on email notifications to inform the user to start the derived credential enrollment process, your users might not receive those instructions until they're compliant with policy.
 
-Similarly, some derived credential request workflows require the use of the device camera to scan an on-screen QR code. This code links that device to the authentication request that occurred against the derived credential issuer with the user's smart card credentials. If device configuration polices block camera use, the user can't complete the derived credential enrollment request.
+Similarly, some derived credential request workflows require the use of the device camera to scan an on-screen QR code. This code links that device to the authentication request that occurred against the derived credential issuer with the user's smart card credentials. If device configuration policies block camera use, the user can't complete the derived credential enrollment request.
 
 **General information**:
 

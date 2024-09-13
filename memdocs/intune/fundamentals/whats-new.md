@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/23/2024
+ms.date: 09/10/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -81,9 +81,27 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### App management
 
 #### Managed Home Screen user experience update<!-- 28232751 -->
-All Android devices will be automatically migrated to the updated Managed Home Screen (MHS) user experience. For more information, see [Updates to the Managed Home Screen experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-managed-home-screen-experience/bc-p/3997842).
+All Android devices will be automatically migrated to the updated Managed Home Screen (MHS) user experience. For more information, see [Updates to the Managed Home Screen experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-managed-home-screen-experience/bc-p/3997842).  
 
-### Device management
+### Device enrollment  
+
+#### Support has ended for Apple profile-based user enrollment with Company Portal<!-- 28361917 -->
+
+Apple supports two types of manual enrollment methods for users and devices in bring-your-own-device (BYOD) scenarios: *profile-based enrollment* and *account-driven enrollment*.  Apple has ended support for profile-based user enrollment, known in Intune as *user enrollment with Company Portal*. This method was their privacy-focused BYOD enrollment flow that used managed Apple IDs. As a result of this change, Intune has ended support for [profile-based user enrollment with Company Portal](../enrollment/apple-user-enrollment-with-company-portal.md). Users can no longer enroll devices targeted with this enrollment profile type. Devices already enrolled with this profile type aren't impacted by this change, so you can continue to manage them in the admin center and receive Microsoft Intune technical support. Less than 1% of Apple devices across all Intune tenants are currently enrolled this way, so this change doesn't affect the majority of enrolled devices.   
+
+There is no change to profile-based device enrollment with Company Portal, the default enrollment method for BYOD scenarios. Devices enrolled via Apple automated device enrollment also remain unaffected.  
+
+We recommend account-driven user enrollment as a replacement method for devices. For more information about your BYOD enrollment options in Intune, see: 
+
+* [Account-driven user enrollment](../enrollment/apple-account-driven-user-enrollment.md)
+
+* [Web-based device enrollment](../enrollment/web-based-device-enrollment-ios.md)
+
+* [Device enrollment with Company Portal](../enrollment/ios-device-enrollment.md#app-or-web-based-enrollment) (default enrollment method for BYOD scenarios)
+
+For more information about the device enrollment types supported by Apple, see [Intro to Apple device enrollment types](https://support.apple.com/en-mide/guide/deployment/dep08f54fcf6/web) in the Apple Platform Deployment guide. 
+
+### Device management  
 
 #### Intune now supports iOS/iPadOS 16.x as the minimum version<!-- 28391935 -->
 
@@ -1011,7 +1029,7 @@ When frontline workers receive the devices, all they have to do is connect to Wi
 
 End users can now view the BitLocker Recovery Key for enrolled Windows devices from the Company Portal website. This capability can reduce helpdesk calls in the event the end user gets locked out of their corporate machines. End users can access the recovery key for an enrolled device by signing into the Company Portal website and selecting **Show recovery key**. This experience is similar to the MyAccount website, which also allows end users to see recovery keys.
 
-You can prevent end users within your organization from accessing BitLocker recovery keys by configuring the Entra ID toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**.
+You can prevent end users within your organization from accessing BitLocker recovery keys by configuring the Microsoft Entra toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**.
 
 For more information, see:
 
