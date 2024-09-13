@@ -66,7 +66,7 @@ To use Application Control with Configuration Manager, devices must be running s
 - Windows Server 2019 or later <!--7752243, 8581848-->
 
 > [!TIP]
-> Existing Application Control polices created with Configuration Manager version 2006 or earlier won't work with Windows Server. To support Windows Server, create new Application Control policies.
+> Existing Application Control policies created with Configuration Manager version 2006 or earlier won't work with Windows Server. To support Windows Server, create new Application Control policies.
 
 ## Before you start
 

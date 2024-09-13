@@ -3,13 +3,13 @@ metadata:
   title: Windows Autopilot troubleshooting FAQ
   description: Troubleshooting of common Windows Autopilot issues
   ms.service: windows-client
-  ms.subservice: itpro-deploy
+  ms.subservice: autopilot
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 08/02/2024
+  ms.date: 08/08/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -393,6 +393,38 @@ sections:
           | **[MDM wins over Group Policy](/windows/client-management/mdm/policy-csp-controlpolicyconflict)** | This policy allows control of which policy is used when both the MDM policy and its equivalent Group Policy (GP) are set on the device. |
           | **Group Policy Objects (GPOs) that affect Windows Autopilot for [pre-provisioned deployment](pre-provision.md)** | Windows Autopilot pre-provisioning doesn't work when any of the four GPO policy settings listed here are enabled.<br><br>**GPO path**: <br>Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options<br><br>**Policies**:<br>[Interactive logon: Message title for users attempting to log on](/windows/security/threat-protection/security-policy-settings/interactive-logon-message-title-for-users-attempting-to-log-on)<br><br>[Interactive logon: Message text for users attempting to log on](/windows/security/threat-protection/security-policy-settings/interactive-logon-message-text-for-users-attempting-to-log-on)<br><br>[Interactive logon: Require Windows Hello for Business or smart card](/windows/security/threat-protection/security-policy-settings/interactive-logon-require-smart-card)<br><br>[User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode - Prompt for credentials on the secure desktop](/windows/security/threat-protection/security-policy-settings/user-account-control-behavior-of-the-elevation-prompt-for-administrators-in-admin-approval-mode) |
           | **[PreferredAadTenantDomainName](/windows/client-management/mdm/policy-csp-authentication#preferredaadtenantdomainname)** | When this policy is enabled, it adds the preferred domain to **DefaultUser0**, which causes autologon to fail. |
+
+  - name: Troubleshooting application install issues during Windows Autopilot
+    questions:
+      - question: |
+          Why is the error message "Another installation is in progress, please try again later" occurring during the ESP of a Windows Autopilot deployment?
+        answer: |
+          The Enrollment Status Page (ESP) used by Windows Autopilot doesn't support mixing of line-of-business (LOB) and Win32 applications. Both LOB and Win32 applications use **TrustedInstaller** which doesn't allow simultaneous installations. If both an LOB and Win32 application attempt to install at the same time, the following error message occurs during ESP:
+
+          `Another installation is in progress, please try again later.`
+
+          For more information, see [Set up the Enrollment Status Page - Device setup: Apps](/mem/intune/enrollment/windows-enrollment-status#device-setup-apps).
+
+          If mixing LOB and Win32 apps is required, consider using [Windows Autopilot device preparation](device-preparation/overview.md), which doesn't use ESP so therefore supports mixing of LOB and Win32 apps.
+
+      - question: |
+          During the ESP of a Windows Autopilot deployment, why does the Microsoft 365 Click-to-Run version of Office fail to install the Teams Machine-Wide Installer, or cause other Win32 app MSI based installs to fail?
+        answer: |
+          The [Teams Machine-Wide Installer](/microsoftteams/msi-deployment) component of the Microsoft 365 Click-to-Run version of Office includes an MSI installation. ESP doesn't track the Teams Machine-Wide Installer MSI install. Because ESP doesn't track the Teams Machine-Wide Installer MSI install, it can cause a conflict when other Win32 app MSI based installs attempt to install during ESP. MSIs install via **TrustedInstaller** which doesn't allow simultaneous installations. This conflict can cause either the Teams Machine-Wide Installer to fail or other MSI based installs to fail during ESP. For more information, see [Set up the Enrollment Status Page - Device setup: Apps](/mem/intune/enrollment/windows-enrollment-status#device-setup-apps).
+
+          This issue might be random and might not always occur. The issue occurs due to a timing issue between the **Teams Machine-Wide Installer** MSI install and other Win32 app MSI installs.
+
+          To work around the issue or avoid the error, use one of the following solutions:
+
+          1. Don't install **Teams** as part of the Microsoft 365 Click-to-Run install of Office. Instead, deploy **Teams** as a Win32 app after the Windows Autopilot deployment completes.
+
+          1. Don't install the Microsoft 365 Click-to-Run version of Office during ESP. Instead, deploy the Microsoft 365 Click-to-Run install of Office after the Windows Autopilot deployment completes.
+
+          1. Use a custom PowerShell script for Intune Management Extension (IME) that checks if **TrustedInstaller** is currently installing another MSI. If it is, then wait for the current MSI to finish installing before launching a new MSI install.
+
+          1. For Windows 11 deployments, use [Windows Autopilot device preparation](device-preparation/overview.md). Windows Autopilot device preparation doesn't use ESP so therefore supports mixing of LOB and Win32 apps.
+
+          1. Continue on error for ESP failures. If the problem occurs with this option enabled, some applications including **Teams** might not install. However, ESP continues and doesn't fail.
 
 
 additionalContent: |

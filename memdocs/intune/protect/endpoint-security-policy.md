@@ -72,7 +72,7 @@ To manage Intune endpoint security policies, you must use an account that includ
 
 > [!NOTE]
 >
-> Before June of 2024, Intune endpoint security polices were managed through rights provided by the *Security baselines* permission. Beginning in June of 2024, Intune began to release granular permissions to manage individual endpoint security workloads.
+> Before June of 2024, Intune endpoint security policies were managed through rights provided by the *Security baselines* permission. Beginning in June of 2024, Intune began to release granular permissions to manage individual endpoint security workloads.
 >
 > Each time a new granular permission for an endpoint security workload is added to Intune, those same rights are removed from the *Security baselines* permission. If you use custom roles with the *Security baselines* permission, the new RBAC permission is assigned automatically to your custom roles with the same rights that were granted through the *Security baseline* permission. This auto-assignment ensures your admins continue to have the same permissions they have today.
 
@@ -183,8 +183,9 @@ After creating the new policy, review and edit the policy to make changes to its
 ### To duplicate a policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select the policy that you want to copy. Next, select **Duplicate**. If *Duplicate* isn't available, select the ellipsis (**…**) to the right of the policy and then select **Duplicate**.
-3. Provide a **New name** for the policy, and then select **Save**.
+2. Locate the policy that you want to copy from the policy list, and then select the ellipsis (**…**) for that line to open the *Context menu*.
+3. Select **Duplicate**.
+4. Provide a **New name** for the policy, and then select **Save**.
 
 ### To edit a policy
 

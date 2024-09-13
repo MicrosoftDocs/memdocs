@@ -12,6 +12,25 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Take Action: Enable multifactor authentication for your tenant before October 15, 2024
+
+Starting on or after October 15, 2024, to further increase security, Microsoft will require admins to use multi-factor authentication (MFA) when signing into the Microsoft Azure portal, Microsoft Entra admin center, and Microsoft Intune admin center. To take advantage of the extra layer of protection MFA offers, we recommend enabling MFA as soon as possible. To learn more, review [Planning for mandatory multifactor authentication for Azure and admin portals](https://aka.ms/mfaforazure).
+
+> [!NOTE]
+> This requirement also applies to any services accessed through the Intune admin center, such as Windows 365 Cloud PC.
+
+#### How does this affect you or your users?
+
+MFA must be enabled for your tenant to ensure admins are able to sign-in to the Azure portal, Microsoft Entra admin center and Intune admin center after this change.
+
+#### How can you prepare?
+
+- If you haven't already, [set up MFA](https://aka.ms/mfaforazure) before **October 15, 2024**, to ensure your admins can access the Azure portal, Microsoft Entra admin center, and Intune admin center.
+- If you're unable to set up MFA before this date, you can [apply to postpone the enforcement date](https://aka.ms/managemfaforazure).
+- If MFA hasn't been set up before the enforcement starts, admins will be prompted to register for MFA before they can access the Azure portal, Microsoft Entra admin center, or Intune admin center on their next sign-in.
+
+For more information, refer to: [Planning for mandatory multifactor authentication for Azure and admin portals](https://aka.ms/mfaforazure).
+
 ### Plan for Change: Intune is moving to support iOS/iPadOS 16 and later<!--28391935-->
 
 Later this year, we expect iOS 18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require [iOS 16/iPadOS 16 and higher](../fundamentals/supported-devices-browsers.md) shortly after the iOS/iPadOS 18 release. 

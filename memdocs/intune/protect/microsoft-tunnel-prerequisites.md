@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 09/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -257,14 +257,14 @@ When creating the Server configuration for the tunnel, you can specify a differe
 
 **More requirements**:
 
-- To access the security token service and Azure storage for logs, provide access to the following FQDNs:
+To access the security token service and Azure storage for logs, provide access to the following FQDNs:
 
-  - Security Token Service: `*.sts.windows.net`
-  - Azure storage for tunnel logs: `*.blob.core.windows.net`
-  - Other storage endpoint urls: `*.blob.storage.azure.net`
-
-- The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22, and graph.microsoft.com.
-
+- Security Token Service: `*.sts.windows.net`
+- Azure storage for tunnel logs: `*.blob.core.windows.net`
+- Other storage endpoint urls: `*.blob.storage.azure.net`
+- Microsoft Intune: `*.manage.microsoft.com`
+- Microsoft authentication: `login.microsoftonline.com`
+- Microsoft Graph: `graph.microsoft.com`
 - Configure firewall rules to support the configurations detailed in [Microsoft Artifact Registry (MAR) Client Firewall Rules Configuration](https://github.com/microsoft/containerregistry/blob/main/docs/client-firewall-rules.md).
 
 ## Proxy
@@ -379,7 +379,7 @@ You can configure Podman to use the proxy to download (pull) updated images for 
 
    `systemctl edit --force mstunnel_monitor`  
 
-2. Add the following four lines to the file. Replace each instance of *[address]* with your proxy DN or address, and then save the file:
+2. Add the following three lines to the file. Replace each instance of *[address]* with your proxy DN or address, and then save the file:
 
    ```
    [Service]
@@ -486,7 +486,7 @@ To use the readiness tool:
 
 2. To validate your network and Linux configuration, run the script with the following commands. These commands set the run permissions for the script, validate the Tunnel can connect to the correct endpoints, and then check for the presence of utilities that Tunnel uses:
 
-   - `sudo chmod +x ./mst-readiness`
+   - `sudo ./mst-readiness`
 
    - `sudo ./mst-readiness network` - This command runs the following actions and then reports success or error for both:
 

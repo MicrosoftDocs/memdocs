@@ -2,13 +2,13 @@
 title: Windows Autopilot device preparation known issues
 description: Information regarding known issues that might occur during a Windows Autopilot device preparation deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 07/23/2024
+ms.date: 08/07/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -152,3 +152,7 @@ The initial release of Windows Autopilot device preparation has the following kn
 - Managed Installer policy during the out-of-box experience (OOBE) isn't supported due to the possibility of incorrect reporting.
 - Custom compliance isn't supported during Windows Autopilot device preparation deployments.
 - The device health script isn't supported during Windows Autopilot device preparation deployments.
+
+## Related content
+
+- [Windows Autopilot device preparation troubleshooting FAQ](troubleshooting-faq.yml).

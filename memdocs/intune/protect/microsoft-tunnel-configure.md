@@ -137,11 +137,11 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
 
-2. To start the server installation, run the script as **root**. For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
+2. To start the server installation, run the script as **root**. For example, you might use the following command line: `sudo ./mstunnel-setup`. The script always installs the [most recent version](microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
 
    > [!IMPORTANT]
    >
-   > If you are installing Tunnel to a [rootless Podman container](#use-a-rootless-podman-container), use the the following modified command-line to start the script: `chmod mst_rootless_mode=1 ./mstunnel-setup`
+   > If you are installing Tunnel to a [rootless Podman container](#use-a-rootless-podman-container), use the the following modified command-line to start the script: `mst_rootless_mode=1 ./mstunnel-setup`
 
    To see detailed console output during the tunnel and installation agent enrollment process:
 
@@ -152,7 +152,7 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
    > [!IMPORTANT]
    > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so, run the following commands to add *intune_env=FXP* to the command line:
    >
-   > 1. Run `sudo chmod +x ./mstunnel-setup`
+   > 1. Run `sudo ./mstunnel-setup`
    > 2. Run `sudo intune_env=FXP ./mstunnel-setup`
 
    > [!TIP]

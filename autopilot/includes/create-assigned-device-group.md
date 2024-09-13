@@ -2,7 +2,7 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
 ms.date: 06/27/2024
@@ -67,7 +67,7 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
         Install-Module azuread
         ```
 
-    If prompted to do so, agree to install **NuGet** and the **azuread** module from the **PSGallery**.
+        If prompted to do so, agree to install **NuGet** and the **azuread** module from the **PSGallery**.
 
    1. Once the **azuread** module is installed, connect to Microsoft Entra ID by entering the following command:
 

@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 10/17/2023
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -51,7 +51,7 @@ A few things to keep in mind:
 
 ## Create a provisioning policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policies** > **Create policy**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Device onboarding**) > **Provisioning policies** > **Create policy**.
 
    ![Screenshot of create policy.](./media/create-provisioning-policy/create-policy.png)
 2. On the **General** page, enter a **Name** and **Description** (optional) for the new policy.

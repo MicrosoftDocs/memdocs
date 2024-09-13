@@ -46,7 +46,7 @@ This article applies to the following policies:
 
 ## Policy refresh intervals
 
-Intune notifies the device to check in with the Intune service. The notification times vary, including immediately up to a few hours. These notification times also vary between platforms. On Android devices, [Googe Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed).
+Intune notifies the device to check in with the Intune service. The notification times vary, including immediately up to a few hours. These notification times also vary between platforms. On Android devices, [Google Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed).
 
 If a device doesn't check in to get the policy or profile after the first notification, Intune makes three more attempts. An offline device, such as turned off, or not connected to a network, might not receive the notifications. In this case, the device gets the policy or profile on its next scheduled check-in with the Intune service. The same applies to checks for noncompliance, including devices that move from a compliant to a noncompliant state.
 
@@ -104,7 +104,7 @@ A policy is deployed to the app and takes effect. A second policy is deployed. I
 
 When two or more policies are assigned to the same user or device, then the setting that applies happens at the individual setting level:
 
-- If you use custom compliance policies to set device settings, then the settings within the custom compliance policy take precedence over the same setting within device configuration policies. Compliance policy settings always have precedence over configuration profile settings.
+- If you use compliance policies to evaluate device settings, then the settings within the compliance policy take precedence over the same setting within device configuration policies. Compliance policy settings always have precedence over configuration profile settings.
 
 - If a compliance policy evaluates against the same setting in another compliance policy, then the most restrictive compliance policy setting applies.
 

@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/30/2023
+ms.date: 08/28/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -91,6 +91,10 @@ Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?
 ## Bulk actions
 
 You can also use Intune’s bulk device actions to place multiple Cloud PCs under review at the same time. For more information, see [Use bulk device actions]( /mem/intune/remote-actions/bulk-device-actions).
+
+
+> [!NOTE]
+> Up to 10 Cloud PCs can be placed under review simultaneously. When more than 10 are placed under review at once, requests are queued and timeouts may increase if the request remains in the queue for too long. If you experience timeouts, it is recommended you stagger the requests to allow sufficient time for previous requests to complete first. Completion times will depend on the size of the Cloud PC disk as well as the location and type of your Azure Storage account.   
 
 ## Management with API
 
