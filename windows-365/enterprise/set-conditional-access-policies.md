@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 9/24/2024
+ms.date: 7/26/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -104,7 +104,7 @@ To configure the time period after which a user is asked to sign-in again:
 1. In the **Session** pane, select **Sign-in frequency**.
 1. Select **Periodic reauthentication** or **Every time**.
     - If you select **Periodic reauthentication**, set the value for the time period after which a user is asked to sign-in again when performing an action that requires a new access token, and then select **Select**. For example, setting the value to **1** and the unit to **Hours**, requires multi-factor authentication if a connection is launched more than an hour after the last user authentication.
-    - The **Every time** option is only supported when applied to the **Microsoft Remote Desktop** and **Windows Cloud Login** apps when single sign-on is enabled for your Cloud PCs. If you select **Every time**, users are prompted to re-authenticate when launching a new connection after a period of 5 to 10 minutes since their last authentication.
+    - The **Every time** option is currently available in preview and is only supported when applied to the **Microsoft Remote Desktop** and **Windows Cloud Login** apps when single sign-on is enabled for your Cloud PCs. If you select **Every time**, users are prompted to re-authenticate when launching a new connection after a period of 5 to 10 minutes since their last authentication.
 1. At the bottom of the page, select **Save**.
 
 > [!NOTE]
