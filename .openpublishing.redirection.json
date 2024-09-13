@@ -2719,6 +2719,36 @@
       "source_path": "memdocs/intune/protect/endpoint-security-firewall-rule-tool.md",
       "redirect_url": "/mem/intune/protect/endpoint-security-firewall-policy",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/pre-provision.md#prerequisites",
+      "redirect_url": "autopilot/pre-provision#requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/add-devices.md#prerequisites",
+      "redirect_url": "autopilot/add-devices#requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/existing-devices.md#prerequisites",
+      "redirect_url": "autopilot/existing-devices#requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/windows-autopilot-hybrid.md#prerequisites",
+      "redirect_url": "autopilot/windows-autopilot-hybrid#requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/windows-autopilot-hybrid.md#device-enrollment-prerequisites",
+      "redirect_url": "autopilot/windows-autopilot-hybrid#device-enrollment-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/windows-autopilot-hybrid.md#intune-connector-server-prerequisites",
+      "redirect_url": "autopilot/windows-autopilot-hybrid#intune-connector-server-requirements",
+      "redirect_document_id": false
     }
   ]
 }

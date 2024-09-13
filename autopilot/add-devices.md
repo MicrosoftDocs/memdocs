@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 09/13/2024
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -42,7 +42,7 @@ This article provides step-by-step guidance for manual registration. For more in
 - [Manual registration overview](manual-registration.md).
 - [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
 
-## Prerequisites
+## Requirements
 
 - [Intune subscription](/mem/intune/fundamentals/licenses).
 - [Windows automatic enrollment enabled](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment).
