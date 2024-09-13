@@ -218,13 +218,13 @@ To run this script, you can use Intune to run [PowerShell scripts](../apps/intun
 
 #### Remove all AppLocker policies from a device (optional)
 
-To remove *all* Windows AppLocker policies from a device, you can use the **CatCleanAll.ps1** PowerShell script. This script removes not only the Intune Management Extension as a managed installer, but *all* managed installers and *all* policies based on Windows AppLocker from a device. Before using this script, be sure you understand your organizations use of AppLocker policies.
+To remove *all* Windows AppLocker policies from a device, you can use the **CatCleanAll.ps1** PowerShell script. This script removes not only the Intune Management Extension as a managed installer, but *all* policies based on Windows AppLocker from a device. Before using this script, be sure you understand your organizations use of AppLocker policies.
 
 1. Download the **CatCleanAll.ps1** PowerShell script. This script is available at [https://aka.ms/intune_WDAC/CatCleanAll]( https://aka.ms/intune_WDAC/CatCleanAll) from *download.microsoft.com*.
 
-2. Run this script on devices that have the Intune Management Extension set as a managed installer. This script removes only the Intune Management Extension as a managed installer.
+2. Run this script on devices that have the Intune Management Extension set as a managed installer. This script removes the Intune Management Extension as a managed installer and AppLocker policies from the device.
 
-3. Restart the Intune Management Extension service for the above changes to take effect. 
+3. Restart the Intune Management Extension service for the above changes to take effect.
 
 To run this script, you can use Intune to run [PowerShell scripts](../apps/intune-management-extension.md), or other methods of your choice.
 

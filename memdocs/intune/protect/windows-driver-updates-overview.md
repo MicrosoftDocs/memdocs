@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/15/2024
+ms.date: 09/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -250,6 +250,7 @@ To help avoid issues that require rolling back a driver from large numbers of de
 ### Why do my devices have driver updates installed that didn't pass through an updates policy?
 
 - These are likely *extension* drivers, which are "sub drivers" that a main driver can reference to be installed when the main driver is installed or updated. Extension drivers show up in the installed drivers or update history on the device, but aren't directly manageable. Because extension drivers don't function without base drivers, it's safe to allow them to install.
+- Plug and Play can also install drivers automatically. When Windows detects new hardware or software (such as a mouse, keyboard, or webcam) without an existing driver, it installs the latest driver to ensure the component functions immediately. After the initial installation, any future updates to these drivers will require approval.
 
 ### How quickly are paused updates actually paused?
 
