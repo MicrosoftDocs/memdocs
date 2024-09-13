@@ -42,7 +42,7 @@ This article provides step-by-step guidance for manual registration. For more in
 - [Manual registration overview](manual-registration.md).
 - [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
 
-## Prerequisites
+## Requirements
 
 - [Intune subscription](/mem/intune/fundamentals/licenses).
 - [Windows automatic enrollment enabled](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment).

@@ -93,10 +93,6 @@ For more information including a list of supported OEMs, see [Return of key func
 >
 > Assigning a licensed user to a specific Autopilot device only affects pre-populating the UPN and setting of a custom greeting name. It doesn't affect assigned policies and applications that are deployed to the device or to the user. The assigned policies and applications are still deployed regardless of the OEM. For more information, see [Windows Autopilot for pre-provisioned deployment](pre-provision.md#preparation).
 
-Prerequisites:
-
-- Microsoft Entra ID [Company Branding](/azure/active-directory/fundamentals/customize-branding) is configured.
-
 > [!IMPORTANT]
 >
 > Assigning a user to a specific Autopilot device doesn't work if using Active Directory Federation Services (ADFS).

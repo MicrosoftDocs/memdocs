@@ -103,7 +103,7 @@ Windows Autopilot user-driven Microsoft Entra hybrid join supports off-premises/
 
 For off-premises/Internet scenarios requiring VPN connectivity, the only change in the Autopilot profile would be in the setting **Skip AD connectivity check**. In the [Create and assign user-driven Microsoft Entra hybrid join Autopilot profile](#create-and-assign-user-driven-microsoft-entra-hybrid-join-autopilot-profile) section, the **Skip AD connectivity check** setting should be set to **Yes** instead of to **No**. Setting this option to **Yes** prevents the deployment from failing since there's no direct connectivity to Active Directory and domain controllers until the VPN connection is established.
 
-In addition to changing the **Skip AD connectivity check** setting to **Yes** in the Autopilot profile, VPN support also relies on the following prerequisites:
+In addition to changing the **Skip AD connectivity check** setting to **Yes** in the Autopilot profile, VPN support also relies on the following requirements:
 
 - The VPN solution can be deployed and installed with Intune.
 - The VPN solution needs to support one of the following options:

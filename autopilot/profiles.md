@@ -87,7 +87,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 
     - **User account type**: Select the user's account type (**Administrator** or **Standard** user). We allow the user joining the device to be a local Administrator by adding them to the local Admin group. We don't enable the user as the default administrator on the device.
 
-    - **Allow pre-provisioned deployment** ([Prerequisites](pre-provision.md#prerequisites)): Select **Yes** to allow pre-provisioning support.
+    - **Allow pre-provisioned deployment** ([Requirements](pre-provision.md#requirements)): Select **Yes** to allow pre-provisioning support.
 
       > [!NOTE]
       >
