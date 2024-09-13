@@ -37,7 +37,7 @@ appliesto:
 
 Date added: *September 13, 2024*
 
-As part of the 2409 Intune release, the **enrollmentProfileName** property is now populated with the Device preparation policy name during Autopilot device preparation deployments. The Enrollment profile property of Intune and Microsoft Entra device objects will automatically be populated with the name of the Device preparation policy that was applied to the device during provisioning. This will enable admins to configure assignment filters and dynamic groups based on the **enrollmentProfileName** property for configurations post-enrollment.
+As part of the 2409 Intune release, the **enrollmentProfileName** property is now populated with the Device preparation policy name during Autopilot device preparation deployments. The Enrollment profile property of Intune and Microsoft Entra device objects are automatically populated with the name of the Device preparation policy that was applied to the device during provisioning. The **enrollmentProfileName** property enables admins to configure assignment filters and dynamic groups based on the **enrollmentProfileName** property for configurations post-enrollment.
 
 <!-- INADO-28533819 -->
 
