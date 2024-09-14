@@ -670,6 +670,15 @@ Organizations may require users to authenticate with NTLM to access intranet web
 
 Organizations can enable NTLM credential caching for particular web sites. For these sites, after the user enters credentials and successfully authenticates, the credentials are cached by default for 30 days.
 
+> [!NOTE]
+> If you're using a proxy server, ensure that it's configured in the NTLMSSOURLs policy with the format scheme://host:port (e.g., https://your-proxy-server:8080).
+>
+> Due to a known issue, both **https** and **http** schemes need to be specified. For example, you need to configure both **https**://your-proxy-server:8080
+> and **http**://your-proxy-server:8080. We are actively working on a fix that will remove the need for specifying the scheme. In future updates, only the format
+> host:port (e.g., your-proxy-server:8080) will be sufficient.
+>
+> In addition, the wildcard symbol (*) is not supported when configuring proxy servers in the NTLMSSOURLs policy.
+
 |Key  |Value  |
 |:---------|:---------|
 |com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2` <br>`http://app.contoso.com/|https://expenses.contoso.com` <br><br>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list). |
