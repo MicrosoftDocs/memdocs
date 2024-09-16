@@ -122,7 +122,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 6. Select **Next** to continue.
 
-7. Complete configuration of additional settings, and then save the profile.
+7. Complete configuration of other settings, and then save the profile.
 
 ## Manage BitLocker
 
@@ -262,7 +262,7 @@ To be accessible, the device must have its keys escrowed to Microsoft Entra.
    - BitLocker Recovery Key
    - Drive Type
 
-   When keys aren't in Microsoft Entra, Intune will display *No BitLocker key found for this device*.
+   When keys aren't in Microsoft Entra, Intune displays *No BitLocker key found for this device*.
 
 > [!NOTE]
 > Currently, Microsoft Entra ID supports a maximum of 200 BitLocker recovery keys per device. If you reach this limit, silent encryption will fail due to the failing backup of recovery keys before starting encryption on the device.
@@ -278,7 +278,7 @@ All BitLocker recovery key accesses are audited. For more information on Audit L
 
 ### View recovery keys for tenant-attached devices
 
-When you've configured the tenant attach scenario, Microsoft Intune can display recovery key data for tenant attached devices.
+When you use the tenant attach scenario, Microsoft Intune can display recovery key data for tenant attached devices.
 
 - To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Microsoft Entra joined devices: See [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
@@ -308,7 +308,7 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 
 2. Select **Devices** > **All devices**.
 
-3. In the list of devices that you manage, select a device, and then select the **BitLocker key rotation** device remote action. If this option should be available but isn't visible, select the ellipsis (...) and then *BitLocker key rotation*.
+3. In the list of devices that you manage, select a device, and then select the **BitLocker key rotation** remote action. If this option should be available but isn't visible, select the ellipsis (...) and then *BitLocker key rotation*.
 
 4. On the **Overview** page of the device, select the **BitLocker key rotation**. If you don't see this option, select the ellipsis (**…**) to show all options, and then select the **BitLocker key rotation** device remote action.
 
@@ -316,15 +316,15 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 
 ### Self service recovery keys
 
-To help end users get their recovery keys without calling the company helpdesk, Intune has enabled [self service scenarios for the end user through the Company Portal app](../user-help/get-recovery-key-windows.md). 
+To help end users get their recovery keys without calling the company helpdesk, Intune has enabled [self service scenarios for the end user through the Company Portal app](../user-help/get-recovery-key-windows.md).
 
-While Intune helps configure policy to define the escrow of BitLocker recovery keys, these keys are stored within Entra ID. These are the capabilities within Entra ID that are helpful to use in conjunction with self-service BitLocker recovery key access for end users.
+While Intune helps configure policy to define the escrow of BitLocker recovery keys, these keys are stored within Entra ID. These are the capabilities within Entra ID that are helpful to use with self-service BitLocker recovery key access for end users.
 
-1. **Tenant-wide toggle to prevent recovery key access for non-admin users**: This setting determines if users can self-service to recover their BitLocker key(s). The default value is 'No' which allows all users to recover their BitLocker key(s). 'Yes' restricts non-admin users from being able to see the BitLocker key(s) for their own devices if there are any. [Learn more about this control in Entra ID](/entra/identity/devices/manage-device-identities#configure-device-settings).
+1. **Tenant-wide toggle to prevent recovery key access for non-admin users**: This setting determines if users can use self-service to recover their BitLocker keys. The default value is 'No' which allows all users to recover their BitLocker keys. 'Yes' restricts non-admin users from being able to see the BitLocker keys for their own devices if there are any. [Learn more about this control in Entra ID](/entra/identity/devices/manage-device-identities#configure-device-settings).
 
-3. **Auditing for recovery key access**: Audit Logs within the Entra ID portal show the history of activities within the tenant. Any user recovery key accesses made through the Company Portal website will be logged in Audit Logs under the Key Management category as a “Read BitLocker key” activity type. The user’s User Principal Name and additional info such as key ID is also logged. [Learn more about audit logs in Entra ID](/entra/identity/monitoring-health/concept-audit-logs).
+2. **Auditing for recovery key access**: Audit Logs within the Entra ID portal show the history of activities within the tenant. Any user recovery key accesses made through the Company Portal website will be logged in Audit Logs under the Key Management category as a “Read BitLocker key” activity type. The user’s User Principal Name and additional info such as key ID is also logged. [Learn more about audit logs in Entra ID](/entra/identity/monitoring-health/concept-audit-logs).
 
-4. **Entra Conditional Access policy requiring a compliant device to access BitLocker Recovery Key**: With Conditional Access policy (CA), you can restrict the access to certain corporate resources if a device is not compliant with the “Require compliant device” setting. If this is set up within your organization, and a device fails to meet the Compliance requirements configured in the Intune Compliance policy, that device cannot be used to access the BitLocker Recovery Key as it is considered a corporate resource which is access controlled by CA.
+3. **Entra Conditional Access policy requiring a compliant device to access BitLocker Recovery Key**: With Conditional Access policy (CA), you can restrict the access to certain corporate resources if a device is not compliant with the “Require compliant device” setting. If this is set up within your organization, and a device fails to meet the Compliance requirements configured in the Intune Compliance policy, that device cannot be used to access the BitLocker Recovery Key as it is considered a corporate resource which is access controlled by CA.
 
 ## Next steps
 
