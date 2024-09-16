@@ -367,34 +367,34 @@ The following table describes the Setup Assistant screens shown during automated
 
 | Setup Assistant screen | What happens when visible |
 |------------------------------------------|------------------------------------------|
-| **Passcode** | Shows the password pane and prompts users for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other way (like a kiosk mode configuration that restricts the device to one app). For iOS/iPadOS 7.0 and later, with some limitations. For more information, see [Limitations](#limitations) in this article. |
-| **Location Services** | Shows the screen for enabling location services, and prompts users for their location. For iOS/iPadOS 7.0 and later. |
-| **Restore** | Shows the Apps & Data screen. On this screen, users setting up devices can restore or transfer data to their device from iCloud Backup. For iOS/iPadOS 7.0 and later. |
-| **Apple ID** | Shows Apple ID setup and gives users the option to sign in with their Apple ID and use iCloud. For iOS/iPadOS 7.0 and later.   |
-| **Terms and conditions** | Shows the Apple terms and conditions and requires users to accept them. For iOS/iPadOS 7.0 and later. |
+| **Passcode** | Shows the passcode and password lock pane to users, and prompts users for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other way (such as through a kiosk mode configuration that restricts the device to one app). This screen is available for iOS/iPadOS 7.0 and later, with some limitations. For more information, see [Limitations](#limitations) in this article. |
+| **Location Services** | Shows the location services setup pane, where users can enable location services on their device. For iOS/iPadOS 7.0 and later. |
+| **Restore** | Shows the apps and data setup pane. On this screen, users setting up devices can restore or transfer data from iCloud Backup. For iOS/iPadOS 7.0 and later. |
+| **Apple ID** | Shows the Apple ID setup pane, which gives users to the option to sign in with their Apple ID and use iCloud. For iOS/iPadOS 7.0 and later. |
+| **Terms and conditions** | Shows the Apple terms and conditions pane, and requires users to accept them. For iOS/iPadOS 7.0 and later. |
 | **Touch ID and Face ID** | Shows the biometric setup pane, which gives users the option to set up fingerprint or facial identification on their devices. For iOS/iPadOS 8.1 and later, with some limitations. For more information, see [Limitations](#limitations) in this article.  |
 | **Apple Pay** | Shows the Apple Pay setup pane, which gives users the option to set up Apple Pay on their devices. For iOS/iPadOS 7.0 and later. |
-| **Zoom** | Shows Zoom setup, which gives users the option to configure zoom settings. For iOS/iPadOS 8.3 and later, and deprecated in iOS/iPadOS 17.  |
-| **Siri** | Shows Siri setup, which gives users the option to set up Siri. For iOS/iPadOS 7.0 and later. |
+| **Zoom** | Shows the zoom setup pane, which gives users the option to configure zoom settings. For iOS/iPadOS 8.3 and later, and deprecated in iOS/iPadOS 17.  |
+| **Siri** | Shows the Siri setup pane to users. For iOS/iPadOS 7.0 and later. |
 | **Diagnostics Data** | Shows the diagnostics pane where users can opt-in to send diagnostic data to Apple. For iOS/iPadOS 7.0 and later. |  
-| **Display Tone** | Shows the display tone setup pane and gives the user the option to configure white balance settings. For iOS/iPadOS 9.3.2 and later, and deprecated in iOS/iPadOS 15. |  
-| **Privacy** | Shows the macOS Privacy screen. For macOS 10.13.4 and later. |  
-| **Android Migration** | Give the user the option to migrate data from an Android device. For iOS/iPadOS 9.0 and later.|
-| **iMessage & FaceTime** | Give the user the option to set up iMessage and FaceTime. For iOS/iPadOS 9.0 and later. |  
+| **Display Tone** | Shows the display tone setup pane, where users can configure the display's white balance settings. For iOS/iPadOS 9.3.2 and later, and deprecated in iOS/iPadOS 15. |  
+| **Privacy** | Shows the privacy setup pane to the user. For iOS/iPadOS 11.3 and later. |  
+| **Android Migration** | Shows a setup pane meant for previous Android users. On this screen, users can migrate data from an Android device. For iOS/iPadOS 9.0 and later.|
+| **iMessage & FaceTime** | Shows the setup pane for iMessage and FaceTime. For iOS/iPadOS 9.0 and later. |  
 | **Onboarding** | Shows onboarding informational screens for user education, such as Cover Sheet and Multitasking and Control Center. For iOS/iPadOS 11.0 and later. |  
 | **Screen Time** | Shows the Screen Time screen. For iOS/iPadOS 12.0 and later. |  
-| **SIM Setup** | Give the user the option to add a cellular plan. For iOS/iPadOS 12.0 and later. |
+| **SIM Setup** | Shows the cellular setup pane, where users can add a cellular plan. For iOS/iPadOS 12.0 and later. |
 | **Software Update** | Shows the mandatory software update screen. For iOS/iPadOS 12.0 and later. |  
-| **Watch Migration** | Give the user the option to migrate data from a watch device. For iOS/iPadOS 11.0 and later.|
+| **Watch Migration** | Shows the Apple Watch migration pane, where users can migrate data from a and Apple Watch. For iOS/iPadOS 11.0 and later.|
 | **Appearance** | Shows the appearance setup pane. For iOS/iPadOS 13.0 and later. |  
-| **Device to Device Migration** | Give the user the option to transfer data from an old device to this device. The option to transfer data directly from a device isn't available for ADE devices running iOS 13 or later.   
+| **Device to Device Migration** | Shows the device-to-device migration pane. On this screen, users can transfer data from an old device to their current device. The option to transfer data directly from a device isn't available for devices running iOS 13 or later.   
 | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  
 | **Software Update Completed** | Shows users all software updates that happen during Setup Assistant.|  
 | **Get Started**| Shows users the Get Started welcome screen.  
 | **Terms of Address**| Shows the terms of address pane, which gives users the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS/iPadOS 16.0 and later.    
 | **Emergency SOS**| Shows the safety setup pane. For iOS/iPadOS 16.0 and later.  
 | **Action button**| Shows the configuration pane for the action button. For iOS/iPadOS 17.0 and later.  
-| **Intelligence**| Shows the intelligence setup pane. For iOS/iPadOS 18.0 and later.  
+| **Intelligence**| Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. For iOS/iPadOS 18.0 and later.  
 
 ## Sync managed devices  
 

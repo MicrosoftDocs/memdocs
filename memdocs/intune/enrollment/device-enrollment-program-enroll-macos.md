@@ -214,28 +214,28 @@ The following table describes the Setup Assistant screens shown during automated
 
 | Setup Assistant screen | What happens when visible  |
 |------------------------------------------|------------------------------------------|
-| **Location Services** | Prompt the user for their location. For macOS 10.11 and later and iOS/iPadOS 7.0 and later. |
-| **Restore** | Display the Apps & Data screen. This screen gives the user the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-| **Apple ID** | Give the user the options to sign in with their Apple ID and use iCloud. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later.   |
-| **Terms and Conditions** | Require the user to accept Apple's terms and conditions. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-| **Touch ID and Face ID** | Give the user the option to set up fingerprint identification for the device. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. |
-| **Apple Pay** | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
-| **Siri** | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
-| **Diagnostics Data** | Display the Diagnostics screen to the user. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |  
-| **Display Tone** |Shows the setup pane for the users' display tone. This screen gives users the option to turn on true tone display. For macOS 10.13.6 and later. |
+| **Location Services** | Shows the location services setup pane, where users can enable location services on their device. For macOS 10.11 and later. |
+| **Restore** | Shows the apps and data setup pane. On this screen, users setting up devices can restore or transfer data from iCloud Backup. For macOS 10.9 and later. |
+| **Apple ID** | Shows the Apple ID setup pane, which gives users to the option to sign in with their Apple ID and use iCloud. For macOS 10.9 and later.   |
+| **Terms and conditions** |Shows the Apple terms and conditions pane, and requires users to accept them. For macOS 10.9 and later. |
+| **Touch ID and Face ID** | Shows the biometric setup pane, which gives users the option to set up fingerprint or facial identification on their devices. For macOS 10.12.4 and later. |
+| **Apple Pay** | Shows the Apple Pay setup pane, which gives users the option to set up Apple Pay on their devices. For macOS 10.12.4 and later. |
+| **Siri** | Shows the Siri setup pane to users. For macOS 10.12 and later. |
+| **Diagnostics Data** | Shows the diagnostics pane where users can opt-in to send diagnostic data to Apple. For macOS 10.9 and later. |  
+| **Display Tone** |Shows the setup pane for the display tone. This screen gives users the option to turn on true tone display. For macOS 10.13.6 and later. |
 | **FileVault** | Shows the FileVault 2 encryption screen to users. For macOS 10.10 and later. |
-| **iCloud diagnostics** | Shows the iCloud Analytics screen to users. For macOS 10.12.4 and later. |  
+| **iCloud Diagnostics** | Shows the iCloud Analytics screen to users. For macOS 10.12.4 and later. |  
 | **Registration** | Shows the registration screen to users. For macOS 10.9 and later. |  
 | **iCloud Storage** | Shows the iCloud Documents and Desktop screen to the user. For macOS 10.13.4 and later. |
-| **Appearance** | Shows the macOS Appearance screen to the user. For macOS 10.14 and later. |    
-| **Screen Time** | Shows the macOS Screen Time screen. For macOS 10.15 and later. |
-| **Privacy** | Shows the macOS Privacy screen to the user. For macOS 10.13.4 and later. |
+| **Appearance** | Shows the appearance pane where users can select an appearance mode. For macOS 10.14 and later. |    
+| **Screen Time** | Shows the macOS Screen Time setup pane, a feature users can enable to gain insight on screen-time, and app and website activity. For macOS 10.15 and later. |
+| **Privacy** | Shows the privacy setup pane to the user. For macOS 10.13.4 and later. |
 | **Accessibility** | Shows the accessibility setup screen to the user. If this screen is hidden, the user can't use the macOS Voice Over feature. Voice Over is supported on devices that:<br>- Run macOS 11.<br>- Are connected to the internet using Ethernet.<br>- Have a serial number in Apple School Manager or Apple Business Manager. |  
-| **Auto unlock with Apple Watch**| Give the user an option to use their Apple Watch to unlock their Mac. For macOS 12.0 and later.  
-| **Terms of Address**| Give the user the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Change Language & Region settings on Mac](https://support.apple.com/guide/mac-help/intl163/mac)(opens Apple website). For macOS 13.0 and later.   
-| **Wallpaper**| Shows the macOS Sonoma wallpaper setup pane. This screen appears after an upgrade. For macOS 14.1 and later.   
-| **Lockdown mode**| Shows the lockdown mode setup pane. For macOS 14.0 and later. 
-| **Intelligence**| Shows the intelligence setup pane. For macOS 15.0 and later.    
+| **Auto unlock with Apple Watch**| Shows the macOS Unlock with Apple Watch pane, where users can configure their Apple Watch to unlock their Mac. For macOS 12.0 and later.  
+| **Terms of Address**| Shows the terms of address pane, which gives users the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Change Language & Region settings on Mac](https://support.apple.com/guide/mac-help/intl163/mac)(opens Apple website). For macOS 13.0 and later.   
+| **Wallpaper**| Shows the macOS Sonoma wallpaper setup pane after devices complete a software upgrade. If you hide this screen, devices get the default macOS Sonoma wallpaper. For macOS 14.0 and later. 
+| **Lockdown mode**| Shows the lockdown mode setup pane to users who set up an Apple ID. For macOS 14.0 and later. 
+| **Intelligence**| Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. For macOS 15.0 and later.    
 
 
 ## Sync managed devices  
