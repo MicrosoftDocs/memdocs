@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/17/2023
+ms.date: 09/16/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -108,7 +108,10 @@ To select an ANC, follow these steps:
     - ABC-%USERNAME:5%-%RAND:5%
 7. Optional. Under **Additional services**, choose a service to be installed on Cloud PCs provisioned with this policy:
     - **Windows Autopatch** is a cloud service that automates updates for Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams on both physical and virtual devices. For more information, see [What is What is Windows Autopatch?](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) and the [Windows Autopatch FAQ](https://go.microsoft.com/fwlink/?linkid=2200228).
-    - **Microsoft Managed Desktop** is a cloud service that helps with device deployment, service management and operations, and security. For more information, see [What is Microsoft Managed Desktop?](/managed-desktop/intro/).
+        - If you already have Windows Autopatch configured to manage your cloud PCs, this option replaces the existing policy. This might disrupt any dynamic distribution you have already configured in Autopatch.
+        - Using this option, devices are assigned to a new ring as the last ring of the Autopatch group.
+        - To manually enable dynamic distribution for your Cloud PCs, modify your Autopatch Groups dynamic distribution list to include the Entra ID group to which your Cloud PCs are being added.
+    - **None**. Manage and update Cloud PCs manually.
 8. Select **Next**.
 9. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select**. Nested groups aren't currently supported.
 10. For Windows 365 Frontline, you must also select a Cloud PC size for each group in the policy. Choose **Select one** > select a size under **Available sizes** > **Select**. After you've selected a size for each group, select **Next**.
