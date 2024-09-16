@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/15/2024
+ms.date: 09/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -203,7 +203,6 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 5. Under **Review + create**, review the settings. When ready to save the Feature updates policy, select **Create**.  
 
 
-
 ## Upgrade devices to Windows 11
 
 You can use policy for *Feature updates for Windows 10 and later* to upgrade devices that run Windows 10 to Windows 11.
@@ -245,7 +244,7 @@ You cannot set the checkbox for an existing policy because changing the checkbox
 - Deploying an older Windows version to a device won't downgrade the device. Devices only install an update when it's newer than the devices current version.
 - Deploying a Windows 11 update to a Windows 10 device that supports Windows 11, [upgrades that device](#upgrade-devices-to-windows-11).  
 
-## Update behavior when multiple policies target a device:
+## Update behavior when multiple policies target a device
 
 Consider the following points when feature update policies target a device with more than one update policy, or target a Windows 10 device with an update for Windows 11:
 
@@ -256,6 +255,9 @@ Consider the following points when feature update policies target a device with 
 - Because Windows 11 updates are considered to be later versions than Windows 10, the service always offers the Windows 11 update to a device targeted by both Windows 10 and Windows 11 updates. This is done because deploying a Windows 11 update to a Windows 10 device is a supported upgrade path.
 
 - Using the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update** when using multiple policies avoids the problems mentioned in this section and configures the service to detect when the Windows 11 is not eligible for a device and instead offers the latest Windows 10 feature update.
+
+> [!NOTE]
+> If you create two policies with the same device/s, where one is set to **Required** and the other set to **Optional** and both policies target the same feature update version, then the update is offered as **Required**.
 
 ## Manage Feature updates for Windows 10 and later policy
 

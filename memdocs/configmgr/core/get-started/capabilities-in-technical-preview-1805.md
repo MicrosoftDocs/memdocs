@@ -145,7 +145,7 @@ The following management insight rules have actions in this release:
 ## Transition device configuration workload to Intune using co-management
 <!--1357903-->
 
-You can now transition the device configuration workload from Configuration Manager to Intune after enabling co-management. Transitioning this workload lets you use Intune to deploy MDM polices, while continuing to use Configuration Manager for deploying applications. 
+You can now transition the device configuration workload from Configuration Manager to Intune after enabling co-management. Transitioning this workload lets you use Intune to deploy MDM policies, while continuing to use Configuration Manager for deploying applications. 
 
 To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](../../comanage/overview.md).
 

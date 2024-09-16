@@ -1,0 +1,126 @@
+### YamlMime:FAQ
+metadata:
+  title: FAQ - Adding your Microsoft Entra account to a device
+  description: Frequently asked questions about adding your Microsoft Entra account to a device and their answers.
+  author: DidunAyodeji
+  ms.author: dayodeji
+  ms.service: entra-id
+  ms.topic: faq
+  ms.date: 09/10/2024
+  ms.reviewer: joflore
+  #customer intent: As an Entra account holder, I want to add my account to the device so that I am compliant with my organization's security requirements.
+title: Adding your Microsoft Entra account to a device
+summary: |
+    **The changes to the single sign-on enrollment page mentioned in this article are scheduled for October of 2024.**
+    
+    This article provides answers to some frequently asked questions (FAQ) about adding your Microsoft Entra account to a device.
+
+sections:
+  - name: Overview
+    questions:
+      - question: |
+          What is the single sign-on enrollment dialog page?
+        answer: |
+          The single sign-on (SSO) enrollment page is shown when you're trying to access protected resources through an app. The page is where you decide if you want to add your account to the device. When an app like Outlook tries to access a protected resource, you see the SSO enrollment page requesting you to add your account to the device. This functionality enables your administrator to make sure your device is compliant with your organization's security requirements. Adding your account to the device gives you the ability to seamlessly sign in to all your desktop apps. It also provides you with more security features. This dialog only appears when using your Microsoft Entra accounts.
+
+          :::image type="content" source="media/sso-dialog-faqs/sso-consent-screen-no-mdm.png" alt-text="Screenshot of the SSO dialog enrollment page." lightbox="media/sso-dialog-faqs/sso-consent-screen-no-mdm.png":::
+
+      - question: |
+          What does selecting "Yes, all apps" do?
+        answer: |
+          You're automatically signed in to desktop apps that use your work or school account. You don't have to enter your credentials when you open these apps.
+
+      - question: |
+          How do I sign out?
+        answer: |
+          On a Windows device, navigate to the **Settings** app > **Accounts** > **Access work or school** > Select your account > **Disconnect**. If you don't have access to the device you signed in to, go to [https://account.microsoft.com/devices](https://account.microsoft.com/devices) to manage your account and sign out.
+    
+          > [!NOTE] 
+          > Signing out of any individual app doesn't remove your account from your device. Signing out of a desktop app doesn't remove your account from the device. You must sign out of all apps via settings or [https://account.microsoft.com/devices](https://account.microsoft.com/devices) to remove your account from the device.
+    
+      - question: |
+          What does selecting "No, this app only" do?
+        answer: |
+          You're signed in to the individual app that you're currently trying to sign in to. Your account isn't added to the device and it isn't shown in the Windows Settings app under Accounts. You aren't signed in to other apps.  
+ 
+  - name: Mobile device management
+    questions:
+      - question: |
+          What is mobile device management?
+        answer: |
+          [Mobile device management (MDM)](/windows/client-management/mdm-overview) lets your administrator manage security and applications on your personal or corporate device without compromising your privacy. It's how organizations make sure only devices that are up to date and configured with required security policies are able to access apps and resources. If your company enables mobile device management, you see the following version of the dialog and you can enroll by checking the **Allow my organization to manage this device** checkbox.
+
+          :::image type="content" source="media/sso-dialog-faqs/sso-consent-screen-mdm.png" alt-text="Screenshot of the SSO dialog enrollment page with MDM enrollment." lightbox="media/sso-dialog-faqs/sso-consent-screen-mdm.png":::
+
+      - question: |
+          What can an administrator see if I enroll in MDM?
+        answer: |
+          [Things your administrator can always see.](/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune#things-your-organization-can-always-see)
+
+      - question: |
+          What can an administrator never see even if I enroll in MDM?
+        answer: |
+          [Things your administrator can never see.](/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune#things-your-organization-can-never-see)
+
+      - question: |
+          What happens if I check the device management checkbox but don't sign in to all apps, I sign in to this app only?
+        answer: |
+          [Mobile device management](/windows/client-management/mdm-overview) isn't activated. If you select "No, this app only," mobile device management isn't activated even if the checkbox is checked. Mobile device management can only be turned on if you select "Yes, all apps."
+
+      - question: |
+          What happens if I uncheck the device management checkbox but sign in to all apps?
+        answer: |
+          You're signed in to all native and desktop apps on your device, but your device isn't enrolled in [mobile device management](/windows/client-management/mdm-overview). Your organization might require MDM to access some applications or resources, without it you might not have access.
+
+      - question: |
+          What can my administrator do if I enroll in mobile device management?
+        answer: |
+          They're able to:
+           - Install applications on devices
+           - Restrict access to specific operating systems
+           - Deploy and update software
+           - Configure device settings
+           - Enforce security policies
+           - Block personal devices
+           - Remove data from lost or stolen devices
+           - Secure and protect data on devices
+
+  - name: General
+    questions:
+      - question: |
+          Can I change my selections later?
+        answer: |
+          The SSO enrollment dialog page appears only once per account so to change your choices, sign out of the account then sign back in. When you sign back in, you see the SSO enrollment dialog page again. You can then make different selections.
+
+      - question: |
+          Why am I seeing the SSO enrollment dialog page?
+        answer: |
+          All Microsoft Entra users are prompted to add their account to the device when signing in to an app because it can provide you with more security. This page is where you decide if you want to add your account to the device or not. If your administrator requires mobile device management, you get to decide if you want to enroll in mobile device management on this page as well.
+
+      - question: |
+          What are the benefits of signing in to all apps on my device?
+        answer: |
+          In addition to being compliant with your organization's policies, you get more security features. You're also automatically signed in to all your desktop apps.
+
+      - question: |
+          Do my choices here apply to other devices I'm signed in to?
+        answer: |
+          No, your choices on the SSO enrollment page apply to this device only.
+
+      - question: |
+          What is the difference between a service and an app?
+        answer: |
+          A desktop app is a software program that you access directly on the computer and it runs locally on the computer. A web app is a combination of pages that you access via a browser and it runs in the cloud. A web app has links to help you navigate through multiple pages.
+      
+          A service enables communication between different apps that work with the internet. Web services work by exposing APIs (Application Programming Interfaces) and allow for the exchange of information between different apps across different platforms (mobile, Windows, Microsoft Edge).
+
+      - question: |
+          For administrator reference
+        answer: |
+          [Conditional Access](/entra/identity/conditional-access/overview) policies are used by administrators to protect resources.
+
+          Applications configured to work with Windows [Web Account Manager](/entra/identity-platform/scenario-desktop-acquire-token-wam) authentication broker provide you with SSO and other [security features](/entra/identity/conditional-access/concept-token-protection).
+
+          All Microsoft Entra customers are prompted to sign in using Web Account Manager if the app and operating system support it.
+
+          [Learn more about mobile device management](/mem/intune/fundamentals/what-is-device-management).

@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/23/2024
+ms.date: 09/10/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -79,7 +79,7 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ### New UI for Intune Company Portal app for Windows<!-- 27219294 -->
 
-The UI for the Intune Company Portal app for Windows will be updated. Users will be able to use the same functionality they’re used to with an improved experience for their desktop app. With the updated design, users will see improvements in user experience for the **Home**, **Devices**, and **Downloads & updates** pages. The new design will be more intuitive and will highlights areas where users need to take action.
+The UI for the Intune Company Portal app for Windows will be updated. Users will be able to use the same functionality they’re used to with an improved experience for their desktop app. With the updated design, users will see improvements in user experience for the **Home**, **Devices**, and **Downloads & updates** pages. The new design will be more intuitive and will highlight areas where users need to take action.
 
 For more information, see [New look for Intune Company Portal app for Windows](https://techcommunity.microsoft.com/t5/intune-customer-success/new-look-for-intune-company-portal-app-for-windows/ba-p/4158755).
 
@@ -241,55 +241,6 @@ Applies to:
 
 - iOS/iPadOS
 - macOS
-
-### Support ending for Apple User Enrollment with Company Portal<!-- 28361917 -->
-
-After the release of iOS/iPadOS 18, Apple will no longer support profile-based Apple User Enrollment. As a result, Intune will end support for [user enrollment with Company Portal](../enrollment/apple-user-enrollment-with-company-portal.md) shortly after the release of iOS/iPadOS 18.
-
-After Intune ends support for user enrollment with Company Portal:
-
-- Existing enrolled devices won't be impacted.
-- Users won't be able to enroll devices if they're targeted with this enrollment profile type.
-- Microsoft Intune technical support will be available for existing enrolled devices with this enrollment profile type. Technical support won't be available for new enrollments.
-
-To prepare, use a different management method to enroll devices. We recommend account-driven Apple User Enrollment for similar functionality and an improved user experience. For a simpler enrollment experience, try web- based device enrollment. For more information, see:
-
-- [Set up account-driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md)
-- [Set up web-based device enrollment for iOS/iPadOS](../enrollment/web-based-device-enrollment-ios.md)
-
-Applies to:
-
-- iOS/iPadOS
-
-<!-- *********************************************** -->
-
-## Device management
-
-### Intune will support macOS 13.x as the minimum version<!-- 28391869 -->
-
-With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Big Sur) and later.
-
-For more information on this change, see [Plan for change: Intune is moving to support macOS 13 and later](../fundamentals/whats-new.md#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year).
-
-> [!NOTE]
-> macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
-
-Applies to:
-
-- macOS
-
-### Intune supports iOS/iPadOS 16.x as the minimum version<!-- 28391935 -->
-
-Later this year, we expect iOS18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require iOS/iPadOS 16 and higher shortly after the iOS/iPadOS 18 release.
-
-For more information on this change, see [Plan for change: Intune is moving to support iOS/iPadOS 16 and later](../fundamentals/whats-new.md#plan-for-change-intune-is-moving-to-support-iosipados-16-and-later).
-
-> [!NOTE]
-> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
-
-Applies to:
-
-- iOS/iPadOS
 
 <!-- *********************************************** -->
 
