@@ -206,7 +206,11 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 1. Review the summary of changes, and then select **Create** to finish creating the profile.   
 
 ### Setup Assistant screen reference 
-The following table describes the Setup Assistant screens shown during automated device enrollment for Macs. You can show or hide these screens on supported devices during enrollment.    
+The following table describes the Setup Assistant screens shown during automated device enrollment for Macs. You can show or hide these screens on supported devices during enrollment.  For more information about how each Setup Assistant screen affects the user experience, see the following resources from Apple: 
+
+- [Apple Platform Deployment guide: Manage Setup Assistant for Apple devices](https://support.apple.com/en-mide/guide/deployment/depdeff4a547/web) 
+- [ShipKeys](https://developer.apple.com/documentation/devicemanagement/skipkeys)  
+-   
 
 | Setup Assistant screen | What happens when visible  |
 |------------------------------------------|------------------------------------------|
@@ -218,17 +222,20 @@ The following table describes the Setup Assistant screens shown during automated
 | **Apple Pay** | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
 | **Siri** | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
 | **Diagnostics Data** | Display the Diagnostics screen to the user. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |  
-| **Display Tone** | Give the user the option to turn on Display Tone. For macOS 10.13.6 and later, and iOS/iPadOS 9.3.2 and later. |
-| **FileVault** | Display the FileVault 2 encryption screen to the user. For macOS 10.10 and later. |
-| **iCloud diagnostics** | Display the iCloud Analytics screen to the user. For macOS 10.12.4 and later. |  
-| **Registration** | Display the registration screen. For macOS 10.9 and later. |  
-| **iCloud Storage** | Display the iCloud Documents and Desktop screen to the user. For macOS 10.13.4 and later. |
+| **Display Tone** |Shows the setup pane for the users' display tone.  This screen gives users the option to turn on true tone display. For macOS 10.13.6 and later, and deprecated in iOS 15. |
+| **FileVault** | Shows the FileVault 2 encryption screen to users. For macOS 10.10 and later. |
+| **iCloud diagnostics** | Shows the iCloud Analytics screen to users. For macOS 10.12.4 and later. |  
+| **Registration** | Shows the registration screen to users. For macOS 10.9 and later. |  
+| **iCloud Storage** | Shows the iCloud Documents and Desktop screen to the user. For macOS 10.13.4 and later. |
 | **Appearance** | Display the Appearance screen to the user. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |    
 | **Screen Time** | Display the Screen Time screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
 | **Privacy** | Display the Privacy screen to the user. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
 | **Accessibility** | Display the Accessibility screen to the user. If this screen is hidden, the user can't use the Voice Over feature. Voice Over is supported on devices that:<br>- Run macOS 11.<br>- Are connected to the internet using Ethernet.<br>- Have the serial number appear in Apple School Manager or Apple Business Manager. |  
 | **Auto unlock with Apple Watch**| Give the user an option to use their Apple Watch to unlock their Mac. For macOS 12.0 and later.  
-| **Terms of Address**| Give the user the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Change Language & Region settings on Mac](https://support.apple.com/guide/mac-help/intl163/mac)(opens Apple website). For macOS 13.0 and later.    
+| **Terms of Address**| Give the user the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Change Language & Region settings on Mac](https://support.apple.com/guide/mac-help/intl163/mac)(opens Apple website). For macOS 13.0 and later.   
+| **Emergency SOS**| Shows the safety (also known as *emergency SOS*) setup pane. For macOS 15.0 and later. 
+| **Lockdown mode**| Shows the Lockdown Mode setup pane. For macOS 14.0 and later.  
+| **Wallpaper**| Shows the macOS Sonoma wallpaper setup pane. This screen appears after an upgrade. For macOS 14.1 and later.   
 
 ## Sync managed devices  
 Syncing refreshes existing device status and imports new devices assigned to the Apple MDM server. To see all associated Apple devices and device info, sync your enrollment program token in the admin center.     

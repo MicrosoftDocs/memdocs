@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/15/2023
+ms.date: 09/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -356,21 +356,24 @@ Prior to device setup, and to ensure quick delivery to devices with user affinit
 If you assign dynamic groups to enrollment profiles, there might be a delay in delivering applications and policies to devices after the enrollment.
 
 ### Setup Assistant screen reference  
-The following table describes the Setup Assistant screens shown during automated device enrollment for iOS/iPadOS. You can show or hide these screens on supported devices during enrollment.       
+The following table describes the Setup Assistant screens shown during automated device enrollment for iOS/iPadOS. You can show or hide these screens on supported devices during enrollment. For more information about how each Setup Assistant screen affects the user experience, see the following resources from Apple: 
+
+- [Apple Platform Deployment guide: Manage Setup Assistant for Apple devices](https://support.apple.com/en-mide/guide/deployment/depdeff4a547/web)  
+- [ShipKeys](https://developer.apple.com/documentation/devicemanagement/skipkeys)  
 
 | Setup Assistant screen | What happens when visible |
 |------------------------------------------|------------------------------------------|
-| **Passcode** | Prompt the user for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other way. (For example, a kiosk mode configuration that restricts the device to one app.) For iOS/iPadOS 7.0 and later. |
-| **Location Services** | Prompt the user for their location. For macOS 10.11 and later, and iOS/iPadOS 7.0 and later. |
-| **Restore** | Display the Apps & Data screen. This screen gives users the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-| **Apple ID** | Give the user the options to sign in with their Apple ID and use iCloud. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later.   |
-| **Terms and conditions** | Require the user to accept Apple's terms and conditions. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-| **Touch ID and Face ID** | Give the user the option to set up fingerprint or facial identification on their device. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. On iOS/iPadOS 14.5 and later, the Passcode and Touch ID Setup Assistant screens during device setup aren’t working. If you use version 14.5+, then don't configure the Passcode or Touch ID Setup Assistant screens. If you require a passcode on devices, then use a device configuration policy or a compliance policy. After the user enrolls and they receive the policy, they're prompted for a passcode. |
-| **Apple Pay** | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
-| **Zoom** | Give the user to the option to zoom the display when they set up the device. For iOS/iPadOS 8.3 and later. |
-| **Siri** | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
-| **Diagnostics Data** | Display the Diagnostics screen. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |  
-| **Display Tone** | Give the user the option to turn on Display Tone. For macOS 10.13.6 and later, and iOS/iPadOS 9.3.2 and later. |  
+| **Passcode** | Shows the password pane and prompts users for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other way (like a kiosk mode configuration that restricts the device to one app). For iOS/iPadOS 7.0 and later, with some limitations. For more information, see [Limitations](#limitations) in this article. |
+| **Location Services** | Shows the screen for enabling location services, and prompts users for their location. For iOS/iPadOS 7.0 and later. |
+| **Restore** | Shows the Apps & Data screen. On this screen users setting up their device can restore or transfer data from iCloud Backup. For iOS/iPadOS 7.0 and later. |
+| **Apple ID** | Shows Apple ID setup and gives users the option to sign in with their Apple ID and use iCloud. For iOS/iPadOS 7.0 and later.   |
+| **Terms and conditions** | Shows the Apple terms and conditions and requires users to accept them. For iOS/iPadOS 7.0 and later. |
+| **Touch ID and Face ID** | Shows the biometric setup pane, which gives users the option to set up fingerprint or facial identification on their devices. For iOS/iPadOS 8.1 and later, with some limitations. For more information, see [Limitations](#known-limitations) in this article.  |
+| **Apple Pay** | Shows the Apple Pay setup pane, which gives users the option to set up Apple Pay on their devices. For iOS/iPadOS 7.0 and later. |
+| **Zoom** | Shows Zoom setup, which gives users the option to configure zoom settings. For iOS/iPadOS 8.3 and later, and deprecated in iOS/iPadOS 17.  |
+| **Siri** | Shows Siri setup, which gives users the option to set up Siri. For iOS/iPadOS 7.0 and later. |
+| **Diagnostics Data** | Shows the diagnostics pane where users have the option to send diagnostic data to Apple. For iOS/iPadOS 7.0 and later. |  
+| **Display Tone** | Shows the DisplayTone setup pane and gives the user the option to turn on Display Tone. For iOS/iPadOS 9.3.2 and later, and deprecated in iOS/iPadOS 15. |  
 | **Privacy** | Display the Privacy screen. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |  
 | **Android Migration** | Give the user the option to migrate data from an Android device. For iOS/iPadOS 9.0 and later.|
 | **iMessage & FaceTime** | Give the user the option to set up iMessage and FaceTime. For iOS/iPadOS 9.0 and later. |  
@@ -382,9 +385,12 @@ The following table describes the Setup Assistant screens shown during automated
 | **Appearance** | Display the Appearance screen. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |  
 | **Device to Device Migration** | Give the user the option to transfer data from an old device to this device. The option to transfer data directly from a device isn't available for ADE devices running iOS 13 or later.   
 | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  
-| **Software Update Completed** | Shows the user all software updates that happen during Setup Assistant.|  
+| **Software Update Completed** | Shows users all software updates that happen during Setup Assistant.|  
 | **Get Started**| Shows users the Get Started welcome screen.  
-| **Terms of Address**| Give the user the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS/iPadOS 16.0 and later.      
+| **Terms of Address**| Shows the Terms of Address pane, which gives users the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS/iPadOS 16.0 and later.    
+| **Emergency SOS**| Shows the safety (also known as *emergency SOS*) setup pane. For iOS/iPadOS 16.0 and later.  
+| **Action button**| Shows the configuration pane for the action button. For iOS/iPadOS 17.0 and later.  
+| **Intelligence**| Shows the intelligence setup pane. For iOS/iPadOS 18.0 and later.  
 
 ## Sync managed devices  
 
@@ -516,6 +522,15 @@ To delete an enrollment profile token:
 1. Return to **Enrollment program tokens**. Select the token, and then select **Profiles**.  
 1. If there's a default profile or any other enrollment profile, they must all be deleted. 
 1. Return to **Enrollment program tokens**. Select the token, and then select **Delete**.  
+
+## Limitations  
+
+These Setup Assistant screens don't work correctly on devices running iOS/iPadOS 14.5 and later: 
+
+  * Passcode  
+  * Touch ID and Face ID  
+
+As a result, hide both screens on devices running iOS/iPadOS 14.5 and later. To require passcodes on those devices, create a device configuration policy or a compliance policy with passcode requirements. After the user enrolls and receives the policy, they're prompted for a passcode. 
 
 ## Next steps
 For an overview of what's required of device users, see [ADE end user tasks](../fundamentals/deployment-guide-enrollment-ios-ipados.md#ade-end-user-tasks).   
