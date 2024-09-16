@@ -174,7 +174,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
    > [!div class="mx-imgBorder"]
    > ![Image of admin center showing new Account settings section in the macOS automated device enrollment profile.](./media/device-enrollment-program-enroll-macos/macos-account-settings-intune.png)  
 
-   These settings are supported on devices running macOS 10.11 or later. Keep in mind while you configure the primary account that this account will be an *admin* account after it's created. Having at least one admin account is a Mac setup requirement.  
+   These settings are supported on devices running macOS 10.11 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account.  Having at least one admin account is a Mac setup requirement.  
 
    Your options:  
 
@@ -183,15 +183,15 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
      * **Primary account name**: Enter the username for the account. `{{partialupn}}` is the supported token variable for *account name*.    
      * **Primary account full name**: Enter the full name of the account.   `{{username}}` is the supported token variable for *full name*.   
    * **Restrict editing**: The default configuration is set to **Yes** so that device users can't edit the account name and full name configured for them. To allow device users to edit the account name and full name, select **Not configured**. If you're only using Setup Assistant (legacy) to enroll devices running macOS 10.15 and later, you can expect the following end user experience:   
-     * **Yes**: The account creation screen in Setup Assistant never appears. Instead, the local primary account is automatically created based on the other setting configurations, and the password is automatically populated from the Entra ID authentication screen. The device user can't edit these fields.           
-     * **Not configured**: The local primary account screen is shown to the end user in Setup Assistant and is populated with the configured account values, and the password from the Entra ID authentication screen. The device user can edit these fields during Setup Assistant.   
+     * **Yes**: The account creation screen in Setup Assistant never appears. Instead, the local primary account is automatically created based on the other setting configurations, and the password is automatically populated from the Microsoft Entra authentication screen. The device user can't edit these fields.           
+     * **Not configured**: The local primary account screen is shown to the end user in Setup Assistant and is populated with the configured account values, and the password from the Microsoft Entra authentication screen. The device user can edit these fields during Setup Assistant.   
 
    For account settings to work as intended, your enrollment profile must have the following configurations:      
    * **User affinity**: Select **Enroll with User affinity**.     
    * **Authentication method**: Select **Setup Assistant with modern authentication** or **Setup Assistant (legacy)**.   
    * **Await final configuration**: Select **Yes**.       
 
-   Local accounts depend on the *await final configuration* feature when they're being created. As a result, if you configure any local primary account settings, this setting is always enabled. Even if you don't touch the *await final configuration* setting, it is enabled in the background and applied to the enrollment profile.  
+   Local accounts depend on the *await final configuration* feature when they're being created. As a result, if you configure any local primary account settings, this setting is always enabled. Even if you don't touch the *await final configuration* setting, it's enabled in the background and applied to the enrollment profile.  
 
 1. Select **Next**.  
 
@@ -206,7 +206,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 1. Review the summary of changes, and then select **Create** to finish creating the profile.   
 
 ### Setup Assistant screen reference 
-The following table describes the Setup Assistant screens shown during automated device enrollment for Macs. You can show or hide these screens on supported devices during enrollment.  For more information about how each Setup Assistant screen affects the user experience, see these Apple resources: 
+The following table describes the Setup Assistant screens shown during automated device enrollment for Macs. You can show or hide these screens on supported devices during enrollment. For more information about how each Setup Assistant screen affects the user experience, see these Apple resources: 
 
 - [Apple Platform Deployment guide: Manage Setup Assistant for Apple devices](https://support.apple.com/en-mide/guide/deployment/depdeff4a547/web) 
 - [Apple Developer documentation: ShipKeys](https://developer.apple.com/documentation/devicemanagement/skipkeys)  
@@ -222,7 +222,7 @@ The following table describes the Setup Assistant screens shown during automated
 | **Apple Pay** | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
 | **Siri** | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
 | **Diagnostics Data** | Display the Diagnostics screen to the user. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |  
-| **Display Tone** |Shows the setup pane for the users' display tone.  This screen gives users the option to turn on true tone display. For macOS 10.13.6 and later. |
+| **Display Tone** |Shows the setup pane for the users' display tone. This screen gives users the option to turn on true tone display. For macOS 10.13.6 and later. |
 | **FileVault** | Shows the FileVault 2 encryption screen to users. For macOS 10.10 and later. |
 | **iCloud diagnostics** | Shows the iCloud Analytics screen to users. For macOS 10.12.4 and later. |  
 | **Registration** | Shows the registration screen to users. For macOS 10.9 and later. |  
@@ -249,7 +249,7 @@ Syncing refreshes existing device status and imports new devices assigned to the
 
 ### Sync restrictions  
 To comply with Apple's terms for acceptable enrollment program traffic, Microsoft Intune imposes the following restrictions:  
- - A *full sync* can run no more than once every seven days. During a full sync, Intune fetches the most recent, updated list of serial numbers assigned to the connected Apple MDM server. If you delete a device from Intune without unassigning it from the MDM server in Apple Business Manager or Apple School Manager, it won't be reimported to Intune until the full sync is run. 
+ - A *full sync* can run no more than once every seven days. During a full sync, Intune fetches the most recent, updated list of serial numbers assigned to the connected Apple MDM server. If you delete a device from Intune without unassigning it from the MDM server in Apple Business Manager or Apple School Manager, it won't be reimported to Intune until the full sync runs. 
  - If a device is released from either of the Apple enrollment programs, it can take up to 45 days for it to be automatically deleted from the Devices page in Intune. You can manually delete released devices in Intune one-by-one, if needed. Intune reports released devices as being removed from Apple Business Manager or Apple School Manager until they're automatically deleted, which occurs within 30-45 days.  
  - A sync is run automatically every 24 hours. You can initiate a sync no more than once every 15 minutes. All sync requests are given 15 minutes to finish. The **Sync** button becomes inactive until syncing is complete. 
 
@@ -275,13 +275,13 @@ Optionally, you can select a default enrollment profile. The default profile is 
 
 Distribute prepared devices throughout your organization.  
 
-* New or wiped Macs: New or wiped Macs configured in Apple Business Manager or Apple School Manager will automatically enroll in Microsoft Intune during Setup Assistant when someone turns on the device. If you assigned the device to a macOS enrollment profile with user affinity, the device user must sign in to the Company Portal after Setup Assistant is done to finish Microsoft Entra registration and conditional access requirements.  
+* New or wiped Macs: New or wiped Macs configured in Apple Business Manager or Apple School Manager automatically enroll in Microsoft Intune during Setup Assistant when someone turns on the device. If you assigned the device to a macOS enrollment profile with user affinity, the device user must sign in to the Company Portal after Setup Assistant is done to finish Microsoft Entra registration and conditional access requirements.  
 
 * Existing Macs: You can enroll devices that already went through Setup Assistant. Complete these steps to enroll corporate-owned Macs running macOS 10.13 and later.    
 
   1. Ensure that: 
-     * The device has been imported to Apple Business Manager or Apple School Manager.  
-     * The device has been assigned a macOS enrollment profile in the admin center. 
+     * The device is imported to Apple Business Manager or Apple School Manager.  
+     * The device is assigned a macOS enrollment profile in the admin center. 
   1. Sign in to the device with a local administrator account.  
   1. To trigger enrollment, from the **Home** page open **Terminal**, and run the following command:  
 
