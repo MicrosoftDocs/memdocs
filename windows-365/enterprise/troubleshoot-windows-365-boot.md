@@ -43,9 +43,9 @@ If the user can't access the Cloud PC from the Windows 365 Boot physical device,
 2. If a user has more than one Cloud PC, make sure they have selected a default Cloud PC to use each time they sign in. To set this default:
    - Navigate to https://windows365.microsoft.com.
    - In the card for the Cloud PC you want to set as default, select the ellipses (...) > Settings.
-   -In the Integrated experiences tab, under Boot to this Cloud PC, select Connect while signed into device.
-   -Select Update.
-3. If you can log into the Cloud PC from either method, and a default cloud PC has been set then there's an issue with the Windows 365 Boot physical device. In this case, confirm that the physical device is correctly configured and has the requisite software versions. For more information, see [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
+   - In the **Integrated experiences** tab, under **Boot to this Cloud PC**, select **Connect while signed into device**.
+   - Select **Save**.
+3. If you can sign into the Cloud PC from the app or web, and a default Cloud PC has been set, then there's an issue with the Windows 365 Boot physical device. In this case, confirm that the physical device is correctly configured and has the requisite software versions. For more information, see [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
 4. Admins can try to manually click on **Device sync** to get the policies delivered faster on the device. Users can try to restart the device.
 
 
