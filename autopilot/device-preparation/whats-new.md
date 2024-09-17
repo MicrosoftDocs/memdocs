@@ -33,6 +33,12 @@ appliesto:
 
 <!-- MAXADO-9313795 / INADO-28687730 -->
 
+## Windows Autopilot Device Preparation Support in 21Vianet
+
+Date added: *September 17, 2024*
+
+As part of the 2409 Intune release, we are announcing support for the new Windows Autopilot Device Preparation policy in the [21Vianet](/mem/intune/fundamentals/china) (Azure China) cloud. Customers with tenants located in China, can now provision devices and manage through Intune. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md). 
+
 ## enrollmentProfileName property is now populated with the Device preparation policy name
 
 Date added: *September 13, 2024*
