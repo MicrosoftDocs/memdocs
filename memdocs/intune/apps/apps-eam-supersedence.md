@@ -31,7 +31,7 @@ Guided update supersedence for Enterprise App Management allows you to check for
 
 In the **Overview** pane for a selected Enterprise App Catalog app, you can view the available updates by selecting the tile **Enterprise App Catalog apps with available updates**.
 
-:::image type="content" alt-text="Screenshot the app's Overview pane with the tile 'Enterprise App Catalog apps with available updates'." source="./media/apps-eam-supersedence/apps-eam-supersedence-01.png" :::
+:::image type="content" alt-text="Screenshot the app's Overview pane with the tile 'Enterprise App Catalog apps with available updates'." source="./media/apps-eam-supersedence/apps-eam-supersedence-01.png" lightbox="./media/apps-eam-supersedence/apps-eam-supersedence-01.png" :::
 
 The **Enterprise App Catalog apps with updates** pane provides a list of Enterprise App Catalog apps that can be updated. This list provides the following app details:
 - **App name**: - The name of the app.
@@ -39,7 +39,7 @@ The **Enterprise App Catalog apps with updates** pane provides a list of Enterpr
 - **Provisioned version**: - The currently installed app version.
 - **Latest available version**: - The new version that is available.
 
-:::image type="content" alt-text="Screenshot the Enterprise App Catalog app list with available updates." source="./media/apps-eam-supersedence/apps-eam-supersedence-02.png" :::
+:::image type="content" alt-text="Screenshot the Enterprise App Catalog app list with available updates." source="./media/apps-eam-supersedence/apps-eam-supersedence-02.png" lightbox="./media/apps-eam-supersedence/apps-eam-supersedence-02.png" :::
 
 ## Update an Enterprise App Catalog app
 
@@ -52,7 +52,7 @@ The **Enterprise App Catalog apps with updates** pane provides a list of Enterpr
 2. Select the **Update** option for the specific app. 
    The **Update application** pane is displayed.
 
-    :::image type="content" alt-text="Screenshot an Enterprise App Catalog app list the supersedence option." source="./media/apps-eam-supersedence/apps-eam-supersedence-04.png" :::
+    :::image type="content" alt-text="Screenshot an Enterprise App Catalog app list the supersedence option." source="./media/apps-eam-supersedence/apps-eam-supersedence-04.png" lightbox="./media/apps-eam-supersedence/apps-eam-supersedence-04.png" :::
 
 3. Select **Supersede app**.
 
