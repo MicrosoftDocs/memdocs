@@ -52,7 +52,7 @@ The **Enterprise App Catalog apps with updates** pane provides a list of Enterpr
 2. Select the **Update** option for the specific app. 
    The **Update application** pane is displayed.
 
-    :::image type="content" alt-text="Screenshot the Enterprise App Catalog app list with available updates." source="./media/apps-eam-supersedence/apps-eam-supersedence-04.png" :::
+    :::image type="content" alt-text="Screenshot an Enterprise App Catalog app list the supersedence option." source="./media/apps-eam-supersedence/apps-eam-supersedence-04.png" :::
 
 3. Select **Supersede app**.
 

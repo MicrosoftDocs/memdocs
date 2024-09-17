@@ -116,7 +116,7 @@ Graph API is planned to be available soon.
 
 ### Will Enterprise catalog apps automatically update to a new version when a new version is available in the Enterprise app catalog?
 
-Updates will be shown in Monitor report under Enterprise App Catalog apps with updates. The updates will not be applied automatically, you still need to go in and create a new app with supersedence relationship.
+Updates are shown in Monitor report under Enterprise App Catalog apps with updates. The updates won't be applied automatically. You still need to go in and create a new app with supersedence relationship.
 
 ### Can you get licensed applications from this catalog?
 
@@ -136,7 +136,7 @@ No. Enterprise App Catalog apps are directly installed by the Intune management 
 
 ### How do I update my Enterprise App Catalog app?
 
-For applications that don’t update themselves, you can can view the upgrades that are available for the EAM app via supersedence.
+For applications that don’t update themselves, you can view the upgrades that are available for the EAM app via supersedence.
 
 ### After several hours, what can I do if my app continues to show that it isn't ready and that the requested content is still being prepared?
 
