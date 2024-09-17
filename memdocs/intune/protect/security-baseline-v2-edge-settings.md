@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/11/2023
+ms.date: 09/17/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,7 +48,7 @@ zone_pivot_groups: dcv2-edge-baselines
 
 This article is a reference for the settings that are available in the Microsoft Edge security baseline for Microsoft Intune and applies to versions of that baseline that released in May 2023 or later.
 
-If you use a security baseline for Edge version 85 or earlier, see [List of the settings in the Microsoft Edge security baseline in Intune](../protect/security-baseline-settings-edge.md).
+If you use a security baseline for Microsoft Edge version 85 or earlier, see [List of the settings in the Microsoft Edge security baseline in Intune](../protect/security-baseline-settings-edge.md).
 
 > [!NOTE]  
 > Beginning in May 2023, all new security baseline versions use a new settings format that replaces previous versions. While the last version instance for a baseline that uses the older setting format remains available to use, the older format will no longer receive updates for new settings, or updated default configurations.
