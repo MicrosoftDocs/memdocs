@@ -385,7 +385,7 @@ The following table describes the Setup Assistant screens shown during automated
 | **Screen Time** | Shows the Screen Time screen. For iOS/iPadOS 12.0 and later. |  
 | **SIM Setup** | Shows the cellular setup pane, where users can add a cellular plan. For iOS/iPadOS 12.0 and later. |
 | **Software Update** | Shows the mandatory software update screen. For iOS/iPadOS 12.0 and later. |  
-| **Watch Migration** | Shows the Apple Watch migration pane, where users can migrate data from a and Apple Watch. For iOS/iPadOS 11.0 and later.|
+| **Watch Migration** | Shows the Apple Watch migration pane, where users can migrate data from an Apple Watch. For iOS/iPadOS 11.0 and later.|
 | **Appearance** | Shows the appearance setup pane. For iOS/iPadOS 13.0 and later. |  
 | **Device to Device Migration** | Shows the device-to-device migration pane. On this screen, users can transfer data from an old device to their current device. The option to transfer data directly from a device isn't available for devices running iOS 13 or later.   
 | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  

@@ -131,14 +131,14 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 
 1. Select **Next**. 
 
-1. On the **Management Settings** page, configure **User Affinity**. *User affinity* determines whether devices enroll with or without an assigned user.  Your options: 
+1. On the **Management Settings** page, configure **User Affinity**. *User affinity* determines whether devices enroll with or without an assigned user. Your options: 
 
     * **Enroll without User Affinity**:  Enroll devices that aren't associated with a single user. Choose this option for shared devices and devices that don't need to access local user data. The Company Portal app doesn't work on these types of devices.  
     * **Enroll with User Affinity**: Enroll devices that are associated with an assigned user. Choose this option for work devices that belong to users, and if you want to require users to have the Company Portal app to install apps. Multifactor authentication (MFA) is available with this option.     
 
       Option 2 requires more configurations. Users must authenticate themselves before enrollment to confirm their identity. Select one of the following authentication methods:   
 
-      - **Setup Assistant with modern authentication**: This method requires users to complete all Setup Assistant screens and sign in to the Company Portal app with their Microsoft Entra credentials before they can access resources.  After they sign in to Company Portal, the device:   
+      - **Setup Assistant with modern authentication**: This method requires users to complete all Setup Assistant screens and sign in to the Company Portal app with their Microsoft Entra credentials before they can access resources. After they sign in to Company Portal, the device:   
 
         - Registers with Microsoft Entra ID.  
         - Is added to the user's device record in Microsoft Entra ID.  
@@ -174,12 +174,12 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
    > [!div class="mx-imgBorder"]
    > ![Image of admin center showing new Account settings section in the macOS automated device enrollment profile.](./media/device-enrollment-program-enroll-macos/macos-account-settings-intune.png)  
 
-   These settings are supported on devices running macOS 10.11 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account.  Having at least one admin account is a Mac setup requirement.  
+   These settings are supported on devices running macOS 10.11 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement.  
 
    Your options:  
 
    * **Create a local primary account**: Select **Yes** to configure local primary account settings for targeted Macs. Select **Not configured** to skip all account setting configurations.     
-   * **Prefill account info**: The default configuration, **Not configured**, requires the device user to enter their account username and full name in Setup Assistant. To prefill the account information for them instead, select **Yes**.  Then enter the primary account name and full name:   
+   * **Prefill account info**: The default configuration, **Not configured**, requires the device user to enter their account username and full name in Setup Assistant. To prefill the account information for them instead, select **Yes**. Then enter the primary account name and full name:   
      * **Primary account name**: Enter the username for the account. `{{partialupn}}` is the supported token variable for *account name*.    
      * **Primary account full name**: Enter the full name of the account.   `{{username}}` is the supported token variable for *full name*.   
    * **Restrict editing**: The default configuration is set to **Yes** so that device users can't edit the account name and full name configured for them. To allow device users to edit the account name and full name, select **Not configured**. If you're only using Setup Assistant (legacy) to enroll devices running macOS 10.15 and later, you can expect the following end user experience:   
