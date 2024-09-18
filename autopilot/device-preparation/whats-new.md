@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 09/13/2024
+ms.date: 09/18/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -30,6 +30,12 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+## Windows Autopilot Device Preparation Support in Azure China 21Vianet
+
+Date added: *September 18, 2024*
+
+As part of the 2409 Intune release, we're announcing support for Windows Autopilot Device Preparation policy in the [Azure China 21Vianet](/mem/intune/fundamentals/china) cloud. Customers with tenants located in China can now provision devices and manage through Microsoft Intune. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
 
 <!-- MAXADO-9313795 / INADO-28687730 -->
 
