@@ -140,7 +140,7 @@ Image hash values:
 
 Changes in this release:
 - Add diagnostic tools for host troubleshooting
-- Upgrade Azure Linux image to 2.0.20240628
+- Upgrade Azure Linux image to 2.0.20240829
 
   
 ### August 12, 2024
