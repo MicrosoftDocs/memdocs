@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/23/2024
+ms.date: 09/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -72,7 +72,7 @@ Security settings management isn't yet supported with Government clouds. For mor
 
 ### Government cloud support
 
-The Defender for Endpoint security settings management scenario is supported in the following tenants:
+As a public preview, the Defender for Endpoint security settings management scenario is supported in the following tenants:
 
 - US Government Community (GCC) High
 - Department of Defense (DoD)
