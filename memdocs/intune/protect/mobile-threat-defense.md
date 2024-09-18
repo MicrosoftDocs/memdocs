@@ -130,18 +130,18 @@ Access is granted when the device is remediated:<br>
 
 Learn how to protect access to company resource based on device, network, and application risk with:
 
-- [Better Mobile](better-mobile-threat-defense-connector.md)
-- [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md)
-- [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
-- [CrowdStrike Falcon for Mobile](crowdstrike-falcon-defense-connector.md)
-- [Jamf Mobile Threat Defense](jamf-mtd-connector.md)
-- [Lookout for Work](lookout-mobile-threat-defense-connector.md)
-- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)
-- [Pradeo](pradeo-mobile-threat-defense-connector.md)
-- [SentinelOne](Sentinelone-mobile-threat-defense-connector.md)
-- [Sophos Mobile](sophos-mtd-connector.md)
-- [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
-- [Trellix Mobile Security](trellix-mobile-threat-defense-connector.md)
-- [Trend Micro Mobile Security as a Service](trend-micro-mobile-threat-defense-connector.md)
-- [Windows Security Center](../apps/protect-mam-windows.md) *(Supports integration with Windows MAM)*
-- [Zimperium](zimperium-mobile-threat-defense-connector.md)
+- [Better Mobile](better-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [CrowdStrike Falcon for Mobile](crowdstrike-falcon-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Jamf Mobile Threat Defense](jamf-mtd-connector.md) - *(Android, iOS/iPadOS)*
+- [Lookout for Work](lookout-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) - *(Android, iOS/iPadOS, Windows)*
+- [Pradeo](pradeo-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [SentinelOne](Sentinelone-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Sophos Mobile](sophos-mtd-connector.md) - *(Android, iOS/iPadOS)*
+- [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Trellix Mobile Security](trellix-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Trend Micro Mobile Security as a Service](trend-micro-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Windows Security Center](../apps/protect-mam-windows.md) - *(Windows)* - *For information about the Windows versions that support this connector, see [Data protection for Windows MAM](../apps/protect-mam-windows.md).*
+- [Zimperium](zimperium-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
