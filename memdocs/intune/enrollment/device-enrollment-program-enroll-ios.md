@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Enroll iOS/iPadOS devices with Apple ADE
+title: Set up automated device enrollment (ADE) for iOS/iPadOS  
 titleSuffix: Microsoft Intune
-description: Learn how to enroll corporate-owned iOS/iPadOS devices by using Automated Device Enrollment (ADE).
+description: Learn how to enroll corporate-owned iOS/iPadOS devices into Microsoft Intune with Apple Automated Device Enrollment (ADE). 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -30,7 +30,7 @@ ms.collection:
 - highpri
 ---
 
-# Set up automated device enrollment in Intune  
+# Set up automated device enrollment (ADE) for iOS/iPadOS   
 
 *Applies to iOS/iPadOS*  
 
