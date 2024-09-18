@@ -486,7 +486,7 @@ To use the readiness tool:
 
 2. To validate your network and Linux configuration, run the script with the following commands. These commands set the run permissions for the script, validate the Tunnel can connect to the correct endpoints, and then check for the presence of utilities that Tunnel uses:
 
-   - `sudo chmod +x ./mst-readiness`
+   - `sudo ./mst-readiness`
 
    - `sudo ./mst-readiness network` - This command runs the following actions and then reports success or error for both:
 

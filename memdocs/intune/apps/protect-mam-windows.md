@@ -49,7 +49,7 @@ You can enable protected Mobile Application Management (MAM) access to org data 
 > For more information about MAM, see [Mobile Application Management (MAM) basics](../apps/app-management.md#mobile-application-management-mam-basics).
 
 > [!NOTE]
-> The Mobile Threat Defense (MTD) Connector for the Windows Security Center (WSC) component is only supported on Windows 11.
+> The Mobile Threat Defense (MTD) Connector for the Windows Security Center (WSC) component is only supported on Windows 11 version 22631 (23H2) or later.
 
 Both end-users and organizations need to have protected organizational access from personal devices. Organizations need to ensure that corporate data is protected on personal, unmanaged devices. As an Intune admin, you have the responsibility to determine how members (end-users) of your organization access corporate resources in a protected way from an unmanaged device. You need to ensure when accessing organizational data, that the unmanaged devices are healthy, the applications adhere to your organization data's protection policies, and that the end-user’s unmanaged assets on their device aren't impacted by your organization's policies. 
 
