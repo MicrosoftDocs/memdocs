@@ -671,10 +671,10 @@ Organizations may require users to authenticate with NTLM to access intranet web
 Organizations can enable NTLM credential caching for particular web sites. For these sites, after the user enters credentials and successfully authenticates, the credentials are cached by default for 30 days.
 
 > [!NOTE]
-> If you're using a proxy server, ensure that it's configured using the NTLMSSOURLs policy where you specifically specify both **https* and **http** as part of the key value. 
+> If you're using a proxy server, ensure that it's configured using the NTLMSSOURLs policy where you specifically specify both **https** and **http** as part of the key value. 
 >
-> Currently, both **https** and **http** schemes need to be specified in the NTLMSSOURLs key value. For example, you need to configure both `**https**://your-proxy-server:8080`
-> and `**http**://your-proxy-server:8080`. Specifying the format as host:port (such as `your-proxy-server:8080`) is not currently sufficient.
+> Currently, both **https** and **http** schemes need to be specified in the NTLMSSOURLs key value. For example, you need to configure both `https://your-proxy-server:8080`
+> and `http://your-proxy-server:8080`. Currently, specifying the format as host:port (such as `your-proxy-server:8080`) is not sufficient.
 >
 > In addition, the wildcard symbol (*) is not supported when configuring proxy servers in the NTLMSSOURLs policy.
 
