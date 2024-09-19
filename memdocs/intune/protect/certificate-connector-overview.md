@@ -393,7 +393,7 @@ New updates for the connector can take a week or more to become available for ea
 Version **6.2406.0.1001** - Changes in this release:  
 
 - Changes to support KB5014754 requirements  
-- Improved PKCS import-pipeline logging   
+- Improved PKCS import pipeline logging   
 - Bug fixes  
 - Security improvements  
 
