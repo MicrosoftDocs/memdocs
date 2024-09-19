@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/23/2023
+ms.date: 09/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,46 +43,40 @@ For information about using imported PKCS certificates, see [Imported PFX Certif
 
 ## Requirements
 
-To use PKCS certificates with Intune, you'll need the following infrastructure:
+To use PKCS certificates with Intune, you need the following infrastructure:
 
-- **Active Directory domain**:  
-  All servers listed in this section must be joined to your Active Directory domain.
+- Active Directory domain: All servers listed in this section must be joined to your Active Directory domain.
 
-  For more information about installing and configuring Active Directory Domain Services (AD DS), see [AD DS Design and Planning](/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
+  For more information about installing and configuring Active Directory Domain Services (AD DS), see [AD DS Design and Planning](/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).  
 
-- **Certification Authority**:  
-   An Enterprise Certification Authority (CA).
+- Certification Authority: An Enterprise Certification Authority (CA).
 
-  For information on installing and configuring Active Directory Certificate Services (AD CS), see [Active Directory Certificate Services Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772393(v=ws.10)).
+  For information on installing and configuring Active Directory Certificate Services (AD CS), see [Active Directory Certificate Services Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772393(v=ws.10)).  
 
   > [!WARNING]  
   > Intune requires you to run AD CS with an Enterprise Certification Authority (CA), not a Standalone CA.
 
-- **A client**:  
-  To connect to the Enterprise CA.
+- A client: To connect to the Enterprise CA.
 
-- **Root certificate**:  
-  An exported copy of your root certificate from your Enterprise CA.
+- Root certificate: An exported copy of your root certificate from your Enterprise CA.
 
-- **Certificate Connector for Microsoft Intune**:
+- Certificate Connector for Microsoft Intune: For information about the certificate connector, see:
 
-  For information about the certificate connector, see:
-
-  - Overview of the [Certificate Connector for Microsoft Intune](certificate-connector-overview.md).
-  - [Prerequisites](certificate-connector-prerequisites.md).
-  - [Installation and configuration](certificate-connector-install.md).
+  - Overview of the [Certificate Connector for Microsoft Intune](certificate-connector-overview.md)  
+  - [Prerequisites](certificate-connector-prerequisites.md)  
+  - [Installation and configuration](certificate-connector-install.md)  
 
 ## Export the root certificate from the Enterprise CA
 
 To authenticate a device with VPN, WiFi, or other resources, a device needs a root or intermediate CA certificate. The following steps explain how to get the required certificate from your Enterprise CA.
 
-**Use a command line**:  
+Use a command line to complete these steps:  
 
-1. Log in to the Root Certification Authority server with Administrator Account.
+1. Sign in to the Root Certification Authority server with Administrator Account.
 
-2. Go to **Start** > **Run**, and then enter **Cmd** to open command prompt.
+2. Go to **Start** > **Run**, and then enter **Cmd** to open a command prompt.
 
-3. Specify **certutil -ca.cert ca_name.cer** to export the Root certificate as a file named *ca_name.cer*.
+3. Enter **certutil -ca.cert ca_name.cer** to export the root certificate as a file named *ca_name.cer*.
 
 ## Configure certificate templates on the CA
 
@@ -91,7 +85,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 3. Find the **User** certificate template, right-click it, and choose **Duplicate Template** to open **Properties of New Template**.
 
     > [!NOTE]
-    > For S/MIME email signing and encryption scenarios, many administrators use separate certificates for signing and encryption. If you're using Microsoft Active Directory Certificate Services, you can use the **Exchange Signature Only** template for S/MIME email signing certificates, and the **Exchange User** template for S/MIME encryption certificates.  If you're using a 3rd-party certification authority, it's suggested to review their guidance to set up signing and encryption templates.
+    > For S/MIME email signing and encryption scenarios, many administrators use separate certificates for signing and encryption. If you're using Microsoft Active Directory Certificate Services, you can use the Exchange Signature Only template for S/MIME email signing certificates, and the Exchange User template for S/MIME encryption certificates.  If you're using a non-Microsoft certification authority, we recommend reviewing their guidance to set up signing and encryption templates.  
 
 4. On the **Compatibility** tab:
 
@@ -100,50 +94,55 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
 5. On the **General** tab:
   
-     - set **Template display name** to something meaningful to you.
-     - Uncheck **Publish certificate in Active Directory**.
+     - Set **Template display name** to something meaningful to you.
+     - Deselect **Publish certificate in Active Directory**.
 
     > [!WARNING]
-    > **Template name** by default is the same as **Template display name** with *no spaces*. Note the template name, you need it later.
+    > **Template name** by default is the same as **Template display name** with *no spaces*. Note the template name, because you need it later.  
 
-8. In **Request Handling**, select **Allow private key to be exported**.
+8. In **Request Handling**, select **Allow private key to be exported**.  
 
     > [!NOTE]
     >
     > Unlike SCEP, with PKCS the certificate private key is generated on the server where the certificate connector is installed and not on the device. The certificate template must allow the private key to be exported so that the connector can export the PFX certificate and send it to the device.
     >
-    > When the certificates install on the device itself, the private key is marked as not exportable.
+    > After the certificates install on the device, the private key is marked as not exportable.
 
-9. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
+9. In **Cryptography**, confirm that the **Minimum key size** is set to 2048. 
 
-   Windows and Android devices support use of 4096-bit key size with a PKCS certificate profile. To use this key size, specify 4096 as the *Minimum key size*. 
+   Windows and Android devices support the use of 4096-bit key size with a PKCS certificate profile. To use this key size, adjust the value to 4096.   
 
    > [!NOTE]
    >
-   > For Windows devices, 4096-bit key storage is supported only in the *Software Key Storage Provider* (KSP). The following do not support storing keys of this size:
+   > For Windows devices, 4096-bit key storage is supported only in the Software Key Storage Provider (KSP). The following features do not support storage for keys of this size:
    >
-   > - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
-   > - Windows Hello for Business. There is no workaround for Windows Hello for Business at this time.
+   > - The hardware TPM (Trusted Platform Module): As a workaround you can use the Software KSP for key storage.
+   > - Windows Hello for Business: There is no workaround for Windows Hello for Business at this time.
 
-10. In **Subject Name**, choose **Supply in the request**.
-11. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
+10. In **Subject Name**, choose **Supply in the request**.  
+11. In **Extensions**, under **Application Policies**, confirm that you see **Encrypting File System**, **Secure Email**, and **Client Authentication**.  
 
     > [!IMPORTANT]
-    > For iOS/iPadOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and confirm that **Signature is proof of origin** isn't selected.
+    > For iOS/iPadOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and then deselect **Signature is proof of origin**.  
 
-12. In **Security**:
-    1. (Required): Add the Computer Account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
-    1. (Optional but recommended): Remove the Domain Users group from the list of groups or user names allowed permissions on this template by selecting the **Domain Users** group and select *Remove*. Review the other entries in *Groups or user names* for permissions and applicability to your environment.
+12. In **Security**:  
+    1. Add the computer account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
+    1. (Optional but recommended) Remove the domain users group from the list of groups or user names allowed permissions on this template. To remove the group:
+       1. Select the **Domain Users** group.
+       1. Select **Remove**. 
+       1. Review the other entries under **Groups or user names** to confirm permissions and applicability to your environment. 
 
-13. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
-14. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**. Choose the template that you created in the previous steps. Select **OK**.
-15. For the server to manage certificates for enrolled devices and users, use the following steps:
+13. Select **Apply** > **OK** to save the certificate template. Close the Certificate Templates Console.
+14. In the **Certification Authority** console, right-click **Certificate Templates**.
+14. Select **New** > **Certificate Template to Issue**. 
+15. Choose the template that you created in the previous steps. Select **OK**.  
+16. Permit the server to manage certificates for enrolled devices and users:  
 
-    1. Right-click the Certification Authority, choose **Properties**.
-    2. On the security tab, add the Computer account of the server where you run the connector.
-    3. Grant **Issue and Manage Certificates** and **Request Certificates** Allow permissions to the computer account.
+    1. Right-click the Certification Authority, and then choose **Properties**.
+    2. On the security tab, add the computer account of the server where you run the connector.
+    3. Grant **Issue and Manage Certificates** and **Request Certificates** permissions to the computer account.  
 
-16. Sign out of the Enterprise CA.
+16. Sign out of the Enterprise CA.  
 
 ## Download, install, and configure the Certificate Connector for Microsoft Intune
 
@@ -344,7 +343,47 @@ Platforms:
   >
   > - When you specify a variable, enclose the variable name in curly brackets { } as seen in the example, to avoid an error.
   > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
-  > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
+  > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.  
+
+ ## KB5014754 requirements    
+ Windows devices that are Microsoft ybrid 
+ 
+ https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16
+  
+
+Update the connector
+Update the certificate connector to the new version.
+ 
+
+Modify the Registry
+Before modifying the registry key, review the following articles on how to change, back up, and restore the registry:
+How to back up and restore the registry in Windows - Microsoft Support
+
+How to add, modify, or delete registry subkeys and values by using a .reg file
+
+ 
+
+Update the value for the following key:
+[HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector]
+
+(DWORD)EnableSidSecurityExtension
+
+Value: 1
+
+Restart the Connector Service.
+Restart the connector service for the changes to take effect. <Eng to share the actual service to be restarted.>
+
+ 
+
+If you need to roll back the changes, restore the original registry settings and create a new profile to re-issue certificates without the SID attribute.
+
+ 
+
+Note: We recommend thorough testing of any applications, Intune-integrated CAs, NAC solutions, and networking infrastructure where clients may utilize certificates for authentication to ensure optimal functionality.
+
+ 
+
+For users of Digicert CA, a separate template must be created for users with SID and those without SID. More information can be found here: <Waiting on Digicert>
 
 ## Next steps
 
