@@ -32,7 +32,7 @@ ms.collection:
 ---
 # Configure and use PKCS certificates with Intune
 
-Microsoft Intune supports the use of private and public key pair (PKCS) certificates. This article reviews what's required to use PKCS certificates with Intune, including the export of a PKCS certificate then adding it to an Intune device configuration profile.
+Microsoft Intune supports the use of private and public key pair (PKCS) certificates. This article reviews the requirements for PKCS certificates with Intune, including the export of a PKCS certificate then adding it to an Intune device configuration profile.
 
 Microsoft Intune includes built-in settings to use PKCS certificates for access and authentication to your organizations resources. Certificates authenticate and secure access to your corporate resources like a VPN or a WiFi network. You deploy these settings to devices using device configuration profiles in Intune.
 
@@ -155,7 +155,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 2. Select  and go to **Devices** > **Manage devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
-   - **Platform**: Choose the platform of the devices that will receive this profile.
+   - **Platform**: Choose the platform of the devices receiving this profile.
      - Android device administrator
      - Android Enterprise:
        - Fully Managed
@@ -184,9 +184,15 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 8. Select **Next**.
 
-9. In **Assignments**, select the user or device group(s) that will be assigned the profile. For more granularity, see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*.
+9. In **Assignments**, select the user or device groups you want to include in the assignment. These groups receive the profile after you deploy it. For more granularity, see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*.
 
-   Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile, and that receive a configuration profile like a Wi-Fi profile that makes use of the certificate. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   Plan to deploy this certificate profile to the same groups that receive:
+   
+   - The PKCS certificate profile and  
+
+   - A configuration profile, such as a Wi-Fi profile that makes use of the certificate. 
+   
+   For more information about assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).  
 
    Select **Next**.
 
@@ -237,10 +243,10 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
    |Setting     | Platform     | Details   |
    |------------|------------|------------|
    |**Renewal threshold (%)**        |<ul><li>All         |Recommended is 20%  |
-   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option may be set to one year. <br><br> Use a validity period of five days or up to 24 months. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
+   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option might be set to one year. <br><br> Use a validity period of five days or up to 24 months. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
    |**Key storage provider (KSP)**   |<ul><li>Windows 10/11  |For Windows, select where to store the keys on the device. |
    |**Certification authority**      |<ul><li>All         |Displays the internal fully qualified domain name (FQDN) of your Enterprise CA.  |
-   |**Certification authority name** |<ul><li>All         |Lists the name of your Enterprise CA, such as "Contoso Certification Authority". |
+   |**Certification authority name** |<ul><li>All         |Lists the name of your Enterprise CA, such as "Contoso Certification Authority." |
    |**Certificate template name**    |<ul><li>All         |Lists the name of your certificate template. |
    |**Certificate type**             |<ul><li>Android Enterprise (*Corporate-Owned and Personally-Owned Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10/11 |Select a type: <ul><li> **User** certificates can contain both user and device attributes in the subject and subject alternative name (SAN) of the certificate. </li><li>**Device** certificates can only contain device attributes in the subject and SAN of the certificate. Use Device for scenarios such as user-less devices, like kiosks or other shared devices.  <br><br> This selection affects the Subject name format. |
    |**Subject name format**          |<ul><li>All         |For details on how to configure the subject name format, see [Subject name format](#subject-name-format) later in this article.  <br><br>For the following platforms, the Subject name format is determined by the certificate type: <ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10/11 </li></ul>  <p>  |
@@ -254,11 +260,17 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
    In **Apps**, configure **Certificate access** to manage how certificate access is granted to applications. Choose from:
 
    - **Require user approval for apps** *(default)* – Users must approve use of a certificate by all applications.
-   - **Grant silently for specific apps (require user approval for other apps)** – With this option, select **Add apps**, and then select one or more apps that will silently use the certificate without user interaction.
+   - **Grant silently for specific apps (require user approval for other apps)** – With this option, select **Add apps**. Then select all apps that should silently use the certificate without user interaction.  
 
 9. Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. Plan to deploy this certificate profile to the same groups that receive the trusted certificate profile, and that receive a configuration profile like a Wi-Fi profile that makes use of the certificate. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+10. In **Assignments**, select the users and groups you want to include in the assignment. Users and groups receive the profile after you deploy it. Plan to deploy this certificate profile to the same groups that receive:  
+
+- The trusted certificate profile and    
+
+- A configuration profile, such as a Wi-Fi profile that makes use of the certificate.  
+
+For more information about assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
     Select **Next**.
 
@@ -318,14 +330,14 @@ Platforms:
 
   By using a combination of one or many of these variables and static text strings, you can create a custom subject name format, such as: **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
-  That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describes this function, and its supported strings.
+  That example includes a subject name format that uses the CN and E variables, and strings for organizational unit, organization, location, state, and country/region values. [CertStrToName function](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describes this function, and its supported strings.
 
   User attributes aren't supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN can't get the user principal name when there isn't a user on the device.
 
 - **Device certificate type**  
   Format options for the Subject name format include the following variables:
   - **{{AAD_Device_ID}}**
-  - **{{DeviceId}}** - This is the Intune device ID
+  - **{{DeviceId}}** - The Intune device ID  
   - **{{Device_Serial}}**
   - **{{Device_IMEI}}**
   - **{{SerialNumber}}**
@@ -350,16 +362,15 @@ Platforms:
 [KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16) requires all SCEP and PFX certificates deployed by Microsoft Intune and used for certificate-based authentication to have specific SID information embedded in them. In Certificate Connector for Microsoft Intune, version 6.2406.0.1001, we released an update that adds the OID attribute containing the user or device SID to the certificate, effectively satisfying the requirements. 
 
 This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID. The update for SID information is available across all platforms, with some differences:  
-* SID information appears in *user certificates* for all OS platforms.
+
+* SID information appears in *user certificates* for all OS platforms.  
+
 * SID information appears in *device certificates* for Windows OS only.  
 
 ### Prerequisites  
 
-Before you begin: 
-
-- Get the latest [certificate connector, version 6.2406.0.1001](certificate-connector-overview.md#september-9-2024).  
+Before you begin, you must have [certificate connector, version 6.2406.0.1001](certificate-connector-overview.md#september-9-2024).  
   
-- To apply the changes from this update, 
 
 ### Apply changes    
 
@@ -380,7 +391,7 @@ Complete the following steps to apply the SID information changes to PFX certifi
    - NAC solutions  
    - Networking infrastructure  
 
-To roll back changes, restore the original registry settings. Then create a new profile to reissue certificates without the SID attribute. If you use a Digicert CA, you must create a template for users with an SID and another template for those without an SID. For more information, see [the Digicert help documentation]().     
+To roll back changes, restore the original registry settings. Then create a new profile to reissue certificates without the SID attribute. If you use a Digicert CA, you must create a template for users with an SID and another template for users without an SID. For more information, see [the Digicert help documentation]().     
 
 ## Next steps
 
