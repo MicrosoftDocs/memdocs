@@ -78,6 +78,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of September 23, 2024 (Service release 2409)
 
+### App management
+
+#### Update Enterprise App Catalog apps<!-- 24875279 -->
+
+Enterprise App Management is enhanced to allow you to update an **Enterprise App Catalog** app. This capability guides you through a wizard that allows you to add a new application and use supersedence to update the previous application.
+
+For more information, see [Guided update supersedence for Enterprise App Management](../apps/apps-eam-supersedence.md).
+
 ### Device configuration
 
 #### Samsung ended support for multiple Android device administrator (DA) settings <!-- 24990472 -->
