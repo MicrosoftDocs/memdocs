@@ -345,45 +345,37 @@ Platforms:
   > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
   > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.  
 
- ## KB5014754 requirements    
- Windows devices that are Microsoft ybrid 
- 
- https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16
-  
+## Update certificate connector for KB5014754 requirements    
+*Applies to servers that run Active Directory Certificate Services and Windows domain controllers that service certificate-based authentication*  
 
-Update the connector
-Update the certificate connector to the new version.
- 
+[KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16) requires all SCEP and PFX certificates deployed by Microsoft Intune and used for certificate-based authentication to have specific SID information embedded in them. In Certificate Connector for Microsoft Intune, version 6.2406.0.1001, we released an update for Windows that adds the OID attribute containing the user’s SID to the device certificate, effectively satisfying the requirements.
 
-Modify the Registry
-Before modifying the registry key, review the following articles on how to change, back up, and restore the registry:
-How to back up and restore the registry in Windows - Microsoft Support
+### Prerequisites  
 
-How to add, modify, or delete registry subkeys and values by using a .reg file
+Before you begin, update the certificate connector [to version 6.2406.0.1001](certificate-connector-overview.md#september-9-2024). Certificates with SID information are available for users and devices synced from an environment on-premises to Microsoft Entra ID. They are exclusively for servers and Windows domain controllers that are Microsoft Entra hybrid-joined.   
 
- 
+This procedure requires you to make changes to the Windows registry. For more information about how to modify the registry, see: 
 
-Update the value for the following key:
-[HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector]
+* [How to back up and restore the registry in Windows - Microsoft Support](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692)  
+* [How to add, modify, or delete registry subkeys and values by using a .reg file - Microsoft Support](https://support.microsoft.com/topic/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg-file-9c7f37cf-a5e9-e1cd-c4fa-2a26218a1a23)  
 
-(DWORD)EnableSidSecurityExtension
+### Apply changes    
 
-Value: 1
+Complete the following steps to apply the changes from Certificate Connector for Microsoft Intune, version 6.2406.0.1001, to SCEP and PFX certificates.  
 
-Restart the Connector Service.
-Restart the connector service for the changes to take effect. <Eng to share the actual service to be restarted.>
+1. In the Windows registry, change the value for `[HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector](DWORD)EnableSidSecurityExtension` to **1**.   
 
- 
+2. Restart the connector service.  
 
-If you need to roll back the changes, restore the original registry settings and create a new profile to re-issue certificates without the SID attribute.
+3. To ensure optimal functionality, we recommend testing all entities where certificate-based authentication could be used, including:   
+   - Apps  
+   - Intune-integrated certification authorities  
+   - NAC solutions  
+   - Networking infrastructure  
 
- 
+To roll back changes, restore the original registry settings. Then create a new profile to reissue certificates without the SID attribute.  
 
-Note: We recommend thorough testing of any applications, Intune-integrated CAs, NAC solutions, and networking infrastructure where clients may utilize certificates for authentication to ensure optimal functionality.
-
- 
-
-For users of Digicert CA, a separate template must be created for users with SID and those without SID. More information can be found here: <Waiting on Digicert>
+If you use a Digicert CA, you must create a separate template for users with an SID and those without an SID. For more information, see [the Digicert help documentation]().  
 
 ## Next steps
 
