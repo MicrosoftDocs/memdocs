@@ -48,7 +48,7 @@ Before you create a profile, review the following articles that detail the Endpo
 ## Create a device profile containing Endpoint protection settings
 
 > [!IMPORTANT]
-> The macOS endpoint protection template has been deprecated. Existing policies remain unchanged, but you can no longer create new policies using this template. We recommend using the settings catalog to create new configurations policies for FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. For more information, see [macOS settings catalog](../configuration/settings-catalog.md?tabs=sc-search-filter%2Csc-reporting).  
+> The macOS endpoint protection template has been deprecated. Existing policies remain unchanged, but you can no longer create new policies using this template. We recommend using the settings catalog to create new configurations policies for FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. For more information, see [macOS settings catalog](../configuration/settings-catalog.md).  
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
 
