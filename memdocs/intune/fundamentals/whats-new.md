@@ -115,7 +115,7 @@ Some VAIO devices running Windows 10/11 are enabled for DFCI. Contact your devic
 For more information about DFCI profiles, see:
 
 - [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
-- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../autopilot/dfci-management.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
 
 Applies to:
 
