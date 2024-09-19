@@ -359,21 +359,22 @@ Before you begin:
 
 - Get the latest [certificate connector, version 6.2406.0.1001](certificate-connector-overview.md#september-9-2024).  
   
-- During this procedure, you must modify the Windows registry. For more information about how to make this change, see the following resources on Microsoft Support:
-  
-   * [How to back up and restore the registry in Windows - Microsoft Support](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692)
-     
-   * [How to add, modify, or delete registry subkeys and values by using a .reg file - Microsoft Support](https://support.microsoft.com/topic/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg-file-9c7f37cf-a5e9-e1cd-c4fa-2a26218a1a23)  
+- To apply the changes from this update, 
 
 ### Apply changes    
+
+>[!TIP]
+> This procedure requires you to modify the registry in Windows. For more information, see the following resources on Microsoft Support:
+> - [How to back up and restore the registry in Windows - Microsoft Support](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692)
+> - [How to add, modify, or delete registry subkeys and values by using a .reg file - Microsoft Support](https://support.microsoft.com/topic/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg-file-9c7f37cf-a5e9-e1cd-c4fa-2a26218a1a23)  
 
 Complete the following steps to apply the SID information changes to PFX certificates.  
 
 1. In the Windows registry, change the value for `[HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector](DWORD)EnableSidSecurityExtension` to **1**.   
 
-2. Restart the connector service.  
+2. Restart the certificate connector service.  
 
-3. To ensure optimal functionality, we recommend testing all entities where certificate-based authentication could be used, including:   
+3. To verify changes, we recommend testing all places where certificate-based authentication could be used, including:   
    - Apps  
    - Intune-integrated certification authorities  
    - NAC solutions  
