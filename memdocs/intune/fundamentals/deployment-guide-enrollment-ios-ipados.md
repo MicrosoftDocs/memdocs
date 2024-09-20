@@ -214,7 +214,7 @@ When you create an enrollment profile in the [Intune admin center](https://go.mi
 
   5. If you don't **Install Company Portal app with VPP**, and want to use the Company Portal app, then:
 
-      1. Users sign in to the Apple app store with their Apple ID (`user@iCloud.com` or `user@gmail.com`). When they sign in, the Company Portal app automatically installs.
+      1. Users sign in to the Apple App Store with their Apple ID (`user@iCloud.com` or `user@gmail.com`). When they sign in, the Company Portal app automatically installs.
 
           This extra sign-in step slows the enrollment, especially if users don't sign in immediately.
 
@@ -222,7 +222,7 @@ When you create an enrollment profile in the [Intune admin center](https://go.mi
 
       2. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Microsoft Entra registration in the Company Portal app, which fully registers the device with Microsoft Entra ID. At the next check-in, users gain access to corporate resources protected by Conditional Access policies.
 
-- **Enroll without user affinity**: No actions. Be sure they don't install the Company Portal app from the Apple app store.
+- **Enroll without user affinity**: No actions. Be sure they don't install the Company Portal app from the Apple App Store.
 
   :::image type="content" source="./media/deployment-guide-enrollment-ios-ipados/ade-enroll-without-user-affinity.png" alt-text="In the Intune admin center and Microsoft Intune, enroll iOS/iPadOS devices using automated device enrollment (ADE). Select enroll without user affinity.":::
 
@@ -305,7 +305,7 @@ This task list provides an overview. For more specific information, go to [Apple
   - If you choose **Enroll without user affinity**, then you're automatically using **Direct enrollment**. Remember:
 
     - You're using the settings from an existing macOS enrollment profile.
-    - Users can't use apps that require a user, including the Company Portal app. The Company Portal app isn't used, needed, or supported on enrollments without user affinity. Be sure users don't install the Company Portal app from the Apple app store.
+    - Users can't use apps that require a user, including the Company Portal app. The Company Portal app isn't used, needed, or supported on enrollments without user affinity. Be sure users don't install the Company Portal app from the Apple App Store.
 
 - When the enrollment profile is ready, USB connect the devices to the Mac, and open the **Apple Configurator** app. When the app opens, it detects the USB connected device, and deploys the Intune enrollment profile you created.
 
@@ -340,7 +340,7 @@ The tasks depend on the option you configured in the enrollment profile.
   2. The Setup Assistant prompts the user for information, including the Apple ID (`user@iCloud.com` or `user@gmail.com`). This step pushes the Intune management profile to the device.
   3. Users install the management profile. The profile checks in with the Intune service, and enrolls the device. The device isn't registered in Microsoft Entra ID.
 
-- **Enroll without user affinity**: You're using Direct enrollment. No actions. Be sure they don't install the Company Portal app from the Apple app store.
+- **Enroll without user affinity**: You're using Direct enrollment. No actions. Be sure they don't install the Company Portal app from the Apple App Store.
 
   :::image type="content" source="./media/deployment-guide-enrollment-ios-ipados/configurator-enroll-without-user-affinity.png" alt-text="In the Intune admin center and Microsoft Intune, enroll iOS/iPadOS devices using Apple Configurator. Select enroll without user affinity.":::
 
@@ -398,7 +398,7 @@ This list provides an overview of the tasks required of administrators.
 
     - Account driven user enrollment creates a work partition on the devices. The features and security you configure in the user enrollment profile only exist in the work partition. They don't exist in the user partition. Users can't factory reset the work partition; administrators can. Users can factory reset the personal partition; administrators can't.
 
-    - If users primarily use Microsoft apps, or use apps created with the [Intune App SDK](../developer/app-sdk.md), then users should download these apps from the Apple app store. Then, use app protection policies to protect these apps. In this scenario, you don't need account driven user enrollment.
+    - If users primarily use Microsoft apps, or use apps created with the [Intune App SDK](../developer/app-sdk.md), then users should download these apps from the Apple App Store. Then, use app protection policies to protect these apps. In this scenario, you don't need account driven user enrollment.
 
     - For line of business (LOB) apps, account driven user enrollment might be an option, as it deploys these apps to the work partition. Application management (MAM) doesn't support LOB apps. So if you need LOB apps, then use account driven user enrollment.  
 
@@ -406,7 +406,7 @@ This list provides an overview of the tasks required of administrators.
 
     - If you install apps before the user enrollment profile is applied, then these apps aren't protected or managed by the user enrollment profile.
 
-      For example, a user downloads the Outlook app from the Apple app store. The app automatically installs to the user partition on the device. The user configures Outlook for their personal email. When users configure their organization email, they're blocked by Conditional Access, and asked to enroll. They enroll, and a user enrollment profile deploys.
+      For example, a user downloads the Outlook app from the Apple App Store. The app automatically installs to the user partition on the device. The user configures Outlook for their personal email. When users configure their organization email, they're blocked by Conditional Access, and asked to enroll. They enroll, and a user enrollment profile deploys.
 
       Since the Outlook app was installed before the user enrollment profile, the user enrollment profile fails. The Outlook app can't be managed because it's installed and configured in the user partition, not the work partition. Users must manually uninstall the Outlook app.
 
@@ -418,7 +418,7 @@ This list provides an overview of the tasks required of administrators.
 
 Your users must do the following steps. For the specific user experience, go to [enroll the device](../user-help/enroll-your-device-in-intune-ios.md).  
 
-1. Go to the Apple app store, and [install the Intune Company Portal app](../user-help/sign-in-to-the-company-portal.md).
+1. Go to the Apple App Store, and [install the Intune Company Portal app](../user-help/sign-in-to-the-company-portal.md).
 2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
 
     Users might have to enter more information. For more specific steps, go to [enroll the device](../user-help/enroll-your-device-in-intune-ios.md). 
@@ -436,18 +436,15 @@ When enrollment completes, Intune automatically installs a profile signing certi
 
 ### User enrollment end user tasks
 
-Account driven user enrollment is driven by the MDM enrollment profile. Your users must do the following steps.   
+Account driven user enrollment is driven by the MDM enrollment profile. Your users must do the following steps. For more information and recommendations, go to [Prepare employees for enrollment]([../enrollment/apple-account-driven-user-enrollment.md#step-3-prepare-employees-for-enrollment).      
 
 1. Open the Settings app and go to **General** > **VPN & Device Management**.  
 2. Sign in to their work or school account.  
 4. Follow the onscreen prompts and allow remote management.  
 5. Enter the device passcode to set up remote management.  
-6. Microsoft Authenticator is required to access work apps. Users should wait a few minutes after enrollment for Authenticator to install on the device. 
 
 <!-- Lanewsad: Commenting out while I get confirmation that this info still applies to account driven experience.  
 When enrollment completes, Intune automatically installs a profile signing certificate on the device. This certificate is valid for one year. At the year end when the certificate is expiring, Intune renews the certificate. If renewal fails, then a **Not verified** status appears within the **VPN & Device management** > **Management Profile** settings on the device. With this status, end users aren't impacted, and devices continue to check-in with Intune and receive policy updates. -->  
-
-For more information about the user experience, go to [Prepare employees for enrollment]([../enrollment/apple-account-driven-user-enrollment.md#step-3-prepare-employees-for-enrollment).   
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]  
 
