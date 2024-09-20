@@ -109,7 +109,7 @@ You can then use the `id` field to query the status of the export with a GET req
 For example:
 ```https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('Devices_05e62361-783b-4cec-b635-0aed0ecf14a3')``` or ```https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs/Devices_05e62361-783b-4cec-b635-0aed0ecf14a3``` 
 
-You will need to continue calling this URL until you get a response with a `status: completed` attribute. It will look like the following example:
+You'll need to continue calling this URL until you get a response with a `status: completed` attribute. It looks like the following example:
 
 ```http
 { 
@@ -144,8 +144,8 @@ You can then directly download the compressed CSV from the `url` field.
 There are five main parameters you can submit in your request body to define the export request: 
 
 - `reportName`: Required. This parameter is the name of the report you want to specify.  
-- `filter`: Not required for most reports. Note that the filter parameter is a string.
-- `select`: Not required. Specify which columns from the report you want. Only valid column names relevant to the report you are calling will be accepted.  
+- `filter`: Not required for most reports. The filter parameter is a string.
+- `select`: Not required. Specify which columns from the report you want. Only valid column names relevant to the report you're calling will be accepted.  
 - `format`: Not required. By default, the data is output in `csv` format.  Specify `json` to output the file in JSON format.
 - `localizationType`: This parameter controls localization behavior for the report. Possible values are `LocalizedValuesAsAdditionalColumn` and `ReplaceLocalizableValues`.
 
@@ -155,9 +155,9 @@ The `localizationType` parameter controls localization behavior for the report. 
 
 ### LocalizedValuesAsAdditionalColumn report value
 
-This value for the `localizationType` parameter is the default value. It will be inserted automatically if the `localizationType` parameter is not specified. This value specifies that Intune provides two columns for each localizable column.
-- *enum value*:  The *enum value* column contains either a raw string, or a set of numbers that don't change, regardless of locale. This column will be under the original column name (see example).
-- *localized string value*: This column  will be the original column name with _loc appended. It will contain string values that are human readable, and locale conditional (see example).
+This value for the `localizationType` parameter is the default value. It is inserted automatically if the `localizationType` parameter isn't specified. This value specifies that Intune provides two columns for each localizable column.
+- *enum value*:  The *enum value* column contains either a raw string, or a set of numbers that don't change, regardless of locale. This column is under the original column name (see example).
+- *localized string value*: This column  is the original column name with _loc appended. It contains string values that are human readable, and locale conditional (see example).
 
 #### Example
 
@@ -173,7 +173,7 @@ This value for the `localizationType` parameter is the default value. It will be
 
 ### ReplaceLocalizableValues report value
 
-ReplaceLocalizableValues report value will only return one column per localized attribute. This column will contain the original column name with the localized values.
+ReplaceLocalizableValues report value will only return one column per localized attribute. This column contains the original column name with the localized values.
 
 #### Example 
 
