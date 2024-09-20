@@ -416,12 +416,12 @@ This list provides an overview of the tasks required of administrators.
 
 ### Device enrollment end user tasks
 
-Your users must do the following steps. For the specific user experience, go to [enroll the device](../user-help/enroll-your-device-in-intune-ios.md).  
+Your users must do the following steps.   
 
 1. Go to the Apple App Store, and [install the Intune Company Portal app](../user-help/sign-in-to-the-company-portal.md).
 2. Open the Company Portal app, and sign in with their work or school account (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
 
-    Users might have to enter more information. For more specific steps, go to [enroll the device](../user-help/enroll-your-device-in-intune-ios.md). 
+    Users might have to enter more information. For more specific steps, go to [enroll the device](../user-help/enroll-your-device-in-intune-ios.md).  
 
 Users with enabled app notifications receive a prompt to return to the Company Portal app to complete the required device registration. Users with disabled app notifications aren't alerted to this requirement. If you're utilizing dynamic groups, which rely on device registration to work, it's important that users complete device registration. Plan to communicate these steps to end users. If you're using Conditional Access (CA) policies, no action is required because any CA-protected app users try to sign into will prompt them to return to Company Portal to complete device registration. 
 
@@ -436,7 +436,7 @@ When enrollment completes, Intune automatically installs a profile signing certi
 
 ### User enrollment end user tasks
 
-Your users must do the following steps. For more information about the user experience, go to [Prepare employees for enrollment](../enrollment/apple-account-driven-user-enrollment.md#step-3-prepare-employees-for-enrollment).   
+Your users must complete the following steps during account driven user enrollment.   
 
 1. Open the Settings app and go to **General** > **VPN & Device Management**.  
 2. Sign in to their work or school account.  
@@ -445,7 +445,7 @@ Your users must do the following steps. For more information about the user expe
 
 When enrollment completes, Intune automatically installs a profile signing certificate on the device. This certificate is valid for one year. At the year end when the certificate is expiring, Intune renews the certificate. If renewal fails, then a **Not verified** status appears within the **VPN & Device management** > **Management Profile** settings on the device. With this status, end users aren't impacted, and devices continue to check in with Intune and receive policy updates. 
 
-[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]  
+For more information about the user experience, go to [Prepare employees for enrollment](../enrollment/apple-account-driven-user-enrollment.md#step-3-prepare-employees-for-enrollment).  
 
 ## Related articles
 
