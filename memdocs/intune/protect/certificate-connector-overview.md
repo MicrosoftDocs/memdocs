@@ -388,7 +388,7 @@ New updates for the connector can take a week or more to become available for ea
 > [!IMPORTANT]  
 > Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. Starting August 2022, these connector versions **won't** be able to revoke certificates. Starting September 2022, these connector versions **won't** be able to issue certificates. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
 
-### September 9, 2024  
+### September 19, 2024  
 
 Version **6.2406.0.1001** - Changes in this release:  
 
