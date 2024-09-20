@@ -371,7 +371,7 @@ For the specific enrollment steps, and its prerequisites, go to [Set up iOS/iPad
 
 ### User and Device enrollment administrator tasks
 
-This task list provides an overview. For more specific information, go to [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment).  
+This list provides an overview of the tasks required of administrators.   
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
@@ -394,15 +394,15 @@ This task list provides an overview. For more specific information, go to [Set u
     > [!NOTE]
     > BYOD can become organization-owned devices. To make these devices corporate, go to [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md).
 
-    Account driven user enrollment is considered friendlier to end users. But, it might not provide the feature set and security features administrators need. In some scenarios, user enrollment might not be the best option. Consider the following scenarios:
+    Account driven user enrollment is considered friendlier to end users. But, it might not provide the feature set and security features administrators need. In some scenarios, account driven user enrollment might not be the best option. Consider the following scenarios:
 
-    - User enrollment creates a work partition on the devices. The features and security you configure in the user enrollment profile only exist in the work partition. They don't exist in the user partition. Users can't factory reset the work partition; administrators can. Users can factory reset the personal partition; administrators can't.
+    - Account driven user enrollment creates a work partition on the devices. The features and security you configure in the user enrollment profile only exist in the work partition. They don't exist in the user partition. Users can't factory reset the work partition; administrators can. Users can factory reset the personal partition; administrators can't.
 
-    - If users primarily use Microsoft apps, or use apps created with the [Intune App SDK](../developer/app-sdk.md), then users should download these apps from the Apple app store. Then, use app protection policies to protect these apps. In this scenario, you don't need user enrollment.
+    - If users primarily use Microsoft apps, or use apps created with the [Intune App SDK](../developer/app-sdk.md), then users should download these apps from the Apple app store. Then, use app protection policies to protect these apps. In this scenario, you don't need account driven user enrollment.
 
-    - For line of business (LOB) apps, user enrollment might be an option, as it deploys these apps to the work partition. Application management (MAM) doesn't support LOB apps. So if you need LOB apps, then use User Enrollment.
+    - For line of business (LOB) apps, account driven user enrollment might be an option, as it deploys these apps to the work partition. Application management (MAM) doesn't support LOB apps. So if you need LOB apps, then use account driven user enrollment.  
 
-    - When devices are enrolled using user enrollment, you can't switch to device enrollment. With user enrollment, you can't move an app from unmanaged to managed. Users must unenroll from user enrollment, and then re-enroll to device enrollment.
+    - When devices are enrolled using account driven user enrollment, you can't switch to device enrollment. With account driven user enrollment, you can't move an app from unmanaged to managed. Users must unenroll from user enrollment, and then re-enroll to device enrollment.
 
     - If you install apps before the user enrollment profile is applied, then these apps aren't protected or managed by the user enrollment profile.
 
@@ -414,9 +414,9 @@ This task list provides an overview. For more specific information, go to [Set u
 
 - Assign the enrollment profile to user groups. Don't assign to device groups.
 
-### User and Device enrollment end user tasks
+### Device enrollment end user tasks
 
-Your users must do the following steps. For the specific user experience, go to [enroll the device](../user-help/enroll-your-device-in-intune-ios.md).
+Your users must do the following steps. For the specific user experience, go to [enroll the device](../user-help/enroll-your-device-in-intune-ios.md).  
 
 1. Go to the Apple app store, and [install the Intune Company Portal app](../user-help/sign-in-to-the-company-portal.md).
 2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
@@ -433,6 +433,23 @@ When enrollment completes, Intune automatically installs a profile signing certi
 > There is a short, step-by-step video to help your users enroll their devices in Intune:
 >
 > [Enroll your iOS/iPadOS device](https://www.youtube.com/watch?v=mJyv6YcHi7c)
+
+### User enrollment end user tasks
+
+Account driven user enrollment is driven by the MDM enrollment profile. Your users must do the following steps.   
+
+1. Open the Settings app and go to **General** > **VPN & Device Management**.  
+2. Sign in to their work or school account.  
+4. Follow the onscreen prompts and allow remote management.  
+5. Enter the device passcode to set up remote management.  
+6. Microsoft Authenticator is required to access work apps. Users should wait a few minutes after enrollment for Authenticator to install on the device. 
+
+<!-- Lanewsad: Commenting out while I get confirmation that this info still applies to account driven experience.  
+When enrollment completes, Intune automatically installs a profile signing certificate on the device. This certificate is valid for one year. At the year end when the certificate is expiring, Intune renews the certificate. If renewal fails, then a **Not verified** status appears within the **VPN & Device management** > **Management Profile** settings on the device. With this status, end users aren't impacted, and devices continue to check-in with Intune and receive policy updates. -->  
+
+For more information about the user experience, go to [Prepare employees for enrollment]([../enrollment/apple-account-driven-user-enrollment.md#step-3-prepare-employees-for-enrollment).   
+
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]  
 
 ## Related articles
 
