@@ -32,6 +32,8 @@ ms.collection:
 
 # Disable Activation Lock on Apple devices with Intune
 
+> [!TIP]
+> You can now turn off Activation Lock directly in Apple Business Manager and Apple School Manager. Learn more on [Apple's User Guide site.](%5Bhttps://support.apple.com/en-euro/guide/apple-business-manager/axm812df1dd8/web%5D(https://support.apple.com/en-euro/guide/apple-business-manager/axm812df1dd8/web))
 Microsoft Intune can help you manage Activation Lock, a feature of the Find My iPhone app for iOS/iPadOS and macOS devices. Activation Lock is enabled automatically when a user sets up the Find My iPhone app on a device. After it's enabled, the user's Apple ID and password must be entered before anyone can:
 
 - Turn off Find My iPhone
@@ -61,7 +63,7 @@ You can read more about Activation Lock on [Apple's web site](https://support.ap
 
 There are two methods to disabling Activation Lock on devices:
 
- - Manually entering the Activation Lock bypass code on the device
+- Manually entering the Activation Lock bypass code on the device
 
  - Using the Disable Activation Lock device action
 
