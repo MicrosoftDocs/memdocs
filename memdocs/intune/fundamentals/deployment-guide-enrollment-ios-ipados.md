@@ -389,7 +389,7 @@ This list provides an overview of the tasks required of administrators.
 
   - **Account driven user enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, like password, per-app VPN, Wi-Fi, and Siri. If you use this method, and to help secure apps and their data, then we recommend also using app protection policies.
 
-    For the complete list of what you can and can't do, go to [Overview of Apple User Enrollment in Microsoft Intune](../enrollment/ios-user-enrollment-supported-actions.md). For the specific user enrollment steps, go to [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md). 
+    For the complete list of what you can and can't do, go to [Overview of Apple User Enrollment in Microsoft Intune](../enrollment/ios-user-enrollment-supported-actions.md). For the specific user enrollment steps, go to [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md).   
 
     > [!NOTE]
     > BYOD can become organization-owned devices. To make these devices corporate, go to [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md).
@@ -436,7 +436,7 @@ When enrollment completes, Intune automatically installs a profile signing certi
 
 ### User enrollment end user tasks
 
-Your users must do the following steps. For more information about the user experience, go to [Prepare employees for enrollment]([../enrollment/apple-account-driven-user-enrollment.md#step-3-prepare-employees-for-enrollment).   
+Your users must do the following steps. For more information about the user experience, go to [Prepare employees for enrollment](../enrollment/apple-account-driven-user-enrollment.md#step-3-prepare-employees-for-enrollment).   
 
 1. Open the Settings app and go to **General** > **VPN & Device Management**.  
 2. Sign in to their work or school account.  
