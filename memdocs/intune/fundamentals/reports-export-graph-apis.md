@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/28/2024
+ms.date: 09/20/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -190,6 +190,14 @@ For columns without localized values, only a single column with the true column 
 
 > [!IMPORTANT]
 > The `localizationType` parameter is relevant for any export experience hosted by Intune's reporting infrastructure with a few exceptions. The`Devices` and `DevicesWithInventory` report types will not honor the `localizationType` parameter due to legacy compatibility requirements.
+
+## API throttling conditions
+
+To ensure that the `exportJobs` API doesn't have too many concurrent requests, which would impact the API's response rate, the below throttling limits are applied.
+
+- **The APIs will support up to 100 requests per tenant per minute**: This support covers all users and apps in a tenant. Any additional requests initiated by either users or apps in the tenant within the same minute will be throttled.
+  - If the APIs are initiated by a user, up to 8 requests will be allowed by the same user within a minute. Subsequent requests by the same user within the same minute will be throttled.
+  -	If the APIs are initiated by an app, then up to 48 requests will be allowed by the same app within a minute. Subsequent requests by the same app within the same minute will be throttled.
 
 ## Next steps
 
