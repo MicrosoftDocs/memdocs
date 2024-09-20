@@ -371,7 +371,7 @@ For the specific enrollment steps, and its prerequisites, go to [Set up iOS/iPad
 
 ### User and Device enrollment administrator tasks
 
-This task list provides an overview. For more specific information, go to [Set up iOS/iPadOS and iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).
+This task list provides an overview. For more specific information, go to [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment).  
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
@@ -389,12 +389,12 @@ This task list provides an overview. For more specific information, go to [Set u
 
   - **Account driven user enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, like password, per-app VPN, Wi-Fi, and Siri. If you use this method, and to help secure apps and their data, then we recommend also using app protection policies.
 
-    For the complete list of what you can and can't do, go to [Intune actions and options supported with Apple User Enrollment](../enrollment/ios-user-enrollment-supported-actions.md). For the specific user enrollment steps, go to [Set up iOS/iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).
+    For the complete list of what you can and can't do, go to [Overview of Apple User Enrollment in Microsoft Intune](../enrollment/ios-user-enrollment-supported-actions.md). For the specific user enrollment steps, go to [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md). 
 
     > [!NOTE]
     > BYOD can become organization-owned devices. To make these devices corporate, go to [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md).
 
-    User enrollment is considered friendlier to end users. But, it might not provide the feature set and security features administrators need. In some scenarios, user enrollment might not be the best option. Consider the following scenarios:
+    Account driven user enrollment is considered friendlier to end users. But, it might not provide the feature set and security features administrators need. In some scenarios, user enrollment might not be the best option. Consider the following scenarios:
 
     - User enrollment creates a work partition on the devices. The features and security you configure in the user enrollment profile only exist in the work partition. They don't exist in the user partition. Users can't factory reset the work partition; administrators can. Users can factory reset the personal partition; administrators can't.
 
