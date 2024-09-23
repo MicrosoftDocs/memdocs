@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/20/2024
+ms.date: 09/23/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -54,6 +54,16 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of September 23, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 11 Cloud PCs now support EN-NZ<!--54032315-->
+
+Windows 365 Cloud PCs now support EN-NZ for Windows 11.
 
 <!-- ########################## -->
 ## Week of September 16, 2024
