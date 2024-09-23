@@ -127,7 +127,7 @@ Use FileVault configurations to manage disk encryption on macOS devices. These c
 
 Use the Firewall configuration to manage the native macOS application firewall. This configuration is located in the **Security** category of the settings catalog. You can learn more about Firewall through the below documentation:
 
-| Apple Platform Guides | Apple Developer | Apple Device Management Schema |
+| Apple Platform Guides | Apple Developer | Apple YAML |
 | -------- | ------- | ------- | 
 | <ul><li>[Firewall security in macOS](https://support.apple.com/guide/security/seca0e83763f/web) </li><li>[Firewall payload](https://support.apple.com/guide/deployment/dep8d306275f/web)</li></ul> | [Firewall](https://developer.apple.com/documentation/devicemanagement/firewall) | [Firewall (YAML)](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.security.firewall.yaml) | 
 
