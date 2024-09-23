@@ -66,11 +66,16 @@ For guidance on assigning the right level of permissions and rights to manage In
   >
   > Beginning on June 19, 2023, the BitLocker profile for Windows was updated to use the settings format as found in the Settings Catalog. The new profile format includes the same settings as the older profile. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
   >
-  > With the new profile format, we no longer publish a dedicated list of settings as found in the profile. Instead, use the *Learn more* link in the UI while viewing information  for a setting, to open [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation, where the setting is detailed in full.
+  > With the new profile format, we no longer publish a dedicated list of settings as found in the profile. Instead, use the *Learn more* link in the UI while viewing information for a setting, to open [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation, where the setting is detailed in full.
   >
   > You can continue to find a list of settings in the original BitLocker profiles created before June 19, 2023, at [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker) in the Intune documentation.
 
-- **Personal Data Encryption** - Personal Data Encryption (PDE) encrypts data at the folder level and is available for devices that run Windows 11 version 22H2 or later. You can use the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp) with other encryption methods, like BitLocker.
+- **Personal Data Encryption** - Personal Data Encryption (PDE) encrypts data at the folder level and is available for devices that run Windows 11 version 22H2 or later. PDE differs from BitLocker in that it encrypts files instead of whole volumes and disks. PDE occurs in addition to other encryption methods such as BitLocker. Unlike BitLocker that releases data encryption keys at boot, PDE doesn't release data encryption keys until a user signs in using Windows Hello for Business. PDE uses the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp).
+
+  For more information about PDE, including prerequisites, related requirements, and recommendations, see the following articles in the Windows security documentation:
+  - [PDE overview](/windows/security/operating-system-security/data-protection/personal-data-encryption/)
+  - [Configure PDE](/windows/security/operating-system-security/data-protection/personal-data-encryption/configure)
+  - [PDE frequently asked questions (FAQ)](/windows/security/operating-system-security/data-protection/personal-data-encryption/faq)
 
 To create a BitLocker or Personal Data Encryption profile, see [Use disk encryption for Windows](../protect/encrypt-devices.md).
 
