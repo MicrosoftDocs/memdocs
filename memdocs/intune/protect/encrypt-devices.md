@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Encrypt Windows devices with BitLocker in Intune 
+title: Encrypt Windows devices with Intune
 titleSuffix: Microsoft Intune
-description: Use policy from Microsoft Intune admin center to encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices.
+description: Use Microsoft Intune policy to manage encryption of Windows devices with either BitLocker or Personal Data Encryption.
 keywords:
 author: brenduns
 ms.author: brenduns
