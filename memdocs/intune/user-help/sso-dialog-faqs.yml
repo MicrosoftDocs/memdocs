@@ -36,7 +36,7 @@ sections:
           On a Windows device, navigate to the **Settings** app > **Accounts** > **Access work or school** > Select your account > **Disconnect**. If you don't have access to the device you signed in to, go to [https://account.microsoft.com/devices](https://account.microsoft.com/devices) to manage your account and sign out.
     
           > [!NOTE] 
-          > Signing out of any individual desktop app won't remove your account from the device. You must sign out of all apps via settings or [https://account.microsoft.com/devices](https://account.microsoft.com/devices) to remove your account from the device.
+          > Signing out of any individual desktop app doesn't remove your account from the device. You must sign out of all apps via settings or [https://account.microsoft.com/devices](https://account.microsoft.com/devices) to remove your account from the device.
     
       - question: |
           What does selecting "No, this app only" do?
