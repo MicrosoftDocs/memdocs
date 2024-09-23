@@ -195,7 +195,6 @@ You can configure these screens in new and existing enrollment policies. For mor
 - [Set up Apple automated device enrollment for iOS/iPadOS](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Set up Apple automated device enrollment for Macs](../enrollment/device-enrollment-program-enroll-macos.md)
 
-
 ### Device security
 
 #### New disk encryption template for Personal Data Encryption<!-- 28677934 -->
@@ -213,6 +212,15 @@ For more information about PDE, including prerequisites, related requirements, a
 - [PDE overview](/windows/security/operating-system-security/data-protection/personal-data-encryption/)
 - [Configure PDE](/windows/security/operating-system-security/data-protection/personal-data-encryption/configure)
 - [PDE frequently asked questions (FAQ)](/windows/security/operating-system-security/data-protection/personal-data-encryption/faq)
+
+### Intune Apps
+
+#### Newly available protected app for Intune<!-- 28730764 -->
+
+The following protected app is now available for Microsoft Intune:
+- Notate for Intune by Shafer Systems, LLC
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of September 9, 2024
 
@@ -876,7 +884,7 @@ If you're using dynamic groups, which rely on device registration to work, it's 
 These changes are currently rolling out and will be made available to all Microsoft Intune tenants by the end of July. There's no change to the Company Portal user interface. For more information about device enrollment for Apple devices, see: 
 
 - [Enrollment guide: Enroll macOS devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-macos.md#device-enrollment-end-user-tasks)
-- [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-ios-ipados.md#user-and-device-enrollment-end-user-tasks)
+- [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-ios-ipados.md)
 
 ## Week of June 24, 2024
 

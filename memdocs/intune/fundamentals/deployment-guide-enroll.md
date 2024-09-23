@@ -141,7 +141,7 @@ The following tabs describe the Intune-supported Android and AOSP enrollment opt
 * [Corporate-owned, userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md): Enroll devices that are built from the Android Open Source Project (AOSP) and absent of Google Mobile services as *corporate-owned, userless devices*. These devices don't have a user associated with them and are intended to be shared, like in a library or lab.  
 * [Corporate-owned, user associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md): Enroll devices that are built from AOSP and absent of Google Mobile services as *corporate-owned, user-associated devices*. These devices are associated with a single user and intended to be exclusively for work use.  
 
-* [Zero-touch enrollment](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch): We recommend using zero-touch enrollment for bulk enrollments and to simplify enrollment for remote workers. This method lets you prepare corporate-owned devices ahead of time so that they automatically provision and enroll as fully manged devices when users turn them on.     
+* [Zero-touch enrollment](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch): We recommend using zero-touch enrollment for bulk enrollments and to simplify enrollment for remote workers. This method lets you prepare corporate-owned devices ahead of time so that they automatically provision and enroll as fully managed devices when users turn them on.     
 
 # [User owned](#tab/user-owned-android)  
 
