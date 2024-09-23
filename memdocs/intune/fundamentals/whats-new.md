@@ -195,6 +195,25 @@ You can configure these screens in new and existing enrollment policies. For mor
 - [Set up Apple automated device enrollment for iOS/iPadOS](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Set up Apple automated device enrollment for Macs](../enrollment/device-enrollment-program-enroll-macos.md)
 
+
+### Device security
+
+#### New disk encryption template for Personal Data Encryption<!-- 28677934 -->
+
+You can now use the new *Personal Data Encryption* (PDE) template that is available through endpoint security [*disk encryption* policy](../protect/encrypt-devices.md). This new template configures the Windows [PDE configuration service provider](/windows/client-management/mdm/personaldataencryption-csp) (CSP), which was introduced in Windows 11 22H2. The PDE CSP is also available through the settings catalog.
+
+PDE differs from BitLocker in that it encrypts files instead of whole volumes and disks. PDE occurs in addition to other encryption methods such as BitLocker. Unlike BitLocker that releases data encryption keys at boot, PDE doesn't release data encryption keys until a user signs in using Windows Hello for Business.
+
+Applies to:
+
+- Windows 11 version 22h2 or later
+
+For more information about PDE, including prerequisites, related requirements, and recommendations, see the following articles in the Windows security documentation:
+
+- [PDE overview](/windows/security/operating-system-security/data-protection/personal-data-encryption/)
+- [Configure PDE](/windows/security/operating-system-security/data-protection/personal-data-encryption/configure)
+- [PDE frequently asked questions (FAQ)](/windows/security/operating-system-security/data-protection/personal-data-encryption/faq)
+
 ## Week of September 9, 2024
 
 ### App management

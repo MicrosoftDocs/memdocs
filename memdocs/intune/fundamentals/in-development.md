@@ -119,20 +119,6 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device security
-
-### New disk encryption template for Personal Data Encryption<!-- 28677934 -->
-
-We’re adding a new template named *Personal Data Encryption* (PDE) to endpoint security BitLocker policy. The new template configures the Windows PDE configuration service provider (CSP) that was introduced in Windows 11 22H2.
-
-PDE is different than BitLocker. PDE encrypts individual files and content, instead of whole volumes and disks. You can use PDE with other encryption methods, such as BitLocker.
-
-Previously, the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp) was made available through the [Intune settings catalog](../fundamentals/whats-new-archive.md#turn-onoff-personal-data-encryption-on-windows-11-devices-using-the-settings-catalog).
-
-Applies to:
-
-- Windows 11
-
 ### Defender for Endpoint security settings support in government cloud environments<!-- 24191406 -->
 
 Customer tenants in US Government Community Cloud (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
