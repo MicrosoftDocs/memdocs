@@ -36,7 +36,7 @@ sections:
           On a Windows device, navigate to the **Settings** app > **Accounts** > **Access work or school** > Select your account > **Disconnect**. If you don't have access to the device you signed in to, go to [https://account.microsoft.com/devices](https://account.microsoft.com/devices) to manage your account and sign out.
     
           > [!NOTE] 
-          > Signing out of any individual app doesn't remove your account from your device. Signing out of a desktop app doesn't remove your account from the device. You must sign out of all apps via settings or [https://account.microsoft.com/devices](https://account.microsoft.com/devices) to remove your account from the device.
+          > Signing out of any individual desktop app doesn't remove your account from the device. You must sign out of all apps via settings or [https://account.microsoft.com/devices](https://account.microsoft.com/devices) to remove your account from the device.
     
       - question: |
           What does selecting "No, this app only" do?
@@ -70,7 +70,7 @@ sections:
       - question: |
           What happens if I uncheck the device management checkbox but sign in to all apps?
         answer: |
-          You're signed in to all native and desktop apps on your device, but your device isn't enrolled in [mobile device management](/windows/client-management/mdm-overview). Your organization might require MDM to access some applications or resources, without it you might not have access.
+          You're signed in to all desktop apps on the device, but the device isn't enrolled in [mobile device management](/windows/client-management/mdm-overview). Your organization might require MDM to access some applications or resources, without it you might not have access.
 
       - question: |
           What can my administrator do if I enroll in mobile device management?
