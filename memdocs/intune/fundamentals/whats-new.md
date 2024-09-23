@@ -218,6 +218,7 @@ For more information about PDE, including prerequisites, related requirements, a
 #### Newly available protected app for Intune<!-- 28730764 -->
 
 The following protected app is now available for Microsoft Intune:
+
 - Notate for Intune by Shafer Systems, LLC
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
