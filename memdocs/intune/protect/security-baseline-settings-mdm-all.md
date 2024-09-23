@@ -1698,87 +1698,87 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 
 - **Access From Network**  
   Baseline default: *Configured*  
-  Values: *Administrators*, *Remote Desktop Users*  
+  Values: *Administrators* (*S-1-5-32-544), *Remote Desktop Users* (*S-1-5-32-555)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#accessfromnetwork)
 
 - **Allow Local Log On**  
   Baseline default: *Configured*  
-  Values: *Administrators*, *Users*  
+  Values: *Administrators* (*S-1-5-32-544), *Users* (*S-1-5-32-545)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#allowlocallogon)
 
 - **Backup Files And Directories**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#backupfilesanddirectories)
 
 - **Create Global Objects**  
   Baseline default: *Configured*  
-  Values: *Administrators*, *LOCAL SERVICE*, *NETWORK SERVICE*, *SERVICE*  
+  Values: *Administrators* (*S-1-5-32-544), *Local Service*  (*S-1-5-19), *Network Service* (*S-1-5-20), *Service* (*S-1-5-6)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#createglobalobjects)
 
 - **Create Page File**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#createpagefile)
 
 - **Debug Programs**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#debugprograms)
 
 - **Deny Access From Network**  
   Baseline default: *Configured*  
-  Value: *NT AUTHORITY\Local Account*  
+  Value: *NT AUTHORITY\Local Account* (*S-1-5-113)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#denyaccessfromnetwork)
 
 - **Deny Remote Desktop Services Log On**  
   Baseline default: *Configured*  
-  Value: *NT AUTHORITY\Local Account*  
+  Value: *NT AUTHORITY\Local Account* (*S-1-5-113)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#denyremotedesktopserviceslogon)
 
 - **Impersonate Client**  
   Baseline default: *Configured*  
-  Values: *Administrators*, *SERVICE*, *Local Service*, *Network Service*  
+  Values: *Administrators* (*S-1-5-32-544), *Service* (*S-1-5-6), *Local Service* (*S-1-5-19), *Network Service* (*S-1-5-20)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#impersonateclient)
 
 - **Load Unload Device Drivers**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#loadunloaddevicedrivers)
 
 - **Manage Auditing And Security Log**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#manageauditingandsecuritylog)
 
 - **Manage Volume**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#managevolume)
 
 - **Modify Firmware Environment**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#modifyfirmwareenvironment)
 
 - **Profile Single Process**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#profilesingleprocess)
 
 - **Remote Shutdown**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#remoteshutdown)
 
 - **Restore Files And Directories**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#restorefilesanddirectories)
 
 - **Take Ownership**  
   Baseline default: *Configured*  
-  Value: *Administrators*  
+  Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#takeownership)
 
 ## Virtualization Based Technology
