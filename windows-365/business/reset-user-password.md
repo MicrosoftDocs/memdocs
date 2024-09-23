@@ -36,9 +36,9 @@ To reset a user’s password:
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with either of the following roles:
     - Password Administrator
     - License Administrator
-1. Select **Your organization’s Cloud PCs**.
-1. Select the check box next to the user whose password you want to reset > **Select**.
-1. Under **Reset password**, choose the options that you want for resetting the password.
-1. Select **Reset password**.
+2. Select **Your organization’s Cloud PCs**.
+3. Select the check box next to the user whose password you want to reset > **Select**.
+4. Under **Reset password**, choose the options that you want for resetting the password.
+5. Select **Reset password**.
 
 You can also reset a user's password through the Microsoft 365 Admin Center and Microsoft Entra ID.
