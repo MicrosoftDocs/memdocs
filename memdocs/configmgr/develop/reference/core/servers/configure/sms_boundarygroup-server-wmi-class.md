@@ -95,6 +95,17 @@ Class SMS_BoundaryGroup : SMS_BaseClass
 
  Boundary group property flags.  
 
+ |Value|Execution context|  
+ |-|-|  
+ |0|Allow peer downloads in this boundary group|  
+ |1|Allow peer downloads in this boundary group **is not enabled**|  
+ |2|During peer downloads, only use peers within the same subnet|  
+ |4|Prefer distribution points over peers within the same subnet|  
+ |8|Prefer cloud based sources over on-premises sources|  
+
+ > [!NOTE]
+ > These are binary flags. So multiple can be set at once. E.g. if a value of 6 is shown, then the first 3 are enabled.
+
  `GroupID`  
  Data type: `UInt32`  
 
@@ -103,17 +114,6 @@ Class SMS_BoundaryGroup : SMS_BaseClass
  Qualifiers: [key]  
 
  Auto-generated unique identifier for the boundary group.  
-
- |Value|Execution context|  
- |-|-|  
- |0|Allow peer downloads in this boundary group|  
- |1|Allow peer downloads in this boundary group *is not enabled*|  
- |2|During peer downloads, only use peers within the same subnet|  
- |4|Prefer distribution points over peers within the same subnet|  
- |8|Prefer cloud based sources over on-premises sources|  
-
- > [!NOTE]
- > These are binary flags. So multiple can be set at once. E.g. if a value of 6 is shown, then the first 3 are enabled.
 
  `MemberCount`  
  Data type: `UInt32`  
