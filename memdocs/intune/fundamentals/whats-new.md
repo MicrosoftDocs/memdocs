@@ -80,6 +80,10 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
+#### Streamlined app creation experience for apps from Enterprise App Catalog<!-- 29411991 -->
+
+We've streamlined the way apps from Enterprise App Catalog are added to Intune. We now provide a direct app link rather than duplicating the app binaries and metadata. App contents now download from a `*.manage.microsoft.com` subdomain. This update helps to improve the latency when adding an app to Intune. When you add an app from Enterprise App Catalog, it syncs immediately and is ready for additional action from within Intune.
+
 #### Update Enterprise App Catalog apps<!-- 24875279 -->
 
 Enterprise App Management is enhanced to allow you to update an **Enterprise App Catalog** app. This capability guides you through a wizard that allows you to add a new application and use supersedence to update the previous application.
@@ -228,7 +232,8 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### App management
 
 #### Managed Home Screen user experience update<!-- 28232751 -->
-All Android devices will be automatically migrated to the updated Managed Home Screen (MHS) user experience. For more information, see [Updates to the Managed Home Screen experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-managed-home-screen-experience/bc-p/3997842).
+
+All Android devices automatically migrate to the updated Managed Home Screen (MHS) user experience. For more information, see [Updates to the Managed Home Screen experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-managed-home-screen-experience/bc-p/3997842).
 
 ### Device enrollment
 
