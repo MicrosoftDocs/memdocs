@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/01/2024
+ms.date: 09/24/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -49,7 +49,9 @@ Complete these steps to set up and enroll your device.
 
 1. Turn on your new or factory-reset device.  
 2. If prompted to, connect to Wi-Fi. Then tap **NEXT**. 
-3. Scan the QR code provided by your organization. 
+3. When you receive the QR code, stop. Then make sure that: 
+   - The QR code comes from a trusted source, via a trusted channel.  
+   - You're enrolling your device into the right organization.    
 4. Follow the onscreen prompts to enroll your device. 
 5. If prompted to, review the device terms and conditions. Then select **ACCEPT & CONTINUE**. 
 6. The Microsoft Intune app opens. The next step depends on the type of device you're using. Complete the step that matches the screen shown on your device: 
