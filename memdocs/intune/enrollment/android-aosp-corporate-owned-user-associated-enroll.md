@@ -88,7 +88,7 @@ Create an enrollment profile to enable enrollment on devices.
 After you create a profile, Intune generates a token that's needed for enrollment. The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.
 
 To view the token as a QR code, select your enrollment profile from the enrollment profile list. Then select **Token**.   
-You can also export the enrollment profile JSON file. To create a JSON file, select Export**.  
+You can also export the enrollment profile JSON file. To create a JSON file, select **Export**.  
 
 > [!IMPORTANT]
 >- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.
