@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2024
+ms.date: 09/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,7 +40,10 @@ Set up enrollment in Intune for corporate-owned, user-associated devices built o
 
 This article describes how to set up Android (AOSP) device management and enroll AOSP devices for use at work.  
 
-## Prerequisites
+## Prerequisites  
+
+>[!NOTE]
+> Beginning October 1st, AOSP devices must have the Microsoft Intune app, version 24.7.0 or later to sync with the Microsoft Intune service.  
 
 To enroll and manage AOSP devices, you must have:
 
@@ -180,6 +183,7 @@ You can take action on one device at a time. For more information about where to
 ## Troubleshooting  
 
 ### View app versions  
+
 Find out which version of the Intune app or Microsoft Authenticator app is installed on a device. 
 
 1. Go to **Devices** and select the device name.    

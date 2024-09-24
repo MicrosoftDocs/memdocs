@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/17/2024
+ms.date: 09/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -58,7 +58,7 @@ Following are brief descriptions of each endpoint security policy type. To learn
 
 - [Attack surface reduction](../protect/endpoint-security-asr-policy.md) - When Defender antivirus is in use on your Windows 10/11 devices, use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
 
-- [Disk encryption](../protect/endpoint-security-disk-encryption-policy.md) - Endpoint security Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault or BitLocker. This focus makes it easy for security admins to manage disk encryption settings without having to navigate a host of unrelated settings.
+- [Disk encryption](../protect/endpoint-security-disk-encryption-policy.md) - Endpoint security Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault, BitLocker, and Personal Data Encryption (for Windows). This focus makes it easy for security admins to manage disk or folder level encryption settings without having to navigate a host of unrelated settings.
 
 - [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) - When you integrate Microsoft Defender for Endpoint with Intune, use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Microsoft Defender for Endpoint.
 

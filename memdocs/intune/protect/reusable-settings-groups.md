@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/19/2024
+ms.date: 09/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -115,6 +115,10 @@ When you edit the configuration of a reusable group, each profile that uses that
 ## Add reusable groups to a Windows firewall rule profile
 
 Add reusable settings groups to profiles while editing or creating the profile. On the profiles Configuration settings page, use an option that supports adding one or more previously created groups.
+
+> [!NOTE]
+>
+> Inbound FQDN rules aren’t natively supported. However, it’s possible to use *pre-hydration* scripts to generate inbound IP entries for the rule. For more information, see [Windows Firewall dynamic keywords](/windows/security/operating-system-security/network-security/windows-firewall/dynamic-keywords) in the Windows Firewall documentation.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a new profile or select and edit an existing profile.
 
