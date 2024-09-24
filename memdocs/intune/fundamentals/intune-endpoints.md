@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/11/2024
+ms.date: 09/24/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -104,7 +104,6 @@ ID |Desc |Category |ER |Addresses |Ports
 190 | Endpoint discovery | Default<BR>Required | False | `go.microsoft.com` | **TCP:** 80, 443|
 189 | Dependency - Feature Deployment| Default<BR>Required | False |`config.edge.skype.com`<BR> | **TCP:** 443|
 <!--170 | Organizational messages| Default<BR>Required | False | `fd.api.orgmsg.microsoft.com`<BR>`ris.prod.api.personalization.ideas.microsoft.com`<BR>`contentauthassetscdn-prod.azureedge.net`<BR>`contentauthassetscdn-prodeur.azureedge.net`<BR>`contentauthrafcontentcdn-prod.azureedge.net`<BR>`contentauthrafcontentcdn-prodeur.azureedge.net`<BR> | **TCP:** 443|check if it's been added by 27th March in the tool-->
-
 
 ### Autopilot dependencies
 
@@ -317,9 +316,6 @@ Managed Windows devices using the Microsoft Store – either to acquire, install
 - purchase.md.mp.microsoft.com
 - licensing.mp.microsoft.com
 - storeedgefd.dsx.mp.microsoft.com
-
-**Proxy configuration**
-- [Prerequisites for Microsoft Store for Business and Education](/microsoft-store/prerequisites-microsoft-store-for-business)
 
 **Windows Update Agent:**
 
