@@ -359,15 +359,18 @@ Platforms:
 
 ## Update certificate connector for KB5014754 requirements     
 
-[KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16) requires a new strong mapping format for all SCEP and PFX certificates deployed by Microsoft Intune and used for certificate-based authentication. The mapping must have a security identifier (SID) extension that maps to the user or device SID. If a certificate doesn't meet the strong mapping criteria by the full enforcement mode date, authentication is denied. In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we released an update that adds the object identifier attribute containing the user or device SID to the certificate, effectively satisfying the requirements. This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID, and is available across all platforms, with some differences:  
+[KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16) requires a new strong mapping format for all PKCS certificates deployed by Microsoft Intune and used for certificate-based authentication. The mapping must have a security identifier (SID) extension that maps to the user or device SID. If a certificate doesn't meet the strong mapping criteria by the full enforcement mode date, authentication is denied. In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we released an update that adds the object identifier attribute containing the user or device SID to the certificate, effectively satisfying the strong mapping requirements. This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID, and is available across all platforms, with some differences:  
 
 * Strong mapping changes apply to *user certificates* for all OS platforms.  
 
 * Strong mapping changes apply to *device certificates* for Windows OS only.  
 
-These changes ensure there is no interruption to authentication.  
+To ensure that certficate-based authentication continues working, you must take the following actions:  
 
-Complete the following procedure to apply the strong mapping changes to PFX certificates.  This procedure requires Microsoft Intune Certificate Connector, version 6.2406.0.1001. For information about the latest version and how to update the certificate connector, see [Certificate connector for Microsoft Intune](certificate-connector-overview.md).  
+- Update the Microsoft Intune Certificate Connector to version 6.2406.0.1001. For information about the latest version and how to update the certificate connector, see [Certificate connector for Microsoft Intune](certificate-connector-overview.md).  
+- Make changes to registry key information.   
+
+Complete the following procedure to modify the registry keys and apply the strong mapping changes to certificates. These changes will apply to new PKCS certificates and PKCS certificates that are being renewed.     
 
 >[!TIP]
 > This procedure requires you to modify the registry in Windows. For more information, see the following resources on Microsoft Support:
@@ -383,7 +386,7 @@ Complete the following procedure to apply the strong mapping changes to PFX cert
       - **PFX Create Legacy Connector for Microsoft Intune**     
       - **PFX Create Legacy Connector for Microsoft Intune**  
 
-4. Microsoft Intune begins sending the SID information to all new certificates, and to certificates being renewed. To verify that authentication is working after these changes, we recommend testing all places where certificate-based authentication could be used, including:   
+4. At this point, the SID information is sent to all new certificates, and to certificates being renewed. To verify that authentication works, we recommend testing all places where certificate-based authentication could be used, including:   
    - Apps  
    - Intune-integrated certification authorities  
    - NAC solutions  
