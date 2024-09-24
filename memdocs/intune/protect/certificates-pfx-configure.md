@@ -266,15 +266,15 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 10. In **Assignments**, select the users and groups you want to include in the assignment. Users and groups receive the profile after you deploy it. Plan to deploy this certificate profile to the same groups that receive:  
 
-- The trusted certificate profile and    
+   - The trusted certificate profile and    
 
-- A configuration profile, such as a Wi-Fi profile that makes use of the certificate.  
+   - A configuration profile, such as a Wi-Fi profile that makes use of the certificate.  
 
-For more information about assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   For more information about assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
-    Select **Next**.
+11. Select **Next**.
 
-11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+12. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ### Subject name format
 
