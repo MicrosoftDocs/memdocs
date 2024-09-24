@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/03/2024
+ms.date: 09/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -257,19 +257,19 @@ To support use with Microsoft Defender security settings management, your polici
 
 | Endpoint security policy | Profile | Defender for Endpoint security settings management  |  Microsoft Intune |
 |---------|----------|-----------|----------|
-| Antivirus              | Defender Update controls           | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+| Antivirus              | Defender Update controls               | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Microsoft Defender Antivirus           | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
-| Antivirus              | Microsoft Defender Antivirus exclusions| ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png) |
-| Antivirus              | Windows Security Experience            | *Note 1*         | ![Supported](./media/mde-security-integration/green-check.png) |
-| Attack Surface Reduction | Attack Surface Reduction Rules          | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
-|Attack Surface Reduction|Device Control|| ![Supported](./media/mde-security-integration/green-check.png) |
-| Endpoint detection and response | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Firewall  | Firewall            | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Firewall  | Firewall Rules      | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Antivirus              | Microsoft Defender Antivirus exclusions| ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+| Antivirus              | Windows Security Experience            | *Note 1*                                                       | ![Supported](./media/mde-security-integration/green-check.png) |
+| Attack Surface Reduction | Attack Surface Reduction Rules       | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+|Attack Surface Reduction|Device Control                          | *Note 1*                                                       | ![Supported](./media/mde-security-integration/green-check.png) |
+| Endpoint detection and response | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png)| ![Supported](./media/mde-security-integration/green-check.png)|
+| Firewall               | Firewall                               | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+| Firewall               | Firewall Rules                         | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 
-***1*** - The *Windows Security Experience* profile is available in the Defender portal but only applies to devices managed by Intune. It isn't supported for devices managed by Microsoft Defender security settings management.
+***1*** - This profile is visible in the Defender portal but isn't supported for devices managed only by Microsoft Defender through the Microsoft Defender security settings management scenario. This profile is supported only for devices managed by Intune.
 
-**Each Intune endpoint security policy** is a discrete group of settings intended for use by security admins who focus on protecting devices in your organization. The following are descriptions of the policies that support security settings management:
+**Each Intune endpoint security profile** is a discrete group of settings intended for use by security admins who focus on protecting devices in your organization. The following are descriptions of the profiles that are supported by the security settings management scenario:
 
 - **[Antivirus](endpoint-security-antivirus-policy.md)** policies manage the security configurations found in Microsoft Defender for Endpoint.
 
