@@ -89,6 +89,7 @@ For more information, see [Intune devices and apps API overview](/graph/intune-c
 - Fujitsu.
 - [Microsoft Surface](/surface/surface-manage-dfci-guide).
 - Panasonic.
+- VAIO.
 
 Other OEMs are pending.
 
