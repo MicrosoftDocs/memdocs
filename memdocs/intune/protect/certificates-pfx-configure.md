@@ -357,41 +357,39 @@ Platforms:
   > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
   > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.  
 
-## Update certificate connector for KB5014754 requirements    
+## Update certificate connector for KB5014754 requirements     
 
-[KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16) requires all SCEP and PFX certificates deployed by Microsoft Intune and used for certificate-based authentication to have specific SID information embedded in them. In Certificate Connector for Microsoft Intune, version 6.2406.0.1001, we released an update that adds the OID attribute containing the user or device SID to the certificate, effectively satisfying the requirements. 
+[KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16) requires a new strong mapping format for all SCEP and PFX certificates deployed by Microsoft Intune and used for certificate-based authentication. The mapping must have a security identifier (SID) extension that maps to the user or device SID. If a certificate doesn't meet the strong mapping criteria by the full enforcement mode date, authentication is denied. In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we released an update that adds the object identifier attribute containing the user or device SID to the certificate, effectively satisfying the requirements. This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID, and is available across all platforms, with some differences:  
 
-This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID. The update for SID information is available across all platforms, with some differences:  
+* Strong mapping changes apply to *user certificates* for all OS platforms.  
 
-* SID information appears in *user certificates* for all OS platforms.  
+* Strong mapping changes apply to *device certificates* for Windows OS only.  
 
-* SID information appears in *device certificates* for Windows OS only.  
+These changes ensure there is no interruption to authentication.  
 
-### Prerequisites  
-
-Before you begin, you must have [certificate connector, version 6.2406.0.1001](certificate-connector-overview.md#september-9-2024).  
-  
-
-### Apply changes    
+Complete the following procedure to apply the strong mapping changes to PFX certificates.  This procedure requires Microsoft Intune Certificate Connector, version 6.2406.0.1001. For information about the latest version and how to update the certificate connector, see [Certificate connector for Microsoft Intune](certificate-connector-overview.md).  
 
 >[!TIP]
 > This procedure requires you to modify the registry in Windows. For more information, see the following resources on Microsoft Support:
 > - [How to back up and restore the registry in Windows - Microsoft Support](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692)
 > - [How to add, modify, or delete registry subkeys and values by using a .reg file - Microsoft Support](https://support.microsoft.com/topic/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg-file-9c7f37cf-a5e9-e1cd-c4fa-2a26218a1a23)  
 
-Complete the following steps to apply the SID information changes to PFX certificates.  
-
 1. In the Windows registry, change the value for `[HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector](DWORD)EnableSidSecurityExtension` to **1**.   
 
 2. Restart the certificate connector service.  
+   1. Go to **Start** > **Run**.  
+   2. Open **services.msc**.  
+   3. Restart these services:  
+      - **PFX Create Legacy Connector for Microsoft Intune**     
+      - **PFX Create Legacy Connector for Microsoft Intune**  
 
-3. To verify changes, we recommend testing all places where certificate-based authentication could be used, including:   
+4. Microsoft Intune begins sending the SID information to all new certificates, and to certificates being renewed. To verify that authentication is working after these changes, we recommend testing all places where certificate-based authentication could be used, including:   
    - Apps  
    - Intune-integrated certification authorities  
    - NAC solutions  
-   - Networking infrastructure  
+   - Networking infrastructure
 
-To roll back changes, restore the original registry settings. Then create a new profile to reissue certificates without the SID attribute. If you use a Digicert CA, you must create a template for users with an SID and another template for users without an SID. For more information, see [the Digicert help documentation]().     
+To roll back changes, restore the original registry settings. Then create a new PKCS certificate profile to reissue certificates without the SID attribute. If you use a Digicert CA, you must create a certificate template for users with an SID and another template for users without an SID. 
 
 ## Next steps
 
