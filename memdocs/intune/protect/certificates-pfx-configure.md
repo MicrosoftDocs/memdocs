@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/20/2024
+ms.date: 09/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -386,11 +386,11 @@ Complete the following procedure to modify the registry keys and apply the stron
       - **PFX Create Legacy Connector for Microsoft Intune**     
       - **PFX Create Legacy Connector for Microsoft Intune**  
 
-4. At this point, the SID information is sent to all new certificates, and to certificates being renewed. To verify that authentication works, we recommend testing all places where certificate-based authentication could be used, including:   
+4. Changes begin applying to all new certificates, and to certificates being renewed. To verify that authentication works, we recommend testing all places where certificate-based authentication could be used, including:   
    - Apps  
    - Intune-integrated certification authorities  
    - NAC solutions  
-   - Networking infrastructure
+   - Networking infrastructure  
 
 To roll back changes, restore the original registry settings. Then create a new PKCS certificate profile to reissue certificates without the SID attribute. If you use a Digicert CA, you must create a certificate template for users with an SID and another template for users without an SID. 
 
