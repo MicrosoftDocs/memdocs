@@ -166,7 +166,7 @@ All events have one of the following IDs:
 
 ### Task Categories
 
-All events are tagged with a Task Category to aid in filtering.  Task categories contain but aren't limited to the following list:
+All events are tagged with a Task Category to aid in filtering. Task categories contain but aren't limited to the following list:
 
 **PKCS**  
 
