@@ -123,15 +123,13 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2016 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2019 (with [KB5025229](https://support.microsoft.com/topic/april-11-2023-kb5025229-os-build-17763-4252-e8ead788-2cd3-4c9b-8c77-d677e2d8744f))
 - Windows Server 2022 (with [KB5025230](https://support.microsoft.com/topic/april-11-2023-security-update-kb5025230-5048ddfb-7bf3-4e6c-b29a-7b44b789d282))
-- Domain Controllers (preview)
+- Domain controllers (preview). See important information in [Use of security settings management on domain controllers](#use-of-security-settings-management-on-domain-controllers) (in this article).
 
 Security settings management doesn't work on and isn't supported with the following devices:
 
 - Non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients
 - Azure Virtual Desktop (AVD and formerly Windows Virtual Desktop, WVD)
 - 32-bit versions of Windows
-
-
 
 ### Licensing and subscriptions
 
@@ -478,9 +476,9 @@ You can manually sync a device on-demand from the [Microsoft Defender portal](ht
 
 The Policy sync button only appears for devices that are successfully managed by Microsoft Defender for Endpoint.
 
-### Devices protected by Tamper Protection
+### Devices protected by tamper protection
 
-If a device has Tamper Protection turned on, it isn't possible to edit the values of [Tamper Protected settings](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#what-happens-when-tamper-protection-is-turned-on) without disabling Tamper Protection first.
+If a device has tamper protection turned on, it isn't possible to edit the values of [Tamper-protected settings](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#what-happens-when-tamper-protection-is-turned-on) without disabling Tamper Protection first.
 
 ### Assignment Filters and security settings management
 
@@ -516,11 +514,13 @@ The following security settings are pending deprecation. The Defender for Endpoi
 
 ### Use of security settings management on domain controllers
 
-Because a Microsoft Entra ID trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
+Currently in preview, security settings management is now supported on domain controllers. To manage security settings on domain controllers, you must enable it in the enforcement scope page (go to **Settings** > **Endpoints** **Enforcement scope**). Windows Server devices must be enabled before you can enable configuration of domain controllers. Additionally, if the *on tagged devices* option is selected for Windows Servers, configuration of domain controllers is limited to tagged devices, too. 
 
-> [!IMPORTANT]
->
-> In some cases, Domain Controllers that are run a down level server Operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn't happen in your environment, we recommend making sure your domain controllers are neither tagged "MDE-Management" or managed by MDE.
+> [!CAUTION]
+> - Misconfiguration of domain controllers could have a negative impact on both your security posture and operational continuity.
+> - If configuration of domain controllers is enabled in your tenant, make sure to review all Windows policies to make sure you're not unintentionally targeting Microsoft Entra device groups that contain domain controllers. To minimize risk to productivity, firewall policies aren't supported on domain controllers. 
+> - We recommend reviewing all policies targeted to domain controllers before unenrolling those devices. Make any required configurations first, and then unenroll your domain controllers. Defender for Endpoint configuration is maintained on each device after the device is unenrolled.
+
 
 ### Server Core installation
 
