@@ -247,7 +247,12 @@ To confirm the reason for an enrollment failure, go to **Devices** > **Enrollmen
 
 ## Known issues and limitations  
 
-- Windows corporate device identifiers are only supported for devices running Windows 10 version 22H2 and later and Windows 11 version 22H2 and later. Earlier versions can't render the model and manufacturer property. As a result, the property appears in the admin center as **Unknown**. We're working on expanding corporate identifer support to devices running earlier versions of Windows.  
+- Windows corporate device identifiers are only supported for devices running:
+  -  Windows 10 version 22H2 (OS build 19045.4598) or later.  
+  -  Windows 11 version 22H2 (OS build 22621.3374) or later.  
+  -  Windows 11 version 23H2 (OS build 22631.3374) or later.  
+  
+  Earlier versions can't render the model and manufacturer property. As a result, the property appears in the admin center as **Unknown**. We're working on expanding corporate identifer support to devices running earlier versions of Windows.  
 
 - You can upload up to 10 CSV files for Windows corporate identifiers in the admin center. If you need to upload more data, we recommend using PowerShell or the Microsoft Intune Graph API to add corporate identifiers.  
 
