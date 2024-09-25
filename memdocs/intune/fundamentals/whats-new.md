@@ -199,6 +199,10 @@ You can configure these screens in new and existing enrollment policies. For mor
 - [Set up Apple automated device enrollment for iOS/iPadOS](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Set up Apple automated device enrollment for Macs](../enrollment/device-enrollment-program-enroll-macos.md)
 
+#### Extended expiration date for corporate-owned, user-associated AOSP enrollment tokens<!-- 25782149 -->
+
+Now when you create an enrollment token for Android Open Source Project (AOSP) corporate-owned, user-associated devices, you can select an expiration date that's up to 65 years into the future, an improvement over the previous 90 day expiration date.
+
 ### Device security
 
 #### New disk encryption template for Personal Data Encryption<!-- 28677934 -->
