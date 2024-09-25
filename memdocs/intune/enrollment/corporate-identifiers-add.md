@@ -250,7 +250,7 @@ To confirm the reason for an enrollment failure, go to **Devices** > **Enrollmen
 - Windows corporate device identifiers are only supported for devices running:
   -  Windows 10 version 22H2 (OS build 19045.4598) or later.  
   -  Windows 11 version 22H2 (OS build 22621.3374) or later.  
-  -  Windows 11 version 23H2 (OS build 22621.3374) or later.
+  -  Windows 11 version 23H2 (OS build 22631.3374) or later.  
   
   Earlier versions can't render the model and manufacturer property. As a result, the property appears in the admin center as **Unknown**. We're working on expanding corporate identifer support to devices running earlier versions of Windows.  
 
