@@ -521,7 +521,6 @@ Currently in preview, security settings management is now supported on domain co
 > - If configuration of domain controllers is enabled in your tenant, make sure to review all Windows policies to make sure you're not unintentionally targeting Microsoft Entra device groups that contain domain controllers. To minimize risk to productivity, firewall policies aren't supported on domain controllers. 
 > - We recommend reviewing all policies targeted to domain controllers before unenrolling those devices. Make any required configurations first, and then unenroll your domain controllers. Defender for Endpoint configuration is maintained on each device after the device is unenrolled.
 
-
 ### Server Core installation
 
 Security settings management doesn't support Server core installations due to Server core platform limitations.
