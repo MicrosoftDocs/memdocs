@@ -454,7 +454,7 @@ As we prepare to support managed device attestation in Intune, we are starting a
 
 Existing OS and hardware eligible devices do not get the ACME certificate unless they re-enroll. There is no change to the end user's enrollment experience, and no changes to the Microsoft Intune admin center. This change only impacts enrollment certificates and has no impact on any device configuration policies. 
 
-ACME is supported for Apple Device Enrollment and Apple Configurator enrollment methods. Eligible OS versions include:
+ACME is supported for Apple Device Enrollment, Apple Configurator enrollment, and Automated device enrollment (ADE) methods. Eligible OS versions include:
 
 - iOS 16.0 or later
 - iPadOS 16.1 or later
