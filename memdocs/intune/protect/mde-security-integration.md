@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/24/2024
+ms.date: 09/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -131,9 +131,7 @@ Security settings management doesn't work on and isn't supported with the follow
 - Domain Controllers
 - 32-bit versions of Windows
 
-> [!IMPORTANT]
->
-> In some cases, Domain Controllers that run a down level server operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn't happen in your environment, we recommend making sure your domain controllers are neither tagged "MDE-Management" or managed by MDE.
+
 
 ### Licensing and subscriptions
 
