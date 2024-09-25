@@ -176,6 +176,15 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 - Non Removable From UI System Extensions
 - Non Removable System Extensions
 
+#### Consent prompt update for remote log collection<!-- 28072852 -->
+
+End users might see a different consent experience for remote log collection after the Android APP SDK 10.4.0 and iOS APP SDK 19.6.0 updates. End users will no longer see a common prompt from Intune and will only see a prompt from the application, if it has one. Note that app updates don't follow a specific schedule.
+
+Applies to:
+
+- Android
+- iOS/iPadOS
+
 ### Device enrollment
 
 #### New Setup Assistant screens available for configuration for ADE <!-- 26607203, 2532989 -->
@@ -198,10 +207,6 @@ You can configure these screens in new and existing enrollment policies. For mor
 
 - [Set up Apple automated device enrollment for iOS/iPadOS](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Set up Apple automated device enrollment for Macs](../enrollment/device-enrollment-program-enroll-macos.md)
-
-#### Extended expiration date for corporate-owned, user-associated AOSP enrollment tokens<!-- 25782149 -->
-
-Now when you create an enrollment token for Android Open Source Project (AOSP) corporate-owned, user-associated devices, you can select an expiration date that's up to 65 years into the future, an improvement over the previous 90 day expiration date.
 
 ### Device security
 
