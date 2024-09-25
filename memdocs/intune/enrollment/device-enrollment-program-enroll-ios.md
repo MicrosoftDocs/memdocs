@@ -41,15 +41,6 @@ This article describes how to prepare and set up automated device enrollment in 
 ## Overview of features    
 The following table shows the features and scenarios supported with automated device enrollment.  
 
-## Certificates  
-This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
-
-Devices that are already enrolled do not get an ACME certificate on unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 
-
-- iOS 16.0 or later  
-
-- iPadOS 16.1 or later 
-
 | Feature | Use this enrollment option when |
 | --- | --- |
 | You want supervised mode. | ✔️ <br/><br/> Supervised mode deploys software updates, restricts features, allows and blocks apps, and more.|
@@ -62,6 +53,15 @@ Devices that are already enrolled do not get an ACME certificate on unless they 
 | Devices are personal or bring-your-own (BYOD). | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../fundamentals/deployment-guide-enrollment-mamwe.md), or [User and Device enrollment](../enrollment/ios-user-enrollment.md). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> If you want to fully manage a device in Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are owned by the organization, we recommend enrolling them in Intune. |  
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |  
+
+## Certificates  
+This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
+
+Devices that are already enrolled do not get an ACME certificate on unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 
+
+- iOS 16.0 or later  
+
+- iPadOS 16.1 or later 
 
 ## Prerequisites 
 Before you create the enrollment profile, you must have:       
