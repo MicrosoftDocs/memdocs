@@ -40,7 +40,7 @@ To support the Installer, a custom XML schema should be included as part of the 
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>  
-    <xs:schema id="RdpInstaller" version="1" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/SystemsManagement/2009/ApplicationManagement" xmlns="http://schemas.microsoft.com/SystemsManagement/2009/ApplicationManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+    <xs:schema id="RdpInstaller" version="1" elementFormDefault="qualified" targetNamespace="https://schemas.microsoft.com/SystemsManagement/2009/ApplicationManagement" xmlns="https://schemas.microsoft.com/SystemsManagement/2009/ApplicationManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
       <xs:complexType name="RdpInstaller">  
         <xs:complexContent mixed="false">  
           <xs:extension base="Installer">  
