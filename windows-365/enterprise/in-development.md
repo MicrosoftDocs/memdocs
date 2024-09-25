@@ -72,10 +72,6 @@ In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 appli
 - Windows 10 Enterprise + Microsoft 365 Apps 22H2
 - Windows 10 Enterprise + Microsoft 365 Apps 21H2
 
-### Windows 365 support for HEVC video coding<!--51599459-->
-
-Windows 365 will support Hardware High Efficiency Video Coding (HEVC) h.265 4:2:0 on compatible GPU-enabled Cloud PCs.
-
 ### Azure network connections inactive state<!--52127015-->
 
 In a future update, Azure network connections that meet either of the following conditions for more than four weeks will be marked as inactive:
