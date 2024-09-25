@@ -85,7 +85,7 @@ To assign an app to groups by using the include and exclude assignment:
 > [!NOTE]
 > When you add a group, if any other group has already been included for a specific assignment type, the app is preselected and can't be modified for other include assignment types. The group that has been used can't be used as an included group.
 
-When you make group assignments, groups that have already been assigned aren't available to be modified. If you want to select a group that currently isn't available, first remove the app from the app's assigned list.
+When you make group assignments, groups that have already been assigned aren't available to be modified. If you want to select a group that currently isn't available, first remove the group from the app's assigned list.
 
 To edit assignments, in the app **Assignments** pane, select the row that contains the specific assignment that you want to change. You can also remove an assignment by selecting the ellipse (**…**) at the end of a row, and then selecting **Remove**.
 

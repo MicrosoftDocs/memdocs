@@ -170,7 +170,7 @@ When you use the schema settings in the **Knox Service Plugin** app, the Intune 
     For guidance on configuring the OEM app schema, use the following links:
 
     - [Blog - Frontline workers get a better experience from Microsoft and Samsung](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/frontline-workers-get-a-better-experience-from-microsoft-and/ba-p/4078801)
-    - [Knox Service Plugin - Overview](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/welcome/) (opens Samsung's web site)
+    - [Knox Service Plugin - Grant special permissions for an app](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/kbas/kba-1261-grant-special-permissions-for-an-app/) (opens Samsung's web site)
 
     When you create the Intune policy, you enter the following info:
 
