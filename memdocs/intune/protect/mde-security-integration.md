@@ -306,7 +306,7 @@ In the Microsoft Defender portal, as a security administrator:
 
    > [!NOTE]
    >
-   > If you have the *Manage security settings in Security Center* permission in the Microsoft Defender for Endpoint portal, and are simultaneously enabled to view devices from all Device Groups (no [role-based access control](/microsoft-365/security/defender-endpoint/rbac) limits on your user permissions), you can also perform this action.
+   > If you have the *Manage security settings in Security Center* permission in the Microsoft Defender portal, and are simultaneously enabled to view devices from all Device Groups (no [role-based access control](/microsoft-365/security/defender-endpoint/rbac) limits on your user permissions), you can also perform this action.
 
 2. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
 
@@ -328,7 +328,7 @@ In the Microsoft Defender portal, as a security administrator:
 
    > [!TIP]
    >
-   > To ensure your Microsoft Defender for Endpoint portal users have consistent permissions across portals, if not already provided, request that your IT administrator grant them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](../fundamentals/role-based-access-control.md).
+   > To ensure your Microsoft Defender portal users have consistent permissions across portals, if not already provided, request that your IT administrator grant them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](../fundamentals/role-based-access-control.md).
 
 ### Configure Intune
 
