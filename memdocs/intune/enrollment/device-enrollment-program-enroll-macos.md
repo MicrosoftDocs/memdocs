@@ -33,13 +33,6 @@ Set up automated device enrollment in Intune for new or wiped Macs purchased thr
 
 This article describes how to set up an automated device enrollment profile for corporate-owned Macs. 
 
-## Certificates  
-This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
-
-Devices that are already enrolled do not get an ACME certificate on unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 
-
-- macOS 13.1+
-
 >[!NOTE]
 > The steps in this article are the same whether you're using Apple Business Manager or Apple School Manager. For brevity, we refer to *Apple Business Manager* only throughout the steps in this article, except where clarification is necessary.     
 
@@ -51,8 +44,14 @@ Devices that are already enrolled do not get an ACME certificate on unless they 
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->  
+## Certificates  
+
+This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
+
+Devices that are already enrolled do not get an ACME certificate unless they re-enroll into Microsoft Intune. ACME is supported on devices running macOS 13.1 and later.  
 
 ## Limitations  
+
 Automated device enrollment via Apple Business Manager and Apple School Manager isn't supported with [device enrollment manager accounts](device-enrollment-manager-enroll.md).    
 
 ## Prerequisites 
