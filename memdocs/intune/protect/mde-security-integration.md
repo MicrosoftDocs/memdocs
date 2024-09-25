@@ -532,9 +532,9 @@ PowerShell needs to be enabled.
 
 Security settings management doesn't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode `enabled`. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
 
-### Managing security through MDE if you were previously using a third-party security tool
+### Managing security through Defender for Endpoint if you were previously using a third-party security tool
 
-If you previously had a third-party security tool on the machine and are now managing it with MDE, you might see some impact on MDE's capability to manage Security settings in rare cases. In such cases, as a troubleshooting measure, uninstall and reinstall the latest version of MDE on your machine.
+If you previously had a third-party security tool on the machine and are now managing it with Defender for Endpoint, you might see some impact on Defender for Endpoint's capability to manage Security settings in rare cases. In such cases, as a troubleshooting measure, uninstall and reinstall the latest version of Defender for Endpoint on your machine.
 
 ## Next steps
 
