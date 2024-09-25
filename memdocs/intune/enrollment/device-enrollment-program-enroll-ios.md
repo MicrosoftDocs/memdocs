@@ -41,6 +41,15 @@ This article describes how to prepare and set up automated device enrollment in 
 ## Overview of features    
 The following table shows the features and scenarios supported with automated device enrollment.  
 
+## Certificates  
+This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
+
+Devices that are already enrolled do not get an ACME certificate on unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 
+
+- iOS 16.0 or later  
+
+- iPadOS 16.1 or later 
+
 | Feature | Use this enrollment option when |
 | --- | --- |
 | You want supervised mode. | ✔️ <br/><br/> Supervised mode deploys software updates, restricts features, allows and blocks apps, and more.|
