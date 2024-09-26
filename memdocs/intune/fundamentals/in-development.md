@@ -83,15 +83,6 @@ The UI for the Intune Company Portal app for Windows will be updated. Users will
 
 For more information, see [New look for Intune Company Portal app for Windows](https://techcommunity.microsoft.com/t5/intune-customer-success/new-look-for-intune-company-portal-app-for-windows/ba-p/4158755).
 
-### Working Time settings for Microsoft Teams<!-- 14631539 -->
-
-Working time settings will allow you to enforce policies that limit access and to mute notifications received during non-working time on Microsoft Teams app. You'll be able to limit access by using App Protection Policies (APP) to block end users from using the iOS/iPadOS or Android Teams app during non-working time. Also, you'll be able to create a non-working time policy to mute notifications from the Teams app to end users during non-working time.
-
-Applies to:
-
-- Android
-- iOS/iPadOS
-
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
@@ -149,7 +140,7 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- *********************************************** -->
 
 <!-- ## Monitor and troubleshoot -->
- 
+
 <!-- *********************************************** -->
 
 <!-- ## Tenant administration -->
