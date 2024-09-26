@@ -122,6 +122,50 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
+## Device management
+
+### Minimum OS version for Android devices will be Android 10 and later for user-based management methods<!-- 14755802 -->
+
+From October 2024, the minimum OS supported for Android devices will be Android 10 and later for user-based management methods, which includes:
+
+- Android Enterprise personally-owned work profile
+- Android Enterprise corporate owned work profile
+- Android Enterprise fully managed
+- Android Open Source Project (AOSP) user-based
+- Android device administrator
+- App protection policies (APP)
+- App configuration policies (ACP) for managed apps
+
+For enrolled devices on unsupported OS versions (Android 9 and lower)
+
+- Intune technical support won't be provided.
+- Intune won't make changes to address bugs or issues.
+- New and existing features aren't guaranteed to work.
+
+While Intune won't prevent enrollment or management of devices on unsupported Android OS versions, functionality isn't guaranteed, and use isn't recommended.
+
+Userless methods of Android device management (Dedicated and AOSP userless) and Microsoft Teams certified Android devices won't be affected by this change.
+
+### Device Inventory for Windows<!-- 24853010 -->
+
+Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
+
+You'll soon be able to choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view.
+
+Applies to:
+
+- Windows (Corporate owned devices managed by Intune)
+
+### Collection of additional device inventory details<!-- 29460196 -->
+
+We're adding additional files and registry keys to be collected to assist in troubleshooting the Device Hardware Inventory feature.
+
+Applies to:
+
+- Windows
+
+<!-- *********************************************** -->
+
 <!-- ## Intune apps -->
 
 <!-- *********************************************** -->
