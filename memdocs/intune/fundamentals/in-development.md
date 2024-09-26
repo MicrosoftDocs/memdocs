@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 09/10/2024
+ms.date: 09/25/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -104,108 +104,6 @@ Applies to:
 
 ## Device configuration
 
-### New settings available in the Apple settings catalog <!-- 28672633 -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
-
-#### iOS/iPadOS
-
-**Declarative Device Management (DDM) > Math Settings**:
-
-- Calculator
-  - Basic Mode
-  - Math Notes Mode
-  - Scientific Mode
-
-- System Behavior
-  - Keyboard Suggestions
-  - Math Notes
-
-**Restrictions**:
-
-- Allow Personalized Handwriting Results
-- Allow Video Conferencing Remote Control
-- Allow Genmoji
-- Allow Image Playground
-- Allow Image Wand
-- Allow iPhone Mirroring
-- Allow Writing Tools
-
-**Web Content Filter**:
-
-- Hide Deny List URLs
-
-#### macOS
-
-**Declarative Device Management (DDM) > Math Settings**:
-
-- Calculator
-  - Basic Mode
-  - Math Notes Mode
-  - Programmer Mode
-  - Scientific Mode
-
-- System Behavior
-  - Keyboard Suggestions
-  - Math Notes
-
-**Restrictions**:
-
-- Allow Genmoji
-- Allow Image Playground
-- Allow iPhone Mirroring
-- Allow Writing Tools
-
-**System Configuration > System Extensions**:
-
-- Non Removable From UI System Extensions
-- Non Removable System Extensions
-
-
-### Device Firmware Configuration Interface (DFCI) supports VAIO devices <!-- 28186944 -->
-
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
-
-Some VAIO devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
-
-For more information about DFCI profiles, see:
-
-- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
-- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
-
-Applies to:
-
-- Windows 10
-- Windows 11
-
-### Samsung ended support for multiple Android device administrator (DA) settings <!-- 24990472 -->
-
-On Android device administrator managed (DA) devices, Samsung has deprecated many [Samsung Knox APIs](https://docs.samsungknox.com/dev/knox-sdk/api-reference/deprecated-api-methods/) (opens Samsung's web site) configuration settings.
-
-In Intune, this deprecation impacts the following device restrictions settings, compliance settings and trusted certificate profiles:
-
-- [Device restriction settings for Android in Microsoft Intune](../configuration/device-restrictions-android.md)
-- [View the Android device administrator compliance settings for Microsoft Intune compliance policies](../protect/compliance-policy-create-android.md)
-- [Create trusted certificate profiles in Microsoft Intune](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator)
-
-In the Intune admin center, when you create or update a profile with these settings, the impacted settings are noted.
-
-Though the functionality might continue to work, there's no guarantee that it will continue working for any or all Android DA versions supported by Intune. For more information on Samsung support for deprecated APIs, see [What kind of support is offered after an API is deprecated?](https://docs.samsungknox.com/dev/knox-sdk/faqs/general/deprecated-api-support-change.htm) (opens Samsung's web site).
-
-Instead, you can manage Android devices with Intune using one of the following Android Enterprise options:
-
-- [Set up enrollment of Android Enterprise personally owned work profile devices](../enrollment/android-work-profile-enroll.md)
-- [Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile](../enrollment/android-corporate-owned-work-profile-enroll.md)
-- [Set up enrollment for Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md)
-- [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md)
-- [App protection policies overview](../apps/app-protection-policy.md)
-
-Applies to:
-
-- Android device administrator (DA)
-
 ### Consent prompt update for remote log collection<!-- 28072852 -->
 
 End users might see a different consent experience for remote log collection after the Android APP SDK 10.4.0 and iOS APP SDK 19.6.0 updates. End users will no longer see a common prompt from Intune and will only see a prompt from the application if it has one.
@@ -217,46 +115,9 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device enrollment
-
-### New Setup Assistant screens available for configuration <!-- 26607203, 2532989 -->
-
-New Setup Assistant screens will be available to configure in the Microsoft Intune admin center. You can hide or show these screens during automated device enrollment.
-
-For macOS:
-
-- **Wallpaper**: Show or hide the macOS Sonoma wallpaper setup pane that appears after an upgrade on devices running macOS 14 and later.
-- **Lockdown mode**: Show or hide the macOS lockdown mode setup pane on devices running macOS 14 and later.
-- **Intelligence**: Show or hide the intelligence setup pane on devices running macOS 15 and later.
-
-For iOS/iPadOS:
-
-- **Emergency SOS**: Show or hide the safety (emergency SOS) setup pane on devices running iOS/iPadOS 16 and later.
-- **Action button**: Show or hide the action button setup pane on devices running iOS/iPadOS 17 and later.
-- **Intelligence**: Show or hide the intelligence setup pane on devices running iOS/iPadOS 18 and later.
-
-You can configure these screens in new and existing enrollment policies.
-
-Applies to:
-
-- iOS/iPadOS
-- macOS
+<!-- ## Device enrollment -->
 
 <!-- *********************************************** -->
-
-## Device security
-
-### New disk encryption template for Personal Data Encryption<!-- 28677934 -->
-
-We’re adding a new template named *Personal Data Encryption* (PDE) to endpoint security BitLocker policy. The new template configures the Windows PDE configuration service provider (CSP) that was introduced in Windows 11 22H2.
-
-PDE is different than BitLocker. PDE encrypts individual files and content, instead of whole volumes and disks. You can use PDE with other encryption methods, such as BitLocker.
-
-Previously, the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp) was made available through the [Intune settings catalog](../fundamentals/whats-new-archive.md#turn-onoff-personal-data-encryption-on-windows-11-devices-using-the-settings-catalog).
-
-Applies to:
-
-- Windows 11
 
 ### Defender for Endpoint security settings support in government cloud environments<!-- 24191406 -->
 
