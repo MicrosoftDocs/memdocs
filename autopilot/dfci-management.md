@@ -55,12 +55,12 @@ See the following figure:
 
 - A currently supported version of Windows and a supported UEFI is required.
 - The device manufacturer must have DFCI added to their UEFI firmware in the manufacturing process, or as a firmware update that can be installed. Work with the device vendors to determine the [manufacturers that support DFCI](#oems-that-support-dfci), or the firmware version needed to use DFCI.
-- The device must be managed with Microsoft Intune. For more information, see [Enroll Windows devices in Intune using Windows Autopilot](/intune/enrollment/enrollment-autopilot).
+- The device must be managed with Microsoft Intune. For more information, see [Enroll Windows devices in Intune using Windows Autopilot](/mem/intune/enrollment/enrollment-autopilot).
 - The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/membership/cloud-solution-provider), or registered directly by the OEM. For Surface devices, Microsoft registration support is available at [Microsoft Devices Autopilot Support](https://prod.support.services.microsoft.com/supportrequestform/0d8bf192-cab7-6d39-143d-5a17840b9f5f).
 
 > [!IMPORTANT]
 >
-> Devices manually registered for Autopilot (such as by [importing from a CSV file](/intune/enrollment/enrollment-autopilot#add-devices)) aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot. When the device is registered, its serial number is displayed in the list of Windows Autopilot devices.
+> Devices manually registered for Autopilot (such as by [importing from a CSV file](/mem/intune/enrollment/enrollment-autopilot#add-devices)) aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot. When the device is registered, its serial number is displayed in the list of Windows Autopilot devices.
 
 ## Managing DFCI profile with Windows Autopilot
 
@@ -71,9 +71,9 @@ There are four basic steps in managing DFCI profile with Windows Autopilot:
 1. Create a DFCI profile
 1. Assign the profiles
 
-See [Create the profiles](/intune/configuration/device-firmware-configuration-interface-windows#create-the-profiles) and [Assign the profiles, and reboot](/intune/configuration/device-firmware-configuration-interface-windows#assign-the-profiles-and-reboot) for details.
+See [Create the profiles](/mem/intune/configuration/device-firmware-configuration-interface-windows#create-the-profiles) and [Assign the profiles, and reboot](/mem/intune/configuration/device-firmware-configuration-interface-windows#assign-the-profiles-and-reboot) for details.
 
-The existing [DFCI settings](/intune/configuration/device-firmware-configuration-interface-windows#update-existing-dfci-settings) can also be changed on devices that are in use. In the existing DFCI profile, change the settings and save the changes. Since the profile is already assigned, the new DFCI settings take effect when next time the device syncs or the device reboots.
+The existing [DFCI settings](/mem/intune/configuration/device-firmware-configuration-interface-windows#update-existing-dfci-settings) can also be changed on devices that are in use. In the existing DFCI profile, change the settings and save the changes. Since the profile is already assigned, the new DFCI settings take effect when next time the device syncs or the device reboots.
 
 To identify whether a device is DFCI ready, the following Intune Graph API call can be used:
 
