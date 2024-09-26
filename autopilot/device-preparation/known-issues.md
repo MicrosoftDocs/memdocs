@@ -40,6 +40,40 @@ This article describes known issues that can often be resolved with:
 
 ## Known issues
 
+## Security group membership update failures may lead to non-compliant devices
+
+Date added: *September 26, 2024*
+
+**Issue:** If security groups are not properly configured in Intune, devices may lose compliance and be left in an unsecured state.
+
+**Potential reasons for security group membership failures:**
+
+1. **Retry failures:** Security group membership updates may not succeed during retry windows, leading to delays in group updates.
+
+1. **Static to dynamic group changes:** After the Autopilot profiles are configured, changing a security group from static to dynamic could cause failures.
+
+1. **Owner removal:** If the Intune Autopilot First Party App is removed as an owner of a configured security group, updates may fail.
+
+1. **Group deletion:** If a configured security group is deleted and devices are deployed before Intune detects the deletion, security configurations may fail to apply.
+
+**Mitigation Steps:**
+
+1. **Validate security group configuration before provisioning:**
+
+  - Ensure the correct security group is selected within the Intune/Entra portal.
+    
+  - The security group should be configured within the Autopilot Device Preparation profile.
+    
+  - The group should not be assignable to other groups.
+    
+  - The Intune Autopilot First Party App should be an owner of the group.
+    
+1. **Manual fix for provisioned devices:**
+
+- If devices are already deployed or the security group is not applicable, manually add the affected devices to the correct security group.
+
+By following these steps, you can prevent security group membership failures and ensure devices remain compliant and secure.
+
 ## Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
 
 Date added: *July 8, 2024* <br>
@@ -92,9 +126,7 @@ The issue is being investigated. As a workaround, add the following additional r
 For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
 
 > [!NOTE]
->
 > The [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions) article doesn't list the **Device configurations** - **Assign** permission. This permission requirement is only temporary until the issue is resolved. However, the article can be used as a guide on how to properly add this permission.
-
 **This issue was resolved in July 2024.**
 
 ### Device is stuck at 100% during the out-of-box experience (OOBE)
