@@ -500,7 +500,7 @@ To install Microsoft Tunnel to a rootless Podman container, use the following co
 
 ## Uninstall the Microsoft Tunnel
 
-To uninstall the product, run **mst-cli uninstall** from the Linux server as root. This will also remove the server from the Intune admin console.
+To uninstall the product, run **mst-cli uninstall** from the Linux server as root. This will also remove the server from the Intune admin center.
 
 ## Related content
 
