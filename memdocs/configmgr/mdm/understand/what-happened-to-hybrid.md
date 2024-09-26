@@ -77,6 +77,6 @@ The following note is the original deprecation announcement:
 
 For more information on supported features for managing MDM devices, see the following articles:
 
-- [What is Microsoft Intune?](/intune/what-is-intune)
+- [What is Microsoft Intune?](/mem/intune/fundamentals/what-is-intune)
 - [What is on-premises MDM?](manage-mobile-devices-with-on-premises-infrastructure.md)
 - [Device management with Exchange](../deploy-use/manage-mobile-devices-with-exchange-activesync.md)

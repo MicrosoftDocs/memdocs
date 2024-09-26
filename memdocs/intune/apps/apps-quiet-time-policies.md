@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/16/2024
+ms.date: 09/23/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,12 +29,13 @@ The global quiet time settings allow you to create policies to schedule quiet ti
 
 ## Quiet time policy types
 
-There are two quiet time policy types available. The following table describes each policy type.
+There are three quiet time policy types available. The following table describes each policy type.
 
 |      Policy Type     |      Description     |
 |---|---|
 |     Date Range    |     Select this option to automatically mute Microsoft Outlook  email and Teams notifications on iOS/iPadOS and Android platforms during the   specified range.    |
 |     Days of the week    |     Select this option to automatically mute Microsoft Outlook   email and Teams notifications on iOS/iPadOS and Android platforms during   certain hours or all day on selected days of the week.    |
+|     Non-working time     | Select this option to automatically mute Microsoft Teams notifications on iOS/iPadOS and Android platforms when the managed account is in non-working time.<p>**Note**: This setting must only be configured if the tenant has been integrated with the **Working Time API**. For more information on integrating with the **Working Time API**, see [Limit access to Microsoft Teams when frontline workers are off shift](/microsoft-365/frontline/flw-working-time). Configuring this setting without integrating with the Working Time API could result in accounts missing Teams app notifications due to missing working time status for the managed account.      |
 
 ## Create an iOS/iPadOS and Android quiet time policy
 
