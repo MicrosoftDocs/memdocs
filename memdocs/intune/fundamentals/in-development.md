@@ -93,16 +93,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device configuration
-
-### Consent prompt update for remote log collection<!-- 28072852 -->
-
-End users might see a different consent experience for remote log collection after the Android APP SDK 10.4.0 and iOS APP SDK 19.6.0 updates. End users will no longer see a common prompt from Intune and will only see a prompt from the application if it has one.
-
-Applies to:
-
-- Android
-- iOS/iPadOS
+<!-- ## Device configuration -->
 
 <!-- *********************************************** -->
 
