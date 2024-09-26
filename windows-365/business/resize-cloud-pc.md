@@ -41,7 +41,7 @@ To resize a Cloud PC, the admin must have certain built-in Microsoft Entra roles
 
 For a Cloud PC provisioned with a direct assigned license, at least one of the following roles:
 
-- Global Admin
+- Windows 365 Administrator
 
 Alternatively, you can assign a custom role that includes the permissions of this built-in role.
 
