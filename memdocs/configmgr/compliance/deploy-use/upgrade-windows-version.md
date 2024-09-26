@@ -102,4 +102,4 @@ If the following error appears in **DcmWmiProvider.log** on the client, check th
 
 - [Windows 10 edition upgrade](/windows/deployment/upgrade/windows-10-edition-upgrades)
 
-- [Upgrade Windows 10 editions or switch out of S mode on devices using Microsoft Intune](/intune/edition-upgrade-configure-windows-10)
+- [Upgrade Windows 10 editions or switch out of S mode on devices using Microsoft Intune](mem/intune/configuration/edition-upgrade-configure-windows-10)
