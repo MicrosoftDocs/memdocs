@@ -45,7 +45,7 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
   - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
 - Windows devices must be Microsoft Entra joined or Microsoft Entra hybrid joined. Workplace joined or Microsoft Entra registered devices aren't supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
-- The [Intune Service Administrator role](/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
+- The [Intune Service Administrator role](/mem/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
   - After the administrator selects **Start** for gathering data, other read-only roles can view the data.
 
 ### <a name="bkmk_cm_prereq"></a> How to enroll devices via Configuration Manager
