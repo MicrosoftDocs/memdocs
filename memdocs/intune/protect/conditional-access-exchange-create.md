@@ -98,7 +98,7 @@ Before you can configure Conditional Access, verify the following configurations
 
   7. When you're done, select **OK** > **Create** to save your changes.
 
-  8. After you create the email profile, [assign it to groups](/mem/intune/device-profile-assign).
+  8. After you create the email profile, [assign it to groups](/mem/intune/configuration/device-profile-assign).
 
   9. Set up [device-based conditional access](/mem/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
@@ -176,4 +176,4 @@ Before you can use the following procedure to set up Exchange on-premises access
 
 Next, create a compliance policy and assign it to the users for Intune to evaluate their mobile devices, See [Get started with device compliance](device-compliance-get-started.md).
 
-[Troubleshooting Intune on-premises Exchange connector in Microsoft Intune](https://support.microsoft.com/help/4471887)
+[Troubleshooting Intune on-premises Exchange connector in Microsoft Intune](/troubleshoot/mem/intune/device-protection/troubleshoot-exchange-connector)

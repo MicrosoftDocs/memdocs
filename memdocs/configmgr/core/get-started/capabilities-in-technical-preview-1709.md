@@ -114,7 +114,7 @@ Windows Update for Business policies let you configure deferral policies for Win
 ### Remote actions available in Intune on Azure for co-managed devices
 When a Windows 10 device is enabled for co-management, you have the following remote actions available to you from Intune on Azure:  
 - [Factory reset](/mem/intune/remote-actions/devices-wipe#wipe)
-- [Selective wipe](/mem/intune/remote-actions/apps-selective-wipe)
+- [Selective wipe](/mem/intune/apps/apps-selective-wipe)
 - [Delete devices](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
 - [Restart device](/mem/intune/remote-actions/device-restart)
 - [Fresh start](/mem/intune/remote-actions/device-fresh-start)

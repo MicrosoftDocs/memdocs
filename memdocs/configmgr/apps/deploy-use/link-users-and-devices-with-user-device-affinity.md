@@ -140,4 +140,4 @@ When you disable the client setting to **Automatically configure user device aff
 
 ## Next steps
 
-You can also use Microsoft Intune to find the primary use of an enrolled device. For more information, see [Find the primary user of an Intune device](mem/intune/remote-actions/find-primary-user) in the Intune documentation.
+You can also use Microsoft Intune to find the primary use of an enrolled device. For more information, see [Find the primary user of an Intune device](/mem/intune/remote-actions/find-primary-user) in the Intune documentation.

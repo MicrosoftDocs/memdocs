@@ -52,7 +52,7 @@ If you don't want your devices to continue sending diagnostic data:
 Set these values using one of the following methods:
 
 - Group policy, in **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**
-- Mobile device management (MDM), such as [Microsoft Intune](mem/intune/configuration/device-restrictions-windows-10#reporting-and-telemetry)
+- Mobile device management (MDM), such as [Microsoft Intune](/mem/intune/configuration/device-restrictions-windows-10#reporting-and-telemetry)
 
 For more information, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
