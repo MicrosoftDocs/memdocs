@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 09/25/2024
+ms.date: 10/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -76,6 +76,19 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 <!-- ***********************************************-->
 
 ## App management
+
+### Updates to app configuration policies for Android Enterprise devices<!-- 26711672 -->
+
+App configuration policies for Android Enterprise devices will soon support overriding the following additional permissions:
+
+- Access background location
+- Bluetooth (connect)
+
+For more information about app configuration policies for Android Enterprise devices, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
+
+Applies to:
+
+- Android Enterprise devices
 
 ### New UI for Intune Company Portal app for Windows<!-- 27219294 -->
 
