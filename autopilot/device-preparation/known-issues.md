@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/07/2024
+ms.date: 09/27/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -50,7 +50,7 @@ If security groups aren't properly configured in Microsoft Intune, devices might
 
 - **Static to dynamic group changes**: After the Windows Autopilot device preparation profiles are configured, changing a security group from static to dynamic could cause failures.
 
-- **Owner removal**: If the Intune Autopilot First Party App is removed as an owner of a configured security group, updates might fail.
+- **Owner removal**: If the **Intune Provisioning Client** service principal is removed as an owner of a configured security group, updates might fail.
 
 - **Group deletion**: If a configured security group is deleted and devices are deployed before Microsoft Intune detects the deletion, security configurations might fail to apply.
 
@@ -61,7 +61,7 @@ To mitigate the issue, follow these steps:
    - Ensure the correct security group is selected within the Microsoft Intune admin center or the Microsoft Entra admin center.
    - The security group should be configured within the Windows Autopilot device preparation profile.
    - The group shouldn't be assignable to other groups.
-   - The Intune Autopilot First Party App should be an owner of the group.
+   - The **Intune Provisioning Client** service principal should be an owner of the group.
 
 1. **Manually fix the provisioned devices**:
 
