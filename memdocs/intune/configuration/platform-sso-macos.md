@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/22/2024
+ms.date: 09/03/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -81,6 +81,8 @@ This article shows you how to configure Platform SSO for macOS devices in Intune
   - Device Configuration **Read**, **Create**, **Update**, and **Assign** permissions
 
   There are some built-in roles that have these permissions, including the **Policy and Profile Manager** Intune RBAC role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+
+- In [Step 5 - Register the device](#step-5---register-the-device) (this article), users register their devices. These users must be allowed to join devices to Entra ID. For more information, go to [Configure your device settings](/entra/identity/devices/device-join-plan#configure-your-device-settings).
 
 ## Step 1 - Decide the authentication method
 

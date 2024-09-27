@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/11/2023
+ms.date: 09/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,19 +42,19 @@ You deploy the trusted certificate profile to the same devices and users that re
 
 ## Export the trusted root CA certificate
 
-To use PKCS,  SCEP, and PKCS imported certificates, devices must trust your root Certification Authority. To establish trust, export the Trusted Root CA certificate, and any intermediate or issuing Certification Authority certificates, as a public certificate (.cer). You can get these certificates from the issuing CA, or from any device that trusts your issuing CA.
+To use PKCS,  SCEP, and PKCS imported certificates, devices must trust your root Certification Authority. To establish trust, export the Trusted Root CA certificate, and any intermediate or issuing Certification Authority certificates, as a public certificate (`.cer`). You can get these certificates from the issuing CA, or from any device that trusts your issuing CA.
 
-To export the certificate, refer to the documentation for your Certification Authority. You'll need to export the public certificate as a DER-encoded .cer file.  Don't export the private key, a .pfx file.
+To export the certificate, refer to the documentation for your Certification Authority. You need to export the public certificate as a DER-encoded `.cer` file. Don't export the private key, a `.pfx` file.
 
-You'll use this .cer file when you [create trusted certificate profiles](#create-trusted-certificate-profiles) to deploy that certificate to your devices.
+You use this `.cer` file when you [create trusted certificate profiles](#create-trusted-certificate-profiles) to deploy that certificate to your devices.
 
 ## Create trusted certificate profiles
 
-Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. Deploying a trusted certificate profile to the same groups that receive the other certificate profile types ensures that each device can recognize the legitimacy of your CA. This includes profiles like those for VPN, Wi-Fi, and email.
+Before you create a SCEP, PKCS, or PKCS imported certificate profile, create and deploy a trusted certificate profile. Deploy the trusted certificate profile to the same groups that receive the other certificate profile types. This step makes sure that each device can recognize the legitimacy of your CA, including profiles VPN, Wi-Fi, and email profiles.
 
-SCEP certificate profiles directly reference a trusted certificate profile. PKCS certificate profiles don't directly reference the trusted certificate profile but do directly reference the server that hosts your CA. PKCS imported certificate profiles don't directly reference the trusted certificate profile but can use it on the device. Deploying a trusted certificate profile to devices ensures this trust is established. When a device doesn't trust the root CA, the SCEP or PKCS certificate profile policy will fail.
+SCEP certificate profiles directly reference a trusted certificate profile. PKCS certificate profiles don't directly reference the trusted certificate profile but do directly reference the server that hosts your CA. PKCS imported certificate profiles don't directly reference the trusted certificate profile but can use it on the device. Deploying a trusted certificate profile to devices ensures this trust is established. When a device doesn't trust the root CA, the SCEP or PKCS certificate profile policy fails.
 
-Create a separate trusted certificate profile for each device platform you want to support, just as you'll do for SCEP, PKCS, and PKCS imported certificate profiles.
+Create a separate trusted certificate profile for each device platform you want to support, just as you do for SCEP, PKCS, and PKCS imported certificate profiles.
 
 > [!IMPORTANT]
 > Trusted root profiles that you create for the platform *Windows 10 and later*, display in the Microsoft Intune admin center as profiles for the platform *Windows 8.1 and later*.
@@ -66,19 +66,22 @@ Create a separate trusted certificate profile for each device platform you want 
 
 ### Trusted certificate profiles for Android device administrator
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-Beginning with Android 11, you can no longer use a trusted certificate profile to deploy a trusted root certificate to devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox.
+This feature applies to:
+
+- Android 10 and earlier on non-KNOX devices
+- Android 12 and earlier on Samsung KNOX devices
 
 Because SCEP certificate profiles require both the trusted root certificate be installed on a device, and must reference a trusted certificate profile that in turn references that certificate, use the following steps to work around this limitation:
 
 1. Manually provision the device with the trusted root certificate. For sample guidance, see the following section.
 
-2. Deploy to the device, a trusted root certificate profile that references the trusted root certificate that you’ve installed on the device.
+2. Deploy to the device, a trusted root certificate profile that references the trusted root certificate that you installed on the device.
 
 3. Deploy a SCEP certificate profile to the device that references the trusted root certificate profile.
 
-This issue isn’t limited to SCEP certificate profiles. Therefore, plan to manually install the trusted root certificate on applicable devices should your use of PKCS certificate profiles, or PKCS Imported certificate profiles require it.
+This issue isn't limited to SCEP certificate profiles. Therefore, plan to manually install the trusted root certificate on applicable devices should your use of PKCS certificate profiles, or PKCS Imported certificate profiles require it.
 
 Learn more about [changes in support for Android device administrator](https://techcommunity.microsoft.com/t5/intune-customer-success/decreasing-support-for-android-device-administrator/ba-p/1441935) from techcommunity.microsoft.com.
 
@@ -86,15 +89,15 @@ Learn more about [changes in support for Android device administrator](https://t
 
 The following guidance can help you manually provision devices with a trusted root certificate.
 
-1. Download or transfer the trusted root certificate to the Android device. For example, you might use email to distribute the certificate to device users, or have users download it from a secure location.  After the certificate is on the device, it must be opened, named, and saved. Saving the certificate adds it to the User certificate store on the device.
+1. Download or transfer the trusted root certificate to the Android device. For example, you might use email to distribute the certificate to device users, or have users download it from a secure location. After the certificate is on the device, it must be opened, named, and saved. Saving the certificate adds it to the User certificate store on the device.
 
    1. To open the certificate on the device, a user must locate and tap (open) the certificate. For example, after sending the certificate by email, a device user can tap on or open the certificate attachment.
    2. When the certificate opens, the user must provide their PIN or otherwise authenticate to the device before they can manage the certificate.
 
-2. After authentication, the certificate opens and must be named before it can be saved to the Users certificate store.  The certificate name must match the certificate name that’s specified in the Trusted Root Certificate profile that will be sent to the device.
-After naming the certificate, it can be saved.  
+2. After authentication, the certificate opens and must be named before it can be saved to the Users certificate store. The certificate name must match the certificate name that's in the Trusted Root Certificate profile that is sent to the device.
+After you name the certificate, it can be saved.  
 
-3. After being saved the certificate is ready for use.  A user can confirm the certificate is in the correct location on the device:
+3. After being saved, the certificate is ready for use. A user can confirm the certificate is in the correct location on the device:
    1. Open **Settings** > **Security** > **Trusted credentials**. The actual path to *Trusted credentials* can vary by device.
    2. Open the **User** tab and locate the certificate.
    3. If present in the list of User certificates, the certificate is installed correctly.
@@ -112,7 +115,7 @@ After naming the certificate, it can be saved.
    ![Navigate to Intune and create a new profile for a trusted certificate](./media/certificates-trusted-root/certificates-configure-profile-new.png)
 
 3. Enter the following properties:
-   - **Platform**: Choose the platform of the devices that will receive this profile.
+   - **Platform**: Choose the platform of the devices that should receive this profile.
    - **Profile**: Depending on your chosen platform, select **Trusted certificate** or select **Templates** > **Trusted certificate**.
 
    [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
@@ -125,7 +128,7 @@ After naming the certificate, it can be saved.
 
 6. Select **Next**.
 
-7. In **Configuration settings**, specify the .cer file for the trusted Root CA Certificate you previously exported.
+7. In **Configuration settings**, specify the `.cer` file for the trusted Root CA Certificate you previously exported.
 
    For Windows 8.1 and Windows 10/11 devices only, select the **Destination Store** for the trusted certificate from:
 
@@ -138,7 +141,7 @@ After naming the certificate, it can be saved.
 8. Select **Next**.
 
 
-9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. In **Assignments**, select the user or groups that should receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 

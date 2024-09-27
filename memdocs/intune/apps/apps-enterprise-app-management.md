@@ -35,7 +35,7 @@ Microsoft Intune Enterprise App Management enables you to easily discover and de
 The Enterprise App Management provides the following benefits:
 
 - **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and add apps directly from the Intune console.
-- **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as they're available in the catalog.
+- **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as they're available in the catalog. Use the **Enterprise App Catalog apps with updates** report.
 
 When you add an Enterprise App Catalog app, Intune prefills the following installation details:
 
@@ -92,7 +92,7 @@ You can also upvote an application previously submitted by someone else. Applica
 
 ### Where are the devices downloading the app content from?
 
-Microsoft hosts the applications in Microsoft storage.
+Microsoft hosts the applications in Microsoft storage accessible through `*.manage.microsoft.com`. For the full list of network requirements, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md?tabs=north-america).  
 
 ### Is Microsoft providing security around any of the content provided in the Enterprise App Catalog?
 
@@ -110,17 +110,13 @@ At this time, Intune provides no running application detection.
 
 No SLA is currently available.
 
-### How many applications are in the catalog?
-
-At the time of general availability (GA), Microsoft expects to have 100 applications available in the Enterprise App Catalog. More apps are available on an ongoing basis.
-
 ### How can working with the applications in Enterprise App Catalog be automated?
 
-Graph API will be available soon after general availability.
+Graph API is planned to be available soon.
 
 ### Will Enterprise catalog apps automatically update to a new version when a new version is available in the Enterprise app catalog?
 
-No, the created app remains at the version it was created at so the IT Pro can have full control over the experience.
+Updates are shown in Monitor report under Enterprise App Catalog apps with updates. The updates won't be applied automatically. You still need to go in and create a new app with supersedence relationship.
 
 ### Can you get licensed applications from this catalog?
 
@@ -140,7 +136,7 @@ No. Enterprise App Catalog apps are directly installed by the Intune management 
 
 ### How do I update my Enterprise App Catalog app?
 
-You can configure what experience you want related to uninstalling the previous version, however the behavior of the application upgrade is controlled by the vendor. 
+For applications that don’t update themselves, you can view the upgrades that are available for the EAM app via supersedence.
 
 ### After several hours, what can I do if my app continues to show that it isn't ready and that the requested content is still being prepared?
 

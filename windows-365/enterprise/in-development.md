@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/28/2024
+ms.date: 09/12/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -71,6 +71,20 @@ In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 appli
 - Windows 11 Enterprise + Microsoft 365 Apps  21H2
 - Windows 10 Enterprise + Microsoft 365 Apps 22H2
 - Windows 10 Enterprise + Microsoft 365 Apps 21H2
+
+### Azure network connections inactive state<!--52127015-->
+
+In a future update, Azure network connections that meet either of the following conditions for more than four weeks will be marked as inactive:
+
+- ANCs that aren't associated with provisioning policies.
+- ANCs with provisioning policies that have no Cloud PCs associate with them.
+
+Inactive ANCs:
+
+- Can't be assigned to provisioning policies.
+- Are skipped during health checks.
+
+You'll be able to reactive such ANCs.
 
 <!-- ***********************************************-->
 ## Device security

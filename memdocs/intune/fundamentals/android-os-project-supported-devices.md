@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/01/2024
+ms.date: 09/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,6 +43,7 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 
 |**OEM**     | **Device**              | **Minimum Firmware**    | **Type of Device** | **Restrictions**       |
 | ------- | -------------------| ------------------- | -------------- | ------------------ |
+| HTC     | Vive Focus Vision   | 7.0.999.159    | AR/VR Headset  |                    |
 | HTC     | HTC Vive Focus 3   | 5.2 - 5.0.999.624    | AR/VR Headset  |                    |
 | HTC     | HTC Vive XR Elite  | 4.0 - 1.0.999.350    | AR/VR Headset  |                    |
 | Meta    | Quest 2            | v49                 | AR/VR Headset  | [Available in select regions only](https://work.meta.com/help/307276701907179) |

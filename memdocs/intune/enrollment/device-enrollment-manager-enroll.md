@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 05/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -33,7 +33,15 @@ ms.collection:
 
 # Add device enrollment managers  
 
-A device enrollment manager (DEM) is a non-administrator user who can enroll devices in Intune. Device enrollment managers are useful to have when you need to enroll and prepare many devices for distribution. People signed in to a DEM account can enroll and manage up to 1,000 devices, while a standard non-admin account can only enroll 15.  
+A device enrollment manager (DEM) is a nonadministrator user who can enroll devices in Intune. Device enrollment managers are useful to have when you need to enroll and prepare many devices for distribution. People signed in to a DEM account can enroll and manage up to 1,000 devices, while a standard nonadmin account can only enroll 15.  
+
+> [!TIP]
+> The following enrollment methods allow standard nonadmin accounts to enroll more than 15 devices:  
+>  - Co-management with Configuration Manager
+>  - Automatic enrollment + group policy 
+>  - Windows Autopilot
+>    
+> If you're using these methods to enroll devices, you do not need to use a DEM account.  
 
 A DEM account requires an Intune user or device license, and an associated Microsoft Entra user. This article describes the limits and specifications of DEM accounts and how to manage permissions.  
 
@@ -103,7 +111,7 @@ DEM-enrolled devices can install VPP apps if they have Apple VPP device licenses
 <a name='azure-ad'></a>  
 
 ### Microsoft Entra ID  
-Applying a Microsoft Entra maximum device limit of less than 1,000 to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.  
+Applying a Microsoft Entra maximum device limit of less than 1,000 to a DEM account prevents you from reaching the 1,000 device limit that the DEM account can enroll.  
 
 ### Certificates  
 You must use device-level certificates to manage Wi-Fi and email connections.  

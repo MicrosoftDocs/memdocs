@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/19/2024
+ms.date: 09/25/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,18 +61,27 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Easy creation of Endpoint Privilege Management elevation rules based on support approval requests<!-- 28196775 -->
+### Use Copilot with Endpoint Privilege Manager to help identify potential elevation risks<!-- 27265509 -->
 
-You’ll soon be able to create Endpoint Privilege Management (EPM) elevation rules directly from a support approval request or from details found in the Elevation report. This new process will replace the need to manually enter details about an elevation and how it should be managed, and supports creation of a new rules policy or adding the new rules to an existing policy.
+We’re adding support for Copilot to help you investigate Endpoint Privilege Manager (EPM) elevation details. Copilot will help you evaluate information from you EPM elevation requests to identify potential indicators of compromise by using information from [Microsoft Defender](/defender-endpoint/microsoft-defender-endpoint).
 
-Applies to:
+EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md). To learn more about how you can use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
 
-- Windows 10
-- Windows 11
+### Endpoint Privilege Manager elevation rule support for file arguments and parameters<!--28077130 -->
 
-For information about using EPM, see [Endpoint Privilege Management overview](../protect/epm-overview.md).
+Soon, the file elevation rules for Endpoint Privilege Manager (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
+
+EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).
+
+<!-- ***********************************************-->
 
 ## App management
+
+### New UI for Intune Company Portal app for Windows<!-- 27219294 -->
+
+The UI for the Intune Company Portal app for Windows will be updated. Users will be able to use the same functionality they’re used to with an improved experience for their desktop app. With the updated design, users will see improvements in user experience for the **Home**, **Devices**, and **Downloads & updates** pages. The new design will be more intuitive and will highlight areas where users need to take action.
+
+For more information, see [New look for Intune Company Portal app for Windows](https://techcommunity.microsoft.com/t5/intune-customer-success/new-look-for-intune-company-portal-app-for-windows/ba-p/4158755).
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -84,61 +93,22 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
 
+### Consent prompt update for remote log collection<!-- 28072852 -->
 
-<!-- *********************************************** -->
-
-## Device enrollment  
-
-### Support ending for Apple User Enrollment with Company Portal<!-- 28361917 -->
-
-After the release of iOS/iPadOS 18, Apple will no longer support profile-based Apple User Enrollment. As a result, Intune will end support for [user enrollment with Company Portal](../enrollment/apple-user-enrollment-with-company-portal.md) shortly after the release of iOS/iPadOS 18.
-
-After Intune ends support for user enrollment with Company Portal:
-
-- Existing enrolled devices won't be impacted.
-- Users won't be able to enroll devices if they're targeted with this enrollment profile type.
-- Microsoft Intune technical support will be available for existing enrolled devices with this enrollment profile type. Technical support won't be available for new enrollments.
-
-To prepare, use a different management method to enroll devices. We recommend account-driven Apple User Enrollment for similar functionality and an improved user experience. For a simpler enrollment experience, try web- based device enrollment. For more information, see:
-
-- [Set up account-driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md)
-- [Set up web-based device enrollment for iOS/iPadOS](../enrollment/web-based-device-enrollment-ios.md)  
-
-<!-- *********************************************** -->
-
-## Device management
-
-### Intune will support macOS 13.x as the minimum version<!-- 28391869 -->
-
-With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Big Sur) and later.
-
-For more information on this change, see [Plan for change: Intune is moving to support macOS 13 and later](../fundamentals/whats-new.md#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year).
-
-> [!NOTE]
-> macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
+End users might see a different consent experience for remote log collection after the Android APP SDK 10.4.0 and iOS APP SDK 19.6.0 updates. End users will no longer see a common prompt from Intune and will only see a prompt from the application if it has one.
 
 Applies to:
 
-- macOS
-
-### Intune supports iOS/iPadOS 16.x as the minimum version<!-- 28391935 -->
-
-Later this year, we expect iOS18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require iOS/iPadOS 16 and higher shortly after the iOS/iPadOS 18 release.
-
-For more information on this change, see [Plan for change: Intune is moving to support iOS/iPadOS 16 and later](../fundamentals/whats-new.md#plan-for-change-intune-is-moving-to-support-iosipados-16-and-later).
-
-> [!NOTE]
-> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
-
-Applies to:
-
+- Android
 - iOS/iPadOS
 
 <!-- *********************************************** -->
 
-## Device security
+<!-- ## Device enrollment -->
+
+<!-- *********************************************** -->
 
 ### Defender for Endpoint security settings support in government cloud environments<!-- 24191406 -->
 
@@ -170,7 +140,7 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- *********************************************** -->
 
 <!-- ## Monitor and troubleshoot -->
- 
+
 <!-- *********************************************** -->
 
 <!-- ## Tenant administration -->

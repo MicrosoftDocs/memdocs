@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/09/2024
+ms.date: 09/23/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -54,6 +54,50 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of September 23, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 11 Cloud PCs now support EN-NZ<!--54032315-->
+
+Windows 365 Cloud PCs now support EN-NZ for Windows 11.
+
+<!-- ########################## -->
+## Week of September 16, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for symmetric NAT with RDP Shortpath<!--43602619-->
+
+RDP Shortpath in Windows 365 now supports establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT. TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+### Windows 365 support for HEVC video coding<!--51599459-->
+Windows 365 will support Hardware High Efficiency Video Coding (HEVC) h.265 4:2:0 on Compatible GPU-enabled Cloud PCs. For more information, see [Enable GPU acceleration for Azure Virtual Desktop](/azure/virtual-desktop/enable-gpu-acceleration?tabs=intune).
+
+<!-- ########################## -->
+## Week of August 26, 2024 (Service release 2408)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Azure Monitor support on Windows 365 Cloud PCs<!--53421756-->
+
+Azure Monitor Agent can now  be installed on Windows 365 Enterprise and Windows 365 Government Cloud PCs. For more information, see [Azure Monitor overview](/azure/azure-monitor/overview).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Session lock experience configuration for single sign-on<!--48440155-->
+
+You can now configure the remote session lock experience when single sign-on is enabled between the default disconnect behavior and showing the remote lock screen. For more information, see [Configure single sign-on for Windows 365 using Microsoft Entra authentication](configure-single-sign-on.md).
+
+#### Windows 365 support for Microsoft Purview Customer Key is now generally available<!--46980464-->
+
+Windows 365 support for encrypting Cloud PCs by setting up Microsoft Purview Customer Key has moved out of preview and into general availability. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
 
 <!-- ########################## -->
 ## Week of August 5, 2024
