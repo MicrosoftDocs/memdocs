@@ -45,7 +45,7 @@ This article describes how to limit access to Office 365 services. You can use t
     ![Select apps to include](./media/restrict-office-365-cloud-pcs/include-apps.png)
 6. Select **Exclude** > **None** (under **Select excluded cloud apps**) > search for and select **Azure Virtual Desktop** and **Windows 365** apps > **Select**.
 7. Select **0 conditions selected** (under **Conditions**) > **Not configured** (under **Filter for devices**).
-    n the **Filter for devices** pane:
+8. In the **Filter for devices** pane:
     1. Set **Configure** to **Yes**.
     2. Select **Exclude filtered devices from policy**.
     3. Select the dropdown option under **Property** > **Model**.
