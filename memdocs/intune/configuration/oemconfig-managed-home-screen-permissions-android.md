@@ -46,7 +46,7 @@ This feature applies to:
 
 Supported OEMs include:
 
-- Samsung
+- Samsung (devices running OS 13+)
 - Zebra
 
 > [!NOTE]

@@ -80,6 +80,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
+#### Working Time settings for app protection policies<!-- 14631539 -->
+
+Working time settings allow you to enforce policies that limit access to apps and mute message notifications received from apps during non-working time. The limit access setting is now available for the Microsoft Teams and Microsoft Edge apps. You can limit access by using App Protection Policies (APP) to block or warn end users from using the iOS/iPadOS or Android Teams and Edge apps during non-working time by setting the **Non-working time** conditional launch setting. Also, you can create a non-working time policy to mute notifications from the Teams app to end users during non-working time.
+
+Applies to:
+
+- Android
+- iOS/iPadOS
+
 #### Streamlined app creation experience for apps from Enterprise App Catalog<!-- 29411991 -->
 
 We've streamlined the way apps from Enterprise App Catalog are added to Intune. We now provide a direct app link rather than duplicating the app binaries and metadata. App contents now download from a `*.manage.microsoft.com` subdomain. This update helps to improve the latency when adding an app to Intune. When you add an app from Enterprise App Catalog, it syncs immediately and is ready for additional action from within Intune.
@@ -178,7 +187,9 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 #### Consent prompt update for remote log collection<!-- 28072852 -->
 
-End users might see a different consent experience for remote log collection after the Android APP SDK 10.4.0 and iOS APP SDK 19.6.0 updates. End users will no longer see a common prompt from Intune and will only see a prompt from the application, if it has one. Note that app updates don't follow a specific schedule.
+End users might see a different consent experience for remote log collection after the Android APP SDK 10.4.0 and iOS APP SDK 19.6.0 updates. End users will no longer see a common prompt from Intune and will only see a prompt from the application, if it has one.
+
+Adoption of this change is per-application and is subject to each applications release schedule.
 
 Applies to:
 
