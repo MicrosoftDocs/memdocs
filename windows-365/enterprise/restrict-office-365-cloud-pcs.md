@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2023
+ms.date: 09/30/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -41,13 +41,11 @@ This article describes how to limit access to Office 365 services. You can use t
 3. Type a **Name** for your new Conditional Access policy. For example, “Restrict Office 365 access to CPCs”.
 4. Select **0 users and groups selected** > **Include** > **Select users and groups** > **Users and groups** > select the Microsoft Entra security group that you created > **Select**.
     ![Select group screen shot](./media/restrict-office-365-cloud-pcs/select-group.png)
-5. Select **No cloud apps, actions, or authentication contexts selected** > **Include** > **Select apps** > **None** (under **Select**) > search for and select **Office 365** > **Select**.
+5. Select **No target resources selected** > **Include** > **Select apps** > **None** (under **Select**) > search for and select **Office 365** > **Select**.
     ![Select apps to include](./media/restrict-office-365-cloud-pcs/include-apps.png)
 6. Select **Exclude** > **None** (under **Select excluded cloud apps**) > search for and select **Azure Virtual Desktop** and **Windows 365** apps > **Select**.
-    ![Select apps to exclude](./media/restrict-office-365-cloud-pcs/exclude-apps.png)
-7. Select **0 conditions selected** > **Not configured** (under **Filter for devices**).
-    ![Filter devices screen shot](./media/restrict-office-365-cloud-pcs/filter-devices.png)
-8. In the **Filter for devices** pane:
+7. Select **0 conditions selected** (under **Conditions**) > **Not configured** (under **Filter for devices**).
+    n the **Filter for devices** pane:
     1. Set **Configure** to **Yes**.
     2. Select **Exclude filtered devices from policy**.
     3. Select the dropdown option under **Property** > **Model**.
@@ -59,7 +57,6 @@ This article describes how to limit access to Office 365 services. You can use t
 
     You can set more options in this policy as needed, but such additions are outside the scope of this article.
 9. Select **0 controls selected** (under **Grant**) > **Block Access** >**Select**.
-    ![Block access screen shot](./media/restrict-office-365-cloud-pcs/block-access.png)
 10. Select **On** (under **Enable policy**). This policy will restrict users from accessing Office 365 services on non-Cloud PC devices. You may want to select **Report-only** to monitor the policy and build confidence prior to enforcing it.
 11. Select **Create** to complete the creation of policy.
 
