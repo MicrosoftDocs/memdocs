@@ -146,7 +146,7 @@ On the platforms that don't require a factory reset, when these devices enroll i
 
 There's an enrollment guide for every platform. Choose your scenario, and get started:
 
-- [Application management without enrollment (MAM-WE)](deployment-guide-enrollment-mamwe.md)
+- [Application management without enrollment](deployment-guide-enrollment-mamwe.md)
 - [Android](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS](deployment-guide-enrollment-ios-ipados.md)
 - [Linux](deployment-guide-enrollment-linux.md)
