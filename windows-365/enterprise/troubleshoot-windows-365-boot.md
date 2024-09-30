@@ -39,7 +39,7 @@ If the user can't access the Cloud PC from the Windows 365 Boot physical device,
 
 1. Check to see if you can sign in to the Cloud PC from either:
     - The browser at windows365.microsoft.com.
-    - The Windows 365 app on another (non-Windows 365 Boot) device.
+    - The Windows App on another (non-Windows 365 Boot) device.
 2. If a user has more than one Cloud PC, make sure they have selected a default Cloud PC to use each time they sign in. To set this default:
    - Navigate to https://windows365.microsoft.com.
    - In the card for the Cloud PC you want to set as default, select the ellipses (...) > Settings.
