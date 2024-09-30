@@ -127,6 +127,7 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 
 Security settings management doesn't work on and isn't supported with the following devices:
 
+- Windows Server core 2109 and earlier
 - Non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients
 - Azure Virtual Desktop (AVD and formerly Windows Virtual Desktop, WVD)
 - 32-bit versions of Windows
