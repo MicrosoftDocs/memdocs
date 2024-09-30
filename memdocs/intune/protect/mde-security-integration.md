@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/24/2024
+ms.date: 09/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -97,7 +97,7 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 
 *Known issue*: With the Defender agent version **101.23052.0009**, Linux devices fail to enroll when they're missing the following filepath: `/sys/class/dmi/id/board_vendor`.
 
-*Known issue*: When a Linux device performs synthetic registration the Device Entra ID (formerly known as Device AAD ID) will not be visible in the Defender portal. This information can be viewed from the Intune or Entra portals. Administrators will still be able to manage devices with policies in this manner. 
+*Known issue*: When a Linux device performs synthetic registration, the Device Entra ID (formerly known as Device AAD ID) isn't visible in the Defender portal. This information can be viewed from the Intune or Microsoft Entra portals. Administrators can still manage devices with policies in this manner. 
 
 
 **macOS**:
@@ -113,7 +113,7 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 
 *Known issue*: With the Defender agent version **101.23052.0004**, macOS devices that are registered in Microsoft Entra ID before enrolling with security settings management receive a duplicate Device ID in Microsoft Entra ID, which is a synthetic registration. When you create a Microsoft Entra group for targeting policy, you must use the synthetic Device ID created by security settings management. In Microsoft Entra ID, the *Join Type* column for the synthetic Device ID  is blank.
 
-*Known issue*: When a macOS device performs synthetic registration the Device Entra ID (formerly known as Device AAD ID) will not be visible in the Defender portal. This information can be viewed from the Intune or Entra portals. Administrators will still be able to manage devices with policies in this manner. 
+*Known issue*: When a macOS device performs synthetic registration, the Device Entra ID (formerly known as Device AAD ID) isn't visible in the Defender portal. This information can be viewed from the Intune or Microsoft Entra portals. Administrators can still manage devices with policies in this manner. 
 
 **Windows**:
 
@@ -123,17 +123,13 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2016 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2019 (with [KB5025229](https://support.microsoft.com/topic/april-11-2023-kb5025229-os-build-17763-4252-e8ead788-2cd3-4c9b-8c77-d677e2d8744f))
 - Windows Server 2022 (with [KB5025230](https://support.microsoft.com/topic/april-11-2023-security-update-kb5025230-5048ddfb-7bf3-4e6c-b29a-7b44b789d282))
+- Domain controllers (preview). See important information in [Use of security settings management on domain controllers](#use-of-security-settings-management-on-domain-controllers) (in this article).
 
 Security settings management doesn't work on and isn't supported with the following devices:
 
 - Non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients
 - Azure Virtual Desktop (AVD and formerly Windows Virtual Desktop, WVD)
-- Domain Controllers
 - 32-bit versions of Windows
-
-> [!IMPORTANT]
->
-> In some cases, Domain Controllers that run a down level server operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn't happen in your environment, we recommend making sure your domain controllers are neither tagged "MDE-Management" or managed by MDE.
 
 ### Licensing and subscriptions
 
@@ -302,15 +298,15 @@ The following sections guide you through that process.
 
 ### Configure Microsoft Defender for Endpoint
 
-In Microsoft Defender for Endpoint portal, as a security administrator:
+In the Microsoft Defender portal, as a security administrator:
 
-1. Sign in to [Microsoft Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope** and enable the platforms for security settings management.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope** and enable the platforms for security settings management.
 
    :::image type="content" source="./media/mde-security-integration/enable-mde-settings-management-defender.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft Defender portal." lightbox="./media/mde-security-integration/enable-mde-settings-management-defender.png#lightbox":::
 
    > [!NOTE]
    >
-   > If you have the *Manage security settings in Security Center* permission in the Microsoft Defender for Endpoint portal, and are simultaneously enabled to view devices from all Device Groups (no [role-based access control](/microsoft-365/security/defender-endpoint/rbac) limits on your user permissions), you can also perform this action.
+   > If you have the *Manage security settings in Security Center* permission in the Microsoft Defender portal, and are simultaneously enabled to view devices from all Device Groups (no [role-based access control](/microsoft-365/security/defender-endpoint/rbac) limits on your user permissions), you can also perform this action.
 
 2. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
 
@@ -332,7 +328,7 @@ In Microsoft Defender for Endpoint portal, as a security administrator:
 
    > [!TIP]
    >
-   > To ensure your Microsoft Defender for Endpoint portal users have consistent permissions across portals, if not already provided, request that your IT administrator grant them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](../fundamentals/role-based-access-control.md).
+   > To ensure your Microsoft Defender portal users have consistent permissions across portals, if not already provided, request that your IT administrator grant them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](../fundamentals/role-based-access-control.md).
 
 ### Configure Intune
 
@@ -480,9 +476,9 @@ You can manually sync a device on-demand from the [Microsoft Defender portal](ht
 
 The Policy sync button only appears for devices that are successfully managed by Microsoft Defender for Endpoint.
 
-### Devices protected by Tamper Protection
+### Devices protected by tamper protection
 
-If a device has Tamper Protection turned on, it isn't possible to edit the values of [Tamper Protected settings](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#what-happens-when-tamper-protection-is-turned-on) without disabling Tamper Protection first.
+If a device has tamper protection turned on, it isn't possible to edit the values of [Tamper-protected settings](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#what-happens-when-tamper-protection-is-turned-on) without disabling Tamper Protection first.
 
 ### Assignment Filters and security settings management
 
@@ -518,11 +514,12 @@ The following security settings are pending deprecation. The Defender for Endpoi
 
 ### Use of security settings management on domain controllers
 
-Because a Microsoft Entra ID trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
+Currently in preview, security settings management is now supported on domain controllers. To manage security settings on domain controllers, you must enable it in the enforcement scope page (go to **Settings** > **Endpoints** **Enforcement scope**). Windows Server devices must be enabled before you can enable configuration of domain controllers. Additionally, if the *on tagged devices* option is selected for Windows Servers, configuration of domain controllers is limited to tagged devices, too. 
 
-> [!IMPORTANT]
->
-> In some cases, Domain Controllers that are run a down level server Operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn't happen in your environment, we recommend making sure your domain controllers are neither tagged "MDE-Management" or managed by MDE.
+> [!CAUTION]
+> - Misconfiguration of domain controllers could have a negative impact on both your security posture and operational continuity.
+> - If configuration of domain controllers is enabled in your tenant, make sure to review all Windows policies to make sure you're not unintentionally targeting Microsoft Entra device groups that contain domain controllers. To minimize risk to productivity, firewall policies aren't supported on domain controllers. 
+> - We recommend reviewing all policies targeted to domain controllers before unenrolling those devices. Make any required configurations first, and then unenroll your domain controllers. Defender for Endpoint configuration is maintained on each device after the device is unenrolled.
 
 ### Server Core installation
 
@@ -534,9 +531,9 @@ PowerShell needs to be enabled.
 
 Security settings management doesn't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode `enabled`. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
 
-### Managing security through MDE if you were previously using a third party security tool
+### Managing security through Defender for Endpoint if you were previously using a third-party security tool
 
-If you previously had a third-party security tool on the machine and are now managing it with MDE, you might see some impact on MDE's capability to manage Security settings in rare cases. In such cases, as a troubleshooting measure, uninstall and reinstall the latest version of MDE on your machine.
+If you previously had a third-party security tool on the machine and are now managing it with Defender for Endpoint, you might see some impact on Defender for Endpoint's capability to manage Security settings in rare cases. In such cases, as a troubleshooting measure, uninstall and reinstall the latest version of Defender for Endpoint on your machine.
 
 ## Next steps
 
