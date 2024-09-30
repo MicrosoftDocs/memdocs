@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2024
+ms.date: 09/30/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -122,7 +122,7 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2012 R2 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2016 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2019 (with [KB5025229](https://support.microsoft.com/topic/april-11-2023-kb5025229-os-build-17763-4252-e8ead788-2cd3-4c9b-8c77-d677e2d8744f))
-- Windows Server 2022 (with [KB5025230](https://support.microsoft.com/topic/april-11-2023-security-update-kb5025230-5048ddfb-7bf3-4e6c-b29a-7b44b789d282))
+- Windows Server 2022, including server core (with [KB5025230](https://support.microsoft.com/topic/april-11-2023-security-update-kb5025230-5048ddfb-7bf3-4e6c-b29a-7b44b789d282))
 - Domain controllers (preview). See important information in [Use of security settings management on domain controllers](#use-of-security-settings-management-on-domain-controllers) (in this article).
 
 Security settings management doesn't work on and isn't supported with the following devices:
@@ -520,10 +520,6 @@ Currently in preview, security settings management is now supported on domain co
 > - Misconfiguration of domain controllers could have a negative impact on both your security posture and operational continuity.
 > - If configuration of domain controllers is enabled in your tenant, make sure to review all Windows policies to make sure you're not unintentionally targeting Microsoft Entra device groups that contain domain controllers. To minimize risk to productivity, firewall policies aren't supported on domain controllers. 
 > - We recommend reviewing all policies targeted to domain controllers before unenrolling those devices. Make any required configurations first, and then unenroll your domain controllers. Defender for Endpoint configuration is maintained on each device after the device is unenrolled.
-
-### Server Core installation
-
-Security settings management doesn't support Server core installations due to Server core platform limitations.
 
 ### PowerShell restrict mode
 
