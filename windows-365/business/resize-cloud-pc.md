@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/26/2024
+ms.date: 10/01/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -56,8 +56,10 @@ When resizing Windows 365 Cloud PCs, the Windows 365 service automatically takes
 - Unassigning the original license.
 - Assigning the new license on behalf of the admin.
 
-1. Sign in to the windows365.microsoft.com , select **Your organization's Cloud PC** > choose a device > **Resize**.
-2. Under **Resize**, there's a list of the sizes that you can upgrade or downsize to based on the licenses available in your inventory. You can upgrade a Cloud PC’s RAM and vCPU. You can only upgrade the OS disk storage. Select one of the available options.
+1. Sign in to the windows365.microsoft.com, select **Your organization's Cloud PCs** > choose a device > **Devcies** > **Resize**.
+![Screenshot of resize Cloud PC](./media/resize-cloud-pc/resize-cloud-pc.png)
+2. Under **Resize**, there's a list of the sizes that you can upgrade or downsize to based on the licenses available in your inventory. You can upgrade a Cloud PC’s **Processor** and **RAM**. **Storage** can only be upgraded. Select one of the available options.
+![Screenshot of resize options](./media/resize-cloud-pc/resize-options.png)
 3. Select **Resize**.
 
 If there available licenses, the resizing starts.
