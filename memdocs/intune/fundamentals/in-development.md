@@ -179,6 +179,25 @@ Applies to:
 
 <!-- *********************************************** -->
 
+## Device security
+
+### New strong mapping requirements for Intune-issued SCEP certificates<!-- 29005591 -->
+
+To align with the Windows Kerberos Distribution Center's (KDC) strong mapping attribute requirements described in [KB5014754](https://support.microsoft.com/help/5014754), SCEP certificates issued by Microsoft Intune will be required to have the following tag in the Subject Alternative Name (SAN) field:
+
+`URL=tag:microsoft.com,2022-09-14:sid:<value>`
+
+This tag will ensure that certificates are compliant with the KDC's latest requirements, and that certificate-based authentication continues working. Microsoft Intune will be adding support for the SID variable in SCEP profiles. You will be able to modify or create a new SCEP profile to include the OnPremisesSecurityIdentifier variable in the SCEP profile. This action will trigger Microsoft Intune to issue new certificates with the appropriate tag to all applicable users and devices.
+
+These requirements apply to:
+
+- Android, iOS/iPadOS, and macOS user certificates.
+- Windows 10/11 user and device certificates.
+
+They don't apply to device certificates used with Microsoft Entra joined users or devices, because SID is an on-premises identifier.
+
+<!-- *********************************************** -->
+
 <!-- ## Intune apps -->
 
 <!-- *********************************************** -->
