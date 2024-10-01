@@ -102,7 +102,7 @@ For more information, see [Configure Azure services for use with Configuration M
 
 ## Co-management
 
-If you enroll Windows devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/intune/intune-endpoints).
+If you enroll Windows devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
 
 ## Microsoft Store for Business
 
