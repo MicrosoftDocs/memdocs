@@ -160,9 +160,9 @@ New GPU offerings for Window 365 Enterprise Cloud PCs have moved out of preview 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Frontline
 
-#### Windows 365 Frontline concurrency buffer improvements are now generally available<!--50220027-->
+#### The Windows 365 Frontline concurrency buffer is now generally available<!--50220027-->
 
-Windows 365 concurrency buffer improvements have moved out of preview and into general availability.
+The Windows 365 concurrency buffer has moved out of preview and into general availability.
 
 <!-- ########################## -->
 ## Week of July 23, 2024
