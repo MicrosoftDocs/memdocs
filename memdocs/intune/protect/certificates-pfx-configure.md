@@ -363,9 +363,9 @@ The Windows Kerberos Key Distribution Center (KDC) requires a strong mapping for
 
 In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we released an update that adds the object identifier attribute containing the user or device SID to the certificate, effectively satisfying the strong mapping requirements. This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID, and is available across all platforms, with some differences:  
 
-* Strong mapping changes apply to *user certificates* for all OS platforms.  
+ * Strong mapping changes apply to *user certificates* for all OS platforms.  
 
-* Strong mapping changes apply to *device certificates* for Windows OS only.  
+ * Strong mapping changes apply to *device certificates* for Microsoft Entra hybrid-joined Windows devices.  
 
  To ensure that certficate-based authentication continues working, you must take the following actions:  
 
