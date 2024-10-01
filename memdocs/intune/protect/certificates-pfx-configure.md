@@ -381,7 +381,7 @@ Complete the following procedure to modify the registry keys and apply the stron
 
 1. In the Windows registry, change the value for `[HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector](DWORD)EnableSidSecurityExtension` to **1**.   
 
-2. Restart the certificate connector service.  
+1. Restart the certificate connector service.  
    1. Go to **Start** > **Run**.  
    2. Open **services.msc**.  
    3. Restart these services:  
@@ -391,28 +391,28 @@ Complete the following procedure to modify the registry keys and apply the stron
         
       - **PFX Create Certificate Connector for Microsoft Intune**  
 
-4. Changes begin applying to all new certificates, and to certificates being renewed. To verify that authentication works, we recommend testing all places where certificate-based authentication could be used, including:   
+1. Changes begin applying to all new certificates, and to certificates being renewed. To verify that authentication works, we recommend testing all places where certificate-based authentication could be used, including:   
    - Apps  
    - Intune-integrated certification authorities  
    - NAC solutions  
    - Networking infrastructure  
 
-To roll back changes, restore the original registry settings. Then create a new PKCS certificate profile to reissue certificates without the SID attribute. If you use a Digicert CA, you must create a certificate template for users with an SID and another template for users without an SID. 
-
-To roll back changes:
-1. Restore the original registry settings.
-1. Restart these services:
+   To roll back changes:
    
-   - **PFX Create Legacy Connector for Microsoft Intune**
+     1. Restore the original registry settings.  
+        
+     1. Restart these services:  
+   
+        - **PFX Create Legacy Connector for Microsoft Intune**  
      
-   - **PFX Create Legacy Connector for Microsoft Intune**
+        - **PFX Create Legacy Connector for Microsoft Intune**  
      
-   - **PFX Create Certificate Connector for Microsoft Intune**
+        - **PFX Create Certificate Connector for Microsoft Intune**  
      
-1. Create a new PKCS certificate profile for affected devices, to reissue certificates without the SID attribute.  
+     1. Create a new PKCS certificate profile for affected devices, to reissue certificates without the SID attribute.  
 
-   > [!TIP]
-   > If you use a Digicert CA, you must create a certificate template for users with an SID and another template for users without an SID. For more information, see the [DigiCert PKI Platform 8.24.1 release notes](https://knowledge.digicert.com/general-information/release-notes-pki).  
+        > [!TIP]
+        > If you use a Digicert CA, you must create a certificate template for users with an SID and another template for users without an SID. For more information, see the [DigiCert PKI Platform 8.24.1 release notes](https://knowledge.digicert.com/general-information/release-notes-pki).  
 
 ## Next steps
 
