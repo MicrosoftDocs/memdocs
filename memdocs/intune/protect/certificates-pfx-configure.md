@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/24/2024
+ms.date: 10/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -359,16 +359,18 @@ Platforms:
 
 ## Update certificate connector for KB5014754 requirements     
 
-[KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16) requires a new strong mapping format for all PKCS certificates deployed by Microsoft Intune and used for certificate-based authentication. The mapping must have a security identifier (SID) extension that maps to the user or device SID. If a certificate doesn't meet the strong mapping criteria by the full enforcement mode date, authentication is denied. In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we released an update that adds the object identifier attribute containing the user or device SID to the certificate, effectively satisfying the strong mapping requirements. This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID, and is available across all platforms, with some differences:  
+The Windows Keberos Key Distribution Center (KDC) requires a strong mapping format for certificates issued by Active Directory Certificate Services. This requirement is applicable to PKCS certificates deployed by Microsoft Intune and used for certificate-based authentication. The mapping must have a security identifier (SID) extension that maps to the user or device SID. If a certificate doesn't meet the new strong mapping criteria set by the full enforcement mode date, authentication will be denied. For more information about the requirements, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).
+
+In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we released an update that adds the object identifier attribute containing the user or device SID to the certificate, effectively satisfying the strong mapping requirements. This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID, and is available across all platforms, with some differences:  
 
 * Strong mapping changes apply to *user certificates* for all OS platforms.  
 
 * Strong mapping changes apply to *device certificates* for Windows OS only.  
 
-To ensure that certficate-based authentication continues working, you must take the following actions:  
+ To ensure that certficate-based authentication continues working, you must take the following actions:  
 
 - Update the Microsoft Intune Certificate Connector to version 6.2406.0.1001. For information about the latest version and how to update the certificate connector, see [Certificate connector for Microsoft Intune](certificate-connector-overview.md).  
-- Make changes to registry key information.   
+- Make changes to registry key information on the Windows server that hosts the certificate connector.  
 
 Complete the following procedure to modify the registry keys and apply the strong mapping changes to certificates. These changes will apply to new PKCS certificates and PKCS certificates that are being renewed.     
 
@@ -383,8 +385,11 @@ Complete the following procedure to modify the registry keys and apply the stron
    1. Go to **Start** > **Run**.  
    2. Open **services.msc**.  
    3. Restart these services:  
-      - **PFX Create Legacy Connector for Microsoft Intune**     
-      - **PFX Create Legacy Connector for Microsoft Intune**  
+      - **PFX Create Legacy Connector for Microsoft Intune**
+        
+      - **PFX Create Legacy Connector for Microsoft Intune**
+        
+      - **PFX Create Certificate Connector for Microsoft Intune**  
 
 4. Changes begin applying to all new certificates, and to certificates being renewed. To verify that authentication works, we recommend testing all places where certificate-based authentication could be used, including:   
    - Apps  
@@ -393,6 +398,21 @@ Complete the following procedure to modify the registry keys and apply the stron
    - Networking infrastructure  
 
 To roll back changes, restore the original registry settings. Then create a new PKCS certificate profile to reissue certificates without the SID attribute. If you use a Digicert CA, you must create a certificate template for users with an SID and another template for users without an SID. 
+
+To roll back changes:
+1. Restore the original registry settings.
+1. Restart these services:
+   
+   - **PFX Create Legacy Connector for Microsoft Intune**
+     
+   - **PFX Create Legacy Connector for Microsoft Intune**
+     
+   - **PFX Create Certificate Connector for Microsoft Intune**
+     
+1. Create a new PKCS certificate profile for affected devices, to reissue certificates without the SID attribute.  
+
+   > [!TIP]
+   > If you use a Digicert CA, you must create a certificate template for users with an SID and another template for users without an SID. For more information, see the [DigiCert PKI Platform 8.24.1 release notes](https://knowledge.digicert.com/general-information/release-notes-pki).  
 
 ## Next steps
 
