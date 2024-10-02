@@ -56,14 +56,6 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- ***********************************************-->
 ## Device management
 
-### Support for symmetric NAT with RDP Shortpath<!--43602619-->
-
-In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission. For more information, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
-
-### Chroma subsampling default change to 4:2:0<!--50308895-->
-
-To reduce monitor support issues, the Windows 365 service will default the chroma subsampling at 4:2:0 (instead of the previous 4:4:4).
-
 ### Cloud PC gallery images update to Microsoft Teams 2.1<!--50394023-->
 
 In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 applications will be updated to use Microsoft Teams 2.1. These images include:
@@ -87,11 +79,7 @@ Inactive ANCs:
 You'll be able to reactive such ANCs.
 
 <!-- ***********************************************-->
-## Device security
-
-### Cloud PC support for FIDO devices and passkeys on macOS and iOS<!--51858977-->
-
-Windows 365 Cloud PCs will support FIDO devices and passkeys for Microsoft Entra ID sign in on macOS and iOS.
+<!--## Device security-->
 
 <!--***********************************************-->
 <!-- ## End user experience -->
@@ -112,18 +100,10 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 The Cloud PC action status report will show batches of devices in which actions have been triggered. Customers will be able to see the batch current progress.
 
 <!-- ***********************************************-->
-## Provisioning
-
-### New health check: UDP TURN (preview)<!--44505391-->
-
-A new UDP TURN check will be added to the Azure Network Connections health checks. For more information about health checks, see [Azure network connections health checks](health-checks.md).
+<!--## Provisioning-->
 
 <!-- ***********************************************-->
-## Security
-
-### New settings for Windows 365 security baselines<!--49685126-->
-
-New configuration settings will be introduced for the Windows 365 security baseline.
+<!--## Security-->
 
 <!-- ***********************************************
 ## Windows 365 app-->
