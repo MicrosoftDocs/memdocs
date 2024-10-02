@@ -56,7 +56,7 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
-## Week of September 30, 2024 (Service release 2309)
+## Week of September 30, 2024 (Service release 2409)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -68,7 +68,7 @@ The **Cloud PCs that aren't available** report has been added to the **Reports**
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning
 
-#### Windows 11 24H2 cloud PCs gallery images<!—53461426-->
+#### Windows 11 24H2 cloud PCs gallery images<!--53461426-->
 
 The latest Windows Enterprise 24H2 images are available for provisioning new devices. You can update your provisioning policies to use either of the following images:
 
