@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2024
+ms.date: 10/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of September 30, 2024  
+
+### Device security  
+
+####  Updates to PKCS certificate issuance process in Microsoft Intune Certificate Connector, version 6.2406.0.1001 <!-- 24186560 -->  
+We've updated the process for PKCS certificate issuance in Microsoft Intune to support the SID information requirements described in [KB5014754](https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16). As part of this update, an OID attribute containing the user or device SID has been added to the certificate. This change is available with the Certificate Connector for Microsoft Intune, version 6.2406.0.1001, and applies to users and devices synced from Active Directory on-premises to Microsoft Entra ID. 
+
+The SID update is available for user certificates across all platforms, and for device certificates specifically on Microsoft Entra hybrid joined Windows devices.  
+
+For more information, see:  
+
+* [What's new for the certificate connector](../protect/certificate-connector-overview.md#september-19-2024)
+
+* [Apply PFX changes to certificate](../protect/certificates-pfx-configure.md#update-certificate-connector-for-kb5014754-requirements)  
 
 ## Week of September 23, 2024 (Service release 2409)
 
