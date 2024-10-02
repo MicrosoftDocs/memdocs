@@ -72,8 +72,8 @@ The **Cloud PCs that aren't available** report has been added to the **Reports**
 
 The latest Windows Enterprise 24H2 images are available for provisioning new devices. You can update your provisioning policies to use either of the following images:
 
-Windows 11 Enterprise 24H2
-Windows 11 Enterprise + Microsoft 365 Apps 24H2 
+- Windows 11 Enterprise 24H2
+- Windows 11 Enterprise + Microsoft 365 Apps 24H2
 
 
 <!-- ########################## -->
