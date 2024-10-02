@@ -67,7 +67,7 @@ To mitigate the issue, follow these steps:
 
    - If devices are already deployed or the security group isn't applicable, manually add the affected devices to the correct security group.
 
-By following these steps, you can prevent security group membership failures and ensure devices remain compliant and secure.
+Security group membership failures can be prevented by following these steps, ensuring devices remain compliant and secure.
 
 ## Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
 

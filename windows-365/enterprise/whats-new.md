@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/23/2024
+ms.date: 10/02/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -56,6 +56,27 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of September 30, 2024 (Service release 2409)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Unavailable Cloud PCs report added to Reporting overview page<!--53687085-->
+
+The **Cloud PCs that aren't available** report has been added to the **Reports** > **Cloud PC overview** page.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Windows 11 24H2 cloud PCs gallery images<!--53461426-->
+
+The latest Windows Enterprise 24H2 images are available for provisioning new devices. You can update your provisioning policies to use either of the following images:
+
+- Windows 11 Enterprise 24H2
+- Windows 11 Enterprise + Microsoft 365 Apps 24H2
+
+
+<!-- ########################## -->
 ## Week of September 23, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -77,6 +98,15 @@ RDP Shortpath in Windows 365 now supports establishing an indirect UDP connectio
 
 ### Windows 365 support for HEVC video coding<!--51599459-->
 Windows 365 will support Hardware High Efficiency Video Coding (HEVC) h.265 4:2:0 on Compatible GPU-enabled Cloud PCs. For more information, see [Enable GPU acceleration for Azure Virtual Desktop](/azure/virtual-desktop/enable-gpu-acceleration?tabs=intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows App
+
+#### Windows App is now generally available<!--46667283-->
+
+Windows App has moved out of preview and into general availability.
+
+For more information, see [What is Windows App?](/windows-app/overview)
 
 <!-- ########################## -->
 ## Week of August 26, 2024 (Service release 2408)
