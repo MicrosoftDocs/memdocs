@@ -87,7 +87,7 @@ The SID update is available for user certificates across all platforms, and for 
 
 For more information, see:  
 
-* [What's new for the certificate connector](../protect/certificate-connector-overview.md#september-9-2024)
+* [What's new for the certificate connector](../protect/certificate-connector-overview.md#september-19-2024)
 
 * [Apply PFX changes to certificate](../protect/certificates-pfx-configure.md#update-certificate-connector-for-kb5014754-requirements)  
 
