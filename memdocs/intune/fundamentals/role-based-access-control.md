@@ -78,7 +78,7 @@ You can create your own roles with custom permissions. For more information abou
 ### Microsoft Entra roles with Intune access
 
 Microsoft recommends following the principle of least-permissions by only assigning the minimum required permissions for an administrator to perform their duties.  Global Administrator and Intune Service Administrator
-are [privileged roles](https://learn.microsoft.com/entra/identity/role-based-access-control/privileged-roles-permissions) and assignment should be limited.  
+are [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions) and assignment should be limited.  
 
 | Microsoft Entra role | All Intune data | Intune audit data |
 | --- | :---: | :---: |
