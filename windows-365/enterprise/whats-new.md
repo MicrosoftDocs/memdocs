@@ -99,6 +99,15 @@ RDP Shortpath in Windows 365 now supports establishing an indirect UDP connectio
 ### Windows 365 support for HEVC video coding<!--51599459-->
 Windows 365 will support Hardware High Efficiency Video Coding (HEVC) h.265 4:2:0 on Compatible GPU-enabled Cloud PCs. For more information, see [Enable GPU acceleration for Azure Virtual Desktop](/azure/virtual-desktop/enable-gpu-acceleration?tabs=intune).
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows App
+
+#### Windows App is now generally available<!--46667283-->
+
+Windows App has moved out of preview and into general availability.
+
+For more information, see [What is Windows App?](/windows-app/overview)
+
 <!-- ########################## -->
 ## Week of August 26, 2024 (Service release 2408)
 

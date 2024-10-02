@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/12/2024
+ms.date: 10/02/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -98,6 +98,10 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 ### Update to Cloud PC action status report<!--49451077-->
 
 The Cloud PC action status report will show batches of devices in which actions have been triggered. Customers will be able to see the batch current progress.
+
+### Remoting connections report deprecation<!--52990648-->
+
+The remoting connection report will be retired on December 31st, 2024. After this date, refer to the [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
 
 <!-- ***********************************************-->
 <!--## Provisioning-->
