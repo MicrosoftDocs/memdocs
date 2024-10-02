@@ -65,7 +65,7 @@ Downsizing may impact support for nested virtualization. For more information, s
 To resize a Cloud PC, the admin must have certain built-in Microsoft Entra roles.
 
 - For a Cloud PC provisioned with a direct assigned license, at least one of the following roles
-    - Intune Service Administrator
+  - Intune Service Administrator
   - Intune Reader + Cloud PC Admin roles
   - Intune Reader + Windows 365 Administrator
 - For a Cloud PC provisioned with a group-based license, at least one of the following roles
@@ -102,7 +102,7 @@ When resizing Cloud PCs provisioned through direct assigned licenses the Windows
 - Assigning the new license on behalf of the admin.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose a device > **Resize**.
-![Screenshot of resize a Cloud PC](./media/resize-cloud-pc/resize.png)
+![Screenshot of resize a Cloud PC.](./media/resize-cloud-pc/resize.png)
 2. Under **Resize**, there's a list of the sizes that you can upgrade or downsize to based on the licenses available in your inventory. You can upgrade/downgrade a Cloud PC’s RAM and vCPU. You can only upgrade the OS disk storage. If you're downgrading a user’s Cloud PC, options with lower storage are grayed out. Select one of the available options.
 3. Select **Resize**.
 
@@ -113,13 +113,13 @@ If there are available licenses, the resizing starts.
 1. Create a new target Microsoft Entra group. Add the users from the source Microsoft Entra group that you want to resize. Alternately, you can use existing Microsoft Entra groups if you're mapping the groups to individual Windows 365 license types.
 2. Assign the existing provisioning policy targeting the original source Microsoft Entra group to the new target Microsoft Entra group. You only need to do this step if you don't have a discrete Microsoft Entra group for your provisioning policy assignment. If you have discrete Microsoft Entra groups to manage your provisioning policy assignments, you can omit this step.
 3. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose the device that you want added to the Microsoft Entra target group > **Resize**.
-![Screenshot of resize a Cloud PC](./media/resize-cloud-pc/resize.png)
+![Screenshot of resize a Cloud PC.](./media/resize-cloud-pc/resize.png)
 4. A list is displayed with all the possible SKUs that you can upgrade or downsize to based on the licenses that you have available in your inventory. You can upgrade/downgrade a Cloud PC’s RAM and vCPU. You can only upgrade the OS disk storage. If you're downsizing a user’s Cloud PC, options with lower storage are grayed out. Select one of the available options.
 5. Select **Resize**.
 6. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
 7. Select **Users** > search for the user name assigned to the Cloud PC and select it > **Groups**.
 8. To retrieve the old license, remove the users from the original source Microsoft Entra group. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
-    - When using Microsoft Entra ID hybrid in your environment, after removing the user from the original group, you must wait until Microsoft Entra Connect synchronizes  your on-premises Active Directory with with your Microsoft Entra ID. This can take up to 30 minutes. Then you can add the user to the new group.
+    - When using Microsoft Entra ID hybrid in your environment, after removing the user from the original group, you must wait until Microsoft Entra Connect synchronizes  your on-premises Active Directory with your Microsoft Entra ID. This can take up to 30 minutes. Then you can add the user to the new group.
 9. Assign the target license to the new target Microsoft Entra group. The resizing process now begins.
 
 ## Bulk resizing Cloud PCs
@@ -159,7 +159,7 @@ Up to 5,000 Cloud PCs can be resized at a time.
 7. Under **Select groups to include**, choose the groups containing the users who own the devices that you want to resize > **Next**.
 8. On the **Review + create** page, select **Create**. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
 9. To retrieve the old license, remove the users from the original source Microsoft Entra group. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
-    - When using Microsoft Entra ID hybrid in your environment, after removing the user from the original group, you must wait until Microsoft Entra Connect synchronizes  your on-premises Active Directory with with your Microsoft Entra ID. This can take up to 30 minutes. Then you can add the user to the new group.
+    - When using Microsoft Entra ID hybrid in your environment, after removing the user from the original group, you must wait until Microsoft Entra Connect synchronizes  your on-premises Active Directory with your Microsoft Entra ID. This can take up to 30 minutes. Then you can add the user to the new group.
 10. Assign the target license to the new target Microsoft Entra group. The resizing process now begins.
 
 ## Resizing details
@@ -172,11 +172,11 @@ If the source license isn't removed first, and the new license is assigned to th
 
 If the source license isn't removed, and the target license isn't assigned within 48 hours, the device returns to the **Provisioned** state.
 
+If you have a combination of paid and trial licenses, the resize feature uses your paid licenses first. After these licenses run out, the resize operation uses your trial licenses.
+
 When resizing starts, the user is automatically disconnected from their Cloud PC and any unsaved work might be lost.
 
 Resizing can take from 15 to 20 minutes before the user can access their Cloud PC again. You can monitor the status in the Windows 365 provisioning blade. Users can see their Cloud PC status at https://windows365.microsoft.com.
-
-If you have a combination of paid and trial licenses, the resize feature uses your paid licenses first. After these licenses run out, the resize operation uses your trial licenses.
 
 If there are no licenses in your inventory, the resizing fails. To request more licenses, contact your procurement admin. After you purchase the license and added to the inventory in the Microsoft 365 admin center, you can retry the resize operation. Licenses can be purchased from various channels: EA, CSP, MCA, and Web Direct.
 
