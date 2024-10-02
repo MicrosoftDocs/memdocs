@@ -386,9 +386,7 @@ Complete the following procedure to modify the registry keys and apply the stron
    2. Open **services.msc**.  
    3. Restart these services:  
       - **PFX Create Legacy Connector for Microsoft Intune**
-        
-      - **PFX Create Legacy Connector for Microsoft Intune**
-        
+       
       - **PFX Create Certificate Connector for Microsoft Intune**  
 
 1. Changes begin applying to all new certificates, and to certificates being renewed. To verify that authentication works, we recommend testing all places where certificate-based authentication could be used, including:   
@@ -404,9 +402,7 @@ Complete the following procedure to modify the registry keys and apply the stron
      1. Restart these services:  
    
         - **PFX Create Legacy Connector for Microsoft Intune**  
-     
-        - **PFX Create Legacy Connector for Microsoft Intune**  
-     
+          
         - **PFX Create Certificate Connector for Microsoft Intune**  
      
      1. Create a new PKCS certificate profile for affected devices, to reissue certificates without the SID attribute.  
