@@ -31,6 +31,8 @@ items:
       href: change-organization-default-settings.md
     - name: Remotely manage Cloud PCs
       href: remotely-manage-business-cloud-pcs.md
+    - name: Resize a Cloud PC
+      href: reset-cloud-pc.md
     - name: Reset a user's password
       href: reset-user-password.md
     - name: Restore a Cloud PC to an earlier state
