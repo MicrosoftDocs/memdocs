@@ -56,7 +56,7 @@ To configure automatic MDM enrollment, you must be a [Microsoft Entra Global Adm
 
 For this example, you'll configure Microsoft Intune mobile device management (MDM) enrollment settings so that corporate-owned and personal devices automatically enroll in Microsoft Intune. *MDM user scope* enables automatic enrollment for Microsoft Intune device management. 
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **Enrollment**.     
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.     
 2. Go to the **Windows** tab. Then select **Automatic Enrollment**.  
 
 > [!IMPORTANT]
