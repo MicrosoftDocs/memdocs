@@ -26,4 +26,3 @@ ms.collection:
 > - The *MFA Wizard for Microsoft Entra ID* from the Microsoft 365 admin center
 > - Entra ID *security defaults*
 >
-> 
