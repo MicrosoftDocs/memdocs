@@ -59,7 +59,7 @@ This article describes how to enable automatic mobile device management (MDM) en
 You must have: 
 - A [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium) or [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845) for automatic MDM enrollment and custom company branding.  
 - A Microsoft Intune subscription.  
-- A Microsoft Entra Global Administator role. For more information about role-based-access-control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).  
+- A Microsoft Entra Global Administrator role. For more information about role-based-access-control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).  
 
 [!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]  
 
