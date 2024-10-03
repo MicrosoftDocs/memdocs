@@ -62,7 +62,7 @@ When resizing Windows 365 Cloud PCs, the Windows 365 service automatically takes
 ![Screenshot of resize options](./media/resize-cloud-pc/resize-options.png)
 3. Select **Resize**.
 
-If there available licenses, the resizing starts.
+If there are available licenses, the resizing starts.
 
 If there are no licenses available, then you can purchase a new license at the Windows 365 Market place. The newly purchased license will be available for upgrade soon.  
 
