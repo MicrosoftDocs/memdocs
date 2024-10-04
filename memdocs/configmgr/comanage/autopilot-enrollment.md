@@ -85,9 +85,9 @@ The following components are required to support Autopilot into co-management:
 
     - Windows 11
 
-        For Windows 11 devices, if a device has not been targeted with a co-management settings policy, the management authority will be set to Microsoft Intune during the Autopilot process. Installing the Configuration Manager client as Win32 app doesn't change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads. To set the management authority to Configuration Manager, create a co-management settings policy with the following Advanced settings:
+        For Windows 11 devices, if a device has not been targeted with a co-management settings policy, the management authority will be set to Microsoft Intune during the Autopilot process. Installing the Configuration Manager client as Win32 app doesn't change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads. To set the management authority to Configuration Manager, create a co-management settings policy with the following Advanced settings:<br>
 
-        - **Automatically install the Configuration Manager client>**: **No**
+        - **Automatically install the Configuration Manager client.**: **No**
         - **Override co-management policy and use Intune for all workloads.**: **No**
 
         For additional information, see [Co-management settings: Windows Autopilot with co-management](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500).
@@ -131,11 +131,11 @@ Use these recommendations for a more successful deployment:
 
 ## Limitations
 
- - For Windows 11 devices in Microsoft Entra hybrid joined scenario, the management authority will be set to Microsoft Intune during the Windows Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and thus Microsoft Intune will continue to manage all the co-management workloads.
+ - For Windows 11 devices in Microsoft Entra hybrid joined scenario, the management authority will be set to Microsoft Intune during the Windows Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads.
 
-    To change the management authority to Configuration Manager, set the following registry key value:
+    To change the management authority to Configuration Manager, set the following registry key value:<br>
 
-    - Path: **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server**.
+    - Path: **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server**
     - Value: **ConfigInfo**
     - REG_SZ: **2**
     
