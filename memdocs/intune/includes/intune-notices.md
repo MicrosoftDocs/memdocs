@@ -33,13 +33,13 @@ For more information, refer to: [Planning for mandatory multifactor authenticati
 
 ### Plan for Change: Intune is moving to support iOS/iPadOS 16 and later<!--28391935-->
 
-Later this year, we expect iOS 18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require [iOS 16/iPadOS 16 and higher](../fundamentals/supported-devices-browsers.md) shortly after the iOS/iPadOS 18 release. 
+Later this year, we expect iOS 18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require [iOS 16/iPadOS 16 and higher](../fundamentals/supported-devices-browsers.md) shortly after the iOS/iPadOS 18 release.
 
 #### How does this affect you or your users?
 
-If you're managing iOS/iPadOS devices, you might have devices that won't be able to upgrade to the minimum supported version (iOS 16/iPadOS 16). 
+If you're managing iOS/iPadOS devices, you might have devices that won't be able to upgrade to the minimum supported version (iOS 16/iPadOS 16).
 
-Given that Microsoft 365 mobile apps are supported on iOS 16/iPadOS 16 and higher, this may not affect you. You've likely already upgraded your OS or devices. 
+Given that Microsoft 365 mobile apps are supported on iOS 16/iPadOS 16 and higher, this may not affect you. You've likely already upgraded your OS or devices.
 
 To check which devices support iOS 16 or iPadOS 16 (if applicable), see the following Apple documentation:
 
@@ -51,7 +51,7 @@ To check which devices support iOS 16 or iPadOS 16 (if applicable), see the foll
 
 #### How can you prepare?
 
-Check your Intune reporting to see what devices or users might be affected. For devices with mobile device management (MDM), go to **Devices** > **All devices** and filter by OS. For devices with app protection policies, go to **Apps** > **Monitor** > **App protection status** and use the *Platform* and *Platform version* columns to filter. 
+Check your Intune reporting to see what devices or users might be affected. For devices with mobile device management (MDM), go to **Devices** > **All devices** and filter by OS. For devices with app protection policies, go to **Apps** > **Monitor** > **App protection status** and use the *Platform* and *Platform version* columns to filter.
 
 To manage the supported OS version in your organization, you can use Microsoft Intune controls for both MDM and APP. For more information, see [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md).
 
@@ -70,57 +70,60 @@ This change only affects you if you currently manage, or plan to manage, macOS d
 
 Check your Intune reporting to see what devices or users might be affected. Go to **Devices** > **All devices** and filter by macOS. You can add more columns to help identify who in your organization has devices running macOS 12.x or earlier. Ask your users to upgrade their devices to a supported OS version.
 
-### Plan for Change: Update to Intune endpoint for Remote Help 
+### Plan for Change: Update to Intune endpoint for Remote Help
 
-Starting on May 30, 2024, or soon after, to improve the experience for Remote Help on Windows, Web, and macOS, we're updating the primary network endpoint for Remote Help from https://remoteassistance.support.services.microsoft.com to https://remotehelp.microsoft.com. 
+Starting on May 30, 2024, or soon after, to improve the experience for Remote Help on Windows, Web, and macOS, we're updating the primary network endpoint for Remote Help from [https://remoteassistance.support.services.microsoft.com](https://remoteassistance.support.services.microsoft.com) to [https://remotehelp.microsoft.com](https://remotehelp.microsoft.com).
 
 #### How does this affect you or your users?
 
-If you're using Remote Help and you have firewall rules that don't permit the new endpoint https://remotehelp.microsoft.com, admins and users may experience connectivity issues or disruptions with Remote Help.  
+If you're using Remote Help and you have firewall rules that don't permit the new endpoint [https://remotehelp.microsoft.com](https://remotehelp.microsoft.com), admins and users may experience connectivity issues or disruptions with Remote Help.
 
 Additionally, the Remote Help app on Windows will need to be updated to the newest version. No action is needed for the Remote Help app for macOS and the Remote Help Web app.
 
 #### How can you prepare?
 
-Update your firewall rules to include the new Remote Help endpoint: https://remotehelp.microsoft.com. For Remote Help on Windows, users will need to update to the [newest version (5.1.124.0)](../fundamentals/remote-help-windows.md#march-13-2024). Most users have opted in for automatic updates and will be updated automatically without any action from the user. To learn more, review [Install and update Remote Help for Windows](../fundamentals/remote-help-windows.md#install-and-update-remote-help).
+Update your firewall rules to include the new Remote Help endpoint: [https://remotehelp.microsoft.com](https://remotehelp.microsoft.com). For Remote Help on Windows, users will need to update to the [newest version (5.1.124.0)](../fundamentals/remote-help-windows.md#march-13-2024). Most users have opted in for automatic updates and will be updated automatically without any action from the user. To learn more, review [Install and update Remote Help for Windows](../fundamentals/remote-help-windows.md#install-and-update-remote-help).
 
-#### Additional information: 
+#### Additional information:
 
 - [Remote Help on Windows with Microsoft Intune](../fundamentals/remote-help-windows.md)
 - [Network endpoints for Microsoft Intune | Microsoft Learn](../fundamentals/intune-endpoints.md#remote-help)
 
 ### Update to the latest Company Portal for Android, Intune App SDK for iOS, and Intune App Wrapper for iOS
 
-Starting **June 1, 2024**, we're making updates to improve the Intune mobile application management (MAM) service. This update will require iOS wrapped apps, iOS SDK integrated apps, and the Company Portal for Android to be updated to the latest versions to ensure applications stay secure and run smoothly. 
+Starting **June 1, 2024**, we're making updates to improve the Intune mobile application management (MAM) service. This update will require iOS wrapped apps, iOS SDK integrated apps, and the Company Portal for Android to be updated to the latest versions to ensure applications stay secure and run smoothly.
 
 > [!IMPORTANT]
 > If you don't update to the latest versions, users will be blocked from launching your app.
 >
 > Ahead of this change, for Microsoft apps that need to be updated, when a user opens the app, they'll receive a blocking message to update the app.
 
-Note that the way Android updates, once one Microsoft application with the updated SDK is on the device and the Company Portal is updated to the latest version, Android apps will update. So, this message is focused on iOS SDK/app wrapper updates. We recommend always updating your Android and iOS apps to the latest SDK or app wrapper to ensure that your app continues to run smoothly.  
+Note that the way Android updates, once one Microsoft application with the updated SDK is on the device and the Company Portal is updated to the latest version, Android apps will update. So, this message is focused on iOS SDK/app wrapper updates. We recommend always updating your Android and iOS apps to the latest SDK or app wrapper to ensure that your app continues to run smoothly.
 
 #### How does this affect you or your users?
+
 If your users haven't updated to the latest Microsoft or third-party app protection supported apps, they'll be blocked from launching their apps. If you have iOS line-of-business (LOB) applications that are using the Intune wrapper or Intune SDK, you must be on Wrapper/SDK version 17.7.0 or later to avoid your users being blocked.
 
 #### How can you prepare?
+
 Plan to make the changes below before **June 1, 2024**:
 
-* Any of your iOS line-of-business (LOB) apps using older versions of the Intune SDK or wrapper must be updated to v17.7.0 or later.
-  * For apps using the Intune iOS SDK, use [Release 19.2.0 · msintuneappsdk/ms-intune-app-sdk-ios (github.com)](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/releases/tag/19.2.0)
-  * For apps using the Intune iOS wrapper, use [Release 19.2.0 · msintuneappsdk/intune-app-wrapping-tool-ios (github.com)](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios/releases/tag/19.2.0)
-* For tenants with policies targeted to iOS apps: 
-  * Notify your users that they need to upgrade to the latest version of the Microsoft apps. You can find the latest version of the apps in the [App store](https://www.apple.com/app-store/). For example, you can find the latest version of Microsoft Teams [here](https://apps.apple.com/app/microsoft-teams/id1113153706) and Microsoft Outlook [here](https://apps.apple.com/app/microsoft-outlook/id951937596).
-  * Additionally, you have the option to enable the following [conditional launch](../apps/app-protection-policy-settings-ios.md#conditional-launch) settings:  
-    * The **Min OS version** setting to warn users using iOS 15 or older so that they can download the latest apps. 
-    * The **Min SDK version** setting to block users if the app is using Intune SDK for iOS older than 17.7.0. 
-    * The **Min app version** setting to warn users on older Microsoft apps. Note that this setting must be in a policy targeted to only the targeted app. 
-* For tenants with policies targeted to Android apps: 
-  * Notify your users that they need to upgrade to the latest version (v5.0.6198.0) of the [Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) app.
-  * Additionally, you have the option to enable the following [conditional launch](../apps/app-protection-policy-settings-ios.md#conditional-launch) device condition setting:  
-    * The **Min Company Portal version** setting to warn users using a Company Portal app version older than 5.0.6198.0.
+- Any of your iOS line-of-business (LOB) apps using older versions of the Intune SDK or wrapper must be updated to v17.7.0 or later.
+  - For apps using the Intune iOS SDK, use [Release 19.2.0 · msintuneappsdk/ms-intune-app-sdk-ios (github.com)](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/releases/tag/19.2.0)
+  - For apps using the Intune iOS wrapper, use [Release 19.2.0 · msintuneappsdk/intune-app-wrapping-tool-ios (github.com)](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios/releases/tag/19.2.0)
+- For tenants with policies targeted to iOS apps:
+  - Notify your users that they need to upgrade to the latest version of the Microsoft apps. You can find the latest version of the apps in the [App store](https://www.apple.com/app-store/). For example, you can find the latest version of Microsoft Teams [here](https://apps.apple.com/app/microsoft-teams/id1113153706) and Microsoft Outlook [here](https://apps.apple.com/app/microsoft-outlook/id951937596).
+  - Additionally, you have the option to enable the following [conditional launch](../apps/app-protection-policy-settings-ios.md#conditional-launch) settings:  
+    - The **Min OS version** setting to warn users using iOS 15 or older so that they can download the latest apps.
+    - The **Min SDK version** setting to block users if the app is using Intune SDK for iOS older than 17.7.0.
+    - The **Min app version** setting to warn users on older Microsoft apps. Note that this setting must be in a policy targeted to only the targeted app.
+- For tenants with policies targeted to Android apps:
+  - Notify your users that they need to upgrade to the latest version (v5.0.6198.0) of the [Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) app.
+  - Additionally, you have the option to enable the following [conditional launch](../apps/app-protection-policy-settings-ios.md#conditional-launch) device condition setting:
+    - The **Min Company Portal version** setting to warn users using a Company Portal app version older than 5.0.6198.0.
 
 ### Plan for Change: Ending support for Intune App SDK Xamarin Bindings in May 2024<!--27143739-->
+
 With the [end of support for Xamarin Bindings](https://dotnet.microsoft.com/platform/support/policy/xamarin), Intune will end support for Xamarin apps and the Intune App SDK Xamarin Bindings beginning on **May 1, 2024**.
 
 #### How does this affect you or your users?
@@ -129,7 +132,7 @@ If you you have iOS and/or Android apps built with Xamarin and are using the Int
 
 #### How can you prepare?
 
-Upgrade your Xamarin based apps to .NET MAUI. Review the following documentation for more information on Xamarin support and upgrading your apps: 
+Upgrade your Xamarin based apps to .NET MAUI. Review the following documentation for more information on Xamarin support and upgrading your apps:
 
 - [Xamarin Support Policy | .NET](https://dotnet.microsoft.com/platform/support/policy/xamarin)
 - [Upgrade from Xamarin to .NET | Microsoft Lear](/dotnet/maui/migration/?view=net-maui-8.0)
@@ -156,6 +159,7 @@ For detailed step-by-step instructions visit [powershell-intune-samples/Updating
 ### Intune moving to support Android 10 and later for user-based management methods in October 2024<!--14755802-->
 
 In October 2024, Intune will be moving to support Android 10 and later for user-based management methods, which includes:
+
 - Android Enterprise personally-owned work profile
 - Android Enterprise corporate owned work profile
 - Android Enterprise fully managed
@@ -175,7 +179,7 @@ For user-based management methods (as listed above), Android devices running And
 
 - Intune technical support won't be provided.
 - Intune won't make changes to address bugs or issues.
-- New and existing features aren't guaranteed to work. 
+- New and existing features aren't guaranteed to work.
 
 While Intune won't prevent enrollment or management of devices on unsupported Android OS versions, functionality isn't guaranteed, and use isn't recommended.
 
@@ -192,7 +196,7 @@ For more information, review: [Manage operating system versions with Microsoft I
 ### Plan for Change: Web based device enrollment will become default method for iOS/iPadOS device enrollment
 
 Today, when creating iOS/iPadOS enrollment profiles, “Device enrollment with Company Portal” is shown as the default method. In an upcoming service release, the default method will change to “Web based device enrollment” during profile creation. Additionally for *new* tenants, if no enrollment profile is created, the user will enroll using web-based device enrollment.
- 
+
 > [!NOTE]
 > For web enrollment, you will need to deploy the single sign-on (SSO) extension policy to enable just in time (JIT) registration, for more information review: [Set up just in time registration in Microsoft Intune](../enrollment/set-up-just-in-time-registration.md).
 
@@ -211,7 +215,7 @@ Update your documentation and user guidance as needed. If you currently use devi
 
 ### Wrapped iOS apps and iOS apps using the Intune App SDK will require Azure AD app registration
 
-We're making updates to improve the security of the Intune mobile application management (MAM) service. This update will require iOS wrapped apps and SDK integrated apps to be [registered with Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) (formerly Azure Active Directory (Azure AD)) by March 31, 2024 to continue receiving MAM policy. 
+We're making updates to improve the security of the Intune mobile application management (MAM) service. This update will require iOS wrapped apps and SDK integrated apps to be [registered with Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) (formerly Azure Active Directory (Azure AD)) by March 31, 2024 to continue receiving MAM policy.
 
 #### How does this affect you or your users?
 
@@ -234,6 +238,7 @@ Prior to this change, you will need to register the apps with Azure AD. See belo
 1. Then launch the application on a device and verify if the sign-in (which should be required every minute on app launch) happens successfully with the configured parameters.
 1. Note that if you only do step #6 and #7 before doing the other steps, you might be blocked on application launch. You will also notice the same behavior if some of the parameters are incorrect.
 1. Once you’ve completed the validation steps, you can undo the changes made in step #6.
+
 > [!NOTE]
 > Intune will soon require an Azure AD device registration for iOS devices using MAM. If you have Conditional Access policies enabled, your devices should already be registered, and you won't notice any change. For more information see, [Microsoft Entra registered devices - Microsoft Entra | Microsoft Learn](/entra/identity/devices/concept-device-registration).
 
@@ -248,7 +253,7 @@ Note that customers in some environments cannot be transitioned initially, for m
 If you're using Jamf Pro’s Conditional Access integration for macOS devices, follow Jamf’s documented guidelines to migrate your devices to Device Compliance integration: [Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
 
 After the Device Compliance integration is complete, some users might see a one-time prompt to enter their Microsoft credentials.
- 
+
 #### How can you prepare?
 
 If applicable, follow the instructions provided by Jamf to migrate your macOS devices. If you need help, contact Jamf Customer Success. For more information and the latest updates, read the blog post: [Support tip: Transitioning Jamf macOS devices from Conditional Access to Device Compliance](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-transitioning-jamf-macos-devices-from-conditional/ba-p/3913059).
@@ -263,15 +268,15 @@ To support the upcoming release of iOS/iPadOS 17, update to the latest versions 
 
 #### How does this affect you or your users?
 
-After Intune ends support for Android device administrator, devices with access to GMS will be impacted in the following ways:   
+After Intune ends support for Android device administrator, devices with access to GMS will be impacted in the following ways:
 
-1. Users won't be able to enroll devices with Android device administrator.  
-2. Intune won't make changes or updates to Android device administrator management, such as bug fixes, security fixes, or fixes to address changes in new Android versions.  
+1. Users won't be able to enroll devices with Android device administrator.
+2. Intune won't make changes or updates to Android device administrator management, such as bug fixes, security fixes, or fixes to address changes in new Android versions.
 3. Intune technical support will no longer support these devices.
 
 #### How can you prepare?
 
-Stop enrolling devices into Android device administrator and migrate impacted devices to other management methods. You can check your Intune reporting to see which devices or users might be affected. Go to **Devices** > **All devices** and filter the OS column to **Android (device administrator)** to see the list of devices. 
+Stop enrolling devices into Android device administrator and migrate impacted devices to other management methods. You can check your Intune reporting to see which devices or users might be affected. Go to **Devices** > **All devices** and filter the OS column to **Android (device administrator)** to see the list of devices.
 
 Read the blog, [Microsoft Intune ending support for Android device administrator on devices with GMS access](https://aka.ms/Intune-Android-DA-blog), for our recommended alternative Android device management methods and information about the impact to devices without access to GMS.
 
@@ -320,7 +325,7 @@ Intune follows the Windows 10 lifecycle for supported Windows 10 versions. We're
 
 #### How does this affect you or your users?
 
-Because Microsoft no longer supports these operating systems, this change might not affect you. You've likely already upgraded your OS or devices. This change only affects you if you're still managing unsupported Windows 10 versions. 
+Because Microsoft no longer supports these operating systems, this change might not affect you. You've likely already upgraded your OS or devices. This change only affects you if you're still managing unsupported Windows 10 versions.
 
 Windows and Company Portal versions that this change affects include:
 
@@ -336,4 +341,4 @@ If you continue to use an unsupported version of Windows 10, your users won't ge
 
 #### How can you prepare?
 
-In the Microsoft Intune admin center, use the [discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user's device, the Company Portal version is shown on the **Settings** page of the Company Portal. Update to a supported Windows and Company Portal version.  
+In the Microsoft Intune admin center, use the [discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user's device, the Company Portal version is shown on the **Settings** page of the Company Portal. Update to a supported Windows and Company Portal version.
