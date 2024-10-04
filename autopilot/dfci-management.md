@@ -93,6 +93,14 @@ For more information, see [Intune devices and apps API overview](/graph/intune-c
 
 Other OEMs are pending.
 
+## Known issues
+
+### DFCI enrollment fails for Windows 11, 24H2, Professional SKUs
+
+Date added: *October 4, 2024*
+
+DFCI cannot currently be used on Windows 11 24H2 Pro devices. The issue is being investigated. As a workaround, ensure the device is upgraded to Enterprise SKU during or after OOBE onboarding. After that you will need to sync, then reboot the device to get it enrolled in DFCI.
+
 ## Related content
 
 - [Microsoft DFCI Scenarios](https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Scenarios/DfciScenarios/).
