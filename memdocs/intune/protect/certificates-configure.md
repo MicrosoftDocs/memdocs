@@ -58,7 +58,8 @@ To provision a user or device with a specific type of certificate, Intune uses a
 
 In addition to the three certificate types and provisioning methods, you need a trusted root certificate from a trusted Certification Authority (CA). The CA can be an on-premises Microsoft Certification Authority, or a [third-party Certification Authority](certificate-authority-add-scep-overview.md). The trusted root certificate establishes a trust from the device to your root or intermediate (issuing) CA from which the other certificates are issued. To deploy this certificate, you use the *trusted certificate* profile, and deploy it to the same devices and users that receive the certificate profiles for SCEP, PKCS, and imported PKCS.
 
-> [!TIP]  
+> [!TIP]
+>
 > Intune also supports use of [Derived credentials](derived-credentials.md) for environments that require use of smartcards.
 
 ### What’s required to use certificates
@@ -154,7 +155,7 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
- !INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android-device-administrator-support](../includes/android-device-administrator-support.md)]
 
 ## Related content
 
