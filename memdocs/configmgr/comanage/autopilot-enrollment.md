@@ -85,8 +85,12 @@ The following components are required to support Autopilot into co-management:
 
     - Windows 11
 
-        > [!NOTE]
-        > For Windows 11 devices, if a device has not been targeted with a co-management settings policy, the management authority will be set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and thus Intune will continue to manage all the co-management workloads. To mitigate this, you must create a co-management settings policy and set **automatically install the Configuration Manager client** to **No** and in Advanced settings, keep default settings for **Override co-management policy and use Intune for all workloads.**
+        For Windows 11 devices, if a device has not been targeted with a co-management settings policy, the management authority will be set to Microsoft Intune during the Autopilot process. Installing the Configuration Manager client as Win32 app doesn't change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads. To set the management authority to Configuration Manager, create a co-management settings policy with the following Advanced settings:
+
+        - **Automatically install the Configuration Manager client>**: **No**
+        - **Override co-management policy and use Intune for all workloads.**: **No**
+
+        For additional information, see [Co-management settings: Windows Autopilot with co-management](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500).
 
     - A [currently supported](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions-by-servicing-option) version of Windows 10.
 
