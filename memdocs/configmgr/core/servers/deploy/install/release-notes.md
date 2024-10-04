@@ -50,7 +50,7 @@ After Enabling Branch Cache on Primary Sites clients are not able to Download Ap
 (CTM.log - CTMJob({63B4C4CE-2DC4-4062-93C7-E5019B3B6CE1}): CCTMJob::Start - State=DownloadingContentFromPeers)
 CTM.log _- CTMJob({D21758B0-D895-474E-9695-1023A25A1770}): CCTMJob::_PerformDownloadWithOutBranchCache - Download failure using branchcache, fallback to regular download
 ```
-To work around this issue,disable branch cache.
+To work around this issue, disable branch cache.
 
 > [!NOTE]
 >Clients are able to download Content from On-Premise DP when Branch Cache is Enabled.
