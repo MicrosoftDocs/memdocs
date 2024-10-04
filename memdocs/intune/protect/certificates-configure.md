@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Learn about the types of certificate that are supported by Microsoft Intune
+title: Types of certificate that are supported by Microsoft Intune
 description: Learn about Microsoft Intune's support for Simple Certificate Enrollment Protocol (SCEP), Public Key Cryptography Standards (PKCS) certificates.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/21/2023
+ms.date: 10/04/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -58,7 +58,8 @@ To provision a user or device with a specific type of certificate, Intune uses a
 
 In addition to the three certificate types and provisioning methods, you need a trusted root certificate from a trusted Certification Authority (CA). The CA can be an on-premises Microsoft Certification Authority, or a [third-party Certification Authority](certificate-authority-add-scep-overview.md). The trusted root certificate establishes a trust from the device to your root or intermediate (issuing) CA from which the other certificates are issued. To deploy this certificate, you use the *trusted certificate* profile, and deploy it to the same devices and users that receive the certificate profiles for SCEP, PKCS, and imported PKCS.
 
-> [!TIP]  
+> [!TIP]
+>
 > Intune also supports use of [Derived credentials](derived-credentials.md) for environments that require use of smartcards.
 
 ### What’s required to use certificates
@@ -120,11 +121,13 @@ When you use a Microsoft Certification Authority (CA):
 
 When you use a third-party (non-Microsoft) Certification Authority (CA):
 
-- To use SCEP certificate profiles:
+- SCEP certificate profiles don't require use of the Microsoft Intune Certificate Connector. Instead, the third-party CA handles the certificate issuance and management directly. To use SCEP certificate profiles without the Intune Certificate Connector:
   - Configure integration with a third-party CA from [one of our supported partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners). Setup includes following the instructions from the third-party CA to complete integration of their CA with Intune.
   - [Create an application in Microsoft Entra ID](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration) that delegates rights to Intune to do SCEP certificate challenge validation.
+  
+  For more information, see [Set up third-party CA integration](../protect/certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration)
 
-- PKCS imported certificates require you to [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
+- PKCS imported certificates require use of the Microsoft Intune Certificate Connector. See [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
 
 - Deploy certificates by using the following mechanisms:
   - [Trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
@@ -152,10 +155,9 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
+[!INCLUDE [android-device-administrator-support](../includes/android-device-administrator-support.md)]
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
-
-## Next steps
+## Related content
 
 More resources:
 
