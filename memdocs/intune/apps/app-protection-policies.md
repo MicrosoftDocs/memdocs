@@ -56,6 +56,9 @@ If you're looking for a list of apps that have integrated the Intune SDK, see [M
 
 For information about adding your organization's line-of-business (LOB) apps to Microsoft Intune to prepare for app protection policies, see [Add apps to Microsoft Intune](apps-add.md).
 
+  > [!NOTE]
+  > To ensure that policies are enforced, we recommend using Conditional Access together with Intune app protection policies. See **Require app protection policy** in https://learn.microsoft.com/entra/identity/conditional-access/howto-policy-approved-app-or-app-protection
+
 ## App protection policies for iOS/iPadOS and Android apps
 
 When you create an app protection policy for iOS/iPadOS and Android apps, you follow a modern Intune process flow that results in a new app protection policy. For information about creating app protection policies for Windows apps, see [App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
