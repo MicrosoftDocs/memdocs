@@ -860,6 +860,7 @@ The following table contains the possible output when calling the `AppInvAggrega
 | ApplicationShortVersion  |
 | ApplicationVersion  |
 | DeviceCount  |
+| Platform  |
 
 There are no filters for this report.
 
@@ -884,7 +885,19 @@ The following table contains the possible output when calling the `AppInvRawData
 |     EmailAddress  |
 |     UserName  |
 
-There are no filters for this report.
+You can filter the `AppInvRawData` report using the `eq` comparison operator on the following properties: 
+- ApplicationName
+- ApplicationPublisher
+- ApplicationShortVersion
+- ApplicationVersion
+- DeviceId
+- DeviceName
+- OSDescription
+- OSVersion
+- Platform
+- UserId
+- EmailAddress
+- UserName
 
 ## ChromeOSDevices report
 
