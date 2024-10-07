@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/01/2024
+ms.date: 09/19/2024
 ms.topic: article
 ms.service: microsoft-intune
 ms.suite: ems
@@ -73,6 +73,7 @@ The following features are available and supported in Microsoft GCC High and/or 
 | --- | --- |
 | Standard MDM features | ✅ <br/><br/> You can use app policies, device configuration profiles, compliance policies, and more. |
 | Mobile Threat Defense (MTD) | ✅ <br/><br/>Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices with MTD vendors that **also support** the GCC High environment can be used. When you sign in to a GCC High tenant, you see the connectors that are available in these environments. |
+| Microsoft Defender for Endpoint security settings management (public preview)| ✅ <br/><br/> On devices onboarded to Defender but not enrolled in Intune, you can use Intune endpoint security policies to manage Defender security settings. For more information on this feature, go to [Defender for Endpoint security settings management](../protect/mde-security-integration.md). |
 | Platform support | ✅ <br/><br/> You can use the same operating systems - Android, AOSP, iOS/iPadOS, Linux, macOS, and Windows. <br/><br/>- **Android (AOSP)**: There are some device restrictions. For more information, go to [Supported operating systems and browsers in Intune - AOSP](supported-devices-browsers.md#android). <br/>- **Linux**: Generally available (GA) in February 2024.|
 | Remote Help | ✅ <br/><br/> Remote Help is supported in GCC on Android, macOS, and Windows devices. It's not supported in GCC High or DoD.<br/><br/> For more information on this feature, go to [Remote Help in Microsoft Intune](../fundamentals/remote-help.md). |
 | Windows Autopilot device preparation | ✅ <br/><br/> Some features are available now, such as user-driven deployments, and some are still [in the planning phase](#in-the-planning-phase). For more information on the recent changes to Windows Autopilot device preparation, go to [Blog: Windows deployment with the next generation of Windows Autopilot](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/windows-deployment-with-the-next-generation-of-windows-autopilot/ba-p/4148169). <br/><br/> To get started with Windows Autopilot device preparation, go to [Windows Autopilot Device Preparation overview](/autopilot/device-preparation/overview). |
