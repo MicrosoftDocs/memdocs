@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chrimo
+ms.reviewer: lakasa, pratikshah, saudm, jonshi
 ms.suite: ems
 search.appverid: 
 #ms.tgt_pltfrm:
@@ -29,6 +29,8 @@ ms.collection:
 - tier2
 - essentials-security
 ---
+
+<!--ms.reviewer review required before publish-->
 
 # Windows 365 security
 
