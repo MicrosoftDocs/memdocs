@@ -20,9 +20,6 @@ ms.collection: tier3
 
 The **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
 
-> [!Note]  
-> In version 2006 and earlier, Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
-
 ## Prerequisites
 
 - Sufficient disk space on the top-level software update point's `WSUSContent` directory to store the source binary content for third-party software updates.
