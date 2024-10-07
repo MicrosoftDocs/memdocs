@@ -29,6 +29,8 @@ ms.collection:
 - tier2
 ---
 
+<!--ms.reviewer review required before publish-->
+
 # Windows 365 service resilience
 
 Windows 365 is designed to provide a resilient and reliable service for organizations and end users, connecting to, and using their Cloud PCs. 

@@ -29,6 +29,8 @@ ms.collection:
 - tier2
 ---
 
+<!--ms.reviewer review required before publish-->
+
 # Windows 365 architecture
 
 Windows 365 provides a per-user per-month license model by hosting Cloud PCs on behalf of customers in Microsoft Azure. In this model, there’s no need to consider storage, compute infrastructure architecture, or costs. The Windows 365 architecture also lets you use your existing investments in Azure networking and security. Each Cloud PC is provisioned according to the configuration you define in the Windows 365 section of the Microsoft Intune admin center.

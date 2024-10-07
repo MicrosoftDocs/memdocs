@@ -30,6 +30,8 @@ ms.collection:
 - essentials-privacy
 ---
 
+<!--ms.reviewer review required before publish-->
+
 # Privacy, customer data, and customer content in Windows 365
 
 Windows 365 is a cloud-based service that lets you provision and manage Cloud PC for your users. You manage the Cloud PCs with the rest of your devices by using Microsoft Intune (Windows 365 Enterprise) or a self-serviced experience (Windows 365 Business). This documentation provides details on data platform and privacy compliance for Windows 365. Unless otherwise specified, the term Windows 365 in this document refers to both Windows 365 Enterprise and the Windows 365 Business. Where the details below differ, each product is called out individually.

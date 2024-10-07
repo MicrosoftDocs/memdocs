@@ -29,6 +29,8 @@ ms.collection:
 - tier2
 ---
 
+<!--ms.reviewer review required before publish-->
+
 # Windows 365 identity and authentication
 
 A Cloud PC user's identity defines which access management services manage that user and Cloud PC. This identity defines:

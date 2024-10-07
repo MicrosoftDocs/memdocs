@@ -29,6 +29,8 @@ ms.collection:
 - tier1
 ---
 
+<!--ms.reviewer review required before publish-->
+
 # Business continuity and disaster recovery overview
 
 Windows 365 provides highly resilient user cloud pcs, including:

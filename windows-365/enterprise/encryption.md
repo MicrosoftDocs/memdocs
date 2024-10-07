@@ -29,6 +29,8 @@ ms.collection:
 - tier2
 ---
 
+<!--ms.reviewer review required before publish-->
+
 # Data encryption in Windows 365
 
 Windows 365 encrypts data at rest and in transit as explained in this article.
