@@ -2,7 +2,7 @@
 title: Enable third-party updates
 titleSuffix: Configuration Manager
 description: Enable third-party updates in Configuration Manager
-ms.date: 08/02/2021
+ms.date: 10/08/2024
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: conceptual
@@ -13,6 +13,9 @@ ms.localizationpriority: medium
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
 ---
+
+> [!Note]
+> Microsoft does not test or verify third party update catalogs or their contents in any way. Before deploying you should verify that any updates downloaded from third party update catalogs are free from malicious software and verify them in a testing environment prior to deploying them in your environment.
 
 # Enable third-party updates
 
