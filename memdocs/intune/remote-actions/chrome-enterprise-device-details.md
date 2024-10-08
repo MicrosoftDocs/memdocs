@@ -40,17 +40,17 @@ You can view synced devices in the **Devices** > **All devices** list and throug
 
 ## Prerequisites  
 
-To view ChromeOS devices and device details, you must be assigned a role that has read permission for *Chrome Enterprise*.  
+To view ChromeOS devices and device details, you must be assigned a role with *read* permission for *Chrome Enterprise*.  
 
 Devices must be enrolled before you can see them in the admin center. Enrollment for ChromeOS devices is done in the Google Admin center. You can create the connection before or after you enroll devices. For more information, see [Enroll ChromeOS devices](https://support.google.com/chrome/a/answer/1360534) (opens Chrome Enterprise and Education Help).
 
 ## View ChromeOS devices  
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** to view an aggregated list of all devices in Intune, including those running ChromeOS.  The following information is shown for ChromeOS devices: 
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** to view an aggregated list of all devices in Intune, including those running ChromeOS. The following information is shown for ChromeOS devices: 
 
 * **Device name**: Device names for ChromeOS devices appear as `Chrome- {serialNumber}`. 
 * **Managed by**: ChromeOS devices are managed by **Intune**. 
 * **Ownership**: ChromeOS devices are always marked as **Corporate**.  
-* **Compliance**: Compliance policies are not supported with ChromeOS devices in Intune so they'll appear in this column as **Not evaluated**.  
+* **Compliance**: Compliance policies aren't supported with ChromeOS devices in Intune, so they appear in this column as **Not evaluated**.  
 
 Select **Filter** to filter the device list by platform. You can also go to the navigation menu and select **ChromeOS** for an exclusive view of ChromeOS devices.    
 
@@ -78,9 +78,9 @@ You can create dynamic device groups based on a [Google Admin organizational uni
    1. For **Membership type**, select **Dynamic Device**.
    2. Select **Add a dynamic query**.   
    3. For **Property**, select **enrollmentProfileName**. Select the **Operator**, depending on how you want the rule to work. For **Value**, enter the name of a Google Admin organizational unit.  
-2. Create a scope tag for an Intune RBAC role. The scope tag determines the level of access for the Intune role.  When you get to **Assignments**, include the dynamic device group you previously created. For more information, see [Use role-based access (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md#to-create-a-scope-tag).  
+2. Create a scope tag for an Intune RBAC role. The scope tag determines the level of access for the Intune role. When you get to **Assignments**, include the dynamic device group you previously created. For more information, see [Use role-based access (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md#to-create-a-scope-tag).  
 
-After you save the scope tag, it's applied to every device that's part of the dynamic device group. The organizational unit's information syncs with the *enrollmentProfileName* device object property in Microsoft Entra ID, using the full path format that's shown in [System info](#system-info). 
+After you save the scope tag, it applies to every device that's part of the dynamic device group. The organizational unit's information syncs with the *enrollmentProfileName* device object property in Microsoft Entra ID, using the full path format shown in [System info](#system-info). 
 
 For example: `/OU Level1/OU Level2`. 
 

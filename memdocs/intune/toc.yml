@@ -1721,7 +1721,7 @@ items:
         - name: Examine device inventory
           href: ./remote-actions/device-inventory.md
         - name: View ChromeOS device information
-        - href: ./remote-actions/chrome-enterprise-device-details.md
+          href: ./remote-actions/chrome-enterprise-device-details.md
         - name: Collect diagnostics
           href: ./remote-actions/collect-diagnostics.md
         - name: Remove apps and configuration
