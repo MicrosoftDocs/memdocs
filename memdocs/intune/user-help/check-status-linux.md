@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/29/2023
+ms.date: 10/08/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -50,17 +50,19 @@ There are three statuses in the Intune app:
 
 To view compliance issues: 
 
-1. Sign in to the Intune app.
-2. Select a device. 
-3. On the device details page, select **View Issues**. This option is only available when issues are present. 
+1. Sign in to the Intune app.  
 
-The app shows you the: 
+1. Select a device.  
+   
+1. On the device details page, select **View Issues**. This option is only available when issues are present.  
 
-  * Action required, such as *Upgrade your operating system*. 
+The app shows you the following information:  
 
-  * Reason for noncompliance, such as *This device’s operating system is not supported*. 
+  * The action required, such as *Upgrade your operating system*.  
 
-  * **How to resolve this** link that, when available, points to a help article on learn.microsoft.com.  
+  * The reason for noncompliance, such as *This device’s operating system is not supported*.  
+
+  * The **How to resolve this** link that, when available, points to a help article on learn.microsoft.com.  
 
 ### Operating system and version 
 When OS and version requirements are enforced, devices running Linux flavors or versions that aren't supported are marked as noncompliant. To resolve this issue, upgrade to or install a version that’s supported by your organization.  

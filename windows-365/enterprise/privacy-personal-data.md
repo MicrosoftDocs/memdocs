@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: anbiswas
+ms.reviewer: tnevins1, pratikshah
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,6 +29,8 @@ ms.collection:
 - tier2
 - essentials-privacy
 ---
+
+<!--ms.reviewer review required before publish-->
 
 # Privacy, customer data, and customer content in Windows 365
 
