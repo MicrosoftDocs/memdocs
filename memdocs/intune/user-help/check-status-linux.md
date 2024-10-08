@@ -54,6 +54,7 @@ There are three statuses in the Intune app:
 
 To view compliance issues: 
 
+
 1. Sign in to the Intune app. 
 
 2. Select a device.  
