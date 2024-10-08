@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/27/2023
+ms.date: 09/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -49,12 +49,6 @@ Possible configurations are:
   - If you add a license entitling Intune to a user previously managed by Basic Mobility and Security for Microsoft 365, their devices are switched to Intune management. To avoid losing Basic Mobility and Security for Microsoft 365 configuration on users' devices, make sure to assign Intune configurations to users before switching them to Intune.
 
 ## Set MDM authority to Intune
-
-For tenants using the 1911 service release and later, the MDM authority is automatically set to Intune.
-
-For tenants using the 1911 service release and later, if you activated Basic Mobility and Security, follow the steps in this section.
-
-For pre-1911 service release tenants, if you haven't yet set the MDM authority, follow the steps in this section.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
 2. Under **Mobile Device Management Authority**, choose your MDM authority from the following options:
@@ -114,7 +108,7 @@ To enable coexistence, you must add Intune as the MDM authority for your environ
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with Microsoft Entra Global or Intune service administrator rights.
 2. Navigate to **Devices**.
-3. The **Add MDM Authority blade** displays.
+3. The **Add MDM Authority blade** banner is displayed.
 4. To switch the MDM authority from *Office 365* to *Intune* and enable coexistence, select **Intune MDM Authority** > **Add**.
   
    :::image type="content" alt-text="Screenshot of Add MDM Authority screen." source="./media/mdm-authority-set/add-mdm-authority.png" lightbox="./media/mdm-authority-set/add-mdm-authority.png":::

@@ -496,7 +496,7 @@ When a web page requests to open an external app, users will see a pop-up asking
 ### Copilot
 
 > [!NOTE]
-> Copilot is also known as Bing Chat Enterprise. Only Copilot eligible users can use Copilot. For more information, see [Frequently asked questions about Copilot](/copilot/faq)
+> As of version 128, Copilot for work or school accounts has been deprecated. Therefore, the following policies will no longer be valid in version 128
 
 Copilot is available on Microsoft Edge for iOS and Android. Users can start Copilot by clicking on Copilot button in bottom bar. 
 
@@ -669,6 +669,14 @@ For more information about how to use Edge for iOS and Android and Microsoft Ent
 Organizations may require users to authenticate with NTLM to access intranet web sites. By default, users are prompted to enter credentials each time they access a web site that requires NTLM authentication as NTLM credential caching is disabled. 
 
 Organizations can enable NTLM credential caching for particular web sites. For these sites, after the user enters credentials and successfully authenticates, the credentials are cached by default for 30 days.
+
+> [!NOTE]
+> If you're using a proxy server, ensure that it's configured using the NTLMSSOURLs policy where you specifically specify both **https** and **http** as part of the key value. 
+>
+> Currently, both **https** and **http** schemes need to be specified in the NTLMSSOURLs key value. For example, you need to configure both `https://your-proxy-server:8080`
+> and `http://your-proxy-server:8080`. Currently, specifying the format as host:port (such as `your-proxy-server:8080`) is not sufficient.
+>
+> In addition, the wildcard symbol (*) is not supported when configuring proxy servers in the NTLMSSOURLs policy.
 
 |Key  |Value  |
 |:---------|:---------|

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/17/2024
+ms.date: 09/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -58,7 +58,7 @@ Following are brief descriptions of each endpoint security policy type. To learn
 
 - [Attack surface reduction](../protect/endpoint-security-asr-policy.md) - When Defender antivirus is in use on your Windows 10/11 devices, use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
 
-- [Disk encryption](../protect/endpoint-security-disk-encryption-policy.md) - Endpoint security Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault or BitLocker. This focus makes it easy for security admins to manage disk encryption settings without having to navigate a host of unrelated settings.
+- [Disk encryption](../protect/endpoint-security-disk-encryption-policy.md) - Endpoint security Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault, BitLocker, and Personal Data Encryption (for Windows). This focus makes it easy for security admins to manage disk or folder level encryption settings without having to navigate a host of unrelated settings.
 
 - [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) - When you integrate Microsoft Defender for Endpoint with Intune, use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Microsoft Defender for Endpoint.
 
@@ -72,7 +72,7 @@ To manage Intune endpoint security policies, you must use an account that includ
 
 > [!NOTE]
 >
-> Before June of 2024, Intune endpoint security polices were managed through rights provided by the *Security baselines* permission. Beginning in June of 2024, Intune began to release granular permissions to manage individual endpoint security workloads.
+> Before June of 2024, Intune endpoint security policies were managed through rights provided by the *Security baselines* permission. Beginning in June of 2024, Intune began to release granular permissions to manage individual endpoint security workloads.
 >
 > Each time a new granular permission for an endpoint security workload is added to Intune, those same rights are removed from the *Security baselines* permission. If you use custom roles with the *Security baselines* permission, the new RBAC permission is assigned automatically to your custom roles with the same rights that were granted through the *Security baseline* permission. This auto-assignment ensures your admins continue to have the same permissions they have today.
 
@@ -183,8 +183,9 @@ After creating the new policy, review and edit the policy to make changes to its
 ### To duplicate a policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select the policy that you want to copy. Next, select **Duplicate**. If *Duplicate* isn't available, select the ellipsis (**…**) to the right of the policy and then select **Duplicate**.
-3. Provide a **New name** for the policy, and then select **Save**.
+2. Locate the policy that you want to copy from the policy list, and then select the ellipsis (**…**) for that line to open the *Context menu*.
+3. Select **Duplicate**.
+4. Provide a **New name** for the policy, and then select **Save**.
 
 ### To edit a policy
 

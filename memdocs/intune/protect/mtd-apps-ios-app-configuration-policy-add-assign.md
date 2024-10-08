@@ -176,7 +176,7 @@ Use the same Microsoft Entra account previously configured in the [Symantec Endp
 
 ### Sophos Mobile app configuration policy
 
-Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article. For more information, see [Sophos Intercept X for Mobile iOS - Available managed settings](https://support.sophos.com/support/s/article/KB-000038801) in the Sophos knowledge base.
+Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article. For more information, see [Sophos Intercept X for Mobile iOS - Available managed settings](https://support.sophos.com/support/s/article/KBA-000006738) in the Sophos knowledge base.
 
 ### Trellix Mobile Security app configuration policy
 

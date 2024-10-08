@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2024
+ms.date: 09/18/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -192,7 +192,7 @@ To manage the Microsoft 365 Feed, you can use the following key:
 This key can be used by managed devices and managed apps.
 
 
-### Copilot with commercial data protection
+### Copilot with enterprise data protection
 
 Admins can now enable or disable Copilot in Microsoft 365 app by configuring the following setting in the Intune admin center. To deploy this app setting, use an [app configuration policy](app-configuration-policies-overview.md) in Intune.
 

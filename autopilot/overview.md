@@ -84,5 +84,5 @@ For a tutorial with detailed instructions on configuring Windows Autopilot, see 
 
 ## Related content
 
-- [Enroll Windows devices in Intune by using Windows Autopilot](/intune/enrollment-autopilot).
+- [Enroll Windows devices in Intune by using Windows Autopilot](enrollment-autopilot.md).
 - [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md).

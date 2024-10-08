@@ -30,9 +30,6 @@ ms.collection:
 
 # Remote device actions for ChromeOS   
 
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).   
-
 Remotely run device actions on ChromeOS devices synced with Microsoft Intune. There are four remote actions supported on ChromeOS devices:  
 
 * Deprovision  

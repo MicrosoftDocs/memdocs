@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/27/2024
+ms.date: 09/13/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,7 +40,7 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 >
 > Using Autopilot for existing devices could be used as a method to convert existing hybrid Microsoft Entra devices into Microsoft Entra devices. Using the setting **Convert all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned groups into a Microsoft Entra device. The setting only registers the devices in the assigned groups for the Autopilot service.
 
-## Prerequisites
+## Requirements
 
 - A currently supported version of Microsoft Configuration Manager current branch.
 

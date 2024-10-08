@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/13/2024
+ms.date: 09/17/2024
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -114,4 +114,4 @@ For more information about troubleshooting Win32 apps, see [Win32 app installati
 
 ## Next steps
 
-- [Troubleshoot app installation issues](/troubleshoot/mem/intune/troubleshoot-app-install)
+- [Troubleshoot app installation issues](/troubleshoot/mem/intune/app-management/troubleshoot-win32-app-install)
