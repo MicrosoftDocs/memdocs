@@ -37,7 +37,7 @@ Remotely run device actions on ChromeOS devices synced with Microsoft Intune. Th
 * Wipe  
 * Restart (only for kiosk devices and managed guest session devices)  
 
-To access remote actions, select a device in your **Chrome Enterprise (preview)** list or go to **Devices** > **All devices** and select a device. This article describes the remote actions, and provides information about required permissions and known issues.  
+To access remote actions, select a device in your **Chrome Enterprise** list or go to **Devices** > **All devices** and select a device. This article describes the remote actions, and provides information about required permissions and known issues.  
 
 ## Prerequisites     
 [Set up the Chrome Enterprise connector](chrome-enterprise-connector-configure.md) with Microsoft Intune, and enroll devices using the Google Admin console. 

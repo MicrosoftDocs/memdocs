@@ -1476,6 +1476,9 @@ items:
         - name: Get Apple MDM push certificate   
           href: ./enrollment/apple-mdm-push-certificate-get.md
           displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment  
+        - name: Configure Chrome Enterprise connector 
+          href: ./enrollment/chrome-enterprise-connector-configure.md 
+          displayName: chrome os; connector; device management; google admin       
         - name: Add corporate identifiers
           href: ./enrollment/corporate-identifiers-add.md
           displayName: COD; corporate owned; IMEI; device ownership; serial   
@@ -1506,14 +1509,6 @@ items:
             href: ./enrollment/create-device-platform-restrictions.md  
           - name: Create device limit restrictions  
             href: ./enrollment/create-device-limit-restrictions.md  
-        - name: Configure Chrome Enterprise connector
-          items: 
-          - name: Configure Chrome Enterprise connector
-            href: ./enrollment/chrome-enterprise-connector-configure.md 
-          - name: View ChromeOS device information in Intune
-            href: ./enrollment/chrome-enterprise-device-details.md              
-          - name: Remote device actions for ChromeOS  
-            href: ./enrollment/chrome-enterprise-remote-actions.md  
   
       - name: Set up Windows enrollment
         items:  
@@ -1711,6 +1706,8 @@ items:
           href: ./remote-actions/find-primary-user.md
       - name: Other actions
         items:
+        - name: Remote actions for ChromeOS
+          href: ./remote-actions/chrome-enterprise-remote-actions.md
         - name: Locate device
           href: ./remote-actions/device-locate.md
         - name: Rename device
@@ -1723,6 +1720,8 @@ items:
           href: ./remote-actions/device-sync.md
         - name: Examine device inventory
           href: ./remote-actions/device-inventory.md
+        - name: View ChromeOS device information
+        - href: ./remote-actions/chrome-enterprise-device-details.md
         - name: Collect diagnostics
           href: ./remote-actions/collect-diagnostics.md
         - name: Remove apps and configuration
