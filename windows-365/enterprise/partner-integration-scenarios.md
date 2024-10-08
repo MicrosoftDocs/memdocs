@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Requirements to set up Citrix HDX Plus for Windows 365 Enterprise
+title: Partner integration scenarios for Windows 365.
 titleSuffix:
-description: Learn about requirements for using Citrix HDX Plus with Windows 365 Enterprise.
+description: Learn about partner integration scenarios for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/21/2023
+ms.date: 08/21/202310/09/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
