@@ -50,9 +50,11 @@ There are three statuses in the Intune app:
 
 To view compliance issues: 
 
-1. Sign in to the Intune app.
-2. Select a device. 
-3. On the device details page, select **View Issues**. This option is only available when issues are present. 
+1. Sign in to the Intune app.  
+
+1. Select a device.  
+   
+1. On the device details page, select **View Issues**. This option is only available when issues are present.  
 
 The app shows you the following information:  
 
