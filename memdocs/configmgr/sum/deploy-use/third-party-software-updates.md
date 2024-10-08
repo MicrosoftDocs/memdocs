@@ -14,8 +14,6 @@ ms.reviewer: mstewart,aaroncz
 ms.collection: tier3
 ---
 
-> [!Note]
-> Microsoft does not test or verify third party update catalogs or their contents in any way. Before deploying you should verify that any updates downloaded from third party update catalogs are free from malicious software and verify them in a testing environment prior to deploying them in your environment.
 
 # Enable third-party updates
 
@@ -23,8 +21,9 @@ ms.collection: tier3
 
 The **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
 
-> [!Note]  
-> In version 2006 and earlier, Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
+> [!Note]
+> - Microsoft does not test or verify third party update catalogs or their contents in any way. Before deploying you should verify that any updates downloaded from third party update catalogs are free from malicious software and verify them in a testing environment prior to deploying them in your environment.
+> - In version 2006 and earlier, Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
 
 ## Prerequisites
 
