@@ -2,7 +2,7 @@
 title: Enable third-party updates
 titleSuffix: Configuration Manager
 description: Enable third-party updates in Configuration Manager
-ms.date: 08/02/2021
+ms.date: 10/08/2024
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: conceptual
@@ -14,14 +14,16 @@ ms.reviewer: mstewart,aaroncz
 ms.collection: tier3
 ---
 
+
 # Enable third-party updates
 
 *Applies to: Configuration Manager (current branch)*
 
 The **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
 
-> [!Note]  
-> In version 2006 and earlier, Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
+> [!Note]
+> - Microsoft does not test or verify third party update catalogs or their contents in any way. Before deploying you should verify that any updates downloaded from third party update catalogs are free from malicious software and verify them in a testing environment prior to deploying them in your environment.
+> - In version 2006 and earlier, Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
 
 ## Prerequisites
 
