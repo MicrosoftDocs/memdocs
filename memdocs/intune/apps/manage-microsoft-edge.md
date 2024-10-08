@@ -150,17 +150,19 @@ Edge supports the following settings for configuration:
 These settings can be deployed to the app regardless of device enrollment status.
 
 ### New Tab Page layout
-The **Custom** layout is the default one for the new tab page. It shows top site shortcuts and news feed without wallpaper. Users can change the layout according to their preferences. Organizations can also manage the layout settings.
+The **inspirational** layout is the default one for the new tab page. It shows top site shortcuts, wallpaper and news feed. Users can change the layout according to their preferences. Organizations can also manage the layout settings.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected <br> **custom** (Default) Custom is selected, top site shortcuts toggle is on, wallpaper toggle is off, and news feed toggle is on|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** (Default) Inspirational is selected <br> **informational** Informational is selected <br> **custom** Custom is selected, top site shortcuts toggle is on, wallpaper toggle is off, and news feed toggle is on|
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** Turn on top site shortcuts <br> **wallpaper** Turn on wallpaper <br> **newsfeed** Turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed` |
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout settings <br> **false** Users cannot change the page layout settings. The page layout is determined by the values specified via the policy or default values will be used |
 
-> [!NOTE]
+> [!IMPORTANT]
 > **NewTabPageLayout** policy is intended to set the initial layout. Users can change page layout settings based on their reference. Therefore, **NewTabPageLayout** policy only takes effect if users do not change layout settings. You can enforce **NewTabPageLayout** policy by configuring **UserSelectable**=false.
 
+> [!NOTE]
+> As of version 129.0.2792.84, the default page layout is changed to **inspirational**.
 
 An example of turning off the news feeds
 - com.microsoft.intune.mam.managedbrowser.NewTabPageLayout=**custom**
