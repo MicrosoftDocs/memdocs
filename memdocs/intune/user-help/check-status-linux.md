@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/29/2023
+ms.date: 10/08/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -54,13 +54,13 @@ To view compliance issues:
 2. Select a device. 
 3. On the device details page, select **View Issues**. This option is only available when issues are present. 
 
-The app shows you the: 
+The app shows you the following information:  
 
-  * Action required, such as *Upgrade your operating system*. 
+  * The action required, such as *Upgrade your operating system*.  
 
-  * Reason for noncompliance, such as *This device’s operating system is not supported*. 
+  * The reason for noncompliance, such as *This device’s operating system is not supported*.  
 
-  * **How to resolve this** link that, when available, points to a help article on learn.microsoft.com.  
+  * The **How to resolve this** link that, when available, points to a help article on learn.microsoft.com.  
 
 ### Operating system and version 
 When OS and version requirements are enforced, devices running Linux flavors or versions that aren't supported are marked as noncompliant. To resolve this issue, upgrade to or install a version that’s supported by your organization.  
