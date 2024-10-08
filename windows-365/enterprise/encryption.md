@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: anbiswas
+ms.reviewer: ryclar, pratikshah, saudm, jonshi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,6 +28,8 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
+
+<!--ms.reviewer review required before publish-->
 
 # Data encryption in Windows 365
 
