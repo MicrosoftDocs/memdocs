@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/16/2024
+ms.date: 10/08/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -60,47 +60,47 @@ In addition to supporting the core App Protection Policy settings, apps are also
 
 The below apps support the Core Intune App Protection Policy settings and are also capable of supporting advanced App Protection Policy and App Configuration Policy settings:
 
-|App|Platform|[Core App Protection Policy settings](apps-supported-intune-apps.md#core-app-settings)|[App configuration](app-configuration-policies-overview.md)|Org allowed accounts ([iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps), [Android](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps))|Sync policy managed app data with native apps ([iOS](app-protection-policy-settings-ios.md#functionality), [Android](app-protection-policy-settings-android.md#functionality))|Org data notifications ([iOS](app-protection-policy-settings-ios.md#functionality), [Android](app-protection-policy-settings-android.md#functionality))|Open data into Org documents ([iOS](app-protection-policy-settings-ios.md#data-transfer), [Android](app-protection-policy-settings-android.md#data-transfer))|Save copies of org data ([iOS](app-protection-policy-settings-ios.md#data-transfer), [Android](app-protection-policy-settings-android.md#data-transfer))|
+|App|Platform|[Core App Protection Policy settings](apps-supported-intune-apps.md#core-app-settings)|[App configuration](app-configuration-policies-overview.md)|Org allowed accounts ([iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps), [Android](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps))|Sync policy managed app data with native apps ([iOS](app-protection-policy-settings-ios.md#functionality), [Android](app-protection-policy-settings-android.md#functionality))|Org data notifications ([iOS](app-protection-policy-settings-ios.md#functionality), [Android](app-protection-policy-settings-android.md#functionality))|Open data into Org documents ([iOS](app-protection-policy-settings-ios.md#data-transfer), [Android](app-protection-policy-settings-android.md#data-transfer))|Save copies of org data ([iOS](app-protection-policy-settings-ios.md#data-transfer), [Android](app-protection-policy-settings-android.md#data-transfer))|Non-working time ([iOS](app-protection-policy-settings-ios.md#conditional-launch), [Android](app-protection-policy-settings-android.md#conditional-launch))|
 |--- |--- |:-: |--- |:-: |:-: |:-: |:-: |:-: |
-|Microsoft Azure|[Android](https://play.google.com/store/apps/details?id=com.microsoft.azure&pcampaignid=web_share)|✔|No settings|✖|N/A|✖|✖|N/A| 
-|Microsoft Azure|[iOS](https://apps.apple.com/app/microsoft-azure/id1219013620)|✔|No settings|✖|N/A|✖|✖|N/A| 
-|Microsoft Copilot|[Android](https://play.google.com/store/apps/details?id=com.microsoft.copilot)|✔|No settings|✖|N/A|✖|✖|N/A|
-|Microsoft Copilot|[iOS](https://apps.apple.com/us/app/microsoft-copilot/id6472538445)|✔|No settings|✔ Supported for v28.1.420324001 or later|N/A|✖|✖|N/A|
-|Microsoft Edge|[Android](https://play.google.com/store/apps/details?id=com.microsoft.emmx)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|N/A|N/A|✔|
-|Microsoft Edge|[iOS](https://apps.apple.com/us/app/microsoft-edge/id1288723196)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|N/A|N/A|✔|
-|Microsoft Excel|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.excel)|✔|No settings|✔|N/A|✖|✖|✔|
-|Microsoft Excel|[iOS](https://apps.apple.com/us/app/microsoft-excel/id586683407)|✔|No settings|✔|N/A|✖|✖|✔|
-|Microsoft Launcher|[Android](https://play.google.com/store/apps/details?id=com.microsoft.launcher)|✔|✔ see [Launcher app config](configure-microsoft-launcher.md)|✖|N/A|✖|✖|N/A|
-|Microsoft Lens - PDF Scanner|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens)|✔|No settings|✖|N/A|✖|✖|N/A|
-|Microsoft Lens - PDF Scanner|[iOS](https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059)|✔|No settings|✖|N/A|✖|✖|N/A|
-|Microsoft Lists|[iOS](https://apps.apple.com/us/app/microsoft-lists/id1530637363)|✔|No settings|✔|N/A|N/A|✔|✔|
-|Microsoft Lists|[Android](https://play.google.com/store/apps/details?id=com.microsoft.lists.public&gl=US)|✔|No settings|✖|N/A|N/A|✖|✖|
-|Microsoft Loop|[iOS](https://apps.apple.com/us/app/microsoft-loop/id1637682491)|✔|No settings|✔|N/A|✖|N/A|N/A|
-|Microsoft Loop|[Android](https://play.google.com/store/apps/details?id=com.microsoft.loop)|✔|No settings|✔|N/A|✖|N/A|N/A|
-|Office (Microsoft 365)|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|
-|Microsoft 365 (Office)|[iOS](https://apps.apple.com/app/microsoft-office/id541164041)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✔ Supported for v2.72 or later|✖|✔|
-|Microsoft OneDrive|[Android](https://play.google.com/store/apps/details?id=com.microsoft.skydrive)|✔|No settings|✔|N/A|✖|✔|N/A|
-|Microsoft OneDrive|[iOS](https://apps.apple.com/us/app/onedrive-cloud-storage-for/id477537958)|✔|No settings|✔|N/A|✖|✔|N/A|
-|Microsoft OneNote|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.onenote)|✔|No settings|✔|N/A|✖|✖|N/A|
-|Microsoft OneNote|[iOS](https://apps.apple.com/us/app/microsoft-onenote-for-iphone/id410395246)|✔|No settings|✔|N/A|✖|✖|N/A|
-|Microsoft Outlook|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔|✔|✖|
-|Microsoft Outlook|[iOS](https://apps.apple.com/us/app/microsoft-outlook/id951937596)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔ Supports "Block org data" for v4.34.0 or later|✔|✔|
-|Microsoft Planner|[Android](https://play.google.com/store/apps/details?id=com.microsoft.planner)|✔|No settings|✖|N/A|✖|✖|N/A|
-|Microsoft Planner|[iOS](https://apps.apple.com/us/app/microsoft-planner/id1219301037)|✔|No settings|✖|N/A|✖|✖|N/A|
-|Microsoft PowerPoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint)|✔|No settings|✔|N/A|✖|✖|✔|
-|Microsoft PowerPoint|[iOS](https://apps.apple.com/us/app/microsoft-powerpoint/id586449534)|✔|No settings|✔|N/A|✖|✖|✔|
-|Microsoft Remote Desktop|[Android](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)|✔|✔|✖|N/A|N/A|N/A|N/A|
-|Microsoft Remote Desktop|[iOS](https://apps.apple.com/us/app/remote-desktop-mobile/id714464092)|✔|✔|✖|N/A|N/A|N/A|N/A|
-|Microsoft SharePoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.sharepoint)|✔|No settings|✖|N/A|✖|✖|N/A|
-|Microsoft SharePoint|[iOS](https://apps.apple.com/us/app/microsoft-sharepoint/id1091505266)|✔|No settings|✖|N/A|✖|✖|N/A|
-|Microsoft Teams|[Android](https://play.google.com/store/apps/details?id=com.microsoft.teams)|✔|No settings|✔|N/A|✔|✔|✔|
-|Microsoft Teams|[iOS](https://apps.apple.com/us/app/microsoft-teams/id1113153706)|✔|No settings|✔|N/A|✔ Supported for v2.0.22 or later|✔|✔|
-|Microsoft To-Do|[Android](https://play.google.com/store/apps/details?id=com.microsoft.todos)|✔|No settings|✖|N/A|✖|✖|N/A|
-|Microsoft To-Do|[iOS](https://apps.apple.com/us/app/microsoft-to-do/id1212616790)|✔|No settings|✖|N/A|✖|✖|N/A|
-|Microsoft Word|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.word)|✔|No settings|✔|N/A|✖|✖|✔|
-|Microsoft Word|[iOS](https://apps.apple.com/us/app/microsoft-word/id586447913)|✔|No settings|✔|N/A|✖|✖|✔|
-|Microsoft Viva Engage|[Android](https://play.google.com/store/apps/details?id=com.yammer.v1)|✔|No settings|✔|N/A|✖|✖|N/A|
-|Microsoft Viva Engage|[iOS](https://apps.apple.com/us/app/yammer/id289559439)|✔|No settings|✔|N/A|✖|✖|N/A|
+|Microsoft Azure|[Android](https://play.google.com/store/apps/details?id=com.microsoft.azure&pcampaignid=web_share)|✔|No settings|✖|N/A|✖|✖|N/A|✖| 
+|Microsoft Azure|[iOS](https://apps.apple.com/app/microsoft-azure/id1219013620)|✔|No settings|✖|N/A|✖|✖|N/A|✖| 
+|Microsoft Copilot|[Android](https://play.google.com/store/apps/details?id=com.microsoft.copilot)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
+|Microsoft Copilot|[iOS](https://apps.apple.com/us/app/microsoft-copilot/id6472538445)|✔|No settings|✔ Supported for v28.1.420324001 or later|N/A|✖|✖|N/A|✖|
+|Microsoft Edge|[Android](https://play.google.com/store/apps/details?id=com.microsoft.emmx)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|N/A|N/A|✔|✔|
+|Microsoft Edge|[iOS](https://apps.apple.com/us/app/microsoft-edge/id1288723196)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|N/A|N/A|✔|✔|
+|Microsoft Excel|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.excel)|✔|No settings|✔|N/A|✖|✖|✔|✖|
+|Microsoft Excel|[iOS](https://apps.apple.com/us/app/microsoft-excel/id586683407)|✔|No settings|✔|N/A|✖|✖|✔|✖|
+|Microsoft Launcher|[Android](https://play.google.com/store/apps/details?id=com.microsoft.launcher)|✔|✔ see [Launcher app config](configure-microsoft-launcher.md)|✖|N/A|✖|✖|N/A|✖|
+|Microsoft Lens - PDF Scanner|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
+|Microsoft Lens - PDF Scanner|[iOS](https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
+|Microsoft Lists|[iOS](https://apps.apple.com/us/app/microsoft-lists/id1530637363)|✔|No settings|✔|N/A|N/A|✔|✔|✖|
+|Microsoft Lists|[Android](https://play.google.com/store/apps/details?id=com.microsoft.lists.public&gl=US)|✔|No settings|✖|N/A|N/A|✖|✖|✖|
+|Microsoft Loop|[iOS](https://apps.apple.com/us/app/microsoft-loop/id1637682491)|✔|No settings|✔|N/A|✖|N/A|N/A|✖|
+|Microsoft Loop|[Android](https://play.google.com/store/apps/details?id=com.microsoft.loop)|✔|No settings|✔|N/A|✖|N/A|N/A|✖|
+|Office (Microsoft 365)|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|✖|
+|Microsoft 365 (Office)|[iOS](https://apps.apple.com/app/microsoft-office/id541164041)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✔ Supported for v2.72 or later|✖|✔|✖|
+|Microsoft OneDrive|[Android](https://play.google.com/store/apps/details?id=com.microsoft.skydrive)|✔|No settings|✔|N/A|✖|✔|N/A|✖|
+|Microsoft OneDrive|[iOS](https://apps.apple.com/us/app/onedrive-cloud-storage-for/id477537958)|✔|No settings|✔|N/A|✖|✔|N/A|✖|
+|Microsoft OneNote|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.onenote)|✔|No settings|✔|N/A|✖|✖|N/A|✖|
+|Microsoft OneNote|[iOS](https://apps.apple.com/us/app/microsoft-onenote-for-iphone/id410395246)|✔|No settings|✔|N/A|✖|✖|N/A|✖|
+|Microsoft Outlook|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔|✔|✖|✖|
+|Microsoft Outlook|[iOS](https://apps.apple.com/us/app/microsoft-outlook/id951937596)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔ Supports "Block org data" for v4.34.0 or later|✔|✔|✖|
+|Microsoft Planner|[Android](https://play.google.com/store/apps/details?id=com.microsoft.planner)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
+|Microsoft Planner|[iOS](https://apps.apple.com/us/app/microsoft-planner/id1219301037)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
+|Microsoft PowerPoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint)|✔|No settings|✔|N/A|✖|✖|✔|✖|
+|Microsoft PowerPoint|[iOS](https://apps.apple.com/us/app/microsoft-powerpoint/id586449534)|✔|No settings|✔|N/A|✖|✖|✔|✖|
+|Microsoft Remote Desktop|[Android](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)|✔|✔|✖|N/A|N/A|N/A|N/A|✖|
+|Microsoft Remote Desktop|[iOS](https://apps.apple.com/us/app/remote-desktop-mobile/id714464092)|✔|✔|✖|N/A|N/A|N/A|N/A|✖|
+|Microsoft SharePoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.sharepoint)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
+|Microsoft SharePoint|[iOS](https://apps.apple.com/us/app/microsoft-sharepoint/id1091505266)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
+|Microsoft Teams|[Android](https://play.google.com/store/apps/details?id=com.microsoft.teams)|✔|No settings|✔|N/A|✔|✔|✔|✔|
+|Microsoft Teams|[iOS](https://apps.apple.com/us/app/microsoft-teams/id1113153706)|✔|No settings|✔|N/A|✔ Supported for v2.0.22 or later|✔|✔|✔|
+|Microsoft To-Do|[Android](https://play.google.com/store/apps/details?id=com.microsoft.todos)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
+|Microsoft To-Do|[iOS](https://apps.apple.com/us/app/microsoft-to-do/id1212616790)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
+|Microsoft Word|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.word)|✔|No settings|✔|N/A|✖|✖|✔|✖|
+|Microsoft Word|[iOS](https://apps.apple.com/us/app/microsoft-word/id586447913)|✔|No settings|✔|N/A|✖|✖|✔|✖|
+|Microsoft Viva Engage|[Android](https://play.google.com/store/apps/details?id=com.yammer.v1)|✔|No settings|✔|N/A|✖|✖|N/A|✖|
+|Microsoft Viva Engage|[iOS](https://apps.apple.com/us/app/yammer/id289559439)|✔|No settings|✔|N/A|✖|✖|N/A|✖|
 
 The below apps support the core Intune App Protection Policy settings.
 
