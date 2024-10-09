@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/22/2024
+ms.date: 10/09/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -38,7 +38,8 @@ The Windows Autopilot Reset process automatically keeps information from the exi
 - Microsoft Entra device membership and mobile device management (MDM) enrollment information.
 - Simple Certificate Enrollment Protocol (SCEP) certificates.
 
-Windows Autopilot Reset blocks the user from accessing the desktop until this information is restored, including reapplying any provisioning packages. For devices enrolled in an MDM service, Windows Autopilot Reset also blocks until an MDM sync is completed. 
+Windows Autopilot Reset blocks the user from accessing the desktop until this information is restored, including reapplying any provisioning packages. For devices enrolled in an MDM service, Windows Autopilot Reset also blocks until an MDM sync is completed.
+
 > [!NOTE]
 >
 > Autopilot Reset doesn't support Microsoft Entra hybrid joined devices. For Microsoft Entra hybrid joined devices, a full device wipe is required. When a hybrid device goes through a full device reset, it might take up to 24 hours for it to be ready to be deployed again. The request can be expedited by re-registering the device.
@@ -117,9 +118,10 @@ On the device where the local Windows Autopilot reset is being performed:
 1. To trigger the local Autopilot Reset, sign into the device with an account that has local admin credentials.
 
  Once the local Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
+
 > [!NOTE]
 >
-> When local Autopilot Reset is used on a device, the device's primary user and the Microsoft Entra device owner are not updated. Admins can update them manually after the Autopilot Reset completes.
+> When local Autopilot Reset is used on a device, the device's primary user and the Microsoft Entra device owner aren't updated. Admins can update them manually after the Autopilot Reset completes.
 
 ## Reset devices with remote Windows Autopilot Reset
 
@@ -136,9 +138,10 @@ To trigger a remote Windows Autopilot Reset via Intune, follow these steps:
 1. Select **Autopilot Reset** to start the reset task.
 
 Once the reset is complete, the device is again ready for use.
+
 > [!NOTE]
 >
-> When remote Autopilot Reset is used on a device, the device's primary user and the Microsoft Entra device owner is removed. The next user who signs in after the reset will be set as the primary user and Entra device owner. Shared devices will remain shared after the Autopilot Reset.
+> When remote Autopilot Reset is used on a device, the device's primary user and the Microsoft Entra device owner is removed. The next user who signs in after the reset will be set as the primary user and Microsoft Entra device owner. Shared devices will remain shared after the Autopilot Reset.
 
 ## Troubleshooting
 
