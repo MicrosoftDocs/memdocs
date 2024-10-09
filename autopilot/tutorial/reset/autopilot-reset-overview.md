@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 10/08/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -30,7 +30,7 @@ Windows Autopilot Reset takes the device back to a business-ready state, allowin
 
 The Windows Autopilot Reset process removes or resets the following information from the existing device:
 
-- The device's primary user is removed when a remote Windows Autopilot Reset is used. The next user who signs in after the Windows Autopilot Reset will be set as the primary user. Shared devices will remain shared after the remote Autopilot Reset. 
+- The device's primary user is removed when a remote Windows Autopilot Reset is used. The next user who signs in after the Windows Autopilot Reset will be set as the primary user. Shared devices will remain shared after the remote Autopilot Reset.
 - The device's owner in Microsoft Entra is removed when a remote Windows Autopilot Reset is used. The next user who signs in after the Windows Autopilot Reset will be set as the owner.
 - Removes personal files, apps, and settings.
 - Reapplies a device's original settings.
@@ -47,7 +47,7 @@ The Windows Autopilot Reset process automatically keeps the following informatio
 - A provisioning package present on a USB drive when the reset process is started.
 - Microsoft Entra device membership and Intune enrollment information.
 - System Center Endpoint Protection (SCEP) certificates.
-- The device's primary user and owner in Microsoft Entra are not updated when a local Windows Autopilot Reset is used. 
+- The device's primary user and owner in Microsoft Entra aren't updated when a local Windows Autopilot Reset is used. 
 
 ## Windows Autopilot Reset requirements
 
