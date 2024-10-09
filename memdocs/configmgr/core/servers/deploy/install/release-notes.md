@@ -53,7 +53,7 @@ CTM.log _- CTMJob({D21758B0-D895-474E-9695-1023A25A1770}): CCTMJob::_PerformDown
 To work around this issue, disable branch cache.
 
 > [!NOTE]
->Clients are able to download Content from On-Premise DP when Branch Cache is Enabled.
+> Clients are able to download content from the on-premise DP when Branch Cache is enabled.
 
 ## Endpoint Protection
 ### Security configurations removed from Intune
