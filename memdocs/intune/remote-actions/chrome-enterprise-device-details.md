@@ -80,13 +80,13 @@ You can create dynamic device groups based on a [Google Admin organizational uni
    3. For **Property**, select **enrollmentProfileName**. Select the **Operator**, depending on how you want the rule to work. For **Value**, enter the name of a Google Admin organizational unit.  
 2. Create a scope tag for an Intune RBAC role. The scope tag determines the level of access for the Intune role. When you get to **Assignments**, include the dynamic device group you previously created. For more information, see [Use role-based access (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md#to-create-a-scope-tag).  
 
-After you save the scope tag, it applies to every device that's part of the dynamic device group. The organizational unit's information syncs with the *enrollmentProfileName* device object property in Microsoft Entra ID, using the full path format shown in [System info](#system-info). 
+   After you save the scope tag, it applies to every device that's part of the dynamic device group. The organizational unit's information syncs with the *enrollmentProfileName* device object property in Microsoft Entra ID, using the full path format shown in [System info](#system-info). 
 
-For example: `/OU Level1/OU Level2`. 
+   For example: `/OU Level1/OU Level2`. 
 
-The maximum length of the string is 255 characters. Intune truncates the first part of the string if it exceeds the max number of characters. 
+   The maximum length of the string is 255 characters. Intune truncates the first part of the string if it exceeds the max number of characters. 
 
-For example:  `/OU Level1/OU Level2/.../OU Level18` becomes `evel1/OU Level2/.../OU Level18`.  
+   For example:  `/OU Level1/OU Level2/.../OU Level18` becomes `evel1/OU Level2/.../OU Level18`.  
 
 
 ## Next steps  
