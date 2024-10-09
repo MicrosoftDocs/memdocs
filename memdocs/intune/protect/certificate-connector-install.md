@@ -33,7 +33,7 @@ ms.collection:
 
 # Install the Certificate Connector for Microsoft Intune
 
-To support your use of certificates with Intune, you can install the Certificate Connector for Microsoft Intune on any Windows Server that meets the [connector prerequisites](../protect/certificate-connector-prerequisites.md). The following sections will help you install and then configure the connector. This article also explains how to modify a previously installed connector, and how to remove the connector from a server.
+To support your use of certificates with Intune, you can install the Certificate Connector for Microsoft Intune on any Windows Server that meets the [connector prerequisites](../protect/certificate-connector-prerequisites.md). The following sections help you install and then configure the connector. This article also explains how to modify a previously installed connector, and how to remove the connector from a server.
 
 ## Download and install the connector software
 
@@ -73,13 +73,13 @@ After a connector installs, you can run the installation program again to uninst
 
 ## Configure the certificate connector
 
-To configure the certificate connector, you use the **Certificate Connector for Microsoft Intune** wizard. The configuration can start automatically when you choose *Configure Now* at the end of a certificate connector install, or manually by opening an elevated command prompt and running **C:\Program Files\Microsoft Intune\PFXCertificateConnector\ConnectorUI\PFXCertificateConnectorUI.exe**. An example is provided below. The command must be run as an administrator.
+To configure the certificate connector, you use the **Certificate Connector for Microsoft Intune** wizard. The configuration can start automatically when you choose *Configure Now* at the end of a certificate connector install, or manually by opening an elevated command prompt and running **C:\Program Files\Microsoft Intune\PFXCertificateConnector\ConnectorUI\PFXCertificateConnectorUI.exe**. An example follows. The command must be run as an administrator.
 
    ``` command
    C:\Program Files\Microsoft Intune\PFXCertificateConnector\ConnectorUI\PFXCertificateConnectorUI.exe
    ```
 
-Each time **Certificate Connector for Microsoft Intune** starts on a server you’ll see the following *Welcome* page:
+Each time **Certificate Connector for Microsoft Intune** starts on a server you should see the following *Welcome* page:
 
 :::image type="content" source="./media/certificate-connector-install/begin-connector-configuration.png" alt-text="Welcome page of the Certificate Connector for Microsoft Intune wizard.":::
 
@@ -92,11 +92,11 @@ Use the following procedure to both configure a new connector and modify a previ
 
 2. On *Features*, select the checkbox for each connector feature you want to install on this server, and then select **Next**. Options include:
 
-   - **SCEP**: Select this option to enable certificate delivery to devices from a Microsoft Active Directory Certification Authority using the SCEP protocol. Devices that submit a certificate request will generate a private/public key pair and submit only the public key as part of that request.
+   - **SCEP**: Select this option to enable certificate delivery to devices from a Microsoft Active Directory Certification Authority using the SCEP protocol. Devices that submit a certificate request generate a private/public key pair and submit only the public key as part of that request.
 
-   - **PKCS**: Select this option to enable certificate delivery to devices from a Microsoft Active Directory Certification Authority in PKCS #12 format.  Ensure you’ve set up all the necessary prerequisites.
+   - **PKCS**: Select this option to enable certificate delivery to devices from a Microsoft Active Directory Certification Authority in PKCS #12 format. Ensure you set up all the necessary prerequisites.
 
-   - **PKCS imported certificates**: Select this option to enable certificate delivery to devices for pfx certificates that you've imported to Intune. Ensure you’ve set up all the necessary prerequisites.
+   - **PKCS imported certificates**: Select this option to enable certificate delivery to devices for pfx certificates that you import to Intune. Ensure you set up all the necessary prerequisites.
 
    - **Certificate revocation**: Select this option to enable automatic certificate revocation for certificates issued from a Microsoft Active Directory Certification Authority.
 
@@ -114,7 +114,7 @@ Use the following procedure to both configure a new connector and modify a previ
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
-6. On the *Microsoft Entra sign-in* page (which appears as *Azure AD Sign-In*), select the environment that hosts your Microsoft Entra ID, and then select **Sign In**. You’ll then be asked to authenticate your access. An Intune license is required for the account that you sign in with which can be either a Global Administrator or an Intune Administrator.
+6. On the *Microsoft Entra sign-in* page (which appears as *Azure AD Sign-In*), select the environment that hosts your Microsoft Entra ID, and then select **Sign In**. Then when prompted, authenticate your access. An Intune license is required for the account that you sign in with which can be either a Global Administrator or an Intune Administrator.
 
    Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 
