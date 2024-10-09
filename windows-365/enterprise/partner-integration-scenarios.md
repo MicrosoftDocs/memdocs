@@ -52,7 +52,7 @@ While scenarios not listed here might still work in customers’ production envi
 1. A user authenticates using Microsoft Entra ID, on-premises Active Directory, or a third party identity provider.
 2. Windows 365 establishes a connection to the partner cloud gateway using partner protocols.
 3. A Cloud PC is assigned to the user and is accessible from the web/workspace portals.
-4. Windows 365 establishes a connection to the Cloud PC using partner protocols.
+4. Windows 365 establishes a connection to the Cloud PC using partner protocols. 
 
 <!-- ########################## -->
 ## Next steps
