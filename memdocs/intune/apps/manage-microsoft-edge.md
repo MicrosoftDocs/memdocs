@@ -190,7 +190,7 @@ This setting allows you to configure a homepage shortcut for Edge for iOS and An
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.homepage |Specify a valid URL. Incorrect URLs are blocked as a security measure. <br>For example: `https://www.bing.com` |
+|com.microsoft.intune.mam.managedbrowser.homepage <br><br> This policy name has been replaced by the UI of **Homepage shortcut URL** under Edge Configuration settings |Specify a valid URL. Incorrect URLs are blocked as a security measure. <br>For example: `https://www.bing.com` |
 
 #### Multiple top site shortcuts
 
@@ -232,7 +232,7 @@ For ease of access, you can configure bookmarks that you'd like your users to ha
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.bookmarks |The value for this configuration is a list of bookmarks. Each bookmark consists of the bookmark title and the bookmark URL. Separate the title and URL with the `|` character.<br>For example: `Microsoft Bing|https://www.bing.com`<br><br>To configure multiple bookmarks, separate each pair with the double character `||`.<br>For example: `Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`|
+|com.microsoft.intune.mam.managedbrowser.bookmarks <br><br> This policy name has been replaced by the UI of **Managed bookmarks** under Edge Configuration settings |The value for this configuration is a list of bookmarks. Each bookmark consists of the bookmark title and the bookmark URL. Separate the title and URL with the `|` character.<br>For example: `Microsoft Bing|https://www.bing.com`<br><br>To configure multiple bookmarks, separate each pair with the double character `||`.<br>For example: `Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`|
 
 #### My Apps bookmark
 
@@ -559,7 +559,7 @@ Use the following key/value pairs to configure either an allowed or blocked site
 |com.microsoft.intune.mam.managedbrowser.AllowListURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
 |com.microsoft.intune.mam.managedbrowser.BlockListURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
 |com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock |**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts aren't disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context. <br>**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked. |
-|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked |**true** allows restricted sites to be opened in the Microsoft Entra account's InPrivate context. If the Microsoft Entra account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account. <br>**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. <br>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
+|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked <br><br> This policy name has been replaced by the UI of **Redirect restricted sites to personal context** under Edge Configuration settings |**true** allows restricted sites to be opened in the Microsoft Entra account's InPrivate context. If the Microsoft Entra account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account. <br>**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. <br>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
 |com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar | Enter the number of seconds that users will see the snack bar notification "Access to this site is blocked by your organization. We’ve opened it in InPrivate mode for you to access the site." By default, the snack bar notification is shown for 7 seconds.|
 
 The following sites except copilot.microsoft.com are always allowed regardless of the defined allow list or block list settings:
@@ -675,7 +675,7 @@ Target Edge for iOS and Android with the following key/value pair, to enable App
 
 |Key |Value|
 |:-------------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.AppProxyRedirection |**true** enables Microsoft Entra application proxy redirection scenarios <br>**false** (default) prevents Microsoft Entra application proxy scenarios |
+|com.microsoft.intune.mam.managedbrowser.AppProxyRedirection <br><br> This policy name has been replaced by the UI of **Application proxy redirection** under Edge Configuration settings |**true** enables Microsoft Entra application proxy redirection scenarios <br>**false** (default) prevents Microsoft Entra application proxy scenarios |
 
 For more information about how to use Edge for iOS and Android and Microsoft Entra application proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Microsoft Entra team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). This blog post references the Intune Managed Browser, but the content applies to Edge for iOS and Android as well.
 
