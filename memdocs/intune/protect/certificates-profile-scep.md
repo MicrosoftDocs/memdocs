@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/23/2023
+ms.date: 10/15/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,9 +29,7 @@ ms.collection:
 - sub-certificates
 ---
 
-# Create and assign SCEP certificate profiles in Intune
-
-[!INCLUDE [azure_portal](../includes/strong-mapping-cert.md)]
+# Create and assign SCEP certificate profiles in Intune 
 
 After you [configure your infrastructure](certificates-scep-configure.md) to support Simple Certificate Enrollment Protocol (SCEP) certificates, you can create and then assign SCEP certificate profiles to users and devices in Intune.
 
@@ -49,7 +47,47 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
  [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)] 
 > [!TIP]
-> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
+> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).  
+
+## Strong mapping requirements  
+
+*Applies to Windows server 2008 and later*  
+
+The Windows Kerberos Key Distribution Center (KDC) requires certificates issued by Active Directory Certificate Services to be strongly mapped in Active Directory. This means that the certificate's SAN must contain a security identifier (SID) extension that maps to the user or device SID in Microsoft Entra ID. The mapping protects against certificate spoofing and ensures that certificate-based authentication against the KDS continues working. When a user or device authenticates with a certificate in Active Directory, the KDC checks for the SID to verify that the certificate is strongly mapped and issued to the correct user or device. 
+
+The mapping is required in new and renewed SCEP certificates deployed by Microsoft Intune and used for certificate-based authentication in Active Directory. If certificates in these scenarios don't meet strong mapping requirements by the full enforcement mode date, authentication will be denied. 
+
+To ensure that certficate-based authentication against the KDC continues working, add the *Onpremises* SID as a URI attribute to SCEP certificate profiles:   
+
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.  
+
+1. Go to **Manage devices** > **Configuration**.  
+
+2. Create a profile or edit an existing one.        
+
+  - Select **Create** to [create a new SCEP certificate profile](#create-a-scep-certificate-profile).  
+
+  - Select an existing profile to edit its configuration settings.
+
+3. Click through the profile until you get to **Configuration settings**.   
+
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/certificate-profile-scep/scep-configuration-settings.png)  
+
+4. Go to the **Subject alternative name** setting.  
+
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/certificate-profile-scep/scep-configuration-settings.png)  
+
+   Add the following attribute and value:  
+
+   - Attribute: **URI**  
+
+   - Value: **{{OnPremisesSecurityIdentifier}}**   
+
+After you finish and save the profile, Microsoft Intune appends the SID value and `tag.com,2022-09-14` to the SAN attribute. The final URI that's in the SCEP payload deployed by Microsoft Intune contains the object SID that maps to the user or device: `tag.com,2022-09-14:sid:<OnPremisesObjectSIDValue>` 
+
+For more information about the requirements and enforcement date, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
 
 ## Create a SCEP certificate profile
 
@@ -229,7 +267,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      >
      > Intune certificate profiles for personally owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
      >
-     >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
+     >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.   
 
      - **User certificate type**
 
