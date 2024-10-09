@@ -77,6 +77,9 @@ Complete these steps to enable multi-factor authentication during Microsoft Intu
      | **Microsoft Intune** | Setup Assistant,<br>Company Portal app | With this option, MFA is required during enrollment and each time the user signs into the Company Portal app or website. The MFA prompts appear on the Company Portal sign-in page. |  
      | **Microsoft Intune Enrollment** | Setup Assistant | With this option, MFA is required during device enrollment and appears as a one-time MFA prompt on the Company Portal sign-in page. |
 
+> [!NOTE]
+> **Microsoft Intune Enrollment** cloud app is no longer created atumatically on new tenants. In such cases, Entra Id admins need to create the Service Principal with this App Id "d4ebce55-015a-49b5-a083-c84d1797ae8c" using PowerShell or Graph.
+
 1. Select the **Grant** category.  
    1. Select **Require multifactor authentication** and **Require device to be marked as compliant**.
    1. Under **For multiple controls**, select **Require all the selected controls**.  
