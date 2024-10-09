@@ -104,7 +104,7 @@ This article describes the settings you can configure.
 
   - **EAP-TLS**: Also enter:
 
-    - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
+    - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then you can enter a wildcard suffix. For example, you can enter `*.contoso.com`.
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate. This certificate allows the client to trust the wireless network access server's certificate.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
@@ -175,4 +175,4 @@ This article describes the settings you can configure.
 
 - Be sure to [assign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Configure Wi-Fi settings on [Android](wi-fi-settings-android.md), [Android Enterprise](wi-fi-settings-android-enterprise.md), [macOS](wi-fi-settings-macos.md), and [Windows 10](wi-fi-settings-windows.md) devices.
+- Configure Wi-Fi settings on [Android](wi-fi-settings-android.md), [Android Enterprise](wi-fi-settings-android-enterprise.md), [macOS](wi-fi-settings-macos.md), and [Windows](wi-fi-settings-windows.md) devices.

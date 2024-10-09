@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -57,7 +57,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 ## Next step: User flow
 
 > [!div class="nextstepaction"]
-> [Step 8: User flow](azure-ad-join-user-flow.md)
+> [Step 9: User flow](azure-ad-join-user-flow.md)
 
 ## Related content
 

@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- get-started
 ---
 
 

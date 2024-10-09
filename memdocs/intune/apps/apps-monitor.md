@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/01/2023
+ms.date: 09/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -52,14 +52,18 @@ Intune provides several ways to monitor the properties of apps that you manage a
 In the app pane, you can review details about the status of an app in your environment.
 
 ### Essentials
-The **Essentials** section contains the following information about the app:
+The **Essentials** section provides the following information about the app if applicable:
 
  | **App details**            | **Description**                                                      |
 |------------------------|------------------------------------------------------------------|
 | **Publisher**          | The publisher of the app                                            |
 | **Operating system**   | The app operating system (Windows, iOS/iPadOS, Android, and so on) |
+| **Version**            | If applicable, the version number of the app |
+| **MAM SDK enabled**    | If applicable, whether the app uses the Intune MAM SDK (**Yes** or **No**)                  |
 | **Created**             | The date and time when this revision was created <b>**Note**: This date value is updated when an IT admin changes app metadata, such as changing the app category or app description.                        |
-| **Assigned**           | Whether the app has been assigned (**Yes** or **No**)                  |
+| **Assigned**           | Whether the app has been assigned (**Yes** or **No**)          
+| **App package file**   | If applicable, the app package file name            |
+
 
 ### Device and user status graphs
 The graphs show the number of apps for the following status:
@@ -84,7 +88,7 @@ A device status list is shown when you select **Device install status** in the *
 | **Device name**      | The name of the device on platforms that allow naming a device <b>**Note**: On other platforms, Intune creates a name from other properties. This attribute isn't available to any other device.                                                                       |
 | **User name**        | The name of the user                                                                                                                                                                                                                                      |
 | **Platform**         | The operating system of the device (Windows, iOS/iPadOS, Android, and so on)                                                                                                                                                                                           |
-| **Version**          | The version number of the app <b>**Note**: For line-of-business (LOB) apps and Microsoft Store for Business apps, the full version number of the app is shown. The full version number identifies a specific release of the app. The number appears as _Version_(_Build_). For example,  2.2(2.2.17560800). For standard Store apps, no versions are shown. |
+| **Version**          | The version number of the app <b>**Note**: For line-of-business (LOB) apps, the full version number of the app is shown. The full version number identifies a specific release of the app. The number appears as _Version_(_Build_). For example,  2.2(2.2.17560800). For standard Store apps, no versions are shown. |
 | **Status**           | The status of the app                                                                                                                                                                                                                                     |
 | **Status details**   | The details of the status                                                                                                                                                                                                                                   |
 | **Last check-in**    | The date of the device's last sync with Intune                                                                                                                                                                                                                  |

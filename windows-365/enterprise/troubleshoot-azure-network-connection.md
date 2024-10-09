@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 08/22/2024
 ms.topic: troubleshooting
 ms.service: windows-365
-ms.subservice: 
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: mattsha
+ms.reviewer: ericor
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/06/2023
+ms.date: 07/31/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -95,13 +95,16 @@ Common tasks when working with security baselines include:
    - The insights for a setting are available beside a light bulb icon. Settings insights provide confidence in configurations by adding insights that similar organizations adopted successfully. Insights are available for some settings and not all settings. For more information, see [Settings insight](../fundamentals/settings-insight.md).
    - Use the *Search* bar and specify keywords that filter the view to display only those groups that contain your search criteria.
 
-   Each setting in a baseline has a default configuration for that baseline version. Reconfigure the default settings to meet your business needs. Different baselines might contain the same setting, and use different default values for the setting, depending on the intent of the baseline.
+   Each setting in a baseline has a default configuration preset for that baseline version. Some will not be configured, while others are set to configure specific values or conditions on a device. The default presets found in a baseline represent the recommended security posture from that products security team. When configuring a baseline:
+
+   - Be sure to review each setting and when necessary reconfigure a default preset when your business needs require a different configuration.
+   - Be aware that different baselines types and versions can include settings that are found in other baselines, and each might recommend a different default value for a setting.
 
    ![Expand a group to view the settings for that group](./media/security-baselines-configure/sample-list-of-settings.png)
 
 6. On the **Scope tags** tab, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
 
-7. On the **Assignments** tab, select **Select groups to include** and then  assign the baseline to one or more groups. Use **Select groups to exclude** to fine-tune the assignment.
+7. On the **Assignments** tab, select **Select groups to include** and then assign the baseline to one or more groups. Use **Select groups to exclude** to fine-tune the assignment.
 
    > [!NOTE]
    >
@@ -123,19 +126,19 @@ Common tasks when working with security baselines include:
 
 ## Update a profile to the latest version
 
-The information in this section applies to updating a baseline instance that was created *before May  2023*, to a version of that same baseline that was released *after May  2023*.
+The information in this section applies to updating a baseline instance that was created *before May 2023*, to a version of that same baseline that was released *after May 2023*.
 
 > [!NOTE]
 >
-> In May, 2023, Intune began rollout of a new security baseline format for each new baseline release or update. Intune also introduced a new update process for migrating an existing security baseline profile to a newly released security baseline. This new behavior replaces existing  behavior when *moving to* a baseline version released in May, 2023 or later.
+> In May, 2023, Intune began rollout of a new security baseline format for each new baseline release or update. Intune also introduced a new update process for migrating an existing security baseline profile to a newly released security baseline. This new behavior replaces existing behavior when *moving to* a baseline version released in May, 2023 or later.
 >
 > The previous behavior remains available for use when updating baselines that have not yet received a new version that uses the new format. For guidance, see [Update baselines that use the previous format](#update-baselines-that-use-the-previous-format).
 
-After May  2023, when a new version for a baseline is released, plan to update your existing profiles to the new version. When moving from an older format to the new baseline format (from a version released before May  2023 to one released in May  2023 or later):
+After May 2023, when a new version for a baseline is released, plan to update your existing profiles to the new version. When moving from an older format to the new baseline format (from a version released before May 2023 to one released in May 2023 or later):
 
 - All new profiles for the baseline type, like Microsoft Edge, use the new format. Creating a new baseline that uses an older baseline version isn't supported.
 
-- Baseline versions released before May  2023 don’t upgrade to the new format. Instead, create a new profile that uses the new format and configure the settings from the old baseline in that new baseline format. Recreation of the profile is a one-time process that is required to move a baseline from the old format to the new baseline format.
+- Baseline versions released before May 2023 don’t upgrade to the new format. Instead, create a new profile that uses the new format and configure the settings from the old baseline in that new baseline format. Recreation of the profile is a one-time process that is required to move a baseline from the old format to the new baseline format.
 
   To assist you in this process Intune can export the old profile to a CSV format that identifies each setting based on the name of the setting as it appears in the new profile version, along with its configuration.
 
@@ -178,9 +181,9 @@ With the information from the export, you can rapidly reconfigure the new baseli
 
    :::image type="content" source="./media/security-baselines-configure/csv-export-of-baseline-configuration.png" alt-text="Screen shot that shows an export of the Microsoft Edge baseline profile as a .csv file." lightbox="./media/security-baselines-configure/csv-export-of-baseline-configuration.png":::
 
-   In the preceding image, there are three columns of information. The information identifies the settings in the new profile, and the configuration for each of them that you had in the old profile.
+   In the preceding image, there are three columns of information. The information identifies the settings in the old profile, and the configuration for each of them that you had in the old profile.
 
-   - **DefinitionId** – This column displays the settings registry name. The information after the underscore ( _ ) identifies the settings name as it appears in the new baseline profile and format, but without spaces in the name. This value is also the name of the CSP setting that this baseline setting manages.  
+   - **DefinitionId** – This column displays the settings registry name. The information after the underscore ( _ ) identifies the settings name as it appears in the old baseline profile and format, but without spaces in the name. This value is also the name of the CSP setting that this baseline setting manages.
 
      For example, our modified setting of *Enable site isolation for every site* appears in this export as *admx--microsoftedge_SitePerProcess*. The last portion, *SitePerProcess*, helps identify the setting.
 
@@ -198,7 +201,7 @@ The information in this section applies to updating an existing baseline created
 
 > [!NOTE]
 >
-> In May 2023, Intune began rollout of a new security baseline format for each new baseline release or update.  Intune also introduced a new update process for migrating an existing security baseline profile to a newly released security baseline. This new behavior replaces existing  behavior when moving to a baseline version released in May 2023 or later.
+> In May 2023, Intune began rollout of a new security baseline format for each new baseline release or update. Intune also introduced a new update process for migrating an existing security baseline profile to a newly released security baseline. This new behavior replaces existing behavior when moving to a baseline version released in May 2023 or later.
 >
 > The following guidance is for use when updating a baseline to a newer version that was released before May 2023. If you’re updating a baseline to a version that was released in May 2023 or later, see [Update a profile to the latest version](#update-a-profile-to-the-latest-version).
 

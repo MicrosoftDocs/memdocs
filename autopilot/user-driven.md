@@ -2,7 +2,7 @@
 title: Windows Autopilot User-Driven Mode
 description: With Windows Autopilot user-driven mode, devices can be configured to deploy to a ready-to-use state without requiring help from IT personnel.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -75,7 +75,7 @@ The steps of the user-driven process are as follows:
 
 1. After sign-in, the enrollment status page displays for user-targeted configuration tasks.
 
-If any issues are found during this process, see [Windows Autopilot troubleshooting](troubleshooting.md).
+If any issues are found during this process, see [Troubleshooting Windows Autopilot overview](troubleshooting-faq.yml#troubleshooting-windows-autopilot-overview).
 
 For more information on the available join options, see the following sections:
 

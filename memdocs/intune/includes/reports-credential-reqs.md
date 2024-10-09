@@ -8,8 +8,7 @@ Authentication and authorization are based on Microsoft Entra credentials and In
 
 Requirements for accessing the Intune Data Warehouse (including the API) are:
 
-- User must be one of:
-  - Microsoft Entra Global Administrator
+- User must have a minimum of one of the following roles:
   - An Intune service administrator
   - User with role-based access to **Intune data warehouse** resource
   - User-less authentication using [application-only authentication](../developer/data-warehouse-app-only-auth.md) 

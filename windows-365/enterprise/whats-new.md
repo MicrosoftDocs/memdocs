@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/25/2024
+ms.date: 10/08/2024
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -54,6 +54,145 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of September 30, 2024 (Service release 2409)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Unavailable Cloud PCs report added to Reporting overview page<!--53687085-->
+
+The **Cloud PCs that aren't available** report has been added to the **Reports** > **Cloud PC overview** page.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Windows 11 24H2 cloud PCs gallery images<!--53461426-->
+
+The latest Windows Enterprise 24H2 images are available for provisioning new devices. You can update your provisioning policies to use either of the following images:
+
+- Windows 11 Enterprise 24H2
+- Windows 11 Enterprise + Microsoft 365 Apps 24H2
+
+
+<!-- ########################## -->
+## Week of September 23, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 11 Cloud PCs now support EN-NZ<!--54032315-->
+
+Windows 365 Cloud PCs now support EN-NZ for Windows 11.
+
+<!-- ########################## -->
+## Week of September 16, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for symmetric NAT with RDP Shortpath<!--43602619-->
+
+RDP Shortpath in Windows 365 now supports establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT. TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+### Windows 365 support for HEVC video coding<!--51599459-->
+Windows 365 will support Hardware High Efficiency Video Coding (HEVC) h.265 4:2:0 on Compatible GPU-enabled Cloud PCs. For more information, see [Enable GPU acceleration for Azure Virtual Desktop](/azure/virtual-desktop/enable-gpu-acceleration?tabs=intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows App
+
+#### Windows App is now generally available<!--46667283-->
+
+Windows App has moved out of preview and into general availability.
+
+For more information, see [What is Windows App?](/windows-app/overview)
+
+<!-- ########################## -->
+## Week of August 26, 2024 (Service release 2408)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Azure Monitor support on Windows 365 Cloud PCs<!--53421756-->
+
+Azure Monitor Agent can now  be installed on Windows 365 Enterprise and Windows 365 Government Cloud PCs. For more information, see [Azure Monitor overview](/azure/azure-monitor/overview).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Session lock experience configuration for single sign-on<!--48440155-->
+
+You can now configure the remote session lock experience when single sign-on is enabled between the default disconnect behavior and showing the remote lock screen. For more information, see [Configure single sign-on for Windows 365 using Microsoft Entra authentication](configure-single-sign-on.md).
+
+#### Windows 365 support for Microsoft Purview Customer Key is now generally available<!--46980464-->
+
+Windows 365 support for encrypting Cloud PCs by setting up Microsoft Purview Customer Key has moved out of preview and into general availability. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
+
+<!-- ########################## -->
+## Week of August 5, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### Updated documentation article: Windows 365 service resilience<!--51365224-->
+
+We’ve created a new article explaining Windows 365 service resilience. For more information, see [Windows 365 service resilience](resilience.md).
+
+<!-- ########################## -->
+## Week of July 29, 2024 (Service release 2407)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Uni-directional clipboard support is now generally available<!--49083399-->
+
+Uni-directional clipboard support for Cloud PCs has moved out of preview and is now generally available. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+
+#### Closing port 3389 by default for newly provisioned and reprovisioned Cloud PCs<!--51154043-->
+
+To help secure your Windows 365 environment, the inbound port 3389 is now closed by default.
+
+#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+
+Windows 365 now supports AVC mixed mode when MMR is not enabled.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows 365 Government now supports Customer Lockbox<!--48802385-->
+
+Windows 365 Government now supports Microsoft Purview Customer Lockbox.
+
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### New Intune report and device action for Windows enrollment attestation (public preview)<!--51490340-->
+
+Use the new device attestation status report in Microsoft Intune to find out if a device has attested and enrolled securely while being hardware-backed. For more information, see [Device attestation status report](/mem/intune/fundamentals/reports#device-attestation-status-report).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Support for Omnissa Horizon clients and the Blast protocol with Windows 365 Enterprise is now generally available<!--51899029-->
+
+Support for Omnissa (previously VMware) Horizon clients and the Blast protocol with Windows 365 Enterprise Cloud PCs has moved out of preview and into general availability. For more information, see [Set up Omnissa Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New GPU offerings for Cloud PCs are now generally available<!--46699074-->
+
+New GPU offerings for Window 365 Enterprise Cloud PCs have moved out of preview and into general availability. For more information, see [GPU Cloud PCs](gpu-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Frontline
+
+#### The Windows 365 Frontline concurrency buffer is now generally available<!--50220027-->
+
+The Windows 365 concurrency buffer has moved out of preview and into general availability.
 
 <!-- ########################## -->
 ## Week of July 23, 2024
@@ -753,7 +892,7 @@ All Cloud PC reports can now be accessed from the **Cloud PC overview** section 
 
 #### Use VMWare Horizon clients and the Blast protocol with Windows 365 Enterprise (public preview)<!--44716096-->
 
-VMWare Horizon clients and the Blast protocol can be used with Windows 365 Enterprise Cloud PCs. This is a [public preview](..\public-preview.md). For more information, see [Set up VMware Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md). To submit a request to join this preview, see [Tech Preview – VMware Horizon extending Microsoft Windows 365](https://www.vmware.com/learn/1733900_REG.html).
+VMWare Horizon clients and the Blast protocol can be used with Windows 365 Enterprise Cloud PCs. This is a [public preview](..\public-preview.md). For more information, see [Set up VMware Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md).
 
 <!-- ########################## -->
 ## Week of August 7, 2023

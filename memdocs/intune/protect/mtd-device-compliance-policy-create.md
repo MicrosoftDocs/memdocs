@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Create a Mobile Threat Defense (MTD) device compliance policy with Microsoft Intune
+title: Create Mobile Threat Defense compliance policies in Intune
 titleSuffix: Microsoft Intune
 description: Create an Intune device compliance policy that uses your MTD partner threat levels to determine if a mobile device can access company resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 09/30/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,13 +52,13 @@ With integration complete and the partner policy in place, you can then create I
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** > **Device Compliance** > **Create policy**.
+2. Select **Endpoint security** > **Device compliance** > **Create policy**.
 
 3. Select the **Platform**:
    - For most platforms, the *Profile type* is automatically set. If not automatically set, select the appropriate Profile type.
    - To continue, select **Create**.
 
-4. On **Basics**, specify  a device compliance policy **Name**, and **Description** (optional). Select **Next** to continue.
+4. On **Basics**, specify a device compliance policy **Name**, and **Description** (optional). Select **Next** to continue.
 
 5. On **Compliance settings**, expand and configure **Device Health**. Choose a threat-level from the drop-down list for **Require the device to be at or under the Device Threat Level**.
 
@@ -74,7 +74,7 @@ With integration complete and the partner policy in place, you can then create I
 
 6. On the **Actions for noncompliance** tab, specify a sequence of actions to apply automatically to devices that don't meet this compliance policy.
 
-   You can add multiple actions and configure schedules and other details for some actions. For example, you might change the schedule of the default action *Mark device noncompliant* to occur after one day. You can then add an action to send an email to the user when the device isn't compliant to warn them of that status. You can also add  actions that lock or retire devices that remain noncompliant.
+   You can add multiple actions and configure schedules and other details for some actions. For example, you might change the schedule of the default action *Mark device noncompliant* to occur after one day. You can then add an action to send an email to the user when the device isn't compliant to warn them of that status. You can also add actions that lock or retire devices that remain noncompliant.
 
    For information about the actions you can configure, see [Add actions for noncompliant devices](actions-for-noncompliance.md), including how to create notification emails to send to your users.
 
@@ -88,12 +88,12 @@ With integration complete and the partner policy in place, you can then create I
 
 ## Monitoring risk score sent by Mobile Threat Defense partner
 
-Your Mobile Threat Defense partner can send a risk score for each device for which the MTD app is installed. You can view this under **Reports** > **Device compliance** > **Reports** > **Device Compliance**. Make sure **Device threat level** is selected when opening the **Columns** tab, this may require you to hit **Generate** first. 
+Your Mobile Threat Defense partner can send a risk score for each device for which the MTD app is installed. You can view this under **Reports** > **Device compliance** > **Reports** > **Device Compliance**. Make sure **Device threat level** is selected when opening the **Columns** tab, this may require you to hit **Generate** first.
 
 > [!IMPORTANT]
 >
 > Conditional Access policies for Microsoft 365 or other services also evaluate device compliance results, which include the threat-level configuration. Any noncompliant device can be blocked from accessing corporate resources until that devices threat-level is remediated to bring the device into compliance with your policies and that status is successfully reported to Intune via the MTD vendor.
 
-## Next steps
+## Related content
 
-[Enable MTD with Intune](mtd-connector-enable.md)
+[Enable a Mobile Threat Defense connector](mtd-connector-enable.md)

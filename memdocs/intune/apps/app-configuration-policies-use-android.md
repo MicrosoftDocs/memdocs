@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/05/2023
+ms.date: 08/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -66,7 +66,17 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 7. Click **Next** to display the **Settings** page.
 8. Click **Add** to display the **Add permissions** pane.
 9. Click the permissions that you want to override. Permissions granted will override the "Default app permissions" policy for the selected apps.
-10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**.  
+10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**.
+
+    > [!NOTE]
+    > As of Android 12, configuring **Auto grant** for the following permissions is not supported for coporate-owned work profile or corporate-owned dedicated devices.
+    > * SMS (read)
+    > * Location access (coarse)
+    > * Location access (fine)
+    > * Camera
+    > * Record audio
+    > * Allow body sensor data
+
 11. If the managed app supports configuration settings, the **Configuration settings format** dropdown box is visible. Select one of the following methods to add configuration information:
     - **Use configuration designer**
     - **Enter JSON data**
@@ -117,7 +127,7 @@ You can use the configuration designer for Managed Google Play apps when the app
 
 2. For each key and value in the configuration, set:
 
-    - **Value type**: The data type of the configuration value. For String value types, you can optionally choose a variable or certificate profile as the value type.
+    - **Value type**: The data type of the configuration value. For string value types, you can optionally choose a variable or certificate profile as the value type. Note that once the policy is created, these value types will show as string. 
     - **Configuration value**: The value for the configuration. If you select variable or certificate for the **Value type**, choose from a list of variables or certificate profiles. If you choose a certificate, then the certificate alias of the certificate deployed to the device is populated at runtime.
 
 ### Supported variables for configuration values

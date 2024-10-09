@@ -3,13 +3,13 @@ metadata:
   title: Windows Autopilot device preparation troubleshooting FAQ
   description: Troubleshooting of common Windows Autopilot device preparation issues
   ms.service: windows-client
-  ms.subservice: itpro-deploy
+  ms.subservice: autopilot
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 06/21/2024
+  ms.date: 08/07/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -19,7 +19,7 @@ title: Windows Autopilot device preparation troubleshooting FAQ
 summary: |
   **Applies to:**
 
-  - Windows 11
+  - [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions).
 
   This article provides troubleshooting for common Windows Autopilot device preparation issues.
 
@@ -99,3 +99,7 @@ sections:
           If multiple Windows Autopilot device preparation policies are deployed to a user, the policy with the highest priority gets priority. Policy priorities are displayed at the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
 
 
+additionalContent: |
+    ## Related content
+
+    - [Windows Autopilot device preparation - known issues](known-issues.md).

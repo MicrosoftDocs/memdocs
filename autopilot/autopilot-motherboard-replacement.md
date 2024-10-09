@@ -2,7 +2,7 @@
 title: Windows Autopilot motherboard replacement
 description: Understand how Windows Autopilot deployments function when the motherboard is replaced on a device.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -244,7 +244,7 @@ If the profiles status of a device shows **Fix pending**, Autopilot is in the pr
 1. Manually deregister the device using the steps in the [Deregister a device](#deregister-a-device) section.
 1. Reregister the device.
 
-For more information, see [Troubleshoot Autopilot device import and enrollment: Autopilot profile not applied after reimaging to an older OS version](troubleshoot-device-enrollment.md#autopilot-profile-not-applied-after-reimaging-to-an-older-os-version).
+For more information, see [Why is the Windows Autopilot profile not applied after a hardware change occurred on a device?](troubleshooting-faq.yml#why-is-the-windows-autopilot-profile-not-applied-after-a-hardware-change-occurred-on-a-device-).
 
 ## Specific repair scenarios
 

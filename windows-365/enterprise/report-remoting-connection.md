@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/25/2023
+ms.date: 08/28/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -30,6 +30,9 @@ ms.collection:
 ---
 
 # Remoting connection report
+
+> [!IMPORTANT]  
+> The remoting connection report will be retired on December 31st, 2024. After this date, refer to the [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
 
 The Remoting connection report in [Endpoint analytics](/mem/analytics/overview) helps you monitor key performance metrics for connecting to the Cloud PCs. There are two metrics in this report:
 

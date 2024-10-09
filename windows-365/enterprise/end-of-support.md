@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 07/25/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: naramkri
+ms.reviewer: evas
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

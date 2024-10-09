@@ -7,7 +7,7 @@ keywords:
 author: Smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/10/2023
+ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -40,19 +40,6 @@ Microsoft Intune allows you to manage firmware updates for supported Zebra devic
 
 Intune manages the creation, management, and monitoring of these deployments through APIs provided by Zebra. Zebra's services and on-device clients handle other complexities (such as evaluating customer entitlements and device compatibility), update hosting, update delivery, and installation.
 
-## Supported Devices
-
-LG OTA is supported on the following devices:
-
-- [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices)
-- [Android Enterprise fully managed devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-fully-managed)
-
-For more specific information on supported devices, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
-
-The following aren't supported in public preview:
-
-- Graph assignment with inclusions/exclusions
-
 ## Prerequisites
 
 - [Set up Managed Google Play for your tenant](../enrollment/connect-intune-android-enterprise.md)
@@ -67,6 +54,29 @@ The following aren't supported in public preview:
 - Access to all appropriate Zebra licenses, and entitlements to use the LG OTA service. For more information, contact Zebra support or see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/faq/).
 - For information about services ports and endpoints used by Zebra OTA updates, refer to [Zebra Lifeguard Over the Air FOTA Updates Ports](https://supportcommunity.zebra.com/s/article/000022419?language=en_US).
 - For more information about which Zebra devices work with the service based on the platform, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
+
+## Government cloud support
+
+Zebra LifeGuard Over-the-Air updates are supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
+
+## Supported Devices
+
+LG OTA is supported on the following devices:
+
+- [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices)
+- [Android Enterprise fully managed devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-fully-managed)
+
+For more specific information on supported devices, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
+
+The following aren't supported in public preview:
+
+- Graph assignment with inclusions/exclusions
+
 
 ## Process overview  
 
@@ -100,6 +110,9 @@ In the Microsoft Intune admin center, you can link Intune and Zebra.
   > This authorization link expires in 10 minutes. If it expires, select **Refresh** to generate a new link.
 
 6. After the authorization process is complete, an enrollment token will auto-populate within the context panel. If the token doesn't appear, select **Refresh**. Copy the enrollment token to your clipboard, as you'll need the token later.
+
+  > [!NOTE]
+  > Before you select **Copy** from the context panel, make sure to select **Show Token**. Not doing this will send asterisks to your clipboard rather than the token value.
 
 ## Step 2: Enroll Devices with Zebra LG OTA Service
 

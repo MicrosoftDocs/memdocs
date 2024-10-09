@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 07/09/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: thhickli
+ms.reviewer: thhickli, mattsha, rikiran
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,6 +28,8 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
+
+<!--ms.reviewer review required before publish-->
 
 # Windows 365 architecture
 

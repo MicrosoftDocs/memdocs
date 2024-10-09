@@ -6,10 +6,10 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/28/2024
+ms.date: 09/13/2024
 ms.topic: how-to
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 ms.collection:
   - M365-identity-device-management
@@ -28,12 +28,12 @@ appliesto:
 
 Intune and Windows Autopilot can be used to set up Microsoft Entra hybrid joined devices. To do so, follow the steps in this article. For more information about Microsoft Entra hybrid join, see [Understanding Microsoft Entra hybrid join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 
-## Prerequisites
+## Requirements
 
 - Successfully configured the [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify the device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
 - If [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) is configured as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
 
-### Device enrollment prerequisites
+### Device enrollment requirements
 
 The device to be enrolled must follow these requirements:
 
@@ -47,7 +47,7 @@ The device to be enrolled must follow these requirements:
 
 Although not required, configuring Microsoft Entra hybrid join for Active Directory Federated Services (ADFS) enables a faster Windows Autopilot Microsoft Entra registration process during deployments. Federated customers that aren't supporting the use of passwords and using AD FS need to follow the steps in the article [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login) to properly configure the authentication experience.
 
-### Intune connector server prerequisites
+### Intune connector server requirements
 
 - The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later with .NET Framework version 4.7.2 or later.
 
@@ -63,19 +63,9 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 
 - To increase scale and availability, multiple connectors can be installed in the environment. We recommend installing the Connector on a server that's not running any other Intune connectors. Each connector must be able to create computer objects in any domain that needs to be supported.
 
-<!-- MAXADO-8594181 -->
-
-- If the organization has multiple domains and multiple Intune Connectors are installed, a domain service account that can create computer objects in all domains must be used. This requirement is true even if Microsoft Entra hybrid join is only implemented for a specific domain. If these domains are untrusted domains, the connectors must be uninstalled from domains where Windows Autopilot isn't used. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
-
-  This connector service account must have the following permissions:
-
-  - [**Log on as a service**](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service).
-  - Must be part of the **Domain user** group.
-  - Must be a member of the local **Administrators** group on the Windows server that hosts the connector.
-
-  > [!IMPORTANT]
-  >
-  > Managed service accounts aren't supported for the service account. The service account must be a domain account.
+<!-- MAXADO-8594181
+Multi-domain support section removed
+-->
 
 - The Intune Connector requires the [same endpoints as Intune](/mem/intune/fundamentals/intune-endpoints).
 
@@ -136,11 +126,11 @@ The organizational unit that has the rights to create computers must match:
 
 ## Install the Intune Connector
 
-Before beginning the installation, make sure that all of the [Intune connector server prerequisites](#intune-connector-server-prerequisites) are met.
+Before beginning the installation, make sure that all of the [Intune connector server requirements](#intune-connector-server-requirements) are met.
 
 ### Install steps
 
-1. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems singing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends to turn off Internet Explorer Enhanced Security Configuration.  To turn off Internet Explorer Enhanced Security Configuration:
+1. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems signing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends to turn off Internet Explorer Enhanced Security Configuration.  To turn off Internet Explorer Enhanced Security Configuration:
 
    1. On the server where the Intune Connector is being installed, open **Server Manager**.
 

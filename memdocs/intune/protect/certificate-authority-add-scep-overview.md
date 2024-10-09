@@ -133,12 +133,13 @@ As the administrator, create a SCEP certificate profile to target to users or de
 
 ## Removing certificates
 
-When you unenroll or wipe the device, the certificates are removed. The certificates aren't revoked.
+After you unenroll or wipe the device, the certificates are removed from the device by Intune and queued for revocations. Revocation on the certificate authority depends on API implementation by each third party. 
 
 ## Third-party certification authority partners
 
 The following third-party certification authorities support Intune:
 
+- [AWS Private Certificate Authority](https://docs.aws.amazon.com/privateca/latest/userguide/connector-for-scep-getting-started.html)  
 - [Cogito Group](https://cogitogroup.net/scep)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
 - [EasyScep](https://docs.just-software.com/EasyScep/)

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,6 +46,17 @@ In addition to using MAM Tunnel with unenrolled devices, you can also use it wit
 
 **Try the interactive demo**  
 The [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS]( https://regale.cloud/Microsoft/viewer/1976/microsoft-tunnel-for-mobile-application-management-for-ios-ipados/index.html#/0/0) interactive demo shows how Tunnel for MAM extends the Microsoft Tunnel VPN Gateway to support iOS and iPadOS devices not enrolled with Intune.
+
+## Government cloud support
+
+Microsoft Tunnel for MAM on iOS/iPadOS is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
+Microsoft Tunnel for MAM on iOS/iPadOS doesn't support Federal Information Processing Standard (FIPS).
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
 ## Required SDKs for iOS
 
@@ -89,7 +100,7 @@ Microsoft Tunnel for MAM iOS uses the following Intune policies and profiles:
 
 Create an app configuration policy for apps that use Tunnel for MAM. This policy configures an app to use a specific Microsoft Tunnel Gateway Site, proxy, and trusted certificate(s) for Edge and line-of-business (LOB) apps. These resources are used when connecting to on-premises resources.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration policies** > **Add** > **Managed Apps**.
 
 2. On the *Basics* tab, enter a *Name* for the policy and a *Description* (optional).
 
@@ -150,7 +161,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Ed
 > [!NOTE]  
 > If you already have an app configuration policy created for your LOB App, you can edit that policy to include Edge and the required *key/value pair* settings.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **App Configuration policies** > **Add** > **Managed Apps**.
 
 2. On the *Basics* tab:
 

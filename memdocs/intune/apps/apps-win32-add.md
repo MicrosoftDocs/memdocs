@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2023
+ms.date: 09/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -117,6 +117,9 @@ On the **Program** page, configure the app installation and removal commands for
     For example:
     
     `msiexec /x "{12345A67-89B0-1234-5678-000001000000}"`
+
+    > [!NOTE]
+    > Environment variable expansion within the **Uninstall command** is not supported. If you require the use of environment variables, use a custom wrapper script within your Win32 package to wrap the appropriate command and use this script for the **Uninstall command**.
 
 - **Installation time required**: The number of minutes the system will wait for install program to finish. Default value is 60 minutes. If the app takes longer to install than the set installation time, the system will fail the app install. Max timeout value is 1440 minutes (1 day).
 
@@ -244,7 +247,7 @@ On the **Detection rules** pane, configure the rules to detect the presence of t
    The Intune agent checks the results from the script. It reads the values written by the script to the STDOUT stream, the standard error (STDERR) stream, and the exit code. If the script exits with a nonzero value, the script fails and the application detection status isn't installed. If the exit code is zero and STDOUT has data, the application detection status is installed. 
 
    > [!NOTE]
-   > We recommend encoding your script as UTF-8. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
+   > We recommend encoding your script as UTF-8 BOM. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
 
 The version of your Win32 app is displayed in the Microsoft Intune admin center. The app version is provided in the **All apps** list, where you can filter by Win32 apps and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Columns** > **Version** to display the app version in the app list.
 

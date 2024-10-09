@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/17/2024
+ms.date: 07/31/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -61,8 +61,12 @@ We recommend using the latest updates for a more successful attestation rate.
 
 - Physical devices are supported.
 
-  > [!NOTE]
-  > Virtual machines can't attest.  
+    > [!NOTE]
+    > Virtual machines can't attest, including the following, even if they use vTPMs:
+    >  - Hyper-V and Azure virtual machines  
+    >  - Azure Virtual Desktop session hosts  
+    >  - Windows 365 Cloud PCs  
+    >  - Microsoft Dev Box  
 
 - Attestation with TPM in this feature is during Intune device management enrollment, after the TPM attestation that occurs in Autopilot pre-provision and Shared device mode (SDM).
 
@@ -131,7 +135,7 @@ The following table lists status details and their descriptions:
 | AIK certificate wasn't provided| AIK certificate is missing on the device. Could be due to network issue. If temporary, attestation would retry successfully once device receives AIK cert.  |
 | Client didn't provide all required parameters | Both AIK certificate and AIK public key are missing.                                                                                     |
 | MDM key is already in TPM       | Device indicates that the MDM key is already stored in TPM. But Intune is unable to attest it because AIK certificate or AIK public key is missing, or ENTRA key can't be attested. |
-| Feature isn't supported        | This status shows for devices that aren't yet attestable. Examples include Win 365, AVD, or Hyper-V machines.                     |
+| Feature isn't supported        | This status shows for devices that aren't yet attestable. Examples include Hyper-V and Azure virtual machines, Azure Virtual Desktop session hosts, Windows 365 Cloud PCs, Microsoft Dev Box.                     |
 | Entra token doesn't match device identity | ENTRA token for enrollment doesn't match the ENTRA key presented in the enrollment request. You can fix this issue by upgrading to the latest Windows build and by retrying attestation.                                          |
 | Entra token is missing device identity | ENTRA token for enrollment is missing ENTRA device identity.                                                               |
 

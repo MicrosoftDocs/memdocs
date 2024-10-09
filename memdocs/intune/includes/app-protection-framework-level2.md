@@ -4,7 +4,7 @@ description: include file
 author: erikre 
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 01/30/2024
+ms.date: 07/31/2024
 ms.author: erikre
 ms.custom: include file
 ---
@@ -12,7 +12,8 @@ ms.custom: include file
 
 Level 2 is the data protection configuration recommended as a standard for devices where users access more sensitive information. These devices are a natural target in enterprises today. These recommendations don't assume a large staff of highly skilled security practitioners, and therefore should be accessible to most enterprise organizations. This configuration expands upon the configuration in Level 1 by restricting data transfer scenarios and requiring a minimum operating system version.
 
-The policy settings enforced in level 2 include all the policy settings recommended for level 1. However, Level 2 only lists those settings that have been added or changed to implement more controls and a more sophisticated configuration than level 1. While these settings may have a slightly higher impact to users or to applications, they enforce a level of data protection more commensurate with the risks facing users with access to sensitive information on mobile devices.
+> [!IMPORTANT]
+> The policy settings enforced in level 2 include all the policy settings recommended for level 1. However, Level 2 only lists those settings that have been added or changed to implement more controls and a more sophisticated configuration than level 1. While these settings may have a slightly higher impact to users or to applications, they enforce a level of data protection more commensurate with the risks facing users with access to sensitive information on mobile devices.
 
 #### Data protection
 
@@ -44,7 +45,7 @@ The policy settings enforced in level 2 include all the policy settings recommen
 | Device conditions  |       Required SafetyNet evaluation type  |          Hardware-backed key  |          Android  |          Hardware backed attestation enhances the existing Google's Play Integrity service check by applying a new evaluation type called [Hardware Backed](https://developer.android.com/training/safetynet/attestation#evaluation-types), providing a more robust root detection in response to newer types of rooting tools and methods that can't always be reliably detected by a software only solution.<p> As its name implies, hardware backed attestation uses a hardware-based component, which shipped with devices installed with Android 8.1 and later. Devices that were upgraded from an older version of Android to Android 8.1 are unlikely to have the hardware-based components necessary for hardware backed attestation. While this setting should be widely supported starting with devices that shipped with Android 8.1, Microsoft strongly recommends testing devices individually before enabling this policy setting broadly.</p>  |
 | Device conditions  |       Require device lock  |          Medium/Block Access  |          Android        | This setting ensures that Android devices have a device password that meets the minimum password requirements.  |
 | Device conditions  |       Samsung Knox device attestation  |          Block Access  |          Android        | Microsoft recommends configuring the **Samsung Knox device attestation** setting to **Block access** to ensure the user account is blocked from access if the device doesn't meet Samsung's Knox hardware-based verification of device health.  This setting verifies all Intune MAM client responses to the Intune service were sent from a healthy device.  <p> This setting applies to all devices targeted.  To apply this setting only to Samsung devices, you can use "Managed apps" assignment filters.  For more information on assignment filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters).|
-| App conditions |       Offline grace period  |          21 / Wipe data (days)  |         Windows  |                  |
+| App conditions |       Offline grace period  |          30 / Wipe data (days)  |         iOS/iPadOS,   Android, Windows  |                  |
 
 > [!NOTE]
 > Windows conditional launch settings are labeled as **Health Checks**.

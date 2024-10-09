@@ -2,13 +2,13 @@
 title: Windows Autopilot requirements
 description: Software, Networking, Licensing, and Configuration requirements for Windows Autopilot.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 09/06/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -239,7 +239,7 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 
 > [!NOTE]
 >
-> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/fundamentals/licenses-assign).
+> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/mem/intune/fundamentals/licenses-assign).
 
 Additionally, the following are also recommended (but not required):
 

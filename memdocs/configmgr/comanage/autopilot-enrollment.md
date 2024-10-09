@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: gowdhamankarthikeyan
 ms.author: gokarthi
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart,aaroncz,frankroj
 manager: apoorvseth
 ms.collection: tier3
 ---
@@ -83,12 +83,16 @@ The following components are required to support Autopilot into co-management:
 
 - Windows devices running one of the following versions:
 
-  - Windows 11
+    - Windows 11
 
-> [!NOTE]
-  > For Windows 11 devices, if a device has not been targeted with a co-management settings policy, the management authority will be set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and thus Intune will continue to manage all the co-management workloads. To mitigate this, you must create a co-management settings policy and set **automatically install the Configuration Manager client** to **No** and in Advanced settings, keep default settings for **Override co-management policy and use Intune for all workloads.**
+        For Windows 11 devices, if a device has not been targeted with a co-management settings policy, the management authority will be set to Microsoft Intune during the Autopilot process. Installing the Configuration Manager client as Win32 app doesn't change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads. To set the management authority to Configuration Manager, create a co-management settings policy with the following Advanced settings:<br>
+<br>
+        - **Automatically install the Configuration Manager client.**: **No**
+        - **Override co-management policy and use Intune for all workloads.**: **No**
 
-  - At least Windows 10, version 20H2, with the latest cumulative update
+        For additional information, see [Co-management settings: Windows Autopilot with co-management](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500).
+
+    - A [currently supported](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions-by-servicing-option) version of Windows 10.
 
 - Register the device for Autopilot. For more information, see [Windows Autopilot registration overview](/autopilot/registration-overview).
 
@@ -127,19 +131,25 @@ Use these recommendations for a more successful deployment:
 
 ## Limitations
 
-Autopilot into co-management currently doesn't support the following functionality:
+ - For Windows 11 devices in Microsoft Entra hybrid joined scenario, the management authority will be set to Microsoft Intune during the Windows Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads.
 
-- Microsoft Entra hybrid joined devices - If the device is targeted with co-management settings policy, in Microsoft Entra hybrid join scenario, the autopilot provisioning times out during ESP phase.
+    To change the management authority to Configuration Manager, set the following registry key value:<br>
+<br>
+    - Path: **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server**
+    - Value: **ConfigInfo**
+    - REG_SZ: **2**
+    
+    For more information, see [Co-management settings: Windows Autopilot with co-management](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500).
 
-> [!NOTE]
->
-> For Windows 11 devices in Microsoft Entra hybrid joined scenario, the management authority will be set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and thus Intune will continue to manage all the co-management workloads. To mitigate this, along with Configuration Manager client installation, registry value **ConfigInfo** in registry path **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server** must be set to **2** which will set the management authority as Configuration Manager.
+- Autopilot into co-management currently doesn't support the following functionality:
 
-- Autopilot pre-provisioning.
+    - Microsoft Entra hybrid joined devices - If the device is targeted with co-management settings policy, in Microsoft Entra hybrid join scenario, the autopilot provisioning times out during ESP phase.
 
-- Workloads switched to **Pilot Intune** with pilot collections. This functionality is dependent upon collection evaluation, which doesn't happen until after the client is installed and registered. Since the client won't get the correct policy until later in the Autopilot process, it can cause indeterminate behaviors.
+    - Autopilot pre-provisioning.
 
-- Clients that authenticate with PKI certificates. You can't provision the certificate on the device before the Configuration Manager client installs and needs to authenticate to the CMG. Microsoft Entra ID is recommended for client authentication. For more information, see [Plan for CMG client authentication: Microsoft Entra ID](../core/clients/manage/cmg/plan-client-authentication.md#azure-ad).
+    - Workloads switched to **Pilot Intune** with pilot collections. This functionality is dependent upon collection evaluation, which doesn't happen until after the client is installed and registered. Since the client won't get the correct policy until later in the Autopilot process, it can cause indeterminate behaviors.
+
+    - Clients that authenticate with PKI certificates. You can't provision the certificate on the device before the Configuration Manager client installs and needs to authenticate to the CMG. Microsoft Entra ID is recommended for client authentication. For more information, see [Plan for CMG client authentication: Microsoft Entra ID](../core/clients/manage/cmg/plan-client-authentication.md#azure-ad).
 
 ## Configure
 
@@ -192,7 +202,7 @@ Investigate how the enrollment status page failed while waiting for Configuratio
 - The **Device setup** phase fails while waiting on the task sequence to complete. For more information, see [The task sequence doesn't complete](#the-task-sequence-doesnt-complete).
 
 > [!TIP]
-> For more information on troubleshooting Autopilot, see [Troubleshooting overview](/autopilot/troubleshooting).
+> For more information on troubleshooting Autopilot, see [Troubleshooting Windows Autopilot overview](/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview).
 
 ### The client installation doesn't complete
 

@@ -2,7 +2,7 @@
 title: What's new in Windows Autopilot
 description: News and resources about the latest updates and past versions of Windows Autopilot. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -271,13 +271,13 @@ Date added: *May 20, 2022*
 
 When Windows 11 is deployed with Autopilot, users can be enabled to view detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics** page is available, which provides a user-friendly view to troubleshoot Windows Autopilot failures.
 
-The following example shows details for **Deployment info**, which includes **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The **Export logs** button can also be used for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
+The following example shows details for **Deployment info**, which includes **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The **Export logs** button can also be used for detailed [troubleshooting](troubleshooting-faq.yml#troubleshooting-windows-oobe-issues-during-windows-autopilot) analysis.
 
 :::image type="content" source="images/oobe-03.png" alt-text="Windows Autopilot diagnostics page expanded to show details.":::
 
 To enable the diagnostics page, go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
 
-The diagnostics page is currently supported for commercial OOBE when using Windows Autopilot user-driven mode. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
+The diagnostics page is currently supported when signing in with a Work or School account during a Windows Autopilot user-driven deployment. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
 
 ## Related content
 

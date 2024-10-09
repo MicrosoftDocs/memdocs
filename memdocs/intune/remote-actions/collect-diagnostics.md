@@ -64,7 +64,7 @@ To download diagnostics:
 2. On the **Summary** page, select the **Diagnostics** page and download the diagnostics.
 
 > [!IMPORTANT]
-> For Android devices, if the Company Portal isn't signed in by the user, logs will not be available for download in the Intune portal. 
+> For Android devices, if the Company Portal isn't signed in by the user, logs will not be available for download in the Intune portal. Diagnostic uploads exceeding 50 diagnostics or 4MB in diagnostic data cannot be downloaded directly from the Intune portal. For access to larger diagnostic uploads, reach out to [Microsoft Intune support](/mem/get-support). 
 
 Diagnostics take approximately 30 minutes to be delivered from an end user's device. The user may be required to close and reopen the app if prompted for a pin when opening the app for the diagnostics request to prompt.
 
@@ -93,12 +93,12 @@ The *Collect diagnostics* remote action is supported for:
 - Devices that are online and able to communicate with the service during diagnostics
 
 > [!NOTE]
-> For diagnostics to be able to upload successfully from the client, make sure that the following URLs are not blocked on the network:
-> `lgmsapeweu.blob.core.windows.net`
-> `lgmsapewus2.blob.core.windows.net`
-> `lgmsapesea.blob.core.windows.net`
-> `lgmsapeaus.blob.core.windows.net`
-> `lgmsapeind.blob.core.windows.net`
+> For diagnostics to be able to upload successfully from the client, make sure that the URL for your region is not blocked on the network:
+> - `Europe - lgmsapeweu.blob.core.windows.net`
+> - `Americas - lgmsapewus2.blob.core.windows.net`
+> - `East Asia - lgmsapesea.blob.core.windows.net`
+> - `Australia - lgmsapeaus.blob.core.windows.net`
+> - `India - lgmsapeind.blob.core.windows.net`
 
 
 ### Collect diagnostics

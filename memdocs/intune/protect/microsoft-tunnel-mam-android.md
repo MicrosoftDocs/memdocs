@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,7 +67,7 @@ Users of devices that aren't enrolled with Intune must install the following app
 
 **Line of Business apps**:
 
-For your Line of Business (LOB) apps, integrate them with the MAM SDK. Later, you can [add your LOB apps](#configure-line-of-business-applications) to your app protection policy and app configuration polices for MAM Tunnel. See [Getting started with MAM for Android](../developer/app-sdk-android-phase3.md).
+For your Line of Business (LOB) apps, integrate them with the MAM SDK. Later, you can [add your LOB apps](#configure-line-of-business-applications) to your app protection policy and app configuration policies for MAM Tunnel. See [Getting started with MAM for Android](../developer/app-sdk-android-phase3.md).
 
 > [!NOTE]
 > Make sure your Android LOB applications support direct proxy or Proxy Auto-Configuration (PAC) for both MDM and MAM.
@@ -75,6 +75,17 @@ For your Line of Business (LOB) apps, integrate them with the MAM SDK. Later, yo
 **MAM SDK Version**:
 
 To use the Android Trusted Roots Functionality for Microsoft Tunnel for MAM requires a MAM SDK version of 9.5.0 or later, go to [Release Version 9.5.0 · msintuneappsdk/ms-intune-app-sdk-android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/releases/tag/9.5.0) on github.com.
+
+## Government cloud support
+
+Microsoft Tunnel for MAM on Android is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
+Microsoft Tunnel for MAM on Android doesn't support Federal Information Processing Standard (FIPS).
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
 ## Configure policies to support Microsoft Tunnel for MAM
 
@@ -95,7 +106,7 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
 > [!NOTE]
 > Ensure only a single Defender app configuration policy targets the unenrolled device. Targeting more than 1 app configuration policy with different tunnel settings for Defender for Endpoint will create tunnel connection issues on the device.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration policies** > **Add** > **Managed Apps**.
 
 2. On the *Basics* tab:
 
@@ -145,7 +156,7 @@ The new policy appears in the list of App configuration policies.
 
 Create an App configuration policy for Microsoft Edge. This policy configures Microsoft Edge to support identity-switch, providing the ability to automatically connect the VPN Tunnel when signing-in or switching to a Microsoft "Work or school" account, and automatically disconnect the VPN tunnel when switching to a Microsoft personal account.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration policies** > **Add** > **Managed Apps**.
 
 2. On the *Basics* tab:
 
@@ -320,12 +331,6 @@ Using two or more app configuration policies for Microsoft Defender that specify
 
 **Workaround**: Target each device with a single app configuration policy for Microsoft Defender, ensuring each unenrolled device is configured to use only one Site.
 
-### GCC High and FIPS support
-
-Microsoft Tunnel for MAM isn't supported for GCC High environments 
-Microsoft Tunnel for MAM doesn't support Federal Information Processing Standard (FIPS).
-Microsoft Tunnel for MAM isn't supported in Fairfax environments
-
 ### Auto-Disconnect with Line of Business Apps 
 We do not support auto disconnect in Line-of-Business (LOB) scenarios.
 
@@ -333,7 +338,6 @@ If Edge is the only application listed in the per-app VPN configuration, the aut
 If there are other applications included in the per-app VPN configuration, the auto disconnect feature will not work. In this case, users must manually disconnect to ensure all connections are terminated.
 
 **Workaround**: Users must manually disconnect connections in LOB scenarios.
-
 
 ## Next steps
 

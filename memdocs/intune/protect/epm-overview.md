@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -75,6 +75,15 @@ Endpoint Privilege Management supports the following operating systems:
 >
 > - Elevation settings policy will show as not applicable for devices that don't run a supported operating system version.
 > - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
+
+## Government cloud support
+
+Endpoint Privilege Management is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+- U.S. Department of Defense (DoD)
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
 ## Getting started with Endpoint Privilege Management
 

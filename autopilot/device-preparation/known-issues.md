@@ -2,13 +2,13 @@
 title: Windows Autopilot device preparation known issues
 description: Information regarding known issues that might occur during a Windows Autopilot device preparation deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 07/23/2024
+ms.date: 09/27/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -39,6 +39,35 @@ This article describes known issues that can often be resolved with:
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 ## Known issues
+
+## Security group membership update failures might lead to non-compliant devices
+
+Date added: *September 27, 2024*
+
+If security groups aren't properly configured in Microsoft Intune, devices might lose compliance and be left in an unsecured state. The following are potential reasons for security group membership failures:
+
+- **Retry failures**: Security group membership updates might not succeed during retry windows, leading to delays in group updates.
+
+- **Static to dynamic group changes**: After the Windows Autopilot device preparation profiles are configured, changing a security group from static to dynamic could cause failures.
+
+- **Owner removal**: If the **Intune Provisioning Client** service principal is removed as an owner of a configured security group, updates might fail.
+
+- **Group deletion**: If a configured security group is deleted and devices are deployed before Microsoft Intune detects the deletion, security configurations might fail to apply.
+
+To mitigate the issue, follow these steps:
+
+1. **Validate security group configuration before provisioning**:
+
+   - Ensure the correct security group is selected within the Microsoft Intune admin center or the Microsoft Entra admin center.
+   - The security group should be configured within the Windows Autopilot device preparation profile.
+   - The group shouldn't be assignable to other groups.
+   - The **Intune Provisioning Client** service principal should be an owner of the group.
+
+1. **Manually fix the provisioned devices**:
+
+   - If devices are already deployed or the security group isn't applicable, manually add the affected devices to the correct security group.
+
+Security group membership failures can be prevented by following these steps, ensuring devices remain compliant and secure.
 
 ## Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
 
@@ -92,9 +121,7 @@ The issue is being investigated. As a workaround, add the following additional r
 For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
 
 > [!NOTE]
->
 > The [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions) article doesn't list the **Device configurations** - **Assign** permission. This permission requirement is only temporary until the issue is resolved. However, the article can be used as a guide on how to properly add this permission.
-
 **This issue was resolved in July 2024.**
 
 ### Device is stuck at 100% during the out-of-box experience (OOBE)
@@ -152,3 +179,7 @@ The initial release of Windows Autopilot device preparation has the following kn
 - Managed Installer policy during the out-of-box experience (OOBE) isn't supported due to the possibility of incorrect reporting.
 - Custom compliance isn't supported during Windows Autopilot device preparation deployments.
 - The device health script isn't supported during Windows Autopilot device preparation deployments.
+
+## Related content
+
+- [Windows Autopilot device preparation troubleshooting FAQ](troubleshooting-faq.yml).

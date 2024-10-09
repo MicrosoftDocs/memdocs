@@ -2,13 +2,13 @@
 title: Windows Autopilot for pre-provisioned deployment
 description: Windows Autopilot for pre-provisioned deployment.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 07/23/2024
+ms.date: 09/13/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -33,7 +33,11 @@ With **Windows Autopilot for pre-provisioned deployment**, the provisioning proc
 
 Pre-provisioned deployments use Microsoft Intune in currently supported versions of Windows. Such deployments build on existing Windows Autopilot [user-driven scenarios](user-driven.md) and support user-driven mode scenarios for both Microsoft Entra joined and Microsoft Entra hybrid joined devices.
 
-## Prerequisites
+## Requirements
+
+> [!IMPORTANT]
+>
+> A device can't automatically re-enroll through Windows Autopilot after an initial deployment with pre-provisioning mode. Instead, delete the device record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the Microsoft Intune admin center, select **Devices** > **All devices** > select the devices to delete > **Delete**. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
 
 In addition to [Windows Autopilot requirements](requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
@@ -48,7 +52,7 @@ In addition to [Windows Autopilot requirements](requirements.md), Windows Autopi
 >
 > - Because the OEM or vendor performs the pre-provisioning process, this process **doesn't require access to an end-user's on-prem domain infrastructure**. The pre-provisioning process is unlike a typical Microsoft Entra hybrid joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected. Instead the domain network is contacted when the device is unboxed on-premises by the end-user.
 >
-> - See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review known issues and their solutions.
+> - See [Windows Autopilot known issues](known-issues.md) and [Troubleshooting Windows Autopilot device import and enrollment](troubleshooting-faq.yml#troubleshooting-windows-autopilot-device-import-and-enrollment) to review known issues and their solutions.
 
 ## Preparation
 

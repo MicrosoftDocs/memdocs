@@ -9,7 +9,7 @@ author: scottbreenmsft
 
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/30/2024
+ms.date: 07/31/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
@@ -36,22 +36,22 @@ ms.collection:
 > [!TIP]
 > [!INCLUDE [cloud-native-endpoints-definitions](../../includes/cloud-native-endpoints-definitions.md)]
 
-This guide walks you through the steps to create a cloud-native Windows endpoint configuration for your organization. For an overview of cloud-native endpoints, and their benefits, go to [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
+This guide walks you through the steps to create a cloud-native Windows endpoint configuration for your organization. For an overview of cloud-native endpoints, and their benefits, see [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
 
 This feature applies to:
 
 - Windows cloud-native endpoints
 
 > [!TIP]
-> If you want a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). In Intune, you can configure Windows in cloud configuration using a [Guided Scenario](../../intune/fundamentals/guided-scenarios-overview.md).
+> If you want a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). For an Intune [Guided Scenario](../../intune/fundamentals/guided-scenarios-overview.md), see [Windows 10/11 in cloud configuration](../../intune/fundamentals/cloud-configuration.md).
 >
 > The following table describes the key difference between this guide and *Windows in cloud configuration*:
 >
 > ---
 > | Solution | Objective |
 > | --- | --- |
-> | Tutorial: Get started with cloud-native Windows endpoints (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing. |
-> | [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies pre-built configuration based on Microsoft best practices for frontline, remote, and other workers with more focused needs. |
+> | **Tutorial: Get started with cloud-native Windows endpoints** (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing. |
+> | [**Windows in cloud configuration**](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies a pre-built configuration based on Microsoft best practices for frontline, remote, and other workers with more focused needs. |
 >
 > ---
 >
@@ -65,11 +65,11 @@ Use the five ordered phases in this guide, which build on each other to help you
 
 :::image type="content" source="../media/cloud-native-windows-endpoints/phases.png" alt-text="Five phases for setting up cloud-native Windows endpoints using Microsoft Intune and Windows Autopilot.":::
 
-- Phase 1 – Set up your environment
-- Phase 2 – Build your first cloud-native Windows endpoint
-- Phase 3 – Secure your cloud-native Windows endpoint
-- Phase 4 – Apply your custom settings and applications
-- Phase 5 – Deploy at scale with Windows Autopilot
+- [Phase 1](#phase-1--set-up-your-environment) – Set up your environment
+- [Phase 2](#phase-2---build-a-cloud-native-windows-endpoint) – Build your first cloud-native Windows endpoint
+- [Phase 3](#phase-3--secure-your-cloud-native-windows-endpoint) – Secure your cloud-native Windows endpoint
+- [Phase 4](#phase-4--apply-customizations-and-review-your-on-premises-configuration) – Apply your custom settings and applications
+- [Phase 5](#phase-5--deploy-at-scale-with-windows-autopilot) – Deploy at scale with Windows Autopilot
 
 At the end of this guide, you have a cloud-native Windows endpoint ready to start testing in your environment. Before you get started, you might want to check out the Microsoft Entra join planning guide at [How to plan your Microsoft Entra join implementation](/entra/identity/devices/device-join-plan).
 
@@ -470,7 +470,7 @@ The following settings in the **Windows security baseline** can cause issues wit
 - Local Policies Security Options\Administrator elevation prompt behavior (default = Prompt for consent on the secure desktop)
 - Standard user elevation prompt behavior (default = Automatically deny elevation requests)
 
-For more information, go to [Windows Autopilot policy conflicts](/autopilot/policy-conflicts).
+For more information, see [Troubleshooting policy conflicts with Windows Autopilot](/autopilot/troubleshooting-faq#troubleshooting-policy-conflicts-with-windows-autopilot).
 
 ### Windows Update for Business
 

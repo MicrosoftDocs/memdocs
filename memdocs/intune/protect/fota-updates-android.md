@@ -64,5 +64,3 @@ In addition, Microsoft Intune supports FOTA update management for supported devi
 
 - **Zebra**: Go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md). 
 - **Samsung**: Go to [Samsung E-FOTA Update Management with Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/samsung-e-fota-update-management-with-microsoft-endpoint-manager/ba-p/2002552)
-
-

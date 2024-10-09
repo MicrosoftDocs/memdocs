@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/17/2024
+ms.date: 08/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -61,7 +61,7 @@ Based on the platform a policy targets, EDR policies for devices you manage with
 > [!TIP]
 > In addition to EDR policy, you can use [device configuration](../protect/advanced-threat-protection-configure.md) policy to onboard devices to Microsoft Defender for Endpoint. However, device configuration policies don't support tenant attached devices.
 >
-> When using multiple polices or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
+> When using multiple policies or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
 
 ## Prerequisites for EDR policies
 
@@ -78,7 +78,7 @@ Based on the platform a policy targets, EDR policies for devices you manage with
 
   To set up tenant attach, including the synchronization of Configuration Manager collections to the Microsoft Intune admin center and enabling them to work with policies for endpoint security, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
-  For more information about using EDR polices with tenant attached devices, see [Set up Configuration Manager to support EDR policy](#set-up-configuration-manager-to-support-edr-policy) in this article.
+  For more information about using EDR policies with tenant attached devices, see [Set up Configuration Manager to support EDR policy](#set-up-configuration-manager-to-support-edr-policy) in this article.
 
 ## Role-based access controls (RBAC)
 
@@ -149,7 +149,7 @@ The EDR onboarding status tab includes:
 
   To learn more about Defender for Endpoint settings that are available for macOS, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences#device-tags) in the Defender documentation.
 
-**Windows** - To manage EDR for Windows devices, select the **Windows 10, Windows 11, and Windows Server** platform. The following profile is available:
+**Windows** - To manage EDR for Windows devices, select the **Windows** platform. The following profile is available:
 
 - **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
 
@@ -158,9 +158,9 @@ The EDR onboarding status tab includes:
 
   > [!NOTE]
   >
-  > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
+  > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform that is now named more simply as *Windows*.
   >
-  > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+  > The *Windows* platform supports devices communicating through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
   >
   > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
@@ -230,7 +230,7 @@ To enable tenant attach when co-management isn’t enabled, you’ll need to sig
 
 The following are supported for devices you manage with Intune:
 
-- Platform: **Windows 10, Windows 11, and Windows Server** - Intune deploys the policy to devices in your Microsoft Entra groups.
+- Platform: **Windows** - Intune deploys the policy to devices in your Microsoft Entra groups.
 - Profile: **Endpoint detection and response**
 
 ## Use a preconfigured EDR policy
@@ -258,11 +258,11 @@ To create the policy:
 2. On the **Create a profile** page, specify one of the following combinations, and then select **Create**:
 
    - For devices managed by Intune:
-      - Platform = **Windows 10, Windows 11, and Windows Server**
+      - Platform = **Windows**
       - Profile = **Endpoint detection and response**
 
    - For devices managed through the [tenant attach scenario](../protect/tenant-attach-intune.md):
-      - Platform = **Windows 10, Windows 11, and Windows Server (ConfigMgr)**
+      - Platform = **Windows (ConfigMgr)**
       - Profile = **Endpoint detection and response (ConfigMgr)**
 
      > [!IMPORTANT]
@@ -305,11 +305,11 @@ This option is found near the top of the page, above the Windows Devices onboard
 
    - Intune - Intune deploys the policy to devices in your assigned groups. When you create the policy, select:
 
-     - Platform: **Linux**, **macOS**, or **Windows 10, Windows 11, and Windows Server**
+     - Platform: **Linux**, **macOS**, or **Windows**
      - Profile: **Endpoint detection and response**
 
    - Configuration Manager - Configuration Manager deploys the policy to devices in your Configuration Manager collections. When you create the policy, select:
-     - Platform: **Windows 10, Windows 11, and Windows Server (ConfigMgr)**
+     - Platform: **Windows (ConfigMgr)**
      - Profile: **Endpoint detection and response (ConfigMgr)**
 
 4. Select **Create**.
@@ -380,12 +380,12 @@ You can view details about the EDR policies you use in the endpoint deployment a
 
 For policy details, in the admin center, go to **Endpoint security** > **Endpoint deployment and response** > **Summary** tab, and select the policy for which you want to view compliance details:
 
-- For policies that target the **Linux**, **macOS**, or **Windows 10, Windows 11, and Windows Server** platforms (Intune), Intune displays an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
+- For policies that target the **Linux**, **macOS**, or **Windows** platforms (Intune), Intune displays an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
 
 - For Windows devices, the chart for **Windows devices onboarded to Defender for Endpoint** displays the count of devices that have successfully onboarded to Microsoft Defender for Endpoint and that have yet to onboard.
 
   To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Microsoft Defender for Endpoint by external means, like Group Policy or PowerShell, are counted as **Devices without the Defender for Endpoint sensor**.
-- For policies that target the **Windows 10, Windows 11, and Windows Server (ConfigMgr)** platform (Configuration Manager), Intune displays an overview of compliance to the policy that doesn't support drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
+- For policies that target the **Windows (ConfigMgr)** platform (Configuration Manager), Intune displays an overview of compliance to the policy that doesn't support drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
 
 To view details for individual devices, go to **Endpoint security** > **Endpoint deployment and response** > **EDR Onboarding Status** tab, and select a device from the list to view additional device-specific details.
 
