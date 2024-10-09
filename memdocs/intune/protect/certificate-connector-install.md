@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Install the Certificate Connector for Microsoft Intune - Azure | Microsoft Docs
+title: Install the Certificate Connector for Microsoft Intune
 description: Learn how to install and configure the unified Certificate Connector for Microsoft Intune, which supports SCEP, PKCS, imported PKCS, and certificate revocation. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/11/2023
+ms.date: 10/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -47,11 +47,11 @@ To support your use of certificates with Intune, you can install the Certificate
 
 4. Sign in to the Windows Server that will host the certificate connector and confirm that the [prerequisites for the certificate connector](../protect/certificate-connector-prerequisites.md) are installed.
 
-   If you’ll use SCEP with a Microsoft Certification Authority (CA), confirm that the Network Device Enrollment Service (NDES) role is installed.
+   To use the Simple Certificate Enrollment Protocol (SCEP) with a Microsoft Certification Authority (CA), confirm that the Network Device Enrollment Service (NDES) role is installed.
 
 5. Use an account with admin permissions to the server to run the installer (**IntuneCertificateConnector.exe**). The installer also installs the policy module for NDES. The policy module runs as an application in IIS.
 
-   > [!NOTE]  
+   > [!NOTE]
    > When **IntuneCertificateConnector.exe** runs to install a new connector or an existing connector auto upgrades while the Windows Event Viewer is open, the installation process logs a message similar to the following with an Event ID 1000 from the source *Microsoft-Intune-CertificateConnectors cannot be found*:
    >
    > - Either the component that raises this event is not installed on your local computer or the installation is corrupted. You can install or repair the component on the local computer.
@@ -108,12 +108,13 @@ Use the following procedure to both configure a new connector and modify a previ
    - **Domain user account** – Use any domain user account that is an administrator on the Windows Server.
 
 4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access. For example, `http://proxy.contoso.com`.
-   > [!IMPORTANT]  
+
+   > [!IMPORTANT]
    > Be sure to include the HTTP or HTTPS prefix. This is a change from the proxy configuration for previous versions of the connector.
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
-6. On the *Microsoft Entra sign-in* page, select the environment that hosts your Microsoft Entra ID, and then select **Sign In**. You’ll then be asked to authenticate your access. An Intune license is required for the account that you sign in with which can be either a Global Administrator or an Intune Administrator.
+6. On the *Microsoft Entra sign-in* page (which appears as *Azure AD Sign-In*), select the environment that hosts your Microsoft Entra ID, and then select **Sign In**. You’ll then be asked to authenticate your access. An Intune license is required for the account that you sign in with which can be either a Global Administrator or an Intune Administrator.
 
    Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 
@@ -132,8 +133,8 @@ Use the following procedure to both configure a new connector and modify a previ
 After the configuration completes successfully and the wizard closes, the Certificate Connector for Microsoft Intune is now ready for use.
 
 > [!TIP]
-> It might be helpful to rename the connector to reference the server the connector is installed on. 
-> 
+> It might be helpful to rename the connector to reference the server the connector is installed on.
+>
 > To rename the connector, in the Microsoft Intune admin center, select **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. Select the connector you want to rename. In **Name**, enter the name you want to use, and then select **save**.
 
 ## Modify the connector configuration
@@ -143,9 +144,9 @@ After you configure a Certificate Connector for Microsoft Intune on a server, yo
 ## Remove the connector
 
 To uninstall the Certificate Connector for Microsoft Intune from a Windows Server, on the server run **IntuneCertificateConnector.exe**, which is the same [software you use to install the connector](#download-and-install-the-connector-software). When run on a server that has the connector installed, the only available option is to remove the current connector installation.
-## Next steps
 
-Deploy:
+## Related content
+
 - [SCEP certificate profiles](../protect/certificates-profile-scep.md)
 - [PKCS certificates](../protect/certificates-pfx-configure.md)
 - [Imported PKCS certificates](../protect/certificates-imported-pfx-configure.md)
