@@ -28,14 +28,18 @@ ms.collection:
 - tier2
 ---
 
-# Check status in Microsoft Intune app for Linux 
-You can use the Microsoft Intune app for Linux to resolve access and compliance issues for enrolled devices. This article describes how to:
+# Check status in Microsoft Intune app for Linux  
+
+You can use the Microsoft Intune app for Linux to resolve access and compliance issues for enrolled devices. This article describes how to:  
 
 * View the status of a device  
+
 * View and resolve compliance issues with your device settings   
-* Refresh device status 
+
+* Refresh device status  
 
 ## View device status  
+
 The Intune app routinely checks in with your device to verify that it complies with setting requirements. Check-ins occur at the time of enrollment, and thereafter whenever you're using your device for work. The status reveals the result of the last check-in. To view the status of a device, sign in to the Intune app and select the device. 
 
 There are three statuses in the Intune app:  
@@ -50,17 +54,18 @@ There are three statuses in the Intune app:
 
 To view compliance issues: 
 
-1. Sign in to the Intune app.  
 
-1. Select a device.  
-   
-1. On the device details page, select **View Issues**. This option is only available when issues are present.  
+1. Sign in to the Intune app. 
+
+2. Select a device.  
+
+3. On the device details page, select **View Issues**. This option is only available when issues are present.  
 
 The app shows you the following information:  
 
-  * The action required, such as *Upgrade your operating system*.  
+  * The action required, such as *Upgrade your operating system*. 
 
-  * The reason for noncompliance, such as *This device’s operating system is not supported*.  
+  * The reason for noncompliance, such as *This device’s operating system is not supported*. 
 
   * The **How to resolve this** link that, when available, points to a help article on learn.microsoft.com.  
 
