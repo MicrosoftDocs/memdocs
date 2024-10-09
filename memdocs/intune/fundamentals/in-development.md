@@ -114,24 +114,6 @@ Applies to:
 
 <!-- *********************************************** -->
 
-### Defender for Endpoint security settings support in government cloud environments<!-- 24191406 -->
-
-Customer tenants in US Government Community Cloud (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
-
-For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
-
-### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
-
-You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
-
-- **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
-
-Applies to the following when you use the *Windows 10, Windows 11, and Windows Server* platform:
-
-- Windows 10
-- Windows 11
-
-When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
 
 <!-- *********************************************** -->
 
@@ -195,6 +177,19 @@ These requirements apply to:
 - Windows 10/11 user and device certificates.
 
 They don't apply to device certificates used with Microsoft Entra joined users or devices, because SID is an on-premises identifier.
+
+### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
+
+You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
+
+- **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
+
+Applies to the following when you use the *Windows 10, Windows 11, and Windows Server* platform:
+
+- Windows 10
+- Windows 11
+
+When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
 
 <!-- *********************************************** -->
 

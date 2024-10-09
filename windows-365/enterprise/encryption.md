@@ -66,7 +66,7 @@ Windows 365 uses the Transport Layer Security (TLS) protocol to protect data in 
 - Algorithm flexibility
 - Ease of deployment and use
 
-TLS 1.2 is used for all connections started from Windows 365 to the Azure Virtual Desktop infrastructure components. These components use the same TLS 1.2 ciphers as [Azure Front Door](/azure/frontdoor/concept-end-to-end-tls#supported-cipher-suites). Additional technical details on the cipher suites are available at [Microsoft 365 technical reference details about encryption](/purview/technical-reference-details-about-encryption#tls-cipher-suites-supported-by-microsoft-365).
+TLS 1.2 is used for all connections started from Windows 365 to the Azure Virtual Desktop infrastructure components. These components use the same TLS 1.2 ciphers as [Azure Front Door](/azure/frontdoor/concept-end-to-end-tls#supported-cipher-suites). Additional technical details on the cipher suites are available at [Microsoft 365 technical reference details about encryption](/purview/technical-reference-details-about-encryption#tls-cipher-suites-supported-by-microsoft-365). For the reverse connect transport, TLS 1.3 is supported. For more details see [Understanding Azure Virtual Desktop connectivity](/azure/virtual-desktop/network-connectivity).
 
 <!-- ########################## -->
 ## Next steps
