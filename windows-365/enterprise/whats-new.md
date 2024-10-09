@@ -56,16 +56,6 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
-## Week of October 7, 2024
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Device management
-
-#### Call redirection<!--53718424-->
-
-Windows 365 now supports multimedia redirection call redirection. For more information, see [Use multimedia redirection](/azure/virtual-desktop/multimedia-redirection).
-
-<!-- ########################## -->
 ## Week of September 30, 2024 (Service release 2409)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
