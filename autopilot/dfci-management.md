@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/13/2024
+ms.date: 10/09/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -92,6 +92,14 @@ For more information, see [Intune devices and apps API overview](/graph/intune-c
 - VAIO.
 
 Other OEMs are pending.
+
+## Known issues
+
+### DFCI enrollment fails for Professional editions of Windows 11, version 24H2
+
+Date added: *October 9, 2024*
+
+DFCI can't currently be used on devices with Professional editions of Windows 11, version 24H2. The issue is being investigated. As a workaround, ensure the device is upgraded to the Enterprise edition of Windows 11, version 24H2 during or after OOBE onboarding. After upgrading to the Enterprise edition of Windows 11, version 24H2, sync the device. Once the device is synced, reboot it to get it enrolled in DFCI.
 
 ## Related content
 
