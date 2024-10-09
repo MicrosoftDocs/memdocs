@@ -607,13 +607,6 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
-### Disable Edge internal pages
-You can disable Edge internal pages such as `Edge://flags` and `Edge://net-export`. More pages can be found from `Edge://about`
-
-|Key |Value |
-|:--|:----|
-|com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList | The corresponding value for the key is a list of page names. You can enter the internal pages you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`flags|net-export`|
-
 ### Control the behavior of the Site Blocked popup
 When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites. You can choose preferences between InPrivate and personal account.
 
@@ -624,7 +617,7 @@ When attempting to access blocked websites, users will be prompted to use either
 ### Control the behavior of switching personal profile to work profile 
 When Edge is under the personal profile and users are attempting to open a link from Outlook or Microsoft Teams which are under the work profile, by default, Intune will use the Edge work profile to open the link because both Edge, Outlook, and Microsoft Teams are managed by Intune. However, when the link is blocked, the user will be switched to the the personal profile. This causes a friction experience for users
 
-You can configure a policy to improve users experience.
+You can configure a policy to enhance users' experience. This policy is recommended to be used together with AutoTransitionModeOnBlock as it may switch users to the personal profile according to the policy value you configured.
 
 |Key |Value |
 |:--|:----|
@@ -632,6 +625,13 @@ You can configure a policy to improve users experience.
 
 > [!NOTE]
 > This policy takes effect when Edge is in personal profile and is receiving URL from a managed apps such as Outlook and Microsoft Teams by Intune. Edge also needs to have both personal profile and work profile signed in.
+
+### Disable Edge internal pages
+You can disable Edge internal pages such as `Edge://flags` and `Edge://net-export`. More pages can be found from `Edge://about`
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList | The corresponding value for the key is a list of page names. You can enter the internal pages you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`flags|net-export`|
 
 ### Manage websites to allow upload files
 There may be scenarios where users are only allowed to view websites, without the ability to upload files. Organizations have the option to designate which websites can receive file uploads.
