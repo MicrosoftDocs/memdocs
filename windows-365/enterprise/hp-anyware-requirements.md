@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/10/2024
+ms.date: 10/09/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
