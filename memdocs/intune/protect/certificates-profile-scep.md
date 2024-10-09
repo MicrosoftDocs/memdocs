@@ -53,11 +53,11 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
 *Applies to Windows server 2008 and later*  
 
-The Windows Kerberos Key Distribution Center (KDC) requires certificates issued by Active Directory Certificate Services to be strongly mapped in Active Directory. This means that the certificate's SAN must contain a security identifier (SID) extension that maps to the user or device SID in Microsoft Entra ID. The mapping protects against certificate spoofing and ensures that certificate-based authentication against the KDS continues working. When a user or device authenticates with a certificate in Active Directory, the KDC checks for the SID to verify that the certificate is strongly mapped and issued to the correct user or device. 
+The Key Distribution Center (KDC) requires certificates issued by Active Directory Certificate Services to be strongly mapped in Active Directory. This means that the certificate's subject alternative name (SAN) must contain a security identifier (SID) extension that maps to the user or device SID in Microsoft Entra ID. The mapping protects against certificate spoofing and ensures that certificate-based authentication against the KDC continues working. When a user or device authenticates with a certificate in Active Directory, the KDC checks for the SID to verify that the certificate is strongly mapped and issued to the correct user or device. 
 
-The mapping is required in new and renewed SCEP certificates deployed by Microsoft Intune and used for certificate-based authentication in Active Directory. If certificates in these scenarios don't meet strong mapping requirements by the full enforcement mode date, authentication will be denied. 
+The mapping is required in new and renewed SCEP certificates deployed by Microsoft Intune and used for certificate-based authentication in Active Directory. If certificates in these scenarios don't meet the strong mapping requirements by the full enforcement mode date, authentication will be denied. 
 
-To ensure that certficate-based authentication against the KDC continues working, add the *Onpremises* SID as a URI attribute to SCEP certificate profiles:   
+To ensure that certficate-based authentication against the KDC continues working, add the *OnPremisesSecurityIdentifier* attribute to SCEP certificate profiles.  
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.  
 
@@ -72,12 +72,12 @@ To ensure that certficate-based authentication against the KDC continues working
 3. Click through the profile until you get to **Configuration settings**.   
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/certificate-profile-scep/scep-configuration-settings.png)  
+   > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/certificates-profile-scep/scep-configuration-settings.png)  
 
 4. Go to the **Subject alternative name** setting.  
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/certificate-profile-scep/scep-configuration-settings.png)  
+   > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/certificates-profile-scep/scep-san-add.png)  
 
    Add the following attribute and value:  
 
@@ -85,7 +85,7 @@ To ensure that certficate-based authentication against the KDC continues working
 
    - Value: **{{OnPremisesSecurityIdentifier}}**   
 
-After you finish and save the profile, Microsoft Intune appends the SID value and `tag.com,2022-09-14` to the SAN attribute. The final URI that's in the SCEP payload deployed by Microsoft Intune contains the object SID that maps to the user or device: `tag.com,2022-09-14:sid:<OnPremisesObjectSIDValue>` 
+After you finish and save the profile, Microsoft Intune appends a tag with an object ID variable to the SAN attribute. The final tag that's in the SCEP payload deployed by Microsoft Intune shows the SID that maps to the user or device in Microsoft Entra ID. Example formatting: `tag.com,2022-09-14:sid:<OnPremisesObjectSIDValue>`   
 
 For more information about the requirements and enforcement date, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
 
