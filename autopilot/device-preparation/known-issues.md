@@ -36,7 +36,7 @@ This article describes known issues that can often be resolved with:
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
-> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation. 
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 ## Known issues
 
@@ -44,9 +44,9 @@ This article describes known issues that can often be resolved with:
 
 Date added: *October 10, 2024*
 
-When the [Managed installer policy](/mem/intune/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant and admin has selected win32 apps in the Device preparation policy, device preparation deployments will fail. The issue is being investigated.
+When the [Managed installer policy](/mem/intune/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant and Win32 apps are selected in the Windows Autopilot device preparation policy, Windows Autopilot device preparation deployments fails. The issue is being investigated.
 
-As a workaround, remove win32 applications from the list of selected apps in all device preparation policies.
+As a workaround, remove Win32 applications from the list of selected apps in all device preparation policies.
 
 ## Security group membership update failures might lead to non-compliant devices
 
