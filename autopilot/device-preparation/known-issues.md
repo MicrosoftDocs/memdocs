@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/27/2024
+ms.date: 10/10/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -39,6 +39,14 @@ This article describes known issues that can often be resolved with:
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 ## Known issues
+
+## Deployments fail when Managed installer policy is enabled for the tenant
+
+Date added: *October 10, 2024*
+
+When the [Managed installer policy](/mem/intune/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant and Win32 apps are selected in the Windows Autopilot device preparation policy, Windows Autopilot device preparation deployments fails. The issue is being investigated.
+
+As a workaround, remove Win32 applications from the list of selected apps in all device preparation policies.
 
 ## Security group membership update failures might lead to non-compliant devices
 

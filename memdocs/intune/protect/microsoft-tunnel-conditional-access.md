@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2023
+ms.date: 10/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,7 +13,7 @@ ms.localizationpriority: high
 # optional metadata
 
 #ROBOTS:
- 
+
 ms.reviewer: ochukwunyere
 ms.suite: ems
 search.appverid: MET150
@@ -61,7 +61,7 @@ If you'll use Conditional Access policy to limit user access, we recommend confi
 3. To configure user and group access, below *Assignments*, select **Users and groups**.
 
    1. Select **Include** > **All users**.
-   2. Next, select **Exclude** and configure the groups you want to *grant access to*, and then save the user and Group configuration.
+   2. Next, select **Exclude**, and then configure the groups you want to *grant access to*, and then save the user and Group configuration.
 
 4. Under **Cloud apps or actions** > **Select apps**, select the **Microsoft Tunnel Gateway app**.
 
@@ -73,6 +73,6 @@ If you'll use Conditional Access policy to limit user access, we recommend confi
 
 For more information about creating policies for Conditional Access, see [Create a device-based Conditional Access policy](../protect/create-conditional-access-intune.md).
 
-## Next steps
+## Related content
 
 [Monitor Microsoft Tunnel](microsoft-tunnel-monitor.md)
