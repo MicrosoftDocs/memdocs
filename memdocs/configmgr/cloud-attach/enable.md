@@ -2,7 +2,7 @@
 title: Enable cloud attach
 titleSuffix: Configuration Manager
 description: Enable cloud attach for Configuration Manager
-ms.date: 10/10/2024
+ms.date: 08/15/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: overview
@@ -41,7 +41,6 @@ By using the recommended default settings, your eligible devices will be cloud a
 
 > [!Note]
 > Ensure that prerequisites for each of the cloud attach features are met. For more information about prerequisites, see, [prerequisites for tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [prerequisites for Endpoint analytics](../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites).
-
 ## Cloud attach using the default settings
 
 Use the following steps to cloud attach your environment with the default settings:
