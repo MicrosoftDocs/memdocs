@@ -187,11 +187,11 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 9. In **Assignments**, select the user or device groups you want to include in the assignment. These groups receive the profile after you deploy it. For more granularity, see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*.
 
    Plan to deploy this certificate profile to the same groups that receive:
-   
+
    - The PKCS certificate profile and  
 
    - A configuration profile, such as a Wi-Fi profile that makes use of the certificate. 
-   
+
    For more information about assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).  
 
    Select **Next**.
