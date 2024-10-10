@@ -103,7 +103,7 @@ With the [end of support for Xamarin Bindings](https://dotnet.microsoft.com/plat
 
 #### How does this affect you or your users?
 
-If you you have iOS and/or Android apps built with Xamarin and are using the Intune App SDK Xamarin Bindings to enable app protection policies, upgrade your apps to .NET MAUI.  
+If you have iOS and/or Android apps built with Xamarin and are using the Intune App SDK Xamarin Bindings to enable app protection policies, upgrade your apps to .NET MAUI.  
 
 #### How can you prepare?
 
