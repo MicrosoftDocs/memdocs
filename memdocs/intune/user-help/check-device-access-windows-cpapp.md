@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/15/2024
+ms.date: 10/07/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -44,6 +44,7 @@ Complete the steps in this article to check access from the Company Portal app f
 ## Check access from Device details page  
 1. Open the Company Portal app for Windows and go to **Devices**.  
 2. Select a device.  
+   ![Screenshot of the Home page for the Company Portal app for Windows. ](./media/windows-companyportal-04.png) 
 3. Under **Device status**, select **Check access**. The app syncs your device with your organization's current requirements and checks to make sure your device matches them. This check can take a few minutes.  
 4. Look at the status update. 
    - **Can access company resources**: No other action needed.      
