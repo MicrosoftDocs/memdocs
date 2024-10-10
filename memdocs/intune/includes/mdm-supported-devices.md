@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 09/06/2024
+ms.date: 10/10/2024
 ms.localizationpriority: high
 ---
 
