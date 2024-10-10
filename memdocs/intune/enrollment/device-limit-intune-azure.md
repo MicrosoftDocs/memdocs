@@ -58,7 +58,8 @@ Intune device limit restrictions don't apply to devices enrolled via:
 - Co-management with Configuration Manager   
 - Automatic enrollment + group policy  
 - Automatic enrollment + device enrollment manager  
-- Automatic enrollment + bulk device enrollment    
+- Automatic enrollment + bulk device enrollment
+- Automatic enrollment initiated by user through desktop - for example using the Access school or work feature on the devices (Settings app > Accounts)      
 - Windows Autopilot  
 
 Devices enrolled via these methods are enrolled automatically or by an Intune admin, not by an employee or student, and are considered shared devices. Instead, you can apply the Microsoft Entra limit, where supported.   
