@@ -32,6 +32,13 @@ ms.collection:
 ---
 # Configure and use PKCS certificates with Intune
 
+**Applies to**L
+- Android
+- iOS/iPadOS
+- macOS
+- Windows 10/11  
+
+
 Microsoft Intune supports the use of private and public key pair (PKCS) certificates. This article reviews the requirements for PKCS certificates with Intune, including the export of a PKCS certificate then adding it to an Intune device configuration profile.
 
 Microsoft Intune includes built-in settings to use PKCS certificates for access and authentication to your organizations resources. Certificates authenticate and secure access to your corporate resources like a VPN or a WiFi network. You deploy these settings to devices using device configuration profiles in Intune.
@@ -66,11 +73,9 @@ To use PKCS certificates with Intune, you need the following infrastructure:
   - [Prerequisites](certificate-connector-prerequisites.md)  
   - [Installation and configuration](certificate-connector-install.md)  
 
-## Strong mapping requirements   
+## Strong mapping requirements for PKCS certificates   
 
-*Applies to Windows server 2008 and later*  
-
-The Windows Kerberos Key Distribution Center (KDC) requires a strong mapping format for certificates issued by Active Directory Certificate Services. This requirement is applicable to PKCS certificates deployed by Microsoft Intune and used for certificate-based authentication. The mapping must have a security identifier (SID) extension that maps to the user or device SID. If a certificate doesn't meet the new strong mapping criteria set by the full enforcement mode date, authentication will be denied. For more information about the requirements, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).
+The Kerberos Key Distribution Center (KDC) requires a strong mapping format for certificates issued by Active Directory Certificate Services. This requirement is applicable to PKCS certificates deployed by Microsoft Intune and used for certificate-based authentication. The mapping must have a security identifier (SID) extension that maps to the user or device SID. If a certificate doesn't meet the new strong mapping criteria set by the full enforcement mode date, authentication will be denied. For more information about the requirements, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).
 
 In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we released an update that adds the object identifier attribute containing the user or device SID to the certificate, effectively satisfying the strong mapping requirements. This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID, and is available across all platforms, with some differences:  
 

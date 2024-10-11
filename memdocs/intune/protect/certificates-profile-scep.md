@@ -49,45 +49,39 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 > [!TIP]
 > *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).  
 
-## Strong mapping requirements  
+## Strong mapping for SCEP certificates  
 
-*Applies to Windows server 2008 and later*  
+**Applies to**:  
 
-The Key Distribution Center (KDC) requires certificates issued by Active Directory Certificate Services to be strongly mapped in Active Directory. This means that the certificate's subject alternative name (SAN) must contain a security identifier (SID) extension that maps to the user or device SID in Microsoft Entra ID. The mapping protects against certificate spoofing and ensures that certificate-based authentication against the KDC continues working. When a user or device authenticates with a certificate in Active Directory, the KDC checks for the SID to verify that the certificate is strongly mapped and issued to the correct user or device. 
+- Windows 10  
+- Windows 11  
+- iOS  
+- macOS  
 
-The mapping is required in new and renewed SCEP certificates deployed by Microsoft Intune and used for certificate-based authentication in Active Directory. If certificates in these scenarios don't meet the strong mapping requirements by the full enforcement mode date, authentication will be denied. 
+One of the ways the Key Distribution Center (KDC) protects against certificate spoofing is by requiring certificates for a user or device object to be strongly mapped in Active Directory. For manual and offline certificates, which is what Microsoft uses to deliver certificates to devices, you need to create a Subject Alternative Name (SAN) for the certificate, with the following tag-based URI:   
+ 
+`URL=tag:microsoft.com,2022-09-14:sid:<OnPremisesSecurityIdentifier>`
 
-To ensure that certficate-based authentication against the KDC continues working, add the *OnPremisesSecurityIdentifier* attribute to SCEP certificate profiles.  
+To create a SCEP certificate profile that's compliant with the KDC, complete these prerequisites:  
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.  
+- Sync the user or device security identifier (SID) from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain]().  
 
-1. Go to **Manage devices** > **Configuration**.  
+- The SID is supported in device certificates for Microsoft Entra hybrid joined devices. To add a SID for iOS or macOS, use the user certificates.  
 
-2. Create a profile or edit an existing one.        
+- Create a SCEP certificate profile in the Microsoft Intune admin center, or have an existing profile that you can modify with the new SAN attribute.   
 
-  - Select **Create** to [create a new SCEP certificate profile](#create-a-scep-certificate-profile).  
-
-  - Select an existing profile to edit its configuration settings.
-
-3. Click through the profile until you get to **Configuration settings**.   
+After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and an object ID. Example formatting: `tag.com,2022-09-14:sid:<OnPremisesObjectSIDValue>` 
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/certificates-profile-scep/scep-configuration-settings.png)  
+   > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/certificates-profile-scep/scep-configuration-settings.png)   
 
-4. Go to the **Subject alternative name** setting.  
 
    > [!div class="mx-imgBorder"]
    > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/certificates-profile-scep/scep-san-add.png)  
 
-   Add the following attribute and value:  
+Then it deploys new certificates to targeted users and devices. 
 
-   - Attribute: **URI**  
-
-   - Value: **{{OnPremisesSecurityIdentifier}}**   
-
-After you finish and save the profile, Microsoft Intune appends a tag with an object ID variable to the SAN attribute. The final tag that's in the SCEP payload deployed by Microsoft Intune shows the SID that maps to the user or device in Microsoft Entra ID. Example formatting: `tag.com,2022-09-14:sid:<OnPremisesObjectSIDValue>`   
-
-For more information about the requirements and enforcement date, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
+If the certificates in certificate-based authentication scenarios are without a SID by the full enforcement mode date, authentication will be denied. For more information about the KDC's requirements and enforcement date for strong mapping, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
 
 ## Create a SCEP certificate profile
 
@@ -111,8 +105,8 @@ For more information about the requirements and enforcement date, see [KB5014754
 
      1. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
      1. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owners**. You can manage revocation through an external process or directly with the certification authority.
-     1. SCEP certificate profiles are supported for Wi-Fi network configuration.  VPN configuration profile support is not available. A future update may include support for VPN configuration profiles.  
-     1. The following 3 variables are not available for use on Android (AOSP) SCEP certificate profiles.  Support for these variables will come in a future update.
+     1. SCEP certificate profiles are supported for Wi-Fi network configuration.  VPN configuration profile support isn't available. A future update might include support for VPN configuration profiles.  
+     1. The following variables aren't available for use on Android (AOSP) SCEP certificate profiles.  Support for these variables will come in a future update.
         - onPremisesSamAccountName
         - OnPrem_Distinguished_Name
         - Department
@@ -138,7 +132,7 @@ For more information about the requirements and enforcement date, see [KB5014754
 
      *(Applies to:  Android, Android Enterprise, Android (AOSP), iOS/iPadOS, macOS, Windows 8.1, and Windows 10/11)*
 
-     Select a type depending on how you'll use the certificate profile:
+     Select a type, depending on how you plan to use the certificate profile:
 
      - **User**: *User* certificates can contain both user and device attributes in the subject and SAN of the certificate.
 
@@ -214,7 +208,7 @@ For more information about the requirements and enforcement date, see [KB5014754
 
        That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describes this function, and its supported strings.
 
-       User attributes are not supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN won’t be able to get the user principal name when there is no user on the device.
+       User attributes aren't supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN won’t be able to get the user principal name when there is no user on the device.
 
      - **Device certificate type**
 
@@ -231,6 +225,7 @@ For more information about the requirements and enforcement date, see [KB5014754
        - **{{DeviceName}}**
        - **{{FullyQualifiedDomainName}}** *(Only applicable for Windows and domain-joined devices)*
        - **{{MEID}}**
+      
 
        You can specify these variables and static text in the textbox. For example, the common name for a device named *Device1* can be added as **CN={{DeviceName}}Device1**.
 
@@ -241,7 +236,7 @@ For more information about the requirements and enforcement date, see [KB5014754
        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
 
    - **Subject alternative name**:  
-     Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. You can specify multiple subject alternative names. For each one, you may select from four SAN attributes and enter a text value for that attribute. The text value can contain variables and static text for the attribute.
+     Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. You can specify multiple subject alternative names. For each one, you can select from four SAN attributes and enter a text value for that attribute. The text value can contain variables and static text for the attribute.
 
      > [!NOTE]
      > The following Android Enterprise profiles don’t support use of the {{UserName}} variable for the SAN:  
@@ -249,14 +244,14 @@ For more information about the requirements and enforcement date, see [KB5014754
      > - Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 
-     Select from the available SAN attributes:
+     Select from the available SAN attributes:  
 
      - **Email address**
      - **User principal name (UPN)**
      - **DNS**
      - **Uniform Resource Identifier (URI)**
 
-     Variables available for the SAN value depend on the Certificate type you selected; either **User** or **Device**.
+     Variables available for the SAN value are determined by the certificate type you selected.  
 
      > [!NOTE]
      > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally owned work profile* devices:
@@ -271,25 +266,31 @@ For more information about the requirements and enforcement date, see [KB5014754
 
      - **User certificate type**
 
-        With the *User* certificate type, you can use any of the user or device certificate variables described above in the Subject Name section.
+        With the *User* certificate type, you can use any of the user or device certificate variables described above in the Subject Name section. 
 
-        For example, user certificate types can include the user principal name (UPN) in the subject alternative name. If a client certificate is used to authenticate to a Network Policy Server, set the subject alternative name to the UPN.
+        For example, user certificate types can include the user principal name (UPN) in the subject alternative name. If a client certificate is used to authenticate to a Network Policy Server, set the subject alternative name to the UPN.  
+
+        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a SID variable that's compliant with the KDC's strong mapping requirements for certificate-based authentication. You should add the SID variable to user certificates that  authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in user certificates for macOS, iOS, and Windows 10/11, and only works with the URI attribute.         
 
      - **Device certificate type**
 
-        With the *Device* certificate type, you can use any of the variables described in the *Device certificate type* section for Subject Name.
+        With the *Device* certificate type, you can use any of the variables described in the *Device certificate type* section for Subject Name. 
 
-        To specify a value for an attribute, include the variable name with curly brackets, followed by the text for that variable. For example, a value for the DNS attribute can be added **{{AzureADDeviceId}}.domain.com** where *.domain.com* is the text. For a user named *User1* an Email address might appear as {{FullyQualifiedDomainName}}User1@Contoso.com.
+        To specify a value for an attribute, include the variable name with curly brackets, followed by the text for that variable. For example, a value for the DNS attribute can be added **{{AzureADDeviceId}}.domain.com** where *.domain.com* is the text. For a user named *User1* an Email address might appear as {{FullyQualifiedDomainName}}User1@Contoso.com.  
 
-      By using a combination of one or many of these variables and static text strings, you can create a custom subject alternative name format, such as:  
-      - **{{UserName}}-Home**
+        By using a combination of one or many of these variables and static text strings, you can create a custom subject alternative name format, such as **{{UserName}}-Home**.  
+        
+        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a SID variable that's compliant with the KDC's strong mapping requirements for certificate-based authentication. You should add the SID variable to device certificates that  authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is only supported in device certificates for Microsoft Entra hybrid joined devices, and only works with the URI attribute.    
+
 
         > [!IMPORTANT]
         >
         > - When using a device certificate variable, enclose the variable name in double curly brackets {{ }}.
         > - Don't use curly brackets **{ }**, pipe symbols **|**, and semicolons **;**, in the text that follows the variable.
         > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
-        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the SAN of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
+        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the SAN of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.  
+              
+        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a SID variable you can use to create a strong mapping in the user certificate. This variable is required for certificate-based authentication against the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. 
 
    - **Certificate validity period**:
 
@@ -299,7 +300,7 @@ For more information about the requirements and enforcement date, see [KB5014754
 
      For example, if the certificate validity period in the certificate template is two years, you can enter a value of one year, but not a value of five years. The value must also be lower than the remaining validity period of the issuing CA's certificate.
 
-     Plan to use a validity period of five days or greater. When the validity period is less than five days, there is a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed.
+     Plan to use a validity period of five days or greater. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed.
 
    - **Key storage provider (KSP)**:
 
