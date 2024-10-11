@@ -165,7 +165,7 @@ Applies to:
 
 ### New strong mapping requirements for Intune-issued SCEP certificates<!-- 29005591 -->
 
-To align with the Windows Kerberos Distribution Center's (KDC) strong mapping attribute requirements described in [KB5014754](https://support.microsoft.com/help/5014754), SCEP certificates issued by Microsoft Intune will be required to have the following tag in the Subject Alternative Name (SAN) field:
+To align with the Windows Kerberos Key Distribution Center's (KDC) strong mapping attribute requirements described in [KB5014754](https://support.microsoft.com/help/5014754), SCEP certificates issued by Microsoft Intune will be required to have the following tag in the Subject Alternative Name (SAN) field:
 
 `URL=tag:microsoft.com,2022-09-14:sid:<value>`
 

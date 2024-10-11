@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/28/2024
+ms.date: 10/07/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -48,20 +48,22 @@ Required apps are necessary for work and school and are deployed directly to you
 To find out which installed apps are required:  
 
 1. Sign into the Company Portal app with your work or school account.   
-2. Go to **Downloads & updates**.  
+2. Go to **Downloads & updates**.
+    ![Screenshot of the Downloads & updates page for the Company Portal app for Windows. ](./media/windows-companyportal-02.png)  
 3. In the table, look under the column **Required by your organization**. A *yes* means that the app is required on your enrolled device.    
 
 ## Install apps  
 Before you begin, install [Intune Company Portal for Windows from the Microsoft Store](https://apps.microsoft.com/detail/9WZDNCRFJ3PZ).    
 
-1. Sign in to the Company Portal app on your work or school device. 
+1. Sign in to the Company Portal app on your work or school device. You'll see the latest notifications on the Home page.
+    ![Screenshot of the Home page with notifications in the Company Portal app for Windows.](./media/windows-companyportal-03.png)  
 2. You can access available apps from the following places in Company Portal:      
 
     * **Home**: Go to **Home** to view your organization's featured apps.  
     * **Apps**: Go to **Apps** to view, sort, and filter through all available apps.  
     * **App categories**: Go to **App categories** to browse apps by type or function. Apps in this area are sorted into categories picked by your organization, like *featured*, *education*, and *productivity*.  
     * **Search for apps**: Use the static search bar in the navigation pane to search apps by name or publisher.  
-3. Select an app, and then choose **Install**. The app's installation status changes to *Installed* when installation is done. Select **Retry** if a required app fails to install and the option to retry is available. It could take up to ten minutes for the installation status to update itself. 
+3. Select an app, and then choose **Install**. The app's installation status changes to *Installing* while the app installation occurs, then *Installed* when installation is done. Select **Retry** if a required app fails to install and the option to retry is available. It could take up to ten minutes for the installation status to update itself. 
 
 > [!TIP]
 > To select and install more than one app at a time, go to **Apps** and switch the layout view to multi-select mode. Then select the checkbox next to each app you want to install. Choose **Install selected** to install them.
@@ -79,6 +81,7 @@ Select **Sort by** to rearrange the apps alphabetically by app or publisher name
 
 ## View installed apps  
 Go to **Downloads & updates** to see a list of installed apps on your device. If no apps are available to view, you'll see a message that no company apps were installed.  
+![Screenshot of the Downloads & updates page for the Company Portal app for Windows.](./media/windows-companyportal-02.png)
 
 The following information is available for each app:    
 
@@ -90,8 +93,6 @@ The following information is available for each app:
 
 ## Installing Microsoft Office  
 Depending on the size of your workplace or school, there could be multiple versions of Office available to install in Company Portal. You should only install one version of Office. If you try to install an additional one, the first one will be uninstalled. If you're unsure which version is best for your role, contact your IT support person for guidance.  
-
-![The Company Portal app for Windows showing 2 versions of Office side by side.](./media/multiple-office-installs-cp-win10.png)  
 
 ## Share apps  
 Share and recommend apps to your work or school contacts. The following steps describe how to share a link directly from Company Portal.
