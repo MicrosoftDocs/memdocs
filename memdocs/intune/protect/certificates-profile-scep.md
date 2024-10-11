@@ -58,17 +58,19 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 - iOS  
 - macOS  
 
-One of the ways the Key Distribution Center (KDC) protects against certificate spoofing is by requiring certificates for a user or device object to be strongly mapped in Active Directory. For manual and offline certificates, which is what Microsoft uses to deliver certificates to devices, you need to create a Subject Alternative Name (SAN) for the certificate, with the following tag-based URI:   
+One of the ways the Key Distribution Center (KDC) protects against certificate spoofing is by requiring the certificate to have a strong mapping in Active Directory. This requirement applies to certificates issued for a user or device object.To comply with the KDC, manual and offline certificates must have a subject alternative name (SAN) with the following tag-based URI:   
  
-`URL=tag:microsoft.com,2022-09-14:sid:<OnPremisesSecurityIdentifier>`
+`URI=tag:microsoft.com,2022-09-14:sid:<OnPremisesSecurityIdentifier>`
 
-To create a SCEP certificate profile that's compliant with the KDC, complete these prerequisites:  
+Microsoft Intune supports *OnPremisesSecurityIdentifier*. Upon deployment, Microsoft Intune replaces the variable with the user or device SID you synced between Active Directory and Microsoft Entra ID. To create a SCEP certificate profile that's compliant with the KDC, complete these prerequisites:  
 
-- Sync the user or device security identifier (SID) from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain]().  
+1. Identify the user or device security identifier (SID) in Active Directory. 
+  - The SID is supported in device certificates for Microsoft Entra hybrid joined devices only.  
+  - To add a SID for iOS or macOS, use user certificates.  
 
-- The SID is supported in device certificates for Microsoft Entra hybrid joined devices. To add a SID for iOS or macOS, use the user certificates.  
+2. Sync the user or device security identifier (SID) from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain](). If you skip this step, the SID won't be in the certificate.   
 
-- Create a SCEP certificate profile in the Microsoft Intune admin center, or have an existing profile that you can modify with the new SAN attribute.   
+To configure the SID, [create a SCEP certificate profile](#create-a-scep-certificate-profile) in the Microsoft Intune admin center. Or edit an existing certificate profile and add the SAN attribute.   
 
 After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and an object ID. Example formatting: `tag.com,2022-09-14:sid:<OnPremisesObjectSIDValue>` 
 
@@ -236,7 +238,7 @@ If the certificates in certificate-based authentication scenarios are without a 
        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
 
    - **Subject alternative name**:  
-     Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. You can specify multiple subject alternative names. For each one, you can select from four SAN attributes and enter a text value for that attribute. The text value can contain variables and static text for the attribute.
+     Select how Microsoft Intune creates the subject alternative name (SAN) in the certificate request. You can specify multiple subject alternative names. For each one, you can select from four SAN attributes and enter a text value for that attribute. The text value can contain variables and static text for the attribute.
 
      > [!NOTE]
      > The following Android Enterprise profiles don’t support use of the {{UserName}} variable for the SAN:  
@@ -266,7 +268,7 @@ If the certificates in certificate-based authentication scenarios are without a 
 
      - **User certificate type**
 
-        With the *User* certificate type, you can use any of the user or device certificate variables described above in the Subject Name section. 
+        With the *user* certificate type, you can use any of the user or device certificate variables described above in the Subject Name section. 
 
         For example, user certificate types can include the user principal name (UPN) in the subject alternative name. If a client certificate is used to authenticate to a Network Policy Server, set the subject alternative name to the UPN.  
 
@@ -274,7 +276,7 @@ If the certificates in certificate-based authentication scenarios are without a 
 
      - **Device certificate type**
 
-        With the *Device* certificate type, you can use any of the variables described in the *Device certificate type* section for Subject Name. 
+        With the *device* certificate type, you can use any of the variables described in the *Device certificate type* section for Subject Name. 
 
         To specify a value for an attribute, include the variable name with curly brackets, followed by the text for that variable. For example, a value for the DNS attribute can be added **{{AzureADDeviceId}}.domain.com** where *.domain.com* is the text. For a user named *User1* an Email address might appear as {{FullyQualifiedDomainName}}User1@Contoso.com.  
 
