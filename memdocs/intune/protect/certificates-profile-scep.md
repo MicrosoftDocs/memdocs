@@ -283,7 +283,7 @@ If the certificates in certificate-based authentication scenarios are without a 
 
         By using a combination of one or many of these variables and static text strings, you can create a custom subject alternative name format, such as **{{UserName}}-Home**.  
         
-        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a SID variable that's compliant with the KDC's strong mapping requirements for certificate-based authentication. You should add the SID variable to device certificates that  authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is only supported in device certificates for Microsoft Entra hybrid joined devices, and only works with the URI attribute.    
+        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the KDC's strong mapping requirements for certificate-based authentication. You should add the SID variable to device certificates that  authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is only supported in device certificates for Microsoft Entra hybrid joined devices, and only works with the URI attribute.    
 
 
         > [!IMPORTANT]
@@ -372,7 +372,7 @@ If the certificates in certificate-based authentication scenarios are without a 
 
      Enter one or more URLs for the NDES Servers that issue certificates via SCEP. For example, enter something like `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
 
-     To allow devices on the internet to get certificates, you must specify the NDES URL external to your corporate network.
+     To allow devices on the internet to get certificates, you must specify the NDES URL external to your corporate network.  
      The URL can be HTTP or HTTPS. However, to support the following devices, the SCEP Server URL must use HTTPS:
      - Android device administrator
      - Android Enterprise device owner
