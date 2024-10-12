@@ -7,11 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2024
+ms.date: 06/27/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
-ms.localizationpriority:
+ms.localizationpriority: Low
 ms.assetid: 
 
 # optional metadata
@@ -32,7 +32,7 @@ ms.collection:
 #Customer intent: As an administrator, I want learn and use ADMX templates in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows 10/11 devices.
 ---
 
-# Walkthrough: Use the cloud to configure group policy on Windows 10/11 devices with ADMX templates and Microsoft Intune
+# Walkthrough: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune
 
 > [!NOTE]
 > This walkthrough was created as a technical workshop for Microsoft Ignite. It has more prerequisites than typical walkthroughs, as it compares using and configuring ADMX policies in Intune and on-premises.
@@ -40,7 +40,7 @@ ms.collection:
 Group policy administrative templates, also known as ADMX templates, include settings you can configure on Windows client devices, including PCs. The ADMX template settings are available by different services. These settings are used by Mobile Device Management (MDM) providers, including Microsoft Intune. For example, you can turn on Design Ideas in PowerPoint, set a home page in Microsoft Edge, and more.
 
 > [!TIP]
-> For an overview of ADMX templates in Intune, including the ADMX templates built-in to Intune, go to [Use Windows 10/11 ADMX templates in Microsoft Intune](administrative-templates-windows.md).
+> For an overview of ADMX templates in Intune, including the ADMX templates built-in to Intune, go to [Use Windows ADMX templates in Microsoft Intune](administrative-templates-windows.md).
 
 For more information on ADMX policies, go to [Understanding ADMX-backed policies](/windows/client-management/mdm/understanding-admx-backed-policies).
 
@@ -235,11 +235,11 @@ In the Intune admin center, you created new security groups, and added existing 
 
 In this section, we create an administrative template in Intune, look at some settings in **Group Policy Management**, and compare the same setting in Intune. The goal is to show a setting in group policy, and show the same setting in Intune.
 
-1. In the Intune admin center, select **Devices** > **Configuration** > **Create**.
+1. In the Intune admin center, select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 2. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Administrative Templates**.
+    - **Profile type**: Select **Templates** > **Administrative Templates**.
 
 3. Select **Create**.
 4. In **Basics**, enter the following properties:
@@ -380,12 +380,12 @@ In the Intune admin center, you created an administrative template device config
 
 In this section, you create a OneDrive admin template in Intune to control some settings. These specific settings are chosen because they're commonly used by organizations.
 
-1. Create another profile (**Devices** > **Configuration** > **Create**).
+1. Create another profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**).
 
 2. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Administrative templates**.
+    - **Profile type**: Select **Templates** > **Administrative templates**.
 
 3. Select **Create**.
 4. In **Basics**, enter the following properties:
@@ -505,7 +505,7 @@ This section uses the following resources. We install these resources in this se
     $configuration = Invoke-MSGraphRequest -Url https://graph.microsoft.com/beta/deviceManagement/groupPolicyConfigurations -Content '{"displayName":"Test Configuration","description":"A test configuration created through PS"}' -HttpMethod POST
     ```
 
-    When these cmdlets succeed, the profile is created. To confirm, go to the Intune admin center > **Devices** > **Configuration**. Your **Test Configuration** profile should be listed.
+    When these cmdlets succeed, the profile is created. To confirm, go to the Intune admin center > **Devices** > **Manage devices** > **Configuration**. Your **Test Configuration** profile should be listed.
 
 10. Get all the SettingDefinitions. Enter:
 
@@ -535,7 +535,7 @@ This section uses the following resources. We install these resources in this se
 
 ### See your policy
 
-1. In the Intune admin center > **Devices** > **Configuration** > **Refresh**.
+1. In the Intune admin center > **Devices** > **Manage devices** > **Configuration** > **Refresh**.
 2. Select your **Test Configuration** profile > **Settings**.
 3. In the drop-down list, select **All products**.
 

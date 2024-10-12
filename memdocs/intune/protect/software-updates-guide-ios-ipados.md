@@ -21,6 +21,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-updates
 ---
 
 # Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune

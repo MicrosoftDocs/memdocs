@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/24/2024
+ms.date: 10/02/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -23,6 +23,7 @@ ms.custom: references_regions
 ms.collection:
 - M365-identity-device-management
 - tier2
+ms.subservice: windows-365-enterprise
 ---
 
 # In development for Windows 365 Enterprise
@@ -55,30 +56,37 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- ***********************************************-->
 ## Device management
 
-### Support for symmetric NAT with RDP Shortpath<!--43602619-->
+### Cloud PC gallery images update to Microsoft Teams 2.1<!--50394023-->
 
-In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 applications will be updated to use Microsoft Teams 2.1. These images include:
+
+- Windows 11 Enterprise + Microsoft 365 Apps  21H2
+- Windows 10 Enterprise + Microsoft 365 Apps 22H2
+- Windows 10 Enterprise + Microsoft 365 Apps 21H2
+
+### Azure network connections inactive state<!--52127015-->
+
+In a future update, Azure network connections that meet either of the following conditions for more than four weeks will be marked as inactive:
+
+- ANCs that aren't associated with provisioning policies.
+- ANCs with provisioning policies that have no Cloud PCs associate with them.
+
+Inactive ANCs:
+
+- Can't be assigned to provisioning policies.
+- Are skipped during health checks.
+
+You'll be able to reactive such ANCs.
 
 <!-- ***********************************************-->
-## Device provisioning
-
-### New Cloud PC images aligned with Microsoft 365 apps images<!--48537480-->
-
-In a future update, new Cloud PC optimized images aligned with the Microsoft 365 apps images will be available in the gallery.
+<!--## Device security-->
 
 <!--***********************************************-->
 <!-- ## End user experience -->
 
 <!-- ***********************************************-->
-## Miscellaneous
-
-### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
-
-In a future update, customers that have Modern Microsoft Cloud Agreements will be able to upgrade their existing Windows 365 licenses in the Microsoft Admin Center.
-
-### New Windows 365 Frontline offers for GCC<!--50308895-->
-
-In a future update, new Windows 365 Frontline offers will be available for Government Community Cloud (GCC) customers using the Azure Commercial cloud.
+<!--## Miscellaneous
+-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -87,23 +95,19 @@ In a future update, new Windows 365 Frontline offers will be available for Gover
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
+### Update to Cloud PC action status report<!--49451077-->
+
+The Cloud PC action status report will show batches of devices in which actions have been triggered. Customers will be able to see the batch current progress.
+
+### Remoting connections report deprecation<!--52990648-->
+
+The remoting connection report will be retired on December 31st, 2024. After this date, refer to the [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
+
 <!-- ***********************************************-->
-## Provisioning
-
-### New health check: UDP TURN (preview)<!--44505391-->
-
-A new UDP TURN check will be added to the Azure Network Connections health checks. For more information about health checks, see [Azure network connections health checks](health-checks.md).
+<!--## Provisioning-->
 
 <!-- ***********************************************-->
-## Security
-
-### FQDN requirement changes<!--46731885-->
-
-In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This change will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
-
-### New settings for Windows 365 security baselines<!--49685126-->
-
-New configuration settings will be introduced for the Windows 365 security baseline.
+<!--## Security-->
 
 <!-- ***********************************************
 ## Windows 365 app-->

@@ -6,12 +6,12 @@ ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: baladelli  
+author: baladelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Peer cache for Configuration Manager clients
@@ -216,7 +216,7 @@ Also use reports to view peer cache use. In the console, go to the **Monitoring*
 
 ## Next steps
 
-- [Microsoft Connected Cache in Configuration Manager](microsoft-connected-cache.md)
+- [Microsoft Connected Cache with Configuration Manager](microsoft-connected-cache.md)
 
 - [Support for Windows BranchCache](../configs/support-for-windows-features-and-networks.md#bkmk_branchcache)
 

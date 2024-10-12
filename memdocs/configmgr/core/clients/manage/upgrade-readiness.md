@@ -11,7 +11,7 @@ ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Integrate Upgrade Readiness with Configuration Manager
@@ -20,8 +20,6 @@ ms.reviewer: mstewart,aaroncz
 
 > [!IMPORTANT]
 > The Windows Analytics service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
->
-> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).
 
 If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients.
 
@@ -39,9 +37,6 @@ If your Configuration Manager site had a connection to Upgrade Readiness, you ne
 
 First, review the site's default or any custom client device settings in the **Windows Analytics** group. For example, disable the following setting: **Manage Windows telemetry settings with Configuration Manager**.
 
-> [!IMPORTANT]
-> If you plan to use Desktop Analytics, it configures Windows diagnostic data settings on clients. Use the Azure services connection wizard to configure these settings for use with Desktop Analytics. For more information, see [How to connect Configuration Manager with Desktop Analytics](../../../desktop-analytics/connect-configmgr.md).
-
 On enrolled devices, remove the CommercialID value from the following Windows Registry keys:
 
 - `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
@@ -57,9 +52,9 @@ If you don't want your devices to continue sending diagnostic data:
 Set these values using one of the following methods:
 
 - Group policy, in **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**
-- Mobile device management (MDM), such as [Microsoft Intune](/intune/device-restrictions-windows-10#reporting-and-telemetry)
+- Mobile device management (MDM), such as [Microsoft Intune](/mem/intune/configuration/device-restrictions-windows-10#reporting-and-telemetry)
 
 For more information, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
-> [!NOTE]  
+> [!NOTE]
 > When you apply these changes, devices immediately stop sending diagnostic data. It may take 24-48 hours for Microsoft to stop processing insights for your workspace. Microsoft deletes this data from its cloud services within 30 days or less.

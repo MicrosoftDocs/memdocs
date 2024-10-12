@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/16/2023
+ms.date: 08/22/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -71,6 +71,19 @@ Secure access to Windows 365 is further enhanced with IGEL OS:
 
 For more information, visit the [IGEL website](https://www.igel.com/windows365/).
 
+## N-able
+
+![N-able image](./media/partners/nable.png)
+
+N-able Cloud Commander is a multi-tenant solution for Microsoft's cloud. In a single console, it enables MSPs and CSPs to manage, secure, standardize, and automate:
+
+- Microsoft 365 users
+- Azure resources
+- Intune devices
+- Windows 365 Business/Enterprise/Frontline Cloud PCs
+
+For more information, visit the [N-able website](https://www.n-able.com/products/cloud-commander).
+
 ## Nerdio
 
 ![Nerdio image](./media/partners/nerdio.png)
@@ -101,7 +114,7 @@ Rimo3 helps organizations onboard Windows 365 by verifying apps and updates for 
 - Test app readiness against security and OS updates up to 10 times faster than current processes.
 - Quickly assess end user resource and performance impacts before production implementation.
 
-For more information, visit the [Rimo3 website](https://www.rimo3.com/solution/application-modernization).
+For more information, visit the [Rimo3 website](https://www.rimo3.com/).
 
 ## ServiceNow
 

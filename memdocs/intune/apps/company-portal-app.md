@@ -92,7 +92,7 @@ Enter your organization's support information, so employees can reach out with q
 | Contact name | 40 | This name is who users will reach when they contact support. |
 | Phone number | 20 | This number enables users to call for support. |
 | Email address | 40 | This email address is where users can send emails for   support. You must enter a valid email address in the format `alias@domainname.com`. |
-| Website name | 40 | This is the friendly name that is displayed in some   locations for the URL to the support website. If you specify a support   website URL and no friendly name, then the URL itself is displayed in the end-user experiences.  |
+| Website name | 40 | This is the friendly name that is displayed in some   locations for the URL to the support website. If you specify a support   website URL and no friendly name, then the URL itself is displayed in the end-user experiences. Note that this setting does not apply to the Intune app for Android.  |
 | Website URL | 150 | The support website that users should use. The URL must be   in the format `https://www.contoso.com`.  |
 | Additional information | 120 | Include any additional support-related messaging to users   here. |
 

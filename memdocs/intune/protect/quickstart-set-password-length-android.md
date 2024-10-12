@@ -28,6 +28,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - Android
+- sub-device-compliance
 ms.custom: intune-azure
 ---
 

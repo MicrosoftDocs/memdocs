@@ -1,15 +1,15 @@
 ---
 title: Windows Autopilot User-Driven Mode
-description: With Windows Autopilot user-driven mode, you can configure devices to deploy to a ready-to-use state without requiring help from IT personnel.
+description: With Windows Autopilot user-driven mode, devices can be configured to deploy to a ready-to-use state without requiring help from IT personnel.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 02/01/2024
-ms.collection: 
+ms.date: 06/11/2024
+ms.collection:
   - M365-modern-desktop
   - highpri
   - tier1
@@ -22,26 +22,26 @@ appliesto:
 
 # Windows Autopilot user-driven mode
 
-Windows Autopilot user-driven mode lets you configure new Windows devices to automatically transform them from their factory state to a ready-to-use state. This process doesn't require that IT personnel touch the device.
+Windows Autopilot user-driven mode lets a new Windows device to be configured to automatically transform them from their factory state to a ready-to-use state. This process doesn't require that IT personnel touch the device.
 
 The process is simple. Devices can be shipped or distributed to the end user directly with the following instructions:
 
 1. Unbox the device, plug it in, and turn it on.
-1. If it uses multiple languages, choose a language, locale, and keyboard.
+1. If it uses multiple languages, select a language, locale, and keyboard.
 1. Connect it to a wireless or wired network with internet access. If using wireless, first connect to the wi-fi network.
-1. Specify your e-mail address and password for your organization account.
+1. Specify an e-mail address account and password for the organization.
 
 The rest of the process is automated. The device does the following steps:
 
 1. Join the organization.
-1. Enroll in Microsoft Intune or another MDM service.
+1. Enroll in Microsoft Intune or another mobile device management (MDM) service.
 1. Get configured as defined by the organization.
 
-You can suppress any other prompts during the out-of-box experience (OOBE). For more information on the available options, see [Configuring Autopilot profiles](profiles.md).
+Other prompts can be suppressed during the out-of-box experience (OOBE). For more information on the available options, see [Configuring Autopilot profiles](profiles.md).
 
 > [!IMPORTANT]
 >
-> If you use Active Directory Federation Services (ADFS), there's a [known issue](known-issues.md#a-non-assigned-user-can-sign-in-when-using-user-driven-mode-with-active-directory-federation-services-adfs) that can enable the end user to sign in with a different account than the one assigned to that device.
+> If Active Directory Federation Services (ADFS) is being used, there's a [known issue](known-issues.md#a-non-assigned-user-can-sign-in-when-using-user-driven-mode-with-active-directory-federation-services-adfs) that can enable the end user to sign in with a different account than the one assigned to that device.
 
 Windows Autopilot user-driven mode supports Microsoft Entra join and Microsoft Entra hybrid joined devices. For more information about these two join options, see the following articles:
 
@@ -63,7 +63,7 @@ The steps of the user-driven process are as follows:
 
 1. The device joins Microsoft Entra ID or Active Directory, depending on the Windows Autopilot profile settings.
 
-1. The device enrolls to Intune or another configured MDM service. Depending on your organizational needs, this enrollment occurs either:
+1. The device enrolls to Intune or another configured MDM service. Depending on the organizational needs, this enrollment occurs either:
 
     - During the Microsoft Entra join process, using MDM auto-enrollment.
 
@@ -75,14 +75,12 @@ The steps of the user-driven process are as follows:
 
 1. After sign-in, the enrollment status page displays for user-targeted configuration tasks.
 
-If any issues are found during this process, see [Windows Autopilot troubleshooting](troubleshooting.md).
+If any issues are found during this process, see [Troubleshooting Windows Autopilot overview](troubleshooting-faq.yml#troubleshooting-windows-autopilot-overview).
 
 For more information on the available join options, see the following sections:
 
-- [Microsoft Entra join](#user-driven-mode-for-azure-ad-join) is available if devices don't need to join an on-premises Active Directory domain.
-- [Microsoft Entra hybrid join](#user-driven-mode-for-hybrid-azure-ad-join) is available for devices that need to join both Microsoft Entra ID and your on-premises Active Directory domain.
-
-<a name='user-driven-mode-for-azure-ad-join'></a>
+- [Microsoft Entra join](#user-driven-mode-for-microsoft-entra-join) is available if devices don't need to join an on-premises Active Directory domain.
+- [Microsoft Entra hybrid join](#user-driven-mode-for-microsoft-entra-hybrid-join) is available for devices that need to join both Microsoft Entra ID and the on-premises Active Directory domain.
 
 ## User-driven mode for Microsoft Entra join
 
@@ -92,33 +90,31 @@ To complete a user-driven deployment using Windows Autopilot, follow these prepa
 
 1. Create an Autopilot profile for user-driven mode with the desired settings.
 
-    - In Intune, this mode is explicitly chosen when you create the profile.
+    - In Intune, this mode is explicitly chosen when a profile is created.
 
     - In Microsoft Store for Business and Partner Center, user-driven mode is the default.
 
-1. If you use Intune, create a device group in Microsoft Entra ID, and assign the Autopilot profile to that group.
+1. If using Intune, create a device group in Microsoft Entra ID, and assign the Autopilot profile to that group.
 
 For each device that is deployed using user-driven deployment, these extra steps are needed:
 
-- Add the device to Windows Autopilot. You can do this step in two ways:
+- Add the device to Windows Autopilot. This step can be done in two ways:
 
-  - Automatically by an OEM or partner when you purchase the device.
+  - Automatically by an OEM or partner when the device is purchased.
 
   - Manually as described in [Adding devices to Windows Autopilot](add-devices.md).
 
 - Assign an Autopilot profile to the device:
 
-  - If you use Intune and Microsoft Entra dynamic device groups, this assignment can be done automatically.
+  - If using Intune and Microsoft Entra dynamic device groups, this assignment can be done automatically.
 
-  - If you use Intune and Microsoft Entra static device groups, manually add the device to the device group.
+  - If using Intune and Microsoft Entra static device groups, manually add the device to the device group.
 
-  - If you use other methods, like Microsoft Store for Business or Partner Center, manually assign an Autopilot profile to the device.
+  - If using other methods, like Microsoft Store for Business or Partner Center, manually assign an Autopilot profile to the device.
 
 > [!TIP]
 >
-> If the intended end-state of the device is co-management, you can configure device enrollment in Intune to enable co-management, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. For more information, see [How to enroll with Autopilot](/mem/configmgr/comanage/autopilot-enrollment).<!-- Intune 11300628 -->
-
-<a name='user-driven-mode-for-hybrid-azure-ad-join'></a>
+> If the intended end-state of the device is co-management, device enrollment can be configured in Intune to enable co-management, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. For more information, see [How to enroll with Autopilot](/mem/configmgr/comanage/autopilot-enrollment).<!-- Intune 11300628 -->
 
 ## User-driven mode for Microsoft Entra hybrid join
 
@@ -126,15 +122,13 @@ For each device that is deployed using user-driven deployment, these extra steps
 >
 > Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
-Windows Autopilot requires that devices be Microsoft Entra joined. If you have an on-premises Active Directory environment, you can join devices to your on-premises domain. To join the devices, configure Autopilot devices to be [hybrid-joined to Microsoft Entra ID](/azure/active-directory/devices/hybrid-azuread-join-plan).
+Windows Autopilot requires that devices be Microsoft Entra joined. For an on-premises Active Directory environment, devices can be joined to the on-premises domain. To join the devices, configure Autopilot devices to be [hybrid-joined to Microsoft Entra ID](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
 > [!TIP]
 >
 > As Microsoft talks with customers that are using Microsoft Intune and Microsoft Configuration Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and Microsoft Entra hybrid joined devices. Many customers confuse these two topics. Co-management is a management option, while Microsoft Entra ID is an identity option. For more information, see [Understanding hybrid Microsoft Entra and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify Microsoft Entra hybrid join and co-management, how they work together, but aren't the same thing.
 >
-> You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for Microsoft Entra hybrid join. This limitation is due to the identity change of the device during the Microsoft Entra join process. Deploy the Configuration Manager client after the Autopilot process. See [Client installation methods in Configuration Manager](/mem/configmgr/core/clients/deploy/plan/client-installation-methods) for alternative options for installing the client.<!-- CMADO-10205503 -->
-
-<a name='requirements-for-user-driven-mode-with-hybrid-azure-ad'></a>
+> The Configuration Manager client can't be deployed while provisioning a new computer in Windows Autopilot user-driven mode for Microsoft Entra hybrid join. This limitation is due to the identity change of the device during the Microsoft Entra join process. Deploy the Configuration Manager client after the Autopilot process. See [Client installation methods in Configuration Manager](/mem/configmgr/core/clients/deploy/plan/client-installation-methods) for alternative options for installing the client.<!-- CMADO-10205503 -->
 
 ### Requirements for user-driven mode with hybrid Microsoft Entra ID
 
@@ -142,19 +136,19 @@ Windows Autopilot requires that devices be Microsoft Entra joined. If you have a
 
   In the Autopilot profile, under **Join to Microsoft Entra ID as**, select **Microsoft Entra hybrid joined**.
 
-- If you use Intune, you need a device group in Microsoft Entra ID. Assign the Windows Autopilot profile to the group.
+- If using Intune, a device group is needed in Microsoft Entra ID. Assign the Windows Autopilot profile to the group.
 
-- If you use Intune, create and assign a Domain Join profile. A Domain Join configuration profile includes on-premises Active Directory domain information.
+- If using Intune, create and assign a Domain Join profile. A Domain Join configuration profile includes on-premises Active Directory domain information.
 
-- The device needs to access the internet. For more information, see the [networking requirements](networking-requirements.md).
+- The device needs to access the internet. For more information, see the [networking requirements](requirements.md?tabs=networking).
 
 - Install the Intune Connector for Active Directory.
 
   > [!NOTE]
   >
-  > The Intune Connector joins the device to the on-premises domain. Users don't need permissions to join devices to the on-premises domain. This behavior assumes that you configure the connector for this action on the user's behalf. For more information, see [Increase the computer account limit in the Organizational Unit](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
+  > The Intune Connector joins the device to the on-premises domain. Users don't need permissions to join devices to the on-premises domain. This behavior assumes that the connector is configured for this action on the user's behalf. For more information, see [Increase the computer account limit in the Organizational Unit](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
 
-- If you use a proxy, enable and configure the WPAD Proxy settings option.
+- If using a proxy, enable and configure the Web Proxy Auto-Discovery Protocol (WPAD) Proxy settings option.
 
 In addition to these core requirements for user-driven Microsoft Entra hybrid join, the following extra requirements apply to on-premises devices:
 
@@ -166,21 +160,17 @@ In addition to these core requirements for user-driven Microsoft Entra hybrid jo
 
   - It needs to communicate with the domain controller to authenticate the user.
 
-<a name='user-driven-mode-for-hybrid-azure-ad-join-with-vpn-support'></a>
-
 ### User-driven mode for Microsoft Entra hybrid join with VPN support
 
 Devices joined to Active Directory require connectivity to an Active Directory domain controller for many activities. These activities include validating the user's credentials when they sign-in, and applying group policy settings. The Autopilot user-driven process for Microsoft Entra hybrid joined devices validates that the device can contact a domain controller by pinging that domain controller.
 
-With the addition of VPN support for this scenario, you can configure the Microsoft Entra hybrid join process to skip the connectivity check. This change doesn't eliminate the need for communicating with a domain controller. Instead, to allow connection to the organization's network, Intune delivers the needed VPN configuration before the user attempts to sign in to Windows.
-
-<a name='requirements-for-user-driven-mode-with-hybrid-azure-ad-and-vpn'></a>
+With the addition of VPN support for this scenario, the Microsoft Entra hybrid join process can be configured to skip the connectivity check. This change doesn't eliminate the need for communicating with a domain controller. Instead, to allow connection to the organization's network, Intune delivers the needed VPN configuration before the user attempts to sign in to Windows.
 
 #### Requirements for user-driven mode with hybrid Microsoft Entra ID and VPN
 
-In addition to the [core requirements](#requirements-for-user-driven-mode-with-hybrid-azure-ad) for user-driven mode with Microsoft Entra hybrid join, the following extra requirements apply to a remote scenario with VPN support:
+In addition to the [core requirements](#requirements-for-user-driven-mode-with-hybrid-microsoft-entra-id) for user-driven mode with Microsoft Entra hybrid join, the following extra requirements apply to a remote scenario with VPN support:
 
-- A currently supported supported version of Windows.
+- A currently supported version of Windows.
 
 - In the Microsoft Entra hybrid join profile for Autopilot, enable the following option: **Skip domain connectivity check**.
 
@@ -190,7 +180,7 @@ In addition to the [core requirements](#requirements-for-user-driven-mode-with-h
 
   - Automatically establishes a VPN connection as needed.
 
-The specific VPN configuration required depends on the VPN software and authentication being used. For third-party VPN solutions, this configuration typically involves deploying a Win32 app via Intune Management Extensions. This app would include the VPN client software and any specific connection information. For example, VPN endpoint host names. For configuration details specific to that provider, see your VPN provider's documentation.
+The specific VPN configuration required depends on the VPN software and authentication being used. For non-Microsoft VPN solutions, this configuration typically involves deploying a Win32 app via Intune Management Extensions. This app would include the VPN client software and any specific connection information. For example, VPN endpoint host names. For configuration details specific to that provider, see the VPN provider's documentation.
 
 > [!NOTE]
 >
@@ -205,9 +195,9 @@ Some configurations aren't supported because they aren't applied until the user 
 
 #### Validation
 
-Before you attempt a Microsoft Entra hybrid join using VPN, it's important to confirm that a user-driven mode for Microsoft Entra hybrid join process works on your internal network. This test simplifies troubleshooting by making sure the core process works before adding the VPN configuration.
+Before attempting a Microsoft Entra hybrid join using VPN, it's important to confirm that the user-driven mode for Microsoft Entra hybrid join process works on the internal network. This test simplifies troubleshooting by making sure the core process works before adding the VPN configuration.
 
-Next, confirm that you can use Intune to deploy the VPN configuration and its requirements. Test these components with an existing device that's already Microsoft Entra hybrid joined. For example, some VPN clients create a per-machine VPN connection as part of the installation process. Validate the configuration using the following steps:
+Next, confirm Intune can be used to deploy the VPN configuration and its requirements. Test these components with an existing device that's already Microsoft Entra hybrid joined. For example, some VPN clients create a per-machine VPN connection as part of the installation process. Validate the configuration using the following steps:
 
 1. Verify that at least one per-machine VPN connection is created.
 
@@ -221,7 +211,7 @@ Next, confirm that you can use Intune to deploy the VPN configuration and its re
     RASDIAL.EXE "ConnectionName"
     ```
 
-1. Sign out of Windows. Verify that you can see the "VPN connection" icon on the Windows sign-in page.
+1. Sign out of Windows. Verify that the **VPN connection** icon appears on the Windows sign-in page.
 
 1. Move the device off the internal network and try to establish the connection using the icon on the Windows sign-in page. Sign into an account that doesn't have cached credentials.
 
@@ -229,15 +219,15 @@ For VPN configurations that automatically connect, the validation steps might be
 
 > [!NOTE]
 >
-> You can use an always-on VPN for this scenario. For more information, see [Deploy always-on VPN](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment).
+> An always-on VPN can be used for this scenario. For more information, see [Deploy always-on VPN](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment).
 
 ## Next steps
 
-- [Deploy Microsoft Entra hybrid joined devices using Intune and Windows Autopilot](windows-autopilot-hybrid.md)
-- [How to enroll with Autopilot](/mem/configmgr/comanage/autopilot-enrollment)
-- [Try out Autopilot hybrid join over VPN in your Azure lab](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/trying-out-autopilot-hybrid-join-over-vpn-in-your-azure-lab/ba-p/1606723)
+- [Deploy Microsoft Entra hybrid joined devices using Intune and Windows Autopilot](windows-autopilot-hybrid.md).
+- [How to enroll with Autopilot](/mem/configmgr/comanage/autopilot-enrollment).
+- [Try out Autopilot hybrid join over VPN in your Azure lab](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/trying-out-autopilot-hybrid-join-over-vpn-in-your-azure-lab/ba-p/1606723).
 
-## Related articles
+## Related content
 
 <!-- Intune 12378279 -->
 

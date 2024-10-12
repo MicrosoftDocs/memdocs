@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/13/2023
+ms.date: 10/02/2024
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: anbiswas
+ms.reviewer: tnevins1, pratikshah
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,6 +29,8 @@ ms.collection:
 - tier2
 - essentials-privacy
 ---
+
+<!--ms.reviewer review required before publish-->
 
 # Privacy, customer data, and customer content in Windows 365
 
@@ -47,7 +49,7 @@ To protect and maintain enrolled devices, Windows 365 processes and copies data 
 
 ## Windows 365 data storage
 
-Depending on a tenant's region and preference, Windows 365 stores its customer content in Azure regions in North America, Europe, or Asia Pacific. Cloud PC virtual disk, customer content, data and storage associated with the Cloud PC lives in the Azure region that the Cloud PC is [provisioned](provisioning.md) in. For Windows 365 Enterprise, the region is defined in the [Azure network connection's](azure-network-connections.md) (ANC) **Virtual network** setting. Windows 365 Business stores customer data in the Azure region of the Cloud PC itself.
+Depending on a tenant's region and preference, Windows 365 stores its customer content in Azure regions in North America, Europe, or Asia Pacific. Cloud PC virtual disk, customer content, data and storage associated with the Cloud PC lives in the Azure region that the Cloud PC is [provisioned](provisioning.md) in. For Windows 365 Enterprise, the region is defined in the Microsoft hosted network or [Azure network connection](azure-network-connections.md) (ANC) settings within the Cloud PC's associated provisioning policy. Windows 365 Business stores customer data in the Azure region of the Cloud PC itself.
 
 To manage the Cloud PC, certain data relating to the Cloud PC (like the machine’s name, diagnostic data, and service-generated data) is stored in Azure data centers in North America, Europe, or Asia Pacific, as defined by the tenant's location. This storage is mapped based on Microsoft Online tenant's country/region to the nearest Azure region.
 

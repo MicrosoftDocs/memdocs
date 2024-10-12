@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/10/2023
+ms.date: 09/12/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -22,6 +22,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-secure-endpoints
 ms.reviewer: laarrizz 
 ---
 
@@ -68,11 +69,6 @@ For details about these settings, see the settings entry in [Set preferences for
   - *Not configured* (*default*)
   - *Enabled*
   - *Disabled*
-
-- **Enforcement level**  
-  - *Passive* (*default*)
-  - *Real time*
-  - *On Demand*
 
 - **Scan history size**
   - *Not configured* (*default*)
@@ -126,6 +122,11 @@ For details about these settings, see the settings entry in [Set preferences for
   - *False* (*default*)
   - *True*
   - *Not configured*
+
+- **Enforcement level**  
+  - *Passive* (*default*)
+  - *Real time*
+  - *On Demand*
 
 ## Network protection
 

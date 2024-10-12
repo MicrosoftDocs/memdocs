@@ -33,7 +33,7 @@ With Intune, you can use Delivery Optimization settings for your Windows devices
 - View the list of the [Delivery Optimization settings](delivery-optimization-settings.md) that Intune supports.
 - Learn about [Delivery Optimization updates](/windows/deployment/update/waas-delivery-optimization) in the Windows documentation.
 
-Applies to:
+This feature applies to:
 
 - Windows 10
 - Windows 11
@@ -42,7 +42,7 @@ Applies to:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration** > **Create** > **New Policy**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**.
 
 3. Enter the following properties:
 

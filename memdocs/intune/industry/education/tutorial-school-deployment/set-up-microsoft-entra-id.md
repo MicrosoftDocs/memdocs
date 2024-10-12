@@ -20,12 +20,9 @@ If you don't already have a Microsoft 365 tenant, you need to create one.
 
 For more information, see [Create your Office 365 tenant][M365-1].
 
-> [!TIP]
-> To learn more, and practice how to configure the Microsoft 365 tenant for your school, try [this interactive demo](https://www.microsoft.com/en-us/education/interactive-demos/set-up-Microsoft-365).
-
 ### Explore the Microsoft 365 admin center
 
-The **Microsoft 365 admin center** is the hub for all administrative consoles for the Microsoft 365 cloud. To access the [Microsoft 365 admin center](https://admin.microsoft.com), sign in with the same global administrator account when you [created the Microsoft 365 tenant](#create-a-microsoft-365-tenant).
+The **Microsoft 365 admin center** is the hub for all administrative consoles for the Microsoft 365 cloud. To access the [Microsoft 365 admin center](https://admin.microsoft.com), sign in with the same account when you [created the Microsoft 365 tenant](#create-a-microsoft-365-tenant).
 
 From the Microsoft 365 admin center, you can access different administrative dashboards: Microsoft Entra ID, Microsoft Intune, Intune for Education, and others:
 
@@ -59,7 +56,7 @@ School Data Sync (SDS) imports and synchronizes SIS data to create classes in Mi
 For more information, see [Overview of School Data Sync][SDS-1].
 
 > [!TIP]
-> To learn more and practice with School Data Sync, follow the [Microsoft School Data Sync demo](https://interactiveguides-schooldatasync.azurewebsites.net/), which provides detailed steps to access, configure, and deploy School Data Sync in your Microsoft 365 Education tenant.
+> To learn more and practice with School Data Sync, follow the [Microsoft School Data Sync demo](/SchoolDataSync/), which provides detailed steps to access, configure, and deploy School Data Sync in your Microsoft 365 Education tenant.
 
 > [!NOTE]
 > You can perform a test deployment by cloning or downloading sample SDS CSV school data from the [O365-EDU-Tools GitHub site](https://github.com/OfficeDev/O365-EDU-Tools).

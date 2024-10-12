@@ -42,7 +42,7 @@ ms.collection:
 
 ## Device and application authentication, authorization, and protection for Zero Trust
 
-You can use Intune to protect access and data on organization-owned and user's personal devices and has compliance and reporting features that support Zero Trust.
+You can use Intune to protect access and data on organization-owned and user's personal devices and have compliance and reporting features that support Zero Trust.
 
 | Zero Trust principle | How Intune helps |
 |---------|---------|

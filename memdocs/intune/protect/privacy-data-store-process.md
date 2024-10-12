@@ -29,6 +29,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - privacy
+- sub-data-privacy
 ---
 
 # Data storage and processing in Intune

@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/14/2019
+ms.date: 06/28/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -30,11 +30,11 @@ ms.collection:
 
 # Device encrypted but apps say otherwise
 
-If Company Portal or the Microsoft Intune app say that your device isn't encrypted, but you're sure that it is, try the steps in this article.  
+If Company Portal or the Microsoft Intune app say that your Android device isn't encrypted, but you're sure that it is, try the steps in this article.  
 
 ## Add a startup PIN
 
-Certain Android devices require you to create a startup PIN to make sure that your device is secure. The location of this setting will be in your device's **Settings** app. The name and location of the setting could vary. For example, on the Samsung Galaxy S7,  the setting is referred to as **Secure Startup**. To enable it and create a passcode, go to **Settings** > **Lock Screen and Security** > **Secure Startup**.  
+Certain Android devices require you to create a startup PIN for security purposes. The location of this setting will be in your device's **Settings** app. The name and location of the setting could vary. For example, on the Samsung Galaxy S7, the setting is referred to as **Secure Startup**. To enable it and create a passcode, go to **Settings** > **Lock Screen and Security** > **Secure Startup**.  
 
 ## Encrypt the entire device
 
@@ -53,9 +53,9 @@ This section only applies to the Company Portal app. If your device offers you t
 
 Some Android devices on version 7.0 and later encrypt data in ways that are inconsistent with certain Android platform standards. These encryption methods put device information at risk. As a result, these devices aren't supported.
 
-For a non-exhaustive list of supported Android devices, see the article [Supported operating systems and browsers in Intune](/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices). If your device isn't listed, refer to the device manufacturer or contact your support person.
+For a non-exhaustive list of supported Android devices, see the article [Supported operating systems and browsers in Intune](/mem/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices). If your device isn't listed, refer to the device manufacturer or contact your support person.
 
-> [!Note]
+> [!NOTE]
 > Microsoft works with manufacturers to address any issues we find while testing or that users report to us. We update this article whenever new information is available.
 
 ## Update devices
@@ -64,4 +64,4 @@ If you haven't updated your device to the most recent version of Android, go to 
 
 ## Next steps
 
-Still need help? Contact your company support (check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information), or write the <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android team</a>.
+Still need help? Contact your IT support person. Check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) or app for your organization's contact information.  

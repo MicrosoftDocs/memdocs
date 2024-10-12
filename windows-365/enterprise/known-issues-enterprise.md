@@ -1,16 +1,15 @@
 ---
 title: Known issues for Windows 365 Enterprise and Frontline
 description: Learn about known issues for Windows 365 Enterprise.
-f1.keywords:
-- NOCSH
+keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 6/05/2024
+ms.date: 7/09/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -93,7 +92,7 @@ The following device compliance settings may report as **Not Compliant** when be
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
 
-When enabling single sign-on, you're prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
+When enabling single sign-on, a prompt appears to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
 
 To prevent this dialog from being shown, you can create a pre-consented device group. Follow the instructions to [configure a target device group](/azure/virtual-desktop/configure-single-sign-on#configure-the-target-device-groups) to get started.
 
@@ -103,7 +102,7 @@ To prevent this dialog from being shown, you can create a pre-consented device g
 
 **Possible cause**: To log in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Microsoft Entra, which may be the cause of the failed connection.
 
-**Troubleshooting**: Follow the steps to [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
+**Troubleshooting**: To [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access), follow the steps.
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
 
@@ -182,9 +181,16 @@ Windows Security reports *Memory Integrity is off. Your device may be vulnerable
 
 In the Cloud PC's Windows Systems Information, you might also see that the Virtualization-based security (VBS) row shows **Enabled but not running**.
 
-This issue can be caused when the Intune tenant configuration requires Direct Memory Access (DMA), which Cloud PCs don’t support. Currently, if DMA is required in a VBS policy used by a Cloud PC, the VBS policy won’t run.
+This issue can be caused when nested virtualization is turned *ON*. When nested virtualization is turned on it requires a running nested hypervisor, which inhibits Direct Memory Access Protections. DMA protections are required when running VBS.
 
-**Troubleshooting steps**: In the Intune policies used by the Cloud PC, remove the DMA requirement from **Virtualization-based security BS Required Security Properties**. Make sure your VBS configurations still provide your desired security.
+**Troubleshooting steps**:
+
+Make sure that:
+
+- Nested virtualization turned *OFF* for the Cloud PC.
+- Policies have VBS enabled with DMA protection.
+
+Another option is to not require DMA for VBS because they're incompatible with each other.
 
 ## Teams isn’t enforcing screen capture protection<!-- 49423094 -->
 
@@ -202,7 +208,7 @@ When screen capture protection is enabled, Teams on Windows 365 Cloud PCs isn’
 
 ## Windows 365 scope tags and nested groups
 
-Windows 365 doesn't support nested security groups. If you apply a scope tag to the top of a nested security group, Cloud PCs in inner nested groups won't be assigned scope tags.
+Windows 365 doesn't support nested security groups. If you apply a scope tag to the top of a nested security group, Cloud PCs in inner nested groups aren't assigned scope tags.
 
 **Troubleshooting steps**:
 
@@ -228,7 +234,7 @@ For example, if an admin scoped with the scope tag “Scope Tag A” creates a c
 
 ## WebRTC Redirector Service missing from latest Windows 365 Cloud PC gallery images
 
-The May 21, 2024 updates for Cloud PC gallery images are missing the WebRTC Redirector Service. Without this component, Teams media redirection does not work.
+The May 21, 2024 updates for Cloud PC gallery images are missing the WebRTC Redirector Service. Without this component, Teams media redirection doesn't work.
 
 This applies to the following gallery images:
 
@@ -239,7 +245,7 @@ This applies to the following gallery images:
 
 For newly provisioned Cloud PCs, verify WebRTC is available. If it’s not, you can use either of the following options:
 
-- To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps: [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/intune/apps/apps-add-office365).
+- To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps: [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/mem/intune/apps/apps-add-office365).
 
 - To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps: [install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, use this link: [https://aka.ms/msrdcwebrtcsvc/msi]( https://aka.ms/msrdcwebrtcsvc/msi).
 

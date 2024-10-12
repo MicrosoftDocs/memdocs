@@ -2,13 +2,13 @@
 title: Windows Autopilot OEM registration process
 description: How OEMs add devices to Windows Autopilot.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/23/2024
+ms.date: 06/28/2024
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -29,7 +29,7 @@ When devices are purchased from an OEM, the OEM can automatically register the d
 
 > [!NOTE]
 >
-> While the hardware hashes, also known as hardware IDs, are generated as part of the OEM device manufacturing process, the hardware hashes aren't generally provided directly to customers or CSP partners. Instead, the OEM should register devices on the customer's behalf. In cases where CSP partners register devices, OEMs might provide PKID information to those partners to support the device registration process.
+> While the hardware hashes, also known as hardware IDs, are generated as part of the OEM device manufacturing process, the hardware hashes aren't normally provided directly to customers or Cloud Solution Partners (CSPs). Instead, the OEM should register devices on the customer's behalf. In cases where CSPs register devices, OEMs might provide PKID information to those partners to support the device registration process.
 
 OEMs must follow [device guidelines](autopilot-device-guidelines.md) for Windows Autopilot devices.
 
@@ -40,6 +40,12 @@ Microsoft manages and maintains Windows Autopilot. This service provides the bac
 ### Customer consent
 
 Before an OEM can register devices for an organization, the organization must grant the OEM permission to do so. The OEM begins this process with approval granted by a Microsoft Entra Global Administrator from the organization. For more information, see [OEM authorization](registration-auth.md#oem-authorization).
+
+<!-- MAXADO-9048730 -->
+
+> [!IMPORTANT]
+>
+> Microsoft recommends using roles with the fewest permissions. Using lower permissioned accounts helps improve security for an organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when an existing role can't be used.
 
 ## Microsoft Surface registration
 

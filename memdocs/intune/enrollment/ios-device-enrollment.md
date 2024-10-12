@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/11/2024
+ms.date: 07/16/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -39,7 +39,7 @@ Device enrollment supports an app based enrollment experience and web based enro
 * **Device enrollment with Company Portal**  
 * **Web based device enrollment**   
 
-Create an enrollment profile in the admin center to select and configure enrollment types. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** and select **Enrollment types**.  
+Create an enrollment profile in the admin center to select and configure enrollment types. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment** and select **Enrollment types**.  
 
 > [!TIP]
 > We recommend enabling web-based enrollment for devices running iOS/iPadOS 15 and later because it doesn't require employees and students to install the Company Portal app. Post-enrollment functionality remains the same as with app-based enrollment. 
@@ -82,6 +82,15 @@ Employees and students can access management options for their personal devices 
 
 For more information about how employees and students can access these actions in the web version, see [Using the Intune Company Portal website](../user-help/using-the-intune-company-portal-website.md).  
 
+## Certificates  
+This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
+
+Devices that are already enrolled do not get an ACME certificate on unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 
+
+- iOS 16.0 or later  
+
+- iPadOS 16.1 or later  
+
 ## Known issues and limitations 
 
 Intune enrollment with Apple device enrollment has the following known issues and limitations. 
@@ -91,8 +100,6 @@ Intune enrollment with Apple device enrollment has the following known issues an
 * Just like Company Portal enrollment, once the management profile downloads, users have a limited amount of time to go to the Settings app and install the profile. If they wait too long, they must download the management profile again to continue.  
 
 * Device users may be unable to access work apps if they try signing in on their newly enrolled device while Microsoft Authenticator is still trying to deploy. Users should wait a few minutes while Authenticator catches up with the Intune service, and then try to sign into their work app again.  
-
-* If your organization uses Microsoft Defender for Endpoint, that app can't be the first app users sign in to after enrollment. JIT registration and compliance remediation may not work as expected if users authenticate in Microsoft Defender for Endpoint first. Users should authenticate in another Microsoft app to complete enrollment. We are actively working to fix this experience.   
 
 * Web-based device enrollment can be used without JIT registration. We recommend using the web version of Company Portal instead of Company Portal for iOS to deploy apps to the device. If you are planning to use the Company Portal app for app deployment, MS Authenticator and the SSO extension policy must be sent to the device post web enrollment. 
 

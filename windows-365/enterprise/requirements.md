@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -148,6 +148,8 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
 - US West
   - West US 2 (Restricted)
   - West US 3
+
+Some features might not be available in some regions.
 
 ### [Windows 365 Government](#tab/gov)
 

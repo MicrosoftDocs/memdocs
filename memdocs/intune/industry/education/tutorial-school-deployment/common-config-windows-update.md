@@ -91,7 +91,7 @@ A [Feature update policy](/mem/intune/protect/windows-10-feature-updates) can be
 To set a feature update policy:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Windows** > **Feature updates for Windows 10 and later** > **Create profile**.
+2. Select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Feature updates** tab > **Create profile**.
 3. Under **Deployment settings**:
     - Specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**.
     - Configure **Rollout options** to **As soon as possible**.

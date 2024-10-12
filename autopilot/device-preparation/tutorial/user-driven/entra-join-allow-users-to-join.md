@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -41,7 +41,7 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 ## Allow users to join devices to Microsoft Entra ID
 
-In order for Windows Autopilot device preparation to work, users need to be allowed to join devices to Microsoft Entra ID. Allowing users to join devices to Microsoft Entra ID can be configured in the Azure portal:
+In order for Windows Autopilot device preparation to work, users need to be allowed to join devices to Microsoft Entra ID. Allowing users to join devices to Microsoft Entra ID can be configured in the [Azure portal](https://portal.azure.com):
 
 [!INCLUDE [Allow users to join devices to Microsoft Entra ID](../../../includes/allow-users-to-join.md)]
 

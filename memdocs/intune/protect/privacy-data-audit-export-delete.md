@@ -30,6 +30,7 @@ ms.collection:
 - M365-identity-device-management
 - privacy
 - essentials-privacy
+- sub-data-privacy
 ---
 
 # Audit, export, or delete personal data in Intune

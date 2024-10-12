@@ -2,10 +2,10 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/03/2024
+ms.date: 06/19/2024
 ms.localizationpriority: medium
 ---
 
@@ -24,22 +24,20 @@ Headings are driven by article context. -->
 
 1. Select **Microsoft Entra ID**.
 
-1. In the **Overview** screen, under **Manage** in the left hand pane, select **Mobility (MDM and MAM)**.
+1. In the **Overview** screen, under **Manage** in the left hand pane, select **Mobility (MDM and WIP)**.
 
-1. In the **Mobility (MDM and MAM)** screen, select **Microsoft Intune**.
+1. In the **Mobility (MDM and WIP)** screen, under **Name** select **Microsoft Intune**.
 
-1. In the **Configure** page that opens, next to **MDM user scope**, select either **All** or **Some**:
+1. In the **Microsoft Intune** page that opens, under **MDM user scope**, select either **All** or **Some**:
 
    - If **All** is selected, all users can automatically enroll their devices in Intune.
 
-   - If **Some** is selected, only users specified in the groups next to **Groups** can automatically enroll their devices in Intune. To add groups:
+   - If **Some** is selected, only users in the groups specified in the link under **Groups** can automatically enroll their devices in Intune. To add groups:
 
-      1. Select the link next to **Groups**.
-      1. In the **Select groups** window that opens, select the desired groups to add.
+      1. Select the link under **Groups**.
+
+      1. In the **Select groups** window that opens, select the desired groups to add. Make sure that the groups selected are Microsoft Entra user groups that contain the desired users.
+
       1. Once all of the desired groups are selected, select **Select** to close the **Select groups** window.
 
-        > [!NOTE]
-        >
-        > The group(s) selected must be a Microsoft Entra group that contains user objects.
-
-1. In the **Configure** screen, if any changes were made, select **Save**.
+1. In the **Microsoft Intune** screen, if any changes were made, select **Save**.

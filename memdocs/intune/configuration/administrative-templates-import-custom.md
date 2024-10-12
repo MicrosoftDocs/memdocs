@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/19/2024
+ms.date: 07/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -107,11 +107,11 @@ Download the ADMX templates you want to import. Save these files to an easily ac
 ## Add the ADMX and ADML files
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Import ADMX** > **Import**:
+2. Select **Devices** > **Manage devices** > **Configuration** > **Import ADMX** tab > **Import**:
 
     :::image type="content" source="./media/administrative-templates-import-custom/import-admx.png" alt-text="Screenshot that shows how to add or import custom ADMX and ADML. Go to Devices > Configuration profiles > Import ADMX in Microsoft Intune and Intune admin center.":::
 
-    Alternatively, you can also import from **Devices** > **Windows** > **Configuration profiles** > **Import ADMX**.
+    Or, you can also import from **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Import ADMX** tab.
 
 3. Upload your files:
 
@@ -133,7 +133,7 @@ When the import completes, your ADMX templates are shown in the list. You can al
 ## Create a profile using your imported files
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
@@ -182,7 +182,7 @@ To update existing ADMX files that are imported, you have the following options:
 
 - **Option 2: Create a new ADMX file**
 
-  1. Create another version of the ADMX file with the same namespace as the original ADMX file.
+  1. Create another version of the ADMX file with a different namespace than the original ADMX file. We recommend you add a version number in the namespace so the names are different.
   2. Add the new and different settings to this ADMX file.
   3. Import the new ADMX and ADML files.
 

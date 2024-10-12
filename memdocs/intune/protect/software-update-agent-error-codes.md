@@ -27,6 +27,7 @@ ms.custom: intune-classic
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-updates
 ---
 
 # Software update agent error codes and descriptions in Microsoft Intune

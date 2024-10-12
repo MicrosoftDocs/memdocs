@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 08/28/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -59,7 +59,7 @@ UDP connectivity can be checked within the “Connection Information” section 
 
 The default connectivity to a Windows 365 Cloud PC is through a TCP connection that traverses a gateway using the [reverse connect](/azure/virtual-desktop/network-connectivity) transport. The reverse transport means that there’s no need for inbound connectivity to the session host (Cloud PC) to connect RDP traffic.
 
-RDP Shortpath builds on the TCP connection and provides, when possible, another direct connection between the Remote Desktop client and the Windows 365 Cloud PC. This connection uses UDP as the underlying  transport protocol. The direct path and protocol deliver improved connection reliability, lower latency, and higher available bandwidth.
+RDP Shortpath enhances the TCP connection by providing an additional direct or relay-based connection between the Remote Desktop client and the Windows 365 Cloud PC using UDP. This improves connection reliability, reduces latency, and increases available bandwidth.
 
 ![Diagram of RDP Shortpath process](./media/rdp-shortpath-public-networks/rdp-shortpath-diagram.png)
 
@@ -74,8 +74,12 @@ When you use RDP Shortpath, the connection with the Cloud PC proceeds as follows
 3. To test connectivity, the service attempts to connect to a Windows 365 STUN server on the public internet through UDP port 3478. This step also establishes the external IP address of the NAT router.
 4. The session host’s candidate table lists the public IP and listener port that it has reachable connectivity on. This information is provided to the connecting client through the established TCP session.
 5. The client sends its list of reachable public IP addresses/ports to the session host.
-6. Both parties attempt a connection at the same time. Because both are creating outbound connections, it often allows connectivity to be established through firewalls because no inbound initiated connectivity occurs.
+6. Both parties attempt a connection at the same time. Because both are creating outbound connections, it often allows connectivity to be established through firewalls because no inbound initiated connectivity occurs. If this connection is not established, then an indirect UDP connection is attempted using relay.
 7. If connectivity is successful, the service evaluates if the connection is the fastest path. If it is, all dynamic virtual channels (such as graphics, input, device redirection, and more) switch to the new transport flow.
+
+## Indirect UDP connection using TURN
+
+By default, Indirect UDP connections using TURN is turned on for everyone. You can turn off UDP connections for public (and private) RDP Shortpath as described in [POlicy CSP - ADMX_TerminalServer](/windows/client-management/mdm/policy-csp-admx-terminalserver#admx-terminalserver-ts_select_transport) and set **ADMX_TerminalServer/TS_SELECT_TRANSPORT** to **Use only TCP**.
 
 ## Known issues
 

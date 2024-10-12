@@ -5,7 +5,7 @@ description: Learn how to use the Microsoft Deployment Toolkit (MDT)
 ms.date: 09/09/2016
 ms.subservice: mdt
 ms.service: configuration-manager
-ms.topic: article
+ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
@@ -100,7 +100,7 @@ The purpose of MDT is to help automate the deployment of Windows operating syste
 |Will you deploy across the network, with removable media, or both? Will you use multicast deployments?|If you are deploying across the network, verify that there is sufficient bandwidth between the deployment shares, distribution points, and the target computers, and provide regional distribution points.For more information, see [Choosing a Deployment Method](#ChoosingaDeploymentMethod) and [Evaluating Network Requirements](#EvaluatingNetworkRequirements).|
 |What is your imaging and source file strategy?|For more information, see [Using Reference Computers in MDT Deployments](#UsingReferenceComputersinMDTDeployments).|
 |Will you deploy a full set of operating system files or a custom image?|For more information, see [Using Reference Computers in MDT Deployments](#UsingReferenceComputersinMDTDeployments).|
-|How will you handle product keys and licensing?|Small organizations might assign each user an individual product key. Larger organizations should use Key Management Service (KMS) or Multiple Activation Key (MAK) activation. For more information, see [Product Activation and Key Information](https://licensingapps.microsoft.com/product-activation).|
+|How will you handle product keys and licensing?|Small organizations might assign each user an individual product key. Larger organizations should use Key Management Service (KMS) or Multiple Activation Key (MAK) activation. For more information, see [Product Activation and Key Information](https://support.microsoft.com/windows/product-activation-for-windows-online-support-telephone-numbers-35f6a805-1259-88b4-f5e9-b52cccef91a0).|
 |Are you going to allow users to choose their own operating system, applications, locale, time zone, and administrative password?|Users can select this information at deployment time, or you can configure the information ahead of time. For more information, see [Choosing LTI, ZTI, or UDI Deployments](#ChoosingLTIZTIorUDIDeployments).|
 |Will users refresh their current computer in place, migrate settings to a new operating system installation, or get a new computer?|For more information, see [Identifying Deployment Scenarios](#IdentifyingDeploymentScenarios).|
 |Which users will be able to install which applications?|For more information, see [Planning for Application Deployment](#PlanningforApplicationDeployment).|

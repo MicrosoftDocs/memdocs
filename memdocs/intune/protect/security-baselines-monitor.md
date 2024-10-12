@@ -1,18 +1,18 @@
 ---
 # required metadata
 
-title: Check for the success or failure of security baselines in Microsoft Intune
-description: Monitor the device and per-setting results of security baselines you deploy with Microsoft Intune, and identify when multiple baselines that apply to the same device result in conflicts.
+title: Monitor security baselines deployed by Microsoft Intune
+description: Monitor device and per-setting results of security baselines you deploy with Microsoft Intune, and identify conflicts for devices.
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/09/2023
+ms.date: 08/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.assetid: 
+ms.assetid:
 
 # optional metadata
 
@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-secure-endpoints
 ---
 
 # Monitor security baselines and profiles in Microsoft Intune
@@ -54,7 +55,7 @@ For more information about the feature, see [Security baselines in Intune](secur
 >
 > The following information applies to profile versions released in May 2023 or later. To view information for profile versions released prior to May 2023, see [Monitor profiles for baseline versions released before May 2023](#monitor-profiles-for-baseline-versions-released-before-may-2023), later in this article.
 
-When you select a security baseline profile that you’ve deployed, you can gain insights into the security state of devices that received that baseline. To view these insights, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *Microsoft 365 Apps for Enterprise Security Baseline*. Then, from the *Profiles* pane, select the profile instance for which you want to view details to open the profiles dashboard view.
+When you select a security baseline profile that you've deployed, you can gain insights into the security state of devices that received that baseline. To view these insights, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *Microsoft 365 Apps for Enterprise Security Baseline*. Then, from the *Profiles* pane, select the profile instance for which you want to view details to open the profiles dashboard view.
 
 :::image type="content" source="./media/security-baselines-monitor/view-baseline-policy-details.png" alt-text="View the dashboard for a security baseline profile.":::
 
@@ -83,7 +84,7 @@ You can filter this report view for specific *Assignment status* values, and the
 
 If you select the name of a device from the *Device name* column, Intune displays the *Profile Settings* view where you can view that devices status results for each setting in the security baseline. Next, from the Profile Settings page, you can select a setting to view more details, which is useful when a device reports a result for any setting other than *Succeeded*.
 
-In the following image, we have drilled in on EAGLE003, the only device to show success for the baseline, and then selected the setting *Add-on Management*:
+In the following image, we drill in on EAGLE003, the only device to show success for the baseline, and then selected the setting *Add-on Management*:
 
 :::image type="content" source="./media/security-baselines-monitor/drill-in-for-setting-details-pane.png" alt-text="View a devices' reported status for each setting in the baseline.":::
 
@@ -91,7 +92,7 @@ On the settings Setting Details pane, we can see each profile that is assigned t
 
 For this device, there's only one source profile that manages the Add-on-management setting. If there were other profiles that configured this setting, those profiles would also be listed as a Source Profile.
 
-Should this setting have been in conflict, this view can help you identify the other profiles so you can then reconcile a consistent configuration, or later baseline profile assignments to remove the conflict.
+Should this setting be in conflict, this view can help you identify the other profiles so you can then reconcile a consistent configuration, or later baseline profile assignments to remove the conflict.
 
 ### Device assignment status report
 

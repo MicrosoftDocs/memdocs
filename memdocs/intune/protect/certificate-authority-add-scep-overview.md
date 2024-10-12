@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/26/2024
+ms.date: 07/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,6 +24,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - certificates
+- sub-certificates
 ---
 
 # Add partner certification authority in Intune using SCEP
@@ -132,12 +133,13 @@ As the administrator, create a SCEP certificate profile to target to users or de
 
 ## Removing certificates
 
-When you unenroll or wipe the device, the certificates are removed. The certificates aren't revoked.
+After you unenroll or wipe the device, the certificates are removed from the device by Intune and queued for revocations. Revocation on the certificate authority depends on API implementation by each third party. 
 
 ## Third-party certification authority partners
 
 The following third-party certification authorities support Intune:
 
+- [AWS Private Certificate Authority](https://docs.aws.amazon.com/privateca/latest/userguide/connector-for-scep-getting-started.html)  
 - [Cogito Group](https://cogitogroup.net/scep)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
 - [EasyScep](https://docs.just-software.com/EasyScep/)
@@ -161,6 +163,11 @@ If you're a third-party CA interested in integrating your product with Intune, r
 
 - [Intune SCEP API GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Intune SCEP API guidance for third party CAs](scep-libraries-apis.md)
+
+## Security and privacy information  
+Some user information in the SCEP profile becomes visible to the third-party certificate authority (CA) receiving the certificate signing request. This happens when you deploy a new or updated SCEP profile that contains the `Common name (CN)` user attribute, and variables such as `UserName`, `OnPrem_Distinguished_Name`, and `OnPremisesSamAccountName`. During profile deployment, Microsoft Intune replaces these variables with actual values. The targeted devices in turn must reach out to the third-party CA to request a certificate with the actual values.     
+
+For a list of supported user variables, see **Step 7** under [Create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile).  
 
 ## See also
 

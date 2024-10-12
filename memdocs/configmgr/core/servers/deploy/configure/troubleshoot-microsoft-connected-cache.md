@@ -6,17 +6,17 @@ ms.date: 11/23/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: troubleshooting
-ms.author: baladell 
+ms.author: baladell
 author: BalaDelli
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
-# Troubleshoot Microsoft Connected Cache in Configuration Manager
+# Troubleshoot Microsoft Connected Cache with Configuration Manager
 
-This article provides technical details about Microsoft Connected Cache in Configuration Manager. Use it to help troubleshoot issues that you might have in your environment. For more information on how it works and how to use it, see [Microsoft Connected Cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
+This article provides technical details about Microsoft Connected Cache with Configuration Manager. Use it to help troubleshoot issues that you might have in your environment. For more information on how it works and how to use it, see [Microsoft Connected Cache with Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 ## Verify
 
@@ -234,4 +234,4 @@ If the IIS and ARR log files take up too much space on the server, there are sev
 
 ## See also
 
-[Microsoft Connected Cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md)
+[Microsoft Connected Cache with Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md)

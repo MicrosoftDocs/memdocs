@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 07/31/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Better Mobile Threat Defense connector with Intune
@@ -51,7 +52,7 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 
 ## Supported platforms
 
-- **Android 4.1 and later**
+- **Android 4.2.2 and later**
 
 - **iOS 8.0 and later**
 
@@ -63,7 +64,7 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 
 - Better Mobile Threat Defense subscription
 
-  - For more information, see the [Better Mobile website](https://www.better.mobi/).
+  - For more information, see the Better Mobile website.  https://aad.bettermtd.com/
 
 ## Sample scenarios
 

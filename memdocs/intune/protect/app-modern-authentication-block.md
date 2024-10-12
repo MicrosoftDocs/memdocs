@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-device-compliance
 ---
 
 # Block apps that don't use modern authentication (MSAL)

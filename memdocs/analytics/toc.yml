@@ -22,7 +22,9 @@ items:
   - name: Data platform schema
     href: data-platform-schema.md
   - name: Battery health
-    href: battery-health.md          
+    href: battery-health.md
+  - name: Resource Performance
+    href: resource-performance-report.md            
 - name: Quickstarts
   items:
   - name: Enroll Intune devices

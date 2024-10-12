@@ -55,7 +55,7 @@ When configuring device restriction policies, the broad range of settings enable
 When you're ready to proceed, create an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
 
 > [!NOTE]
-> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados).
+> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
 ## App Store, Doc Viewing, Gaming
 

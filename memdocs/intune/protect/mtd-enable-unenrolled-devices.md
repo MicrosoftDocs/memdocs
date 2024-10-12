@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 08/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,24 +28,14 @@ ms.custom:
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Enable the Mobile Threat Defense connector in Intune for unenrolled devices
 
 During Mobile Threat Defense (MTD) setup, you've configured a policy for classifying threats in your Mobile Threat Defense partner console and you've created the app protection policy in Intune. If you've already configured the Intune connector in the MTD partner console, you can now enable the MTD connection for MTD partner applications.
 
-> [!NOTE]
-> This article applies to all Mobile Threat Defense partners that support app protection policies:
->
-> - BlackBerry Mobile (Android, iOS/iPadOS)
-> - Better Mobile (Android,iOS/iPadOS)
-> - Check Point Harmony Mobile Protect (Android, iOS/iPadOS)
-> - Jamf (Android, iOS/iPadOS) *(formerly Wandera)*
-> - Lookout for Work (Android, iOS/iPadOS)
-> - SentinelOne (Android,iOS/iPadOS)
-> - Symantec Endpoint Security (Android, iOS/iPadOS)
-> - Trellix Mobile Security (Android,iOS/iPadOS)
-> - Zimperium (Android,iOS/iPadOS)
+[!INCLUDE [mtd-mam-note](../../intune/protect/includes/mtd-mam-note.md)]
 
 ## Classic conditional access policies for Mobile Threat Defense (MTD) apps
 
@@ -71,7 +61,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a third-party Mobile Threat Defense vendor, you must be a Microsoft Entra *Global administrator* or be assigned the *Endpoint Security Manager* built-in admin role for Intune. You can also use a custom role that includes the *Mobile Threat Defense* permission in Intune.
+2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a third-party Mobile Threat Defense vendor, your account must be assigned the *Endpoint Security Manager* built-in admin role for Intune, or be assigned a custom role that includes the *Read* and *Modify* rights for the Intune *Mobile Threat Defense* permission.
 
 3. On the **Mobile Threat Defense** pane, select **Add**.
 

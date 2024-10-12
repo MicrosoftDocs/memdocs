@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2023
+ms.date: 06/13/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,6 +23,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- sub-secure-endpoints
 ---
 
 # Manage Windows LAPS policy with Microsoft Intune
@@ -48,13 +49,13 @@ Applies to:
 
 ## About Intune LAPS policy
 
-Intune’s provides support to configure Windows LAPS on devices through the **Local admin password solution (Windows LAPS)** profile, available through endpoint security policies for [account protection](../protect/endpoint-security-account-protection-policy.md).
+Intune supports configuration of Windows LAPS on devices through the **Local admin password solution (Windows LAPS)** profile for endpoint security [account protection](../protect/endpoint-security-account-protection-policy.md) policy.
 
 Intune policies manage LAPS by using the Windows LAPS configuration service provider (CSP). Windows LAPS CSP configurations [take precedence](/windows-server/identity/laps/laps-management-policy-settings#supported-policy-roots) over, and overwrite, any existing configurations from other LAPS sources, like GPOs or the [Legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) tool.
 
 Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting **Administrator Account Name**. If the account name specified in the policy isn’t present on the device, no account is managed. However, when **Administrator Account Name** is left blank, the policy defaults to the devices built-in local admin account that is identified by its well-known relative identifier (RID).
 
-> [!NOTE]  
+> [!NOTE]
 > Ensure the [prerequisites](../protect/windows-laps-overview.md#prerequisites) for Intune to support Windows LAPS in your tenant are met before creating policies.
 >
 > Intune’s LAPS policies do not create new accounts or passwords. Instead, they manage an account that’s already on the device.
@@ -129,9 +130,8 @@ To view account and password details, an account must have one of the following 
 
 Use the following methods to grant accounts these permissions:
 
-- Assign one of the following built-in Microsoft Entra roles:
-  - Global Admin
-  - Cloud Device Admin
+- Assign the following [built-in Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference):
+  - *Cloud Device Administrator*
 
 Create and assign a custom role in Microsoft Entra ID that grants these permissions. See [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra documentation.
 
@@ -143,7 +143,7 @@ For more information, see [Role based access controls for LAPS](../protect/windo
 
 2. On the devices Overview pane, below *Monitor* select **Local admin password**. If your account has sufficient permissions, the Local admin password pane for the device opens, which is the same view that’s available from within the Azure portal.
 
-   :::image type="content" source="./media/windows-laps-policy/view-password.png" alt-text="Screen shot that shows the local admin password pane for a Windows device."  lightbox="./media/windows-laps-policy/view-password.png":::
+   :::image type="content" source="./media/windows-laps-policy/view-password.png" alt-text="Screen shot that shows the local admin password pane for a Windows device." lightbox="./media/windows-laps-policy/view-password.png":::
 
    The following information can be viewed from within the admin center. However, the *Local admin password* can only be viewed when the account was backed up to Microsoft Entra. It can’t be viewed for an account that’s backed up to an on-premises Active Directory (Windows Server Active Directory):
 
@@ -170,7 +170,7 @@ To use this device action, your account must have the following three Intune per
 
 - Managed devices: **Read**
 - Organization: **Read**
-- Remote tasks:  **Rotate Local Admin Password**
+- Remote tasks: **Rotate Local Admin Password**
 
 See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
@@ -218,7 +218,7 @@ When a device that doesn’t have a LAPS policy then receives two conflicting po
 
 To resolve conflicts, you must either remove policy assignments from the device, or reconfigure settings in applicable policies until no more conflicts remain.
 
-## Next steps
+## Related content
 
 - [Introduction to Intune policy for LAPS](../protect/windows-laps-overview.md)
 - [View reports for LAPS](../protect/windows-laps-reports.md)

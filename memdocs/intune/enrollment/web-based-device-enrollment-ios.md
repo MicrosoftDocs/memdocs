@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/15/2024
+ms.date: 09/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -32,11 +32,6 @@ ms.collection:
 
 # Set up web based device enrollment for iOS  
 **Applies to iOS/iPadOS**  
-
->[!IMPORTANT]
-> When you create an iOS/iPadOS enrollment profile in the Microsoft Intune admin center, *device enrollment with Company Portal* appears as the default method. The default method is expected to change to *web-based device enrollment* in the future. This change will appear in new profiles you create. Existing profiles will remain the same.
->
->To ensure a smooth transition to web-based enrollment, it's important to set up a single sign-on extension policy and enable JIT registration. For information about how to prepare, see [Plan for Change: Web based device enrollment will become default method for iOS/iPadOS device enrollment](../fundamentals/whats-new.md#plan-for-change-web-based-device-enrollment-will-become-default-method-for-iosipados-device-enrollment). 
 
 Set up web-based device enrollment in Microsoft Intune for iOS/iPadOS personal devices. This is one of two *Apple device enrollment* methods supported in Microsoft Intune, with the other being [device enrollment with the Company Portal app](ios-device-enrollment.md#app-or-web-based-enrollment). Both methods give you access to a limited but appropriate set of device management settings and actions for bring-your-own-device (BYOD) scenarios, so you can protect work data without affecting the device user's personal data or apps.  
 
@@ -86,21 +81,21 @@ When an employee attempts to sign into a work app on their personal device, the 
 
 Alternatively, you can provide employees and students with a URL that opens the Company Portal website. If you aren't utilizing conditional access, it's important to share the enrollment link with device users so that they know how to initiate enrollment. The link to share is:  
 
- `portal.manage.microsoft.com/conditionalaccess/enrollment`   
+ `https://portal.manage.microsoft.com/enrollment/webenrollment/ios`   
 
 This section provides the high-level enrollment steps for device users. We recommend using this information in your organization's device onboarding documentation or for troubleshooting and support. 
 
 >[!IMPORTANT]
 > Safari browser is the only supported browser for this type of enrollment, and is needed to download the management profile and complete enrollment. If a user's default browser is anything other than Safari, they will need to copy the enrollment link and paste it into a Safari browser to initiate enrollment. After they complete enrollment, users can return to their preferred browser.  
 
-1. Open Safari and go to [https://portal.manage.microsoft.com/conditionalaccess/enrollment](https://portal.manage.microsoft.com/conditionalaccess/enrollment). Sign in with your work or school account.   
+1. Open Safari and go to [https://portal.manage.microsoft.com/enrollment/webenrollment/ios](https://portal.manage.microsoft.com/enrollment/webenrollment/ios). Sign in with your work or school account.   
 2. When prompted to, download the management profile. Wait in Safari while Company Portal downloads the management profile.  
 3. Go to your device settings app to view and install the management profile.  
 4. Wait until Microsoft Authenticator is installed on the device before signing into a work or school app. The device won't be ready for work use until Authenticator is on the device, which can take a few minutes. To verify that Authenticator installed, open your device settings and go to **Profile** > **Management Profile** > **Single Sign On Extension**. Authenticator should be listed as the SSO extension.  
 5. Sign in to a work app, such as Microsoft Teams, with your work account.  
 6. Wait while the app identifies required setting updates. For example, you may be required to update your device's operating system before you can use the app. Check the app you're signed into for pending action items. When you're done making changes, select **Recheck**.   
 
-After compliance checks are complete, users can access apps configured with the SSO app extension policy for the rest of their session without needing to sign in again.       
+After compliance checks are complete, users can access apps configured with the SSO app extension policy for the rest of their session without needing to sign in again.
 
 ### Removing device from management  
 The volume and cryptographic keys created to manage the work data on the device are erased when the device unenrolls from Intune. 
@@ -112,9 +107,3 @@ For more details about Apple Device Enrollment features and functionality, see [
 
 ### Troubleshooting  
 For information about how to troubleshoot device enrollment issues in Microsoft Intune, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
-
- 
-
-
-
-

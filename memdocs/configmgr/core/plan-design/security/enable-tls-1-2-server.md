@@ -2,7 +2,7 @@
 title: Enable TLS 1.2 on servers
 titleSuffix: Configuration Manager
 description: Information about how to enable Transport Layer Security (TLS) 1.2 for Configuration Manager site servers and remote site systems.
-ms.date: 05/04/2021
+ms.date: 06/20/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # How to enable TLS 1.2 on the site servers and remote site systems
@@ -35,7 +35,6 @@ For more information about dependencies for specific Configuration Manager featu
 
 [!INCLUDE [Update and configure the .NET framework to support TLS 1.2](includes/update-net-framework-to-support-tls-1-2.md)]
 
-
 ## <a name="bkmk_sql"></a> Update SQL Server and client components
 
 Microsoft SQL Server 2016 and later support TLS 1.1 and TLS 1.2. Earlier versions and dependent libraries might require updates. For more information, see [KB 3135244: TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe).
@@ -45,6 +44,7 @@ Secondary site servers need to use at least SQL Server 2016 Express with Service
 ### <a name="bkmk_sql-client"></a> SQL Server Native Client
 
 > [!NOTE]
+>
 > [KB 3135244](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe) also describes requirements for SQL Server client components.
 
 Make sure to also update the SQL Server Native Client to at least version SQL Server 2012 SP4 (11.*.7001.0). This requirement is a [prerequisite check (warning)](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
@@ -75,8 +75,9 @@ After the configuration has been assigned, the compliance status of your resourc
 
 For a detailed, step-by-step tutorial, see [Consistently upgrade your server TLS protocol using Azure Arc and Automanage Machine Configuration](https://techcommunity.microsoft.com/t5/azure-arc-blog/consistently-upgrade-your-server-tls-protocol-using-azure-arc/ba-p/3664217).
 
-
 ## <a name="bkmk_wsus"></a> Update Windows Server Update Services (WSUS)
+
+TLS 1.2 is supported by default for WSUS on all [currently supported version](/windows-server/get-started/windows-server-release-info) of Windows Server.
 
 To support TLS 1.2 in earlier versions of WSUS, install the following update on the WSUS server:
 
@@ -84,7 +85,9 @@ To support TLS 1.2 in earlier versions of WSUS, install the following update on 
 
 - For WSUS server that's running Windows Server 2012 R2, install [update 4022720](https://support.microsoft.com/topic/june-27-2017-kb4022720-preview-of-monthly-rollup-b98970bb-6f11-46c3-8681-a6b85d5d8eb4) or a later rollup update.
 
-Starting in Windows Server 2016, TLS 1.2 is supported by default for WSUS. TLS 1.2 updates are only needed on Windows Server 2012 and Windows Server 2012 R2 WSUS servers.
+> [!NOTE]
+>
+> On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 entered the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see **[Extended Security Updates and Configuration Manager](/mem/configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)**.
 
 ## Next steps
 

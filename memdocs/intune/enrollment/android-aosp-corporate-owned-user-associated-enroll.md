@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2024
+ms.date: 09/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -38,9 +38,12 @@ Set up enrollment in Intune for corporate-owned, user-associated devices built o
 * Intended to be used by a single user. 
 * Used exclusively for work.    
 
-This article describes how to set up Android (AOSP) device management and enroll RealWear devices for use at work.  
+This article describes how to set up Android (AOSP) device management and enroll AOSP devices for use at work.  
 
-## Prerequisites
+## Prerequisites  
+
+>[!NOTE]
+> Beginning October 1st, AOSP devices must have the Microsoft Intune app, version 24.7.0 or later to sync with the Microsoft Intune service.  
 
 To enroll and manage AOSP devices, you must have:
 
@@ -51,7 +54,7 @@ You must also:
 
 * [Set Microsoft Intune as the mobile device management (MDM) authority in your tenant](../fundamentals/mdm-authority-set.md). You only need to do this once, when you first set up Intune for mobile device management.  
 
-* Assign valid licenses to all RealWear device users. For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md).  
+* Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md) and [Managing specialty devices with Microsoft Intune](../fundamentals/specialty-devices-with-intune.md).
 
 ## Create an enrollment profile   
 Create an enrollment profile to enable enrollment on devices. 
@@ -68,7 +71,7 @@ Create an enrollment profile to enable enrollment on devices.
     - **SSID**: Identifies the network that the device will connect to.  
     
         > [!NOTE]
-        > Wi-Fi details are required because the RealWear device doesn't have a button or option that lets it automatically connect to other devices.  
+        > Wi-Fi details are required if the device doesn't have a button or option that lets it automatically connect to a network.  
 
     - **Hidden network**: Choose whether this is a hidden network. By default, this setting is disabled, which means the network can broadcast its SSID. 
     - **Wi-Fi type**: Select the type of authentication needed for this network.  
@@ -88,8 +91,10 @@ To view the token as a QR code, select your enrollment profile from the enrollme
 You can also export the enrollment profile JSON file. To create a JSON file, select Export**.  
 
 > [!IMPORTANT]
->- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
->- Since you're managing the device via Intune, you should skip the RealWear first time setup. The Intune QR codes is the only thing you need to set up the device.  
+>- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.
+>- Consider using a staging network with limited permissions for provisioning devices and completing the enrollment process. For example, you could use an internet-connected network with limited permissions and no corporate access to do the initial set up.
+>- On RealWear devices, you should skip the first time setup. The Intune QR code is the only thing you need to set up the device.  
+
 
 ### Replace a token  
 You can generate a new token to replace one that's nearing its expiration date. The replacement token doesn't affect devices that are already enrolled.  
@@ -178,6 +183,7 @@ You can take action on one device at a time. For more information about where to
 ## Troubleshooting  
 
 ### View app versions  
+
 Find out which version of the Intune app or Microsoft Authenticator app is installed on a device. 
 
 1. Go to **Devices** and select the device name.    

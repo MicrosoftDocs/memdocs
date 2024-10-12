@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/11/2023
+ms.date: 07/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -46,28 +46,39 @@ This article shows you how to export Wi-Fi settings from a Windows device, and t
 > - On Windows 10/11, you can [create a Wi-Fi profile](wi-fi-settings-windows.md) directly in Intune. You don't have to import a file.
 > - For Windows 8.1 devices, you must export and import Wi-Fi settings to create and deploy Wi-Fi profiles.
 
+## Before you begin
+
+- To configure the Intune policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+
 ## Export Wi-Fi settings from a Windows device
 
-Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by Intune. On a Windows computer that has the WiFi profile, use the following steps:
+To export an existing Wi-Fi profile to an XML file readable by Intune, use `netsh wlan`. On a Windows computer that has the WiFi profile, use the following steps:
 
 1. Create a local folder for the exported Wi-Fi profiles, such as **c:\WiFi**.
 2. Open a command prompt as an administrator.
-3. Run the `netsh wlan show profiles` command. Note the name of the profile you'd like to export. In our example, the profile name is **ContosoWiFi**.
+3. Run the `netsh wlan show profiles` command. Note the name of the profile you want to export.
 4. Run the `netsh wlan export profile name="ContosoWiFi" folder=c:\Wifi` command. This command creates a Wi-Fi profile file named **Wi-Fi-ContosoWiFi.xml** in your target folder.
 
-> [!IMPORTANT]
->
-> - If you're exporting a Wi-Fi profile that includes a pre-shared key, you **must** add `key=clear` to the command. The key must be exported in plain text to successfully use the profile. For example, enter:
->
->   `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
->
-> - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this happens, the Wi-Fi profile is properly assigned to the device, and the profile works as expected.
-> - If you export a Wi-Fi profile that includes a pre-shared key, be sure the file is protected. The key is in plain text. It's your responsibility to protect the key.
+### Preshared keys and exporting
+
+If you're exporting a Wi-Fi profile that includes a preshared key (PSK), you **must** add `key=clear` to the command. The key must be exported in plain text to successfully use the profile.
+
+For example, enter:
+
+```cmd
+netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi
+```
+
+- Using a preshared key with Windows 10/11 causes a remediation error to show in Intune. When the error happens, the Wi-Fi profile is properly assigned to the device, and the profile works as expected.
+
+- If you export a Wi-Fi profile that includes a preshared key, be sure the file is protected. The key is in plain text. It's your responsibility to protect the key.
 
 ## Import the Wi-Fi settings into Intune
 
+When the XML file is ready, you can import it into Intune to create a Wi-Fi profile.
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 8.1 and later**.
@@ -100,8 +111,8 @@ Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by 
 
 11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
-## Related content
+## Related articles
 
-The profile is created, but may not be doing anything. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status.](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-See the [Wi-Fi settings overview](wi-fi-settings-configure.md), including other available platforms.
+- See the [Wi-Fi settings overview](wi-fi-settings-configure.md), including other available platforms.

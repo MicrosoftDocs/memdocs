@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/02/2024
+ms.date: 06/27/2024
 ms.topic: troubleshooting
 ms.service: windows-365
-ms.subservice: 
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -35,7 +35,7 @@ This page lists recent known issues with [Windows 365 Switch](windows-365-switch
 
 ## Support for only one Cloud PC
 
-Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The user is automatically signed into the first available Switch-supported Cloud PC from the list of Cloud PCs assigned to the user. Using Switch, the user can choose which Cloud PC to sign in to by selecting the ellipses (...) > choose the Cloud PC > **Add to Task view**. Only one Cloud PC can be added to Task view at a time.
+Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The user is automatically signed into the first available Switch-supported Cloud PC from the list of Cloud PCs assigned to the user. Using Switch, the user can choose which Cloud PC to sign in to by selecting the ellipses (...) > choose the Cloud PC > **Add to Task view**. Only one Cloud PC can be added to Task view at a time. If you try to pin multiple Cloud PCs to the Task view, they're added in a stack fashion. For example, if you remove the first Cloud PC you added, the second one takes its place. Because only the first Cloud PC added is displayed in the Task view, it's not recommended to pin more than one Cloud PC to the Task view.
 
 ## Remove or replace stale Cloud PC from task view
 

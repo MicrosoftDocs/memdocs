@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/10/2024
+ms.date: 10/09/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -46,8 +46,8 @@ To use HP Anyware for Windows 365, you must meet the following requirements:
 - Microsoft Entra domain in the same tenant as Microsoft Intune
 - Windows 365 Enterprise licenses in the same tenant as Microsoft Intune
 - Azure admin account:
-  - Microsoft Entra Global Admin for required authorizations in HP Anyware Service.
-  - Intune Admin for enabling the HP Anyware connector in Microsoft Intune.
+  - Intune Administrator for required authorizations in HP Anyware Service.
+  - Intune Administrator for enabling the HP Anyware connector in Microsoft Intune.
   - For more information about the Windows 365 requirements, see [Windows 365 requirements](requirements.md).
 
 ## Supported configurations

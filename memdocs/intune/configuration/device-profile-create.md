@@ -58,6 +58,13 @@ This article:
 - Describes applicability rules on Windows client devices, and shows you how to create a rule.
 - Has more information on the check-in refresh cycle times when devices receive profiles and any profile updates.
 
+This feature applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Windows
+
 ## Create the profile
 
 Profiles are created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In this admin center, select **Devices**. You have the following options:
@@ -66,10 +73,10 @@ Profiles are created in the [Microsoft Intune admin center](https://go.microsoft
 
 - **Overview**: Lists the status of your profiles, and provides more details on the profiles you assigned to users and devices.
 - **Monitor**: Check the status of your profiles for success or failure, and also view logs on your profiles.
-- **By platform**: Create and view policies and profiles by your platform. This view can also show features specific to the platform. For example, select **Windows**. You see Windows-specific features, such as **Windows Update Rings** and **PowerShell scripts**.
+- **By platform**: Create and view policies and profiles by your platform. This view can also show features specific to the platform. For example, select **Windows 10 and later**. You see Windows-specific features, such as **Windows Update Rings** and **PowerShell scripts**.
 - **Manage devices**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run on devices, and add data plans to devices using [eSIM](esim-device-configuration.md).
 
-When you create a profile (**Configuration** > **Create**), choose your platform:
+When you create a profile (**Devices** > **Manage devices** > **Configuration** > **Create**), choose your platform:
 
 - **Android device administrator**
 - **Android Enterprise**
@@ -94,7 +101,6 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [Email](email-settings-configure.md)
 - [Endpoint protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
 - [Extensions (macOS)](kernel-extensions-overview-macos.md)
-- [Identity protection (Windows)](../protect/identity-protection-configure.md)
 - [Kiosk](kiosk-settings.md)
 - [Microsoft Defender for Endpoint (Windows)](../protect/advanced-threat-protection.md)
 - [Mobility Extensions (MX) profile (Android device administrator)](android-zebra-mx-overview.md)
@@ -112,7 +118,7 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [Windows health monitoring](windows-health-monitoring.md)
 - [Wired networks (macOS)](wired-network-settings-macos.md)
 
-For example, if you select **iOS/iPadOS** for the platform, your options look similar to the following profile:
+For example, if you select **Android Enterprise** for the platform, your options look similar to the following profile:
 
 :::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Screenshot that shows how to create an iOS/iPadOS device configuration policy and profile in Microsoft Intune.":::
 

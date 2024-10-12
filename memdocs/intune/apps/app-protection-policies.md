@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2023
+ms.date: 07/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -67,15 +67,12 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 3. Select **Create policy** and select either **iOS/iPadOS** or **Android**. The **Create policy** pane is displayed.
 4. On the **Basics** page, add the following values:
 
-    | Value | Description |
-    |:-------------|:-----------------------------------------------|
-    | Name | The name of this app protection policy. |
-    | Description | [Optional] The description of this app protection policy. |
+ | Value | Description |
+ |:-------------|:-----------------------------------------------|
+ | Name | The name of this app protection policy. |
+ | Description | [Optional] The description of this app protection policy. |
 
-
-    The **Platform** value is set based on your above choice.
-
-    ![Screenshot of the Basics page of the Create policy pane](./media/app-protection-policies/app-protection-add-policies-01.png)
+![Screenshot of the Basics page of the Create policy pane](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Click **Next** to display the **Apps** page.  \
     The **Apps** page allows you to choose which apps should be targeted by this policy. You must add at least one app.
@@ -84,7 +81,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     |:-------------|:-----------------------------------------------|
     | Target policy to | In the **Target policy to** dropdown box, choose to target your app protection policy to **All Apps**, **Microsoft Apps**, or **Core Microsoft Apps**.<p><ul><li>**All Apps** includes all Microsoft and partner apps that have integrated the Intune SDK.</li><li>**Microsoft Apps** includes all Microsoft apps that have integrated the Intune SDK.</li><li>**Core Microsoft Apps** includes the following apps: Microsoft Edge, Excel, Office, OneDrive, OneNote, Outlook, PowerPoint, SharePoint, Teams, To Do, and Word.</li></ul></p>Next, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy.|
     | Public apps | If you don't want to select one of the predefined app groups, you can choose to target individual apps by selecting **Selected apps** in the **Target policy to** dropdown box. Click **Select public apps** to select public apps to target. |
-    | Custom apps | If you don't want to select one of the predefined app groups, you can choose to target individual apps by selecting **Selected apps** in the **Target policy to** dropdown box. Click **Select custom apps** to select custom apps to target based on a Bundle ID. You cannot choose a custom app when targeting all public apps in the same policy. |
+    | Custom apps | If you don't want to select one of the predefined app groups, you can choose to target individual apps by selecting **Selected apps** in the **Target policy to** dropdown box. Click **Select custom apps** to select custom apps to target based on a Bundle ID. You cannot choose a custom app when also targeting the options **All Apps**, **Microsoft Apps**, or **Core Microsoft Apps** in the same policy. |
 
     The app(s) you have selected will appear in the public and custom apps list.
 
@@ -206,7 +203,7 @@ To use these filters when assigning policies, browse to **Apps** > **App protect
 
 On Android, Android devices will prompt to install the Intune Company Portal app regardless of which Device Management type is chosen. For example, if you select 'Android Enterprise' then users with unmanaged Android devices will still be prompted.
 
-For iOS/iPadOS, for the Device Management type to be enforced to Intune managed devices, additional app configuration settings are required. These configurations will communicate to the APP service that a particular app is managed—and that APP settings won't apply:
+For iOS/iPadOS, for the Device Management type to be enforced to Intune managed devices, additional app configuration settings are required. These settings communicate with the APP (App Protection Policy) service to indicate that the app is managed. Therefore, the APP settings will not apply until you deploy the app configuration policy. The following are the app configuration settings:
 
 - **IntuneMAMUPN** and **IntuneMAMOID** must be configured for all MDM managed applications. For more information, see [How to manage data transfer between iOS/iPadOS apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** must be configured for all third-party and line-of-business MDM managed applications. The **IntuneMAMDeviceID** should be configured to the device ID token. For example, `key=IntuneMAMDeviceID, value={{deviceID}}`. For more information, see [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).

@@ -2,13 +2,13 @@
 title: Windows Autopilot device guidelines
 description: Learn all about hardware, firmware, and software best practices for Windows Autopilot deployment.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/23/2024
+ms.date: 06/11/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -23,11 +23,16 @@ appliesto:
 
 ## Hardware and firmware best practice guidelines for Windows Autopilot
 
-All devices using Windows Autopilot should meet the [minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview) for Windows.
+All devices using Windows Autopilot should meet the minimum hardware requirements for Windows. For more information, see:
+
+- [Find Windows 11 specs, features, and computer requirements](https://www.microsoft.com/windows/windows-11-specifications).
+- [How to Find Windows 10 Computer Specifications & Systems Requirements](https://www.microsoft.com/windows/windows-10-specifications).
+- [Windows minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview).
+- [Windows 11 requirements](/windows/whats-new/windows-11-requirements).
 
 The following best practices ensure that devices can easily be provisioned as part of the Windows Autopilot deployment process:
 
-- TPM 2.0 is enabled and in a good state (not in **Reduced Functionality Mode**) on devices intended for Windows Autopilot self-deploying mode.
+- TPM 2.0 is enabled and in a good state on devices intended for Windows Autopilot self-deploying mode. The TPM shouldn't be in the **Reduced Functionality Mode** state.
 
 - The OEM should provision either of the following information into the [SMBIOS fields](/windows-hardware/drivers/bringup/smbios). The information should follow Microsoft specifications (Manufacturer, Product Name, and Serial Number stored in SMBIOS Type 1 04h, Type 1 05h, and Type 1 07h).
 
@@ -41,7 +46,7 @@ The following best practices ensure that devices can easily be provisioned as pa
 
 - The OEM ensures that the PKID provisioned in the SMBIOS is passed on to the channel.
 
-- When using a VM for Autopilot testing, assign at least 2 processors and 4gb of memory. *Note: The [minimum system requirements](/windows/whats-new/windows-11-requirements#virtual-machine-support) for Windows 11 are 2 processors and 4gb memory.
+- When using a VM for Autopilot testing, assign at least 2 processors and 4gb of memory.
 
 ## Software best practice guidelines for Windows Autopilot
 
@@ -53,7 +58,7 @@ The following best practices ensure that devices can easily be provisioned as pa
 
   - Per OEM Policy, Windows features, including built-in apps, shouldn't be disabled or removed.
 
-## Next steps
+## Related content
 
 - [Windows Autopilot customer consent](registration-auth.md).
 - [Motherboard replacement scenario guidance](autopilot-motherboard-replacement.md).

@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2023
+ms.date: 6/18/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,6 +29,7 @@ ms.collection:
 - highpri
 - highseo
 - compliance
+- sub-device-compliance
 ---
 
 # Device Compliance settings for Windows 10/11 in Intune
@@ -47,8 +48,13 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 [Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Windows 10 and later**.
 
-## Device Health
+## Device health
+To ensure devices boot to a trusted state, Intune utilizes Microsoft device attestation services.  Devices across Intune commercial, US Government GCC High, and DoD services running Windows 10 use the Device Health Attestation (DHA) service. 
 
+For more information, see:  
+
+- [Device Health Attestation](/windows-server/security/device-health-attestation)  
+  
 ### Windows Health Attestation Service evaluation rules
 
 - **Require BitLocker**:  
@@ -74,10 +80,10 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Require code integrity, which detects if an unsigned driver or system file is being loaded into the kernel. It also detects if a system file is changed by malicious software or run by a user account with administrator privileges.
 
-More resources:
+For more information, see:  
 
-- For details about how the Health Attestation service works, see [Health Attestation CSP](/windows/client-management/mdm/healthattestation-csp).
-- [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
+- For details about how the Health Attestation service works, see [Health Attestation CSP](/windows/client-management/mdm/healthattestation-csp).  
+- [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).  
 
 ## Device Properties
 

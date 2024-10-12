@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 09/17/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,13 +24,14 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-secure-endpoints
 ms.reviewer: mattcall
 
 ---
 
 # Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune
 
-View the Microsoft Defender Antivirus settings you can manage with the **Microsoft Defender Antivirus Policy (ConfigMgr)** profile from Intune. The profile is available when you configure Intune [Endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md), and the policy deploys to devices you manage with Configuration Manager when you've configured the [tenant attach](../protect/tenant-attach-intune.md) scenario.
+View the Microsoft Defender Antivirus settings you can manage with the **Microsoft Defender Antivirus Policy (ConfigMgr)** profile from Intune. The profile is available when you configure Intune [Endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md), and the policy deploys to devices you manage with Configuration Manager when you've configured the [tenant attach](../protect/tenant-attach-intune.md) scenario. (Path in the Microsoft Intune admin center: *Endpoint security* > *Antivirus* > *+ Create Policy* > Platform = *Windows (ConfigMgr)* > Profile = *Microsoft Defender Antivirus*.)
 
 ## Cloud protection
 
@@ -280,7 +281,7 @@ Learn more
 - **Time of day to run a scheduled scan**  
   - **Not Configured** (*default*)
 
-- **Check For Signature Updates Before Running Scan**  
+- **Check For Signature Updates Before Running Scan (Device)**  
   - **Not Configured** (*default*)
   - **No**
   - **Yes**
@@ -302,9 +303,9 @@ Learn more
 
   Specify the interval from zero to 24 (in hours) that is used to check for signatures. A value of zero results in no check for new signatures. A value of 2 will check every two hours, and so on.
 
-- **Signature Update Fallback Order (Device)**
+  - **Signature Update Fallback Order (Device)**
 
-- **Signature Update File Shares Sources (Device)**
+  - **Signature Update File Shares Sources (Device)**
 
 - **Security Intelligence Location (Device)**  
 
@@ -315,13 +316,7 @@ Learn more
   - **Not allowed** Prevents users from accessing UI.
   - **Allowed** Lets users access UI.
 
-- **Show notifications messages on the client computer when the user needs to run a full scan, update security intelligence, or run Windows Defender Offline**  
+- **Allow users to view the full History results**  
   - **Not Configured** (*default*)
   - **Yes**
   - **No**
-
-- **Disable the client user interface**  
-  - **Not Configured** (*default*)
-  - **Yes**
-  - **No**
-

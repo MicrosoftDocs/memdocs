@@ -30,6 +30,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- graph-interactive
 ---
  
 # Remote Help on macOS with Microsoft Intune
@@ -46,8 +47,8 @@ Remote Help is available for macOS as both a native application, and as a Web Ap
 
 |Capability|Client requirement|Helper app|
 |---|---|---|
-|**Screen sharing**: View the remote screen.|✔️Web app</br>✔️Native app|✔️Web app|
-|**Full control**: View the display and control the devices mouse and keyboard.|✔️Native app|✔️Web app|
+|**Screen sharing**: View the remote screen.|✅ Web app</br>✅ Native app|✅ Web app|
+|**Full control**: View the display and control the devices mouse and keyboard.|✅ Native app|✅ Web app|
 
 ### Remote Help capabilities
 
@@ -90,6 +91,7 @@ General prerequisites for Remote Help are listed here [Prerequisites for Remote 
 - macOS 12 (Monterey)
 - macOS 13 (Ventura)
 - macOS 14 (Sonoma)
+- macOS 15 (Sequoia)
 
 ### Remote Help Web App supported browsers
 
@@ -121,12 +123,14 @@ On macOS, applications that access and control the screen require permission. By
 
 |Permission|MDM control capabilities|
 |---|---|
-|Accessibility|✔️Allow</br>✔️Allow Standard User To Set System Service</br></br>macOS allows this property to be set on behalf of the user to *Allow*, reducing the number of steps required to use the Remote Help native client|
-|Screen sharing|✔️Allow Standard User To Set System Service</br></br>This permission by default requires administrator privileges to allow it. macOS doesn't allow this property to be set to *Allow* by MDM but you can enable the ability for standard users to accept this permission.|
+|Accessibility|✅ Allow</br>✅ Allow Standard User To Set System Service</br></br>macOS allows this property to be set on behalf of the user to *Allow*, reducing the number of steps required to use the Remote Help native client|
+|Screen sharing|✅ Allow Standard User To Set System Service</br></br>This permission by default requires administrator privileges to allow it. macOS doesn't allow this property to be set to *Allow* by MDM but you can enable the ability for standard users to accept this permission.|
 
 With settings catalog, we can streamline the end users experience for allowing these permissions.
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices > Configuration > Create > macOS > Settings catalog**
+#### [:::image type="icon" source="../media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
+
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices > Manage devices > Configuration > Create > macOS > Settings catalog**
 1. Enter a name and description for the profile. For example, "macOS Remote Help privacy permissions" and select **Next**
 1. Select **Add settings** and in the settings picker, navigate to **Privacy > Privacy Preferences Policy Control > Services**
     1. Under **Accessibility** select:
@@ -161,6 +165,22 @@ With settings catalog, we can streamline the end users experience for allowing t
     | Identifier type | bundle ID |
     | Static Code | False |
 1. Select **Next**, configure scope tags as required, assign the profile to groups as required, review settings and **Create** the policy.
+
+#### [:::image type="icon" source="../media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
+
+[!INCLUDE [graph-explorer-introduction](../includes/graph-explorer-intro.md)]
+
+This will create a policy in your tenant with the name **_MSLearn_Example_macOS Remote Help - Privacy Preferences Policy Control**.
+
+```msgraph-interactive
+POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
+Content-Type: application/json
+
+{"name":"_MSLearn_Example_macOS Remote Help - Privacy Preferences Policy Control","description":"","platforms":"macOS","technologies":"mdm,appleRemoteManagement","roleScopeTagIds":["0"],"settings":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_com.apple.tcc.configuration-profile-policy","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_authorization","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_authorization_0","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_coderequirement","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"identifier \"com.microsoft.remotehelp\" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_identifier","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"com.microsoft.remotehelp"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_identifiertype","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_identifiertype_0","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_staticcode","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_staticcode_false","children":[]}}]}]},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_authorization","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_authorization_2","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_coderequirement","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"identifier \"com.microsoft.remotehelp\" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_identifier","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"com.microsoft.remotehelp"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_identifiertype","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_identifiertype_0","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_staticcode","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_staticcode_false","children":[]}}]}]}]}]}]}]}}]}
+```
+[!INCLUDE [graph-explorer-steps](../includes/graph-explorer-steps.md)]
+
+---
 
 ### Supported Languages
 
@@ -218,7 +238,7 @@ The most recent version of Remote Help is **1.0.2404171**.
 
 For enrolled devices, you can streamline the user experience by installing Remote Help on behalf of your users.
 
-For more information on installing Remote Help through Intune as a required install, see [Add an unmanaged macOS PKG app to Microsoft Intune](/mem/intune/apps/macos-unmanaged-pkg).
+For more information on installing Remote Help through Intune as a required install, see [Add an unmanaged macOS PKG app to Microsoft Intune](../apps/macos-unmanaged-pkg.md).
 
 For more information on making Remote Help available in Company Portal for the user to install, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
 
@@ -245,8 +265,8 @@ When you as the sharer and your helper are ready to begin the session:
 1. Enter the 8-digit security code provided by the helper. After entering the code, select **Share screen** to continue.
 1. When the session connection begins, a trust screen is displayed with the Helpers information including their full name, job title, company, profile picture, and verified domain. At this time, the helper requests a session with Full control of your device or View Only screen sharing. You can either choose to *Allow* or to *Decline* the request.
 1. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone.
-    - Select **Don't Allow** as this permission isn't needed for screen sharing.
-   :::image type="content" source="media/remote-help/remote-help-microphone-permission.png" alt-text="The microphone permission prompt showing to select Don't Allow":::
+   - Select **Don't Allow** as this permission isn't needed for screen sharing.
+     :::image type="content" source="media/remote-help/remote-help-microphone-permission.png" alt-text="The microphone permission prompt showing to select Don't Allow":::
 1. Select **Share screen** to continue. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
 1. macOS displays a dialogue menu in the top right corner as one of two options:
    - **Green camera icon**: Choose **Screen**, and then move your mouse to select the screen share.
@@ -263,7 +283,7 @@ When you as the sharer and your helper are ready to begin the session:
 
 As a helper, you can provide remote assistance to their device by providing them with a code to start the session. The web app can be started from any supported browser on Windows or macOS.
 
-#### [Intune admin console](#tab/intune)
+#### [:::image type="icon" source="../media/icons/intune.svg"::: **Intune admin center**](#tab/intune)
 
 1. Navigate to the device you're trying to help from the Microsoft Intune admin center:
 
@@ -279,7 +299,7 @@ As a helper, you can provide remote assistance to their device by providing them
 
 1. At this time, you can request a session with full control of the sharer's device or choose only screen sharing. The sharer can choose to *Allow* or to *Decline* the request.
 
-#### [Web app](#tab/web-app)
+#### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web app**](#tab/web-app)
 
 1. Sign in to <a href="https://aka.ms/rhh" target="_blank"><u>https://aka.ms/rhh</u></a>.
 1. Copy and share the 8-digit session code with the sharer that you're trying to help.

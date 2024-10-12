@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # What's new in version 1910 of Configuration Manager current branch
@@ -38,9 +38,9 @@ The Microsoft Intune family of products is an integrated solution for managing a
 The following Microsoft management solutions are all now part of the Microsoft Intune family of products:
 
 - [Configuration Manager](/configmgr)
-- [Intune](/intune)
+- [Intune](/mem/intune/fundamentals/account-sign-up)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
-- [Autopilot](/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/autopilot/enrollment-autopilot)
 - Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 For more information, see the following posts from Brad Anderson, Microsoft corporate vice president for Microsoft 365:
@@ -91,7 +91,7 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 
 ### Optimizations to the CMPivot engine
 <!--3197353-->
-We've added some significant optimizations to the CMPivot engine. Now you can push more of the processing to the ConfigMgr client. The optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, you can now sift through gigabytes of client data in real time. 
+We've added some significant optimizations to the CMPivot engine. Now you can push more of the processing to the ConfigMgr client. The optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, you can now sift through gigabytes of client data in real time.
 
 For more information, see [Optimizations to the CMPivot engine](../../servers/manage/cmpivot-changes.md#bkmk_optimization).
 
@@ -115,7 +115,7 @@ This release also includes several [other enhancements](../../servers/manage/cmp
 
 When you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can now serve Microsoft Intune Win32 apps to co-managed clients.
 
-For more information, see [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md#support-for-intune-win32-apps).
+For more information, see [Microsoft Connected Cache with Configuration Manager](../hierarchy/microsoft-connected-cache.md#support-for-intune-win32-apps).
 
 > [!NOTE]
 > Configuration Manager current branch version 1906 included [Delivery Optimization In-Network Cache](../hierarchy/microsoft-connected-cache.md), an application installed on Windows Server that's still in development. Starting in current branch version 1910, this feature is now called Microsoft Connected Cache.
@@ -366,7 +366,7 @@ The following additional hotfixes are available to address specific issues:
 | [4552181](https://support.microsoft.com/help/4552181) | Content distribution stalls in Configuration Manager current branch, version 1910 | 16 March 2020 | No |
 | [4552430](https://support.microsoft.com/help/4552430) | Third-party update category synchronization resets to default in Configuration Manager | 18 March 2020 | No |
 
-> [!NOTE]  
+> [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 
@@ -382,8 +382,8 @@ When you're ready to install this version, see [Installing updates for Configura
 >
 > Learn more about:
 >
-> - [Installing new sites](../../servers/deploy/install/installing-sites.md) 
-> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines) 
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)
+> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
 For known significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 

@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-device-compliance
 ---
 
 # Step 7: Send notifications to noncompliant devices
@@ -112,7 +113,7 @@ After you have created a noncompliance policy, you can set an action to take pla
 
 The following steps will create an action for noncompliance for Windows 10 devices:
 
-1. In the Intune admin center, select **Devices** > **Windows** > **Compliance policies**.  
+1. In the Intune admin center, select **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance**.  
 2. Select your Windows 10 compliance policy from the list.
 3. Select **Properties**.  
 4. Next to the **Action for noncompliance** section, choose **Edit**.

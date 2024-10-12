@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/30/2024
+ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -91,7 +91,7 @@ admin.
 3. Select your role from the list.  
 4. Select **Properties**.
 5. Go to **Permissions** and then select **Edit**.  
-6. Select **Android for Work**.  
+6. Select **Android Enterprise**.  
 7. Next to **Update app sync**, select **Yes**.
 8. Select **Review + save** to review your changes.  
 9. Select **Save**.  
@@ -99,7 +99,7 @@ admin.
 #### Step 2: Enable enrollment for corporate-owned devices  
 Verify that enrollment is enabled for corporate-owned, fully managed devices.   
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Android**.  
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **By platform** > **Android**.  
 2. Select **Android enrollment**. 
 3. Under **Enrollment profiles**, choose **Corporate-owned, fully managed user devices**.  
 4. Verify that the setting for **Allow users to enroll corporate-owned user devices**, is set to **Yes**.             
@@ -107,12 +107,12 @@ Verify that enrollment is enabled for corporate-owned, fully managed devices.
 #### Step 3: Link zero-touch account to Intune    
 Link a zero-touch account with your Microsoft Intune account.   
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Android**.  
-2. Select **Android enrollment**.  
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **By platform** > **Android**.  
+2. Select **Device onboarding** > **Enrollment**.  
 3. Under **Bulk enrollment methods**, choose **Zero-touch enrollment**.  
 4. The iframe opens.  Select **Next** to begin setup.   
 5. Sign in with the Google account you provided to your reseller. 
-6 Select the zero-touch account you want to link, and then select **Link**.  
+6. Select the zero-touch account you want to link, and then select **Link**.  
 7. A default configuration is created. A screen appears with basic information about the configuration. Intune will automatically apply the default configuration to any zero-touch enabled device that's without an existing configuration.  
 
    > [!CAUTION]
@@ -126,7 +126,7 @@ Once your account is linked with Intune, the default configuration is applied to
 
 ### Create configuration in zero-touch enrollment portal        
 
-Add a zero-touch configuration in the [zero-touch enrollment portal](https://partner.android.com/zerotouch). You can use the portal by itself to manage configurations, or you can use it in combination with the zero-touch iframe. The portal supports configurations for fully managed and dedicated devices, and corporate-owned devices with a work profile. 
+Add a zero-touch configuration in the [zero-touch enrollment portal](https://enterprise.google.com/android/zero-touch/customers). You can use the portal by itself to manage configurations, or you can use it in combination with the zero-touch iframe. The portal supports configurations for fully managed and dedicated devices, and corporate-owned devices with a work profile. 
 
 1. Sign in to the zero-touch enrollment portal with your Google account.
 2. Select the option to add a new configuration.  
@@ -160,9 +160,12 @@ For corporate-owned work profile (COPE) devices, the NFC enrollment method is on
 ## Enroll by using a token  
 We recommend this method for new or factory-reset devices, in scenarios where the QR code or NFC method aren't available. It requires the person provisioning the device to type in the enrollment token string (example: `12345`) that they're provided. When you're ready for enrollment, share the token directly with targeted users or post it to your organization's support site for easy retrieval. The token works for all Intune-licensed users and doesn't expire.   
 
-This method is supported on corporate-owned devices running Android 8.0 and later. It isn't supported with device enrollment manager accounts. 
+This method is supported on corporate-owned devices running Android 8.0 and later. It isn't supported on: 
 
-You can use this method in conjunction with the Microsoft Intune DPC identifier to set up fully managed devices. The DPC identifier method isn't supported on corporate-owned, personally enabled (COPE) devices running Android 11 and later.    
+* Corporate-owned, personally enabled (COPE) devices running Android 11 and later.  
+* Devices enrolled via device enrollment manager accounts.    
+
+You can use this method in conjunction with the Microsoft Intune DPC identifier to set up fully managed devices.
 
 1. Turn on the device.  
 2. On the **Welcome** screen, select your language.  

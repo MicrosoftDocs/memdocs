@@ -41,9 +41,9 @@ Android custom profiles use Open Mobile Alliance Uniform Resource Identifier (OM
 
 Using a custom profile, you can configure and assign the following Android settings. The following settings aren't built in to Intune:
 
-- [Create a Wi-Fi profile with a pre-shared key](/intune/wi-fi-profile-shared-key)
-- [Create a per-app VPN profile](/intune/android-pulse-secure-per-app-vpn)
-- [Allow and block apps for Samsung Knox Standard devices](/intune/samsung-knox-apps-allow-block)
+- [Create a Wi-Fi profile with a pre-shared key](/mem/intune/configuration/wi-fi-profile-shared-key)
+- [Create a per-app VPN profile](/mem/intune/configuration/android-pulse-secure-per-app-vpn)
+- [Allow and block apps for Samsung Knox Standard devices](/mem/intune/configuration/samsung-knox-apps-allow-block)
 - [Configure web protection in Microsoft Defender for Endpoint for Android](../protect/advanced-threat-protection-manage-android.md)
 
 > [!IMPORTANT]
@@ -54,7 +54,7 @@ This article shows you how to create a custom profile for Android devices.
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following settings:
 
     - **Platform**: Select **Android device administrator**.

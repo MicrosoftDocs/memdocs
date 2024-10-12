@@ -49,7 +49,7 @@ This guide is for Android developers who are looking to add support for Microsof
 
 Before you start integrating the Intune App SDK into your Android application, take a moment to familiarize yourself with Microsoft Intune's Mobile Application Management solution:
 
-- [What is Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
+- [Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
   and where to find these features in the Microsoft Intune admin center.
 - [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
 - [Android app protection policy settings] describes each Android setting in detail.
@@ -166,8 +166,8 @@ The user is ***not*** required to sign into or even launch the Company Portal ap
 > [!NOTE]
 > Ensure that your app is compatible with the [Google Play requirements](https://developer.android.com/google/play/requirements/target-sdk).
 
-The SDK fully supports Android API 28 (Android 9.0) through Android API 34 (Android 14).
-In order to target Android API 34 (Android 14), you must use Intune App SDK `v10.0.0` or later.
+The SDK fully supports Android API 28 (Android 9.0) through Android API 35 (Android 15).
+In order to target Android API 35 (Android 15), you must use Intune App SDK `v11.0.0` or later.
 
 APIs 26 through 27 (Android 8.0 - 8.1) are in limited support.
 The Company Portal app isn't supported below Android API 26 (Android 8.0).
@@ -260,7 +260,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 
 <!-- Microsoft Learn documentation: Intune overview -->
 [Intune App SDK overview]:/mem/intune/developer/app-sdk
-[What is Microsoft Intune app management]:/mem/intune/apps/app-management
+[Microsoft Intune app management]:/mem/intune/apps/app-management
 [Android app protection policy settings]:/mem/intune/apps/app-protection-policy-settings-android
 [Overview of the Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer

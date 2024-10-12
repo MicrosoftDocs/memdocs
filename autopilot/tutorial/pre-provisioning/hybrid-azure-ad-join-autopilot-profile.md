@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 09/13/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -28,20 +28,21 @@ Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join ste
 - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
 - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
 - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
+
 > [!div class="checklist"]
+>
 > - **Step 7: Create and assign Microsoft Entra hybrid join Autopilot profile**
+
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 - Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 - Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
 - Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow)
-
-<a name='create-and-assign-a-pre-provisioned-hybrid-azure-ad-join-autopilot-profile'></a>
+For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow).
 
 ## Create and assign a pre-provisioned Microsoft Entra hybrid join Autopilot profile
 
-The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out of box experience (OOBE).
+The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
 
 The difference between a Microsoft Entra join and a Microsoft Entra hybrid join is that the Microsoft Entra hybrid join scenario joins both an on-premises domain and Microsoft Entra ID during Autopilot. The pre-provisioned Microsoft Entra join scenario only joins Microsoft Entra ID during Autopilot.
 
@@ -79,11 +80,11 @@ To create a pre-provisioned Microsoft Entra hybrid join Autopilot profile, follo
 
       > [!NOTE]
       >
-      > The above settings have been selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired. For example, some regions may require that **Privacy settings** always be shown.
+      > The above settings are selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired. For example, some regions might require that **Privacy settings** always be shown.
 
       > [!NOTE]
       >
-      > If the language/region and keyboard screens are set to hidden, they may still be displayed if there's no network connectivity at the start of the Autopilot deployment. These screens are displayed because there's no network connectivity at the start of the deployment to download the Autopilot profile where the settings to hide these screens are specified. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
+      > If the language/region and keyboard screens are set to hidden, they might still be displayed if there's no network connectivity at the start of the Autopilot deployment. When there's no network connectivity at the start of the deployment, the Autopilot profile, where the settings to hide these screens is defined, hasn't downloaded yet. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
 
 [!INCLUDE [Autopilot profiles after steps](../includes/autopilot-profile-steps-after.md)]
 
@@ -95,9 +96,9 @@ To create a pre-provisioned Microsoft Entra hybrid join Autopilot profile, follo
 
 Windows Autopilot for pre-provisioned Microsoft Entra hybrid join supports off-premises/Internet scenarios where direct connectivity to Active directory and domain controllers isn't available. However, an off-premises/Internet scenario doesn't eliminate the need for connectivity to Active Directory and a domain controller during the domain join. In an off-premises/Internet scenario, connectivity to Active Directory and a domain controller can be established via a VPN connection during the Autopilot process.
 
-For off-premises/Internet scenarios requiring VPN connectivity, the only change in the Autopilot profile would be in the setting **Skip AD connectivity check**. In the [Create and assign pre-provisioned Microsoft Entra hybrid join Autopilot profile](#create-and-assign-a-pre-provisioned-hybrid-azure-ad-join-autopilot-profile) section, the **Skip AD connectivity check** setting should be set to **Yes** instead of to **No**. Setting this option to **Yes** prevents the deployment from failing since there's no direct connectivity to Active Directory and domain controllers until the VPN connection is established.
+For off-premises/Internet scenarios requiring VPN connectivity, the only change in the Autopilot profile would be in the setting **Skip AD connectivity check**. In the [Create and assign pre-provisioned Microsoft Entra hybrid join Autopilot profile](#create-and-assign-a-pre-provisioned-microsoft-entra-hybrid-join-autopilot-profile) section, the **Skip AD connectivity check** setting should be set to **Yes** instead of to **No**. Setting this option to **Yes** prevents the deployment from failing since there's no direct connectivity to Active Directory and domain controllers until the VPN connection is established.
 
-In addition to changing the **Skip AD connectivity check** setting to **Yes** in the Autopilot profile, VPN support also relies on the following prerequisites:
+In addition to changing the **Skip AD connectivity check** setting to **Yes** in the Autopilot profile, VPN support also relies on the following requirements:
 
 - The VPN solution can be deployed and installed with Intune.
 - The VPN solution needs to support one of the following options:
@@ -118,8 +119,8 @@ The VPN solution would need to be installed and configured via Intune during the
 > [!div class="nextstepaction"]
 > [Step 8: Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]
-- [User-driven mode for Microsoft Entra hybrid join with VPN support](/mem/autopilot/user-driven#user-driven-mode-for-hybrid-azure-ad-join-with-vpn-support)
-- [BYO VPNs](/mem/autopilot/windows-autopilot-hybrid#byo-vpns)
+- [User-driven mode for Microsoft Entra hybrid join with VPN support](../../user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
+- [VPNs](../../windows-autopilot-hybrid.md#vpns).

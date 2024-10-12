@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/06/2023
+ms.date: 07/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Set up Lookout Mobile Endpoint Security integration with Intune
@@ -74,7 +75,7 @@ To enable your Lookout Mobile Endpoint Security subscription integration with In
 
       :::image type="content" source="./media/lookout-mtd-connector-integration/azure-ad-group-id.png" alt-text="Microsoft Entra group Object ID":::
 
-   After you gather this information, contact Lookout support (email: enterprisesupport@lookout.com). Lookout Support works with your primary contact to onboard your subscription and create your Lookout Enterprise account, using the information that you provide.
+   After you gather this information, contact Lookout support. Lookout Support works with your primary contact to onboard your subscription and create your Lookout Enterprise account, using the information that you provide.
 
 ## Configure your Lookout subscription
 

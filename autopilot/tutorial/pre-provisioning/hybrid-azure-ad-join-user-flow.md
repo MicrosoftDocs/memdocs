@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2023
+ms.date: 07/23/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -21,6 +21,7 @@ appliesto:
 # Pre-provision Microsoft Entra hybrid join: User flow
 
 Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join steps:
+
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector (OU)](hybrid-azure-ad-join-intune-connector.md)
 - Step 3: [Increase the computer account limit in the Organizational Unit](hybrid-azure-ad-join-computer-account-limit.md)
@@ -31,10 +32,12 @@ Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join ste
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 - Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 - Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
-> [!div class="checklist"]
-> - **Step 10: User flow**
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow)
+> [!div class="checklist"]
+>
+> - **Step 11: User flow**
+
+For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow).
 
 ## User flow
 
@@ -58,7 +61,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 5. Once the **Device setup** phase of the Device ESP is complete, user ESP begins and the **User setup** phase starts. The ESP is temporarily dismissed and the Windows sign-on screen appears:
 
-   1. Select <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard to initiate Windows sign-on.
+   1. Enter the keystroke <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> to initiate Windows sign-on.
    1. Enter the on-premises domain credentials for the end-user.
 
       If on-premises domain end-user credentials are different from Microsoft Entra end-user credentials, make sure that the **on-premises domain end-user credentials** are used to sign into the device at this step. Don't use the Microsoft Entra end-user credentials to attempt to sign into the device at this step.
@@ -67,11 +70,11 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 6. The Enrollment Status Page (ESP) appears again and the **Account setup** phase of the user ESP continues.
 
-   1. After a short period of time, the Microsoft Entra sign-in page may appear. Sign in with the end-user's Microsoft Entra credentials.
+   1. After a short period of time, the Microsoft Entra sign-in page might appear. Sign in with the end-user's Microsoft Entra credentials.
 
       If on-premises domain end-user credentials are different from Microsoft Entra end-user credentials, make sure that **Microsoft Entra end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
 
-   1. Once the credentials are entered, select the **Next** button.
+   1. Once the credentials are entered, select **Next**.
 
    1. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
 
@@ -79,7 +82,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
       > [!NOTE]
       >
-      > Under certain circumstances, the Microsoft Entra sign-in page may not appear and the end-user may be automatically signed into Microsoft Entra ID. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed into Microsoft Entra ID, then the Autopilot deployment will proceed on to the next step automatically.
+      > Under certain circumstances, the Microsoft Entra sign-in page might not appear and the end-user might be automatically signed into Microsoft Entra ID. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed into Microsoft Entra ID, then the Autopilot deployment will proceed on to the next step automatically.
 
 7. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign-on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
 
@@ -95,6 +98,6 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 [!INCLUDE [Tips compliance resets during User flow](../includes/tips-pre-provision-compliance-user-flow.md)]
 
-## More information
+## Related content
 
 [!INCLUDE [More information user flow](../includes/more-info-user-flow.md)]

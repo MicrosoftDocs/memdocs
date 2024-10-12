@@ -4,7 +4,7 @@ description: Understand supported platforms, prerequisites, and limitations of t
 ms.date: 08/12/2022
 ms.subservice: mdt
 ms.service: configuration-manager
-ms.topic: article
+ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

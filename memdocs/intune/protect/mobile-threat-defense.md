@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 08/21/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Mobile Threat Defense integration with Intune
@@ -40,9 +41,18 @@ Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an inform
 
 Intune can use this same data as a source for unenrolled devices using Intune app protection policies. As such, admins can use this information to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), and issue a block or selective wipe.
 
-> [!NOTE]
->
-> Intune for GCC High only supports the Mobile Threat Defense (MTD) connector for Android and iOS devices with MTD vendors that also have support in this environment. You will see connectors enabled for those specific vendors when you log in with a GCC-H tenant. Learn more about [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
+## Government cloud support
+
+Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices are available in the following sovereign clouds, provided that the MTD partners also support these environments. Upon logging into your tenant, you'll be able to view the available connectors in that specific environment:
+
+- U.S. Government Community Cloud (GCC) High
+- 21Vianet
+
+Learn more about Intune and government clouds:
+
+- [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description)
+- [Microsoft Intune for US Government GCC High and DoD service description](../fundamentals/intune-govt-service-description.md)
+- [Microsoft Intune operated by 21Vianet in China](../fundamentals/china.md)
 
 ## Protect corporate resources
 
@@ -63,7 +73,7 @@ Once you add a Mobile Threat Defense connector to your tenant, the status displa
 | Connector status     | Definition | Device threat messages blocked?     | AppSync request messages blocked? |
 |--------------|-----------|------------|------------|
 | **Unavailable**| Connector is/was deprovisioned. The MTD partner needs to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308) |
-| **Not Set Up**| Connector setup isn't complete.  There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309) |
+| **Not Set Up**| Connector setup isn't complete. There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309) |
 | **Available**| Connector setup is complete. At least one platform toggle must be turned on for this status to change to **Enabled**. | No | No |
 | **Enabled**| Connector setup is complete, and at least one platform toggle is currently turned on for this connector. | No | No |
 | **Unresponsive**| Connector isn't responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune ignores the compliance state.| No | No |
@@ -120,19 +130,18 @@ Access is granted when the device is remediated:<br>
 
 Learn how to protect access to company resource based on device, network, and application risk with:
 
-- [Better Mobile](better-mobile-threat-defense-connector.md)
-- [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md)
-- [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
-- [CrowdStrike Falcon for Mobile](crowdstrike-falcon-defense-connector.md)
-- [Jamf Mobile Threat Defense](jamf-mtd-connector.md) *(formerly Wandera)*
-- [Lookout for Work](lookout-mobile-threat-defense-connector.md)
-- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)
-- [Pradeo](pradeo-mobile-threat-defense-connector.md)
-- [SentinelOne](Sentinelone-mobile-threat-defense-connector.md)
-- [Sophos Mobile](sophos-mtd-connector.md)
-- [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
-- [Trellix Mobile Security](trellix-mobile-threat-defense-connector.md)
-- [Trend Micro Mobile Security as a Service](trend-micro-mobile-threat-defense-connector.md)
-- [Windows Security Center](../apps/protect-mam-windows.md) *(Supports integration with Windows MAM)*
-- [Zimperium](zimperium-mobile-threat-defense-connector.md)
-
+- [Better Mobile](better-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [CrowdStrike Falcon for Mobile](crowdstrike-falcon-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Jamf Mobile Threat Defense](jamf-mtd-connector.md) - *(Android, iOS/iPadOS)*
+- [Lookout for Work](lookout-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) - *(Android, iOS/iPadOS, Windows)*
+- [Pradeo](pradeo-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [SentinelOne](Sentinelone-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Sophos Mobile](sophos-mtd-connector.md) - *(Android, iOS/iPadOS)*
+- [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Trellix Mobile Security](trellix-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Trend Micro Mobile Security as a Service](trend-micro-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Windows Security Center](../apps/protect-mam-windows.md) - *(Windows)* - *For information about the Windows versions that support this connector, see [Data protection for Windows MAM](../apps/protect-mam-windows.md).*
+- [Zimperium](zimperium-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*

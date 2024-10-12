@@ -1,7 +1,7 @@
 ---
 title: Education device enrollment with Windows Autopilot and Intune
 description: Learn how to join Microsoft Entra ID and enroll in Intune using Windows Autopilot.
-ms.date: 5/2/2024
+ms.date: 06/27/2024
 ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
@@ -20,7 +20,7 @@ From the user's perspective, it only takes a few simple operations to make their
 
 Before setting up Windows Autopilot, consider these prerequisites:
 
-- **Software requirements.** Ensure your school and devices meet the [software, networking, licensing, and configuration requirements][WIN-1] for Windows Autopilot.
+- **Requirements.** Ensure your school and devices meet the [requirements for Windows Autopilot][WIN-1].
 - **Devices ordered and registered.** Ensure your school IT administrator or Microsoft partner  devices from an original equipment manufacturer (OEM) and registers them with the Autopilot deployment service. To connect with a partner, you can use the [Microsoft Partner Center][MSFT-1] and work with them to register your devices.
 - **Networking requirements.** Ensure students know to connect to the school network during OOBE setup. For more information on managing devices behind firewalls and proxy servers, see [Network endpoints for Microsoft Intune][MEM-1].
 
@@ -157,7 +157,7 @@ With the devices joined to Microsoft Entra tenant and managed by Intune, you can
 [MEM-4]: /mem/autopilot/profiles
 [MEM-5]: /mem/autopilot/partner-registration
 
-[WIN-1]: /windows/deployment/windows-autopilot/windows-autopilot-requirements
+[WIN-1]: /autopilot/requirements
 
 [MSFT-1]: https://partner.microsoft.com/
 

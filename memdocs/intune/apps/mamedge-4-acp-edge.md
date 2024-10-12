@@ -44,7 +44,7 @@ Microsoft Edge for iOS and Android supports the following configuration scenario
 - Additional app configuration for managed devices
 
 > [!IMPORTANT]
-> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Microsoft Edge for Android must be deployed via the Managed Google Play store. For more information, see [**Set up enrollment of Android Enterprise personally-owned work profile devices**](/mem/intune/enrollment/android-work-profile-enroll) and [**Add app configuration policies for managed Android Enterprise devices**](/mem/intune/apps/app-configuration-policies-use-android).
+> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Microsoft Edge for Android must be deployed via the Managed Google Play store. For more information, see [**Set up enrollment of Android Enterprise personally-owned work profile devices**](../enrollment/android-work-profile-enroll.md) and [**Add app configuration policies for managed Android Enterprise devices**](app-configuration-policies-use-android.md).
 
 You'll now review the following key items that need to be configured. Then, you'll create an app configuration policy in Microsoft Intune admin center.
 
@@ -62,7 +62,7 @@ Reference the following table when setting app configuration values for Microsof
 | com.microsoft.intune.mam.managedbrowser.account.syncDisabled | TRUE |  |  |
 | com.microsoft.intune.IntuneMAMOnly.AdvancedEncryption | enabled |  |  |
 
-For related information, see [Manage Microsoft Edge on iOS and Android with Intune](../apps/manage-microsoft-edge.md).
+For related information, see [Manage Microsoft Edge on iOS and Android with Intune](manage-microsoft-edge.md).
 
 ### Configure the app configuration policy for Android and iOS
 

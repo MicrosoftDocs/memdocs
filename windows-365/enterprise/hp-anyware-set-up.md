@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 04/10/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -49,7 +49,7 @@ To set up HP Anyware for Windows 365 Enterprise, follow these steps. The first t
 
 To turn on the HP Anyware connector, follow these steps:
 
-1. As a Global administrator, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens**.
+1. As a Intune Administrator, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens**.
 
    ![Screenshot of navigating to Connectors and tokens](./media/set-up-citrix/connectors-tokens.png)
 

@@ -11,14 +11,14 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Use cloud services with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager supports several cloud-based options. These can supplement your on-premises infrastructure, and can help solve business problems like:  
+Configuration Manager supports several cloud-based options. These can supplement your on-premises infrastructure, and can help solve business problems like:
 
 - How to manage clients that roam onto the internet.
 
@@ -57,7 +57,6 @@ You can connect the site to Azure for several scenarios:
 - Microsoft Entra authentication and discovery. For more information, see [Configure Azure services](../servers/deploy/configure/azure-services-wizard.md).
 - Cloud management gateway to manage internet-based clients. For more information, see [Cloud management gateway overview](../clients/manage/cmg/overview.md).
 - Deploy apps from the Microsoft Store for Business and Education. For more information, see [Manage apps from the Microsoft Store for Business and Education](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
-- Use Windows data to gain insights into apps and drivers to help upgrade devices to Windows 10. For more information, see [What is Desktop Analytics?](../../desktop-analytics/overview.md).
 - [Microsoft Intune tenant attach](../../tenant-attach/device-sync-actions.md)
 
 These are different than using an Azure virtual machine, on which you deploy a site system role.

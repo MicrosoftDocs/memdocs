@@ -1,12 +1,12 @@
 ---
 title: Learn about the Microsoft Tunnel VPN solution for Microsoft Intune
-description: Learn about the Microsoft Tunnel Gateway, a VPN server for Intune that runs on Linux. With the Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure. 
+description: Learn about the Microsoft Tunnel Gateway, a VPN server for Intune that runs on Linux. With Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/14/2023
-ms.topic: how-to
+ms.date: 10/10/2024
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -26,6 +26,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- sub-infrastructure
 ---
 
 # Microsoft Tunnel for Microsoft Intune
@@ -36,7 +37,7 @@ This article introduces the core Microsoft Tunnel, how it works, and its archite
 
 If you're ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](microsoft-tunnel-prerequisites.md), and then [Configure the Microsoft Tunnel](microsoft-tunnel-configure.md).
 
-After you've deployed Microsoft Tunnel, you can choose to add [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md) (Tunnel for MAM). Tunnel for MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune. Tunnel for MAM is available when you add *Microsoft Intune Plan 2* or *Microsoft Intune Suite* as an [add-on license](../fundamentals/intune-add-ons.md) to  your Tenant.
+After you deploy Microsoft Tunnel, you can choose to add [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md) (Tunnel for MAM). Tunnel for MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune. Tunnel for MAM is available when you add *Microsoft Intune Plan 2* or *Microsoft Intune Suite* as an [add-on license](../fundamentals/intune-add-ons.md) to your Tenant.
 
 > [!NOTE]
 >
@@ -72,10 +73,10 @@ Features of the VPN profiles for the tunnel include:
 - A friendly name for the VPN connection that is visible to your end users.
 - The site that the VPN client connects to.
 - Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN automatically connects and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
-- For iOS devices that have the Microsoft Defender for Endpoint configured to support per-app VPNs and *TunnelOnly* mode set to *True*, users don’t need to open or sign-in to Microsoft Defender on their device for the Tunnel to be used. Instead, with the user signed-in to the Company Portal on the device or to any other app that uses multifactor authentication that has a valid token for access, the Tunnel per-app VPN is used automatically. *TunnelOnly* mode is supported for iOS/iPadOS, and disables the Defender functionality, leaving only the Tunnel capabilities.
+- For iOS devices that have Microsoft Defender for Endpoint configured to support per-app VPNs and *TunnelOnly* mode set to *True*, users don’t need to open or sign-in to Microsoft Defender on their device for the Tunnel to be used. Instead, with the user signed-in to the Company Portal on the device or to any other app that uses multifactor authentication that has a valid token for access, the Tunnel per-app VPN is used automatically. *TunnelOnly* mode is supported for iOS/iPadOS, and disables the Defender functionality, leaving only the Tunnel capabilities.
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
-- On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. (iOS/iPadOS)
-- Proxy support (iOS/iPadOS, Android 10+)
+- On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. *(iOS/iPadOS)*
+- Proxy support. *(iOS/iPadOS, Android 10+)*
 
 Server configurations include:
 
@@ -96,10 +97,10 @@ To use the Microsoft Tunnel, devices must install the Microsoft Defender for End
 
 ## Architecture
 
-The Microsoft Tunnel Gateway runs in containers that run on Linux servers.  
+The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 
 ![Drawing of the Microsoft Tunnel Gateway architecture](./media/microsoft-tunnel-overview/tunnel-architecture.png)
-  
+
 **Components**:
 
 - **A** – Microsoft Intune.
@@ -119,11 +120,11 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 
 - **1** - Intune administrator configures *Server configurations* and *Sites*, Server configurations are associated with Sites.
 - **2** - Intune administrator installs Microsoft Tunnel Gateway and the authentication plugin authenticates Microsoft Tunnel Gateway with Microsoft Entra. Microsoft Tunnel Gateway server is assigned to a site.
-- **3** - Management Agent communicates to Intune to retrieve your server configuration policies, and to send telemetry logs to Intune.  
-- **4** - Intune administrator creates and deploys VPN profiles and the Defender app to devices.  
-- **5** - Device authenticates to Microsoft Entra. Conditional Access policies are evaluated.  
-- **6** - With split tunnel:  
-  - **6.a** - Some traffic goes directly to the public internet.  
+- **3** - Management Agent communicates to Intune to retrieve your server configuration policies, and to send telemetry logs to Intune.
+- **4** - Intune administrator creates and deploys VPN profiles and the Defender app to devices.
+- **5** - Device authenticates to Microsoft Entra. Conditional Access policies are evaluated.
+- **6** - With split tunnel:
+  - **6.a** - Some traffic goes directly to the public internet.
   - **6.b** - Some traffic goes to your public facing IP address for the Tunnel. The VPN channel will use TCP, TLS, UDP, and DTLS over port 443. This traffic requires inbound and outbound [Firewall ports](../protect/microsoft-tunnel-prerequisites.md#firewall) to be open.
 - **7** - The Tunnel routes traffic to your internal proxy (optional) and/or your corporate network. IT Admins must ensure that traffic from the Tunnel Gateway server internal interface can successfully route to internal corporate resource (IP address ranges and ports).
 
@@ -142,7 +143,7 @@ The following information outlines where break and inspect isn't supported. Refe
 - **Break and inspect is not supported in the following areas**:
 
   - Tunnel Gateway doesn't support SSL break and inspect, TLS break and inspect, or deep packet inspection for client connections.
-  - The Use of firewalls, proxies, load balancers, or any technology that terminates and inspects the client sessions that go into the Tunnel Gateway isn't supported and causes client connections to fail. (Refer to **F**, **D**, and **C** in the Architecture diagram).
+  - The use of firewalls, proxies, load balancers, or any technology that terminates and inspects the client sessions that go into the Tunnel Gateway isn't supported and causes client connections to fail. (Refer to **F**, **D**, and **C** in the Architecture diagram).
   - If Tunnel Gateway uses an outbound proxy for internet access, the proxy server can't perform break and inspect. This is because Tunnel Gateway Management Agent uses TLS mutual authentication when connecting to Intune (Refer to **3** in the Architecture diagram). If break and inspect is enabled on the proxy server, network admins that manage the proxy server must add the Tunnel Gateway server IP address and Fully Qualified Domain Name (FQDN) to an approve-list to these [Intune endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
 **Additional details**:
@@ -151,7 +152,7 @@ The following information outlines where break and inspect isn't supported. Refe
 
 - The Management Agent is authorized against Microsoft Entra ID using Azure app ID/secret keys.
 
-## Next steps
+## Related content
 
 - [Prerequisites for the Microsoft Tunnel in Intune](microsoft-tunnel-prerequisites.md)
 - [Learn about Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)

@@ -87,7 +87,7 @@ The token is then automatically escrowed to Microsoft Intune. You can use a comm
 You can monitor the escrow status for any enrolled Mac in the admin center. The *Bootstrap token escrowed* hardware property reports whether or not the bootstrap token has been escrowed in Intune. Intune reports **Yes** when the token has been successfully escrowed and **No** when the token has not been escrowed. 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
-2. Go to **Devices** > **macOS**.  
+2. Go to **Devices** > **By platform** > **macOS**.  
 3. Select a device from your list of macOS devices.  
 4. Select **Hardware**.  
 5. In your hardware details, scroll down to **Conditional access** > **Bootstrap token escrowed**.  

@@ -7,7 +7,7 @@ description: View the settings in the Microsoft Intune security baseline for Mic
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2024
+ms.date: 09/10/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-secure-endpoints
 zone_pivot_groups: atp-baseline-versions
 ---
 
@@ -85,12 +86,12 @@ This baseline is optimized for physical devices and isn't recommended for use on
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx#preventinstallationofmatchingdevicesetupclasses)
 
+  - **Prevented Classes**  
+    Baseline default: *d48179be-ec20-11d1-b6b8-00c04fa372a7*  
+
   - **Also apply to matching devices that are already installed.**  
     Baseline default: *False*  
 
-  - **Prevented Classes**  
-    Baseline default: *d48179be-ec20-11d1-b6b8-00c04fa372a7*  
-  
 ### Windows Components > BitLocker Drive Encryption
 
 - **Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later)**  
@@ -160,22 +161,22 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Omit recovery options from the BitLocker setup wizard**  
     Baseline default: *True*
 
+  - **Allow data recovery agent**  
+    Baseline default: *True*
+
     Value: *Allow 256-bit recovery key*
 
-  - **Save BitLocker recovery information to AD DS for operating system drives**  
-    Baseline default: *True*
+  - **Configure storage of BitLocker recovery information to AD DS:**  
+    Baseline default: *Store recovery passwords and key packages*
 
   - **Do not enable BitLocker until recovery information is stored to AD DS for operating system drives**  
     Baseline default: *True*
 
-  - **Configure user storage of BitLocker recovery information:**  
-    Baseline default: *Allow 48-digit recovery password*
-
-  - **Allow data recovery agent**  
+  - **Save BitLocker recovery information to AD DS for operating system drives**  
     Baseline default: *True*
 
-  - **Configure storage of BitLocker recovery information to AD DS:**  
-    Baseline default: *Store recovery passwords and key packages*
+  - **Configure user storage of BitLocker recovery information:**  
+    Baseline default: *Allow 48-digit recovery password*
 
 - **Enable use of BitLocker authentication requiring preboot keyboard input on slates**  
   Baseline default: *Enabled*  
@@ -195,11 +196,11 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Configure TPM startup key and PIN:**  
     Baseline default: *Do not allow startup key and PIN with TPM*
 
-  - **Allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive)**  
-    Baseline default: *False*
-
   - **Configure TPM startup:**  
     Baseline default: *Allow TPM*
+
+  - **Allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive)**  
+    Baseline default: *False*
 
   - **Configure TPM startup PIN:**  
     Baseline default: *Allow startup PIN with TPM*
@@ -320,79 +321,79 @@ This baseline is optimized for physical devices and isn't recommended for use on
   [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowuseruiaccess)
 
   - **Block execution of potentially obfuscated scripts**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/defender-endpoint/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Win32 API calls from Office macros**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block executable files from running unless they meet a prevalence, age, or trusted list criterion**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Office communication application from creating child processes**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block all Office applications from creating child processes**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
-  - **Block JavaScript or VBScript from launching downloaded executable content**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
-  - **Block Webshell creation for Servers**  
-  Baseline default: *Off*  
-  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-
-  - **Block untrusted and unsigned processes that run from USB**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Adobe Reader from creating child processes**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block credential stealing from the Windows local security authority subsystem**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
-  - **Block abuse of exploited vulnerable signed drivers (Device)**  
-  Baseline default: *Off*  
+  - **Block JavaScript or VBScript from launching downloaded executable content**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
+  - **Block Webshell creation for Servers**  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
+  - **Block untrusted and unsigned processes that run from USB**  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block persistence through WMI event subscription**  
-  Baseline default: *Off*  
+  Baseline default: *Audit*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **[PREVIEW] Block use of copied or impersonated system tools**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
+  - **Block abuse of exploited vulnerable signed drivers (Device)**  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block process creations originating from PSExec and WMI commands**  
-  Baseline default: *Off*  
+  Baseline default: *Audit*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Office applications from creating executable content**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Office applications from injecting code into other processes**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **[PREVIEW] Block rebooting machine in Safe Mode**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Use advanced protection against ransomware**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block executable content from email client and webmail**  
-  Baseline default: *Off*  
+  Baseline default: *Block*  
   [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
 - **Check For Signatures Before Running Scan**  
@@ -489,29 +490,29 @@ This baseline is optimized for physical devices and isn't recommended for use on
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablefirewall)
 
-  - **Disable Stealth Mode Ipsec Secured Packet Exemption**  
+  - **Allow Local Ipsec Policy Merge**  
   Baseline default: *True*  
-  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmodeipsecsecuredpacketexemption)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalipsecpolicymerge)
 
   - **Disable Stealth Mode**  
   Baseline default: *False*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmode)
 
-  - **Allow Local Ipsec Policy Merge**  
-  Baseline default: *True*  
-  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalipsecpolicymerge)
-
   - **Disable Inbound Notifications**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableinboundnotifications)
+
+  - **Disable Unicast Responses To Multicast Broadcast**  
+  Baseline default: *False*  
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableunicastresponsestomulticastbroadcast)
 
   - **Global Ports Allow User Pref Merge**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileglobalportsallowuserprefmerge)
 
-  - **Disable Unicast Responses To Multicast Broadcast**  
-  Baseline default: *False*  
-  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableunicastresponsestomulticastbroadcast)
+  - **Disable Stealth Mode Ipsec Secured Packet Exemption**  
+  Baseline default: *True*  
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmodeipsecsecuredpacketexemption)
 
   - **Allow Local Policy Merge**  
   Baseline default: *True*  
@@ -519,6 +520,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Enable Packet Queue**  
   Baseline default: *Configured*  
+  Value: *Disabled*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalenablepacketqueue)
 
 - **Enable Private Network Firewall**  
@@ -526,7 +528,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablefirewall)
 
   - **Default Inbound Action for Private Profile**  
-  Baseline default: *True*  
+  Baseline default: *Block*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultinboundaction)
 
   - **Disable Unicast Responses To Multicast Broadcast**  
@@ -549,6 +551,10 @@ This baseline is optimized for physical devices and isn't recommended for use on
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisablestealthmodeipsecsecuredpacketexemption)
 
+  - **Disable Inbound Notifications**  
+  Baseline default: *True*  
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableinboundnotifications)
+
   - **Allow Local Policy Merge**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileallowlocalpolicymerge)
@@ -560,10 +566,6 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Auth Apps Allow User Pref Merge**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileauthappsallowuserprefmerge)
-
-  - **Disable Inbound Notifications**  
-  Baseline default: *True*  
-  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableinboundnotifications)
 
 - **Enable Public Network Firewall**  
   Baseline default: *True*  
@@ -585,29 +587,29 @@ This baseline is optimized for physical devices and isn't recommended for use on
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisablestealthmodeipsecsecuredpacketexemption)
 
-  - **Default Inbound Action for Public Profile**  
-  Baseline default: *Block*  
-  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
-
-  - **Global Ports Allow User Pref Merge**  
-  Baseline default: *True*  
-  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileglobalportsallowuserprefmerge)
-
   - **Allow Local Policy Merge**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalpolicymerge)
-
-  - **Allow Local Ipsec Policy Merge**  
-  Baseline default: *True*  
-  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
 
   - **Auth Apps Allow User Pref Merge**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileauthappsallowuserprefmerge)
 
+  - **Default Inbound Action for Public Profile**  
+  Baseline default: *Block*  
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
+
   - **Disable Unicast Responses To Multicast Broadcast**  
   Baseline default: *False*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableunicastresponsestomulticastbroadcast)
+
+  - **Global Ports Allow User Pref Merge**  
+  Baseline default: *True*  
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileglobalportsallowuserprefmerge)
+
+  - **Allow Local Ipsec Policy Merge**  
+  Baseline default: *True*  
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
 
 - **Preshared Key Encoding**  
   Baseline default: *UTF8*  

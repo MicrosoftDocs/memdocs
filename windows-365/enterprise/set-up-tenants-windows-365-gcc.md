@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 08/11/2023
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -80,11 +80,11 @@ If you want to use Microsoft Entra join or Microsoft Entra hybrid join, consider
 For the Windows 365 GCC Setup Tool to complete tenant mapping, the Windows 365 Microsoft Entra application must be given permission to access your Azure Government AD tenant through a service principal. The service principal object defines what the app can do in the tenant, who can access the app, and what resources the app can access. Before running the Windows 365 GCC Setup Tool the first time, you must do the following:
 
 1. If not already completed, install the Azure CLI on the computer where you will be creating the service principal. For more information, see [How to install the Azure CLI](/cli/azure/install-azure-cli).
-2. Sign into your Azure Government AD tenant by using the Azure CLI steps defined in [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli). Global Administrator permissions are required to create the service principal for the Windows 365 App.
+2. Sign into your Azure Government AD tenant by using the Azure CLI steps defined in [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli). Global Administrator permissions are required to create the service principal for Windows App.
 3. For more information about working with service principals in Azure, see [Work with Azure service principal using the Azure CLI](/cli/azure/azure-cli-sp-tutorial-1). Grant the Windows 365 Microsoft Entra app permissions to your tenant by running the following PowerShell command: ```az ad sp create --id 0af06dc6-e4b5-4f28-818e-e78e62d137a5```.
-4. After the command completes successfully, you should be able to view details about the service principal by running the following PowerShell command: ```az ad sp show --id 0af06dc6-e4b5-4f28-818e-e78e62d137a5```. You should see the Windows 365 application listed in the **All Applications** view in the Enterprise application blade in Azure portal.
+4. After the command completes successfully, you should be able to view details about the service principal by running the following PowerShell command: ```az ad sp show --id 0af06dc6-e4b5-4f28-818e-e78e62d137a5```. You should see Windows App listed in the **All Applications** view in the Enterprise application blade in Azure portal.
 
-The Windows 365 App service principal can only access Azure resources necessary to configure custom image and Azure Network Connection (ANC) support in Windows 365. After it's created, the service principal can only be deleted when custom images, ANC objects and corresponding Cloud PCs using them have been deprovisioned. Otherwise, Cloud PC provisioning tasks may fail, and existing Cloud PCs may become inaccessible.
+The Windows App service principal can only access Azure resources necessary to configure custom image and Azure Network Connection (ANC) support in Windows 365. After it's created, the service principal can only be deleted when custom images, ANC objects and corresponding Cloud PCs using them have been deprovisioned. Otherwise, Cloud PC provisioning tasks may fail, and existing Cloud PCs may become inaccessible.
 
 ## Get started with the Windows 365 GCC Setup Tool
 

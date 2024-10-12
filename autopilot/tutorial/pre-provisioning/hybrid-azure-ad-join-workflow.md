@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 12/08/2023
+ms.date: 09/13/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -24,17 +24,15 @@ appliesto:
 >
 > Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
-This step by step tutorial guides you through using Intune to perform a Windows Autopilot for pre-provisioned deployment scenario when the devices are also joined to an on-premises domain, also known as Microsoft Entra hybrid join.
+This step by step tutorial guides through using Intune to perform a Windows Autopilot for pre-provisioned deployment scenario when the devices are also joined to an on-premises domain, also known as Microsoft Entra hybrid join.
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot for pre-provisioned deployment Microsoft Entra hybrid join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
-Before beginning, refer to the [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to make sure all prerequisites are met for joining on-premises AD devices to Microsoft Entra ID.
+Before beginning, refer to the [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to make sure all requirements are met for joining on-premises AD devices to Microsoft Entra ID.
 
 > [!NOTE]
 >
-> Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join builds on top of [Windows Autopilot user-driven Microsoft Entra hybrid join](../user-driven/hybrid-azure-ad-join-workflow.md). For this reason, Microsoft recommends that the Windows Autopilot user-driven Microsoft Entra hybrid join scenario is working before attempting to use the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join scenario. If the Windows Autopilot user-driven Microsoft Entra hybrid join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment Microsoft Entra hybrid join scenario won't work either.
-
-<a name='windows-autopilot-for-pre-provisioned-deployment-hybrid-azure-ad-join-overview'></a>
+> Before attempting the Windows Autopilot pre-provisioned Microsoft Entra hybrid join scenario, Microsoft recommends that the [Windows Autopilot user-driven Microsoft Entra hybrid join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario is first configured, tested, and working. The Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join builds on top of Windows Autopilot user-driven Microsoft Entra hybrid join scenario. If the Windows Autopilot user-driven Microsoft Entra hybrid join scenario isn't working, then most likely the Windows Autopilot pre-provisioned deployment Microsoft Entra hybrid join scenario won't work either.
 
 ## Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview
 
@@ -90,6 +88,7 @@ There's one possible disadvantage of Windows Autopilot for pre-provisioned deplo
 The following steps are needed to configure and then perform a Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join in Intune:
 
 > [!div class="checklist"]
+>
 > - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 > - Step 2: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
 > - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
@@ -111,9 +110,9 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > [!div class="nextstepaction"]
 > [Step 1: Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 
-## More information
+## Related content
 
-For more information on Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join, see the following article(s):
+For more information on Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join, see the following articles:
 
-- [Windows Autopilot for pre-provisioned deployment](/mem/autopilot/pre-provision)
-- [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/mem/autopilot/windows-autopilot-hybrid)
+- [Windows Autopilot for pre-provisioned deployment](../../pre-provision.md).
+- [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../windows-autopilot-hybrid.md).

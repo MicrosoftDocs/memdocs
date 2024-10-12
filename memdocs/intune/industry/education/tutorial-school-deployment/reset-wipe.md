@@ -1,5 +1,5 @@
 ---
-title: Reset and wipe Windows devices
+title: Reset and wipe Education devices
 description: Learn about the reset and wipe options for Windows devices using Intune for Education, including scenarios when to delete devices.
 ms.date: 5/2/2024
 ms.topic: tutorial

@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/19/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -21,23 +21,27 @@ appliesto:
 # Windows Autopilot deployment for existing devices: Create collection in Configuration Manager
 
 Autopilot user-driven Microsoft Entra join steps:
+
 - Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
-- Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
-- Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)
+- Step 2: [Install required modules to obtain Autopilot profiles from Intune](install-modules.md)
+- Step 3: [Create JSON file for Autopilot profiles](create-json-file.md)
 - Step 4: [Create and distribute package for JSON file in Configuration Manager](create-json-package.md)
 - Step 5: [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md)
+
 > [!div class="checklist"]
+>
 > - **Step 6: Create collection in Configuration Manager**
+
 - Step 7: [Deploy Autopilot task sequence to collection in Configuration Manager](deploy-autopilot-task-sequence.md)
 - Step 8: [Speed up the deployment process (optional)](speed-up-deployment.md)
 - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 - Step 10: [Register device for Windows Autopilot](register-device.md)
 
-For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md#workflow)
+For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md#workflow).
 
 ## Create collection in Configuration Manager
 
-Once the Autopilot for existing devices task sequence has been created, the next step is to create a collection in Configuration Manager to deploy the task sequence to the target devices.
+Once the Autopilot for existing devices task sequence is created, the next step is to create a collection in Configuration Manager to deploy the task sequence to the target devices.
 
 > [!NOTE]
 >
@@ -65,13 +69,13 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
       1. Select the **Next >** button.
 
-   1. In the **Define membership rules for this collection** page, via the **Add Rule** drop-down menu, create a rule(s) that includes the desired devices to run the Autopilot for existing devices task sequence. For more information on creating rules for a collection to include the desired devices, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections). Once the appropriate rules have been created that include the desired devices, select the **Next >** button.
+   1. In the **Define membership rules for this collection** page, via the **Add Rule** drop-down menu, create a rule that includes the desired devices to run the Autopilot for existing devices task sequence. For more information on creating rules for a collection to include the desired devices, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections). Once the appropriate rules are created that include the desired devices, select the **Next >** button.
 
    1. In the **Confirm the settings** page, verify that everything is configured as desired, and then select the **Next >** button.
 
    1. When the **Create Device Collection Wizard** completes with **The task "Create Device Collection Wizard" completed successfully** message, select the **Close** button.
 
-1. With **Device Collections** still selected, select <kbd>F5</kbd> on the keyboard to refresh the list of collections in the right pane. Verify that the newly created collection appears. If it doesn't appear, wait a few minutes, and then try to refresh again. Depending on the environment, it may take some time for the newly created collection to appear.
+1. With **Device Collections** still selected, select <kbd>F5</kbd> on the keyboard to refresh the list of collections in the right pane. Verify that the newly created collection appears. If it doesn't appear, wait a few minutes, and then try to refresh again. Depending on the environment, it might take some time for the newly created collection to appear.
 
 1. Once the newly created collection appears, open it by double-clicking on it. Alternatively, to open the collection, right-click on the collection and then select **Show Members**. The members of the collection appear in the right pane.
 
@@ -82,9 +86,9 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 > [!div class="nextstepaction"]
 > [Step 7: Deploy Autopilot task sequence to collection in Configuration Manager](deploy-autopilot-task-sequence.md)
 
-## More information
+## Related content
 
-For more information on creating a collection in Configuration Manager, see the following article(s):
+For more information on creating a collection in Configuration Manager, see the following articles:
 
-- [Deploy the Autopilot task sequence](/mem/autopilot/existing-devices#deploy-the-autopilot-task-sequence)
-- [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)
+- [Deploy the Autopilot task sequence](../../existing-devices.md#deploy-the-autopilot-task-sequence).
+- [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).

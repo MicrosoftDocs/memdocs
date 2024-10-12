@@ -53,7 +53,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 Create an MDM server profile for Microsoft Intune in Apple Business Manager. The token you download in this step will enable the connection between Microsoft Intune and Apple Business Manager in a later step.    
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**.  
+2. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment**.  
 3. Select **Enrollment program tokens**.  
 4. Select **Add**.  
 5. Select **I agree** to grant permission to Microsoft to send user and device information to Apple.  

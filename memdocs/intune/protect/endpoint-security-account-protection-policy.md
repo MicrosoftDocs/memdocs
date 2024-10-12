@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Manage account protection settings with endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Deploy policies for endpoint security account protection policies to devices you manage with  in Microsoft Intune.
+title: Manage account protection settings with endpoint security policies in Microsoft Intune
+description: Use Microsoft Intune endpoint security account protection policies to protect the identity and accounts of users.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2024
+ms.date: 10/10/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,7 +25,8 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-ms.reviewer: mattcall
+- sub-secure-endpoints
+ms.reviewer: juidaewo
 
 ---
 
@@ -33,29 +34,43 @@ ms.reviewer: mattcall
 
 Use Intune endpoint security policies for account protection to protect the identity and accounts of your users and manage the built-in group memberships on devices.
 
+> [!IMPORTANT]
+>
+> In July 2024, the following Intune profiles for identity protection and account protection were deprecated and replaced by a new consolidated profile named *Account protection*. This newer profile is found in the account protection policy node of endpoint security, and is the only profile template that remains available to create new policy instances for identity and account protection. The settings from this new profile are also available through the settings catalog.
+>
+> Any instances of the following older profiles that you have created remain available to use and edit:
+>
+> - **Identity protection** – previously available from *Devices* > *Configuration* > *Create* > *New Policy* > *Windows 10 and later* > *Templates* > *Identity Protection*
+> - **Account protection (Preview)** – previously available from *Endpoint Security* > *Account protection* > *Windows 10 and later* > *Account protection ( Preview)*
+
 Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Prerequisites for Account protection profiles
 
-- To support the *Account protection (preview)* profile, devices must run Windows 10 or Windows 11.
-- To support the *Local user group membership (preview)* profile, devices must run Windows 10 20H2 or later, or Windows 11.
+- To support the *Account protection* profile, devices must run Windows 10 or Windows 11.
+- To support the *Local user group membership* profile, devices must run Windows 10 20H2 or later, or Windows 11.
+- To support the *Local admin password solution (Windows LAPS), see [Prerequisites](../protect/windows-laps-overview.md#prerequisites) in *Microsoft Intune support for Windows LAPS*.
+
+## Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to manage Intune account protection profiles, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Account protection profiles
 
-*Account protection profiles are in preview*.
+Platform:
 
-**Windows 10/11 profiles**:
+- **Windows**
 
-- **Account protection (preview)** – Settings for account protection policies help you protect user credentials.
+Profiles:
 
-  The account protection policy is focused on settings for  Windows Hello and Credential Guard, which is part of Windows identity and access management.
+- **Account protection** – Settings for account protection policies help you to protect user credentials. The account protection policy focuses on *device-scoped* and *user-scoped* settings for Windows Hello for Business, and on Credential Guard. Credential Guard is part of Windows identity and access management.
 
   - *Windows Hello for Business* replaces passwords with strong two-factor authentication on PCs and mobile devices.
   - *Credential Guard* helps protect credentials and secrets that you use with your devices.
 
   To learn more, see [Identity and access management](/windows/security/identity-protection/) in the Windows identity and access management documentation.
 
-  View [settings for the account protection profile](../protect/endpoint-security-account-protection-profile-settings.md).
+  The settings in this profile are also available in the [Settings catalog](../configuration/settings-catalog.md).
 
 - **Local admin password solution (Windows LAPS)** - Use this profile to configure Windows LAPS on devices. Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting *Administrator Account Name*.
 
@@ -77,23 +92,23 @@ Use the *Local user group membership* profile to manage the users that are membe
 
 ### Configure the profile
 
-This profile manages the local group membership on devices through [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx). The CSP documentation includes additional details on how configurations apply, and an FAQ about the use of the CSP. 
+This profile manages the local group membership on devices through [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx). The CSP documentation includes more details on how configurations apply, and an FAQ about the use of the CSP.
 
-When configuring this profile, on the *Configuration settings* page you can create multiple rules to manage which built-in local groups you want to change, the group action to take, and the method to select the users.
+When you configure this profile, on the *Configuration settings* page you can create multiple rules to manage which built-in local groups you want to change, the group action to take, and the method to select the users.
 
 :::image type="content" source="./media/endpoint-security-account-protection-policy/create-profile.png" alt-text="Screen shot of the Configuration settings page for configuring the profile.":::
 
 The following are the configurations you can make:
 
-- **Local group**:  Select one or more groups from the drop-down. These groups will all apply the same Group and user action  to the users you assign.  You can create more than one grouping of local groups in a single profile and assign different actions and groups of users to each grouping of local groups.
+- **Local group**: Select one or more groups from the drop-down. These groups all apply the same *Group and user action* to the users you assign. You can create more than one grouping of local groups in a single profile and assign different actions and groups of users to each grouping of local groups.
 
 > [!NOTE]
 > The list of local groups is limited to the six built-in local groups which are guaranteed to be evaluated at logon, as referenced in the [How to manage the local administrators group on Microsoft Entra joined devices](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-microsoft-entra-groups-preview) documentation.
 
-- **Group and user action**: Configure the action to apply to the selected groups. This action will apply to the users you select for this same action and grouping of local accounts.  Actions you can choose include:
-  - **Add (Update)**: Adds members to the selected groups. The group membership for users that aren’t specified by the policy are not changed.
-  - **Remove (Update)**: Remove members from the selected groups. The group membership for users that aren’t specified by the policy are not changed.
-  - **Add (Replace)**: Replace the members of the selected groups with the new members you specify for this action. This option works in the same way as a Restricted Group and any group members that are not specified in the policy are removed.
+- **Group and user action**: Configure the action to apply to the selected groups. This action applies to the users you select for this same action and grouping of local accounts. Actions you can select include:
+  - **Add (Update)**: Adds members to the selected groups. The group membership for users that aren’t specified by the policy aren't changed.
+  - **Remove (Update)**: Remove members from the selected groups. The group membership for users that aren’t specified by the policy aren't changed.
+  - **Add (Replace)**: Replace the members of the selected groups with the new members you specify for this action. This option works in the same way as a Restricted Group and any group members that aren't specified in the policy are removed.
 
   > [!CAUTION]
   > If the same group is configured with both a Replace and Update action, the Replace action wins. This is not considered a conflict. Such a configuration can occur when you deploy multiple policies to the same device, or when this CSP is also configured by use of Microsoft Graph.
@@ -101,28 +116,28 @@ The following are the configurations you can make:
 - **User selection type**: Choose how to select users. Options include:
 
   - **Users**: Select the users and user groups from Microsoft Entra ID. (Supported for Microsoft Entra joined devices only).
-  - **Manual**:  Specify Microsoft Entra users and groups manually, by username, domain\username, or the groups security identifier (SID). (Supported for Microsoft Entra joined and Microsoft Entra hybrid joined devices).
+  - **Manual**: Specify Microsoft Entra users and groups manually, by username, domain\username, or the groups security identifier (SID). (Supported for Microsoft Entra joined and Microsoft Entra hybrid joined devices).
 
-- **Selected user(s)**: Depending on your selection for *User selection type*, you’ll use one of the following options:
+- **Selected user(s)**: Depending on your selection for *User selection type*, use one of the following options:
 
   - **Select user(s)**: Select the users and user groups from Microsoft Entra.
-  - **Add users(s)**: This opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *security identifier (SID)*, *Domain\username*, or by *Username*.
+  - **Add user(s)**: This option opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *security identifier (SID)*, *Domain\username*, or by *Username*.
 
-    :::image type="content" source="./media/endpoint-security-account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page.":::
+    :::image type="content" source="./media/endpoint-security-account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page in the Intune admin center.":::
 
-Choosing the Manual option can be helpful in scenarios where you want to manage your on-prem Active Directory users from Active Directory to a local group for a Microsoft Entra hybrid joined device. The supported formats of identifying the user selection in order of most to least preferred is through the SID, domain\username, or member’s username. Values from Active Directory must be used for hybrid joined devices, while values from Microsoft Entra ID must be used for Microsoft Entra join. Microsoft Entra group SIDs can be obtained using [Graph API for Groups](/graph/api/resources/group?view=graph-rest-1.0#json-representation&preserve-view=true).
+Choosing the Manual option can be helpful in scenarios where you want to manage your on-premises Active Directory users from Active Directory to a local group for a Microsoft Entra hybrid joined device. The supported formats of identifying the user selection in order of most to least preferred is through the SID, domain\username, or member’s username. Values from Active Directory must be used for hybrid joined devices, while values from Microsoft Entra ID must be used for Microsoft Entra join. Microsoft Entra group SIDs can be obtained using [Graph API for Groups](/graph/api/resources/group?view=graph-rest-1.0#json-representation&preserve-view=true).
 
 ### Conflicts
 
-If policies create a conflict for a group membership, the conflicting settings from each policy are not sent to the device. Instead, the conflict is reported for those policies in the Microsoft Intune admin center. To resolve the conflict, reconfigure one or more policies.
+If policies create a conflict for a group membership, the conflicting settings from each policy aren't sent to the device. Instead, the conflict is reported for those policies in the Microsoft Intune admin center. To resolve the conflict, reconfigure one or more policies.
 
 ### Reporting
 
 As devices check in and apply the policy, the admin center displays the status of the devices and users as successful or in error.
 
-Because the policy can contain multiple rules, consider the following:
+Because the policy can contain multiple rules, consider the following points:
 
-- When processing the policy for devices, the per-setting status view displays a status for the group of rules as if it’s a single setting.
+- When Intune processes the policy for devices, the per-setting status view displays a status for the group of rules as if it’s a single setting.
 - Each rule in the policy that results in an error is skipped, and not sent to devices.
 - Each rule that is successful is sent to devices to be applied.
 

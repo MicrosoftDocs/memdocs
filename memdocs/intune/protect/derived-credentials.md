@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use derived credentials for mobile devices with Microsoft Intune
-description: Use derived credentials on mobile devices as an authentication method for Intune VPN, email, Wi-Fi profiles, applications, and S/MIME and encryption. Derived credentials are an implementation of the NIST guidelines for Special Publication 800-157.  
+description: Use a third-party partners derived credential as an authentication method for Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/27/2023
+ms.date: 07/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,25 +28,28 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- sub-certificates
 ---
 
 # Use derived credentials with Microsoft Intune
+
+Derived credentials are an implementation of the National Institute of Standards and Technology (NIST) guidelines for Derived Personal Identity Verification (PIV) credentials as part of [Special Publication (SP) 800-157](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-157.pdf) *(Link opens a .pdf file on nvlpubs.nist.gov)*.
 
 *This article applies to:*
 
 - *Android Enterprise fully managed devices that run version 7.0 and above*
 - *iOS/iPadOS*
-- *Windows 10/11*
+- *Windows 10*
+- *Windows 11*
 
-In an environment where smart cards are required for authentication or encryption and signing, you can use Intune to provision mobile devices with a certificate that's derived from a user's smart card. That certificate is called a *derived credential*. Intune [supports several derived credential issuers](#supported-issuers), though you can use only a single issuer per tenant at a time.
+Organizations that require use of smart cards for authentication or encryption and signing can use Intune to provision mobile devices with a certificate that's derived from a user's smart card. That certificate is called a *derived credential*. Intune [supports several derived credential issuers](#supported-issuers), but use of only one issuer per tenant.
 
-Derived credentials are an implementation of the National Institute of Standards and Technology (NIST) guidelines for Derived Personal Identity Verification (PIV) credentials as part of [Special Publication (SP) 800-157](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-157.pdf) *(Link opens a .pdf file on nvlpubs.nist.gov)*.
+## About Intune's implementation
 
-**With Intune's implementation**:
+To use Intune derived credentials, an Intune administrator must configure the tenant to work with a supported derived credential issuer. You don't need to configure any Intune specific settings in the derived credential issuer's system.
 
-- The Intune administrator configures their tenant to work with a supported derived credential issuer. You don't need to configure any Intune specific settings in the derived credential issuer's system.
 - The Intune administrator specifies **Derived credential** as the *authentication method* for the following objects:
-  
+
   **For Android Enterprise fully managed devices**:
   - Common profile types like Wi-Fi
   - App authentication
@@ -60,10 +63,11 @@ Derived credentials are an implementation of the National Institute of Standards
   - Common profile types like Wi-Fi, and VPN
   
   > [!NOTE]
-  > Currently, derived credentials as an authentication method for VPN profiles isn't working as expected on Windows devices. This behavior only impacts VPN profiles on Windows devices and will be fixed in a future release (no ETA).
+  > Currently, derived credentials as an authentication method for VPN profiles isn't working as expected on Windows devices. This behavior only affects VPN profiles on Windows devices and will be fixed in a future release (no ETA).
 
-- For Android and iOS/iPadOS, users obtain a derived credential by using their smart card on a computer to authenticate to the derived credential issuer. The issuer then issues to the mobile device a certificate that's derived from their smart card. For Windows, users install the app from the derived credential provider, which installs the certificate to the device for later use.
-- After the device receives the derived credential, it's used for authentication and for S/MIME signing and encryption when apps or resource access profiles require the derived credential.
+- For Android and iOS/iPadOS, users obtain a derived credential by using their smart card on a computer to authenticate to the derived credential issuer. The issuer then issues to the mobile device a certificate that's derived from their smart card. For Windows, users install an app from the derived credential provider that installs the certificate to the device for later use.
+a
+- After a device receives the derived credential, the credential is used for authentication and for S/MIME signing and encryption when apps or resource access profiles are configured to require the derived credential.
 
 ## Prerequisites
 
@@ -77,11 +81,12 @@ Intune supports derived credentials on the following platforms:
 - Android Enterprise:
   - Fully Managed devices (version 7.0 and above)
   - Corporate-Owned Work Profile
-- Windows 10/11
+- Windows 10
+- Windows 11
 
 ### Supported issuers
 
-Intune supports a single derived credential issuer per tenant. You can configure Intune to work with the following issuers:
+Intune supports a single derived credential issuer per tenant. The following issuers are supported:
 
 - **DISA Purebred**: https://public.cyber.mil/pki-pke/purebred/
 - **Entrust**: https://www.entrust.com/
@@ -96,7 +101,7 @@ For important details about using the different issuers, review guidance for tha
 
 ### Required apps
 
-Plan to deploy the relevant user-facing app to devices that will enroll for a derived credential. Device users use the app to start the credential enrollment process.
+Plan to deploy the relevant user-facing app to devices that enroll for a derived credential. Device users use the app to start the credential enrollment process.
 
 - iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
 - Android Enterprise Fully Managed and Corporate-Owned work profile devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
@@ -115,7 +120,7 @@ Depending on the issuer you choose, you might need staff to be available at the 
 
 For example, you might use conditional access to block access to email for noncompliant devices. If you rely on email notifications to inform the user to start the derived credential enrollment process, your users might not receive those instructions until they're compliant with policy.
 
-Similarly, some derived credential request workflows require the use of the device camera to scan an on-screen QR code. This code links that device to the authentication request that occurred against the derived credential issuer with the user's smart card credentials. If device configuration polices block camera use, the user can't complete the derived credential enrollment request.
+Similarly, some derived credential request workflows require the use of the device camera to scan an on-screen QR code. This code links that device to the authentication request that occurred against the derived credential issuer with the user's smart card credentials. If device configuration policies block camera use, the user can't complete the derived credential enrollment request.
 
 **General information**:
 
@@ -148,7 +153,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 - Device users must work with a live agent during the enrollment process. During enrollment, time-limited one-time passcodes are provided to the user as they continue through the enrollment process.
 - When changes are made to a policy that uses derived credentials, such as creation of a new Wi-Fi profile, iOS and iPadOS users are notified to open the Company Portal app.
 - Users are notified to open the applicable app when they need to renew their derived credential.
-  
+
   The renewal process happens like this:
 
   - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
@@ -175,7 +180,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
   - **iOS and iPadOS** - Users are notified to open the Company Portal app.
   - **Android Enterprise** *Corporate-Owned Work Profile* or *Fully managed devices* - The Company Portal app doesn't need to open.
 - Users are notified to open the applicable app when they need to renew their derived credential.
-  
+
   The renewal process happens like this:
   - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
   - The device checks in during the renewal period (the last 20% of the validity period).
@@ -199,7 +204,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
   - **iOS and iPadOS** - Users are notified to open the Company Portal app.
   - **Android Enterprise** *Corporate-Owned Work Profile* or *Fully managed devices* - The Company Portal app doesn't need to open.
 - Users are notified to open the applicable app when they need to renew their derived credential.
-  
+
   The renewal process happens like this:
   - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
   - The device checks in during the renewal period (the last 20% of the validity period).
@@ -237,7 +242,7 @@ Before you create policies that require use of a derived credential, set up a cr
 
    :::image type="content" source="./media/derived-credentials/configure-provider.png" alt-text="Configure derived credentials in the Microsoft Intune admin center." lightbox="./media/derived-credentials/configure-provider.png":::
 
-3. Specify a friendly **Display name** for the derived credential issuer policy.  This name isn't shown to your device users.
+3. Specify a friendly **Display name** for the derived credential issuer policy. This name isn't shown to your device users.
 
 4. For **Derived credential issuer**, select the derived credential issuer that you have chosen for your tenant:
    - DISA Purebred (iOS only)
@@ -256,7 +261,7 @@ Before you create policies that require use of a derived credential, set up a cr
 
 7. When ready, select **Save** to complete configuration of the derived credential issuer.
 
-After you save the configuration, you can make changes to all fields except for the *Derived credential issuer*.  To change the issuer, see [Change the derived credential issuer](#change-the-derived-credential-issuer).
+After you save the configuration, you can make changes to all fields except for the *Derived credential issuer*. To change the issuer, see [Change the derived credential issuer](#change-the-derived-credential-issuer).
 
 ## Deploy the DISA Purebred app
 
@@ -277,7 +282,7 @@ In addition to deploying the DISA Purebred app with Intune, the device must have
 
    Extra settings for the Purebred app might be required. Speak to your Purebred agent to understand which values should be included in your policies, or if you have a DoD issued Common Access Card (CAC) you can access the Purebred documentation online at https:\//cyber.mil/pki-pke/purebred/.
 
-3. If you choose to use a per-app VPN  for the DISA Purebred application, see [Create a per-app VPN](../configuration/vpn-settings-configure.md).
+3. If you choose to use a per-app VPN for the DISA Purebred application, see [Create a per-app VPN](../configuration/vpn-settings-configure.md).
 
 ## Use derived credentials for authentication and S/MIME signing and encryption
 
@@ -304,7 +309,7 @@ You can specify **Derived credential** for the following profile types and purpo
 Use derived credentials for certificate-based authentication to web sites and applications. To deliver a derived credential for app authentication:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 3. Use the following settings:
 
    **For iOS and iPadOS**:
@@ -386,4 +391,3 @@ After you delete an issuer and then add a new one, device users must request a n
 ## Next steps
 
 [Create device configuration profiles](../configuration/device-profile-create.md).
-

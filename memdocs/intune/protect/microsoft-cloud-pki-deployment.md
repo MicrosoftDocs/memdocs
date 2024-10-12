@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - certificates
 - IntuneSuite
+- sub-intune-suite
 ---
 # Microsoft Cloud PKI deployment for Microsoft Intune  
 

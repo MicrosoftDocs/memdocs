@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/31/2023
+ms.date: 08/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -59,6 +59,7 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 - Multiple Microsoft 365 deployments aren't currently supported. Only one deployment will be delivered to the device.
 - **Office version** - Choose whether you want to assign the 32-bit or 64-bit version of Office. You can install the 32-bit version on both 32-bit and 64-bit devices, but you can install the 64-bit version on 64-bit devices only.
 - **Remove MSI from end-user devices** - Choose whether you want to remove pre-existing Office .MSI apps from end-user devices. The installation won't succeed if there are pre-existing .MSI apps on end-user devices. The apps to be uninstalled aren't limited to the apps selected for installation in **Configure App Suite**, as it will remove all Office (MSI) apps from the end user device. For more information, see [Remove existing MSI versions of Office when upgrading to Microsoft 365 Apps](/deployoffice/upgrade-from-msi-version). When Intune reinstalls Office on your end user's machines, end users will automatically get the same language packs that they had with previous .MSI Office installations.
+- If devices are provisioned using Autopilot and you intend to deploy Microsoft 365 Apps as a tracked app during the enrollment status page (ESP) process, it is recommended to deploy Microsoft 365 Apps as a Win32 app. Unlike Win32 apps in Intune, the installation of the **Microsoft 365 Apps(Windows 10 and later)** app type is not managed by the Intune Management Extension (IME). Installing a **Microsoft 365 Apps** app during ESP could create an installation concurrency issue, where the **Microsoft 365 Apps** app begins installing while there is an ongoing installation of a Win32 app (also tracked during ESP), which will cause the ESP to fail.
 
 ## Select Microsoft 365 Apps
 
@@ -194,7 +195,7 @@ When you're unable to install the Microsoft 365 apps to a device, you must ident
 - There's an active network connection on the device. If the device is in airplane mode, is turned off, or is in a location with no service, the policy won't apply until network connectivity is established.
 - Both Intune and Microsoft 365 network requirements are met and the related IP ranges are accessible based on the following articles:
 
-  - [Intune network configuration requirements and bandwidth](/intune/network-bandwidth-use)
+  - [Intune network configuration requirements and bandwidth](/mem/intune/fundamentals/network-bandwidth-use)
   - [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges)
 
 - The correct groups have been assigned the Microsoft 365 app suite.

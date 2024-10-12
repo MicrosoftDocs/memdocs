@@ -2,7 +2,7 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
 ms.date: 06/03/2024
@@ -15,7 +15,7 @@ device-preparation/tutorial/user-driven/entra-join-user-group.md
 
 Headings are driven by article context. -->
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Groups** in the left hand pane.
 
@@ -42,7 +42,7 @@ Headings are driven by article context. -->
 
        1. Scroll through the list of objects and select owners for the user group. Alternatively, use the **Search** bar to search for and select owners of the group.
 
-       1. Once all of the desired owners are selected, select the **Select** button.
+       1. Once all of the desired owners are selected, select **Select**.
 
     1. For assigned user groups:
 
@@ -52,7 +52,7 @@ Headings are driven by article context. -->
 
           1. Scroll through the list of objects and select members that the Windows Autopilot device preparation profiles should be deployed to. Alternatively, use the **Search** bar to search for and select members for the group. Make sure to only select users or groups that only contain users.
 
-          1. Once all of the desired users or user groups are selected that the Windows Autopilot device preparation profiles should be deployed to, select the **Select** button.
+          1. Once all of the desired users or user groups are selected that the Windows Autopilot device preparation profiles should be deployed to, select **Select**.
 
     1. For dynamic user groups:
 
@@ -64,4 +64,4 @@ Headings are driven by article context. -->
         >
         > The linked article is in regards to creating dynamic membership rules in Microsoft Entra ID. However, dynamic user groups in Intune are also dynamic user groups in Microsoft Entra ID, so the rule syntax is the same.
 
-    1. Select the **Create** button to finish creating user group.
+    1. Select **Create** to finish creating user group.

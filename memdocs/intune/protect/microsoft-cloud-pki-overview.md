@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - certificates
 - IntuneSuite
+- sub-intune-suite
 ---
 # Overview of Microsoft Cloud PKI for Microsoft Intune
 
@@ -178,5 +179,4 @@ For the latest changes and additions, see [What's new in Microsoft Intune](../fu
   * Cloud PKI Root CA  
   * Cloud PKI Issuing CA  
   * BYOCA Issuing CA
-* There isn't a way in the admin center to delete or disable a CA from your Intune tenant. We're actively working to provide these actions. Until they become available, we recommend making an Intune support request to delete a CA.  
 * In the admin center, when you select **View all certificates** for an issuing CA, Intune only shows the first 1000 issued certificates. We're actively working to address this limitation. As a workaround, go to **Devices** > **Monitor**. Then select **Certificates** to view all issued certificates.  

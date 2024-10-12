@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 08/22/2024
 ms.topic: troubleshooting
 ms.service: windows-365
-ms.subservice: 
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: mattsha
+ms.reviewer: ericor
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,7 +41,7 @@ When a Cloud PC is provisioned, it’s automatically joined to the provided doma
 - The domain join user can write to the organizational unit (OU) provided.  
 - The domain join user isn't restricted in how many computers they can join. For example, the default maximum joins per user is 10 and this maximum can affect Cloud PC provisioning.
 - The subnet being used can reach a domain controller.
-- You test Add-Computer using the domain join credentials on a VM connected to the Cloud PC vNet/subnet.
+- You test Add-Computer using the domain join credentials on a VM (virtual machine) connected to the Cloud PC vNet/subnet.
 - You troubleshoot domain join failures like any physical computer in your organization.
 - If you have a domain name that can be resolved on the internet (like contoso.com), make sure that your DNS servers are configured as internal. Also, make sure that they can resolve Active Directory domain DNS records and not your public domain name.  
 
@@ -49,7 +49,7 @@ When a Cloud PC is provisioned, it’s automatically joined to the provided doma
 
 ## Microsoft Entra device Sync
 
-Before MDM enrollment can take place during provisioning, a Microsoft Entra ID object must be present for the Cloud PC. This check is intended to make sure that your organizations computer accounts are syncing to Microsoft Entra ID in a timely manner.  
+Before mobile device management (MDM) enrollment can take place during provisioning, a Microsoft Entra ID object must be present for the Cloud PC. This check is intended to make sure that your organizations computer accounts are syncing to Microsoft Entra ID in a timely manner.  
 
 Make sure that your Microsoft Entra computer objects appear in Microsoft Entra ID quickly. We suggest within 30 minutes, and no longer than 60 minutes. If the computer object doesn’t arrive in Microsoft Entra ID within 90 minutes, provisioning fails.  
 
@@ -62,22 +62,26 @@ If provisioning fails, make sure that:
 
 ## Azure subnet IP address range usage
 
-As part of the ANC setup, you provide a subnet. This subnet is used for all Cloud PCs during the provisioning process. Each Cloud PC, provisioning creates a virtual NIC and consume an IP address from the subnet.  
+As part of the ANC setup, you're required to provide a subnet to which the Cloud PC will connect. For each Cloud PC, provisioning creates a virtual NIC and consumes an IP address from this subnet.
 
-Make sure that there's sufficient IP Address allocation available for the volume of Cloud PCs you expect to provision. Also, plan enough address space for provisioning failures and potential disaster recovery.  
+Make sure that there's sufficient IP Address allocation available for the number of Cloud PCs you expect to provision. Also, plan enough address space for provisioning failures and potential disaster recovery.  
 
-If this check fails, make sure that:
+If this check fails, make sure that you:
 
-- You check the subnet in Azure Virtual Network. It should have enough address space available.  
-- There are enough address to handle three provisioning retries, each of which may hold onto the network addresses used for a few hours.  
-- You clean out any unused vNICs and IP addresses. It’s best to use a dedicated subnet for Cloud PCs only to make sure that no other services are eating allocation.  
-- You expand the subnet to make more addresses are available.
+- Check the subnet in Azure Virtual Network. It should have enough address space available.  
+- Make sure there are enough address to handle three provisioning retries, each of which may hold onto the network addresses used for a few hours.  
+- Remove any unused vNICs. It’s best to use a dedicated subnet for Cloud PCs to make sure that no other services are consuming allocation of IP addresses.  
+- Expand the subnet to make more addresses available. This can't be completed if there are devices connected.
+
+During provisioning attempts, it’s important to consider any CanNotDelete locks that may be applied at the resource group level or above. If these locks are present, the network interfaces created in the process aren't automatically deleted. In they aren't automatically deleted, you must manually remove the vNICs before you can retry.
+
+During provisioning attempts, it’s important to consider any existing locks at the resource group level or above. If these locks are present, the network interfaces created in the process won't be automatically deleted. In the event this occurs, you must manually remove the vNICs before you can retry.
 
 ## Azure tenant readiness
 
 When checks are performed, we check that the provided Azure subscription is valid and healthy. If it's not valid and healthy, we’re unable to connect Cloud PCs back to your vNet during provisioning. Problems such as billing issues may cause subscriptions to become disabled.  
 
-Many organizations use Azure policies to make sure that resources are only provisioned into certain regions and services. You should make sure that any Azure policies have considered the Cloud PC service and the supported regions.
+Many organizations use Azure policies to make sure that resources are only provisioned into certain regions and services. You should make sure that any Azure policies consider the Cloud PC service and the supported regions.
 
 Sign in to the Azure portal and make sure that the Azure subscription is enabled, valid, and healthy.
 
@@ -105,7 +109,7 @@ Along with standard the DNS lookup on the supplied domain name, we also check fo
 
 During provisioning, Cloud PCs must connect to multiple Microsoft publicly available services. These services include Microsoft Intune, Microsoft Entra ID, and Azure Virtual Desktop.  
 
-You must make sure that all of the [required public endpoints](requirements-network.md#allow-network-connectivity) can be reached from the subnet being used by Cloud PCs.
+You must make sure that all of the [required public endpoints](requirements-network.md#allow-network-connectivity) can be reached from the subnet used by Cloud PCs.
 
 If this test fails, make sure that:
 
@@ -115,7 +119,7 @@ If this test fails, make sure that:
 - There are no firewall rules (physical, virtual, or in Windows) that might block required traffic.
 - You consider testing the endpoints from a VM on the same subnet declared for Cloud PCs.
 
-## Environment and configuration is ready
+## Environment and configuration are ready
 
 This check is used for many infrastructure related issues that might be related to infrastructure that customers are responsible for. It can include errors such as internal service time outs or errors caused by customers deleting/changing Azure resources while checks are being run.  
 
@@ -125,7 +129,7 @@ We suggest you retry the checks if you encounter this error. If it persists, con
 
 When creating an ANC, the wizard grants a certain level of permissions on the resource group and subscription. These permissions let the service smoothly provision Cloud PCs.  
 
-These permissions can be viewed and modified by Azure admins who hold such permissions.  
+Azure admins holding such permissions can view and modify these permissions.  
 
 If any of these permissions are revoked, this check fails. Make sure that the following permissions are granted to the Windows 365 application service principal:
 
@@ -135,7 +139,7 @@ If any of these permissions are revoked, this check fails. Make sure that the fo
 
 The role assignment on the subscription is granted to the Cloud PC service principal.  
 
-Also, make sure that the permissions haven't been granted as [classic subscription administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#classic-subscription-administrator-roles) or "Roles (Classic)". This role isn't sufficient. It must be one of the Azure role-based access control built-in roles as listed previously.
+Also, make sure that the permissions aren't granted as [classic subscription administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#classic-subscription-administrator-roles) or "Roles (Classic)". This role isn't sufficient. It must be one of the Azure role-based access control built-in roles as listed previously.
 
 <!-- ########################## -->
 ## Next steps

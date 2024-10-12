@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/18/2024
+ms.date: 09/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: amanhaq
+ms.reviewer: rishitasarin 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,9 +31,6 @@ ms.collection:
 ---
 
 # Set up account driven Apple User Enrollment  
-
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
 Set up account driven Apple User Enrollment for personal devices enrolling in Microsoft Intune. Account driven user enrollment provides a faster and more user-friendly enrollment experience than [user enrollment with Company Portal](apple-user-enrollment-with-company-portal.md). The device user initiates enrollment by signing into their work account in the Settings app. After the user approves device management, the enrollment profile silently installs and Intune policies are applied. Intune uses just-in-time registration and the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps.      
 
@@ -87,8 +84,6 @@ Deploy the web app version of the Intune Company Portal website so that users ha
 Apple User Enrollment requires you to create and provide managed Apple IDs to enrolling users. If you enable federated authentication, which consists of linking Apple Business Manager with Microsoft Entra ID, you don't have to create and provide unique Apple IDs to each user. Instead, a device user can sign in to their apps with the same credentials they use for their work account. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-axmb19317543/1/web/1) in the Apple Business Manager User Guide.  
 
 ## Step 1: Set up just in time registration and assign Microsoft Authenticator     
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
 Configure just-in-time registration and assign Microsoft Authenticator as a required app. For steps, see [Set up JIT registration in Intune](set-up-just-in-time-registration.md). Return to this article when you're done so you can continue to the next step.  
 
@@ -148,7 +143,7 @@ To get around this issue, the device user must uninstall the Microsoft Authentic
 
 ## Next steps  
 * For an overview of supported Apple User Enrollment features and management actions in Microsoft Intune, see [Overview of Apple User Enrollment in Microsoft Intune](ios-user-enrollment-supported-actions.md).  
-* For more details about Apple User Enrollment features and functionality, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/user-enrollment-and-mdm-dep23db2037d/web) on the Apple support website.  
+* For more information about Apple User Enrollment, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/user-enrollment-and-mdm-dep23db2037d/web) on the Apple support website.  
 * For troubleshooting, see [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors).  
 * For supported settings in Intune device configurations profiles, see:   
 

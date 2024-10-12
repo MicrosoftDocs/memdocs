@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Windows 10 Delivery Optimization settings for Intune 
+title: Windows 10/11 Delivery Optimization settings for Intune 
 titleSuffix: Microsoft Intune
-description: Delivery Optimization settings for Windows 10 devices that you can deploy using Intune.
+description: Delivery Optimization settings for Windows 10/11 devices that you can deploy using Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -31,7 +31,7 @@ ms.collection:
 
 # Delivery Optimization settings for Windows devices in Intune
 
-Applies to:
+This feature applies to:
 
 - Windows 10
 - Windows 11
@@ -39,7 +39,7 @@ Applies to:
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-This article lists some of the settings for Delivery Optimization that Intune supports for devices that run Windows 10 or later.
+This article lists some of the settings for Delivery Optimization that Intune supports for devices that run Windows.
 
 Most options in the Microsoft Intune admin center directly map to Delivery Optimization settings that are covered in-depth in the Windows documentation. These options include links to relevant content. Settings or options that are specific to Intune don't contain links to additional content.
 
@@ -55,15 +55,15 @@ To configure Intune to use these settings, see [Deliver updates](delivery-optimi
 
 ## Before you begin
 
-[Create a Windows Delivery Optimization profile](delivery-optimization-windows.md).
+- [Create a Windows Delivery Optimization profile](delivery-optimization-windows.md).
 
 ## Delivery Optimization
 
 |Setting  |Windows version  |Details  |
 |---------|-----------------|---------|
-| [Download mode](/windows/deployment/update/waas-delivery-optimization-reference#download-mode) | 1511 | Specify the download method that Delivery Optimization uses to download content.<br><ul><li>**Not configured**: End users update their devices using their own methods, which might be to use the *Windows Updates or Delivery Optimization* settings available with the operating system. </li><li> **HTTP only, no peering (0)**: Get updates only from the internet. Don't get updates from other computers on your network (peer-to-peer). </li><li> **HTTP blended with peering behind the same NAT (1)**: Get updates from the internet and from other computers on your network that are behind the same Network Address Translation (NAT) IP addresses. </li><li> **HTTP blended with peering across a private group (2)**: Peering occurs on devices in the same Active Directory Site (if it exists) or the same domain. When this option is selected, peering crosses your NAT IP addresses. </li><li> **HTTP blended with Internet peering (3)**: Get updates from the internet and from other computers on your network. </li><li> **Simple download mode with no peering (99)**: Gets updates from the internet, directly from the update owner, such as Microsoft. It doesn't contact the Delivery Optimization cloud services. </li><li> **Bypass mode (100)**: Use Background Intelligent Transfer Service (BITS) to get updates. Don't use Delivery Optimization. </li></ul> **Default**: Not configured <br><br> Policy CSP: [DODownloadMode](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodownloadmode) <br><br> |
+| [Download mode](/windows/deployment/update/waas-delivery-optimization-reference#download-mode) | 1511 | Specify the download method that Delivery Optimization uses to download content.<br><ul><li>**Not configured**: End users update their devices using their own methods, which might be to use the *Windows Updates or Delivery Optimization* settings available with the operating system. </li><li> **HTTP only, no peering (0)**: Get updates only from the internet. Don't get updates from other computers on your network (peer-to-peer). </li><li> **HTTP blended with peering behind the same NAT (1)**: Get updates from the internet and from other computers on your network that are behind the same Network Address Translation (NAT) IP addresses. </li><li> **HTTP blended with peering across a private group (2)**: Peering occurs on devices with the same Group ID. When this option is selected, peering crosses your NAT IP addresses. </li><li> **HTTP blended with Internet peering (3)**: Get updates from the internet and from other computers on your network. </li><li> **Simple download mode with no peering (99)**: Gets updates from the internet, directly from the update owner, such as Microsoft. It doesn't contact the Delivery Optimization cloud services. </li><li> **Bypass mode (100)**: Use Background Intelligent Transfer Service (BITS) to get updates. Don't use Delivery Optimization. </li></ul> **Default**: Not configured <br><br> Policy CSP: [DODownloadMode](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodownloadmode) <br><br> |
 | [Restrict Peer Selection](/windows/deployment/update/waas-delivery-optimization-reference#select-a-method-to-restrict-peer-selection) | 1803 | Requires **Download mode** be set to *HTTP blended with peering behind the same NAT (1)* or *HTTP blended with peering across a private group (2)*.<br/><br/>Restricts peer selection to a specific group of devices.<br/><br/>**Default**: Not configured <br/><br/> Policy CSP: [DORestrictPeerSelectionBy](/windows/client-management/mdm/policy-csp-deliveryoptimization#dorestrictpeerselectionby)<br><br> |
-| [Group ID source](/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids) | 1803 | Requires **Download mode** be set to *HTTP blended with peering across a private group*.<br><br>Restricts peer selection to a specific group of devices by source.<br><br>If you select **Custom**, you then configure **Group ID (as GUID)**. Use a GUID as the Group ID if you need to create a single group for Local Network Peering for branches that are on different domains or aren't on the same LAN. <br><br> **Default**: Not configured <br><br> Policy CSP: [DOGroupId](/windows/client-management/mdm/policy-csp-deliveryoptimization#dogroupid) |
+| [Group ID Source](/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids) | 1803 | Requires **Download mode** be set to *HTTP blended with peering across a private group*.<br><br>Restricts peer selection to a specific group of devices by source.<br><br>If you select **Custom**, you then configure **Group ID (as GUID)**. Use a GUID as the Group ID if you need to create a single group for Local Network Peering for branches that are on different domains or aren't on the same LAN. <br><br> **Default**: Not configured <br><br> Policy CSP: [DOGroupId](/windows/client-management/mdm/policy-csp-deliveryoptimization#dogroupid) |
 
 ## Bandwidth
 

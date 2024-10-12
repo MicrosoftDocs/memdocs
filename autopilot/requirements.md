@@ -1,14 +1,14 @@
 ---
 title: Windows Autopilot requirements
-description: Inform yourself about requirements for Windows Autopilot deployment.
+description: Software, Networking, Licensing, and Configuration requirements for Windows Autopilot.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 09/06/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -23,10 +23,21 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>
 ---
 
-
 # Windows Autopilot requirements
 
-The list of requirements for Windows Autopilot device preparation is organized into five different categories:
+> [!TIP]
+>
+> RSS can be used to notify when requirements are added or updated to this page. For example, the following RSS link includes this article:
+>
+> ``` url
+> https://learn.microsoft.com/en-us/search/?terms=%22The%20list%20of%20requirements%20for%20Windows%20Autopilot%20is%20organized%20into%20four%20different%20categories%22
+> ```
+>
+> This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
+>
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+The list of requirements for Windows Autopilot is organized into four different categories:<!-- RSS subscription is based on this line so don't change. If the line needs to change, update RSS URL in the Tip in the article.-->
 
 - **Software** - OS requirements.
 - **Networking** - networking requirements.
@@ -47,33 +58,32 @@ Windows Autopilot depends on specific features available in Windows client, Micr
 
 #### Windows 11
 
-A [supported version](/windows/release-health/) of Windows 11 General Availability Channel is required.
+A [supported version](/windows/release-health/windows11-release-information) of Windows 11 General Availability Channel is required.
 
-The following editions are supported:
+The following editions of Windows 11 are supported:
 
-- Windows 11 Pro
-- Windows 11 Pro Education
-- Windows 11 Pro for Workstations
-- Windows 11 Enterprise
-- Windows 11 Education
+- Windows 11 Pro.
+- Windows 11 Pro Education.
+- Windows 11 Pro for Workstations.
+- Windows 11 Enterprise.
+- Windows 11 Education.
 
 #### Windows 10
 
-A [supported version](/windows/release-health/) of Windows 10 General Availability Channel is required.
+A [supported version](/windows/release-health/release-information) of Windows 10 is required.
 
-The following editions are supported:
+The following editions of Windows 10 are supported:
 
-- Windows 10 Pro
-- Windows 10 Pro Education
-- Windows 10 Pro for Workstations
-- Windows 10 Enterprise
-- Windows 10 Education
-
-Windows 10 LTSC/LTSB editions aren't supported.
+- Windows 10 Pro.
+- Windows 10 Pro Education.
+- Windows 10 Pro for Workstations.
+- Windows 10 Enterprise.
+- Windows 10 Education.
+- [Windows 10 Enterprise LTSC](/windows/whats-new/ltsc/overview).
 
 #### HoloLens
 
-- Windows Autopilot for HoloLens 2 requires Windows Holographic, version 2004 or later. For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+- Windows Autopilot for HoloLens 2 requires a currently supported version of Windows Holographic. For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
 > [!NOTE]
 >
@@ -157,9 +167,9 @@ To resolve internet names for all services, the device communicates with a DNS s
 
 ##### Diagnostics data
 
-Diagnostic data collection is enabled by default. To disable Windows Analytics and related diagnostics capabilities, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm).
+Diagnostic data collection is enabled by default. For more information, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm).
 
-If the device can't send diagnostic data, the Autopilot process still continues. However, services that depend on diagnostic data, such as Desktop Analytics, doesn't work.
+If the device can't send diagnostic data, the Autopilot process still continues. However, services that depend on diagnostic data don't work.
 
 ##### Network Connection Status Indicator (NCSI)
 
@@ -193,7 +203,7 @@ Some of these services also need to check certificate revocation lists (CRLs) fo
 >
 > Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
-The device can be Microsoft Entra hybrid joined. The computer should be on the internal network for Microsoft Entra hybrid join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
+The device can be Microsoft Entra hybrid joined. The computer should be on the internal network for Microsoft Entra hybrid join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join).
 
 ##### Autopilot self-deploying mode and Autopilot pre-provisioning
 
@@ -219,9 +229,9 @@ Windows Autopilot depends on specific capabilities available in Windows client a
 
 To provide needed Microsoft Entra ID and MDM functionality, including automatic MDM enrollment and company branding features, one of the following subscriptions is required:
 
-- [Microsoft 365 Business Premium subscription](https://www.microsoft.com/microsoft-365/business)
-- [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline)
-- [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/buy-license/microsoft365/default.aspx)
+- [Microsoft 365 Business Premium subscription](https://www.microsoft.com/microsoft-365/business).
+- [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline).
+- [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/products/microsoft-365).
 - [Microsoft 365 Enterprise E3 or E5 subscription](https://www.microsoft.com/microsoft-365/enterprise), which include all Windows client, Microsoft 365, and EMS features (Microsoft Entra ID and Intune).
 - [Enterprise Mobility + Security E3 or E5 subscription](https://www.microsoft.com/cloud-platform/enterprise-mobility-security), which include all needed Microsoft Entra ID and Intune features.
 - [Intune for Education subscription](/intune-education/what-is-intune-for-education), which include all needed Microsoft Entra ID and Intune features.
@@ -229,7 +239,7 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 
 > [!NOTE]
 >
-> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/fundamentals/licenses-assign).
+> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/mem/intune/fundamentals/licenses-assign).
 
 Additionally, the following are also recommended (but not required):
 
@@ -264,8 +274,11 @@ For a walkthrough for some of these and related steps, see this video:
 
 > [!VIDEO https://www.youtube.com/embed/KYVptkpsOqs]
 
-There are no additional hardware requirements to use Autopilot, beyond the requirements to run [Windows 11](https://www.microsoft.com/windows/windows-11-specifications) or [Windows 10](https://www.microsoft.com/windows/windows-10-specifications).
+There are no additional hardware requirements to use Autopilot, beyond the hardware requirements to run Windows. For more information, see:
+
+- [Find Windows 11 specs, features, and computer requirements](https://www.microsoft.com/windows/windows-11-specifications).
+- [How to Find Windows 10 Computer Specifications & Systems Requirements](https://www.microsoft.com/windows/windows-10-specifications).
+- [Windows minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview).
+- [Windows 11 requirements](/windows/whats-new/windows-11-requirements).
 
 ---
-
-## Related content

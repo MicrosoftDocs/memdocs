@@ -11,7 +11,7 @@ manager: apoorvseth
 ms.author: baladell
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 # Create and deploy an application with Configuration Manager
 

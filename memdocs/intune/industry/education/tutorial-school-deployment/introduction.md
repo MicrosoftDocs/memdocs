@@ -15,7 +15,7 @@ This guide introduces the tools and services available from Microsoft to deploy,
 
 ## Audience and user requirements
 
-This tutorial is intended for education professionals responsible for deploying and managing devices, including:  
+This tutorial is intended for education professionals responsible for deploying and managing devices, including:
 
 - School leaders
 - IT administrators
@@ -60,7 +60,7 @@ From enrollment, through configuration and protection, to resetting, Intune help
 In the remainder of this tutorial, we discuss the key concepts and benefits of modern device management with Microsoft 365 solutions for education. The guidance is organized around the four main pillars of modern device management:
 
 - **Identity management:** setting up and configuring the identity system, with Microsoft 365 Education and Microsoft Entra ID, as the foundation for user identity and authentication
-- **Initial setup:** setting up the Intune environment for managing devices, including configuring settings, deploying applications, and defining updates cadence  
+- **Initial setup:** setting up the Intune environment for managing devices, including configuring settings, deploying applications, and defining updates cadence
 - **Device enrollment:** Setting up devices for deployment and enrolling them in Intune
 - **Device reset:** Resetting managed devices with Intune
 
@@ -77,7 +77,6 @@ Let's begin with the creation and configuration of your Microsoft Entra tenant a
 
 [MEM-1]: /mem/intune/fundamentals/what-is-intune
 [MEM-2]: /mem/configmgr/core/understand/introduction
-[MEM-3]: /mem/configmgr/desktop-analytics/overview
 [MEM-4]: /mem/autopilot/windows-autopilot
 [MEM-5]: /mem/intune/fundamentals/surface-management-portal
 

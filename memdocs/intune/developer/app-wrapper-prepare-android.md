@@ -36,10 +36,10 @@ Use the Microsoft Intune App Wrapping Tool for Android to change the behavior of
 
 The tool is a Windows command-line application that runs in PowerShell and creates a wrapper around your Android app. After the app is wrapped, you can change the app's functionality by configuring [mobile application management policies](../apps/app-protection-policies.md) in Intune.
 
-Before running the tool, review [Security considerations for running the App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). To download the tool, go to the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) on GitHub.
+Before running the tool, review [Security considerations for running the App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). To download the tool, go to the [Microsoft Intune App Wrapping Tool for Android](https://github.com/microsoftconnect/intune-app-wrapping-tool-android) on GitHub.
 
 > [!NOTE]
-> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/issues) on GitHub.
+> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/microsoftconnect/intune-app-wrapping-tool-android/issues) on GitHub.
 
 ## Fulfill the prerequisites for using the App Wrapping Tool
 
@@ -69,7 +69,7 @@ Before running the tool, review [Security considerations for running the App Wra
 
 - Android requires all app packages (.apk) to be signed. For **reusing** existing certificates and overall signing certificate guidance, see [Reusing signing certificates and wrapping apps](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps). After you have wrapped the .apk file using the Intune App Wrapping Tool, the recommendation is to use [Google's provided Apksigner tool]( https://developer.android.com/studio/command-line/apksigner). This will ensure that once your app gets to end user devices, it can be launched properly by Android standards.
 
-- (Optional) Sometimes an app may hit the Dalvik Executable (DEX) size limit due to the Intune MAM SDK classes that are added during wrapping. DEX files are a part of the compilation of an Android app. The Intune App Wrapping Tool automatically handles DEX file overflow during wrapping for apps with a min API level of 21 or higher (as of [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). For apps with a min API level of < 21, best practice would be to increase the min API level using the wrapper's `-UseMinAPILevelForNativeMultiDex` flag. For customers unable to increase the app's minimum API level, the following DEX overflow workarounds are available. In certain organizations, this may require working with whoever compiles the app (ie. the app build team):
+- (Optional) Sometimes an app may hit the Dalvik Executable (DEX) size limit due to the Intune MAM SDK classes that are added during wrapping. DEX files are a part of the compilation of an Android app. The Intune App Wrapping Tool automatically handles DEX file overflow during wrapping for apps with a min API level of 21 or higher (as of [v. 1.0.2501.1](https://github.com/microsoftconnect/intune-app-wrapping-tool-android/releases)). For apps with a min API level of < 21, best practice would be to increase the min API level using the wrapper's `-UseMinAPILevelForNativeMultiDex` flag. For customers unable to increase the app's minimum API level, the following DEX overflow workarounds are available. In certain organizations, this may require working with whoever compiles the app (ie. the app build team):
 
   - Use ProGuard to eliminate unused class references from the app's primary DEX file.
   - For customers using v3.1.0 or higher of the Android Gradle plugin, disable the [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
@@ -80,7 +80,7 @@ The main scenarios in which you would need to rewrap your applications are as fo
 
 - The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Microsoft Intune admin center.
 
-- The Intune App Wrapping Tool for Android has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens every 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
+- The Intune App Wrapping Tool for Android has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens every 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for Android](https://github.com/microsoftconnect/intune-app-wrapping-tool-android).
 
 Some best practices for rewrapping include:
 
@@ -88,7 +88,7 @@ Some best practices for rewrapping include:
 
 ## Install the App Wrapping Tool
 
-1. From the [GitHub repository](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android), download the installation file InstallAWT.exe for the Intune App Wrapping Tool for Android to a Windows computer. Open the installation file.
+1. From the [GitHub repository](https://github.com/microsoftconnect/intune-app-wrapping-tool-android), download the installation file InstallAWT.exe for the Intune App Wrapping Tool for Android to a Windows computer. Open the installation file.
 
 2. Accept the license agreement, then finish the installation.
 
@@ -97,7 +97,7 @@ Note the folder to which you installed the tool. The default location is: C:\Pro
 ## Run the App Wrapping Tool
 
 > [!IMPORTANT]
-> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
+> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool for Android](https://github.com/microsoftconnect/intune-app-wrapping-tool-android) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 1. On the Windows computer where you installed the App Wrapping Tool, open a PowerShell window.
 

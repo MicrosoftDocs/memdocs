@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- sub-secure-endpoints
 ---
 
 # Configure Microsoft Defender for Endpoint in Intune
@@ -38,7 +39,7 @@ Use the information and procedures in this article to configure integration of M
 - **Use Intune policy to onboard devices with Microsoft Defender for Endpoint**. You onboard devices to configure them to communicate with Microsoft Defender for Endpoint and to provide data that helps assess their risk level.
 - **Use Intune device compliance policies to set the level of risk you want to allow**. Microsoft Defender for Endpoint reports a devices risk level. Devices that exceed the allowed risk level are identified as noncompliant.
 - **Use a conditional access policy** to block users from accessing corporate resources from devices that are noncompliant.
-- **Use** [**app protection policies**](../protect/mtd-app-protection-policy.md) for Android and iOS/iPadOS, to set device risk levels. App protection polices work with both enrolled and unenrolled devices.
+- **Use** [**app protection policies**](../protect/mtd-app-protection-policy.md) for Android and iOS/iPadOS, to set device risk levels. App protection policies work with both enrolled and unenrolled devices.
 
 In addition to managing settings for Microsoft Defender for Endpoint on devices that enroll with Intune, you can manage Defender for Endpoint security configurations on devices that aren’t enrolled with Intune. This scenario is called *Security Management for Microsoft Defender for Endpoint* and requires configuring the *Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations* toggle to *On*. For more information, see [MDE Security Configuration Management](../protect/mde-security-integration.md).
 
@@ -206,7 +207,7 @@ Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for 
 
 1. Download the .mobile profile, which is hosted here: [https://aka.ms/mdatpiossupervisedprofile](https://aka.ms/mdatpiossupervisedprofile).
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
+3. Select **Devices** > **Manage devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 4. For **Platform**, select **iOS/iPadOS**
 5. For **Profile type**, select **Custom**, and then select **Create**.
 6. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.

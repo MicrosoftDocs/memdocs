@@ -23,6 +23,12 @@ landingContent:
         links:
           - text: KB 26186448 Summary of changes in 2403
             url: 2403/26186448.md
+          - text: KB 28290310 CMG update for 2403
+            url: 2403/28290310.md
+          - text: KB 28458746 Software update client fix for 2403
+            url: 2403/28458746.md
+          - text: KB 29166583 MP security update for 2403
+            url: 2403/29166583.md  
   - title: Configuration Manager 2309
     linkLists:
       - linkListType: overview
@@ -33,6 +39,8 @@ landingContent:
             url: 2309/26129847.md
           - text: 25858444 Update rollup for Configuration Manager version 2309
             url: 2309/25858444.md
+          - text: KB 29166583 MP security update for 2309
+            url: 2309/29166583.md  
   - title: Configuration Manager 2303
     linkLists:
       - linkListType: overview
@@ -45,6 +53,8 @@ landingContent:
             url: 2303/24721208.md
           - text: 25073607 Client update for Configuration Manager version 2303
             url: 2303/25073607.md
+          - text: KB 29166583 MP security update for 2303
+            url: 2303/29166583.md  
   - title: Configuration Manager 2211
     linkLists:
       - linkListType: overview

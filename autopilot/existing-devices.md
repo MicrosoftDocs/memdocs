@@ -2,13 +2,13 @@
 title: Windows Autopilot for existing devices
 description: Modern desktop deployment with Windows Autopilot enables easily deploying the latest version of Windows to existing devices.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/10/2024
+ms.date: 09/13/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,7 +40,7 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 >
 > Using Autopilot for existing devices could be used as a method to convert existing hybrid Microsoft Entra devices into Microsoft Entra devices. Using the setting **Convert all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned groups into a Microsoft Entra device. The setting only registers the devices in the assigned groups for the Autopilot service.
 
-## Prerequisites
+## Requirements
 
 - A currently supported version of Microsoft Configuration Manager current branch.
 
@@ -60,13 +60,9 @@ If desired, an [enrollment status page](enrollment-status.md) (ESP) for Autopilo
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Go to **Devices > Enroll Devices > Windows enrollment > Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+1. Go to **Devices** > **Device onboarding** | **Enrollment**. Make sure **Windows** is selected at the top and then under **Windows Autopilot**, select **Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
 
-    :::image type="content" source="images/esp-config.png" alt-text="Enrollment status page policy page in Intune.":::
-
-1. Go to **Microsoft Entra ID > Mobility (MDM and MAM) > Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
-
-    :::image type="content" source="images/mdm-config.png" alt-text="Configure MDM enrollment in Azure.":::
+1. Go to **Microsoft Entra ID** > **Manage** | **Mobility (MDM and WIP)** > **Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
 
 ## Install required modules
 
@@ -80,15 +76,15 @@ If desired, an [enrollment status page](enrollment-status.md) (ESP) for Autopilo
 
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-    Install-Module WindowsAutopilotIntune -MinimumVersion 5.4.0 -Force
-    Install-Module Microsoft.Graph.Groups -Force
-    Install-Module Microsoft.Graph.Authentication -Force
-    Install-Module Microsoft.Graph.Identity.DirectoryManagement -Force
+    Install-Module -Name WindowsAutopilotIntune -MinimumVersion 5.4.0 -Force
+    Install-Module -Name Microsoft.Graph.Groups -Force
+    Install-Module -Name Microsoft.Graph.Authentication -Force
+    Install-Module -Name Microsoft.Graph.Identity.DirectoryManagement -Force
 
-    Import-Module WindowsAutopilotIntune -MinimumVersion 5.4
-    Import-Module Microsoft.Graph.Groups
-    Import-Module Microsoft.Graph.Authentication
-    Import-Module Microsoft.Graph.Identity.DirectoryManagement
+    Import-Module -Name WindowsAutopilotIntune -MinimumVersion 5.4
+    Import-Module -Name Microsoft.Graph.Groups
+    Import-Module -Name Microsoft.Graph.Authentication
+    Import-Module -Name Microsoft.Graph.Identity.DirectoryManagement
     ```
 
 1. Enter the following commands and provide Intune administrative credentials:
@@ -168,7 +164,7 @@ $AutopilotProfile | ForEach-Object {
 >
 > The file name has to be `AutopilotConfigurationFile.json` and encoded as ASCII or ANSI.
 
-The profile can also be saved to a text file and edit in Notepad. In Notepad, when choosing **Save as**, select the save as type: **All Files**, and then choose **ANSI** for the **Encoding**.
+The profile can also be saved to a text file and edit in Notepad. In Notepad, when choosing **Save as**, select the save as type: **All Files**, and then select **ANSI** for the **Encoding**.
 
 :::image type="content" source="images/notepad.png" alt-text="Save as ANSI encoding in Notepad.":::
 
@@ -178,13 +174,11 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 >
 > The configuration file can only contain one profile. Multiple JSON profile files can be used, but each one must be named `AutopilotConfigurationFile.json`. This requirement is for OOBE to follow the Autopilot experience. To use more than one Autopilot profile, create separate Configuration Manager packages.
 >
-> If the file is saved with one of the following criteria:
+> Windows OOBE doesn't follow the Autopilot experience if the file is saved with one of the following criteria:
 >
-> - Unicode encoding
-> - UTF-8 encoding
-> - a file name other than `AutopilotConfigurationFile.json`
->
-> then Windows OOBE doesn't follow the Autopilot experience.
+> - Unicode encoding.
+> - UTF-8 encoding.
+> - A file name other than `AutopilotConfigurationFile.json`.
 
 ## Create a package containing the JSON file
 
@@ -194,13 +188,13 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. In the Create Package and Program Wizard, enter the following details for the package:
 
-    - _Name_: **Autopilot for existing devices config**
+    - *Name*: **Autopilot for existing devices config**
     - Select **This package contains source files**
-    - _Source folder_: Specify the UNC network path that contains the `AutopilotConfigurationFile.json` file
+    - *Source folder*: Specify the UNC network path that contains the `AutopilotConfigurationFile.json` file
 
     For more information, see [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
 
-1. For the program, select the _Program Type_: **Don't create a program**
+1. For the program, select the *Program Type*: **Don't create a program**
 
 1. Complete the wizard.
 
@@ -212,13 +206,13 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node.
 
-1. On the ribbon, select **Create**, and then choose **Create Device Collection**. An existing collection can also be used. If using an existing collection, proceed to the [Create a task sequence](#create-a-task-sequence) section.
+1. On the ribbon, select **Create**, and then select **Create Device Collection**. An existing collection can also be used. If using an existing collection, proceed to the [Create a task sequence](#create-a-task-sequence) section.
 
 1. In the Create Device Collection Wizard, enter the following **General** details:
 
-    - _Name_: **Autopilot for existing devices collection**
-    - _Comment_: Add an optional comment to further describe the collection
-    - _Limiting collection_: **All Systems** or if desired, an alternate collection.
+    - *Name*: **Autopilot for existing devices collection**
+    - *Comment*: Add an optional comment to further describe the collection
+    - *Limiting collection*: **All Systems** or if desired, an alternate collection.
 
 1. On the **Membership Rules** page, select **Add Rule**. Specify either a direct or query-based collection rule to add the target Windows devices to the new collection.
 
@@ -238,17 +232,17 @@ For more information, see [How to create collections in Configuration Manager](/
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems** and select the **Task Sequences** node.
 
-1. On the **Home** ribbon, select **Create Task Sequence**.
+1. In the **Home** ribbon, select **Create Task Sequence**.
 
-1. On the **Create new task sequence** page, select the option to **Deploy Windows Autopilot for existing devices**.
+1. In the **Create new task sequence** page, select the option to **Deploy Windows Autopilot for existing devices**.
 
-1. On the **Task sequence information** page, specify the following information:
+1. In the **Task sequence information** page, specify the following information:
 
     - A name for the task sequence. For example, **Autopilot for existing devices**.
     - Optionally add a description to better describe the task sequence.
     - Select a boot image. For more information on supported boot image versions, see [Support for the Windows ADK in Configuration Manager](/mem/configmgr/core/plan-design/configs/support-for-windows-adk).
 
-1. On the **Install Windows** page, select the Windows **Image package**. Then configure the following settings:
+1. In the **Install Windows** page, select the Windows **Image package**. Then configure the following settings:
 
     - **Image index**: Select either Enterprise, Education, or Professional, as required by the organization.
 
@@ -262,25 +256,23 @@ For more information, see [How to create collections in Configuration Manager](/
         - **Randomly generate the local administrator password and disable the account on all support platforms (recommended)**
         - **Enable the account and specify the local administrator password**
 
-1. On the **Configure Network** page, select the option to **Join a workgroup**.
-
-    > [!IMPORTANT]
-    >
-    > The Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). This action fails if the device is joined to a domain.
-    >
-    > Sysprep runs with the `/Generalize` parameter, which on currently supported version of Windows deletes the Autopilot profile file. The device then boots into the OOBE phase instead of Autopilot. To fix this issue, see [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909).
-
-1. On the **Install Configuration manager** page, add any necessary installation properties for the environment.
+1. In the **Install the Configuration Manager client** page, add any necessary Configuration Manager client installation properties for the environment. For example, since the device is a Workgroup device and not domain joined during the Windows Autopilot for existing devices task sequence, the [SMSMP](/mem/configmgr/core/clients/deploy/about-client-installation-properties#smsmp) or [SMSMPLIST](/mem/configmgr/core/clients/deploy/about-client-installation-properties#smsmplist) parameters might be needed to run certain tasks such as the **Install Application** or **Install Software Updates** tasks.
 
 1. The **Include updates** page selects by default the option to **Do not install any software updates**.
 
-1. On the **Install applications** page, applications to install during the task sequence can be selected. However, Microsoft recommends that to mirror the signature image approach with this scenario. After the device provisions with Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.
+1. In the **Install applications** page, applications to install during the task sequence can be selected. However, Microsoft recommends that to mirror the signature image approach with this scenario. After the device provisions with Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.
 
-1. On the **System Preparation** page, select the package that includes the Autopilot configuration file. By default, the task sequence restarts the computer after it runs Windows Sysprep. The option to **Shutdown computer after this task sequence completes** can also be selected. This option allows preparation of a device and then delivery to a user for a consistent Autopilot experience.
+1. In the **System Preparation** page, select the package that includes the Autopilot configuration file. By default, the task sequence restarts the computer after it runs Windows Sysprep. The option to **Shutdown computer after this task sequence completes** can also be selected. This option allows preparation of a device and then delivery to a user for a consistent Autopilot experience.
 
 1. Complete the wizard.
 
 The Windows Autopilot for existing devices task sequence results in a device joined to Microsoft Entra ID.
+
+> [!NOTE]
+>
+> For Windows Autopilot for existing devices task sequence, the **Create Task Sequence Wizard** purposely skips configuring and adding the **Apply Network Settings** task. If the **Apply Network Settings** task isn't specified in a task sequence, it uses Windows default behavior, which is to join a workgroup.
+>
+> The Windows Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). If the device is joined to a domain, Sysprep fails, so therefore the Windows Autopilot for existing devices task sequence joins a workgroup. For this reason, it isn't necessary to add the **Apply Network Settings** task to a Windows Autopilot for existing devices task sequence.
 
 For more information on creating the task sequence, including information on other wizard options, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
 
@@ -288,13 +280,13 @@ If the task sequence is viewed, it's similar to the default task sequence to app
 
 - **Apply Windows Autopilot configuration**: This step applies the Autopilot configuration file from the specified package. It's not a new type of step, it's a **Run Command Line** step to copy the file.
 
-- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture).
+- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#prepare-windows-for-capture).
 
 For more information on editing the task sequence, see [Use the task sequence editor](/mem/configmgr/osd/understand/task-sequence-editor) and [Task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps).
 
 > [!NOTE]
 >
-> The **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909).
+> The **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Modify the task sequence to account for Sysprep command line configuration](tutorial/existing-devices/create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) and [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work).
 
 To make sure the user's data is backed up before the Windows upgrade, use OneDrive for work or school [known folder move](/onedrive/redirect-known-folders).
 
@@ -320,21 +312,21 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
     - **General**
 
-      - _Task Sequence_: **Autopilot for existing devices**
+      - *Task Sequence*: **Autopilot for existing devices**
 
-      - _Collection_: **Autopilot for existing devices collection**
+      - *Collection*: **Autopilot for existing devices collection**
 
     - **Deployment Settings**
 
-      - _Action_: **Install**.
+      - *Action*: **Install**.
 
-      - _Purpose_: **Available**.
+      - *Purpose*: **Available**.
 
-      - _Make available to the following_: **Only Configuration Manager Clients**.
+      - *Make available to the following*: **Only Configuration Manager Clients**.
 
         > [!NOTE]
         >
-        > Choose the option here that is relevant for the context of testing. If the target client doesn't have the Configuration Manager agent or Windows installed, the task sequence needs to be started via PXE or Boot Media.
+        > Select the option here that is relevant for the context of testing. If the target client doesn't have the Configuration Manager agent or Windows installed, the task sequence needs to be started via PXE or Boot Media.
 
     - **Scheduling**
 
@@ -346,13 +338,13 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
     - **Distribution Points**
 
-      - _Deployment options_: **Download content locally when needed by the running task sequence**
+      - *Deployment options*: **Download content locally when needed by the running task sequence**
 
 1. Complete the wizard.
 
 ## Complete the deployment process
 
-1. On the target Windows device, go to the **Start** menu, type `Software Center`, and open it.
+1. On the target Windows device, go to the **Start** menu, enter `Software Center`, and open it.
 
 1. In the Software Library, under **Operating Systems**, select **Autopilot for existing devices**, and then select **Install**.
 
@@ -372,7 +364,7 @@ The task sequence runs and does the following actions:
 
 > [!NOTE]
 >
-> If devices need to be joined to Active Directory as part of a Microsoft Entra hybrid join scenario, don't do so through the task sequence and the **Apply Network Settings** Task. Instead, create a **Domain Join** device configuration profile. Since there's no Microsoft Entra device object for the computer to do group-based targeting, target the profile to **All Devices**. For more information, see [User-driven mode for Microsoft Entra hybrid join](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
+> If devices need to be joined to Active Directory as part of a Microsoft Entra hybrid join scenario, don't do so through the task sequence and the **Apply Network Settings** Task. Instead, create a **Domain Join** device configuration profile. Since there's no Microsoft Entra device object for the computer to do group-based targeting, target the profile to **All Devices**. For more information, see [User-driven mode for Microsoft Entra hybrid join](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join).
 
 ## Register the device for Windows Autopilot
 
@@ -384,7 +376,11 @@ Also see [Adding devices to Windows Autopilot](add-devices.md).
 
 > [!NOTE]
 >
-> Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if the online profile times out.
+> - Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if the online profile times out.
+> <!--9105086-->
+> - When the assigned profile is applied, the **enrollmentProfileName** property of the device object in Microsoft Intune and Microsoft Entra ID match the Windows Autopilot profile name.
+>
+> - When the Windows Autopilot for existing devices profile is applied, the **enrollmentProfileName** property of the device object in Microsoft Intune and Microsoft Entra ID are **OffilineAutoPilotProfile-\<ZtdCorrelationId\>**.
 
 ## How to speed up the deployment process
 
@@ -396,6 +392,6 @@ For a detailed tutorial on configuring Windows Autopilot for existing devices, s
 
 [Step by step tutorial for Windows Autopilot deployment for existing devices in Intune and Configuration Manager](tutorial/existing-devices/existing-devices-workflow.md)
 
-## Related articles
+## Related content
 
 - [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/new-windows-autopilot-capabilities-and-expanded-partner-support/ba-p/260430).

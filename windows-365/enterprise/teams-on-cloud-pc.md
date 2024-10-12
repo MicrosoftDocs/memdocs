@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/18/2023
+ms.date: 07/01/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -31,11 +31,11 @@ ms.collection:
 
 # Microsoft Teams on a Cloud PC
 
-Microsoft Teams is one of the core Microsoft 365 applications used with Windows 365. The [Windows 10/11 images optimized for Microsoft 365 apps](device-images.md#gallery-images) available in the Windows 365 image gallery support Teams chat, presence, calling, and meeting optimizations.
+Microsoft Teams is one of the core Microsoft 365 applications used with Windows 365. The [Windows 10/11 images optimized for Microsoft 365 apps](device-images.md#gallery-images) available in the Windows 365 image gallery support Teams chat, presence, calling, and meeting optimizations. Gallery images use the new [Microsoft Teams](/microsoftteams/new-teams-desktop-admin).
 
 Using Microsoft Teams on a Cloud PC is different from using it on a physical PC. You'll need to do the following to provide the best Teams experiences from Cloud PCs:
 
-- Read the [requirements and limitations](/microsoftteams/teams-for-vdi) for using Microsoft Teams in virtualized environments.
+- Read the [requirements and limitations](/MicrosoftTeams/vdi-2) for using Microsoft Teams in virtualized environments.
 - [Prepare your network](/microsoftteams/prepare-network/) for Microsoft Teams.
 - Confirm that [required components](/azure/virtual-desktop/teams-on-avd) for Microsoft Teams optimizations are installed.
 - Conform to [Cloud PCs sizing requirements](cloud-pc-size-recommendations.md) for Microsoft Teams.
@@ -43,19 +43,20 @@ Using Microsoft Teams on a Cloud PC is different from using it on a physical PC.
 
 ## Teams optimizations
 
-The [Windows 10/11 images](device-images.md#gallery-images) in the gallery are pre-configured with required optimization components. When you install and use Microsoft Teams in your cloud PC, you get an optimized experience. These optimization components enable peer-to-peer audio and video calls from your physical endpoint to the other person's endpoint. This situation creates the same experience as you would have on a physical endpoint running Microsoft Teams.
+The [Windows 10/11 images](device-images.md#gallery-images) in the gallery are pre-configured with required optimization components. When you install and use new Microsoft Teams in your cloud PC, you get an optimized experience. These optimization components enable peer-to-peer audio and video calls from your physical endpoint to the other person's endpoint. This situation creates the same experience as you would have on a physical endpoint running Microsoft Teams.
 
 Some of the key benefits of the optimizations are:
 
 - High-performance peer-to-peer streaming facilitated by WebRTC and rendered directly on the endpoint.
 - Devices are redirected as the same hardware device, resulting in better hardware redirection support.
 - Windows 10/11 and macOS endpoints get all the benefits of the modern media stack, including HW video decoding.
+- Teams optimization VDI 2.0 is currently not supported for macOS.
 
 ### Supported endpoints
 
 Media optimization for Microsoft Teams is only available for the Windows and macOS endpoints. Media optimizations require:
 
-- Windows 365 app for Windows via the Microsoft Store (ideally the latest version).
+- [Windows App for Windows](/azure/virtual-desktop/teams-on-avd) via the Microsoft Store (ideally the latest version).
 - Remote Desktop client for Windows, version 1.2.1026.0 or later (ideally the latest version).
 - Remote Desktop client for macOS, version 10.7.7 or later ([beta client](https://aka.ms/rdmacbeta)). If you upgrade from versions earlier than 10.7.7, you'll also need to go to Microsoft **Remote Desktop Preferences** > **General** and turn on Teams optimizations. If you're using the client for the first time and already have version 10.7.7 or later installed, you won't need to turn that on. In that case, Teams optimizations are turned on by default.
 

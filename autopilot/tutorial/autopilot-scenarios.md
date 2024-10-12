@@ -7,13 +7,13 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
   - essentials-get-started
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -53,9 +53,9 @@ The following table compares the different capabilities for each Autopilot scena
 
 > [!NOTE]
 >
-> The **Windows Autopilot for existing devices** scenario is a method to completely reinstall Windows on a device in preparation to run an Autopilot deployment. However the Windows Autopilot for existing devices scenario itself isn't technically an Autopilot deployment. After the Windows Autopilot for existing devices process completes, it automatically runs an Autopilot scenario.
+> The **Windows Autopilot for existing devices** scenario is a method to completely reinstall Windows on a device in preparation to run a Windows Autopilot deployment. However the Windows Autopilot for existing devices scenario itself isn't technically an Autopilot deployment. After the Windows Autopilot for existing devices process completes, it automatically runs an Autopilot scenario.
 >
-> The above table lists what the Windows Autopilot for existing devices scenario can potentially support, but may not always support depending on the Autopilot scenario that runs once it completes.
+> The above table lists what the Windows Autopilot for existing devices scenario can potentially support. However, a given Windows Autopilot scenario might not always be supported once the **Windows Autopilot for existing devices** scenario completes.
 
 ## Scenario pros and cons
 
@@ -77,7 +77,7 @@ Microsoft Entra join and Microsoft Entra hybrid join aren't Autopilot scenarios,
 - Device identities being used going forward.
 - Possible device identities being used in the future.
 
-Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. Microsoft Entra join provides the best user experience. However, current environment configurations and restrictions may require the continued use of on-premises Active Directory. In scenarios where on-premises Active Directory is still needed, Microsoft Entra hybrid join can be used. However, consider moving new devices to Microsoft Entra join while keeping existing devices on Microsoft Entra hybrid join. Microsoft Entra hybrid join can also be seen as a way to transition from on-premises Active Directory to purely Microsoft Entra ID.
+Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. Microsoft Entra join provides the best user experience. However, current environment configurations and restrictions might require the continued use of on-premises Active Directory. In scenarios where on-premises Active Directory is still needed, Microsoft Entra hybrid join can be used. However, consider moving new devices to Microsoft Entra join while keeping existing devices on Microsoft Entra hybrid join. Microsoft Entra hybrid join can also be seen as a way to transition from on-premises Active Directory to purely Microsoft Entra ID.
 
 Also keep in mind that for the Autopilot deployments that support Microsoft Entra hybrid join, Microsoft Entra hybrid join requires connectivity to a domain controller. If the device undergoing an Autopilot deployment is a remote device and isn't able to connect to a domain controller either on-premises or via a VPN connection, then only Microsoft Entra join is an option.
 
@@ -158,9 +158,10 @@ The following list contains links to Autopilot scenario walkthroughs. The walkth
 1. [Windows Autopilot for existing devices](existing-devices/existing-devices-workflow.md).
 1. [Windows Autopilot Reset](reset/autopilot-reset-overview.md).
 
-## More information
+## Related content
 
-For more information on Autopilot scenarios, see the following article(s):
+For more information on Autopilot scenarios, see the following articles:
 
-- [Windows Autopilot scenarios and capabilities](/mem/autopilot/windows-autopilot-scenarios).
-- [Windows Autopilot deployment process](/mem/autopilot/deployment-process).
+- [Windows Autopilot scenarios and capabilities](../windows-autopilot-scenarios.md).
+- [Windows Autopilot deployment process](../deployment-process.md).
+

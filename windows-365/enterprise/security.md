@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/02/2023
+ms.date: 08/28/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chrimo
+ms.reviewer: lakasa, pratikshah, saudm, jonshi
 ms.suite: ems
 search.appverid: 
 #ms.tgt_pltfrm:
@@ -29,6 +29,8 @@ ms.collection:
 - tier2
 - essentials-security
 ---
+
+<!--ms.reviewer review required before publish-->
 
 # Windows 365 security
 

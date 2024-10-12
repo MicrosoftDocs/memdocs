@@ -2,10 +2,10 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/26/2023
+ms.date: 06/19/2024
 ms.localizationpriority: medium
 ---
 
@@ -16,7 +16,10 @@ pre-provisioning/hybrid-azure-ad-join-technician-flow.md
 
 Headings are driven by article context. -->
 
-Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Microsoft Entra ID side, the next step is to start the Autopilot process. For Windows Autopilot for pre-provisioned deployment, the Autopilot process is split into two different phases that run at two different points in time by two different sets of individuals.  The first phase is known as the **technician flow** and is normally run by the IT department, OEM, or reseller. The second phase is known as the **user flow** and is normally run by the end-user.
+Once all of the configurations for Windows Autopilot for pre-provisioned deployment are completed in Intune and in Microsoft Entra ID, the next step is to start the Windows Autopilot deployment process on the device. For Windows Autopilot for pre-provisioned deployment, the Autopilot process is split into two different phases that run at two different points in time by two different sets of individuals:
+
+- The first phase is known as the **technician flow** and is normally run by the IT department, OEM, or reseller.
+- The second phase is known as the **user flow** and is normally run by the end-user.
 
 To start the technician flow, select a device that is part of the device group created in the previous **Create a device group** step, and then follow these steps:
 
@@ -39,9 +42,9 @@ To start the technician flow, select a device that is part of the device group c
 
    - A QR code containing a unique identifier for the device. This code can be used to look up the device in Intune to perform actions such as verifying configurations, make any necessary changes, etc.
 
-7. Validate that the information in the **Windows Autopilot Configuration** screen is correct. Once all information has been confirmed as correct, select **Provision** (Windows 10) or **Next** (Windows 11) to begin the provisioning process.
+7. Validate that the information in the **Windows Autopilot Configuration** screen is correct. Once all information is confirmed as correct, select **Provision** (Windows 10) or **Next** (Windows 11) to begin the provisioning process.
 
-8. The device may reboot, followed by the Enrollment Status Page (ESP) appearing. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
+8. The device might reboot, followed by the Enrollment Status Page (ESP) appearing. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
 
    - **Device preparation** (Device ESP)
    - **Device setup** (Device ESP)
@@ -67,6 +70,6 @@ To start the technician flow, select a device that is part of the device group c
 
       - In Windows 10, select **View diagnostics**.
 
-      - In Windows 11, press the <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> keys and then select **Export Logs**.
+      - In Windows 11, enter the keystroke <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd> and then select **Export Logs**.
 
       If the issue can be easily fixed, for example resolving network connectivity, then select the **Retry** button to retry provisioning the device. Otherwise if the issue can't be immediately fixed or can't be fixed without a reset, then select the **Reset** button so that the process starts over again.

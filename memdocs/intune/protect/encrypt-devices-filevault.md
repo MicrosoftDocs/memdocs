@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/19/2024
+ms.date: 06/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - highpri
+- sub-secure-endpoints
 
 ---
 
@@ -52,28 +53,24 @@ To manage BitLocker for Windows 10/11, see [Manage BitLocker policy](../protect/
 
 After you create a policy to encrypt devices with FileVault, the policy is applied to devices in two stages. First, the device is prepared to enable Intune to retrieve and back up the recovery key. This action is referred to as escrow. After the key is escrowed, the disk encryption can start.
 
-In addition to using Intune policy to encrypt a device with FileVault, you can deploy policy to a managed device to enable Intune to [assume management of FileVault when the device is encrypted by the user](#assume-management-of-filevault-on-previously-encrypted-devices). This scenario requires the device to receive FileVault policy from Intune, followed by the user uploading their personal recovery key to Intune.
+In addition to using Intune policy to encrypt a device with FileVault, you can deploy policy to a managed device to enable Intune to [assume management of FileVault when the device the user has encrypted it](#assume-management-of-filevault-on-previously-encrypted-devices). This scenario requires the device to receive FileVault policy from Intune, followed by the user uploading their personal recovery key to Intune.
 
 User-approved device enrollment is required for FileVault to work on a device. The user must manually approve of the management profile from system preferences for enrollment to be considered user-approved.
 
-## Permissions to manage FileVault
+## Role-based access controls to manage FileVault
 
-To manage FileVault in Intune, your account must have the applicable Intune [role-based access control](../fundamentals/role-based-access-control.md) (RBAC) permissions.
+To manage FileVault in Intune, an account must be assigned an Intune [role-based access control](../fundamentals/role-based-access-control.md) (RBAC) role that includes the **Remote tasks** permission with the **Rotate FileVault key** right set to **Yes**:
 
-Following are the FileVault permissions, which are part of the **Remote tasks** category, and the built-in RBAC roles that grant the permission:
+You can add this permission and right to your own [custom RBAC roles](../fundamentals/create-custom-role.md) or use one of the following [built-in RBAC roles](../fundamentals/role-based-access-control-reference.md) that include this right:
 
-- **Get FileVault key**:
-  - Help Desk Operator
-  - Endpoint security manager
-
-- **Rotate FileVault key**
-  - Help Desk Operator
+- Help Desk Operator
+- Endpoint Security Administrator
 
 ## Create device configuration policy for FileVault
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 
 3. On the **Create a profile** page, set the following options, and then select **Create**:
    - **Platform**: macOS
@@ -128,7 +125,7 @@ Select **Next**.
 4. On the **Configuration settings** page:
    1. Set *Enable FileVault* to **Yes**.
    2. For *Recovery key type*, only **Personal Recovery Key** is supported.
-   3. Configure additional settings to meet your requirements.
+   3. Configure other settings to meet your requirements.
 
    Consider adding a message to help guide users on [how to retrieve the recovery key](#retrieve-a-personal-recovery-key) for their device. This information can be useful for your users when you use the setting for Personal recovery key rotation, which can automatically generate a new recovery key for a device periodically.
 
@@ -148,7 +145,7 @@ Select **Next**.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **macOS** > **Configuration profiles** > **Create** > **New policy**.
+2. Select **Devices** > **By platform** > **macOS** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 
 3. On the **Create a profile** page, select **Settings catalog** for the **Profile type**.
 
@@ -171,7 +168,7 @@ Select **Next**.
    >
    > When configuring encryption for devices that run macOS 14 or later, you can use the macOS Setup Assistant to enforce FileVault encryption before a user arrives at the home screen. See [Enable FileVault through the Setup Assistant](#enable-filevault-through-the-setup-assistant) later in this article.
 
-6. Configure additional [FileVault settings](https://support.apple.com/en-md/guide/deployment/dep32bf53500/web) *(opens Apple’s website)* to meet your business needs, and then select **Next**.
+6. Configure extra [FileVault settings](https://support.apple.com/en-md/guide/deployment/dep32bf53500/web) *(opens Apple’s website)* to meet your business needs, and then select **Next**.
 
 7. If applicable, on the **Scope (Tags)** page, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile. Select **Next** to continue.
 
@@ -181,7 +178,7 @@ Select **Next**.
 
 ### Enable FileVault through the Setup Assistant
 
-For devices that run macOS 14 and later, your settings catalog policy can also enforce FileVault encryption through the macOS Setup Assistant, before a user arrives at the home screen. This goal requires additional configurations:
+For devices that run macOS 14 and later, your settings catalog policy can also enforce FileVault encryption through the macOS Setup Assistant, before a user arrives at the home screen. This goal requires extra configurations:
 
 - The **Await final configuration** feature for the device must be set to **Yes**. This configuration prevents end users from accessing restricted content or changing settings until applicable Intune device configuration policies apply. For information on this configuration, see [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../intune/enrollment/device-enrollment-program-enroll-macos.md).
 

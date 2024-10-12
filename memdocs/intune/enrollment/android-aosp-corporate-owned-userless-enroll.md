@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 09/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -46,9 +46,10 @@ Devices enrolled into Intune with this management mode are automatically set up 
 Devices are configured in [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. Devices enable single sign-on (SSO) between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). By installing Company Portal, users can also leverage SSO when signing out of [apps that are integrated with the Intune SDK](../apps/apps-supported-intune-apps.md), even apps that don't yet participate with shared device mode. 
 
 
+## Prerequisites  
 
-
-## Prerequisites
+>[!NOTE]
+> Beginning October 1st, AOSP devices must have the Microsoft Intune app, version 24.7.0 or later to sync with the Microsoft Intune service.  
 
 To enroll and manage AOSP devices, you must have:
 
@@ -59,7 +60,7 @@ You must also:
 
 * [Set Microsoft Intune as the mobile device management (MDM) authority in your tenant](../fundamentals/mdm-authority-set.md). You only need to do this once, when you first set up Intune for mobile device management.  
 
-* Assign valid licenses to all RealWear device users. For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md).  
+* Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md) and [Managing specialty devices with Microsoft Intune](../fundamentals/specialty-devices-with-intune.md).  
 
 
 ## Create an enrollment profile  
@@ -116,6 +117,7 @@ You can also export the enrollment profile JSON file. To create a JSON file:
 
 > [!IMPORTANT]
 >- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
+>- Consider using a staging network with limited permissions for provisioning devices and completing the enrollment process. For example, you could use an internet-connected network with limited permissions and no corporate access to do the initial set up.
 >- Since you're managing the device via Intune, you should skip the RealWear first time setup. The Intune QR codes is the only thing you need to set up the device.   
 
 ### Replace token  
@@ -174,7 +176,7 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 2. When the device prompts you to, scan the token's QR code.     
 
 > [!TIP]
-> To access the token in Intune, select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**. Select your enrollment profile, and then select **Tokens**. 
+> To access the token in Intune, select **Devices** > **By platform** > **Android** > **Device onboarding** > **Enrollment** > **Corporate-owned, userless devices**. Select your enrollment profile, and then select **Tokens**. 
 
 3. Follow the on-screen prompts to finish enrolling and registering the device. During setup, Intune automatically installs and opens the apps that are needed for enrollment. Those apps include:  
 

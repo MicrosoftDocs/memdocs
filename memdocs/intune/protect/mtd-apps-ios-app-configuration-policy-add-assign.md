@@ -7,7 +7,7 @@ description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authe
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 07/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-mtd-apps
 ---
 
 # Add and assign Mobile Threat Defense (MTD) apps with Intune
@@ -175,7 +176,7 @@ Use the same Microsoft Entra account previously configured in the [Symantec Endp
 
 ### Sophos Mobile app configuration policy
 
-Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article. For more information, see [Sophos Intercept X for Mobile iOS - Available managed settings](https://support.sophos.com/support/s/article/KB-000038801) in the Sophos knowledge base.
+Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article. For more information, see [Sophos Intercept X for Mobile iOS - Available managed settings](https://support.sophos.com/support/s/article/KBA-000006738) in the Sophos knowledge base.
 
 ### Trellix Mobile Security app configuration policy
 
@@ -278,10 +279,10 @@ Choose the section that corresponds to your MTD provider:
 ### Assigning Jamf
 
 - **Android**:
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Jamf Mobile app store URL](https://play.google.com/store/apps/details?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 8.0**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Jamf Mobile app store URL](https://play.google.com/store/apps/details/?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 11**.
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Jamf Mobile app store URL](https://apps.apple.com/us/app/jamf-trust/id1608041266) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Jamf Mobile app store URL](https://apps.apple.com/us/app/jamf-trust/id1608041266?mt=8) for the **Appstore URL**.
 
 ### Assigning Lookout for Work
 
@@ -292,8 +293,7 @@ Choose the section that corresponds to your MTD provider:
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Lookout for Work iOS app store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) for the **Appstore URL**.
 
 - **Lookout for Work app outside the Apple store**:
-  - You must re-sign the Lookout for Work iOS app. Lookout distributes its Lookout for Work iOS app outside of the iOS App Store. Before distributing the app, you must re-sign the app with your iOS Enterprise Developer Certificate.  
-  - For detailed instructions to re-sign the Lookout for Work iOS apps, see [Lookout for Work iOS app re-signing process](https://personal.support.lookout.com/hc/articles/114094038714) on the Lookout website.
+  - You must re-sign the Lookout for Work iOS app. Lookout distributes its Lookout for Work iOS app outside of the iOS App Store. Before distributing the app, you must re-sign the app with your iOS Enterprise Developer Certificate. Contact Lookout for Work for detailed instructions on this process. 
 
   - **Enable Microsoft Entra authentication for Lookout for Work iOS app users.**
 

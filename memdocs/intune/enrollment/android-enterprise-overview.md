@@ -145,6 +145,6 @@ Wi-Fi profiles are removed when the device retires from Intune and the work prof
 
 ## Next steps  
 
-- [Enrollment deployment guide for Android](/mem/intune/fundamentals/deployment-guide-enrollment-android)  
+- [Enrollment deployment guide for Android](../fundamentals/deployment-guide-enrollment-android.md)  
 
 - [Assign apps to Android Enterprise work profile devices with Intune](../apps/apps-add-android-for-work.md)  

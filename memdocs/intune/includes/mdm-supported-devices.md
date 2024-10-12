@@ -4,22 +4,29 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 04/24/2024
+ms.date: 09/06/2024
 ms.localizationpriority: high
 ---
 
 ### Apple
 
-- Apple iOS 15.0 and later
-- Apple iPadOS 15.0 and later
-- macOS 12.0 and later
+- **User assigned devices** - devices enrolled with user affinity using Automated Device Enrollment or personally enrolled devices.
+  - iOS/iPadOS 15.x and later
+  - macOS 13.0 and later
+- **User-less devices** - devices enrolled without user affinity using Automated Device Enrollment or Apple Configurator.
+  - Supported:
+    - iOS/iPadOS 16.x and later
+    - macOS 13.0 and later
+  - Allowed to enroll:
+    - iOS/iPadOS 13.x and later
+    - macOS 10.14 and later
 
 > [!NOTE]
-> Intune requires iOS 15.x or later for device enrollment scenarios and app configuration delivered through Managed devices app configuration policies.
+> **Supported** versions include devices running the three most recent operating system versions. These devices can enroll and take advantage of all Intune functionality that is applicable, and all new eligible features will work on these devices.
 >
-> For Intune app protection policies and app configuration delivered through Managed apps App configuration policies, Intune requires iOS 15.x or later.  
-
-In the context of userless iOS/iPadOS devices, there's a difference between *supported* OS versions and *allowed* OS versions. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://techcommunity.microsoft.com/t5/intune-customer-success/support-statement-for-supported-versus-allowed-ios-ipados/ba-p/3484657).  
+> **Allowed** versions includes devices running a non-supported version (within three versions of the supported versions). These devices can enroll and take advantage of Intune's eligible features but there is no guarantee that they will work as expected.
+>
+> Intune requires iOS 15.x or later for app protection policies and app configuration.
 
 ### Android
 

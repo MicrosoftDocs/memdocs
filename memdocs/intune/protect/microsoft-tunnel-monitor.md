@@ -23,6 +23,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-infrastructure
 ---
 
 # Monitor Microsoft Tunnel
@@ -123,7 +124,7 @@ Default values for server health metrics:
 
 - **Server logs** – Determines if logs have been uploaded to the server within the last 60 minutes.
   - *Healthy* - Server logs were uploaded within the last 60 minutes.
-  - *Unhealthy* - Server logs were uploaded within the last 60 minutes.
+  - *Unhealthy* - Server logs have not been uploaded in the last 60 minutes.
 
 ## Manage health status thresholds
 

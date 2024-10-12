@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2023
+ms.date: 09/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,6 +25,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - endpoint-protection
+- sub-secure-endpoints
 ms.reviewer: mattcall
 ---
 
@@ -46,9 +47,12 @@ Before you create a profile, review the following articles that detail the Endpo
 
 ## Create a device profile containing Endpoint protection settings
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> [!IMPORTANT]
+> The macOS endpoint protection template has been deprecated. Existing policies remain unchanged, but you can no longer create new policies using this template. We recommend using the settings catalog to create new configuration policies for FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. For more information, see [macOS settings catalog](../configuration/settings-catalog.md).
 
-2. Select **Devices** > **Configuration** > **Create**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
 
@@ -103,7 +107,7 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
 

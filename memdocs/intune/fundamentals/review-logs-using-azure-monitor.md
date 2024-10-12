@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/30/2023
+ms.date: 09/03/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,7 +58,7 @@ To use this feature, you need:
 
 - An Azure subscription that you can sign in to. If you don't have an Azure subscription, you can [sign up for a free trial](https://azure.microsoft.com/free/).
 - A Microsoft Intune environment (tenant)
-- A user who's a **Global Administrator** or **Intune Service Administrator** for the Intune tenant.
+- A user who has the **Intune Service Administrator** Microsoft Entra role for the Intune tenant. For information on this role, go to [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 - To configure the log collection from Azure Storage, you need the **Log Analytics Contributor** role in the Log Analytics Workspace. For more information on the different roles, and what they can do, go to [Manage access to log data and workspaces in Azure Monitor](/azure/azure-monitor/logs/manage-access).
 
 Depending on where you want to route the audit log data, you need one of the following services:
@@ -132,7 +132,7 @@ In the audit log, you can find the following properties and their specific value
 |---|---|---|
 | ActivityType  | The action that the admin takes. | Create, Delete, Patch, Action, SetReference, RemoveReference, Get, Search |
 | ActorType  | Person taking the action. | Unknown = 0, ItPro, IW, System, Partner, Application, GuestUser |
-| Category  | The pane where the action took place. | Other = 0, Enrollment = 1, Compliance = 2, DeviceConfiguration = 3, Device = 4, Application = 5, EBookManagement = 6, ConditionalAccess= 7, OnPremiseAccess= 8, Role = 9, SoftwareUpdates =10, DeviceSetupConfiguration = 11, DeviceIntent = 12, DeviceIntentSetting = 13, DeviceSecurity = 14, GroupPolicyAnalytics = 15 |
+| Category  | The pane where the action took place. | Other = 0, Enrollment = 1, Compliance = 2, DeviceConfiguration = 3, Device = 4, Application = 5, EBookManagement = 6, ConditionalAccess= 7, OnPremiseAccess= 8, Role = 9, SoftwareUpdates =10, DeviceSetupConfiguration = 11, DeviceIntent = 12, DeviceIntentSetting = 13, DeviceSecurity = 14, GroupPolicyAnalytics = 15, AssignmentFilter = 16, RemoteHelp = 17, OrganizationalMessage = 18, EndpointPrivilegeMgmt = 19, DeviceInventory = 20|
 | ActivityResult | Whether the action is successful or not | Success = 1 |
 
 ## Cost considerations
@@ -210,7 +210,7 @@ The Intune **Audit logs** and **Operational logs** are available for routing usi
 After the action:
 
 - The Intune **Audit Logs** and **Operational Logs** are sent immediately from Intune to Azure Monitor services.
-- The Intune **Device Compliance Organizational Logs** and **IntuneDevices** report data is sent from Intune to Azure Monitor services once every 24 hours.
+- The Intune **Device Compliance Organizational Logs** and **IntuneDevices** report data is sent from Intune to Azure Monitor services once every 24 hours. So, it can take up to 24 hours to get the logs in the Azure Monitor services.
 
 Once the data is sent from Intune, then it typically shows in the Azure Monitor service within 30 minutes.
 

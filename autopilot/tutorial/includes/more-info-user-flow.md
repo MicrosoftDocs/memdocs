@@ -2,10 +2,10 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 04/24/2023
+ms.date: 06/19/2024
 ms.localizationpriority: medium
 ---
 
@@ -16,6 +16,6 @@ pre-provisioning/hybrid-azure-ad-join-user-flow.md
 
 Headings are driven by article context. -->
 
-For more information on the user flow of a Windows Autopilot for pre-provisioned deployment, see the following article(s):
+For more information on the user flow of a Windows Autopilot for pre-provisioned deployment, see the following articles:
 
-- [User flow](/mem/autopilot/pre-provision#user-flow)
+- [User flow](/autopilot/pre-provision#user-flow).

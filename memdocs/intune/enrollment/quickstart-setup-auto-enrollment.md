@@ -11,7 +11,7 @@ ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 5/10/2024
+ms.date: 10/03/2024
 
 # optional metadata
 
@@ -50,15 +50,13 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
   - [Create a group](../fundamentals/quickstart-create-group.md).
   - [Have Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or the [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845). You can activate a free Premium trial subscription during setup.  
 
-## Sign in to the Microsoft Intune admin center
-
-Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or Intune service administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.  
+To configure automatic MDM enrollment, you must be a [Microsoft Entra Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator). If you signed up for a Microsoft Intune Trial subscription at the beginning of this quickstart, your account has Global Administrator permissions and can complete all procedures in this article.  
 
 ## Set up automatic enrollment  
 
 For this example, you'll configure Microsoft Intune mobile device management (MDM) enrollment settings so that corporate-owned and personal devices automatically enroll in Microsoft Intune. *MDM user scope* enables automatic enrollment for Microsoft Intune device management. 
 
-1. In the Microsoft Intune admin center, go to **Devices** > **Enrollment**.     
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.     
 2. Go to the **Windows** tab. Then select **Automatic Enrollment**.  
 
 > [!IMPORTANT]

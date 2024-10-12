@@ -43,13 +43,30 @@ The **Collect diagnostics** remote action lets you collect and download managed 
 
 The Microsoft 365 remote application diagnostics allows Intune admins to request Intune app protection logs and Microsoft 365 application logs (where applicable) directly from the Intune console. Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application. 
 
+### Collect diagnostics from a M365 Application
+
+To use the *Collect diagnostics* action:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+2. Navigate to **Troubleshooting + support** > **Troubleshoot** > *select a user*.
+3. On the **Summary** page, select **App Protection** >  **Checked-in**.
+4. Find the application to collect diagnostics on and use the **"..."** option to select **Collect diagnostics**.
+5. When prompted, select **Yes**.
+
+To check status of the *Collect diagnostics* action:
+
+1. On the "App Protection" summary, select **refresh**.
+2. Find the application you want the status for and select the hyperlink in the Diagnostic Status column.
+
+To download diagnostics:
+
+1. Navigate to **Troubleshooting + support** > **Troubleshoot** > *select a user*.
+2. On the **Summary** page, select the **Diagnostics** page and download the diagnostics.
+
 > [!IMPORTANT]
-> For Android devices, if the Company Portal isn't signed in by the user, logs will not be available for download in the Intune portal. 
+> For Android devices, if the Company Portal isn't signed in by the user, logs will not be available for download in the Intune portal. Diagnostic uploads exceeding 50 diagnostics or 4MB in diagnostic data cannot be downloaded directly from the Intune portal. For access to larger diagnostic uploads, reach out to [Microsoft Intune support](/mem/get-support). 
 
 Diagnostics take approximately 30 minutes to be delivered from an end user's device. The user may be required to close and reopen the app if prompted for a pin when opening the app for the diagnostics request to prompt.
-
-> [!NOTE]
-> Currently, the Intune app protection logs for iOS will be unavailable for you to download. However, Intune support teams will have access to these the logs. 
 
 ## Collect diagnostics from a Windows device
 
@@ -76,12 +93,12 @@ The *Collect diagnostics* remote action is supported for:
 - Devices that are online and able to communicate with the service during diagnostics
 
 > [!NOTE]
-> For diagnostics to be able to upload successfully from the client, make sure that the following URLs are not blocked on the network:
-> `lgmsapeweu.blob.core.windows.net`
-> `lgmsapewus2.blob.core.windows.net`
-> `lgmsapesea.blob.core.windows.net`
-> `lgmsapeaus.blob.core.windows.net`
-> `lgmsapeind.blob.core.windows.net`
+> For diagnostics to be able to upload successfully from the client, make sure that the URL for your region is not blocked on the network:
+> - `Europe - lgmsapeweu.blob.core.windows.net`
+> - `Americas - lgmsapewus2.blob.core.windows.net`
+> - `East Asia - lgmsapesea.blob.core.windows.net`
+> - `Australia - lgmsapeaus.blob.core.windows.net`
+> - `India - lgmsapeind.blob.core.windows.net`
 
 
 ### Collect diagnostics
@@ -89,7 +106,7 @@ The *Collect diagnostics* remote action is supported for:
 To use the *Collect diagnostics* action:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Windows** > select a supported device.
+2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
 3. On the device’s **Overview** page, select **…** >  **Collect diagnostics** > **Yes**. A pending notification appears on the device’s **Overview** page.
 4. To see the status of the action, select **Device diagnostics monitor**.
 5. After the  action completes, select **Download** in the row for the action > **Yes**.
@@ -103,7 +120,7 @@ To use the *Collect diagnostics* action:
 To view the diagnostics collected after an Autopilot failure:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Windows**.
+2. Navigate to **Devices** > **By platform** > **Windows**.
 3. Select a device.
 4. Select **Diagnostics** > **Download**.
 5. The data zip file is added to your download tray and you can save it to your computer.

@@ -23,6 +23,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- sub-infrastructure
 ---
 
 # Upgrade Microsoft Tunnel for Microsoft Intune
@@ -127,6 +128,46 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 > [!IMPORTANT]
 >
 > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
+
+
+### September 12, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:17158c73750ff2c7157e979c2f4ff4e175318730c16aa8d0ee6526a969c37c59
+
+- **serverImageDigest**: sha256:6484d311d1bd6cbe55d71306595715bafa6a20a000be6fd6f9e530716cef6c16
+
+Changes in this release:
+- Add diagnostic tools for host troubleshooting
+- Upgrade Azure Linux image to 2.0.20240829
+
+  
+### August 12, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:4d16b1f458c69c3423626906b0b577cb42c8d22f4240205299355c6217e08a6b
+
+- **serverImageDigest**: sha256:66559e142d489491ca8f090b50f4a444a3394f850a5ec09fb9f3e6f986d93c46
+
+Changes in this release:
+- Support customizing container registry during installation
+- Support customizing container creation options during installation
+- Security updates on the base image
+
+  
+### June 20, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:2c700282bbb525ca42c4da0827a62bee6e8079b36572cf777db72810dac3a788
+
+- **serverImageDigest**: sha256:5ba3c960be6b9da4569a019fcd57509c25a89106fc689fbf4fe38f0bdb98fbdd
+
+Changes in this release:
+- AL base image - Use Azure Linux as the base image for the Tunnel containers
+- Improvement on cert revocation check
 
 ### May 16, 2024
 
