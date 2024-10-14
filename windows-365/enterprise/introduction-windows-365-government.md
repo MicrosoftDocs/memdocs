@@ -68,7 +68,8 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 - Cloud PC connection quality report
 - Cross region disaster recovery
 - [Support for Omnissa Horizon clients and the Blast protocol](set-up-omnissa-horizon.md)
-- [Microsoft Purview Customer Key](purview-customer-key.md) 
+- [Microsoft Purview Customer Key](purview-customer-key.md)
+- [HP Anyware for Windows 365](hp-anyware-set-up.md)
 
 ## Next steps
 
