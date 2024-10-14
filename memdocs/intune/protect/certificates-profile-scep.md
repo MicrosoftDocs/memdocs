@@ -59,11 +59,11 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 - iOS  
 - macOS  
 
-The Kerberos Key Distribution (KDC) requires user or device objects to be strongly mapped to Active Directory for certificate-based authentication. This means that the certificate's subject alternative name (SAN) must contain a security identifier (SID) extension that maps to the user or device SID in Active Directory. The mapping protects against certificate spoofing and ensures that certificate-based authentication against the KDC continues working. When a user or device authenticates with a certificate in Active Directory, the KDC checks for the SID to verify that the certificate is strongly mapped and issued to the correct user or device. 
+The Key Distribution (KDC) requires user or device objects to be strongly mapped to Active Directory for certificate-based authentication. This means that the certificate's subject alternative name (SAN) must contain a security identifier (SID) extension that maps to the user or device SID in Active Directory. When a user or device authenticates with a certificate in Active Directory, the KDC checks for the SID to verify that the certificate is mapped and issued to the correct user or device. The mapping requirement protects against certificate spoofing and ensures that certificate-based authentication against the KDC continues working.  
 
 Strong mapping is required for all certificates deployed by Microsoft Intune and used for certificate-based authentication against KDC. The strong mapping solution is applicable to user certificates across all platforms. For device certificates, it only applies to Microsoft Entra hybrid-joined Windows devices. If certificates in these scenarios don't meet the strong mapping requirements by the full enforcement mode date, authentication will be denied.  
 
-To implement the strong mapping solution for SCEP certificates delivered via Intune, you must add the `OnpremisesSecurityIdentifier` variable to the SAN in the SCEP proile. 
+To implement the strong mapping solution for SCEP certificates delivered via Intune, you must add the `OnpremisesSecurityIdentifier` variable to the SAN in the SCEP profile. 
 
   > [!div class="mx-imgBorder"]
    > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/certificates-profile-scep/scep-configuration-settings.png)   
@@ -73,13 +73,13 @@ This variable must be part of the URI attribute. You can create a new SCEP profi
    > [!div class="mx-imgBorder"]
    > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/certificates-profile-scep/scep-san-add.png)  
 
-After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and an object ID. Example formatting: *tag.com,2022-09-14:sid:* At this point, the certificate profile meets the strong mapping requirements. 
+After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and an object ID. Example formatting: `tag.com,2022-09-14:sid:` At this point, the certificate profile meets the strong mapping requirements. 
 
-To meet the strong mapping requirements for Intune, complete these steps:  
+To ensure your profile meets strong mapping requirements, complete these steps:  
 
-- Sync the user or device SID from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/synchronization).  
+1. Sync the user or device SID from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/synchronization).  
 
-- Create a SCEP certificate profile in the Microsoft Intune admin center, or modify an existing profile with the new SAN attribute and value.    
+2. Create a SCEP certificate profile in the Microsoft Intune admin center, or modify an existing profile with the new SAN attribute and value.    
 
 For more information about the KDC's requirements and enforcement date for strong mapping, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
 
@@ -106,7 +106,7 @@ For more information about the KDC's requirements and enforcement date for stron
      1. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
      1. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owners**. You can manage revocation through an external process or directly with the certification authority.
      1. SCEP certificate profiles are supported for Wi-Fi network configuration.  VPN configuration profile support isn't available. A future update might include support for VPN configuration profiles.  
-     1. The following variables aren't available for use on Android (AOSP) SCEP certificate profiles.  Support for these variables will come in a future update.
+     1. The following variables aren't available for use on Android (AOSP) SCEP certificate profiles. Support for these variables will come in a future update.
         - onPremisesSamAccountName
         - OnPrem_Distinguished_Name
         - Department
@@ -236,7 +236,7 @@ For more information about the KDC's requirements and enforcement date for stron
        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
 
    - **Subject alternative name**:  
-     Configurethe subject alternative name (SAN) in the certificate request. You can enter more than one subject alternative name. The text value can contain variables and static text for the attribute.
+     Configure the subject alternative name (SAN) in the certificate request. You can enter more than one subject alternative name. The text value can contain variables and static text for the attribute.  
 
      > [!NOTE]
      > The following Android Enterprise profiles don’t support use of the {{UserName}} variable for the SAN:  
@@ -270,7 +270,7 @@ For more information about the KDC's requirements and enforcement date for stron
 
         For example, user certificate types can include the user principal name (UPN) in the subject alternative name. If a client certificate is used to authenticate to a Network Policy Server, set the subject alternative name to the UPN.  
 
-        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a SID variable that's compliant with the KDC's strong mapping requirements for certificate-based authentication. You should add the SID variable to user certificates that  authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in user certificates for macOS, iOS, and Windows 10/11, and only works with the URI attribute.         
+        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a SID variable that's compliant with the Key Distribution Center's (KDC) strong mapping requirements for certificate-based authentication. You should add the SID variable to user certificates that authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in user certificates for macOS, iOS, and Windows 10/11, and only works with the URI attribute.          
 
      - **Device certificate type**
 
@@ -280,7 +280,7 @@ For more information about the KDC's requirements and enforcement date for stron
 
         By using a combination of one or many of these variables and static text strings, you can create a custom subject alternative name format, such as **{{UserName}}-Home**.  
         
-        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the KDC's strong mapping requirements for certificate-based authentication. You should add the SID variable to device certificates that  authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in device certificates for Microsoft Entra hybrid joined devices, and only works with the URI attribute.    
+        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the Key Distribution Center's (KDC) strong mapping requirements for certificate-based authentication. You should add the SID variable to device certificates that authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in device certificates for Microsoft Entra hybrid joined devices, and only works with the URI attribute.    
 
 
         > [!IMPORTANT]
@@ -420,7 +420,7 @@ When your subject name includes one of the special characters, use one of the fo
 - Encapsulate the CN value that contains the special character with quotes.  
 - Remove the special character from the CN value.
 
-**For example**, you have a Subject Name that appears as *Test user (TestCompany, LLC)*.  A CSR that includes a CN that has the comma between *TestCompany* and *LLC* presents a problem.  The problem can be avoided by placing quotes around the entire CN, or by removing of the comma from between *TestCompany* and *LLC*:
+**For example**, you have a Subject Name that appears as *Test user (TestCompany, LLC)*. A CSR that includes a CN that has the comma between *TestCompany* and *LLC* presents a problem. The problem can be avoided by placing quotes around the entire CN, or by removing of the comma from between *TestCompany* and *LLC*:  
 
 - **Add quotes**: *CN="Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **Remove the comma**: *CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
