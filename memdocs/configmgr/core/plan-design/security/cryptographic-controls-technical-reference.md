@@ -2,12 +2,12 @@
 title: Cryptographic controls technical reference
 titleSuffix: Configuration Manager
 description: Learn how signing and encryption can help protect attacks from reading data in Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 10/15/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
+author: Baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -28,14 +28,13 @@ Starting in version 2107, the primary encryption algorithm that Configuration Ma
 
 - When the client downloads secret policies, the management point always encrypts these policies. For example, an OS deployment task sequence that includes passwords.
 
-For clients on version 2103 and earlier, the primary encryption algorithm is **3DES**.
 
 > [!NOTE]
-> If you configure HTTPS communication, these messages are encrypted twice. The message is encrypted with AES, then the HTTPS transport is encrypted with AES.
+> If you configure HTTPS communication, these messages are encrypted twice. The message is encrypted with AES, then the HTTPS transport is encrypted with AES-256. 
 
 When you use client communication over HTTPS, configure your public key infrastructure (PKI) to use certificates with the maximum hashing algorithms and key lengths. When using CNG v3 certificates, Configuration Manager clients only support certificates that use the RSA cryptographic algorithm. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md) and [CNG v3 certificates overview](../network/cng-certificates-overview.md).
 
-For transport security, anything that uses TLS supports AES. This support includes when you configure the site for [enhanced HTTP](../hierarchy/enhanced-http.md) or HTTPS. For on-premises site systems, you can control the TLS cipher suites. For cloud-based roles like the cloud management gateway (CMG), if you enable TLS 1.2, Configuration Manager configures the cipher suites.
+For transport security, anything that uses TLS supports AES-256. This support includes when you configure the site for [enhanced HTTP (E-HTTP)](../hierarchy/enhanced-http.md) or HTTPS. For on-premises site systems, you can control the TLS cipher suites. For cloud-based roles like the cloud management gateway (CMG), if you enable TLS 1.2, Configuration Manager configures the cipher suites.
 
 For most cryptographic operations with Windows-based operating systems, Configuration Manager uses these algorithms from the Windows CryptoAPI library rsaenh.dll.
 
@@ -49,7 +48,7 @@ Information in Configuration Manager can be signed and encrypted. It supports th
 
 The site signs client policy assignments with its self-signed certificate. This behavior helps prevent the security risk of a compromised management point from sending tampered policies. If you use [internet-based client management](../../clients/manage/plan-internet-based-client-management.md), this behavior is important because it requires an internet-facing management point.
 
-When policy contains sensitive data, starting in version 2107, the management point encrypts it with AES-256. In version 2103 and earlier, it uses 3DES. Policy that contains sensitive data is only sent to authorized clients. The site doesn't encrypt policy that doesn't have sensitive data.
+When policy contains sensitive data, starting in version 2107, the management point encrypts it with AES-256. Policy that contains sensitive data is only sent to authorized clients. The site doesn't encrypt policy that doesn't have sensitive data.
 
 When a client stores policy, it encrypts the policy using the Windows data protection application programming interface (DPAPI).
 
@@ -69,21 +68,19 @@ Not all devices can support content hashing. The exceptions include:
 
 - Windows clients when they stream App-V content.
 
-- Windows Mobile clients, though these clients verify the signature of an application that's signed by a trusted source.
-
 ### Inventory signing and encryption
 
-When a client sends hardware or software inventory to a management point, it always signs the inventory. It doesn't matter if the client communicates with the management point over HTTP or HTTPS. If they use HTTP, you can also choose to encrypt this data, which is recommended.
+When a client sends hardware or software inventory to a management point, it always signs the inventory. It doesn't matter if the client communicates with the management point over E-HTTP or HTTPS. If they use E-HTTP, you can also choose to encrypt this data, which is recommended.
 
 ### State migration encryption
 
-When a task sequence captures data from a client for OS deployment, it always encrypts the data. In version 2103 and later, the task sequence runs the User State Migration Tool (USMT) with the **AES-256** encryption algorithm. In version 2010 and earlier, it uses **3DES**.<!--9171505-->
+When a task sequence captures data from a client for OS deployment, it always encrypts the data. In version 2103 and later, the task sequence runs the User State Migration Tool (USMT) with the **AES-256** encryption algorithm.<!--9171505-->
 
 ### Encryption for multicast packages
 
-For every OS deployment package, you can enable encryption when you use multicast. This encryption uses the **AES** algorithm. If you enable encryption, no other certificate configuration is required. The multicast-enabled distribution point automatically generates symmetric keys to encrypt the package. Each package has a different encryption key. The key is stored on the multicast-enabled distribution point by using standard Windows APIs.
+For every OS deployment package, you can enable encryption when you use multicast. This encryption uses the **AES-256** algorithm. If you enable encryption, no other certificate configuration is required. The multicast-enabled distribution point automatically generates symmetric keys to encrypt the package. Each package has a different encryption key. The key is stored on the multicast-enabled distribution point by using standard Windows APIs.
 
-When the client connects to the multicast session, the key exchange occurs over an encrypted channel. If the client uses HTTPS, it uses the PKI-issued client authentication certificate. If the client uses HTTP, it uses the self-signed certificate. The client only stores the encryption key in memory during the multicast session.
+When the client connects to the multicast session, the key exchange occurs over an encrypted channel. If the client uses HTTPS, it uses the PKI-issued client authentication certificate. If the client uses E-HTTP, it uses the self-signed certificate. The client only stores the encryption key in memory during the multicast session.
 
 ### Encryption for OS deployment media
 
@@ -105,7 +102,7 @@ When you import configuration data, Configuration Manager verifies the file's di
 
 ### Encryption and hashing for client notification
 
-If you use client notification, all communication uses TLS and the highest algorithms that the server and client can negotiate. For example, all supported Windows OS versions can use at least **AES-128** encryption. The same negotiation occurs for hashing the packets that are transferred during client notification, which uses **SHA-2**.
+If you use client notification, all communication uses TLS and the highest algorithms that the server and client can negotiate. The same negotiation occurs for hashing the packets that are transferred during client notification, which uses **SHA-2**.
 
 ## Certificates
 
@@ -120,21 +117,15 @@ Configuration Manager requires PKI certificates for the following scenarios:
 
 - When you manage Configuration Manager clients on the internet
 
-- When you manage Configuration Manager clients on mobile devices
-
-- When you manage macOS computers
-
 - When you use a cloud management gateway (CMG)
 
 For most other communication that requires certificates for authentication, signing, or encryption, Configuration Manager automatically uses PKI certificates if available. If they aren't available, Configuration Manager generates self-signed certificates.
 
-Configuration Manager doesn't use PKI certificates when it manages mobile devices by using the Exchange Server connector.
 
 ### Mobile device management and PKI certificates
 
-If the mobile device isn't locked by the mobile operator, you can use Configuration Manager to request and install a client certificate. This certificate provides mutual authentication between the client on the mobile device and Configuration Manager site systems. If the mobile device is locked, you can't use Configuration Manager to deploy certificates.
-
-If you enable hardware inventory for mobile devices, Configuration Manager also inventories the certificates that are installed on the mobile device.
+> [!NOTE]
+> Since Nov 2021 we have deprecated Mobile device management and we recommend customers to uninstall this role.
 
 ### OS deployment and PKI certificates
 
@@ -150,7 +141,7 @@ After Configuration Manager deploys the OS installs the client, the client requi
 
 ### ISV proxy solutions and PKI certificates
 
-Independent Software Vendors (ISVs) can create applications that extend Configuration Manager. For example, an ISV could create extensions to support non-Windows client platforms such as macOS. However, if the site systems require HTTPS client connections, these clients must also use PKI certificates for communication with the site. Configuration Manager includes the ability to assign a certificate to the ISV proxy that enables communications between the ISV proxy clients and the management point. If you use extensions that require ISV proxy certificates, consult the documentation for that product.
+Independent Software Vendors (ISVs) can create applications that extend Configuration Manager. For example, an ISV could create extensions to support non-Windows client platforms. However, if the site systems require HTTPS client connections, these clients must also use PKI certificates for communication with the site. Configuration Manager includes the ability to assign a certificate to the ISV proxy that enables communications between the ISV proxy clients and the management point. If you use extensions that require ISV proxy certificates, consult the documentation for that product.
 
 If the ISV certificate is compromised, block the certificate in the **Certificates** node in the **Administration** workspace, **Security** node.
 
@@ -174,9 +165,8 @@ This action copies this certificate's GUID, for example: `aa05bf38-5cd6-43ea-ac6
 
 ### Asset Intelligence and certificates
 
-Configuration Manager installs with an X.509 certificate that the Asset Intelligence synchronization point uses to connect to Microsoft. Configuration Manager uses this certificate to request a client authentication certificate from the Microsoft certificate service. The client authentication certificate is installed on the Asset Intelligence synchronization point and it's used to authenticate the server to Microsoft. Configuration Manager uses the client authentication certificate to download the Asset Intelligence catalog and to upload software titles.
-
-This certificate has a key length of 1024 bits.
+> [!NOTE]
+> Since Nov 2021 we have deprecated Mobile device management and we recommend customers to uninstall this role.
 
 ### Azure services and certificates
 
@@ -192,13 +182,11 @@ A PKI certificate revocation list (CRL) increases overall security, but does req
 
 IIS enables CRL checking by default. If you use a CRL with your PKI deployment, you don't need to configure most site systems that run IIS. The exception is for software updates, which requires a manual step to enable CRL checking to verify the signatures on software update files.
 
-When a client uses HTTPS, it enables CRL checking by default. For macOS clients, you can't disable CRL checking.
+When a client uses HTTPS, it enables CRL checking by default. 
 
 The following connections don't support CRL checking in Configuration Manager:
 
 - Server-to-server connections
-
-- Mobile devices that are enrolled by Configuration Manager.
 
 ## Server communication
 
@@ -214,11 +202,7 @@ In addition to this certificate for each site system server, Configuration Manag
 
 - Asset Intelligence synchronization point
 
-- Certificate registration point
-
 - Endpoint Protection point
-
-- Enrollment point
 
 - Fallback status point
 
@@ -234,7 +218,7 @@ In addition to this certificate for each site system server, Configuration Manag
 
 Configuration Manager automatically generates and manages these certificates.
 
-To send status messages from the distribution point to the management point, Configuration Manager uses a client authentication certificate. When you configure the management point for HTTPS, it requires a PKI certificate. If the management point accepts HTTP connections, you can use a PKI certificate. It can also use a self-signed certificate with client authentication capability, uses SHA-256, and has a key length of 2048 bits.
+To send status messages from the distribution point to the management point, Configuration Manager uses a client authentication certificate. When you configure the management point for HTTPS, it requires a PKI certificate. If the management point accepts E-HTTP connections, you can use a PKI certificate. It can also use a self-signed certificate with client authentication capability, uses SHA-256, and has a key length of 2048 bits.
 
 ### Server communication between sites
 
@@ -277,17 +261,17 @@ When clients communicate with site systems over HTTPS, most traffic is encrypted
 
 You configure reporting services points to use HTTP or HTTPS independently from the client communication mode.
 
-## Clients that use HTTP
+## Clients that use E-HTTP
 
-When clients use HTTP communication to site system roles, they can use PKI certificates for client authentication, or self-signed certificates that Configuration Manager generates. When Configuration Manager generates self-signed certificates, they have a custom object identifier for signing and encryption. These certificates are used to uniquely identify the client. These self-signed certificates use **SHA-256**, and have a key length of 2048 bits.
+When clients use E-HTTP communication to site system roles, they can use PKI certificates for client authentication, or self-signed certificates that Configuration Manager generates. When Configuration Manager generates self-signed certificates, they have a custom object identifier for signing and encryption. These certificates are used to uniquely identify the client. These self-signed certificates use **SHA-256**, and have a key length of 2048 bits.
 
 ### OS deployment and self-signed certificates
 
-When you use Configuration Manager to deploy operating systems with self-signed certificates, the client must also have a certificate to communicate with the management point. This requirement is even if the computer is in a transitional phase such as booting from task sequence media or a PXE-enabled distribution point. To support this scenario for HTTP client connections, Configuration Manager generates self-signed certificates that have a custom object identifier for signing and encryption. These certificates are used to uniquely identify the client. These self-signed certificates use **SHA-256**, and have a key length of 2048 bits. If these self-signed certificates are compromised, prevent attackers from using them to impersonate trusted clients. Block the certificates in the **Certificates** node in the **Administration** workspace, **Security** node.
+When you use Configuration Manager to deploy operating systems with self-signed certificates, the client must also have a certificate to communicate with the management point. This requirement is even if the computer is in a transitional phase such as booting from task sequence media or a PXE-enabled distribution point. To support this scenario for E-HTTP client connections, Configuration Manager generates self-signed certificates that have a custom object identifier for signing and encryption. These certificates are used to uniquely identify the client. These self-signed certificates use **SHA-256**, and have a key length of 2048 bits. If these self-signed certificates are compromised, prevent attackers from using them to impersonate trusted clients. Block the certificates in the **Certificates** node in the **Administration** workspace, **Security** node.
 
 ### Client and server authentication
 
-When clients connect over HTTP, they authenticate the management points by using either Active Directory Domain Services or by using the Configuration Manager trusted root key. Clients don't authenticate other site system roles, such as state migration points or software update points.
+When clients connect over E-HTTP, they authenticate the management points by using either Active Directory Domain Services or by using the Configuration Manager trusted root key. Clients don't authenticate other site system roles, such as state migration points or software update points.
 
 When a management point first authenticates a client by using the self-signed client certificate, this mechanism provides minimal security because any computer can generate a self-signed certificate. Use client approval to enhance this process. Only approve trusted computers, either automatically by Configuration Manager, or manually by an administrative user. For more information, see [Manage clients](../../clients/manage/manage-clients.md#approve).
 
