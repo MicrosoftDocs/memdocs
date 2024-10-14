@@ -63,7 +63,7 @@ While in the Warning state, you can use existing provisioning policies to deploy
 
 For images in the  **Unsupported** state, no provisioning is possible.
 
-Planned removals are always accompanied by proactive message center communications.
+Planned removals are always preceded by proactive message center communications.
 
 <!-- ########################## -->
 ## Next steps
