@@ -50,7 +50,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 > [!TIP]
 > *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).  
 
-## Strong mapping for SCEP certificates  
+## Update certificate connector: Strong mapping requirements for KB5014754  
 
 **Applies to**:  
 
@@ -59,32 +59,29 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 - iOS  
 - macOS  
 
-One of the ways the Key Distribution Center (KDC) protects against certificate spoofing is by requiring certificates to have a strong mapping in Active Directory. This requirement applies to certificates issued for a user or device object. Manual and offline certificates must have a subject alternative name (SAN) with the following tag-based URI:   
- 
-`URI=tag:microsoft.com,2022-09-14:sid:<OnPremisesSecurityIdentifier>`
+The Kerberos Key Distribution (KDC) requires user or device objects to be strongly mapped to Active Directory for certificate-based authentication. This means that the certificate's subject alternative name (SAN) must contain a security identifier (SID) extension that maps to the user or device SID in Active Directory. The mapping protects against certificate spoofing and ensures that certificate-based authentication against the KDC continues working. When a user or device authenticates with a certificate in Active Directory, the KDC checks for the SID to verify that the certificate is strongly mapped and issued to the correct user or device. 
 
-Microsoft Intune automatically adds the tag-based URI when the *OnPremisesSecurityIdentifier* variable is present in the SAN. Upon deployment, Microsoft Intune replaces the variable with the user or device SID you synced between Active Directory and Microsoft Entra ID.  
+Strong mapping is required for all certificates deployed by Microsoft Intune and used for certificate-based authentication against KDC. The strong mapping solution is applicable to user certificates across all platforms. For device certificates, it only applies to Microsoft Entra hybrid-joined Windows devices. If certificates in these scenarios don't meet the strong mapping requirements by the full enforcement mode date, authentication will be denied.  
 
-To create a SCEP certificate profile that's compliant with the KDC, complete these prerequisites:  
+To implement the strong mapping solution for SCEP certificates delivered via Intune, you must add the `OnpremisesSecurityIdentifier` variable to the SAN in the SCEP proile. 
 
-1. Identify the user or device security identifier (SID) in Active Directory. 
-   - The SID is supported in device certificates for Microsoft Entra hybrid joined devices only.  
-   
-   - To add a SID for iOS or macOS, use user certificates.  
-
-2. Sync the user or device SID from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain](). If you skip this step, the SID won't be in the certificate.   
-
-To configure the SID, [create a SCEP certificate profile](#create-a-scep-certificate-profile) in the Microsoft Intune admin center. Or edit an existing certificate profile and add the URI attribute. Microsoft Intune deploys new certificates to targeted users and devices. 
-After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and an object ID. Example formatting: `tag.com,2022-09-14:sid:<OnPremisesObjectSIDValue>` 
-
-   > [!div class="mx-imgBorder"]
+  > [!div class="mx-imgBorder"]
    > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/certificates-profile-scep/scep-configuration-settings.png)   
 
+This variable must be part of the URI attribute. You can create a new SCEP profile or edit an existing one to add the URI attribute.  
 
    > [!div class="mx-imgBorder"]
    > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/certificates-profile-scep/scep-san-add.png)  
 
-If the certificates in certificate-based authentication scenarios are without a SID by the full enforcement mode date, authentication will be denied. For more information about the KDC's requirements and enforcement date for strong mapping, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
+After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and an object ID. Example formatting: *tag.com,2022-09-14:sid:* At this point, the certificate profile meets the strong mapping requirements. 
+
+To meet the strong mapping requirements for Intune, complete these steps:  
+
+- Sync the user or device SID from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/synchronization).  
+
+- Create a SCEP certificate profile in the Microsoft Intune admin center, or modify an existing profile with the new SAN attribute and value.    
+
+For more information about the KDC's requirements and enforcement date for strong mapping, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
 
 ## Create a SCEP certificate profile
 
@@ -283,7 +280,7 @@ If the certificates in certificate-based authentication scenarios are without a 
 
         By using a combination of one or many of these variables and static text strings, you can create a custom subject alternative name format, such as **{{UserName}}-Home**.  
         
-        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the KDC's strong mapping requirements for certificate-based authentication. You should add the SID variable to device certificates that  authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is only supported in device certificates for Microsoft Entra hybrid joined devices, and only works with the URI attribute.    
+        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the KDC's strong mapping requirements for certificate-based authentication. You should add the SID variable to device certificates that  authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in device certificates for Microsoft Entra hybrid joined devices, and only works with the URI attribute.    
 
 
         > [!IMPORTANT]
