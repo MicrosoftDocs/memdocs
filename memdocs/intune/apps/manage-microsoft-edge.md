@@ -150,17 +150,19 @@ Edge supports the following settings for configuration:
 These settings can be deployed to the app regardless of device enrollment status.
 
 ### New Tab Page layout
-The **Custom** layout is the default one for the new tab page. It shows top site shortcuts and news feed without wallpaper. Users can change the layout according to their preferences. Organizations can also manage the layout settings.
+The **inspirational** layout is the default one for the new tab page. It shows top site shortcuts, wallpaper and news feed. Users can change the layout according to their preferences. Organizations can also manage the layout settings.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected <br> **custom** (Default) Custom is selected, top site shortcuts toggle is on, wallpaper toggle is off, and news feed toggle is on|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** Turn on top site shortcuts <br> **wallpaper** Turn on wallpaper <br> **newsfeed** Turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed` |
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** (Default) Inspirational is selected <br> **informational** Informational is selected <br> **custom** Custom is selected, top site shortcuts toggle is on, wallpaper toggle is on, and news feed toggle is on|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** Turn on top site shortcuts <br> **wallpaper** Turn on wallpaper <br> **newsfeed** Turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|wallpaper|newsfeed|` |
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout settings <br> **false** Users cannot change the page layout settings. The page layout is determined by the values specified via the policy or default values will be used |
 
-> [!NOTE]
+> [!IMPORTANT]
 > **NewTabPageLayout** policy is intended to set the initial layout. Users can change page layout settings based on their reference. Therefore, **NewTabPageLayout** policy only takes effect if users do not change layout settings. You can enforce **NewTabPageLayout** policy by configuring **UserSelectable**=false.
 
+> [!NOTE]
+> As of version 129.0.2792.84, the default page layout is changed to **inspirational**.
 
 An example of turning off the news feeds
 - com.microsoft.intune.mam.managedbrowser.NewTabPageLayout=**custom**
@@ -188,7 +190,7 @@ This setting allows you to configure a homepage shortcut for Edge for iOS and An
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.homepage |Specify a valid URL. Incorrect URLs are blocked as a security measure. <br>For example: `https://www.bing.com` |
+|com.microsoft.intune.mam.managedbrowser.homepage <br><br> This policy name has been replaced by the UI of **Homepage shortcut URL** under Edge Configuration settings |Specify a valid URL. Incorrect URLs are blocked as a security measure. <br>For example: `https://www.bing.com` |
 
 #### Multiple top site shortcuts
 
@@ -230,7 +232,7 @@ For ease of access, you can configure bookmarks that you'd like your users to ha
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.bookmarks |The value for this configuration is a list of bookmarks. Each bookmark consists of the bookmark title and the bookmark URL. Separate the title and URL with the `|` character.<br>For example: `Microsoft Bing|https://www.bing.com`<br><br>To configure multiple bookmarks, separate each pair with the double character `||`.<br>For example: `Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`|
+|com.microsoft.intune.mam.managedbrowser.bookmarks <br><br> This policy name has been replaced by the UI of **Managed bookmarks** under Edge Configuration settings |The value for this configuration is a list of bookmarks. Each bookmark consists of the bookmark title and the bookmark URL. Separate the title and URL with the `|` character.<br>For example: `Microsoft Bing|https://www.bing.com`<br><br>To configure multiple bookmarks, separate each pair with the double character `||`.<br>For example: `Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`|
 
 #### My Apps bookmark
 
@@ -496,7 +498,8 @@ When a web page requests to open an external app, users will see a pop-up asking
 ### Copilot
 
 > [!NOTE]
-> As of version 128, Copilot for work or school accounts has been deprecated. Therefore, the following policies will no longer be valid in version 128
+> As of version 128, Copilot for work or school accounts has been deprecated. Therefore, the following policies will no longer be valid in version 128.
+> If you want to block access to the web version of Copilot, copilot.microsoft.com, you can use policy AllowListURLs or BlockListURLs.
 
 Copilot is available on Microsoft Edge for iOS and Android. Users can start Copilot by clicking on Copilot button in bottom bar. 
 
@@ -556,10 +559,10 @@ Use the following key/value pairs to configure either an allowed or blocked site
 |com.microsoft.intune.mam.managedbrowser.AllowListURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
 |com.microsoft.intune.mam.managedbrowser.BlockListURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
 |com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock |**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts aren't disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context. <br>**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked. |
-|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked |**true** allows restricted sites to be opened in the Microsoft Entra account's InPrivate context. If the Microsoft Entra account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account. <br>**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. <br>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
+|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked <br><br> This policy name has been replaced by the UI of **Redirect restricted sites to personal context** under Edge Configuration settings |**true** allows restricted sites to be opened in the Microsoft Entra account's InPrivate context. If the Microsoft Entra account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account. <br>**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. <br>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
 |com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar | Enter the number of seconds that users will see the snack bar notification "Access to this site is blocked by your organization. We’ve opened it in InPrivate mode for you to access the site." By default, the snack bar notification is shown for 7 seconds.|
 
-The following sites are always allowed regardless of the defined allow list or block list settings:
+The following sites except copilot.microsoft.com are always allowed regardless of the defined allow list or block list settings:
 - `https://*.microsoft.com/*`
 - `http://*.microsoft.com/*`
 - `https://microsoft.com/*`
@@ -604,19 +607,31 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
-### Disable Edge internal pages
-You can disable Edge internal pages such as `Edge://flags` and `Edge://net-export`. More pages can be found from `Edge://about`
-
-|Key |Value |
-|:--|:----|
-|com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList | The corresponding value for the key is a list of page names. You can enter the internal pages you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`flags|net-export`|
-
 ### Control the behavior of the Site Blocked popup
 When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites. You can choose preferences between InPrivate and personal account.
 
 |Key |Value |
 |:--|:----|
 |com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in.If personal account is not signed in, the behavior will be changed to value 2. <br>**2**:Automatically switch to InPrivate if InPrivate switch is allowed by com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true. |
+
+### Control the behavior of switching personal profile to work profile 
+When Edge is under the personal profile and users are attempting to open a link from Outlook or Microsoft Teams which are under the work profile, by default, Intune will use the Edge work profile to open the link because both Edge, Outlook, and Microsoft Teams are managed by Intune. However, when the link is blocked, the user will be switched to the the personal profile. This causes a friction experience for users
+
+You can configure a policy to enhance users' experience. This policy is recommended to be used together with AutoTransitionModeOnBlock as it may switch users to the personal profile according to the policy value you configured.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork |**1**: (Default) Switch to work profile even if the URL is blocked by Edge policy.<br> **2**: URLs that are blocked by Edge policy will not be switched to work profile. |
+
+> [!NOTE]
+> This policy takes effect when Edge is in personal profile and is receiving URL from a managed apps such as Outlook and Microsoft Teams by Intune. Edge also needs to have both personal profile and work profile signed in.
+
+### Disable Edge internal pages
+You can disable Edge internal pages such as `Edge://flags` and `Edge://net-export`. More pages can be found from `Edge://about`
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList | The corresponding value for the key is a list of page names. You can enter the internal pages you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`flags|net-export`|
 
 ### Manage websites to allow upload files
 There may be scenarios where users are only allowed to view websites, without the ability to upload files. Organizations have the option to designate which websites can receive file uploads.
@@ -660,7 +675,7 @@ Target Edge for iOS and Android with the following key/value pair, to enable App
 
 |Key |Value|
 |:-------------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.AppProxyRedirection |**true** enables Microsoft Entra application proxy redirection scenarios <br>**false** (default) prevents Microsoft Entra application proxy scenarios |
+|com.microsoft.intune.mam.managedbrowser.AppProxyRedirection <br><br> This policy name has been replaced by the UI of **Application proxy redirection** under Edge Configuration settings |**true** enables Microsoft Entra application proxy redirection scenarios <br>**false** (default) prevents Microsoft Entra application proxy scenarios |
 
 For more information about how to use Edge for iOS and Android and Microsoft Entra application proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Microsoft Entra team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). This blog post references the Intune Managed Browser, but the content applies to Edge for iOS and Android as well.
 

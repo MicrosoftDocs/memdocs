@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/08/2024
+ms.date: 10/14/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -56,14 +56,17 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
-## Week of October 7, 2024
+## Week of October 14, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Device management
+### Partners
 
-#### Call redirection<!--53718424-->
+#### HP Anyware for Windows 365 is now generally available<!--51133111-->
 
-Windows 365 now supports multimedia redirection call redirection. For more information, see [Use multimedia redirection](/azure/virtual-desktop/multimedia-redirection).
+HP Anyware for Windows 365 has moved out of preview and into general availability.
+
+For more information, see [Set up HP Anyware for Windows 365 Enterprise](hp-anyware-set-up.md)
+
 
 <!-- ########################## -->
 ## Week of September 30, 2024 (Service release 2409)
@@ -989,7 +992,7 @@ Users now have two options when they select the **Open in browser** drop-down bu
 
 #### Windows 365 app update notifications for users<!--45206957-->
 
-Windows 365 app users will get a notification when an udpate is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
+Windows 365 app users will get a notification when an update is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot

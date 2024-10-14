@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/07/2024
+ms.date: 10/09/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,6 +77,11 @@ You can use RSS to be notified when this page is updated. For more information, 
 -->
 
 ## Week of October 7, 2024
+
+### App management
+
+#### New UI for Intune Company Portal app for Windows<!-- 27219294 -->
+The UI for the Intune Company Portal app for Windows has been updated. Users will see an improved experience for their desktop app without changing the functionality they've used in the past. Specific UI improvements are focused on the **Home**, **Devices**, and **Downloads & updates** pages. The new design is more intuitive and highlights areas where users need to take action. For more information, see [New look for Intune Company Portal app for Windows](https://techcommunity.microsoft.com/t5/intune-customer-success/new-look-for-intune-company-portal-app-for-windows/ba-p/4158755). For end user details, see [Install and share apps on your device](../user-help/install-apps-cpapp-windows.md).
 
 ### Device security
 
