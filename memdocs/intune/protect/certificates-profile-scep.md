@@ -75,7 +75,7 @@ This variable must be part of the URI attribute. You can create a new SCEP profi
 
 After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and an object ID. Example formatting: `tag.com,2022-09-14:sid:` At this point, the certificate profile meets the strong mapping requirements. 
 
-To ensure your profile meets strong mapping requirements, complete these steps:  
+To ensure that certficate-based authentication continues working, you must take the following actions:    
 
 1. Sync the user or device SID from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/synchronization).  
 

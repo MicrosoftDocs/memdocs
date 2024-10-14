@@ -100,7 +100,7 @@ For more information, see:
 
 - [What's new for the certificate connector](../protect/certificate-connector-overview.md#september-19-2024)
 
-- [Apply PFX changes to certificate](../protect/certificates-pfx-configure.md#strong-mapping-requirements)  
+- [Apply PFX changes to certificate](../protect/certificates-pfx-configure.md)  
 
 ## Week of September 23, 2024 (Service release 2409)
 

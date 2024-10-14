@@ -73,9 +73,9 @@ To use PKCS certificates with Intune, you need the following infrastructure:
   - [Prerequisites](certificate-connector-prerequisites.md)  
   - [Installation and configuration](certificate-connector-install.md)  
 
-## Strong mapping requirements for PKCS certificates   
+## Update certificate connector: Strong mapping requirements for KB5014754    
 
-The Kerberos Key Distribution Center (KDC) requires a strong mapping format for certificates issued by Active Directory Certificate Services. This requirement is applicable to PKCS certificates deployed by Microsoft Intune and used for certificate-based authentication. The mapping must have a security identifier (SID) extension that maps to the user or device SID. If a certificate doesn't meet the new strong mapping criteria set by the full enforcement mode date, authentication will be denied. For more information about the requirements, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).
+The Key Distribution Center (KDC) requires a strong mapping format in PKCS certificates deployed by Microsoft Intune and used for certificate-based authentication. The mapping must have a security identifier (SID) extension that maps to the user or device SID. If a certificate doesn't meet the new strong mapping criteria set by the full enforcement mode date, authentication will be denied. For more information about the requirements, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
 
 In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we released an update that adds the object identifier attribute containing the user or device SID to the certificate, effectively satisfying the strong mapping requirements. This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID, and is available across all platforms, with some differences:  
 
@@ -86,6 +86,7 @@ In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we release
  To ensure that certficate-based authentication continues working, you must take the following actions:  
 
 - Update the Microsoft Intune Certificate Connector to version 6.2406.0.1001. For information about the latest version and how to update the certificate connector, see [Certificate connector for Microsoft Intune](certificate-connector-overview.md).  
+
 - Make changes to registry key information on the Windows server that hosts the certificate connector.  
 
 Complete the following procedure to modify the registry keys and apply the strong mapping changes to certificates. These changes apply to new PKCS certificates and PKCS certificates that are being renewed.     
