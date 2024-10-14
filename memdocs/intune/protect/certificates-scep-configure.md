@@ -102,11 +102,13 @@ The Intune policy module works to secure NDES in the following ways:
 
 - When attempting to access the published NDES URL directly, the server returns a **403 – Forbidden: Access is denied** response.
 
-- When a well-formed SCEP certificate request is received and the request payload includes both the challenge blob and the device CSR, the policy module compares the details of the device CSR against the challenge blob:
+- Once the Intune certificate connector is installed, it places itself as the validation provider (on the NDES server), as soon as a well-formed SCEP certificate request is received and the request payload include both the challenge blob and the device CSR, the Intune connector will send/upload the request (along with the challenege password) to the Intune service to validate the following:
 
-  - If the validation fails, no certificate is issued.
-
-  - Only the certificate requests from an Intune enrolled device that passes the challenge blob validation are issued a certificate.
+  - Validate that the User/Device requesting the certificate is still part of the tenant.
+  - Validate that the User/Device is still targeted by the SCEP profile.
+  - Validate that the Challenge password is similar to the one generated in the cloud and is still valid (Generated challenges has a validity period of 1 hour).
+    
+(If the validation fails, no certificate is issued.)
 
 
 ### Accounts
