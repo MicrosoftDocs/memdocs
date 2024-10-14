@@ -266,7 +266,7 @@ For more information about the KDC's requirements and enforcement date for stron
 
         For example, user certificate types can include the user principal name (UPN) in the subject alternative name. If a client certificate is used to authenticate to a Network Policy Server, set the subject alternative name to the UPN.  
 
-        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a SID variable that's compliant with the Key Distribution Center's (KDC) strong mapping requirements for certificate-based authentication. You should add the SID variable to user certificates that authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in user certificates for macOS, iOS, and Windows 10/11, and only works with the URI attribute.          
+        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the Key Distribution Center's (KDC) strong mapping requirements for certificate-based authentication. You should add the variable to user certificates that authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in user certificates for macOS, iOS, and Windows 10/11, and only works with the URI attribute.          
 
      - **Device certificate type**
 
@@ -276,7 +276,7 @@ For more information about the KDC's requirements and enforcement date for stron
 
         By using a combination of one or many of these variables and static text strings, you can create a custom subject alternative name format, such as **{{UserName}}-Home**.  
         
-        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the Key Distribution Center's (KDC) strong mapping requirements for certificate-based authentication. You should add the SID variable to device certificates that authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in device certificates for Microsoft Entra hybrid joined devices, and only works with the URI attribute.    
+        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the Key Distribution Center's (KDC) strong mapping requirements for certificate-based authentication. You should add the variable to device certificates that authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in device certificates for Microsoft Entra hybrid joined devices, and only works with the URI attribute.    
 
 
         > [!IMPORTANT]
@@ -285,8 +285,6 @@ For more information about the KDC's requirements and enforcement date for stron
         > - Don't use curly brackets **{ }**, pipe symbols **|**, and semicolons **;**, in the text that follows the variable.
         > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
         > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the SAN of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.  
-              
-        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a SID variable you can use to create a strong mapping in the user certificate. This variable is required for certificate-based authentication against the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. 
 
    - **Certificate validity period**:
 
