@@ -129,14 +129,6 @@ Applies to:
 
 - Windows (Corporate owned devices managed by Intune)
 
-### Collection of additional device inventory details<!-- 29460196 -->
-
-We're adding additional files and registry keys to be collected to assist in troubleshooting the Device Hardware Inventory feature.
-
-Applies to:
-
-- Windows
-
 <!-- *********************************************** -->
 
 ## Device security

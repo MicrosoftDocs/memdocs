@@ -93,6 +93,16 @@ Applies to:
 
 - Android Enterprise devices
 
+### Device management
+
+#### Collection of additional device inventory details<!-- 29460196 -->
+
+Intune now collects additional files and registry keys to assist in troubleshooting the Device Hardware Inventory feature.
+
+Applies to:
+
+- Windows
+
 ## Week of October 7, 2024
 
 ### App management
