@@ -51,7 +51,7 @@ You _**do not need**_ to register your app. For internal [line-of-business (LOB)
 
 You _**must**_ first register your app with Microsoft Intune and agree to the registration terms. IT administrators can then apply an app protection policy to the managed app, which will be listed as an [Partner productivity apps](../apps/apps-supported-intune-apps.md#partner-productivity-apps).
 
-Until registration has been finished and confirmed by the Microsoft Intune team, Intune administrators won't have the option to apply app protection policy to your app's deep link. Microsoft will also add your app to its [Microsoft Intune Partners page](https://www.microsoft.com/cloud-platform/microsoft-intune-apps). There, the app's icon will be displayed to show that it supports Intune app protection policies.
+Until registration has been finished and confirmed by the Microsoft Intune team, Intune administrators won't have the option to apply app protection policy to your app's deep link. Microsoft will also add your app to its Microsoft Intune Partners page. There, the app's icon will be displayed to show that it supports Intune app protection policies.
 
 ### The registration process
 To begin the registration process, and if you aren't already working with a Microsoft contact, fill out the [Microsoft Intune App Partner Questionnaire](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR80SNPjnVA1KsGiZ89UxSdVUMEpZNUFEUzdENENOVEdRMjM5UEpWWjJFVi4u).
@@ -67,7 +67,7 @@ We'll use the email addresses listed in your questionnaire response to reach out
 
 2. After we receive all necessary information from you, we'll send you the Microsoft Intune App Partner Agreement to sign. This agreement describes the terms that your company must accept before it becomes a Microsoft Intune app partner.
 
-3. You'll be notified when your app is successfully registered with the Microsoft Intune service and when your app is featured on the [Microsoft Intune partners](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) site.
+3. You'll be notified when your app is successfully registered with the Microsoft Intune service and when your app is featured on the Microsoft Intune partners site.
 
 4. Finally, your app's deep link will be added to the next monthly Intune Service update. For example, if the registration information is finished in July, the deep link will be supported in mid-August.
 
