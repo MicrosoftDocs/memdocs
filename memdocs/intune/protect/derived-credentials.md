@@ -320,7 +320,7 @@ Use derived credentials for certificate-based authentication to web sites and ap
 
    **For Android Enterprise**:
 
-   - For *Platform*. select **Android Enterprise**, and then for *Profile type*, under *Fully Managed, Dedicated, and Corporate-Owned Work Profile*, select Derived credential**. Select **Create** to continue.
+   - For *Platform*. select **Android Enterprise**, and then for *Profile type*, under *Fully Managed, Dedicated, and Corporate-Owned Work Profile*, select **Derived credential**. Select **Create** to continue.
    - For *Name*, enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Derived credential for Android Enterprise devices profile**.
    - For *Description*, enter a description that gives an overview of the setting, and any other important details.
    - On the *Apps* page, configure **Certificate access** to manage how certificate access is granted to applications. Choose from:
