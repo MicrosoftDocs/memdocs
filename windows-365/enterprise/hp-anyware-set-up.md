@@ -33,7 +33,7 @@ ms.collection:
 
 HP Anyware for Windows 365 is a cloud-based service that lets you deliver Windows 365 Enterprise desktops on HP Anyware’s management and PCoIP protocol. HP Anyware's infrastructure and protocol excel in low bandwidth environments and intensive workloads.
 
-HP Anyware for Windows 365 is available in selected regions. To sign up up for a guided onboarding experience of HP Anyware for Windows 365 or sign up for updates, see [https://reinvent.hp.com/Anyware-for-windows365](https://reinvent.hp.com/Anyware-for-windows365).
+HP Anyware for Windows 365 is available in selected regions. To sign up for a guided onboarding experience of HP Anyware for Windows 365 or sign up for updates, see [https://reinvent.hp.com/Anyware-for-windows365](https://reinvent.hp.com/Anyware-for-windows365).
 
 ## Set up overview
 
