@@ -51,8 +51,6 @@ Windows 365 tracks end of support information in Microsoft Intune on the **Provi
 
 These status values for custom images also appear under the **OS support status** column on the **Device images** page.
 
-Images can be removed prior End of Support date and go through warning and unsupported states. While in warning you can use existing provisioning policies to deploy your devices but not create new provisioning policies. In unsupported state no provisioning is possible. Detailed information is provided in message center for planned removals of images.
-
 ## Provisioning policies
 
 Starting on the end of support date, gallery images that use the expired OS won’t be selectable for newly created provisioning policies. The images also won’t be available for use when editing existing provisioning policies.
