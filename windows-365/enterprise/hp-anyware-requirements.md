@@ -29,7 +29,7 @@ ms.collection:
 - tier2
 ---
 
-# Requirements for using HP Anyware for Windows 365 Enterprise (preview)
+# Requirements for using HP Anyware for Windows 365 Enterprise
 
 To use HP Anyware for Windows 365, you must meet the following requirements:
 
