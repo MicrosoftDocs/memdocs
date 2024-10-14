@@ -59,4 +59,4 @@ To turn on the HP Anyware connector, follow these steps:
 <!-- ########################## -->
 ## Next steps
 
-To complete the integration, proceed to the HP Anyare Manager. For more information about HP Anyware set up, see [https://aka.ms/HPAnywareDocConnectEntraIDtoHP](https://aka.ms/HPAnywareDocConnectEntraIDtoHP).
+To complete the integration, proceed to the HP Anyware Manager. For more information about HP Anyware set up, see [https://aka.ms/HPAnywareDocConnectEntraIDtoHP](https://aka.ms/HPAnywareDocConnectEntraIDtoHP).
