@@ -992,7 +992,7 @@ Users now have two options when they select the **Open in browser** drop-down bu
 
 #### Windows 365 app update notifications for users<!--45206957-->
 
-Windows 365 app users will get a notification when an udpate is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
+Windows 365 app users will get a notification when an update is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
