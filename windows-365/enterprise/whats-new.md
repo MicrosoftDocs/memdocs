@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/14/2024
+ms.date: 10/15/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -52,11 +52,18 @@ For more information about public preview items, see [Public preview in Windows 
 ### Scripts
 ### End user experience
 ### Windows 365 Government
-### Windows 365 app
+### Windows 365 app 
 -->
 
 <!-- ########################## -->
 ## Week of October 14, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Call redirection<!--53718424-->
+
+Windows 365 now supports multimedia redirection call redirection. For more information, see [Use multimedia redirection](/azure/virtual-desktop/multimedia-redirection).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Partners
