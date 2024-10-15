@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/24/2024
+ms.date: 10/15/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -32,7 +32,11 @@ ms.collection:
 
 # Assign licenses
 
-Before a user can use a Cloud PC, you must assign a [Windows 365 license](https://www.microsoft.com/windows-365/all-pricing) to that user. You can assign the licenses using either of these methods:
+[Windows 365 licenses](https://www.microsoft.com/windows-365/all-pricing) must be assigned before users can use a Cloud PC.
+
+## Windows 365 Enterprise
+
+Before a user can use a Cloud PC, you must assign a [Windows 365 license](https://www.microsoft.com/windows-365/all-pricing) to that user. You can assign the licenses using any of these methods:
 
 - Microsoft 365 admin center for individual users. For steps on how to use admin center to assign licenses, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
 - [Microsoft Entra admin center](https://aad.portal.azure.com/) for group license assignments. For more information about group license assignments, see [Assign licenses to users by group membership in Microsoft Entra ID](/azure/active-directory/enterprise-users/licensing-groups-assign).
@@ -40,7 +44,7 @@ Before a user can use a Cloud PC, you must assign a [Windows 365 license](https:
 
 ## Windows 365 Frontline
 
-This article doesn't apply to Windows 365 Frontline. Windows 365 Frontline licenses are managed directly in provisioning policies when assigning users in a targeted Microsoft Entra group.
+Licenses for Windows 365 Frontline are assigned to your tenant and shared across Cloud PCs provisioned in dedicated mode and shared mode. The licenses are assigned by selecting a  Microsoft Entra group during the [creation of provisioning policies](create-provisioning-policy.md).
 
 ## Next steps
 
