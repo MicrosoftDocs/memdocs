@@ -46,6 +46,6 @@ Before a user can use a Cloud PC, you must assign a [Windows 365 license](https:
 
 Licenses for Windows 365 Frontline are assigned to your tenant and shared across Cloud PCs provisioned in dedicated mode and shared mode. The licenses are assigned by selecting a  Microsoft Entra group during the [creation of provisioning policies](create-provisioning-policy.md).
 
-## Next steps
+## Next steps 
 
 [Create Azure network connection](create-azure-network-connection.md).
