@@ -69,7 +69,7 @@ A few things to keep in mind:
     - **Frontline**: Provision Cloud PCs for [Windows 365 Frontline](introduction-windows-365-frontline.md).
 4. If you choose **Frontline**, you must also select a **Frontline type**:
     - **Dedicated**: Provision Cloud PCs in dedicated mode.
-    - **Shared**: rovision Cloud PCs in shared mode.
+    - **Shared**: Provision Cloud PCs in shared mode.
 5. On the **General** page, select a **Join type**:
     - **Microsoft Entra Join**: You have two options for **Network**:
         - **Microsoft hosted network**: Select a **Geography** where you want your Cloud PCs provisioned. Then, for [**Region**](requirements.md#supported-azure-regions-for-cloud-pc-provisioning), you can select:
