@@ -129,7 +129,7 @@ You can use this version with the minimum service pack and cumulative update sup
 - A secondary site-->
 
 > [!IMPORTANT]
-> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
+> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> Its support lifecycle ended in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
 
 ### SQL Server 2017 Express
 
@@ -157,7 +157,7 @@ You can use this version with the minimum service pack and cumulative update sup
 - A secondary site-->
 
 > [!IMPORTANT]
-> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
+> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> Its support lifecycle ended in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
 
 ## <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server
 
