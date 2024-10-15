@@ -73,7 +73,7 @@ This variable must be part of the URI attribute. You can create a new SCEP profi
    > [!div class="mx-imgBorder"]
    > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/certificates-profile-scep/scep-san-add.png)  
 
-After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and an object ID. Example formatting: `tag.com,2022-09-14:sid:` At this point, the certificate profile meets the strong mapping requirements. 
+After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and the resolved SID. Example formatting: `tag:microsoft.com,2022-09-14:sid:<value>` At this point, the certificate profile meets the strong mapping requirements. 
 
 To ensure your SCEP profile meets strong mapping requirements, create a SCEP certificate profile in the Microsoft Intune admin center, or modify an existing profile with the new SAN attribute and value. As a prerequisite, users and devices must be synced from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/synchronization).   
 
