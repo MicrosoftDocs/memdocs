@@ -59,6 +59,15 @@ For more information about public preview items, see [Public preview in Windows 
 ## Week of October 14, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New Windows 365 IP subnet for RDP connectivity<!--53404845-->
+
+Core TCP-based RDP traffic for Cloud PC connections uses the *.wvd.microsoft.com wildcard fully qualified domain name (FQDN). The FQDN remains unchanged, but the underlying IP addresses associated with it will shortly be changed to a single subnet. This will simplify optimization of this traffic and reduce the need for future change management.
+
+For more information, see [Plan for change: New Windows 365 IP Subnet for RDP Connectivity](https://iridias.microsoft.com/messagecenter?id=894574) Message Center post.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 #### Call redirection<!--53718424-->
