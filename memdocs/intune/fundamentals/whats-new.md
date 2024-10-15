@@ -95,6 +95,28 @@ Applies to:
 
 ### Device management
 
+#### Minimum OS version for Android devices is Android 10 and later for user-based management methods<!-- 14755802 -->
+
+Beginning in October 2024, Android 10 and later is the minimum Android OS version that is supported for user-based management methods, which includes:
+
+- Android Enterprise personally-owned work profile
+- Android Enterprise corporate owned work profile
+- Android Enterprise fully managed
+- Android Open Source Project (AOSP) user-based
+- Android device administrator
+- App protection policies (APP)
+- App configuration policies (ACP) for managed apps
+
+For enrolled devices on unsupported OS versions (Android 9 and lower)
+
+- Intune technical support is not provided.
+- Intune won't make changes to address bugs or issues.
+- New and existing features aren't guaranteed to work.
+
+While Intune doesn't prevent enrollment or management of devices on unsupported Android OS versions, functionality isn't guaranteed, and use isn't recommended.
+
+Userless methods of Android device management (Dedicated and AOSP userless) and Microsoft Teams certified Android devices are not affected by this change.
+
 #### Collection of additional device inventory details<!-- 29460196 -->
 
 Intune now collects additional files and registry keys to assist in troubleshooting the Device Hardware Inventory feature.
@@ -114,6 +136,21 @@ The UI for the Intune Company Portal app for Windows is updated. Users now see a
 For more information, see [New look for Intune Company Portal app for Windows](https://techcommunity.microsoft.com/t5/intune-customer-success/new-look-for-intune-company-portal-app-for-windows/ba-p/4158755). For end user details, see [Install and share apps on your device](../user-help/install-apps-cpapp-windows.md).
 
 ### Device security
+
+#### New strong mapping requirements for SCEP certificates authenticating with KDC<!-- 29005591 -->
+
+The Key Distribution Center (KDC) requires user or device objects to be strongly mapped to Active Directory for certificate-based authentication. This means that a Simple Certificate Enrollment Protocol (SCEP) certificate's subject alternative name (SAN) must have a security identifier (SID) extension that maps to the user or device SID in Active Directory. The mapping requirement protects against certificate spoofing and ensures that certificate-based authentication against the KDC continues working.
+
+To meet requirements, modify or create a SCEP certificate profile in Microsoft Intune. Then add a `URI` attribute and the `OnPremisesSecurityIdentifier` variable to the SAN. After you do that, Microsoft Intune appends a tag with the SID extension to the SAN and issues new certificates to targeted users and devices. If the user or device has a SID on premises that's been synced to Microsoft Entra ID, the certificate shows the SID. If they don't have a SID, a new certificate is issued without the SID.
+
+For more information and steps, see [Update certificate connector: Strong mapping requirements for KB5014754](./protect/certificates-profile-scep.md).
+
+Applies to:
+
+- Windows 10/11, iOS/iPadOS, and macOS user certificates
+- Windows 10/11 device certificates
+
+This requirement isn't applicable to device certificates used with Microsoft Entra joined users or devices, because the SID attribute is an on-premises identifier.
 
 #### Defender for Endpoint security settings support in government cloud environments (public preview)<!-- 24191406 -->
 
@@ -913,7 +950,7 @@ The following protected apps are now available for Microsoft Intune:
 - HCSS Field: Time, cost, safety (iOS) by Heavy Construction Systems Specialists, Inc.
 - Synchrotab for Intune (iOS) by Synchrotab, LLC
 
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).  
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of July 15, 2024
 

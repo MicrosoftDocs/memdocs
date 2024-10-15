@@ -97,28 +97,6 @@ Applies to:
 
 ## Device management
 
-### Minimum OS version for Android devices will be Android 10 and later for user-based management methods<!-- 14755802 -->
-
-From October 2024, the minimum OS supported for Android devices will be Android 10 and later for user-based management methods, which includes:
-
-- Android Enterprise personally-owned work profile
-- Android Enterprise corporate owned work profile
-- Android Enterprise fully managed
-- Android Open Source Project (AOSP) user-based
-- Android device administrator
-- App protection policies (APP)
-- App configuration policies (ACP) for managed apps
-
-For enrolled devices on unsupported OS versions (Android 9 and lower)
-
-- Intune technical support won't be provided.
-- Intune won't make changes to address bugs or issues.
-- New and existing features aren't guaranteed to work.
-
-While Intune won't prevent enrollment or management of devices on unsupported Android OS versions, functionality isn't guaranteed, and use isn't recommended.
-
-Userless methods of Android device management (Dedicated and AOSP userless) and Microsoft Teams certified Android devices won't be affected by this change.
-
 ### Device Inventory for Windows<!-- 24853010 -->
 
 Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
@@ -132,21 +110,6 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device security
-
-### New strong mapping requirements for Intune-issued SCEP certificates<!-- 29005591 -->
-
-To align with the Windows Kerberos Key Distribution Center's (KDC) strong mapping attribute requirements described in [KB5014754](https://support.microsoft.com/help/5014754), SCEP certificates issued by Microsoft Intune will be required to have the following tag in the Subject Alternative Name (SAN) field:
-
-`URL=tag:microsoft.com,2022-09-14:sid:<value>`
-
-This tag will ensure that certificates are compliant with the KDC's latest requirements, and that certificate-based authentication continues working. Microsoft Intune will be adding support for the SID variable in SCEP profiles. You will be able to modify or create a new SCEP profile to include the OnPremisesSecurityIdentifier variable in the SCEP profile. This action will trigger Microsoft Intune to issue new certificates with the appropriate tag to all applicable users and devices.
-
-These requirements apply to:
-
-- Android, iOS/iPadOS, and macOS user certificates.
-- Windows 10/11 user and device certificates.
-
-They don't apply to device certificates used with Microsoft Entra joined users or devices, because SID is an on-premises identifier.
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
