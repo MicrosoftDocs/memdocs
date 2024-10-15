@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/23/2024
+ms.date: 10/15/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,3 +56,5 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 | Realwear| Navigator 500      | 1.1                | AR/VR Headset  |                    |
 | Lenovo| ThinkReality VRX     | VRX_user_S766001_2310192349_kona   | AR/VR Headset  |                   |
 | DigiLens Inc.| DigiLens ARGO    | DigiOS 2068 (B1.0001.2068)            | AR/VR Headset  |                    |
+| Vuzix     | M400   | M-Series Version 3.0.2    | AR/VR Headset  |                    |
+| Vuzix     | M4000   | M-Series Version 3.0.2   | AR/VR Headset  |                    |
