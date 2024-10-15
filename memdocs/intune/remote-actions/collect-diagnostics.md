@@ -148,7 +148,7 @@ Registry Keys:
 - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI
 - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
 - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
-- HKLM\Software\Microsoft\DeviceInventory
+- HKLM\SOFTWARE\Microsoft\DeviceInventory
 - HKLM\SOFTWARE\Policies
 - HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL
 - HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
