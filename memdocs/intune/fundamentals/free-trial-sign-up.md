@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/13/2024
+ms.date: 10/02/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -53,6 +53,8 @@ Trying out Intune is free for 30 days. If you already have a work or school acco
 
 > [!IMPORTANT]
 > You can't combine an existing work or school account after you sign up for a new account.
+
+[!INCLUDE [MFA requirement for admin center](../includes/mfa-console.md)]
 
 To sign up for the Microsoft Intune free trial, follow the steps below:
 
