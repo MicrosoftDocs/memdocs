@@ -31,12 +31,12 @@ ms.collection:
 
 # Delete provisioning policies from Cloud PCs
 
-Only a provisioning policy that has no assignments can be deleted. You can remove assignments by following the steps in [Edit provisioning policy](edit-provisioning-policy.md). After completing those steps, follow the steps below to delete a provisioning policy.
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policies**.
+1. **Only a provisioning policy that has no assignments can be deleted**. Therefore, you must first remove assignments. You can remove assignments by following the steps in [Edit provisioning policy](edit-provisioning-policy.md). After completing those steps, follow the steps below to delete a provisioning policy.
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policies**.
 ![Screenshot of delete policy](./media/delete-provisioning-policy/delete-policy.png)
-2. Select the ellipses (**…**) next to the policy you want to delete > **Delete**.
-3. Select **Confirm** when asked to delete the policy.
+3. Make sure that **Assigned** is **No**. If **Assigned** state is **Yes**, select the provisioning policy and remove assignments. For Windows 365 Enterprise and Windows 365 Frontline in dedicated mode, if you remove the assignments, the Cloud PCs move into the [grace period](device-management-overview.md) state.
+4. Select the ellipses (**…**) next to the policy you want to delete > **Delete**.
+5. Select **Confirm** when asked to delete the policy.
 
 <!-- ########################## -->
 ## Next steps
