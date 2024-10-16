@@ -61,7 +61,6 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 - Audit logs support in Azure Log Analytics
 - [New Microsoft Teams client](/microsoftteams/new-teams-desktop-admin)
 - Windows 365 Boot (available for GCC, not available for GCC High)
-- Windows App
 - Microsoft Purview forensic evidence
 - Windows 365 Switch
 - Windows 365 Frontline (available for GCC, not available for GCC High)
