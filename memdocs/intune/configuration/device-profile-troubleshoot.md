@@ -4,8 +4,8 @@
 title: Questions with policies and profiles in Microsoft Intune
 description: Common questions, answers, and scenarios with device policies and profiles in Microsoft Intune. Learn more about profile changes not applying to users or devices, how long it takes for new policies to deploy, which settings apply when there are conflicts, what happens when you delete or remove a profile, and more.
 keywords:
-author: MandiOhlinger
-ms.author: mandia
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 05/13/2024
 ms.topic: troubleshooting

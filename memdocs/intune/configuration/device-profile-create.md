@@ -4,8 +4,8 @@
 title: Create device profiles in Microsoft Intune
 description: Add or configure a device configuration profile in Microsoft Intune. Select the platform type, configure the settings, and add a scope tag.
 keywords:
-author: MandiOhlinger
-ms.author: mandia
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 05/13/2024
 ms.topic: how-to

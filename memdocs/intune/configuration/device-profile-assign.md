@@ -4,8 +4,8 @@
 title: Assign device profiles in Microsoft Intune
 description: Use the Microsoft Intune admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
 keywords:
-author: MandiOhlinger
-ms.author: mandia
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 05/13/2024
 ms.topic: how-to
