@@ -35,7 +35,7 @@ ms.collection:
 - Windows 10  
 - Windows 11  
 
-This article describes how to prevent Microsoft from collecting data about your Intune Company Portal usage. To turn off data collection in Company Portal:  
+This article describes how to prevent Microsoft from collecting data about your Company Portal app usage. To turn off data collection in Company Portal:  
 
 1. Open the Company Portal app and go to **Settings**.  
 
