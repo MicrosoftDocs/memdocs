@@ -20,7 +20,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: jieyang
+ms.reviewer: madakeva
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser; intune-azure
@@ -56,7 +56,7 @@ Company Portal device resets aren't supported on all devices. The feasibility of
 |Device configuration and management|Device type|
 |---------------------------------------|---------------|
 |Your organization manages your mobile device|**Windows 10/11 and Windows Phone 8.1**</br>Your device no longer appears in Company Portal. Company Portal tries to reset the device back to the manufacturer's default settings. Your personal data, apps, and settings are removed. <br /><br />**Windows 10 Mobile**</br>The only way to unenroll your device is to reset it.|
-|Your device can access company email only|**Windows Phone 8.1**<br />Your device no longer appears in Company Portal. The email that belongs to your work account, and all unsaved emails, are deleted.<br /><br />**Windows 7 or Windows Vista**<br /> Devices running Windows 7 or earlier, and used exclusively for email, can't be reset. <br /><br />**Windows 8.1 and Windows 8**<br />Your device no longer appears in Company Portal.The email that belongs to your work account, and all unsaved emails, are deleted.|
+|Your device can access company email only|**Windows Phone 8.1**<br />Your device no longer appears in Company Portal. The email that belongs to your work account, and all unsaved emails, are deleted.<br /><br />**Windows 7 or Windows Vista**<br /> Devices running Windows 7 or earlier, and used exclusively for email, can't be reset. <br /><br />**Windows 8.1 and Windows 8**<br />Your device no longer appears in Company Portal. The email that belongs to your work account, and all unsaved emails, are deleted.|
 |PCs and laptops|**Windows 8.1 and Windows 8**<br /> Devices running Windows 8 or Windows 8.1 can't be reset, unless they're used exclusively for email.<br /><br />**Windows 7 or Windows Vista**<br />Devices running Windows 7 or earlier can't be reset.|  
 
 Need more help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
