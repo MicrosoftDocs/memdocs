@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2024
+ms.date: 10/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -92,6 +92,17 @@ For more information about app configuration policies for Android Enterprise dev
 Applies to:
 
 - Android Enterprise devices
+
+### Device configuration
+
+#### Windows Autopilot device preparation support in Intune operated by 21Vianet in China<!-- MAXADO-9313795 / INADO-28687730 -->
+
+Intune now supports *Windows Autopilot device preparation* policy for [Intune operated by 21Vianet in China](../fundamentals/china.md) cloud. Customers with tenants located in China can now use *Windows Autopilot device preparation* with Intune to provision devices.
+
+For information about this Autopilot support, see the following in the Autopilot documentation:
+
+- Overview: [Overview of Windows Autopilot device preparation](../../autopilot/device-preparation/device-preparation/overview.md)
+- Tutorial: [Windows Autopilot device preparation scenarios](../../autopilot/device-preparation/tutorial/scenarios.md)
 
 ### Device management
 
