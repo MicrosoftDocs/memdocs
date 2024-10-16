@@ -56,10 +56,10 @@ Organizations enforce requirements, such as encryption and password limits, to m
 
 4. Look at the status update. 
    - **Can access company resources**: No other action needed.      
-   - **Cannot access company resources**: Take the required remediation actions to regain access to company resources.  After you update flagged settings, select **Check access** to recheck access.     
-   - **Can access company resources, but action required**: Take the required remediation actions by the specified date or lose access to company resources.  After you update flagged settings, select **Check access** to recheck access.   
+   - **Cannot access company resources**: Take the required remediation actions to regain access to company resources. After you update flagged settings, select **Check access** to recheck access.     
+   - **Can access company resources, but action required**: Take the required remediation actions by the specified date or lose access to company resources. After you update flagged settings, select **Check access** to recheck access.   
    
-5. When applicable, the status message shows Microsoft Learn help links and remediation actions. Select one or more of these options to start troubleshooting right away. The resolve, check access, and contact actions in the following list are only visible when you're using Company Portal on the affected device.  
+5. When applicable, the status message shows Microsoft Learn help links and remediation actions. To start troubleshooting right away, select one or more of the options. The *resolve*, *check access*, and *contact* actions in the following list are only visible when you're using Company Portal on the affected device.  
 
      * **How to resolve this** opens a relevant help article, if available.  
      * **Resolve** redirects you to the setting on your device.  
