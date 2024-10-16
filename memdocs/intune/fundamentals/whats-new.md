@@ -101,7 +101,7 @@ Intune now supports *Windows Autopilot device preparation* policy for [Intune op
 
 For information about this Autopilot support, see the following in the Autopilot documentation:
 
-- Overview: [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/device-preparation/overview)
+- Overview: [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview)
 - Tutorial: [Windows Autopilot device preparation scenarios](/autopilot/device-preparation/tutorial/scenarios)
 
 ### Device management
