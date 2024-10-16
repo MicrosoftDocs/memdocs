@@ -678,7 +678,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [First Policy Application Test]:#first-policy-application-test
 [Data Protection Tests]:#data-protection-tests
 [Diagnostics Information]:#recommended-diagnostics-information
-[My app isn't receiving or enforcing any policies]:#my-app-isn't-receiving-or-enforcing-any-policies
+[My app isn't receiving or enforcing any policies]:#my-app-isnt-receiving-or-enforcing-any-policies
 
 <!-- Other SDK Guide Markdown documentation -->
 [Stage 1: Plan the Integration]:app-sdk-android-phase1.md
