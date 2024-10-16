@@ -101,8 +101,8 @@ Intune now supports *Windows Autopilot device preparation* policy for [Intune op
 
 For information about this Autopilot support, see the following in the Autopilot documentation:
 
-- Overview: [Overview of Windows Autopilot device preparation](../../autopilot/device-preparation/device-preparation/overview.md)
-- Tutorial: [Windows Autopilot device preparation scenarios](../../autopilot/device-preparation/tutorial/scenarios.md)
+- Overview: [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/device-preparation/overview)
+- Tutorial: [Windows Autopilot device preparation scenarios](/autopilot/device-preparation/tutorial/scenarios)
 
 ### Device management
 
@@ -154,7 +154,7 @@ The Key Distribution Center (KDC) requires user or device objects to be strongly
 
 To meet requirements, modify or create a SCEP certificate profile in Microsoft Intune. Then add a `URI` attribute and the `OnPremisesSecurityIdentifier` variable to the SAN. After you do that, Microsoft Intune appends a tag with the SID extension to the SAN and issues new certificates to targeted users and devices. If the user or device has a SID on premises that's been synced to Microsoft Entra ID, the certificate shows the SID. If they don't have a SID, a new certificate is issued without the SID.
 
-For more information and steps, see [Update certificate connector: Strong mapping requirements for KB5014754](./protect/certificates-profile-scep.md).
+For more information and steps, see [Update certificate connector: Strong mapping requirements for KB5014754](../protect/certificates-profile-scep.md).
 
 Applies to:
 
