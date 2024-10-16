@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 10/16/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -31,12 +31,6 @@ ms.collection:
 
 # Reset device in Company Portal app for Windows  
 
-**Applies to**  
-- Windows 10  
-- Windows 11  
-- Windows 10 Mobile  
-- Windows Phone 8.1
-
 Use the Company Portal app for Windows to reset a used, lost, or stolen device back to factory settings. All apps, settings, and personal data on the device will be deleted and the device will no longer appear in Company Portal.  
 
 The reset option may not be available for every device that appears in Company Portal. Your organization can choose to hide the option.  
@@ -46,14 +40,19 @@ The reset option may not be available for every device that appears in Company P
 To reset a device to its original, out-of-box settings:  
 
 1. Open the Company Portal app on any managed device and sign in with your work or school account.
-2. Select **DEVICES**. 
-3. Select the device you want to reset.
-4. Select **Actions** > **Reset**.    
-5. Select **Reset** to start wiping the device.   
+2. Select **Devices**, and then select the device you want to reset.  
+3. Select **Actions** > **Reset**.    
+
+   > [!div class="mx-imgBorder"]
+   > ![Example screenshot of the Company Portal app for Windows highlighting the Reset option.](./media/reset-device-company-portal-windows/company-portal-windows-reset.png)  
+
+4. Select **Reset** to start wiping the device.   
+
+   > [!div class="mx-imgBorder"]
+   > ![Example screenshot of the Company Portal app for Windows highlighting the confirmation message and final Reset button.](./media/reset-device-company-portal-windows/company-portal-windows-reset-confirmation.png) 
 
 ## Reset limitations  
-Company Portal device resets aren't supported on all devices. The feasibility of a reset depends on the Windows version and how your organization configured their policies. This table lists the expected outcomes for various Windows devices and configurations.       
-
+Company Portal device resets aren't supported on all devices. The feasibility of a reset depends on the Windows version and how your organization configured their policies. This table lists the expected outcomes for various Windows devices and configurations.  
 
 |Device configuration and management|Device type|
 |---------------------------------------|---------------|

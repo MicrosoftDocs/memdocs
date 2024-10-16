@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/29/2023
+ms.date: 10/16/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -39,16 +39,14 @@ Rename a device to make it easier to recognize and manage in the Intune Company 
 
 ## Change name in device details   
 
-Select the name of a device in the Company Portal app to edit it directly.  
+Select the name of a device in the Company Portal app to edit it directly. After you rename the device, its name immediately changes in the app.    
 
 1. Open the Company Portal app and go to **Devices**.  
 2. Select the device you want to rename.
-3. Next to the current device name, select the **Rename** pencil icon.  
+3. Next to the current device name, select the **Edit** pencil icon. Then type in the new name and select **Rename**. 
 
-     ![Example screenshot of the Company Portal app for Windows, highlighting the Rename pencil icon.](./media/1809_Rename_CPapp_Windows_icon.png) 
-4. Type in the new name and select **Rename**. The device name updates immediately in the app.  
-
-     ![Example screenshot of the Company Portal app for Windows, Device details page, Rename popup field.](./media/1808_RenameApp_Popup.png)  
+   > [!div class="mx-imgBorder"]
+   > ![Example screenshot of the Company Portal app for Windows highlighting the edit pencil icon and rename settings.](./media/check-device-access-windows-cpapp/company-portal-windows-rename.png)  
 
 ## Rename device from Actions menu   
 
