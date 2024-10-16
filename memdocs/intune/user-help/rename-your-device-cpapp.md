@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/29/2023
+ms.date: 10/16/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -37,27 +37,16 @@ Rename a device to make it easier to recognize and manage in the Intune Company 
 * iOS
 * Android  
 
-## Change name in device details   
+## Rename device     
 
-Select the name of a device in the Company Portal app to edit it directly.  
+After you rename a device, its name immediately changes in the app.  
 
 1. Open the Company Portal app and go to **Devices**.  
-2. Select the device you want to rename.
-3. Next to the current device name, select the **Rename** pencil icon.  
+1. Select the device you want to rename.   
+1. Select the **Edit** pencil icon that's next to the current device name. Enter the new name, and then select **Rename**. 
 
-     ![Example screenshot of the Company Portal app for Windows, highlighting the Rename pencil icon.](./media/1809_Rename_CPapp_Windows_icon.png) 
-4. Type in the new name and select **Rename**. The device name updates immediately in the app.  
-
-     ![Example screenshot of the Company Portal app for Windows, Device details page, Rename popup field.](./media/1808_RenameApp_Popup.png)  
-
-## Rename device from Actions menu   
-
-Rename a device via the **Actions** menu in the Company Portal app. 
-
-1. Open the Company Portal app and go to **Devices**.
-2. Select the device you want to rename.  
-2. Select **Actions** > **Rename**.   
-3. Type in a new name and select **Rename**. The device name updates immediately in the app.  
+   > [!div class="mx-imgBorder"]
+   > ![Example screenshot of the Company Portal app for Windows highlighting the edit pencil icon and rename settings.](./media/check-device-access-windows-cpapp/company-portal-windows-rename.png) 
 
 Still need help? Contact your IT support person. For contact information, sign into the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account. 
 

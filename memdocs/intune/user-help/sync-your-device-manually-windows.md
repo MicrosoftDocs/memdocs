@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/28/2024
+ms.date: 10/16/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -38,24 +38,26 @@ Sync the enrolled device you're using for work to get the latest updates, requir
 
 This article describes how to start a sync from the:
 
-* Company Portal app
-* Windows desktop taskbar or Start menu
-* System settings app  
+* Company Portal app  
+* Windows desktop taskbar or Start menu  
+* System settings app   
 
 ## Sync from Company Portal app for Windows  
 Complete these steps to sync a device in the Company Portal app. You can sync devices running Windows 10 with the Creator's Update (1703) or later, and Windows 11.  
 
-1. Open the Company Portal app on your device.
+1. Open the Company Portal app on your device and go to **Settings**.  
 
-2. Select **Settings** > **Sync**.
+   > [!div class="mx-imgBorder"]
+   > ![Example screenshot of the Company Portal app homepage, highlighting the Settings option.](./media/sync-your-device-manually-windows/company-portal-windows-settings.png)  
 
-    ![Screenshot home page of Company Portal app, highlighting Settings area.](./media/RS1_homePage_settings_04.png)  
-    
-    ![Screenshot settings page of Company Portal app, highlighting Sync button.](./media/RS1_settingspage_sync05.png)  
+1. Select **Sync**.  
+
+   > [!div class="mx-imgBorder"]
+   > ![Example screenshot of the Company Portal app, highlighting Sync button.](./media/sync-your-device-manually-windows/company-portal-windows-sync.png)  
 
 ## Sync from device taskbar or Start menu   
 
-You can access the Company Portal syncing action from your device's desktop. This way is useful if you have the app pinned directly to your taskbar or Start menu, and want to quickly sync.  
+You can access Company Portal syncing action from the desktop. This way is useful if you have the app pinned directly to your taskbar or Start menu, and want to quickly sync.  
 
 1. Find the Company Portal app icon in your taskbar or Start menu.  
 2. Right-click the app's icon so its menu (also referred to as a jump list) appears.  
