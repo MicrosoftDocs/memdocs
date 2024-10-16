@@ -31,7 +31,7 @@ ms.collection:
 
 # Reset device in Company Portal app for Windows  
 
-Use the Company Portal app for Windows to reset a used, lost, or stolen device back to factory settings. After a reset, all apps, settings, and personal data on the device is deleted and the device no longer appears in Company Portal.  
+Use the Company Portal app for Windows to reset a used, lost, or stolen device back to factory settings. After a reset, all apps, settings, and personal data on the device are deleted, and the device no longer appears in Company Portal.  
 
 The reset option may not be available for every device that appears in Company Portal. Your organization can choose to hide the option.  
 
