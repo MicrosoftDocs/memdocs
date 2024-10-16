@@ -2732,6 +2732,11 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
 
 ## Microsoft Defender Antivirus Exclusions
 
+> [!WARNING]
+> **Defining exclusions lowers the protection offered by Microsoft Defender Antivirus**. Always evaluate the risks that are associated with implementing exclusions. Only exclude files you know aren't malicious.
+>
+> For more information, see [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions) in the Microsoft Defender documentation.
+
 - **Defender Processes to exclude**  
   Baseline defaults:  *Not configured by default. Manually add one or more entries.*
 

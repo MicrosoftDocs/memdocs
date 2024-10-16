@@ -68,6 +68,11 @@ View details about the [endpoint security](../protect/endpoint-security-policy.m
 
 ## Microsoft Defender Antivirus Exclusions
 
+> [!WARNING]
+> **Defining exclusions lowers the protection offered by Microsoft Defender Antivirus**. Always evaluate the risks that are associated with implementing exclusions. Only exclude files you know aren't malicious.
+>
+> For more information, see [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions) in the Microsoft Defender documentation.
+
 The following settings are available in the Microsoft Defender Antivirus profile:
 
 - **Defender local admin merge**  

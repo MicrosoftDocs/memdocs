@@ -4,8 +4,8 @@
 title: Use Copilot for Security to get device and policy information
 description: You can use Copilot for Security to get information about your Intune data, including devices, apps, policies, and groups managed in Intune. You can also compare policies, get device specific details, and get target info for policies.
 keywords:
-author: MandiOhlinger
-ms.author: mandia
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 04/01/2024
 ms.topic: concept-article
