@@ -119,6 +119,8 @@ If this test fails, make sure that:
 - There are no firewall rules (physical, virtual, or in Windows) that might block required traffic.
 - You consider testing the endpoints from a VM on the same subnet declared for Cloud PCs.
 
+If you aren't using Azure CloudShell, make sure that your PowerShell execution policy is configured to allow Unrestricted scripts. If you use Group Policy to set execution policy, make sure that the Group Policy Object (GPO) targeted at the Organizational Unit (OU) defined in the ANC is configured to allow Unrestricted scripts. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy).
+
 ## Environment and configuration are ready
 
 This check is used for many infrastructure related issues that might be related to infrastructure that customers are responsible for. It can include errors such as internal service time outs or errors caused by customers deleting/changing Azure resources while checks are being run.  
