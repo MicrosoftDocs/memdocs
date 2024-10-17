@@ -166,7 +166,9 @@ This action copies this certificate's GUID, for example: `aa05bf38-5cd6-43ea-ac6
 ### Asset Intelligence and certificates
 
 > [!NOTE]
-> Since Nov 2021 we have deprecated Mobile device management and we recommend customers to uninstall this role.
+
+> Since Nov 2021 we have deprecated Asset Intelligence and we recommend customers to uninstall this role.
+
 
 ### Azure services and certificates
 
