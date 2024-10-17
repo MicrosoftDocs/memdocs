@@ -338,6 +338,30 @@ items:
               - name: Step 6. Use app protection actions
                 href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
+              - name: Assign and deploy apps using Microsoft Intune
+                items: 
+                - name: Overview
+                  href: /microsoft-365/solutions/apps-assign-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                  displayName: assign, deploy, app, apps, monitor, troubleshoot
+                - name: Understand app management
+                  href: /microsoft-365/solutions/apps-assign-management?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                - name: Understand app assignments
+                  href: /microsoft-365/solutions/apps-assign-assignments?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                - name: Understand app deployment
+                  href: /microsoft-365/solutions/apps-assign-deployment?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                - name: Assign apps to your organization
+                  items: 
+                  - name: Assign apps overview      
+                    href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json     
+                  - name: Step 1. Confirm users, devices, or groups
+                    href: /microsoft-365/solutions/apps-assign-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                  - name: Step 2. Assign apps to users, devices, or groups
+                    href: /microsoft-365/solutions/apps-assign-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                  - name: Step 3. Verify and monitor app assignments
+                    href: /microsoft-365/solutions/apps-assign-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                  - name: Step 4. Troubleshoot app deployment issues
+                    href: /microsoft-365/solutions/apps-assign-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+
           - name: Secure your corporate data using Edge for Business
             items: 
             - name: Overview
@@ -2037,6 +2061,30 @@ items:
           - name: Step 6. Use app protection actions
             href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
+          - name: Assign and deploy apps using Microsoft Intune
+            items: 
+            - name: Overview
+              href: /microsoft-365/solutions/apps-assign-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              displayName: assign, deploy, app, apps, monitor, troubleshoot
+            - name: Understand app management
+              href: /microsoft-365/solutions/apps-assign-management?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Understand app assignments
+              href: /microsoft-365/solutions/apps-assign-assignments?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Understand app deployment
+              href: /microsoft-365/solutions/apps-assign-deployment?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Assign apps to your organization
+              items: 
+              - name: Assign apps overview      
+                href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json     
+              - name: Step 1. Confirm users, devices, or groups
+                href: /microsoft-365/solutions/apps-assign-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 2. Assign apps to users, devices, or groups
+                href: /microsoft-365/solutions/apps-assign-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 3. Verify and monitor app assignments
+                href: /microsoft-365/solutions/apps-assign-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 4. Troubleshoot app deployment issues
+                href: /microsoft-365/solutions/apps-assign-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            
       - name: Secure your corporate data using Edge for Business
         items: 
         - name: Overview
