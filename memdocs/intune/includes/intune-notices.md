@@ -212,9 +212,8 @@ If applicable, follow the instructions provided by Jamf to migrate your macOS de
 
 After Intune ends support for Android device administrator, devices with access to GMS will be impacted in the following ways:
 
-1. Users won't be able to enroll devices with Android device administrator.
-2. Intune won't make changes or updates to Android device administrator management, such as bug fixes, security fixes, or fixes to address changes in new Android versions.
-3. Intune technical support will no longer support these devices.
+1. Intune won't make changes or updates to Android device administrator management, such as bug fixes, security fixes, or fixes to address changes in new Android versions.
+2. Intune technical support will no longer support these devices.
 
 #### How can you prepare?
 
