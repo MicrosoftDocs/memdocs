@@ -60,6 +60,12 @@ View the Microsoft Defender Antivirus settings you can manage with the **Microso
 
 ## Microsoft Defender Antivirus Exclusions
 
+> [!WARNING]
+> **Defining exclusions lowers the protection offered by Microsoft Defender Antivirus**. Always evaluate the risks that are associated with implementing exclusions. Only exclude files you know aren't malicious.
+>
+> For more information, see [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions) in the Microsoft Defender documentation.
+
+
 For each setting in this group, you can expand the setting, select **Add**, and then specify a value for the exclusion.
 
 - **Defender Processes To Exclude**  
