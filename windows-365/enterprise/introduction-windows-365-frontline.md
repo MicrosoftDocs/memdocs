@@ -169,6 +169,7 @@ The following features aren't yet supported for Windows 365 Frontline.
 
 - Resize a Cloud PC remote action
 - [Move a Cloud PC](move-cloud-pc.md)
+- Cross region disaster recovery
 
 ## Next steps
 
