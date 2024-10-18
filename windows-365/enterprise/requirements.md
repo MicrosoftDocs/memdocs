@@ -113,7 +113,7 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
   - Canada Central
 - European Union
   - North Europe
-  - West Europe
+  - West Europe (Restricted)
   - Italy North
   - Poland Central
   - Sweden Central

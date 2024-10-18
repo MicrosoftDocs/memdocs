@@ -78,6 +78,7 @@ This feature applies to:
 | com.apple.mobilenotes       | Notes        | Apple     |
 | com.apple.Numbers           | Numbers      | Apple     |
 | com.apple.Pages             | Pages        | Apple     |
+| com.apple.Passwords         | Passwords    | Apple     |
 | com.apple.mobilephone       | Phone        | Apple     |
 | com.apple.Photo-Booth       | Photo Booth  | Apple     |
 | com.apple.mobileslideshow   | Photos       | Apple     |

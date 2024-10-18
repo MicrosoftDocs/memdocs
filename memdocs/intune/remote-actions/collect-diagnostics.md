@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/06/2024
+ms.date: 10/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -41,7 +41,7 @@ The **Collect diagnostics** remote action lets you collect and download managed 
 
 ## Collect diagnostics for Microsoft 365 remote applications
 
-The Microsoft 365 remote application diagnostics allows Intune admins to request Intune app protection logs and Microsoft 365 application logs (where applicable) directly from the Intune console. Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application. 
+The Microsoft 365 remote application diagnostics allows Intune admins to request Intune app protection logs and Microsoft 365 application logs (where applicable) directly from the Intune console. Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application.
 
 ### Collect diagnostics from a M365 Application
 
@@ -148,6 +148,7 @@ Registry Keys:
 - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI
 - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
 - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+- HKLM\SOFTWARE\Microsoft\DeviceInventory
 - HKLM\SOFTWARE\Policies
 - HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL
 - HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
@@ -200,6 +201,7 @@ Files:
 
 - %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\\*.etl
 - %ProgramFiles%\Microsoft EPM Agent\Logs\\\*.*
+- %Program Files%\Microsoft Device Inventory Agent\Logs
 - %ProgramData%\Microsoft\IntuneManagementExtension\Logs\\\*.*
 - %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
 - %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
