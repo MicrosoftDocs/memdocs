@@ -37,15 +37,17 @@ The **User settings** page lets IT administrators manage the following settings 
 - **Enable local admin**: If enabled, each user in the assigned groups is elevated to a local administrator of each of their own Cloud PCs. These permissions apply at the user level.
 - **Enable users to reset their Cloud PCs**: If enabled, a **Reset** option is shown in the Windows 365 app and portal for users in the assigned groups. Resetting wipes and reprovisions the Cloud PC, deleting all user data and apps.
 - **Allow user to initiate restore service**: If enabled, each user in the assigned groups can restore their own Cloud PCs to any available backup version.
+- **Cross region disaster recovery configuration (optional)**: Lets you protect Cloud PCs during regional outages. For more information, see [Cross region disaster recovery](cross-region-disaster-recovery.md).
 
 When managing settings, keep the following points in mind:
 
 - The settings can be applied before or after a Cloud PC is assigned.
 - Changes to the settings take effect when the user logs on. If the user is currently logged on, they must sign out and then sign in again to see the change.
+- User settings don't apply to Windows 365 Frontline Cloud PCs in shared mode.
 
 ## Add a new setting
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...** > **User Settings** > **Add**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Device onboarding**) > **...** > **User Settings** > **Add**.
 ![Screenshot of add user setting](./media/assign-users-as-local-admin/user-settings.png)
 2. Under **Settings**, enter a **Name** for the setting.
 3. Select the boxes for the settings that you want to enable for the users.
