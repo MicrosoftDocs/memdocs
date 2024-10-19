@@ -64,7 +64,6 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 - Microsoft Purview forensic evidence
 - Windows 365 Switch
 - Windows 365 Frontline (available for GCC, not available for GCC High)
-- Cloud PC connection quality report
 - Cross region disaster recovery
 - [Support for Omnissa Horizon clients and the Blast protocol](set-up-omnissa-horizon.md)
 - [Microsoft Purview Customer Key](purview-customer-key.md)
