@@ -94,7 +94,7 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
     >
     > - The app is not available in US region.
     > - The app is a paid app, which is not supported.
-    > - The app is an Android app.
+    > - The app platform isn't support in the Microsoft Store.
 
 3. Choose the app that you want to deploy and choose **Select**.
 
