@@ -50,7 +50,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is Intune?
-            url: mem/intune/fundamentals/what-is-intune
+            url: /mem/intune/fundamentals/what-is-intune
           - text: Device management overview
             url: /mem/intune/fundamentals/what-is-device-management
       - linkListType: tutorial
