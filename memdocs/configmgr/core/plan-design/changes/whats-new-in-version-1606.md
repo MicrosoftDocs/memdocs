@@ -101,7 +101,7 @@ On-premises mobile device management (MDM) now supports a new capability in Wind
 
 ### Manage apps from the Windows Store for Business
 
-The [Windows Store for Business](https://businessstore.microsoft.com/store/private-store) is where you can find and purchase Windows apps for your organization, either individually or in volume. By connecting the store to Configuration Manager, you can synchronize the list of apps you've purchased with Configuration Manager, view these in the Configuration Manager console, and deploy them like you would any other app.
+The Windows Store for Business is where you can find and purchase Windows apps for your organization, either individually or in volume. By connecting the store to Configuration Manager, you can synchronize the list of apps you've purchased with Configuration Manager, view these in the Configuration Manager console, and deploy them like you would any other app.
 
 For details, see [Manage apps from the Windows Store for Business with Configuration Manager](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 

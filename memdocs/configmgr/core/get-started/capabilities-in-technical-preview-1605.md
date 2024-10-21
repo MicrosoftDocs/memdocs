@@ -79,7 +79,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 - On the main page of the **Devices** node (not all columns might be visible by default).  
 
 ##  <a name="BKMK_WSFB"></a> Windows Store for Business apps  
- The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
+ The Windows Store for Business is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
 
 - You can synchronize the list of purchased apps with Configuration Manager  
 
@@ -111,7 +111,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 3.  In the Windows Store for Business, configure Configuration Manager as the store management tool.  
 
-    1.  Open [https://businessstore.microsoft.com](https://businessstore.microsoft.com/) and sign-in if prompted.  
+    1.  Open Windows Store for Business and sign-in if prompted.  
 
     2.  Accept the terms of use if necessary.  
 

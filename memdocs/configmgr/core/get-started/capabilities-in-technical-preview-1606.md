@@ -76,7 +76,7 @@ Similar options have been added to the software updates deployment wizard, autom
 
 Device Guard is a Windows 10 feature that uses hardware and software features to strictly control what is allowed to run on the device.
 
-For more information, see [Introduction to Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
+For more information, see [Introduction to Device Guard](/windows-server/security/security-and-assurance).
 
 In this release, Configuration Manager can interoperate with Device Guard and [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) so that executable and DLL files that are deployed with Configuration Manager are automatically trusted as they come from a Managed Installer, meaning that they will be allowed to run on the target device and other software will not be allowed to run unless explicitly allowed to run by other AppLocker rules.  
 
@@ -91,7 +91,7 @@ Like all AppLocker policies, policies with Managed Installer rules can run in tw
 
 For more information, see the following articles:
 
-- [Device Guard introduction](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
+- [Device Guard introduction](/windows-server/security/security-and-assurance)
 
 - [Planning and getting started on the Windows Defender Application Control deployment process](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
