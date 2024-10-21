@@ -295,10 +295,10 @@ Your private organization app repository can be:
 
 - Microsoft Store for Business or Microsoft Store for Education
 
-  Previously, the Microsoft Store app had a Microsoft Store for Business tab. This tab is removed. If you use Microsoft Store for Business, then to access your private app repository, go to the [Microsoft Store for Business website](https://businessstore.microsoft.com/). For more information, go to [Manage access to private store](/microsoft-store/manage-access-to-private-store).
+  Previously, the Microsoft Store app had a Microsoft Store for Business tab. This tab is removed. If you use Microsoft Store for Business, then to access your private app repository, go to the Microsoft Store for Business website. For more information, go to [Manage access to private store](/microsoft-store/manage-access-to-private-store).
 
   > [!NOTE]
-  > The Microsoft Store for Business and Microsoft Store for Education will be retired. For more information, go to [Microsoft Store for Business and Microsoft Store for Education](/microsoft-store/microsoft-store-for-business-overview).
+  > The Microsoft Store for Business and Microsoft Store for Education will be retired. For more information, go to [Microsoft Store for Business and Microsoft Store for Education](/mem/configmgr/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 Using Intune, on Windows 10/11 Enterprise and Education devices, you can block end users from installing Microsoft Store apps outside of your organization's private app repository.
 
