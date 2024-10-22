@@ -35,7 +35,7 @@ ms.collection:
 The **User settings** page lets IT administrators manage the following settings for the user:
 
 - **Enable local admin**: If enabled, each user in the assigned groups is elevated to a local administrator of each of their own Cloud PCs. These permissions apply at the user level.
-- **Enable users to reset their Cloud PCs**: If enabled, a **Reset** option is shown in the Windows 365 app and portal for users in the assigned groups. Resetting wipes and reprovisions the Cloud PC, deleting all user data and apps.
+- **Enable users to reset their Cloud PCs**: If enabled, a **Reset** option is shown in the Windows App and portal for users in the assigned groups. Resetting wipes and reprovisions the Cloud PC, deleting all user data and apps.
 - **Allow user to initiate restore service**: If enabled, each user in the assigned groups can restore their own Cloud PCs to any available backup version.
 - **Cross region disaster recovery configuration (optional)**: Lets you protect Cloud PCs during regional outages. For more information, see [Cross region disaster recovery](cross-region-disaster-recovery.md).
 
