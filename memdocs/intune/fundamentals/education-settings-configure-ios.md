@@ -162,7 +162,7 @@ When you're finished configuring certificates, choose **OK**.
 
 The profile is created and appears on the profiles list pane.
 
-Assign the profile to student devices in the classroom groups that were created when you synchronized your school data with Microsoft Entra ID (see [How to assign device profiles](../configuration/device-profile-assign.md).
+Assign the profile to student devices in the classroom groups that were created when you synchronized your school data with Microsoft Entra ID (see [How to assign device profiles](../configuration/device-profile-assign.md)).
 
 ## Next steps
 
