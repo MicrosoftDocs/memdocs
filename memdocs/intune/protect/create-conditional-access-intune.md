@@ -119,4 +119,4 @@ To take advantage of device compliance status, configure Conditional Access poli
 ## Next steps
 
 - [App-based Conditional Access with Intune](app-based-conditional-access-intune.md)
-- [Troubleshooting Intune Conditional Access](https://support.microsoft.com/help/4456106)
+- [Troubleshooting Intune Conditional Access](/troubleshoot/mem/intune/device-protection/troubleshoot-conditional-access)
