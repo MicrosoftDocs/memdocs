@@ -1833,8 +1833,6 @@ items:
           href: ./fundamentals/review-logs-using-azure-monitor.md
         - name: Device configuration profile status
           href: ./configuration/device-profile-monitor.md                    
-        - name: Endpoint analytics
-          href: ../analytics/
 
   - name: Industry guides
     items: 
