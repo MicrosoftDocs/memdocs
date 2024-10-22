@@ -42,11 +42,11 @@ This option is available for Macs that were encrypted by your organization using
 2. Select the encrypted Mac.  
 3. Select **Get recovery key**.  
 
-    ![Screenshot of Company Portal website, highlighting Get recovery key section.](./media/1907-recovery2-cpweb-intune.PNG)  
+    ![Screenshot of Company Portal website, highlighting Get recovery key section.](./media/get-recovery-key-cpweb/1907-recovery2-cpweb-intune.PNG)  
 
 4. Your recovery key appears. For security reasons, the key disappears after five minutes. To see the key again, select **Get recovery key**.  
 
-    ![Screenshot of Company Portal website, showing recovery key.](./media/1907-recovery-cpweb-intune.PNG)   
+    ![Screenshot of Company Portal website, showing recovery key.](./media/get-recovery-key-cpweb/1907-recovery-cpweb-intune.PNG)   
 
 ## Get recovery key from Company Portal app 
 
@@ -60,7 +60,7 @@ This option isn't available for Macs that you have personally encrypted. The per
 1. Go to **Devices** and select the Mac you're locked out of.  
 1. On the device details page, select **Get recovery key**. The Company Portal website opens in Safari and shows the key.  After 5 minutes of inactivity, Company Portal returns you to the device details page on the Company Portal website. You can view the key again from there.    
 
-    ![Screenshot of Company Portal app for iOS, showing recovery key](./media/get-recovery-key-cpweb-02.png)  
+    ![Screenshot of Company Portal app for iOS, showing recovery key](./media/get-recovery-key-cpweb/get-recovery-key-cpweb-02.png)  
 
 ## IT pro support  
 

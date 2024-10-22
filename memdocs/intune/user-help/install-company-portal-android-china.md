@@ -43,7 +43,7 @@ Company Portal is also available from the [Baidu App Store](https://go.microsoft
  
    1. Go to the [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565).  
    2. Search for the Company Portal app by entering **公司门户** in the search bar.  
-   3. Select the Company Portal ![Company Portal icon](./media/company-portal-logo-small-2101.png) listing.  
+   3. Select the Company Portal ![Company Portal icon](./media/install-company-portal-android-china/company-portal-logo-small-2101.png) listing.  
 
 
 If the app stores are unavailable, you can download [Microsoft Intune Company Portal for Android](https://www.microsoft.com/download/details.aspx?id=49140) on your device and side-load the app. When installed this way, the app doesn't receive updates or fixes automatically. You must be sure to regularly update and patch the app manually.  

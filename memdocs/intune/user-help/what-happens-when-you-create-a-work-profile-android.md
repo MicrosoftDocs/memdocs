@@ -196,7 +196,7 @@ Samsung Galaxy S20 (Android 13)
 
 
    > [!div class="mx-imgBorder"]
-   > [![Screenshot of activated work profile icon in Samsung Galaxy S20 quick settings.](./media/android-work-profile-quick-settings-on-1.png)](./media/what-happens-when-you-create-a-work-profile-android/android-work-profile-quick-settings-on.png#lightbox)    
+   > [![Screenshot of activated work profile icon in Samsung Galaxy S20 quick settings.](./media/what-happens-when-you-create-a-work-profile-android/android-work-profile-quick-settings-on-1.png)](./media/what-happens-when-you-create-a-work-profile-android/android-work-profile-quick-settings-on.png#lightbox)    
 
   
 Nexus 5X (Android 8.1.0)  

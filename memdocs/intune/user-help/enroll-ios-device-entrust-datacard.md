@@ -86,7 +86,7 @@ Derived credentials are an implementation of the National Institute of Standards
     a. Tap the link to your organization's setup instructions. If your organization doesn't provide additional instructions, you'll be sent to this article.  
     b. Tap **Begin**.  
 
-    ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/smart-card-info-intercede.png)
+    ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/enroll-ios-device-intercede/smart-card-info-intercede.png)
 
 9. Switch to your smart card-enabled device and open IdentityGuard. 
 10. Find the smart credential sign-in area and select the sign-in button.  
@@ -101,14 +101,14 @@ Derived credentials are an implementation of the National Institute of Standards
 
 16. Return to your mobile device. On the Company Portal > **Get QR code** screen, tap **Continue**. 
 
-    ![Example screenshot of the Company Portal Get QR code screen.](./media/get-qr-code-intercede.png)  
+    ![Example screenshot of the Company Portal Get QR code screen.](./media/enroll-ios-device-intercede/get-qr-code-intercede.png)  
 17. Tap **Use Camera** > **OK**.  
 
-    ![Example screenshot of a Company Portal prompt, asking permission to allow camera access.](./media/allow-cp-camera-access-intercede.png)  
+    ![Example screenshot of a Company Portal prompt, asking permission to allow camera access.](./media/enroll-ios-device-intercede/allow-cp-camera-access-intercede.png)  
 18. Scan the image of the QR code that's on your smart card-enabled device.  
 19. Enter the numerical password that appears under the QR code.  
 
-    ![Example screenshot of the Company Portal Password Required screen, enter password field.](./media/enter-password-derived-credentials.png)   
+    ![Example screenshot of the Company Portal Password Required screen, enter password field.](./media/enroll-ios-device-entrust-datacard/enter-password-derived-credentials.png)   
 
 20. Wait for Company Portal to finish setting up your device.  
 

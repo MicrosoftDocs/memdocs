@@ -52,21 +52,21 @@ Use Intune Company Portal to enroll devices running on Windows 10, version 1607 
 
 2. On the **Home** screen, select **Next** to set up your device. 
 
-    ![Example image of Company Portal > Set up your device screen, showing that the device needs to be set up to connect to work and highlighting the Next button.](./media/set-up-your-device-company-portal-2107.png)  
+    ![Example image of Company Portal > Set up your device screen, showing that the device needs to be set up to connect to work and highlighting the Next button.](./media/enroll-windows-10-device/set-up-your-device-company-portal-2107.png)  
 
 3. Select **Connect**.  
 
-    ![Example image of Company Portal > Connect to work screen highlighting the Connect button.](./media/connect-to-work-company-portal-2107.png)  
+    ![Example image of Company Portal > Connect to work screen highlighting the Connect button.](./media/enroll-windows-10-device/connect-to-work-company-portal-2107.png)  
 
 4. Sign in with your work or school account again. If you're using the Company Portal website, the sign-in prompt may open in a new window. 
 
-    ![Example image of Microsoft authentication screen that prompts user to "Enter password."](./media/enter-password-prompt-company-portal-2107.png)  
+    ![Example image of Microsoft authentication screen that prompts user to "Enter password."](./media/enroll-windows-10-device/enter-password-prompt-company-portal-2107.png)  
 
 5. On the **Setting up your device** screen, select **Go**.  
 6. After setup is complete, return to the Company Portal app. Select **Next**.  
 7. Select **Done** to exit setup.  
 
-    ![Example image of Company Portal > You're all set screen, highlighting the Done button.](./media/youre-all-set-company-portal-2107.png)  
+    ![Example image of Company Portal > You're all set screen, highlighting the Done button.](./media/enroll-windows-10-device/youre-all-set-company-portal-2107.png)  
 
 ## Sync device to fix connection problems  
 
@@ -80,17 +80,17 @@ Enroll devices running Windows 10, version 1511 and earlier. Company Portal does
 3. Select **Accounts** > **Your account**.  
 
 
-    ![Select your account](./media/W10-enroll-2-accounts-your-account.png)  
+    ![Select your account](./media/enroll-windows-10-device/W10-enroll-2-accounts-your-account.png)  
 
 5. Select **Add a work or school account**.  
 
 
-    ![Select add a work or school account](./media/w10-enroll-3-add-work-school-acct.png)  
+    ![Select add a work or school account](./media/enroll-windows-10-device/w10-enroll-3-add-work-school-acct.png)  
 
 6. Sign in with your work or school credentials.  
 
 
-    ![Sign in](./media/W10-enroll-4-sign-in.png)  
+    ![Screenshot of Office 365 sign-in screen for work or school account.](./media/enroll-windows-10-device/W10-enroll-4-sign-in.png)  
 
 
 ## Troubleshooting 

@@ -64,7 +64,7 @@ Your device must be running macOS 11 or later.
 3. Review the privacy information. Then select **Continue**.  
 4. On the **Install management profile** page, select **Download profile**.  
 
-    ![Example screenshot of Company Portal, Install management profile screen, highlighting password prompt.](./media/install-management-profile-macos-2006.png)  
+    ![Example screenshot of Company Portal, Install management profile screen, highlighting password prompt.](./media/enroll-your-device-in-intune-macos-cp/install-management-profile-macos-2006.png)  
 5. Your macOS system settings open in a new window. The management profile you just downloaded is shown.  
     1. Select the profile to open it.  
     1. Select **Install...**  
@@ -75,7 +75,7 @@ Your device must be running macOS 11 or later.
 8. Your organization may require you to update your device settings. On the **Checking device settings** page, review the list of settings you need to change. Select **How to resolve this** to view related help documentation in a web browser.   
 9. After you make all changes, select **Retry**. Wait while Company Portal rechecks your device settings.  
 
-    ![Example screenshot of Company Portal, Update device settings screen, highlighting Retry button.](./media/update-settings-mac-2006.png)  
+    ![Example screenshot of Company Portal, Update device settings screen, highlighting Retry button.](./media/enroll-your-device-in-intune-macos-cp/update-settings-mac-2006.png)  
 10. When setup is complete, select **Done**. Your device is ready to use for work. You can go to **Devices** in the Company Portal app to view and manage your enrolled Mac.    
 
 ## Troubleshooting and feedback   
