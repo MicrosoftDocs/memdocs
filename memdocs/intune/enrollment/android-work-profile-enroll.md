@@ -88,6 +88,18 @@ For more information and screenshots of the end user experience, see [Enroll dev
 
 Microsoft Intune shares certain user and device information with Google when Android Enterprise device management is enabled.  For more information, see [Data Intune sends to Google](../protect/data-intune-sends-to-google.md).  
 
+## Limitations 
+
+The limitations in this section apply to personal devices with a work profile.    
+
+Private space is a feature introduced with Android 15 that lets users create a space for sensitive apps they want to keep hidden. Users might try to enroll their private space.  
+
+* The private space is considered a personal profile. Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.   
+
+* Any policies you deploy to an enrolled private space is scoped to the private space, not the entire device.      
+
+* If users attempt to enroll the private space after they enroll the device, Intune will initiate the device administrator enrollment process. This will cause two enrollment records to appear in the Microsoft Intune admin center: one under work profile management and one under device administrator management. 
+
 ## Next steps
 - [Deploy Android Enterprise apps](../apps/apps-add-android-for-work.md)
 - [Add Android Enterprise configuration policies](../configuration/device-profiles.md) 

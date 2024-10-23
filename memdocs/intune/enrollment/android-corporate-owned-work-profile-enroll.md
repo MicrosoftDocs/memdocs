@@ -190,10 +190,7 @@ Private space is a feature introduced with Android 15 that lets users create a s
 
 * The private space is considered a personal profile. Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.   
 
-* Any policies you deploy to an enrolled private space is scoped to the private space, not the entire device.      
-
-* After enrollment, if users add and attempt to enroll the private space, Intune will initiate the device administrator enrollment process. This will cause two enrollment records to appear in the Microsoft Intune admin center for this device: one under work profile management and one under Android administrator management.  
-
+* Any policies you deploy to an enrolled private space is scoped to the private space, not the entire device.  
 
 ## Next steps
 - [Deploy Android apps](../apps/apps-deploy.md)
