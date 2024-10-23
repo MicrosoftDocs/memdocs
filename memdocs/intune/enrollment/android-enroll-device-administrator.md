@@ -34,7 +34,7 @@ ms.collection:
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
 
-Android device administrator (sometimes referred to *legacy* Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is available with [Android Enterprise](https://www.android.com/enterprise/management/) in [countries where Android Enterprise is available](https://support.google.com/work/android/answer/6270910). In an effort to move to modern, richer, and more secure device management, Google deprecated Android device administrator management in 2020 and Intune will be ending support for device administrator devices with access to Google Mobile Services at the end of 2024.
+Android device administrator (sometimes referred to *legacy* Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is available with [Android Enterprise](https://www.android.com/enterprise/management/) in [countries/regions where Android Enterprise is available](https://support.google.com/work/android/answer/6270910). Google deprecated Android device administrator management in 2020. Intune is ending support for device administrator devices with access to Google Mobile Services at the end of 2024.  
 
 Therefore, we advise against enrolling new devices using the device administrator process described here and we also recommend that you migrate devices off of device administrator management.
 
@@ -44,7 +44,7 @@ If you still decide to have users enroll their Android devices with device admin
 
 ## Set up device administrator enrollment
 
-1. To prepare to manage mobile devices, you must set the mobile device management (MDM) authority to **Microsoft Intune**. See [Set the MDM authority](../fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you are first setting up Intune for mobile device management.
+1. To prepare to manage mobile devices, you must set the mobile device management (MDM) authority to **Microsoft Intune**. See [Set the MDM authority](../fundamentals/mdm-authority-set.md) for instructions. You only need to configure this setting in your tenant once.  
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Go to **Devices** > **Enrollment.
 4. Select the **Android** tab.
@@ -52,11 +52,13 @@ If you still decide to have users enroll their Android devices with device admin
 6. Select the checkmark next to **Use device administrator to manage devices**.  
 7. [Tell your users how to enroll their devices](../user-help/enroll-device-android-company-portal.md).  
 
-After a user has enrolled, you can begin managing their devices in Intune, including [assigning compliance policies](../protect/compliance-policy-create-android.md), [managing apps](../apps/app-management.md), and more.
+After a user enrolls, you can begin managing their devices in Intune, including [assigning compliance policies](../protect/compliance-policy-create-android.md), [managing apps](../apps/app-management.md), and more.
 
-For information about other user tasks, see these articles:
-- [Resources about the end-user experience with Microsoft Intune](../fundamentals/intune-planning-guide.md)
-- [Using your Android device with Intune](../user-help/why-enroll-android-device.md)  
+For information about other user tasks, see these articles:  
+
+- [Microsoft Intune planning guide](../fundamentals/intune-planning-guide.md)  
+
+- [Android device enrollment overview ](../user-help/why-enroll-android-device.md)  
 
 ## Block device administrator enrollment
 To block Android device administrator devices, or to block only personally owned Android device administrator devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).
@@ -65,29 +67,26 @@ To block Android device administrator devices, or to block only personally owned
 
 [Microsoft Teams certified Android devices](/microsoftteams/devices/teams-ip-phones) should continue being managed with device administrator management until [AOSP user-associated](android-aosp-corporate-owned-user-associated-enroll.md) management becomes available for these devices.  
 
-To unenroll a Microsoft Teams certified Android device that's enrolled in Android device administrator, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/) and deselect the Intune license from the Teams account for the Android device. After you remove an Intune license, there is a 30 day grace period in which the device still functions. The device will have to sign in again after this step to avoid enrolling in Intune under device administrator management again. 
+To unenroll a Microsoft Teams-certified Android device you manage with Android device administrator, you must:  
+
+1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
+1. Deselect the Intune license from the Teams account for the Android device. 
+
+After you remove an Intune license, there's a 30 day grace period, during which the device still functions. The device must sign in again after this step to avoid enrolling in Intune under device administrator management again. 
 
 ## Limitations 
 
-Private space is a feature introduced with Android 15 that lets users create a space for sensitive apps they want to keep hidden. The following limitations apply to devices with device administrator:    
+The limitations in this section apply to devices managed with device administrator.    
 
- * Users might attempt to create a work profile-like experience on device administrator devices by enrolling only the private space, leading to partial device management. 
+Private space is a feature introduced with Android 15 that lets people create a space on their device for sensitive apps and data they want to keep hidden. 
 
- * Microsoft Intune doesn't support mobile device management within the private space, and doesn't provide technical support for devices that attempt to enroll the private space.   
+ * The private space is considered a personal profile. Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.   
 
- * Enrolled devices that have a private space might appear with two enrollment records in the Microsoft Intune admin center.  
+ * Any policies you deploy to an enrolled private space is scoped to the private space, not the entire device.  
 
- ## Limitations 
+ * Users might try to create a work profile-like experience on their devices by enrolling only the private space, leading to partial device management. This causes two enrollment records to appear in the Microsoft Intune admin center, each reporting different statuses. 
 
-The following limitations apply to devices managed with device administrator:    
-
-Private space is a feature introduced with Android 15 that lets users create a space for sensitive apps they want to keep hidden. Employees or students might try to enroll their private space. The private space is considered a personal profile, so Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.   
-
-* Enrolled devices that have a private space might appear with two enrollment records in the Microsoft Intune admin center, each reporting different statuses. 
-
-* Any policies you deploy to an enrolled private space is scoped to the private space, not the entire device.    
-
-* If a person creates the private space on a personal device before they enroll it, you can manage the space outside of the private space with device administrator. After enrollment, if they attempt to enroll the private space, Intune will initiate the work profile enrollment flow, but the process will fail without any notification.  
+ * After a user enrolls their personal device, if they attempt to enroll the private space, Intune will initiate the personal work profile enrollment flow. However, in this scenario the enrollment process will fail without any notification.   
 
 ## Next steps
 - [Assign compliance policies](../protect/compliance-policy-create-android.md)
