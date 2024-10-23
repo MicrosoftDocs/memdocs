@@ -47,7 +47,8 @@ Intune helps you deploy apps and settings to Android Enterprise corporate-owned 
 Devices must meet these requirements to be managed as Android Enterprise corporate-owned work profile devices:
 
 - Android OS version 8.0 and above.
-- Devices must run a distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
+- Devices must run a distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.  
+
 
 ## Set up Android Enterprise corporate-owned work profile device management
 
@@ -180,6 +181,19 @@ Apps are automatically updated on managed devices when the app developer publish
 To remove an app from Android Enterprise corporate-owned work profile devices, you can either: 
 - Delete the Required app deployment.
 - Create an uninstall deployment for the app.  
+
+## Limitations 
+
+The limitations in this section apply to corporate-owned devices with a work profile.    
+
+Private space is a feature introduced with Android 15 that lets users create a space for sensitive apps they want to keep hidden. Users might try to enroll their private space.  
+
+* The private space is considered a personal profile. Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.   
+
+* Any policies you deploy to an enrolled private space is scoped to the private space, not the entire device.      
+
+* After enrollment, if users add and attempt to enroll the private space, Intune will initiate the device administrator enrollment process. This will cause two enrollment records to appear in the Microsoft Intune admin center for this device: one under work profile management and one under Android administrator management.  
+
 
 ## Next steps
 - [Deploy Android apps](../apps/apps-deploy.md)

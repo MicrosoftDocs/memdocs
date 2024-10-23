@@ -67,6 +67,28 @@ To block Android device administrator devices, or to block only personally owned
 
 To unenroll a Microsoft Teams certified Android device that's enrolled in Android device administrator, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/) and deselect the Intune license from the Teams account for the Android device. After you remove an Intune license, there is a 30 day grace period in which the device still functions. The device will have to sign in again after this step to avoid enrolling in Intune under device administrator management again. 
 
+## Limitations 
+
+Private space is a feature introduced with Android 15 that lets users create a space for sensitive apps they want to keep hidden. The following limitations apply to devices with device administrator:    
+
+ * Users might attempt to create a work profile-like experience on device administrator devices by enrolling only the private space, leading to partial device management. 
+
+ * Microsoft Intune doesn't support mobile device management within the private space, and doesn't provide technical support for devices that attempt to enroll the private space.   
+
+ * Enrolled devices that have a private space might appear with two enrollment records in the Microsoft Intune admin center.  
+
+ ## Limitations 
+
+The following limitations apply to devices managed with device administrator:    
+
+Private space is a feature introduced with Android 15 that lets users create a space for sensitive apps they want to keep hidden. Employees or students might try to enroll their private space. The private space is considered a personal profile, so Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.   
+
+* Enrolled devices that have a private space might appear with two enrollment records in the Microsoft Intune admin center, each reporting different statuses. 
+
+* Any policies you deploy to an enrolled private space is scoped to the private space, not the entire device.    
+
+* If a person creates the private space on a personal device before they enroll it, you can manage the space outside of the private space with device administrator. After enrollment, if they attempt to enroll the private space, Intune will initiate the work profile enrollment flow, but the process will fail without any notification.  
+
 ## Next steps
 - [Assign compliance policies](../protect/compliance-policy-create-android.md)
 - [Managing apps](../apps/app-management.md)
