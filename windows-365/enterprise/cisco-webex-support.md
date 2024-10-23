@@ -45,7 +45,7 @@ To optimize Cisco Webex, you’ll need to:
 
 These instructions don't support connections through a web browser.
 
-- **Windows 365 app for Windows**
+- **Windows App**
 - **Windows Remote Desktop Client**
 - **Operating system**: Windows
 
