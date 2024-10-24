@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/06/2024
+ms.date: 10/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,6 +34,8 @@ At a high level, the Microsoft Tunnel requires:
 
 - An Azure subscription.
 - A *Microsoft Intune Plan 1* subscription.
+  > [!NOTE]
+  > This prerequisite is for *Microsoft Tunnel*, and does not include [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md), which is an [Intune add-on](../fundamentals/intune-add-ons.md) that requires a *Microsoft Intune Plan 2* subscription.
 - A Linux server that runs containers. The server can be on-premises or in the cloud, and supports one of the following container types:
   - **Podman** for Red Hat Enterprise Linux (RHEL). See the [Linux server](#linux-server) requirements.
   - **Docker** for all other Linux distributions.
@@ -47,7 +49,6 @@ The following sections detail the prerequisites for the Microsoft Tunnel, and pr
 
 > [!NOTE]
 > Tunnel and Global Secure Access (GSA) cannot be use simultaneously on the same device.
-
 
 ## Linux server
 
