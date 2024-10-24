@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 10/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -321,7 +321,7 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 
 ### Locked view mode
 
-Edge for iOS and Android can be enabled as locked view mode with MDM policy **[EdgeLockedViewModeEnabled](/deployedge/microsoft-edge-mobile-policies#edgelockedviewmodeenabled)**
+Edge for iOS and Android can be enabled as locked view mode with MDM policy **[EdgeLockedViewModeEnabled](/deployedge/microsoft-edge-mobile-policies#edgelockedviewmodeenabled)**.
 
 |Key  |Value  |
 |:---------|:---------|
