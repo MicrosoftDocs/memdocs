@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/06/2024
+ms.date: 10/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,6 +34,8 @@ At a high level, the Microsoft Tunnel requires:
 
 - An Azure subscription.
 - A *Microsoft Intune Plan 1* subscription.
+  > [!NOTE]
+  > This prerequisite is for *Microsoft Tunnel*, and does not include [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md), which is an [Intune add-on](../fundamentals/intune-add-ons.md) that requires a *Microsoft Intune Plan 2* subscription.
 - A Linux server that runs containers. The server can be on-premises or in the cloud, and supports one of the following container types:
   - **Podman** for Red Hat Enterprise Linux (RHEL). See the [Linux server](#linux-server) requirements.
   - **Docker** for all other Linux distributions.
@@ -47,7 +49,6 @@ The following sections detail the prerequisites for the Microsoft Tunnel, and pr
 
 > [!NOTE]
 > Tunnel and Global Secure Access (GSA) cannot be use simultaneously on the same device.
-
 
 ## Linux server
 
@@ -111,7 +112,7 @@ Set up a Linux based virtual machine or a physical server on which to install th
 
   - [Install Podman on Red Hat Enterprise Linux 8.4 and later (scroll down to RHEL8)](https://podman.io/get-started).
 
-    These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and that usually install together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages with documentation for the application, and packages with helper utilities. For more information, see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
+    These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and that usually install together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages with documentation for the application, and packages with helper utilities. For more information, see [Introduction to modules](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/managing-versions-of-appstream-content_using-appstream) in the Red Hat documentation.
 
     > [!NOTE]
     >
