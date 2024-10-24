@@ -9,4 +9,4 @@ ms.author: erikje
 ms.custom: include file
 ---
 
-For Frontline Cloud PCs in shared mode, you can [bulk reprovision](remotely=manage-cloud-pc.md) all the Cloud PCs in a provisioning policy. Admins can also select the percentage of Cloud PCs that are available for users to connect without being impacted by reprovisioning process.
+For Frontline Cloud PCs in shared mode, you can [bulk reprovision](remotely-manage-cloud-pc.md) all the Cloud PCs in a provisioning policy. Admins can also select the percentage of Cloud PCs that are available for users to connect without being impacted by reprovisioning process.
