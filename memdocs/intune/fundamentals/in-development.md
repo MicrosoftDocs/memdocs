@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/17/2024
+ms.date: 10/29/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -87,7 +87,44 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
+
+### New settings available in the Apple settings catalog <!--29038336 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+We're adding new settings to the Settings Catalog. To view available settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+#### iOS/iPadOS
+
+**Restrictions**:
+
+- Allow Apps To Be Hidden
+- Allow Apps To Be Locked
+- Allow Call Recording
+- Allow Mail Summary
+- Allow RCS Messaging
+
+##### macOS
+
+**Declarative Device Management (DDM) > Math Settings**:
+
+- Calculator
+  - Input Mode - RPN
+
+**Restrictions**:
+
+- Allow Mail Summary
+- Allow Media Sharing Modification
+
+The following settings have been deprecated by Apple and will be marked as deprecated in the Settings Catalog:
+
+#### macOS
+
+**Security > Firewall**:
+
+- Enable Logging
+- Logging Option
 
 <!-- *********************************************** -->
 
@@ -96,6 +133,14 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device management
+
+### Store macOS certificates in user keychain<!-- 7824255 -->
+
+Soon you'll have the option to store macOS certificates in the user keychain. Currently, Microsoft Intune automatically stores user and device certificates in the *device* keychain. The enhancement will strengthen system security, and will improve the user experience by reducing certificate prompts.
+
+Applies to:
+
+- macOS
 
 ### Device Inventory for Windows<!-- 24853010 -->
 
@@ -134,7 +179,40 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-<!-- ## Monitor and troubleshoot -->
+## Monitor and troubleshoot
+
+### New device actions for single device query<!--25799823 -->
+
+We're adding the Intune remote device actions to Single device query to help you manage your devices remotely. From the device query interface, you'll be able to run device actions based on query results for faster and more efficient troubleshooting.
+
+Applies to:
+
+- Windows
+
+For more information, see:
+
+- [Device query in Microsoft Intune](../../analytics/device-query.md)
+- [Run remote actions on devices with Microsoft Intune](../remote-actions/device-management.md)
+
+### Device Query for Multiple Devices<!--25234456 -->
+
+We're adding Device query for multiple devices. This feature allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
+
+Device query for multiple devices will be supported for devices running Windows 10 or later. This feature will be included as part of Advanced Analytics.
+
+Applies to:
+
+- Windows
+
+### ICCID will be inventoried for Android Enterprise Dedicated and Fully Managed <!-- 12846449 -->
+
+We're adding the ability to view a device's ICCID number for devices enrolled as Android Enterprise Dedicated or Android Fully Managed. Admins can view ICCID numbers in their device inventory.
+
+When available, you can find the ICCID number for Android devices by navigating to **Devices** > **Android**. Select a device of interest. In the side panel, under **Monitor** select **Hardware**. The ICCID number will be in the **Network details** group. The ICCID number isn't supported for Android Corporate-Owned Work Profile devices.
+
+Applies to:
+
+- Android
 
 <!-- *********************************************** -->
 
