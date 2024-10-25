@@ -102,7 +102,8 @@ With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defende
 - Debian 9 or higher  
 - SUSE Linux Enterprise Server 12 or higher  
 - Oracle Linux 7.2 or higher  
-- Amazon Linux 2  
+- Amazon Linux 2 
+- Amazon Linux 2023
 - Fedora 33 or higher
 
 To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for Linux*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-updates).
