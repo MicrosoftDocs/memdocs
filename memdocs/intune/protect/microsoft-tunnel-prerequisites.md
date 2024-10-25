@@ -135,6 +135,11 @@ Set up a Linux based virtual machine or a physical server on which to install th
   - The TLS certificate can be in **PEM** or **pfx** format.
   
   - To support the *TLS certificate revocation* health check, ensure the Online Certificate Status Protocol (OCSP) or certificate revocation list (CRL) address as defined by the TLS certificate is accessible from the server.
+  
+  - Configure the Tunnel clients certificate with a key that is 2048-bits or larger. We recommend larger keys to help your deployment stay in support for future and evolving SSL/TLS requirements by various SSL/TLS library solutions.
+
+    > [!TIP]
+    > Periodically review the requirements of your chosen SSL/TLS library to ensure your infrastructure and certificates remain supported and in compliance to recent changes for that library, and reissue Tunnel client certificates when necessary to stay current with your solutions evolving requirements.
 
 - **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn't available, the connection can fall back to use TLS 1.2.
 
