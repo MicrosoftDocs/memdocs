@@ -545,15 +545,15 @@ Organizations also define what happens when a user attempts to navigate to a res
 > [!NOTE]
 > Edge for iOS and Android can block access to sites only when they're accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site. URLs that start with **Edge**, such as `Edge://*`, `Edge://flags`, and `Edge://net-export`, aren't supported in app configuration policy **AllowListURLs** or **BlockListURLs** for managed apps. You can disable these URLs with **com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList**. <br><br> If your devices are managed, you can also use app configuration policy [URLAllowList](/deployedge/microsoft-edge-mobile-policies#urlallowlist) or [URLBlocklist](/deployedge/microsoft-edge-mobile-policies#urlblocklist) for managed devices. For related information, see [Microsoft Edge mobile policies](/deployedge/microsoft-edge-mobile-policies).
 > 
-> To enhance the profile-switching experience and reduce the need for users to manually switch to personal profiles or InPrivate mode, we’ve introduced two new policies below <br>
+> To enhance the profile-switching experience by reducing the need for users to manually switch to personal profiles or InPrivate mode to open blocked URLs, we’ve introduced two new policies below <br>
 > com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock
 > com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork
 >
 > Since these policies bring different results based on their configurations and combinations, we recommend trying our policy suggestions below for a quick evaluation to see if the profile-switching experience aligns well with your organization’s needs before exploring detailed documentation. <br>
 > com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock=**true** <br>
 > com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=**true** <br>
-> com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock=**2** <br>
-> com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork=**1** <br>
+> com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock=**1** <br>
+> com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork=**2** <br>
 
 Use the following key/value pairs to configure either an allowed or blocked site list for Edge for iOS and Android. 
 
