@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 10/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -282,7 +282,7 @@ Edge for iOS and Android allows organizations to disable certain features that a
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br>**coupons** disables coupons <br>**extensions** disables extensions (Edge for Android only) <br>**developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br>**UIRAlert** suppress re-verify account popups in new tab page screen <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
+|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br>**coupons** disables coupons <br>**extensions** disables extensions (Edge for Android only) <br>**developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br>**UIRAlert** suppress re-verify account popups in new tab page screen <br> **share** disables Share under menu <br> **sendtodevices** disables Send to devices under menu <br> **weather** disables weather in NTP (New Tab Page) <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
 
 #### Disable import passwords feature
 
@@ -316,9 +316,12 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 |com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode |**true** shows the address bar in kiosk mode <br>**false** (default) hides the address bar when kiosk mode is enabled|
 |com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode |**true** shows the bottom action bar in kiosk mode <br>**false** (default) hides the bottom bar when kiosk mode is enabled |
 
+> [!NOTE]
+> Kiosk mode is not supported on iOS devices. However, you may want to use Locked View Mode (MDM policy only) to achieve a similar user experience, where users are unable to navigate to other websites, as the URL address bar becomes read-only in Locked View Mode.
+
 ### Locked view mode
 
-Edge for iOS and Android can be enabled as locked view mode with MDM policy EdgeLockedViewModeEnabled.
+Edge for iOS and Android can be enabled as locked view mode with MDM policy **[EdgeLockedViewModeEnabled](/deployedge/microsoft-edge-mobile-policies#edgelockedviewmodeenabled)**.
 
 |Key  |Value  |
 |:---------|:---------|
@@ -484,16 +487,6 @@ Organizations can configure a search provider for users. To configure a search p
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | The corresponding value is a string <br> **Example** `My Intranet Search`  |
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | The corresponding value is a string <br> **Example** `https://search.my.company/search?q={searchTerms}`|
-
-### Open external apps
-When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
-
-|Key |Value |
-|:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.OpeningExternalApps |**0** (default) Show the pop-up for users to choose stay in Edge or open by external apps. <br>**1** Always open within Edge without showing the pop-up.<br> **2** Always open with external apps without showing the pop-up. If external apps aren't installed, the behavior will be the same as value 1|
-
-> [!NOTE]
-> As of version 120.2210.99, the app jump blocker feature is removed. External apps will be opened from Edge by default. Therefore, this policy is no longer valid from version 120.2210.99.
 
 ### Copilot
 

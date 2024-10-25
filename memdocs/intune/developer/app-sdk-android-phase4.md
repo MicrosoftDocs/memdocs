@@ -95,7 +95,7 @@ MAMStrictMode.global().setHandler(handler);
 If a check fails in a situation where your app is doing nothing
 incorrect, report it as mentioned above.
 In the meantime, it may be necessary to disable the check encountering a false positive, at least while waiting for an updated SDK.
-The check, which failed will be shown in the error raised by the default handler, or will be passed to a custom handler if set.
+The check that failed will be shown in the error raised by the default handler or it will be passed to a custom handler, if set.
 
 Although suppressions can be done globally, temporarily disabling per-thread at the specific call site is preferred.
 The following examples show various ways to disable [MAMStrictCheck.IDENTITY_NO_SUCH_FILE][MAMStrictCheck] (raised if an
@@ -389,7 +389,7 @@ If the enrollment attempt fails, the account's status may change over time as th
 | `UNENROLLMENT_SUCCEEDED` | Unenrollment was successful.|
 | `UNENROLLMENT_FAILED` | The unenrollment request failed.  Further details can be found in the device logs. In general, this won't occur as long as the app passes a valid (neither null nor empty) UPN. There's no direct, reliable remediation the app can take. If this value is received when unregistering a valid UPN, report as a bug to the Intune MAM team.|
 | `PENDING` | The initial enrollment attempt for the account is in progress.  The app can block access to corporate data until the enrollment result is known, but isn't required to do so. |
-| `COMPANY_PORTAL_REQUIRED` | The account is licensed for Intune, but the app can't be enrolled until the Company Portal app is installed on the device. The Intune App SDK attempts to block access to the app for the given account and direct them to install the Company Portal app. When sending this notification to the app, the Intune App SDK will show a nonblocking UI on top of the current Activity if the Activity is currently visible to the user or the next time `onResume` is called. If the user cancels out this nonblocking UI, the Intune App SDK will show a blocking UI the next time `onCreate` is called for an Activity and the current identity is managed (see below for details on troubleshooting). |
+| `COMPANY_PORTAL_REQUIRED` | The account is licensed for Intune, but the app can't be enrolled until the Company Portal app is installed on the device. The Intune App SDK attempts to block access to the app for the given account and directs the user to install the Company Portal app. When sending this notification to the app, the Intune App SDK will show a nonblocking UI on top of the current Activity if the Activity is currently visible to the user or the next time `onResume` is called. If the user cancels out this nonblocking UI, the Intune App SDK will show a blocking UI the next time `onCreate` is called for an Activity and the current identity is managed (see below for details on troubleshooting). |
 
 ## (Recommended) Logging
 
@@ -678,7 +678,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [First Policy Application Test]:#first-policy-application-test
 [Data Protection Tests]:#data-protection-tests
 [Diagnostics Information]:#recommended-diagnostics-information
-[My app is not receiving or enforcing any policies]:#my-app-is-not-receiving-or-enforcing-any-policies
+[My app isn't receiving or enforcing any policies]:#my-app-isnt-receiving-or-enforcing-any-policies
 
 <!-- Other SDK Guide Markdown documentation -->
 [Stage 1: Plan the Integration]:app-sdk-android-phase1.md
