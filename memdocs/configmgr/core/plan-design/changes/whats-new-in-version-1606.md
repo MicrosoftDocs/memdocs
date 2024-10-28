@@ -47,7 +47,7 @@ The following are changes to the Updates and Servicing node in the Configuration
     - **Prerequisites Check**
     - **Installation**
 
-  Additionally, there is now more detailed information for each step, including which log file you can view for more information.  
+  Additionally, there's now more detailed information for each step, including which log file you can view for more information.  
 -   **New option to retry prerequisite failures:**
 
     In both the **Administration** and **Monitoring** workspaces, the **Updates and Servicing** node includes a new button on the ribbon called **Ignore prerequisite warnings**.
@@ -71,7 +71,7 @@ Beginning with 1606, you must give consent to use pre-release features in Config
 ### New distribution point update behavior
 Update 1606 introduces changes that improve the availability of distribution points when you install future updates.
 
-After update 1606 is installed, when you next install an update at that site that requires the automatic reinstallation of standard and pull-distribution point site system roles, all distribution points no longer go offline to update at the same time. Instead, the site server uses the site's content distribution settings to distribute the update to a subset of distribution points at any given time. The result is that only some distribution points go offline to install the update. This allows distribution points that have not yet begun to update, or that have completed the update, to remain online and able to provide content to clients.
+After update 1606 is installed, when you next install an update at that site that requires the automatic reinstallation of standard and pull-distribution point site system roles, all distribution points no longer go offline to update at the same time. Instead, the site server uses the site's content distribution settings to distribute the update to a subset of distribution points at any given time. The result is that only some distribution points go offline to install the update. This allows distribution points that haven't yet begun to update, or that have completed the update, to remain online and able to provide content to clients.
 
 
 
@@ -94,7 +94,7 @@ You can now configure the size of the cache folder on client computers with **Cl
 
 ### Support for multiple device management points
 
-On-premises mobile device management (MDM) now supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fall back to another device management point, when the one it normally uses is not available. This capability only works for PCs and devices with the Windows 10 Anniversary Update installed.
+On-premises mobile device management (MDM) now supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fall back to another device management point, when the one it normally uses isn't available. This capability only works for PCs and devices with the Windows 10 Anniversary Update installed.
 
 
 ## Application management
@@ -118,7 +118,7 @@ The Software Center user interface has been streamlined for easier discovery.
 * Multiple updates can now be selected for installation at once, or all updates can be installed at once by clicking **Install All**.
 
 ### Content status links
-On the properties of an application or package, there is now a link that takes you to the status for that object.
+On the properties of an application or package, there's now a link that takes you to the status for that object.
 
 ## Software updates
 
@@ -133,7 +133,7 @@ You can now enable an option that lets Configuration Manager clients switch to a
 For details, see [Plan for software updates in Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs).
 
 ### Restart options for Windows 10 clients after software update installation
-When a software update that requires a restart is deployed by using Configuration Manager and is installed on a computer, a pending restart is scheduled. A restart dialog box is also displayed. Beginning in Configuration Manager version 1606, the options **Update and Restart** and **Update and Shutdown** are available whenever there is a pending restart for a Configuration Manager software update. These are available in the Windows power options of Windows 10 computers. After using one of these options, the restart dialog box will not display after the computer restarts.
+When a software update that requires a restart is deployed by using Configuration Manager and is installed on a computer, a pending restart is scheduled. A restart dialog box is also displayed. Beginning in Configuration Manager version 1606, the options **Update and Restart** and **Update and Shutdown** are available whenever there's a pending restart for a Configuration Manager software update. These are available in the Windows power options of Windows 10 computers. After using one of these options, the restart dialog box won't display after the computer restarts.
 
 For details, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md#BKMK_RestartOptions).
 
@@ -153,7 +153,7 @@ The OSDPreserveDriveLetter task sequence variable has been deprecated. Starting 
 For details, see [Task sequence built-in variables](../../../osd/understand/task-sequence-variables.md).
 
 ### Customize the RamDisk TFTP window size for PXE-enabled distribution points
-You can now customize the RamDisk window size for PXE-enabled distribution points. If you have customized your network, it could cause the boot image download to fail with a time-out error, because the window size is too large. The RamDisk Trivial File Transfer Protocol (TFTP) window size customization lets you optimize TFTP traffic when you are using PXE to meet your specific network requirements.
+You can now customize the RamDisk window size for PXE-enabled distribution points. If you have customized your network, it could cause the boot image download to fail with a time-out error, because the window size is too large. The RamDisk Trivial File Transfer Protocol (TFTP) window size customization lets you optimize TFTP traffic when you're using PXE to meet your specific network requirements.
 
 For details, see [Prepare site system roles for operating system deployments with Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#customize-the-ramdisk-tftp-block-and-window-sizes-on-pxe-enabled-distribution-points).
 
@@ -162,7 +162,7 @@ For details, see [Prepare site system roles for operating system deployments wit
 ### Smart Lock setting for Android devices
 A new setting, **Allow Smart Lock and other trust agents**, has been added to the Android and Samsung KNOX Standard configuration item.
 
-This setting lets you control the Smart Lock feature on compatible Android devices. This phone capability, sometimes known as "trust agents," lets you disable or bypass the device lock screen password if the device is in a trusted location. For example, a trusted location could be when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent users from configuring Smart Lock.
+This setting lets you control the Smart Lock feature on compatible Android devices. This phone capability, sometimes known as "trust agents," lets you disable or bypass the device lock screen password if the device is in a trusted location. For example, a trusted location could be when it's connected to a specific Bluetooth device, or when it's near to an NFC tag. You can use this setting to prevent users from configuring Smart Lock.
 
 
 ## Device configuration and protection
@@ -197,7 +197,7 @@ Endpoint Protection can help manage and monitor Microsoft Defender for Endpoint.
 For details, see [Microsoft Defender for Endpoint](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### Device categories
-You can create device categories, which can be used to place devices in device collections automatically when you are using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. Additionally, you can change the category of a device from the Configuration Manager console.
+You can create device categories, which can be used to place devices in device collections automatically when you're using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. Additionally, you can change the category of a device from the Configuration Manager console.
 
 ### Predeclare devices with IMEI or iOS serial numbers
 
@@ -210,4 +210,4 @@ You can now enable Health Attestation services monitoring for Windows 10 PCs by 
 For details, see [Health attestation for Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).  
 
 ## Remote control
-Allow your users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer does not have the ability to give themselves permission to proceed with the file transfer. You can find this new setting in the **Administration** workspace. Go to **Client Settings**, and then in **Default Settings**, open the **Remote Tools** panel.
+Allow your users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer doesn't have the ability to give themselves permission to proceed with the file transfer. You can find this new setting in the **Administration** workspace. Go to **Client Settings**, and then in **Default Settings**, open the **Remote Tools** panel.
