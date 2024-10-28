@@ -32,6 +32,9 @@ ms.collection:
 
 # Use Windows 10/11 templates to configure group policy settings in Microsoft Intune
 
+> [!IMPORTANT]
+> After January of 2025, you will not be able to create new Administrative templates through the 'Templates > Administrative templtes' profile type and will need to use Setting catalog. For more information, see [Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-device-configuration-policies-migrating-to/ba-p/4189665).
+
 **Administrative Templates** in Microsoft Intune include thousands of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Google Chrome, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings enable administrators to create group policies using the cloud.
 
 This feature applies to:
@@ -96,6 +99,9 @@ This article describes the steps to create a template for Windows client devices
 
 
     # [ADMX template](#tab/template)
+
+    > [!IMPORTANT]
+    > After January of 2025, you will not be able to create new Administrative templates through the 'Templates > Administrative templtes' profile type and will need to use Setting catalog. For more information, see [Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-device-configuration-policies-migrating-to/ba-p/4189665).
 
     To see an alphabetical list of all the settings, go to **Configuration settings** and select **All settings** . Or, configure settings that apply to devices (**Computer configuration**), or settings that apply to users **(User configuration**):
 
