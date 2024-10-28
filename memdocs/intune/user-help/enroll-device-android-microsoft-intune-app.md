@@ -80,7 +80,7 @@ Complete these steps to set up and enroll your device.
 
 10. When you see the message that your device is ready, tap **DONE**.  
 
-    ![Example image of Set up your work phone screen, highlighting Done button.](./media/fully-managed-intune-app-18/fully-managed-intune-app-18.png)   
+    ![Example image of Set up your work phone screen, highlighting Done button.](./media/enroll-device-android-microsoft-intune-app/fully-managed-intune-app-18.png)   
 
 If you have trouble accessing your organization's resources, you might need to update additional settings on your device. Sign in to the Microsoft Intune app to check for required updates.   
 

@@ -69,18 +69,18 @@ Derived credentials are an implementation of the National Institute of Standards
 
 2. Write down the onscreen code.  
 
-    ![Example image of Company Portal app with onscreen message and code.](./media/copy-code-intercede.png)   
+    ![Example image of Company Portal app with onscreen message and code.](./media/enroll-ios-device-intercede/copy-code-intercede.png)   
 
 3. Switch to your smart card-enabled device and go to https://microsoft.com/devicelogin. 
 4. Enter the code you previously wrote down.  
 
-    ![Example screenshot of the Company Portal website "Enter code" prompt.](./media/enter-code-intercede.png)   
+    ![Example screenshot of the Company Portal website "Enter code" prompt.](./media/enroll-android-device-disa-purebred/enter-code-intercede.png)   
 
 5. Insert your smart card to sign in.   
 6. Return to the Company Portal app on your mobile device and follow the onscreen instructions to enroll your device.  
 7. After enrollment is complete, Company Portal will notify you to set up your smart card. Tap the notification. If you don't get a notification, check your email.   
 
-    ![Example screenshot of the Company Portal push notification on device home screen.](./media/action-required-in-app-intercede.png)  
+    ![Example screenshot of the Company Portal push notification on device home screen.](./media/enroll-ios-device-intercede/action-required-in-app-intercede.png)  
 
 8. On the **Setup mobile smart card access** screen:   
     a. Tap the link to your organization's setup instructions. If your organization doesn't provide additional instructions, you'll be sent to this article.  

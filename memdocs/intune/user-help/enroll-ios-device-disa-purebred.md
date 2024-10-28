@@ -74,9 +74,6 @@ You'll also need to contact a Purebred agent or representative during setup.
 
 3. Switch to your smart card-enabled device and go to https://microsoft.com/devicelogin. If you're a government employee signing in from another device, you'll need to change the settings on your device so that you're redirected to the government cloud for authentication. For more information about the setting changes you need to make, see [Troubleshoot iOS/iPadOS enrollment errors](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors#authentication-doesnt-redirect-to-the-government-cloud).  
 4. Enter the code you previously wrote down.  
-
-    ![Example screenshot of the Company Portal website "Enter code" prompt.](./media/enroll-ios-device-intercede/enter-code-intercede.png)   
-
 5. Insert your smart card to sign in.  
 6. Return to the Company Portal app on your mobile device and follow the onscreen instructions to enroll your device.  
 7. After enrollment is complete, Company Portal will notify you to set up your smart card. Tap the notification. If you don't get a notification, check your email.   
