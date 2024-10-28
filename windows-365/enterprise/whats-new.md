@@ -59,6 +59,15 @@ For more information about public preview items, see [Public preview in Windows 
 ## Week of October 28, 2024 (Service release 2410)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Bulk Troubleshoot action now generally available<!--51893512-->
+
+The Troubleshoot action in bulk has moved out of preview and into general availability.
+
+For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
 ### Update to Cloud PC action status report<!--49451077-->
