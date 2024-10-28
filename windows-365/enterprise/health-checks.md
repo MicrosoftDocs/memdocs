@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/28/2024
+ms.date: 10/30/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -46,6 +46,7 @@ Statuses include:
 - **Checks successful**: All health checks passed. The ANC is ready for use.
 - **Checks successful with warnings**: All critical health checks passed. However at least one non-critical check may have issues. An example of a check that may trigger this state is the Microsoft Entra hybrid join sync check. Microsoft Entra hybrid join sync can take up to 90 minutes, so we check much of the Microsoft Entra hybrid join sync service but can’t confirm the device sync succeeded until later. ANCs with this status can be used by provisioning policies.
 - **Checks failed**: One or more required checks failed. An ANC can’t be used if it's in a failed state. You’ll have to resolve the underlying issue and Retry the health checks.
+= **Inactivfe**: The ANC is inactive and health checks are paused. Reactivate the ANC to restart the health checks. After the health checks are passed, the ANC is ready for use.
 
 ## Status error details
 

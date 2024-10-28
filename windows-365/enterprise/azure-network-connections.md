@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/28/2024
+ms.date: 10/30/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -124,6 +124,10 @@ After completing either of these operations, you can delete the ANC.
 ## Maximum Azure network connections
 
 Each tenant has a limit of 10 Azure network connections. If your organization needs more than 10 Azure network connections, contact support.
+
+## Inactive ANCs
+
+ANCs that are unused for a period of time become inactive. Inactive ANCs pause running health checks and can't be assigned to a provisioning policy until the ANC is reactivated and health checks complete successfully.  
 
 ## User sign-in
 
