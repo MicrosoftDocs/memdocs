@@ -63,7 +63,7 @@ A subscription in Azure Government is required for Windows 365 Government custom
 ## Microsoft Entra ID and Intune requirements
 
 - A valid and working Intune and Microsoft Entra tenant.
-- Intune default device type enrollment restrictions must be set to Allow Windows (MDM) platform for corporate enrollment. For more information, see [Device Enrollment Restrictions Limitations](mem/intune/enrollment/enrollment-restrictions-set,md#limitations).
+- Intune default device type enrollment restrictions must be set to Allow Windows (MDM) platform for corporate enrollment. For more information, see [Device Enrollment Restrictions Limitations](/mem/intune/enrollment/enrollment-restrictions-set#limitations).
 - Infrastructure configuration: If you plan on provisioning Microsoft Entra hybrid joined Cloud PCs, you must configure your infrastructure to automatically Microsoft Entra hybrid join any devices that domain join to the on-premises Active Directory. This [configuration lets them be recognized and managed in the cloud](/azure/active-directory/devices/overview).
 - Microsoft Entra Domain Services isn't supported because it doesn't support Microsoft Entra hybrid join.
 
