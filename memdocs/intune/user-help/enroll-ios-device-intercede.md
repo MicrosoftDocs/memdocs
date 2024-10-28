@@ -83,7 +83,7 @@ Derived credentials are an implementation of the National Institute of Standards
     ![Example screenshot of the Company Portal push notification on device home screen.](./media/enroll-ios-device-intercede/action-required-in-app-intercede.png)  
 
 5. On the **Setup mobile smart card access** screen:  
-    a. Tap the link to your organization's setup instructions. If your organization doesn't provide additional instructions,you'll be sent to this article.  
+    a. Tap the link to your organization's setup instructions. If your organization doesn't provide additional instructions, you are sent to this article.  
     b. Tap **Begin**.  
 
     ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/enroll-ios-device-intercede/smart-card-info-intercede.png)  
