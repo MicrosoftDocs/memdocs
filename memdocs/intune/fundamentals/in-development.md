@@ -89,6 +89,16 @@ Applies to:
 
 ## Device configuration
 
+### New settings for Windows 24H2 in the Windows settings catalog<!-- 29592329 -->
+
+The Settings Catalog lists all the settings you can configure in a device policy, and all in one place. You can view these Windows settings in the Microsoft Intune admin center by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
+
+We're working on the addition of new settings for Window 24H2.
+
+Applies to:
+
+- Windows
+
 ### New settings available in the Apple settings catalog <!--29038336 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
