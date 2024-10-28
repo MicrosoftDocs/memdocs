@@ -42,7 +42,7 @@ To delete an unused ANC:
 
 ## In use ANCs
 
-ANCs that are in use can't be deleted. ANCs that are in use include those that are:
+ANCs that are in use can't be deleted. In use ANCs include ANCs that are:
 
 - Referenced by a provisioning policy, including as an alternate ANC.
 - Used by a Cloud PC.
