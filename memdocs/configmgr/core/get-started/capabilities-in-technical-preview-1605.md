@@ -48,7 +48,7 @@ This article introduces the features that are available in the Technical Preview
  The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image it will install a new Configuration Manager client each time.  
 
 ##  <a name="BKMK_Grace"></a> Grace period for required application deployments  
- In some cases, you might want give users more time to install required application deployments beyond any deadlines you configured. For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. However, they can still immediately install the application at any time they want.  
+ In some cases, you might want to give users more time to install required application deployments beyond any deadlines you configured. For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. However, they can still immediately install the application at any time they want.  
 
  To help solve this problem, you can now define a **grace period** by deploying Configuration Manager client settings to a collection.  
 
