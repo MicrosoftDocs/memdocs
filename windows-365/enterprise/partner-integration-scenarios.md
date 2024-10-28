@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/09/2024
+ms.date: 10/23/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -33,11 +33,11 @@ ms.collection:
 
 The following partner integration scenarios support partner protocols on top of Windows 365, without compromising the simplicity and predictability that Windows 365 delivers.
 
-| Partner | Supported clients | Gateway service | Connection protocol |
-| --- | --- | --- | --- |
-| Citrix | Citrix Workspace web client<br>Citrix Workspace desktop clients for supported platforms | Citrix Cloud Gateway Service | Citrix HDX |
-| HP | HP Anyware web client<br>HP Anyware desktop clients for supported platforms | HP Anyware Cloud Gateway Service | HP Anyware |
-| Omnissa | Omnissa Workspace ONE web client<br>Omnissa ONE desktop clients for supported platforms | Omnissa Cloud Gateway Service |  Omnissa Blast |
+| Partner | Supported clients | Gateway service | Connection protocol | Supported service plans |
+| --- | --- | --- | --- | --- |
+| Citrix | Citrix Workspace web client<br>Citrix Workspace desktop clients for supported platforms | Citrix Cloud Gateway Service | Citrix HDX | Enterprise, Frontline
+| HP | HP Anyware web client<br>HP Anyware desktop clients for supported platforms | HP Anyware Cloud Gateway Service | HP Anyware | Enterprise |
+| Omnissa | Omnissa Workspace ONE web client<br>Omnissa ONE desktop clients for supported platforms | Omnissa Cloud Gateway Service |  Omnissa Blast | Enterprise |
 
 While scenarios not listed here might still work in customers’ production environment, they aren't supported by Microsoft.
 
