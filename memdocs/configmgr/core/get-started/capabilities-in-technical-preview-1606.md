@@ -57,7 +57,7 @@ When you associate a collection with a device category, all devices in the categ
 
 ## <a name="dmp_grace"></a> Enforcement grace period for required application and software update deployments
 
-In some cases, you might want give users more time to install required application deployments or software updates beyond any deadlines you configured. This might typically be required when a computer has been turned off for an extended period of time and needs to install a large number of application or update deployments.
+In some cases, you might want to give users more time to install required application deployments or software updates beyond any deadlines you configured. This might typically be required when a computer has been turned off for an extended period of time and needs to install a large number of application or update deployments.
 For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed.
 To help solve this problem, you can now define an enforcement grace period by deploying Configuration Manager client settings to a collection.
 
@@ -96,7 +96,7 @@ For more information, see the following articles:
 - [Planning and getting started on the Windows Defender Application Control deployment process](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="dmp_onprem"></a> Multiple device management points for On-premises Mobile Device Management  
-  With Technical Preview 1606, On\-premises Mobile Device Management (MDM) supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fallback to another device management point when the one it normal uses is not available. This capability only works for PCs with Windows 10 Anniversary Update installed.  
+  With Technical Preview 1606, On\-premises Mobile Device Management (MDM) supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fall back to another device management point when the one it normal uses is not available. This capability only works for PCs with Windows 10 Anniversary Update installed.  
 
 ### Try it out!  
 
@@ -150,7 +150,7 @@ You can create a custom SSL certificate for Cloud Proxy Service in the same way 
 
 #### Export the client certificate's root
 
-The easiest way to get export the root of the client certificates used on the network, is to open a client certificate on one of the domain-joined machines that has one and copy it.
+The easiest way to get export the root of the client certificates used on the network is to open a client certificate on one of the domain-joined machines that has one and copy it.
 
 >[!NOTE]
 >Client certificates are required on any computer you want to manage with Cloud Proxy Service and on the site system server hosting the cloud proxy connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clouddp2008_cm2012).
