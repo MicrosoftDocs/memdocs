@@ -23,7 +23,7 @@ This article introduces the features that are available in the Technical Preview
  The following are new features you can try out with this version.  
 
 ##  <a name="BKMK_WindowsVPP"></a> Manage volume-purchased apps from the Windows Store for Business  
- The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
+ The Windows Store for Business is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
 
 -   You can synchronize the list of purchased apps with Configuration Manager  
 
@@ -35,7 +35,7 @@ This article introduces the features that are available in the Technical Preview
 
 ##### Scenario 1: Set up Windows Store for Business synchronization  
 
-1.  In Microsoft Entra ID, register Configuration Manager as a "Web Application and/or Web API" management tool. This will give you a client ID that you will need later.  
+1.  In Microsoft Entra ID, register Configuration Manager as a "Web Application and/or Web API" management tool. This will give you a client ID that you'll need later.  
 
     1.  In the **Active Directory** node of [https://portal.azure.com](https://portal.azure.com), select your Microsoft Entra ID, then click **Applications** > **Add**.  
 
@@ -43,7 +43,7 @@ This article introduces the features that are available in the Technical Preview
 
     3.  Enter a name for the application, select **Web application** and/or **Web API**, then click the Next arrow.  
 
-    4.  Enter the same URL for both the **Sign-on URL** and **App ID URI**.  The URL can be anything and does not need to resolve to a real address. For example, you can enter **https://&lt;yourdomain\>/sccm**.  
+    4.  Enter the same URL for both the **Sign-on URL** and **App ID URI**.  The URL can be anything and doesn't need to resolve to a real address. For example, you can enter **https://&lt;yourdomain\>/sccm**.  
 
     5.  Complete the wizard.  
 
@@ -51,11 +51,11 @@ This article introduces the features that are available in the Technical Preview
 
     1.  Highlight the application you just created and click **Configure**.  
 
-    2.  Under **Keys**, select a duration from the list, and click **Save**.  This will create a new client key.  Do not navigate away from this page until you have successfully onboarded Windows Store for Business to Configuration Manager.  
+    2.  Under **Keys**, select a duration from the list, and click **Save**.  This will create a new client key.  Don't navigate away from this page until you have successfully onboarded Windows Store for Business to Configuration Manager.  
 
 3.  In the Windows Store for Business, configure Configuration Manager as the store management tool.  
 
-    1.  Open [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools) and sign-in if prompted.  
+    1.  Open Windows Store for Business and sign-in if prompted.  
 
     2.  Accept the terms of use if required.  
 
@@ -73,9 +73,9 @@ This article introduces the features that are available in the Technical Preview
 
 6.  On the **Home** tab, in the **Create** group, click **Add Windows Store for Business Account**.  
 
-7.  Add your tenant ID, client id, and client key from Microsoft Entra ID, then complete the wizard.  
+7.  Add your tenant ID, client ID, and client key from Microsoft Entra ID, then complete the wizard.  
 
-8.  Once you are done, you will see the account you configured in the **Windows Store for Business Accounts** list in the Configuration Manager console.  
+8.  Once you're done, you'll see the account you configured in the **Windows Store for Business Accounts** list in the Configuration Manager console.  
 
 ##### Scenario 2: Create and deploy a Configuration Manager application from a Windows Store for Business offline licensed app  
 
@@ -103,7 +103,7 @@ This article introduces the features that are available in the Technical Preview
 ##  <a name="bkmk_peercache"></a> Client settings to manage Client Cache Settings and client Peer Cache  
  Technical preview version 1604 introduces two new device  client settings that affect the use of a client's cache. Both can be used individually but are configured on the same property sheet for client settings and combine to help you manage deployment of content to your clients in remote locations.  
 
--   First is **client Peer Cache**, a built-in Configuration Manager solution for clients to share content with other clients directly from their local cache. For Peer Cache clients to share content, they must be members of the same boundary group. Peer Cache does not replace the use of other solutions like BracnchCache but instead works side-by-side to give you more options to extend traditional content deployment solutions like distribution points.  
+-   First is **client Peer Cache**, a built-in Configuration Manager solution for clients to share content with other clients directly from their local cache. For Peer Cache clients to share content, they must be members of the same boundary group. Peer Cache doesn't replace the use of other solutions like BracnchCache but instead works side-by-side to give you more options to extend traditional content deployment solutions like distribution points.  
 
      After you deploy client settings that enable Peer Cache to a collection, members of that collection can act as a peer content source for other clients in its boundary group.  The client that operates as a peer content source will submit a list of available content it has cached to its management point. Then, when the next client in that boundary group requests that content, the peer cache source is offered as a potential content source along with all distribution points that are configured to be fast. The client selects a random content source from this combined pool of content sources. Clients will only seek content from a distribution point that is configured to be slow when no fast distribution points or peer cache sources are present in the boundary group.  
 
@@ -116,7 +116,7 @@ To help you understand the use of client Peer Cache, you can view the **Client D
 
 -   You must configure your site with a **Network Access Account** that has **Full Control** to the cache folder on each client. By default, this is  **%windir%\ccmcache**  
 
--   Clients can only transfer content using Peer Cache when they  are members of the same boundary group.  
+-   Clients can only transfer content using Peer Cache when they're members of the same boundary group.  
 
 #### To configure Client Peer Cache client settings  
 
@@ -142,9 +142,9 @@ To help you understand the use of client Peer Cache, you can view the **Client D
 
 ##  <a name="bkmk_passport"></a> Support for Passport for Work as a KSP  
  Configuration Manager lets you integrate with Microsoft Passport for Work which is an alternative sign-in method that uses Active Directory, or a Microsoft Entra account to replace a password, smart card, or virtual smart card.  
-Passport lets you use a user gesture to login, instead of a password. A user gesture might be a simple PIN, biometric authentication such as Windows Hello, or an external device such as a fingerprint reader.  
+Passport lets you use a user gesture to log in, instead of a password. A user gesture might be a simple PIN, biometric authentication such as Windows Hello, or an external device such as a fingerprint reader.  
 
--   You can use Configuration Manager to control which gestures users can and cannot use to login, and to configure PIN complexity requirements.  
+-   You can use Configuration Manager to control which gestures users can and can't use to log in, and to configure PIN complexity requirements.  
 
 -   You can store authentication certificates in the Passport for Work key storage provider (KSP).  
 
@@ -162,4 +162,4 @@ When a user creates a Passport PIN, Windows sends a notification which Configura
 To try it out, configure on-premises Health Attestation Service using client agent settings.  
 
 ##  <a name="BKMK_Smart"></a> SmartLock setting for Android devices  
- A new setting, **Allow SmartLock and other trust agents** has been added to the **Android and Samsung KNOX** configuration item that lets you control the SmartLock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring SmartLock.  
+ A new setting, **Allow SmartLock and other trust agents** has been added to the **Android and Samsung KNOX** configuration item that lets you control the SmartLock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it's connected to a specific Bluetooth device, or when it's near to an NFC tag. You can use this setting to prevent end users from configuring SmartLock.  
