@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/25/2024
+ms.date: 10/30/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -47,6 +47,12 @@ To edit an Azure network connection:
 After the edits have been saved, the ANC checks are run to verify the configuration.
 
 You can't edit an ANC if it's running checks. You must wait for the checks to pass/fail before edit functionality becomes available.
+
+Some configuration settings can't be edited for ANCs that are:
+
+- Referenced by a provisioning policy, including as an alternate ANC.
+- Used by a Cloud PC.
+- Configured as backup ANCs for [cross region disaster recovery](cross-region-disaster-recovery.md).
 
 <!-- ########################## -->
 ## Next steps

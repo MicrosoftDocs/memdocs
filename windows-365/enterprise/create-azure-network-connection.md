@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/01/2024
+ms.date: 10/30/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -87,6 +87,8 @@ When planning your ANC VNets with ExpressRoute as the on-premises connectivity m
 
 8. Select **Next**.
 9. On the **Review + Create** page, select **Create**.
+
+When an ANC is in use, it can't be deleted and certain configuration settings can't be edited. For more information, see[Edit Azure network connection](edit-azure-network-connection.md) and [Delete Azure network connection](delete-azure-network-connection.md).
 
 <!-- ########################## -->
 ## Next steps
