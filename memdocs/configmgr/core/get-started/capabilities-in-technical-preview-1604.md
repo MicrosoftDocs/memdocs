@@ -73,7 +73,7 @@ This article introduces the features that are available in the Technical Preview
 
 6.  On the **Home** tab, in the **Create** group, click **Add Windows Store for Business Account**.  
 
-7.  Add your tenant ID, client id, and client key from Microsoft Entra ID, then complete the wizard.  
+7.  Add your tenant ID, client ID, and client key from Microsoft Entra ID, then complete the wizard.  
 
 8.  Once you're done, you'll see the account you configured in the **Windows Store for Business Accounts** list in the Configuration Manager console.  
 
@@ -142,9 +142,9 @@ To help you understand the use of client Peer Cache, you can view the **Client D
 
 ##  <a name="bkmk_passport"></a> Support for Passport for Work as a KSP  
  Configuration Manager lets you integrate with Microsoft Passport for Work which is an alternative sign-in method that uses Active Directory, or a Microsoft Entra account to replace a password, smart card, or virtual smart card.  
-Passport lets you use a user gesture to login, instead of a password. A user gesture might be a simple PIN, biometric authentication such as Windows Hello, or an external device such as a fingerprint reader.  
+Passport lets you use a user gesture to log in, instead of a password. A user gesture might be a simple PIN, biometric authentication such as Windows Hello, or an external device such as a fingerprint reader.  
 
--   You can use Configuration Manager to control which gestures users can and cannot use to login, and to configure PIN complexity requirements.  
+-   You can use Configuration Manager to control which gestures users can and can't use to log in, and to configure PIN complexity requirements.  
 
 -   You can store authentication certificates in the Passport for Work key storage provider (KSP).  
 
