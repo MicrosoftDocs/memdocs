@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/01/2024
+ms.date: 10/17/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,25 +77,6 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
-### Updates to app configuration policies for Android Enterprise devices<!-- 26711672 -->
-
-App configuration policies for Android Enterprise devices will soon support overriding the following additional permissions:
-
-- Access background location
-- Bluetooth (connect)
-
-For more information about app configuration policies for Android Enterprise devices, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
-
-Applies to:
-
-- Android Enterprise devices
-
-### New UI for Intune Company Portal app for Windows<!-- 27219294 -->
-
-The UI for the Intune Company Portal app for Windows will be updated. Users will be able to use the same functionality they’re used to with an improved experience for their desktop app. With the updated design, users will see improvements in user experience for the **Home**, **Devices**, and **Downloads & updates** pages. The new design will be more intuitive and will highlight areas where users need to take action.
-
-For more information, see [New look for Intune Company Portal app for Windows](https://techcommunity.microsoft.com/t5/intune-customer-success/new-look-for-intune-company-portal-app-for-windows/ba-p/4158755).
-
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
@@ -114,32 +95,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-
-<!-- *********************************************** -->
-
 ## Device management
-
-### Minimum OS version for Android devices will be Android 10 and later for user-based management methods<!-- 14755802 -->
-
-From October 2024, the minimum OS supported for Android devices will be Android 10 and later for user-based management methods, which includes:
-
-- Android Enterprise personally-owned work profile
-- Android Enterprise corporate owned work profile
-- Android Enterprise fully managed
-- Android Open Source Project (AOSP) user-based
-- Android device administrator
-- App protection policies (APP)
-- App configuration policies (ACP) for managed apps
-
-For enrolled devices on unsupported OS versions (Android 9 and lower)
-
-- Intune technical support won't be provided.
-- Intune won't make changes to address bugs or issues.
-- New and existing features aren't guaranteed to work.
-
-While Intune won't prevent enrollment or management of devices on unsupported Android OS versions, functionality isn't guaranteed, and use isn't recommended.
-
-Userless methods of Android device management (Dedicated and AOSP userless) and Microsoft Teams certified Android devices won't be affected by this change.
 
 ### Device Inventory for Windows<!-- 24853010 -->
 
@@ -151,32 +107,9 @@ Applies to:
 
 - Windows (Corporate owned devices managed by Intune)
 
-### Collection of additional device inventory details<!-- 29460196 -->
-
-We're adding additional files and registry keys to be collected to assist in troubleshooting the Device Hardware Inventory feature.
-
-Applies to:
-
-- Windows
-
 <!-- *********************************************** -->
 
 ## Device security
-
-### New strong mapping requirements for Intune-issued SCEP certificates<!-- 29005591 -->
-
-To align with the Windows Kerberos Key Distribution Center's (KDC) strong mapping attribute requirements described in [KB5014754](https://support.microsoft.com/help/5014754), SCEP certificates issued by Microsoft Intune will be required to have the following tag in the Subject Alternative Name (SAN) field:
-
-`URL=tag:microsoft.com,2022-09-14:sid:<value>`
-
-This tag will ensure that certificates are compliant with the KDC's latest requirements, and that certificate-based authentication continues working. Microsoft Intune will be adding support for the SID variable in SCEP profiles. You will be able to modify or create a new SCEP profile to include the OnPremisesSecurityIdentifier variable in the SCEP profile. This action will trigger Microsoft Intune to issue new certificates with the appropriate tag to all applicable users and devices.
-
-These requirements apply to:
-
-- Android, iOS/iPadOS, and macOS user certificates.
-- Windows 10/11 user and device certificates.
-
-They don't apply to device certificates used with Microsoft Entra joined users or devices, because SID is an on-premises identifier.
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
