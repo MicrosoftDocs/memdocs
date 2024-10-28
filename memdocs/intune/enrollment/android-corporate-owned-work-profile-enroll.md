@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/17/2024
+ms.date: 10/28/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -186,11 +186,7 @@ To remove an app from Android Enterprise corporate-owned work profile devices, y
 
 The limitations in this section apply to corporate-owned devices with a work profile.    
 
-Private space is a feature introduced with Android 15 that lets people create a space on their device for sensitive apps and data they want to keep hidden.  
-
- * The private space is considered a personal profile. Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.     
-
- * Any policies you deploy to an enrolled private space is scoped to the private space, not the entire device.  
+Private space is a feature introduced with Android 15 that lets people create a space on their device for sensitive apps and data they want to keep hidden. The private space is considered a personal profile. Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.     
 
 ## Next steps
 - [Deploy Android apps](../apps/apps-deploy.md)
