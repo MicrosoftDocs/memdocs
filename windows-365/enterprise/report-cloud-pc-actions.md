@@ -33,7 +33,7 @@ ms.collection:
 
 This report shows you the status and completion progress of actions admins have taken on Cloud PCs, for both:
 
-- Single actions on the **Devices tab**.
+- Single actions on the **Devices** tab.
 - Multiple devices using **Bulk device actions** on the **Bulk batches** tab.
 
  The report shows action statuses for the last 90 days.
@@ -48,7 +48,7 @@ To get to the **Cloud PC actions** report, sign in to [Microsoft Intune admin ce
 
 :::image type="content" source="./media/report-cloud-pc-actions/report.png" alt-text="Screenshot of the Cloud PC actions report." lightbox="./media/report-cloud-pc-actions/report.png":::
 
-The report shows the following columns:
+The tab shows the following columns:
 
 - **Device name**
 - **Primary user UPN**
@@ -71,9 +71,9 @@ The report shows the following columns:
 
 ## Bulk batches tab
 
-When an admin takes an action on multiple Cloud PCs at once using **Bulk device actions**, these are combined into a batch.
+When an admin takes an action on multiple Cloud PCs at once using **Bulk device actions**, the actions are combined into a batch.
 
-The report shows the following columns:
+The tab shows the following columns:
 
 - **Batch name** - An automatically generated name for a batch of devices undergoing a remote action.
 - **Action** - Same as **Devices** tab.
