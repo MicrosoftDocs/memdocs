@@ -226,7 +226,7 @@ Details on how to implement auditing depend on the Linux platform you use:
 
   Typically, the *auditd* package is available from the default repository of each Ubuntu version.
 
-  For more information about using system auditing on Ubuntu, see [How to setup and Install Auditd on Ubuntu](https://dev.to/ajaykdl/how-to-setup-auditd-on-ubuntu-jfk), and article available on the dev.to website, and originally  published at kubefront.com.
+  For more information about using system auditing on Ubuntu, see [How to setup and Install Auditd on Ubuntu](https://dev.to/ajaykdl/how-to-setup-auditd-on-ubuntu-jfk), an article that is available on the dev.to website that was originally published at kubefront.com.
 
 ## Network
 
