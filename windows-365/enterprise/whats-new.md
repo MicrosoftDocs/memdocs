@@ -59,11 +59,27 @@ For more information about public preview items, see [Public preview in Windows 
 ## Week of October 28, 2024 (Service release 2410)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Bulk Troubleshoot action now generally available<!--51893512-->
+
+The Troubleshoot action in bulk has moved out of preview and into general availability.
+
+For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
 ### Update to Cloud PC action status report<!--49451077-->
 
-The Cloud PC action status report now shows batches of devices on which actions were triggered. You can see the batch current progress. For more information, see [Cloud PC actions report ](report-cloud-pc-actions.md). 
+The Cloud PC action status report now shows batches of devices on which actions were triggered. You can see the batch current progress. For more information, see [Cloud PC actions report ](report-cloud-pc-actions.md).
+
+### Azure network connections inactive state<!--52127015-->
+
+Azure network connections that meet either of the following conditions for more than four weeks are now marked as inactive:
+
+- ANCs that aren't associated with provisioning policies.
+- ANCs with provisioning policies that have no Cloud PCs associate with them.
 
 <!-- ########################## -->
 ## Week of October 21, 2024
