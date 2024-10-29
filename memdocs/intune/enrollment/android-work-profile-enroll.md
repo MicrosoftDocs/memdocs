@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 6/28/2024
+ms.date: 10/28/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -33,7 +33,7 @@ ms.collection:
 
 # Set up enrollment of Android Enterprise personally owned work profile devices
 
-Set up enrollment for bring-your-own-device (BYOD) and personal device scenarios using the *Android Enterprise personally owned work profile* management solution. During enrollment, a work profile is created on the device to house work apps and work data. The work profile can be managed by Microsoft Intune policies. Personal apps and data stay separate in another part of the device and remain unaffected by Intune. 
+Set up enrollment for bring-your-own-device (BYOD) and personal device scenarios using the *Android Enterprise personally owned work profile* management solution. During enrollment, a work profile is created on the device to house work apps and work data. You can use Microsoft Intune policies to manage the work profile and its contents. Personal apps and data stay separate in another part of the device and remain unaffected by Intune. 
 
 For more information about Android Enterprise work profile features, see [Work profiles](https://support.google.com/work/android/answer/9563584) (opens Android Enterprise Help).  
 
@@ -68,7 +68,7 @@ Complete these steps to set up enrollment for Android Enterprise devices in BYOD
      [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
      
 10. Select **Next** to continue to **Scope tags**.    
-11. Optionally, apply one or more scope tags to limit visibility and management of restrictions to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).     
+11. Optionally, apply one or more scope tags to limit visibility and management of restrictions to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).     
 12. Select **Next** to continue to **Assignments**. 
 13. Assign the restriction to all users, or select specific groups.  
 14. Select **Next** to continue to **Review + create**.  
@@ -86,7 +86,17 @@ For more information and screenshots of the end user experience, see [Enroll dev
 
 ## Data shared with Google  
 
-Microsoft Intune shares certain user and device information with Google when Android Enterprise device management is enabled.  For more information, see [Data Intune sends to Google](../protect/data-intune-sends-to-google.md).  
+Microsoft Intune shares certain user and device information with Google when Android Enterprise device management is enabled. For more information, see [Data Intune sends to Google](../protect/data-intune-sends-to-google.md).  
+
+## Limitations 
+
+The limitations in this section apply to personal devices with a work profile.    
+
+Private space is a feature introduced with Android 15 that lets people create a space on their device for sensitive apps and data they want to keep hidden.   
+
+ * The private space is considered a personal profile. Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.   
+
+ * If users attempt to enroll the private space after they enroll the device, Intune will initiate the device administrator enrollment process. The second enrollment causes two enrollment records to appear in the Microsoft Intune admin center: one under work profile management and one under device administrator management.  Microsoft Intune doesn't provide support for this scenario.  
 
 ## Next steps
 - [Deploy Android Enterprise apps](../apps/apps-add-android-for-work.md)
