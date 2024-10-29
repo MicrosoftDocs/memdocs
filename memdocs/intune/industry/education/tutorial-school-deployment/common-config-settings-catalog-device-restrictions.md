@@ -9,7 +9,7 @@ ms.manager: dougeby
 no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 ---
 
-# Device restrictions
+# Common Education device restrictions
 
 There are many device restriction settings and configuration options you have available. This article summarizes the configurations that are most commonly used for student and teacher devices.
 

@@ -47,7 +47,7 @@ These policies are commonly used but not mandatory. Schools can tailor their con
 
 ## Intune policies for iPads in Education
 
-- [Device restrictions](./common-config-ipads-device-restrictions)
-- [Apple Intelligence](./common-config-ipads-ai)
-- [iPads with no user affinity](./common-config-ipads-nouser)
-- [Optional restrictions](./common-config-ipads-optional)
+- [Device restrictions](common-config-ipads-device-restrictions.md)
+- [Apple Intelligence](common-config-ipads-ai.md)
+- [iPads with no user affinity](common-config-ipads-nouser.md)
+- [Optional restrictions](common-config-ipads-optional.md)
