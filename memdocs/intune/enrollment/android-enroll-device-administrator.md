@@ -82,7 +82,7 @@ Private space is a feature introduced with Android 15 that lets people create a 
 
  * The private space is considered a personal profile. Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.   
 
- * Users might try to create a work profile-like experience on their devices by enrolling only the private space, leading to partial device management. Microsoft Intune doesn't provide support for this scenario. 
+ * Users might try to create a work profile-like experience on their devices by enrolling only the private space, leading to partial device management. Microsoft Intune doesn't provide support for this scenario. To avoid this issue, we recommend using [personal work profile management](android-work-profile-enroll.md) or [corporate-owned work profile management](android-corporate-owned-work-profile-enroll.md) instead of device administrator management.  
 
  * After a user enrolls their personal device, if they attempt to enroll the private space, Intune will initiate the personal work profile enrollment flow. However, in this scenario the enrollment process will fail without any notification.    
 
