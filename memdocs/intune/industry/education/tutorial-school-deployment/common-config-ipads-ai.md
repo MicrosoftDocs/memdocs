@@ -28,11 +28,11 @@ To learn more, see:
 
 | **Category** | **Property** | **Value** | **Notes** | **Payload property** |
 |---|---|:---:|---|---|
-| Restrictions | **:::no-loc text="Allow Genmoji":::** | False | Prohibits creating new Genmoji | [:::no-loc text="allowGenmoji":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
-| Restrictions | **:::no-loc text="Allow Image Playground":::** | False | Prohibits the use of image generation | [:::no-loc text="allowImagePlayground":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
-| Restrictions | **:::no-loc text="Allow Image Wand":::** | False | Prohibits the use of Image Wand | [:::no-loc text="allowImageWand":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Allow Genmoji":::** | False | Prohibits creating new Genmoji. | [:::no-loc text="allowGenmoji":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Allow Image Playground":::** | False | Prohibits the use of image generation. | [:::no-loc text="allowImagePlayground":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Allow Image Wand":::** | False | Prohibits the use of Image Wand. | [:::no-loc text="allowImageWand":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
 | Restrictions | **:::no-loc text="Allow Personalized Handwriting Results":::** | False | | [:::no-loc text="allowPersonalizedHandwritingResults":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
-| Restrictions | **:::no-loc text="Allow Writing Tool":::** | False | Disables Apple Intelligence writing tools | [:::no-loc text="allowWritingTools":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Allow Writing Tool":::** | False | Disables Apple Intelligence writing tools. | [:::no-loc text="allowWritingTools":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
 
 ## [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
 
