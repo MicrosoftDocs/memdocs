@@ -130,6 +130,19 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
 
 
+### October 2, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:7921c2e97217fa17de4ab69396d943e4975d323417b8b813211e2f8b639f64e1
+
+- **serverImageDigest**: sha256:0efab5013351bcd81f186973e75ed5d9f91bbe6271e3be481721500f946fc9ec
+
+Changes in this release:
+-Upgrade from .NET 6 to .NET 8
+- Upgrade ocserv to version 1.3.0
+- Fix rootless container bug in installer
+
 ### September 12, 2024
 
 Image hash values:
