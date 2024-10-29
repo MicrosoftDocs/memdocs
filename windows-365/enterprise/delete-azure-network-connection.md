@@ -53,7 +53,7 @@ If an ANC is in use, then you must take one of the following steps before you ca
 - Remove the ANC from all provisioning policies.
 - Move Cloud PCs to another ANC or deprovision the Cloud PCs.
 - Remove the ANC from all cross region disaster recovery user settings.
-- 
+
 <!-- ########################## -->
 ## Next steps
 
