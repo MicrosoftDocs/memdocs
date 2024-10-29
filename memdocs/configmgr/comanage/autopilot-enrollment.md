@@ -2,7 +2,7 @@
 title: How to enroll with Autopilot
 titleSuffix: Configuration Manager
 description: Enable clients to enroll with co-management when they provision with Windows Autopilot.
-ms.date: 05/18/2022
+ms.date: 10/29/2024
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: how-to
@@ -131,7 +131,7 @@ Use these recommendations for a more successful deployment:
 
 ## Limitations
 
-- Autopilot device preparation policy does not support Autopilot into co-management. As a result, attempting to install co-management during the device preparation flow, may result in failed deployments.
+- [Windows Autopilot device preparation](/autopilot/device-preparation/overview) policy doesn't support Autopilot into co-management. As a result, attempting to install co-management during the device preparation flow might result in failed deployments.
   
  - For Windows 11 devices in Microsoft Entra hybrid joined scenario, the management authority will be set to Microsoft Intune during the Windows Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads.
 
