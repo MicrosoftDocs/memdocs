@@ -157,24 +157,6 @@ To avoid conflicts, you can reconfigure both Podman and Docker to use a bridge n
 > [!IMPORTANT]
 > The Tunnel Gateway server must be installed before you can change the bridge network configuration.
 
-### Linux system auditing
-
-Linux system auditing can help identify security-relevant information or security violations on a Linux server that hosts Microsoft Tunnel. Linux system auditing is recommended for Microsoft Tunnel, but not required. To use system auditing, a Linux server must have the **auditd** package installed to `/etc/audit/auditd.conf`.
-
-Details on how to implement auditing depend on the Linux platform you use:
-
-- **Red Hat**: Versions of Red Had Enterprise Linux 7 and later install the *auditd* package by default. However, if the package isn't installed, you can use the following command line on the Linux server to install it: `sudo apt install auditd audispd-plugins`
-
-  Typically, the *auditd* package is available from the default repository of each REHL version.
-
-  For more information about using system auditing on RHEL, see [Configure Linux system auditing with auditd](https://www.redhat.com/blog/configure-linux-auditing-auditd) in the Red Hat Blog.
-
-- **Ubuntu**: To use system auditing with Ubuntu you must manually install the *auditd* package. To do so, use the following command line on the Linux server: `sudo apt install auditd audispd-plugins`
-
-  Typically, the *auditd* package is available from the default repository of each Ubuntu version.
-
-  For more information about using system auditing on Ubuntu, see [How to setup and Install Auditd on Ubuntu](https://dev.to/ajaykdl/how-to-setup-auditd-on-ubuntu-jfk), and article available on the dev.to website, and originally  published at kubefront.com.
-
 #### Change the default bridge network used by Docker
 
 Docker uses the file **/etc/docker/daemon.json** to configure a new default bridge IP address. In the file, the bridge IP address must be specified in CIDR (Classless inter-domain routing) notation, a compact way to represent an IP address along with its associated subnet mask and routing prefix.
@@ -227,6 +209,24 @@ Podman uses the file **/etc/cni/net.d as 87-podman-bridge.conflist** to configur
 4. Use the following command to restart the MS Tunnel Gateway containers: `sudo mst-cli agent start ; sudo mst-cli server start`
 
 For more information, see [Configuring container networking with Podman](https://www.redhat.com/sysadmin/container-networking-podman) in the Red Hat documentation.
+
+### Linux system auditing
+
+Linux system auditing can help identify security-relevant information or security violations on a Linux server that hosts Microsoft Tunnel. Linux system auditing is recommended for Microsoft Tunnel, but not required. To use system auditing, a Linux server must have the **auditd** package installed to `/etc/audit/auditd.conf`.
+
+Details on how to implement auditing depend on the Linux platform you use:
+
+- **Red Hat**: Versions of Red Had Enterprise Linux 7 and later install the *auditd* package by default. However, if the package isn't installed, you can use the following command line on the Linux server to install it: `sudo apt install auditd audispd-plugins`
+
+  Typically, the *auditd* package is available from the default repository of each REHL version.
+
+  For more information about using system auditing on RHEL, see [Configure Linux system auditing with auditd](https://www.redhat.com/blog/configure-linux-auditing-auditd) in the Red Hat Blog.
+
+- **Ubuntu**: To use system auditing with Ubuntu you must manually install the *auditd* package. To do so, use the following command line on the Linux server: `sudo apt install auditd audispd-plugins`
+
+  Typically, the *auditd* package is available from the default repository of each Ubuntu version.
+
+  For more information about using system auditing on Ubuntu, see [How to setup and Install Auditd on Ubuntu](https://dev.to/ajaykdl/how-to-setup-auditd-on-ubuntu-jfk), and article available on the dev.to website, and originally  published at kubefront.com.
 
 ## Network
 
