@@ -28,7 +28,7 @@ Key areas of focus include:
 These policies are commonly used but not mandatory. Schools can tailor their configurations based on their specific needs, and optional policies are provided for more situational use cases.
 
 > [!CAUTION]
-> Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies. For more information, see [Compliance and device configuration policies that conflict](/mem/intune/configuration/device-profile-troubleshoot#conflicts) and [Avoiding policy conflicts](./manage-avoid-policy-conflicts).
+> Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies. For more information, see [Compliance and device configuration policies that conflict](/mem/intune/configuration/device-profile-troubleshoot#conflicts) and [Avoiding policy conflicts](manage-avoid-policy-conflicts.md).
 
 ## Intune policies for Windows in Education
 
