@@ -22,19 +22,22 @@ To learn more, see:
 - [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune/configuration/settings-catalog)
 - [Restrictions payload](https://developer.apple.com/documentation/devicemanagement/restrictions)
 
+> [!TIP]
+> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search field to find the desired policy.
+
 ## [**Settings**](#tab/settings)
 
 | **Category** | **Property** | **Value** | **Notes** | **Payload property** |
 |---|---|:---:|---|---|
-| Restrictions | **:::no-loc text="Allow Account Modification":::** | False | Disables modification of accounts such as Apple IDs and Internet-based accounts such as Mail, Contacts, and Calendar | [:::no-loc text="allowAccountModification":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
-| Restrictions | **:::no-loc text="Allow Bookstore":::** | False | Removes the Book Store tab from the Books app | [:::no-loc text="allowBookstore":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
-| Restrictions | **:::no-loc text="Allow Enterprise Book Backup":::** | False | Disables backup of Enterprise books | [:::no-loc text="allowEnterpriseBookBackup":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
-| Restrictions | **:::no-loc text="Allow Enterprise Book Metadata Sync":::** | False | Disables sync of Enterprise books, notes, and highlights | [:::no-loc text="allowEnterpriseBookMetadataSync":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
-| Restrictions | **:::no-loc text="Allow Fingerprint For Unlock":::** | False | Prevents Touch ID or Face ID from unlocking a device | [:::no-loc text="allowFingerprintForUnlock":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
-| Restrictions | **:::no-loc text="Allow Fingerprint Modification":::** | False | Prevents the user from modifying Touch ID or Face ID | [:::no-loc text="allowFingerprintModification":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
-| Restrictions | **:::no-loc text="Allow Passcode Modification":::** | False | Prevents adding, changing, or removing the passcode | [:::no-loc text="allowPasscodeModification":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Allow Account Modification":::** | False | Disables modification of accounts such as Apple IDs and Internet-based accounts such as Mail, Contacts, and Calendar. | [:::no-loc text="allowAccountModification":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Allow Bookstore":::** | False | Removes the Book Store tab from the Books app. | [:::no-loc text="allowBookstore":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Allow Enterprise Book Backup":::** | False | Disables backup of Enterprise books. | [:::no-loc text="allowEnterpriseBookBackup":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Allow Enterprise Book Metadata Sync":::** | False | Disables sync of Enterprise books, notes, and highlights. | [:::no-loc text="allowEnterpriseBookMetadataSync":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Allow Fingerprint For Unlock":::** | False | Prevents Touch ID or Face ID from unlocking a device. | [:::no-loc text="allowFingerprintForUnlock":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Allow Fingerprint Modification":::** | False | Prevents the user from modifying Touch ID or Face ID. | [:::no-loc text="allowFingerprintModification":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Allow Passcode Modification":::** | False | Prevents adding, changing, or removing the passcode. | [:::no-loc text="allowPasscodeModification":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
 | Restrictions | **:::no-loc text="Allow Password Auto Fill":::** | False | | [:::no-loc text="allowPasswordAutoFill":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
-| Restrictions | **:::no-loc text="Safari Allow Autofill":::** | False | Disables Safari AutoFill for passwords, contact info, and credit cards and also prevents using the Keychain for AutoFill | [:::no-loc text="safariAllowAutoFill":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
+| Restrictions | **:::no-loc text="Safari Allow Autofill":::** | False | Disables Safari AutoFill for passwords, contact info, and credit cards and also prevents using the Keychain for AutoFill. | [:::no-loc text="safariAllowAutoFill":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
 
 ## [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
 

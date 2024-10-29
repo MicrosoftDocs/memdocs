@@ -21,6 +21,9 @@ To learn more, see:
 - [Restrictions payload](https://developer.apple.com/documentation/devicemanagement/restrictions)
 - [iPadOS 18](https://www.apple.com/ipados/ipados-18)
 
+> [!TIP]
+> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search field to find the desired policy.
+
 ## [**Settings**](#tab/settings)
 
 | **Category** | **Property** | **Value** | **Notes** | **Payload property** |
