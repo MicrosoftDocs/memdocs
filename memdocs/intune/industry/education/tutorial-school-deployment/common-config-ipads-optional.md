@@ -20,7 +20,7 @@ To learn more, see:
 - [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune/configuration/settings-catalog)
 - [Restrictions payload](https://developer.apple.com/documentation/devicemanagement/restrictions)
 
-## [:::image type="icon" source="../../../media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
+## [**Settings**](#tab/settings)
 
 | **Category** | **Property** | **Value** | **Notes** | **Payload property** |
 |---|---|:---:|---|---|
@@ -39,7 +39,7 @@ To learn more, see:
 | System Configuration > Lock Screen Message | **:::no-loc text="Asset Tag Information":::** | {{devicename}} | Displayed in the login window and Lock screen. | [:::no-loc text="AssetTagInformation":::](https://developer.apple.com/documentation/devicemanagement/lockscreenmessage) |
 | System Configuration > Lock Screen Message | **:::no-loc text="Lock Screen Footnote":::** | **Example**:<br> School of Fine Art | The footnote displayed in the login window and Lock screen. | [:::no-loc text="LockScreenFootnote":::](https://developer.apple.com/documentation/devicemanagement/lockscreenmessage) |
 
-## [:::image type="icon" source="../../../media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
+## [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 

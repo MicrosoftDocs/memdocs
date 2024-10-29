@@ -22,7 +22,7 @@ To learn more, see:
 - [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune/configuration/settings-catalog)
 - [Restrictions payload](https://developer.apple.com/documentation/devicemanagement/restrictions)
 
-## [:::image type="icon" source="../../../media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
+## [**Settings**](#tab/settings)
 
 | **Category** | **Property** | **Value** | **Notes** | **Payload property** |
 |---|---|:---:|---|---|
@@ -36,7 +36,7 @@ To learn more, see:
 | Restrictions | **:::no-loc text="Allow Password Auto Fill":::** | False | | [:::no-loc text="allowPasswordAutoFill":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
 | Restrictions | **:::no-loc text="Safari Allow Autofill":::** | False | Disables Safari AutoFill for passwords, contact info, and credit cards and also prevents using the Keychain for AutoFill | [:::no-loc text="safariAllowAutoFill":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
 
-## [:::image type="icon" source="../../../media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
+## [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 

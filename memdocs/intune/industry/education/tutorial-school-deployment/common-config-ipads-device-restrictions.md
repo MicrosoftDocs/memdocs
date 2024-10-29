@@ -27,7 +27,7 @@ To learn more, see:
 
 ## General restrictions
 
-### [:::image type="icon" source="../../../media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
+### [**Settings**](#tab/settings)
 
 | **Category** | **Property** | **Value** | **Notes** | **Payload property** |
 |---|---|:---:|---|---|
@@ -93,7 +93,7 @@ To learn more, see:
 | Restrictions | **:::no-loc text="Safari Force Fraud Warning":::** | True | | [:::no-loc text="safariForceFraudWarning":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
 | Web Content Filter | **:::no-loc text="Auto Filter Enabled":::** | True | Enables automatic filtering.<br><br>**Note:** iPadOS's built-in filter checks for adult content and doesn't cover categories that are educationally inappropriate. A separate 3rd party filtering solution is recommended. | [:::no-loc text="AutoFilterEnabled":::](https://developer.apple.com/documentation/devicemanagement/webcontentfilter) |
 
-### [:::image type="icon" source="../../../media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
+### [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
@@ -115,7 +115,7 @@ Content-Type: application/json
 > [!CAUTION]
 > Enable these settings with caution after carefully evaluating their effect on your environment.
 
-### [:::image type="icon" source="../../../media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
+### [**Settings**](#tab/intuneadminconsole)
 
 | **Category** | **Property** | **Value** | **Notes** | **Payload property** |
 |---|---|:---:|---|---|
@@ -127,7 +127,7 @@ Content-Type: application/json
 | Restrictions | **:::no-loc text="Allow Video Conferencing":::** | False | Hides the FaceTime app.<br><br>**Note:** Disabling may prevent screen sharing in some remote assistant apps used by IT Helpdesk. | [:::no-loc text="allowVideoConferencing":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
 | Restrictions | **:::no-loc text="Force WiFi To Allowed Networks Only":::** | True | Limits the device to only join Wi-Fi networks set up through a configuration profile.<br><br>**Note:** Could potentially leave the device in an unmanageable state if unable to connect to allowed networks. | [:::no-loc text="forceWiFiToAllowedNetworksOnly":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
 
-### [:::image type="icon" source="../../../media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
+### [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 

@@ -21,7 +21,7 @@ To learn more, see:
 - [Restrictions payload](https://developer.apple.com/documentation/devicemanagement/restrictions)
 - [iPadOS 18](https://www.apple.com/ipados/ipados-18)
 
-## [:::image type="icon" source="../../../media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
+## [**Settings**](#tab/settings)
 
 | **Category** | **Property** | **Value** | **Notes** | **Payload property** |
 |---|---|:---:|---|---|
@@ -31,7 +31,7 @@ To learn more, see:
 | Restrictions | **:::no-loc text="Allow Personalized Handwriting Results":::** | False | | [:::no-loc text="allowPersonalizedHandwritingResults":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
 | Restrictions | **:::no-loc text="Allow Writing Tool":::** | False | Disables Apple Intelligence writing tools | [:::no-loc text="allowWritingTools":::](https://developer.apple.com/documentation/devicemanagement/restrictions) |
 
-## [:::image type="icon" source="../../../media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
+## [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
