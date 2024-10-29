@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -71,7 +71,7 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
     > [!NOTE]
     >
-    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
+    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
 1. In the **Assignments** page, select the **Search by group name..** box, and then either select or search for the user group created in [Step 4: Create a user group](entra-join-user-group.md). Make sure to select the user group created in [Step 4: Create a user group](entra-join-user-group.md) and not the device group created in [Step 3: Create a device group](entra-join-device-group.md). Once the correct user group is selected, select **Next**.
 
@@ -123,10 +123,10 @@ In the **Configuration settings** page:
     >
     > The following types of applications are supported for use with Windows Autopilot device preparation:
     >
-    > - [Line-of-business (LOB)](/intune/intune-service/apps/lob-apps-windows).
-    > - [Win32](/intune/intune-service/apps/apps-win32-prepare).
-    > - [Microsoft Store](/intune/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-    > - [Microsoft 365](/intune/intune-service/apps/apps-add-office365).
+    > - [Line-of-business (LOB)](/mem/intune/apps/lob-apps-windows).
+    > - [Win32](/mem/intune/apps/apps-win32-prepare).
+    > - [Microsoft Store](/mem/intune/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
+    > - [Microsoft 365](/mem/intune/apps/apps-add-office365).
     >
     > In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 

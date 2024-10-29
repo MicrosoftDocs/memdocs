@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 08/11/2023
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -33,7 +33,7 @@ ms.collection:
 
 The fastest way to use Windows 365 is to use AADJ, gallery images and the Microsoft Hosted Network option. The instructions on this page are only if you must use either or both:
 
-- **Custom images**. Windows 365 provides optimized gallery images, including [images with Microsoft 365 apps preinstalled](/windows-365/enterprise/device-images). After the gallery image is deployed, Intune can be used for further customization of [common settings](/intune/intune-service/configuration/settings-catalog-common-features) and [application deployment](/intune/intune-service/apps/apps-windows-10-app-deploy). If you must use your existing custom image, for more information, see [add a custom image](./add-device-images.md).
+- **Custom images**. Windows 365 provides optimized gallery images, including [images with Microsoft 365 apps preinstalled](/windows-365/enterprise/device-images). After the gallery image is deployed, Intune can be used for further customization of [common settings](/mem/intune/configuration/settings-catalog-common-features) and [application deployment](/mem/intune/apps/apps-windows-10-app-deploy). If you must use your existing custom image, for more information, see [add a custom image](./add-device-images.md).
 - **Azure Network Connections (ANC)**. ANCs let you provision Cloud PCs that are attached to a virtual network that you manage. Examples include:
     - Azure Virtual Network (VNet).
     - Azure VPN Gateway or a dedicated connection via ExpressRoute.
@@ -80,11 +80,11 @@ If you want to use Microsoft Entra join or Microsoft Entra hybrid join, consider
 For the Windows 365 GCC Setup Tool to complete tenant mapping, the Windows 365 Microsoft Entra application must be given permission to access your Azure Government AD tenant through a service principal. The service principal object defines what the app can do in the tenant, who can access the app, and what resources the app can access. Before running the Windows 365 GCC Setup Tool the first time, you must do the following:
 
 1. If not already completed, install the Azure CLI on the computer where you will be creating the service principal. For more information, see [How to install the Azure CLI](/cli/azure/install-azure-cli).
-2. Sign into your Azure Government AD tenant by using the Azure CLI steps defined in [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli). Global Administrator permissions are required to create the service principal for the Windows 365 App.
+2. Sign into your Azure Government AD tenant by using the Azure CLI steps defined in [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli). Global Administrator permissions are required to create the service principal for Windows App.
 3. For more information about working with service principals in Azure, see [Work with Azure service principal using the Azure CLI](/cli/azure/azure-cli-sp-tutorial-1). Grant the Windows 365 Microsoft Entra app permissions to your tenant by running the following PowerShell command: ```az ad sp create --id 0af06dc6-e4b5-4f28-818e-e78e62d137a5```.
-4. After the command completes successfully, you should be able to view details about the service principal by running the following PowerShell command: ```az ad sp show --id 0af06dc6-e4b5-4f28-818e-e78e62d137a5```. You should see the Windows 365 application listed in the **All Applications** view in the Enterprise application blade in Azure portal.
+4. After the command completes successfully, you should be able to view details about the service principal by running the following PowerShell command: ```az ad sp show --id 0af06dc6-e4b5-4f28-818e-e78e62d137a5```. You should see Windows App listed in the **All Applications** view in the Enterprise application blade in Azure portal.
 
-The Windows 365 App service principal can only access Azure resources necessary to configure custom image and Azure Network Connection (ANC) support in Windows 365. After it's created, the service principal can only be deleted when custom images, ANC objects and corresponding Cloud PCs using them have been deprovisioned. Otherwise, Cloud PC provisioning tasks may fail, and existing Cloud PCs may become inaccessible.
+The Windows App service principal can only access Azure resources necessary to configure custom image and Azure Network Connection (ANC) support in Windows 365. After it's created, the service principal can only be deleted when custom images, ANC objects and corresponding Cloud PCs using them have been deprovisioned. Otherwise, Cloud PC provisioning tasks may fail, and existing Cloud PCs may become inaccessible.
 
 ## Get started with the Windows 365 GCC Setup Tool
 
@@ -108,7 +108,7 @@ Follow these steps to configure tenant mapping using the Windows 365 GCC Setup T
 If you have issues running the Windows 365 GCC Setup Tool:
 
 1. In the same folder where the GCCSetupTool.exe is run, navigate to the **Log** folder and review the `GCCAdminTool.log` file.
-2. If you continue to have issues, [contact support](/intune/get-support#contact-support) and provide the GCCADminTool.log file.
+2. If you continue to have issues, [contact support](/mem/get-support#contact-support) and provide the GCCADminTool.log file.
 
 ### Subsequent use of the GCC Setup Tool
 

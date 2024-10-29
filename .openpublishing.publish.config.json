@@ -15,21 +15,9 @@
       "template_folder": "_themes"
     },
     {
-      "docset_name": "intune",
-      "build_source_folder": "intune",
-      "build_output_subfolder": "intune",
-      "locale": "en-us",
-      "monikers": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "build_entry_point": "docs"
-    },
-    {
       "docset_name": "memdocs",
-      "build_source_folder": "intune",
-      "build_output_subfolder": "intune",
+      "build_source_folder": "memdocs",
+      "build_output_subfolder": "memdocs",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -100,8 +88,5 @@
   "docs_build_engine": {},
   "skip_source_output_uploading": false,
   "contribution_branch_mappings": {},
-  "need_generate_pdf_url_template": true,
-  "redirection_files": [
-    ".openpublishing.redirection.json"
-  ]
+  "need_generate_pdf_url_template": true
 }

@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 07/16/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -51,7 +51,7 @@ In these steps, you’ll use the Device Model device property to create the dyna
 5. Select **Add dynamic query**.
 6. On the **Dynamic membership rules** page, enter the following:
     1. **Property** = "deviceModel"
-    2. **Operator** = "Contains"
+    2. **Operator** = "Starts With"
     3. **Value** = "Cloud PC"
 7. To validate that it works, select **Validate Rules (Preview)** > **+Add devices** > select some Cloud PCs and non-Cloud PC devices.
 8. After the validation completes, select **Save** > **Create**.
@@ -93,7 +93,7 @@ In these steps, you'll use the Device Model device property to create the dynami
 5. Select **Add dynamic query**.
 6. On the **Dynamic membership rules** page, enter the following:
     1. **Property** = “deviceModel”
-    2. **Operator** = “Contains”
+    2. **Operator** = “Starts With”
     3. **Value** = “Cloud PC”
 7. Select **Add expression** and enter the following:
     1. **Property** = “deviceModel”

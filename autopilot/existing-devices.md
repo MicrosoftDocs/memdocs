@@ -2,13 +2,13 @@
 title: Windows Autopilot for existing devices
 description: Modern desktop deployment with Windows Autopilot enables easily deploying the latest version of Windows to existing devices.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/27/2024
+ms.date: 09/13/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,7 +40,7 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 >
 > Using Autopilot for existing devices could be used as a method to convert existing hybrid Microsoft Entra devices into Microsoft Entra devices. Using the setting **Convert all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned groups into a Microsoft Entra device. The setting only registers the devices in the assigned groups for the Autopilot service.
 
-## Prerequisites
+## Requirements
 
 - A currently supported version of Microsoft Configuration Manager current branch.
 
@@ -48,11 +48,11 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 
 - Microsoft Entra ID P1 or P2.
 
-- A supported version of Windows imported into Configuration Manager as an [OS image](/intune/configmgr/osd/get-started/manage-operating-system-images).
+- A supported version of Windows imported into Configuration Manager as an [OS image](/mem/configmgr/osd/get-started/manage-operating-system-images).
 
 - The [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616) is required for Windows Server 2012/2012 R2 when running the PowerShell commands and scripts that [installs the required modules](#install-required-modules).
 
-- Enrollment restrictions aren't configured to block personal devices. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/intune/intune-service/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices). <!-- INADO-27343099 -->
+- Enrollment restrictions aren't configured to block personal devices. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices). <!-- INADO-27343099 -->
 
 ## Configure the Enrollment Status Page (optional)
 
@@ -60,9 +60,9 @@ If desired, an [enrollment status page](enrollment-status.md) (ESP) for Autopilo
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Go to **Devices** > **Device onboarding** | **Enrollment**. Make sure **Windows** is selected at the top and then under **Windows Autopilot**, select **Enrollment Status Page** and [Set up the Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status).
+1. Go to **Devices** > **Device onboarding** | **Enrollment**. Make sure **Windows** is selected at the top and then under **Windows Autopilot**, select **Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
 
-1. Go to **Microsoft Entra ID** > **Manage** | **Mobility (MDM and WIP)** > **Microsoft Intune** and [enable Windows automatic enrollment](/intune/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
+1. Go to **Microsoft Entra ID** > **Manage** | **Mobility (MDM and WIP)** > **Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
 
 ## Install required modules
 
@@ -192,7 +192,7 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
     - Select **This package contains source files**
     - *Source folder*: Specify the UNC network path that contains the `AutopilotConfigurationFile.json` file
 
-    For more information, see [Packages and programs in Configuration Manager](/intune/configmgr/apps/deploy-use/packages-and-programs).
+    For more information, see [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
 
 1. For the program, select the *Program Type*: **Don't create a program**
 
@@ -226,7 +226,7 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. Complete the wizard with the default settings.
 
-For more information, see [How to create collections in Configuration Manager](/intune/configmgr/core/clients/manage/collections/create-collections).
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 ## Create a task sequence
 
@@ -240,7 +240,7 @@ For more information, see [How to create collections in Configuration Manager](/
 
     - A name for the task sequence. For example, **Autopilot for existing devices**.
     - Optionally add a description to better describe the task sequence.
-    - Select a boot image. For more information on supported boot image versions, see [Support for the Windows ADK in Configuration Manager](/intune/configmgr/core/plan-design/configs/support-for-windows-adk).
+    - Select a boot image. For more information on supported boot image versions, see [Support for the Windows ADK in Configuration Manager](/mem/configmgr/core/plan-design/configs/support-for-windows-adk).
 
 1. In the **Install Windows** page, select the Windows **Image package**. Then configure the following settings:
 
@@ -256,7 +256,7 @@ For more information, see [How to create collections in Configuration Manager](/
         - **Randomly generate the local administrator password and disable the account on all support platforms (recommended)**
         - **Enable the account and specify the local administrator password**
 
-1. In the **Install the Configuration Manager client** page, add any necessary Configuration Manager client installation properties for the environment. For example, since the device is a Workgroup device and not domain joined during the Windows Autopilot for existing devices task sequence, the [SMSMP](/intune/configmgr/core/clients/deploy/about-client-installation-properties#smsmp) or [SMSMPLIST](/intune/configmgr/core/clients/deploy/about-client-installation-properties#smsmplist) parameters might be needed to run certain tasks such as the **Install Application** or **Install Software Updates** tasks.
+1. In the **Install the Configuration Manager client** page, add any necessary Configuration Manager client installation properties for the environment. For example, since the device is a Workgroup device and not domain joined during the Windows Autopilot for existing devices task sequence, the [SMSMP](/mem/configmgr/core/clients/deploy/about-client-installation-properties#smsmp) or [SMSMPLIST](/mem/configmgr/core/clients/deploy/about-client-installation-properties#smsmplist) parameters might be needed to run certain tasks such as the **Install Application** or **Install Software Updates** tasks.
 
 1. The **Include updates** page selects by default the option to **Do not install any software updates**.
 
@@ -274,15 +274,15 @@ The Windows Autopilot for existing devices task sequence results in a device joi
 >
 > The Windows Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). If the device is joined to a domain, Sysprep fails, so therefore the Windows Autopilot for existing devices task sequence joins a workgroup. For this reason, it isn't necessary to add the **Apply Network Settings** task to a Windows Autopilot for existing devices task sequence.
 
-For more information on creating the task sequence, including information on other wizard options, see [Create a task sequence to install an OS](/intune/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
+For more information on creating the task sequence, including information on other wizard options, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
 
 If the task sequence is viewed, it's similar to the default task sequence to apply an existing OS image. This task sequence includes the following extra steps:
 
 - **Apply Windows Autopilot configuration**: This step applies the Autopilot configuration file from the specified package. It's not a new type of step, it's a **Run Command Line** step to copy the file.
 
-- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](/intune/configmgr/osd/understand/task-sequence-steps#prepare-windows-for-capture).
+- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#prepare-windows-for-capture).
 
-For more information on editing the task sequence, see [Use the task sequence editor](/intune/configmgr/osd/understand/task-sequence-editor) and [Task sequence steps](/intune/configmgr/osd/understand/task-sequence-steps).
+For more information on editing the task sequence, see [Use the task sequence editor](/mem/configmgr/osd/understand/task-sequence-editor) and [Task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps).
 
 > [!NOTE]
 >
@@ -302,7 +302,7 @@ Next distribute all content required for the task sequence to distribution point
 
 1. After specifying content distribution, complete the wizard.
 
-For more information, see [Manage task sequences to automate tasks](/intune/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks).
+For more information, see [Manage task sequences to automate tasks](/mem/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks).
 
 ## Deploy the Autopilot task sequence
 

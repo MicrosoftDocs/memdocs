@@ -2,7 +2,7 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
 ms.date: 06/28/2024
@@ -27,7 +27,7 @@ There are several methods to register a device as an Autopilot device in Intune:
 
 - Manually registering devices into Intune as an Autopilot device via the hardware hash. The hardware hash of a device can be collected via one of the following methods:
 
-  - [Configuration Manager](/intune/configmgr/comanage/how-to-prepare-Win10#windows-autopilot).
+  - [Configuration Manager](/mem/configmgr/comanage/how-to-prepare-Win10#windows-autopilot).
   - [PowerShell script](../../add-devices.md#powershell).
   - [Diagnostics page hash export](../../add-devices.md#diagnostics-page-hash-export).
   - [Desktop hash export](../../add-devices.md#desktop-hash-export).

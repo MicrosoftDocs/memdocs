@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 08/05/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -44,7 +44,7 @@ For more information about guided scenarios in general, see [Intune guided scena
 
 ## Prerequisites
 
-- Each physical device and Cloud PC must be running Windows 11 Enterprise or Professional, version 22621.3227 or later.
+- Each physical device and Cloud PC must be running Windows 11 Enterprise or Professional, version 22621.3374 or later.
 - You must have the Intune Service Administrator role.
 
 Before adding physical devices to the group, you must ensure that they meet the [Windows 365 Boot requirements](windows-365-boot-physical-device-requirements.md).

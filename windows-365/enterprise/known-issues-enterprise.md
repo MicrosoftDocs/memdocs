@@ -9,7 +9,7 @@ ms.date: 7/09/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -245,7 +245,7 @@ This applies to the following gallery images:
 
 For newly provisioned Cloud PCs, verify WebRTC is available. If it’s not, you can use either of the following options:
 
-- To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps: [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/intune/apps/apps-add-office365).
+- To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps: [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/mem/intune/apps/apps-add-office365).
 
 - To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps: [install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, use this link: [https://aka.ms/msrdcwebrtcsvc/msi]( https://aka.ms/msrdcwebrtcsvc/msi).
 

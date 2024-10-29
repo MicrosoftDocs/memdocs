@@ -4,13 +4,13 @@ title: Network requirements for Windows 365
 titleSuffix:
 description: Learn about the network requirements for using Windows 365.
 keywords:
-author: ErikjeMS  
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/08/2024
+ms.date: 07/31/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -33,7 +33,7 @@ ms.collection:
 
 Windows 365 is a cloud-based service that lets users connect through the internet from any device, from any place, to a Windows Desktop running in Azure. To support these internet connections, you must follow the networking requirements listed in this article.
 
-Each customer has its specific requirements based on the workload they use to calculate the network requirements of their Cloud PC environment.  
+Each customer has its specific requirements based on the workload they use to calculate the network requirements of their Cloud PC environment.
 
 >[!Note]
 >This article only applies if you plan on provisioning Cloud PCs on your own Azure virtual network, as opposed to a Microsoft-hosted network.
@@ -64,7 +64,7 @@ All of the Windows 365 Enterprise **General network requirements** apply to [Win
 To use your own network and provision Microsoft Entra joined Cloud PCs, you must meet the following requirements:
 
 - The customer must have a subscription in the Azure Government environment.
-- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created.  For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this network is a US Gov region.
+- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created. For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this network is a US Gov region.
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
 
@@ -89,7 +89,7 @@ You must allow traffic in your network configuration to the following service UR
 | Device or service | Network connectivity required URLs and ports | Notes |
 | --- | --- | --- |
 | Physical device | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#remote-desktop-clients) | For Remote Desktop client connectivity and updates. |
-| Microsoft Intune service | [Link](/intune/intune-service/fundamentals/intune-endpoints) | For Intune cloud services like device management, application delivery, and endpoint analytics. |
+| Microsoft Intune service | [Link](/mem/intune/fundamentals/intune-endpoints) | For Intune cloud services like device management, application delivery, and endpoint analytics. |
 | Azure Virtual Desktop session host virtual machine | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#session-host-virtual-machines) | For remote connectivity between Cloud PCs and the backend Azure Virtual Desktop service. |
 | Windows 365 service | [Link](#windows-365-service) | For provisioning and health checks. |
 
@@ -114,8 +114,17 @@ The following URLs and ports are required for the provisioning of Cloud PCs and 
   - hm-iot-in-3-prod-preu01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-4-prod-prna01.azure-devices.net (443 & 5671 outbound)
-  
+
 All endpoints connect over port 443 unless otherwise specified.
+
+##### Port 3389
+
+Port 3389 is disabled by default for all newly provisioned Cloud PCs. Microsoft recommends that you keep port 3389 closed. However, if you need port 3389 to be open for any reprovisioned or newly provisioned Cloud PCs using the Azure Network Connection (ANC) deployment option, you can review the following options:
+
+- [Windows 365 Security Baselines](deploy-security-baselines.md). Customers can use the Windows 365 Security Baselines to effectively manage port 3389 for Windows 365 Cloud PCs. These baselines provide comprehensive tools and configurations designed to enhance security measures while allowing necessary access. By adjusting Firewall Settings and setting the **Default Inbound Action for Public Profile** to *Allow*, organizations can make sure that port 3389 is appropriately configured to meet operational needs. Review and customize these settings according to your specific organizational requirements.
+- [Create a custom Firewall rule in Microsoft Intune](/mem/intune/protect/endpoint-security-firewall-policy). Customers can use custom Firewall rules in Microsoft Intune to configure port 3389 for Windows 365 Cloud PCs. This option involves creating a custom rule within Intune's security policies tailored to allow inbound traffic on port 3389, which is used for access to Cloud PCs. By defining the rule parameters such as port number, protocol (TCP), and restricting specific IP addresses or networks, you can make sure that access to port 3389 is tightly controlled and limited to authorized entities only.
+
+These options aren't applicable for customers using a Microsoft-hosted network.
 
 ### [Windows 365 Government](#tab/gov)
 
@@ -126,9 +135,9 @@ You must allow traffic in your Azure network configuration to:
 
 All endpoints connect over port 443 unless specified otherwise.
 
-- GCC: [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints).
+- GCC: [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
 - GCC: [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list).
-- GCCH: [Microsoft Intune network endpoints for US government deployments](/intune/intune-service/fundamentals/intune-us-government-endpoints).
+- GCCH: [Microsoft Intune network endpoints for US government deployments](/mem/intune/fundamentals/intune-us-government-endpoints).
 - GCCH: [Required URLs for Azure Virtual Desktop for US government deployments](/azure/virtual-desktop/safe-url-list?tabs=azure-for-us-government).
 
 #### Cloud PC required URLs
@@ -221,14 +230,14 @@ Windows 365 uses the Remote Desktop Protocol (RDP).
 
 | Scenario | Default mode | H.264/AVC 444 mode | Description |
 | --- | --- | --- | --- |
-| Idle | 0.3 Kbps | 0.3 Kbps | User has paused their work and there are no active screen updates. |
+| Idle | 0.3 Kbps | 0.3 Kbps | User paused their work and there are no active screen updates. |
 | Microsoft Word | 100-150 Kbps | 200-300 Kbps | User is actively working with Microsoft Word: typing, pasting graphics, and switching between documents. |
 | Microsoft Excel | 150-200 Kbps | 400-500 Kbps | User is actively working with Microsoft Excel: multiple cells with formulas and charts are updated simultaneously |
 | Microsoft PowerPoint | 4-4.5 Mbps | 1.6-1.8 Mbps | User is actively working with Microsoft PowerPoint: typing, pasting, modifying rich graphics, and using slide transition effects. |
 | Web Browsing | 6-6.5 Mbps | 0.9-1 Mbps | User is actively working with a graphically rich website that contains multiple static and animated images. User scrolls the pages both horizontally and vertically |
 | Image Gallery | 3.3-3.6 Mbps | 0.7-0.8 Mbps | User is actively working with the image gallery application: browsing, zooming, resizing, and rotating images |
 | Video playback | 8.5-9.5 Mbps | 2.5-2.8 Mbps | User is watching a 30 FPS video that consumes 1/2 of the screen. |
-| Fullscreen Video playback | 7.5-8.5 Mbps | 2.5-3.1 Mbps | User is watching a 30 FPS video that’s maximized to a full screen. |
+| Fullscreen Video playback | 7.5-8.5 Mbps | 2.5-3.1 Mbps | User is watching a 30 FPS video maximized to a full screen. |
 
 ## Microsoft Teams requirements
 

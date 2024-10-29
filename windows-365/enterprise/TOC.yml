@@ -15,6 +15,8 @@ items:
     href: architecture.md
   - name: Architecture diagram
     href: high-level-architecture.md
+  - name: Service resilience
+    href: resilience.md
   - name: Identity and authentication
     href: identity-authentication.md
   - name: Lifecycle
@@ -71,6 +73,8 @@ items:
         href: cloud-pc-size-recommendations.md
       - name: GPU Cloud PC
         href: gpu-cloud-pc.md
+      - name: GPU Cloud PC performance
+        href: gpu-cloud-pc-performance.md
     - name: Deploy
       items:
       - name: Deployment overview
@@ -115,16 +119,18 @@ items:
           href: windows-365-boot-restrict-user-access-physical-device.md
       - name: Partner connectors for Windows 365
         items:
+        - name: Partner integration scenarios
+          href: partner-integration-scenarios.md
         - name: Citrix requirements
           href: requirements-citrix.md
         - name: Set up Citrix HDX Plus for Windows 365
           href: set-up-citrix.md
         - name: Retry Citrix agent installation
           href: retry-citrix-agent-installation.md
-        - name: VMware requirements
-          href: requirements-vmware-horizon.md
-        - name: Set up VMware Horizon for Windows 365
-          href: set-up-vmware-horizon.md
+        - name: Omnissa requirements
+          href: requirements-omnissa-horizon.md
+        - name: Set up Omnissa Horizon for Windows 365
+          href: set-up-omnissa-horizon.md
         - name: HP Anyware requirements
           href: hp-anyware-requirements.md
         - name: Set up HP Anyware for Windows 365

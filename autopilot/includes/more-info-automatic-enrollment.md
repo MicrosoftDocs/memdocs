@@ -2,7 +2,7 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
 ms.date: 06/03/2024
@@ -22,5 +22,5 @@ Headings are driven by article context. -->
 
 For more information on Windows automatic MDM/Intune enrollment, see the following articles:
 
-- [Enable Windows automatic enrollment](/intune/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment).
+- [Enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment).
 - [Set up Windows automatic enrollment](/autopilot/windows-autopilot-hybrid#set-up-windows-automatic-mdm-enrollment).

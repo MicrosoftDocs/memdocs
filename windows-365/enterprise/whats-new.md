@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2024
+ms.date: 10/23/2024
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -52,29 +52,193 @@ For more information about public preview items, see [Public preview in Windows 
 ### Scripts
 ### End user experience
 ### Windows 365 Government
-### Windows 365 app
+### Windows 365 app 
 -->
+
+<!-- ########################## -->
+## Week of October 21, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Use Citrix HDX Plus with Windows 365 Frontline<!--54445358-->
+
+You can now use Citrix HDX Plus with Windows 365 Frontline Cloud PCs.
+
+<!-- ########################## -->
+## Week of October 14, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New Windows 365 IP subnet for RDP connectivity<!--53404845-->
+
+Core TCP-based RDP traffic for Cloud PC connections uses the *.wvd.microsoft.com wildcard fully qualified domain name (FQDN). The FQDN remains unchanged, but the underlying IP addresses associated with it will shortly be changed to a single subnet. This will simplify optimization of this traffic and reduce the need for future change management.
+
+For more information, see [Plan for change: New Windows 365 IP Subnet for RDP Connectivity](https://iridias.microsoft.com/messagecenter?id=894574) Message Center post.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Call redirection<!--53718424-->
+
+Windows 365 now supports multimedia redirection call redirection. For more information, see [Use multimedia redirection](/azure/virtual-desktop/multimedia-redirection).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### HP Anyware for Windows 365 is now generally available<!--51133111-->
+
+HP Anyware for Windows 365 has moved out of preview and into general availability.
+
+For more information, see [Set up HP Anyware for Windows 365 Enterprise](hp-anyware-set-up.md)
+
+
+<!-- ########################## -->
+## Week of September 30, 2024 (Service release 2409)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Unavailable Cloud PCs report added to Reporting overview page<!--53687085-->
+
+The **Cloud PCs that aren't available** report has been added to the **Reports** > **Cloud PC overview** page.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Windows 11 24H2 cloud PCs gallery images<!--53461426-->
+
+The latest Windows Enterprise 24H2 images are available for provisioning new devices. You can update your provisioning policies to use either of the following images:
+
+- Windows 11 Enterprise 24H2
+- Windows 11 Enterprise + Microsoft 365 Apps 24H2
+
+
+<!-- ########################## -->
+## Week of September 23, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 11 Cloud PCs now support EN-NZ<!--54032315-->
+
+Windows 365 Cloud PCs now support EN-NZ for Windows 11.
+
+<!-- ########################## -->
+## Week of September 16, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for symmetric NAT with RDP Shortpath<!--43602619-->
+
+RDP Shortpath in Windows 365 now supports establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT. TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+### Windows 365 support for HEVC video coding<!--51599459-->
+Windows 365 will support Hardware High Efficiency Video Coding (HEVC) h.265 4:2:0 on Compatible GPU-enabled Cloud PCs. For more information, see [Enable GPU acceleration for Azure Virtual Desktop](/azure/virtual-desktop/enable-gpu-acceleration?tabs=intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows App
+
+#### Windows App is now generally available<!--46667283-->
+
+Windows App has moved out of preview and into general availability.
+
+For more information, see [What is Windows App?](/windows-app/overview)
+
+<!-- ########################## -->
+## Week of August 26, 2024 (Service release 2408)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Azure Monitor support on Windows 365 Cloud PCs<!--53421756-->
+
+Azure Monitor Agent can now  be installed on Windows 365 Enterprise and Windows 365 Government Cloud PCs. For more information, see [Azure Monitor overview](/azure/azure-monitor/overview).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Session lock experience configuration for single sign-on<!--48440155-->
+
+You can now configure the remote session lock experience when single sign-on is enabled between the default disconnect behavior and showing the remote lock screen. For more information, see [Configure single sign-on for Windows 365 using Microsoft Entra authentication](configure-single-sign-on.md).
+
+#### Windows 365 support for Microsoft Purview Customer Key is now generally available<!--46980464-->
+
+Windows 365 support for encrypting Cloud PCs by setting up Microsoft Purview Customer Key has moved out of preview and into general availability. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
+
+<!-- ########################## -->
+## Week of August 5, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### Updated documentation article: Windows 365 service resilience<!--51365224-->
+
+We’ve created a new article explaining Windows 365 service resilience. For more information, see [Windows 365 service resilience](resilience.md).
+
+<!-- ########################## -->
+## Week of July 29, 2024 (Service release 2407)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Uni-directional clipboard support is now generally available<!--49083399-->
+
+Uni-directional clipboard support for Cloud PCs has moved out of preview and is now generally available. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+
+#### Closing port 3389 by default for newly provisioned and reprovisioned Cloud PCs<!--51154043-->
+
+To help secure your Windows 365 environment, the inbound port 3389 is now closed by default.
+
+#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+
+Windows 365 now supports AVC mixed mode when MMR is not enabled.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows 365 Government now supports Customer Lockbox<!--48802385-->
+
+Windows 365 Government now supports Microsoft Purview Customer Lockbox.
+
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### New Intune report and device action for Windows enrollment attestation (public preview)<!--51490340-->
+
+Use the new device attestation status report in Microsoft Intune to find out if a device has attested and enrolled securely while being hardware-backed. For more information, see [Device attestation status report](/mem/intune/fundamentals/reports#device-attestation-status-report).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Support for Omnissa Horizon clients and the Blast protocol with Windows 365 Enterprise is now generally available<!--51899029-->
+
+Support for Omnissa (previously VMware) Horizon clients and the Blast protocol with Windows 365 Enterprise Cloud PCs has moved out of preview and into general availability. For more information, see [Set up Omnissa Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New GPU offerings for Cloud PCs are now generally available<!--46699074-->
+
+New GPU offerings for Window 365 Enterprise Cloud PCs have moved out of preview and into general availability. For more information, see [GPU Cloud PCs](gpu-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Frontline
+
+#### The Windows 365 Frontline concurrency buffer is now generally available<!--50220027-->
+
+The Windows 365 concurrency buffer has moved out of preview and into general availability.
 
 <!-- ########################## -->
 ## Week of July 23, 2024
 
-<!-- ########################## -->
-### Apps
-
-#### Remaining Cloud PC gallery images update to new Microsoft Teams<!--50394023-->
-
-All of the remaining Windows 365 Cloud PC gallery images with Microsoft 365 applications now use the new Microsoft Teams. The final images updated this week include:
-
-- Windows 11 Enterprise + Microsoft 365 Apps  21H2
-- Windows 10 Enterprise + Microsoft 365 Apps 22H2
-- Windows 10 Enterprise + Microsoft 365 Apps 21H2
-
-<!-- ########################## -->
-### Device security
-
 ### Updated default settings for Windows 365 security baselines<!--49685126-->
 
-Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/intune/intune-service/protect/security-baseline-settings-windows-365).
+Several Windows 365 Security baseline default values have changed. For a full list of all the updated settings, see [List of the settings in the Windows 365 Cloud PC security baseline in Intune](/mem/intune/protect/security-baseline-settings-windows-365).
 
 <!-- ########################## -->
 ## Week of July 15, 2024
@@ -220,7 +384,7 @@ The **Cloud PCs that aren't available report** has moved out of preview and into
 
 #### Intune scope tags (preview)<!--48907552-->
 
-Windows 365 now supports [Intune scope tags](/intune/intune-service/fundamentals/scope-tags). For more information, see [Scope tags](role-based-access.md#scope-tags).
+Windows 365 now supports [Intune scope tags](/mem/intune/fundamentals/scope-tags). For more information, see [Scope tags](role-based-access.md#scope-tags).
 
 <!-- ########################## -->
 ## Week of April 10, 2024
@@ -854,7 +1018,7 @@ Users now have two options when they select the **Open in browser** drop-down bu
 
 #### Windows 365 app update notifications for users<!--45206957-->
 
-Windows 365 app users will get a notification when an udpate is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
+Windows 365 app users will get a notification when an update is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -1684,7 +1848,7 @@ A Cloud PC’s name is now appended to the network interface name within the Azu
 
 #### New remote action: Remote Help<!--38310389-->
 
-The [Remote Help remote action](/intune/intune-service/remote-actions/remote-help) (in the Microsoft Intune admin center) lets admins start a remote session into an end user’s Cloud PC.
+The [Remote Help remote action](/mem/intune/remote-actions/remote-help) (in the Microsoft Intune admin center) lets admins start a remote session into an end user’s Cloud PC.
 
 <!-- ########################## -->
 ## Week of February 28, 2022 (Service release 2202)
@@ -1745,7 +1909,7 @@ The new details for Windows 365 Cloud PCs include the following registry data:
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
 
-To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/intune/intune-service/remote-actions/collect-diagnostics).
+To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning

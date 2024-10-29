@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/13/2023
+ms.date: 08/28/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -31,7 +31,7 @@ ms.collection:
 
 # Resource performance report
 
-The Resource performance report in [Endpoint analytics](/intune/analytics/overview) helps you optimize vCPU and RAM resources on the Cloud PC devices in your organization. The report includes four tabs of information:
+The Resource performance report in [Endpoint analytics](/mem/analytics/overview) helps you optimize vCPU and RAM resources on the Cloud PC devices in your organization. The report includes four tabs of information:
 
 - **Resource performance score**
 - **Model performance**
@@ -42,7 +42,7 @@ Resource performance score also contributes to your organization's [Microsoft Pr
 
 ## Prerequisites
 
-Before you can use this report, you'll need to [enroll your Cloud PC devices in Endpoint analytics](/intune/analytics/enroll-intune).
+Before you can use this report, you'll need to [enroll your Cloud PC devices in Endpoint analytics](/mem/analytics/enroll-intune).
 
 ## Use the Resource performance report
 

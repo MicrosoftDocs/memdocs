@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 08/28/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -34,7 +34,7 @@ ms.collection:
 
 Windows 365 Enterprise is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. It provides the productivity, security, and collaboration benefits of Microsoft 365. Windows 365 Enterprise uses:
 
-- [Microsoft Intune](/intune/) to manage the Cloud PCs.
+- [Microsoft Intune](/mem/) to manage the Cloud PCs.
 - Microsoft Entra ID for identity and access control.
 - Azure Virtual Desktop for remote connectivity.
 
@@ -48,7 +48,7 @@ With the Windows 365 service, you can:
 - Automatically provision on-demand Windows Enterprise Cloud PCs for your users. [Provisioning](provisioning.md) is the automatic creation of Cloud PCs for your end users. After you set up Cloud PC support in Microsoft Intune, a Cloud PC is automatically provisioned whenever you assign a user with a Cloud PC license to an appropriate Microsoft Entra user group. To set up Cloud PC support, you’ll:
   - [Optional] Create [Azure network connections](azure-network-connections.md), which are links between the Cloud PCs and your on-premises resources.
   - Choose a built-in, optimized Windows [image](device-images.md) (or create your own) to use as the basis for each Cloud PC.
-- Manage your Cloud PCs like your organization’s other devices in [Microsoft Intune](/intune/). Based on your configuration, Cloud PCs are either:
+- Manage your Cloud PCs like your organization’s other devices in [Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2109431). Based on your configuration, Cloud PCs are either:
   - Joined to your enterprise Active Directory domain and synced to Microsoft Entra ID.
   - Directly joined to Microsoft Entra ID.
   

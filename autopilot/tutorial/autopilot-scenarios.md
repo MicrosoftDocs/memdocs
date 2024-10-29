@@ -13,7 +13,7 @@ ms.collection:
   - tier1
   - highpri
   - essentials-get-started
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -85,10 +85,10 @@ Also keep in mind that for the Autopilot deployments that support Microsoft Entr
 
 For more information on Microsoft Entra join versus Microsoft Entra hybrid join, see the following articles:
 
-- [Microsoft Entra joined vs. Microsoft Entry hybrid joined in cloud-native endpoints](/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
+- [Microsoft Entra joined vs. Microsoft Entry hybrid joined in cloud-native endpoints](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
 - [What is a device identity?](/azure/active-directory/devices/overview).
-- [Learn more about cloud-native endpoints](/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
-- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/intune/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
+- [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
+- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
 - [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/device-join-plan).
 - [A framework for Windows endpoint management transformation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684).
 - [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).

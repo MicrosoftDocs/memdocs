@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/05/2023
+ms.date: 09/26/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: anbiswas
+ms.reviewer: ryclar, pratikshah, saudm, jonshi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,6 +28,8 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
+
+<!--ms.reviewer review required before publish-->
 
 # Data encryption in Windows 365
 
@@ -49,8 +51,6 @@ The following Windows 365 Enterprise and Business objects are automatically encr
 - Snapshots
 - Images
 
-When Windows 365 Enterprise customers use Microsoft Purview Customer Key, these objects are instead encrypted-at-rest with customer-managed keys. By default, new Cloud PC disks, snapshots, and images are encrypted using this method after Customer Key is set up. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
-
 Windows 365 as a service treats all data stored on Windows 365 disks as customer content. For more information, see [Privacy and personal data in Windows 365](./privacy-personal-data.md).
 
 >[!NOTE]
@@ -66,7 +66,7 @@ Windows 365 uses the Transport Layer Security (TLS) protocol to protect data in 
 - Algorithm flexibility
 - Ease of deployment and use
 
-TLS 1.2 is used for all connections started from Windows 365 to the Azure Virtual Desktop infrastructure components. These components use the same TLS 1.2 ciphers as [Azure Front Door](/azure/frontdoor/concept-end-to-end-tls#supported-cipher-suites). Additional technical details on the cipher suites are available at [Microsoft 365 technical reference details about encryption](/purview/technical-reference-details-about-encryption#tls-cipher-suites-supported-by-microsoft-365).
+TLS 1.2 is used for all connections started from Windows 365 to the Azure Virtual Desktop infrastructure components. These components use the same TLS 1.2 ciphers as [Azure Front Door](/azure/frontdoor/concept-end-to-end-tls#supported-cipher-suites). Additional technical details on the cipher suites are available at [Microsoft 365 technical reference details about encryption](/purview/technical-reference-details-about-encryption#tls-cipher-suites-supported-by-microsoft-365). For the reverse connect transport, TLS 1.3 is supported. For more details see [Understanding Azure Virtual Desktop connectivity](/azure/virtual-desktop/network-connectivity).
 
 <!-- ########################## -->
 ## Next steps

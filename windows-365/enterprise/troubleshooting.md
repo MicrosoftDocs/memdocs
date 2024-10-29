@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 05/20/2024
 ms.topic: troubleshooting
 ms.service: windows-365
-ms.subservice: 
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -35,9 +35,9 @@ This article provides suggestions for troubleshooting Windows 365 issues.
 
 ## Contact help/support
 
-For instructions on how to get help and open a support ticket, see  [How to get support in Microsoft Intune](/intune/get-support). Support is included as part of your Windows 365 subscription.
+For instructions on how to get help and open a support ticket, see  [How to get support in Microsoft Intune](/mem/get-support). Support is included as part of your Windows 365 subscription.
 
-Since Cloud PCs work like most physical devices, you can use existing troubleshooting documentation to troubleshoot issues with [Windows client](/troubleshoot/windows-client/welcome-windows-client), [Microsoft 365 services](/microsoft-365/), and [Microsoft Intune admin center](/intune/get-support).
+Since Cloud PCs work like most physical devices, you can use existing troubleshooting documentation to troubleshoot issues with [Windows client](/troubleshoot/windows-client/welcome-windows-client), [Microsoft 365 services](/microsoft-365/), and [Microsoft Intune admin center](/mem/get-support).
 
 ## Audio and video redirection not working
 
@@ -62,7 +62,7 @@ For more information on how a given policy may affect your environment, see [Tro
 
 ## Help users in your organization
 
-You can use the Intune Troubleshooting page to view enrollment issues, remediation steps, and user details. For more information, see [Use the troubleshooting portal to help users at your company](/intune/intune-service/fundamentals/help-desk-operators).
+You can use the Intune Troubleshooting page to view enrollment issues, remediation steps, and user details. For more information, see [Use the troubleshooting portal to help users at your company](/mem/intune/fundamentals/help-desk-operators).
 
 [App Assure](https://www.microsoft.com/fasttrack/microsoft-365/app-assure) is a service for Microsoft’s enterprise customers who encounter application compatibility issues. App Assure will help remediate issues with your ISV, line-of-business and Microsoft-developed apps at no extra cost. If you encounter any app compatibility issues, follow the instructions above to submit a case and include a short description of the issue.
 

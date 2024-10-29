@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 03/27/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -42,11 +42,9 @@ An evolving model analyzes this data to determine whether Cloud PCs are:
 - Under-used.
 - Sized appropriately.
 
-The Cloud PC recommendations report is in [public preview](..\public-preview.md).
-
 ## Use the Cloud PC recommendations report
 
-To get to the **Cloud PC recommendations** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Cloud PC Overview** > **Cloud PC recommendations (preview)**.
+To get to the **Cloud PC recommendations** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Cloud PC Overview** > **Cloud PC recommendations**.
 
 ![Screenshot of Cloud PC recommendation report.](media/report-cloud-pc-recommendations/report-cloud-pc-recommendations.png)
 

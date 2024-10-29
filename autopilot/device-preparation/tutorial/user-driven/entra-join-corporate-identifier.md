@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -38,12 +38,12 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted devices go through Windows Autopilot device preparation. This feature is optional for Windows Autopilot device preparation and isn't required for a Windows Autopilot device preparation deployment to work.
 
-If corporate identifiers aren't being used, then proceed with deploying the device. Otherwise, to add a corporate identifier to the device in Intune, see [Add Windows corporate identifiers](/intune/intune-service/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
+If corporate identifiers aren't being used, then proceed with deploying the device. Otherwise, to add a corporate identifier to the device in Intune, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
 For more information, see:
 
-- [Identify devices as corporate-owned](/intune/intune-service/enrollment/corporate-identifiers-add).
-- [What are enrollment restrictions?](/intune/intune-service/enrollment/enrollment-restrictions-set).
-- [Create device platform restrictions](/intune/intune-service/enrollment/create-device-platform-restrictions).
+- [Identify devices as corporate-owned](/mem/intune/enrollment/corporate-identifiers-add).
+- [What are enrollment restrictions?](/mem/intune/enrollment/enrollment-restrictions-set).
+- [Create device platform restrictions](/mem/intune/enrollment/create-device-platform-restrictions).
 
 Once the corporate identifier is added to the device, then proceed with deploying the device.

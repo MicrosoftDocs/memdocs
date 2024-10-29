@@ -2,7 +2,7 @@
 title: Windows Autopilot motherboard replacement
 description: Understand how Windows Autopilot deployments function when the motherboard is replaced on a device.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -244,7 +244,7 @@ If the profiles status of a device shows **Fix pending**, Autopilot is in the pr
 1. Manually deregister the device using the steps in the [Deregister a device](#deregister-a-device) section.
 1. Reregister the device.
 
-For more information, see [Troubleshoot Autopilot device import and enrollment: Autopilot profile not applied after reimaging to an older OS version](troubleshoot-device-enrollment.md#autopilot-profile-not-applied-after-reimaging-to-an-older-os-version).
+For more information, see [Why is the Windows Autopilot profile not applied after a hardware change occurred on a device?](troubleshooting-faq.yml#why-is-the-windows-autopilot-profile-not-applied-after-a-hardware-change-occurred-on-a-device-).
 
 ## Specific repair scenarios
 
@@ -314,7 +314,7 @@ Other repair scenarios not yet tested and verified include:
 
 | Question | Answer |
 | --- | --- |
-| What to do if another customer's welcome page is displayed? | If another customer's welcome page is displayed on a replacement device or refurbished motherboard, a case needs to be raised to Microsoft to fix the device ownership. A case can be opened through the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting the Help and Support option outlined [here](/intune/get-support). If there isn't access to Microsoft Intune, a case can be submitted through Microsoft Store for Business by selecting **Manage** > **Support** and selecting **Technical Support**. A case can also be submitted through the Microsoft Volume Licensing Center agreement. Instructions on how to submit a case  are outlined at [Microsoft Software Assurance - Support Incident Submission](https://support.microsoft.com/topic/microsoft-software-assurance-support-incident-submission-74a9a148-9a75-ecc8-4420-14191e634d65). Title all cases **Autopilot Deregistration Request** to streamline requests. |
+| What to do if another customer's welcome page is displayed? | If another customer's welcome page is displayed on a replacement device or refurbished motherboard, a case needs to be raised to Microsoft to fix the device ownership. A case can be opened through the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting the Help and Support option outlined [here](/mem/get-support). If there isn't access to Microsoft Intune, a case can be submitted through Microsoft Store for Business by selecting **Manage** > **Support** and selecting **Technical Support**. A case can also be submitted through the Microsoft Volume Licensing Center agreement. Instructions on how to submit a case  are outlined at [Microsoft Software Assurance - Support Incident Submission](https://support.microsoft.com/topic/microsoft-software-assurance-support-incident-submission-74a9a148-9a75-ecc8-4420-14191e634d65). Title all cases **Autopilot Deregistration Request** to streamline requests. |
 | We have a tool that programs product information into the BIOS after the motherboard replacement. Do we still need to submit a CBR report for the device to be Autopilot-capable? | No. Not if the in-house tool writes the minimum necessary information into the BIOS that the Autopilot program looks for to identify the device, as described earlier in this document. |
 | What if only some components are replaced rather than the full motherboard? | It's true that some limited repairs don't prevent the Autopilot algorithm from successfully matching the post-repair device with the pre-repair device. However, Microsoft recommends to always go through the motherboard replacement steps described in the previous sections to ensure success. |
 | How does a repair technician gain access to a broken device if they don't have the customer's sign-in credentials? | The technician has to reimage the device and use their own credentials during the repair process. |

@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -101,7 +101,7 @@ The above steps are necessary if additional tasks need to run during the task se
 >
 > - Install applications via Intune.
 > - Enable BitLocker via Intune.
-> - Install software updates via offline servicing and [Configuration Manager Scheduled Updates](/intune/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image).
+> - Install software updates via offline servicing and [Configuration Manager Scheduled Updates](/mem/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image).
 >
 > When possible, Microsoft recommends using the above methods to run the additional tasks instead of running them via the task sequence. Using the above methods allows using this solution to speed up the deployment.
 

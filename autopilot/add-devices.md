@@ -2,13 +2,13 @@
 title: Manually register devices with Windows Autopilot
 description: Learn how to manually add devices to Windows Autopilot.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 09/13/2024
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -42,15 +42,15 @@ This article provides step-by-step guidance for manual registration. For more in
 - [Manual registration overview](manual-registration.md).
 - [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
 
-## Prerequisites
+## Requirements
 
-- [Intune subscription](/intune/intune-service/fundamentals/licenses).
-- [Windows automatic enrollment enabled](/intune/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment).
+- [Intune subscription](/mem/intune/fundamentals/licenses).
+- [Windows automatic enrollment enabled](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment).
 - [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium).
 
 ## Required permissions
 
-Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. A custom Autopilot device manager role can also be created by using [role-based access control (RBAC)](/intune/intune-service/fundamentals/role-based-access-control). Autopilot device management requires only that all permissions under **Enrollment programs** are enabled, except for the four token management options.
+Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. A custom Autopilot device manager role can also be created by using [role-based access control (RBAC)](/mem/intune/fundamentals/role-based-access-control). Autopilot device management requires only that all permissions under **Enrollment programs** are enabled, except for the four token management options.
 
 > [!NOTE]
 >

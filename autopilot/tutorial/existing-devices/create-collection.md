@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -69,7 +69,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
       1. Select the **Next >** button.
 
-   1. In the **Define membership rules for this collection** page, via the **Add Rule** drop-down menu, create a rule that includes the desired devices to run the Autopilot for existing devices task sequence. For more information on creating rules for a collection to include the desired devices, see [How to create collections in Configuration Manager](/intune/configmgr/core/clients/manage/collections/create-collections). Once the appropriate rules are created that include the desired devices, select the **Next >** button.
+   1. In the **Define membership rules for this collection** page, via the **Add Rule** drop-down menu, create a rule that includes the desired devices to run the Autopilot for existing devices task sequence. For more information on creating rules for a collection to include the desired devices, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections). Once the appropriate rules are created that include the desired devices, select the **Next >** button.
 
    1. In the **Confirm the settings** page, verify that everything is configured as desired, and then select the **Next >** button.
 
@@ -91,4 +91,4 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 For more information on creating a collection in Configuration Manager, see the following articles:
 
 - [Deploy the Autopilot task sequence](../../existing-devices.md#deploy-the-autopilot-task-sequence).
-- [How to create collections in Configuration Manager](/intune/configmgr/core/clients/manage/collections/create-collections).
+- [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).

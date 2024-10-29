@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 08/02/2024
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -71,18 +71,18 @@ To manage any of the redirections by using the Settings Catalog, create and assi
 
 4. On the **Configuration settings** page, select **+ Add settings** to list and select settings to manage.
 
-    - To manage printer redirection settings, search for “Printer Redirection”, select the resulting category, and select the settings you want to manage.
+    - To manage printer redirection settings, search for *Printer Redirection*, select the resulting category, and select the settings you want to manage.
     - To manage other redirection settings, search for “Device and Resource Redirection”, select the resulting category, and select the settings you want to manage.
 
-5. After you've selected all the redirection settings that you want to manage, close the **Settings picker** view, configure the settings on the **Configuration settings** page, then select **Next**.
+5. After you select all the redirection settings that you want to manage, close the **Settings picker** view, configure the settings on the **Configuration settings** page, then select **Next**.
 
 6. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
-7. On the **Assignments** page, select the users or groups that will receive the redirection policy, then select **Next**.
+7. On the **Assignments** page, select the users or groups that you want to receive the redirection policy, then select **Next**.
 
 8. On the *Review + create** page, select **Create**.
 
-For more help using the settings catalog to create a device configuration policy, see [Use the settings catalog to configure settings on Windows and macOS devices](/intune/intune-service/configuration/settings-catalog).
+For more help using the settings catalog to create a device configuration policy, see [Use the settings catalog to configure settings on Windows and macOS devices](/mem/intune/configuration/settings-catalog).
 
 > [!Note]
 > The settings catalog configures policies by using the Policy CSP. To make sure that these settings take precedence over a conflicting GPO, you can also configure the [ControlPolicyConflict CSP]( /windows/client-management/mdm/policy-csp-controlpolicyconflict#controlpolicyconflict-policies).
@@ -90,6 +90,10 @@ For more help using the settings catalog to create a device configuration policy
 ## Use a GPO to manage RDP device redirections
 
 To manage any of the redirections by using GPO, create and assign a GPO in your Windows Server Active Directory domain. Make sure to use the corresponding policies as shown in the [RDP device redirection settings table](#rdp-device-redirection-settings). To learn more about the policies, download the [Group Policy Settings Reference Spreadsheet](https://www.microsoft.com/download/101451).
+
+## Clipboard redirections
+
+Clipboard redirection in Azure Virtual Desktop and Windows 365 lets users copy and paste content (like text, images, and files) between the user's device and the remote session in either direction. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types?tabs=intune).
 
 <!-- ########################## -->
 ## Next steps

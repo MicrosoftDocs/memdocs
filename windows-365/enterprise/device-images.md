@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/21/2024
+ms.date: 09/09/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -41,7 +41,7 @@ Both marketplace and custom images must meet the following requirements:
 - Generation 2 images.
     > [!Note]
     > We recently made the change to **generation 2** (Gen2) virtual machine images. Newly created custom images must be Gen2. Existing custom images uploaded based on generation 1 will remain active.
-- The image must never have been Active Directory, Microsoft Entra ID joined, Intune-enrolled, or enrolled for co-management. For more information, see [Sysprep will not run correctly on a device that has been MDM enrolled](/troubleshoot/mem/intune/device-enrollment/troubleshoot-sysprep-windows-10-device-enrolled-mdm).
+- The image must never have been Active Directory, Microsoft Entra ID joined, Intune-enrolled, or enrolled for co-management. For more information, see [Sysprep won't run correctly on a device that has been MDM enrolled](/troubleshoot/mem/intune/device-enrollment/troubleshoot-sysprep-windows-10-device-enrolled-mdm).
 - Generalized VM image.
 - Single Session VM images (multi-session isn’t supported).
 - No recovery partition. For information about how to remove a recovery partition, see the [Windows Server command: delete partition](/windows-server/administration/windows-commands/delete-partition).
@@ -56,7 +56,7 @@ Storing a managed image on Azure incurs storage costs. However, customers can de
 
 ## Gallery images
 
-Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the [provisioning policy creation flow](create-provisioning-policy.md). Each image helps admins with pre-set audit policies already enabled, like account policies, logon/logoff, object access, and policy change.
+Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the [provisioning policy creation flow](create-provisioning-policy.md). Each image helps admins with preset audit policies already enabled, like account policies, logon/logoff, object access, and policy change.
 
 They're replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with:
 
@@ -65,7 +65,7 @@ They're replicated to all Azure regions to give you a quick provisioning experie
 
 There are two sets of images available to choose from across the different versions of Windows Enterprise:
 
-- **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and [Teams optimizations](teams-on-cloud-pc.md) are already installed. The following settings are pre-applied:
+- **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and Teams optimizations are already installed. The following settings are preapplied:
   - IsWVDEnvironment reg key (Teams).
   - C++ Runtime (Teams).
   - WebRTC Redirector (Teams).
@@ -78,14 +78,17 @@ Both types of images are harmonized in GPOs. Any differences are due to preinsta
 
 ### Gallery image update cycle
 
-All supported Windows 365 gallery images are updated monthly after the security patch release schedule of Windows Servicing & Delivery. This update happens around the middle of each month.
+All supported Windows 365 gallery images are updated monthly after the security patch release schedule of Windows Servicing & Delivery. This update happens around the middle of each month. Updated Windows 365 images are made available in Intune for provisioning around the end of the third week of the month.
 
 Each updated image includes:
 
 - [Windows 10/11 monthly image updates](https://support.microsoft.com/topic/windows-10-release-on-azure-marketplace-update-history-da826e21-45ae-f6b9-de71-5f0ee2ec1563)
 - [Microsoft 365 Apps security updates](/officeupdates/microsoft365-apps-security-updates) and [feature updates](/officeupdates/monthly-enterprise-channel)
+  - Windows 365 gallery images include the latest Monthly Enterprise Channel release with the latest security updates.
 - [Microsoft Teams updates](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-d7092a6d-c896-424c-b362-a472d5f105de)
 - [WebRTC redirector service updates](/azure/virtual-desktop/teams-on-avd#install-the-teams-websocket-service)
+
+Applications that come pre-installed are the latest version that is available at the start of the second Tuesday of that month. Any app updates posted on that day are included in the image update of the subsequent month.
 
 Newly provisioned Cloud PCs are automatically created with the latest images. For existing Cloud PCs, you can receive the updates by reprovisioning.
 
@@ -117,3 +120,5 @@ When you upload a custom device image, Windows 365:
 [Learn about device configuration](device-configuration.md).
 
 [Learn about using apps, like Microsoft Teams, with your Cloud PCs](app-overview.md).
+
+[Learn about restoring a Cloud PC to a previous state](restore-overview.md)

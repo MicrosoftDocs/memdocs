@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 05/8/2024 
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -41,7 +41,7 @@ When a user with the Subscription Owner or User Access Administrator role create
 
 If you only have the Subscription Reader role, these assignments aren't automatic. Instead, you must manually configure the required built-in roles to the Windows First Party App in Azure.
 
-For more information, see [Role-based access control (RBAC) with Microsoft Intune](/intune/intune-service/fundamentals/role-based-access-control).
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 
 ## Windows 365 Administrator role
 
@@ -175,7 +175,7 @@ Windows 365 support for scope tags is in [public preview](../public-preview.md).
 
 For RBAC, roles are only part of the equation. While roles work well to define a set of permissions, scope tags help define visibility of your organization’s resources. Scope tags are most helpful when organizing your tenant to have users scoped to certain hierarchies, geographical regions, business units, and so on.
 
-Use Intune to create and manage scope tags. For more information on how scope tags are created and managed, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).  
+Use Intune to create and manage scope tags. For more information on how scope tags are created and managed, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).  
 
 In Windows 365, scope tags can be applied to the following resources:
 
@@ -210,7 +210,7 @@ For the duration of the scope tags public preview, the following bulk actions do
 
 <!-- ########################## -->
 ## Next steps
-[Role-based access control (RBAC) with Microsoft Intune](/intune/intune-service/fundamentals/role-based-access-control).
+[Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 
 [Understand Azure role definitions](/azure/role-based-access-control/role-definitions)
 

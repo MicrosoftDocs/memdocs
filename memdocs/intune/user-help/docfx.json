@@ -1,0 +1,67 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "**/old-TOC.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/images/**",
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.bmp",
+          "**/*.html",
+          "**/*.css"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "_themes/**"
+        ]
+      }
+    ],
+    "dest": "user-help",
+    "template": "docs.html",
+    "globalMetadata": {
+      "layout": "Conceptual",
+      "breadcrumb_path": "/intune/bread/toc.json",
+      "product_feedback_displaytext": "Intune Feedback",
+      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472",
+      "feedback_system": "Standard",
+            
+      "contributors_to_exclude": [
+        "herohua",
+        "fenxu",
+        "beccarobins",
+        "rjagiewich",
+        "shdyas",
+        "claydetels19",
+        "jborsecnik",
+        "garycentric",
+        "dstrome",
+        "American-Dipper",
+        "padmagit77",
+        "aditisrivastava07"
+      ],
+      "searchScope": [
+        "Intune"
+      ],
+      "_op_documentIdPathDepotMapping": {
+        "./": {
+          "depot_name": "Azure.EndUser",
+          "folder_relative_path_in_docset": "."
+        }
+      }
+    },
+    "markdownEngineName": "markdig"
+  }
+}

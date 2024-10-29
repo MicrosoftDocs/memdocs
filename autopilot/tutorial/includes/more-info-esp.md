@@ -2,7 +2,7 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
 ms.date: 06/19/2024
@@ -22,4 +22,4 @@ Headings are driven by article context. -->
 For more information on the Enrollment Status Page (ESP), see the following articles:
 
 - [Windows Autopilot Enrollment Status Page](/autopilot/enrollment-status).
-- [Set up the Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status).
+- [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).

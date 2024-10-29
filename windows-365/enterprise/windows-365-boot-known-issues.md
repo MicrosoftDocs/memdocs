@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/26/2023
+ms.date: 09/26/2024
 ms.topic: troubleshooting
 ms.service: windows-365
-ms.subservice: 
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -96,7 +96,7 @@ When using single sign-on, users are prompted to authenticate to Microsoft Entra
 
 Windows 365 Boot is designed for Ethernet connections or WiFi connections managed through the [WiFi CSP](/windows/client-management/mdm/wifi-csp).
 
-**Troubleshooting steps**: Configure the Windows 365 Boot physical device's Wi-Fi profile through Intune. For more information, see [Add Wi-Fi settings for Windows 10/11 devices in Intune](/intune/intune-service/configuration/wi-fi-settings-windows).
+**Troubleshooting steps**: Configure the Windows 365 Boot physical device's Wi-Fi profile through Intune. For more information, see [Add Wi-Fi settings for Windows 10/11 devices in Intune](/mem/intune/configuration/wi-fi-settings-windows).
 
 ## User sees black screen after using Disconnect/Sign-out/Lock command from Cloud PC
 
@@ -213,7 +213,7 @@ Resources created by the Windows 365 Boot guided scenario can be applied to both
 - Microsoft Entra joined devices
 - Microsoft Entra hybrid joined devices in tenants where certain workloads were switched to Intune. For Microsoft Entra hybrid joined devices, Windows Update policies, device configuration, and client apps workloads must be switched to Intune.
 
-**Troubleshooting steps**: To determine if your device is Microsoft Entra hybrid joined, see [Using the Azure portal](/azure/active-directory/devices/howto-hybrid-join-verify#using-the-azure-portal). If your device is Microsoft Entra hybrid joined, see [Comanagement workloads](/intune/configmgr/comanage/workloads) to see what workloads are configured in your environment.
+**Troubleshooting steps**: To determine if your device is Microsoft Entra hybrid joined, see [Using the Azure portal](/azure/active-directory/devices/howto-hybrid-join-verify#using-the-azure-portal). If your device is Microsoft Entra hybrid joined, see [Comanagement workloads](/mem/configmgr/comanage/workloads) to see what workloads are configured in your environment.
 
 ## User can't reset their password on the Windows 365 Boot device
 

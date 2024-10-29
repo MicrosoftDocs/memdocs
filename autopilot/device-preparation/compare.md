@@ -2,7 +2,7 @@
 title: Compare Windows Autopilot device preparation and Windows Autopilot
 description: Compare Windows Autopilot device preparation and Windows Autopilot features and when to use each.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -65,7 +65,7 @@ In general, the following are some of the major factors when considering between
 | [HoloLens](/hololens/hololens2-autopilot) support | ❌ | ✅ |
 | [Teams Meeting Room](/microsoftteams/rooms/autopilot-autologin) support | ❌ | ✅ |
 | Device Firmware Configuration Interface<br>([DFCI](../dfci-management.md)) Management support | ❌ | ✅ |
-| [Autopilot into co-management](/intune/configmgr/comanage/autopilot-enrollment) | ❌ | ✅ |
+| [Autopilot into co-management](/mem/configmgr/comanage/autopilot-enrollment) | ❌ | ✅ |
 
 ## Using Windows Autopilot device preparation and Windows Autopilot concurrently
 

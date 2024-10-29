@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 03/27/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice: 
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -31,13 +31,13 @@ ms.collection:
 
 # Remotely manage Windows 365 devices
 
-You can remotely manage Cloud PCs in Intune just like any other managed device. For more information, see [Remotely run device actions with Intune](/intune/intune-service/remote-actions/).
+You can remotely manage Cloud PCs in Intune just like any other managed device. For more information, see [Remotely run device actions with Intune](/mem/intune/remote-actions/).
 
 Cloud PCs support the following remote management actions:
 
 | Remote action | Bulk action support? |
 | --- | :---: |
-| [Collect diagnostics](/intune/intune-service/remote-actions/collect-diagnostics) | Yes |
+| [Collect diagnostics](/mem/intune/remote-actions/collect-diagnostics) | Yes |
 | Create Cloud PC manual restore point | Yes |
 | Full Scan | No |
 | [Place Cloud PC Under Review](place-cloud-pc-under-review.md) | Yes |
@@ -55,7 +55,7 @@ Cloud PCs support the following remote management actions:
 | [Troubleshoot](health-checks-connectivity.md) | Yes |
 | Update Windows Defender | No |
 
-You can run remote actions for up to 5,000 Cloud PCs at a time. For more information about bulk actions, see [Use bulk device actions](/intune/intune-service/remote-actions/bulk-device-actions).
+You can run remote actions for up to 5,000 Cloud PCs at a time. For more information about bulk actions, see [Use bulk device actions](/mem/intune/remote-actions/bulk-device-actions).
 
 ## Windows 365 Frontline Cloud PCs
 

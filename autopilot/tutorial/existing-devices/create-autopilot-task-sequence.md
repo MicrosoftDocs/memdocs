@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -106,7 +106,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
       >
       > If using the alternate [Speed up the deployment process (optional)](speed-up-deployment.md) step later in this tutorial, Sysprep never runs as part of the task sequence. However, the product key and local administrator password never get processed since the `unattend.xml` file that contains the product key and local administrator password is deleted as part of this optional step. For this reason, when using the alternate [Speed up the deployment process (optional)](speed-up-deployment.md) step, the settings specified for these two options are irrelevant since they're never processed.
 
-   1. In the **Install the Configuration Manager client** page, add any necessary Configuration Manager client installation properties for the environment. For example, since the device is a Workgroup device and not domain joined during the Windows Autopilot for existing devices task sequence, the [SMSMP](/intune/configmgr/core/clients/deploy/about-client-installation-properties#smsmp) or [SMSMPLIST](/intune/configmgr/core/clients/deploy/about-client-installation-properties#smsmplist) parameters might be needed to run certain tasks such as the **Install Application** or **Install Software Updates** tasks. Once finished adding any Configuration Manager client installation properties, select the **Next >** button.
+   1. In the **Install the Configuration Manager client** page, add any necessary Configuration Manager client installation properties for the environment. For example, since the device is a Workgroup device and not domain joined during the Windows Autopilot for existing devices task sequence, the [SMSMP](/mem/configmgr/core/clients/deploy/about-client-installation-properties#smsmp) or [SMSMPLIST](/mem/configmgr/core/clients/deploy/about-client-installation-properties#smsmplist) parameters might be needed to run certain tasks such as the **Install Application** or **Install Software Updates** tasks. Once finished adding any Configuration Manager client installation properties, select the **Next >** button.
 
    1. In the **Install software updates** page, select the desired option to install software updates during the task sequence. For the  Autopilot for existing devices task sequence, Microsoft recommends leaving the option to the default of **Do not install any software updates** and not install any software updates during the task sequence. Once the desired option is selected, select the **Next >** button.
 
@@ -114,7 +114,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
       >
       > Microsoft recommends not installing software updates during the Autopilot for existing devices task sequence because doing so significantly increases the time for the task sequence to complete. Instead, consider installing updates using one of the following two options:
       >
-      > - The Configuration Manager offline image servicing feature of [Scheduled Updates](/intune/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image)
+      > - The Configuration Manager offline image servicing feature of [Scheduled Updates](/mem/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image)
       > - Every month, download the latest monthly ISO for the version of Windows that's being installing and then update the **Operating System Images** package in Configuration Manager with the new updated `install.wim` image from the ISO. The ISOs are updated monthly and have the latest updates in them.
 
    1. In the **Install applications** page, select the desired applications to install during the task sequence. Once the desired applications are added, select the **Next >** button. If no applications need to be installed, then select the **Next >** button without selecting any applications.

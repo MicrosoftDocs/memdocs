@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 07/16/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -60,4 +60,4 @@ Both targeting strategies are supported for Microsoft Entra hybrid join and Micr
 <!-- ########################## -->
 ## Next steps
 
-[Learn more about the Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status).
+[Learn more about the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).

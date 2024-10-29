@@ -47,10 +47,10 @@ Some apps may require that the user have administrator privileges. To change a u
 
 The following apps are pre-installed on Windows 365 Business Cloud PCs when they're created:
 
-- [Microsoft 365 Apps for Enterprise](/intune/intune-service/apps/apps-add-office365) (formerly Office 365 Pro Plus)
+- [Microsoft 365 Apps for Enterprise](/mem/intune/apps/apps-add-office365) (formerly Office 365 Pro Plus)
 - Microsoft Teams
 - Microsoft OneDrive
-- [Microsoft Edge](/intune/intune-service/apps/apps-windows-edge)
+- [Microsoft Edge](/mem/intune/apps/apps-windows-edge)
 
 > [!IMPORTANT]
 > If a user tries to use a Microsoft 365 Business Standard license on their Cloud PC, they might see the following error: "Account Issue: The products we found in your account cannot be used to activate Office in shared computer scenarios." In this scenario, the user must uninstall the version of Office installed on their Cloud PC and install a new copy from Office.com.

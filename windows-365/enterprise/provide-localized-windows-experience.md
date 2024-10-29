@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2023
+ms.date: 08/28/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chrimo
+ms.reviewer: satulim
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -35,7 +35,7 @@ For users to be productive on their Windows 365 Cloud PC, it's important for Win
 
 There are two different ways to provide a localized Windows experience when users first sign in:
 
-- [Use a provisioning policy](use-provisioning-policy-default-display-language.md). If you plan on using a gallery image, you can select the language when you create the provisioning policy. When using this method to deploy language packs, the required content is automatically installed during the provisioning process. This content is downloaded from endpoints listed on the [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints) page. These Intune endpoints are a [requirement for Windows 365](requirements-network.md?tabs=enterprise%2Cent) operation, so if the network is correctly configured they're already accessible in your environment. Make sure TCP port 80 is open for these endpoints. As explained by the Intune requirements, this port is used to download elements of the content.
+- [Use a provisioning policy](use-provisioning-policy-default-display-language.md). If you plan on using a gallery image, you can select the language when you create the provisioning policy. When using this method to deploy language packs, the required content is automatically installed during the provisioning process. This content is downloaded from endpoints listed on the [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints) page. These Intune endpoints are a [requirement for Windows 365](requirements-network.md?tabs=enterprise%2Cent) operation, so if the network is correctly configured they're already accessible in your environment. Make sure TCP port 80 is open for these endpoints. As explained by the Intune requirements, this port is used to download elements of the content.
 - [Create a custom device image](create-custom-image-languages.md). If you plan on using a custom image and you manage your Cloud PCs through group policy, you can include the language as part of the custom image. See the following section for the links to download content for this method of deployment.
 
 ## URLs to allow for custom image deployment

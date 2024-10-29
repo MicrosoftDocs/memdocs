@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 08/28/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -48,7 +48,7 @@ Windows 365 requires access to the following endpoints:
 
 1. [Windows 365](/windows-365/enterprise/requirements-network?tabs=enterprise%2Cent#allow-network-connectivity)  
 2. [Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list?tabs=azure)
-3. [Intune](/intune/intune-service/fundamentals/intune-endpoints)
+3. [Intune](/mem/intune/fundamentals/intune-endpoints)
 
 You might also consider access to other Microsoft services (like Office 365) when configuring optimized connectivity from the environment.
 

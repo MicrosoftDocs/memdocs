@@ -1,0 +1,134 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "sccm/**"          
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/media/**",
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "sccm/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/mem/breadcrumb/toc.json",
+      "uhfHeaderId": "MSDocsHeader-Intune",
+      "feedback_system": "Standard",
+            "brand": "Microsoft Endpoint Manager",
+      "searchScope": ["Intune"],     
+      "contributors_to_exclude": [
+        "PRMerger9",
+        "PRMerger17",
+        "PRMerger5",
+        "PRMerger4",
+        "PRMerger3",
+        "PRMerger-2",
+        "hexiaokai",
+        "openpublishingbuild",
+        "tysonn",
+        "v-anpasi",
+        "kiwhit",
+        "ShawnJackson",
+        "PRmerger",
+        "DuncanmaMSFT",
+        "Saisang",
+        "Ja-Dunn",
+        "jomolnar",
+        "KatieCumming",
+        "deneha",
+        "ktoliver",
+        "itechedit",
+        "MattGLaBelle",
+        "Lisaco88",
+        "GitHubber17",
+        "v-shils",
+        "trishamc",
+        "Jak-MS",
+        "Kellylorenebaker",
+        "ShannonLeavitt",
+        "v-albemi",
+        "v-dansch",
+        "chbain",
+        "atookey",
+        "tfosmark",
+        "sdwheeler",
+        "meganbradley",
+        "rjagiewich",        
+        "rmca14",
+        "garycentric",
+        "jborsecnik",
+        "dstrome",
+        "shdyas",
+        "claydetels19",
+        "beccarobins",
+        "Stacyrch140",
+        "American-Dipper",
+        "padmagit77",
+        "aditisrivastava07"
+      ]          
+    },
+    "fileMetadata": {
+      "feedback_product_url": {
+        "configmgr/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472",
+        "configmgr/**/*.yml": "https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472",
+        "intune/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472"
+      }, 
+      "searchScope": {
+        "configmgr/**/*.md": ["ConfigMgr"],
+        "configmgr/**/*.yml": ["ConfigMgr"],
+        "configmgr/core/**/*.md": ["ConfigMgr"],
+        "analytics/**/*.md": ["Analytics"]
+      },
+      "featureFlags": {
+        "*.md" : [
+          "show_binary_rating"
+        ]
+      },
+      "feedback_system": {
+        "configmgr/core/misc/**/*": "None"
+      }
+    },
+    "template": [],
+    "dest": "memdocs",
+    "markdownEngineName": "markdig",
+    "rules": {
+        "docs-link-absolute": {
+            "exclude": [
+                "memdocs/configmgr/core/misc/in-console-documentation.md"
+            ]
+        },
+      "sensitive-language-bl":{
+        "exclude": [
+          "intune/configuration/android-pulse-secure-per-app-vpn.md"
+          ]
+      },
+       "sensitive-language-wl":{
+        "exclude": [
+          "intune/configuration/android-pulse-secure-per-app-vpn.md"
+          ]
+      } 
+      
+    }
+  }
+}

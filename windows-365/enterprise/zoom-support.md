@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/13/2023
+ms.date: 08/28/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -40,9 +40,8 @@ To optimize Zoom, you’ll need to install the Zoom VDI Client on the Cloud PC a
 
 ## Requirements
 
-- **Windows 365 app for Windows**\*
 - **Windows Remote Desktop Client**\*
-- **Windows 365 app**
+- **Windows App**
 - **Operating system**: Windows
 
 \* These don't support connections through a web browser.
@@ -53,7 +52,7 @@ To optimize Zoom, you’ll need to install the Zoom VDI Client on the Cloud PC a
 2. Locate and download the most recent VDI client version.
 3. Run the MSI and follow the installation instructions.
 
-Alternatively, the admin can deploy the Zoom VDI client. For more information about deploying apps, see the [Win32 App management guide](/intune/intune-service/apps/apps-win32-app-management).
+Alternatively, the admin can deploy the Zoom VDI client. For more information about deploying apps, see the [Win32 App management guide](/mem/intune/apps/apps-win32-app-management).
 
 ## Install the plugin on the local Windows PC
 
@@ -73,4 +72,4 @@ To benefit from these optimizations, users must sign in to their Cloud PC from a
 
 ## Next steps
 
-For more information about deploying apps, see the [Win32 App management guide](/intune/intune-service/apps/apps-win32-app-management).
+For more information about deploying apps, see the [Win32 App management guide](/mem/intune/apps/apps-win32-app-management).

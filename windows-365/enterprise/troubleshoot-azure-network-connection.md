@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 08/22/2024
 ms.topic: troubleshooting
 ms.service: windows-365
-ms.subservice: 
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: mattsha
+ms.reviewer: ericor
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -118,6 +118,8 @@ If this test fails, make sure that:
 - There's no proxy between the Cloud PC subnet and the internet.
 - There are no firewall rules (physical, virtual, or in Windows) that might block required traffic.
 - You consider testing the endpoints from a VM on the same subnet declared for Cloud PCs.
+
+If you aren't using Azure CloudShell, make sure that your PowerShell execution policy is configured to allow Unrestricted scripts. If you use Group Policy to set execution policy, make sure that the Group Policy Object (GPO) targeted at the Organizational Unit (OU) defined in the ANC is configured to allow Unrestricted scripts. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy).
 
 ## Environment and configuration are ready
 

@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/08/2023
+ms.date: 09/26/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -47,7 +47,7 @@ This option is simple, reliable, and scalable, offering Cloud PC connectivity wh
 
 - Sets up and fully manages the infrastructure and related services required to deliver functional Cloud PCs to your users.
 - Manages the network that the Cloud PCs occupy.
-- Provides a Zero Trust Framework-aligned model of an End User Computing (EUC) environment. For more information, see [Learn more about cloud-native endpoints](/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
+- Provides a Zero Trust Framework-aligned model of an End User Computing (EUC) environment. For more information, see [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
 
 The customer’s only responsibility is the configuration and management of the Cloud PCs.
 

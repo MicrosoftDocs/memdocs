@@ -2,13 +2,13 @@
 title: Windows Autopilot requirements
 description: Software, Networking, Licensing, and Configuration requirements for Windows Autopilot.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 09/06/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -35,7 +35,7 @@ appliesto:
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
-> For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 The list of requirements for Windows Autopilot is organized into four different categories:<!-- RSS subscription is based on this line so don't change. If the line needs to change, update RSS URL in the Tip in the article.-->
 
@@ -131,14 +131,14 @@ Microsoft Entra ID validates user credentials. Additionally, the device is joine
 
 Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see the following articles:
 
-- [Intune network configuration requirements and bandwidth](/intune/intune-service/fundamentals/network-bandwidth-use).
-- [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints).
+- [Intune network configuration requirements and bandwidth](/mem/intune/fundamentals/network-bandwidth-use).
+- [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
 
 ##### Autopilot automatic device diagnostics collection
 
 For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` isn't blocked on the network. Diagnostics are available for 28 days before they're removed.
 
-For more information, see [Collect diagnostics from a Windows device](/intune/intune-service/remote-actions/collect-diagnostics).
+For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
 ##### Windows Update
 
@@ -201,7 +201,7 @@ Some of these services also need to check certificate revocation lists (CRLs) fo
 
 > [!IMPORTANT]
 >
-> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
 The device can be Microsoft Entra hybrid joined. The computer should be on the internal network for Microsoft Entra hybrid join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join).
 
@@ -239,7 +239,7 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 
 > [!NOTE]
 >
-> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/fundamentals/licenses-assign).
+> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/mem/intune/fundamentals/licenses-assign).
 
 Additionally, the following are also recommended (but not required):
 
@@ -252,7 +252,7 @@ Additionally, the following are also recommended (but not required):
 
 Before Windows Autopilot can be used, some configuration tasks are required to support the common Autopilot scenarios.
 
-- **Configure Microsoft Entra automatic enrollment**. For details when using Microsoft Intune, see [Set up Windows automatic Intune enrollment](tutorial/user-driven/azure-ad-join-automatic-enrollment.md) or [Enable Windows automatic enrollment](/intune/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment). If using a different MDM service, contact the vendor for the specific URLs or configuration needed for those services.
+- **Configure Microsoft Entra automatic enrollment**. For details when using Microsoft Intune, see [Set up Windows automatic Intune enrollment](tutorial/user-driven/azure-ad-join-automatic-enrollment.md) or [Enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). If using a different MDM service, contact the vendor for the specific URLs or configuration needed for those services.
 
 - **The first user that signs in needs to have Microsoft Entra join permissions for some deployment scenarios**. For details, see [Allow users to join devices to Microsoft Entra ID](tutorial/user-driven/azure-ad-join-allow-users-to-join.md). The exception to this requirement is Windows Autopilot self-deployment mode since this method works in a userless context.
 

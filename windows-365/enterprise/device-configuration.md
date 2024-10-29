@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 07/24/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -31,9 +31,9 @@ ms.collection:
 
 # Device configuration for Cloud PCs
 
-After a Cloud PC is [provisioned](provisioning.md), you can manage it like any other Windows device in Microsoft Intune. You can create [device configuration profiles](/intune/intune-service/configuration/device-profiles) to turn different settings on and off in Windows.
+After a Cloud PC is [provisioned](provisioning.md), you can manage it like any other Windows device in Microsoft Intune. You can create [device configuration profiles](/mem/intune/configuration/device-profiles) to turn different settings on and off in Windows.
 
 <!-- ########################## -->
 ## Next steps
 
-For more information, see [Apply features and settings on your devices using device profiles](/intune/intune-service/configuration/device-profiles) in the Microsoft Intune documentation.
+For more information, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles) in the Microsoft Intune documentation.

@@ -2,7 +2,7 @@
 title: Windows Autopilot scenarios and capabilities
 description: Follow along with several typical Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -71,7 +71,7 @@ To change this key value, use the Windows Configuration Designer (WCD) tool to c
 
 For more information, see [Cortana voice support](/windows-hardware/customize/desktop/cortana-voice-support).
 
-[!INCLUDE [cortana-app-deprecation](../intune/intune-service/includes/cortana-app-deprecation.md)]
+[!INCLUDE [cortana-app-deprecation](../memdocs/intune/includes/cortana-app-deprecation.md)]
 
 ### BitLocker encryption
 

@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 07/25/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -31,7 +31,7 @@ ms.collection:
 
 # Create device configuration profile
 
-In this example, we’ll apply a **Device restrictions** [device configuration profile](/intune/intune-service/configuration/device-profile-create) and apply it to **All Cloud PCs**. You'll need either a dynamic device group or a filter to accomplish this task.
+In this example, we’ll apply a **Device restrictions** [device configuration profile](/mem/intune/configuration/device-profile-create) and apply it to **All Cloud PCs**. You'll need either a dynamic device group or a filter to accomplish this task.
 
 > [!NOTE]
 > If you haven’t already, follow the steps to either [create a dynamic device group containing all Cloud PCs](create-dynamic-device-group-all-cloudpcs.md#create-a-dynamic-device-group-for-all-cloud-pcs) or [create a filter for all Cloud PCs](create-filter.md#create-a-filter-for-all-cloud-pcs), then return here to create the device configuration profile.

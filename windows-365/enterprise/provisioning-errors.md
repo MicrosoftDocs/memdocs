@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/16/2024
+ms.date: 09/13/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -97,7 +97,7 @@ If Intune enrollment is failing, make sure that:
 - All of the required Intune endpoints are available on the vNet of your Cloud PCs.
 - There are no MDM enrollment restrictions on the tenant. Windows corporate device enrollment is allowed in custom and default policies.
 - The Intune tenant is active and healthy.
-- If co-managing Cloud PCs with Intune and Configuration Manager, ensure that the Cloud PC OU isn't targeted for client push installation. Instead deploy the Configuration Manager agent from Intune. For more information, see Configuration Manager [client installation methods](/intune/configmgr/core/clients/deploy/plan/client-installation-methods#microsoft-intune-mdm-installation).
+- If co-managing Cloud PCs with Intune and Configuration Manager, ensure that the Cloud PC OU isn't targeted for client push installation. Instead deploy the Configuration Manager agent from Intune. For more information, see Configuration Manager [client installation methods](/mem/configmgr/core/clients/deploy/plan/client-installation-methods#microsoft-intune-mdm-installation).
 
 **Suggested test**: Attempt an Intune enrollment using a test device or VM.
 
@@ -168,6 +168,25 @@ While a provisioning is in progress, someone deleted the associated user.
 Windows 365 provisioned the Cloud PC but didn’t disable the built-in Windows reset option. As a result, the user can manually trigger the built-in Windows reset option under Settings. The Cloud PC will never successfully complete the reset, which makes the Cloud PC unusable.
 
 **Suggested test**: Retry provisioning.
+
+## Blocking High Risk Ports: One or more high risk ports couldn’t be disabled
+
+Windows 365 provisioned the Cloud PC but was unable to block all high-risk ports based on Microsoft security standards. Windows 365 disables high risk ports used for the management of resources or unsecure/unencrypted data transmission and shouldn't be exposed to the internet by default.
+
+If you are seeing this error, some factors to consider are:
+
+- Sometimes an enterprise will implement an Intune group policy that enables one of these ports by default.  
+- Make sure that there are no Intune policies that may override Windows 365's default of disabling these high-risk ports.
+
+**Suggested test**: Try any of these solutions:
+
+- Retry provisioning.
+- If the device is Intune-enrolled, you can apply Intune policy to disable the ports.
+- The user can also disable the ports manually by adding a local firewall rule onto their device. For a list of high risk ports that are recommended for blocking, please see [Security admin rules in Azure Virtual Network Manager](/azure/virtual-network-manager/concept-security-admins#protect-high-risk-ports).
+
+## Other provisioning failures
+
+If you encounter other provisioning errors not covered above, make sure all the required endpoints are allowed on the VNet used for your ANC and any gateway device.
 
 <!-- ########################## -->
 ## Next steps

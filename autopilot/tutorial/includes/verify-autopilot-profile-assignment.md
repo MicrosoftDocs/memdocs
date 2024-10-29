@@ -2,7 +2,7 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
 ms.date: 06/28/2024
@@ -49,13 +49,13 @@ Before deploying a device, ensure that an Autopilot profile is assigned to a dev
 
           If Intune is able to successfully register the new hardware, Intune updates the profile status when the device next checks into Intune. For more information on the **Fix pending** status, see the following articles:
 
-           - [Autopilot profile not applied after reimaging to an older OS version](../../troubleshoot-device-enrollment.md#autopilot-profile-not-applied-after-reimaging-to-an-older-os-version).
+           - [Why is the Windows Autopilot profile not applied after a hardware change occurred on a device?](../../troubleshooting-faq.yml#why-is-the-windows-autopilot-profile-not-applied-after-a-hardware-change-occurred-on-a-device-).
            - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
            - [Windows Autopilot motherboard replacement scenario guidance](../../autopilot-motherboard-replacement.md)
 
        - **Attention required**: If Intune is unable to register the new hardware after a hardware change occurs on a device, the device can't receive the Autopilot profile until the device is reset and the device re-registers. For more information on this status and how to deregister/re-register a device, see the following articles:
 
-         - [Autopilot profile not applied after reimaging to an older OS version](../../troubleshoot-device-enrollment.md#autopilot-profile-not-applied-after-reimaging-to-an-older-os-version).
+         - [Why is the Windows Autopilot profile not applied after a hardware change occurred on a device?](../../troubleshooting-faq.yml#why-is-the-windows-autopilot-profile-not-applied-after-a-hardware-change-occurred-on-a-device-).
          - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
          - [Windows Autopilot motherboard replacement scenario guidance](../../autopilot-motherboard-replacement.md)
          - [Deregister a device](../../registration-overview.md#deregister-a-device)

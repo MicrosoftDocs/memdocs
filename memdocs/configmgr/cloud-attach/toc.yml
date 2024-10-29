@@ -1,0 +1,199 @@
+items:
+- name: Cloud attach documentation
+  href: index.yml
+- name: What is cloud attach?
+  href: overview.md
+- name: Enable cloud attach, versions 2111 and later
+  href: enable.md 
+- name: Tenant attach
+  items:
+  - name: Tenant attach prerequisites
+    href: ../tenant-attach/prerequisites.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Enable tenant attach, versions 2103 and earlier
+    href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json  
+  - name: Use Intune RBAC for tenant attach
+    href: use-intune-rbac.md
+  - name: Use tenant attach
+    items:
+    - name: Client details
+      href: ../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Install applications
+      href: ../tenant-attach/applications.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Device timeline
+      href: ../tenant-attach/timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Resource explorer
+      href: ../tenant-attach/resource-explorer.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Run scripts
+      href: ../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: BitLocker recovery keys
+      href: ../tenant-attach/bitlocker-recovery-keys.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Software updates
+      href: ../tenant-attach/software-updates.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: CMPivot for tenant attached devices
+      items:
+      - name: Launch CMPivot
+        href: ../tenant-attach/cmpivot-start.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: CMPivot usage overview
+        href: ../tenant-attach/cmpivot-overview-attached.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: CMPivot sample scripts
+        href: ../tenant-attach/cmpivot-samples-attached.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Endpoint security for tenant attached devices
+      items:
+      - name: Get started with endpoint security policies
+        href: ../tenant-attach/endpoint-security-get-started.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Create and deploy endpoint detection and response policy
+        href: ../tenant-attach/atp-onboard.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Create and deploy antivirus policy
+        href: ../tenant-attach/deploy-antivirus-policy.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json  
+      - name: Create and deploy firewall policy
+        href: ../tenant-attach/deploy-firewall-policy.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Create and deploy attack surface reduction policy
+        href: ../tenant-attach/deploy-asr-policy.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json     
+    - name: Reference for tenant attach
+      items:
+      - name: Tenant attach data collection
+        href: ../tenant-attach/data-collection.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Microsoft Defender Antivirus policy settings
+        href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Windows Security experience Antivirus policy settings
+        href: ../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Firewall policy settings
+        href: ../../intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Endpoint Detection and Response policy settings
+        href: ../../intune/protect/endpoint-security-edr-profile-settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Attack surface reduction policy settings
+        href: ../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Troubleshoot tenant attach
+      items:
+      - name: Tenant attach and device actions
+        href: ../tenant-attach/troubleshoot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Client details
+        href: ../tenant-attach/troubleshoot-client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Application installation 
+        href: ../tenant-attach/troubleshoot-applications.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Common error codes for application installation
+        href: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Timeline
+        href: ../tenant-attach/troubleshoot-timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Resource explorer
+        href: ../tenant-attach/troubleshoot-resource-explorer.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Run scripts
+        href: ../tenant-attach/troubleshoot-scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: CMPivot
+        href: ../tenant-attach/troubleshoot-cmpivot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Software updates
+        href: ../tenant-attach/troubleshoot-software-updates.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+- name: Endpoint analytics
+  items:
+  - name: Endpoint analytics overview
+    href: ../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Scores, baselines, and insights
+    href: ../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Enable Endpoint analytics
+    items:
+    - name: Enroll Intune devices
+      href: ../../analytics/enroll-intune.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Enroll Configuration Manager devices
+      href: ../../analytics/enroll-configmgr.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Use Endpoint analytics
+    items:
+    - name: Startup performance
+      href: ../../analytics/startup-performance.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Restart frequency
+      href: ../../analytics/restart-frequency.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json    
+    - name: Application reliability
+      href: ../../analytics/app-reliability.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Work from anywhere
+      href: ../../analytics/work-from-anywhere.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Endpoint analytics in Microsoft Adoption Score
+      href: ../../analytics/adoption-score.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Endpoint analytics settings
+      href: ../../analytics/settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Reference for Endpoint analytics
+    items:
+    - name: Data collection
+      href: ../../analytics/data-collection.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Troubleshoot
+      href: ../../analytics/troubleshoot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Get support
+      href: ../../analytics/get-support.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+- name: Co-management
+  items:
+  - name: Co-management overview
+    href: ../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Frequently asked questions
+    href: ../comanage/faq.yml?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Enable co-management
+    items:
+    - name: Paths to co-management
+      href: ../comanage/quickstart-paths.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Path 1 - Enable co-management for Configuration Manager clients
+      href: ../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Path 2 - Enable co-management for internet-based devices
+      href: ../comanage/tutorial-co-manage-new-devices.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Use co-management
+    items:
+    - name: About workloads
+      href: ../comanage/workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Switch workloads to Intune
+      href: ../comanage/how-to-switch-workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Conditional access
+      href: ../comanage/quickstart-conditional-access.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Remote actions from Intune
+      href: ../comanage/quickstart-remote-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Client health
+      href: ../comanage/quickstart-client-health.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Apps in Company Portal
+      href: ../comanage/company-portal.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Monitor co-management
+      href: ../comanage/how-to-monitor.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Third-party MDM coexistence
+      href: ../comanage/coexistence.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+- name: Cloud management gateway (CMG)
+  items:
+  - name: CMG overview
+    href: ../core/clients/manage/cmg/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Frequently asked questions
+    href: ../core/clients/manage/cmg/cloud-management-gateway-faq.yml?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Plan for CMG
+    items:
+    - name: Plan for CMG
+      href: ../core/clients/manage/cmg/plan-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: CMG client authentication
+      href: ../core/clients/manage/cmg/plan-client-authentication.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: CMG hierarchy design
+      href: ../core/clients/manage/cmg/plan-hierarchy-design.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Supported configurations for CMG
+      href: ../core/clients/manage/cmg/supported-configurations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Performance and scale
+      href: ../core/clients/manage/cmg/perf-scale.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Cost
+      href: ../core/clients/manage/cmg/cost.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Set up CMG
+    items:
+    - name: Set up checklist
+      href: ../core/clients/manage/cmg/set-up-checklist.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: 1. Server authentication certificate
+      href: ../core/clients/manage/cmg/server-auth-cert.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: 2. Configure Microsoft Entra ID
+      href: ../core/clients/manage/cmg/configure-azure-ad.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: 3. Configure client authentication
+      href: ../core/clients/manage/cmg/configure-authentication.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: 4. Set up a CMG
+      href: ../core/clients/manage/cmg/setup-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: 5. Configure clients for CMG
+      href: ../core/clients/manage/cmg/configure-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Manage CMG
+    items:
+    - name: Monitor a CMG
+      href: ../core/clients/manage/cmg/monitor-clients-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Modify a CMG
+      href: ../core/clients/manage/cmg/modify-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+  - name: Reference for CMG
+    items:
+    - name: Manually register Microsoft Entra apps for CMG
+      href: ../core/clients/manage/cmg/manually-register-azure-ad-apps.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Security and privacy for CMG
+      href: ../core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Ports and data flow
+      href: ../core/clients/manage/cmg/data-flow.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json

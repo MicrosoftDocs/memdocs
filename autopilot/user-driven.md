@@ -2,7 +2,7 @@
 title: Windows Autopilot User-Driven Mode
 description: With Windows Autopilot user-driven mode, devices can be configured to deploy to a ready-to-use state without requiring help from IT personnel.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -46,9 +46,9 @@ Other prompts can be suppressed during the out-of-box experience (OOBE). For mor
 Windows Autopilot user-driven mode supports Microsoft Entra join and Microsoft Entra hybrid joined devices. For more information about these two join options, see the following articles:
 
 - [What is a device identity?](/azure/active-directory/devices/overview).
-- [Learn more about cloud-native endpoints](/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
-- [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints](/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
-- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/intune/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
+- [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
+- [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
+- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
 - [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/device-join-plan).
 - [A framework for Windows endpoint management transformation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684).
 - [Success with remote Windows Autopilot and Microsoft Entra hybrid join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353).
@@ -75,7 +75,7 @@ The steps of the user-driven process are as follows:
 
 1. After sign-in, the enrollment status page displays for user-targeted configuration tasks.
 
-If any issues are found during this process, see [Windows Autopilot troubleshooting](troubleshooting.md).
+If any issues are found during this process, see [Troubleshooting Windows Autopilot overview](troubleshooting-faq.yml#troubleshooting-windows-autopilot-overview).
 
 For more information on the available join options, see the following sections:
 
@@ -114,13 +114,13 @@ For each device that is deployed using user-driven deployment, these extra steps
 
 > [!TIP]
 >
-> If the intended end-state of the device is co-management, device enrollment can be configured in Intune to enable co-management, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. For more information, see [How to enroll with Autopilot](/intune/configmgr/comanage/autopilot-enrollment).<!-- Intune 11300628 -->
+> If the intended end-state of the device is co-management, device enrollment can be configured in Intune to enable co-management, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. For more information, see [How to enroll with Autopilot](/mem/configmgr/comanage/autopilot-enrollment).<!-- Intune 11300628 -->
 
 ## User-driven mode for Microsoft Entra hybrid join
 
 > [!IMPORTANT]
 >
-> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
 Windows Autopilot requires that devices be Microsoft Entra joined. For an on-premises Active Directory environment, devices can be joined to the on-premises domain. To join the devices, configure Autopilot devices to be [hybrid-joined to Microsoft Entra ID](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
@@ -128,7 +128,7 @@ Windows Autopilot requires that devices be Microsoft Entra joined. For an on-pre
 >
 > As Microsoft talks with customers that are using Microsoft Intune and Microsoft Configuration Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and Microsoft Entra hybrid joined devices. Many customers confuse these two topics. Co-management is a management option, while Microsoft Entra ID is an identity option. For more information, see [Understanding hybrid Microsoft Entra and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify Microsoft Entra hybrid join and co-management, how they work together, but aren't the same thing.
 >
-> The Configuration Manager client can't be deployed while provisioning a new computer in Windows Autopilot user-driven mode for Microsoft Entra hybrid join. This limitation is due to the identity change of the device during the Microsoft Entra join process. Deploy the Configuration Manager client after the Autopilot process. See [Client installation methods in Configuration Manager](/intune/configmgr/core/clients/deploy/plan/client-installation-methods) for alternative options for installing the client.<!-- CMADO-10205503 -->
+> The Configuration Manager client can't be deployed while provisioning a new computer in Windows Autopilot user-driven mode for Microsoft Entra hybrid join. This limitation is due to the identity change of the device during the Microsoft Entra join process. Deploy the Configuration Manager client after the Autopilot process. See [Client installation methods in Configuration Manager](/mem/configmgr/core/clients/deploy/plan/client-installation-methods) for alternative options for installing the client.<!-- CMADO-10205503 -->
 
 ### Requirements for user-driven mode with hybrid Microsoft Entra ID
 
@@ -224,7 +224,7 @@ For VPN configurations that automatically connect, the validation steps might be
 ## Next steps
 
 - [Deploy Microsoft Entra hybrid joined devices using Intune and Windows Autopilot](windows-autopilot-hybrid.md).
-- [How to enroll with Autopilot](/intune/configmgr/comanage/autopilot-enrollment).
+- [How to enroll with Autopilot](/mem/configmgr/comanage/autopilot-enrollment).
 - [Try out Autopilot hybrid join over VPN in your Azure lab](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/trying-out-autopilot-hybrid-join-over-vpn-in-your-azure-lab/ba-p/1606723).
 
 ## Related content
@@ -232,9 +232,9 @@ For VPN configurations that automatically connect, the validation steps might be
 <!-- Intune 12378279 -->
 
 - [What is a device identity?](/azure/active-directory/devices/overview).
-- [Learn more about cloud-native endpoints](/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
-- [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints](/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
-- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/intune/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
+- [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
+- [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
+- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
 - [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/device-join-plan).
 - [A framework for Windows endpoint management transformation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684).
 - [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).

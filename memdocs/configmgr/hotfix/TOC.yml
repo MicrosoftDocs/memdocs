@@ -1,0 +1,127 @@
+items:
+- name: Hotfix documentation
+  href: index.yml
+- name: Version 2403
+  items:
+  - name: KB 26186448 Summary of changes in 2403
+    href: 2403/26186448.md
+  - name: KB 28290310 CMG update for 2403
+    href: 2403/28290310.md
+  - name: KB 28458746 Software update client fix for 2403
+    href: 2403/28458746.md
+  - name: KB 29166583 MP security update for 2403
+    href: 2403/29166583.md 
+- name: Version 2309
+  items:
+  - name: KB 24341484 Summary of changes in 2309
+    href: 2309/24341484.md
+  - name: KB 25858444 Update rollup for Configuration Manager version 2309
+    href: 2309/25858444.md
+  - name: KB 29166583 MP security update for 2309
+    href: 2309/29166583.md
+- name: Version 2303
+  items:
+  - name: KB 16900870 Summary of changes in 2303
+    href: 2303/16900870.md
+  - name: KB 21010486 Update rollup for Configuration Manager version 2303
+    href: 2303/21010486.md
+  - name: KB 24721208 Data processing update for Configuration Manager version 2303
+    href: 2303/24721208.md
+  - name: KB 25073607 Client update for Configuration Manager version 2303
+    href: 2303/25073607.md
+  - name: KB 29166583 MP security update for 2303
+    href: 2303/29166583.md
+- name: Version 2211
+  items:
+  - name: KB 15582417  Summary of changes in 2211
+    href: 2211/15582417.md
+  - name: KB 16643863 Update rollup for Configuration Manager version 2211
+    href: 2211/16643863.md
+- name: Version 2207
+  items:
+  - name: KB 14840616  Summary of changes in 2207
+    href: 2207/14840616.md
+  - name: KB 14959905  Early update ring
+    href: 2207/14959905.md
+  - name: KB 14978429  Connected cache update for Microsoft Endpoint Configuration Manager version 2207
+    href: 2207/14978429.md
+  - name: KB 15498768 NTLM connection fallback update
+    href: 2207/15498768.md
+  - name: KB 15599094 NTLM client installation update
+    href: 2207/15599094.md
+  - name: KB 15152495 Update rollup for Configuration Manager version 2207
+    href: 2207/15152495.md
+- name: Version 2203
+  items:
+  - name: KB 13174460 Summary of changes in 2203
+    href: 2203/13174460.md
+  - name: KB 13953025 Early update ring
+    href: 2203/13953025.md  
+  - name: KB 14480034 PKI Client registration fails in Configuration Manager 2203
+    href: 2203/14480034.md
+  - name: KB 14244456 Update rollup for Microsoft Endpoint Configuration Manager version 2203
+    href: 2203/14244456.md
+  - name: KB 15599094 NTLM client installation update
+    href: 2207/15599094.md
+- name: Version 2111
+  items:
+  - name: KB 10096997 Summary of changes in 2111
+    href: 2111/11052354.md
+  - name: KB 12709700 Update for Configuration Manager 2111
+    href: 2111/12709700.md
+  - name: KB 12959506 Client update for Configuration Manager 2111
+    href: 2111/12959506.md
+  - name: KB 12819689 Connected cache update for Microsoft Endpoint Configuration Manager version 2111
+    href: 2111/12819689.md
+  - name: KB 12896009 Update rollup for Microsoft Endpoint Configuration Manager version 2111
+    href: 2111/12896009.md
+  - name: KB 15599094 NTLM client installation update
+    href: 2207/15599094.md
+- name: Version 2107
+  items:
+  - name: KB 10096997 Summary of changes in 2107
+    href: 2107/10096997.md
+  - name: KB 10503003 Early update ring
+    href: 2107/10503003.md
+  - name: KB 11121541 Update rollup for 2107
+    href: 2107/11121541.md
+  - name: KB 12636660 Network access account update
+    href: 2107/12636660.md
+  - name: KB 15599094 NTLM client installation update
+    href: 2207/15599094.md
+- name: Version 2103
+  items:
+  - name: KB 9210721 Summary of changes in 2103
+    href: 2103/9210721.md
+  - name: KB 9603111 Early update ring
+    href: 2103/9603111.md
+  - name: KB 9833643 Console update
+    href: 2103/9833643.md
+  - name: KB 10036164 Update rollup for 2103
+    href: 2103/10036164.md
+  - name: KB 10216365 Availability group
+    href: 2103/10216365.md
+  - name: KB 10372804 BitLocker management
+    href: 2103/10372804.md
+  - name: KB 10589155 Client update
+    href: 2103/10589155.md
+  - name: KB 10582136 Tenant attach update
+    href: 2103/10582136.md
+  - name: KB 15599094 NTLM client installation update
+    href: 2207/15599094.md
+- name: Version 2010
+  items:
+  - name: KB 4599442 Summary of changes in 2010
+    href: 2010/4599442.md
+  - name: KB 4594176 Early update ring
+    href: 2010/4594176.md
+  - name: KB 4599924 Console termination
+    href: 2010/4599924.md
+  - name: KB 4594177 Client notifications
+    href: 2010/4594177.md
+  - name: KB 4600089 Update rollup for 2010
+    href: 2010/4600089.md
+  - name: KB 5001600 Connected cache update
+    href: 2010/5001600.md
+  - name: KB 5001670 App usage data update
+    href: 2010/5001670.md

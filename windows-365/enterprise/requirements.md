@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -63,7 +63,7 @@ A subscription in Azure Government is required for Windows 365 Government custom
 ## Microsoft Entra ID and Intune requirements
 
 - A valid and working Intune and Microsoft Entra tenant.
-- Intune device type enrollment restrictions set to Allow Windows (MDM) platform for corporate enrollment.
+- Intune default device type enrollment restrictions must be set to Allow Windows (MDM) platform for corporate enrollment. For more information, see [Device Enrollment Restrictions Limitations](/mem/intune/enrollment/enrollment-restrictions-set#limitations).
 - Infrastructure configuration: If you plan on provisioning Microsoft Entra hybrid joined Cloud PCs, you must configure your infrastructure to automatically Microsoft Entra hybrid join any devices that domain join to the on-premises Active Directory. This [configuration lets them be recognized and managed in the cloud](/azure/active-directory/devices/overview).
 - Microsoft Entra Domain Services isn't supported because it doesn't support Microsoft Entra hybrid join.
 
@@ -78,7 +78,7 @@ If you choose to provision Microsoft Entra hybrid joined Cloud PCs, then the fol
 - User accounts that are assigned Cloud PCs must have a synced identity available in both Active Directory and Microsoft Entra ID.
 
 > [!NOTE]
-> For the user account used to join the Cloud PCs to the Active Directory Domain Services, make sure to set up appropriate delegation following the instructions in [Increase the computer account limit in the Organizational Unit](/intune/autopilot/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit).
+> For the user account used to join the Cloud PCs to the Active Directory Domain Services, make sure to set up appropriate delegation following the instructions in [Increase the computer account limit in the Organizational Unit](/mem/autopilot/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit).
 
 ## Licensing requirements
 
@@ -148,6 +148,8 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
 - US West
   - West US 2 (Restricted)
   - West US 3
+
+Some features might not be available in some regions.
 
 ### [Windows 365 Government](#tab/gov)
 

@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 05/09/2023
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -47,7 +47,7 @@ The following errors can occur when connecting to a Cloud PC.
 **Possible solution**: Turn on PKU2U protocol requests on both the Cloud PC and the user's physical device:
 
 1. [Create a filter for all Cloud PCs](create-filter.md#create-a-filter-for-all-cloud-pcs).
-2. Create a device configuration policy [using the settings catalog](/intune/intune-service/configuration/settings-catalog).
+2. Create a device configuration policy [using the settings catalog](/mem/intune/configuration/settings-catalog).
 3. On the **Configuration settings** page, search for and select **Network Security Allow PKU2U Authentication Requests** > **Allow**.
 ![Screenshot with the **Network Security Allow PKU2U Authentication Requests** set to **Allow**.](./media/connection-errors/allow-pku2u.png)
 5. On the **Assignments** page, select **Add all devices** > **Edit filter** > **Include filtered devices in assignment** > select the filter you created for all Cloud PCs.

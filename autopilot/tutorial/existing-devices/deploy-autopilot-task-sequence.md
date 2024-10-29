@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -118,7 +118,7 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
 > [!NOTE]
 >
-> The instructions in this step don't fully go into detail all of the options available when running the **Deploy Software Wizard**. For full details on the options available, see [Deploy a task sequence](/intune/configmgr/osd/deploy-use/deploy-a-task-sequence).
+> The instructions in this step don't fully go into detail all of the options available when running the **Deploy Software Wizard**. For full details on the options available, see [Deploy a task sequence](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence).
 
 ## Next step: Speed up the deployment process (optional)
 
@@ -135,4 +135,4 @@ If the preference is to use an unmodified out-of-box Autopilot task sequence cre
 For more information on deploying the Autopilot task sequence, see the following articles:
 
 - [Deploy the Autopilot task sequence](../../existing-devices.md#deploy-the-autopilot-task-sequence).
-- [Deploy a task sequence](/intune/configmgr/osd/deploy-use/deploy-a-task-sequence).
+- [Deploy a task sequence](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence).

@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 04/29/2023
+ms.date: 10/18/2024
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -42,8 +42,8 @@ You might want to share (move or copy) a Cloud PC and its contents to:
 
 ## Share a single restore point
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > select a device > select the ellipses (**...**) > **Share**.
-1. In the **Select restore point** area, select a **Subscription** and **Storage account**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** > **All Cloud PCs** > select a device > **Restore points** > select the ellipses (**...**) > **Share**.
+1. In the **Share restore point** area, select a **Subscription** and **Storage account**.
 1. Select **Share**.
 
 A folder is created in the storage account. The folder name is identical to the Cloud PC name. The folder contains a VHD copy of the Cloud PC device disk.

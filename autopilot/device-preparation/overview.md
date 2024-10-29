@@ -2,7 +2,7 @@
 title: Overview of Windows Autopilot device preparation
 description: Windows Autopilot device preparation is used to set up and configure new devices, getting them ready for productive use.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -73,7 +73,7 @@ New features in Windows Autopilot device preparation include:
   - Deployment time.
     For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
 
-- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/intune/intune-service/fundamentals/intune-govt-service-description) environments.
+- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune/fundamentals/intune-govt-service-description) environments.
 
 ## Capabilities
 
@@ -130,15 +130,15 @@ For Windows Autopilot device preparation:
 - Only applications and PowerShell scripts selected in the Windows Autopilot device preparation profile are deployed during OOBE. Any additional applications or PowerShell scripts assigned to the device group will be deployed after the Windows Autopilot device preparation deployment is complete.
 - For policies, Windows Autopilot device preparation syncs any policies assigned to the device group. However, Windows Autopilot device preparation doesn't track if the policies are applied during the deployment. The policies might be applied either during the deployment or after the deployment is complete.
 
-For more information, see [Enrollment time grouping in Microsoft Intune](/intune/intune-service/enrollment/enrollment-time-grouping).
+For more information, see [Enrollment time grouping in Microsoft Intune](/mem/intune/enrollment/enrollment-time-grouping).
 
 ### Corporate identifiers for Windows
 
 Windows Autopilot device preparation supports the Intune corporate identifier enrollment feature. Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted devices go through Windows Autopilot device preparation. Corporate identifiers for Windows is optional for Windows Autopilot device preparation. Corporate identifiers for Windows isn't required for a Windows Autopilot device preparation deployment to work. For more information, see:
 
-- [Identify devices as corporate-owned](/intune/intune-service/enrollment/corporate-identifiers-add).
-- [What are enrollment restrictions?](/intune/intune-service/enrollment/enrollment-restrictions-set).
-- [Create device platform restrictions](/intune/intune-service/enrollment/create-device-platform-restrictions).
+- [Identify devices as corporate-owned](/mem/intune/enrollment/corporate-identifiers-add).
+- [What are enrollment restrictions?](/mem/intune/enrollment/enrollment-restrictions-set).
+- [Create device platform restrictions](/mem/intune/enrollment/create-device-platform-restrictions).
 
 ## Tutorial
 

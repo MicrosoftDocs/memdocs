@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 07/25/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -93,13 +93,13 @@ In these steps, you'll use the Model device property to create the filter.
 5. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 6. On the **Review + create** page, select **Create**.
 
-After you've created the filter, you can use the filter in the assignment page in [supported policies](/intune/intune-service/fundamentals/filters-supported-workloads).
+After you've created the filter, you can use the filter in the assignment page in [supported policies](/mem/intune/fundamentals/filters-supported-workloads).
 
 For more information on using filters in Intune, see the following how-to guides:
 
-- [Create a filter (Intune how-to guide)](/intune/intune-service/fundamentals/filters)
-- [Supported filter properties](/intune/intune-service/fundamentals/filters-device-properties)
-- [Filter reporting and troubleshooting](/intune/intune-service/fundamentals/filters-reports-troubleshoot)
+- [Create a filter (Intune how-to guide)](/mem/intune/fundamentals/filters)
+- [Supported filter properties](/mem/intune/fundamentals/filters-device-properties)
+- [Filter reporting and troubleshooting](/mem/intune/fundamentals/filters-reports-troubleshoot)
 
 <!-- ########################## -->
 ## Next steps

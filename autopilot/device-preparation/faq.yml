@@ -3,13 +3,13 @@ metadata:
   title: Windows Autopilot device preparation FAQ
   description: This article provides OEMs, partners, administrators, and users with answers to some frequently asked questions about deploying Windows with Windows Autopilot device preparation.
   ms.service: windows-client
-  ms.subservice: itpro-deploy
+  ms.subservice: autopilot
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 06/03/2024
+  ms.date: 07/29/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -19,7 +19,7 @@ title: Windows Autopilot device preparation FAQ
 summary: |
   **Applies to:**
 
-  - Windows 11
+  - [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions).
 
   This article provides OEMs, partners, administrators, and users with answers to some frequently asked questions about deploying Windows with Windows Autopilot device preparation.
 
@@ -109,10 +109,10 @@ sections:
         answer: |
           The following types of applications are supported for use with Windows Autopilot device preparation:
 
-          - [Line-of-business (LOB)](/intune/intune-service/apps/lob-apps-windows).
-          - [Win32](/intune/intune-service/apps/apps-win32-prepare).
-          - [Microsoft Store](/intune/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-          - [Microsoft 365](/intune/intune-service/apps/apps-add-office365).
+          - [Line-of-business (LOB)](/mem/intune/apps/lob-apps-windows).
+          - [Win32](/mem/intune/apps/apps-win32-prepare).
+          - [Microsoft Store](/mem/intune/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
+          - [Microsoft 365](/mem/intune/apps/apps-add-office365).
 
       - question: |
           Do devices need to be pre-staged with Windows Autopilot device preparation?

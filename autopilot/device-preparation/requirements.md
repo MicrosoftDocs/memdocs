@@ -2,13 +2,13 @@
 title: Windows Autopilot device preparation requirements
 description: Software, Networking, Licensing, Configuration, and RBAC requirements for Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 09/05/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -34,7 +34,7 @@ appliesto:
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed another supported locale. For example, `&locale=es-es`.
 >
-> For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 The list of requirements for Windows Autopilot device preparation is organized into five different categories:
 
@@ -64,11 +64,11 @@ Windows Autopilot device preparation depends on specific features available in W
 
 The following editions are supported:
 
-- Windows 11 Pro
-- Windows 11 Pro Education
-- Windows 11 Pro for Workstations
-- Windows 11 Enterprise
-- Windows 11 Education
+- Windows 11 Pro.
+- Windows 11 Pro Education.
+- Windows 11 Pro for Workstations.
+- Windows 11 Enterprise.
+- Windows 11 Education.
 
 ## [:::image type="icon" source="../images/icons/wifi-ethernet-18.svg"::: **Networking**](#tab/networking)
 
@@ -112,14 +112,14 @@ Microsoft Entra ID validates user credentials. Additionally, the device is joine
 
 Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see the following articles:
 
-- [Intune network configuration requirements and bandwidth](/intune/intune-service/fundamentals/network-bandwidth-use).
-- [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints).
+- [Intune network configuration requirements and bandwidth](/mem/intune/fundamentals/network-bandwidth-use).
+- [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
 
 #### Windows Autopilot device preparation automatic device diagnostics collection
 
 For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` isn't blocked on the network. Diagnostics are available for 28 days before they're removed.
 
-For more information, see [Collect diagnostics from a Windows device](/intune/intune-service/remote-actions/collect-diagnostics).
+For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
 #### Windows Update
 
@@ -200,7 +200,7 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 
 > [!NOTE]
 >
-> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/fundamentals/licenses-assign).
+> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/mem/intune/fundamentals/licenses-assign).
 
 Additionally, the following are also recommended, but not required:
 
@@ -213,7 +213,7 @@ Additionally, the following are also recommended, but not required:
 
 Before Windows Autopilot device preparation can be used, some configuration tasks are required to support the common Autopilot scenarios.
 
-- **Configure Microsoft Entra automatic enrollment**. For Microsoft Intune, see [Set up Windows automatic Intune enrollment](tutorial/user-driven/entra-join-automatic-enrollment.md) and [Enable Windows automatic enrollment](/intune/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment) for details. If using a different mobile device management (MDM) service, contact the vendor for the specific URLs or configuration needed for those services.
+- **Configure Microsoft Entra automatic enrollment**. For Microsoft Intune, see [Set up Windows automatic Intune enrollment](tutorial/user-driven/entra-join-automatic-enrollment.md) and [Enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment) for details. If using a different mobile device management (MDM) service, contact the vendor for the specific URLs or configuration needed for those services.
 
 - **The first user that signs in needs to have Microsoft Entra join permissions**. For more information, see [Allow users to join devices to Microsoft Entra ID](tutorial/user-driven/entra-join-allow-users-to-join.md).
 
@@ -316,12 +316,12 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
         > [!NOTE]
         >
-        > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
+        > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
    1. In the **Review + create** page, verify that all permissions are correct, and then select **Create**.
 
 1. The new custom Windows Autopilot device preparation role can now be assigned to users who administer Windows Autopilot device preparation.
 
-For more information, see [Role-based access control (RBAC) with Microsoft Intune](/intune/intune-service/fundamentals/role-based-access-control).
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 
 ---

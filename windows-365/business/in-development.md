@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/13/2024
+ms.date: 09/25/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -55,10 +55,6 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 ### Upgrade Cloud PCs to more storage, RAM, and CPU<!--48540819-->
 
 By using the upcoming Resize action, you'll be able to upgrade Cloud PCs to more storage, RAM, and CPU.
-
-### Resize support for Windows 365 Business<!--48540819-->
-
-You'll be able to use the resize remote action for Windows 365 Business Cloud PCs.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot

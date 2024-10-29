@@ -1,0 +1,59 @@
+### YamlMime:Landing
+
+title: Mobile device management (MDM) documentation
+summary: Use the Microsoft Intune family of products to manage mobile devices in your organization, either on-premises or cloud-based
+
+metadata:
+  title: Mobile device management
+  titleSuffix: Configuration Manager
+  description: Use Microsoft Intune and Configuration Manager to manage mobile devices in your organization, either on-premises or cloud-based
+  ms.subservice: mdm
+  ms.service: configuration-manager
+  ms.topic: landing-page
+  author: banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
+  ms.date: 09/23/2021
+  ms.localizationpriority: medium
+
+landingContent:
+  - title: About on-premises MDM
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is on-premises MDM?
+            url: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+          - text: Plan for on-premises MDM
+            url: plan-design/plan-on-premises-mdm.md
+      - linkListType: how-to-guide
+        links:
+          - text: Install roles
+            url: get-started/install-site-system-roles-for-on-premises-mdm.md
+          - text: Enroll devices
+            url: deploy-use/enroll-devices-on-premises-mdm.md
+          - text: Manage devices
+            url: deploy-use/wipe-lock-reset-devices.md
+
+  - title: Connect ConfigMgr and Exchange
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Device management with Exchange
+            url: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+      - linkListType: how-to-guide
+        links:
+          - text: Install the Exchange connector
+            url: deploy-use/install-configure-exchange-connector.md
+
+  - title: Use cloud-based Intune
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Intune?
+            url: /mem/intune/fundamentals/what-is-intune
+          - text: Device management overview
+            url: /mem/intune/fundamentals/what-is-device-management
+      - linkListType: tutorial
+        links:
+          - text: Walkthrough the Microsoft Intune admin center
+            url: /mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager

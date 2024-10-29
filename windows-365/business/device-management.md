@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 08/28/2024
 audience: Admin
 ms.topic: how-to
 ms.service: windows-365
@@ -54,7 +54,7 @@ You can sign in to the [Microsoft 365 admin center](https://admin.microsoft.com)
 
 ## Intune
 
-If the organization and users are properly licensed, Cloud PCs can be enrolled in Intune. In this case, use the same procedure for [enrolling Windows 10 machines in Intune](/intune/intune-service/user-help/enroll-windows-10-device).
+If the organization and users are properly licensed, Cloud PCs can be enrolled in Intune. In this case, use the same procedure for [enrolling Windows 10 machines in Intune](/mem/intune/user-help/enroll-windows-10-device).
 
 ## Microsoft Graph
 

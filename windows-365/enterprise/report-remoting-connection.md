@@ -7,10 +7,10 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/25/2023
+ms.date: 08/28/2024
 ms.topic: overview
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -31,7 +31,10 @@ ms.collection:
 
 # Remoting connection report
 
-The Remoting connection report in [Endpoint analytics](/intune/analytics/overview) helps you monitor key performance metrics for connecting to the Cloud PCs. There are two metrics in this report:
+> [!IMPORTANT]  
+> The remoting connection report will be retired on December 31st, 2024. After this date, refer to the [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
+
+The Remoting connection report in [Endpoint analytics](/mem/analytics/overview) helps you monitor key performance metrics for connecting to the Cloud PCs. There are two metrics in this report:
 
 - **Round trip time (ms)**
 - **Sign in time (sec)**
@@ -40,7 +43,7 @@ Resource performance score also contributes to your organization's [Microsoft Pr
 
 ## Prerequisites
 
-Before you can use this report, you'll need to [enroll your Cloud PC devices in Endpoint analytics](/intune/analytics/enroll-intune).
+Before you can use this report, you'll need to [enroll your Cloud PC devices in Endpoint analytics](/mem/analytics/enroll-intune).
 
 ## Use the Remoting connection report
 

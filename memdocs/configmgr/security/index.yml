@@ -1,0 +1,64 @@
+### YamlMime:Landing
+
+title: Security documentation
+summary: Configuration Manager is secure by default. Learn more about how to configure and use features to help keep your environment secure.
+
+metadata:
+  title: Security documentation
+  titleSuffix: Configuration Manager
+  description: Configuration Manager is secure by default. Learn more about how to configure and use features to help keep your environment secure.
+  ms.subservice: core-infra
+  ms.service: configuration-manager
+  ms.topic: landing-page
+  author: Banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
+  ms.reviewer: mstewart,aaroncz 
+  ms.collection: tier3
+
+landingContent:
+  - title: Fundamentals
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Security in Configuration Manager
+            url: ../core/understand/fundamentals-of-security.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+          - text: Role-based administration
+            url: ../core/understand/fundamentals-of-role-based-administration.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+
+  - title: Plan
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Plan for security
+            url: ../core/plan-design/security/plan-for-security.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+          - text: Certificates overview
+            url: ../core/plan-design/security/certificates-overview.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+          - text: Configure security
+            url: ../core/plan-design/security/configure-security.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+
+  - title: Resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Enable TLS 1.2
+            url: ../core/plan-design/security/enable-tls-1-2.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+          - text: Cryptographic controls technical reference
+            url: ../core/plan-design/security/cryptographic-controls-technical-reference.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+          - text: Accounts
+            url: ../core/plan-design/hierarchy/accounts.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+          - text: Ports
+            url: ../core/plan-design/hierarchy/ports.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+
+  - title: Feature guidance
+    linkLists:
+      - links:
+          - text: OS deployment
+            url: ../osd/plan-design/security-and-privacy-for-operating-system-deployment.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+          - text: App management
+            url: ../apps/plan-design/security-and-privacy-for-application-management.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+          - text: Software update management
+            url: ../sum/plan-design/security-and-privacy-for-software-updates.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+        linkListType: concept

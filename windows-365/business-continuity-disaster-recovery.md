@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 08/28/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: docoombs
+ms.reviewer: docoombs, olivchen, rkiran
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,6 +28,8 @@ ms.collection:
 - M365-identity-device-management
 - tier1
 ---
+
+<!--ms.reviewer review required before publish-->
 
 # Business continuity and disaster recovery overview
 
