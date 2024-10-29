@@ -150,7 +150,6 @@
       "redirect_url": "/mem/intune/copilot/security-copilot",
       "redirect_document_id": true
     },
-
     {
       "source_path": "memdocs/intune/user-help/allow-wi-fi-control-android.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
