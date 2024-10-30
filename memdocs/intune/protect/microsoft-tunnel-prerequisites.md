@@ -216,7 +216,7 @@ Linux system auditing can help identify security-relevant information or securit
 
 Details on how to implement auditing depend on the Linux platform you use:
 
-- **Red Hat**: Versions of Red Had Enterprise Linux 7 and later install the *auditd* package by default. However, if the package isn't installed, you can use the following command line on the Linux server to install it: `sudo apt install auditd audispd-plugins`
+- **Red Hat**: Versions of Red Had Enterprise Linux 7 and later install the *auditd* package by default. However, if the package isn't installed, you can use the following command line on the Linux server to install it: `sudo dnf install audit audispd-plugins`
 
   Typically, the *auditd* package is available from the default repository of each REHL version.
 
