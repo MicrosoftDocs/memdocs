@@ -110,6 +110,10 @@ At this time, Intune provides no running application detection.
 
 No SLA is currently available.
 
+### How many applications are in the catalog?
+
+The catalog has over 400+ available applications in the Enterprise App Catalog. More apps are available on an ongoing basis.
+
 ### How can working with the applications in Enterprise App Catalog be automated?
 
 Graph API is planned to be available soon.
