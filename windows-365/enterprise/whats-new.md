@@ -82,16 +82,6 @@ Azure network connections that meet either of the following conditions for more 
 - ANCs with provisioning policies that have no Cloud PCs associate with them.
 
 <!-- ########################## -->
-## Week of October 21, 2024
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Partners
-
-#### Use Citrix HDX Plus with Windows 365 Frontline<!--54445358-->
-
-You can now use Citrix HDX Plus with Windows 365 Frontline Cloud PCs.
-
-<!-- ########################## -->
 ## Week of October 14, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
