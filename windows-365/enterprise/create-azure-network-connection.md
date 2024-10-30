@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/01/2024
+ms.date: 10/30/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -68,7 +68,7 @@ When planning your ANC VNets with ExpressRoute as the on-premises connectivity m
 
     ![Screenshot of Name field](./media/create-azure-network-connection/connection-name.png)
 
-4. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy ANC](health-checks.md), you won't be able to proceed.
+4. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy ANC](health-checks.md), you can't proceed.
 5. Select a **Virtual network** and **Subnet**.
 6. Select **Next**.
 7. For hybrid Microsoft Entra join ANCs, on the **AD domain** page, provide the following information:
@@ -87,6 +87,8 @@ When planning your ANC VNets with ExpressRoute as the on-premises connectivity m
 
 8. Select **Next**.
 9. On the **Review + Create** page, select **Create**.
+
+When an ANC is in use, it can't be deleted and certain configuration settings can't be edited. For more information, see [Edit Azure network connection](edit-azure-network-connection.md) and [Delete Azure network connection](delete-azure-network-connection.md).
 
 <!-- ########################## -->
 ## Next steps
