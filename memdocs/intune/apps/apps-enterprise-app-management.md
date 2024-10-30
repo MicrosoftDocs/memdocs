@@ -96,7 +96,7 @@ Microsoft hosts the applications in Microsoft storage accessible through `*.mana
 
 ### Is Microsoft providing security around any of the content provided in the Enterprise App Catalog?
 
-No. Microsoft makes no guarantee, express or implied, with respect to the security and compliance of the applications provided in the Enterprise App Catalog.
+Microsoft does not assert compliance or authorizations for apps distributed via Intune. Customers are responsible for ensuring that apps meet their requirements.
 
 ### What app installer types are in the Enterprise App Catalog?
 
