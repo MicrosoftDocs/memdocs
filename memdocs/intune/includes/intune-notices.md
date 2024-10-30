@@ -4,13 +4,33 @@ description: include file
 author: dougeby  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 03/13/2024
+ms.date: 10/30/2024
 ms.author: dougeby
 manager: dougeby
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Update to the latest Intune App SDK and Intune App Wrapper for Android 15 support
+We've recently released new versions of the Intune App SDK and Intune App Wrapping Tool for Android to support Android 15. We recommend upgrading your app to the latest SDK or wrapper versions to ensure applications stay secure and run smoothly.
+ 
+#### How does this affect you or your users?
+
+If you have applications using the Intune App SDK or Intune App Wrapping Tool for Android, it's recommended that you update your app to the latest version to support Android 15.
+ 
+#### How can you prepare?
+
+If you choose to build apps targeting Android API 35, you'll need to adopt the new version of the Intune App SDK for Android (v11.0.0). If you’ve wrapped your app and are targeting API 34 you'll need to use the new version of the App wrapper (v1.0.4549.6).
+
+> [!NOTE]
+> As a reminder, while apps must update to the latest SDK if targeting Android 15, apps do not need to update the SDK to simply run on Android 15.
+
+You should also plan to update your documentation or developer guidance if applicable to include this change in support for the SDK.
+
+Here are the public repositories:
+- [Intune App SDK for Android](https://github.com/microsoftconnect/ms-intune-app-sdk-android)
+- [Intune App Wrapping Tool for Android](https://github.com/microsoftconnect/intune-app-wrapping-tool-android)
 
 ### Take Action: Update to the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS
 
