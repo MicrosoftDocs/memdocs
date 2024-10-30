@@ -84,12 +84,9 @@ Azure network connections that meet either of the following conditions for more 
 <!-- ########################## -->
 ## Week of October 21, 2024
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Partners
+#### Windows 365 support for AVC mixed mode when MMR isn't enabled (preview)<!--50205898-->
 
-#### Use Citrix HDX Plus with Windows 365 Frontline<!--54445358-->
-
-You can now use Citrix HDX Plus with Windows 365 Frontline Cloud PCs.
+AVC Mixed Mode is now available in the default graphics profile. When MMR isn't enabled, AVC/h.264 is used to encode detected image content instead of the RemoteFX image encoder. This improves performance when encoding images relative to bitrate and framerate in network-constrained scenarios.
 
 <!-- ########################## -->
 ## Week of October 14, 2024
