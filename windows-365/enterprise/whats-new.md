@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/29/2024
+ms.date: 10/23/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -52,8 +52,124 @@ For more information about public preview items, see [Public preview in Windows 
 ### Scripts
 ### End user experience
 ### Windows 365 Government
-### Windows 365 app
+### Windows 365 app 
 -->
+
+<!-- ########################## -->
+## Week of October 28, 2024 (Service release 2410)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Bulk Troubleshoot action now generally available<!--51893512-->
+
+The Troubleshoot action in bulk has moved out of preview and into general availability.
+
+For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+### Update to Cloud PC action status report<!--49451077-->
+
+The Cloud PC action status report now shows batches of devices on which actions were triggered. You can see the batch current progress. For more information, see [Cloud PC actions report ](report-cloud-pc-actions.md).
+
+### Azure network connections inactive state<!--52127015-->
+
+Azure network connections that meet either of the following conditions for more than four weeks are now marked as inactive:
+
+- ANCs that aren't associated with provisioning policies.
+- ANCs with provisioning policies that have no Cloud PCs associate with them.
+
+<!-- ########################## -->
+## Week of October 21, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Use Citrix HDX Plus with Windows 365 Frontline<!--54445358-->
+
+You can now use Citrix HDX Plus with Windows 365 Frontline Cloud PCs.
+
+<!-- ########################## -->
+## Week of October 14, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New Windows 365 IP subnet for RDP connectivity<!--53404845-->
+
+Core TCP-based RDP traffic for Cloud PC connections uses the *.wvd.microsoft.com wildcard fully qualified domain name (FQDN). The FQDN remains unchanged, but the underlying IP addresses associated with it will shortly be changed to a single subnet. This will simplify optimization of this traffic and reduce the need for future change management.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Call redirection<!--53718424-->
+
+Windows 365 now supports multimedia redirection call redirection. For more information, see [Use multimedia redirection](/azure/virtual-desktop/multimedia-redirection).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### HP Anyware for Windows 365 is now generally available<!--51133111-->
+
+HP Anyware for Windows 365 has moved out of preview and into general availability.
+
+For more information, see [Set up HP Anyware for Windows 365 Enterprise](hp-anyware-set-up.md)
+
+
+<!-- ########################## -->
+## Week of September 30, 2024 (Service release 2409)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Unavailable Cloud PCs report added to Reporting overview page<!--53687085-->
+
+The **Cloud PCs that aren't available** report has been added to the **Reports** > **Cloud PC overview** page.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Windows 11 24H2 cloud PCs gallery images<!--53461426-->
+
+The latest Windows Enterprise 24H2 images are available for provisioning new devices. You can update your provisioning policies to use either of the following images:
+
+- Windows 11 Enterprise 24H2
+- Windows 11 Enterprise + Microsoft 365 Apps 24H2
+
+
+<!-- ########################## -->
+## Week of September 23, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 11 Cloud PCs now support EN-NZ<!--54032315-->
+
+Windows 365 Cloud PCs now support EN-NZ for Windows 11.
+
+<!-- ########################## -->
+## Week of September 16, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for symmetric NAT with RDP Shortpath<!--43602619-->
+
+RDP Shortpath in Windows 365 now supports establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT. TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+### Windows 365 support for HEVC video coding<!--51599459-->
+Windows 365 will support Hardware High Efficiency Video Coding (HEVC) h.265 4:2:0 on Compatible GPU-enabled Cloud PCs. For more information, see [Enable GPU acceleration for Azure Virtual Desktop](/azure/virtual-desktop/enable-gpu-acceleration?tabs=intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows App
+
+#### Windows App is now generally available<!--46667283-->
+
+Windows App has moved out of preview and into general availability.
+
+For more information, see [What is Windows App?](/windows-app/overview)
 
 <!-- ########################## -->
 ## Week of August 26, 2024 (Service release 2408)
@@ -137,9 +253,9 @@ New GPU offerings for Window 365 Enterprise Cloud PCs have moved out of preview 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Frontline
 
-#### Windows 365 Frontline sign in time and shift change buffer improvements are now generally available<!--50220027-->
+#### The Windows 365 Frontline concurrency buffer is now generally available<!--50220027-->
 
-Sign in time and shift change buffer improvements have moved out of preview and into general availability.
+The Windows 365 concurrency buffer has moved out of preview and into general availability.
 
 <!-- ########################## -->
 ## Week of July 23, 2024
@@ -926,7 +1042,7 @@ Users now have two options when they select the **Open in browser** drop-down bu
 
 #### Windows 365 app update notifications for users<!--45206957-->
 
-Windows 365 app users will get a notification when an udpate is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
+Windows 365 app users will get a notification when an update is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot

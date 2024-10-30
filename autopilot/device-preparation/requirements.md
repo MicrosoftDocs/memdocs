@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 09/05/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -67,7 +67,7 @@ The following editions are supported:
 - Windows 11 Pro.
 - Windows 11 Pro Education.
 - Windows 11 Pro for Workstations.
-- Windows 11 Enterprise/[Windows 11 IoT Eneterprise](/windows/iot/iot-enterprise/overview).
+- Windows 11 Enterprise.
 - Windows 11 Education.
 
 ## [:::image type="icon" source="../images/icons/wifi-ethernet-18.svg"::: **Networking**](#tab/networking)
@@ -200,7 +200,7 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 
 > [!NOTE]
 >
-> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/fundamentals/licenses-assign).
+> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/mem/intune/fundamentals/licenses-assign).
 
 Additionally, the following are also recommended, but not required:
 

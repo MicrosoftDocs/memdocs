@@ -86,16 +86,6 @@ items:
       href: use-microsoft-tunnel-android.md
     - name: Installing Company Portal app in China 
       href: install-company-portal-android-china.md
-  - name: Resolve a threat in MTD app
-    items:
-    - name: Lookout for Work
-      href: you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md
-    - name: Symantec Endpoint Protection Mobile
-      href: you-need-to-resolve-a-threat-found-by-skycure-android.md
-    - name: Harmony Mobile Protect
-      href: you-need-to-resolve-a-threat-found-by-checkpoint-android.md
-    - name: Zimperium zIPS
-      href: you-need-to-resolve-a-threat-found-by-zips-android.md
   - name: Get help
     items:
     - name: Report a problem 
@@ -124,7 +114,7 @@ items:
     items:
     - name: Migrate account to new iPhone
       href: set-up-migrate-iphone-for-work.md
-    - name: Manually sync iOS/iPadOS device
+    - name: Check device status  
       href: sync-your-device-manually-ios.md
     - name: Reset iOS/iPadOS device
       href: effects-of-device-reset-company-portal-ios.md
@@ -140,16 +130,6 @@ items:
       href: use-managed-apps-on-your-device-ios.md
     - name: Use Microsoft Tunnel for iOS
       href: use-microsoft-tunnel-iOS.md 
-  - name: Resolve a threat in MTD app
-    items:
-    - name: Lookout for Work 
-      href: you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md
-    - name: Symantec Endpoint Protection Mobile
-      href: you-need-to-resolve-a-threat-found-by-skycure-ios.md
-    - name: Harmony Mobile Protect
-      href: you-need-to-resolve-a-threat-found-by-checkpoint-ios.md
-    - name: Zimperium zIPS
-      href: you-need-to-resolve-a-threat-found-by-zips-ios.md
   - name: Get help
     items:
     - name: Retrieve app logs
@@ -200,6 +180,8 @@ items:
       href: enroll-windows-10-device.md
     - name: Unenroll device
       href: unenroll-your-device-from-intune-windows.md
+    - name: Enrollment dialog FAQs
+      href: sso-dialog-faqs.yml
 
   - name: Company Portal app for Windows
     items:

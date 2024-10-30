@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2024
+ms.date: 09/10/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -174,10 +174,11 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 - **Prevent installation of devices using drivers that match these device setup classes**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx#preventinstallationofmatchingdevicesetupclasses)
+  - **Prevented Classes**  
+    Baseline default: *{d48179be-ec20-11d1-b6b8-00c04fa372a7}*  
+  
   - **Also apply to matching devices that are already installed**  
     Baseline default: *True*
-  - **Prevented Classes**  
-    Baseline default: *{d48179be-ec20-11d1-b6b8-00c04fa372a7}*
 
 ### System > Early Launch Antimalware
 
@@ -200,31 +201,13 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 ### System > Internet Communication Management > Internet Communication settings
 
-- **Turn off downloading of print drivers**  
+- **Turn off downloading of print drivers over HTTP**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disabledownloadingofprintdriversoverhttp)
 
 - **Turn off Internet download for Web publishing and online ordering wizards**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disableinternetdownloadforwebpublishingandonlineorderingwizards)
-
-### System > Power Management > Sleep Settings
-
-- **Allow standby states (S1-S3) when sleeping (on battery)**  
-  Baseline default: *Disabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#allowstandbystateswhensleepingonbattery)
-
-- **Allow standby states (S1-S3) when sleeping (plugged in)**  
-  Baseline default: *Disabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#allowstandbywhensleepingpluggedin)
-
-- **Require a password when a computer wakes (on battery)**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#requirepasswordwhencomputerwakesonbattery)
-
-- **Require a password when a computer wakes (plugged in)**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#requirepasswordwhencomputerwakespluggedin)
 
 ### System > Remote Assistance
 
@@ -263,28 +246,6 @@ The settings in this baseline apply to Windows devices managed through Intune. W
   [Learn more](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#turnoffautoplay)
   - **Turn off Autoplay on:**  
     Baseline default: *All drives*
-
-### Windows Components > BitLocker Drive Encryption > Fixed Data Drives
-
-> [!NOTE]
->
-> The default configuration of the following setting will apply to all managed Windows 365 PCs as Windows 365 PC’s do no support use of BitLocker as an encryption option.  For more information, see [Data encryption in Windows 365](/windows-365/enterprise/encryption) in the Windows Security documentation.
-
-- **Deny write access to fixed drives not protected by BitLocker**  
-  Baseline default: *Disabled*  
-  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrequireencryption)
-
-### Windows Components > BitLocker Drive Encryption > Removable Data Drives
-
-> [!NOTE]
->
-> The default configuration of the following setting will apply to all managed Windows 365 PCs as Windows 365 PC’s do no support use of BitLocker as an encryption option.  For more information, see [Data encryption in Windows 365](/windows-365/enterprise/encryption) in the Windows Security documentation.
-
-- **Deny write access to removable drives not protected by BitLocker**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesrequireencryption)
-  - **Do not allow write access to devices configured in another organization**  
-    Baseline default: *False*
 
 ### Windows Components > Credential User Interface
 
@@ -1222,28 +1183,6 @@ The settings in this baseline apply to Windows devices managed through Intune. W
   Baseline default: *Success+ Failure*  
   [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsystemintegrity)
 
-## Browser
-
-- **Allow Password Manager**  
-  Baseline default: *Block*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser?WT.mc_id=Portal-fx#allowpasswordmanager)
-
-- **Allow Smart Screen**  
-  Baseline default: *Allow*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser?WT.mc_id=Portal-fx#allowsmartscreen)
-
-- **Prevent Cert Error Overrides**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser?WT.mc_id=Portal-fx#preventcerterroroverrides)
-
-- **Prevent Smart Screen Prompt Override**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser?WT.mc_id=Portal-fx#preventsmartscreenpromptoverride)
-
-- **Prevent Smart Screen Prompt Override For Files**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser?WT.mc_id=Portal-fx#preventsmartscreenpromptoverrideforfiles)
-
 ## Data Protection
 
 - **Allow Direct Memory Access**  
@@ -1283,36 +1222,47 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 - **Allow Script Scanning**  
   Baseline default: *Allowed.*  
   [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscriptscanning)
+
   - **Block execution of potentially obfuscated scripts**  
     Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
   - **Block Win32 API calls from Office macros**  
     Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
   - **Block Office communication application from creating child processes**  
     Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
   - **Block all Office applications from creating child processes**  
     Baseline default: *Block*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block JavaScript or VBScript from launching downloaded executable content**  
-    Baseline default: *Block*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
-  - **Block untrusted and unsigned processes that run from USB**  
-    Baseline default: *Block*  
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx) 
+
   - **Block Adobe Reader from creating child processes**  
     Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
   - **Block credential stealing from the Windows local security authority subsystem**  
     Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
+  - **Block JavaScript or VBScript from launching downloaded executable content**  
+    Baseline default: *Block*  
+    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
+  - **Block untrusted and unsigned processes that run from USB**  
+    Baseline default: *Block*  
+    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
   - **Block Office applications from creating executable content**  
     Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
   - **Block Office applications from injecting code into other processes**  
     Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+
   - **Block executable content from email client and webmail**  
     Baseline default: *Block*  
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
@@ -1377,10 +1327,12 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 - **Device Password Enabled**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordenabled)
+ 
   - **Device Password History**  
     Baseline default: *Configured*  
     Value: *24*  
     [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordhistory)
+
   - **Min Device Password Length**  
     Baseline default: *Configured*  
     Value: *14*  
@@ -1397,9 +1349,11 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 - **Allow Windows Spotlight (User)**  
   Baseline default: *Allow*  
   [Learn more](/windows/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowwindowsspotlight)
+
   - **Allow Windows Consumer Features**  
     Baseline default: *Allow*  
     [Learn more](/windows/client-management/mdm/policy-csp-experience?WT.mc_id=Portal-fx#allowwindowsconsumerfeatures)
+
   - **Allow Third Party Suggestions In Windows Spotlight (User)**  
     Baseline default: *Block*  
     [Learn more](/windows/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowthirdpartysuggestionsinwindowsspotlight)
@@ -1409,74 +1363,94 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 - **Enable Domain Network Firewall**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablefirewall)
-  - **Enable Log Success Connections**  
-    Baseline default: *Enable Logging Of Successful Connections*  
-    [Learn more](/windows/client-management/mdm/Firewall-csp/?WT.mc_id=Portal-fx#mdmstoredomainprofileenablelogsuccessconnections)
-  - **Default Outbound Action**  
-    Baseline default: *Allow*  
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledefaultoutboundaction)
+
   - **Enable Log Dropped Packets**  
     Baseline default: *Enable Logging Of Dropped Packets*  
     [Learn more](/windows/client-management/mdm/Firewall-csp/?WT.mc_id=Portal-fx#mdmstoredomainprofileenablelogdroppedpackets)
+
+  - **Default Outbound Action**  
+    Baseline default: *Allow*  
+    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledefaultoutboundaction)
+
   - **Disable Inbound Notifications**  
     Baseline default: *True*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableinboundnotifications)
+
   - **Log Max File Size**  
     Baseline default: *Configured*  
     Value: *16384*  
     [Learn more](/windows/client-management/mdm/Firewall-csp/?WT.mc_id=Portal-fx#mdmstoredomainprofilelogmaxfilesize)
+
   - **Default Inbound Action for Domain Profile**  
     Baseline default: *Block*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledefaultinboundaction)
 
+  - **Enable Log Success Connections**  
+    Baseline default: *Enable Logging Of Successful Connections*  
+    [Learn more](/windows/client-management/mdm/Firewall-csp/?WT.mc_id=Portal-fx#mdmstoredomainprofileenablelogsuccessconnections)
+
 - **Enable Private Network Firewall**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablefirewall)
+
   - **Log Max File Size**  
     Baseline default: *Configured*  
     Value: *16384*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofilelogmaxfilesize)
+
   - **Default Inbound Action for Private Profile**  
     Baseline default: *Block*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultinboundaction)
+
   - **Enable Log Success Connections**  
     Baseline default: *Enable Logging Of Successful Connections*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablelogsuccessconnections)
+
   - **Enable Log Dropped Packets**  
     Baseline default: *Enable Logging Of Dropped Packets*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablelogdroppedpackets)
-  - **Default Outbound Action**  
-    Baseline default: *Allow*  
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultoutboundaction)
+
   - **Disable Inbound Notifications**  
     Baseline default: *True*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableinboundnotifications)
 
+  - **Default Outbound Action**  
+    Baseline default: *Allow*  
+    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultoutboundaction)
+
 - **Enable Public Network Firewall**  
   Baseline default: *True*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablefirewall)
+
   - **Enable Log Dropped Packets**  
     Baseline default: *Enable Logging Of Dropped Packets*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablelogdroppedpackets)
+
   - **Log Max File Size**  
     Baseline default: *Configured*  
     Value: *16384*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofilelogmaxfilesize)
+
   - **Default Outbound Action**  
     Baseline default: *Allow*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultoutboundaction)
+
   - **Disable Inbound Notifications**  
     Baseline default: *True*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableinboundnotifications)
-  - **Default Inbound Action for Public Profile**  
-    Baseline default: *Block*  
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
+
   - **Allow Local Policy Merge**  
     Baseline default: *False*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalpolicymerge)
+
+  - **Default Inbound Action for Public Profile**  
+    Baseline default: *Block*  
+    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
+
   - **Enable Log Success Connections**  
     Baseline default: *Enable Logging Of Successful Connections*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablelogsuccessconnections)
+
   - **Allow Local Ipsec Policy Merge**  
     Baseline default: *False*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
@@ -1486,94 +1460,6 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 - **Enable Insecure Guest Logons**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#enableinsecureguestlogons)
-
-## Local Policies Security Options
-
-- **Accounts Limit Local Account Use Of Blank Passwords To Console Logon Only**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#accounts_limitlocalaccountuseofblankpasswordstoconsolelogononly)
-
-- **Interactive Logon Machine Inactivity Limit**  
-  Baseline default: *Configured*  
-  Value: *900*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#interactivelogon_machineinactivitylimit)
-
-- **Interactive Logon Smart Card Removal Behavior**  
-  Baseline default: *Lock Workstation*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#interactivelogon_smartcardremovalbehavior)
-
-- **Microsoft Network Client Digitally Sign Communications Always**  
-  Baseline default: *Enable*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkclient_digitallysigncommunicationsalways)
-
-- **Microsoft Network Client Send Unencrypted Password To Third Party SMB Servers**  
-  Baseline default: *Disable*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkclient_sendunencryptedpasswordtothirdpartysmbservers)
-
-- **Microsoft Network Server Digitally Sign Communications Always**  
-  Baseline default: *Enable*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkserver_digitallysigncommunicationsalways)
-
-- **Network Access Do Not Allow Anonymous Enumeration Of SAM Accounts**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_donotallowanonymousenumerationofsamaccounts)
-
-- **Network Access Do Not Allow Anonymous Enumeration Of Sam Accounts And Shares**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_donotallowanonymousenumerationofsamaccountsandshares)
-
-- **Network Access Restrict Anonymous Access To Named Pipes And Shares**  
-  Baseline default *Enable*
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess-restrictanonymousaccesstonamedpipesandshares)
-
-- **Network Access Restrict Clients Allowed To Make Remote Calls To SAM**  
-  Baseline default: *Configured*  
-  Value: *O:BAG:BAD:(A;;RC;;;BA)*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_restrictclientsallowedtomakeremotecallstosam)
-
-- **Network Security Do Not Store LAN Manager Hash Value On Next Password Change**  
-  Baseline default: *Enable*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_donotstorelanmanagerhashvalueonnextpasswordchange)
-
-- **Network Security LAN Manager Authentication Level**  
-  Baseline default: *Send LM and NTLMv2 responses only. Refuse LM and NTLM*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_lanmanagerauthenticationlevel)
-
-- **Network Security Minimum Session Security For NTLMSSP Based Clients**  
-  Baseline default: *Require NTLM and 128-bit encryption*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_minimumsessionsecurityforntlmsspbasedclients)
-
-- **Network Security Minimum Session Security For NTLMSSP Based Servers**  
-  Baseline default: *Require NTLM and 128-bit encryption*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_minimumsessionsecurityforntlmsspbasedservers)
-
-- **User Account Control Behavior Of The Elevation Prompt For Administrators**  
-  Baseline default: *Prompt for consent on the secure desktop*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_behavioroftheelevationpromptforadministrators)
-
-- **User Account Control Behavior Of The Elevation Prompt For Standard Users**  
-  Baseline default: *Automatically deny elevation requests*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_behavioroftheelevationpromptforstandardusers)
-
-- **User Account Control Detect Application Installations And Prompt For Elevation**  
-  Baseline default: *Enable*
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-detectapplicationinstallationsandpromptforelevation)
-
-- **User Account Control Only Elevate UI Access Applications That Are Installed In Secure Locations**  
-  Baseline default: *Enabled: Application runs with UIAccess integrity only if it resides in secure location.*
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-onlyelevateuiaccessapplicationsthatareinstalledinsecurelocations)
-
-- **User Account Control Run All Administrators In Admin Approval Mode**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_runalladministratorsinadminapprovalmode)
-
-- **User Account Control Use Admin Approval Mode**  
-  Baseline default: *Enable*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_useadminapprovalmode)
-
-- **User Account Control Virtualize File And Registry Write Failures To Per User Locations**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_virtualizefileandregistrywritefailurestoperuserlocations)
 
 ## Local Security Authority
 
@@ -1607,11 +1493,13 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Minimum TLS version enabled**  
   Baseline default: *Enabled*
+
   - **Minimum TLS version enabled (Device)**  
     Baseline default: *TlS 1.2*
 
 - **Minimum TLS version enabled (User)**  
   Baseline default: *Enabled*
+
   - **Minimum TLS version enabled (User)**  
   Baseline default: *TLS 1.2*
 
@@ -1658,30 +1546,6 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Service Enabled**  
   Baseline default: *Enabled*
-
-## System Services
-
-- **Configure Xbox Accessory Management Service Startup Mode**  
-  Baseline default: *Disabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-SystemServices?WT.mc_id=Portal-fx#configurexboxaccessorymanagementservicestartupmode)
-
-- **Configure Xbox Live Auth Manager Service Startup Mode**  
-  Baseline default: *Disabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-SystemServices?WT.mc_id=Portal-fx#configurexboxliveauthmanagerservicestartupmode)
-
-- **Configure Xbox Live Game Save Service Startup Mode**  
-  Baseline default: *Disabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-SystemServices?WT.mc_id=Portal-fx#configurexboxlivegamesaveservicestartupmode)
-
-- **Configure Xbox Live Networking Service Startup Mode**  
-  Baseline default: *Disabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-SystemServices?WT.mc_id=Portal-fx#configurexboxlivenetworkingservicestartupmode)
-
-## Task Scheduler
-
-- **Enable Xbox Game Save Task**  
-  Baseline default: *Disabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-TaskScheduler?WT.mc_id=Portal-fx#enablexboxgamesavetask)
 
 ## User Rights
 
@@ -1801,22 +1665,99 @@ The settings in this baseline apply to Windows devices managed through Intune. W
   Baseline default: *(Enabled with UEFI lock) Turns on Hypervisor-Protected Code Integrity with UEFI lock.*  
   [Learn more](/windows/client-management/mdm/policy-csp-VirtualizationBasedTechnology?WT.mc_id=Portal-fx#hypervisorenforcedcodeintegrity)
 
-## Wi-Fi Settings
-
-- **Allow Auto Connect To Wi Fi Sense Hotspots**  
-  Baseline default: *Block*  
-  [Learn more](/windows/client-management/mdm/policy-csp-wifi?WT.mc_id=Portal-fx#allowautoconnecttowifisensehotspots)
-
-- **Allow Internet Sharing**  
-  Baseline default: *Block*  
-  [Learn more](/windows/client-management/mdm/policy-csp-wifi?WT.mc_id=Portal-fx#allowinternetsharing)
-
 ## Windows Ink Workspace
 
 - **Allow Windows Ink Workspace**  
   Baseline default: *Ink workspace is enabled (feature is turned on), but the user cannot access it above the lock screen.*  
   [Learn more](/windows/client-management/mdm/policy-csp-WindowsInkWorkspace?WT.mc_id=Portal-fx#allowwindowsinkworkspace)
 
+## Local Policies Security Options
+
+- **Accounts Limit Local Account Use Of Blank Passwords To Console Logon Only**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#accounts_limitlocalaccountuseofblankpasswordstoconsolelogononly)
+
+- **Interactive Logon Machine Inactivity Limit**  
+  Baseline default: *Configured*  
+  Value: *900*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#interactivelogon_machineinactivitylimit)
+
+- **Interactive Logon Smart Card Removal Behavior**  
+  Baseline default: *Lock Workstation*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#interactivelogon_smartcardremovalbehavior)
+
+- **Microsoft Network Client Digitally Sign Communications Always**  
+  Baseline default: *Enable*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkclient_digitallysigncommunicationsalways)
+
+- **Microsoft Network Client Send Unencrypted Password To Third Party SMB Servers**  
+  Baseline default: *Disable*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkclient_sendunencryptedpasswordtothirdpartysmbservers)
+
+- **Microsoft Network Server Digitally Sign Communications Always**  
+  Baseline default: *Enable*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkserver_digitallysigncommunicationsalways)
+
+- **Network Access Do Not Allow Anonymous Enumeration Of SAM Accounts**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_donotallowanonymousenumerationofsamaccounts)
+
+- **Network Access Do Not Allow Anonymous Enumeration Of Sam Accounts And Shares**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_donotallowanonymousenumerationofsamaccountsandshares)
+
+- **Network Access Restrict Anonymous Access To Named Pipes And Shares**  
+  Baseline default *Enable*
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess-restrictanonymousaccesstonamedpipesandshares)
+
+- **Network Access Restrict Clients Allowed To Make Remote Calls To SAM**  
+  Baseline default: *Configured*  
+  Value: *O:BAG:BAD:(A;;RC;;;BA)*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_restrictclientsallowedtomakeremotecallstosam)
+
+- **Network Security Do Not Store LAN Manager Hash Value On Next Password Change**  
+  Baseline default: *Enable*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_donotstorelanmanagerhashvalueonnextpasswordchange)
+
+- **Network Security LAN Manager Authentication Level**  
+  Baseline default: *Send LM and NTLMv2 responses only. Refuse LM and NTLM*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_lanmanagerauthenticationlevel)
+
+- **Network Security Minimum Session Security For NTLMSSP Based Clients**  
+  Baseline default: *Require NTLM and 128-bit encryption*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_minimumsessionsecurityforntlmsspbasedclients)
+
+- **Network Security Minimum Session Security For NTLMSSP Based Servers**  
+  Baseline default: *Require NTLM and 128-bit encryption*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_minimumsessionsecurityforntlmsspbasedservers)
+
+- **User Account Control Behavior Of The Elevation Prompt For Administrators**  
+  Baseline default: *Prompt for consent on the secure desktop*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_behavioroftheelevationpromptforadministrators)
+
+- **User Account Control Behavior Of The Elevation Prompt For Standard Users**  
+  Baseline default: *Automatically deny elevation requests*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_behavioroftheelevationpromptforstandardusers)
+
+- **User Account Control Detect Application Installations And Prompt For Elevation**  
+  Baseline default: *Enable*
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-detectapplicationinstallationsandpromptforelevation)
+
+- **User Account Control Only Elevate UI Access Applications That Are Installed In Secure Locations**  
+  Baseline default: *Enabled: Application runs with UIAccess integrity only if it resides in secure location.*
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-onlyelevateuiaccessapplicationsthatareinstalledinsecurelocations)
+
+- **User Account Control Run All Administrators In Admin Approval Mode**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_runalladministratorsinadminapprovalmode)
+
+- **User Account Control Use Admin Approval Mode**  
+  Baseline default: *Enable*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_useadminapprovalmode)
+
+- **User Account Control Virtualize File And Registry Write Failures To Per User Locations**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_virtualizefileandregistrywritefailurestoperuserlocations)
 ::: zone-end
 
 ::: zone pivot="win365-nov21"
@@ -2790,6 +2731,11 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2113937)
 
 ## Microsoft Defender Antivirus Exclusions
+
+> [!WARNING]
+> **Defining exclusions lowers the protection offered by Microsoft Defender Antivirus**. Always evaluate the risks that are associated with implementing exclusions. Only exclude files you know aren't malicious.
+>
+> For more information, see [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions) in the Microsoft Defender documentation.
 
 - **Defender Processes to exclude**  
   Baseline defaults:  *Not configured by default. Manually add one or more entries.*

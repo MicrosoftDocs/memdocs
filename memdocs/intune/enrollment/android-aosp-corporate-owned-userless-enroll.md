@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 09/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -46,9 +46,10 @@ Devices enrolled into Intune with this management mode are automatically set up 
 Devices are configured in [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. Devices enable single sign-on (SSO) between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). By installing Company Portal, users can also leverage SSO when signing out of [apps that are integrated with the Intune SDK](../apps/apps-supported-intune-apps.md), even apps that don't yet participate with shared device mode. 
 
 
+## Prerequisites  
 
-
-## Prerequisites
+>[!NOTE]
+> Beginning October 1st, AOSP devices must have the Microsoft Intune app, version 24.7.0 or later to sync with the Microsoft Intune service.  
 
 To enroll and manage AOSP devices, you must have:
 
@@ -59,7 +60,7 @@ You must also:
 
 * [Set Microsoft Intune as the mobile device management (MDM) authority in your tenant](../fundamentals/mdm-authority-set.md). You only need to do this once, when you first set up Intune for mobile device management.  
 
-* Assign valid licenses to all RealWear device users. For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md).  
+* Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md) and [Managing specialty devices with Microsoft Intune](../fundamentals/specialty-devices-with-intune.md).  
 
 
 ## Create an enrollment profile  
@@ -71,12 +72,12 @@ Create an enrollment profile to enable enrollment on devices.
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **Enrollment**.  
 3. Select the **Android** tab.  
-4. In the **Android Open Source Project (AOSP) (Preview)** section, choose **Corporate-owned, userless devices (Preview)**.  
+4. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, userless devices**.  
 5. Select **Create profile**.  
 6.	Enter the basics for your profile:  
     - **Name**: Give the profile a name. Note the name down for later, because you'll need it when you set up the dynamic device group.   
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.    
-    - **Token expiration date**: Select the date the token expires, up to 90 days in the future.  
+    - **Token expiration date**: Select the date the token expires, which can be up to 90 days in the future.  
     - **SSID**: Identifies the network that the device will connect to.  
 
         > [!NOTE]
@@ -97,12 +98,12 @@ Create an enrollment profile to enable enrollment on devices.
 ### Access enrollment token  
 After you create a profile, Intune generates a token that's needed for enrollment. To access the token:
 
-1. Go to **Corporate-owned, userless devices (Preview)**.
+1. Go to **Corporate-owned, userless devices**.
 2. From the list, select your enrollment profile. 
 3. Select **Tokens**. 
 
 Another way to find the token is:
-1. Go to **Corporate-owned, userless devices (Preview)**.
+1. Go to **Corporate-owned, userless devices**.
 2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
 3. Select **View enrollment token**.  
 
@@ -110,7 +111,7 @@ The token appears as a QR code. During device setup, when prompted to, scan the 
 
 You can also export the enrollment profile JSON file. To create a JSON file:
 
-1. Go to **Corporate-owned, userless devices (Preview)**.
+1. Go to **Corporate-owned, userless devices**.
 2. From the list, select your enrollment profile.
 3. Select **Token > Export**.   
 
@@ -124,10 +125,10 @@ Generate a new token to replace one that's nearing its expiration date. Replacin
 
 1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 2. Select the **Android** tab.  
-3. In the **Android Open Source Project (AOSP) (Preview)** section, choose **Corporate-owned, userless devices (Preview)**. 
+3. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, userless devices**. 
 4. Choose the profile that you want to work with.
 5. Select **Token** > **Replace token**.
-6. Enter the new token expiration date. Tokens must be replaced at least every 90 days. 
+6. Enter the token's new expiration date. The token must be replaced at least every 90 days. 
 7. Select **OK**.    
 
 ### Revoke token  
@@ -140,7 +141,7 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
 
 1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 2. Select the **Android** tab.  
-3. In the **Android Open Source Project (AOSP) (Preview)** section, choose **Corporate-owned, userless devices (Preview)**.  
+3. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, userless devices**.  
 4.	Choose the profile that you want to work with.
 5.	Select **Token** > **Revoke token** > **Yes**.   
 

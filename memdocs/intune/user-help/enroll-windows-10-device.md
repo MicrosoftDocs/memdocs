@@ -98,7 +98,7 @@ For a non-exhaustive list of error messages and resolutions, see [Troubleshoot W
 
 ## Support for IT administrators    
 
-If you're an IT administrator and run into problems while enrolling devices, see [Troubleshooting Windows device enrollment problems in Microsoft Intune](https://support.microsoft.com/help/4469913). This article lists common errors, their causes, and steps to resolve them. 
+If you're an IT administrator and run into problems while enrolling devices, see [Troubleshooting Windows device enrollment problems in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors). This article lists common errors, their causes, and steps to resolve them. 
 
 ## Next steps  
 If you need more help setting up your device or using Company Portal, contact your support person. Sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's contact information.   

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 08/09/2024
+ms.date: 09/09/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -88,6 +88,8 @@ Each updated image includes:
 - [Microsoft Teams updates](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-d7092a6d-c896-424c-b362-a472d5f105de)
 - [WebRTC redirector service updates](/azure/virtual-desktop/teams-on-avd#install-the-teams-websocket-service)
 
+Applications that come pre-installed are the latest version that is available at the start of the second Tuesday of that month. Any app updates posted on that day are included in the image update of the subsequent month.
+
 Newly provisioned Cloud PCs are automatically created with the latest images. For existing Cloud PCs, you can receive the updates by reprovisioning.
 
 ## Custom images
@@ -118,3 +120,5 @@ When you upload a custom device image, Windows 365:
 [Learn about device configuration](device-configuration.md).
 
 [Learn about using apps, like Microsoft Teams, with your Cloud PCs](app-overview.md).
+
+[Learn about restoring a Cloud PC to a previous state](restore-overview.md)

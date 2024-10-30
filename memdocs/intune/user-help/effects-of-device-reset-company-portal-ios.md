@@ -37,7 +37,7 @@ If your device is only set up to access work or school email, your email account
 
 ## Availability of factory reset option 
 
-The factory reset option isn't available for all iOS devices. If you're an IT support person and want to find out more about these limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](/intune/devices-wipe).  
+The factory reset option isn't available for all iOS devices. If you're an IT support person and want to find out more about these limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](/mem/intune/remote-actions/devices-wipe).  
 
 ## Factory reset device  
 To reset a device to its original, out-of-box settings:   

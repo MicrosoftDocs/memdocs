@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 04/24/2024
+ms.date: 10/10/2024
 ms.localizationpriority: high
 ---
 
@@ -12,26 +12,27 @@ ms.localizationpriority: high
 
 - **User assigned devices** - devices enrolled with user affinity using Automated Device Enrollment or personally enrolled devices.
   - iOS/iPadOS 15.x and later
-  - macOS 12.0 and later
+  - macOS 13.0 and later
 - **User-less devices** - devices enrolled without user affinity using Automated Device Enrollment or Apple Configurator.
   - Supported:
-    - iOS/iPadOS 15.x and later
-    - macOS 12.0 and later
+    - iOS/iPadOS 16.x and later
+    - macOS 13.0 and later
   - Allowed to enroll:
-    - iOS/iPadOS 12.x and later
+    - iOS/iPadOS 13.x and later
     - macOS 10.14 and later
 
 > [!NOTE]
 > **Supported** versions include devices running the three most recent operating system versions. These devices can enroll and take advantage of all Intune functionality that is applicable, and all new eligible features will work on these devices.
 >
-> **Allowed** versions includes devices running a non-supported version (within three versions of the supported versions). These devices can enroll and take advantage of Intune's eligible features but there is no guarantee that they will work as expected. 
+> **Allowed** versions includes devices running a non-supported version (within three versions of the supported versions). These devices can enroll and take advantage of Intune's eligible features but there is no guarantee that they will work as expected.
 >
 > Intune requires iOS 15.x or later for app protection policies and app configuration.
 
 ### Android
 
-- Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
-- Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
+- For user-based management methods: Android 10.0 and later
+- For userless management methods: Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
+- Android enterprise
 - Android open source project device: [See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 

@@ -91,6 +91,7 @@ General prerequisites for Remote Help are listed here [Prerequisites for Remote 
 - macOS 12 (Monterey)
 - macOS 13 (Ventura)
 - macOS 14 (Sonoma)
+- macOS 15 (Sequoia)
 
 ### Remote Help Web App supported browsers
 
