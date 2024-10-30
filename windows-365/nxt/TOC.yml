@@ -1,0 +1,35 @@
+items:
+- name: NXT docs
+  href: index.yml
+- name: Device overview
+  items:  
+  - name: What is NXT? 
+    href: overview.md
+  - name: What can NXT do for you?
+    href: tbd.md
+- name: Using your NXT
+  items:
+  - name: First-time usage
+    items:
+    - name: Unboxing your NXT
+      href: 
+    - name: First time user set up
+      href: 
+    - name: Getting around NXT
+      href: 
+    - name: Update NXT
+      href: 
+  - name: Daily usage
+    items:
+    - name: Sign in
+      href:
+- name: Deploying NXT
+  items:
+  - name: Common deployment scenarios
+    href:
+  - name: Planning NXT deployment
+    href: 
+- name: Troubleshooting
+  items:
+  - name: Troubleshooting
+    href: troubleshooting-nxt.md

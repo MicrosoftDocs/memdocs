@@ -1,0 +1,98 @@
+### YamlMime:Hub
+title: NXT documentation
+summary: Official product documentation for NXT
+
+metadata:
+  services: service
+  ms.service: windows-365
+  ms.topic: hub-page
+  author: erikjeMS
+  ms.author: erikje
+  manager: dougeby
+  ms.date: 11/192024
+  ms.subservice: windows-365-enterprise
+
+highlightedContent:
+  items:
+    - title: What is NXT?
+      itemType: overview
+      url: overview.md
+    - title: What's new in NXT?
+      itemType: overview
+      url: whats-new.md
+    - title: Features in development
+      itemType: overview
+      url: in-development.md
+    - title: Planning your NXT deployment
+      itemType: get-started
+      url: planning-guide.md
+    - title: Requirements
+      itemType: how-to-guide
+      url: requirements.md
+
+conceptualContent:
+  items:
+    - title: More info 1
+      links:
+        - url: planning-guide.md
+          itemType: how-to-guide
+          text: Planning guide
+        - url: requirements.md
+          itemType: how-to-guide
+          text: Requirements
+      footerLink:
+        url: planning-guide.md
+        text: See more
+    - title: More info 2
+      links:
+        - url: deployment-overview.md
+          itemType: how-to-guide
+          text: Link 1
+        - url: assign-licenses.md
+          itemType: how-to-guide
+          text: Link 2
+        - url: create-azure-network-connection.md
+          itemType: how-to-guide
+          text: Link 3
+      footerLink:
+        url: deployment-overview.md
+        text: See more
+    - title: More info 3
+      links:
+        - url: create-provisioning-policy.md
+          itemType: how-to-guide
+          text: Create provisioning policy
+        - url: automated-provisioning-steps.md
+          itemType: concept  
+          text: Automated provisioning steps
+      footerLink:
+        url: create-provisioning-policy.md
+        text: See more
+additionalContent:
+  sections:
+    - title: Additional resources related to NXT
+      items:
+      - title: Windows 365
+        links: 
+        - text: Link 1
+          url: /windows-365/
+        - text: Link 2
+          url: /windows-365/
+        - text: Link 3
+          url: /windows-365/
+      - title: Additional 2
+        links:
+          - text: Link 1
+            url: /windows/resources/
+          - text: Link 2
+            url: /windows/deployment/
+          - text: Link 3
+            url: https://blogs.windows.com/  
+      - title: Microsoft Intune product family
+        links:
+          - text: Microsoft Intune product family documentation
+            url: /mem/index
+          - text: Overview of Microsoft Intune family
+            url: /mem/endpoint-manager-overview
+          - text: Microsoft Intune blog
+            url: https://aka.ms/memblog
