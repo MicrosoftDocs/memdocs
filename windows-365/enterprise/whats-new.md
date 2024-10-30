@@ -75,8 +75,6 @@ You can now use Citrix HDX Plus with Windows 365 Frontline Cloud PCs.
 
 Core TCP-based RDP traffic for Cloud PC connections uses the *.wvd.microsoft.com wildcard fully qualified domain name (FQDN). The FQDN remains unchanged, but the underlying IP addresses associated with it will shortly be changed to a single subnet. This will simplify optimization of this traffic and reduce the need for future change management.
 
-For more information, see [Plan for change: New Windows 365 IP Subnet for RDP Connectivity](https://iridias.microsoft.com/messagecenter?id=894574) Message Center post.
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
