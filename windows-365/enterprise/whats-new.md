@@ -82,6 +82,13 @@ Azure network connections that meet either of the following conditions for more 
 - ANCs with provisioning policies that have no Cloud PCs associate with them.
 
 <!-- ########################## -->
+## Week of October 21, 2024
+
+#### Windows 365 support for AVC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+
+AVC Mixed Mode is now available in the default graphics profile. When MMR isn't enabled, AVC/h.264 is used to encode detected image content instead of the RemoteFX image encoder. This improves performance when encoding images relative to bitrate and framerate in network-constrained scenarios.
+
+<!-- ########################## -->
 ## Week of October 14, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
