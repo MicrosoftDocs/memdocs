@@ -11,7 +11,7 @@ ms.collection:
 - graph-interactive
 ---
 
-# Device restrictions
+# Common Education iPad device restrictions
 
 This article summarizes the configurations that are most commonly used for student and teacher iPads in educational organizations.
 
