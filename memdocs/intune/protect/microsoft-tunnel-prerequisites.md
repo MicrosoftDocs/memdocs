@@ -210,6 +210,24 @@ Podman uses the file **/etc/cni/net.d as 87-podman-bridge.conflist** to configur
 
 For more information, see [Configuring container networking with Podman](https://www.redhat.com/sysadmin/container-networking-podman) in the Red Hat documentation.
 
+### Linux system auditing
+
+Linux system auditing can help identify security-relevant information or security violations on a Linux server that hosts Microsoft Tunnel. Linux system auditing is recommended for Microsoft Tunnel, but not required. To use system auditing, a Linux server must have the **auditd** package installed to `/etc/audit/auditd.conf`.
+
+Details on how to implement auditing depend on the Linux platform you use:
+
+- **Red Hat**: Versions of Red Had Enterprise Linux 7 and later install the *auditd* package by default. However, if the package isn't installed, you can use the following command line on the Linux server to install it: `sudo dnf install audit audispd-plugins`
+
+  Typically, the *auditd* package is available from the default repository of each REHL version.
+
+  For more information about using system auditing on RHEL, see [Configure Linux system auditing with auditd](https://www.redhat.com/blog/configure-linux-auditing-auditd) in the Red Hat Blog.
+
+- **Ubuntu**: To use system auditing with Ubuntu you must manually install the *auditd* package. To do so, use the following command line on the Linux server: `sudo apt install auditd audispd-plugins`
+
+  Typically, the *auditd* package is available from the default repository of each Ubuntu version.
+
+  For more information about using system auditing on Ubuntu, see [How to setup and Install Auditd on Ubuntu](https://dev.to/ajaykdl/how-to-setup-auditd-on-ubuntu-jfk), an article that is available on the dev.to website that was originally published at kubefront.com.
+
 ## Network
 
 - **Enable packet forwarding for IPv4**: Each Linux server that hosts the Tunnel server software must have IP forwarding for IPv4 enabled. To check on the status of IP forwarding, on the server run one of the following generic commands as *root* or *sudo*. Both commands return a value of **0** for *disabled* and a value of **1** for *enabled*:

@@ -75,6 +75,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of October 14, 2024
+
+### Device security
+
+#### Defender for Endpoint security settings support in government cloud environments (generally available)<!-- 30064299 -->
+
+Now generally available, customer tenants in the Government Community Cloud (GCC), US Government Community High (GCC High), and Department of Defense (DoD) environments can use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. Previously, support for Defender security settings was in public preview.
+
+This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
 
 ## Week of October 14, 2024 (Service release 2410)
 
