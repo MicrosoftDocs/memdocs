@@ -83,7 +83,7 @@ For more information, see [Licensing and branches](../../understand/learn-more-e
 
 ### Review Microsoft .NET versions
 
-Configuration Manager now requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console.<!--10402814--> Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8.
+Configuration Manager now requires Microsoft .NET Framework version 4.8 for site servers, specific site systems, clients, and the console.<!--10402814--> Before you run setup to install or update the site, first update .NET and restart the system.
 
 This installation can put the site system server into a reboot pending state and report errors to the Configuration Manager component status viewer. .NET applications on the server might experience random failures until you restart the server.
 
