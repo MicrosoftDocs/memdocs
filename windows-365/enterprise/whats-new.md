@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/23/2024
+ms.date: 10/31/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -84,6 +84,10 @@ Azure network connections that meet either of the following conditions for more 
 
 - ANCs that aren't associated with provisioning policies.
 - ANCs with provisioning policies that have no Cloud PCs associate with them.
+
+#### Cloud PC connection quality report now available for Windows 365 Government<!--46738280-->
+
+The Cloud PC connection quality report is now available for Windows 365 Government, both Government Community Cloud (GCC) and GCC-High. For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
 
 <!-- ########################## -->
 ## Week of October 21, 2024
