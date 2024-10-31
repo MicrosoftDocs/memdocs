@@ -67,6 +67,10 @@ The Troubleshoot action in bulk has moved out of preview and into general availa
 
 For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
 
+#### Microsoft Remote Desktop iOS client now supports Yubikey smart card redirection<!--49237449-->
+
+The Microsoft Remote Desktop iOS client now supports smart card redirection for YubiKeys using USB-C or Lightning connector. This enables in-session smart card usage.
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
