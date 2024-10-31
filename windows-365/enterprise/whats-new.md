@@ -87,7 +87,7 @@ Azure network connections that meet either of the following conditions for more 
 
 #### Cloud PC connection quality report now available for Windows 365 Government<!--46738280-->
 
-The Cloud PC connection quality report is now available for Windows 365 Government, both Government Community Cloud (GCC) and GCC-High. For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
+The Cloud PC connection quality report is now available for Windows 365 Government, both Government Community Cloud (GCC) and GCC-High. For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md). 
 
 <!-- ########################## -->
 ## Week of October 21, 2024
