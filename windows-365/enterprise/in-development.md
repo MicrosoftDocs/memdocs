@@ -64,7 +64,6 @@ In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 appli
 - Windows 10 Enterprise + Microsoft 365 Apps 22H2
 - Windows 10 Enterprise + Microsoft 365 Apps 21H2
 
-
 <!-- ***********************************************-->
 <!--## Device security-->
 
@@ -75,7 +74,7 @@ In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 appli
 <!--## Miscellaneous
 -->
 
-<!-- ***********************************************--> 
+<!-- ***********************************************-->
 ## Monitor and troubleshoot
 
 ### End user manual connectivity check<!--37679345 -->
@@ -97,7 +96,6 @@ The remoting connection report will be retired on December 31st, 2024. After thi
 
 <!-- ***********************************************-->
 <!--## Windows 365 Frontline-->
-
 
 ## Next steps
 
