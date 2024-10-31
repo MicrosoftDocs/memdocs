@@ -21,7 +21,7 @@ If you have applications using the Intune App SDK or Intune App Wrapping Tool fo
  
 #### How can you prepare?
 
-If you choose to build apps targeting Android API 35, you'll need to adopt the new version of the Intune App SDK for Android (v11.0.0). If you’ve wrapped your app and are targeting API 34 you'll need to use the new version of the App wrapper (v1.0.4549.6).
+If you choose to build apps targeting Android API 35, you'll need to adopt the new version of the Intune App SDK for Android (v11.0.0). If you’ve wrapped your app and are targeting API 35 you'll need to use the new version of the App wrapper (v1.0.4549.6).
 
 > [!NOTE]
 > As a reminder, while apps must update to the latest SDK if targeting Android 15, apps do not need to update the SDK to simply run on Android 15.
