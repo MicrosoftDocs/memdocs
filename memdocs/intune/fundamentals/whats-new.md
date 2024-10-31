@@ -75,7 +75,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
-<<<<<<< HEAD
+
 ## Week of October 28, 2024
 
 ### Device security
