@@ -35,6 +35,8 @@ Configuration Manager lets you manage Microsoft 365 Apps in the following ways:
 
 To review Microsoft 365 Apps client information and start some of these Microsoft 365 Apps management actions, use the [Office 365 Client Management dashboard](office-365-dashboard.md).
 
+**Warning**: With Microsoft 365 Apps Perpetual updates there is currently a delay with the sync. The updates will appear in  Office 365 Updates node a week or so after the stated time in the 'Deate Released' column.
+
 ## <a name="bkmk_deploy"></a> Deploy Microsoft 365 Apps
 Start the Microsoft 365 Apps Installer from the Office 365 Client Management dashboard for the initial Microsoft 365 Apps installation. The wizard lets you configure Microsoft 365 Apps installation settings, download files from the Office Content Delivery Networks (CDNs), and create and deploy a script application for the files. Until Microsoft 365 Apps is installed on clients and the [Microsoft 365 Apps automatic updates task](/deployoffice/overview-update-process-microsoft-365-apps) runs, Microsoft 365 Apps updates aren't applicable. For testing purposes, you can run the update task manually.
 
