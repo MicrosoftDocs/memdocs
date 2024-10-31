@@ -64,19 +64,6 @@ In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 appli
 - Windows 10 Enterprise + Microsoft 365 Apps 22H2
 - Windows 10 Enterprise + Microsoft 365 Apps 21H2
 
-### Azure network connections inactive state<!--52127015-->
-
-In a future update, Azure network connections that meet either of the following conditions for more than four weeks will be marked as inactive:
-
-- ANCs that aren't associated with provisioning policies.
-- ANCs with provisioning policies that have no Cloud PCs associate with them.
-
-Inactive ANCs:
-
-- Can't be assigned to provisioning policies.
-- Are skipped during health checks.
-
-You'll be able to reactive such ANCs.
 
 <!-- ***********************************************-->
 <!--## Device security-->
@@ -88,16 +75,12 @@ You'll be able to reactive such ANCs.
 <!--## Miscellaneous
 -->
 
-<!-- ***********************************************-->
+<!-- ***********************************************--> 
 ## Monitor and troubleshoot
 
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
-
-### Update to Cloud PC action status report<!--49451077-->
-
-The Cloud PC action status report will show batches of devices in which actions have been triggered. Customers will be able to see the batch current progress.
 
 ### Remoting connections report deprecation<!--52990648-->
 
