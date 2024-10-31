@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2024
+ms.date: 10/31/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,7 +75,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
-## Week of October 14, 2024
+## Week of October 28, 2024
 
 ### Device security
 
