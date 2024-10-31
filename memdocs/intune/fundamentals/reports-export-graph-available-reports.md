@@ -954,7 +954,7 @@ You can check whether the ChromeOSDevices report has completed by using the Micr
 Use the output from the above call to determine the status of the ChromeOSDevices report. An example call will look similar to the following:
 `https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('ChromeOSDevices_1223a321-4bcd-5432-efg1-0hi9876h1234') `
 
-You can continue to run your call to check the status of the report. When the report shows a status of `complete`, you're report is ready to be downloaded.
+You can continue to run your call to check the status of the report. When the report shows a status of `complete`, your report is ready to be downloaded.
 
 ### Download the completed ChromeOSDevices report
 
