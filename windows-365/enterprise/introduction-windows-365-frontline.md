@@ -39,7 +39,7 @@ Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead,
 
 Windows 365 Frontline has two different modes: dedicated mode and shared mode.
 
-## Windows 365 Frontline dedicated mode
+## Windows 365 Frontline in dedicated mode
 
 A single license:
 
@@ -55,12 +55,15 @@ Windows 365 Frontline dedicated mode is designed specifically for workers who ne
 
 The maximum number of active Windows 365 Frontline Cloud PC sessions in your organization is equal to the number of Windows 365 Frontline licenses that you purchased. For example, if you purchase 10 licenses, up to 30 Cloud PCs can be provisioned in dedicated mode. Ten of those Cloud PCs can be active at a given time. The active sessions are managed automatically. When a user signs off from their Cloud PC, the session is released for another user to start using their Cloud PC. A concurrency buffer exists to exceed the maximum a limited number of times per day. For more information, see [Exceeding the maximum concurrency limit ](#exceeding-the-maximum-concurrency-limit).
 
-## Windows 365 Frontline shared mode
+## Windows 365 Frontline in shared mode
 
 A single license:
 
 - Lets you provision one Cloud PC that can be shared noncurrently among a group of users.
 - Provides one concurrent session.
+
+> [!NOTE]
+> During public preview, it's recommended that no more than 10 users are assigned to one Windows 365 Frontline license. There will be a cap when Windows 365 Frontline in shared mode moves into general availability.
 
 Windows 365 Frontline in shared mode is designed specifically for workers who
 
@@ -86,9 +89,9 @@ Windows 365 Frontline licenses are pooled licenses applied at the tenant level, 
 
 Windows 365 Frontline is a separate product and isn't governed by the Microsoft 365 F1/F3 license eligibility conditions.
 
-### Windows 365 Frontline dedicated mode licensing
+### Windows 365 Frontline mode licensing
 
-To use Windows 365 Frontline in dedicated mode, each user must be licensed for:
+To use Windows 365 Frontline, each user must be licensed for:
 
 - Windows 11 Enterprise or Windows 10 Enterprise
 - Microsoft Intune
@@ -103,14 +106,6 @@ In addition to being available independently, Windows Enterprise, Intune, and Mi
 - Microsoft 365 A5
 - Microsoft 365 Business Premium
 - Microsoft 365 Education Student Use Benefit subscriptions
-
-### Windows 365 Frontline shared mode licensing
-
-To use Windows 365 Frontline in shared mode, the administrator who provisioned the Cloud PCs must be licensed for:
-
-- Windows 11 Enterprise or Windows 10 Enterprise
-- Microsoft Intune
-- Microsoft Entra ID P1.
 
 ## Managing Windows 365 Frontline Cloud PCs
 
