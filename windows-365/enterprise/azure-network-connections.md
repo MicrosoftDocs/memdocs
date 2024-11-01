@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/28/2024
+ms.date: 10/30/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -47,8 +47,8 @@ There are two kinds of ANCs based on their join type. Both let you manage traffi
 
 When a Cloud PC is provisioned, the information in the ANC is used by the provisioning policy to provision the Cloud PC in the Azure subnet. The information required in an ANC includes:
 
-- **Network details**: The Azure subscription, resource group, virtual network, and subnet that the Cloud PC will be associated with. When a provisioning policy runs, it creates a Cloud PC in the Microsoft hosted Azure subscription. To connect to a customer's on-premises network, a virtual network interface card (vNic) is injected into a customer-provided Azure virtual network (vNet). To create this vNic, Windows 365 needs sufficient access to an Azure subscription.
-- **Active Directory domain**: The Active Directory domain to join, an Organizational Unit (OU) destination for the computer object, and Active Directory user credentials with sufficient permissions to perform the domain join. When a provisioning policy runs, the Cloud PC is joined to this Active Directory domain. The credentials will be stored securely in the Windows 365 service.
+- **Network details**: The Azure subscription, resource group, virtual network, and subnet to associate with the Cloud PC. When a provisioning policy runs, it creates a Cloud PC in the Microsoft hosted Azure subscription. To connect to a customer's on-premises network, a virtual network interface card (vNic) is injected into a customer-provided Azure virtual network (vNet). To create this vNic, Windows 365 needs sufficient access to an Azure subscription.
+- **Active Directory domain**: The Active Directory domain to join, an Organizational Unit (OU) destination for the computer object, and Active Directory user credentials with sufficient permissions to perform the domain join. When a provisioning policy runs, the Cloud PC is joined to this Active Directory domain. The credentials are stored securely in the Windows 365 service.
 
 During provisioning, the Cloud PC is connected to the Azure subnet and joined to a domain (either Windows Server Active Directory or Microsoft Entra ID). This process results in a Cloud PC that is:
 
@@ -61,7 +61,7 @@ The ANC settings are applied to the Cloud PC only at the time of provisioning.
 
 ### Alternate ANCs
 
-To help make provisioning Cloud PCs more reliable in the rare case of capacity constraints in a region, you have the option to assign alternate ANCs to a provisioning policy. You can define the priority order of the ANCs that the policy will use. If the first ANC is unavailable, the policy will automatically use the second ANC in the priority list. If the second one is unavailable, it will move on to the next, and so on. This lets administrators prepare multiple ANCs in different Azure regions, making provisioning more reliable. You don't have to use multiple ANCs. For more information about using alternate ANCs when creating your provisioning policies, see [Create provisioning policies](create-provisioning-policy.md).
+To help make provisioning Cloud PCs more reliable in the rare case of capacity constraints in a region, you can assign alternate ANCs to a provisioning policy. You can define the priority order of the ANCs that the policy uses. If the first ANC is unavailable, the policy automatically uses the second ANC in the priority list. If the second one is unavailable, it moves on to the next, and so on. This process lets administrators prepare multiple ANCs in different Azure regions, making provisioning more reliable. You don't have to use multiple ANCs. For more information about using alternate ANCs when creating your provisioning policies, see [Create provisioning policies](create-provisioning-policy.md).
 
 ## First health check
 
@@ -81,7 +81,7 @@ After provisioning, the information in an ANC is also used to monitor:
 - the connection health between your network-based resources
 - the Cloud PC hosted in the Microsoft hosted subscription
 
-Windows 365 will report configuration issues that may cause provisioning failures or poor end-user experiences. This monitoring reduces your management overhead. For more information on these periodic checks, see [Azure network connection health checks](health-checks.md).
+Windows 365 reports configuration issues that may cause provisioning failures or poor end-user experiences. This monitoring reduces your management overhead. For more information on these periodic checks, see [Azure network connection health checks](health-checks.md).
 
 ## Health check frequency
 
@@ -102,13 +102,13 @@ The ANC wizard requires access to Azure and, optionally, on-premises domain reso
 - [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator) or [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference) role.
 - An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit (Microsoft Entra hybrid join ANCs only).
 
-To create or edit an ANC, you must at least have the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
+To create or edit an ANC, you must have at least the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
 
 For a full list of requirements, see [Windows 365 requirements](requirements.md).
 
 ## Changing an Azure network connection
 
-Changing the settings in an ANC won’t affect Cloud PCs previously provisioned with that ANC. Only Cloud PCs provisioned after the changes to the ANC will reflect such later changes.
+Changing the settings in an ANC won’t affect Cloud PCs previously provisioned with that ANC. Only Cloud PCs provisioned after the changes to the ANC reflect such later changes.
 
 If you want to change the ANC related settings on a previously provisioned Cloud PC, you must reprovision the Cloud PC. Reprovisioning is a destructive action, so be sure it's an action you really want to take. For more information, see [reprovisioning](provisioning.md#reprovisioning).  
 
@@ -124,6 +124,10 @@ After completing either of these operations, you can delete the ANC.
 ## Maximum Azure network connections
 
 Each tenant has a limit of 10 Azure network connections. If your organization needs more than 10 Azure network connections, contact support.
+
+## Inactive ANCs
+
+ANCs that are unused for a period of time become inactive. Inactive ANCs pause running health checks and can't be assigned to a provisioning policy until the ANC is reactivated and health checks complete successfully.  
 
 ## User sign-in
 

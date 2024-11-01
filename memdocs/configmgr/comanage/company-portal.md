@@ -83,7 +83,7 @@ For more information on client settings, see the following articles:
 
 - To require the app on co-managed devices, the deployment process depends upon the state of the [Client apps](workloads.md#client-apps) co-management workload:
 
-  - If the client apps workload is with Configuration Manager, [create and deploy an application with Configuration Manager](../apps/get-started/create-and-deploy-an-application.md). Download the offline Company Portal app from the [Microsoft Store for Business](https://www.microsoft.com/business-store).
+  - If the client apps workload is with Configuration Manager, [create and deploy an application with Configuration Manager](../apps/get-started/create-and-deploy-an-application.md).
 
   - If the client apps workload is with Intune, you can deploy it via Configuration Manager or [add the Company Portal app by using Microsoft Intune](../../intune/apps/store-apps-company-portal-app.md).
 

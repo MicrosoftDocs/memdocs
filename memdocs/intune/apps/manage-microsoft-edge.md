@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 10/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -282,7 +282,7 @@ Edge for iOS and Android allows organizations to disable certain features that a
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br>**coupons** disables coupons <br>**extensions** disables extensions (Edge for Android only) <br>**developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br>**UIRAlert** suppress re-verify account popups in new tab page screen <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
+|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br>**coupons** disables coupons <br>**extensions** disables extensions (Edge for Android only) <br>**developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br>**UIRAlert** suppress re-verify account popups in new tab page screen <br> **share** disables Share under menu <br> **sendtodevices** disables Send to devices under menu <br> **weather** disables weather in NTP (New Tab Page) <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
 
 #### Disable import passwords feature
 
@@ -316,9 +316,12 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 |com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode |**true** shows the address bar in kiosk mode <br>**false** (default) hides the address bar when kiosk mode is enabled|
 |com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode |**true** shows the bottom action bar in kiosk mode <br>**false** (default) hides the bottom bar when kiosk mode is enabled |
 
+> [!NOTE]
+> Kiosk mode is not supported on iOS devices. However, you may want to use Locked View Mode (MDM policy only) to achieve a similar user experience, where users are unable to navigate to other websites, as the URL address bar becomes read-only in Locked View Mode.
+
 ### Locked view mode
 
-Edge for iOS and Android can be enabled as locked view mode with MDM policy EdgeLockedViewModeEnabled.
+Edge for iOS and Android can be enabled as locked view mode with MDM policy **[EdgeLockedViewModeEnabled](/deployedge/microsoft-edge-mobile-policies#edgelockedviewmodeenabled)**.
 
 |Key  |Value  |
 |:---------|:---------|
@@ -485,16 +488,6 @@ Organizations can configure a search provider for users. To configure a search p
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | The corresponding value is a string <br> **Example** `My Intranet Search`  |
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | The corresponding value is a string <br> **Example** `https://search.my.company/search?q={searchTerms}`|
 
-### Open external apps
-When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
-
-|Key |Value |
-|:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.OpeningExternalApps |**0** (default) Show the pop-up for users to choose stay in Edge or open by external apps. <br>**1** Always open within Edge without showing the pop-up.<br> **2** Always open with external apps without showing the pop-up. If external apps aren't installed, the behavior will be the same as value 1|
-
-> [!NOTE]
-> As of version 120.2210.99, the app jump blocker feature is removed. External apps will be opened from Edge by default. Therefore, this policy is no longer valid from version 120.2210.99.
-
 ### Copilot
 
 > [!NOTE]
@@ -549,6 +542,16 @@ Organizations can define which sites users can access within the work or school 
 
 Organizations also define what happens when a user attempts to navigate to a restricted web site. By default, transitions are allowed. If the organization allows it, restricted web sites can be opened in the personal account context, the Microsoft Entra account’s InPrivate context, or whether the site is blocked entirely. For more information on the various scenarios that are supported, see [Restricted website transitions in Microsoft Edge mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). By allowing transitioning experiences, the organization's users stay protected, while keeping corporate resources safe.
 
+To enhance the profile-switching experience by reducing the need for users to manually switch to personal profiles or InPrivate mode to open blocked URLs, we’ve introduced two new policies:
+- `com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock`
+- `com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork`
+
+Since these policies bring different results based on their configurations and combinations, we recommend trying our policy suggestions below for a quick evaluation to see if the profile-switching experience aligns well with your organization’s needs before exploring detailed documentation. Suggested profile-switching configuration settings include the following values:
+- `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock=true`
+- `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true`
+- `com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock=1`
+- `com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork=2`
+
 > [!NOTE]
 > Edge for iOS and Android can block access to sites only when they're accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site. URLs that start with **Edge**, such as `Edge://*`, `Edge://flags`, and `Edge://net-export`, aren't supported in app configuration policy **AllowListURLs** or **BlockListURLs** for managed apps. You can disable these URLs with **com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList**. <br><br> If your devices are managed, you can also use app configuration policy [URLAllowList](/deployedge/microsoft-edge-mobile-policies#urlallowlist) or [URLBlocklist](/deployedge/microsoft-edge-mobile-policies#urlblocklist) for managed devices. For related information, see [Microsoft Edge mobile policies](/deployedge/microsoft-edge-mobile-policies).
 
@@ -556,8 +559,8 @@ Use the following key/value pairs to configure either an allowed or blocked site
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.AllowListURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
-|com.microsoft.intune.mam.managedbrowser.BlockListURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
+|com.microsoft.intune.mam.managedbrowser.AllowListURLs <br><br> This policy name has been replaced by the UI of **Allowed URLs** under Edge Configuration settings|The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
+|com.microsoft.intune.mam.managedbrowser.BlockListURLs <br><br> This policy name has been replaced by the UI of **Blocked URLs** under Edge Configuration settings|The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
 |com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock |**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts aren't disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context. <br>**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked. |
 |com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked <br><br> This policy name has been replaced by the UI of **Redirect restricted sites to personal context** under Edge Configuration settings |**true** allows restricted sites to be opened in the Microsoft Entra account's InPrivate context. If the Microsoft Entra account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account. <br>**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. <br>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
 |com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar | Enter the number of seconds that users will see the snack bar notification "Access to this site is blocked by your organization. We’ve opened it in InPrivate mode for you to access the site." By default, the snack bar notification is shown for 7 seconds.|
@@ -570,6 +573,22 @@ The following sites except copilot.microsoft.com are always allowed regardless o
 - `https://*.windowsazure.com/*`
 - `https://*.microsoftonline.com/*`
 - `https://*.microsoftonline-p.com/*`
+
+### Control the behavior of the Site Blocked popup
+When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites. You can choose preferences between InPrivate and personal account.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in.If personal account is not signed in, the behavior will be changed to value 2. <br>**2**:Automatically switch to InPrivate if InPrivate switch is allowed by com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true. |
+
+### Control the behavior of switching personal profile to work profile 
+When Edge is under the personal profile and users are attempting to open a link from Outlook or Microsoft Teams which are under the work profile, by default, Intune will use the Edge work profile to open the link because both Edge, Outlook, and Microsoft Teams are managed by Intune. However, when the link is blocked, the user will be switched to the the personal profile. This causes a friction experience for users
+
+You can configure a policy to enhance users' experience. This policy is recommended to be used together with AutoTransitionModeOnBlock as it may switch users to the personal profile according to the policy value you configured.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork |**1**: (Default) Switch to work profile even if the URL is blocked by Edge policy.<br> **2**: The blocked URLs will open under personal profile if personal profile is signed in. If personal profile is not signed in, the blocked URL will opened in InPrivate mode. |
 
 #### URL formats for allowed and blocked site list
 
@@ -606,25 +625,6 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://*`
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
-
-### Control the behavior of the Site Blocked popup
-When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites. You can choose preferences between InPrivate and personal account.
-
-|Key |Value |
-|:--|:----|
-|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in.If personal account is not signed in, the behavior will be changed to value 2. <br>**2**:Automatically switch to InPrivate if InPrivate switch is allowed by com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true. |
-
-### Control the behavior of switching personal profile to work profile 
-When Edge is under the personal profile and users are attempting to open a link from Outlook or Microsoft Teams which are under the work profile, by default, Intune will use the Edge work profile to open the link because both Edge, Outlook, and Microsoft Teams are managed by Intune. However, when the link is blocked, the user will be switched to the the personal profile. This causes a friction experience for users
-
-You can configure a policy to enhance users' experience. This policy is recommended to be used together with AutoTransitionModeOnBlock as it may switch users to the personal profile according to the policy value you configured.
-
-|Key |Value |
-|:--|:----|
-|com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork |**1**: (Default) Switch to work profile even if the URL is blocked by Edge policy.<br> **2**: URLs that are blocked by Edge policy will not be switched to work profile. |
-
-> [!NOTE]
-> This policy takes effect when Edge is in personal profile and is receiving URL from a managed apps such as Outlook and Microsoft Teams by Intune. Edge also needs to have both personal profile and work profile signed in.
 
 ### Disable Edge internal pages
 You can disable Edge internal pages such as `Edge://flags` and `Edge://net-export`. More pages can be found from `Edge://about`

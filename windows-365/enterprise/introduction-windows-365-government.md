@@ -45,7 +45,7 @@ For more information about Cloud PCs and Windows 365, see [What is Windows 365?]
 
 ## Features not yet supported Windows 365 Government
 
-The following features aren't yet supported for Windows 365 GCC or GCC High. 
+The following features aren't yet supported for Windows 365 GCC or GCC High.
 
 - Unified dashboard
 - Windows 365 Security baseline
@@ -68,6 +68,7 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 - [Support for Omnissa Horizon clients and the Blast protocol](set-up-omnissa-horizon.md)
 - [Microsoft Purview Customer Key](purview-customer-key.md)
 - [HP Anyware for Windows 365](hp-anyware-set-up.md)
+- Bulk Troubleshoot action
 
 ## Next steps
 
