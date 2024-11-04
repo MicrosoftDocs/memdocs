@@ -56,6 +56,7 @@ As part of the process to place Cloud PCs under review, Windows 365 requires the
         - **Premium account type**: **Page blobs**
     - **Security**
         - Minimum TLS version: **Version 1.2**
+        - Confirm **Allow blob anonymous access** is disabled (the default)
     - **Networking**
         - **Network access**: **Enable public access from all networks**
 
