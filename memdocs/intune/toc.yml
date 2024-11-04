@@ -1865,6 +1865,16 @@ items:
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu.md
             - name: OneDrive Known Folder Move
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove.md
+          - name: Intune policies for iPads in Education
+            items:
+            - name: Device restrictions
+              href: ./industry/education/tutorial-school-deployment/common-config-ipads-device-restrictions.md
+            - name: Apple Intelligence
+              href: ./industry/education/tutorial-school-deployment/common-config-ipads-ai.md
+            - name: iPads with no user affinity
+              href: ./industry/education/tutorial-school-deployment/common-config-ipads-nouser.md
+            - name: Optional restrictions
+              href: ./industry/education/tutorial-school-deployment/common-config-ipads-optional.md
 
       - name: Intune for Education docs
         href: /intune-education/
