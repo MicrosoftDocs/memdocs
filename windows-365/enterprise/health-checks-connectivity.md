@@ -42,7 +42,7 @@ You can review any failed connectivity checks and use the **Troubleshoot this co
 
 If the Cloud PC is connected, the status shows as **Available**.
 
-If there is a problem with the Cloud PC's connection due to malfunctioning components, the status shows as **Unavailable**. Details appear on the right. Select **Troubleshoot this connection** to troubleshoot the issue.
+If there's a problem with the Cloud PC's connection due to malfunctioning components, the status shows as **Unavailable**. Select **Troubleshoot this connection** to troubleshoot the issue.
 
 ## Connectivity errors
 
@@ -74,7 +74,7 @@ Connectivity errors can occur even when all connectivity health checks successfu
 
 ## User connectivity history report
 
-The user connectivity history report shows when a user started a connection and when the connection finished. There are different ways a connection can start/finish and these are logged as activities in the report.
+The user connectivity history report shows when a user started a connection and when the connection finished. There are different ways a connection can start/finish and these connections are logged as activities in the report.
 
 ### View Connectivity history report
 
@@ -93,7 +93,7 @@ The report shows of the following activities:
 
 Select any activity to get more information about the event.
 
-The connectivity history report provides visibility to other activities within a 1-hour period of a connectivity error or failed check.  As an example, if a user attempts to connect to their Cloud PC, and is not able to, the health checks and successful sign-in activity within 1 hour prior/after of the error shows as well.  This allows an admin to evaluate an error, possible cause, and if/when the system became healthy again.
+The connectivity history report provides visibility to other activities within a one hour period of a connectivity error or failed check. As an example, if a user attempts to connect to their Cloud PC, and isn't able to, the health checks and successful sign-in activity within 1 hour prior/after of the error shows as well. This information allows an admin to evaluate an error, possible cause, and if/when the system became healthy again.
 
 <!-- ########################## -->
 ## Next steps
