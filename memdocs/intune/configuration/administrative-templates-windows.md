@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/28/2024
+ms.date: 11/04/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ ms.collection:
 # Use Windows 10/11 templates to configure group policy settings in Microsoft Intune
 
 > [!IMPORTANT]
-> In January 2025, the **Templates** > **Administrative Templates** profile type is being removed. To create ADMX template profiles, use the **[settings catalog](settings-catalog.md)**. For more information on this change, see [Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-device-configuration-policies-migrating-to/ba-p/4189665).
+> Starting with the December 2412 release, you can't create new Administrative Templates policies from the **Templates** > **Administrative Templates** profile type in the Intune admin center. To create ADMX template profiles, use the **[settings catalog](settings-catalog.md)**. For more information on this change, see [Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-device-configuration-policies-migrating-to/ba-p/4189665).
 
 **Administrative Templates** in Microsoft Intune include thousands of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Google Chrome, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings enable administrators to create group policies using the cloud.
 
@@ -101,7 +101,7 @@ This article describes the steps to create a template for Windows client devices
     # [ADMX template](#tab/template)
 
     > [!IMPORTANT]
-    > In January 2025, the **Templates** > **Administrative Templates** profile type is being removed. To create ADMX template profiles, use the **[settings catalog](settings-catalog.md)**. For more information on this change, see [Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-device-configuration-policies-migrating-to/ba-p/4189665).
+    > Starting with the December 2412 release, you can't create new Administrative Templates policies from the **Templates** > **Administrative Templates** profile type in the Intune admin center. To create ADMX template profiles, use the **[settings catalog](settings-catalog.md)**. For more information on this change, see [Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-device-configuration-policies-migrating-to/ba-p/4189665).
 
     To see an alphabetical list of all the settings, go to **Configuration settings** and select **All settings** . Or, configure settings that apply to devices (**Computer configuration**), or settings that apply to users **(User configuration**):
 
