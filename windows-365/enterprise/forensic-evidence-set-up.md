@@ -143,4 +143,4 @@ For more information about Microsoft Purview, see [Learn about Microsoft Purview
 
 For more information about Microsoft Purview forensic evidence capturing options, see [Capturing options](/purview/insider-risk-management-forensic-evidence#capturing-options).
 
-For more information Microsoft Purview capacity and billing, see [capacity and billing](/purview/insider-risk-management-forensic-evidence-manage?tabs=purview-portal#capacity-and-billing).
+For more information Microsoft Purview capacity and billing, see [Capacity and billing](/purview/insider-risk-management-forensic-evidence-manage?tabs=purview-portal#capacity-and-billing).
