@@ -14,7 +14,7 @@ items:
     - name: Unboxing your NXT
       href: 
     - name: First time user set up
-      href: 
+      href: setup.md
     - name: Getting around NXT
       href: 
     - name: Update NXT
@@ -25,9 +25,13 @@ items:
       href:
 - name: Deploying NXT
   items:
-  - name: Common deployment scenarios
+  - name: Requirements
     href:
-  - name: Planning NXT deployment
+  - name: Join NXT to Microsoft Entra
+    href:
+  - name: Automatically enroll in Intune
+    href: 
+  - name: Enable single sign-on
     href: 
 - name: Troubleshooting
   items:
