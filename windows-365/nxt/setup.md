@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: What is NXT?
+title: Set up NXT
 titleSuffix:
-description: What is NXT?
+description: Learn how to set up your NXT
 keywords:
 author: ErikjeMS  
 ms.author: erikje
