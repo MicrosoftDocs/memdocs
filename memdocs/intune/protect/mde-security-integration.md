@@ -135,6 +135,7 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2012 R2 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2016 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2019 (with [KB5025229](https://support.microsoft.com/topic/april-11-2023-kb5025229-os-build-17763-4252-e8ead788-2cd3-4c9b-8c77-d677e2d8744f))
+  - Windows Server 2019 Core (with the [Server Core App Compatibility Feature on Demand](https://learn.microsoft.com/en-us/windows-server/get-started/server-core-app-compatibility-feature-on-demand) installed)  
 - Windows Server 2022, including Server Core (with [KB5025230](https://support.microsoft.com/topic/april-11-2023-security-update-kb5025230-5048ddfb-7bf3-4e6c-b29a-7b44b789d282))
 - Domain controllers (preview). See important information in [Use of security settings management on domain controllers](#use-of-security-settings-management-on-domain-controllers) (in this article).
 
