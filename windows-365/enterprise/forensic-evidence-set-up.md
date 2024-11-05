@@ -125,7 +125,7 @@ After you create the policy, a user must sign in to their device before the poli
 
 ### Use a local script to deploy configuration package
 
-Follow the instructions in  [Onboard Windows 10 and Windows 11 devices using a local script](/purview/device-onboarding-script). This can be helpful when testing a subset of Cloud PCs before proceeding to onboard all your Cloud PCs.
+Follow the instructions in [Onboard Windows 10 and Windows 11 devices using a local script](/purview/device-onboarding-script). This script can be helpful when testing a subset of Cloud PCs before proceeding to onboard all your Cloud PCs.
 
 ## View onboarding devices list
 
