@@ -79,7 +79,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Tenant administration
 
-#### Intune now supports Ubuntu 24.04 LTS for Linux management.<!-- 28363586  -->
+#### Intune now supports Ubuntu 24.04 LTS for Linux management.<!--28363586  -->
 
 We're now supporting device management for Ubuntu 24.04 LTS. You can enroll and manage Linux devices running Ubuntu 24.04, and assign standard compliance policies, custom configuration scripts, and compliance scripts.
 
