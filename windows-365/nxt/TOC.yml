@@ -26,11 +26,11 @@ items:
 - name: Deploying NXT
   items:
   - name: Requirements
-    href:
+    href: requirements.md
   - name: Join NXT to Microsoft Entra
-    href:
+    href: join-microsoft-entra.md
   - name: Automatically enroll in Intune
-    href: 
+    href: intune-automatic-enrollment.md
   - name: Enable single sign-on
     href: 
 - name: Troubleshooting
