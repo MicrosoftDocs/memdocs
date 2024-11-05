@@ -35,7 +35,7 @@ ms.collection:
 
 Microsoft Intune can integrate data from a Mobile Threat Defense (MTD) partner for use by device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
 
-After you [setup your MTD Partner](/protect/mobile-threat-defense.md#mobile-threat-defense-partners) and configure the Intune connector in the MTD partner console, you can then enable the MTD connection for that MTD partner application from within the Intune admin center.
+After you [setup your MTD Partner](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) and configure the Intune connector in the MTD partner console, you can then enable the MTD connection for that MTD partner application from within the Intune admin center.
 
 Applies to:
 
