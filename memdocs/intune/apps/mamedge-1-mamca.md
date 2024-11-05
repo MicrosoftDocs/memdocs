@@ -102,7 +102,7 @@ In the previous steps, you implemented conditional access as a required app prot
     
     :::image type="content" alt-text="Device Platform - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business59.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business59.png":::
     
-7. Select **Grant** and select **Require device to be market as compliant.** This will provide access through desktop apps only for enrolled and compliant devices.
+7. Select **Grant** and select **Require device to be marked as compliant.** This will provide access through desktop apps only for enrolled and compliant devices.
 
     :::image type="content" alt-text="Grant - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business60.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business60.png":::
 

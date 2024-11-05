@@ -55,6 +55,10 @@ These status values for custom images also appear under the **OS support status*
 
 Starting on the end of support date, gallery images that use the expired OS won’t be selectable for newly created provisioning policies. The images also won’t be available for use when editing existing provisioning policies.
 
+## Device action limitations for unsupported images
+
+Cloud PCs associated with provisioning policies using images in the unsupported state can’t be reprovisioned or reset. Any device actions requiring provisioning, like reprovisioning, can’t be performed on such Cloud PCs. The resize device action isn’t impacted by unsupported state.
+
 ## Removed images
 
 Gallery images might rarely be removed prior to the End of Support date. Such removed images go through the same **Warning** and **Unsupported** states as the OS.

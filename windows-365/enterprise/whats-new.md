@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/23/2024
+ms.date: 10/31/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -67,6 +67,10 @@ The Troubleshoot action in bulk has moved out of preview and into general availa
 
 For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
 
+#### Microsoft Remote Desktop iOS client now supports Yubikey smart card redirection<!--49237449-->
+
+The Microsoft Remote Desktop iOS client now supports smart card redirection for YubiKeys using USB-C or Lightning connector. This enables in-session smart card usage.
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
@@ -80,6 +84,10 @@ Azure network connections that meet either of the following conditions for more 
 
 - ANCs that aren't associated with provisioning policies.
 - ANCs with provisioning policies that have no Cloud PCs associate with them.
+
+#### Cloud PC connection quality report now available for Windows 365 Government<!--46738280-->
+
+The Cloud PC connection quality report is now available for Windows 365 Government, both Government Community Cloud (GCC) and GCC-High. For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md). 
 
 <!-- ########################## -->
 ## Week of October 21, 2024
