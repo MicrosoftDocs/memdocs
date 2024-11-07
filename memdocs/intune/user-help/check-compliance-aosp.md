@@ -50,7 +50,7 @@ Complete these steps to check compliance and refresh the device settings status 
 
 2. Tap **Devices** and then select your device.  
 
-3. Under **Device Settings Status**, tap **Refresh**.  Wait while the Intune app checks device settings and updates the device settings status.  
+3. Under **Device Settings Status**, tap **Refresh**. Wait while the Intune app checks device settings and updates the device settings status.  
 
 4. If your device is noncompliant and you're required to make changes, you receive a compliance notification in the Intune app. Tap the notification for more information.  
 
