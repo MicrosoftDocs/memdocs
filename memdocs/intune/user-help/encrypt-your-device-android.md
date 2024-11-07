@@ -44,7 +44,7 @@ Before you can access school or work resources, your organization might require 
 
 ## Encrypt device
 
-Follow these steps to encrypt your device. Your device may restart more than once. The name and location of the encryption option varies depending on your device manufacturer and Android version. These steps don't apply to newer Android devices, which are are encrypted by default when you set up a lock screen.    
+Follow these steps to encrypt your device. Your device may restart more than once. The name and location of the encryption option varies depending on your device manufacturer and Android version. These steps don't apply to newer Android devices, which are encrypted by default when you set up a lock screen.    
 
 1. Open the **Settings** app.
 2. Type **security** or **encrypt** in the search bar to find related settings.  
