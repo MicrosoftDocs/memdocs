@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 11/07/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
