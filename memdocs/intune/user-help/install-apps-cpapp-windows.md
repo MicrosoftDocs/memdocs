@@ -48,21 +48,28 @@ Required apps are necessary for work and school and are deployed directly to you
 To find out which installed apps are required:  
 
 1. Sign into the Company Portal app with your work or school account.   
-2. Go to **Downloads & updates**.
-    ![Screenshot of the Downloads & updates page for the Company Portal app for Windows. ](./media/windows-companyportal-02.png)  
+2. Go to **Downloads & updates**.  
+
+    ![Screenshot of the Downloads & updates page for the Company Portal app for Windows. ](./media/install-apps-cpapp-windows/windows-companyportal-02.png)  
 3. In the table, look under the column **Required by your organization**. A *yes* means that the app is required on your enrolled device.    
 
 ## Install apps  
 Before you begin, install [Intune Company Portal for Windows from the Microsoft Store](https://apps.microsoft.com/detail/9WZDNCRFJ3PZ).    
 
-1. Sign in to the Company Portal app on your work or school device. You'll see the latest notifications on the Home page.
-    ![Screenshot of the Home page with notifications in the Company Portal app for Windows.](./media/windows-companyportal-03.png)  
+1. Sign in to the Company Portal app on your work or school device. You'll see the latest notifications on the Home page.  
+
+    ![Screenshot of the Home page with notifications in the Company Portal app for Windows.](./media/install-apps-cpapp-windows/windows-companyportal-03.png)  
+
 2. You can access available apps from the following places in Company Portal:      
 
     * **Home**: Go to **Home** to view your organization's featured apps.  
+
     * **Apps**: Go to **Apps** to view, sort, and filter through all available apps.  
+
     * **App categories**: Go to **App categories** to browse apps by type or function. Apps in this area are sorted into categories picked by your organization, like *featured*, *education*, and *productivity*.  
+
     * **Search for apps**: Use the static search bar in the navigation pane to search apps by name or publisher.  
+
 3. Select an app, and then choose **Install**. The app's installation status changes to *Installing* while the app installation occurs, then *Installed* when installation is done. Select **Retry** if a required app fails to install and the option to retry is available. It could take up to ten minutes for the installation status to update itself. 
 
 > [!TIP]
@@ -80,8 +87,9 @@ Go to **Apps** to see a list of all available and installed apps on your device.
 Select **Sort by** to rearrange the apps alphabetically by app or publisher name, or chronologically by publish date. Under **Refine**, you can select a category to narrow results to a certain type of app. 
 
 ## View installed apps  
-Go to **Downloads & updates** to see a list of installed apps on your device. If no apps are available to view, you'll see a message that no company apps were installed.  
-![Screenshot of the Downloads & updates page for the Company Portal app for Windows.](./media/windows-companyportal-02.png)
+Go to **Downloads & updates** to see a list of installed apps on your device. If no apps are available to view, you'll see a message that no company apps were installed. 
+ 
+![Screenshot of the Downloads & updates page for the Company Portal app for Windows.](./media/install-apps-cpapp-windows/windows-companyportal-02.png)
 
 The following information is available for each app:    
 
@@ -105,7 +113,7 @@ Share and recommend apps to your work or school contacts. The following steps de
 ## Request an app for work or school  
 Request an app that's unavailable in the Company Portal app. Go to **Help & support** for your organization's helpdesk details. The same contact information is available on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
-  ![Screenshot of the Company Portal app for Windows, Help & Support page, highlighting the Helpdesk section. ](./media/1812_UCP_Help_Support_helpdesk.png)  
+  ![Screenshot of the Company Portal app for Windows, Help & Support page, highlighting the Helpdesk section.](./media/install-apps-cpapp-windows/1812_UCP_Help_Support_helpdesk.png)  
 
 ## Uninstall apps  
 

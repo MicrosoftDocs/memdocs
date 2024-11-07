@@ -42,7 +42,7 @@ Sign in to the [Company Portal website](https://portal.manage.microsoft.com) to 
 ## View all apps  
 From the menu, select **Apps** to see all apps made available by your organization. 
 
-   ![Screenshot of Company Portal website, Apps page.](./media/intune-view-apps-1907.png)  
+   ![Screenshot of Company Portal website, Apps page.](./media/manage-apps-cpweb/intune-view-apps-1907.png)  
 
 This page lists the following details about each app:  
 
@@ -64,7 +64,7 @@ Company Portal doesn't immediately recognize newly added Windows devices. So bef
 
 Use the search bar to find apps. Search results are sorted automatically by relevancy.  
 
-   ![Screenshot of Company Portal website, Apps page, showing Refine options.](./media/intune-refine-all-apps-1907.png)  
+   ![Screenshot of Company Portal website, Apps page, showing Refine options.](./media/manage-apps-cpweb/intune-refine-all-apps-1907.png)  
 
 Select **Refine** to see filter and sort options. Filter the list to show apps with specific criteria, including **Type**, **Availability**, and **Publishers**. Select **Sort** to rearrange the apps by:
 
@@ -75,7 +75,7 @@ Select **Refine** to see filter and sort options. Filter the list to show apps w
 ## View installed apps  
 From the menu, select **Installed Apps** to view a list of all apps installed on your device.  
 
-   ![Screenshot of Company Portal website, Installed Apps page.](./media/intune-installed-apps-1907.png)  
+   ![Screenshot of Company Portal website, Installed Apps page.](./media/manage-apps-cpweb/intune-installed-apps-1907.png)  
 
 
 This page lists the following details about each app:  
@@ -90,7 +90,7 @@ This page lists the following details about each app:
 
 Use the search bar to find apps. Search results are sorted automatically by relevancy.  
 
-   ![Screenshot of Company Portal website, Installed Apps, refine options.](./media/intune-installed-refine-1907.png)  
+   ![Screenshot of Company Portal website, Installed Apps, refine options.](./media/manage-apps-cpweb/intune-installed-refine-1907.png)  
 
 Select **Refine** to see filter and sort options. Filter the list to show apps with specific criteria, including **Types**, **Publishers**, and **Statuses**. Select **Sort** to rearrange the apps by:
 
@@ -114,7 +114,7 @@ Apps are made available to you based on your device type. For example, if you're
 Select an app on the **Apps** or **Installed apps** page to view its details. You'll be taken to **App details**, where you'll find the app's description and requirements. If an app isn't already installed on your device, you can install it from this page. 
 
 
-   ![Screenshot of Company Portal website, App details page.](./media/intune-app-details-1907.png)  
+   ![Screenshot of Company Portal website, App details page.](./media/manage-apps-cpweb/intune-app-details-1907.png)  
 
 ## Device compliance status
 View the compliance status of your devices from the Company Portal website. You can navigate to the [Company Portal](https://portal.manage.microsoft.com/devices) website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**.
