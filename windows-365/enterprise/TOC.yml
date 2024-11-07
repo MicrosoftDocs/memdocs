@@ -119,6 +119,8 @@ items:
           href: windows-365-boot-restrict-user-access-physical-device.md
       - name: Partner connectors for Windows 365
         items:
+        - name: Partner integration scenarios
+          href: partner-integration-scenarios.md
         - name: Citrix requirements
           href: requirements-citrix.md
         - name: Set up Citrix HDX Plus for Windows 365

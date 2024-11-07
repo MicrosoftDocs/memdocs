@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/10/2024
+ms.date: 10/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,7 +35,7 @@ ms.collection:
 
 You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by SentinelOne, a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the SentinelOne app.
 
-You can configure Conditional Access policies based on SentinelOne risk assessment enabled through Intune device compliance policies for enrolled devices, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
+You can configure Conditional Access policies that are based on SentinelOne risk assessment, enabled through Intune device compliance policies for enrolled devices. You can use these policies to allow or block noncompliant devices access to corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
 
 ## Supported platforms
 
@@ -51,7 +51,7 @@ You can configure Conditional Access policies based on SentinelOne risk assessme
 
 ## How do Intune and SentinelOne help protect your company resources?
 
-The SentinelOne app for Android and iOS/iPadOS captures file system, network stack, device, and application telemetry where available, then sends the telemetry data to the SentinelOne cloud service to assess the device's risk for mobile threats.
+For Android and iOS/iPadOS The SentinelOne app captures file system, network stack, device, and application telemetry where available. Then the app sends the  data to the SentinelOne cloud service to assess the device's risk for mobile threats.
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from SentinelOne. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the SentinelOne app installed in their devices to resolve the issue and regain access to corporate resources. To support using SentinelOne with enrolled devices:
 

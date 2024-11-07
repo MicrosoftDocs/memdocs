@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/30/2024
+ms.date: 10/30/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -68,19 +68,19 @@ When a supported device onboards to Microsoft Defender for Endpoint:
 - For devices that aren't fully Microsoft Entra registered, a synthetic device identity is created in Microsoft Entra ID that allows the device to retrieve policies. Fully registered devices use their current registration.
 - Policies retrieved from Microsoft Intune are enforced on the device by Microsoft Defender for Endpoint.
 
-Security settings management isn't yet supported with Government clouds. For more information, see [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
-
 ### Government cloud support
 
-As a public preview, the Defender for Endpoint security settings management scenario is supported in the following tenants:
+The Defender for Endpoint security settings management scenario is supported in the following government tenants:
 
-- US Government Community (GCC) High
+- US Government Community Cloud (GCC)
+- US Government Community High (GCC High)
 - Department of Defense (DoD)
 
 For more information, see:
 
 - [Intune US Government service description](../fundamentals/intune-govt-service-description.md)
 - [Microsoft Defender for Endpoint for US Government customers](/microsoft-365/security/defender-endpoint/gov)
+- [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
 
 ### Connectivity requirements
 
@@ -102,7 +102,8 @@ With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defende
 - Debian 9 or higher  
 - SUSE Linux Enterprise Server 12 or higher  
 - Oracle Linux 7.2 or higher  
-- Amazon Linux 2  
+- Amazon Linux 2 
+- Amazon Linux 2023
 - Fedora 33 or higher
 
 To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for Linux*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-updates).
@@ -134,6 +135,7 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2012 R2 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2016 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2019 (with [KB5025229](https://support.microsoft.com/topic/april-11-2023-kb5025229-os-build-17763-4252-e8ead788-2cd3-4c9b-8c77-d677e2d8744f))
+- Windows Server 2019 Core (with the [Server Core App Compatibility Feature on Demand](/windows-server/get-started/server-core-app-compatibility-feature-on-demand) installed)  
 - Windows Server 2022, including Server Core (with [KB5025230](https://support.microsoft.com/topic/april-11-2023-security-update-kb5025230-5048ddfb-7bf3-4e6c-b29a-7b44b789d282))
 - Domain controllers (preview). See important information in [Use of security settings management on domain controllers](#use-of-security-settings-management-on-domain-controllers) (in this article).
 
