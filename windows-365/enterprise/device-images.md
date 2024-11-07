@@ -52,6 +52,10 @@ A custom image must also meet the following extra requirements:
 - Exist in an Azure subscription.
 - Is stored as a [managed image](/azure/virtual-machines/capture-image-resource) in Azure.
 
+> [!NOTE]
+>
+> Some editions of the Windows operating system, like N or long term service channel (LTSC) editions, aren't supported. For best results when you create a custom image, use one of the Cloud PC gallery images as a starting template.
+
 Storing a managed image on Azure incurs storage costs. However, customers can delete the managed image from Azure once they've successfully uploaded it as a Custom Image to Microsoft Intune.
 
 ## Gallery images
