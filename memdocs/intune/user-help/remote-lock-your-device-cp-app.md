@@ -47,7 +47,7 @@ Complete the following steps to lock a missing device from the Company Portal ap
 4. Choose **Actions**, and then select **Remote lock**.    
 5. Select **Lock** to confirm that you want to lock the device. The app will try to lock your device and redirect you to **Home**.  
 
-   ![Screenshot of Company Portal app, Device details page, Remote lock confirmation prompt.](./media/1804_remote_lock_Windows_CPapp_06.png)  
+   ![Screenshot of Company Portal app, Device details page, Remote lock confirmation prompt.](./media/remote-lock-your-device-cp-app/1804_remote_lock_Windows_CPapp_06.png)  
 
 4. Should you find your device, enter your passcode to unlock it.  
 

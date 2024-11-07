@@ -58,16 +58,12 @@ Complete these steps to set up and enroll your device.
 
     * Token: When you get to the Google sign-in screen, complete the steps in [Token enrollment](#token-enrollment).  
     * Google Zero Touch: After you connect to Wi-Fi, your device will be recognized by your organization. Continue to step 4 and follow the onscreen prompts until setup is complete.    
- 
-       ![Example image of Google terms screen that you see if you're using Google Zero Touch, highlighting Accept & Continue button.](./media/google-zero-touch-intune-app-01.png)   
    
-4. Review Google's terms. Then tap **ACCEPT & CONTINUE**.  
-
-      ![Example image of Google terms screen, highlighting Accept & Continue button.](./media/fully-managed-intune-app-04.png)   
+4. Review the terms from Google. Then tap **ACCEPT & CONTINUE**.   
 
 6. Review Chrome's Terms of Service. Then tap **ACCEPT & CONTINUE**.  
 
-   ![Example image of Chrome Terms of Service screen, highlighting Accept & Continue button.](./media/fully-managed-intune-app-06.png)   
+   ![Example image of Chrome Terms of Service screen, highlighting Accept & Continue button.](./media/enroll-android-device-disa-purebred/fully-managed-intune-app-06.png)   
 
 7. On the sign in screens, sign in with your work or school account.   
 
@@ -76,23 +72,15 @@ Complete these steps to set up and enroll your device.
 
 8. Depending on your organization's requirements, you might be prompted to update settings, such as screen lock or encryption. If you see these prompts, tap **SET** and follow the onscreen instructions.  
 
-   ![Example image of Set up your work phone screen, highlighting Set button.](./media/fully-managed-intune-app-10.png)   
-
 9. To install work apps on your device, tap **INSTALL**. After installation is complete, tap **NEXT**.  
-
-   ![Example image of Set up your work phone screen, highlighting Install button.](./media/fully-managed-intune-app-11.png)   
 
 10. Tap **START** to open the Microsoft Intune app and register your device. 
 
-    ![Example image of Set up your work phone screen, highlighting Start button.](./media/fully-managed-intune-app-17.png)   
-
 11. Tap **SIGN IN** and then tap **NEXT** to begin registration. When you see the message that registration is complete, tap **DONE**.  
-
-    ![Example image of Set up access, register your device screen, highlighting Done button.](./media/fully-managed-intune-app-19.png)   
 
 10. When you see the message that your device is ready, tap **DONE**.  
 
-    ![Example image of Set up your work phone screen, highlighting Done button.](./media/fully-managed-intune-app-18.png)   
+    ![Example image of Set up your work phone screen, highlighting Done button.](./media/enroll-device-android-microsoft-intune-app/fully-managed-intune-app-18.png)   
 
 If you have trouble accessing your organization's resources, you might need to update additional settings on your device. Sign in to the Microsoft Intune app to check for required updates.   
 
@@ -100,21 +88,20 @@ If you have trouble accessing your organization's resources, you might need to u
 ## QR code enrollment  
 In this section, you'll scan your company-provided QR code.  When you're done, we'll redirect you back to the device enrollment steps.     
   
-1. On the **Welcome** screen, tap the screen five times to start QR code setup.  
-
-   ![Example image of device setup Welcome screen, highlighting instructions to tap screen.](./media/qr-code-intune-app-01.png)  
+1. On the **Welcome** screen, tap the screen five times to start QR code setup.    
 
 2. Follow any onscreen instructions to connect to Wi-Fi.  
+
 3. If your device doesn't have a QR code scanner, the setup screens will show the progress as a scanner is installed. Wait for installation to complete.  
+
 4. When prompted, scan the enrollment profile QR code that your organization gave you.  
+
 5. Return to [Enroll device](#enroll-device), step 4 to continue setup.  
 
 ## Token enrollment  
 In this section, you'll enter your company-provided token. When you're done, we'll redirect you back to the device enrollment steps.  
 
-1. On the Google sign-in screen, in the **Email or phone** box, type **afw#setup**. Tap **Next**. 
-
-   ![Example image of Google sign-in screen, showing that "afw#setup" is typed into field.](./media/token-intune-app-01.png)   
+1. On the Google sign-in screen, in the **Email or phone** box, type **afw#setup**. Tap **Next**.  
 
 2. Choose **Install** for the **Android Device Policy** app. Continue through the installation. Depending on your device, you might need to review and accept additional terms.    
 
@@ -123,8 +110,6 @@ In this section, you'll enter your company-provided token. When you're done, we'
 4. Select **Enter code**.  
 
 5. On the **Scan or enter code** screen, type in the code that your organization gave you.  Then click **Next**.  
-
-   ![Example image of Scan or enter code screen, highlighting Next button.](./media/token-intune-app-04.png)  
 
 6. Return to [Enroll device](#enroll-device), step 4 to continue setup.  
 
