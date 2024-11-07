@@ -64,7 +64,7 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
    1. Install the **azuread** module by entering the following command:
 
         ```powershell
-        Install-Module azuread
+        Install-Module microsoft.graph.applications
         ```
 
         If prompted to do so, agree to install **NuGet** and the **azuread** module from the **PSGallery**.
@@ -72,7 +72,7 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
    1. Once the **azuread** module is installed, connect to Microsoft Entra ID by entering the following command:
 
         ```powershell
-        Connect-AzureAD
+        Connect-MgGraph
         ```
 
    1. If not already authenticated to Microsoft Entra ID, the **Sign in to your account** window appears. Enter the credentials of a Microsoft Entra ID administrator that has permissions to add service principals.
@@ -80,5 +80,5 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
    1. Once authenticated to Microsoft Entra ID, add the **Intune Provisioning Client** service principal by entering the following command:
 
         ```powershell
-        New-AzureADServicePrincipal -AppId f1346770-5b25-470b-88bd-d5744ab7952c
+        New-MgServicePrincipal -BodyParameter f1346770-5b25-470b-88bd-d5744ab7952c
         ```
