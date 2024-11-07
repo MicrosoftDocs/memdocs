@@ -279,6 +279,20 @@ For additional information on Microsoft Defender for Endpoint integration in con
   
   To set up Microsoft Defender for Endpoint as your defense threat service, see [Enable Microsoft Defender for Endpoint with Conditional Access](advanced-threat-protection.md).
 
+## Windows Subsystem for Linux (WSL)
+
+These settings require the Intune WSL plug-in. For additional information, see [Evaluate compliance for Windows Subsystem for Linux](compliance-wsl.md). 
+
+- **Allowed Linux distributions and versions** - Specify at least one Linux distribution name and optionally, a minimum or maximum OS version.
+  > [!NOTE]
+  > The provided distribution names and versions affect the compliance policy as follows:
+  > - If no distribution is listed, all distributions are allowed (default).
+  > - If only distribution names are provided, any installed version of that distribution are allowed. 
+  > - If a distribution name and a minimum OS version are provided, installed distributions with the provided name and at least the  provided version number or higher are allowed.
+  > - If a distribution name and a maximum OS version are provided, installed distributions with the provided name and up to the provided version number are allowed.
+  > - If a distribution name, a minimum OS version and a maximum OS version are provided, installed distributions and OS version numbers within the provided range are allowed. 
+
+
 ## Windows Holographic for Business
 
 Windows Holographic for Business uses the **Windows 10 and later** platform. Windows Holographic for Business supports the following setting:
