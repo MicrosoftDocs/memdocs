@@ -37,7 +37,7 @@ Report a problem or error that occurs in the Intune Company Portal app for Windo
 > [!NOTE]
 > App logs are also shared with Microsoft Support in case the problem requires additional help. Your support person will reach out to Microsoft Support with your incident ID to work with them.    
 
-## Upload logs   
+## Report problem to support person     
 Complete the following steps to upload Company Portal app logs.   
 
 1. Open the **Company Portal** app.
@@ -53,9 +53,14 @@ Complete the following steps to upload Company Portal app logs.
 
 1. Follow up with your support person as needed.
 
-## Report a problem  
+## Report problem to Microsoft   
 
 Complete the following steps to report a problem directly to Microsoft in the Feedback Hub app. Microsoft doesn't respond to this type of report but uses it to improve upon the products. You can include screenshots and diagnostic details, but the report should remain anonymous, so don't include information like name, email address, or phone number. 
+
+1. Open the **Company Portal** app.  
+1. Go to **Help & support**.  
+1. Select **Report problem to Microsoft**.
+1. Select **Report problem**. Alternatively, you can send a suggestion or leave a review of the app.        
 
 ## What is a diagnostic log?
 
@@ -66,6 +71,4 @@ Events and errors that occur in the Company Portal app are saved on your device 
 
 ## Next steps  
 
-* If your company needs additional information about app or device activity, you might need to resend [logs from the Settings app](send-logs-to-your-it-admin-settings-windows.md). 
-
-* Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
+If your workplace or school needs additional information about app or device activity, you might need to resend [logs from the Settings app](send-logs-to-your-it-admin-settings-windows.md).  
