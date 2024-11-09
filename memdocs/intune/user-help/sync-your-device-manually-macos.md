@@ -44,11 +44,11 @@ Complete these steps to check the status of the Mac you use for work or school.
 
 1. Select **Devices**.  
   
-1. If you only have one device, skip to step 4. If you have multiple devices, select the device you want to sync.  
+1. If you only have one device, skip to step 4. If you have multiple devices, select the device you're currently using.    
 
 1. Select **Check Status**. 
 
-1. Wait while Company Portal confirms your device status. The status will update onscreen to tell you whether or not you meet your organization's security requirements. 
+1. Wait while Company Portal confirms the status of your access. The status appears onscreen and tells you that you meet your organization's security requirements, or tells you what is needed to get access.   
 
 ## Next steps
 Still need help? Contact your support person. Sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's contact information.  
