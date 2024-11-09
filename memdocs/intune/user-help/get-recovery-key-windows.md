@@ -31,13 +31,6 @@ ms.collection:
 
 # Get recovery key for Windows    
 
-**Applies to**:  
-
- - Windows 10  
- - Windows 11
- - iOS/iPadOS 
- - macOS   
-
  Access the BitLocker recovery key for a work or school device on the Intune Company Portal website or in the Intune Company Portal app. If you forget the sign-in password and get locked out of an Intune-enrolled PC, you can unlock it with a stored recovery key. This article describes how to retrieve the key from Company Portal.  
 
  >[!NOTE]
@@ -80,8 +73,8 @@ Retrieve a personal BitLocker recovery key in the Company Portal app. The recove
 2. Go to **Devices**, and then select your Windows device.  
 3. On the device details page, select **Get recovery key**. The Company Portal website opens in Safari and shows the key.  
 
-  After 5 minutes of inactivity, Company Portal returns you to the device page in Safari. You can view the key again from there.  
+  After 5 minutes of inactivity, Company Portal returns you to the device page in your web browser. You can view the key again from there.  
 
 ## IT pro support  
 
-If you're an IT support person and want to configure and manage  encryption, see [Manage  policy for Windows devices with Microsoft Intune](../protect/encrypt-devices.md).  
+If you're an IT support person and want to configure and manage encryption, see [Manage policy for Windows devices with Microsoft Intune](../protect/encrypt-devices.md).  
