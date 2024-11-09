@@ -59,9 +59,9 @@ This option isn't available for Macs that you have personally encrypted. The per
       
 1. Go to **Devices** and select the Mac you're locked out of.  
 1. On the device's page, select **Get recovery key**.
-1. The Company Portal website opens in Safari and shows the key. Write down or copy the key. After 5 minutes of inactivity, the Company Portal website sends you to the device's page. You can view the key again from there.    
+1. The Company Portal website opens in Safari and shows the key. Write down or copy the key. For security reasons, the key disappears after five minutes and you have to request the key again to see it.  
 
-    ![Screenshot of Company Portal app for iOS, showing recovery key](./media/get-recovery-key-cpweb/get-recovery-key-cpweb-02.png)  
+If a key isn't found, but your device is properly encrypted, contact your IT support person for help. Check the Company Portal website for your organization's helpdesk details.  
 
 ## IT pro support  
 
