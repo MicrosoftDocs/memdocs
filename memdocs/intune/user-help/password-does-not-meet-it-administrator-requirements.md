@@ -43,7 +43,7 @@ When you enroll your device for work or school use, you might need to adjust the
 
 ## List of Company Portal messages 
 
-For a list of all passcode-related messages in Company Portal, see [Reference: device passcode messages in Company Portal](intune-company-portal-password-message-reference.md). Company Portal sends you one message per password requirement. For example, if your passcode is too short and too simple, you receive one message about the length and one message about the complexity.  Your workplace or school are the ones that choose the password and biometric requirements for your device. If the Company Portal messages appear too vague, contact your IT support person directly for the exact password and biometric requirements for your device.  
+For a list of all passcode-related messages in Company Portal, see [Reference: device passcode messages in Company Portal](intune-company-portal-password-message-reference.md). Company Portal sends you one message per password requirement. For example, if your passcode is too short and too simple, you receive one message about the length and one message about the complexity.  Your workplace chooses the password and biometric requirements for your device. If the Company Portal messages appear too vague, contact your IT support person directly for the exact password and biometric requirements for your device.  
 
 ## Change password and biometrics   
 
