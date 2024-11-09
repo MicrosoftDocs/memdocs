@@ -48,7 +48,7 @@ If you get locked out of your device, you can retrieve your key from the followi
 - Company Portal app for Android
 - Intune app
  
- IT support people with administrator access to Intune can rotate your personal recovery key for you if you get locked out of your device.They can also view keys, but only the ones that belong to corporate-owned devices. IT support people can't view recovery keys that belong to personal devices.   
+ IT support people with administrator access to Intune can rotate your personal recovery key for you if you get locked out of your device. They can also view keys, but only the ones that belong to corporate-owned devices. IT support people can't view recovery keys that belong to personal devices.   
 
 
 ## Do I need to store my key?  
