@@ -63,21 +63,19 @@ Your device must be running macOS 11 or later.
 1. On the **Set up access** page, select **Begin**.
 1. Review the privacy information. Then select **Continue**.  
 1. On the **Install management profile** page, select **Download profile**.  
-1. Your macOS system settings open in a new window. The management profile you just downloaded is shown.  
+1. Your macOS system settings open in a new window. The management profile you downloaded is shown.  
     1. Select the profile to open it.  
     1. Select **Install...**  
     1. When asked to confirm installation, select **Install**.   
     1. Enter your device password to allow the profile to enroll your device. Then select **Enroll**.  
 1. Wait while the management profile installs and then enrolls your device. 
 1. Return to the Company Portal app and verify that there's a green checkmark next to **Install management profile**.  
-1. Your organization may require changes to the device settings. In Company Portal, select the device. Under **Status**, review the list of of required changes in Company Portal. Select **Learn more** to read more about the requirement. 
+1. Your organization may require changes to the device settings. In Company Portal, select the device. Under **Status**, review the list of required changes. Select **Learn more** to read more about the requirements. 
    
-    > [!TIP]
-    > Select **How to resolve this**, where applicable, to view related help documentation in a web browser.
+   > [!TIP]
+   > Select **How to resolve this**, where applicable, to view related help documentation in a web browser.
     
-1. After you make all changes, select **Retry**. Wait while Company Portal rechecks your device settings.  
-
-    ![Example screenshot of Company Portal, Update device settings screen, highlighting Retry button.](./media/enroll-your-device-in-intune-macos-cp/update-settings-mac-2006.png)  
+1. After you make all changes, select **Retry**. Wait while Company Portal rechecks your device settings and refreshes the status.       
 1. When setup is complete, select **Done**.
 
 Your device is ready to use for work or school. Sign in to the Company Portal app or website anytime to view and manage it.     
