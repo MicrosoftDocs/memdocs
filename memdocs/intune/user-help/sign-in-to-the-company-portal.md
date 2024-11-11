@@ -101,7 +101,7 @@ If you normally use a smart card to access work resources, follow the steps in t
 
 3. Write down the one-time, sign-in code that appears on screen (or just keep this screen handy for the next couple steps). 
 
-   ![Instructions are provided to go to the https://microsoft.com/devicelogin page, with a unique passcode, from your work computer, then to use the code to sign in.](./media/cp_ios_aad_signin_after_1804_006.png)
+   ![Instructions are provided to go to the https://microsoft.com/devicelogin page, with a unique passcode, from your work computer, then to use the code to sign in.](./media/sign-in-to-the-company-portal/cp_ios_aad_signin_after_1804_006.png)
 
 3. Switch to your other device (the one you're using to authenticate) and go to [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).  
 
