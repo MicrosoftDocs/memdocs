@@ -60,7 +60,7 @@ The device is secure by design, featuring an adminless user model, no local data
 
 ### Control + Alt + Delete
 
-Options on the Control + Alt + Delet menu include:
+Options on the Control + Alt + Delete menu include:
 
 | Control | Description |
 | --- | --- |

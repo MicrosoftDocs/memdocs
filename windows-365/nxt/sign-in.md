@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Set up NXT
+title: Sign in to your NXT
 titleSuffix:
-description: Learn how to set up your NXT
+description: Learn how to sign in, sign our, and lock your NXT
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -29,37 +29,12 @@ ms.collection:
 - tier2
 ---
 
-# Set up your NXT and sign in
+# Sign in to your NXT
 
 > [!IMPORTANT]
-> This is unfinished draft documentation. Not ready for review.
+> This is unfinished draft documentation. Not ready for review. 
 
-The first time you turn on your NXT, you are guided through setting up your device, signing in with a work or school user account.
-
-## Requirements
-
-- An available network.
-- A work or school account.
-
-## First time set up
-
-Complete the following steps to set up your new device:
-
-1. Connect a monitor, USB mouse, and keyboard to the device.
-2. Connect the power adaptor to the power port and then into a power outlet.
-3. Power on the device.
-4. On the **Let's connect you to a network** page, select a network > **Next**.
-5. On the **Please review License Agreement** page, review the agreement > **Next**.
-6. On the **Let's set things up for your work or school** page, type your work or school e-mail > **Next**
-7. On the **Sign in** page, type your work email address.
-
-You can adjust additional settings prior to sign-in by using Quick settings in the bottom-right corner.
-
-After completing these steps, your NXT is connected to your Cloud PC virtual machine through the Windows 365 service.
-
-## Sign in
-
-When you subsequently want to use the NXT, complete the following steps to sign in:
+When you want to use the NXT, complete the following steps to sign in:
 
 1. On the **Windows security** page, provide your sign in credentials. The device automatically presents you with the most secure MFA sign-in process configured for your account (security key, cross-device passkey, or passwordless MFA).
 2. On the **Sign-in with your passkey** page, select **iPhone, iPad, or Android device** > **Next**.
@@ -67,6 +42,13 @@ When you subsequently want to use the NXT, complete the following steps to sign 
 4. Complete the authentication process using the Authentication app on your phone.
 
 ## Sign out
+
+To sign out of your NXT:
+
+1. Press control-alt-delete.
+1. Select **Sign out**.
+
+## Lock your NXT
 
 Lock the device by either of these methods:
 
