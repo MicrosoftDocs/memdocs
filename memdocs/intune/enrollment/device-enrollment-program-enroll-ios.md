@@ -219,7 +219,7 @@ Now that you've installed your token, you can create an enrollment profile for a
 1. Select **Next**.
 
    > [!IMPORTANT]
-   > You must assign an enrollment policy to your devices before the devices are activated. It is recomended to set a default enrollment policy as soon as possible so that as devices sync over from Apple Business Manager or Apple School Manager, when they turn on, they can enroll correctly through automated device enrollment. If a device that synced over from Apple Business Manager or Apple School Manager to Intune is not assigned an enrollment policy and it is turned on to be set up, enrollment will fail.
+   > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business Manager or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple is not assigned an enrollment policy and someone turns it on to set it up, enrollment will fail. 
 
     > [!IMPORTANT]
     > If you make changes to an existing enrollment profile, the new settings won't take effect on assigned devices until devices are reset back to factory settings and reactivated. The device name template setting is the only setting you can change that doesn't require a factory reset to take effect. Changes to the naming template take effect at the next check-in.    
