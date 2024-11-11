@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/15/2024
+ms.date: 11/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,7 +15,7 @@ ms.subservice: protect
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: sheetg
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -138,7 +138,7 @@ For more information about the KDC's requirements and enforcement date for stron
 
      > [!NOTE]
      > Storage of certificates provisioned by SCEP:
-     > - *macOS* - Certificates you provision with SCEP are always placed in the system keychain (System store) of the device.
+     > - *macOS* - You can store certificates you provision with SCEP in the system keychain, known as the *system store*, of the device or the user keychain.  
      >
      > - *Android* - Devices have both a *VPN and apps* certificate store, and a *WIFI* certificate store.  Intune always stores SCEP certificates in the VPN and apps store on a device. Use of the VPN and apps store makes the certificate available for use by any other app.  
      >
@@ -460,6 +460,9 @@ Consider the following before you continue:
 > - On iOS/iPadOS and macOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the device having multiple certificates delivered by the SCEP or PKCS certificate request.
 > - Certificates delivered by SCEP are each unique. Certificates delivered by PKCS are the same certificate, but appear different as each profile instance is represented by a separate line in the management profile.
 > - On iOS 13 and macOS 10.15, there are [additional security requirements that are documented by Apple](https://support.apple.com/HT210176) to take into consideration.  
+
+## Verify deployment channel   
+We recommend checking the deployment channel in existing SCEP profiles, and linked VPN and Wi-Fi profiles when they're up for renewal to ensure that any authentication certificates you're using are stored in the proper keychain. Always select the user channel in profiles when you're deploying user-targeted authentication certificates. And always select the device channel when you're deploying device-targeted authentication certificates. Certificates in profiles you created prior to the introduction of the deployment channel setting will continue to be stored in the device keychain until you create a new profile and select the user deployment channel.   
 
 ## Next steps
 
