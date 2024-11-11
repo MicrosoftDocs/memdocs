@@ -7,7 +7,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/20/2023
+ms.date: 11/08/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -60,23 +60,25 @@ Your device must be running macOS 11 or later.
 
 ## Enroll your Mac  
 1. Sign in to the Company Portal app with your work or school account.  
-2. On the **Set up access** page, select **Begin**.
-3. Review the privacy information. Then select **Continue**.  
-4. On the **Install management profile** page, select **Download profile**.  
-
-    ![Example screenshot of Company Portal, Install management profile screen, highlighting password prompt.](./media/enroll-your-device-in-intune-macos-cp/install-management-profile-macos-2006.png)  
-5. Your macOS system settings open in a new window. The management profile you just downloaded is shown.  
+1. On the **Set up access** page, select **Begin**.
+1. Review the privacy information. Then select **Continue**.  
+1. On the **Install management profile** page, select **Download profile**.  
+1. Your macOS system settings open in a new window. The management profile you downloaded is shown.  
     1. Select the profile to open it.  
     1. Select **Install...**  
     1. When asked to confirm installation, select **Install**.   
     1. Enter your device password to allow the profile to enroll your device. Then select **Enroll**.  
-6. Wait while the management profile installs and then enrolls your device. 
-7. Return to the Company Portal app and verify that there's a green checkmark next to **Install management profile**.  
-8. Your organization may require you to update your device settings. On the **Checking device settings** page, review the list of settings you need to change. Select **How to resolve this** to view related help documentation in a web browser.   
-9. After you make all changes, select **Retry**. Wait while Company Portal rechecks your device settings.  
+1. Wait while the management profile installs and then enrolls your device. 
+1. Return to the Company Portal app and verify that there's a green checkmark next to **Install management profile**.  
+1. Your organization may require changes to the device settings. In Company Portal, select the device. Under **Status**, review the list of required changes. Select **Learn more** to read more about the requirements. 
+   
+   > [!TIP]
+   > Select **How to resolve this**, where applicable, to view related help documentation in a web browser.
+    
+1. After you make all changes, select **Retry**. Wait while Company Portal rechecks your device settings and refreshes the status.       
+1. When setup is complete, select **Done**.
 
-    ![Example screenshot of Company Portal, Update device settings screen, highlighting Retry button.](./media/enroll-your-device-in-intune-macos-cp/update-settings-mac-2006.png)  
-10. When setup is complete, select **Done**. Your device is ready to use for work. You can go to **Devices** in the Company Portal app to view and manage your enrolled Mac.    
+Your device is ready to use for work or school. Sign in to the Company Portal app or website anytime to view and manage it.     
 
 ## Troubleshooting and feedback   
 
