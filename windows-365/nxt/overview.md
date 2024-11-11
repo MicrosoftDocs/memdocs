@@ -58,33 +58,6 @@ The device is secure by design, featuring an adminless user model, no local data
 
 ## Device capabilities
 
-### Control + Alt + Delete
-
-Options on the Control + Alt + Delete menu include:
-
-| Control | Description |
-| --- | --- |
-| Lock | Locks the local device similar to Windows key + L. Connection to Windows 365 lasts 15 minutes, making it easy to quickly reconnect to your Cloud PC after you reauthenticate. |
-| Sign out | Closes your Windows 365 connection and signs out of device.  |
-| Task Manager | Opens the Task Manager of your Cloud PC. |
-| Connection details | Shows information about the current connection to your Cloud PC. |
-| Restore and Troubleshoot | Initiates these processes for your Cloud PC. |
-| Quick settings | Opens a small set of essential settings. For details on individual Quick settings, see below. |
-
-### Quick settings
-
-In addition to more settings being configured directly from your Cloud PC for GA release (like display configuration, Bluetooth devices, and sound settings) the following local settings can be quickly configured from the sign-in screen: 
-
-| Control | Description |
-| --- | --- |
-| Wi-Fi | View and manage Wi-Fi connection. |
-| Bluetooth (BT) | View and manage BT devices. Note that you can only add BT devices once authenticated. |
-| Accessibility Tools | Turn on/off accessibility tools: Magnifier, Narrator, Contrast themes, On-screen keyboard, and Sticky & Filter keys. Voice access coming soon.  |
-| Language | Choose preferred display language. |
-| Display | Can only change scale and swap multiple monitor arrangement. GA release to support full display configuration. |
-| Privacy and Security | View privacy and security settings for camera, mic, and location. |
-| Power button | View power management options for the device. |
-
 ### MMR and VDI optimization
 
 NXT supports local redirection of web multimedia content, ensuring a smooth, high-quality experience, just like on a local PC. It is also optimized for online meetings with Microsoft Teams (Teams VDI 2.0), providing highly performant video conferencing. Similarly, we’re working to enable high-fidelity Zoom and Webex meetings in the same way.
