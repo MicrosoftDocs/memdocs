@@ -1,7 +1,7 @@
 items:
 - name: NXT docs
   href: index.yml
-- name: Device overview
+- name: Overview
   items:  
   - name: What is NXT? 
     href: overview.md
