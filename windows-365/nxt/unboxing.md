@@ -40,7 +40,7 @@ Your box includes:
 
 - NXT device.
 - Power adaptor.
-- Instructions.
+- Quick start guide.
 
 ## Software
 
@@ -84,13 +84,7 @@ USB and Bluetooth for:
 - headphones
 - camera
 
-Unwrap the device.
-. Connect your peripherals monitor(s), keyboard and mouse to your device. Plug device into the power.  
-
-Note: To complete OOBE you will need to use a monitor, USB mouse and keyboard, network connection wired or Wi-Fi. 
-
-
 <!-- ########################## -->
 ## Next steps
 
-TBS
+[First time set up for your NXT](setup.md): After unboxing, your NXT is brand-new and no users are logged into the device. The device must go through first-time setup, also known as the Out-of-Box Experience (OOBE). Through this setup process, the first user is added to the device.

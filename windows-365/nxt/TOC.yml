@@ -13,7 +13,7 @@ items:
     items:
     - name: Unboxing your NXT
       href: 
-    - name: First time user set up
+    - name: First time set up and sign in
       href: setup.md
     - name: Getting around NXT
       href: 
@@ -22,7 +22,11 @@ items:
   - name: Daily usage
     items:
     - name: Sign in
-      href:
+      href: sign-in.md
+    - name: Quick settings
+      href: quick-settings
+    - name: Control-alt-delete menu
+      href: control-alt-delete.md  
 - name: Deploying NXT
   items:
   - name: Requirements
