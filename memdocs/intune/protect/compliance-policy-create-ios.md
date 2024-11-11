@@ -81,7 +81,7 @@ For details about email profiles, see [configure access to organization email us
 
 - **Require the device to be at or under the Device Threat Level**  
   *Supported for iOS 8.0 and later*
-
+Select the maximum allowed device threat level evaluated by your mobile threat defense service. 
   Use this setting to take the risk assessment as a condition for compliance. Choose the allowed threat level:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Secured** - This option is the most secure, and means that the device can't have any threats. a device with any level of threats is evaluated as noncompliant.
