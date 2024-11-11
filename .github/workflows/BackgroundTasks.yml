@@ -1,6 +1,7 @@
 name: Background tasks
 
 permissions:
+ 
   pull-requests: write
   contents: read
   
