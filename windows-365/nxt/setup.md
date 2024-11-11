@@ -57,24 +57,6 @@ You can adjust additional settings prior to sign-in by using Quick settings in t
 
 After completing these steps, your NXT is connected to your Cloud PC virtual machine through the Windows 365 service.
 
-## Sign in
-
-When you subsequently want to use the NXT, complete the following steps to sign in:
-
-1. On the **Windows security** page, provide your sign in credentials. The device automatically presents you with the most secure MFA sign-in process configured for your account (security key, cross-device passkey, or passwordless MFA).
-2. On the **Sign-in with your passkey** page, select **iPhone, iPad, or Android device** > **Next**.
-3. On the **iPhone, iPad, or Android device** page, scan the QR code with a device that has a passkey.
-4. Complete the authentication process using the Authentication app on your phone.
-
-## Sign out
-
-Lock the device by either of these methods:
-
-- Press the **Windows key + L** on your keyboard.
-- Select **Start** > **Power** > **Lock**.
-
-The Cloud PC connection persists for 15 minutes after sign-out.
-
 <!-- ########################## -->
 ## Next steps
 
