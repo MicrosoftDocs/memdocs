@@ -34,7 +34,7 @@ ms.collection:
 
 # Security Copilot in Microsoft Intune
 
-Microsoft Security Copilot is a cloud-based AI platform that provides a natural language Copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, go to [What is Microsoft Security Copilot?](/security-copilot/microsoft-security-copilot).
+Microsoft Security Copilot is a cloud-based AI platform that provides a natural language Copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, go to [What is Microsoft Security Copilot?](/security-copilot/microsoft-security-copilot)
 
 ## Know before you begin
 
@@ -61,10 +61,10 @@ This article shows you how to access your Microsoft Intune data in Security Copi
 
 There are three areas to use Copilot in Intune:
 
-- Policy and setting management
-- Device details and troubleshooting
-- Device query
-- Windows Autopatch AI integration
+- [Policy and setting management](../copilot/copilot-intune-overview.md#policy-and-setting-management)
+- [Device details and troubleshooting](../copilot/copilot-intune-overview.md#device-details-and-troubleshooting)
+- [Device query](../copilot/copilot-intune-overview.md#query-with-copilot-in-device-query)
+- [Windows Autopatch AI integration](../copilot/copilot-intune-overview.md#windows-autopatch-ai-integration-with-copilot-in-intune)
 
 ### Security admin focus
 
