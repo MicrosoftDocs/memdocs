@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2024
+ms.date: 11/11/2024
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -172,9 +172,11 @@ For more information on dynamic groups, go to:
 - [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters-performance-recommendations.md)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership)
 
-## My Windows device is reporting "The sync could not be initiated (0x80072f9a)" when trying to sync from access work or school accounts
+## "The sync could not be initiated (0x80072f9a)" error
 
-If the Trusted Platform Module (TPM) has been reset to factory settings, the device will need to be re-enrolled to resume syncing. The device's Entra identity is stored in the TPM, and if removed, re-enrollment is the only way to re-establish that identity. 
+On Windows devices, when trying to sync in the **Settings** app > **Accounts** > **Access work or school**, you might see a `The sync could not be initiated (0x80072f9a)` error.
+
+If the Trusted Platform Module (TPM) was reset to factory settings, then the device must reenrolled to resume syncing. The device's Microsoft Entra identity is stored in the TPM. So, if the ID is removed, then reenrollment is the only way to reestablish the Microsoft Entra identity. 
 
 ## Related articles
 
