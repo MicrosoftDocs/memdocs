@@ -172,6 +172,10 @@ For more information on dynamic groups, go to:
 - [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters-performance-recommendations.md)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership)
 
+## My Windows device is reporting "The sync could not be initiated (0x80072f9a)" when trying to sync from access work or school accounts
+
+If the Trusted Platform Module (TPM) has been reset to factory settings, the device will need to be re-enrolled to resume syncing. The device's Entra identity is stored in the TPM, and if removed, re-enrollment is the only way to re-establish that identity. 
+
 ## Related articles
 
 - [Troubleshoot policies and profiles](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune).
