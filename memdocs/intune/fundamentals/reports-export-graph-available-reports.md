@@ -860,6 +860,7 @@ The following table contains the possible output when calling the `AppInvAggrega
 | ApplicationShortVersion  |
 | ApplicationVersion  |
 | DeviceCount  |
+| Platform  |
 
 There are no filters for this report.
 
@@ -884,7 +885,19 @@ The following table contains the possible output when calling the `AppInvRawData
 |     EmailAddress  |
 |     UserName  |
 
-There are no filters for this report.
+You can filter the `AppInvRawData` report using the `eq` comparison operator on the following properties: 
+- ApplicationName
+- ApplicationPublisher
+- ApplicationShortVersion
+- ApplicationVersion
+- DeviceId
+- DeviceName
+- OSDescription
+- OSVersion
+- Platform
+- UserId
+- EmailAddress
+- UserName
 
 ## ChromeOSDevices report
 
@@ -941,7 +954,7 @@ You can check whether the ChromeOSDevices report has completed by using the Micr
 Use the output from the above call to determine the status of the ChromeOSDevices report. An example call will look similar to the following:
 `https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('ChromeOSDevices_1223a321-4bcd-5432-efg1-0hi9876h1234') `
 
-You can continue to run your call to check the status of the report. When the report shows a status of `complete`, you're report is ready to be downloaded.
+You can continue to run your call to check the status of the report. When the report shows a status of `complete`, your report is ready to be downloaded.
 
 ### Download the completed ChromeOSDevices report
 

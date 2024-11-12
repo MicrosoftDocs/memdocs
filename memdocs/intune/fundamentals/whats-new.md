@@ -75,7 +75,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
-## Week of November 4, 2024
+## Week of November 11, 2024
 
 ### Device security
 
@@ -86,7 +86,6 @@ The [Microsoft Tunnel readiness tool](../protect/microsoft-tunnel-prerequisites.
 When the mst-readiness tool runs, it now raises a non-blocking  warning if the audit package isn't installed. By default, Red Hat Enterprise Linux versions 7 and later install this package by default. Ubuntu versions of Linux currently require this optional package to be installed.
 
 For more information on *auditd* and how to install it on your Microsoft Tunnel server, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#linux-system-auditing).
-
 
 ## Week of October 28, 2024
 

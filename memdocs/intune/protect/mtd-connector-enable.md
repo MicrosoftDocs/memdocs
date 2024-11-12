@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/09/2024
+ms.date: 11/05/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,25 +33,31 @@ ms.collection:
 
 # Enable the Mobile Threat Defense connector in Intune
 
-During Mobile Threat Defense (MTD) setup, you should have created a policy for classifying threats in your Mobile Threat Defense partner console and created a related device compliance policy in Microsoft Intune. If you already configured the Intune connector in the MTD partner console, you can now enable the MTD connection for your MTD partner application.
+Microsoft Intune can integrate data from a Mobile Threat Defense (MTD) partner for use by device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
+
+After you [setup your MTD Partner](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) and configure the Intune connector in the MTD partner console, you can then enable the MTD connection for that MTD partner application from within the Intune admin center.
 
 Applies to:
 
 - All [Intune Mobile Threat Defense partners](../protect/mobile-threat-defense.md#mobile-threat-defense-partners).
 
+## Required role-based access control permissions
+
+To successfully enable the Mobile Threat Defense connector, you must use an account that is assigned [Role-based access control](../fundamentals/role-based-access-control.md) (RBAC) permissions equivalent to the *Endpoint Security Manager* built-in admin role for Intune. If you use a custom role, ensure it includes the *Read* and *Modify* rights for the Intune *Mobile Threat Defense* permission.
+
 ## To enable the Mobile Threat Defense connector
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a third-party Mobile Threat Defense vendor, your account must be assigned the *Endpoint Security Manager* built-in admin role for Intune, or be assigned a custom role that includes the *Read* and *Modify* rights for the Intune *Mobile Threat Defense* permission.
+2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**.
 
 3. On the **Mobile Threat Defense** pane, select **Add**.
 
 4. For **Mobile Threat Defense connector to setup**, select your MTD partner solution from the drop-down list.
 
-> [!NOTE]
->
-> As of the August 2023 Intune service release (2308), classic Conditional Access (CA) policies are no longer created for the **Microsoft Defender for Endpoint** connector. As of April 2024 Intune service release (2404), classic CA policies are no longer needed for 3rd party **Mobile Threat Defense** connectors either. If your tenant has a classic CA policy that was previously created for integration with Microsoft Defender for Endpoint or 3rd party Mobile Threat Defense connectors, it can be deleted.
+   > [!NOTE]
+   >
+   > As of the August 2023 Intune service release (2308), classic Conditional Access (CA) policies are no longer created for the **Microsoft Defender for Endpoint** connector. As of April 2024 Intune service release (2404), classic CA policies are no longer needed for 3rd party **Mobile Threat Defense** connectors either. If your tenant has a classic CA policy that was previously created for integration with Microsoft Defender for Endpoint or 3rd party Mobile Threat Defense connectors, it can be deleted.
 
 5. Enable the toggle options according to your organization's requirements. The toggle options that are visible can vary depending on the MTD partner. For example, the following image shows the available options that are available for Symantec Endpoint Protection:
 
@@ -114,4 +120,4 @@ To learn more about using Mobile Threat Defense connectors for Intune App Protec
 
 ## Next steps
 
-- [Create Mobile Threat Defense (MTD) device compliance policy with Intune](mtd-device-compliance-policy-create.md).
+- [Create Mobile Threat Defense (MTD) device compliance policy with Intune](mtd-device-compliance-policy-create.md)
