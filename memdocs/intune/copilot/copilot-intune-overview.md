@@ -7,7 +7,7 @@ keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings cata
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/01/2024
+ms.date: 11/08/2024
 ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice:
