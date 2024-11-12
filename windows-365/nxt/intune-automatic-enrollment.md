@@ -31,8 +31,7 @@ ms.collection:
 
 # Automatically enroll NXT in Intune
 
-> [!IMPORTANT]
-> This is unfinished draft documentation. Not ready for review.
+[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 TBS...
 

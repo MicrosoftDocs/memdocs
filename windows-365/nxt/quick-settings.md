@@ -31,19 +31,35 @@ ms.collection:
 
 # Quick settings
 
-> [!IMPORTANT]
-> This is unfinished draft documentation. Not ready for review.
+[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-In addition to more settings being configured directly from your Cloud PC for GA release (like display configuration, Bluetooth devices, and sound settings) the following local settings can be quickly configured from the sign-in screen:
+You can use the quick settings icons in the bottom corner of the **Sign in** screen to access various settings for your NXT. There are three different option icons:
+
+- Internet
+- Display Audio
+- Accessibility
+
+## Internet
+
+To see the internet options, on the **Sign in** screen, select the XX icon.
+
+## Display Audio
+
+To see the display audio options, on the **Sign in** screen, select the XX icon.
+
+## Accessibility
+
+To see the accessibility options, on the **Sign in** screen, select the XX icon.
 
 | Control | Description |
 | --- | --- |
 | Wi-Fi | View and manage Wi-Fi connection. |
-| Bluetooth (BT) | View and manage BT devices. Note that you can only add BT devices once authenticated. |
-| Accessibility Tools | Turn on/off accessibility tools: Magnifier, Narrator, Contrast themes, On-screen keyboard, and Sticky & Filter keys. Voice access coming soon.  |
-| Language | Choose preferred display language. |
-| Display | Can only change scale and swap multiple monitor arrangement. GA release to support full display configuration. |
-| Privacy and Security | View privacy and security settings for camera, mic, and location. |
+| Bluetooth | View and manage Bluetooth devices. You can only add Bluetooth devices after they're authenticated. |
+| Accessibility | Turn on/off accessibility tools: Magnifier, Contrast themes, Narrator, On-screen keyboard, Sticky keys, and Filter keys. |
+| Language | Choose display language used on your NXT. |
+| Display | Change the scale for you display and swap multiple monitor arrangement. |
+| Privacy and Security | View privacy and security settings for your Location, Camera, and microphone. |
+| Audio slider | Manages local speaker volume. |
 | Power button | View power management options for the device. |
 
 <!-- ########################## -->

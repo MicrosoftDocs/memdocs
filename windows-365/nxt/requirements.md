@@ -31,8 +31,7 @@ ms.collection:
 
 # Requirements for NXT
 
-> [!IMPORTANT]
-> This is unfinished draft documentation. Not ready for review.
+[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 TBS...
 

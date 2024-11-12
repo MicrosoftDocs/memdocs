@@ -31,8 +31,7 @@ ms.collection:
 
 # What is NXT?
 
-> [!IMPORTANT]
-> This is unfinished draft documentation. Not ready for review. 
+[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 NXT is the first Cloud PC device. It’s a full stack, purpose-built solution by Microsoft, designed to connect you to the Windows 365 service in seconds. When you sign in to your Cloud PC, you can securely connect to a familiar Windows Desktop in the cloud, and access a responsive, high-quality experience. For IT, it brings a more streamlined management experience, where it can be managed alongside other PCs in Microsoft Intune.
 
@@ -126,6 +125,6 @@ screencap
 
 [First time user setup](setup.md).
 
-[Learn more about Windows 365 Enterprise](./enterprise/overview.md).
+[Learn more about Windows 365 Enterprise](../enterprise/overview.md).
 
 [Read the Windows 365 service description](/office365/servicedescriptions/windows-365-service-description/windows-365-service-description).

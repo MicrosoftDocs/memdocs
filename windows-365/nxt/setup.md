@@ -31,8 +31,7 @@ ms.collection:
 
 # Set up your NXT and sign in
 
-> [!IMPORTANT]
-> This is unfinished draft documentation. Not ready for review.
+[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 The first time you turn on your NXT, you are guided through setting up your device, signing in with a work or school user account.
 
