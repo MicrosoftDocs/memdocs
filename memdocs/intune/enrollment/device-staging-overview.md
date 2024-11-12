@@ -74,7 +74,7 @@ In the second stage, an Intune admin or third-party vendor completes the followi
 
 1. With the device, scan the staging token's QR code or enter the token string.  
 
-1. Complete the enrollment steps and setup wizard, landing on device's home screen once complete.
+1. Complete the enrollment steps and setup wizard. At the end of setup, you are on the device's home screen.  
 
 1. Turn off the device and distribute it to the end user.   
 
