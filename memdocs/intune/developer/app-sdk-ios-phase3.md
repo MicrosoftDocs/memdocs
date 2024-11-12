@@ -413,7 +413,8 @@ The return value of this method tells the SDK if the application must handle the
 
 * If false is returned, the SDK will restart the application after this method returns. The SDK immediately shows a dialog box that tells the user to restart the application.
 
-Note for .NET MAUI apps the restart is not required.
+>[!NOTE]
+>.NET MAUI apps not note require a restart.
 
 ## Exit Criteria
 
