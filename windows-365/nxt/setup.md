@@ -56,7 +56,7 @@ Complete the following steps to set up your new device:
 
 You can adjust additional settings prior to sign-in by using [Quick settings](quick-settings.md) in the bottom-right corner.
 
-When you sign in for the first time, the NXT joins Microsoft Entra and automatically enrolls the device into Microsoft Intune. You organization's admins use Intune to manage both virtual machines and hardware devices, including NXT.
+When you sign in for the first time, the NXT joins Microsoft Entra and automatically enrolls the device into Microsoft Intune. You organization's admins use Intune to manage both virtual machines and hardware devices, including NXT. 
 
 <!-- ########################## -->
 ## Next steps
