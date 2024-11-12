@@ -364,7 +364,7 @@ The site server uses the **Exchange Server connection account** to connect to th
 
 ### Management point connection account
 
-The management point uses the **Management point connection account** to connect to the Configuration Manager site database. It uses this connection to send and retrieve information for clients. The management point uses its computer account by default, but you can configure an alternate service account instead. When the management point is in an untrusted domain from the site server, you must specify a alternate service account.
+The management point uses the **Management point connection account** to connect to the Configuration Manager site database. It uses this connection to send and retrieve information for clients. The management point uses its computer account by default, but you can configure an alternate service account instead. When the management point is in an untrusted domain from the site server, you must specify an alternate service account.
 
   > [!NOTE]
   > For enhanced security posture it is recommended to leverage alternate service account rather than Computer account for ‘Management point connection account’.
@@ -749,7 +749,7 @@ Configuration Manager grants access to the account used for the reporting servic
 
 ## Elevated permissions
 
-Configuration Manager requires some accounts to have elevated permissions for on-going operations. For example, see [Prerequisites for installing a primary site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). The following list summarizes these permissions and the reasons why they're needed.
+Configuration Manager requires some accounts to have elevated permissions for ongoing operations. For example, see [Prerequisites for installing a primary site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). The following list summarizes these permissions and the reasons why they're needed.
 
 - The computer account of the primary site server and central administration site server requires:
 

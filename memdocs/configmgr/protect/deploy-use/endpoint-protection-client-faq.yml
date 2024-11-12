@@ -24,26 +24,26 @@ sections:
       - question: |
           Why do I need antivirus and antispyware software?  
         answer: |
-           It is critical to make sure that your computer is running software that protects against malicious software. Malicious software, which includes viruses, spyware, or other potentially unwanted software can try to install itself on your computer any time you connect to the Internet. It can also infect your computer when you install a program using a CD, DVD, or other removable media. Malicious software, can also be programmed to run at unexpected times, not just when it is installed.  
+           It's critical to make sure that your computer is running software that protects against malicious software. Malicious software, which includes viruses, spyware, or other potentially unwanted software can try to install itself on your computer anytime you connect to the Internet. It can also infect your computer when you install a program using a CD, DVD, or other removable media. Malicious software can also be programmed to run at unexpected times, not just when it's installed.  
           
            Windows Defender or Endpoint Protection offers three ways to help keep malicious software from infecting your computer:  
           
-           -   **Using real-time protection** - Real-time protection enables Windows Defender to monitor your computer all the time and alert you when malicious software, including viruses, spyware, or other potentially unwanted software attempts to install itself or run on your computer. Windows Defender then suspends the software and enables you to you to follow its recommendation on the software or take an alternative action.
+           -   **Using real-time protection** - Real-time protection enables Windows Defender to monitor your computer all the time and alert you when malicious software, including viruses, spyware, or other potentially unwanted software attempts to install itself or run on your computer. Windows Defender then suspends the software and enables you to follow its recommendation on the software or take an alternative action.
           
            -   **Scanning options** - You can use Windows Defender to scan for potential threats, such as viruses, spyware, and other malicious software that might put your computer at risk. You can also use it to schedule scans on a regular basis and to remove malicious software that is detected during a scan.  
           
-           -   **Microsoft Active Protection Service community** - The online Microsoft Active Protection Service community helps you see how other people respond to software that has not yet been classified for risks. You can use this information to help you choose whether to allow this software on your computer. In turn, if you participate, your choices are added to the community ratings to help other people decide what to do.  
+           -   **Microsoft Active Protection Service community** - The online Microsoft Active Protection Service community helps you see how other people respond to software that hasn't yet been classified for risks. You can use this information to help you choose whether to allow this software on your computer. In turn, if you participate, your choices are added to the community ratings to help other people decide what to do.  
           
       - question: |
           How can I tell if my computer is infected with malicious software?  
         answer: |
            You might have some form of malicious software, including viruses, spyware, or other potentially unwanted software, on your computer if:  
           
-           -   You notice new toolbars, links, or favorites that you did not intentionally add to your Web browser.  
+           -   You notice new toolbars, links, or favorites that you didn't intentionally add to your Web browser.  
           
            -   Your home page, mouse pointer, or search program changes unexpectedly.  
           
-           -   You type the address for a specific site, such as a search engine, but you are taken to a different Web site without notice.  
+           -   You type the address for a specific site, such as a search engine, but you're taken to a different Web site without notice.  
           
            -   Files are automatically deleted from your computer.  
           
@@ -65,7 +65,7 @@ sections:
         answer: |
            If Windows Defender detects malicious software or potentially unwanted software on your computer (either when monitoring your computer using real-time protection or after running a scan), it notifies you about the detected item by displaying a notification message in the bottom right-hand corner of your screen.  
           
-           The notification message includes a **Clean computer** button and a **Show details** link that lets you view additional information about the detected item. Click the **Show details** link to open the **Potential threat details** window to get additional information about the detected item. You can now choose which action to apply to the item, or click **Clean computer**. If you need help determining which action to apply to the detected item, use the alert level that Windows Defender assigned to the item as your guide (for more information see, Understanding alert levels).  
+           The notification message includes a **Clean computer** button and a **Show details** link that lets you view additional information about the detected item. Click the **Show details** link to open the **Potential threat details** window to get additional information about the detected item. You can now choose which action to apply to the item, or click **Clean computer**. If you need help with determining which action to apply to the detected item, use the alert level that Windows Defender assigned to the item as your guide (for more information see, Understanding alert levels).  
           
            Alert levels help you choose how to respond to viruses, spyware, and other potentially unwanted software. While Windows Defender will recommend that you remove all viruses and spyware, not all software that is flagged is malicious or unwanted. The following information can help you decide what to do if Windows Defender detects potentially unwanted software on your computer.  
           
@@ -110,7 +110,7 @@ sections:
         answer: |
            Both viruses and spyware are installed on your computer without your knowledge and both have the potential to be intrusive and destructive. They also have the ability to capture information on your computer and damage or delete that information. They both can negatively affect your computer's performance.  
           
-           The main differences between viruses and spyware is how they behave on your computer. Viruses, like living organisms, want to infect a computer, replicate, and then spread to as many other computers as possible. Spyware, however, is more like a mole - it wants to "move into" your computer and stay there as long as possible, sending valuable information about your computer to an outside source while it is there.  
+           The main difference between viruses and spyware is how they behave on your computer. Viruses, like living organisms, want to infect a computer, replicate, and then spread to as many other computers as possible. Spyware, however, is more like a mole - it wants to "move into" your computer and stay there as long as possible, sending valuable information about your computer to an outside source while it's there.  
           
       - question: |
           Where do viruses, spyware, and other potentially unwanted software come from?  
@@ -125,7 +125,7 @@ sections:
       - question: |
           Why is it important to review license agreements before installing software?  
         answer: |
-          When you visit websites, do not automatically agree to download anything the site offers. If you download free software, such as file sharing programs or screen savers, read the license agreement carefully. Look for clauses that say that you must accept advertising and pop-ups from the company, or that the software will send certain information back to the software publisher.  
+          When you visit websites, don't automatically agree to download anything the site offers. If you download free software, such as file sharing programs or screen savers, read the license agreement carefully. Look for clauses that say that you must accept advertising and pop-ups from the company, or that the software will send certain information back to the software publisher.  
 
       - question: |
           Why doesn't Windows Defender detect cookies?  
@@ -145,12 +145,12 @@ sections:
           
            -   If you receive an e-mail with an attachment and you're unsure of the source, then you should delete it immediately. Don't download any applications or files from unknown sources, and be careful when trading files with other users.  
           
-           -   Install and use a firewall. It is recommended that you enable Windows Firewall.  
+           -   Install and use a firewall. It's recommended that you enable Windows Firewall.  
           
       - question: |
           What are virus and spyware definitions?  
         answer: |
-         When you use Windows Defender or Endpoint Protection, it is important to have up-to-date virus and spyware definitions. Definitions are files that act like an ever-growing encyclopedia of potential software threats. Windows Defender or Endpoint Protection uses definitions to determine if software that it detects is a virus, spyware, or other potentially unwanted software, and then to alert you to potential risks. To help keep your definitions up to date, Windows Defender or Endpoint Protection works with Microsoft Update to install new definitions automatically as they are released. You can also set Windows Defender or Endpoint Protection to check online for updated definitions before scanning.  
+         When you use Windows Defender or Endpoint Protection, it's important to have up-to-date virus and spyware definitions. Definitions are files that act like an ever-growing encyclopedia of potential software threats. Windows Defender or Endpoint Protection uses definitions to determine if software that it detects is a virus, spyware, or other potentially unwanted software, and then to alert you to potential risks. To help keep your definitions up to date, Windows Defender or Endpoint Protection works with Microsoft Update to install new definitions automatically as they're released. You can also set Windows Defender or Endpoint Protection to check online for updated definitions before scanning.  
 
       - question: |
           How do I keep virus and spyware definitions up to date?  
@@ -240,11 +240,11 @@ sections:
           Can you describe a little bit what protected, potentially protected or at risk means?
         answer: |
 
-          Depending whether Defender or another antivirus product is being used as primary provider, the general states above represented by a color show the overall asessment of the security state of the device.
+          Depending whether Defender or another antivirus product is being used as primary provider, the general states above represented by a color show the overall assessment of the security state of the device.
           In case of security level being satisfactory, a green label will be provided.
 
           The "potentially unprotected" state is mostly due to settings - not directly impacting detection - not being set to the recommended security level. For example, in Defender case, a quick scan didn't run in a while, or cloud protection is turned off. 
-          In the case of another antivirus, those states are reported via Security Center and could be in basically the following categories - a scan is recommended, settings change is recommended or an update is recomended.
+          In the case of another antivirus, those states are reported via Security Center and could be in basically the following categories - a scan is recommended, settings change is recommended or an update is recommended.
 
           The "at risk" status represents serious security issues, such as a malware detection, software out of date or antivirus not running at all. In the case of another Antivirus that could mean license has expired.
 
@@ -252,7 +252,7 @@ sections:
            How to set up Windows Defender or Endpoint Protection alerts?  
         answer: |
 
-           When Windows Defender is running on your computer, it automatically alerts you if it detects viruses, spyware, or other potentially unwanted software. You can also set Windows Defender to alert you if you run software that has not yet been analyzed, and you can choose to be alerted when software makes changes to your computer.  
+           When Windows Defender is running on your computer, it automatically alerts you if it detects viruses, spyware, or other potentially unwanted software. You can also set Windows Defender to alert you if you run software that hasn't yet been analyzed, and you can choose to be alerted when software makes changes to your computer.  
 
            ### To set up alerts  
 
