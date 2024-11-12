@@ -236,7 +236,18 @@ sections:
            -   Yellow indicates that your computer's status is "potentially unprotected."  
           
            -   Red indicates that your computer's status is "at risk."  
-          
+      - question: |
+          Can you describe a little bit what protected, potentially protected or at risk means?
+        answer: |
+
+          Depending whether Defender or another antivirus product is being used as primary provider, the general states above represented by a color show the overall asessment of the security state of the device.
+          In case of security level being satisfactory, a green label will be provided.
+
+          The "potentially unprotected" state is mostly due to settings - not directly impacting detection - not being set to the recommended security level. For example, in Defender case, a quick scan didn't run in a while, or cloud protection is turned off. 
+          In the case of another antivirus, those states are reported via Security Center and could be in basically the following categories - a scan is recommended, settings change is recommended or an update is recomended.
+
+          The "at risk" status represents serious security issues, such as a malware detection, software out of date or antivirus not running at all. In the case of another Antivirus that could mean license has expired.
+
       - question: |
            How to set up Windows Defender or Endpoint Protection alerts?  
         answer: |
