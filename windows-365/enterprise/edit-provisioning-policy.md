@@ -56,7 +56,7 @@ If you remove users from the provisioning policy assignment:
 - Frontline Cloud PCs in dedicated mode are immediately deprovisioned.
 - Frontline Cloud PCs in shared mode remain unchanged.
 
-## Apply the current configuration for Enterprise and Frontline dedicated mode
+## Apply the current configuration for Enterprise and Frontline in dedicated mode
 
 To apply a configuration change to existing Cloud PCs:
 
@@ -72,7 +72,7 @@ To apply a configuration change to existing Cloud PCs:
 >- When you apply a new region, Cloud PCs are shutdown during the application process. Users are disconnected and any unsaved work is lost.
 >- When you apply single sign-on, Cloud PCs deployed before April 2023 are shutdown during the application process. As this operation takes time, applying SSO to a large number of Cloud PCs can restart the VMs over a long period of time and won't complete immediately.
 
-## Apply the current configuration for Frontline shared mode
+## Apply the current configuration for Frontline in shared mode
 
 To apply a configuration to existing Cloud PCs:
 
