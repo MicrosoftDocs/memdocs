@@ -89,7 +89,7 @@ Windows 365 Frontline licenses are pooled licenses applied at the tenant level, 
 
 Windows 365 Frontline is a separate product and isn't governed by the Microsoft 365 F1/F3 license eligibility conditions.
 
-### Windows 365 Frontline mode licensing
+### Windows 365 Frontline licensing
 
 To use Windows 365 Frontline, each user must be licensed for:
 
@@ -165,6 +165,18 @@ The following features aren't yet supported for Windows 365 Frontline.
 - Resize a Cloud PC remote action
 - [Move a Cloud PC](move-cloud-pc.md)
 - Cross region disaster recovery
+
+Windows 365 Frontline in shared mode is only available in the following regions:
+
+- Australia East
+- Canada Central
+- North Europe
+- Central India
+- Japan East
+- UK South
+- Central US
+- East US
+- East US 2
 
 ## Next steps
 

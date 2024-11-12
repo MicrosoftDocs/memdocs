@@ -47,7 +47,7 @@ A few things to keep in mind:
 - Windows 365 Frontline in dedicated mode
 
   - If you have more users in your Microsoft Entra user group than the number of Cloud PCs available for the selected size, some users might not receive their Cloud PC.
-  - If you remove users from your Microsoft Entra user group, their Cloud PC is automatically moved into a grace period.  
+  - If you remove users from your Microsoft Entra user group, their Cloud PC is automatically moved into a [grace period](device-management-overview.md#column-details) .  
 
 - Windows 365 Frontline in shared mode
 
@@ -73,7 +73,7 @@ A few things to keep in mind:
 5. On the **General** page, select a **Join type**:
     - **Microsoft Entra Join**: You have two options for **Network**:
         - **Microsoft hosted network**: Select a **Geography** where you want your Cloud PCs provisioned. Then, for [**Region**](requirements.md#supported-azure-regions-for-cloud-pc-provisioning), you can select:
-            - **Automatic (Recommended)** (not supported for Frontline shared mode): The Windows 365 service automatically chooses a region within the selected geography at the time of provisioning. Microsoft strongly recommends using the **Automatic** option. This automation decreases the chance of provisioning failure.
+            - **Automatic (Recommended)** (*not supported for Frontline in shared mode*): The Windows 365 service automatically chooses a region within the selected geography at the time of provisioning. Microsoft strongly recommends using the **Automatic** option. This automation decreases the chance of provisioning failure.
             - A specific region: This option makes sure that your Cloud PCs are only provisioned in the region that you choose.
         - **Azure network connection**: Select an ANC to use for this policy.
     - **Hybrid Microsoft Entra join**: You must select an ANC to use for this policy.
