@@ -469,7 +469,7 @@ For the list of policy and profile combinations supported for security settings 
 
 ## Monitor status
 
-Intune
+**Intune:**
 
 Status and reports for policies that target devices in this channel are available from the policy node under Endpoint security in the Microsoft Intune admin center.
 
@@ -478,18 +478,19 @@ Drill in to the policy type and then select the policy to view its status. You c
 When you select a policy, you can view information about the device check-in status, and can select:
 
 - **View report** - View a list of devices that received the policy. You can select a device to drill in and see its per-setting status. You can then select a setting to view more information about it, including other policies that manage that same setting, which could be a source of conflict.
-
 - **Per setting status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
 
+**Defender Portal:**
 
-Defender Portal
-You can also monitor the Intune policies that are applied via the Defedner Portal. Go to the Endpoints section, expand onfiguration management and click on Ednpoint security policies. Select the policy to view its status, and can select:
-- **Overview** - View an overview of which groups the policy is applied to, the policy settings that are applied and device check-in status
-- **Policy Settings Values** - View the settings that are configured by the policy
+You can also monitor the Intune policies that are applied from within the [Microsoft Defender portal](https://security.microsoft.com/). Within the portal, go to **Endpoints**, expand configuration management and select *Endpoint security policies*. Select a policy to view its status, and then select:
+
+- **Overview** - View an overview of the groups the policy is applied to, the policy settings that are applied, and device check-in status.
+- **Policy Settings Values** - View the settings that are configured by the policy.
 - **Policy settings status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
-- **Applied devices** - View the devices to which the policy is applied
-- **Assigned Groups** - View the groups that the policy is applied
+- **Applied devices** - View the devices to which the policy is applied.
+- **Assigned Groups** - View the groups to which the policy is assigned.
 
+For additional information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json) in the Defender content.
   
 ## Frequently asked questions and considerations
 
