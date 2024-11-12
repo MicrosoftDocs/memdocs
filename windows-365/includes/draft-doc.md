@@ -10,4 +10,4 @@ ms.custom: include file
 ---
 
 > [!IMPORTANT]
-> MICROSOFT CONFIDENTIAL. This is unfinished draft documentation and is subject to significant change. Not ready for review. 
+> MICROSOFT CONFIDENTIAL. This is unfinished draft documentation and is subject to significant change.

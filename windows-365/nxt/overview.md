@@ -33,9 +33,28 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-NXT is the first Cloud PC device. It’s a full stack, purpose-built solution by Microsoft, designed to connect you to the Windows 365 service in seconds. When you sign in to your Cloud PC, you can securely connect to a familiar Windows Desktop in the cloud, and access a responsive, high-quality experience. For IT, it brings a more streamlined management experience, where it can be managed alongside other PCs in Microsoft Intune.
+NXT is the first Cloud PC hardware device. It’s a full stack, purpose-built solution by Microsoft. When a users sign in to their NXT, they're securely connected to their [Cloud PC virtual machine](/windows-365/overview#what-is-a-cloud-pc) through the Windows 365 service.
 
-The device is secure by design, featuring an adminless user model, no local data storage, and no local apps. You can’t install or execute any arbitrary software on the device, so you are protected from malware. Security baseline policies are enabled by default, and security features cannot be disabled.
+Organizations can purchase NXTs and distribute them to their employees. Admins use Microsoft Intune to manage NXTs alongside other devices.
+
+## Secure by design
+
+NXT is secure by design, thanks to the following features:
+
+- An adminless user model.
+- No local data storage.
+- No local apps.
+- Arbitrary software can't be installed or executed on the NXT, so it's protected from malware.
+- Security baseline policies are enabled by default.
+- Security features can't be disabled.
+
+## Requirements
+
+Requirements for NXT include:
+
+- NXT device.
+- Management by your organization using Microsoft Intune.
+- [Windows 365 license](https://www.microsoft.com/licensing/product-licensing/windows-365?rtc=1) for your Cloud PC.
 
 ## NXT components
 
@@ -45,83 +64,48 @@ The device is secure by design, featuring an adminless user model, no local data
 
 ### Power supply details
 
+Barrel type, 65 W. Passive thermals.
+
 ## Device specifications
 
 ### Compute and connectivity
 
-| Memory | ? |
-| Storage | ? |
-| Wi-Fi | ? |
-| Bluetooth | ? |
+| Component | Details |
+| --- | --- |
+| Memory | 8 GB LPDDRS |
+| Storage | 64 GB UFS |
+| Wi-Fi | WiFi 6E |
+| Bluetooth | 5.3 |
 | USB | ? |
 
 ## Device capabilities
 
 ### MMR and VDI optimization
 
-NXT supports local redirection of web multimedia content, ensuring a smooth, high-quality experience, just like on a local PC. It is also optimized for online meetings with Microsoft Teams (Teams VDI 2.0), providing highly performant video conferencing. Similarly, we’re working to enable high-fidelity Zoom and Webex meetings in the same way.
-
-### Monitor support
-
-NXT supports two 4K displays with 1 HDMI and 1 Display port connection in the back of the device.
-
-### Peripheral support
-
-The device supports USB and Bluetooth peripherals for:
-
-- keyboard
-- mouse
-- headphones
-- camera
-
-### Ports and connections
-
-On the front panel, there’s a USB-A port and a 3.5 mm audio jack. The back panel includes two USB-A ports, a USB-C port, an Ethernet port, and the power connector. It also includes an HDMI port and a Display Port—both the HDMI and Display Port support one monitor each, up to 4k in resolution. On the side, there is a Kensington lock port to help you physically secure the device. For wireless connectivity, the device supports Wi-Fi 6E and Bluetooth 5.3. 
-
-## Preinstalled software
-
-The device comes pre-installed with a build and will auto-update during off hours when a new build is available.  
+NXT supports local redirection of web multimedia content, ensuring a smooth, high-quality experience, just like on a local PC.
 
 ## Device certifications
 
 - [Product safety](https://support.microsoft.com/en-us/windows/product-safety-warnings-and-instructions-726eab87-f471-4ad8-48e5-9c25f68927ba)
 - [Product safety warnings and instructions](https://support.microsoft.com/en-us/windows/product-safety-warnings-and-instructions-726eab87-f471-4ad8-48e5-9c25f68927ba)
 
-## Warranty information
+## Unit dimensions
 
-
-## Package dimensions
-
-| Measurement | Units metric | Units imperial |
+| Dimension | Units metric | Units imperial |
 | --- | --- | --- |
-| Unit length | | |
-| Unit width | | |
-| Unit depth | | |
-| Unit weight | | |
-| Exterior shipper length | | |
-| Exterior shipper width | | |
-| Exterior shipper depth | | |
-| Exterior shipper weight | | |
-
-- Unit: The retail-style box NXT is sold in.
-- Exterior shipper: The protective shipping packaging around unit.
+| Length | 120mm | 4.72 inches |
+| Width | 120mm | 4.72 inches |
+| Height | 30mm | 1.18 inches |
+| Weight | 418 grams | 14.75 ounces |
 
 ## Finding the serial number
 
-The serial number for NXT is printed...
-
-The serial number can also be found in the **Properties** app:
-
-1. Sign in to the device.
-1. Navigate to **This PC** in file explorer.
-1. Right click and select **Properties** of the NXT.
-
-screencap
-
-
+The serial number is printed on the bottom of the device below the Microsoft logo.
 
 <!-- ########################## -->
 ## Next steps
+
+For information about peripheral ports, software, and box contents, see [Unboxing](unboxing.md).
 
 [First time user setup](setup.md).
 
