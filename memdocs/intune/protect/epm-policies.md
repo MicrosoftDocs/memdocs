@@ -261,7 +261,10 @@ Use either of the following methods to create new elevation rules, which are add
 
    1. For the rule, configure the elevation **Type** and **Child process behavior**, and then select **OK**. The policy is updated with the new rule.
    2. After the rule is added to the policy, you can edit the policy to gain access to the rule and then modify it to make additional configurations if needed.
- 
+
+   **Require the same file path as this elevation:**  
+   When you select this checkbox, the File Path field in the rule is set to the file path as seen in the report. If the checkbox isn’t selected, the path remains empty.
+
    :::image type="content" source="./media/epm-policies/create-a-rule.png" alt-text="Image from the admin center UI of the create a rule pane." lightbox="./media/epm-policies/create-a-rule.png":::
 
 ### Manually configure elevation rules for Windows elevation rules policy
