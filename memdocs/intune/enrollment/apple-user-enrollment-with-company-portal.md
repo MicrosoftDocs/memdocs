@@ -73,13 +73,6 @@ Complete these steps to create an enrollment profile for devices enrolling via u
 6. Select **Next**.
   
 7. On the **Settings** page, select **User enrollment with Company Portal**. 
-  
-   Alternatively, you can select **Determine based on user choice**, which lets assigned users select the enrollment type during enrollment. Their options:   
-
-   * **I own this device**: As a follow-up, the user must select whether they want to secure the entire device or only secure work-related apps and data. 
-   * **(Company) owns this device**: The device enrolls via Apple Device Enrollment. For more information about this enrollment method, see [Device Enrollment and MDM](https://support.apple.com/guide/deployment/device-enrollment-and-mdm-depd1c27dfe6/web) on the Apple Support website.   
-
-   The device user's selection determines which enrollment process is carried out. Their choice is also reflected in the device ownership attribute shown in Intune. To learn more about the user experience and what they see onscreen during enrollment, see [Set up iOS/iPadOS device access to your company resources](../user-help/enroll-your-device-in-intune-ios.md).  
     
 8. Select **Next**.  
 
