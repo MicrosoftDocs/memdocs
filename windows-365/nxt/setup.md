@@ -48,13 +48,15 @@ Complete the following steps to set up your new device:
 2. Connect the power adaptor to the power port and then into a power outlet.
 3. Power on the device.
 4. On the **Let's connect you to a network** page, select a network > **Next**.
-5. On the **Please review License Agreement** page, review the agreement > **Next**.
-6. On the **Let's set things up for your work or school** page, type your work or school e-mail > **Next**
-7. On the **Sign in** page, type your work email address.
+![Screenshot of network connect page.](media/setup/connect-network.png)
+5. On the **Let's set things up for your work or school** page, type your work or school e-mail > **Next**
+![Screenshot of e-mail sign in page.](media/setup/email-sign-in.png)
+6. Authenticate your account as requested. Your organization defined the authentication method (security key, cross-device passkey, or passwordless multifactor authentication).
+7. Your Cloud PC loads with all of your context and apps just where you left off.
 
-You can adjust additional settings prior to sign-in by using Quick settings in the bottom-right corner.
+You can adjust additional settings prior to sign-in by using [Quick settings](quick-settings.md) in the bottom-right corner.
 
-After completing these steps, your NXT is connected to your Cloud PC virtual machine through the Windows 365 service.
+When you sign in for the first time, the NXT joins Microsoft Entra and automatically enrolls the device into Microsoft Intune. You organization's admins use Intune to manage both virtual machines and hardware devices, including NXT.
 
 <!-- ########################## -->
 ## Next steps
