@@ -364,7 +364,7 @@ The site server uses the **Exchange Server connection account** to connect to th
 
 ### Management point connection account
 
-The management point uses the **Management point connection account** to connect to the Configuration Manager site database. It uses this connection to send and retrieve information for clients. The management point uses its computer account by default, but you can configure an alternate service account instead. When the management point is in an untrusted domain from the site server, you must specify a alternate service account.
+The management point uses the **Management point connection account** to connect to the Configuration Manager site database. It uses this connection to send and retrieve information for clients. The management point uses its computer account by default, but you can configure an alternate service account instead. When the management point is in an untrusted domain from the site server, you must specify an alternate service account.
 
   > [!NOTE]
   > For enhanced security posture it is recommended to leverage alternate service account rather than Computer account for ‘Management point connection account’.
@@ -391,7 +391,11 @@ For more information, see [Use multicast to deploy Windows over the network](../
 
 ### Network access account
 
-Client computers use the **network access account** when they can't use their local computer account to access content on distribution points. It mostly applies to workgroup clients and computers from untrusted domains. This account is also used during OS deployment, when the computer that's installing the OS doesn't yet have a computer account on the domain.
+Client computers use the **network access account** when they can't use their local computer account to access content on distribution points. It mostly applies to workgroup clients and computers from untrusted domains.
+This account is also used during OS deployment, when the computer that's installing the OS doesn't yet have a computer account on the domain.
+
+> [!NOTE]
+> Managing clients in untrusted domains and cross-forest scenarios allows for multiple network access accounts.
 
 > [!IMPORTANT]
 > The network access account is never used as the security context to run programs, install software updates, or run task sequences. It's used only for accessing resources on the network.
@@ -441,7 +445,6 @@ The network access account is still required for the following actions (includin
 
 - Task Sequence properties setting to **Run another program first**. This setting runs a package and program from a network share before the task sequence starts. For more information, see [Task sequences properties: Advanced tab](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#advanced-tab).
 
-- Managing clients in untrusted domains and cross-forest scenarios allows for multiple network access accounts.
 
 ### Package access account
 
@@ -746,7 +749,7 @@ Configuration Manager grants access to the account used for the reporting servic
 
 ## Elevated permissions
 
-Configuration Manager requires some accounts to have elevated permissions for on-going operations. For example, see [Prerequisites for installing a primary site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). The following list summarizes these permissions and the reasons why they're needed.
+Configuration Manager requires some accounts to have elevated permissions for ongoing operations. For example, see [Prerequisites for installing a primary site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). The following list summarizes these permissions and the reasons why they're needed.
 
 - The computer account of the primary site server and central administration site server requires:
 
