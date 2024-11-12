@@ -5,7 +5,7 @@ keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 7/09/2024
+ms.date: 10/19/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -248,6 +248,34 @@ For newly provisioned Cloud PCs, verify WebRTC is available. If it’s not, you 
 - To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps: [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/mem/intune/apps/apps-add-office365).
 
 - To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps: [install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, use this link: [https://aka.ms/msrdcwebrtcsvc/msi]( https://aka.ms/msrdcwebrtcsvc/msi).
+
+## Windows 365 Frontline
+
+The following are issues for Windows 365 Frontline:
+
+### Reprovision action doesn't apply on devices that don't have a configuration change
+
+For Frontline in shared mode Cloud PCs, the reprovision action won't begin unless a change has been made to the provisioning policy image.
+
+**Troubleshooting steps**
+
+You can reprovision all devices by removing the assignment group, saving the changes, and then adding the group assignment back to the policy. This workaround method will end the sessions for all active users.
+
+### Frontline shared card displays in Windows App during Cloud PC provisioning
+
+When you provision the Frontline Cloud PC in shared more for the first time, the Frontline shared card displays in Windows App with status **Ready to Connect** during Cloud PC are provisioning. Users can click to connect but receive a **Your connection failed** error.
+
+**Troubleshooting steps**
+
+Users must close all dialogs before connecting to the Cloud PC.
+
+### Users must wait for about 90 seconds after Reset
+
+When a user preforms the **Reset** action on a Frontline Cloud PC in shared mode, the **Connect** button is grayed out for around 90 seconds. During this time, users can't connect to another Frontline Cloud PC.
+
+### Users can select Connect while they're connected to a Frontline Cloud PC in shared mode
+
+When a user is connected to a Frontline Cloud PC, the connect button in Windows App remains blue and clickable. If the user selects connect, a new window opens and connects. The previous window remains open with a new connection notification dialog.
 
 ## Next steps
 
