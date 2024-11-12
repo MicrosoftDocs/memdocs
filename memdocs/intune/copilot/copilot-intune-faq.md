@@ -7,7 +7,7 @@ keywords: security copilot, intune, microsoft intune, copilot, faq
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/01/2024
+ms.date: 11/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice:
