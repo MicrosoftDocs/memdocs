@@ -56,20 +56,20 @@ The NXT has the following ports:
 
 #### Back panel
 
-- Two USB-A
 - USB-C
+- Two USB-A
+- Display
+- HDMI
 - Ethernet
 - Power connector
-- HDMI
-- Display
 
-![Image of the NXT device back.](media/overview/device-back.png)
+![Image of the NXT device back.](media/unboxing/device-back.png)
 
 #### Side panel
 
 Kensington lock to physically secure the device
 
-![Image of the NXT device back.](media/overview/device-back.png)
+![Image of the NXT side back.](media/unboxing/device-side.png)
 
 ### Peripheral support
 
