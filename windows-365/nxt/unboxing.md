@@ -52,6 +52,8 @@ The NXT has the following ports:
 - USB-A
 - 3.5 mm audio jack
 
+![Image of the NXT device front.](media/overview/device-front.png)
+
 #### Back panel
 
 - Two USB-A
@@ -61,9 +63,13 @@ The NXT has the following ports:
 - HDMI
 - Display
 
+![Image of the NXT device back.](media/overview/device-back.png)
+
 #### Side panel
 
 Kensington lock to physically secure the device
+
+![Image of the NXT device back.](media/overview/device-back.png)
 
 ### Peripheral support
 
