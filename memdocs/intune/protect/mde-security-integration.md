@@ -469,6 +469,8 @@ For the list of policy and profile combinations supported for security settings 
 
 ## Monitor status
 
+Intune
+
 Status and reports for policies that target devices in this channel are available from the policy node under Endpoint security in the Microsoft Intune admin center.
 
 Drill in to the policy type and then select the policy to view its status. You can view the list of platforms, policy types, and profiles that support security settings management in the table in [Which solution should I use](#which-solution-should-i-use), earlier in this article.
@@ -479,6 +481,16 @@ When you select a policy, you can view information about the device check-in sta
 
 - **Per setting status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
 
+
+Defender Portal
+You can also monitor the Intune policies that are applied via the Defedner Portal. Go to the Endpoints section, expand onfiguration management and click on Ednpoint security policies. Select the policy to view its status, and can select:
+- **Overview** - View an overview of which groups the policy is applied to, the policy settings that are applied and device check-in status
+- **Policy Settings Values** - View the settings that are configured by the policy
+- **Policy settings status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
+- **Applied devices** - View the devices to which the policy is applied
+- **Assigned Groups** - View the groups that the policy is applied
+
+  
 ## Frequently asked questions and considerations
 
 ### Device check-in frequency
