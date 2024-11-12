@@ -237,7 +237,7 @@ sections:
           
            -   Red indicates that your computer's status is "at risk."  
       - question: |
-          Can you describe a little bit what protected, potentially protected or at risk means ?
+          Can you describe a little bit what protected, potentially protected or at risk means?
         answer: |
 
           Depending whether Defender or another antivirus product is being used as primary provider, the general states above represented by a color show the overall asessment of the security state of the device.
