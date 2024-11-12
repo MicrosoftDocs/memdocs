@@ -31,7 +31,7 @@ ms.collection:
 
 # Automatically enroll NXT in Intune
 
-[!INCLUDE [MS confidential, draft docs](./includes/draft-doc.md)]
+[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 TBS...
 

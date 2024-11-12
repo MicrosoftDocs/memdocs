@@ -31,7 +31,7 @@ ms.collection:
 
 # Join NXT to Microsoft Entra
 
-[!INCLUDE [MS confidential, draft docs](./includes/draft-doc.md)]
+[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 TBS...
 

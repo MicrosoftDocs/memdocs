@@ -31,7 +31,7 @@ ms.collection:
 
 # Control + Alt + Delete
 
-[!INCLUDE [MS confidential, draft docs](./includes/draft-doc.md)]
+[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 Options on the Control + Alt + Delete menu include:
 
