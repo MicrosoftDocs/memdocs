@@ -96,7 +96,16 @@ Create an enrollment profile for devices enrolling via account driven user enrol
 1. Select **Create profile** > **iOS/iPadOS**.  
 1. On the **Basics** page, enter a name and description for the profile so that you can distinguish it from other profiles in the admin center. Device users don't see these details.  
 1. Select **Next**.  
-1. On the **Settings** page, for **Enrollment type**, select **Account driven user enrollment**.  
+1. On the **Settings** page, for **Enrollment type**, select **Account driven user enrollment**.
+
+   Alternatively, you can select Determine based on user choice, which lets assigned users select the enrollment type during enrollment. Their options:
+
+   **I own this device:** As a follow-up, the user must select whether they want to secure the entire device or only secure work-related apps and data.
+
+   **(Company) owns this device:** The device enrolls via Apple Device Enrollment. For more information about this enrollment method, see Device Enrollment and MDM on the Apple Support website.
+
+   The device user's selection determines which enrollment process is carried out. Their choice is also reflected in the device ownership attribute shown in Intune. To learn more about the user experience and what they see onscreen during enrollment, see [Set up iOS/iPadOS device access to your company resources](enroll-your-device-in-intune-ios.md).
+
 1. Select **Next**.  
 1. On the **Assignments** page, assign the profile to all users, or select specific groups. Device groups aren't supported in user enrollment scenarios because user enrollment requires user identities.  
 1. Select **Next**.  
