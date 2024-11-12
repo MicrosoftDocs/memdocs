@@ -149,26 +149,27 @@ Maintain a Wi-Fi connection until all steps are complete. Pausing for more than 
   > [!NOTE]
   > You must install the management profile as described in the next steps within 8 minutes of downloading it. If you don't, the profile will be removed and you'll have to restart enrollment.  
 
-4. When prompted to open Company Portal, tap **Open**. Read through the information on the **How to install Management Profile** screen. 
+4. Go to the Settings app.
 
-5. Go to the Settings app and tap **Enroll in < organization name >** or **Profile Downloaded**.  
+5. Go to **General** and select the VPN & device management option.
 
-    ![Example screenshot of the Settings app, Enroll in organization option.](./media/enroll-your-device-in-intune-ios/enroll-in-organization-ios-1909.PNG)  
+6. **Sign in** with your work or school account, or with the Apple ID provided to you by your organization.
 
-   If neither options appear, go to **General** and select the VPN & device management option to view installed profiles. If you still don't see the profile, try downloading it again. 
+7. Select **Sign In to iCloud**.
+   
+8. Enter the password for the username that's shown on screen. Then select **Continue**.
 
+9. Select **Allow Remote Management**.
+    
+ Wait a few minutes while your device is configured and the management profile is installed.
+ 
+ To confirm your device is ready to use for work, go to VPN & Device Management. Confirm that your work account is listed under **MANAGED ACCOUNT**.
+ 
+ Microsoft Authenticator is required to access work apps. Wait a few minutes after enrollment for Authenticator to install on your device. An error message appears if you try to sign in to a work app without Authenticator.
+ 
+ You might receive more prompts asking for your approval to install work apps. Select **Install** to approve installation.  
 
-6. On the **User Enrollment** screen, tap **Enroll My iPhone**.  
-
-    ![Example screenshot of the Settings app, User Enrollment screen, highlighting the enroll button.](./media/enroll-your-device-in-intune-ios/user-enrollment-information-1909.PNG)  
-
-7. Enter the device password. Then tap **Install**.  
-
-8. On the **Sign in** screen, enter the password for your managed Apple ID. In most cases, these credentials will be the same ones you use to sign in to your work or school account, unless your organization provided you with a different set of credentials. 
-9. Tap **Sign in**.  
-10. A success message will appear on the screen briefly after the profile is installed. To verify that the profile was installed, go to your VPN and device management settings. You should see the profile listed under **Mobile Device Management**. 
-
-11. Return to the Company Portal app. Company Portal will begin to sync and set up your device. Company Portal might prompt you to update additional device settings. If it does, tap **Continue**.    
+11. Return to the Company Portal app. Company Portal might prompt you to update additional device settings. If it does, tap **Continue**.    
 
 12. You'll know that setup is complete when all items in the list show a green checkmark. Tap **Done**.  
 
