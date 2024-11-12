@@ -33,6 +33,8 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
+When you unbox your NXT, you'll find the following hardware, software, and network and peripheral support.
+
 ## Hardware
 
 Your box includes:
@@ -40,6 +42,39 @@ Your box includes:
 - NXT device.
 - Power adaptor.
 - Quick start guide.
+
+### Ports
+
+The NXT has the following ports:
+
+#### Front panel
+
+- USB-A
+- 3.5 mm audio jack
+
+#### Back panel
+
+- Two USB-A
+- USB-C
+- Ethernet
+- Power connector
+- HDMI
+- Display
+
+#### Side panel
+
+Kensington lock to physically secure the device
+
+### Peripheral support
+
+Both the HDMI and Display Port support one monitor each, up to 4k in resolution.
+
+USB and Bluetooth for:
+
+- keyboard
+- mouse
+- headphones
+- camera
 
 ## Software
 
@@ -51,37 +86,6 @@ Operating system updates occur automatically during off hours.
 
 - Wi-Fi 6E
 - Bluetooth 5.3
-
-## Ports
-
-### Front panel
-
-- USB-A
-- 3.5 mm audio jack
-
-### Back panel
-
-- Two USB-A
-- USB-C
-- Ethernet
-- Power connector
-- HDMI
-- Display
-
-### Side panel
-
-Kensington lock to physically secure the device
-
-## Peripheral support
-
-Both the HDMI and Display Port support one monitor each, up to 4k in resolution.
-
-USB and Bluetooth for:
-
-- keyboard
-- mouse
-- headphones
-- camera
 
 <!-- ########################## -->
 ## Next steps
