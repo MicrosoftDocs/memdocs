@@ -70,7 +70,7 @@ Get-AppxPackage –AllUsers -name *MicrosoftCorporationII*
 
 This command shows all the Microsoft-maintained apps (like QuickAssist, Microsoft Family, and so on) on the physical device. In order for Windows 365 Boot to work correctly, confirm the following versions:
 
-- Windows App version 1.1.162.0 or later.
+- Windows App version 2.0.285 or later.
 - Azure Virtual Desktop (HostApp) app version 1.2.4159. or later.
 
 Windows 365 Boot also requires the latest version of Windows 11.
