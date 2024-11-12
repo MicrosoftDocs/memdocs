@@ -41,7 +41,7 @@ You can use the quick settings icons in the bottom corner of the **Sign in** scr
 
 ## Internet
 
-To see the internet options, on the **Sign in** screen, select the XX icon.
+To see the internet options, on the **Sign in** screen, select the **Internet** icon (![Image of the internet icon.](media/quick-settings/internet-icon.gif)).
 
 ## Display Audio
 
@@ -49,7 +49,7 @@ To see the display audio options, on the **Sign in** screen, select the XX icon.
 
 ## Accessibility
 
-To see the accessibility options, on the **Sign in** screen, select the XX icon.
+To see the accessibility options, on the **Sign in** screen, select the **Accessibility** icon (![Image of the Accessibility icon.](media/quick-settings/accessibility-icon.gif)).
 
 | Control | Description |
 | --- | --- |
