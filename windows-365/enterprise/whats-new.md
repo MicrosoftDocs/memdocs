@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/02/2024
+ms.date: 10/31/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -52,8 +52,76 @@ For more information about public preview items, see [Public preview in Windows 
 ### Scripts
 ### End user experience
 ### Windows 365 Government
-### Windows 365 app
+### Windows 365 app 
 -->
+
+<!-- ########################## -->
+## Week of October 28, 2024 (Service release 2410)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Bulk Troubleshoot action now generally available<!--51893512-->
+
+The Troubleshoot action in bulk has moved out of preview and into general availability.
+
+For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+#### Microsoft Remote Desktop iOS client now supports Yubikey smart card redirection<!--49237449-->
+
+The Microsoft Remote Desktop iOS client now supports smart card redirection for YubiKeys using USB-C or Lightning connector. This enables in-session smart card usage.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+### Update to Cloud PC action status report<!--49451077-->
+
+The Cloud PC action status report now shows batches of devices on which actions were triggered. You can see the batch current progress. For more information, see [Cloud PC actions report ](report-cloud-pc-actions.md).
+
+### Azure network connections inactive state<!--52127015-->
+
+Azure network connections that meet either of the following conditions for more than four weeks are now marked as inactive:
+
+- ANCs that aren't associated with provisioning policies.
+- ANCs with provisioning policies that have no Cloud PCs associate with them.
+
+#### Cloud PC connection quality report now available for Windows 365 Government<!--46738280-->
+
+The Cloud PC connection quality report is now available for Windows 365 Government, both Government Community Cloud (GCC) and GCC-High. For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md). 
+
+<!-- ########################## -->
+## Week of October 21, 2024
+
+#### Windows 365 support for AVC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+
+AVC Mixed Mode is now available in the default graphics profile. When MMR isn't enabled, AVC/h.264 is used to encode detected image content instead of the RemoteFX image encoder. This improves performance when encoding images relative to bitrate and framerate in network-constrained scenarios.
+
+<!-- ########################## -->
+## Week of October 14, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New Windows 365 IP subnet for RDP connectivity<!--53404845-->
+
+Core TCP-based RDP traffic for Cloud PC connections uses the *.wvd.microsoft.com wildcard fully qualified domain name (FQDN). The FQDN remains unchanged, but the underlying IP addresses associated with it will shortly be changed to a single subnet. This will simplify optimization of this traffic and reduce the need for future change management.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Call redirection<!--53718424-->
+
+Windows 365 now supports multimedia redirection call redirection. For more information, see [Use multimedia redirection](/azure/virtual-desktop/multimedia-redirection).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### HP Anyware for Windows 365 is now generally available<!--51133111-->
+
+HP Anyware for Windows 365 has moved out of preview and into general availability.
+
+For more information, see [Set up HP Anyware for Windows 365 Enterprise](hp-anyware-set-up.md)
+
 
 <!-- ########################## -->
 ## Week of September 30, 2024 (Service release 2409)
@@ -979,7 +1047,7 @@ Users now have two options when they select the **Open in browser** drop-down bu
 
 #### Windows 365 app update notifications for users<!--45206957-->
 
-Windows 365 app users will get a notification when an udpate is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
+Windows 365 app users will get a notification when an update is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot

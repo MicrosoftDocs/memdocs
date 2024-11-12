@@ -67,7 +67,7 @@ To create a new enrollment profile:
 1. Go to **Devices** > **Enrollment**.  
 1. Select the **Android** tab.  
 1. Under **Android Enterprise** > **Enrollment Profiles**, choose **Corporate-owned, fully managed user devices**. 
-1. Select **Create profile**.  
+1. Select **Create policy**.  
 1. Enter the basics for your profile:  
     - **Name**: Give the profile a name. Note the name down for later, because you need it when you set up the dynamic device group.   
 

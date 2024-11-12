@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/01/2024
+ms.date: 10/29/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,24 +77,13 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
-### Updates to app configuration policies for Android Enterprise devices<!-- 26711672 -->
+### Additional reporting details for LOB apps on AOSP devices<!-- 27157460  -->
 
-App configuration policies for Android Enterprise devices will soon support overriding the following additional permissions:
-
-- Access background location
-- Bluetooth (connect)
-
-For more information about app configuration policies for Android Enterprise devices, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
+Additional details will be provided for app installation reporting of Line of Business (LOB) apps on Android Open Source Project (AOSP) devices. You will be able to see error codes and detailed error messages for LOB apps. For information about app status details, see [Monitor app information and assignments with Microsoft Intune](../apps/apps-monitor.md).
 
 Applies to:
 
-- Android Enterprise devices
-
-### New UI for Intune Company Portal app for Windows<!-- 27219294 -->
-
-The UI for the Intune Company Portal app for Windows will be updated. Users will be able to use the same functionality they’re used to with an improved experience for their desktop app. With the updated design, users will see improvements in user experience for the **Home**, **Devices**, and **Downloads & updates** pages. The new design will be more intuitive and will highlight areas where users need to take action.
-
-For more information, see [New look for Intune Company Portal app for Windows](https://techcommunity.microsoft.com/t5/intune-customer-success/new-look-for-intune-company-portal-app-for-windows/ba-p/4158755).
+- Android Open Source Project (AOSP) devices
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -106,7 +95,67 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
+
+### Device Firmware Configuration Interface (DFCI) support for Samsung devices<!-- 29107197 -->
+
+We're adding support to use DFCI profiles to manage UEFI (BIOS) settings for Samsung devices that run Windows 10 or Windows 11. Not all Samsung devices running Windows are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+
+You can manage DFCI profiles from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type. For more information about DFCI profiles, see:
+
+- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
+
+Applies to:
+
+- Windows
+
+### New settings for Windows 24H2 in the Windows settings catalog<!-- 29592329 -->
+
+The Settings Catalog lists all the settings you can configure in a device policy, and all in one place. You can view these Windows settings in the Microsoft Intune admin center by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
+
+We're working on the addition of new settings for Window 24H2.
+
+Applies to:
+
+- Windows
+
+### New settings available in the Apple settings catalog <!--29038336 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+We're adding new settings to the Settings Catalog. To view available settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+#### iOS/iPadOS
+
+**Restrictions**:
+
+- Allow Apps To Be Hidden
+- Allow Apps To Be Locked
+- Allow Call Recording
+- Allow Mail Summary
+- Allow RCS Messaging
+
+##### macOS
+
+**Declarative Device Management (DDM) > Math Settings**:
+
+- Calculator
+  - Input Mode - RPN
+
+**Restrictions**:
+
+- Allow Mail Summary
+- Allow Media Sharing Modification
+
+The following settings have been deprecated by Apple and will be marked as deprecated in the Settings Catalog:
+
+#### macOS
+
+**Security > Firewall**:
+
+- Enable Logging
+- Logging Option
 
 <!-- *********************************************** -->
 
@@ -114,11 +163,46 @@ Applies to:
 
 <!-- *********************************************** -->
 
-### Defender for Endpoint security settings support in government cloud environments<!-- 24191406 -->
+## Device management
 
-Customer tenants in US Government Community Cloud (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
+### Store macOS certificates in user keychain<!-- 7824255 -->
 
-For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
+Soon you'll have the option to store macOS certificates in the user keychain. Currently, Microsoft Intune automatically stores user and device certificates in the *device* keychain. The enhancement will strengthen system security, and will improve the user experience by reducing certificate prompts.
+
+Applies to:
+
+- macOS
+
+### Device Inventory for Windows<!-- 24853010 -->
+
+Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
+
+You'll soon be able to choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view.
+
+Applies to:
+
+- Windows (Corporate owned devices managed by Intune)
+
+<!-- *********************************************** -->
+
+## Device security
+
+### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
+
+We are adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform, that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+
+The template will support settings related to global exclusion settings. Applicable to antivirus and EDR engines on the client, the settings can configure exclusions to stop associated real time protection EDR alerts for the excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
+
+Applies to:
+
+- Linux
+
+### New Microsoft Tunnel readiness check for auditd package<!-- 28148207 -->
+
+We're updating the [Microsoft Tunnel readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to detect if the **auditd** package for Linux System Auditing (LSA) is installed on your Linux Server. When this check is in place, the mst-readiness tool will raise a warning if the audit package isn't installed. Auditing isn't a required prerequisite for the Linux Server, but recommended.
+
+For more information on *auditd* and how to install it on your Microsoft Tunnel server, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#linux-system-auditing).
+
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
@@ -135,69 +219,6 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Device management
-
-### Minimum OS version for Android devices will be Android 10 and later for user-based management methods<!-- 14755802 -->
-
-From October 2024, the minimum OS supported for Android devices will be Android 10 and later for user-based management methods, which includes:
-
-- Android Enterprise personally-owned work profile
-- Android Enterprise corporate owned work profile
-- Android Enterprise fully managed
-- Android Open Source Project (AOSP) user-based
-- Android device administrator
-- App protection policies (APP)
-- App configuration policies (ACP) for managed apps
-
-For enrolled devices on unsupported OS versions (Android 9 and lower)
-
-- Intune technical support won't be provided.
-- Intune won't make changes to address bugs or issues.
-- New and existing features aren't guaranteed to work.
-
-While Intune won't prevent enrollment or management of devices on unsupported Android OS versions, functionality isn't guaranteed, and use isn't recommended.
-
-Userless methods of Android device management (Dedicated and AOSP userless) and Microsoft Teams certified Android devices won't be affected by this change.
-
-### Device Inventory for Windows<!-- 24853010 -->
-
-Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
-
-You'll soon be able to choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view.
-
-Applies to:
-
-- Windows (Corporate owned devices managed by Intune)
-
-### Collection of additional device inventory details<!-- 29460196 -->
-
-We're adding additional files and registry keys to be collected to assist in troubleshooting the Device Hardware Inventory feature.
-
-Applies to:
-
-- Windows
-
-<!-- *********************************************** -->
-
-## Device security
-
-### New strong mapping requirements for Intune-issued SCEP certificates<!-- 29005591 -->
-
-To align with the Windows Kerberos Distribution Center's (KDC) strong mapping attribute requirements described in [KB5014754](https://support.microsoft.com/help/5014754), SCEP certificates issued by Microsoft Intune will be required to have the following tag in the Subject Alternative Name (SAN) field:
-
-`URL=tag:microsoft.com,2022-09-14:sid:<value>`
-
-This tag will ensure that certificates are compliant with the KDC's latest requirements, and that certificate-based authentication continues working. Microsoft Intune will be adding support for the SID variable in SCEP profiles. You will be able to modify or create a new SCEP profile to include the OnPremisesSecurityIdentifier variable in the SCEP profile. This action will trigger Microsoft Intune to issue new certificates with the appropriate tag to all applicable users and devices.
-
-These requirements apply to:
-
-- Android, iOS/iPadOS, and macOS user certificates.
-- Windows 10/11 user and device certificates.
-
-They don't apply to device certificates used with Microsoft Entra joined users or devices, because SID is an on-premises identifier.
-
-<!-- *********************************************** -->
-
 <!-- ## Intune apps -->
 
 <!-- *********************************************** -->
@@ -206,7 +227,40 @@ They don't apply to device certificates used with Microsoft Entra joined users o
 
 <!-- *********************************************** -->
 
-<!-- ## Monitor and troubleshoot -->
+## Monitor and troubleshoot
+
+### New device actions for single device query<!--25799823 -->
+
+We're adding the Intune remote device actions to Single device query to help you manage your devices remotely. From the device query interface, you'll be able to run device actions based on query results for faster and more efficient troubleshooting.
+
+Applies to:
+
+- Windows
+
+For more information, see:
+
+- [Device query in Microsoft Intune](../../analytics/device-query.md)
+- [Run remote actions on devices with Microsoft Intune](../remote-actions/device-management.md)
+
+### Device Query for Multiple Devices<!--25234456 -->
+
+We're adding Device query for multiple devices. This feature allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
+
+Device query for multiple devices will be supported for devices running Windows 10 or later. This feature will be included as part of Advanced Analytics.
+
+Applies to:
+
+- Windows
+
+### ICCID will be inventoried for Android Enterprise Dedicated and Fully Managed <!-- 12846449 -->
+
+We're adding the ability to view a device's ICCID number for devices enrolled as Android Enterprise Dedicated or Android Fully Managed. Admins can view ICCID numbers in their device inventory.
+
+When available, you can find the ICCID number for Android devices by navigating to **Devices** > **Android**. Select a device of interest. In the side panel, under **Monitor** select **Hardware**. The ICCID number will be in the **Network details** group. The ICCID number isn't supported for Android Corporate-Owned Work Profile devices.
+
+Applies to:
+
+- Android
 
 <!-- *********************************************** -->
 

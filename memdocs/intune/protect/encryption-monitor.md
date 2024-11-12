@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/18/2024
+ms.date: 10/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -55,7 +55,7 @@ The encryption report supports reporting on devices that run the following opera
 
 ### Report details
 
-The Encryption report pane displays a list of the devices you manage with high-level details about those devices. You can select a device from the list to drill-in and view additional details from the devices [Device encryption status](#device-encryption-status) pane.
+The Encryption report pane displays a list of the devices you manage with high-level details about those devices. You can select a device from the list to drill-in and view more details from the devices [Device encryption status](#device-encryption-status) pane.
 
 - **Device name** - The name of the device.
 - **OS** – The device platform, such as Windows or macOS.
@@ -76,7 +76,7 @@ The Encryption report pane displays a list of the devices you manage with high
 
     For more information on Windows prerequisites for encryption, see the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
 
-  - **Not ready**: The device doesn't have full encryption capabilities, but may still support encryption.
+  - **Not ready**: The device doesn't have full encryption capabilities, but might still support encryption.
   - **Not applicable**: There isn't enough information to classify this device.
 
 - **Encryption status** – Whether the OS drive is encrypted. 
@@ -166,7 +166,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - Recovery key backup failed.
 
-    *Consider: Check the Event log on device to see why the recovery key backup failed. You may need to run the **manage-bde** command to manually escrow recovery keys.*
+    *Consider: Check the devices Event log to see why the recovery key backup failed. You might need to run the **manage-bde** command to manually escrow recovery keys.*
 
   - A fixed drive is unprotected.
 
@@ -178,15 +178,15 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - Windows Recovery Environment (WinRE) isn't configured.
   
-    *Consider: Need to run command line to configure the WinRE on separate partition; as that was not detected. For more information, see [REAgentC command-line options](/windows-hardware/manufacture/desktop/reagentc-command-line-options).*
+    *Consider: Need to run command line to configure the WinRE on separate partition; as that wasn't detected. For more information, see [REAgentC command-line options](/windows-hardware/manufacture/desktop/reagentc-command-line-options).*
 
   - A TPM isn't available for BitLocker, either because it isn't present, it's been made unavailable in the Registry, or the OS is on a removable drive.
 
-    *Consider: The BitLocker policy applied to this device requires a TPM, but on this device, the BitLocker CSP has detected that the TPM may be disabled at the BIOS level.*
+    *Consider: The BitLocker policy applied to this device requires a TPM, but on this device, the BitLocker CSP detects that the TPM might be disabled at the BIOS level.*
 
   - The TPM isn't ready for BitLocker.
 
-    *Consider: The BitLocker CSP sees that this device has an available TPM, but the TPM may need to be initialized. Consider running **intialize-tpm** on the machine to initialize the TPM.*
+    *Consider: The BitLocker CSP sees that this device has an available TPM, but the TPM might need to be initialized. Consider running **intialize-tpm** on the machine to initialize the TPM.*
 
   - The network isn't available, which is required for recovery key backup.
 
@@ -200,7 +200,7 @@ This report can be of use in identifying problems for groups of devices. For exa
 
 ## Manage recovery keys
 
-For details on managing recovery keys, see the following in the Intune documentation:
+For details on managing recovery keys, see the following Intune documentation:
 
 macOS FileVault:
 

@@ -48,7 +48,7 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net, and graph.microsoft.com.
 
   > [!NOTE]
-  > SSL traffic inspection is not supported for 'manage.microsoft.com', 'dm.microsoft.com', or the [Device Health Attestation (DHA) endpoints listed in the compliance section](#migrating-device-health-attestation-compliance-policies-to-microsoft-azure-attestation).
+  > SSL traffic inspection is not supported for '\*.manage.microsoft.com', '\*.dm.microsoft.com', or the [Device Health Attestation (DHA) endpoints listed in the compliance section](#migrating-device-health-attestation-compliance-policies-to-microsoft-azure-attestation).
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 

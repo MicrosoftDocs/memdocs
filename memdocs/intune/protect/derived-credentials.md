@@ -141,7 +141,7 @@ The following are key considerations for each supported partner. Become familiar
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](/intune-user-help/enroll-ios-device-disa-purebred)
+- [iOS and iPadOS](/mem/intune/user-help/enroll-ios-device-disa-purebred)
 - [Android Enterprise](../user-help/enroll-android-device-disa-purebred.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
@@ -167,7 +167,7 @@ For information getting and configuring the DISA Purebred app, see [Deploy the D
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](/intune-user-help/enroll-ios-device-entrust-datacard)
+- [iOS and iPadOS](/mem/intune/user-help/enroll-ios-device-entrust-datacard)
 - [Android Enterprise](../user-help/enroll-android-device-entrust-datacard.md)- *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
@@ -191,7 +191,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](/intune-user-help/enroll-ios-device-intercede)
+- [iOS and iPadOS](/mem/intune/user-help/enroll-ios-device-intercede)
 - [Android Enterprise](../user-help/enroll-android-device-intercede.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
@@ -320,7 +320,7 @@ Use derived credentials for certificate-based authentication to web sites and ap
 
    **For Android Enterprise**:
 
-   - For *Platform*. select **Android Enterprise**, and then for *Profile type*, under *Fully Managed, Dedicated, and Corporate-Owned Work Profile*, select Derived credential**. Select **Create** to continue.
+   - For *Platform*. select **Android Enterprise**, and then for *Profile type*, under *Fully Managed, Dedicated, and Corporate-Owned Work Profile*, select **Derived credential**. Select **Create** to continue.
    - For *Name*, enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Derived credential for Android Enterprise devices profile**.
    - For *Description*, enter a description that gives an overview of the setting, and any other important details.
    - On the *Apps* page, configure **Certificate access** to manage how certificate access is granted to applications. Choose from:
@@ -390,4 +390,4 @@ After you delete an issuer and then add a new one, device users must request a n
 
 ## Next steps
 
-[Create device configuration profiles](../configuration/device-profile-create.md).
+[Create device configuration profiles](../configuration/device-profile-create.md)

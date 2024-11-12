@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chrimo
+ms.reviewer: lakasa, pratikshah, saudm, jonshi
 ms.suite: ems
 search.appverid: 
 #ms.tgt_pltfrm:
@@ -29,6 +29,8 @@ ms.collection:
 - tier2
 - essentials-security
 ---
+
+<!--ms.reviewer review required before publish-->
 
 # Windows 365 security
 
@@ -106,7 +108,7 @@ To manage RDP features available to the user during their Cloud PC connection, s
 
 Windows 365 Cloud PCs can be accessed from various operating system platforms and clients available in those platforms.
 
-- **Windows OS platforms**: Windows 365 can be accessed using Remote Desktop client for Windows and the Windows 365 App. Both these apps receive updates using the Windows Update service. For more information, see [Windows Update security](/windows/deployment/update/windows-update-security).
+- **Windows OS platforms**: Windows 365 can be accessed using Remote Desktop client for Windows and the Windows App. Both these apps receive updates using the Windows Update service. For more information, see [Windows Update security](/windows/deployment/update/windows-update-security).
 - **Apple devices (macOS and iOS)**: Remote desktop client apps and their updates are distributed by Apple's app store. For more information about MacOS and iOS security measures, see [Apple Platform Security](https://support.apple.com/en-sg/guide/security/welcome/web).
 - **Android platforms**: Android platform apps downloaded from Google play stores conform to the Google play store terms and conditions. For more information, see [Google Play Terms of Service](https://play.google.com/about/play-terms/index.html).
 

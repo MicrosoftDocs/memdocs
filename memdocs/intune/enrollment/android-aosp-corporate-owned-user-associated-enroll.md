@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/18/2024
+ms.date: 09/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -62,12 +62,12 @@ Create an enrollment profile to enable enrollment on devices.
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **Enrollment**.  
 3. Select the **Android** tab.  
-4. Under **Android Open Source Project (AOSP) (Preview)**, choose **Corporate-owned, user-associated devices (Preview)**.  
+4. Under **Android Open Source Project (AOSP)**, choose **Corporate-owned, user-associated devices**.  
 5. Select **Create profile**.  
 6. Enter the basics for your profile:
     - **Name**: Give the profile a name. Note the name down for later, because you'll need it when you set up the dynamic device group.  
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.  
-    - **Token expiration date**: Select the date the token expires, up to 90 days in the future.    
+    - **Token expiration date**: Select the date the token expires, which can be up to 65 years in the future.    
     - **SSID**: Identifies the network that the device will connect to.  
     
         > [!NOTE]
@@ -88,7 +88,7 @@ Create an enrollment profile to enable enrollment on devices.
 After you create a profile, Intune generates a token that's needed for enrollment. The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.
 
 To view the token as a QR code, select your enrollment profile from the enrollment profile list. Then select **Token**.   
-You can also export the enrollment profile JSON file. To create a JSON file, select Export**.  
+You can also export the enrollment profile JSON file. To create a JSON file, select **Export**.  
 
 > [!IMPORTANT]
 >- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.
@@ -101,10 +101,10 @@ You can generate a new token to replace one that's nearing its expiration date. 
 
 1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 2. Select the **Android** tab.  
-3. In the **Android Open Source Project (AOSP) (Preview)** section, choose **Corporate-owned, user-associated devices (Preview)**.   
+3. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, user-associated devices**.   
 3. Choose the profile that you want to work with.
 4. Select **Token** > **Replace token**.
-5. Enter the new token expiration date. Tokens must be replaced at least every 90 days. 
+5. Enter the token's new expiration date, which can be up to 65 years in the future. 
 6. Select **OK**. 
 
 ### Revoke a token  
@@ -117,7 +117,7 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
 
 1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 2. Select the **Android** tab.  
-3. In the **Android Open Source Project (AOSP) (Preview)** section, choose **Corporate-owned, user-associated devices (Preview)**.
+3. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, user-associated devices**.
 4.	Choose the profile that you want to work with.  
 5.	Select **Token** > **Revoke token** > **Yes**.   
 

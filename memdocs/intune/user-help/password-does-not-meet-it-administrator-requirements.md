@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/02/2024
+ms.date: 11/09/2024
 ms.topic: end-user-help
 ms.localizationpriority: high
 ms.service: microsoft-intune
@@ -39,13 +39,15 @@ ms.collection:
  * iOS/iPadOS  
  * macOS  
 
-Intune Company Portal notifies you when the sign-in password, PIN, or passcode on your enrolled device conflicts with your organization's security requirements. Device sign-in requirements are put in place to prevent unauthorized individuals from gaining access to the work or school data on your device. Until you choose a more secure sign-in method, you may be blocked from accessing your organization's network.  
+When you enroll your device for work or school use, you might need to adjust the lock screen and startup settings you use to unlock your device so that they align with your organization's password and biometric requirements. Password and biometric requirements are put in place to prevent unauthorized individuals from gaining access to the work or school data on your device. Until you choose a more secure authentication method for your device's lock screen, you might be blocked from accessing your organization's network.  
 
-Company Portal sends one message per passcode requirement. For example, if your passcode is too short and too simple, you'll receive one message about the length and one message about the complexity. For a list of all passcode-related messages in Company Portal, see [Reference: device passcode messages in Company Portal](intune-company-portal-password-message-reference.md).  
+## List of Company Portal messages 
 
-## Change password, passcode, PIN  
+For a list of all passcode-related messages in Company Portal, see [Reference: device passcode messages in Company Portal](intune-company-portal-password-message-reference.md). Company Portal sends you one message per password requirement. For example, if your passcode is too short and too simple, you receive one message about the length and one message about the complexity.  Your workplace chooses the password and biometric requirements for your device. If the Company Portal messages appear too vague, contact your IT support person directly for the exact password and biometric requirements for your device.  
 
-To secure your device with a sign-in passcode, password, or lock screen, see the following resources.   
+## Change password and biometrics   
+
+The following resources are available for Apple, Android, and Windows devices, and describe how to set up lock screens and startup passwords. For the most up-to-date information about how to secure your specific device model, refer to the device manufacturer's help documentation.  
 
 - [Windows sign-in options and account protection](https://support.microsoft.com/windows/windows-sign-in-options-and-account-protection-7b34d4cf-794f-f6bd-ddcc-e73cdf1a6fbf)  
 
@@ -55,13 +57,11 @@ To secure your device with a sign-in passcode, password, or lock screen, see the
 
 - [Set screen lock on Android device](https://support.google.com/android/answer/9079129) (opens Android Help docs)  
 
-- [Set up or change your Android work profile lock](https://support.google.com/work/android/answer/7029958) (opens Android Enterprise Help docs)
-
-For information about how to secure your specific device model, refer to the device manufacturer's help documentation.   
+- [Set up or change your Android work profile lock](https://support.google.com/work/android/answer/7029958) (opens Android Enterprise Help docs)  
 
 ## Next steps
 Still need help?  
 
-* If you still receive passcode-related messages after updating the passcode, try restarting your device.  
+* If you still receive password and authentication-related messages after updating your settings, try restarting your device.  
 
-* Sign-in and passcode requirements are determined by your organization's policies. For questions about specific messages, contact your IT support person. Check the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's helpdesk information.  
+* Password and biometric requirements are determined by your organization's policies. For questions about specific messages, contact your IT support person. Check the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's helpdesk information.  
