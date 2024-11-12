@@ -31,8 +31,7 @@ ms.collection:
 
 # Unboxing your NXT
 
-> [!IMPORTANT]
-> This is unfinished draft documentation. Not ready for review.
+[!INCLUDE [MS confidential, draft docs](./includes/draft-doc.md)]
 
 ## Hardware
 

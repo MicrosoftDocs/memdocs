@@ -31,8 +31,7 @@ ms.collection:
 
 # Join NXT to Microsoft Entra
 
-> [!IMPORTANT]
-> This is unfinished draft documentation. Not ready for review.
+[!INCLUDE [MS confidential, draft docs](./includes/draft-doc.md)]
 
 TBS...
 

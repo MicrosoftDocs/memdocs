@@ -31,8 +31,7 @@ ms.collection:
 
 # Control + Alt + Delete
 
-> [!IMPORTANT]
-> This is unfinished draft documentation. Not ready for review. 
+[!INCLUDE [MS confidential, draft docs](./includes/draft-doc.md)]
 
 Options on the Control + Alt + Delete menu include:
 

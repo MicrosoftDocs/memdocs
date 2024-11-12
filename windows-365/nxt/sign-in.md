@@ -31,8 +31,7 @@ ms.collection:
 
 # Sign in to your NXT
 
-> [!IMPORTANT]
-> This is unfinished draft documentation. Not ready for review. 
+[!INCLUDE [MS confidential, draft docs](./includes/draft-doc.md)]
 
 When you want to use the NXT, complete the following steps to sign in:
 
