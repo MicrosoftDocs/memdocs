@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Manually sync your macOS device with Intune Company Portal
-description:  Sync your personal Mac from the Intune Company Portal to get the latest updates and requirements from your organization.  
+title: Check status of work or school device in Company Portal app for macOS 
+description:  Check status of work or school devices in Company Portal app for macOS.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/02/2022
+ms.date: 11/08/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,36 +29,27 @@ ms.collection:
 ---
 
 
-# Manually sync macOS device with Intune  
+# Check status in Company Portal for macOS   
 
-You can force your enrolled Mac to sync with Intune for the latest updates, requirements, and communications from your organization. The Intune Company Portal app regularly syncs devices when they're connected to Wi-Fi. However, if you ever need to disconnect for an extended period of time, you can use the Company Portal *sync* action to reconnect and bring your device up-to-date.  
- 
-Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.  
+The Intune Company Portal app regularly checks the settings on work or school devices to ensure they're meeting access requirements. However, if you ever need to disconnect from Wi-Fi for an extended period of time, or if you're in a hurry to resolve a current access issue, you can use the Company Portal *check status* action to reconnect without waiting.  
 
->[!TIP]
-> The Intune Company Portal app is required for this feature. If you're trying to sync a Mac that's owned by your organization, and it doesn't have the Company Portal app, contact your support person for help. They will need to facilitate the sync on their end.          
+> [!TIP]
+> The Intune Company Portal app is required for this feature. If you're trying to sync a Mac that's owned by your organization, and it doesn't have the Company Portal app, contact your support person for help. They must facilitate the status check on their end.          
 
-## Sync personal Mac  
+## Check status    
 
- To force a sync on your personal Mac:  
+Complete these steps to check the status of the Mac you use for work or school.    
 
-1. Open the Company Portal app.
+1. Open the Company Portal app on your Mac.  
 
-2. Select **Devices**.  
-3. If you only have one device, you'll go directly to the device details screen and can skip to step 4. If you have multiple devices, you'll see all devices inline at the top of the page. Select the device that you're currently using. 
+1. Select **Devices**.  
+  
+1. If you only have one device, skip to step 4. If you have multiple devices, select the device you're currently using.    
 
-    ![Screenshot of the Devices screen, showing three devices and highlighting the one that the user is currently using. Also highlights text that says "This is the device you are currently using."](./media/macos-sync-1-company-portal-2006.png)
+1. Select **Check Status**. 
 
-4. Select **More [...]** and then choose **Check Status** to sync your device. 
-
-    ![Screenshot of the device details highlighting Check status link.](./media/macos-sync-2-company-portal-2006.png)  
-
-5. Wait while Company Portal confirms your device status. The status will update onscreen to tell you whether or not you meet your organization's security requirements. 
-
-     ![Screenshot of the Device details highlighting the loading bar.](./media/macos-sync-3-company-portal-2006.png)  
+1. Wait while Company Portal confirms the status of your access. The status appears onscreen and tells you that you meet your organization's security requirements, or tells you what is needed to get access.   
 
 ## Next steps
-Once you've completed these steps, check to see if your initial problem is resolved. If it's not, it may help to restart the stalled installation or task. 
-
 Still need help? Contact your support person. Sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's contact information.  
 
