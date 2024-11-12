@@ -125,6 +125,6 @@ screencap
 
 [First time user setup](setup.md).
 
-[Learn more about Windows 365 Enterprise](./enterprise/overview.md).
+[Learn more about Windows 365 Enterprise](../enterprise/overview.md).
 
 [Read the Windows 365 service description](/office365/servicedescriptions/windows-365-service-description/windows-365-service-description).

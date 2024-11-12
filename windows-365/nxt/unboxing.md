@@ -31,7 +31,7 @@ ms.collection:
 
 # Unboxing your NXT
 
-[!INCLUDE [MS confidential, draft docs](./includes/draft-doc.md)]
+[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 ## Hardware
 

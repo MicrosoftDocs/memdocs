@@ -31,7 +31,7 @@ ms.collection:
 
 # Set up your NXT and sign in
 
-[!INCLUDE [MS confidential, draft docs](./includes/draft-doc.md)]
+[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 The first time you turn on your NXT, you are guided through setting up your device, signing in with a work or school user account.
 

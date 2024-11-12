@@ -31,7 +31,7 @@ ms.collection:
 
 # Sign in to your NXT
 
-[!INCLUDE [MS confidential, draft docs](./includes/draft-doc.md)]
+[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 When you want to use the NXT, complete the following steps to sign in:
 
