@@ -56,7 +56,7 @@ See the following figure:
 - A currently supported version of Windows and a supported UEFI is required.
 - The device manufacturer must have DFCI added to their UEFI firmware in the manufacturing process, or as a firmware update that can be installed. Work with the device vendors to determine the [manufacturers that support DFCI](#oems-that-support-dfci), or the firmware version needed to use DFCI.
 - The device must be managed with Microsoft Intune. For more information, see [Enroll Windows devices in Intune using Windows Autopilot](/mem/intune/enrollment/enrollment-autopilot).
-- The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/membership/cloud-solution-provider), or registered directly by the OEM. For Surface devices, Microsoft registration support is available at [Microsoft Devices Autopilot Support](https://prod.support.services.microsoft.com/supportrequestform/0d8bf192-cab7-6d39-143d-5a17840b9f5f).
+- The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/membership/cloud-solution-provider), or registered directly by the OEM. For Surface devices, Microsoft registration support is available at [Microsoft Devices Autopilot Support](https://support.microsoft.com/supportrequestform/0d8bf192-cab7-6d39-143d-5a17840b9f5f).
 
 > [!IMPORTANT]
 >
