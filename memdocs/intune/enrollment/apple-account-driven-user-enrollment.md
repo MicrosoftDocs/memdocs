@@ -96,11 +96,16 @@ Create an enrollment profile for devices enrolling via account driven user enrol
 1. Select **Create profile** > **iOS/iPadOS**.  
 1. On the **Basics** page, enter a name and description for the profile so that you can distinguish it from other profiles in the admin center. Device users don't see these details.  
 1. Select **Next**.  
-1. On the **Settings** page, for **Enrollment type**, select the enrollment options you want to give users. Their choice determines the enrollment process that Microsoft Intune carries out. It's also reflected in the device ownership attribute in Intune. To learn more about the user experience and what they see onscreen during enrollment, see [Set up personal iOS device for work or school](../user-help/enroll-your-device-in-intune-io.mds).
-    Your options:  
-   - **Account driven user enrollment**:  
-   - **Determine based on user choice**: Assigned users can select the enrollment type during enrollment. They see the following options:  
-       - **I own this device:** More options appear with this selection. The user has the option to secure their entire device or only secure work-related apps and data.  
+1. On the **Settings** page, for **Enrollment type**, select how you want to enroll devices. You can choose the enrollment method or allow users to make their own choice. Their choice determines the enrollment process that Microsoft Intune carries out. It's also reflected in the device ownership attribute in Intune. To learn more about the user's experience and what they see onscreen during enrollment, see [Set up personal iOS device for work or school](../user-help/enroll-your-device-in-intune-io.mds).  
+
+   Your options:
+   
+   - **Account driven user enrollment**: Assigned users who initiate enrollment are enrolled via account driven user enrollment.
+     
+   - **Determine based on user choice**: Assigned users who initiate enrollment can select how they want to enroll their device. Their options:  
+     
+       - **I own this device:** More settings appear with this selection. The user has the option to secure their entire device or only secure work-related apps and data.  
+         
        - **(Company) owns this device:** The device enrolls via Apple Device Enrollment. For more information about this enrollment method, see [Device Enrollment and MDM](https://support.apple.com/guide/deployment/device-enrollment-and-mdm-depd1c27dfe6/web) on the Apple Support website.  
 
 1. Select **Next**.  
