@@ -46,7 +46,7 @@ This article describes how to enroll your device using the Intune Company Portal
 [Install the Intune Company Portal app from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). The Company Portal app is used to enroll and manage your device, install work apps, and get IT support.  
 
 ## Enroll device  
-Make sure you're signed in to the primary user account on your device. Work profile enrollment is not supported on secondary user accounts.  
+Make sure you're signed in to the primary user account on your device. Work profile enrollment isn't supported on secondary user accounts.  
 
 1. Open the Intune Company Portal app and sign in with your work or school account.   
 
@@ -73,7 +73,7 @@ Make sure you're signed in to the primary user account on your device. Work prof
    > [!div class="mx-imgBorder"]
    > ![Screenshot of Company Portal highlighting the Next button.](./media/enroll-device-android-work-profile/work-profile-setup-next-2307.png)  
 
-7. On the **Company Access Setup** screen, confirm that the profile has been created. Then tap **CONTINUE** to proceed to the next enrollment task.    
+7. On the **Company Access Setup** screen, confirm that you created the profile. Then tap **CONTINUE** to proceed to the next enrollment task.    
 
    > [!div class="mx-imgBorder"]
    > ![Screenshot of Company Access Setup showing work profile is created.](./media/enroll-device-android-work-profile/work-profile-complete-1911.png)  
@@ -89,7 +89,7 @@ Make sure you're signed in to the primary user account on your device. Work prof
    > [!div class="mx-imgBorder"]
    > ![Screenshot of Company Portal'a Update device settings screen highlighting the RESOLVE button and CONFIRM DEVICE SETTINGS button.](./media/enroll-device-android-work-profile/confirm-device-settings-work-profile-2307.png)  
 
-11. When setup and enrollment are complete, you are sent back to the setup list, where you should see a green checkmark next to each enrollment task. Tap **DONE**.       
+11. When setup and enrollment are complete, you're sent back to the setup list, where you should see a green checkmark next to each enrollment task. Tap **DONE**.       
 
     ![Screenshot of Company Portal's Company Access Setup screen, showing completed setup and highlighting Done button.](./media/enroll-device-android-work-profile/work-profile-done-1911.png)  
 
