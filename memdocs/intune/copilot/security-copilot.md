@@ -64,7 +64,6 @@ There are three areas to use Copilot in Intune:
 - [Policy and setting management](../copilot/copilot-intune-overview.md#policy-and-setting-management)
 - [Device details and troubleshooting](../copilot/copilot-intune-overview.md#device-details-and-troubleshooting)
 - [Device query](../copilot/copilot-intune-overview.md#query-with-copilot-in-device-query)
-- [Windows Autopatch AI integration](../copilot/copilot-intune-overview.md#windows-autopatch-ai-integration-with-copilot-in-intune)
 
 ### Security admin focus
 
@@ -136,9 +135,7 @@ To view the list of Intune built-in system capabilities for Intune, use the foll
 
 When you use prompts in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or in the Security Copilot portal, the sessions are saved. To see the saved sessions, use the following steps:
 
-1. In the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989), go to the menu > **My sessions**.
-
-    :::image type="content" source="./media/security-copilot/security-copilot-menu-my-sessions.png" alt-text="Screenshot that shows the Security Copilot menu and My sessions with previous sessions in Security Copilot portal.":::
+1. In the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989), go to the menu at the top left > **My sessions**.
 
 2. When you select a session, your previous prompts and results are shown. Every session also has a session ID in the URL. You can share this session ID with others to review the same prompt session.
 
