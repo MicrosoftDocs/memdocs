@@ -43,6 +43,11 @@ Organizations can purchase NXTs and distribute them to their employees. Admins u
 
 NXT is secure by design, thanks to the following features:
 
+- Trusted Platform Model.
+- Secure Bot.
+- BitLocker drive encryption.
+- Hypervisor Code Integrity.
+- Microsoft Defender EDR Sensor.
 - An adminless user model.
 - No local data storage.
 - No local apps.
