@@ -64,7 +64,6 @@ There are three areas to use Copilot in Intune:
 - [Policy and setting management](../copilot/copilot-intune-overview.md#policy-and-setting-management)
 - [Device details and troubleshooting](../copilot/copilot-intune-overview.md#device-details-and-troubleshooting)
 - [Device query](../copilot/copilot-intune-overview.md#query-with-copilot-in-device-query)
-- [Windows Autopatch AI integration](../copilot/copilot-intune-overview.md#windows-autopatch-ai-integration-with-copilot-in-intune)
 
 ### Security admin focus
 
