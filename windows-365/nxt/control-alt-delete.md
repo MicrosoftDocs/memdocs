@@ -33,7 +33,7 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-Options on the Control + Alt + Delete menu include:
+When you press Control + Alt + Delete on your NXT, you see the following options:
 
 | Control | Description |
 | --- | --- |
@@ -46,3 +46,5 @@ Options on the Control + Alt + Delete menu include:
 
 <!-- ########################## -->
 ## Next steps
+
+[Learn about options in the Quick settings menu](quick-setings.md) 

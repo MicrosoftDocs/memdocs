@@ -33,7 +33,7 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-The first time you turn on your NXT, you are guided through setting up your device, signing in with a work or school user account.
+The first time you turn on your NXT, you're guided through setting up your device and signing in with a work or school user account.
 
 ## Requirements
 
@@ -52,7 +52,7 @@ Complete the following steps to set up your new device:
 5. On the **Let's set things up for your work or school** page, type your work or school e-mail > **Next**
 ![Screenshot of e-mail sign in page.](media/setup/email-sign-in.png)
 6. Authenticate your account as requested. Your organization defined the authentication method (security key, cross-device passkey, or passwordless multifactor authentication).
-7. Your Cloud PC loads with all of your context and apps just where you left off.
+7. You're connected to your Cloud PC with all of your context and apps just where you left off.
 
 You can adjust additional settings prior to sign-in by using [Quick settings](quick-settings.md) in the bottom-right corner.
 

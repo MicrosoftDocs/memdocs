@@ -105,7 +105,7 @@ Operating system updates occur automatically during off hours.
 | Storage | 64 GB UFS |
 | Wi-Fi | WiFi 6E |
 | Bluetooth | 5.3 |
-| USB | ? |
+| USB | USB-C, 2 USB-A |
 
 <!-- ########################## -->
 ## Next steps
