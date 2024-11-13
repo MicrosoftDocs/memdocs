@@ -263,7 +263,7 @@ conceptualContent:
           itemType: how-to-guide
           text: Microsoft Tunnel for Mobile Application Management
           
-    - title: Microsoft Endpoint Analytics
+    - title: Microsoft Endpoint analytics
       links:
         - url: ../analytics/overview.md
           itemType: how-to-guide
