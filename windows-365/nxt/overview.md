@@ -35,7 +35,7 @@ ms.collection:
 
 NXT is the first Cloud PC hardware device. It’s a full stack, purpose-built solution by Microsoft. When a users sign in to their NXT, they're securely connected to their Windows 365 [Cloud PC virtual machine](/windows-365/overview#what-is-a-cloud-pc) through the Windows 365 service.
 
-![Image of the NXT device.](media/overview/device-front.png)
+![Image of the NXT device.](media/overview/device-front.png) 
 
 Organizations can purchase NXTs and distribute them to their employees. Admins use Microsoft Intune to manage NXTs alongside other devices.
 
