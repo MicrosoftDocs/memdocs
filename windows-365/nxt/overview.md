@@ -33,9 +33,9 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-NXT is the first Cloud PC hardware device. It’s a full stack, purpose-built solution by Microsoft. When a users sign in to their NXT, they're securely connected to their [Cloud PC virtual machine](/windows-365/overview#what-is-a-cloud-pc) through the Windows 365 service.
+NXT is the first Cloud PC hardware device. It’s a full stack, purpose-built solution by Microsoft. When a users sign in to their NXT, they're securely connected to their Windows 365 [Cloud PC virtual machine](/windows-365/overview#what-is-a-cloud-pc) through the Windows 365 service.
 
-![Image of the NXT device.](media/overview/device-front.png)
+![Image of the NXT device.](media/overview/device-front.png) 
 
 Organizations can purchase NXTs and distribute them to their employees. Admins use Microsoft Intune to manage NXTs alongside other devices.
 
@@ -48,7 +48,7 @@ NXT is secure by design, thanks to the following features:
 - BitLocker drive encryption.
 - Hypervisor Code Integrity.
 - Microsoft Defender EDR Sensor.
-- An adminless user model.
+- ??An adminless user model??.
 - No local data storage.
 - No local apps.
 - Arbitrary software can't be installed or executed on the NXT, so it's protected from malware.
@@ -62,6 +62,10 @@ Requirements for NXT include:
 - NXT device.
 - Management by your organization using Microsoft Intune.
 - [Windows 365 license](https://www.microsoft.com/licensing/product-licensing/windows-365?rtc=1) for your Cloud PC.
+
+## Public preview
+
+NXT releases some features in ["public preview"](../public-preview.md). ??To participate, contact your company's Microsoft account team??. As part of your participation, you can join the Customer Connections Program and Office hours for the latest updates.
 
 ## NXT components
 
