@@ -90,16 +90,6 @@ items:
         href: ./configuration/tutorial-walkthrough-administrative-templates.md
         displayName: admx, administrative template, gpo, windows 
 
-  - name: Microsoft Copilot + Intune
-    items:
-    - name: Copilot in Intune
-      href: ./copilot/copilot-intune-overview.md
-    - name: Troubleshoot a device using Copilot
-      href: ./copilot/copilot-devices.md
-    - name: FAQ
-      href: ./copilot/copilot-intune-faq.md
-    - name: Intune plugin in Copilot for Security
-      href: ./copilot/security-copilot.md
   - name: Plan
     items:
     - name: Planning guide
@@ -189,6 +179,16 @@ items:
     - name: Step 5 - Enroll devices
       displayName: deployment, mdm, android, ios, ipados, macos, windows
       href: ./fundamentals/deployment-guide-enroll.md
+  - name: Microsoft Copilot + Intune
+    items:
+    - name: Copilot in Intune
+      href: ./copilot/copilot-intune-overview.md
+    - name: Troubleshoot a device using Copilot
+      href: ./copilot/copilot-devices.md
+    - name: FAQ
+      href: ./copilot/copilot-intune-faq.md
+    - name: Intune plugin in Copilot for Security
+      href: ./copilot/security-copilot.md
   - name: Endpoint analytics
     items:
     - name: Overview
