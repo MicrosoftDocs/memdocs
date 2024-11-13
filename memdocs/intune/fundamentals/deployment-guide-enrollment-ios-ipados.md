@@ -385,7 +385,7 @@ This list provides an overview of the tasks required of administrators.
 
   - **Web based device enrollment**: Starting with iOS 15 and newer. This option is just like device enrollment with Company Portal, but enrollment takes place on the web version of Intune Company Portal, eliminating the need for the app. Additionally, this option enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps. 
 
-  - **Determine based on user choice**: Gives end users a choice when they enroll. Depending on their selection, **User enrollment** or **Device enrollment** is used.  
+  - **Determine based on user choice**: Gives end users a choice when they enroll. Depending on their selection, **Account driven user enrollment** or **Device enrollment** is used.  
 
   - **Account driven user enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, like password, per-app VPN, Wi-Fi, and Siri. If you use this method, and to help secure apps and their data, then we recommend also using app protection policies.
 
