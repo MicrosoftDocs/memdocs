@@ -96,7 +96,7 @@ Create an enrollment profile for devices enrolling via account driven user enrol
 1. Select **Create profile** > **iOS/iPadOS**.  
 1. On the **Basics** page, enter a name and description for the profile so that you can distinguish it from other profiles in the admin center. Device users don't see these details.  
 1. Select **Next**.  
-1. On the **Settings** page, for **Enrollment type**, select how you want to enroll devices. You can choose the enrollment method or allow users to make their own choice. Their choice determines the enrollment process that Microsoft Intune carries out. It's also reflected in the device ownership attribute in Intune. To learn more about the user's experience and what they see onscreen during enrollment, see [Set up personal iOS device for work or school](../user-help/enroll-your-device-in-intune-io.mds).  
+1. On the **Settings** page, for **Enrollment type**, select how you want to enroll devices. You can choose the enrollment method or allow users to make their own choice. Their choice determines the enrollment process that Microsoft Intune carries out. It's also reflected in the device ownership attribute in Intune. To learn more about the user's experience and what they see onscreen during enrollment, see [Set up personal iOS device for work or school](../user-help/enroll-your-device-in-intune-ios.md).  
 
    Your options:
    
