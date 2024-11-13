@@ -65,29 +65,7 @@ Requirements for NXT include:
 
 ## Public preview
 
-NXT releases some features in ["public preview"](../public-preview.md). ??To participate, contact your company's Microsoft account team??. As part of your participation, you can join the Customer Connections Program and Office hours for the latest updates.
-
-## NXT components
-
-...
-
-## In the box
-
-### Power supply details
-
-Barrel type, 65 W. Passive thermals.
-
-## Device specifications
-
-### Compute and connectivity
-
-| Component | Details |
-| --- | --- |
-| Memory | 8 GB LPDDRS |
-| Storage | 64 GB UFS |
-| Wi-Fi | WiFi 6E |
-| Bluetooth | 5.3 |
-| USB | ? |
+Microsoft releases some features in ["public preview"](../public-preview.md). ??To participate, contact your company's Microsoft account team??. As part of your participation, you can join the Customer Connections Program and Office hours for the latest updates.
 
 ## Device capabilities
 
@@ -116,7 +94,7 @@ The serial number is printed on the bottom of the device below the Microsoft log
 <!-- ########################## -->
 ## Next steps
 
-For information about peripheral ports, software, and box contents, see [Unboxing](unboxing.md).
+For information about peripheral ports, software, and box contents, see [What's in the box](whats-in-the-box.md).
 
 [First time user setup](setup.md).
 

@@ -29,7 +29,7 @@ ms.collection:
 - tier2
 ---
 
-# Unboxing your NXT
+# What's in the box
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
@@ -61,15 +61,19 @@ The NXT has the following ports:
 - Display
 - HDMI
 - Ethernet
-- Power connector
+- Power connector 
 
-![Image of the NXT device back.](media/unboxing/device-back.png)
+![Image of the NXT device back.](media/whats-in-the-box/device-back.png)
 
 #### Side panel
 
 Kensington lock to physically secure the device
 
-![Image of the NXT side back.](media/unboxing/device-side.png)
+![Image of the NXT side back.](media/whats-in-the-box/device-side.png)
+
+### Power supply
+
+Barrel type, 65 W. Passive thermals.
 
 ### Peripheral support
 
@@ -92,6 +96,16 @@ Operating system updates occur automatically during off hours.
 
 - Wi-Fi 6E
 - Bluetooth 5.3
+
+## Compute and connectivity
+
+| Component | Details |
+| --- | --- |
+| Memory | 8 GB LPDDRS |
+| Storage | 64 GB UFS |
+| Wi-Fi | WiFi 6E |
+| Bluetooth | 5.3 |
+| USB | ? |
 
 <!-- ########################## -->
 ## Next steps
