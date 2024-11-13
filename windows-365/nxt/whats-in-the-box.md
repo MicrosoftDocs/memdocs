@@ -75,11 +75,13 @@ Kensington lock to physically secure the device
 
 Barrel type, 65 W. Passive thermals.
 
-### Peripheral support
+## Monitor support
 
 Both the HDMI and Display Port support one monitor each, up to 4k in resolution.
 
-USB and Bluetooth for:
+## Peripheral support
+
+USB and Bluetooth support for:
 
 - keyboard
 - mouse
@@ -90,7 +92,7 @@ USB and Bluetooth for:
 
 The NXT comes pre-installed with the X operating system.
 
-Operating system updates occur automatically during off hours.
+Operating system updates occur automatically during off hours. To get these upadates, make sure the device is plugged in and powered on (in standby or sleep mode).
 
 ## Wireless support
 
