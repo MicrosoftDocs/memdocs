@@ -69,7 +69,7 @@ Derived credentials are an implementation of the National Institute of Standards
 ## Enroll device  
 
 1. Turn on your new or factory-reset device.  
-2. On the **Welcome** screen, select your language. If your organizations instructed you to enroll with a QR code or NFC, follow the step that matches the method.  
+2. On the **Welcome** screen, select your language. If your organizations instructed you to enroll with a QR code or near-field communication (NFC), follow the step that matches the method.  
      * NFC: Tap your NFC-supported device against a programmer device to connect to your organization's network. Follow the onscreen prompts. When you reach the screen for Chrome's Terms of Service, continue to step 5.  
 
      * QR code: Complete the steps in [QR code enrollment](#qr-code-enrollment).  
@@ -79,7 +79,7 @@ Derived credentials are an implementation of the National Institute of Standards
 3. Connect to Wi-Fi and tap **NEXT**. Follow the step that matches your enrollment method. 
 
     * Token: When you get to the Google sign-in screen, complete the steps in [Token enrollment](#token-enrollment).  
-    * Google Zero Touch: After you connect to Wi-Fi, your device is recognized by your organization. Continue to step 4 and follow the onscreen prompts until setup is complete.
+    * Google Zero Touch: After you connect to Wi-Fi, your organization can recognize your device. Continue to step 4 and follow the onscreen prompts until setup is complete.
       
 4. Review Google's terms. Then tap **ACCEPT & CONTINUE**.  
 
@@ -112,9 +112,9 @@ In this section, you scan your company-provided QR code. When you're done, we'll
   
 1. On the **Welcome** screen, tap the screen five times to start QR code setup.  
 2. Follow any onscreen instructions to connect to Wi-Fi.  
-3. If your device doesn't have a QR code scanner, the setup screens will show the progress as a scanner is installed. Wait for installation to complete.  
+3. If your device doesn't have a QR code scanner, a scanner automatically installs. Wait for installation to complete.  
 4. When prompted, scan the enrollment profile QR code that your organization gave you.  
-5. Return to [Enroll device](#enroll-device), step 4 to continue setup.  
+5. Return to [Step 4: Enroll device](#enroll-device) to continue setup.  
 
 ### Token enrollment  
 In this section, you enter your company-provided token. When you're done, we'll redirect you back to the device enrollment steps.  
@@ -129,14 +129,14 @@ In this section, you enter your company-provided token. When you're done, we'll 
 
 5. On the **Scan or enter code** screen, enter the code that your organization gave you. Then tap **Next**.  
 
-6. Return to [Enroll device](#enroll-device), step 4 to continue setup.  
+6. Return to [Step 4: Enroll device](#enroll-device) to continue setup.  
 
 ## Set up smart card  
 
 1. After enrollment is complete, the Intune app prompts you to set up your smart card via notification. Tap the notification. If you don't get a notification, check your email.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the Company Portal push notification on device home screen.](./media/enroll-android-device-disa-purebred/action-required-in-app-android.png)
+   > ![Screenshot of the Intune app push notification on device home screen.](./media/enroll-android-device-disa-purebred/action-required-in-app-android.png)
 
 2. On the **Set up smart card** screen:
 
@@ -197,4 +197,4 @@ After enrollment is complete, you have access to work resources, such as email, 
 * [Use managed apps on your device](use-managed-apps-on-your-device-android.md)  
 * [Manage apps from the Company Portal website](manage-apps-cpweb.md)  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your company support. For contact information, check the [ website](https://go.microsoft.com/fwlink/?linkid=2010980).
