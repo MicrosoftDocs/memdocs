@@ -38,8 +38,10 @@ After a NXT device is joined to Entra ID, it can be managed with Intune if Autom
 1. Sign in to the Microsoft Entra admin center and expand the Identity section.
 2. Go to Show more / Settings / Mobility and under Name select Microsoft Intune.
 3. In the Microsoft Intune page that opens, under MDM user scope, select either All or Some: 
- - If All is selected, all users can automatically enroll their devices in Intune. 
- - If Some is selected, only users in the groups specified in the link under Groups can automatically enroll their devices in Intune. Make sure the groups selected are Microsoft Entra user groups that contain the desired users.
+
+   - If All is selected, all users can automatically enroll their devices in Intune. 
+   - If Some is selected, only users in the groups specified in the link under Groups can automatically enroll their devices in Intune. Make sure the groups selected are Microsoft Entra user groups that contain the desired users.
+
 4. In the Microsoft Intune screen, if any changes were made, select Save.
 
 NOTE: In Mobility (MDM and WIP) list, if there is more than one application, then the users who will be enrolling Windham devices must be in the MDM User scope of Microsoft Intune only. Confirm one of the following is true in your tenant:
