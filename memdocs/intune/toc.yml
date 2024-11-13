@@ -189,7 +189,7 @@ items:
     - name: Step 5 - Enroll devices
       displayName: deployment, mdm, android, ios, ipados, macos, windows
       href: ./fundamentals/deployment-guide-enroll.md
-  - name: Endpoint Analytics
+  - name: Endpoint analytics
     items:
     - name: Overview
       items:
