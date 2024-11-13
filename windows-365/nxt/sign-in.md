@@ -35,10 +35,10 @@ ms.collection:
 
 When you want to use the NXT, complete the following steps to sign in:
 
-1. On the **Windows security** page, provide your sign in credentials. The device automatically presents you with the most secure MFA sign-in process configured for your account (security key, cross-device passkey, or passwordless MFA).
-2. On the **Sign-in with your passkey** page, select **iPhone, iPad, or Android device** > **Next**.
-3. On the **iPhone, iPad, or Android device** page, scan the QR code with a device that has a passkey.
-4. Complete the authentication process using the Authentication app on your phone.
+1. Power on the NXT.
+2. On the **Sign in** screen, provide your sign in credentials. The device automatically presents you with the sign-in process configured by your organization (security key, cross-device passkey, or passwordless multifactor authentication).
+3. Authenticate your account as requested.
+4. You're connected to your Cloud PC with all of your context and apps just where you left off
 
 ## Sign out
 

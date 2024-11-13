@@ -48,7 +48,7 @@ NXT is secure by design, thanks to the following features:
 - BitLocker drive encryption.
 - Hypervisor Code Integrity.
 - Microsoft Defender EDR Sensor.
-- ??An adminless user model??.
+- No local administrator.
 - No local data storage.
 - No local apps.
 - Arbitrary software can't be installed or executed on the NXT, so it's protected from malware.

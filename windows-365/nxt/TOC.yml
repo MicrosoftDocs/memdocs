@@ -9,10 +9,8 @@ items:
     href: whats-in-the-box.md
 - name: Using your NXT
   items:
-  - name: First-time usage
-    items:
-    - name: First time set up and sign in
-      href: setup.md
+  - name: First time set up and sign in
+    href: setup.md
   - name: Daily usage
     items:
     - name: Sign in

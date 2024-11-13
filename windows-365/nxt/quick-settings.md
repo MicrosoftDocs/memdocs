@@ -35,21 +35,16 @@ ms.collection:
 
 You can use the quick settings icons in the bottom corner of the **Sign in** screen to access various settings for your NXT. There are three different option icons:
 
-- Internet
-- Display Audio
-- Accessibility
+- Internet (![Image of the internet icon.](media/quick-settings/internet-icon.gif))
+- Accessibility (![Image of the Accessibility icon.](media/quick-settings/accessibility-icon.gif))
 
 ## Internet
 
-To see the internet options, on the **Sign in** screen, select the **Internet** icon (![Image of the internet icon.](media/quick-settings/internet-icon.gif)).
-
-## Display Audio
-
-To see the display audio options, on the **Sign in** screen, select the XX icon.
+To see the internet options, on the **Sign in** screen, select the **Internet** icon (![Image of the internet icon.](media/quick-settings/internet-icon.gif)). You can then select which network you want to use.
 
 ## Accessibility
 
-To see the accessibility options, on the **Sign in** screen, select the **Accessibility** icon (![Image of the Accessibility icon.](media/quick-settings/accessibility-icon.gif)).
+To see the accessibility options, on the **Sign in** screen, select the **Accessibility** icon (![Image of the Accessibility icon.](media/quick-settings/accessibility-icon.gif)). You can then set the following accessibility options.
 
 | Control | Description |
 | --- | --- |
@@ -64,3 +59,5 @@ To see the accessibility options, on the **Sign in** screen, select the **Access
 
 <!-- ########################## -->
 ## Next steps
+
+[Learn about the options in the control + alt + delete meneu](control-alt-delete.md).
