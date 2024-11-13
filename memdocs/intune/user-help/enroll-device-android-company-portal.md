@@ -29,9 +29,7 @@ ms.collection:
 ---
 
 # Enroll your device with Company Portal  
-Enroll your personal or corporate-owned Android device with Intune Company Portal to get secure access to company email, apps, and data. 
-
-
+Enroll your personal or corporate-owned Android device with Intune Company Portal to get secure access to company email, apps, and data.  
 
 ## Prerequisites  
 The Intune Company Portal app supports devices running Android 8.0 and later, including devices secured by Samsung Knox Standard 2.4 and later. To learn how to update your Android device to meet requirements, see [Check & update your Android version](https://support.google.com/android/answer/7680439).  
@@ -53,7 +51,7 @@ Install the Intune Company Portal app [from Google Play](https://play.google.com
 ## Enroll device  
 During enrollment, you might be asked to choose a category that best describes how you use your device. Company Portal uses your answer to check for work and school apps relevant to you.  
 
-1. Open the Company Portal app and sign in with your work or school account.  If prompted to, review notification permissions for Company Portal. You can adjust notification permissions anytime in the Settings app.  
+1. Open the Company Portal app and sign in with your work or school account. Review notification permissions for Company Portal as they pop up. You can adjust notification permissions anytime in the Settings app.  
 
 2. If you're prompted to accept your organization's terms and conditions, tap **ACCEPT ALL**.  
 
@@ -69,11 +67,11 @@ During enrollment, you might be asked to choose a category that best describes h
     ![Screenshot of Company Portal, What's next screen, highlighting the Next button.](./media/enroll-device-android-company-portal/android-whats-next-1911.png)  
 
 
-5. Depending on your version of Android, you might be prompted to allow access to certain parts of your device. These prompts are required by Google and not controlled by Microsoft.  
+5. Depending on your version of Android, you might be prompted to allow access to certain parts of your device. These prompts are a Google requirement and not controlled by Microsoft.  
 
     Tap **Allow** for the following permissions:  
-    * **Allow Company Portal to make and manage phone calls**: This permission enables your device to share its international mobile station equipment identity (IMEI) number with Intune, your organization's device management provider. It's safe to allow this permission. Microsoft will never make or manage phone calls.  
-    * **Allow Company Portal to access your contacts**: This permission lets the Company Portal app create, use, and manage your work account.  It's safe to allow this permission. Microsoft will never access your contacts. 
+    * **Allow Company Portal to make and manage phone calls**: This permission enables your device to share its international mobile station equipment identity (IMEI) number with Intune, your organization's device management provider. It's safe to allow this permission. Microsoft never makes or manages phone calls.  
+    * **Allow Company Portal to access your contacts**: This permission lets the Company Portal app create, use, and manage your work account. It's safe to allow this permission. Microsoft never accesses your contacts. 
 
     If you deny permission, you'll be prompted again the next time you sign in to Company Portal. To turn off these messages, select **Never ask again**. To manage app permissions, go to the Settings app > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
 
@@ -103,7 +101,7 @@ During enrollment, you might be asked to choose a category that best describes h
 
 ## Next steps  
 
-Before you try to install a school or work app, modify device settings to allow app installations from unknown sources. If you don't make this change on your device, apps installations will be blocked. Open the **Settings** app on your device. Then go to **Security and privacy** > **Install unknown apps**.  
+Before you try to install a school or work app, modify device settings to allow app installations from unknown sources. If you don't make this change on your device, Company Portal blocks app installations. Open the **Settings** app on your device. Then go to **Security and privacy** > **Install unknown apps**.  
 
 If you get an error while you try to enroll your device in Intune, you can [email your company support](send-logs-to-your-it-admin-by-email-android.md).  
 
