@@ -47,4 +47,4 @@ When you press Control + Alt + Delete on your NXT, you see the following options
 <!-- ########################## -->
 ## Next steps
 
-[Learn about options in the Quick settings menu](quick-setings.md) 
+[Learn about options in the Quick settings menu](quick-settings.md) 
