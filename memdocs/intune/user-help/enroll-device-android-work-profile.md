@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/01/2024  
+ms.date: 11/13/2024  
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -56,7 +56,7 @@ Make sure you're signed in to the primary user account on your device. Work prof
 
 3. On the privacy information screen, review the list of items that your organization can and can't see on your device. Then tap **CONTINUE**. 
 
-    ![Screenshot of Company Portal, We care about your privacy screen, highlighting the Continue button.](./media/enroll-device-android-company-portal/android-privacy-screen-1911.png)  
+    ![Screenshot of Company Portal's We care about your privacy screen, highlighting the Continue button.](./media/enroll-device-android-company-portal/android-privacy-screen-1911.png)  
 
 4. Review the Google terms for creating a work profile. Accept the terms to continue. The appearance of this screen varies based on OS version.  
 
@@ -87,19 +87,19 @@ Make sure you're signed in to the primary user account on your device. Work prof
 10. In the Company Portal app, review the list of settings your organization requires.  Update the settings on your device if necessary. Tap **RESOLVE** to open the setting on your device. After you're done updating settings, tap **CONFIRM DEVICE SETTINGS**.   
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of Company Portal, Update device settings screen highlighting the RESOLVE button and CONFIRM DEVICE SETTINGS button.](./media/enroll-device-android-work-profile/confirm-device-settings-work-profile-2307.png)  
+   > ![Screenshot of Company Portal'a Update device settings screen highlighting the RESOLVE button and CONFIRM DEVICE SETTINGS button.](./media/enroll-device-android-work-profile/confirm-device-settings-work-profile-2307.png)  
 
 11. When setup and enrollment are complete, you are sent back to the setup list, where you should see a green checkmark next to each enrollment task. Tap **DONE**.       
 
-    ![Example image of Company Portal, Company Access Setup screen, showing completed setup and highlighting Done button.](./media/enroll-device-android-work-profile/work-profile-done-1911.png)  
+    ![Screenshot of Company Portal's Company Access Setup screen, showing completed setup and highlighting Done button.](./media/enroll-device-android-work-profile/work-profile-done-1911.png)  
 
 12. Optionally, when prompted to view suggested work apps in Google Play Store, tap **OPEN**. If you're not ready to install apps, you can do it later by going to the Play Store app in your work profile.    
 
-    ![Example image of Company Portal prompt to open badged version of Google Play.](./media/enroll-device-android-work-profile/get-apps-banner-android-2005.png) 
+    ![Screenshot of Company Portal prompt to open badged version of Google Play.](./media/enroll-device-android-work-profile/get-apps-banner-android-2005.png) 
 
     You can also access available apps from the Company Portal menu > **Get Apps**.  
 
-    ![Example image of Company Portal menu, highlighting Get Apps link.](./media/enroll-device-android-work-profile/updated-drawer-android-2005.png)  
+    ![Screenshot of the Company Portal menu, highlighting the Get Apps link.](./media/enroll-device-android-work-profile/updated-drawer-android-2005.png)  
 
 ## Android Enterprise availability 
 
