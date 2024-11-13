@@ -61,7 +61,7 @@ To create custom device scopes:
 The new custom device scope appears in your list of saved device scopes. By default, custom devices scopes are in the *Off* state. To activate custom device scopes, toggle the **State** setting to *On*. Data processing starts for the selected device scope.  
 
 > [!NOTE]
-> Once activated, custom device scopes can take up to 24 hours to process. During this period, custom device scopes that are still processing will not be usable. Additionally, custom device scopes require 10 devices at minimum to populate supported reports, otherwise 'Insufficient Data' may show when trying to select a custom scope. 
+> Once activated, custom device scopes can take up to 24 hours to process. During this period, custom device scopes that are still processing will not be usable. Additionally, custom device scopes require 10 devices at minimum to populate supported reports, otherwise **Insufficient Data** may show when trying to select a custom scope. 
 
 Only the user who created the custom device scopes or a Global administrator can delete the custom device scopes.
 
