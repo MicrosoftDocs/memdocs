@@ -5,8 +5,6 @@ items:
   items:  
   - name: What is NXT? 
     href: overview.md
-  - name: What can NXT do for you?
-    href: tbd.md
 - name: Using your NXT
   items:
   - name: First-time usage
@@ -15,10 +13,6 @@ items:
       href: unboxing.md
     - name: First time set up and sign in
       href: setup.md
-    - name: Getting around NXT
-      href: 
-    - name: Update NXT
-      href: 
   - name: Daily usage
     items:
     - name: Sign in
