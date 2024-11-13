@@ -100,6 +100,7 @@ items:
       href: ./copilot/copilot-intune-faq.md
     - name: Intune plugin in Security Copilot
       href: ./copilot/security-copilot.md
+
   - name: Plan
     items:
     - name: Planning guide
@@ -189,6 +190,70 @@ items:
     - name: Step 5 - Enroll devices
       displayName: deployment, mdm, android, ios, ipados, macos, windows
       href: ./fundamentals/deployment-guide-enroll.md
+  - name: Microsoft Copilot + Intune
+    items:
+    - name: Copilot in Intune
+      href: ./copilot/copilot-intune-overview.md
+    - name: Troubleshoot a device using Copilot
+      href: ./copilot/copilot-devices.md
+    - name: FAQ
+      href: ./copilot/copilot-intune-faq.md
+    - name: Intune plugin in Copilot for Security
+      href: ./copilot/security-copilot.md
+  - name: Endpoint analytics
+    items:
+    - name: Overview
+      items:
+      - name: What is Endpoint analytics?
+        href: ../analytics/overview.md
+    - name: Concepts
+      items:
+      - name: Scores, baselines, and insights
+        href: ../analytics/scores.md           
+    - name: How to guides
+      items:
+      - name: Enroll Intune devices
+        href: ../analytics/enroll-intune.md
+      - name: Enroll Configuration Manager devices
+        href: ../analytics/enroll-configmgr.md
+      - name: Manage settings
+        href: ../analytics/settings.md  
+    - name: Reports
+      items:
+      - name: Startup performance
+        href: ../analytics/startup-performance.md
+      - name: Restart frequency
+        href: ../analytics/restart-frequency.md    
+      - name: Application reliability
+        href: ../analytics/app-reliability.md
+      - name: Work from anywhere
+        href: ../analytics/work-from-anywhere.md
+      - name: Endpoint analytics in Microsoft Adoption Score
+        href: ../analytics/adoption-score.md    
+    - name: Intune Advanced Analytics
+      items:
+      - name: What is Advanced Analytics?
+        href: ../analytics/advanced-endpoint-analytics.md
+      - name: Anomaly detection
+        href: ../analytics/anomaly-detection.md
+      - name: Enhanced device timeline
+        href: ../analytics/enhanced-device-timeline.md    
+      - name: Device scopes
+        href: ../analytics/device-scopes.md        
+      - name: Device query
+        href: ../analytics/device-query.md
+      - name: Data platform schema
+        href: ../analytics/data-platform-schema.md
+      - name: Battery health
+        href: ../analytics/battery-health.md
+      - name: Resource Performance
+        href: ../analytics/resource-performance-report.md
+    - name: Get support
+      href: ../analytics/get-support.md
+    - name: Data collection
+      href: ../analytics/data-collection.md
+    - name: Troubleshoot
+      href: ../analytics/troubleshoot.md
 
   - name: How-to guides
     items:
@@ -1779,8 +1844,6 @@ items:
           href: ./fundamentals/review-logs-using-azure-monitor.md
         - name: Device configuration profile status
           href: ./configuration/device-profile-monitor.md                    
-        - name: Endpoint analytics
-          href: ../analytics/
 
   - name: Industry guides
     items: 
