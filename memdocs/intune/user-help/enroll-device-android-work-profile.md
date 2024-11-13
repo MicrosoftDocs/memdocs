@@ -84,7 +84,7 @@ Make sure you're signed in to the primary user account on your device. Work prof
    > [!div class="mx-imgBorder"]
    > ![Screenshot of Company Access Setup showing work profile is active.](./media/enroll-device-android-work-profile/work-profile-active-1911.png)  
 
-10. In the Company Portal app, review the list of settings your organization requires.  Update the settings on your device if necessary. Tap **RESOLVE** to open the setting on your device. After you're done updating settings, tap **CONFIRM DEVICE SETTINGS**.   
+10. In the Company Portal app, review the list of settings your organization requires. Update the settings on your device if necessary. Tap **RESOLVE** to open the setting on your device. After you're done updating settings, tap **CONFIRM DEVICE SETTINGS**.   
 
    > [!div class="mx-imgBorder"]
    > ![Screenshot of Company Portal'a Update device settings screen highlighting the RESOLVE button and CONFIRM DEVICE SETTINGS button.](./media/enroll-device-android-work-profile/confirm-device-settings-work-profile-2307.png)  
