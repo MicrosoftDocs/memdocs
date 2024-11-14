@@ -21,6 +21,8 @@ items:
       href: control-alt-delete.md  
 - name: Deploying NXT
   items:
+  - name: Deployment overivew
+    href: deployment-overview.md
   - name: Requirements
     href: requirements.md
   - name: Join NXT to Microsoft Entra
