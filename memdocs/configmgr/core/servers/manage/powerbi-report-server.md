@@ -28,7 +28,7 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
 
 - Power BI Report Server license. For more information, see [Licensing Power BI Report Server](/power-bi/report-server/get-started#licensing-power-bi-report-server).
 
-- Download [Microsoft Power BI Report Server-September 2019](https://www.microsoft.com/download/details.aspx?id=57270), or later.
+- Download [Microsoft Power BI Report Server-September 2024](https://www.microsoft.com/download/details.aspx?id=105945), or later.
    - Don't install Power BI Report Server right away. For the proper process based on your environment, see [Configure the reporting services point](#configure-the-reporting-services-point).
    - It's recommended that you use a [supported version of Power BI Report Server](/power-bi/report-server/support-timeline). For versioning information, see the [Change log for Power BI Report Server](/power-bi/report-server/changelog).
 

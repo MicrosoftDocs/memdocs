@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/28/2024
+ms.date: 10/02/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -56,14 +56,6 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- ***********************************************-->
 ## Device management
 
-### Support for symmetric NAT with RDP Shortpath<!--43602619-->
-
-In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission. For more information, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
-
-### Chroma subsampling default change to 4:2:0<!--50308895-->
-
-To reduce monitor support issues, the Windows 365 service will default the chroma subsampling at 4:2:0 (instead of the previous 4:4:4).
-
 ### Cloud PC gallery images update to Microsoft Teams 2.1<!--50394023-->
 
 In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 applications will be updated to use Microsoft Teams 2.1. These images include:
@@ -73,11 +65,7 @@ In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 appli
 - Windows 10 Enterprise + Microsoft 365 Apps 21H2
 
 <!-- ***********************************************-->
-## Device security
-
-### Cloud PC support for FIDO devices and passkeys on macOS and iOS<!--51858977-->
-
-Windows 365 Cloud PCs will support FIDO devices and passkeys for Microsoft Entra ID sign in on macOS and iOS.
+<!--## Device security-->
 
 <!--***********************************************-->
 <!-- ## End user experience -->
@@ -93,30 +81,21 @@ Windows 365 Cloud PCs will support FIDO devices and passkeys for Microsoft Entra
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
-### Update to Cloud PC action status report<!--49451077-->
+### Remoting connections report deprecation<!--52990648-->
 
-The Cloud PC action status report will show batches of devices in which actions have been triggered. Customers will be able to see the batch current progress.
-
-<!-- ***********************************************-->
-## Provisioning
-
-### New health check: UDP TURN (preview)<!--44505391-->
-
-A new UDP TURN check will be added to the Azure Network Connections health checks. For more information about health checks, see [Azure network connections health checks](health-checks.md).
+The remoting connection report will be retired on December 31st, 2024. After this date, refer to the [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
 
 <!-- ***********************************************-->
-## Security
+<!--## Provisioning-->
 
-### New settings for Windows 365 security baselines<!--49685126-->
-
-New configuration settings will be introduced for the Windows 365 security baseline.
+<!-- ***********************************************-->
+<!--## Security-->
 
 <!-- ***********************************************
 ## Windows 365 app-->
 
 <!-- ***********************************************-->
 <!--## Windows 365 Frontline-->
-
 
 ## Next steps
 

@@ -186,8 +186,7 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. If a helper performs elevated actions on a user's device and the sharer ends the session, a warning message appears for the helper. The message warns that if the helper continues, they'll be logged off.
-
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. 
 #### Request help on an unenrolled device
 
 The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you're trying to receive help, be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
@@ -236,7 +235,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. If a helper performs elevated actions on a user's device and the sharer ends the session, a warning message appears for the helper. The message warns that if the helper continues, they'll be logged off.
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. If a helper performs elevated actions on a user's device and the sharer ends the session, at the end of the session the sharer is automatically signed out.
 
 #### Provide help on an unenrolled device
 
@@ -392,7 +391,7 @@ Microsoft Edge WebView2 is required to use Remote Help. If you get an error mess
 
 ## Known Issues
 For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service isn't running.
-After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30-60 seconds after restart), or manually start the service through services.msc.
+After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30 minutes after restart), or manually start the service through services.msc.
 For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
 
 ## What's New for Remote Help

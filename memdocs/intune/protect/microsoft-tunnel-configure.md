@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 10/31/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -137,11 +137,11 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
 
-2. To start the server installation, run the script as **root**. For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
+2. To start the server installation, run the script as **root**. For example, you might use the following command line: `sudo ./mstunnel-setup`. The script always installs the [most recent version](microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
 
    > [!IMPORTANT]
    >
-   > If you are installing Tunnel to a [rootless Podman container](#use-a-rootless-podman-container), use the the following modified command-line to start the script: `chmod mst_rootless_mode=1 ./mstunnel-setup`
+   > If you are installing Tunnel to a [rootless Podman container](#use-a-rootless-podman-container), use the the following modified command-line to start the script: `mst_rootless_mode=1 ./mstunnel-setup`
 
    To see detailed console output during the tunnel and installation agent enrollment process:
 
@@ -152,7 +152,7 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
    > [!IMPORTANT]
    > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so, run the following commands to add *intune_env=FXP* to the command line:
    >
-   > 1. Run `sudo chmod +x ./mstunnel-setup`
+   > 1. Run `sudo ./mstunnel-setup`
    > 2. Run `sudo intune_env=FXP ./mstunnel-setup`
 
    > [!TIP]
@@ -191,7 +191,7 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
        Alternatively, create a link to the private key file in **/etc/mstunnel/private/site.key**. For example: `ln -s [full path to key file] /etc/mstunnel/private/site.key` This key shouldn't be encrypted with a password. The private key file name must be **site.key**.
 
-6. After setup installs the certificate and creates the Tunnel Gateway services, you're prompted to sign in and authenticate with Intune. The user account must have either the Intune Administrator or Global Administrator roles assigned. The account you use to complete the authentication must have an Intune license. The credentials of this account aren't saved and are only used for initial sign-in to Microsoft Entra ID. After successful authentication, Azure app IDs/secret keys are used for authentication between the Tunnel Gateway and Microsoft Entra.
+6. After setup installs the certificate and creates the Tunnel Gateway services, you're prompted to sign in and authenticate with Intune. The user account must be assigned permissions equivalent to the Intune Administrator. The account you use to complete the authentication must have an Intune license. The credentials of this account aren't saved and are only used for initial sign-in to Microsoft Entra ID. After successful authentication, Azure app IDs/secret keys are used for authentication between the Tunnel Gateway and Microsoft Entra.
 
    This authentication registers Tunnel Gateway with Microsoft Intune and your Intune tenant.
 
@@ -205,16 +205,17 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
 8. If you're using RHEL 8.4 or later, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
 
-##  Add trusted root certificates to Tunnel containers
+## Add trusted root certificates to Tunnel containers
+
 Trusted root certificates must be added to the Tunnel containers when:
 
 - The outgoing server traffic requires SSL proxy inspection.
 - The endpoints accessed by the Tunnel containers are not exempt from proxy inspection.
 
 **Steps:**
+
 1. Copy the trusted root certificate(s) with .crt extension to /etc/mstunnel/ca-trust
 2. Restart Tunnel containers using "mst-cli server restart" and "mst-cli agent restart"
-
 
 ## Deploy the Microsoft Tunnel client app
 
@@ -456,7 +457,6 @@ With prerequisites in place, you can then use the [installation script procedure
 
 Use of a rootless Podman container requires your environment meet the following prerequisites, which are in *addition* to the default [Microsoft Tunnel prerequisites](microsoft-tunnel-prerequisites.md):
 
-
 **Supported platform**:
 
 - The Linux server must run Red Hat (RHEL) 8.8 or later.
@@ -465,10 +465,12 @@ Use of a rootless Podman container requires your environment meet the following 
 - The rootless container must be installed under the **/home** folder.
 - The **/home** folder must have a minimum of 10 GB of free space.
 
-**Throughput**
-  - The peak throughput should not exceed 230Mbps
+**Throughput**:
+
+- The peak throughput should not exceed 230Mbps
 
 **Network**:
+
 The following network settings, which are not available in a rootless namespace, must be set in **/etc/sysctl.conf**:
 
 - `net.core.somaxconn=8192`
@@ -484,6 +486,7 @@ For example, to specify port 443, use the following entry: `net.ipv4.ip_unprivil
 After editing **sysctl.conf**, you must reboot the Linux server before the new configurations take effect.
 
 **Outbound proxy for the rootless user**:
+
 To support an outbound proxy for the rootless user, edit **/etc/profile.d/http_proxy.sh** and add the following two lines. In the following lines, *10.10.10.1:3128* is an example *address:port* entry. When you add these lines, replace *10.10.10.1:3128* with the values for your proxy IP address and port:
 
 - `export http_proxy=http://10.10.10.1:3128`
@@ -497,11 +500,9 @@ To install Microsoft Tunnel to a rootless Podman container, use the following co
 
 ## Uninstall the Microsoft Tunnel
 
-To uninstall the product, run **mst-cli uninstall** from the Linux server as root.
+To uninstall the product, run **mst-cli uninstall** from the Linux server as root. This will also remove the server from the Intune admin center.
 
-After the product is uninstalled, delete the corresponding server record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Microsoft Tunnel Gateway** > **Servers**.
-
-## Next steps
+## Related content
 
 [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)  
 [Monitor Microsoft Tunnel](microsoft-tunnel-monitor.md)

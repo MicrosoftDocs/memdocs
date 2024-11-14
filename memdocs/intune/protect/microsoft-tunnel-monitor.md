@@ -1,11 +1,11 @@
 ---
-title: Monitor the status of the Microsoft Tunnel VPN solution for Microsoft Intune
-description: Monitor the status of Microsoft Tunnel Gateway, a VPN server that runs on Linux. With the Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure. 
+title: Monitor the Microsoft Tunnel VPN solution for Microsoft Intune
+description: Monitor the status of Microsoft Tunnel Gateway, a VPN server that runs on Linux. Microsoft Tunnel enables your Intune managed cloud-based devices to reach your on-premises infrastructure.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/23/2024
+ms.date: 10/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -96,7 +96,7 @@ Default values for server health metrics:
   
   Plan to replace a revoked TLS certificate.
 
-  To learn  more about Online Certificate Status Protocol (OCSP), see [Online Certificate Status Protocol](https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol) at wikipedia.org.
+  To learn more about Online Certificate Status Protocol (OCSP), see [Online Certificate Status Protocol](https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol) at wikipedia.org.
 
 - **Internal network accessibility** – Status from the most recent check of the internal URL. You configure the URL as part of a [Tunnel Site configuration](../protect/microsoft-tunnel-configure.md#to-create-a-site-configuration).
   - *Healthy* - The server can access the URL specified in the site properties.
@@ -124,7 +124,7 @@ Default values for server health metrics:
 
 - **Server logs** – Determines if logs have been uploaded to the server within the last 60 minutes.
   - *Healthy* - Server logs were uploaded within the last 60 minutes.
-  - *Unhealthy* - Server logs were uploaded within the last 60 minutes.
+  - *Unhealthy* - Server logs haven't been uploaded in the last 60 minutes.
 
 ## Manage health status thresholds
 
@@ -188,7 +188,7 @@ Microsoft Tunnel logs information to the Linux server logs in the *syslog* forma
 
 - **mstunnel-agent**: Display agent logs.
 - **mstunnel_monitor**: Display monitoring task logs.
-- **ocserv** -  Display server logs.
+- **ocserv** - Display server logs.
 - **ocserv-access** - Display access logs.
 
   By default, access logging is disabled. Enabling access logs can reduce performance, depending on the number of active connections and usage patterns on the server. Logging for DNS connections increases the verbosity of the logs, which can become noisy.
@@ -210,7 +210,7 @@ Microsoft Tunnel logs information to the Linux server logs in the *syslog* forma
 
 - **OCSERV_TELEMETRY** - Display telemetry details for connections to Tunnel.
 
-  Telemetry logs have the following format, with the values for *bytes_in*, *bytes_out*, and *duration* being used only for disconnect operations: `<operation><client_ip><server_ip><gateway_ip><assigned_ip><user_id><device_id><user_agent><bytes_in><bytes_out><duration>` For example:  
+  Telemetry logs have the following format, with the values for *bytes_in*, *bytes_out*, and *duration* being used only for disconnect operations: `<operation><client_ip><server_ip><gateway_ip><assigned_ip><user_id><device_id><user_agent><bytes_in><bytes_out><duration>` For example:
 
   - *Oct 20 19:32:15 mstunnel ocserv[4806]: OCSERV_TELEMETRY,connect,31258,73.20.85.75,172.17.0.3,169.254.0.1,169.254.107.209,3780e1fc-3ac2-4268-a1fd-dd910ca8c13c, 5A683ECC-D909-4E5F-9C67-C0F595A4A70E,MobileAccess iOS 1.1.34040102*
 
@@ -255,7 +255,7 @@ Each set of logs that Intune collects and uploads is identified as a separate se
 - A *start* and *end* time of the log collection
 - When the upload was generated
 - The log sets *verbosity level*
-- An *Incident ID*  that can be used to identify that specific log set
+- An *Incident ID* that can be used to identify that specific log set
 
 :::image type="content" source="./media/microsoft-tunnel-monitor/send-server-logs-tab.png" alt-text="Screen capture that shows the Send verbose server logs interface.":::
 
@@ -282,13 +282,13 @@ The following are known issues for Microsoft Tunnel.
 
 #### Clients can successfully use the Tunnel when Server health status shows as offline<!-- 14878305 -->
 
-**Issue**: On the [Tunnel *Health status* tab](../protect/microsoft-tunnel-monitor.md), a server’s health status reports as offline indicating that it's disconnected, even though users can reach the tunnel server and connect to the organization’s resources.  
+**Issue**: On the [Tunnel *Health status* tab](../protect/microsoft-tunnel-monitor.md), a server’s health status reports as offline indicating that it's disconnected, even though users can reach the tunnel server and connect to the organization’s resources.
 
 **Solution**: To resolve this issue, you must reinstall Microsoft Tunnel, which re-enrolls the Tunnel server agent with Intune. To prevent this issue, install updates for the Tunnel agent and server soon after they're released. Use the Tunnel server health metrics in the Microsoft Intune admin center to monitor server health.
 
 #### With Podman, you see “Error executing checkup” in the mstunnel_monitor log<!-- 14878316 -->
 
-**Issue**: Podman fails to identify or see the active containers are running, and reports “Error executing checkup” in the [mstunnel_monitor log](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) of the Tunnel server.  The following are examples of the errors: 
+**Issue**: Podman fails to identify or see the active containers are running, and reports “Error executing checkup” in the [mstunnel_monitor log](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) of the Tunnel server. The following are examples of the errors:
 
 - Agent:
   ```
@@ -316,14 +316,14 @@ The following are known issues for Microsoft Tunnel.
 
 **Solution**: To resolve this issue, manually [restart the Podman containers](https://docs.podman.io/en/latest/markdown/podman-restart.1.html). Podman should then be able to identify the containers. If the problem persists, or returns, consider using ***cron*** to create a job that automatically restarts the containers when this issue is seen.
 
-#### With Podman, you see System.DateTime errors in the mstunnel-agent log<!-- 14878334  -->
+#### With Podman, you see System.DateTime errors in the mstunnel-agent log<!-- 14878334 -->
 
 **Issue**: When you use Podman, the mstunnel-agent log might contain errors similar to the following entries:
 
 - `Failed to parse version-info.json for version information.`
 - `System.Text.Json.JsonException: The JSON value could not be converted to System.DateTime`
 
-This issue occurs due to differences in formatting dates between Podman and Tunnel Agent. These errors don't indicate a fatal issue or prevent connectivity.  Beginning with containers released after October 2022, the formatting issues should be resolved.  
+This issue occurs due to differences in formatting dates between Podman and Tunnel Agent. These errors don't indicate a fatal issue or prevent connectivity. Beginning with containers released after October 2022, the formatting issues should be resolved.
 
 **Solution**: To resolve these issues, update the agent container (Podman or Docker) to the latest version. As new sources of these errors are discovered, we'll continue to fix them in subsequent version updates.
 
@@ -339,6 +339,6 @@ For guidance on viewing Tunnel logs, see [View Microsoft Tunnel logs](#view-micr
 
 If this issue persists, consider automating the restart command by using the cron scheduling utility. See [How to use cron on Linux](https://opensource.com/article/21/7/cron-linux) at *opensource.com*.
 
-## Next steps
+## Related content
 
 [Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)

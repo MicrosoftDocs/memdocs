@@ -102,11 +102,11 @@ For more information, see [Configure Azure services for use with Configuration M
 
 ## Co-management
 
-If you enroll Windows devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/intune/intune-endpoints).
+If you enroll Windows devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
 
 ## Microsoft Store for Business
 
-If you integrate Configuration Manager with the [Microsoft Store for Business](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+If you integrate Configuration Manager with the [Microsoft Store for Business](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](/mem/intune/fundamentals/intune-endpoints).
 
 ## Delivery optimization
 
@@ -187,6 +187,8 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 -  `https://clients.config.office.net` and `https://go.microsoft.com/fwlink/?linkid=2190568` to support deploying updates for Microsoft 365 Apps for enterprise
 
 - `contentstorage.osi.office.net` to support the evaluation of Office add-in readiness<!-- MEMDocs#410 -->
+
+- `clients.config.office.net` to retrieve the names of the files needed for a particular Microsoft 365 Apps update. For more information, see [Using the Microsoft 365 Apps file list API](/office/client-developer/shared/manageability-applications-with-the-office-365-click-to-run-installer#using-the-microsoft-365-apps-file-list-api).
 
 Your top-level site server needs access to the following endpoint to download the Microsoft Apps 365 readiness file:
 

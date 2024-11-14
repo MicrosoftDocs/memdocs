@@ -7,7 +7,7 @@ keywords:
 author: dougeby  
 ms.author: dougeby
 manager: dougeby
-ms.date: 06/14/2024
+ms.date: 09/25/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -36,6 +36,368 @@ ms.collection:
 <!-- Maintenance plan:
 
      Maintain ~2 years of archived content -->
+
+## Week of April 15, 2024
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 26740168 -->
+
+The following protected app is now available for Microsoft Intune:
+
+- Atom Edge by Arlanto Apps
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+## Week of April 1, 2024
+
+### Device management
+
+#### Copilot in Intune is available in the Intune admin center (public preview)<!-- 24105429 26122887 24205474 24205510 24205460 26113632-->
+
+Copilot in Intune is integrated in the Intune admin center, and can help you get information quickly. You can use Copilot in Intune for the following tasks:
+
+✅ **Copilot can help you manage your settings and policies**
+
+- **Copilot tooltip on settings**: When you add settings to a policy or review settings in an existing policy, there's a new Copilot tooltip. When you select the tooltip, you get AI generated guidance based on Microsoft content and recommendations. You can see what each setting does, how the setting works, any recommended values, if the setting is configured in another policy, and more.
+
+- **Policy summarizer**: On existing policies, you get a Copilot summary of the policy. The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the impact of a policy and its settings on your users and devices.
+
+✅ **Copilot shows device details and can help troubleshoot**
+
+- **All about a device**: On a device, you can use Copilot to get key information about the device, including its properties, configuration, and status information.
+
+- **Device compare**: Use Copilot to compare the hardware properties and device configurations of two devices. This feature helps you determine what's different between two devices with similar configurations, especially when troubleshooting.
+
+- **Error code analyzer**: Use Copilot in the device view to analyze an error code. This feature helps you understand what the error means and provides a potential resolution.
+
+✅ **Intune capabilities in Copilot for Security**
+
+Intune has capabilities available in the Copilot for Security portal. SOC Analysts and IT admins can use these capabilities to get more information on policies, devices, group membership, and more. On a single device, you can get more specific information that's unique to Intune, like compliance status, device type, and more.
+
+You can also ask Copilot to tell you about a user's devices and get a quick summary of critical information. For example, the output shows links to the user's devices in Intune, device ID, enrollment date, last check-in date, and compliance status. If you're an IT admin and reviewing a user, then this data provides a quick summary.
+
+As a SOC analyst that's investigating a suspicious or potentially compromised user or device, information like enrollment date and last check-in can help you make informed decisions.
+
+For more information on these features, see:
+
+- [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)
+- [Access your Microsoft Intune data in Copilot for Security](../copilot/security-copilot.md)
+
+Applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Windows
+
+#### GCC customers can use Remote Help for Windows and Android devices<!-- 10613615 25825071-->
+
+The [Microsoft Intune Suite](intune-add-ons.md) includes advanced endpoint management and security features, including Remote Help.
+
+On Windows and enrolled Android Enterprise dedicated devices, you can use remote help on US Government GCC environments.
+
+For more information on these features, see:
+
+- [Microsoft Intune for US Government GCC service description](intune-govt-service-description.md)
+- [Use Remote Help with Microsoft Intune](remote-help.md)
+
+Applies to:
+
+- Windows 10/11
+- Windows 10/11 on ARM64 devices
+- Windows 365
+- Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
+
+### Device configuration
+
+#### New BIOS device configuration profile for OEMs<!-- 9278502 -->
+
+There's a new **BIOS configuration and other settings** device configuration policy for OEMs. Admins can use this new policy to enable or disable different BIOS features that secure device. In the Intune device configuration policy, you add the BIOS configuration file, deploy a Win32 app, and then assign the policy to your devices.
+
+For example, admins can use the [Dell Command tool](https://www.dell.com/support/kbdoc/000108963/how-to-use-and-troubleshoot-dell-command-update-to-update-all-drivers-bios-and-firmware-for-your-system) (opens Dell's website) to create the BIOS configuration file. Then, they add this file to the new Intune policy.
+
+For more information on this feature, see [Use BIOS configuration profiles on Windows devices in Microsoft Intune](../configuration/bios-configuration.md).
+
+Applies to
+
+- Windows 10 and later
+
+## Week of March 25, 2024 (Service release 2403)
+
+### Microsoft Intune Suite
+
+#### New elevation type for Endpoint Privilege Management<!-- 25230692 -->
+
+Endpoint Privilege Management has a new file elevation type, **support approved**. Endpoint Privilege Management is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../fundamentals/intune-add-ons.md).
+
+A support-approved elevation gives you a third option for both the default elevation response and the elevation type for each rule. Unlike automatic or user confirmed, a support-approved elevation request requires Intune administrators to manage which files can run as elevated on a case-by-case basis.
+
+With support approved elevations, users can request approval to elevate an application that isn't explicitly allowed for elevation by automatic or user approved rules. This takes the form of an elevation request that must be reviewed by an Intune administrator who can approve or deny the elevation request.
+
+When the request is approved, users are notified that the application can now be run as elevated, and they have 24 hours from the time of approval to do so before the elevation approval expires.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+For more information on this new capability, see [Support approved elevation requests](../protect/epm-support-approved.md).
+
+### App management
+
+#### Extended capabilities for Managed Google Play apps on personally owned Android devices with a work profile<!-- 26554642 -->
+
+There are new capabilities extended to work profile devices. The following capabilities were previously available only on corporate-owned devices:
+
+- **Available apps for device groups**: You can use Intune to make apps available for device groups through the Managed Google Play store. Previously, apps could only be made available to user groups.
+
+- **Update priority setting**: You can use Intune to configure the app update priority on devices with a work profile. To learn more about this setting, see [Update a Managed Google Play app](../apps/apps-add-android-for-work.md#update-a-managed-google-play-app).
+
+- **Required apps display as available in Managed Google Play**: You can use Intune to make required apps available for users through the Managed Google Play store. Apps that are part of existing policies now display as available.
+
+These new capabilities will follow a phased rollout over multiple months.
+
+Applies to:
+
+- Android Enterprise personally owned devices with a work profile
+
+### Device configuration
+
+#### New settings available in the Apple settings catalog<!-- 26551582 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+##### iOS/iPadOS
+
+**Declarative Device Management (DDM) > Passcode**:
+
+- Maximum Passcode Age In Days
+- Minimum Complex Characters
+- Require Alphanumeric Passcode
+
+**Restrictions**:
+
+- Allow Marketplace App Installation
+
+##### macOS
+
+**Declarative Device Management (DDM) > Passcode**:
+
+- Change At Next Auth
+- Custom Regex
+- Failed Attempts Reset In Minutes
+- Maximum Passcode Age In Days
+- Minimum Complex Characters
+- Require Alphanumeric Passcode
+
+**Full Disk Encryption > FileVault**:
+
+- Recovery Key Rotation In Months
+
+#### New settings available in the Windows settings catalog<!-- 26763724, 26170998, + 26801723 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type.
+
+- **Delivery optimization**:
+
+  - **DO Disallow Cache Server Downloads On VPN** - This setting blocks downloads from Microsoft Connected Cache servers when the device connects using VPN. By default, the device is allowed to download from Microsoft Connected Cache when connected using VPN.
+
+  - **DO Set Hours To Limit Background Download Bandwidth** - This setting specifies the maximum background download bandwidth. Delivery Optimization uses this bandwidth during and outside business hours across all concurrent download activities as a percentage of available download bandwidth.
+
+  - **DO Set Hours To Limit Foreground Download Bandwidth** - This setting specifies the maximum foreground download bandwidth. Delivery Optimization uses this bandwidth during and outside business hours across all concurrent download activities as a percentage of available download bandwidth.
+
+  - **DO Vpn Keywords** - This policy allows you to set one or more keywords used to recognize VPN connections.
+
+- **Messaging**:
+
+  - **Allow Message Sync** - This policy setting allows the backup and restore of cellular text messages to Microsoft's cloud services.
+
+- **Microsoft Defender Antivirus**:
+
+  - **Specify the maximum depth to scan archive files**
+  - **Specify the maximum size of archive files to be scanned**
+
+For more information on these settings, see:
+
+- [Policy CSP - DeliveryOptimization](/windows/client-management/mdm/policy-csp-deliveryoptimization)
+- [Policy CSP - Messaging](/windows/client-management/mdm/policy-csp-messaging#allowmessagesync)
+- [Policy CSP - ADMX_MicrosoftDefenderAntivirus](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus)
+
+Applies to:
+
+- Windows 10 and later
+
+#### New archive file scan settings added to Antivirus policy for Windows devices<!-- 26801723 -->
+
+We added the following two settings to the *Microsoft Defender Antivirus* profile for [endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md#antivirus-profiles) that apply to Windows 10 and Windows 11 devices:
+
+- [Specify the maximum depth to scan archive files](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#scan_archivemaxdepth) - This setting allows you to configure the maximum directory depth level into which archive files such as .ZIP or .CAB are unpacked during scanning.
+- [Specify the maximum size of archive files to be scanned](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#scan_archivemaxsize) - This setting allows you to configure the maximum size of archive files such as .ZIP or .CAB that are scanned. The value represents file size in kilobytes (KB).
+
+With Antivirus policy, you can manage these settings on devices enrolled by Intune and on devices managed through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+
+Both settings are also available in the [settings catalog](../configuration/settings-catalog.md) at **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type > **Defender**.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+#### Updates to assignment filters<!-- 12798031, 24801139 -->
+
+You can use [Intune assignment filters](filters.md) to assign a policy based on rules you create.
+
+Now, you can:
+
+- Use managed app assignment filters for Window MAM app protection policies and app configuration policies.
+- Filter your existing assignment filters by **Platform**, and by the **Managed apps** or **Managed devices** filter type. When you have many filters, this feature makes it easier to find specific filters you created.
+
+For more information on these features, see:
+
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
+- [Data protection for Windows MAM](../apps/protect-mam-windows.md)
+
+This feature applies to:
+
+- **Managed devices** on the following platforms:
+
+  - Android device administrator
+  - Android Enterprise
+  - Android (AOSP)
+  - iOS/iPadOS
+  - macOS
+  - Windows 10/11
+
+- **Managed apps** on the following platforms:
+
+  - Android
+  - iOS/iPadOS
+  - Windows
+
+### Device management
+
+#### New compliance setting lets you verify device integrity using hardware-backed security features<!-- 12391862 -->
+
+A new compliance setting called **Check strong integrity using hardware-backed security features** lets you verify device integrity using hardware-backed key attestation. If you configure this setting, strong integrity attestation is added to Google Play's integrity verdict evaluation. Devices must meet device integrity to remain compliant. Microsoft Intune marks devices that don't support this type of integrity check as noncompliant.
+
+This setting is available in profiles for Android Enterprise fully managed, dedicated, and corporate-owned work profile, under **Device Health** > **Google Play Protect**. It only becomes available when the Play integrity verdict policy in your profile is set to **Check basic integrity** or **Check basic integrity & device integrity**.
+
+Applies to:
+
+- Android Enterprise
+
+For more information, see [Device compliance - Google Play Protect](../protect/compliance-policy-create-android-for-work.md#google-play-protect).
+
+#### New compliance settings for Android work profile, personal devices<!-- 24743927 -->
+
+Now you can add compliance requirements for work profile passwords without impacting device passwords. All new Microsoft Intune settings are available in compliance profiles for Android Enterprise personally owned work profiles under **System Security** > **Work Profile Security**, and include:
+
+- Require a password to unlock work profile
+- Number of days until password expires
+- Number of previous passwords to prevent reuse
+- Maximum minutes of inactivity before password is required
+- Password complexity
+- Required password type
+- Minimum password length
+
+If a work profile password fails to meet requirements, Company Portal marks the device as noncompliant. Intune compliance settings take precedence over the respective settings in an Intune device configuration profile. For example, the password complexity in your compliance profile is set to *medium*. The password complexity in a device configuration profile is set to *high*. Intune prioritizes and enforces the compliance policy.
+
+Applies to:
+
+- Android Enterprise personally owned devices with a work profile
+
+For more information, see [Compliance settings - Android Enterprise](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile).
+
+#### Windows quality updates support for expediting non-security updates<!-- 17614146 -->
+
+Windows quality updates now support expediting non-security updates for those times when a quality fix needs to be deployed faster than the normal quality update settings.
+
+Applies to:
+
+- Windows 11 devices
+
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md#create-and-assign-an-expedited-quality-update).
+
+#### Introducing a remote action to pause the config refresh enforcement interval<!--24249019 -->
+
+In the Windows Settings Catalog, you can configure **Configuration Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
+
+To support this feature, a remote action is added to allow a pause in action. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue a pause from Intune for a specified period. When the period expires, settings are enforced again.
+
+The remote action **Pause configuration refresh** can be accessed from the device summary page.
+
+For more information, see:
+
+- [Remote actions](../remote-actions/device-management.md)
+- [Pause Config Refresh Remote action](../remote-actions/pause-config-refresh.md)
+
+### Device security
+
+#### Updated security baseline for Windows version 23H2<!-- 25021947 -->
+
+You can now deploy the Intune security baseline for Windows version 23H2. This new baseline is based on the **version 23H2** of the Group Policy security baseline found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and includes only the settings that are applicable to devices managed through Intune. Use of this updated baseline can help you maintain best-practice configurations for your Windows devices.
+
+This baseline uses the unified settings platform seen in the Settings Catalog. It features an improved user interface and reporting experience, consistency and accuracy improvements related to setting tattooing, and can support assignment filters for profiles.
+
+Use of [Intune security baselines](../protect/security-baselines.md) can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft. As with all baselines, the default baseline represents the recommended configurations, which you can modify to meet the requirements of your organization.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+To view the new baselines included settings with their default configurations, see, [Windows MDM security baseline version 23H2](../protect/security-baseline-settings-mdm-all.md?pivots=mdm-23h2).
+
+#### Use a rootless implementation of Podman to host Microsoft Tunnel<!-- 24836716 -->
+
+When prerequisites are met, you can use a rootless Podman container to host a Microsoft Tunnel server. This capability is available when you use [Podman for Red Hat Enterprise Linux (RHEL)](../protect/microsoft-tunnel-prerequisites.md#linux-server) version 8.8 or later, to host Microsoft Tunnel.
+
+When using a rootless Podman container, the mstunnel services run under a non-privileged service user. This implementation can help limit impact from a container escape. To use a rootless Podman container, you must start the tunnel installation script using a modified command line.
+
+For more information about this Microsoft Tunnel install option, see [Use a rootless Podman container](../protect/microsoft-tunnel-configure.md#use-a-rootless-podman-container).
+
+#### Improvements for Intune deployments of Microsoft Defender for Endpoint<!-- 26314441 -->
+
+We improved and simplified the experience, workflow, and report details for onboarding devices to Microsoft Defender when using Intune's endpoint detection and response (EDR) policy. These changes apply for Windows devices managed by Intune and by the tenant-attach scenario. These improvements include:
+
+- Changes to the EDR node, dashboards, and reports to improve the visibility of your Defender EDR deployment numbers. See [About the endpoint detection and response node](../protect/endpoint-security-edr-policy.md#about-the-endpoint-detection-and-response-node).
+
+- A new tenant-wide option to deploy a preconfigured EDR policy that streamlines the deployment of Defender for Endpoint to applicable Windows devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
+
+- Changes to Intune's the Overview page of the endpoint security node. These changes provide a consolidated view of reports for the device signals from Defender for Endpoint on your managed devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
+
+These changes apply to the Endpoint security and endpoint detection and response nodes of the admin center, and the following device platforms:
+
+- Windows 10
+- Windows 11
+
+#### Windows quality updates support expediting non-security updates<!-- 17614146 -->
+
+Windows quality updates now support expediting non-security updates for those times when a quality fix needs to be deployed faster than the normal quality update settings.
+
+Applies to:
+
+- Windows 11 devices
+
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md#create-and-assign-an-expedited-quality-update).
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 26677733, 26711918, 26763096, 26763121 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Cerby by Cerby, Inc.
+- OfficeMail Go by 9Folders, Inc.
+- DealCloud by Intapp, Inc.
+- Intapp 2.0 by Intapp, Inc.
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of March 3, 2024
 
@@ -4150,7 +4512,7 @@ Applies to:
 - Windows 10/11
 
 > [!NOTE]  
-> ASR polices don't support merge functionality for *ASR Only Per Rule Exclusions* and a policy conflict can result when multiple polices that configure *ASR Only Per Rule Exclusions* for the same device conflict. To avoid conflicts, combine the configurations for *ASR Only Per Rule Exclusions* into a single ASR policy. We are investigating adding policy merge for *ASR Only Per Rule Exclusions* in a future update.
+> ASR policies don't support merge functionality for *ASR Only Per Rule Exclusions* and a policy conflict can result when multiple policies that configure *ASR Only Per Rule Exclusions* for the same device conflict. To avoid conflicts, combine the configurations for *ASR Only Per Rule Exclusions* into a single ASR policy. We are investigating adding policy merge for *ASR Only Per Rule Exclusions* in a future update.
 
 #### Grant apps permission to silently use certificates on Android Enterprise devices<!-- 12441244    -->  
 You can now configure silent use of certificates by apps on Android Enterprise devices that enrolled as **Fully Managed, Dedicated, and Corporate-Owned work Profile**.
@@ -4195,7 +4557,7 @@ As of October 12, 2022, the name Microsoft Endpoint Manager will no longer be us
 For more information, see [Intune documentation]( ../../index.yml).
 
 #### Grace period status visible in Windows Company Portal<!-- 14746606 -->  
-Windows Company Portal now displays a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If users don't update their device by the given date, their device status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) and [Check access from Device details page](../user-help/check-device-access-windows-cpapp.md#check-access-from-device-details-page).
+Windows Company Portal now displays a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If users don't update their device by the given date, their device status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) and [Check access from Device details page](../user-help/check-device-access-windows-cpapp.md).
 
 #### Linux device management available in Microsoft Intune<!-- 14616038 -->  
 Microsoft Intune now supports Linux device management for devices running Ubuntu Desktop 22.04 or 20.04 LTS. Intune admins don't need to do anything to enable Linux enrollment in the Microsoft Intune admin center.  Linux users can [enroll supported Linux devices](../user-help/enroll-device-linux.md) on their own and use the Microsoft Edge browser to access corporate resources online.
@@ -4457,7 +4819,7 @@ You can now use Intune role-based access control (RBAC) when interacting with te
 ### App management
 
 #### Android strong biometric change detection<!-- 9740832 -->
-The Android **Fingerprint instead of PIN for access** setting in Intune, which allows the end-user to use [fingerprint authentication](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) instead of a PIN, is being modified. This change allows you to require end-users to set strong biometrics. And, if a change in strong biometrics is detected, you can require end-users to confirm their app protection policy (APP) PIN. You can find Android app protection polices in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App protection policies** > **Create policy** > **Android**. For more information, see [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md#access-requirements).
+The Android **Fingerprint instead of PIN for access** setting in Intune, which allows the end-user to use [fingerprint authentication](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) instead of a PIN, is being modified. This change allows you to require end-users to set strong biometrics. And, if a change in strong biometrics is detected, you can require end-users to confirm their app protection policy (APP) PIN. You can find Android app protection policies in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App protection policies** > **Create policy** > **Android**. For more information, see [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md#access-requirements).
 
 #### Noncompliance details available for Android (AOSP) in Microsoft Intune app<!-- 12645770 -->
 Android (AOSP) users can view noncompliance reasons in the Microsoft Intune app. These details describe why a device is marked noncompliant. This information is available on the Device details page for devices enrolled as user-associated Android (AOSP) devices.

@@ -40,7 +40,7 @@ For Windows 10/11 devices, use of [Windows Hello for Business](/windows/security
 
 After device enrollment, or when you choose not to use the tenant-wide enrollment policy, Intune supports the following methods to manage Windows Hello on discrete groups of devices:
 
-- [**Endpoint security Account protection policy**](../protect/endpoint-security-account-protection-policy.md): To manage Windows Hello on devices after they have enrolled with Intune, use the Intune *Account protection* profile, which is part of endpoint security Account protection policy.
+- [**Endpoint security Account protection policy**](../protect/endpoint-security-account-protection-policy.md): To manage settings for Windows Hello on devices after they have enrolled with Intune, use the Intune *Account protection* profile, which is part of endpoint security Account protection policy.
 
 - [**Security baselines**](../protect/security-baselines.md): Some settings for Windows Hello can be managed by security baselines like the baselines for *Microsoft Defender for Endpoint security* or *Security Baseline for Windows 10 and later*.
 

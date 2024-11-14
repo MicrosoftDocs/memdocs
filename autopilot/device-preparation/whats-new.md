@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 08/21/2024
+ms.date: 10/15/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -30,6 +30,26 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+## Diagnostics logs automatically available in Windows Autopilot device preparation deployment status report
+
+Date added: *October 9, 2024*
+
+Admins can now download diagnostics logs for failed Autopilot device preparation deployments directly from the **Windows Autopilot device preparation deployment status** report. Logs are available for download in the **Device deployment details** when you select a failed deployment under the **Device** tab. Logs are automatically collected when an error occurs during deployment.
+
+## Windows Autopilot Device Preparation Support in Intune operated by 21Vianet in China
+
+Date added: *September 18, 2024*
+
+As part of the 2409 Intune release, we're announcing support for Windows Autopilot Device Preparation policy in [Intune operated by 21Vianet in China](/mem/intune/fundamentals/china) cloud. Customers with tenants located in China can now provision devices and manage through Microsoft Intune. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
+
+<!-- MAXADO-9313795 / INADO-28687730 -->
+
+## enrollmentProfileName property is now populated with the Device preparation policy name
+
+Date added: *September 13, 2024*
+
+As part of the 2409 Intune release, the **enrollmentProfileName** property is now populated with the Device preparation policy name during Autopilot device preparation deployments. The Enrollment profile property of Intune and Microsoft Entra device objects are automatically populated with the name of the Device preparation policy that was applied to the device during provisioning. The **enrollmentProfileName** property enables admins to configure assignment filters and dynamic groups based on the **enrollmentProfileName** property for configurations post-enrollment.
 
 <!-- INADO-28533819 -->
 

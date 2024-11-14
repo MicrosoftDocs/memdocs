@@ -129,6 +129,47 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 >
 > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
 
+
+### October 2, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:7921c2e97217fa17de4ab69396d943e4975d323417b8b813211e2f8b639f64e1
+
+- **serverImageDigest**: sha256:0efab5013351bcd81f186973e75ed5d9f91bbe6271e3be481721500f946fc9ec
+
+Changes in this release:
+-Upgrade from .NET 6 to .NET 8
+- Upgrade ocserv to version 1.3.0
+- Fix rootless container bug in installer
+
+### September 12, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:17158c73750ff2c7157e979c2f4ff4e175318730c16aa8d0ee6526a969c37c59
+
+- **serverImageDigest**: sha256:6484d311d1bd6cbe55d71306595715bafa6a20a000be6fd6f9e530716cef6c16
+
+Changes in this release:
+- Add diagnostic tools for host troubleshooting
+- Upgrade Azure Linux image to 2.0.20240829
+
+  
+### August 12, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:4d16b1f458c69c3423626906b0b577cb42c8d22f4240205299355c6217e08a6b
+
+- **serverImageDigest**: sha256:66559e142d489491ca8f090b50f4a444a3394f850a5ec09fb9f3e6f986d93c46
+
+Changes in this release:
+- Support customizing container registry during installation
+- Support customizing container creation options during installation
+- Security updates on the base image
+
+  
 ### June 20, 2024
 
 Image hash values:

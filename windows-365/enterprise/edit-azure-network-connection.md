@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/25/2024
+ms.date: 10/30/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -44,9 +44,15 @@ To edit an Azure network connection:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**) > **Azure network connection** > select the connection you want to edit > **Properties**.
 2. For all ANCs, you can edit the **General** settings by selecting **Edit** next to each header. You can edit all settings except **Join type**. For Microsoft Entra hybrid join connections, you can also edit the **AD domain** settings.
 
-After the edits have been saved, the ANC checks are run to verify the configuration.
+After the edits are saved, the ANC checks are run to verify the configuration.
 
 You can't edit an ANC if it's running checks. You must wait for the checks to pass/fail before edit functionality becomes available.
+
+Some configuration settings can't be edited for ANCs that are:
+
+- Referenced by a provisioning policy, including as an alternate ANC.
+- Used by a Cloud PC.
+- Configured as backup ANCs for [cross region disaster recovery](cross-region-disaster-recovery.md).
 
 <!-- ########################## -->
 ## Next steps

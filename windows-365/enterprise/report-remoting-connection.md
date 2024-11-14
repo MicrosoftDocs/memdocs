@@ -31,6 +31,9 @@ ms.collection:
 
 # Remoting connection report
 
+> [!IMPORTANT]  
+> The remoting connection report will be retired on December 31st, 2024. After this date, refer to the [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
+
 The Remoting connection report in [Endpoint analytics](/mem/analytics/overview) helps you monitor key performance metrics for connecting to the Cloud PCs. There are two metrics in this report:
 
 - **Round trip time (ms)**

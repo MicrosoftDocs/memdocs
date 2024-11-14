@@ -287,18 +287,9 @@ The script is deployed to devices using in Intune. To add and deploy the script,
 
 #### Microsoft Store app
 
-If you previously removed the Microsoft Store app, you can redeploy it using Microsoft Intune. To re-add the Microsoft Store app (or any other apps you want to re-add), add the Microsoft Store app to your private organization app repository. Then, deploy the app to devices using Intune. The Microsoft Store app helps keep apps updated.
+If you previously removed the Microsoft Store app, you can redeploy it using Microsoft Intune. To re-add the Microsoft Store app (or any other apps you want to re-add), add the Microsoft Store app to your private organization app repository. Then, deploy the app to devices using Intune. The Microsoft Store app helps keep apps updated. For information about how to configure access to the Microsoft Store app, see [Manage access to private store](/microsoft-store/manage-access-to-private-store).  
 
-Your private organization app repository can be:
-
-- The Intune Company Portal app or website (preferred)
-
-- Microsoft Store for Business or Microsoft Store for Education
-
-  Previously, the Microsoft Store app had a Microsoft Store for Business tab. This tab is removed. If you use Microsoft Store for Business, then to access your private app repository, go to the [Microsoft Store for Business website](https://businessstore.microsoft.com/). For more information, go to [Manage access to private store](/microsoft-store/manage-access-to-private-store).
-
-  > [!NOTE]
-  > The Microsoft Store for Business and Microsoft Store for Education will be retired. For more information, go to [Microsoft Store for Business and Microsoft Store for Education](/microsoft-store/microsoft-store-for-business-overview).
+Your private organization app repository can be the Intune Company Portal app or website.  
 
 Using Intune, on Windows 10/11 Enterprise and Education devices, you can block end users from installing Microsoft Store apps outside of your organization's private app repository.
 

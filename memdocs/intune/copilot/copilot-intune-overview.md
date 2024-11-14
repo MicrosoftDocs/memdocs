@@ -4,8 +4,8 @@
 title: Microsoft Copilot in Intune features overview
 description: Microsoft Copilot in Intune is an AI platform. It can help you create policies, get information about existing policies, and show more details on specific settings, including their impacts on users and devices. You can also use Copilot to troubleshoot device issues.
 keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings catalog, policies, device details, troubleshooting
-author: MandiOhlinger
-ms.author: mandia
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 04/01/2024
 ms.topic: get-started
@@ -164,7 +164,7 @@ For more information about using Copilot with your devices, go to [Use Microsoft
 
 ### Query with Copilot in device query
 
-You can use Copilot to help you create KQL queries to run when using device query in Intune.
+You can use Copilot to help you create Kusto Query Language (KQL) queries to run when using device query in Intune.
 
 > [!NOTE]
 > To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. For more information, see [Intune add-ons](../fundamentals/intune-add-ons.md#microsoft-intune-advanced-analytics).

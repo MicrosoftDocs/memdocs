@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/10/2023
+ms.date: 09/13/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,7 +46,7 @@ Pivot yml:
       title: May 2023
 -->
 
-# Microsoft  365 Apps for Enterprise security baseline settings reference for Microsoft Intune
+# Microsoft 365 Apps for Enterprise security baseline settings reference for Microsoft Intune
 
 This article is a reference for the settings that are available in the Microsoft 365 Apps for Enterprise security baseline for Microsoft Intune.
 
@@ -72,41 +72,94 @@ To learn more about using security baselines, see:
 
 ::: zone pivot="office-may-2023"
 
-**Microsoft 365 Apps for Enterprise security baseline for May 2023**  
+**Microsoft 365 Apps for Enterprise security baseline for May 2023**
+
+This baseline version was first made available in May of 2023. It was replaced by the Baseline *Version 2306*
 
 For more information about the following settings that are included in this baseline, download the [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center, and review the *Microsoft 365 Apps for Enterprise-2206-FINAL.zip* file.
 
 ::: zone-end
 ::: zone pivot="v2306"
 
-**Microsoft 365 Apps for Enterprise for security baseline version 2306**  
+**Microsoft 365 Apps for Enterprise for security baseline version 2306**
+
+This baseline version was first made available in November 2023, and replaces the *May 2023* version.
 
 For more information about the following settings that are included in this baseline, download the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center, and then review the *Microsoft 365 Apps for Enterprise 2306.zip* file.
 
 ::: zone-end
-
-## Microsoft 365 Apps for Enterprise
-
 ::: zone pivot="office-may-2023,v2306"
 
-### Microsoft Access 2016
+## Administrative Templates
+
+*MS Security Guide*
+
+- **Block Flash activation in Office documents**  
+  Baseline default: *Enabled*  
+  - **Block Flash player in Office (Device)**  
+    Baseline default: Block all activation*
+
+- **Restrict legacy JScript execution for Office**  
+  Baseline default: *Enabled*
+
+  - **Excel: (Device)**  
+    Baseline default: *69632*
+
+  - **PowerPoint: (Device)**  
+    Baseline default: *69632*
+
+  - **OneNote: (Device)**  
+    Baseline default: *69632*
+
+  - **Publisher: (Device)**  
+    Baseline default: *69632*
+
+  - **Access: (Device)**  
+    Baseline default: *69632*
+
+  - **Project: (Device)**  
+    Baseline default: *69632*
+  
+  - **Visio: (Device)**  
+    Baseline default: *69632*
+
+  - **Outlook: (Device)**  
+    Baseline default: *69632*
+
+
+  - **Word: (Device)**  
+    Baseline default: *69632*
+
+
+
+## Microsoft Access 2016
 
 *Application Settings > Security > Trust Center*
 
 - **Block macros from running in Office files from the Internet (User)**  
-  Baseline default: *Enabled*  
+  Baseline default: *Enabled*
+
+- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+  Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="v2306"
+<!-- v.2306 only -->
+
+- **Require that application add-ins are signed by Trusted Publisher (User)**  
+  Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,v2306"
 
 - **VBA Macro Notification Settings (User)**  
   Baseline default: *Enabled*  
   - Baseline default: *Disable all with notification*
 
-- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
-  Baseline default: *Enabled*  
-
 *Application Settings > Security > Trust Center > Trusted Locations*
 
 - **Allow Trusted Locations on the network (User)**  
-  Baseline default: *Disabled*  
+  Baseline default: *Disabled*
 
 ### Microsoft Excel 2016
 
@@ -152,30 +205,39 @@ For more information about the following settings that are included in this base
 
 *Excel Options > Security > Trust Center*
 
+::: zone-end
+::: zone pivot="v2306"
+<!-- v.2306 only -->
+
+- **Block Excel XLL Add-ins that come from an untrusted source (User)**  
+  Baseline default: *Enabled*
+  - Baseline default: *Block*
+
+::: zone-end
+::: zone pivot="office-may-2023,v2306"
+
 - **Block macros from running in Office files from the Internet (User)**  
   Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="v2306"
+- **Disable Trust Bar Notification for unsigned application add-ins and block them (User) (Deprecated)**  
+  Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,v2306"
 
 - **Prevent Excel from running XLM macros (User)**  
   Baseline default: *Enabled*
 
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
-  Baseline default: *Enabled*
-
-- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+  Baseline default: *Enabled*  
+  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
   Baseline default: *Enabled*
 
 - **VBA Macro Notification Settings (User)**  
   Baseline default: *Enabled*  
   - Baseline default: *Disable all except digitally signed macros*
-
-::: zone-end
-::: zone pivot="v2306"
-
-- **Block Excel XLL Add-ins that come from an untrusted source**  
-  Baseline default: *Block*
-
-::: zone-end
-::: zone pivot="office-may-2023,v2306"
 
 *Excel Options > Security > Trust Center > External Content*
 
@@ -184,6 +246,7 @@ For more information about the following settings that are included in this base
 
 ::: zone-end
 ::: zone pivot="office-may-2023"
+<!-- May 2023: only -->
 
 - **Don’t allow Dynamic Data Exchange (DDE) server launch in Excel (User)**  
   Baseline default: *Enabled*
@@ -277,8 +340,7 @@ For more information about the following settings that are included in this base
   Baseline default: *Disabled*
 
 - **Set document behavior if file validation fails (User)**  
-  Baseline default: *Enabled*
-
+  Baseline default: *Enabled*  
   - **Checked: Allow edit. Unchecked: Do not allow edit. (User)**  
     Baseline default: *False*  
     - Baseline default: *Open in Protected View*
@@ -289,22 +351,17 @@ For more information about the following settings that are included in this base
 *Excel Options > Security > Trust Center > Trusted Locations*
 
 - **Allow Trusted Locations on the network (User)**  
-  Baseline default: *Disabled*+
+  Baseline default: *Disabled*
 
-::: zone-end
-::: zone pivot="office-may-2023"
-### Microsoft Lync Feature Policies
+## Microsoft Lync Feature Policies
 
-- **Configure SIP security mode**
+- **Configure SIP security mode**  
   Baseline default: *Enabled*
 
-- **Disable HTTP fallback for SIP connection**
+- **Disable HTTP fallback for SIP connection**  
   Baseline default: *Enabled*
 
-::: zone-end
-::: zone pivot="office-may-2023,v2306"
-
-### Microsoft Office 2016
+## Microsoft Office 2016
 
 *Customize*
 
@@ -317,12 +374,6 @@ For more information about the following settings that are included in this base
   - **Disallow in Publisher (User)**  
     Baseline default: *True*
 
-  - **Disallow in Visio (User)**  
-    Baseline default: *True*
-
-  - **Disallow in InfoPath (User)**  
-    Baseline default: *True*
-
   - **Disallow in Outlook (User)**  
     Baseline default: *True*
 
@@ -332,24 +383,30 @@ For more information about the following settings that are included in this base
   - **Disallow in Access (User)**  
     Baseline default: *True*
 
+  - **Disallow in InfoPath (User)**  
+    Baseline default: *True*
+
   - **Disallow in Word (User)**  
     Baseline default: *True*
 
   - **Disallow in Excel (User)**  
     Baseline default: *True*
 
+  - **Disallow in Visio (User)**  
+    Baseline default: *True*
+
 *Security Settings*
 
 - **ActiveX Control Initialization (User)**  
-  Baseline default: *Enabled*
-
-  - **ActiveX Control Initialization: (User)**  
+  Baseline default: *Enabled*  
+  -**ActiveX Control Initialization: (User)**  
   Baseline default: *6*
 
 ::: zone-end
 ::: zone pivot="v2306"
+<!-- v.2306 only -->
 
-- **Allow Basic Authentication prompts from network proxies**  
+- **Allow Basic Authentication prompts from network proxies (User)**  
   Baseline default: *Disabled*
 
 ::: zone-end
@@ -378,10 +435,11 @@ For more information about the following settings that are included in this base
 
 ::: zone-end
 ::: zone pivot="v2306"
+<!-- V.2306: only  -->
 
-- **Encryption mode for Information Rights Management (IRM)**  
+- **Encryption mode for Information Rights Management (IRM) (User)**  
   Baseline default: *Enabled*  
-  - **Encryption type: (User)**  
+  - **IRM Encryption Mode: (User)**  
     Baseline default: *Cipher Block Chaining (CBC)*
 
 ::: zone-end
@@ -424,10 +482,7 @@ For more information about the following settings that are included in this base
 - **Disable Smart Document's use of manifests (User)**  
   Baseline default: *Enabled*
 
-::: zone-end
-::: zone pivot="office-may-2023"
-
-### Microsoft Office 2016 (Machine)
+## Microsoft Office 2016 (Machine)
 
 *Security Settings > IE Security*
 
@@ -446,7 +501,13 @@ For more information about the following settings that are included in this base
   - **powerpnt.exe (Device)**  
     Baseline default: *True*
 
+  - **excel.exe (Device)**  
+    Baseline default: *True*
+
   - **visio.exe (Device)**  
+    Baseline default: *True*
+
+  - **onent.exe (Device)**  
     Baseline default: *True*
 
   - **outlook.exe (Device)**  
@@ -458,19 +519,13 @@ For more information about the following settings that are included in this base
   - **winword.exe (Device)**  
     Baseline default: *True*
 
-  - **excel.exe (Device)**  
-    Baseline default: *True*
-
-  - **onent.exe (Device)**  
-    Baseline default: *True*
-
-  - **winproj.exe (Device)**  
-    Baseline default: *True*
-
   - **exprwd.exe (Device)**  
     Baseline default: *True*
 
   - **spDesign.exe (Device)**  
+    Baseline default: *True*
+
+  - **winproj.exe (Device)**  
     Baseline default: *True*
 
   - **groove.exe (Device)**  
@@ -488,7 +543,13 @@ For more information about the following settings that are included in this base
   - **spDesign.exe (Device)**  
     Baseline default: *True*
 
+  - **onent.exe (Device)**  
+    Baseline default: *True*  
+
   - **outlook.exe (Device)**  
+    Baseline default: *True*
+
+  - **pptview.exe (Device)**  
     Baseline default: *True*
 
   - **mspub.exe (Device)**  
@@ -497,25 +558,19 @@ For more information about the following settings that are included in this base
   - **visio.exe (Device)**  
     Baseline default: *True*
 
-  - **onent.exe (Device)**  
-    Baseline default: *True*  
-
-  - **pptview.exe (Device)**  
-    Baseline default: *True*
-
   - **winproj.exe (Device)**  
-    Baseline default: *True*
-
-  - **powerpnt.exe (Device)**  
-    Baseline default: *True*
-
-  - **mse7.exe (Device)**  
     Baseline default: *True*
 
   - **msaccess.exe (Device)**  
     Baseline default: *True*
 
+  - **powerpnt.exe (Device)**  
+    Baseline default: *True*
+  
   - **groove.exe (Device)**  
+    Baseline default: *True*
+
+  - **mse7.exe (Device)**  
     Baseline default: *True*
 
   - **winword.exe (Device)**  
@@ -524,9 +579,9 @@ For more information about the following settings that are included in this base
 - **Disable user name and password**  
   Baseline default: *Enabled*
 
-  - **pptview.exe (Device)**  
+  - **excel.exe (Device)**  
     Baseline default: *True*
-
+ 
   - **groove.exe (Device)**  
     Baseline default: *True*
 
@@ -536,7 +591,7 @@ For more information about the following settings that are included in this base
   - **mse7.exe (Device)**  
     Baseline default: *True*
 
-  - **excel.exe (Device)**  
+  - **mspub.exe (Device)**  
     Baseline default: *True*
 
   - **visio.exe (Device)**  
@@ -545,16 +600,13 @@ For more information about the following settings that are included in this base
   - **exprwd.exe (Device)**  
     Baseline default: *True*
 
+  - **msaccess.exe (Device)**  
+    Baseline default: *True*
+
   - **spDesign.exe (Device)**  
     Baseline default: *True*
 
   - **winword.exe (Device)**  
-    Baseline default: *True*
-
-  - **mspub.exe (Device)**  
-    Baseline default: *True*
-
-  - **msaccess.exe (Device)**  
     Baseline default: *True*
 
   - **powerpnt.exe (Device)**  
@@ -564,6 +616,9 @@ For more information about the following settings that are included in this base
     Baseline default: *True*
 
   - **winproj.exe (Device)**  
+    Baseline default: *True*
+
+  - **pptview.exe (Device)**  
     Baseline default: *True*
 
 - **Information Bar**  
@@ -581,25 +636,19 @@ For more information about the following settings that are included in this base
   - **msaccess.exe (Device)**  
     Baseline default: *True*
 
+  - **onent.exe (Device)**  
+    Baseline default: *True*
+
   - **outlook.exe (Device)**  
     Baseline default: *True*
 
   - **winproj.exe (Device)**  
     Baseline default: *True*
 
-  - **spDesign.exe (Device)**  
-    Baseline default: *True*
-
-  - **onent.exe (Device)**  
-    Baseline default: *True*
-
   - **powerpnt.exe (Device)**  
     Baseline default: *True*
 
-  - **winword.exe (Device)**  
-    Baseline default: *True*
-
-  - **exprwd.exe (Device)**  
+  - **spDesign.exe (Device)**  
     Baseline default: *True*
 
   - **groove.exe (Device)**  
@@ -611,8 +660,14 @@ For more information about the following settings that are included in this base
   - **mse7.exe (Device)**  
     Baseline default: *True*
 
+  - **winword.exe (Device)**  
+    Baseline default: *True*
+
+  - **exprwd.exe (Device)**  
+    Baseline default: *True*
+
 - **Local Machine Zone Lockdown Security**  
-  Baseline default: *Enabled*  
+  Baseline default: *Enabled*
 
   - **mse7.exe (Device)**  
     Baseline default: *True*
@@ -638,9 +693,6 @@ For more information about the following settings that are included in this base
   - **groove.exe (Device)**  
     Baseline default: *True*
 
-  - **visio.exe (Device)**  
-    Baseline default: *True*
-
   - **winword.exe (Device)**  
     Baseline default: *True*
 
@@ -648,6 +700,9 @@ For more information about the following settings that are included in this base
     Baseline default: *True*
 
   - **spDesign.exe (Device)**  
+    Baseline default: *True*
+
+  - **visio.exe (Device)**  
     Baseline default: *True*
 
   - **onent.exe (Device)**  
@@ -683,9 +738,6 @@ For more information about the following settings that are included in this base
   - **outlook.exe (Device)**  
     Baseline default: *True*
 
-  - **pptview.exe (Device)**  
-    Baseline default: *True*
-
   - **mspub.exe (Device)**  
     Baseline default: *True*
 
@@ -695,25 +747,22 @@ For more information about the following settings that are included in this base
   - **msaccess.exe (Device)**  
     Baseline default: *True*
 
-  - **spDesign.exe (Device)**  
+  - **pptview.exe (Device)**  
     Baseline default: *True*
 
   - **winproj.exe (Device)**  
+    Baseline default: *True*
+
+  - **spDesign.exe (Device)**  
     Baseline default: *True*
 
 - **Navigate URL**  
   Baseline default: *Enabled*
 
-  - **powerpnt.exe (Device)**  
-    Baseline default: *True*
-
-  - **visio.exe (Device)**  
-    Baseline default: *True*
-
-  - **mse7.exe (Device)**  
-    Baseline default: *True*
-
   - **groove.exe (Device)**  
+    Baseline default: *True*
+
+  - **spDesign.exe (Device)**  
     Baseline default: *True*
 
   - **onent.exe (Device)**  
@@ -722,19 +771,10 @@ For more information about the following settings that are included in this base
   - **pptview.exe (Device)**  
     Baseline default: *True*
 
-  - **spDesign.exe (Device)**  
-    Baseline default: *True*
-
   - **outlook.exe (Device)**  
     Baseline default: *True*
 
   - **winproj.exe (Device)**  
-    Baseline default: *True*
-
-  - **excel.exe (Device)**  
-    Baseline default: *True*
-
-  - **exprwd.exe (Device)**  
     Baseline default: *True*
 
   - **msaccess.exe (Device)**  
@@ -743,13 +783,58 @@ For more information about the following settings that are included in this base
   - **winword.exe (Device)**  
     Baseline default: *True*
 
+  - **excel.exe (Device)**  
+    Baseline default: *True*
+
   - **mspub.exe (Device)**  
+    Baseline default: *True*
+
+  - **exprwd.exe (Device)**  
+    Baseline default: *True*
+
+  - **powerpnt.exe (Device)**  
+    Baseline default: *True*
+
+  - **visio.exe (Device)**  
+    Baseline default: *True*
+
+  - **mse7.exe (Device)**  
     Baseline default: *True*
 
 - **Object Caching Protection**  
   Baseline default: *Enabled*
 
-  - **excel.exe (Device)**  
+  - **winword.exe (Device)**  
+    Baseline default: *True*
+
+  - **powerpnt.exe (Device)**  
+    Baseline default: *True*
+
+  - **spDesign.exe (Device)**  
+    Baseline default: *True*
+ 
+  - **mse7.exe (Device)**  
+    Baseline default: *True*
+
+  - **mspub.exe (Device)**  
+    Baseline default: *True*
+
+  - **msaccess.exe (Device)**  
+    Baseline default: *True*
+
+  - **onent.exe (Device)**  
+    Baseline default: *True*
+
+  - **outlook.exe (Device)**  
+    Baseline default: *True*
+
+  - **groove.exe (Device)**  
+    Baseline default: *True*
+
+ - **excel.exe (Device)**  
+    Baseline default: *True*
+
+  - **visio.exe (Device)**  
     Baseline default: *True*
 
   - **pptview.exe (Device)**  
@@ -759,51 +844,15 @@ For more information about the following settings that are included in this base
     Baseline default: *True*
 
   - **exprwd.exe (Device)**  
-    Baseline default: *True*
-
-  - **winword.exe (Device)**  
-    Baseline default: *True*
-
-  - **spDesign.exe (Device)**  
-    Baseline default: *True*
-
-  - **mse7.exe (Device)**  
-    Baseline default: *True*
-
-  - **mspub.exe (Device)**  
-    Baseline default: *True*
-
-  - **powerpnt.exe (Device)**  
-    Baseline default: *True*
-
-  - **onent.exe (Device)**  
-    Baseline default: *True*
-
-  - **outlook.exe (Device)**  
-    Baseline default: *True*
-
-  - **msaccess.exe (Device)**  
-    Baseline default: *True*
-
-  - **visio.exe (Device)**  
-    Baseline default: *True*
-
-  - **groove.exe (Device)**  
     Baseline default: *True*
 
 - **Protection From Zone Elevation**  
   Baseline default: *Enabled*
 
-  - **msaccess.exe (Device)**  
-    Baseline default: *True*
-
-  - **spDesign.exe (Device)**  
+  - **winproj.exe (Device)**  
     Baseline default: *True*
 
   - **groove.exe (Device)**  
-    Baseline default: *True*
-
-  - **winproj.exe (Device)**  
     Baseline default: *True*
 
   - **outlook.exe (Device)**  
@@ -827,13 +876,19 @@ For more information about the following settings that are included in this base
   - **winword.exe (Device)**  
     Baseline default: *True*
 
+  - **exprwd.exe (Device)**  
+    Baseline default: *True*
+
+  - **msaccess.exe (Device)**  
+    Baseline default: *True*
+
+  - **spDesign.exe (Device)**  
+    Baseline default: *True*
+
   - **onent.exe (Device)**  
     Baseline default: *True*
 
   - **pptview.exe (Device)**  
-    Baseline default: *True*
-
-  - **exprwd.exe (Device)**  
     Baseline default: *True*
 
 - **Restrict ActiveX Install**  
@@ -851,9 +906,6 @@ For more information about the following settings that are included in this base
   - **onent.exe (Device)**  
     Baseline default: *True*
 
-  - **pptview.exe (Device)**  
-    Baseline default: *True*
-
   - **excel.exe (Device)**  
     Baseline default: *True*
 
@@ -867,6 +919,9 @@ For more information about the following settings that are included in this base
     Baseline default: *True*
 
   - **outlook.exe (Device)**  
+    Baseline default: *True*
+
+  - **pptview.exe (Device)**  
     Baseline default: *True*
 
   - **winproj.exe (Device)**  
@@ -929,31 +984,34 @@ For more information about the following settings that are included in this base
 - **Saved from URL**  
   Baseline default: *Enabled*
 
-  - **visio.exe (Device)**  
-    Baseline default: *True*
-
   - **mspub.exe (Device)**  
     Baseline default: *True*
 
-  - **outlook.exe (Device)**  
+  - **visio.exe (Device)**  
     Baseline default: *True*
 
   - **winword.exe (Device)**  
     Baseline default: *True*
 
-  - **excel.exe (Device)**  
-    Baseline default: *True*
-
   - **msaccess.exe (Device)**  
-    Baseline default: *True*
-
-  - **powerpnt.exe (Device)**  
     Baseline default: *True*
 
   - **onent.exe (Device)**  
     Baseline default: *True*
 
+  - **outlook.exe (Device)**  
+    Baseline default: *True*
+
   - **groove.exe (Device)**  
+    Baseline default: *True*
+
+  - **excel.exe (Device)**  
+    Baseline default: *True*
+
+  - **powerpnt.exe (Device)**  
+    Baseline default: *True*
+
+  - **pptview.exe (Device)**  
     Baseline default: *True*
 
   - **exprwd.exe (Device)**  
@@ -963,9 +1021,6 @@ For more information about the following settings that are included in this base
     Baseline default: *True*
 
   - **spDesign.exe (Device)**  
-    Baseline default: *True*
-
-  - **pptview.exe (Device)**  
     Baseline default: *True*
 
   - **winproj.exe (Device)**  
@@ -980,10 +1035,16 @@ For more information about the following settings that are included in this base
   - **onent.exe (Device)**  
     Baseline default: *True*
 
+  - **winproj.exe (Device)**  
+    Baseline default: *True*
+
   - **winword.exe (Device)**  
     Baseline default: *True*
 
   - **exprwd.exe (Device)**  
+    Baseline default: *True*
+
+  - **mse7.exe (Device)**  
     Baseline default: *True*
 
   - **mspub.exe (Device)**  
@@ -992,34 +1053,25 @@ For more information about the following settings that are included in this base
   - **outlook.exe (Device)**  
     Baseline default: *True*
 
+  - **msaccess.exe (Device)**  
+    Baseline default: *True*
+
   - **powerpnt.exe (Device)**  
     Baseline default: *True*
 
   - **groove.exe (Device)**  
     Baseline default: *True*
 
-  - **mse7.exe (Device)**  
-    Baseline default: *True*
-
-  - **msaccess.exe (Device)**  
-    Baseline default: *True*
-
   - **excel.exe (Device)**  
-    Baseline default: *True*
-
-  - **spDesign.exe (Device)**  
     Baseline default: *True*
 
   - **pptview.exe (Device)**  
     Baseline default: *True*
 
-  - **winproj.exe (Device)**  
+  - **spDesign.exe (Device)**  
     Baseline default: *True*
 
-::: zone-end
-::: zone pivot="office-may-2023,v2306"
-
-### Microsoft Outlook 2016
+## Microsoft Outlook 2016
 
 *Security > Security Form Settings*
 
@@ -1032,6 +1084,23 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
     - **Guard behavior: (User)**  
       Baseline default: *Automatically Deny*
 
+  - **Prevent users from customizing attachment security settings (User)**  
+    Baseline default: *Enabled*
+
+  - **Retrieving CRLs (Certificate Revocation Lists) (User)**  
+    Baseline default: *Enabled*  
+    - Baseline default: *When online always retrieve the CRL*
+
+::: zone-end
+::: zone pivot="office-may-2023"
+<!-- May 2023: only  -->
+
+  - **Junk E-mail protection level (User)**  
+    Baseline default: *Disabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,v2306"
+
   - **Configure Outlook object model prompt When accessing the Formula property of a UserProperty object (User)**  
     Baseline default: *Enabled*  
     - **Guard behavior: (User)**  
@@ -1042,16 +1111,16 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
     - **Select the authentication with Exchange server. (User)**  
       Baseline default: *Kerberos Password Authentication*
 
-  - **Configure Outlook object model prompt when reading address information (User)**  
-    Baseline default: *Enabled*  
-    - **Guard behavior: (User)**  
-      Baseline default: *Automatically Deny*
-
-  - **Enable RPC encryption (User)**  
+ - **Enable RPC encryption (User)**  
     Baseline default: *Enabled*
 
   - **Allow hyperlinks in suspected phishing e-mail messages (User)**  
     Baseline default: *Disabled*
+
+  - **Configure Outlook object model prompt when reading address information (User)**  
+    Baseline default: *Enabled*  
+    - **Guard behavior: (User)**  
+      Baseline default: *Automatically Deny*
 
   - **Configure Outlook object model prompt when sending mail (User)**  
     Baseline default: *Enabled*
@@ -1067,33 +1136,10 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   - **Allow scripts in one-off Outlook forms (User)**  
     Baseline default: *Disabled*
 
-  - **Prevent users from customizing attachment security settings (User)**  
-    Baseline default: *Enabled*
-
   - **Remove file extensions blocked as Level 2 (User)**  
     Baseline default: *Enabled*  
     - **Removed Extensions: (User)**  
       Baseline default: *;*
-
-  - **Retrieving CRLs (Certificate Revocation Lists) (User)**  
-    Baseline default: *Enabled*  
-    - Baseline default: *When online always retrieve the CRL*
-
-  - **Configure Outlook object model prompt when accessing an address book (User)**  
-    Baseline default: *Enabled*  
-    - **Guard behavior: (User)**  
-      Baseline default: *Automatically Deny*
-
-  - **Do not allow Outlook object model scripts to run for public folders (User)**  
-    Baseline default: *Enabled*
-
-  - **Include Internet in Safe Zones for Automatic Picture Download (User)**  
-    Baseline default: *Disabled*
-
-  - **Signature Warning (User)**  
-    Baseline default: *Enabled*  
-    - **Signature Warning (User)**  
-      Baseline default: *Always warn about invalid signatures*
 
   - **Use Unicode format when dragging e-mail message to file system (User)**  
     Baseline default: *Disabled*  
@@ -1102,6 +1148,12 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
     Baseline default: *Enabled*  
     - **When executing a custom action: (User)**  
       Baseline default: *Automatically Deny*
+
+  - **Do not allow Outlook object model scripts to run for public folders (User)**  
+    Baseline default: *Enabled*
+
+  - **Include Internet in Safe Zones for Automatic Picture Download (User)**  
+    Baseline default: *Disabled*
 
   - **Security setting for macros (User)**  
     Baseline default: *Enabled*  
@@ -1113,43 +1165,57 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
     - **Removed Extensions: (User)**  
       Baseline default: *;*
 
-::: zone-end
-::: zone pivot="office-may-2023"
+  - **Signature Warning (User)**  
+    Baseline default: *Enabled*  
+    - **Signature Warning (User)**  
+      Baseline default: *Always warn about invalid signatures*
 
-  - **Junk E-mail protection level (User)**  
-    Baseline default: *Disabled*
+- **Display Level 1 attachments (User)**  
+  Baseline default: *Disabled*
 
-::: zone-end
-::: zone pivot="office-may-2023,v2306"
+- **Minimum encryption settings (User)**  
+  Baseline default: *Enabled*
+  - **Minimum key size (in bits): (User)**  
+    Baseline default: *168*
 
-  - **Display Level 1 attachments (User)**  
-    Baseline default: *Disabled*
+- **Do not allow Outlook object model scripts to run for shared folders (User)**  
+  Baseline default: *Enabled*
 
-  - **Minimum encryption settings (User)**  
-    Baseline default: *Enabled*
-    - **Minimum key size (in bits): (User)**  
-      Baseline default: *168*
-
-  - **Do not allow Outlook object model scripts to run for shared folders (User)**  
-    Baseline default: *Enabled*
-
-  - **Configure Outlook object model prompt when executing Save As (User)**  
+- **Configure Outlook object model prompt when executing Save As (User)**  
+  Baseline default: *Enabled*
+  - **Guard behavior: (User)**  
+    Baseline default: *Automatically Deny*
+  - **Configure Outlook object model prompt when reading address information (User)**  
     Baseline default: *Enabled*  
     - **Guard behavior: (User)**  
       Baseline default: *Automatically Deny*
 
-  - **Configure Outlook object model prompt when responding to meeting and task requests (User)**  
-    Baseline default: *Enabled*  
-    - **Guard behavior: (User)**  
-      Baseline default: *Automatically Deny*
+- **Configure Outlook object model prompt when responding to meeting and task requests (User)**  
+  Baseline default: *Enabled*
+  - **Guard behavior: (User)  
+    Baseline default: *Automatically Deny*
 
-### Microsoft PowerPoint 2016
+## Microsoft PowerPoint 2016
 
 *PowerPoint Options > Security*
+
+::: zone-end
+::: zone pivot="v2306"
+<!-- V.2306: only -->
+
+- **Run Programs (User)**  
+  Baseline default: *Disabled*  
+
+::: zone-end
+::: zone pivot="office-may-2023"
+<!-- May 2023: only -->
 
 - **Run Programs (User)**  
   Baseline default: *Enabled*  
   - *disable (don't run any programs)*
+
+::: zone-end
+::: zone pivot="office-may-2023,v2306"
 
 - **Scan encrypted macros in PowerPoint Open XML presentations (User)**  
   Baseline default: *Enabled*  
@@ -1163,10 +1229,19 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 - **Block macros from running in Office files from the Internet (User**)  
   Baseline default: *Enabled*
 
+::: zone-end
+::: zone pivot="v2306"
+<!-- V.2306: only  -->
+
+- **Disable Trust Bar Notification for unsigned application add-ins and block them (User) (Deprecated)**  
+  Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,v2306"
+
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*  
-
-- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
   Baseline default: *Enabled*
 
 - **VBA Macro Notification Settings (User)**  
@@ -1193,10 +1268,11 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   Baseline default: *Disabled*
 
 - **Set document behavior if file validation fails (User)**  
-  Baseline default: *Enabled*  
-  - Baseline default: *Open in Protected View*  
+  Baseline default: *Enabled* 
+ 
   - **Checked: Allow edit. Unchecked: Do not allow edit. (User)**  
     Baseline default: *False*
+  - Baseline default: *Open in Protected View*  
 
 - **Turn off Protected View for attachments opened from Outlook (User)**  
   Baseline default: *Disabled*
@@ -1206,24 +1282,33 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 - **Allow Trusted Locations on the network (User)**  
   Baseline default: *Disabled*
 
-### Microsoft Project 2016
+## Microsoft Project 2016
 
 *Project Options > Security > Trust Center*
 
 - **Allow Trusted Locations on the network (User)**  
   Baseline default: *Disabled*
 
+::: zone-end
+::: zone pivot="v2306"
+<!-- V.2306: only  -->
+
+- **Disable Trust Bar Notification for unsigned application add-ins and block them (User) (Deprecated)**  
+  Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,v2306"
+
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*  
-
-- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
-  Baseline default: *Enabled*
+  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+    Baseline default: *Enabled*
 
 - **VBA Macro Notification Settings (User)**  
   Baseline default: *Enabled*  
   - Baseline default: *Disable all except digitally signed macros*
 
-### Microsoft Publisher 2016
+## Microsoft Publisher 2016
 
 *Security*
 
@@ -1234,9 +1319,13 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 *Security > Trust Center*
 
 ::: zone-end
-::: zone pivot="office-may-2023,v2306"
+::: zone pivot="v2306"
+<!-- V.2306: only  -->
 
-- **Block macros from running in Office files from the internet**
+- **Block macros from running in Office files from the internet (User)**
+  Baseline default: *Enabled*
+
+- **Disable Trust Bar Notification for unsigned application add-ins (User) (Deprecated)**  
   Baseline default: *Enabled*
 
 ::: zone-end
@@ -1245,28 +1334,37 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*
 
-- **Disable Trust Bar Notification for unsigned application add-ins and block them(User)**  
-  Baseline default: *Enabled*
+  - **Disable Trust Bar Notification for unsigned application add-ins (User)**  
+  Baseline default: Enabled*
 
 - **VBA Macro Notification Settings (User)**  
   Baseline default: *Enabled*  
   - Baseline default: *Disable all except digitally signed macros*
 
-### Microsoft Visio 2016
+## Microsoft Visio 2016
 
 *Visio Options > Security > Trust Center*
 
 - **Allow Trusted Locations on the network (User)**  
   Baseline default: *Disabled*
 
-- **Block macros from running in Office files from the internet (User)**  
+- **Block macros from running in Office files from the Internet (User)**  
   Baseline default: *Enabled*
+
+
+::: zone-end
+::: zone pivot="v2306"
+<!-- V.2306: only -->
+- **Disable Trust Bar Notification for unsigned application add-ins and block them (User) (Deprecated)**  
+  Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,v2306"
 
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*  
-
-- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
-  Baseline default: *Enabled*
+  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+    Baseline default: *Enabled*
 
 - **VBA Macro Notification Settings (User)**  
   Baseline default: *Enabled*  
@@ -1289,12 +1387,21 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   - **File block setting: (User)**  
     Baseline default: *Open/Save blocked*
 
-### Microsoft Word 2016
+## Microsoft Word 2016
 
 *Word Options > Security > Trust Center*
 
-- **Block macros from running in Office files from the internet (User)**  
+- **Block macros from running in Office files from the Internet (User)**  
   Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="v2306"
+<!-- V.2306: only  -->
+- **Disable Trust Bar Notification for unsigned application add-ins and block them (User) (Deprecated)**  
+  Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,v2306"
 
 - **Dynamic Data Exchange (User)**  
   Baseline default: *Disabled*
@@ -1302,7 +1409,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*
 
-- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
   Baseline default: *Enabled*
 
 - **Scan encrypted macros in Word Open XML documents (User)**  
@@ -1361,7 +1468,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 
 *Word Options > Security > Trust Center > Protected View*
 
-- **Do not open files from the internet zone in Protected View (User)**  
+- **Do not open files from the Internet zone in Protected View (User)**  
   Baseline default: *Disabled*
 
 - **Do not open files in unsafe locations in Protected View (User)**  
@@ -1369,6 +1476,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 
 - **Set document behavior if file validation fails (User)**  
   Baseline default: *Enabled*
+
   - Baseline default: *Open in Protected View*
 
   - **Checked: Allow edit. Unchecked: Do not allow edit. (User)**  
@@ -1377,57 +1485,15 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 - **Turn off Protected View for attachments opened from Outlook (User)**  
   Baseline default: *Disabled*
 
-*Word Options > Security > Trust Center > Trusted Locations*
-
-- **Allow Trusted Locations on the network (User)**  
-  Baseline default: *Disabled*
-
 *Word Options > Security*
 
 - **Turn off file validation (User)**  
   Baseline default: *Disabled*
 
-::: zone-end
-::: zone pivot="office-may-2023"
+*Word Options > Security > Trust Center > Trusted Locations*
 
-### Administrative Templates
-
-*MS Security Guide*
-
-- **Block Flash activation in Office documents**  
-  Baseline default: *Enabled*  
-  - **Block Flash player in Office (Device)**  
-    Baseline default: Block all activation*
-
-- **Restrict legacy JScript execution for Office**  
-  Baseline default: *Enabled*
-
-  - **Outlook: (Device)**  
-    Baseline default: *69632*
-
-  - **Excel: (Device)**  
-    Baseline default: *69632*
-
-  - **PowerPoint: (Device)**  
-    Baseline default: *69632*
-
-  - **OneNote: (Device)**  
-    Baseline default: *69632*
-
-  - **Publisher: (Device)**  
-    Baseline default: *69632*
-
-  - **Access: (Device)**  
-    Baseline default: *69632*
-
-  - **Visio: (Device)**  
-    Baseline default: *69632*
-
-  - **Project: (Device)**  
-    Baseline default: *69632*
-  
-  - **Word: (Device)**  
-    Baseline default: *69632*
+- **Allow Trusted Locations on the network (User)**  
+  Baseline default: *Disabled*
 
 ::: zone-end
 
