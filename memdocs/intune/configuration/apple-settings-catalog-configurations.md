@@ -28,7 +28,7 @@ ms.collection:
 
 This article lists and describes the Apple configurations you can manage using a settings catalog policy in Microsoft Intune. 
 
-This articles applies to:
+This article applies to:
 
 - iOS/iPadOS
 - macOS
@@ -39,19 +39,21 @@ This articles applies to:
 - Create a [settings catalog policy](settings-catalog.md).
 
 ### How to use this article
-This article covers the two types of configurations from Apple's MDM protocol:
+
+This article covers the two types of configurations from Apple's mobile device management (MDM) protocol:
 
 - Apple declarative configurations
 - Apple MDM payloads
 
 Each section can have links to other documents:
+
 - **Apple platform guides**: The Apple Platform Deployment and Security guides that cover deployment and security features of Apple technology
 - **Apple developer**: The developer documentation outlines the device management API that gets updated with every OS release
-- **Apple YAML**: Apple GitHub repository that contains setting definitions which are ingested into the settings catalog. Use this to see requirements like applicable OS version, enrollment types, and if supervision is required
+- **Apple YAML**: Apple GitHub repository that contains setting definitions that are ingested into the settings catalog. Use this information to see requirements like applicable OS version, enrollment types, and if supervision is required
 - **Intune documentation**: Intune guides for scenario-based configuration like setting up Platform Single Sign On or deploying declarative software updates
 - **Known issues**: Updated list of known issues related to each configuration
 
-To aid with manual policy migration, configurations that are in both device configuration templates and settings catalog have a section that maps the template setting to its equivalent in the settings catalog. 
+Some settings are available in device configuration templates and in the settings catalog. To help with a manual policy migration, this article lists the template settings that maps to their equivalent setting in the settings catalog.
 
 > [!IMPORTANT]
 > It's recommended to create all new policies using the settings catalog where possible. Some of the existing device configuration templates are no longer being updated. In a future Intune release, they will be migrated to use the settings catalog policy type and the ability to create new templates will be deprecated. These templates include:
@@ -75,10 +77,10 @@ To aid with manual policy migration, configurations that are in both device conf
 
 ## Apple declarative configurations
 
-This section is specific to the configurations that are under the Declarative Device Management (DDM) category in the settings catalog. You can learn more about DDM on Apple's website: https://support.apple.com/guide/deployment/depb1bab77f8/1/web/1.0
+This section is specific to the configurations that are under the Declarative Device Management (DDM) category in the settings catalog. You can learn more about DDM at [Intro to declarative device management and Apple devices](https://support.apple.com/guide/deployment/depb1bab77f8/1/web/1.0) on Apple's website.
 	
 ### Passcode
-Use the passcode configuration to require that devices have a password or passcode that meet your organization's requirements. This configuration is located in the **Declarative Device Management (DDM)** category of the settings catalog. You can learn more about Passcode through the below documentation:
+Use the passcode configuration to require that devices have a password or passcode that meet your organization's requirements. This configuration is located in the **Declarative Device Management (DDM)** category of the settings catalog. You can learn more about Passcode using the following documentation:
 
 | Apple Platform Guides | Apple Developer | Apple YAML | Intune documentation
 | -------  | ------- | ------- | ------- |
@@ -88,7 +90,7 @@ Use the passcode configuration to require that devices have a password or passco
 - None
 
 ### Software Update
-Use the Software Update configuration to enforce an update to install at a specific time. This configuration is located in the **Declarative Device Management (DDM)** category of the settings catalog. You can learn more about this configuration through the below documentation:
+Use the Software Update configuration to enforce an update to install at a specific time. This configuration is located in the **Declarative Device Management (DDM)** category of the settings catalog. You can learn more about this configuration using the following documentation:
 
 | Apple Platform Guides | Apple Developer | Apple YAML | Intune documentation
 | -------  | ------- | ------- | ------- |
@@ -99,11 +101,11 @@ Use the Software Update configuration to enforce an update to install at a speci
 
 ## Apple MDM payload settings
 
-This section is specific to Apple payloads that use the standard MDM channel. A list of these payloads is available on [Apple's website.](https://support.apple.com/guide/deployment/dep5370d089/web)
+This section is specific to Apple payloads that use the standard MDM channel. A list of these payloads is available at [Review MDM payloads for Apple devices](https://support.apple.com/guide/deployment/dep5370d089/web) on Apple's website.
 
 ### FileVault 
 
-Use FileVault configurations to manage disk encryption on macOS devices. These configurations are located in the **Full Disk Encryption** category of the settings catalog. You can learn more about FileVault through the below documentation:
+Use FileVault configurations to manage disk encryption on macOS devices. These configurations are located in the **Full Disk Encryption** category of the settings catalog. You can learn more about FileVault using the following documentation:
 
 | Apple Platform Guides | Apple Developer | Apple YAML | Intune documentation
 | -------  | ------- | ------- | ------- |
@@ -120,19 +122,19 @@ Use FileVault configurations to manage disk encryption on macOS devices. These c
 | Escrow location description of personal recovery key | Full Disk Encryption > FileVault Recovery Key Escrow | Location
 | Personal recovery key rotation | Full Disk Encryption > FileVault | Recovery Key Rotation In Months |
 | Hide recovery key  | Full Disk Encryption > FileVault | Show Recovery Key |
-| Disable prompt at sign out | Full Disk Encryption > FileVault | Defer Dont Ask At User Logout |
+| Disable prompt at sign out | Full Disk Encryption > FileVault | Defer Don't Ask At User Logout |
 | Number of times allowed to bypass | Full Disk Encryption > FileVault | Defer Force At User Login Max Bypass Attempts |
 
 ### Firewall
 
-Use the Firewall configuration to manage the native macOS application firewall. This configuration is located in the **Security** category of the settings catalog. You can learn more about Firewall through the below documentation:
+Use the Firewall configuration to manage the native macOS application firewall. This configuration is located in the **Security** category of the settings catalog. You can learn more about Firewall using the following documentation:
 
 | Apple Platform Guides | Apple Developer | Apple YAML |
 | -------- | ------- | ------- | 
 | <ul><li>[Firewall security in macOS](https://support.apple.com/guide/security/seca0e83763f/web) </li><li>[Firewall payload](https://support.apple.com/guide/deployment/dep8d306275f/web)</li></ul> | [Firewall](https://developer.apple.com/documentation/devicemanagement/firewall) | [Firewall (YAML)](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.security.firewall.yaml) | 
 
 #### Known issues
-- [macOS devices using stealth mode turn non-compliant after upgrading to macOS 15](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-macos-devices-using-stealth-mode-turn-non-compliant/ba-p/4250583)
+- [macOS devices using stealth mode turn noncompliant after upgrading to macOS 15](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-macos-devices-using-stealth-mode-turn-non-compliant/ba-p/4250583)
 
 #### Intune device configuration template to settings catalog mapping
 
@@ -145,7 +147,7 @@ Use the Firewall configuration to manage the native macOS application firewall. 
 | Enable stealth mode | Networking > Firewall | Enable Stealth Mode |
 	
 ### System Policy Control (Gatekeeper)
-Use the System Policy Control payload to configure Gatekeeper settings. This configuration is located in the **System Policy Control** category of the settings catalog. You can learn more about System Policy Control through the below documentation:
+Use the System Policy Control payload to configure Gatekeeper settings. This configuration is located in the **System Policy Control** category of the settings catalog. You can learn more about System Policy Control using the following documentation:
 
 | Apple Platform Guides | Apple Developer | Apple YAML |
 | -------- | ------- | ------- | 
@@ -162,7 +164,7 @@ Use the System Policy Control payload to configure Gatekeeper settings. This con
 | Allow apps downloaded from these locations | System Policy Control > System Policy Control | Allow Identified Developers |
 	
 ### System Extensions
-Use the System Extensions payload to configure system extensions to be automatically loaded or prevent users from approving specific extensions. This configuration is located in the **System Configuration** category of the settings catalog. You can learn more about System Extensions through the below documentation:
+Use the System Extensions payload to configure system extensions to be automatically loaded or prevent users from approving specific extensions. This configuration is located in the **System Configuration** category of the settings catalog. You can learn more about System Extensions using the following documentation:
 
 | Apple Platform Guides | Apple Developer | Apple YAML |
 | -------- | ------- | ------- | 
