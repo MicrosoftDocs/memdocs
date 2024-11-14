@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/16/2024
+ms.date: 11/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -75,9 +75,9 @@ In the second stage, an Intune admin or third-party vendor completes the followi
 2. With the device, scan the staging token's QR code or enter the token string.
 
 > [!NOTE]
-> Manually entering the token string is not supported on Android Enterprise corporate-owned work profile (COPE) devices that are running Android 11 and later.
+> Manual token entry isn't supported on Android Enterprise corporate-owned work profile (also known as COPE) devices running Android 11 and later.  
 
-3. Complete the enrollment steps and setup wizard. When you get to the sign-in screen, stop. Don't sign in.
+3. Complete the enrollment steps and setup wizard. At the end of setup, you are on the device's home screen.  
 
 4. Turn off the device and distribute it to the end user.   
 

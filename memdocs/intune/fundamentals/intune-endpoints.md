@@ -153,10 +153,9 @@ For Intune-managed Windows devices managed using Mobile Device Management (MDM),
 | --- | ---- | -------- | ----- | --------- | ----- |
 | 172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
 
-**Port requirements** - For peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP. It uses Teredo on port 3544 for NAT traversal (use of Teredo is optional)
-For client-service communication, it uses HTTP or HTTPS over port 80/443.
+**Port requirements** - For client-service communication, it uses HTTP or HTTPS over port 80/443. Optionally, for peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP and Teredo on port 3544 for NAT traversal. For more information, see [Delivery Optimization documentation](/windows/deployment/do/) 
 
-**Proxy requirements** - To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Windows Update](/windows/deployment/update/windows-update-troubleshooting).
+**Proxy requirements** - To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Delivery Optimization](/windows/deployment/do/waas-delivery-optimization-faq.md#what-are-the-requirements-if-i-use-a-proxy).
 
 **Firewall requirements** - Allow the following hostnames through your firewall to support Delivery Optimization. For communication between clients and the Delivery Optimization cloud service:
 

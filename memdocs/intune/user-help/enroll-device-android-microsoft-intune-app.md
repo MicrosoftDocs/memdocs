@@ -62,9 +62,7 @@ Complete these steps to set up and enroll your device.
    
 1. Review the terms from Google. Then tap **ACCEPT & CONTINUE**.   
 
-1. Review Chrome's Terms of Service. Then tap **ACCEPT & CONTINUE**.  
-
-   ![Example image of Chrome Terms of Service screen, highlighting Accept & Continue button.](./media/enroll-android-device-disa-purebred/fully-managed-intune-app-06.png)   
+1. Review Chrome's Terms of Service. Then tap **ACCEPT & CONTINUE**.   
 
 1. On the sign in screens, sign in with your work or school account.   
 
@@ -80,8 +78,6 @@ Complete these steps to set up and enroll your device.
 1. Tap **SIGN IN** and then tap **NEXT** to begin registration. When you see the message that registration is complete, tap **DONE**.  
 
 1. When you see the message that your device is ready, tap **DONE**.  
-
-    ![Example image of Set up your work phone screen, highlighting Done button.](./media/enroll-device-android-microsoft-intune-app/fully-managed-intune-app-18.png)   
 
 If you have trouble accessing your organization's resources, you might need to update other settings on your device. Sign in to the Microsoft Intune app to check for required updates.   
 
