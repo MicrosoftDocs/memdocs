@@ -29,9 +29,13 @@ items:
     href: join-microsoft-entra.md
   - name: Automatically enroll in Intune
     href: intune-automatic-enrollment.md
+  - name: Create Intune filter for NXT
+    href: create-intune-filter.md
+  - name: Optimize enrollment restrictions
+    href: enrollment-restrictions.md
   - name: Enable single sign-on
     href: 
 - name: Troubleshooting
   items:
   - name: Troubleshooting
-    href: troubleshooting-nxt.md
+    href: troubleshooting.md
