@@ -6,7 +6,7 @@ author: beflamm
 ms.author: beflamm
 manager: dougeby
 ms.topic: reference
-ms.date: 09/23/2024
+ms.date: 11/13/2024
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
