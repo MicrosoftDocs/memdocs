@@ -45,7 +45,7 @@ This article describes how to set up compliance checks for WSL.
 
 These requirements must be followed to create your compliance policy with WSL settings:
 
-- [Intune WSL plug-in](https://github.com/microsoft/shell-intune-samples/tree/master/Linux/WSL/WSL%20Management%20Example) must be installed for compliance evaluation. 
+- [Intune WSL plug-in](https://go.microsoft.com/fwlink/?linkid=2296896) must be installed for compliance evaluation.
 - The Microsoft Intune management extension (IME) must be installed on the target device. This is automatically installed when any of the following conditions are met:
 	- A PowerShell script or a proactive remediation is assigned to the user or device.
 	- A Win32 app or Microsoft Store app is deployed.
@@ -54,11 +54,12 @@ These requirements must be followed to create your compliance policy with WSL se
 
 ## Before you begin
 
-Ensure that you have unassigned and removed any existing custom compliance policy for WSL.
+1. Ensure that you have unassigned and removed any existing custom compliance policy for WSL.
+2. Review the [Limitations](./#Limitations) of using WSL settings in compliance policies.
 
 ## Add Intune WSL plug-in as a win32 app   
 
-Create a Win32 app policy for the [Intune WSL plug-in](https://github.com/microsoft/shell-intune-samples/tree/master/Linux/WSL/WSL%20Management%20Example) and assign it to the target Entra group.
+Create a Win32 app policy for the [Intune WSL plug-in](https://go.microsoft.com/fwlink/?linkid=2296896) and assign it to the target Entra group.
 
 1. Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to convert the Intune WSL plug-in into the *.intunewin* format. [Learn more about converting to .intunewin format](https://learn.microsoft.com/en-us/mem/intune/apps/apps-win32-prepare#convert-the-win32-app-content).
    
@@ -101,7 +102,15 @@ Create a Win32 app policy for the [Intune WSL plug-in](https://github.com/micros
 18. Review the summary and then select **Create** to save the policy.  
 
 > [!NOTE]
-> Creating a compliance policy with WSL settings will automatically generate a read-only custom script. Editing the compliance policy will edit the associated custom script. These scripts appear under **Microsoft Intune admin center** > **Devices** > **Compliance** > **Scripts** and are named as _Built-in WSL Compliance-<compliance policy id>_.
+> Creating a compliance policy with WSL settings will automatically generate a read-only custom script. Editing the compliance policy will edit the associated custom script. These scripts appear under **Microsoft Intune admin center** > **Devices** > **Compliance** > **Scripts** and are named as _Built-in WSL Compliance-< compliance policy id >_.
+
+## Limitations
+
+The known limitations of using the Intune WSL plugin for compliance evaluation are as follows:
+
+- Compliance evaluation requires that the installed Linux distributions in WSL have run at least once.
+- Compliance evaluation is not guaranteed to function as expected on custom Linux images or Linux images without `etc/os-release` directory.
+- The Intune WSL plugin cannot guarantee that malicious software or user actions have not compromised the compliance evaluation mechanism.
 
 ## Next steps
 
