@@ -2,7 +2,7 @@
 # required metadata
 title: Optimize enrollment restrictions for NXT devices
 titleSuffix:
-description: Learn how to optimize enrollment restrictions for NXT devices
+description: Learn how to optimize enrollment restrictions for NXT devices.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
