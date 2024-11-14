@@ -270,12 +270,15 @@ If you want to completely remove an Apple automated device enrollment (ADE) devi
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the device > **Retire**.
-3. Visit [business.apple.com](http://business.apple.com) and search for the device by its serial number.
-4. Select the device, and then select **Release from Organization**.
+3. Visit [business.apple.com](http://business.apple.com), go to the **Devices** section, and search for the device by its serial number.
+4. Select the device, open the **...** menu, and then select **Release from Organization**.
 
-5. Check **I understand this cannot be undone**, and then select **Release**.
+5. Check **I understand this cannot be undone**, and then select **Continue**.
 
-    ![Screenshot for Apple reassign](./media/devices-wipe/apple-reassign.png)
+    ![Screenshot for Apple reassign](./media/devices-wipe/ABM-Release-Device.png)
+
+> [!NOTE]
+> In some cases, the iOS device must be restored with iTunes to apply this change. Please find further instructions from Apple [here](https://support.apple.com/guide/itunes/restore-to-factory-settings-itnsdb1fe305/windows).
 
 ## Device states
 
