@@ -7,7 +7,7 @@ keywords:
 ms.author: smbhardwaj
 author: smritib17 
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 11/14/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,9 +33,7 @@ ms.collection:
 
 *Applies to: Microsoft Intune*
 
-This article goes over the properties supported in the Intune Data Platform.
-
-Device query allows you to quickly assess the state of devices in your environment and take action. When you enter a query on a selected device, Device query runs a query in real time. The data returned can then be filtered, grouped, and refined to answer business questions, troubleshoot issues in your environment, or respond to security threats.
+This article goes over the properties supported in the Intune Data Platform. The Intune Data Platform can be accessed via Device query for single devices, Inventory, and Device query for Multiple Devices.
 
 Each table (entity) in this page lists the types of queries that are supported.
 
@@ -418,4 +416,49 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 | ServiceDescription | string (max 256 characters) | Service Description |
 | WindowsUserAccount | string (max 256 characters) | The name of the account that the service process is logged on as when it runs. This name can be of the form Domain\UserName |
 
+## Battery
+
+**Description**: Provides details about battery and battery health
+
+**Supported Features**: Inventory
+
+**Supported Platforms**: Windows
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| CycleCount | Long | The number of times a battery has gone through a full charge and discharge. Can be used to assess the battery state|
+| DesignCapacity | Long (milliwatt hours) | The theoretical capacity of the battery when new.|
+| FullChargedCapacity | Long (milliwatt hours) | Full charge capacity of the battery.|
+| InstanceName| String | Name used to identify the battery instance.|
+| Manufacturer| String | Manufacturer of the battery.|
+| Model| String | Display name of the battery.|
+| SerialNumber| String | Battery serial number that is assigned by the manufacturer.|
+
+#### NetworkAdapter
+- **Description**: Provide basic network adapter information
+- **Supported Features**: Inventory
+- **Supported Platforms**: Windows
+- **Property**: Type, Description
+  - Identifier: String, Unique identifier of the adapter from other devices on the system
+  - Manufacturer: String, Name of the network adapters manufacturer
+  - Type: String, Network medium in use
+
+#### Time
+- **Description**: Provides basic time information
+- **Supported Features**: Inventory
+- **Supported Platforms**: Windows
+- **Property**: Type, Description
+  - TimeZone: String, Describes the time zone the device is in
+
+#### VideoController
+- **Description**: Provides video controller and graphics information
+- **Supported Features**: Inventory
+- **Supported Platforms**: Windows
+- **Property**: Type, Description
+  - AdapterDacType: String, Name or identifier of the digital-to-analog converter (DAC) chip. The character set of this property is alphanumeric.
+  - AdapterRam: Long, Memory size of the video adapter
+  - CurrentScanMode: String, Current scan mode
+  - GraphicsModel: String, Provides manufacturer and model information of graphics card
+  - Identifier: String, Identifier (unique to the computer system) for this video controller.
+  - VideoModeDescription: String, Current resolution, color, and scan mode settings of the video controller.
 
