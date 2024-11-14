@@ -33,11 +33,12 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
+> [!NOTE]
+> NXT is in ["public preview"](../public-preview.md). Administrators who want to participate in the preview and get NXT devices for their organization should contact their Microsoft account team. As part of your participation, you can join the Customer Connections Program and Office hours for the latest updates.
+
 NXT is the first Cloud PC hardware device. It’s a full stack, purpose-built solution by Microsoft. When a users sign in to their NXT, they're securely connected to their Windows 365 [Cloud PC virtual machine](/windows-365/overview#what-is-a-cloud-pc) through the Windows 365 service.
 
 ![Image of the NXT device.](media/overview/device-front.png)
-
-Organizations can purchase NXTs and distribute them to their employees. Administrators who want to get NXT devices for their organization should contact their Microsoft account team.
 
 Admins use Microsoft Intune to manage NXTs alongside other devices.
 
@@ -64,10 +65,6 @@ Requirements for NXT include:
 - NXT device.
 - Management by your organization using Microsoft Intune.
 - [Windows 365 license](https://www.microsoft.com/licensing/product-licensing/windows-365?rtc=1) for your Cloud PC.
-
-## Public preview
-
-Microsoft releases some features in ["public preview"](../public-preview.md). As part of your participation, you can join the Customer Connections Program and Office hours for the latest updates.
 
 ## Device capabilities
 

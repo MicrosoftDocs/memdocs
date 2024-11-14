@@ -33,28 +33,28 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-After a NXT device is joined to Entra ID, it can be managed with Intune if Automatic Enrollment is enabled and the user has the appropriate Entra Premium license. Without Automatic Enrollment, NXT devices may be joined to Entra but would be unmanaged and will not appear in Intune. Enabling automatic enrollment in Intune Management can be configured in then Entra portal: 
+As the second step to [set up your organization's environment to support NXT devices](deployment-overview.md), you must make sure they can be managed by Microsoft Intune.
 
-1. Sign in to the Microsoft Entra admin center and expand the Identity section.
-2. Go to Show more / Settings / Mobility and under Name select Microsoft Intune.
-3. In the Microsoft Intune page that opens, under MDM user scope, select either All or Some: 
+After a NXT device is [joined to Entra ID](join-microsoft-entra.md), it can be managed with Intune if automatic enrollment is enabled by setting **MDM user scope**. ??The user must also have the appropriate Microsoft Entra Premium license??. Without setting **MDM user scope**, automatic enrollment won't occur and NXT devices can't be managed by, and don't appear in, Intune.
 
-   - If All is selected, all users can automatically enroll their devices in Intune. 
-   - If Some is selected, only users in the groups specified in the link under Groups can automatically enroll their devices in Intune. Make sure the groups selected are Microsoft Entra user groups that contain the desired users.
+To set up automatically enrollment in Intune for NXT devices:
 
-4. In the Microsoft Intune screen, if any changes were made, select Save.
+1. Sign in to the [Microsoft Entra admin center](https://aad.portal.azure.com/) > **Show more** > **Settings** > **Mobility**.
+2. On the **Mobility (MDM and WIP)** page, select **Microsoft Intune**.
+3. On the **Microsoft Intune** page, under **MDM user scope**, select either **All** or **Some**.
 
-NOTE: In Mobility (MDM and WIP) list, if there is more than one application, then the users who will be enrolling Windham devices must be in the MDM User scope of Microsoft Intune only. Confirm one of the following is true in your tenant:
+   - **All**: All users can automatically enroll their devices in Intune.
+   - **Some**: Only users in the groups specified in the link under **Groups** can automatically enroll their devices in Intune. Make sure the groups selected are Microsoft Entra user groups that contain the desired users.
 
-1. Only Microsoft Intune has the MDM user scope set to All and each of the other applications are set to None. Or,
-2. That Microsoft Intune has the MDM user scope set to Some and the each of the other applications are set to None. Or,
-3. If Microsoft Intune has the MDM user scope set to Some, none of the other applications are set to All. If any of the other applications are set to Some, then no users belong to more than one of the selected groups.
+4. If there's more than one application listed on the **Mobility (MDM and WIP)** page, confirm that one of the following is true:
 
-Confirm that Microsoft Intune is configured as the MDM Authority in the tenant.
+    - Only **Microsoft Intune** has **MDM user scope** set to **All** and each of the other applications are set to **None**. Or,
+    - Only **Microsoft Intune** has **MDM user scope** set to **Some** and each of the other applications are set to **None**. Or,
+    - If **Microsoft Intune** has **MDM user scope** set to **Some**, none of the other applications are set to **All**. If any of the other applications are set to **Some**, then no users belong to more than one of the selected groups.
 
-1. Sign in to the Microsoft Intune admin center.
-2. Go to Tenant administration / Tenant status.
-3. Under the Tenant details tab, confirm that “MDM authority” is set to “Microsoft Intune”.
+5. Select **Save**.
+6. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) >**Tenant administration** > **Tenant status** > **Tenant details**.
+7. Confirm that **MDM authority** is set to *Microsoft Intune*.
 
 <!-- ########################## -->
 ## Next steps

@@ -2,7 +2,7 @@
 # required metadata
 title: Join NXT to Microsoft Entra
 titleSuffix:
-description: Learn about the joining NXT to Microsoft Entra
+description: Learn about joining NXT to Microsoft Entra
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -33,18 +33,25 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-NXT devices must be Entra joined. The first time the device is powered on, the Out of Box Experience (OOBE) will prompt a user to sign in and will then join the device to their tenant. This user must have permission to join and not be blocked by any Intune device enrollment restrictions.
+As the first step in setting up your organization's environment to support NXT, you must allow NXT devices to join Microsoft Entra.
 
-Allowing users to join devices to Microsoft Entra ID can be configured in the Entra portal:
+Prior to signing in, the user must have permission to join and not be blocked by any Intune device enrollment restrictions.
 
-1. Sign in to the Microsoft Entra admin center and expand the **Identity** section.
-2. Go to **Devices** / **Overview** and select **Device Settings**.
-3. In the **Devices** | **Device settings** screen, under **Users may join devices to Microsoft Entra**, choose either **All** or **Selected**:
-  - If **All** is chosen, all users can join their devices to Microsoft Entra ID.
-  -If **Selected** is chosen, only the those specified under **Selected** can join devices to Microsoft Entra ID. Any selected groups must be a Microsoft Entra group that contains user objects.
-4. In the **Devices** | **Overview** screen, if any changes were made, select **Save**.
+The first time the device is powered on, the Out of Box Experience (OOBE):
 
-Also in the **Devices** | **Device settings** screen, confirm the **Maximum number of devices per user** is set to a reasonable value that will not prevent users from joining new devices. The default maximum is 50 and applies to all users, including device enrollment managers. See the Configure device settings documentation for more information.
+1. Prompts the user to sign in.
+2. Joins the device to their tenant.
+
+To set permissions to allow your organization's users to join their NXT to Microsoft Entra, follow these steps:
+
+1. Sign in to the [Microsoft Entra admin center](https://aad.portal.azure.com/) > **Identity** > **Devices** > **Overview** > **Device Settings**.
+2. Under **Users may join devices to Microsoft Entra**, select either **All** or **Selected**:
+  
+    - **All**: All users can join their devices to Microsoft Entra ID.
+    - **Selected**: Only users specified under **Selected** can join devices to Microsoft Entra ID. Selected groups must be a Microsoft Entra group that contains user objects.
+
+3. Make sure that **Maximum number of devices per user** is set to a reasonable value that doesn't prevent users from joining new devices. The default maximum is 50 and applies to all users, including device enrollment managers.
+4. Select **Save**.
 
 <!-- ########################## -->
 ## Next steps
