@@ -275,7 +275,7 @@ If you want to completely remove an Apple automated device enrollment (ADE) devi
 
 5. Check **I understand this cannot be undone**, and then select **Continue**.
 
-    ![Screenshot for Apple reassign](./media/devices-wipe/abm-release-device.png)
+    ![Screenshot for Apple reassign](./media/devices-wipe/ade-release-device.png)
 
 > [!NOTE]
 > In some cases, the iOS device must be restored with iTunes to apply this change. Please find further instructions from Apple [here](https://support.apple.com/guide/itunes/restore-to-factory-settings-itnsdb1fe305/windows).
