@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 5/29/2024 
+ms.date: 11/14/2024 
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,47 +59,51 @@ These requirements must be followed to create your compliance policy with WSL se
 
 ## Add Intune WSL plug-in as a win32 app   
 
-Create a Win32 app policy for the [Intune WSL plug-in](https://go.microsoft.com/fwlink/?linkid=2296896) and assign it to the target Entra group.
+Create a Win32 app policy for the [Intune WSL plug-in](https://github.com/microsoft/shell-intune-samples/blame/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi) and assign it to the target Entra group.
 
-1. Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to convert the Intune WSL plug-in into the *.intunewin* format. [Learn more about converting to .intunewin format](https://learn.microsoft.com/en-us/mem/intune/apps/apps-win32-prepare#convert-the-win32-app-content).
+1. Use the [Microsoft Win32 Content Prep Tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool) to convert the Intune WSL plug-in into the *.intunewin* format. For more information, see [Convert the Win32 app content](https://learn.microsoft.com/en-us/mem/intune/apps/apps-win32-prepare#convert-the-win32-app-content). 
    
-2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least a <insert least priveleged role>.  
    
-3. Select **Apps** > **All apps** > **Add**.
+3. Go to **Apps** > **All apps** > **Add**.  
 
-4. On the **Select app type** pane, under the **Other** app types, select **Windows app (Win32)**.
+4. For **App type**, scroll down to **Other**, and then select **Windows app (Win32)**.  
 
-5. Click **Select**. The **Add app** steps appear.
+5. Choose **Select**. The **Add app** steps appear.  
 
-6. On the **Add app** pane, click **Select app package file**.
+6. Choose **Select app package file**.
 
-7. On the **App package file** pane, select the browse button. Then, select the converted Intune WSL plugin installation file with the extension _.intunewin_. 
+7. Select the **Folder** button to browse your files for the app package file. Then choose the Intune WSL plug-in installation file with the `.intunewin` extension.   
 
-8. When you're finished, select **OK** on the **App package file** pane.
+8. Select **OK** to continue to the next step.  
 
-9. Enter app information:  
-   - **Select file**: Select this option to upload the installation package file for the Intune WSL plug-in.  
+9. Enter the following app information:  
+   - **Select file**: The app package file you selected in the previous step appears here. Select the file to upload a different installation package file for the Intune WSL plug-in.   
    - **Name**: Enter **Intune WSL Plugin**.  
-   - **Description**: Enter a description for the app. This setting is optional but recommended. 
+   - **Description**: Select **Edit Description** to enter a description for the app. For example, you can describe its purpose or how your organization plans to use it. This setting is optional but recommended.  
    - **Publisher**: Enter **Microsoft Intune**.  
 
-10. Select **Next** to go to **Program**. Review the pre-populated settings. These shouldn't be changed.
+10. Select **Next** to continue to **Program**.  
 
-11. Select **Next** to go to **Requirements**. Specify the requirements that devices must meet before the app is installed. 
+11. Review the settings that are prepopulated so that you are familiar with how the app behaves. You shouldn't need to change any of these settings.  
 
-12. Select **Next** to go to **Detection rules**. Review the pre-populated detection rules. These shouldn't be changed.
+12. Select **Next** to go to **Requirements**.
+13. Enter the requirements devices must meet to install the app.  
 
-13. Select **Next** to go to **Dependencies**. Leave it as-is.
+14. Select **Next** to go to **Detection rules**.
+15. Review the detection rules that are prepopulated. These rules are app-specific and detect the presence of the app. You shouldn't need to change any of these settings.  
 
-14. Select **Next** to go to **Supersedence**. Leave it as-is.
+16. Select **Next** to go to **Dependencies**. Leave it as-is.
 
-15. Select **Next** to go to **Assignments**.  
+17. Select **Next** to go to **Supersedence**. Leave it as-is.
 
-16. Add Microsoft Entra users under **Required** to assign the policy.  
+18. Select **Next** to go to **Assignments**.  
 
-17. Select **Next** to go to **Review + create**.  
+19. Add Microsoft Entra users under **Required** to assign the policy.  
 
-18. Review the summary and then select **Create** to save the policy.  
+20. Select **Next** to go to **Review + create**.  
+
+21. Review the summary and then select **Create** to save the policy.  
 
 > [!NOTE]
 > Creating a compliance policy with WSL settings will automatically generate a read-only custom script. Editing the compliance policy will edit the associated custom script. These scripts appear under **Microsoft Intune admin center** > **Devices** > **Compliance** > **Scripts** and are named as _Built-in WSL Compliance-< compliance policy id >_.
