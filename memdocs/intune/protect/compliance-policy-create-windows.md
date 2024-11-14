@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 6/18/2024
+ms.date: 11/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -279,18 +279,19 @@ For additional information on Microsoft Defender for Endpoint integration in con
   
   To set up Microsoft Defender for Endpoint as your defense threat service, see [Enable Microsoft Defender for Endpoint with Conditional Access](advanced-threat-protection.md).
 
-## Windows Subsystem for Linux (WSL)
+## Windows Subsystem for Linux  
 
-These settings require the Intune WSL plug-in. For additional information, see [Evaluate compliance for Windows Subsystem for Linux](compliance-wsl.md). 
+The settings in this section require the Windows Subsystem for Linux (WSL) plug-in. For more information, see [Evaluate compliance for Windows Subsystem for Linux](compliance-wsl.md). 
 
-- **Allowed Linux distributions and versions** - Specify at least one Linux distribution name and optionally, a minimum or maximum OS version.
+For **Allowed Linux distributions and versions**, enter at least one Linux distribution name. Optionally, enter a minimum or maximum OS version.
+
   > [!NOTE]
-  > The provided distribution names and versions affect the compliance policy as follows:
-  > - If no distribution is listed, all distributions are allowed (default).
-  > - If only distribution names are provided, any installed version of that distribution are allowed. 
-  > - If a distribution name and a minimum OS version are provided, installed distributions with the provided name and at least the  provided version number or higher are allowed.
-  > - If a distribution name and a maximum OS version are provided, installed distributions with the provided name and up to the provided version number are allowed.
-  > - If a distribution name, a minimum OS version and a maximum OS version are provided, installed distributions and OS version numbers within the provided range are allowed. 
+  > The distribution names and versions you enter affect the compliance policy in the following ways:  
+  > - If no distribution is provided, all distributions are allowed. This is the default behavior.  
+  > - If only distribution names are provided, all installed versions of that distribution are allowed. 
+  > - If a distribution name and a minimum OS version are provided, all installed distributions with the provided name and minimum version or later are allowed.  
+  > - If a distribution name and a maximum OS version are provided, all installed distributions with the provided name and maximum version or earlier are allowed.
+  > - If a distribution name, a minimum OS version, and a maximum OS version are provided, all installed distributions and OS versions within the provided range are allowed. 
 
 
 ## Windows Holographic for Business
