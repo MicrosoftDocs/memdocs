@@ -35,7 +35,7 @@ ms.collection:
 
 As the second step to [set up your organization's environment to support NXT devices](deployment-overview.md), you must make sure they can be managed by Microsoft Intune.
 
-After a NXT device is [joined to Entra ID](join-microsoft-entra.md), it can be managed with Intune if automatic enrollment is enabled by setting **MDM user scope**. ??The user must also have the appropriate Microsoft Entra Premium license??. Without setting **MDM user scope**, automatic enrollment won't occur and NXT devices can't be managed by, and don't appear in, Intune.
+After a NXT device is [joined to Entra ID](join-microsoft-entra.md), it can be managed with Intune if automatic enrollment is enabled by setting **MDM user scope**. ??The user must also have the appropriate Microsoft Entra Premium license??. Without setting **MDM user scope**, automatic enrollment doesn't occur and NXT devices can't be managed by, and don't appear in, Intune.
 
 To set up automatically enrollment in Intune for NXT devices:
 

@@ -39,7 +39,7 @@ To set up your organization's environment to deploy and manage NXT devices, admi
 
 1. [Meet all requirements](requirements.md).
 2. [Configure Microsoft Entra Device settings to let users join NXT devices to Microsoft Entra](join-microsoft-entra.md).
-3. [Configure Microsoft Entra Mobility settings to automatically enroll NXT devices in Intune](intune-auotomatic-enrollment.md).
+3. [Configure Microsoft Entra Mobility settings to automatically enroll NXT devices in Intune](intune-autoomatic-enrollment.md).
 4. [Create an Intune filter for NXT devices](create-intune-filter.md).
 5. [Optimize enrollment restrictions to let NXT devices enroll](enrollment-restrictions.md).
 6. Synchronize conditional access policies.
