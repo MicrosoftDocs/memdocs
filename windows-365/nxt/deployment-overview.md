@@ -45,7 +45,9 @@ To set up your organization's environment to deploy and manage NXT devices, admi
 6. [Synchronize conditional access policies](conditional-access-policies-synchronize.md)
 7. [Suppress single sign-on consent prompt](single-sign-on-suppress.md).
 
-After setting up deployment for your NXT devices, you can manage them using Intune as explained in the [Microsoft Intune documentation](/mem/intune/fundamentals/what-is-intune).
+After setting up deployment for your NXT devices, you can start [onboarding](onboarding.md) them.
+
+For more information about managing devices in microsoft Intune, see the [Microsoft Intune documentation](/mem/intune/fundamentals/what-is-intune).
 
 <!-- ########################## -->
 ## Next steps
