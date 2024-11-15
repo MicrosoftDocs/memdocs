@@ -49,8 +49,8 @@ You may have to place a Cloud PC under review for any of these scenarios:
 
 In response to legal requests for data stored on a Cloud PC, admins must attest that digital evidence they provide demonstrates a valid Chain of Custody (CoC) throughout the evidence acquisition, preservation, and access process. For this reason, admins should make sure to support adequate:
 
-- Access control. For more information about just-in-time access management, see [Best practices for Azure RBAC](/azure/role-based-access-control/best-practices) and [Start using Privileged Identity Managmement](/entra/id-governance/privileged-identity-management/pim-getting-started).
-- Data protection and integrity. Only the virtual network in the dedicated subscription containing the snapshot has access to the storage account and key vault that archives the evidence. For more information, see [Microsoft Purview Customer Key for Windows 365 Cloud PCs](/enterprise/purview-customer-key)
+- Access control. For more information about just-in-time access management, see [Best practices for Azure RBAC](/azure/role-based-access-control/best-practices) and [Start using Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-getting-started).
+- Data protection and integrity. Only the virtual network in the dedicated subscription containing the snapshot has access to the storage account and key vault that archives the evidence. For more information, see [Microsoft Purview Customer Key for Windows 365 Cloud PCs](/windows-365/enterprise/purview-customer-key)
 - Monitoring and alerting. For more information, see [Alert on privileged Azure role assignment](/azure/role-based-access-control/role-assignments-alert)
 - Logging and auditing, separation of duties. Only the small list of admins with access to the storage account can grant investigators temporary access (that was recorded and approved) to the evidence.
   
