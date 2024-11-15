@@ -42,7 +42,7 @@ You can access the reporting feature in Company Portal using any of these method
 
 * When you receive an error message or alert, tap **Report**.  
 * Under the **More** tab of the Company Portal app, tap **Send Logs**.  
-* In the Company Portal app, shake your device, then tap **Send Diagnostic Report**. If the =diagnostics report prompt doesn't appear when you shake the device, open **Settings** > **Company Portal**, and turn on **Shake Gesture**.  
+* In the Company Portal app, shake your device, then tap **Send Diagnostic Report**. If the diagnostics report prompt doesn't appear when you shake the device, open **Settings** > **Company Portal**, and turn on **Shake Gesture**.  
 
 ## Share diagnostic logs    
 
