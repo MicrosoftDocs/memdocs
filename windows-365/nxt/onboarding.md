@@ -100,4 +100,4 @@ To onboard NXT devices using this method, follow these steps:
 
 ## Next steps
 
-TBS
+For more information about managing devices in Microsoft Intune, see the [Microsoft Intune documentation](/mem/intune/fundamentals/what-is-intune).

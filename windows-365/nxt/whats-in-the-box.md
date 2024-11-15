@@ -86,10 +86,10 @@ Both the HDMI and Display Port support one monitor each, up to 4k in resolution.
 
 USB and Bluetooth support for:
 
-- keyboard
-- mouse
-- headphones
-- camera
+- Keyboard
+- Mouse
+- Headphones
+- Camera
 
 ## Software
 

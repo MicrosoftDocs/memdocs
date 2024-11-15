@@ -36,7 +36,7 @@ ms.collection:
 > [!NOTE]
 > NXT is in ["public preview"](../public-preview.md). Administrators who want to participate in the preview and get NXT devices for their organization should contact their Microsoft account team. As part of your participation, you can join the Customer Connections Program and Office hours for the latest updates.
 
-NXT is the first Cloud PC hardware device. It’s a full stack, purpose-built solution by Microsoft. When a users sign in to their NXT, they're securely connected to their Windows 365 [Cloud PC virtual machine](/windows-365/overview#what-is-a-cloud-pc) through the Windows 365 service.
+NXT is the first Cloud PC hardware device that lets users connect directly to their Cloud PC virtual machine. It’s a full stack, purpose-built solution by Microsoft. When users sign in to their NXT, they're securely connected to their Windows 365 [Cloud PC virtual machine](/windows-365/overview#what-is-a-cloud-pc) through the Windows 365 service.
 
 ![Image of the NXT device.](media/overview/device-front.png)
 
