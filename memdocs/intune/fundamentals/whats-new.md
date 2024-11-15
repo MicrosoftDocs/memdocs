@@ -99,7 +99,7 @@ Applies to:
 
 - Windows 11
 
-### Device Firmware Configuration Interface (DFCI) support for Samsung devices<!-- 29107197 --> 
+#### Device Firmware Configuration Interface (DFCI) support for Samsung devices<!-- 29107197 --> 
 
 We've added support to use DFCI profiles to manage UEFI (BIOS) settings for Samsung devices that run Windows 10 or Windows 11. Not all Samsung devices running Windows are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
 
@@ -112,13 +112,13 @@ Applies to:
 
 - Windows
 
-### New settings available in the Apple settings catalog <!--29038336 -->
+#### New settings available in the Apple settings catalog <!--29038336 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 We've added new settings to the Settings Catalog. To view available settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
-#### iOS/iPadOS
+##### iOS/iPadOS
 
 **Restrictions**:
 
@@ -143,12 +143,20 @@ We've added new settings to the Settings Catalog. To view available settings, in
 
 The following settings have been deprecated by Apple and will be marked as deprecated in the Settings Catalog:
 
-#### macOS
+##### macOS
 
 **Networking > Firewall**:
 
 - Enable Logging
 - Logging Option
+
+### Device management
+
+#### Evaluate compliance of Windows Subsystem for Linux (generally available)<!-- 24557103 -->
+ 
+Now generally available, Microsoft Intune supports compliance checks for instances of Windows Subsystem for Linux (WSL) running on a Windows host device. You can create a Windows 10/11 compliance policy that contains the allowed Linux distribution names and versions evaluated on WSL. Microsoft Intune includes the WSL compliance results in the overall compliance state of the host device.
+
+For more information about WSL compliance, see [Evaluate compliance for Windows Subsystem for Linux](../protect/compliance-wsl.md).  
 
 ### Intune Apps
 
@@ -171,7 +179,7 @@ Applies to:
 
 - Android dedicated and fully managed
 
-### New device actions for single device query<!--25799823 -->
+#### New device actions for single device query<!--25799823 -->
 
 We're adding the Intune remote device actions to Single device query to help you manage your devices remotely. From the device query interface, you'll be able to run device actions based on query results for faster and more efficient troubleshooting.
 
@@ -183,9 +191,6 @@ For more information, see:
 
 - [Device query in Microsoft Intune](../../analytics/device-query.md)
 - [Run remote actions on devices with Microsoft Intune](../remote-actions/device-management.md)
-
-
-
 
 
 ## Week of October 28, 2024
