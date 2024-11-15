@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 5/29/2024 
+ms.date: 11/15/2024 
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,24 +48,24 @@ This article describes how to set up compliance checks for WSL.
 
 These resources are required to create your custom compliance script:   
 
-- [Intune WSL plug-in](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi): Use the example Powershell script to get the installation package file for the Intune WSL plug-in.    
+- [Intune WSL plugin](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi): Use the example Powershell script to get the installation package file for the Intune WSL plugin.    
 
 - [Custom compliance script](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/WSL%20Management%20Example/WSLDistroVersionCompliance.ps1): The example PowerShell script calculates compliance against WSL distros based on Distro and Distro Version.  
 
 - [JSON for validation](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/WSL%20Management%20Example/WSLDetectionRule.json): Use the example JSON to define WSL detection rules.  
 
-## Step 1: Install Intune WSL plug-in    
+## Step 1: Install Intune WSL plugin    
 
-Use the Intune WSL plug-in resource to install the Intune WSL plug-in on the target machine.   
+Use the Intune WSL plugin resource to install the Intune WSL plugin on the target machine.   
 
 ## Step 2: Add policy for line-of-business app 
 
-Create an app policy for the Intune WSL plug-in. The Intune WSL plug-in is considered a Windows line-of-business app. 
+Create an app policy for the Intune WSL plugin. The Intune WSL plugin is considered a Windows line-of-business app. 
 
 1. In the Microsoft Intune admin center, go to **Apps** > **Windows**.  
 
 2. Enter app information:  
-   - **Select file**: Select this option to upload the installation package file for the Intune WSL plug-in.  
+   - **Select file**: Select this option to upload the installation package file for the Intune WSL plugin.  
    - **Name**: Enter **Intune WSL Plugin**.  
    - **Description**: Enter a description for the app. This setting is optional but recommended. 
    - **Publisher**: Enter **Microsoft Intune**.  
