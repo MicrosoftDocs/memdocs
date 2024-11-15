@@ -68,4 +68,4 @@ For more information about creating CA policies for resources used for Windows 3
 <!-- ########################## -->
 ## Next steps
 
-TBS
+[Suppress single sign-on consent prompt](single-sign-on-suppress.md).

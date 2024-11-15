@@ -59,4 +59,4 @@ To set up automatically enrollment in Intune for NXT devices:
 <!-- ########################## -->
 ## Next steps
 
-TBS
+[Create an Intune filter for NXT devices](create-intune-filter.md).

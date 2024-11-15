@@ -68,3 +68,4 @@ Follow these steps to create a policy to allow NXT devices to enroll in Intune:
 <!-- ########################## -->
 ## Next steps
 
+[Suppress single sign-on consent prompt](single-sign-on-suppress.md).
