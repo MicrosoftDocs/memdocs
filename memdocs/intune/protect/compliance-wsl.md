@@ -114,7 +114,7 @@ Create a Win32 app policy for the [Intune WSL plugin](https://github.com/microso
 
 This section describes the known limitations with using the Intune WSL plugin for compliance evaluation. 
 
-- Compliance evaluation requires the installed Linux distributions in WSL to run at least once before it works. If you install a Linux distribution with the `--no-launch` [command for WSL](/windows/wsl/basic-commands), the compliance evaluation won't work.   
+- Compliance evaluation requires the installed Linux distributions in WSL to run at least one time before it works. If you install a Linux distribution with the `--no-launch` [command for WSL](/windows/wsl/basic-commands), the compliance evaluation won't work.   
 
 - Compliance evaluation might not function as expected on custom Linux images or Linux images without the `etc/os-release` directory. 
 
