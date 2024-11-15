@@ -34,9 +34,9 @@ ms.collection:
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 > [!NOTE]
-> NXT is in ["public preview"](../public-preview.md). Administrators who want to participate in the preview and get NXT devices for their organization should contact their Microsoft account team. As part of your participation, you can join the Customer Connections Program and Office hours for the latest updates.
+> NXT is in ["public preview"](../public-preview.md). Customers who want to participate in the preview and get NXT devices for their organization should contact their Microsoft account team. As part of your participation, you can join the Customer Connections Program and Office hours for the latest updates.
 
-NXT is the first Cloud PC hardware device that lets users connect directly to their Cloud PC virtual machine. It’s a full stack, purpose-built solution by Microsoft. When users sign in to their NXT, they're securely connected to their Windows 365 [Cloud PC virtual machine](/windows-365/overview#what-is-a-cloud-pc) through the Windows 365 service.
+NXT is the first Cloud PC hardware device that lets users connect directly to their Cloud PC virtual machine. It’s a full stack, purpose-built solution by Microsoft. When users sign in to their NXT, they're connected to their Windows 365 [Cloud PC virtual machine](/windows-365/overview#what-is-a-cloud-pc) through the Windows 365 service.
 
 ![Image of the NXT device.](media/overview/device-front.png)
 
@@ -46,19 +46,17 @@ Admins use Microsoft Intune to manage NXTs alongside other devices.
 
 NXT is secure by design, thanks to the following features:
 
-- Trusted Platform Model.
+- Discrete Trusted Platform Model 2.0.
 - Secure boot.
+- Virtualization-based security.
+- Hypervisor-protected Code Integrity.
 - BitLocker drive encryption.
-- Hypervisor Code Integrity.
-- Microsoft Defender EDR Sensor.
-- No local administrator.
+- Strict Application Control policy.
+- No local user with administrative rights.
 - No local data storage.
 - No local apps.
-- Arbitrary software can't be installed or executed on the NXT, so it's protected from malware.
 - Security baseline policies are enabled by default.
-- Security features can't be disabled.
-- Windows Defender Firewall
-- Windows Defender Application Guard
+- Microsoft Defender EDR Sensor.
 
 ## Requirements
 
@@ -73,11 +71,6 @@ Requirements for NXT include:
 ### Media optimizations
 
 NXT supports local redirection of web multimedia content, ensuring a smooth, high-quality experience, just like on a local PC.
-
-## ??Device certifications??
-
-- [Product safety](https://support.microsoft.com/en-us/windows/product-safety-warnings-and-instructions-726eab87-f471-4ad8-48e5-9c25f68927ba)
-- [Product safety warnings and instructions](https://support.microsoft.com/en-us/windows/product-safety-warnings-and-instructions-726eab87-f471-4ad8-48e5-9c25f68927ba)
 
 ## Unit dimensions
 

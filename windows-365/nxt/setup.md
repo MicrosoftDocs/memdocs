@@ -39,12 +39,13 @@ The first time you turn on your NXT, you're guided through setting up your devic
 
 - An available network.
 - A work or school account.
+- A Windows 365 Cloud PC.
 
 ## First time set up
 
 Complete the following steps to set up your new device:
 
-1. Connect a monitor, USB mouse, and keyboard to the device.
+1. Connect a monitor, USB mouse (recommended), and keyboard to the device.
 2. Connect the power adaptor to the power port and then into a power outlet.
 3. Power on the device.
 4. On the **Let's connect you to a network** page, select a network > **Next**.
@@ -52,12 +53,12 @@ Complete the following steps to set up your new device:
 4. On the **Please review License Agreement** page, review the license > **Next**.
 5. On the **Let's set things up for your work or school** page, type your work or school e-mail > **Next**
 6[Screenshot of e-mail sign in page.](media/setup/email-sign-in.png)
-7. Authenticate your account as requested. Your organization defined the authentication method (security key, cross-device passkey, or passwordless multifactor authentication).
+7. Authenticate your account as requested. Your organization defined the authentication method (FIDO2 security key, Passkey (FIDO2), Microsoft Authenticator app, and so on).
 8. You're connected to your Cloud PC with all of your context and apps just where you left off.
 
 You can adjust additional settings prior to sign-in by using [Quick settings](quick-settings.md) in the bottom-right corner.
 
-When you sign in for the first time, the NXT automatically joins Microsoft Entra ID and enrolls the device into Microsoft Intune tenant associated with the account used to sign in. You organization's admins use Intune to manage both virtual machines and hardware devices, including NXT. 
+When you sign in for the first time, the NXT automatically joins Microsoft Entra ID and enrolls the device into Microsoft Intune tenant associated with the account used to sign in. You organization's admins use Intune to manage both virtual machines and hardware devices, including NXT.
 
 <!-- ########################## -->
 ## Next steps

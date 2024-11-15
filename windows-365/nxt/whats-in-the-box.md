@@ -115,4 +115,4 @@ Operating system updates occur automatically during off hours. To get these upad
 <!-- ########################## -->
 ## Next steps
 
-[First time set up for your NXT](setup.md): After unboxing, your NXT is brand-new and no users are logged into the device. The device must go through first-time setup, also known as the Out-of-Box Experience (OOBE). Through this setup process, the first user is added to the device.
+[First time set up for your NXT](setup.md): After unboxing, your NXT is brand-new and no users are logged into the device. The device must go through first-time setup, also known as the Out-of-Box Experience (OOBE). Through this setup process, the device is automatically joined to Microsoft Entra and enrolled in Microsoft Intune.

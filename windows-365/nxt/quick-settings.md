@@ -36,11 +36,16 @@ ms.collection:
 You can use the quick settings icons in the bottom corner of the **Sign in** screen to access various settings for your NXT. There are three different option icons:
 
 - Internet (![Image of the internet icon.](media/quick-settings/internet-icon.gif))
+- Audio 
 - Accessibility (![Image of the Accessibility icon.](media/quick-settings/accessibility-icon.gif))
 
 ## Internet
 
 To see the internet options, on the **Sign in** screen, select the **Internet** icon (![Image of the internet icon.](media/quick-settings/internet-icon.gif)). You can then select which network you want to use.
+
+## Audio
+
+Select audio output device and manage its volume.
 
 ## Accessibility
 
@@ -49,12 +54,11 @@ To see the accessibility options, on the **Sign in** screen, select the **Access
 | Control | Description |
 | --- | --- |
 | Wi-Fi | View and manage Wi-Fi connection. |
-| Bluetooth | View and manage Bluetooth devices. You can only add Bluetooth devices after they're authenticated. |
+| Bluetooth | View and manage Bluetooth devices. You can only add Bluetooth devices after you're authenticated. |
 | Accessibility | Turn on/off accessibility tools: Magnifier, Contrast themes, Narrator, On-screen keyboard, Sticky keys, and Filter keys. |
 | Language | Choose display language used on your NXT. |
-| Display | Change the scale for you display and swap multiple monitor arrangement. |
+| Display | Change the scale for you display and set two monitor arrangement. |
 | Privacy and Security | View privacy and security settings for your Location, Camera, and microphone. |
-| Audio slider | Select audio output device and manage its volume. |
 | Power button | View power management options for the device. |
 
 <!-- ########################## -->
