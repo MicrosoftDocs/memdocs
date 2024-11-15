@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/31/2024
+ms.date: 11/21/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,119 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of November 18, 2024 (Service release 2411)
+
+### App management
+
+#### Additional installation error reporting for LOB apps on AOSP devices<!-- 27157460 -->
+
+Additional details are now provided for app installation reporting of Line of Business (LOB) apps on Android Open Source Project (AOSP) devices. You can view installation error codes and detailed error messages for LOB apps in Intune. For information about app installation error details, see [Monitor app information and assignments with Microsoft Intune](../apps/apps-monitor.md#app-installation-error-reporting).
+
+Applies to:
+
+- Android Open Source Project (AOSP) devices
+  
+### Device configuration
+
+#### New settings available in the Windows settings catalog<!-- 30159445 -->
+
+The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
+
+A new setting **Set Copilot Hardware Key** has been added to the Settings Catalog. To see this and other settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
+
+Applies to:
+
+- Windows 11
+
+### Device Firmware Configuration Interface (DFCI) support for Samsung devices<!-- 29107197 --> 
+
+We've added support to use DFCI profiles to manage UEFI (BIOS) settings for Samsung devices that run Windows 10 or Windows 11. Not all Samsung devices running Windows are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+
+You can manage DFCI profiles from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type. For more information about DFCI profiles, see:
+
+- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../autopilot/dfci-management.md)
+
+Applies to:
+
+- Windows
+
+### New settings available in the Apple settings catalog <!--29038336 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+We've added new settings to the Settings Catalog. To view available settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+#### iOS/iPadOS
+
+**Restrictions**:
+
+- Allow Apps To Be Hidden
+- Allow Apps To Be Locked
+- Allow Call Recording
+- Allow Default Browser Modification
+- Allow External Intelligence Integrations
+- Allow External Intelligence Integrations Sign In
+- Allow Mail Summary
+- Allow RCS Messaging
+
+##### macOS
+
+**Restrictions**:
+
+- Allow External Intelligence Integrations
+- Allow External Intelligence Integrations Sign In
+- Allow Mail Summary
+- Allow Media Sharing Modification
+- Force Bypass Screen Capture Alert
+
+The following settings have been deprecated by Apple and will be marked as deprecated in the Settings Catalog:
+
+#### macOS
+
+**Networking > Firewall**:
+
+- Enable Logging
+- Logging Option
+
+### Intune Apps
+
+#### Newly available protected apps for Intune<!-- 29602331 -->
+The following protected app is now available for Microsoft Intune:
+
+- Microsoft Designer by Microsoft Corporation
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Monitor and troubleshoot
+
+#### ICCID will be inventoried for Android Enterprise Dedicated and Fully Managed <!-- 12846449 -->
+
+We've added the ability to view a device's ICCID number for devices enrolled as Android Enterprise Dedicated or Android Fully Managed. Admins can view ICCID numbers in their device inventory.
+
+You can now find the ICCID number for Android devices by navigating to **Devices** > **Android**. Select a device of interest. In the side panel, under **Monitor** select **Hardware**. The ICCID number will be in the **Network details** group. The ICCID number isn't supported for Android Corporate-Owned Work Profile devices.
+
+Applies to:
+
+- Android dedicated and fully managed
+
+### New device actions for single device query<!--25799823 -->
+
+We're adding the Intune remote device actions to Single device query to help you manage your devices remotely. From the device query interface, you'll be able to run device actions based on query results for faster and more efficient troubleshooting.
+
+Applies to:
+
+- Windows
+
+For more information, see:
+
+- [Device query in Microsoft Intune](../../analytics/device-query.md)
+- [Run remote actions on devices with Microsoft Intune](../remote-actions/device-management.md)
+
+
+
+
+
 ## Week of October 28, 2024
 
 ### Device security
