@@ -35,7 +35,3 @@ items:
     href: enrollment-restrictions.md
   - name: Enable single sign-on
     href: 
-- name: Troubleshooting
-  items:
-  - name: Troubleshooting
-    href: troubleshooting.md

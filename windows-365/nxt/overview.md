@@ -47,7 +47,7 @@ Admins use Microsoft Intune to manage NXTs alongside other devices.
 NXT is secure by design, thanks to the following features:
 
 - Trusted Platform Model.
-- Secure Bot.
+- Secure boot.
 - BitLocker drive encryption.
 - Hypervisor Code Integrity.
 - Microsoft Defender EDR Sensor.
@@ -57,6 +57,8 @@ NXT is secure by design, thanks to the following features:
 - Arbitrary software can't be installed or executed on the NXT, so it's protected from malware.
 - Security baseline policies are enabled by default.
 - Security features can't be disabled.
+- Windows Defender Firewall
+- Windows Defender Application Guard
 
 ## Requirements
 
@@ -68,11 +70,11 @@ Requirements for NXT include:
 
 ## Device capabilities
 
-### MMR and VDI optimization
+### Media optimizations
 
 NXT supports local redirection of web multimedia content, ensuring a smooth, high-quality experience, just like on a local PC.
 
-## Device certifications
+## ??Device certifications??
 
 - [Product safety](https://support.microsoft.com/en-us/windows/product-safety-warnings-and-instructions-726eab87-f471-4ad8-48e5-9c25f68927ba)
 - [Product safety warnings and instructions](https://support.microsoft.com/en-us/windows/product-safety-warnings-and-instructions-726eab87-f471-4ad8-48e5-9c25f68927ba)
