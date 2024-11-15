@@ -39,7 +39,7 @@ To avoid this this experience, you must suppress the SSO consent prompt by confi
 
 To suppress the SSO consent prompt, follow these steps:
 
-1. [Create a dynamic device group for all Cloud PCs](../enterprise/create-dynamic-device-group-all-cloudpcs#create-a-dynamic-device-group-for-all-cloud-pcs.md).
+1. [Create a dynamic device group for all Cloud PCs](../enterprise/create-dynamic-device-group-all-cloudpcs.md#create-a-dynamic-device-group-for-all-cloud-pcs).
 2. [Enable Entra authentication for RDP on the SSO service principal](/azure/virtual-desktop/configure-single-sign-on#enable-microsoft-entra-authentication-for-rdp).
 3. [Add the group of Cloud PCs to the Service Principal target](/azure/virtual-desktop/configure-single-sign-on#hide-the-consent-prompt-dialog).
 
@@ -47,4 +47,4 @@ AFter the Cloud PCs are in the target group, the users aren't prompted to consen
 
 ## Next steps
 
-TBS
+[Onboard NXT devices](onboarding.md).
