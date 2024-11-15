@@ -2,7 +2,7 @@
 # required metadata
 
 title: Properties catalog in Microsoft Intune
-description: Configure device configuration policy to manage Delivery Optimization settings on Windows devices you manage with Intune.
+description: Configure Properties catalog policy to manage Device Inventory settings on Windows devices you manage with Intune.
 keywords:
 author: smbhardwaj
 ms.author: smbhardwaj
