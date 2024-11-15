@@ -47,7 +47,7 @@ The user who joins the device to Microsoft Entra ID must have permissions to joi
 
 NXT devices can be used to connect to Cloud PCs that are either Entra joined or Entra hybrid joined.
 
-NXT devices use automatic [mobile device management](/windows/client-management/mdm-overview) (MDM) enrollment to enroll in Intune for manaagment by the organization. To use this feature, the user who Entra joins the device must have a Microsoft Entra ID Premium license.
+NXT devices use automatic [mobile device management](/windows/client-management/mdm-overview) (MDM) enrollment to enroll in Intune for managment by the organization. To use this feature, the user who Entra joins the device must have a Microsoft Entra ID Premium license.
 
 For more information, see []().
 
@@ -59,7 +59,7 @@ Optionally, NXT devices can be used with the Intune corporate identifier enrollm
 
 For more information, see []().
 
-## Windows 365 requirements
+## Windows 365 SSO requirements
 
  NXT devices can only be used to connect to Windows 365 Cloud PCs that have Entra ID single sign-on (SSO) enabled. If SSO is not enabled on the Cloud PC, the user:
 
@@ -75,7 +75,7 @@ After SSO is enabled, NXT devices can be used to connect to those Cloud PCs. For
 
 ### Conditional access
 
-If you're using Conditional Access to protect access to Cloud PC, make sure to include the SSO service principal in the resources of those Conditional Access policies.
+If you're using Conditional Access to protect access to Cloud PC, make sure to include the SSO Cloud App resource in the target resources of those Conditional Access policies.
 
 Also consider suppressing the SSO Consent Prompt by configuring the SSO on service principals. (see how-to configure environment for guidance)
 
