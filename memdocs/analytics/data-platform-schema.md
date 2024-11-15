@@ -41,7 +41,9 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Provides basic BIOS Information.  
 
-**Supported for**: Device query, single device on-demand.
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -53,7 +55,10 @@ Each table (entity) in this page lists the types of queries that are supported.
 ## Certificate
 
 **Description**: Certificate Authorities installed in Keychains/ca-bundles. Only certificates for computers are returned.
- **Supported for**: Device query, single device on-demand.
+
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -76,7 +81,9 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Retrieves CPU hardware info on the machine.
 
-**Supported for**: Device query, single device on-demand.
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -98,7 +105,9 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Retrieves basic information about the physical disks of a system.
 
-**Supported for**: Device query, single device on-demand.
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -118,7 +127,9 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Retrieves encryptable volume status of the machine.
 
-**Supported for**: Device query, single device on-demand
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -133,6 +144,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 ## FileInfo
 
 **Description**: Lists all file info of the passed file or files under the passed directory.
+
+**Supported platforms**: Windows
 
 **Supported for**: Device query, single device on-demand.
 
@@ -159,6 +172,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Lists local user groups.  
 
+**Supported platforms**: Windows
+
 **Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
@@ -170,6 +185,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 ## LocalUserAccount
 
 **Description**: Lists local user accounts.
+
+**Supported platforms**: Windows
 
 **Supported for**: Device query, single device on-demand.
 
@@ -185,7 +202,9 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Details for logical drives on the system. A logical drive generally represents a single partition.
 
-**Supported for**: Device query, single device on-demand.
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -200,7 +219,10 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Memory Information.
 
-**Supported for**: Device query, single device on-demand.
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand, Inventory.
+Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for Device query, single device on-demand. 
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -213,7 +235,9 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: A single row containing the operating system name and version.
 
-**Supported for**: Device query, single device on-demand,
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -229,6 +253,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 ## Process
 
 **Description**: All running processes on the host system.  
+
+**Supported platforms**: Windows
 
 **Supported for**: Device query, single device on-demand.
 
@@ -259,7 +285,9 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Displays information pertaining to the chassis and its security status.
 
-**Supported for**: Device query, single device on-demand.
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -281,6 +309,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: System information of the device.  
 
+**Supported platforms**: Windows
+
 **Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
@@ -297,7 +327,9 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Provides TPM related information of the device.  
 
-**Supported for**: Device query, single device on-demand.
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -315,6 +347,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Provides App Crash info in Windows event log file Application in look back time.
 
+**Supported platforms**: Windows
+
 **Supported for**: Device query, single device on-demand.
 
 | ReportId(Key) | string (max 256 characters) | Report ID of the App crash |
@@ -328,6 +362,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 ## WindowsDriver
 
 **Description**: Details for in-use Windows device drivers. This doesn't display installed but unused drivers.
+
+**Supported platforms**: Windows
 
 **Supported for**: Device query, single device on-demand.
 
@@ -348,6 +384,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Get Windows Event logs in the specified log name and look back in time.  
 
+**Supported platforms**: Windows
+
 **Supported for**: Device query, single device on-demand.
 
 > [!NOTE]
@@ -367,7 +405,10 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 ## WindowsQfe
 
 **Description**: Information about security patches on the device.
-**Supported for**: Device query, single device on-demand.
+
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand, Inventory.
 
 | Property | Type | Description |
 | --- | --- | --- |
@@ -382,6 +423,8 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 ## WindowsRegistry
 
 **Description**: Lists registry under the passed registry key.  
+
+**Supported platforms**: Windows
 
 **Supported for**: Device query, single device on-demand.
 
@@ -398,6 +441,8 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 ## WindowsService
 
 **Description**: Lists all installed Windows services and their relevant data.
+
+**Supported platforms**: Windows
 
 **Supported for**: Device query, single device on-demand.
 
@@ -418,7 +463,7 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 
 ## Battery
 
-**Description**: Provides details about battery and battery health
+**Description**: Provides details about battery and battery health.
 
 **Supported Features**: Inventory
 
@@ -434,31 +479,45 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 | Model| String | Display name of the battery.|
 | SerialNumber| String | Battery serial number that is assigned by the manufacturer.|
 
-#### NetworkAdapter
-- **Description**: Provide basic network adapter information
-- **Supported Features**: Inventory
-- **Supported Platforms**: Windows
-- **Property**: Type, Description
-  - Identifier: String, Unique identifier of the adapter from other devices on the system
-  - Manufacturer: String, Name of the network adapters manufacturer
-  - Type: String, Network medium in use
+## NetworkAdapter
 
-#### Time
-- **Description**: Provides basic time information
-- **Supported Features**: Inventory
-- **Supported Platforms**: Windows
-- **Property**: Type, Description
-  - TimeZone: String, Describes the time zone the device is in
+**Description**: Provides basic network adapter information.
 
-#### VideoController
-- **Description**: Provides video controller and graphics information
-- **Supported Features**: Inventory
-- **Supported Platforms**: Windows
-- **Property**: Type, Description
-  - AdapterDacType: String, Name or identifier of the digital-to-analog converter (DAC) chip. The character set of this property is alphanumeric.
-  - AdapterRam: Long, Memory size of the video adapter
-  - CurrentScanMode: String, Current scan mode
-  - GraphicsModel: String, Provides manufacturer and model information of graphics card
-  - Identifier: String, Identifier (unique to the computer system) for this video controller.
-  - VideoModeDescription: String, Current resolution, color, and scan mode settings of the video controller.
+**Supported Features**: Inventory
 
+**Supported Platforms**: Windows
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| Identifier | String | Unique identifier of the adapter from other devices on the system. |
+| Manufacturer | String | Name of the network adapter's manufacturer. |
+| Type | String | Network medium in use. |
+
+## Time
+
+**Description**: Provides basic time information.
+
+**Supported Features**: Inventory
+
+**Supported Platforms**: Windows
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| TimeZone | String | Describes the device's time zone. |
+
+## VideoController
+
+**Description**: Provides video controller and graphics information.
+
+**Supported Features**: Inventory
+
+**Supported Platforms**: Windows
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| AdapterDacType | String | Name or identifier of the digital-to-analog converter (DAC) chip. The character set of this property is alphanumeric. |
+| AdapterRam | Long | Memory size of the video adapter. |
+| CurrentScanMode | String | Current scan mode. |
+| GraphicsModel | String | Provides manufacturer and model information of graphics card. |
+| Identifier | String | Identifier (unique to the computer system) for this video controller. |
+| VideoModeDescription | String | Current resolution, color, and scan mode settings of the video controller. |

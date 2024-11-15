@@ -29,7 +29,7 @@ ms.reviewer: abbystarr
 
 ## Device inventory
 
-With Intune, you can use Device inventory to collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.  
+With Intune, you can use Device inventory to collect and view more hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.  
 
 This article describes how to configure Device Inventory settings as part of an Intune device configuration profile. After you create a profile, you then assign or deploy that profile to your Windows devices.
 
@@ -40,7 +40,7 @@ Windows 10
 
 ## Prerequisites
 
-- To use Inventory, devices must be corporate owned, Intune managed (includes co-managed), and Entra joined.
+- To use Inventory, devices must be corporate owned, Intune managed (includes co-managed), and Microsoft Entra joined.
 - For a user to configure a policy to start collecting inventory data from devices, they must have the Device Configurations **Create** permission.
 - For a user to view collected data about devices, they must have the Managed Devices **Read** permission.
 
@@ -99,7 +99,7 @@ The next time each device checks in, the policy is applied.
 ### View collected data
 
 To view collected inventory information, navigate to **Devices** > **Windows Devices** and select a device.
-Under **Monitor** select **Resource Explorer**. Choose a category to view hardware information that was configured to be collected.
+Under **Monitor** select **Resource Explorer**. Choose a category to view hardware information.
 After a device syncs with Intune, it can take up to 24 hours for initial harvesting of inventory data.  
 
 ### Required Properties
@@ -109,14 +109,14 @@ The following properties are required:
 
 - **Battery**: Instance Name
 - **Bios Info**: Bios Name, Software Element ID, Software Element State, Target Operating System
-- **Cpu**: Processor Id
-- **Disk Drive**: Drive Id
-- **Encryptable Volume**: Volume Id
+- **Cpu**: Processor ID
+- **Disk Drive**: Drive ID
+- **Encryptable Volume**: Volume ID
 - **Logical Drive**: Drive Identifier
 - **Network Adapter**: Identifier
 - **System Enclosure**: Serial Number
 - **Video Controller**: Identifier
-- **Windows Qfe**: Hot Fix Id
+- **Windows Qfe**: Hot Fix ID
 
 ## Known Limitations
 
@@ -124,7 +124,7 @@ Collection of properties can only be stopped (deleted) at the category level. To
 
 ## Supported Properties
 
-Inventory supports the following entities. To learn more about what properties are supported for each entity, see Intune Data Platform Schema.
+Inventory supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](../../analytics/data-platform-schema.md).
 
 - Battery
 - Bios Info
@@ -143,13 +143,13 @@ Inventory supports the following entities. To learn more about what properties a
 
 ## Frequently Asked Questions
 
-### Is this different than the Hardware tab for a device?
+### Is Resource Explorer different than the Hardware tab for a device?
 
-Yes, the Hardware tab data and Resource Explorer data come from different places. We recommend using Inventory and Resource Explorer for the most up-to-date and comprehensive data about your devices. In the future, the Hardware tab will be fed by the same data as Resource Explorer.
+Yes, the **Hardware** tab data and **Resource Explorer** data come from different places. We recommend using Inventory and Resource Explorer for the most up-to-date and comprehensive data about your devices. In the future, the data source for **Hardware** tab and the Resource Explorer will be the same.
 
-### I am using Co-management with Tenant Attach and I see two Resource Explorer nodes. Which one should I use?
+### I'm using Co-management with Tenant Attach and I see two Resource Explorer nodes. Which one should I use?
 
-You will see a **Resource Explorer** tab for Intune collected data and a **Resource Explorer** tab for Configuration Manager collected data. Feel free to use the source that best fits your use case. In the future, we recommend using the Intune-based Resource Explorer.
+You'll see a **Resource Explorer** tab for Intune collected data and a **Resource Explorer** tab for Configuration Manager collected data. Feel free to use the source that best fits your use case. In the future, we recommend using the Intune-based Resource Explorer.
 
 ### How can I troubleshoot this feature?
 
