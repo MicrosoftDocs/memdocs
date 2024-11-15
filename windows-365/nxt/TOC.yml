@@ -35,5 +35,5 @@ items:
     href: enrollment-restrictions.md
   - name: Synchronize conditional access policies
     href: conditional-access-policies-synchronize.md
-  - name: Enable single sign-on
-    href:     
+  - name: Suppress single sign-on prompt
+    href: single-sign-on-suppress.md    

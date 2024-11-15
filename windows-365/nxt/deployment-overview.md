@@ -43,6 +43,7 @@ To set up your organization's environment to deploy and manage NXT devices, admi
 4. [Create an Intune filter for NXT devices](create-intune-filter.md).
 5. [Optimize enrollment restrictions to let NXT devices enroll](enrollment-restrictions.md).
 6. [Synchronize conditional access policies](conditional-access-policies-synchronize.md)
+7. [Suppress single sign-on consent prompt](single-sign-on-suppress.md).
 
 <!-- ########################## -->
 ## Next steps
