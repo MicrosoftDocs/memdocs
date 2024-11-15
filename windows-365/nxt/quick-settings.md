@@ -54,7 +54,7 @@ To see the accessibility options, on the **Sign in** screen, select the **Access
 | Language | Choose display language used on your NXT. |
 | Display | Change the scale for you display and swap multiple monitor arrangement. |
 | Privacy and Security | View privacy and security settings for your Location, Camera, and microphone. |
-| Audio slider | Manages local speaker volume. |
+| Audio slider | Select audio output device and manage its volume. |
 | Power button | View power management options for the device. |
 
 <!-- ########################## -->

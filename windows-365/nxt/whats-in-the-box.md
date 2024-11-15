@@ -51,6 +51,7 @@ The NXT has the following ports:
 
 - USB-A
 - 3.5 mm audio jack
+- Power button and LED indicator
 
 ![Image of the NXT device front.](media/overview/device-front.png)
 
@@ -58,10 +59,10 @@ The NXT has the following ports:
 
 - USB-C
 - Two USB-A
-- Display
+- DisplayPort
 - HDMI
 - Ethernet
-- Power connector 
+- Power supply
 
 ![Image of the NXT device back.](media/whats-in-the-box/device-back.png)
 
@@ -71,9 +72,11 @@ Kensington lock to physically secure the device
 
 ![Image of the NXT side back.](media/whats-in-the-box/device-side.png)
 
-### Power supply
+### Power
 
-Barrel type, 65 W. Passive thermals.
+**Power supply**: Barrel type, 65 watts.
+
+**Fan**: None.
 
 ## Monitor support
 

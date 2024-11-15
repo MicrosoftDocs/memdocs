@@ -40,7 +40,7 @@ The first time a user signs in to their NXT, the Out of Box Experience (OOBE) jo
 If a [device platform restriction]() blocks personal Windows devices, the transition from unknown to corporate-owned device is prevented and Intune enrollment fails. To avoid this, make sure to allow NXT devices to enroll in Intune using one of the following methods:
 
 - [Use a Device Enrollment Manager to bypass all restrictions](mem/intune/enrollment/device-enrollment-manager-enroll).
-- [Use an operating system SKU filter to let NXT devices enroll]().
+- [Use an operating system SKU filter to let NXT devices enroll](#use-an-operating-system-sku-filter-to-let-nxt-devices-enroll-in-intune).
 - [Preregister NXT devices using corporate identifiers](mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
 Autopilot can't be used to pre-register NXT as corporate devices.
@@ -63,7 +63,7 @@ Follow these steps to create a policy to allow NXT devices to enroll in Intune:
 8. On the **Filters** pane, select **Include filtered devices in assignment** > **??NXT devices??” > **Select**.
 9. Select **Next**.
 10. On the **Review + create** page, select **Create**.
-11.	On the **Enrollment restrictions** > **Windows restrictions** page, make sure the new policy is above any block policy in priority order.
+11. On the **Enrollment restrictions** > **Windows restrictions** page, make sure the new policy is above any block policy in priority order.
 
 <!-- ########################## -->
 ## Next steps
