@@ -36,12 +36,15 @@ This article describes how to configure Device Inventory settings as part of an 
 This feature applies to:
 
 Windows 11
+
 Windows 10
 
 ## Prerequisites
 
 - To use Inventory, devices must be corporate owned, Intune managed (includes co-managed), and Microsoft Entra joined.
+
 - For a user to configure a policy to start collecting inventory data from devices, they must have the Device Configurations **Create** permission.
+
 - For a user to view collected data about devices, they must have the Managed Devices **Read** permission.
 
 ## Supported platforms
@@ -56,7 +59,9 @@ Inventory is currently only supported on devices running Windows 10 and later. I
 
 ## How to use
 
-To configure Inventory collection, create a new **Properties Catalog** profile in the Intune admin center. This profile allows you to select which properties you would like to collect from your devices. After the profile is created, you can apply the profile to specific devices in the selected groups.
+To configure Inventory collection, create a new **Properties Catalog** profile in the Intune admin center. This profile allows you to select which properties you would like to collect from your devices.
+
+After the profile is created, you can apply the profile to specific devices in the selected groups.
 
 ### Create the profile
 
@@ -99,12 +104,15 @@ The next time each device checks in, the policy is applied.
 ### View collected data
 
 To view collected inventory information, navigate to **Devices** > **Windows Devices** and select a device.
+
 Under **Monitor** select **Resource Explorer**. Choose a category to view hardware information.
+
 After a device syncs with Intune, it can take up to 24 hours for initial harvesting of inventory data.  
 
 ### Required Properties
 
 Certain **required** properties are automatically collected when you collect any properties in that category.
+
 The following properties are required:
 
 - **Battery**: Instance Name
@@ -120,7 +128,9 @@ The following properties are required:
 
 ## Known Limitations
 
-Collection of properties can only be stopped (deleted) at the category level. To stop collecting properties, navigate to the **Properties catalog** profile, and remove collection for every property in a particular category.
+Collection of properties can only be stopped (deleted) at the category level. 
+
+To stop collecting properties, navigate to the **Properties catalog** profile, and remove collection for every property in a particular category.
 
 ## Supported Properties
 
