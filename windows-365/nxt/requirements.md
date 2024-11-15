@@ -49,7 +49,7 @@ NXT devices can be used to connect to Cloud PCs that are either Entra joined or 
 
 NXT devices use automatic [mobile device management](/windows/client-management/mdm-overview) (MDM) enrollment to enroll in Intune for managment by the organization. To use this feature, the user who Entra joins the device must have a Microsoft Entra ID Premium license.
 
-For more information, see []().
+For more information, see [Join NXT to Microsoft Entra](join-microsoft-entra.md).
 
 ## Microsoft Intune requirements
 
@@ -57,7 +57,7 @@ For more information, see []().
 
 Optionally, NXT devices can be used with the Intune corporate identifier enrollment feature to pre-upload the serial number, manufacturer, model to ensure only trusted devices go through enrollment.
 
-For more information, see []().
+For more information, see [Automatically enroll NXT in Intune](intune-automatic-enrollment.md).
 
 ## Windows 365 SSO requirements
 
