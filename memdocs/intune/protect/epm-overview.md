@@ -62,6 +62,7 @@ Endpoint Privilege Management has the following requirements:
 > - Windows 365 (CloudPC) is supported using a supported operating system version
 > - Workplace-join devices are not supported by Endpoint Privilege Management
 > - Azure Virtual Desktop is not supported by Endpoint Privilege Management
+> - ARM64 devices are not supported by Endpoint Privilege Management
 
 Endpoint Privilege Management supports the following operating systems:
 
