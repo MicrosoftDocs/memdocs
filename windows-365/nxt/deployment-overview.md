@@ -33,17 +33,17 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-Before users can use their NXT to connect to their Cloud PC provided by your organization, admins must set up your Microsoft Entra and Intune environments to manage, register, and enroll the device.
+Before users can use their NXT to connect to their Cloud PC provided by their organization, admins must set up the organization's Microsoft Entra ID and Intune environments to manage, register, and enroll the device.
 
 To set up your organization's environment to deploy and manage NXT devices, admins must complete the following steps:
 
 1. [Meet all requirements](requirements.md).
 2. [Configure Microsoft Entra Device settings to let users join NXT devices to Microsoft Entra](join-microsoft-entra.md).
 3. [Configure Microsoft Entra Mobility settings to automatically enroll NXT devices in Intune](intune-automatic-enrollment.md).
-4. [Create an Intune filter for NXT devices](create-intune-filter.md).
+4. [Create an Intune filter for NXT devices](create-intune-filter.md) (optional).
 5. [Optimize enrollment restrictions to let NXT devices enroll](enrollment-restrictions.md).
-6. [Synchronize conditional access policies](conditional-access-policies-synchronize.md)
-7. [Suppress single sign-on consent prompt](single-sign-on-suppress.md).
+6. [Synchronize conditional access policies](conditional-access-policies-synchronize.md).
+7. [Suppress single sign-on consent prompt](single-sign-on-suppress.md) (recommended).
 
 After setting up deployment for your NXT devices, you can start [onboarding](onboarding.md) them.
 
