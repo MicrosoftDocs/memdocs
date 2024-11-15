@@ -47,4 +47,4 @@ AFter the Cloud PCs are in the target group, the users aren't prompted to consen
 
 ## Next steps
 
-TBS
+[Onboard NXT devices](onboarding.md).
