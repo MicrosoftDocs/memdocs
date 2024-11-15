@@ -48,7 +48,7 @@ This article describes how to set up compliance checks for WSL.
 
 These resources are required to create your custom compliance script:   
 
-- [Intune WSL plugin](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi): Use the example Powershell script to get the installation package file for the Intune WSL plugin.    
+- [Intune WSL plugin](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi): Use the example PowerShell script to get the installation package file for the Intune WSL plugin.    
 
 - [Custom compliance script](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/WSL%20Management%20Example/WSLDistroVersionCompliance.ps1): The example PowerShell script calculates compliance against WSL distros based on Distro and Distro Version.  
 
