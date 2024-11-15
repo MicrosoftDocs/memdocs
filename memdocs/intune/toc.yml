@@ -1325,7 +1325,13 @@ items:
           - name: eSIM bulk activation with activation codes (import CSV)
             href: ./configuration/esim-device-configuration.md
 
-      - name: Configuration profile settings lists
+      - name: Settings catalog lists
+        items:
+        - name: Apple
+          displayName: ios, ipados, macos
+          href: ./configuration/apple-settings-catalog-configurations.md
+
+      - name: Device Configuration template settings lists
         items:
         - name: Android device administrator
           items: 
