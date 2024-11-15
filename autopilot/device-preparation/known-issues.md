@@ -43,11 +43,9 @@ This article describes known issues that can often be resolved with:
 ## Deployments fail when Managed installer policy is enabled for the tenant
 
 Date added: *October 10, 2024*<br>
-Date updated: *October 18, 2024*
+Date updated: *November 15, 2024*
 
-When the [Managed installer policy](/mem/intune/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant and Win32 apps are selected in the Windows Autopilot device preparation policy, Windows Autopilot device preparation deployments fails. The issue is being investigated.
-
-As a workaround, remove Win32 applications from the list of selected apps in all device preparation policies.
+When the [Managed installer policy](/mem/intune/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps and Microsoft Store apps will not be delivered during OOBE. The apps will installed after the device gets to the desktop and the Managed installer policy is delivered. The Autopilot device preparation report will report the apps as **Skipped.** 
 
 For more information, see [Known issue: Windows Autopilot device preparation with Win32 apps and managed installer policy](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-windows-autopilot-device-preparation-with-win32-apps/ba-p/4273286).
 
