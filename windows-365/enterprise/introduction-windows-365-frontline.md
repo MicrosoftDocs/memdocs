@@ -63,7 +63,7 @@ A single license:
 - Provides one concurrent session.
 
 > [!NOTE]
-> During public preview, it's recommended that no more than 10 users are assigned to one Windows 365 Frontline license. There will be a cap when Windows 365 Frontline in shared mode moves into general availability.
+> During public preview, we are evaluating the potential limits for assigned users for shared Cloud PCs. More information will be shared at general availability.
 
 Windows 365 Frontline in shared mode is designed specifically for workers who
 
@@ -79,7 +79,7 @@ The maximum number of active Windows 365 Frontline shared Cloud PC sessions in y
 
 > [!NOTE]
 >
-> During public preview, we are evaluating the potential limits for assigned users for shared Cloud PCs. More information will be shared at general availability.
+> During public preview, only data stored in User Profiles is deleted. Any data stored outside of user profiles persists and can be accessed by other users who connect to the Cloud PC.
 
 ## Licensing
 
