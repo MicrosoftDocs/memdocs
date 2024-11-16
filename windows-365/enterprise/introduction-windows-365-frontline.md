@@ -79,7 +79,7 @@ The maximum number of active Windows 365 Frontline shared Cloud PC sessions in y
 
 > [!NOTE]
 >
-> During public preview, only data stored in User Profiles is deleted. Any data stored outside of user profiles persists and can be accessed by other users who connect to the Cloud PC.
+> During public preview, we are evaluating the potential limits for assigned users for shared Cloud PCs. More information will be shared at general availability.
 
 ## Licensing
 
