@@ -33,7 +33,7 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-As the first step in setting up your organization's environment to support NXT, you must allow NXT devices to join Microsoft Entra.
+As the first step in setting up your organization's environment to support NXT, you must allow NXT devices to [join Microsoft Entra](/entra/identity/devices/concept-directory-join).
 
 Prior to signing in, the user must have permission to join and not be blocked by any Intune device enrollment restrictions.
 
@@ -52,6 +52,8 @@ To set permissions to allow your organization's users to join their NXT to Micro
 
 3. Make sure that **Maximum number of devices per user** is set to a reasonable value that doesn't prevent users from joining new devices. The default maximum is 50 and applies to all users, including device enrollment managers.
 4. Select **Save**.
+
+For more about configuring device settings for Microsoft Entra ID, see [Configure your device settings](/entra/identity/devices/device-join-plan#configure-your-device-settings).
 
 <!-- ########################## -->
 ## Next steps

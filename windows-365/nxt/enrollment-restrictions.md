@@ -35,19 +35,19 @@ ms.collection:
 
 While [setting up your organization's environment to support NXT devices](deployment-overview.md), you should make sure that your environment's enrollment restrictions don't block NXT devices from enrolling in Intune.
 
-The first time a user signs in to their NXT, the Out of Box Experience (OOBE) joins the device to Microsoft Entra and enrolls it in Microsoft Intune for management. This is the first time the device is introduced to the tenant, and thus it's an Unknown device. After joining Microsoft Entra, it becomes a Corporate-owned device.
+The first time a user signs in to their NXT, the Out of Box Experience (OOBE) joins the device to Microsoft Entra and enrolls it in Microsoft Intune for management. This is the first time the device is introduced to Intune, and thus it's an Unknown device. Because the device is Microsoft Entra joined, Intune sets the ownership to Corporate-owned after the Intune enrollment process completes.
 
-If a [device platform restriction]() blocks personal Windows devices, the transition from unknown to corporate-owned device is prevented and Intune enrollment fails. To avoid this, make sure to allow NXT devices to enroll in Intune using one of the following methods:
+If a [device platform restriction]() blocks personally-owned devices, NXT devices are prevented from completing Intune enrollment. To avoid this, make sure to allow NXT devices to enroll in Intune using one of the following methods:
 
 - [Use a Device Enrollment Manager to bypass all restrictions](/mem/intune/enrollment/device-enrollment-manager-enroll).
 - [Use an operating system SKU filter to let NXT devices enroll](#use-an-operating-system-sku-filter-to-let-nxt-devices-enroll-in-intune).
 - [Preregister NXT devices using corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
-Autopilot can't be used to pre-register NXT as corporate devices.
+NXT devices don't currently support Autopilot.
 
 ## Use an operating system SKU filter to let NXT devices enroll in Intune
 
-If there's a policy that blocks personally-owned Windows devices from enrolling in Intune it will also block NXT devices. You can create another policy to allow NXT devices to enroll in Intune while still blocking other personally-owned Windows devices.
+If there's a policy that blocks personally-owned Windows devices from enrolling in Intune it will also block NXT devices. You can create another policy with higher priority to allow NXT devices to enroll in Intune while still blocking other personally-owned Windows devices.
 
 Follow these steps to create a policy to allow NXT devices to enroll in Intune:
 
@@ -64,6 +64,8 @@ Follow these steps to create a policy to allow NXT devices to enroll in Intune:
 9. Select **Next**.
 10. On the **Review + create** page, select **Create**.
 11. On the **Enrollment restrictions** > **Windows restrictions** page, make sure the new policy is above any block policy in priority order.
+
+For more information about Intune platform enrollment restrictions, see [Create device platform restrictions](/mem/intune/enrollment/create-device-platform-restrictions).
 
 <!-- ########################## -->
 ## Next steps
