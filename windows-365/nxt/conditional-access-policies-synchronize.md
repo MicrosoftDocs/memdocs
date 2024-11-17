@@ -46,7 +46,7 @@ If CA policies enforcing multi-factor authentication (MFA) are used to protect t
 
 Also review any existing CA policies that apply to **All resources**. These policies trigger when connecting but not at sign in. Use the [What If tool](/entra/identity/conditional-access/what-if-tool) to help determine what CA policies are applied.
 
-For more information about creating CA policies for user actions to register or join devices, see [Create a Conditional Access policy](/en-us/entra/identity/conditional-access/policy-all-users-device-registration#create-a-conditional-access-policy).
+For more information about creating CA policies for user actions to register or join devices, see [Create a Conditional Access policy](/entra/identity/conditional-access/policy-all-users-device-registration#create-a-conditional-access-policy).
 
 For more information about creating CA policies for resources used for Windows 365, see [Set Conditional Access policies](../enterprise/set-conditional-access-policies.md).
 
