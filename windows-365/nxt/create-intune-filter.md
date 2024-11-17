@@ -40,12 +40,14 @@ To create a filter exclusively including NXT devices:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) >**Tenant administration** > **Filters** > **Create** > **Managed devices**.
 2. Provide a **Filter name**, like *NXT devices*, and an optional **Description**.
 3. For **Platform**, select **Windows 10 and later** > **Next**.
-4. Select **Edit** (next to **Rule syntax**.
-5. In the **Edit rule syntax** box, type `(device.operatingSystemSKU -eq "CPCE")` > **OK** > **Next**.
+4. Select **Edit** (next to **Rule syntax**).
+5. In the **Edit rule syntax** box, type `(device.operatingSystemSKU -eq "WCPC")` > **OK** > **Next**.
 6. On the **Scope tags** page, select **Next**.
 7. On the **Review + create** page, select **Create**.  
 
 The new filter can now be used on any policy assignment to include or exclude NXT devices.
+
+For more information, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters).
 
 <!-- ########################## -->
 ## Next steps
