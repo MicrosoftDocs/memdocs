@@ -6,4 +6,4 @@ ms.topic: include
 ms.service: windows-365
 ---
 
-For Frontline Cloud PCs in shared mode, you can [bulk reprovision](/windows-365/enterprise/remotely-manage-cloud-pc) all the Cloud PCs in a provisioning policy. Admins can also select the percentage of Cloud PCs that are available for users to connect without being affected by the reprovisioning process.
+For Frontline Cloud PCs in shared mode, you can [bulk reprovision](/windows-365/enterprise/frontline-shared-bulk-reprovision) all the Cloud PCs in a provisioning policy. Admins can also select the percentage of Cloud PCs that are available for users to connect without being affected by the reprovisioning process.
