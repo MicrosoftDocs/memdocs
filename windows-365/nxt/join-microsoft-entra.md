@@ -55,6 +55,8 @@ To set permissions to allow your organization's users to join their NXT to Micro
 
 For more about configuring device settings for Microsoft Entra ID, see [Configure your device settings](/entra/identity/devices/device-join-plan#configure-your-device-settings).
 
+For full information about planning yoru join implementation, see [How to: Plan your Microsoft Entra join implementation](https://learn.microsoft.com/en-us/entra/identity/devices/device-join-plan).
+
 <!-- ########################## -->
 ## Next steps
 
