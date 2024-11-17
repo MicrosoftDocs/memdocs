@@ -37,7 +37,7 @@ The following lists the requirements to deploy and manage NXT devices using Intu
 
 ## Licensing
 
-NXT is a Windows 365 product and shares the same license requirements. For more information, see [Windows 365 plans and pricing](https://www.microsoft.com/en-us/windows-365/enterprise/all-pricing?rtc=1).
+NXT is a Windows 365 product and shares the same license requirements. For more information, see [Windows 365 plans and pricing](https://www.microsoft.com/windows-365/enterprise/all-pricing?rtc=1).
 
 ## Microsoft Entra ID requirements
 
