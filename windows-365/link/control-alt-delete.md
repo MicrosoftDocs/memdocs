@@ -31,8 +31,6 @@ ms.collection:
 
 # Control + Alt + Delete
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 When you press Control + Alt + Delete on your Windows 365 Link, you see the following options:
 
 | Control | Description |

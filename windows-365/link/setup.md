@@ -31,8 +31,6 @@ ms.collection:
 
 # Set up your Windows 365 Link and sign in
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 The first time you turn on your Windows 365 Link, you're guided through setting up your device and signing in with a work or school user account.
 
 ## Requirements

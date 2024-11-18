@@ -31,8 +31,6 @@ ms.collection:
 
 # Optimize enrollment restrictions
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 While [setting up your organization's environment to support Windows 365 Link](deployment-overview.md), you should make sure that your environment's enrollment restrictions don't block Windows 365 Link devices from enrolling in Intune.
 
 The first time a user signs in to their Windows 365 Link, the Out of Box Experience (OOBE) joins the device to Microsoft Entra and enrolls it in Microsoft Intune for management. This is the first time the device is introduced to Intune, and thus it's an Unknown device. Because the device is Microsoft Entra joined, Intune sets the ownership to Corporate-owned after the Intune enrollment process completes.
