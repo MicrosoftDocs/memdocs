@@ -45,12 +45,11 @@ The first time you turn on your NXT, you're guided through setting up your devic
 
 Complete the following steps to set up your new device:
 
-1. Connect a monitor, USB mouse (recommended), and keyboard to the device.
+1. Connect a monitor, USB keyboard, and USB mouse (recommended) to the device.
 2. Connect the power adaptor to the power port and then into a power outlet.
 3. Power on the device.
 4. On the **Let's connect you to a network** page, select a network > **Next**.
 ![Screenshot of network connect page.](media/setup/connect-network.png)
-4. On the **Please review License Agreement** page, review the license > **Next**.
 5. On the **Let's set things up for your work or school** page, type your work or school e-mail > **Next**
 6[Screenshot of e-mail sign in page.](media/setup/email-sign-in.png)
 7. Authenticate your account as requested. Your organization defined the authentication method (FIDO2 security key, Passkey (FIDO2), Microsoft Authenticator app, and so on).
