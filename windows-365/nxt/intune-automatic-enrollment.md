@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Automatically enroll NXT in Intune
+title: Automatically enroll Windows 365 Link in Intune
 titleSuffix:
-description: Learn about automatically enrolling NXT in Intune
+description: Learn about automatically enrolling Windows 365 Link in Intune
 keywords:
 author: ErikjeMS 
 ms.author: erikje
@@ -29,15 +29,15 @@ ms.collection:
 - tier2
 ---
 
-# Automatically enroll NXT in Intune
+# Automatically enroll Windows 365 Link in Intune
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-As the second step to [set up your organization's environment to support NXT devices](deployment-overview.md), you must make sure they can be managed by Microsoft Intune.
+As the second step to [set up your organization's environment to support Windows 365 Link](deployment-overview.md), you must make sure they can be managed by Microsoft Intune.
 
-After a NXT device is [joined to Entra ID](join-microsoft-entra.md), it can be managed with Intune if automatic enrollment is enabled by setting **MDM user scope**. ??The user must also have the appropriate Microsoft Entra Premium license??. Without setting **MDM user scope**, automatic enrollment doesn't occur and NXT devices can't be managed by, and don't appear in, Intune.
+After a Windows 365 Link device is [joined to Entra ID](join-microsoft-entra.md), it can be managed with Intune if automatic enrollment is enabled by setting **MDM user scope**. The user must also have the appropriate Microsoft Entra Premium license. Without setting **MDM user scope**, automatic enrollment doesn't occur and Windows 365 Link devices can't be managed by, and don't appear in, Intune.
 
-To set up automatically enrollment in Intune for NXT devices:
+To set up automatically enrollment in Intune for Windows 365 Link devices:
 
 1. Sign in to the [Microsoft Entra admin center](https://aad.portal.azure.com/) > **Show more** > **Settings** > **Mobility**.
 2. On the **Mobility (MDM and WIP)** page, select **Microsoft Intune**.
@@ -59,4 +59,4 @@ To set up automatically enrollment in Intune for NXT devices:
 <!-- ########################## -->
 ## Next steps
 
-[Create an Intune filter for NXT devices](create-intune-filter.md).
+[Create an Intune filter for Windows 365 Link devices](create-intune-filter.md).

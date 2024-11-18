@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Join NXT to Microsoft Entra
+title: Join Windows 365 Link to Microsoft Entra
 titleSuffix:
-description: Learn about joining NXT to Microsoft Entra
+description: Learn about joining Windows 365 Link to Microsoft Entra
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -29,11 +29,11 @@ ms.collection:
 - tier2
 ---
 
-# Join NXT to Microsoft Entra
+# Join Windows 365 Link to Microsoft Entra
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-As the first step in setting up your organization's environment to support NXT, you must allow NXT devices to [join Microsoft Entra](/entra/identity/devices/concept-directory-join).
+As the first step in setting up your organization's environment to support Windows 365 Link, you must allow Windows 365 Link devices to [join Microsoft Entra](/entra/identity/devices/concept-directory-join).
 
 Prior to signing in, the user must have permission to join and not be blocked by any Intune device enrollment restrictions.
 
@@ -42,7 +42,7 @@ The first time the device is powered on, the Out of Box Experience (OOBE):
 1. Prompts the user to sign in.
 2. Joins the device to their tenant.
 
-To set permissions to allow your organization's users to join their NXT to Microsoft Entra, follow these steps:
+To set permissions to allow your organization's users to join their Windows 365 Link to Microsoft Entra, follow these steps:
 
 1. Sign in to the [Microsoft Entra admin center](https://aad.portal.azure.com/) > **Identity** > **Devices** > **Overview** > **Device Settings**.
 2. Under **Users may join devices to Microsoft Entra**, select either **All** or **Selected**:

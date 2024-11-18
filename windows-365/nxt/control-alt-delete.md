@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Control-Alt-Delete menu for NXT
+title: Control+Alt+Delete menu for Windows 365 Link
 titleSuffix:
-description: Learn about the Control-Alt-Delete menu for NXT
+description: Learn about the Control-Alt-Delete menu for Windows 365 Link
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -33,7 +33,7 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-When you press Control + Alt + Delete on your NXT, you see the following options:
+When you press Control + Alt + Delete on your Windows 365 Link, you see the following options:
 
 | Control | Description |
 | --- | --- |
