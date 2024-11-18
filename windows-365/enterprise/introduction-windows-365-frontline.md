@@ -75,7 +75,7 @@ Frontline Cloud PCs in shared mode can be helpful for users who are:
 - Customer-facing workers.
 - External contractors.
 
-The maximum number of active Windows 365 Frontline shared Cloud PC sessions in your organization is equal to the number of Windows 365 Frontline licenses that you set up for a specific group. For example, if you assign 10 Windows 365 Frontline shared licenses, 10 Cloud PCs can be provisioned for the group. Only a single user can connect to a shared Cloud PC at a given time. When a user signs out from the Cloud PC, all user data is deleted and the Cloud PC is released for another user to start using. Concurrency buffer doesn't exist for a Frontline Cloud PC in shared mode.  
+The maximum number of active Windows 365 Frontline Cloud PC in shared mode sessions in your organization is equal to the number of Windows 365 Frontline licenses that you set up for a specific group. For example, if you assign 10 Windows 365 Frontline shared licenses, 10 Cloud PCs can be provisioned for the group. Only a single user can connect to a shared Cloud PC at a given time. When a user signs out from the Cloud PC, all user data is deleted and the Cloud PC is released for another user to start using. Concurrency buffer doesn't exist for a Frontline Cloud PC in shared mode.  
 
 > [!NOTE]
 >
