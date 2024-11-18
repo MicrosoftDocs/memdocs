@@ -1,6 +1,6 @@
 ### YamlMime:Hub
-title: NXT documentation
-summary: Official product documentation for NXT
+title: Windows 365 Link documentation
+summary: Official product documentation for Windows 365 Link
 
 metadata:
   services: service
@@ -14,80 +14,52 @@ metadata:
 
 highlightedContent:
   items:
-    - title: What is NXT?
+    - title: What is Windows 365 Link?
       itemType: overview
       url: overview.md
-    - title: What's new in NXT?
-      itemType: overview
-      url: whats-new.md
-    - title: Features in development
-      itemType: overview
-      url: in-development.md
-    - title: Planning your NXT deployment
+    - title: Set up your Windows 365 Link
       itemType: get-started
-      url: planning-guide.md
-    - title: Requirements
+      url: setup.md
+    - title: Sign in
       itemType: how-to-guide
-      url: requirements.md
+      url: sign-in.md
 
 conceptualContent:
   items:
-    - title: More info 1
+    - title: For administrators
       links:
-        - url: planning-guide.md
+        - url: deployment-overview.md
           itemType: how-to-guide
-          text: Planning guide
+          text: Deployment overview
         - url: requirements.md
           itemType: how-to-guide
           text: Requirements
       footerLink:
         url: planning-guide.md
         text: See more
-    - title: More info 2
+    - title: For users
       links:
-        - url: deployment-overview.md
+        - url: setup.md
           itemType: how-to-guide
-          text: Link 1
-        - url: assign-licenses.md
+          text: First time set up
+        - url: setup.md
           itemType: how-to-guide
-          text: Link 2
-        - url: create-azure-network-connection.md
-          itemType: how-to-guide
-          text: Link 3
+          text: Sign in, sign out, lock
       footerLink:
         url: deployment-overview.md
         text: See more
-    - title: More info 3
-      links:
-        - url: create-provisioning-policy.md
-          itemType: how-to-guide
-          text: Create provisioning policy
-        - url: automated-provisioning-steps.md
-          itemType: concept  
-          text: Automated provisioning steps
-      footerLink:
-        url: create-provisioning-policy.md
-        text: See more
 additionalContent:
   sections:
-    - title: Additional resources related to NXT
+    - title: Additional resources related to Windows 365 Link
       items:
       - title: Windows 365
         links: 
-        - text: Link 1
+        - text: Windows 365
           url: /windows-365/
-        - text: Link 2
-          url: /windows-365/
-        - text: Link 3
-          url: /windows-365/
-      - title: Additional 2
-        links:
-          - text: Link 1
-            url: /windows/resources/
-          - text: Link 2
-            url: /windows/deployment/
-          - text: Link 3
-            url: https://blogs.windows.com/  
+        - text: Windows 365 Enterprise
+          url: /windows-365/enterprise/
+        - text: Windows 365 Business
+          url: /windows-365/business/
       - title: Microsoft Intune product family
         links:
           - text: Microsoft Intune product family documentation
