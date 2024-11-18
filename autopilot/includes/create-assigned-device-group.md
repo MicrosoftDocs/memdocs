@@ -93,4 +93,4 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
         New-MgServicePrincipal -BodyParameter f1346770-5b25-470b-88bd-d5744ab7952c
         ```
 
-        For more information, see [New-MgServicePrincipal](/powershell/module/microsoft.graph.applications/new-mgserviceprincipal).
+        For more information, see [New-MgServicePrincipal -BodyParameter](/powershell/module/microsoft.graph.applications/new-mgserviceprincipal#-bodyparameter).
