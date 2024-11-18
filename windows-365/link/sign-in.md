@@ -31,8 +31,6 @@ ms.collection:
 
 # Sign in to, sign out, or lock your Windows 365 Link
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 When you want to use the Windows 365 Link, complete the following steps to sign in:
 
 1. Power on the Windows 365 Link.

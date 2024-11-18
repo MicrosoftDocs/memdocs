@@ -31,8 +31,6 @@ ms.collection:
 
 # Conditional Access policies for Windows 365 Link
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 As part of [setting up your organization's environment to support Windows 365 Link](deployment-overview.md), you must make sure that your organization's sign-in and connection (if any) Conditional Access (CA) policies are synchronized. If CA is used to protect the resources used to access Windows 365 Cloud PCs, a matching policy must also be used to protect the user action to register or join devices.
 
 ## Authentication process for Windows 365 Link devices

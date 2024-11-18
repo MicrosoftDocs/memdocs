@@ -31,8 +31,6 @@ ms.collection:
 
 # What is Windows 365 Link?
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 > [!NOTE]
 > Windows 365 Link is in ["public preview"](../public-preview.md). Customers who want to participate in the preview and get Windows 365 Link devices for their organization should contact their Microsoft account team. As part of your participation, you can join the Customer Connections Program and Office hours for the latest updates.
 

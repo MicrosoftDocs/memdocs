@@ -31,8 +31,6 @@ ms.collection:
 
 # What's in the box
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 When you unbox your Windows 365 Link, you'll find the following hardware, software, and network and peripheral support.
 
 ## Hardware

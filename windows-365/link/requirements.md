@@ -31,8 +31,6 @@ ms.collection:
 
 # Requirements for Windows 365 Link deployment
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 The following lists the requirements to deploy and manage Windows 365 Link devices using Intune.
 
 ## Licensing

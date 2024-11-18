@@ -31,8 +31,6 @@ ms.collection:
 
 # Quick settings
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 You can use the quick settings icons in the bottom corner of the **Sign in** screen to access various settings for your Windows 365 Link. There are three different option icons:
 
 - Internet (![Image of the internet icon.](media/quick-settings/internet-icon.gif))

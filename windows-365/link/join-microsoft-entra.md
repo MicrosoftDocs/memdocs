@@ -31,8 +31,6 @@ ms.collection:
 
 # Join Windows 365 Link to Microsoft Entra
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 As the first step in setting up your organization's environment to support Windows 365 Link, you must allow Windows 365 Link devices to [join Microsoft Entra](/entra/identity/devices/concept-directory-join).
 
 Prior to signing in, the user must have permission to join and not be blocked by any Intune device enrollment restrictions.

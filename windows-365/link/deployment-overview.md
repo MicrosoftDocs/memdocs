@@ -31,8 +31,6 @@ ms.collection:
 
 # Windows 365 Link deployment overview
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 Before users can use their Windows 365 Link to connect to their Cloud PC provided by their organization, admins must set up the organization's Microsoft Entra ID and Intune environments to manage, register, and enroll the device.
 
 To set up your organization's environment to deploy and manage Windows 365 Link devices, admins must complete the following steps:
