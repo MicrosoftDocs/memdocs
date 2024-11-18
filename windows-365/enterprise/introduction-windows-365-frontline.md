@@ -35,7 +35,7 @@ Windows 365 Frontline is a version of [Windows 365](../overview.md) that helps o
 
 Windows 365 Frontline is currently only available for Azure Global Cloud.
 
-Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead, you must use [https://windows.cloud.microsoft/](https://windows.cloud.microsoft/) if you want to access your Frontline Cloud PC.
+Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead, you must use [https://windows.cloud.microsoft/](https://windows.cloud.microsoft/) if you want to access your Frontline Cloud PC. You can also find Windows App at the [Microsoft Store](https://apps.microsoft.com/detail/9n1f85v9t8bn?ocid=pdpshare&hl=en-us&gl=US).
 
 Windows 365 Frontline has two different modes: dedicated mode and shared mode.
 
@@ -75,7 +75,7 @@ Frontline Cloud PCs in shared mode can be helpful for users who are:
 - Customer-facing workers.
 - External contractors.
 
-The maximum number of active Windows 365 Frontline Cloud PC in shared mode sessions in your organization is equal to the number of Windows 365 Frontline licenses that you set up for a specific group. For example, if you assign 10 Windows 365 Frontline shared licenses, 10 Cloud PCs can be provisioned for the group. Only a single user can connect to a shared Cloud PC at a given time. When a user signs out from the Cloud PC, all user data is deleted and the Cloud PC is released for another user to start using. Concurrency buffer doesn't exist for a Frontline Cloud PC in shared mode.  
+The maximum number of active Windows 365 Frontline Cloud PC sessions in your organization is equal to the number of Windows 365 Frontline licenses that you set up for a specific group. For example, if you assign 10 Windows 365 Frontline shared licenses, 10 Cloud PCs can be provisioned for the group. Only a single user can connect to a shared Cloud PC at a given time. When a user signs out from the Cloud PC, all user data is deleted and the Cloud PC is released for another user to start using. Concurrency buffer doesn't exist for a Frontline Cloud PC in shared mode.  
 
 > [!NOTE]
 >

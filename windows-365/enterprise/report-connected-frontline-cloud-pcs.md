@@ -44,7 +44,16 @@ The Connected Frontline Cloud PCs report is in [public preview](..\public-previe
 
 ## Maximum concurrency limit
 
-The maximum concurrency limit is set by the total number of Frontline licenses that you've purchased. If this limit is reached, subsequent users won't be able to connect to their Cloud PCs. In such cases, you Restart some Cloud PCs to reduce concurrency. You can use the session length information to help identify which Cloud PCs to Restart.
+The maximum concurrency limit is set by the total number of Frontline licenses that you've purchased. If this limit is reached, subsequent users won't be able to connect to their Cloud PCs.
+
+In such cases, you can do any of the following to unblock users:
+
+- Restart some Cloud PCs to reduce concurrency. You can use the session length information to help identify which Cloud PCs to Restart.
+- Redistribute licenses across the Microsoft Entra group assignment.
+- Purchase more licenses.
+
+If the total number of connections exceeds the maximum concurrency limit, it means that you're using the concurrency buffer (for Frontline Cloud PCs in dedicated mode only).
+
 ## Requirements
 
 The following permissions are required to view this report:
