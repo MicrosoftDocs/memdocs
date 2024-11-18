@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: What is NXT?
+title: What is Windows 365 Link?
 titleSuffix:
-description: What is NXT?
+description: What is Windows 365 Link?
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -29,22 +29,22 @@ ms.collection:
 - tier2
 ---
 
-# What is NXT?
+# What is Windows 365 Link?
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
 > [!NOTE]
-> NXT is in ["public preview"](../public-preview.md). Customers who want to participate in the preview and get NXT devices for their organization should contact their Microsoft account team. As part of your participation, you can join the Customer Connections Program and Office hours for the latest updates.
+> Windows 365 Link is in ["public preview"](../public-preview.md). Customers who want to participate in the preview and get Windows 365 Link devices for their organization should contact their Microsoft account team. As part of your participation, you can join the Customer Connections Program and Office hours for the latest updates.
 
-NXT is the first Cloud PC hardware device that lets users connect directly to their Cloud PC virtual machine. It’s a full stack, purpose-built solution by Microsoft. When users sign in to their NXT, they're connected to their Windows 365 [Cloud PC virtual machine](/windows-365/overview#what-is-a-cloud-pc) through the Windows 365 service.
+Windows 365 Link is the first Cloud PC hardware device that lets users connect directly to their Cloud PC virtual machine. It’s a full stack, purpose-built solution by Microsoft. When users sign in to their Windows 365 Link, they're connected to their Windows 365 [Cloud PC virtual machine](/windows-365/overview#what-is-a-cloud-pc) through the Windows 365 service.
 
-![Image of the NXT device.](media/overview/device-front.png)
+![Image of the Windows 365 Link device.](media/overview/device-front.png)
 
-Admins use Microsoft Intune to manage NXTs alongside other devices.
+Admins use Microsoft Intune to manage Windows 365 Link devices alongside other devices.
 
 ## Secure by design
 
-NXT is secure by design, thanks to the following features:
+Windows 365 Link is secure by design, thanks to the following features:
 
 - Discrete Trusted Platform Model 2.0.
 - Secure boot.
@@ -60,9 +60,9 @@ NXT is secure by design, thanks to the following features:
 
 ## Requirements
 
-Requirements for NXT include:
+Requirements for Windows 365 Link include:
 
-- NXT device.
+- Windows 365 Link device.
 - Management by your organization using Microsoft Intune.
 - [Windows 365 license](https://www.microsoft.com/licensing/product-licensing/windows-365?rtc=1) for your Cloud PC.
 
@@ -70,7 +70,7 @@ Requirements for NXT include:
 
 ### Media optimizations
 
-NXT supports local redirection of web multimedia content, ensuring a smooth, high-quality experience, just like on a local PC.
+Windows 365 Link supports local redirection of web multimedia content, ensuring a smooth, high-quality experience, just like on a local PC.
 
 ## Unit dimensions
 

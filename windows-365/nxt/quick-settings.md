@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Quick settings for NXT
+title: Quick settings for Windows 365 Link
 titleSuffix:
-description: Learn about Quick settings for NXT
+description: Learn about Quick settings for Windows 365 Link
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -33,7 +33,7 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-You can use the quick settings icons in the bottom corner of the **Sign in** screen to access various settings for your NXT. There are three different option icons:
+You can use the quick settings icons in the bottom corner of the **Sign in** screen to access various settings for your Windows 365 Link. There are three different option icons:
 
 - Internet (![Image of the internet icon.](media/quick-settings/internet-icon.gif))
 - Audio
@@ -56,7 +56,7 @@ To see the accessibility options, on the **Sign in** screen, select the **Access
 | Wi-Fi | View and manage Wi-Fi connection. |
 | Bluetooth | View and manage Bluetooth devices. You can only add Bluetooth devices after you're authenticated. Not in Out of Box Experience (OOBE)|
 | Accessibility | Turn on/off accessibility tools: Magnifier, Contrast themes, Narrator, On-screen keyboard, Sticky keys, and Filter keys. |
-| Language | Choose display language used on your NXT. |
+| Language | Choose display language used on your Windows 365 Link. |
 | Display | Change the scale for you display and set two monitor arrangement. |
 | Privacy and Security | View privacy and security settings for your Location, Camera, and microphone. Not in OOBE.|
 | Power button | View power management options for the device. |

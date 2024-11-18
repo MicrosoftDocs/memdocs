@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Conditional Access policies for NXT
+title: Conditional Access policies for Windows 365 Link
 titleSuffix:
-description: Learn about Conditional Access policies for NXT
+description: Learn about Conditional Access policies for Windows 365 Link
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -29,20 +29,20 @@ ms.collection:
 - tier2
 ---
 
-# Conditional Access policies for NXT
+# Conditional Access policies for Windows 365 Link
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-As part of [setting up your organization's environment to support NXT devices](deployment-overview.md), you must make sure that your organization's sign-in and connection (if any) Conditional Access (CA) policies are synchronized. If CA is used to protect the resources used to access Windows 365 Cloud PCs, a matching policy must also be used to protect the user action to register or join devices.
+As part of [setting up your organization's environment to support Windows 365 Link](deployment-overview.md), you must make sure that your organization's sign-in and connection (if any) Conditional Access (CA) policies are synchronized. If CA is used to protect the resources used to access Windows 365 Cloud PCs, a matching policy must also be used to protect the user action to register or join devices.
 
-## Authentication process for NXT devices
+## Authentication process for Windows 365 Link devices
 
-1. When the user signs in on the NXT interactive **Sign in** screen, their account is authenticated against the device registration service.
-2. NXT silently authenticates against the other required cloud resources (like Microsoft Graph and the Windows 365 service by using single sign-on (SSO)).
+1. When the user signs in on the Windows 365 Link interactive **Sign in** screen, their account is authenticated against the device registration service.
+2. Windows 365 Link silently authenticates against the other required cloud resources (like Microsoft Graph and the Windows 365 service by using single sign-on (SSO)).
 
 ## Create CA policies to synchronize sign in and connection authentication
 
-If CA policies enforcing multi-factor authentication (MFA) are used to protect the resources used to access Windows 365 Cloud PCs, you must create a CA policy enforcing MFA on the user action to register or join devices. This second policy must make sure the user's authentication token has the right MFA claims after the initial sign in to NXT.
+If CA policies enforcing multi-factor authentication (MFA) are used to protect the resources used to access Windows 365 Cloud PCs, you must create a CA policy enforcing MFA on the user action to register or join devices. This second policy must make sure the user's authentication token has the right MFA claims after the initial sign in to Windows 365 Link.
 
 Also review any existing CA policies that apply to **All resources**. These policies trigger when connecting but not at sign in. Use the [What If tool](/entra/identity/conditional-access/what-if-tool) to help determine what CA policies are applied.
 

@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Unboxing your NXT
+title: Unboxing your Windows 365 Link
 titleSuffix:
-description: Learn about unboxing your NXT.
+description: Learn about unboxing your Windows 365 Link.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -33,19 +33,19 @@ ms.collection:
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-When you unbox your NXT, you'll find the following hardware, software, and network and peripheral support.
+When you unbox your Windows 365 Link, you'll find the following hardware, software, and network and peripheral support.
 
 ## Hardware
 
 Your box includes:
 
-- NXT device.
+- Windows 365 Link device.
 - Power adaptor.
 - Quick start guide.
 
 ### Ports
 
-The NXT has the following ports:
+The Windows 365 Link has the following ports:
 
 #### Front panel
 
@@ -53,7 +53,7 @@ The NXT has the following ports:
 - 3.5 mm audio jack
 - Power button and LED indicator
 
-![Image of the NXT device front.](media/overview/device-front.png)
+![Image of the Windows 365 Link device front.](media/overview/device-front.png)
 
 #### Back panel
 
@@ -64,13 +64,13 @@ The NXT has the following ports:
 - Ethernet
 - Power supply
 
-![Image of the NXT device back.](media/whats-in-the-box/device-back.png)
+![Image of the Windows 365 Link device back.](media/whats-in-the-box/device-back.png)
 
 #### Side panel
 
 Kensington lock to physically secure the device
 
-![Image of the NXT side back.](media/whats-in-the-box/device-side.png)
+![Image of the Windows 365 Link side back.](media/whats-in-the-box/device-side.png)
 
 ### Power
 
@@ -93,7 +93,7 @@ USB and Bluetooth support for:
 
 ## Software
 
-The NXT comes pre-installed with the X operating system.
+The Windows 365 Link comes pre-installed with the X operating system.
 
 Operating system updates occur automatically during off hours. To get these upadates, make sure the device is plugged in and powered on (in standby or sleep mode).
 
@@ -115,4 +115,4 @@ Operating system updates occur automatically during off hours. To get these upad
 <!-- ########################## -->
 ## Next steps
 
-[First time set up for your NXT](setup.md): After unboxing, your NXT is brand-new and no users are logged into the device. The device must go through first-time setup, also known as the Out-of-Box Experience (OOBE). Through this setup process, the device is automatically joined to Microsoft Entra and enrolled in Microsoft Intune.
+[First time set up for your Windows 365 Link](setup.md): After unboxing, your Windows 365 Link is brand-new and no users are logged into the device. The device must go through first-time setup, also known as the Out-of-Box Experience (OOBE). Through this setup process, the device is automatically joined to Microsoft Entra and enrolled in Microsoft Intune.

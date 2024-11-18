@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Set up NXT
+title: Set up Windows 365 Link
 titleSuffix:
-description: Learn how to set up your NXT
+description: Learn how to set up your Windows 365 Link
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -29,11 +29,11 @@ ms.collection:
 - tier2
 ---
 
-# Set up your NXT and sign in
+# Set up your Windows 365 Link and sign in
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-The first time you turn on your NXT, you're guided through setting up your device and signing in with a work or school user account.
+The first time you turn on your Windows 365 Link, you're guided through setting up your device and signing in with a work or school user account.
 
 ## Requirements
 
@@ -57,11 +57,11 @@ Complete the following steps to set up your new device:
 
 You can adjust additional settings prior to sign-in by using [Quick settings](quick-settings.md) in the bottom-right corner.
 
-When you sign in for the first time, the NXT automatically joins Microsoft Entra ID and enrolls the device into Microsoft Intune tenant associated with the account used to sign in. You organization's admins use Intune to manage both virtual machines and hardware devices, including NXT.
+When you sign in for the first time, the Windows 365 Link automatically joins Microsoft Entra ID and enrolls the device into Microsoft Intune tenant associated with the account used to sign in. You organization's admins use Intune to manage both virtual machines and hardware devices, including Windows 365 Link.
 
 <!-- ########################## -->
 ## Next steps
 
-[Use Quick Settings to view and manage monitors, langauages, network connections, and more](quick-settings.md).
+[Use Quick Settings to view and manage monitors, languages, network connections, and more](quick-settings.md).
 
-[Use the Control-Alt-Delete menu to mange manage tasks, connections, sign-out, or lock your NXT.](control-alt-delete.md)
+[Use the Control-Alt-Delete menu to mange manage tasks, connections, sign-out, or lock your Windows 365 Link.](control-alt-delete.md)

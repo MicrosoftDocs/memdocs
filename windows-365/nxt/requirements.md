@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Requirements for NXT
+title: Requirements for Windows 365 Link
 titleSuffix:
-description: Learn about the requirements of NXT
+description: Learn about the requirements of Windows 365 Link
 keywords:
 author: ErikjeMS 
 ms.author: erikje
@@ -29,39 +29,39 @@ ms.collection:
 - tier2
 ---
 
-# Requirements for NXT deployment
+# Requirements for Windows 365 Link deployment
 
 [!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
 
-The following lists the requirements to deploy and manage NXT devices using Intune.
+The following lists the requirements to deploy and manage Windows 365 Link devices using Intune.
 
 ## Licensing
 
-NXT is a Windows 365 product and shares the same license requirements. For more information, see [Windows 365 plans and pricing](https://www.microsoft.com/windows-365/enterprise/all-pricing?rtc=1).
+Windows 365 Link is a Windows 365 product and shares the same license requirements. For more information, see [Windows 365 plans and pricing](https://www.microsoft.com/windows-365/enterprise/all-pricing?rtc=1).
 
 ## Microsoft Entra ID requirements
 
-NXT devices must be [Microsoft Entra joined](/entra/identity/devices/concept-directory-join).
+Windows 365 Link devices must be [Microsoft Entra joined](/entra/identity/devices/concept-directory-join).
 
 The user who joins the device to Microsoft Entra ID must have permissions to join devices to Microsoft Entra ID.
 
-NXT devices can be used to connect to Cloud PCs that are either Entra joined or Entra hybrid joined.
+Windows 365 Link devices can be used to connect to Cloud PCs that are either Entra joined or Entra hybrid joined.
 
-NXT devices use automatic [mobile device management](/windows/client-management/mdm-overview) (MDM) enrollment to enroll in Intune for managment by the organization. To use this feature, the user who Entra joins the device must have a Microsoft Entra ID Premium license.
+Windows 365 Link devices use automatic [mobile device management](/windows/client-management/mdm-overview) (MDM) enrollment to enroll in Intune for managment by the organization. To use this feature, the user who Entra joins the device must have a Microsoft Entra ID Premium license.
 
-For more information, see [Join NXT to Microsoft Entra](join-microsoft-entra.md).
+For more information, see [Join Windows 365 Link to Microsoft Entra](join-microsoft-entra.md).
 
 ## Microsoft Intune requirements
 
- NXT devices enroll for management with Intune during the Out of Box experience. The user performing enrollment must have permission to enroll the devices and comply with any defined Enrollment restrictions.
+Windows 365 Link devices enroll for management with Intune during the Out of Box experience. The user performing enrollment must have permission to enroll the devices and comply with any defined Enrollment restrictions.
 
-Optionally, NXT devices can be used with the Intune corporate identifier enrollment feature to pre-upload the serial number, manufacturer, model to ensure only trusted devices go through enrollment.
+Optionally, Windows 365 Link devices can be used with the Intune corporate identifier enrollment feature to pre-upload the serial number, manufacturer, model to ensure only trusted devices go through enrollment.
 
-For more information, see [Automatically enroll NXT in Intune](intune-automatic-enrollment.md).
+For more information, see [Automatically enroll Windows 365 Link in Intune](intune-automatic-enrollment.md).
 
 ## Windows 365 SSO requirements
 
- NXT devices can only be used to connect to Windows 365 Cloud PCs that have Entra ID single sign-on (SSO) enabled. If SSO is not enabled on the Cloud PC, the user:
+Windows 365 Link devices can only be used to connect to Windows 365 Cloud PCs that have Entra ID single sign-on (SSO) enabled. If SSO is not enabled on the Cloud PC, the user:
 
 - Gets an error that their Cloud PC doesn't support Entra ID single sign-on
 - Can't connect to their Cloud PC.
@@ -71,7 +71,7 @@ To [configure SSO](../enterprise/configure-single-sign-on.md), use either of the
 - Edit an existing provisioning Policy to enable SSO, then apply the change to all Cloud PCs that are associated with the policy.
 - Provision new Cloud PCs using a provisioning profile with SSO enabled.
 
-After SSO is enabled, NXT devices can be used to connect to those Cloud PCs. For more information, see [Configure single sign-on for Windows 365 using Microsoft Entra authentication](../enterprise/configure-single-sign-on.md).
+After SSO is enabled, Windows 365 Link devices can be used to connect to those Cloud PCs. For more information, see [Configure single sign-on for Windows 365 using Microsoft Entra authentication](../enterprise/configure-single-sign-on.md).
 
 ### Conditional access
 
@@ -81,13 +81,13 @@ Also consider suppressing the SSO Consent Prompt by configuring the SSO on servi
 
 ## Microsoft Teams requirements
 
- ??NXT devices can only use the VDI solution for Teams for media optimizations??. These optimizations are pre-installed as part of the NXT's operating system. Check the Microsoft Teams PowerShell policy for optimization to ensure that the users signing in to NXT devices are in scope for the new VDI policy.
+ Windows 365 Link devices can only use the VDI solution for Teams for media optimizations. These optimizations are pre-installed as part of the Windows 365 Link's operating system. Check the Microsoft Teams PowerShell policy for optimization to ensure that the users signing in to Windows 365 Link devices are in scope for the new VDI policy.
 
 ## Network Requirements
 
- NXT devices have the same network requirements as [Azure Virtual Desktop end user devices](/azure/virtual-desktop/required-fqdn-endpoint?tabs=azure#end-user-devices).
+ Windows 365 Link devices have the same network requirements as [Azure Virtual Desktop end user devices](/azure/virtual-desktop/required-fqdn-endpoint?tabs=azure#end-user-devices).
 
 <!-- ########################## -->
 ## Next steps
 
-[Join NXT devices to Microsoft Entra ID](join-microsoft-entra.md).
+[Join Windows 365 Link devices to Microsoft Entra ID](join-microsoft-entra.md).
