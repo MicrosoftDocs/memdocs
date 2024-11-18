@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/27/2024
+ms.date: 11/18/2024
 ms.localizationpriority: medium
 ---
 
@@ -61,19 +61,29 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
 
 1. In the **Windows PowerShell** command prompt window:
 
-   1. Install the **azuread** module by entering the following command:
+   1. Install the **Microsoft.Graph.Authentication** module by entering the following command:
 
         ```powershell
-        Install-Module microsoft.graph.applications
+        Install-Module Microsoft.Graph.Authentication
         ```
 
-        If prompted to do so, agree to install **NuGet** and the **azuread** module from the **PSGallery**.
+        If prompted to do so, select **Yes** to agree to install from the **PSGallery** untrusted repository. For more information, see [Microsoft.Graph.Authentication](/powershell/module/microsoft.graph.authentication/) and [Set-PSRepository -InstallationPolicy](/powershell/module/powershellget/set-psrepository#-installationpolicy).
+    
+    1. Install the **Microsoft.Graph.Applications** module by entering the following command:
 
-   1. Once the **azuread** module is installed, connect to Microsoft Entra ID by entering the following command:
+        ```powershell
+        Install-Module Microsoft.Graph.Applications
+        ```
+
+        If prompted to do so, select **Yes** to agree to install from the **PSGallery** untrusted repository. For more information, see [Microsoft.Graph.Applications](/powershell/module/microsoft.graph.applications/) and [Set-PSRepository -InstallationPolicy](/powershell/module/powershellget/set-psrepository#-installationpolicy).
+
+   1. Once the **Microsoft.Graph.Authentication** and **Microsoft.Graph.Applications** modules are installed, connect to Microsoft Entra ID by entering the following command:
 
         ```powershell
         Connect-MgGraph
         ```
+
+        For more information, see [Connect-MgGraph](/powershell/module/microsoft.graph.authentication/connect-mggraph).
 
    1. If not already authenticated to Microsoft Entra ID, the **Sign in to your account** window appears. Enter the credentials of a Microsoft Entra ID administrator that has permissions to add service principals.
 
@@ -82,3 +92,5 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
         ```powershell
         New-MgServicePrincipal -BodyParameter f1346770-5b25-470b-88bd-d5744ab7952c
         ```
+
+        For more information, see [New-MgServicePrincipal](/powershell/module/microsoft.graph.applications/new-mgserviceprincipal).
