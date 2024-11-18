@@ -42,9 +42,9 @@ Windows 365 is available in multiple editions:
 
 To learn about the differences between the Business and Enterprise versions, see [Compare Windows 365 Business and Enterprise](business-enterprise-comparison.md).
 
-## NXT
+## Windows 365 Link
 
-Available now in preview in select markets, Microsoft also offers NXT, the first Cloud PC device purpose-built to connect users directly to Windows 365. For more information, see [What is NXT?](./nxt/overview.md).
+Available now in preview in select markets, Microsoft also offers Windows 365 Link, the first Cloud PC device purpose-built to connect users directly to Windows 365. For more information, see [What is Windows 365 Link?](./link/overview.md).
 
 [!INCLUDE [What is a Cloud PC?](./includes/what-is-cloud-pc.md)]
 
