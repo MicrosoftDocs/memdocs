@@ -123,5 +123,5 @@ Offset Maintenance Windows scheduled in the last week of the month may encounter
 
 When calculating the difference from UTC to local time, the client will use the active [bias](/exchange/client-developer/web-service-reference/bias) from the "Effective date" of the maintenance window to calculate the local time from the UTC time:
 
-- If Daylight Saving Time (DST) is active on the effective date, then this bias from UTC will always be used, causing the Maintenance Window to open an hour earlier than expected when DST ends
-- If Daylight Saving Time (DST) is not active on the effective date, then this bias from UTC will always be used, causing the Maintenance Window to open an hour later than expected when DST starts
+- If Daylight Saving Time (DST) is active on the effective date, then this bias from UTC will always be used, causing the Maintenance Window to open an hour earlier than expected when DST ends.
+- If Daylight Saving Time (DST) is not active on the effective date, then this bias from UTC will always be used, causing the Maintenance Window to open an hour later than expected when DST starts.
