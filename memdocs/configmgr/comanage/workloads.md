@@ -152,6 +152,8 @@ For more information on the Intune feature, see [What is Microsoft Intune app ma
 
 When you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients. For more information, see [Microsoft Connected Cache with Configuration Manager](../core/plan-design/hierarchy/microsoft-connected-cache.md#support-for-intune-win32-apps).
 
+For example, if you wish to deploy the new Store applications (winget) via Microsoft Intune, you need to switch this workload. 
+
 ## Diagram for app workloads
 
 :::image type="content" source="media/co-management-apps.svg" alt-text="Diagram of co-management app workloads." lightbox="media/co-management-apps.svg":::

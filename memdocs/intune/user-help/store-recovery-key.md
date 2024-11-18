@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 11/18/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -48,11 +48,11 @@ If you get locked out of your device, you can retrieve your key from the followi
 - Company Portal app for Android
 - Intune app
  
- IT support people with administrator access to Intune can rotate your personal recovery key for you if you get locked out of your device.They can also view keys, but only the ones that belong to corporate-owned devices. IT support people can't view recovery keys that belong to personal devices.   
+ IT support people with administrator access to Intune can rotate your personal recovery key for you if you get locked out of your device. They can also view keys, but only the ones that belong to corporate-owned devices. IT support people can't view recovery keys that belong to personal devices.   
 
 
 ## Do I need to store my key?  
-An IT support person will let you know if you're required to upload a personal recovery key. You may receive a notification from the Company Portal apps for iOS/iPadOS or Android if that's how your organization's IT department normally communicates with you. 
+An IT support person will let you know if you're required to upload a personal recovery key. You may receive a notification from the Company Portal apps for iOS/iPadOS or Android if that's how your organization's IT department normally communicates with you.  
 
 We only recommend uploading a recovery key if you fall into one of the following categories:
 * You encrypted your device before you enrolled it with your organization. 
@@ -66,22 +66,21 @@ Complete these steps to save the personal FileVault key for your encrypted Mac d
 
 1. Go to the [Company Portal website](https://portal.manage.microsoft.com) and sign in with your school or work account. 
 2. Select your encrypted device.
-3. Select **Store recovery key**.  
+3. Select **Store Recovery Key**.  
 4. Enter your 24-character, alphanumeric FileVault key.  
 5. Enter the key again. Then select **Save**.
-6. Company Portal will attempt to verify, rotate, and save your personal recovery key. No further action is needed once the key has been saved. If you leave the website before the upload is complete, you can view its status on the device details page the next time you sign in.  
+6. Wait while Company Portal attempts to verify, rotate, and save your personal recovery key. No further action is needed once the key has been saved. If you leave the website before the upload is complete, you can follow up on the status the next time you sign in. 
 
-For more information about the messages you may see during this process, see [Company Portal messages](store-recovery-key.md#company-portal-messages).  
 
 ## Company Portal messages
+This section describes the messages you might see as you store a recovery key.    
 
 |Message  |Meaning  |
 |---------|---------|
-|Keys must match. Check keys and try again.     | Appears under **Confirm recovery key** box to let you know that your keys don't match each other. Retype the keys in both fields and then try saving again.        |
-|Couldn't update recovery key for device.| Appears as a toast notification at the top of the screen to let you know that Company Portal couldn't store a recovery key for you. For more details, select your encrypted device. Then read the message at the top of the page for next steps. |
-|We were unable to upload your recovery key. Check that you entered the correct key and try again. If the problem persists, try to manually rotate your key. Tap to learn more.     | Appears on the device details page and could mean a couple things: First, Company Portal couldn't rotate and save your key because the key you entered is incorrect. Verify that you have the right key and try again. The second possibility is that your device hasn't checked in with your organization in a while. To sync the latest updates from your organization, select your device > **Status** > **Check access**. Then try to store the recovery key again. Finally, if the problem persists, it might mean that your organization hasn't enabled FileVault on their side. Contact your IT support person and let them know that you synced your device but are still unable to store your FileVault key.         |
-|Your recovery key has been updated. If you ever get locked out of your device and need to retrieve your key, sign in to Company Portal and select **Get recovery key**.    | Appears on the device details page. The key you saved was successfully rotated and your new personal recovery key is stored.    |
-
+|Keys must match. Check keys and try again.     | Appears under the **Confirm Recovey Key** box to let you know that your keys don't match each other. Retype the keys in both fields.      |
+|Couldn't update recovery key for device.| Appears as a toast notification at the top of the screen to let you know that Company Portal couldn't store your recovery key. For more details, select your encrypted device. Then read the message at the top of the page for next steps. |
+|We were unable to upload your recovery key. Check that you entered the correct key and try again. If the problem persists, try to manually rotate your key. Tap to learn more.     | Appears on the device's page and could mean a couple things: first, Company Portal couldn't rotate and save your key because the key you entered is incorrect. Verify that you have the right key and try again. Or second, your device hasn't checked in with your organization in a while. To sync the latest updates from your organization, select your device in Company Portal, and then select **Check status**. Then try to store the recovery key again. Finally, if the problem persists, it might mean that your organization hasn't enabled FileVault on their side. Contact your IT support person and let them know that you synced your device but are still unable to store your FileVault key.         |
+|Your recovery key has been updated. If you ever get locked out of your device and need to retrieve your key, sign in to Company Portal and select **Get recovery key**.    | Appears on the device's page. The key you saved was successfully rotated and your new personal recovery key is stored.    |
 
 
 ## IT pro support
@@ -90,7 +89,7 @@ If you're an IT support person and want to configure and manage FileVault encryp
 
 ## Next steps
 
-You can always retrieve your key from the Company Portal website, the Intune app, and the Company Portal apps for iOS and Android,  and use it to access your Mac device. To learn how to retrieve your recovery key, see [Get recovery key](get-recovery-key-cpweb.md).
+You can always retrieve your key from the Company Portal website, the Intune app, and the Company Portal apps for iOS and Android, and use it to access your Mac device. To learn how to retrieve your recovery key, see [Get recovery key](get-recovery-key-cpweb.md).
 
 Find out what else you can do in the Company Portal website. See [Using the Intune Company Portal website](using-the-intune-company-portal-website.md) for a list of actions.  
 

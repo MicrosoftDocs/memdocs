@@ -42,7 +42,7 @@ To share logs with your support person:
 2. Go to **Accounts** > **Access work or school**.  
 3. Select **Export your management log files**.  
 
-   ![The "Access work or school screen", which presents the Export option underneath the "Related settings" heading.](./media/w10-export-logs.png)
+   ![The "Access work or school screen", which presents the Export option underneath the "Related settings" heading.](./media/send-logs-to-your-it-admin-settings-windows/w10-export-logs.png)
 
 4. Email the logs to your support person. Logs are saved in **C:\Users\Public\Public Documents\MDMDiagnostics**. Two files are created for each log: one is the log itself, and the other is a document that allows your admin to review the logs in different programs, such as Microsoft Excel. Include both files in your email to your support person. 
 
