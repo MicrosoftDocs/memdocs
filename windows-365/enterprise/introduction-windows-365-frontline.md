@@ -55,7 +55,7 @@ Windows 365 Frontline dedicated mode is designed specifically for workers who ne
 
 The maximum number of active Windows 365 Frontline Cloud PC sessions in your organization is equal to the number of Windows 365 Frontline licenses that you purchased. For example, if you purchase 10 licenses, up to 30 Cloud PCs can be provisioned in dedicated mode. Ten of those Cloud PCs can be active at a given time. The active sessions are managed automatically. When a user signs off from their Cloud PC, the session is released for another user to start using their Cloud PC. A concurrency buffer exists to exceed the maximum a limited number of times per day. For more information, see [Exceeding the maximum concurrency limit ](#exceeding-the-maximum-concurrency-limit).
 
-## Windows 365 Frontline in shared mode
+## Windows 365 Frontline in shared mode (preview)
 
 A single license:
 
@@ -63,7 +63,7 @@ A single license:
 - Provides one concurrent session.
 
 > [!NOTE]
-> During public preview, we are evaluating the potential limits for assigned users for shared Cloud PCs. More information will be shared at general availability.
+> During [public preview](../public-preview.md), we are evaluating the potential limits for assigned users for shared Cloud PCs. More information will be shared at general availability.
 
 Windows 365 Frontline in shared mode is designed specifically for workers who
 
