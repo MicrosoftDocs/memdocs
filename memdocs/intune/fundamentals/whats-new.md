@@ -152,6 +152,16 @@ The following settings have been deprecated by Apple and will be marked as depre
 
 ### Device management
 
+#### Device Inventory for Windows<!-- 24853010 --> 
+
+Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
+
+You can now choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view.
+
+Applies to:
+
+- Windows 10 and later (Corporate owned devices managed by Intune)
+
 #### Evaluate compliance of Windows Subsystem for Linux (generally available)<!-- 24557103 -->
  
 Now generally available, Microsoft Intune supports compliance checks for instances of Windows Subsystem for Linux (WSL) running on a Windows host device. You can create a Windows 10/11 compliance policy that contains the allowed Linux distribution names and versions evaluated on WSL. Microsoft Intune includes the WSL compliance results in the overall compliance state of the host device.
