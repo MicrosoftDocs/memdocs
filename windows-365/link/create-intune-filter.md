@@ -31,8 +31,6 @@ ms.collection:
 
 # Create an Intune filter for Windows 365 Link devices
 
-[!INCLUDE [MS confidential, draft docs](../includes/draft-doc.md)]
-
 To help with [setting up your organization's environment to support Windows 365 Link](deployment-overview.md), you can use filters when assigning Intune polices. Such a filter can be used on any policy assignment to include or exclude Windows 365 Link devices.
 
 To create a filter exclusively including Windows 365 Link devices:
