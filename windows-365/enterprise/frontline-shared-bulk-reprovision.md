@@ -43,10 +43,11 @@ Using bulk actions to reprovision multiple Cloud PCs at a time can help you:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Device onboarding**) > **Provisioning policies**.
 2. Select a provisioning policy for Frontline Cloud PCs.
 3. Select **Reprovision**.
-4. In the **Would you like to continue** > **Keep a percentage of devices available** box, type the percentage of the devices you want to keep available during the reprovisioning action.
+4. In the **Would you like to continue** > **Keep a percentage of devices available** box, type the percentage of the devices you want to keep available during the reprovisioning action. If you set a value more than 0%, reprovisioning rolls out over all the Cloud PCs and always keeps that percentage of Cloud PCs available for use.
 
     When choosing the percentage, consider the following information:
-      - Cloud PCs don't reprovision while users are still signed in. If you need to force users to be connected, start the reprovision, type 0%, then use the **Restart** remote action on each Cloud PC.
+      - The percentage you set is the number of Cloud PCs that remain available while the rest of the Cloud PCs are reprovisioned. After a number of Cloud PCs equal to the percentage are reprovisioned (and available for use), the previously set aside Cloud PCs start reprovisinoing.
+      - The Cloud PCs don't reprovision while users are still signed in. To force disconnection of users, start the reprovision, type 0%, then use the **Restart** remote action on each Cloud PC.
       - The minimum number of devices that will be reprovisioned is one. For example, if you have one Cloud PC and you specify 99%, that one device will still be reprovisioned, even though the closest whole number is one Cloud PC to be available.
       - The system rounds down to the nearest whole number. For example, if the total number of Cloud PCs is 150 and you keep 27% available, the result is 40.5 Cloud PCs. This number is rounded down to keep 40 Cloud PCs available at a time.
 
