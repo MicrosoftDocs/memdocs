@@ -63,7 +63,7 @@ For more information about public preview items, see [Public preview in Windows 
 
 #### Windows 365 Frontline in shared mode (preview)<!--52583422-->
 
-Windows 365 Frontline in shared mode gives you the ability to provision a collection of Cloud PCs that can be used across multiple users mapped to a Microsoft Entra ID group. One active Cloud PC is permitted per license. For more information, see [Windows 365 Frontline in shared mode](introduction-windows-365-frontline.md#windows-365-frontline-shared-mode).
+Windows 365 Frontline in shared mode gives you the ability to provision a collection of Cloud PCs that can be used across multiple users mapped to a Microsoft Entra ID group. One active Cloud PC is permitted per license. For more information, see [Windows 365 Frontline in shared mode](introduction-windows-365-frontline.md#windows-365-frontline-in-shared-mode).
 
 <!-- ########################## -->
 ## Week of October 28, 2024 (Service release 2410)
