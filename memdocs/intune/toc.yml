@@ -187,8 +187,9 @@ items:
       href: ./copilot/copilot-devices.md
     - name: FAQ
       href: ./copilot/copilot-intune-faq.md
-    - name: Intune plugin in Copilot for Security
+    - name: Intune plugin in Security Copilot
       href: ./copilot/security-copilot.md
+
   - name: Endpoint analytics
     items:
     - name: Overview
@@ -1325,7 +1326,13 @@ items:
           - name: eSIM bulk activation with activation codes (import CSV)
             href: ./configuration/esim-device-configuration.md
 
-      - name: Configuration profile settings lists
+      - name: Settings catalog lists
+        items:
+        - name: Apple
+          displayName: ios, ipados, macos
+          href: ./configuration/apple-settings-catalog-configurations.md
+
+      - name: Device Configuration template settings lists
         items:
         - name: Android device administrator
           items: 
