@@ -263,7 +263,7 @@ You can reprovision all devices by removing the assignment group, saving the cha
 
 ### Frontline shared card displays in Windows App during Cloud PC provisioning
 
-When you provision the Frontline Cloud PC in shared more for the first time, the Frontline shared card displays in Windows App with status **Ready to Connect** during Cloud PC are provisioning. Users can click to connect but receive a **Your connection failed** error.
+When you provision the Frontline Cloud PC in shared mode for the first time, the Frontline shared card displays in Windows App with status **Ready to Connect** during Cloud PC are provisioning. Users can click to connect but receive a **Your connection failed** error.
 
 **Troubleshooting steps**
 
