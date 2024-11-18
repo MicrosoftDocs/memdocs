@@ -35,7 +35,7 @@ conceptualContent:
           itemType: how-to-guide
           text: Requirements
       footerLink:
-        url: planning-guide.md
+        url: deployment-overview.md
         text: See more
     - title: For users
       links:
@@ -46,7 +46,7 @@ conceptualContent:
           itemType: how-to-guide
           text: Sign in, sign out, lock
       footerLink:
-        url: deployment-overview.md
+        url: overview.md
         text: See more
 additionalContent:
   sections:
