@@ -55,6 +55,10 @@ In addition to the Intune SDK, you need these two components to enable App Prote
 
 :::image type="content" alt-text="Diagram of MAM-CA remediation flow." source="./media/app-sdk-ios/app-ca-flow.png" lightbox="./media/app-sdk-ios/app-ca-flow.png":::
 
+### MAM compliance process flow
+
+:::image type="content" alt-text="Diagram of MAM compliance process flow." source="./media/app-sdk-ios/mam-compliance-flow.png" lightbox="./media/app-sdk-ios/mam-compliance-flow.png":::
+
 ### New APIs
 Most of the new APIs can be found in the IntuneMAMComplianceManager.h. The app needs to be aware of three differences in behavior explained below.
 
