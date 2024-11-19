@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2024
+ms.date: 11/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,8 @@ Depending on the settings you choose, not all values in the following list are c
 
 This feature applies to:
 
-- macOS
+- macOS  
+
 
 ## Before you begin
 
@@ -47,11 +48,20 @@ This feature applies to:
 
 ## Base VPN
 
-**Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections.
+- **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the authentication certificates are stored, so it's important to select the proper channel. It's not possible to edit the deployment channel after you deploy the profile. To change it, you must create a new profile. 
+
+  >[!NOTE]
+  > We recommend rechecking the deployment channel setting in existing profiles when the linked authentication certificates are up for renewal to ensure the intended channel is selected. If it isn't, create a new profile with the correct deployment channel.   
+
+   You have two options:  
+   - **User channel**: Always select the user deployment channel in profiles with user certificates. This option stores certificates in the user keychain.     
+   - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the system keychain.   
+   
+- **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections.
 
 - **VPN server address**: Enter the IP address or fully qualified domain name of the VPN server that devices connect to. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
-  - **Certificates**: Under **Authentication certificate**, select a SCEP or PKCS certificate profile you previously created to authenticate the connection. For more information about certificate profiles, go to [How to configure certificates](../protect/certificates-configure.md).
+  - **Certificates**: Under **Authentication certificate**, select a SCEP or PKCS certificate profile you previously created to authenticate the connection. For more information about certificate profiles, go to [How to configure certificates](../protect/certificates-configure.md). Choose the certificates that align with your deployment channel selection. If you selected the user channel, your certificate options are limited to user certificate profiles. If you selected the device channel, you have both user and device certificate profiles to choose from. However, we recommend always selecting the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.       
   - **Username and password**: End users must enter a username and password to sign into the VPN server.
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:

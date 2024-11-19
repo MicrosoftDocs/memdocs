@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/27/2023
+ms.date: 11/05/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -105,7 +105,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
 |Wi-Fi MAC|The device's Media Access Control address.|Windows, macOS, iOS/iPadOS, Android<br><br>**NOTE**: As of October 2021, Intune doesn't display Wi-Fi MAC addresses for newly enrolled personally owned work profile devices and devices managed with device administrator running Android 9 and later. |
 |Ethernet MAC|The primary Ethernet MAC address for the device. For macOS devices with no ethernet, the device reports the Wi-Fi MAC address.|macOS|
-|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android<br/><br/>ICCID isn't inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.|
+|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android BYOD, Android Enterprise Dedicated, Android Fully Managed <br/><br/>**Note**:Reporting for ICCID isn't supported for Android Enterprise corporate-owned work profile devices. For Android Enterprise fully managed and dedicated devices, reporting for ICCID is supported; however, certain SIM cards won't write the data and therefore the ICCID isn't reported in such cases.|
 |EID|The eSIM identifier, which is a unique identifier for the embedded SIM (eSIM) for cellular devices that have an eSIM.|iOS/iPadOS|
 |Wi-Fi IPv4 address|The device's IPv4 address.|Windows, Android Enterprise fully managed, dedicated and corp-owned work profiles.<br/><br/>**NOTE**: Any change to IPv4 or subnet ID may take up to 8 hours to reflect in Intune admin center from the time that network changes on device.|
 |Wi-Fi subnet ID|The device's subnet ID.|Android Enterprise fully managed, dedicated and corp-owned work profiles.<br/><br/>**NOTE**: Any change to IPv4 or subnet ID may take up to 8 hours to reflect in Intune admin center from the time that network changes on device.|

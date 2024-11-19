@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/12/2024
+ms.date: 12/02/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,7 +75,8 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
-## Week of November 11, 2024
+
+## Week of December 02, 2024
 
 ### Device security
 
@@ -86,6 +87,16 @@ The [Microsoft Tunnel readiness tool](../protect/microsoft-tunnel-prerequisites.
 When the mst-readiness tool runs, it now raises a non-blocking  warning if the audit package isn't installed. By default, Red Hat Enterprise Linux versions 7 and later install this package by default. Ubuntu versions of Linux currently require this optional package to be installed.
 
 For more information on *auditd* and how to install it on your Microsoft Tunnel server, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#linux-system-auditing).
+
+## Week of November 18, 2024
+
+### App management
+
+#### Microsoft Teams app protection on VisionOS devices (preview)<!-- 29913431 -->
+Microsoft Intune app protection policies (APP) are now supported on the Microsoft Teams app on VisionOS devices. To learn more about how to target policies to VisionOS devices, see [Managed app properties](../fundamentals/filters-device-properties.md#managed-app-properties) for more information about filters for managed app properties.
+
+Applies to:
+- Microsoft Teams for iOS on VisionOS devices
 
 ## Week of October 28, 2024
 
