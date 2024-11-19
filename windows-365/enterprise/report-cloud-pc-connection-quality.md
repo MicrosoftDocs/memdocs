@@ -51,6 +51,7 @@ The device list shows the individual Cloud PCs with the following columns:
 - **Client IP address**
 - **Protocol for most recent (or current) connection**
 - **UDP Utilization average over date range**
+- **Device type**: The type of Cloud PC based on the offering (Enterprise, Frontline dedicated, Frontline shared).
 
 Each row in the report gives links to the specific Cloud PC where you can find greater detail regarding the devices connection history and related performance.
 
