@@ -33,7 +33,7 @@ ms.collection:
 
 Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources. You can assign roles for your Cloud PCs by using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-When a user with the Subscription Owner or User Access Administrator role creates, edits, or retries an ANC, Windows 365 transparently assigns the required built-in roles the following resources (if tehy're not already assigned):
+When a user with the Subscription Owner or User Access Administrator role creates, edits, or retries an ANC, Windows 365 transparently assigns the required built-in roles the following resources (if they're not already assigned):
 
 - Azure Subscription
 - Resource group
@@ -170,8 +170,6 @@ To manually remove the existing roles and add the new roles, refer to the follow
 For more details about removing a role assignment from an Azure resource, see [Remove Azure role assignments](/azure/role-based-access-control/role-assignments-remove).
 
 ## Scope tags
-
-Windows 365 support for scope tags is in [public preview](../public-preview.md).
 
 For RBAC, roles are only part of the equation. While roles work well to define a set of permissions, scope tags help define visibility of your organization’s resources. Scope tags are most helpful when organizing your tenant to have users scoped to certain hierarchies, geographical regions, business units, and so on.
 
