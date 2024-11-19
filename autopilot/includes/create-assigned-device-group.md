@@ -61,35 +61,39 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
 
 1. In the **Windows PowerShell** command prompt window:
 
-   1. Install the **Microsoft.Graph.Authentication** module by entering the following command:
+    1. Install the **Microsoft.Graph.Authentication** module by entering the following command:
 
-        ```powershell
-        Install-Module Microsoft.Graph.Authentication
-        ```
+       ```powershell
+       Install-Module Microsoft.Graph.Authentication
+       ```
 
-        If prompted to do so, select **Yes** to agree to install from the **PSGallery** untrusted repository. For more information, see [Microsoft.Graph.Authentication](/powershell/module/microsoft.graph.authentication/) and [Set-PSRepository -InstallationPolicy](/powershell/module/powershellget/set-psrepository#-installationpolicy).
+       If prompted to do so, select **Yes** to agree to install from the **PSGallery** untrusted repository.
+
+       For more information, see [Microsoft.Graph.Authentication](/powershell/module/microsoft.graph.authentication/) and [Set-PSRepository -InstallationPolicy](/powershell/module/powershellget/set-psrepository#-installationpolicy).
     
     1. Install the **Microsoft.Graph.Applications** module by entering the following command:
 
-        ```powershell
-        Install-Module Microsoft.Graph.Applications
-        ```
+       ```powershell
+       Install-Module Microsoft.Graph.Applications
+       ```
 
-        If prompted to do so, select **Yes** to agree to install from the **PSGallery** untrusted repository. For more information, see [Microsoft.Graph.Applications](/powershell/module/microsoft.graph.applications/) and [Set-PSRepository -InstallationPolicy](/powershell/module/powershellget/set-psrepository#-installationpolicy).
+       If prompted to do so, select **Yes** to agree to install from the **PSGallery** untrusted repository.
 
-   1. Once the **Microsoft.Graph.Authentication** and **Microsoft.Graph.Applications** modules are installed, connect to Microsoft Entra ID by entering the following command:
+       For more information, see [Microsoft.Graph.Applications](/powershell/module/microsoft.graph.applications/) and [Set-PSRepository -InstallationPolicy](/powershell/module/powershellget/set-psrepository#-installationpolicy).
 
-        ```powershell
-        Connect-MgGraph
-        ```
+    1. Once the **Microsoft.Graph.Authentication** and **Microsoft.Graph.Applications** modules are installed, connect to Microsoft Entra ID by entering the following command:
 
-        For more information, see [Connect-MgGraph](/powershell/module/microsoft.graph.authentication/connect-mggraph).
+       ```powershell
+       Connect-MgGraph -Scopes "Application.ReadWrite.All"
+       ```
 
-   1. If not already authenticated to Microsoft Entra ID, the **Sign in to your account** window appears. Enter the credentials of a Microsoft Entra ID administrator that has permissions to add service principals.
+       For more information, see [Connect-MgGraph](/powershell/module/microsoft.graph.authentication/connect-mggraph).
 
-   1. If the **Permissions requested** window appears, select the **Consent on behalf of your organization** checkbox, and then select the **Accept** button.
+    1. If not already authenticated to Microsoft Entra ID, the **Sign in to your account** window appears. Enter the credentials of a Microsoft Entra ID administrator that has permissions to add service principals.
 
-   1. Once authenticated to Microsoft Entra ID and proper permissions are granted, add the **Intune Provisioning Client** service principal by entering the following command:
+    1. If the **Permissions requested** window appears, select the **Consent on behalf of your organization** checkbox, and then select the **Accept** button.
+
+    1. Once authenticated to Microsoft Entra ID and proper permissions are granted, add the **Intune Provisioning Client** service principal by entering the following command:
 
         ```powershell
         New-MgServicePrincipal -AppID f1346770-5b25-470b-88bd-d5744ab7952c
@@ -97,13 +101,26 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
 
         For more information, see [New-MgServicePrincipal -BodyParameter](/powershell/module/microsoft.graph.applications/new-mgserviceprincipal#-bodyparameter).
 
-       > [!NOTE]
-       >
-       > If the following message is displayed after running the `New-MgServicePrincipal -AppID f1346770-5b25-470b-88bd-d5744ab7952c` command, it means that the **Intune Provisioning Client service principal** has already been added:
-
-        > ```powershell
-        > New-MgServicePrincipal : The service principal cannot be created, updated, or restored because the service principal name 
-        > f1346770-5b25-470b-88bd-d5744ab7952c is already in use.
-        > Status: 409 (Conflict)
-        > ErrorCode: Request_MultipleObjectsWithSameKeyValue
-        > ```
+        > [!NOTE]
+        >
+        > - The following error message is displayed if the **Intune Provisioning Client service principal** already exists in the tenant:
+        >
+        >   ```powershell
+        >   New-MgServicePrincipal : The service principal cannot be created, updated, or restored because the service principal name 
+        >   f1346770-5b25-470b-88bd-d5744ab7952c is already in use.
+        >   Status: 409 (Conflict)
+        >   ErrorCode: Request_MultipleObjectsWithSameKeyValue
+        >   ```
+        >
+        > - The following error message is displayed if one of the following conditions is true:
+        > 
+        >     - The account used to sign with the `Connect-MgGraph` command doesn't have permissions to add a service principal to the tenant.
+        >     - The `-Scopes "Application.ReadWrite.All"` argument isn't added to the `Connect-MgGraph` command.
+        >     - The **Permissions requested** window isn't accepted.
+        >     - The **Consent on behalf of your organization** checkbox isn't selected in the **Permissions requested** window.
+        > 
+        >   ```powershell 
+        >   New-MgServicePrincipal : Insufficient privileges to complete the operation.
+        >   Status: 403 (Forbidden)
+        >   ErrorCode: Authorization_RequestDenied
+        >   ```
