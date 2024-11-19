@@ -114,7 +114,7 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
         >
         > - The following error message is displayed if one of the following conditions is true:
         >
-        >   - The account used to sign with the `Connect-MgGraph` command doesn't have permissions to add a service principal to the tenant.
+        >   - The account used to sign in with the `Connect-MgGraph` command doesn't have permissions to add a service principal to the tenant.
         >   - The `-Scopes "Application.ReadWrite.All"` argument isn't added to the `Connect-MgGraph` command.
         >   - The **Permissions requested** window isn't accepted.
         >   - The **Consent on behalf of your organization** checkbox isn't selected in the **Permissions requested** window.
