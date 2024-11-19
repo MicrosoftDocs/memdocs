@@ -56,7 +56,8 @@ This feature applies to:
    You have two options:  
    - **User channel**: Always select the user deployment channel in profiles with user certificates. This option stores certificates in the user keychain.     
    - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the system keychain.   
-**Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections.
+   
+- **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections.
 
 - **VPN server address**: Enter the IP address or fully qualified domain name of the VPN server that devices connect to. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
