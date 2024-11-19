@@ -41,6 +41,9 @@ This feature applies to:
 
 This article describes the settings you can configure.  
 
+## Verify deployment channel  
+We recommend that you check the deployment channel setting in existing wired network settings profiles when your linked authentication certificates are up for renewal. Under wired network settings, check the deployment channel value to ensure that the linked certificate is being stored in the proper keychain. Certificates in profiles you created prior to the introduction of the deployment channel setting will continue to be stored in the device keychain until you create a new profile and select the user deployment channel. For the latest information about the deployment channel setting, see [What's New in Microsoft Intune](../fundamentals/whats-new.md).  
+
 ## Before you begin
 
 - Create a [macOS wired network device configuration profile](wired-networks-configure.md).
