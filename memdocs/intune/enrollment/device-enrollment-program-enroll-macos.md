@@ -128,7 +128,10 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 1. Select an enrollment program token.  
 1. Select **Profiles** > **Create profile** > **macOS**.  
 
-    ![Create a profile screenshot.](./media/device-enrollment-program-enroll-macos/image04.png)  
+    ![Create a profile screenshot.](./media/device-enrollment-program-enroll-macos/image04.png)
+
+   > [!IMPORTANT]
+   > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business Manager or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple is not assigned an enrollment policy and someone turns it on to set it up, enrollment will fail. 
 
 1. For **Basics**, enter a name and description for the profile so that you can distinguish it from other enrollment profiles. These details aren't visible to device users.  
 
