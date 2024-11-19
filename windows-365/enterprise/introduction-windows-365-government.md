@@ -69,6 +69,7 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 - [HP Anyware for Windows 365](hp-anyware-set-up.md)
 - Bulk Troubleshoot action
 - RDP Shortpath for public networks via TURN
+- Windows 365 Link
 
 ## Next steps
 

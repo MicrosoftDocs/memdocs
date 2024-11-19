@@ -31,12 +31,14 @@ ms.collection:
 
 # Alerts in Windows 365
 
-The Windows 365 Alerts system notifies you when specific events occur in your Cloud PC environment, like connection, provisioning, or image upload failures. By default, these alerts appear in the Microsoft Intune admin center as pop-up notifications (you can also turn on email notifications). You can customize the built-in alert rules:
+The Windows 365 Alerts system notifies you when specific events occur in your Cloud PC environment, like connection, provisioning, or image upload failures. There are also alerts to notify you when you've reached or passed the maximum concurrency threshold for Windows 365 Frontline Cloud PCs. By default, alerts appear in the Microsoft Intune admin center as pop-up notifications (you can also turn on email notifications). You can customize the built-in alert rules:
 
 - Set conditions and thresholds for triggering alerts.
 - Define the severity of alerts.
 - Turn each alert rule on or off.
 - Configure each alert to notify you in the console and/or by email.
+
+If emails are turned on, when an alert rule is triggered, one email is sent to the designated email address. After the alert is resolved, if it's triggered again, anohter emila is sent to the designated address.
 
 ## Requirements
 
