@@ -105,15 +105,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device management
-
-### Store macOS certificates in user keychain<!-- 7824255 -->
-
-Soon you'll have the option to store macOS certificates in the user keychain. Currently, Microsoft Intune automatically stores user and device certificates in the *device* keychain. The enhancement will strengthen system security, and will improve the user experience by reducing certificate prompts.
-
-Applies to:
-
-- macOS
+<!-- ## Device management -->
 
 <!-- *********************************************** -->
 
