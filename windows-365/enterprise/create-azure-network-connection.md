@@ -71,7 +71,7 @@ When planning your ANC VNets with ExpressRoute as the on-premises connectivity m
 
     - To maintain a stable and performant connection, make sure the vNET is in the region closest to the Windows 365 users.
     - Make sure there are enough IP addresses in the vNET subnet to accommodate all required Cloud PCs. Also, consider future growth and [resizing](resize-cloud-pc.md) needs.
-    - Make sure the vNET has line of sight to a domain controller. This is required for initial provisioning and successful sign in for hybrid joined Cloud PCs.
+    - Make sure the vNET has line of sight to a domain controller. This line of sight is required for initial provisioning and successful sign in for hybrid joined Cloud PCs.
     - Make sure all [required endpoints](requirements-network.md) are allowed through the vNET and aren't blocked by any firewall, proxy, or Software Gateways.
 
 6. Select **Next**.
