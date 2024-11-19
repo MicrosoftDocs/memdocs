@@ -39,10 +39,7 @@ This feature applies to:
 
 These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise settings.
 
-This article describes the settings you can configure. 
-
-## Verify deployment channel  
-We recommend that you check the deployment channel setting in existing enterprise Wi-Fi profiles when your linked authentication certificates are up for renewal. Under the enterprise profiles settings, check the deployment channel value to ensure that the linked certificates, either SCEP or PKCS, are being stored in the proper keychain. Certificates in Wi-Fi profiles you created prior to the introduction of the deployment channel setting will continue to be stored in the device keychain until you create a new profile and select the user deployment channel. For the latest information about the deployment channel setting, see [What's New in Microsoft Intune](../fundamentals/whats-new.md).  
+This article describes the settings you can configure.  
 
 ## Before you begin
 
@@ -52,7 +49,7 @@ We recommend that you check the deployment channel setting in existing enterpris
 
 ## Basic profiles
 
-Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on devices. Typically, WPA/WPA2 is used on home networks or personal networks. You can also add a pre-shared key to authenticate the connection.
+Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on devices. Typically, WPA/WPA2 is used on home networks or personal networks. You can also add a preshared key to authenticate the connection.
 
 - **Wi-Fi type**: Select **Basic**.
 - **SSID**: This **service set identifier** (SSID) property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
@@ -75,11 +72,14 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
 
 Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate Wi-Fi connections. EAP is often used by enterprises, as you can use certificates to authenticate and secure connections, and configure more security options.
 
-- **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the authentication certificates are stored, so it's important to select the proper channel. It's not possible to edit the deployment channel after you deploy the profile. 
+- **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the authentication certificates are stored, so it's important to select the proper channel. It's not possible to edit the deployment channel after you deploy the profile. To do so, you must create a new profile.    
+
+  >[!NOTE]
+  > We recommend rechecking the deployment channel setting in existing profiles when the linked authentication certificates are up for renewal to ensure the intended channel is selected. If it isn't, create a new profile with the correct deployment channel.   
 
    You have two options:  
    - **User channel**: Always select the user deployment channel in profiles with user certificates. This option stores certificates in the user keychain.     
-   - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the device keychain.   
+   - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the system keychain.   
 - **Wi-Fi type**: Select **Enterprise**.
 - **SSID**: Short for **service set identifier**. This property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
 - **Connect automatically**: Select **Enable** to automatically connect to this network when the device is in range. Select **Disable** to prevent devices from automatically connecting.
@@ -100,7 +100,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
     - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
-    - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection. Choose the certificates that align with your deployment channel selection. If you selected the user channel, your certificate options are limited to user certificate profiles. If you selected the device channel, you have both user and device certificate profiles to choose from, but we recommend always selecting the certificate type that aligns with the selected channel. Storing user certificates in the device keychain increases security risks.       
+    - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection. Choose the certificates that align with your deployment channel selection. If you selected the user channel, your certificate options are limited to user certificate profiles. If you selected the device channel, you have both user and device certificate profiles to choose from. However, we recommend always selecting the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.       
 
     - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 

@@ -41,9 +41,6 @@ This feature applies to:
 
 This article describes the settings you can configure.  
 
-## Verify deployment channel  
-We recommend that you check the deployment channel setting in existing wired network settings profiles when your linked authentication certificates are up for renewal. Under wired network settings, check the deployment channel value to ensure that the linked certificate is being stored in the proper keychain. Certificates in profiles you created prior to the introduction of the deployment channel setting will continue to be stored in the device keychain until you create a new profile and select the user deployment channel. For the latest information about the deployment channel setting, see [What's New in Microsoft Intune](../fundamentals/whats-new.md).  
-
 ## Before you begin
 
 - Create a [macOS wired network device configuration profile](wired-networks-configure.md).
@@ -64,11 +61,14 @@ We recommend that you check the deployment channel setting in existing wired net
 
   Options with "active" in the title use interfaces that are actively working on the device. If there are no active interfaces, the next interface in service-order priority is configured. By default, **First active Ethernet** is selected, which is also the default setting configured by macOS.
 
-- **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the authentication certificates are stored, so it's important to select the proper channel. It's not possible to edit the deployment channel after you deploy the profile. 
+- **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the authentication certificates are stored, so it's important to select the proper channel. It's not possible to edit the deployment channel after you deploy the profile. To do so, you must create a new profile.      
+
+  >[!NOTE]
+  > We recommend rechecking the deployment channel setting in existing profiles when the linked authentication certificates are up for renewal to ensure the intended channel is selected. If it isn't, create a new profile with the correct deployment channel.  
 
    You have two options:  
    - **User channel**: Always select the user deployment channel in profiles with user certificates. This option stores certificates in the user keychain.     
-   - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the device keychain. 
+   - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the system keychain. 
 
 - **EAP type**: To authenticate secured wired connections, select the Extensible Authentication Protocol (EAP) type. Your options:
 
@@ -96,7 +96,7 @@ We recommend that you check the deployment channel setting in existing wired net
           - **Challenge Handshake Authentication Protocol (CHAP)**
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP Version 2 (MS-CHAP v2)**
-      - **Certificates**: Select an existing SCEP client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection. PKCS certificates aren't supported. Choose the certificate that aligns with your deployment channel selection. If you selected the user channel, your certificate options are limited to user certificate profiles. If you selected the device channel, you have both user and device certificate profiles to choose from, but we recommend always selecting the certificate type that aligns with the selected channel. Storing user certificates in the device keychain increases security risks.  
+      - **Certificates**: Select an existing SCEP client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection. PKCS certificates aren't supported. Choose the certificate that aligns with your deployment channel selection. If you selected the user channel, your certificate options are limited to user certificate profiles. If you selected the device channel, you have both user and device certificate profiles to choose from. However, we recommend always selecting the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.  
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
   - **LEAP**

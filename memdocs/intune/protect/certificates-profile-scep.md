@@ -124,6 +124,11 @@ For more information about the KDC's requirements and enforcement date for stron
 
 7. In **Configuration settings**, complete the following configurations:
 
+   - **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the linked certificates are stored, so it's important to select the proper channel. 
+   
+     Always select the user deployment channel in profiles with user certificates. The user channel stores certificates in the user keychain. Always select the device deployment channel in profiles with device certificates. The device channel stores certificates in the system keychain. 
+     
+     It's not possible to edit the deployment channel after you deploy the profile. You must create a new profile to select a different channel.
    - **Certificate type**:
 
      *(Applies to:  Android, Android Enterprise, Android (AOSP), iOS/iPadOS, macOS, Windows 8.1, and Windows 10/11)*
@@ -134,11 +139,13 @@ For more information about the KDC's requirements and enforcement date for stron
 
      - **Device**:  *Device* certificates can only contain device attributes in the subject and SAN of the certificate.
 
-       Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
+       Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.  
+
+       For macOS, if this profile is configured to use the device deployment channel, you can select **User** or **Device**. If the profile is configured to use the user deployment channel, you can select only **User**. 
 
      > [!NOTE]
      > Storage of certificates provisioned by SCEP:
-     > - *macOS* - Certificates you provision with SCEP are always placed in the system keychain (also called *system store* or *device keychain*) of the device.
+     > - *macOS* - Certificates you provision with SCEP are always placed in the system keychain (also called *system store* or *device keychain*) of the device, unless you select the user deployment channel. 
      >
      > - *Android* - Devices have both a *VPN and apps* certificate store, and a *WIFI* certificate store.  Intune always stores SCEP certificates in the VPN and apps store on a device. Use of the VPN and apps store makes the certificate available for use by any other app.  
      >
@@ -460,9 +467,6 @@ Consider the following before you continue:
 > - On iOS/iPadOS and macOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the device having multiple certificates delivered by the SCEP or PKCS certificate request.
 > - Certificates delivered by SCEP are each unique. Certificates delivered by PKCS are the same certificate, but appear different as each profile instance is represented by a separate line in the management profile.
 > - On iOS 13 and macOS 10.15, there are [additional security requirements that are documented by Apple](https://support.apple.com/HT210176) to take into consideration.  
-
-## Verify deployment channel   
-We recommend checking the deployment channel in existing SCEP profiles when they're up for renewal to ensure that any authentication certificates you're using are stored in the proper keychain. Always select the user channel in profiles when you're deploying user-targeted authentication certificates. And always select the device channel when you're deploying device-targeted authentication certificates. Certificates in profiles you created prior to the introduction of the deployment channel setting will continue to be stored in the device keychain until you create a new profile and select the user deployment channel. For the latest information about the deployment channel setting, see [What's New in Microsoft Intune](../fundamentals/whats-new.md). 
 
 ## Next steps
 

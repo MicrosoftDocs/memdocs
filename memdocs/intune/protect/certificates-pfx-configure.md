@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/11/2024
+ms.date: 11/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -303,17 +303,18 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
    
    |Setting     | Platform     | Details   |
    |------------|------------|------------|
-   |**Renewal threshold (%)**        |<ul><li>All         |Recommended is 20%  |
-   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option might be set to one year. <br><br> Use a validity period of five days or up to 24 months. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
-   |**Key storage provider (KSP)**   |<ul><li>Windows 10/11  |For Windows, select where to store the keys on the device. |
-   |**Certification authority**      |<ul><li>All         |Displays the internal fully qualified domain name (FQDN) of your Enterprise CA.  |
-   |**Certification authority name** |<ul><li>All         |Lists the name of your Enterprise CA, such as "Contoso Certification Authority." |
-   |**Certificate template name**    |<ul><li>All         |Lists the name of your certificate template. |
-   |**Certificate type**             |<ul><li>Android Enterprise (*Corporate-Owned and Personally-Owned Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10/11 |Select a type: <ul><li> **User** certificates can contain both user and device attributes in the subject and subject alternative name (SAN) of the certificate. </li><li>**Device** certificates can only contain device attributes in the subject and SAN of the certificate. Use Device for scenarios such as user-less devices, like kiosks or other shared devices.  <br><br> This selection affects the Subject name format. |
-   |**Subject name format**          |<ul><li>All         |For details on how to configure the subject name format, see [Subject name format](#subject-name-format) later in this article.  <br><br>For the following platforms, the Subject name format is determined by the certificate type: <ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10/11 </li></ul>  <p>  |
-   |**Subject alternative name**     |<ul><li>All         |For *Attribute*, select **User principal name (UPN)** unless otherwise required, configure a corresponding *Value*, and then select **Add**. <br><br> You can use variables or static text for the SAN of both certificate types. Use of a variable isn't required.<br><br>For more information, see [Subject name format](#subject-name-format) later in this article.|
+   |**Deployment channel**|macOS|Select how you want to deploy the profile. This setting also determines the keychain where the linked certificates are stored, so it's important to select the proper channel. <br><br/>Always select the user deployment channel in profiles with user certificates. The user channel stores certificates in the user keychain. Always select the device deployment channel in profiles with device certificates. The device channel stores certificates in the system keychain. <br><br/> It's not possible to edit the deployment channel after you deploy the profile. You must create a new profile to select a different channel.
+   |**Renewal threshold (%)**        |All         |Recommended is 20%  |
+   |**Certificate validity period**  |All         |If you didn't change the certificate template, this option might be set to one year. <br><br> Use a validity period of five days or up to 24 months. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
+   |**Key storage provider (KSP)**   |Windows 10/11  |For Windows, select where to store the keys on the device. |
+   |**Certification authority**      |All         |Displays the internal fully qualified domain name (FQDN) of your Enterprise CA.  |
+   |**Certification authority name** |All         |Lists the name of your Enterprise CA, such as "Contoso Certification Authority." |
+   |**Certificate template name**    |All         |Lists the name of your certificate template. |
+   |**Certificate type**             |<ul><li>Android Enterprise (*Corporate-Owned and Personally-Owned Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10/11 |Select a type: <ul><li> **User** certificates can contain both user and device attributes in the subject and subject alternative name (SAN) of the certificate. </li><li>**Device** certificates can only contain device attributes in the subject and SAN of the certificate. Use Device for scenarios such as user-less devices, like kiosks or other shared devices.  <br><br> This selection affects the Subject name format. <br><br/>For macOS, if this profile is configured to use the device deployment channel, you can select **User** or **Device**. If the profile is configured to use the user deployment channel, you can select only **User**. |
+   |**Subject name format**          |All         |For details on how to configure the subject name format, see [Subject name format](#subject-name-format) later in this article.  <br><br>For the following platforms, the Subject name format is determined by the certificate type: <ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10/11 </li></ul>  <p>  |
+   |**Subject alternative name**     |All         |For *Attribute*, select **User principal name (UPN)** unless otherwise required, configure a corresponding *Value*, and then select **Add**. <br><br> You can use variables or static text for the SAN of both certificate types. Use of a variable isn't required.<br><br>For more information, see [Subject name format](#subject-name-format) later in this article.|
    |**Extended key usage**           |<ul><li> Android device administrator </li><li>Android Enterprise (*Device Owner*, *Corporate-Owned and Personally-Owned Work Profile*) </li><li>Windows 10/11 |Certificates usually require *Client Authentication* so that the user or device can authenticate to a server. |
-   |**Allow all apps access to private key** |<ul><li>macOS  |Set to **Enable** to give apps that are configured for the associated mac device access to the PKCS certificate's private key. <br><br> For more information on this setting, see *AllowAllAppsAccess* the Certificate Payload section of [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) in the Apple developer documentation. |
+   |**Allow all apps access to private key** |macOS  |Set to **Enable** to give apps that are configured for the associated mac device access to the PKCS certificate's private key. <br><br> For more information on this setting, see *AllowAllAppsAccess* the Certificate Payload section of [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) in the Apple developer documentation. |
    |**Root Certificate**             |<ul><li>Android device administrator </li><li>Android Enterprise (*Device Owner*, *Corporate-Owned and Personally-Owned Work Profile*) |Select a root CA certificate profile that was previously assigned. |
 
 8. This step applies only to **Android Enterprise** devices profiles for **Fully Managed, Dedicated, and Corporate-Owned work Profile**.  
@@ -416,10 +417,7 @@ Platforms:
   >
   > - When you specify a variable, enclose the variable name in curly brackets { } as seen in the example, to avoid an error.
   > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
-  > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
-
-## Verify deployment channel   
-We recommend that you check the deployment channel in existing PKCS profiles when your linked authentication certificates are up for renewal. Always select the user channel in profiles when you're deploying user-targeted authentication certificates. And always select the device channel when you're deploying device-targeted authentication certificates. Certificates in profiles you created prior to the introduction of the deployment channel setting will continue to be stored in the device keychain until you create a new profile and select the user deployment channel. For the latest information about the deployment channel setting, see [What's New in Microsoft Intune](../fundamentals/whats-new.md).  
+  > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.  
 
 ## Next steps
 
