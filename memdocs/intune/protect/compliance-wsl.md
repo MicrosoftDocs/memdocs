@@ -6,7 +6,7 @@ description: Evaluate WSL attributes on a host device for compliance.
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: dougeby 
 ms.date: 11/19/2024 
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -47,24 +47,24 @@ To create your compliance policy with WSL settings, you must meet these requirem
 
 - The [Intune WSL plugin](https://go.microsoft.com/fwlink/?linkid=2296896) must be installed for compliance evaluation.  
   
-- The Microsoft Intune management extension must be installed on the target device. Make sure devices meet one of the following conditions so that the management extension can install:    
+- The Microsoft Intune management extension must be installed on the target device. Make sure devices meet one of the following conditions so that the management extension can install:
   
-	- Assign a PowerShell script or a proactive remediation to the user or device.  
-	- Deploy a Win32 app or Microsoft Store app to the user or device.   
-	- Assign a custom compliance policy to the user or device.  
-
+   - Assign a PowerShell script or a proactive remediation to the user or device.  
+   - Deploy a Win32 app or Microsoft Store app to the user or device.
+   - Assign a custom compliance policy to the user or device.
 
 ## Before you begin
+
 Unassign and remove existing custom compliance policies for WSL. Then review the [limitations](#limitations) with WSL settings in compliance policies so that you know what to expect.  
 
-## Add Intune WSL plugin as a Win32 app   
+## Add Intune WSL plugin as a Win32 app
 
 Create a Win32 app policy for the [Intune WSL plugin](https://github.com/microsoft/shell-intune-samples/blame/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi), and assign it to the target Microsoft Entra group.  
 
-1. Use the [Microsoft Win32 Content Prep Tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool) to convert the Intune WSL plugin to the *.intunewin* format. For more information, see [Convert the Win32 app content](../apps/apps-win32-prepare.md#convert-the-win32-app-content). 
-   
-2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least an Intune administrator.   
-   
+1. Use the [Microsoft Win32 Content Prep Tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool) to convert the Intune WSL plugin to the *.intunewin* format. For more information, see [Convert the Win32 app content](../apps/apps-win32-prepare.md#convert-the-win32-app-content).
+
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least an Intune administrator.
+
 3. Go to **Apps** > **All apps** > **Add**.  
 
 4. For **App type**, scroll down to **Other**, and then select **Windows app (Win32)**.  

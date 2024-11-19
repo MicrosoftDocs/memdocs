@@ -332,7 +332,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **[Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)** is a generative-AI security analysis tool. It accesses your Intune data and can help you manage your policies and settings, understand your security posture, and troubleshoot device issues.  
 
-  Copilot in Intune is licensed through Microsoft Copilot for Security. For more information, go to [Get started with Microsoft Copilot for Security](/copilot/security/get-started-security-copilot).
+  Copilot in Intune is licensed through Microsoft Security Copilot. For more information, go to [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 
 - **[Intune Suite](intune-add-ons.md)** provides advanced endpoint management and security features, like remote help, Microsoft Cloud PKI, Endpoint Privilege Management, and more. The Intune Suite is available as a separate license.
 

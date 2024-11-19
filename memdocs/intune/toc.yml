@@ -187,8 +187,9 @@ items:
       href: ./copilot/copilot-devices.md
     - name: FAQ
       href: ./copilot/copilot-intune-faq.md
-    - name: Intune plugin in Copilot for Security
+    - name: Intune plugin in Security Copilot
       href: ./copilot/security-copilot.md
+
   - name: Endpoint analytics
     items:
     - name: Overview
