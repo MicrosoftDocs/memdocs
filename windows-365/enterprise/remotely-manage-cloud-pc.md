@@ -31,7 +31,7 @@ ms.collection:
 
 # Remotely manage Windows 365 devices
 
-You can remotely manage Cloud PCs in Intune just like any other managed device. For more information, see [Remotely run device actions with Intune](/mem/intune/remote-actions/).
+You can remotely manage Cloud PCs in Intune just like any other managed device. For more information, see [Use remote actions to manage devices using Intune](/mem/intune/remote-actions/device-management).
 
 Cloud PCs support the following remote management actions:
 
@@ -57,9 +57,15 @@ Cloud PCs support the following remote management actions:
 
 You can run remote actions for up to 5,000 Cloud PCs at a time. For more information about bulk actions, see [Use bulk device actions](/mem/intune/remote-actions/bulk-device-actions).
 
+Within the Intune portal, you can get to the bulk actions tab by going to **Devices**> **All devices** > **Bulk device actions**.  
+
 ## Windows 365 Frontline Cloud PCs
 
-Frontline Cloud PCs support remote actions like Enterprise Cloud PCs. One difference is that a Frontline Cloud PC power state is determined by the end user. When a Frontline Cloud PC is on, remote actions are started immediately. If a Frontline Cloud PC is powered off, remote actions start as soon as the Cloud PC is powered on. When a Cloud PC is powered on, it uses a license that others can't use. When the Cloud PC is powered off, the license is freed up so others can use it.
+Frontline Cloud PCs support remote actions like Enterprise Cloud PCs.
+
+### End user's power state
+
+One difference is that a Frontline Cloud PC power state is determined by the end user. When a Frontline Cloud PC is on, remote actions are started immediately. If a Frontline Cloud PC is powered off, remote actions start as soon as the Cloud PC is powered on. When a Cloud PC is powered on, it uses a license that others can't use. When the Cloud PC is powered off, the license is freed up so others can use it.
 
 You can view the power state for Frontline Cloud PCs in the Intune portal on the devices **Properties** page.
 
@@ -75,7 +81,9 @@ You can also power on and power off Frontline Cloud PCs in bulk to help with:
 - Make sure Cloud PCs are on for an incoming shift.
 - Manage concurrency limits.
 
-Within the Intune portal, you can get to the bulk actions tab by going to **Devices**> **All devices** > **Bulk device actions**.  
+### Bulk reprovision Frontline Cloud PCs in shared mode
+
+[!INCLUDE [Reprovision a Frontline shared Cloud PC](../includes/reprovision-frontline-shared-cloud-pc.md)]
 
 <!-- ########################## -->
 ## Next steps
