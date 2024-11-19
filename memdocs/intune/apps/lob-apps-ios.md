@@ -112,7 +112,7 @@ The app that you created now appears in the list of apps. From the list, you can
 The update to the line-of-business app will be installed automatically.
 
 > [!NOTE]
-> For the Intune service to successfully deploy a new IPA file to the device, you must update the CFBundleVersion string in the Info.plist file in your IPA package. You are allowed to upgrade an app by increasing the value, or downgrade an app by decreasing the value, however you cannot upload a new version of CFBundleVersion if the new app is identical to the existing one.
+> For the Intune service to successfully deploy a new IPA file to the device, you must update the CFBundleVersion and CFBundleShortVersionString in the Info.plist file in your IPA package. You are allowed to upgrade an app by increasing the value, or downgrade an app by decreasing the value, however you cannot upload a new version of CFBundleVersion and CFBundleShortVersionString of the new app is identical to the existing one.
 
 For an iOS LOB app targeted with available intent, auto-update of the application will happen as long as the following conditions are met:
 
