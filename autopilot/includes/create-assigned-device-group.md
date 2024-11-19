@@ -70,7 +70,7 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
        If prompted to do so, select **Yes** to agree to install from the **PSGallery** untrusted repository.
 
        For more information, see [Microsoft.Graph.Authentication](/powershell/module/microsoft.graph.authentication/) and [Set-PSRepository -InstallationPolicy](/powershell/module/powershellget/set-psrepository#-installationpolicy).
-    
+
     1. Install the **Microsoft.Graph.Applications** module by entering the following command:
 
        ```powershell
@@ -113,13 +113,13 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
         >   ```
         >
         > - The following error message is displayed if one of the following conditions is true:
-        > 
-        >     - The account used to sign with the `Connect-MgGraph` command doesn't have permissions to add a service principal to the tenant.
-        >     - The `-Scopes "Application.ReadWrite.All"` argument isn't added to the `Connect-MgGraph` command.
-        >     - The **Permissions requested** window isn't accepted.
-        >     - The **Consent on behalf of your organization** checkbox isn't selected in the **Permissions requested** window.
-        > 
-        >   ```powershell 
+        >
+        >   - The account used to sign with the `Connect-MgGraph` command doesn't have permissions to add a service principal to the tenant.
+        >   - The `-Scopes "Application.ReadWrite.All"` argument isn't added to the `Connect-MgGraph` command.
+        >   - The **Permissions requested** window isn't accepted.
+        >   - The **Consent on behalf of your organization** checkbox isn't selected in the **Permissions requested** window.
+        >
+        >   ```powershell
         >   New-MgServicePrincipal : Insufficient privileges to complete the operation.
         >   Status: 403 (Forbidden)
         >   ErrorCode: Authorization_RequestDenied
