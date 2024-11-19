@@ -35,7 +35,7 @@ As part of [setting up your organization's environment to support Windows 365 Li
 
 ## Authentication process for Windows 365 Link devices
 
-1. When the user signs in on the Windows 365 Link interactive **Sign in** screen, their account is authentiConditional Accessted against the device registration service.
+1. When the user signs in on the Windows 365 Link interactive **Sign in** screen, their account is authenticated against the device registration service.
 2. Windows 365 Link silently authenticates against the other required cloud resources (like Microsoft Graph and the Windows 365 service by using single sign-on (SSO)).
 
 ## Create Conditional Access policies to synchronize sign in and connection authentication
