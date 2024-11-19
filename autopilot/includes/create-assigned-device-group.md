@@ -96,3 +96,14 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
         ```
 
         For more information, see [New-MgServicePrincipal -BodyParameter](/powershell/module/microsoft.graph.applications/new-mgserviceprincipal#-bodyparameter).
+
+       > [!NOTE]
+       >
+       > If the following message is displayed after running the `New-MgServicePrincipal -AppID f1346770-5b25-470b-88bd-d5744ab7952c` command, it means that the **Intune Provisioning Client service principal** has already been added:
+
+        > ```powershell
+        > New-MgServicePrincipal : The service principal cannot be created, updated, or restored because the service principal name 
+        > f1346770-5b25-470b-88bd-d5744ab7952c is already in use.
+        > Status: 409 (Conflict)
+        > ErrorCode: Request_MultipleObjectsWithSameKeyValue
+        > ```
