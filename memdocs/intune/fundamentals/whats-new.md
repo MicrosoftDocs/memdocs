@@ -152,6 +152,16 @@ The following settings have been deprecated by Apple and will be marked as depre
 
 ### Device management
 
+#### Store macOS certificates in user keychain<!-- 7824255 -->  
+
+A new *deployment channel* setting in Microsoft Intune enables you to store macOS authentication certificates in the user keychain. This enhancement strengthens system security and improves the user experience by reducing certificate prompts. Prior to this change, Microsoft Intune automatically stored user and device certificates in the system keychain. The deployment channel setting is available in SCEP and PKCS certificate profiles for macOS, and in VPN, Wi-Fi, and wired network settings configuration profiles for macOS. For more information about the profiles and their new setting, see:  
+
+- [Add VPN settings on macOS devices in Microsoft Intune](../configuration/vpn-settings-macos.md)   
+- [Add Wi-Fi settings for macOS devices in Microsoft Intune](../configuration/wi-fi-settings-macos.md)   
+- [Add wired network settings for macOS](../configuration/wired-network-settings-macos.md)  
+- [Configure and use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)  
+- [Create and assign SCEP certificate profiles in Intune](../protect/certificates-profile-scep.md) 
+
 #### Device Inventory for Windows<!-- 24853010 --> 
 
 Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
