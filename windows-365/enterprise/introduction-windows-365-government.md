@@ -70,6 +70,7 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 - Bulk Troubleshoot action
 - RDP Shortpath for public networks via TURN
 - Windows 365 Link
+- Configure client device redirection for Windows App on iOS/iPadOS/Android using Intune
 
 ## Next steps
 

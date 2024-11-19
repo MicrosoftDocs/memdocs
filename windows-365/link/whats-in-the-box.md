@@ -91,9 +91,9 @@ USB and Bluetooth support for:
 
 ## Software
 
-The Windows 365 Link comes pre-installed with the X operating system.
+The Windows 365 Link comes pre-installed with the Windows CPC operating system.
 
-Operating system updates occur automatically during off hours. To get these upadates, make sure the device is plugged in and powered on (in standby or sleep mode).
+Operating system updates occur automatically during off hours. To get these updates, make sure the device is plugged in and powered on (in standby or sleep mode).
 
 ## Wireless support
 
