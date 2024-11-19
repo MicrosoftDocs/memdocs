@@ -271,7 +271,7 @@ Users must close all dialogs before connecting to the Cloud PC.
 
 ### Users must wait for about 90 seconds after Reset
 
-When a user preforms the **Reset** action on a Frontline Cloud PC in shared mode, the **Connect** button is grayed out for around 90 seconds. During this time, users can't connect to another Frontline Cloud PC.
+When a user performs the **Reset** action on a Frontline Cloud PC in shared mode, the **Connect** button is grayed out for around 90 seconds. During this time, users can't connect to another Frontline Cloud PC.
 
 ### Users can select Connect while they're connected to a Frontline Cloud PC in shared mode
 
