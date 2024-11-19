@@ -71,7 +71,7 @@ To [configure SSO](../enterprise/configure-single-sign-on.md), use either of the
 
 After SSO is enabled, Windows 365 Link devices can be used to connect to those Cloud PCs. For more information, see [Configure single sign-on for Windows 365 using Microsoft Entra authentication](../enterprise/configure-single-sign-on.md).
 
-### Conditional access
+### Conditional Access
 
 If you're using Conditional Access to protect access to Cloud PC, make sure to include the SSO Cloud App resource in the target resources of those Conditional Access policies.
 
