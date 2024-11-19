@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 11/18/2024
+ms.date: 11/19/2024
 ms.localizationpriority: medium
 ---
 
@@ -87,10 +87,12 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
 
    1. If not already authenticated to Microsoft Entra ID, the **Sign in to your account** window appears. Enter the credentials of a Microsoft Entra ID administrator that has permissions to add service principals.
 
-   1. Once authenticated to Microsoft Entra ID, add the **Intune Provisioning Client** service principal by entering the following command:
+   1. If the **Permissions requested** window appears, select the **Consent on behalf of your organization** checkbox, and then select the **Accept** button.
+
+   1. Once authenticated to Microsoft Entra ID and proper permissions are granted, add the **Intune Provisioning Client** service principal by entering the following command:
 
         ```powershell
-        New-MgServicePrincipal -BodyParameter f1346770-5b25-470b-88bd-d5744ab7952c
+        New-MgServicePrincipal -AppID f1346770-5b25-470b-88bd-d5744ab7952c
         ```
 
         For more information, see [New-MgServicePrincipal -BodyParameter](/powershell/module/microsoft.graph.applications/new-mgserviceprincipal#-bodyparameter).
