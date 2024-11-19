@@ -60,7 +60,7 @@ This feature applies to:
 When you configure the profile, enter the following settings:
 
 - **Configuration profile name**: Enter a name for the policy. This name is shown on the device, and in the Intune status in the Intune admin center.
-- **Deployment channel**: Select the channel you want to use to deploy your configuration profile. If you send the profile to the wrong channel, deployment can fail. After you select a channel and save the profile, the channel can't be changed. To select a different channel, create a new profile. We don't recommend placing SCEP and PKCS user certificates in the device channel due to increased security risks.  
+- **Deployment channel**: Select the channel you want to use to deploy your configuration profile. If you send the profile to the wrong channel, deployment can fail. After you select a channel and save the profile, the channel can't be changed. To select a different channel, create a new profile.  
 
   User-targeted payloads don't apply to devices enrolled without user affinity. For more information on whether a payload can be used for a device configuration profile or a user configuration profile, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's developer website).
 
