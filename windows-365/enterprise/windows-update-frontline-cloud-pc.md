@@ -31,7 +31,7 @@ ms.collection:
 
 # Configure Windows Update for Windows 365 Frontline Cloud PCs
 
-Windows 365 Frontline Cloud PCs rely on active hours Windows Update policies to make sure that Cloud PCs don't reboot for Windows Update during active usage. The following table lists  recommended update configurations for Frontline Cloud PCs. Make sure to use the [Filter function](create-filter.md#create-a-filter-for-all-cloud-pcs) to target the policies only to your Frontline Cloud PCs.
+Windows 365 Frontline Cloud PCs rely on active hours Windows Update policies to make sure that Cloud PCs don't reboot for Windows Update during active usage. The following table lists  recommended update configurations for Frontline Cloud PCs. Make sure to use the [Filter function](create-filter.md#create-a-filter-for-all-cloud-pcs) or [create a dynamic device group](create-dynamic-device-group-all-cloudpcs.md) to target the policies only to your Frontline Cloud PCs.
 
 | Windows Update policy setting | Windows 365 Frontline recommendation |
 | --- | --- |
@@ -57,16 +57,16 @@ Windows 365 Frontline Cloud PCs rely on active hours Windows Update policies to 
 
 These settings are important to make sure that users aren't disrupted by a Windows Update during their work hours.
 
-## Automatic sync updates for Cloud PCs that haven't been turned on for seven days
+## Automatic sync updates for Frontline Cloud PCs in dedicated mode that haven't been connected for seven days
 
-The Windows 365 Service automatically powers on a Windows 365 Frontline Cloud PC if it hasn't been used and powered in the previous seven days. When the Windows 365 Frontline Cloud PC is turned on, the Windows 365 Service:
+The Windows 365 Service automatically powers on a Windows 365 Frontline Cloud PC in dedicated mode if it hasn't been used and powered in the previous seven days. When the Windows 365 Frontline Cloud PC is turned on, the Windows 365 Service:
 
 - Syncs the Cloud PC with the Windows Update service.
 - Performs the Windows Update process honoring the Windows Update policy configurations set in Intune.
 - Keeps the Cloud PC powered on for two hours to make sure that the Windows Update installation can complete.
-- Checks for any pending reboots. If there are, the Cloud PC automatically reboots to complete any Windows Update before turning off.
+- Checks for any pending reboots. If there are, the Cloud PC automatically reboots to complete any Windows Update before turning off the Cloud PC.
 
-This process lets the user seamlessly start using the Windows 365 Frontline Cloud PC the next time they sign in.
+This process lets the user seamlessly start using the Cloud PC the next time they sign in.
 
 <!-- ########################## --> 
 ## Next steps

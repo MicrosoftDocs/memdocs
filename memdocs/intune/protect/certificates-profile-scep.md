@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/15/2024
+ms.date: 11/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,7 +15,7 @@ ms.subservice: protect
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: sheetg
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -124,6 +124,11 @@ For more information about the KDC's requirements and enforcement date for stron
 
 7. In **Configuration settings**, complete the following configurations:
 
+   - **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the linked certificates are stored, so it's important to select the proper channel. 
+   
+     Always select the user deployment channel in profiles with user certificates. The user channel stores certificates in the user keychain. Always select the device deployment channel in profiles with device certificates. The device channel stores certificates in the system keychain. 
+     
+     It's not possible to edit the deployment channel after you deploy the profile. You must create a new profile to select a different channel.
    - **Certificate type**:
 
      *(Applies to:  Android, Android Enterprise, Android (AOSP), iOS/iPadOS, macOS, Windows 8.1, and Windows 10/11)*
@@ -134,11 +139,13 @@ For more information about the KDC's requirements and enforcement date for stron
 
      - **Device**:  *Device* certificates can only contain device attributes in the subject and SAN of the certificate.
 
-       Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
+       Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.  
+
+       For macOS, if this profile is configured to use the device deployment channel, you can select **User** or **Device**. If the profile is configured to use the user deployment channel, you can select only **User**. 
 
      > [!NOTE]
      > Storage of certificates provisioned by SCEP:
-     > - *macOS* - Certificates you provision with SCEP are always placed in the system keychain (System store) of the device.
+     > - *macOS* - Certificates you provision with SCEP are always placed in the system keychain (also called *system store* or *device keychain*) of the device, unless you select the user deployment channel. 
      >
      > - *Android* - Devices have both a *VPN and apps* certificate store, and a *WIFI* certificate store.  Intune always stores SCEP certificates in the VPN and apps store on a device. Use of the VPN and apps store makes the certificate available for use by any other app.  
      >

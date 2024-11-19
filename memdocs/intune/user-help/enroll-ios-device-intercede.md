@@ -69,7 +69,8 @@ Derived credentials are an implementation of the National Institute of Standards
 1. Open the Company Portal app for iOS/iPadOS on your mobile device and sign in with your work account.  
 2. Write down the code that appears on screen.  
 
-    ![Example image of Company Portal app with onscreen message and code.](./media/copy-code-intercede.png)  
+    ![Example image of Company Portal app with onscreen message and code.](./media/enroll-ios-device-intercede/copy-code-intercede.png)  
+
 1. Switch to your smart card-enabled device and go to https://microsoft.com/devicelogin. 
 
 1. Enter the code you previously wrote down.
@@ -79,24 +80,24 @@ Derived credentials are an implementation of the National Institute of Standards
 3. Return to the Company Portal app on your mobile device and follow the onscreen instructions to enroll your device.  
 4. After enrollment is complete, Company Portal will notify you to set up your smart card. Tap the notification. If you don't get a notification, check your email.   
 
-    ![Example screenshot of the Company Portal push notification on device home screen.](./media/action-required-in-app-intercede.png)  
+    ![Example screenshot of the Company Portal push notification on device home screen.](./media/enroll-ios-device-intercede/action-required-in-app-intercede.png)  
 
 5. On the **Setup mobile smart card access** screen:  
-    a. Tap the link to your organization's setup instructions. If your organization doesn't provide additional instructions,you'll be sent to this article.  
+    a. Tap the link to your organization's setup instructions. If your organization doesn't provide additional instructions, you are sent to this article.  
     b. Tap **Begin**.  
 
-    ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/smart-card-info-intercede.png)  
+    ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/enroll-ios-device-intercede/smart-card-info-intercede.png)  
 
 6. Switch to your smart card-enabled device or self-service kiosk and open the MyID app. Sign in with your work credentials.  
 7. Select the option to request your ID. 
 8. When asked what profile you want to use, select the option to activate with a mobile credential. A QR code appears.  
 9. Return to your mobile device. On the Company Portal > **Get QR code** screen, tap **Continue**.  
 
-    ![Example screenshot of the Company Portal Get QR code screen.](./media/get-qr-code-intercede.png) 
+    ![Example screenshot of the Company Portal Get QR code screen.](./media/enroll-ios-device-intercede/get-qr-code-intercede.png) 
  
 10. Tap **Use Camera** > **OK**.  
 
-    ![Example screenshot of a Company Portal prompt, asking permission to allow camera access.](./media/allow-cp-camera-access-intercede.png)  
+    ![Example screenshot of a Company Portal prompt, asking permission to allow camera access.](./media/enroll-ios-device-intercede/allow-cp-camera-access-intercede.png)  
 
 11. Scan the image of the QR code that's on your smart card-enabled device. 
 12. Wait for Company Portal to finish setting up your device.  

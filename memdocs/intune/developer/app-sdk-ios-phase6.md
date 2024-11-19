@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/30/2024
+ms.date: 11/18/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -161,9 +161,10 @@ guard let authorityURL = URL(string: kAuthority) else {
         self.applicationContext = try MSALPublicClientApplication(configuration: msalConfiguration)
 
 ```
-To fetch the Microsoft Entra object ID for the accountId parameter of the MAM SDK compliance remediation APIs you need to do the following:
+
+To fetch the Microsoft Entra object ID for the accountId parameter of the MAM SDK compliance remediation APIs, you need to do the following steps:
 - First get the homeAccountId from userInfo[MSALHomeAccountIdKey] within MSALError object sent back by MSAL when it reports ERROR_SERVER_PROTECTION_POLICY_REQUIRED to the app.
-- This homeAccountId will be in the format ObjectId.TenantId. Extract the ObjectId value by splitting the string on the '.' and then use that value for the accountId parameter in remediation API remediateComplianceForAccountId.
+- This homeAccountId is in the format ObjectId.TenantId. Extract the ObjectId value by splitting the string on the '.' and then use that value for the accountId parameter in remediation API remediateComplianceForAccountId.
 
 ### Exit criteria
 

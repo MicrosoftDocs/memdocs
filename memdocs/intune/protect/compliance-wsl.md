@@ -6,8 +6,8 @@ description: Evaluate WSL attributes on a host device for compliance.
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 5/29/2024 
+manager: dougeby 
+ms.date: 11/19/2024 
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,128 +41,91 @@ Create a Microsoft Intune policy that checks the compliance of devices running W
 
 This article describes how to set up compliance checks for WSL.  
 
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).   
-
 ## Requirements   
 
-These resources are required to create your custom compliance script:   
+To create your compliance policy with WSL settings, you must meet these requirements:  
 
-- [Intune WSL plug-in](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi): Use the example Powershell script to get the installation package file for the Intune WSL plug-in.    
+- The [Intune WSL plugin](https://go.microsoft.com/fwlink/?linkid=2296896) must be installed for compliance evaluation.  
+  
+- The Microsoft Intune management extension must be installed on the target device. Make sure devices meet one of the following conditions so that the management extension can install:
+  
+   - Assign a PowerShell script or a proactive remediation to the user or device.  
+   - Deploy a Win32 app or Microsoft Store app to the user or device.
+   - Assign a custom compliance policy to the user or device.
 
-- [Custom compliance script](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/WSL%20Management%20Example/WSLDistroVersionCompliance.ps1): The example PowerShell script calculates compliance against WSL distros based on Distro and Distro Version.  
+## Before you begin
 
-- [JSON for validation](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/WSL%20Management%20Example/WSLDetectionRule.json): Use the example JSON to define WSL detection rules.  
+Unassign and remove existing custom compliance policies for WSL. Then review the [limitations](#limitations) with WSL settings in compliance policies so that you know what to expect.  
 
-## Step 1: Install Intune WSL plug-in    
+## Add Intune WSL plugin as a Win32 app
 
-Use the Intune WSL plug-in resource to install the Intune WSL plug-in on the target machine.   
+Create a Win32 app policy for the [Intune WSL plugin](https://github.com/microsoft/shell-intune-samples/blame/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi), and assign it to the target Microsoft Entra group.  
 
-## Step 2: Add policy for line-of-business app 
+1. Use the [Microsoft Win32 Content Prep Tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool) to convert the Intune WSL plugin to the *.intunewin* format. For more information, see [Convert the Win32 app content](../apps/apps-win32-prepare.md#convert-the-win32-app-content).
 
-Create an app policy for the Intune WSL plug-in. The Intune WSL plug-in is considered a Windows line-of-business app. 
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least an Intune administrator.
 
-1. In the Microsoft Intune admin center, go to **Apps** > **Windows**.  
+3. Go to **Apps** > **All apps** > **Add**.  
 
-2. Enter app information:  
-   - **Select file**: Select this option to upload the installation package file for the Intune WSL plug-in.  
+4. For **App type**, scroll down to **Other**, and then select **Windows app (Win32)**.  
+
+5. Choose **Select**. The **Add app** steps appear.  
+
+6. Choose **Select app package file**.
+
+7. Select the **Folder** button and browse your files for the app package file. Upload the Intune WSL plugin installation file with the *.intunewin* extension.  
+
+8. Select **OK** to continue.  
+
+9. Enter the following app information:  
+   - **Select file**: The app package file you selected in the previous step appears here. Select the file to upload a different installation package file for the Intune WSL plugin.   
    - **Name**: Enter **Intune WSL Plugin**.  
-   - **Description**: Enter a description for the app. This setting is optional but recommended. 
+   - **Description**: Select **Edit Description** to enter a description for the app. For example, you can describe its purpose or how your organization plans to use it. This setting is optional but recommended.  
    - **Publisher**: Enter **Microsoft Intune**.  
 
-3. Select **Next** to go to **Assignments**.  
+10. Select **Next** to go to **Program**.  
 
-4. Add Microsoft Entra users under **Required** to assign the policy.  
+11. Review the settings that are prepopulated so that you're familiar with how the app behaves. Leave the settings as-is.  
 
-5. Select **Next** to go to **Review + create**.  
+12. Select **Next** to go to **Requirements**.  
 
-6. Review the summary and then select **Create** to save the policy.  
+13. Enter the requirements devices must meet to install the app.  
 
-## Step 3: Set up custom script  
-In a command line, complete the following steps:  
+14. Select **Next** to go to **Detection rules**.
 
-1. Modify the following properties in lines 23-28 of the custom compliance script to match your organization's requirements:   
+15. Review the detection rules that are prepopulated. These rules are app-specific and detect the presence of the app. Leave the settings as-is.    
 
-   - Distros    
+16. Select **Next** to go to **Dependencies**. Leave the settings as-is.
 
-   - Minimum/maximum version    
+17. Select **Next** to go to **Supersedence**. Leave the settings as-is.
 
-   - Number of days since last check-in a device can remain compliant  
-  
-1.  In the JSON for validation resource, modify the following fields with your organization's custom values: 
+18. Select **Next** to go to **Assignments**.  
 
-    - **MoreInfoUrl** - Enter the URL where device users can go to learn more about how to meet compliance requirements.  
- 
-    - **RemediationStrings**:  Enter helpful information for the device user about the compliance requirement for WSL. 
-    
-      - **Language** - Example: `en-us`  
-      - **Title** - Example: `WSL distros not in compliance with company policy` 
-      - **Description** - Example: `Make sure only allowed distros and versions are registered in WSL.` 
+19. To assign the policy, add Microsoft Entra users under **Required**.   
 
-## Step 4: Deploy custom compliance policy  
- Deploy the custom compliance policy to targeted devices.  
+20. Select **Next** to go to **Review + create**.  
 
- 1. In the admin center, go to **Endpoint security** > **Device compliance**.  
- 
- 1. Go to **Scripts**.   
- 
- 1. Select **Add** > **Windows 10 and later**.  
- 
- 1. Enter the basic information for your policy, including name and description. 
- 
- 1. Select **Next** to go to **Settings**.    
- 
- 1. Copy and paste your custom compliance script into **Detection Script**. 
- 
- 1. Leave all other settings as is.  
+21. Review the summary, and then select **Create** to save the policy.  
 
-## Step 5: Create device compliance policy  
-Create a new device compliance policy for devices running Windows 10 and later. 
+> [!NOTE]
+> When you create a compliance policy with WSL settings, it automatically generates a read-only custom script. Editing the compliance policy also edits the associated custom script. These scripts appear in the Microsoft Intune admin center in **Devices** > **Compliance** > **Scripts** and are called *Built-in WSL Compliance-< compliance policy id >*.  
 
-1. In the admin center, go to **Endpoint security** > **Device compliance**. 
+## Limitations
 
-1. Go to **Policies**.    
+This section describes the known limitations with using the Intune WSL plugin for compliance evaluation. 
 
-1. Select **Create policy**. 
+- Compliance evaluation requires the installed Linux distributions in WSL to run at least one time before it works. If you install a Linux distribution with the `--no-launch` [command for WSL](/windows/wsl/basic-commands), the compliance evaluation won't work.   
 
-1. For platform, choose **Windows 10 and later**.  
+- Compliance evaluation might not function as expected on custom Linux images or Linux images without the `etc/os-release` directory. 
 
-1. Select **Create**. 
+- Even with the Intune WSL plugin, it's possible for malicious software or user actions to compromise the compliance evaluation mechanism. 
 
-1. Enter the basic information for your policy, including **Name** and **Description**. 
+## Next steps
 
-1. Select **Next** to go to **Compliance settings**.    
+- [Create a compliance policy](create-compliance-policy.md#create-the-policy), and set the **Platform** to **Windows 10 and later**. For more information about the compliance settings for Windows Subsystem for Linux, see [Windows Subsystem for Linux](compliance-policy-create-windows.md#windows-subsystem-for-linux).   
 
-1. Expand **Custom Compliance**: 
-  
-   1. Select the custom compliance script file as the discovery script.    
-  
-   1. Upload your JSON validation file. 
+- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).  
 
-1. Leave all other settings as is. Select **Next**. 
+- [Monitor your compliance policies](compliance-policy-monitor.md).  
 
-1. Review the summary of your policy, and then select **Create** to save it.  
-
-## Remediation  
-
-A quick way to get a device back to a compliant state is to unregister the noncompliant distro on the device. Use the following command to unregister a distro:     
-
-```PowerShell  
-
-wsl --unregister [DISTRONAME] 
-
-```  
-## Troubleshooting  
-
-**Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_MOD_NOT_FOUND**
-
-Restart the WSL service. In an elevated PowerShell window, run the following commands: 
- 
-```PowerShell  
- sc.exe stop wslservice 
-
- wsl.exe echo “test” 
-
-```   
-
-For WSL troubleshooting help, see [Windows Subsystem for Linux](/windows/wsl/troubleshooting).  
+- For troubleshooting help, see [Troubleshooting Windows Subsystem for Linux](/windows/wsl/troubleshooting).   
