@@ -86,6 +86,24 @@ If you only manage the user's physical device through Group Policy or you don't 
 
 **Possible solution**: If the issue persists, sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > select the cog icon next to the Cloud PC > **Restart**.
 
+### Connection Attempt timed out, Please try again or An error occurred while accessing this resource or Connection attempt timed out. Please try again.
+
+If you encounter these errors, make sure that you don't have a configured CSP or GPO that blocks remote desktop connections.
+
+**Intune CSP policy**
+
+Settings Catalog: Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Connections
+
+- *Allow users to connect remotely by using Remote Desktop Services*
+
+**GPO configuration path**
+
+Computer Configuration\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Connections 
+
+- *Allow users to connect remotely by using Remote Desktop Services*
+
+If you continue to experience issues, run the Inspect Connection option within  Windows App or the Troubleshoot option under the Manage my Cloud PC located under the three dots.
+
 ## Other connection error causes
 
 Some other possible causes for Cloud PC connection failures include:
