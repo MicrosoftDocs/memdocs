@@ -191,7 +191,7 @@ MAM-CA noncompliance	| Setup an App Protection CA policy, but don't assign a MAM
 
 ## Next Steps
 
-After you've completed all the [Exit Criteria] above, your app is now successfully integrated with App Protection CA support. The subsequent section, [Stage 7: Web-view features], may or may not be required, depending on your app's desired app protection policy support.
+After you've completed all the [Exit Criteria] above, your app is now successfully integrated with App Protection CA support. The subsequent section, [Stage 7: Web-view features] may or may not be required, depending on your app's desired app protection policy support.
 
 <!-- Stage 6 links -->
 [Exit Criteria]:#exit-criteria
