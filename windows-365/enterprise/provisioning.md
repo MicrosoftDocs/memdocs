@@ -109,6 +109,8 @@ When a Cloud PC is reprovisioned, the Cloud PC is deleted and recreated as a new
 
 The Cloud PC will be reprovisioned to the current configured settings in the provisioning policy that is targeting the user's Microsoft Entra group. If the image referenced by the policy has changed, or if any other changes to the policy have been made, the reprovisioned Cloud PC uses the new settings.
 
+[!INCLUDE [Reprovision a Frontline shared Cloud PC](../includes/reprovision-frontline-shared-cloud-pc.md)]
+
 For more information, see [Reprovision a Cloud PC](reprovision-cloud-pc.md).
 
 ## Users with multiple Windows 365 licenses
