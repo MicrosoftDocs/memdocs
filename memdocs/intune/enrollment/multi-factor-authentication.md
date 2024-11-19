@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/05/2024
+ms.date: 11/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -34,8 +34,7 @@ ms.collection:
 *Applies to*: 
  * Android
  * iOS/iPadOS
- * macOS
- * Windows 8.1
+ * macOS  
  * Windows 10
  * Windows 11  
 
@@ -70,10 +69,10 @@ Complete these steps to enable multi-factor authentication during Microsoft Intu
    4. To exclude users or groups from the policy, select the **Exclude** tab and add those users or groups like you did in the previous step.    
 1. Select the next category, **Target resources**. In this step, you select the resources that the policy applies to. In this case, we want the policy to apply to events where users or groups try to access the Microsoft Intune Enrollment app.   
    1. Under **Select what this policy applies to**, choose **Resources (formerly cloud apps)**.  
-   1. Select the **Include** tab.  
-   2. Choose **Select resources**. Additional options appear.     
-   3. Under **Select**, choose **None**. A list of resources open.  
-   4. Search for **Microsoft Intune Enrollment**. Then choose **Select** to add the app.  
+   2. Select the **Include** tab.  
+   3. Choose **Select resources**. Additional options appear.     
+   4. Under **Select**, choose **None**. A list of resources open.  
+   5. Search for **Microsoft Intune Enrollment**. Then choose **Select** to add the app.  
      
      For Apple automated device enrollments using Setup Assistant with modern authentication, you have two options to choose from. The following table describes the difference between the *Microsoft Intune* option and *Microsoft Intune Enrollment* option.      
     
