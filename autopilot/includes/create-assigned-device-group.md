@@ -57,7 +57,7 @@ Headings are driven by article context. -->
 
 If the **Intune Provisioning Client** service principal with AppId **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available when selecting the owner of the device group, then follow these steps to add the service principal:
 
-1. On a device where Microsoft Intune or Microsoft Entra ID is normally administered, open a **Windows PowerShell** command prompt.
+1. On a device where Microsoft Intune or Microsoft Entra ID is normally administered, open an elevated **Windows PowerShell** command prompt.
 
 1. In the **Windows PowerShell** command prompt window:
 
@@ -67,7 +67,10 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
        Install-Module Microsoft.Graph.Authentication
        ```
 
-       If prompted to do so, select **Yes** to agree to install from the **PSGallery** untrusted repository.
+       If prompted to do so:
+
+       - Agree to install **NuGet** by entering **Y** or **Yes**, or selecting the **Yes** button.
+       - Agree to install from the **PSGallery** untrusted repository by entering **Y** or **Yes**, or selecting the **Yes** button.
 
        For more information, see [Microsoft.Graph.Authentication](/powershell/module/microsoft.graph.authentication/) and [Set-PSRepository -InstallationPolicy](/powershell/module/powershellget/set-psrepository#-installationpolicy).
 
@@ -77,7 +80,7 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
        Install-Module Microsoft.Graph.Applications
        ```
 
-       If prompted to do so, select **Yes** to agree to install from the **PSGallery** untrusted repository.
+       If prompted to do so, agree to install from the **PSGallery** untrusted repository by entering **Y** or **Yes**, or selecting the **Yes** button.
 
        For more information, see [Microsoft.Graph.Applications](/powershell/module/microsoft.graph.applications/) and [Set-PSRepository -InstallationPolicy](/powershell/module/powershellget/set-psrepository#-installationpolicy).
 
