@@ -493,6 +493,9 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 | Manufacturer | String | Name of the network adapter's manufacturer. |
 | Type | String | Network medium in use. |
 
+> [!NOTE]
+> Inventory will only report up to 20 network adapters per device.
+
 ## Time
 
 **Description**: Provides basic time information.
