@@ -171,8 +171,6 @@ For more details about removing a role assignment from an Azure resource, see [R
 
 ## Scope tags
 
-Windows 365 support for scope tags is in [public preview](../public-preview.md).
-
 For RBAC, roles are only part of the equation. While roles work well to define a set of permissions, scope tags help define visibility of your organization’s resources. Scope tags are most helpful when organizing your tenant to have users scoped to certain hierarchies, geographical regions, business units, and so on.
 
 Use Intune to create and manage scope tags. For more information on how scope tags are created and managed, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).  
