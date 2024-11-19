@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/11/2024
+ms.date: 11/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,7 +38,7 @@ This feature applies to:
 - macOS  
 
 ## Verify deployment channel  
-We recommend checking the deployment channel in existing enterprise VPN profiles when they're up for renewal to ensure that any authentication certificates you're using, either SCEP or PKCS, are stored in the proper keychain. Certificates in VPN profiles you created prior to the introduction of the deployment channel setting will continue to be stored in the device keychain until you create a new profile and select the user deployment channel.   
+We recommend that you check the deployment channel setting in existing enterprise VPN profiles when your linked authentication certificates are up for renewal. Under the base VPN settings, check the deployment channel value to ensure that the linked certificates, either SCEP or PKCS, are being stored in the proper keychain. Certificates in VPN profiles you created prior to the introduction of the deployment channel setting will continue to be stored in the device keychain until you create a new profile and select the user deployment channel. For the latest information about the deployment channel setting, see [What's New in Microsoft Intune](../fundamentals/whats-new.md).  
 
 ## Before you begin
 
