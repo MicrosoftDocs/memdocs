@@ -74,7 +74,7 @@ To use PKCS certificates with Intune, you need the following infrastructure:
   - [Installation and configuration](certificate-connector-install.md)  
 
 ## Verify deployment channel   
-We recommend checking the deployment channel in existing PKCS profiles when they're up for renewal to ensure that any authentication certificates you're using are stored in the proper keychain. Always select the user channel in profiles when you're deploying user-targeted authentication certificates. And always select the device channel when you're deploying device-targeted authentication certificates. Certificates in profiles you created prior to the introduction of the deployment channel setting will continue to be stored in the device keychain until you create a new profile and select the user deployment channel. For the latest information about the deployment channel setting, see [What's New in Microsoft Intune](../fundamentals/whats-new.md).  
+We recommend that you check the deployment channel in existing PKCS profiles when your linked authentication certificates are up for renewal. Always select the user channel in profiles when you're deploying user-targeted authentication certificates. And always select the device channel when you're deploying device-targeted authentication certificates. Certificates in profiles you created prior to the introduction of the deployment channel setting will continue to be stored in the device keychain until you create a new profile and select the user deployment channel. For the latest information about the deployment channel setting, see [What's New in Microsoft Intune](../fundamentals/whats-new.md).  
 
 ## Update certificate connector: Strong mapping requirements for KB5014754    
 
