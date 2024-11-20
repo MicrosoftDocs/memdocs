@@ -28,10 +28,10 @@ To learn more, see [Use the settings catalog to configure settings on Windows, i
 
 ## [**Settings**](#tab/settings)
 
-| **Name** | **Value** | **Notes** | **CSP** |
-|---|---|---|---|
-| **:::no-loc text="Allow Location":::** | Force Location On. All Location Privacy settings are toggled on and grayed out. Users can't change the settings and all consent permissions will be automatically suppressed. | Required to invoke **Locate device** action on Windows devices in Intune. | [:::no-loc text="System/AllowLocation":::](/windows/client-management/mdm/policy-csp-system#allowlocation) |
-| **:::no-loc text="Let Apps Access Location":::** | Force allow. | Windows apps are allowed to access location. You can specify either a default setting for all apps or a per-app setting by specifying a Package Family Name. You can get the Package Family Name for an app by using the Get-AppPackage Windows PowerShell cmdlet. A per-app setting overrides the default setting. | [:::no-loc text="Privacy/LetAppsAccessLocation":::](/windows/client-management/mdm/policy-csp-privacy#letappsaccesslocation) |
+| **Category** | **Name** | **Value** | **Notes** | **CSP** |
+|---|---|---|---|---|
+| Privacy | **:::no-loc text="Let Apps Access Location":::** | Force allow. | Windows apps are allowed to access location. You can specify either a default setting for all apps or a per-app setting by specifying a Package Family Name. You can get the Package Family Name for an app by using the Get-AppPackage Windows PowerShell cmdlet. A per-app setting overrides the default setting. | [:::no-loc text="Privacy/LetAppsAccessLocation":::](/windows/client-management/mdm/policy-csp-privacy#letappsaccesslocation) |
+| System | **:::no-loc text="Allow Location":::** | Force Location On. All Location Privacy settings are toggled on and grayed out. Users can't change the settings and all consent permissions will be automatically suppressed. | Required to invoke **Locate device** action on Windows devices in Intune. | [:::no-loc text="System/AllowLocation":::](/windows/client-management/mdm/policy-csp-system#allowlocation) |
 
 ## [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
 
