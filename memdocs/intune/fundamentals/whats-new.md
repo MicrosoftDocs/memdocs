@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2024
+ms.date: 11/20/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
 ## Week of November 18, 2024 (Service release 2411)
 
 ### App management
@@ -86,7 +87,13 @@ Additional details are now provided for app installation reporting of Line of Bu
 Applies to:
 
 - Android Open Source Project (AOSP) devices
-  
+
+#### Microsoft Teams app protection on VisionOS devices (preview)<!-- 29913431 -->
+Microsoft Intune app protection policies (APP) are now supported on the Microsoft Teams app on VisionOS devices. To learn more about how to target policies to VisionOS devices, see [Managed app properties](../fundamentals/filters-device-properties.md#managed-app-properties) for more information about filters for managed app properties.
+
+Applies to:
+- Microsoft Teams for iOS on VisionOS devices
+
 ### Device configuration
 
 #### New settings available in the Windows settings catalog<!-- 30159445 -->
@@ -211,7 +218,6 @@ For more information, see:
 
 - [Device query in Microsoft Intune](../../analytics/device-query.md)
 - [Run remote actions on devices with Microsoft Intune](../remote-actions/device-management.md)
-
 
 ## Week of October 28, 2024
 

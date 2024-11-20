@@ -187,8 +187,9 @@ items:
       href: ./copilot/copilot-devices.md
     - name: FAQ
       href: ./copilot/copilot-intune-faq.md
-    - name: Intune plugin in Copilot for Security
+    - name: Intune plugin in Security Copilot
       href: ./copilot/security-copilot.md
+
   - name: Endpoint analytics
     items:
     - name: Overview
@@ -1168,6 +1169,9 @@ items:
           - name: Universal Print policy
             displayName: printers, gpo, admx, windows
             href: ./configuration/settings-catalog-printer-provisioning.md
+        - name: Properties catalog
+          displayName: windows
+          href: ./configuration/properties-catalog.md
         - name: Custom settings & scripts
           items:
           - name: Create custom profiles

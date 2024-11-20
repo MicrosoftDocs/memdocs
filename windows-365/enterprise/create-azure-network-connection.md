@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/30/2024
+ms.date: 11/19/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -55,8 +55,6 @@ To create an ANC, you must meet these requirements:
 
 When planning your ANC VNets with ExpressRoute as the on-premises connectivity model, refer to [Azure’s documentation on VM limits](/azure/expressroute/expressroute-about-virtual-network-gateways#performance-results). For the ExpressRoute Gateway SKU, make sure that you have the correct sized Gateway for the number of Cloud PCs planned within the VNet. Exceeding this limit could cause instability in your connectivity.
 
-*******
-
 ## Create an ANC
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Azure network connection** > **Create**.
@@ -69,7 +67,13 @@ When planning your ANC VNets with ExpressRoute as the on-premises connectivity m
     ![Screenshot of Name field](./media/create-azure-network-connection/connection-name.png)
 
 4. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy ANC](health-checks.md), you can't proceed.
-5. Select a **Virtual network** and **Subnet**.
+5. Select a **Virtual network** and **Subnet**. When selecting a vNET:
+
+    - To maintain a stable and performant connection, make sure the vNET is in the region closest to the Windows 365 users.
+    - Make sure there are enough IP addresses in the vNET subnet to accommodate all required Cloud PCs. Also, consider future growth and [resizing](resize-cloud-pc.md) needs.
+    - Make sure the vNET has line of sight to a domain controller. This line of sight is required for initial provisioning and successful sign in for hybrid joined Cloud PCs.
+    - Make sure all [required endpoints](requirements-network.md) are allowed through the vNET and aren't blocked by any firewall, proxy, or Software Gateways.
+
 6. Select **Next**.
 7. For hybrid Microsoft Entra join ANCs, on the **AD domain** page, provide the following information:
 
