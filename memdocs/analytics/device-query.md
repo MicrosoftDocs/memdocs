@@ -35,19 +35,22 @@ Device query allows you to quickly gain on-demand information about the state of
 
 ## Prerequisites
 
-To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
+- To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
 
-- The Intune Advanced Analytics Add-on
-- Microsoft Intune Suite
+  - The Intune Advanced Analytics Add-on
+  - Microsoft Intune Suite
 
-To use Device query on a device, the device must be enrolled in Endpoint Analytics. Learn [how to enroll a device in Endpoint Analytics](enroll-intune.md).
+- To use Device query on a device, the device must be enrolled in Endpoint Analytics. Learn [how to enroll a device in Endpoint Analytics](enroll-intune.md).
 
-You cannot opt out of cloud notifications (WNS)
+- You cannot opt out of cloud notifications (WNS)
 
-For a user to use Device query, you must assign the **Managed Devices** - **Query** permission to them.  
+- For a user to use Device query, you must assign the **Managed Devices** - **Query** permission to them.  
 
-To use Device query, devices must be Intune managed and corporate owned.
+- To use Device query, devices must be Intune managed and corporate owned.
 
+- To run remote actions, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the **Help Desk Operator** role. For more information on the different roles, go to [Role-based access control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md).
+
+- To receive the remote action, the device must be connected to the internet and powered on.
 
 ## Supported platforms
 
@@ -63,6 +66,39 @@ For more information on Kusto Query Language, see [Learn more about Kusto Query 
 
 > [!TIP]
 > You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune/copilot/copilot-intune-overview.md#query-with-copilot-in-device-query).
+
+## Remote device actions
+
+Use the Intune remote device actions in Single device query to help you manage your devices remotely. From the device query interface, you can now run device actions based on query results for faster and more efficient troubleshooting.
+
+### Available remote actions
+
+The available device actions depend on the device configuration. Not all actions are available for all devices.
+
+For a complete list of what can be done on your devices, in the Intune admin center, select Devices > All devices, and select a specific device. The available device actions are shown at the top. 
+
+The following list includes supported device actions:
+
+|Action|Description|
+|---|---|
+|[Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|Restores a device to its original settings and removes personal files, apps, and settings.|
+|[BitLocker key rotation](../intune/protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)|Changes the BitLocker recovery key for a device and uploads the new key to Intune.|
+|[Collect diagnostics](../intune/remote-actions/collect-diagnostics.md)|Collects diagnostic logs from a device and uploads the logs to Intune.|
+|[Delete](../intune/remote-actions/devices-wipe.md)|Removes a device from Intune management, any company data is removed, and the device is retired.|
+|[Fresh start](../intune/remote-actions/device-fresh-start.md)|Reinstalls the latest version of Windows on a device and removes apps that the manufacturer installed.|
+|[Full scan](../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)|Initiates a full scan of the device by Microsoft Defender Antivirus.|
+|[Locate device](../intune/remote-actions/device-locate.md)|Shows the approximate location of a device on a map.|
+|[Pause ConfigRefresh](../intune/remote-actions/pause-config-refresh.md)|Pause ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes.|
+|[Quick scan](../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)|Initiates a quick scan of the device by Microsoft Defender Antivirus.|
+|[Remote control with Team Viewer](../intune/remote-actions/teamviewer-support.md)|Allows you to remotely control a device using TeamViewer.|
+|[Rename device](../intune/remote-actions/device-rename.md)|Changes the device name in Intune.|
+|[Restart](../intune/remote-actions/device-rename.md)|Restarts a device.|
+|[Retire](../intune/remote-actions/devices-wipe.md#retire)|Removes company data and settings from a device, and leaves personal data intact.|
+|[Rotate Local admin password](../intune/protect/windows-laps-policy.md#manually-rotate-passwords)|Changes the local administrator password for a device and stores the password in Intune.|
+|[Synchronize device](../intune/remote-actions/device-sync.md)|Syncs a device with Intune to apply the latest policies and configurations.|
+|[Update Windows Defender Security Intelligence](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)|Updates the security intelligence files for Microsoft Defender Antivirus.|
+|[Windows 10 PIN reset](../intune/remote-actions/device-windows-pin-reset.md)|Resets the PIN of a device that uses Microsoft Entra authentication.|
+|[Wipe](../intune/remote-actions/devices-wipe.md#wipe)|This action restores a device to its factory settings and removes all data and settings.|
 
 ## Supported Operators  
 
