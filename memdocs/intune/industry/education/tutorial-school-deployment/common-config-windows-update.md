@@ -81,9 +81,9 @@ To learn more, see [Use the settings catalog to configure settings on Windows, i
 
 ### [**Settings**](#tab/settings)
 
-| **Name** | **Value** | **Notes** | **CSP** |
-| --- | --- | --- | --- |
-| **:::no-loc text="No update notifications during active hours":::** | Enabled |     | [:::no-loc text="NoUpdateNotificationsDuringActiveHours":::](/windows/client-management/mdm/policy-csp-update#noupdatenotificationsduringactivehours) |
+| **Category** | **Name** | **Value** | **Notes** | **CSP** |
+|---|---|---|---|---|
+| Windows Update For Business | **:::no-loc text="No update notifications during active hours":::** | Enabled |     | [:::no-loc text="NoUpdateNotificationsDuringActiveHours":::](/windows/client-management/mdm/policy-csp-update#noupdatenotificationsduringactivehours) |
 
 ### [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
 
