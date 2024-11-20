@@ -60,7 +60,7 @@ To learn more, see:
 This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - Windows - Update ring**.
 
 ```msgraph-interactive
-POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
+POST https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations
 Content-Type: application/json
 
 {"@odata.type":"#microsoft.graph.windowsUpdateForBusinessConfiguration","id":"","displayName":"_MSLearn_Example_CommonEDU - Windows - Update ring","description":"https://aka.ms/ManageEduDevices","roleScopeTagIds":["0"],"microsoftUpdateServiceAllowed":true,"driversExcluded":false,"qualityUpdatesDeferralPeriodInDays":7,"featureUpdatesDeferralPeriodInDays":30,"allowWindows11Upgrade":false,"qualityUpdatesPaused":false,"featureUpdatesPaused":false,"businessReadyUpdatesOnly":"userDefined","skipChecksBeforeRestart":false,"automaticUpdateMode":"windowsDefault","installationSchedule":null,"userPauseAccess":"disabled","userWindowsUpdateScanAccess":"disabled","updateNotificationLevel":"restartWarningsOnly","updateWeeks":null,"featureUpdatesRollbackWindowInDays":14,"deadlineForFeatureUpdatesInDays":7,"deadlineForQualityUpdatesInDays":3,"deadlineGracePeriodInDays":2,"postponeRebootUntilAfterDeadline":false,"engagedRestartDeadlineInDays":null,"engagedRestartSnoozeScheduleInDays":null,"engagedRestartTransitionScheduleInDays":null,"engagedRestartSnoozeScheduleForFeatureUpdatesInDays":null,"engagedRestartTransitionScheduleForFeatureUpdatesInDays":null,"autoRestartNotificationDismissal":"notConfigured","scheduleRestartWarningInHours":null,"scheduleImminentRestartWarningInMinutes":null}
