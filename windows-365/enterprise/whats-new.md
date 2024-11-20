@@ -255,7 +255,7 @@ Uni-directional clipboard support for Cloud PCs has moved out of preview and is 
 
 To help secure your Windows 365 environment, the inbound port 3389 is now closed by default.
 
-#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+#### Windows 365 support for AVC mixed mode when MMR isn't enabled (preview)<!--50205898-->
 
 Windows 365 now supports AVC mixed mode when MMR is not enabled.
 
