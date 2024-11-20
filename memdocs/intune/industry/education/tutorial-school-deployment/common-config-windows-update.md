@@ -7,6 +7,8 @@ author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
 no-loc: [Microsoft, Windows, Autopatch, Autopilot]
+ms.collection: 
+- graph-interactive
 ---
 
 # Windows Update
@@ -26,6 +28,8 @@ To learn more, see:
 - [YouTube: Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKvpS9zPyFt9fc9HgepQxaw9&index=1)
 - [YouTube: Windows Update for Business Fundamentals (Japanese)](https://youtu.be/o6_eGOyv-_g)
 
+### [**Settings**](#tab/settings)
+
 | **Update settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
 | **Microsoft product updates** | Allow | Don't set to Block. In order to revert the configuration, PowerShell commands have to be run on each device. | [:::no-loc text="AllowMUUpdateService":::](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice) |
@@ -39,7 +43,7 @@ To learn more, see:
 | **User experience settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
 | **Automatic update behavior** | Reset to default | Auto install and restart. Updates are downloaded automatically on non-metered networks and installed during "Automatic Maintenance" when the device isn't in use and isn't running on battery power.<br><br>**Note:** If Windows Update policy is configured via the settings catalog, the value should be **Auto install and restart**. | [:::no-loc text="AllowAutoUpdate":::](/windows/client-management/mdm/policy-csp-update#allowautoupdate) |
-| **Restart checks (EDU Restart)** | Allow | Must not be disabled in existing Windows Update Rings. This setting is no longer available when creating a new Windows Update Ring policy.  | [:::no-loc text="SetEDURestart":::](/windows/client-management/mdm/policy-csp-update#setedurestart) |
+| **Restart checks (EDU Restart)** | Allow | Must not be disabled in existing Windows Update Rings.<br><br>This setting is no longer available when creating a new Windows Update Ring policy.  | [:::no-loc text="SetEDURestart":::](/windows/client-management/mdm/policy-csp-update#setedurestart) |
 | **Option to pause Windows updates** | Disable |     | [:::no-loc text="SetDisablePauseUXAccess":::](/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess) |
 | **Option to check for Windows updates** | Disable |     | [:::no-loc text="SetDisableUXWUAccess":::](/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess) |
 | **Change notification update level** | Turn off all notifications, excluding restart warnings |     | [:::no-loc text="UpdateNotificationLevel":::](/windows/client-management/mdm/policy-csp-update#updatenotificationlevel) |
@@ -48,6 +52,23 @@ To learn more, see:
 | **Deadline for quality updates** | 3   |     | [:::no-loc text="ConfigureDeadlineForQualityUpdates":::](/windows/client-management/mdm/policy-csp-update#configuredeadlineforqualityupdates) |
 | **Grace period** | 2   |     | [:::no-loc text="ConfigureDeadlineGracePeriod":::](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiod)<br><br>[:::no-loc text="ConfigureDeadlineGracePeriodForFeatureUpdates":::](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiodforfeatureupdates) |
 | **Auto reboot before deadline** | Yes |     | [:::no-loc text="ConfigureDeadlineNoAutoReboot":::](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot) |
+
+### [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
+
+[!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
+
+This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - Windows - Update ring**.
+
+```msgraph-interactive
+POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
+Content-Type: application/json
+
+{"@odata.type":"#microsoft.graph.windowsUpdateForBusinessConfiguration","id":"","displayName":"_MSLearn_Example_CommonEDU - Windows - Update ring","description":"https://aka.ms/ManageEduDevices","roleScopeTagIds":["0"],"microsoftUpdateServiceAllowed":true,"driversExcluded":false,"qualityUpdatesDeferralPeriodInDays":7,"featureUpdatesDeferralPeriodInDays":30,"allowWindows11Upgrade":false,"qualityUpdatesPaused":false,"featureUpdatesPaused":false,"businessReadyUpdatesOnly":"userDefined","skipChecksBeforeRestart":false,"automaticUpdateMode":"windowsDefault","installationSchedule":null,"userPauseAccess":"disabled","userWindowsUpdateScanAccess":"disabled","updateNotificationLevel":"restartWarningsOnly","updateWeeks":null,"featureUpdatesRollbackWindowInDays":14,"deadlineForFeatureUpdatesInDays":7,"deadlineForQualityUpdatesInDays":3,"deadlineGracePeriodInDays":2,"postponeRebootUntilAfterDeadline":false,"engagedRestartDeadlineInDays":null,"engagedRestartSnoozeScheduleInDays":null,"engagedRestartTransitionScheduleInDays":null,"engagedRestartSnoozeScheduleForFeatureUpdatesInDays":null,"engagedRestartTransitionScheduleForFeatureUpdatesInDays":null,"autoRestartNotificationDismissal":"notConfigured","scheduleRestartWarningInHours":null,"scheduleImminentRestartWarningInMinutes":null}
+```
+
+[!INCLUDE [graph-explorer-steps](../../../includes/graph-explorer-steps.md)]
+
+---
 
 ## Settings catalog
 
@@ -58,9 +79,28 @@ To learn more, see [Use the settings catalog to configure settings on Windows, i
 > [!TIP]
 > When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search field to find the desired policy.
 
+### [**Settings**](#tab/settings)
+
 | **Name** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
 | **:::no-loc text="No update notifications during active hours":::** | Enabled |     | [:::no-loc text="NoUpdateNotificationsDuringActiveHours":::](/windows/client-management/mdm/policy-csp-update#noupdatenotificationsduringactivehours) |
+
+### [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
+
+[!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
+
+This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - Windows - Updates**.
+
+```msgraph-interactive
+POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
+Content-Type: application/json
+
+{"name":"_MSLearn_Example_CommonEDU - Windows - Updates","description":"https://aka.ms/ManageEduDevices","platforms":"windows10","technologies":"mdm","roleScopeTagIds":["0"],"settings":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_update_noupdatenotificationsduringactivehours","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"device_vendor_msft_policy_config_update_noupdatenotificationsduringactivehours_1","children":[]}}}]}
+```
+
+[!INCLUDE [graph-explorer-steps](../../../includes/graph-explorer-steps.md)]
+
+---
 
 ## Windows Update Feature Control
 
