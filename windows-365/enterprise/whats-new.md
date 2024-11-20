@@ -82,6 +82,13 @@ For more information, see [Configure client device redirection settings for Wind
 Windows App and the Remote Desktop app for macOS and iOS now support FIDO devices and passkeys for Microsoft Entra ID sign in on brokered and unbrokered devices.
 For more information see [Support for FIDO2 authentication with Microsoft Entra ID](/entra/identity/authentication/concept-fido2-compatibility#native-application-support).
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Use Citrix HDX Plus with Windows 365 Frontline<!--54445358-->
+
+You can now use Citrix HDX Plus with Windows 365 Frontline Cloud PCs.
+
 <!-- ########################## -->
 ## Week of October 28, 2024 (Service release 2410)
 
