@@ -101,6 +101,9 @@ In the following example, you can see this information for the **Microsoft Word*
 > - In the **Device install status** report, apps deployed as "Available" aren't shown. To troubleshoot if a user/device is filtered in or out of an Available assignment, use the **Filter evaluation report for devices**. To generate filter evaluation results, the end user must go to the list of apps in the Company portal app or website.
 > - When assigning a policy, you can add devices to the "Excluded groups". These excluded devices aren't shown in the workload device status reports.
 > - In the **Apps** and **Settings Catalog** device status reports, there's a column that shows any filter evaluation. Currently, the filter evaluation information isn't available for all Intune workloads.
+>
+> [! Known Bugs]
+> Evaluation result is Inconclusive for operatingSystemVersion of Android AOSP, if a filter is craeted operatingSystemVersion for available apps.
 
 ## Reports for managed apps  
 
