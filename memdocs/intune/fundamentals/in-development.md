@@ -135,6 +135,18 @@ For more information, see [Wi-Fi settings for personally-owned work profile devi
 
 ## Device security
 
+### Security baselines for HoloLens 2 in public preview<!-- 24914095 -->
+ 
+We’re working to release a public preview of two security baselines for HoloLens 2. These baselines represent Microsoft’s best practice guidelines and experience from deploying and supporting HoloLens 2 devices to customers across various industries.  The baselines include:
+ 
+- **Standard Security Baseline for HoloLens 2**:
+  The standard security baseline for HoloLens 2 represents the recommendations for configuring security settings that are applicable to all types of customers irrespective of HoloLens 2 use case scenarios.
+ 
+- **Advanced Security Baseline for HoloLens 2**:
+  The advanced security baseline for HoloLens 2 represents the recommendations for configuring security settings for the customers who have strict security controls of their environment and require stringent security policies to be applied to any device used in their environment.  
+ 
+To learn more about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
+
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
 
 We are adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform, that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
