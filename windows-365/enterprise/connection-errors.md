@@ -122,6 +122,14 @@ Some other possible causes for Cloud PC connection failures include:
 
 **Possible solution**: Remote Credential Guard requires connectivity to the on-premises Active Directory Domain Controller on the client PC used to access the Cloud PC. This connection is only possible using a VPN solution. Using a KDC proxy isn't currently available for Windows 365.
 
+### Azure WireServer may be blocked
+
+Windows 365 Cloud PCs require access to Azure communication channels.
+
+Make sure that IP address 168.63.129.16 is reachable through any security software installed on the Cloud PC or gateway devices used in the vNET connected to your ANC.
+
+For more informationk, see [What is IP Address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
+
 ## Other troubleshooting steps
 
 ### Move the Cloud PC to a new organizational unit (OU) with no group policies
