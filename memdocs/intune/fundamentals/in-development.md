@@ -105,7 +105,31 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device management -->
+## Device management
+
+### Check for compliance on devices with custom compliance rules <!-- 22827464 -->
+
+Soon, when a device user selects the **Check access** in the Intune Company Portal app for Windows, the Company Portal will sync the custom compliance policy status before it evaluates the compliance status. Currently, the *check access button only triggers an MDM sync. With this change, if you use a custom compliance policy, your device users will be able to sync the latest status when they select the **Check access** button in Company Portal.
+
+Applies to:
+
+- Windows
+
+### More Wi-Fi configurations will be available for personally-owned work profile devices<!-- 28331156 -->
+
+Intune Wi-Fi configuration profiles for personally-owned work profile devices will soon support configuration of pre-shared keys and proxy settings.
+
+You will find these settings in the admin console in **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**. Set **Platform** to Android Enterprise and **Profile Type** to Templates and then in the **Personally-Owned Work Profile** section, select Wi-Fi and select the **Create** button.
+
+In the **Configuration settings** tab, when Basic Wi-Fi type is selected, you will see several new options:
+
+1. Security type, with options for Open (no authentication), WEP-Pre-shared key, and WPA-Pre-shared key.
+2. Proxy settings, with the option to select Automatic and then specify the proxy server URL.
+
+It was possible to configure these in the past with Custom Configuration policies, but going forward, we recommend setting these in the Wi-Fi Configuration profile, because [Intune is ending support for Custom policies in April 2024.](https://aka.ms/Intune/Android-customprofiles).
+
+For more information, see [Wi-Fi settings for personally-owned work profile devices.](../configuration/wi-fi-settings-android-enterprise.md#personally-owned-work-profile).
+
 
 <!-- *********************************************** -->
 
