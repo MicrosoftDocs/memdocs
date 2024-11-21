@@ -159,6 +159,20 @@ The following settings have been deprecated by Apple and will be marked as depre
 
 ### Device management
 
+#### Windows 365 Link is now available in public preview<!-- 29267349 -->
+
+Windows 365 Link is the first Cloud PC device built by Microsoft to connect securely to Windows 365 in seconds, providing a responsive, high-fidelity Windows desktop experience in the Microsoft Cloud.
+
+Windows 365 Link runs a small Windows based OS called Windows CPC, and shows up in Intune alongside other managed Windows devices and Cloud PCs.  
+
+Also, Device actions, such as **Wipe**, **Restart**, and **Collect diagnostics** work similarly to other Windows devices.  As the OS is purpose built to directly connect to Windows 365, this results in only a fraction of Windows configuration policies being applicable, minimizing decision points.
+
+The process to configure and apply those applicable policies is simple and familiar because the process is the same as your other Windows devices.  Secondly, Windows 365 Link has no ability to store data locally, no local apps, no local admin users, and automatically keeps itself up to date.  
+
+This means several Intune features are not applicable including application and update management, along with scripts and remediations.
+
+Windows 365 Link is now available in public preview. For more information, see [Windows 365 Link—the first Cloud PC device for Windows 365.](https://aka.ms/Windows365LinkPublicPreview)
+
 #### Store macOS certificates in user keychain<!-- 7824255 -->  
 
 A new *deployment channel* setting in Microsoft Intune enables you to store macOS authentication certificates in the user keychain. This enhancement strengthens system security and improves the user experience by reducing certificate prompts. Prior to this change, Microsoft Intune automatically stored user and device certificates in the system keychain. The deployment channel setting is available in SCEP and PKCS certificate profiles for macOS, and in VPN, Wi-Fi, and wired network settings configuration profiles for macOS. For more information about the profiles and their new setting, see:  
