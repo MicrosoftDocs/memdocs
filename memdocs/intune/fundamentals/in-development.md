@@ -89,32 +89,6 @@ Applies to:
 
 ## Device configuration
 
-### New settings for Windows 24H2 in the Windows settings catalog<!-- 29592329 -->
-
-The Settings Catalog lists all the settings you can configure in a device policy, and all in one place. You can view these Windows settings in the Microsoft Intune admin center by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
-
-We're working on the addition of new settings for Window 24H2.
-
-Applies to:
-
-- Windows
-
-<!-- *********************************************** -->
-
-<!-- ## Device enrollment -->
-
-<!-- *********************************************** -->
-
-## Device management
-
-### Check for compliance on devices with custom compliance rules <!-- 22827464 -->
-
-Soon, when a device user selects the **Check access** in the Intune Company Portal app for Windows, the Company Portal will sync the custom compliance policy status before it evaluates the compliance status. Currently, the *check access button only triggers an MDM sync. With this change, if you use a custom compliance policy, your device users will be able to sync the latest status when they select the **Check access** button in Company Portal.
-
-Applies to:
-
-- Windows
-
 ### More Wi-Fi configurations will be available for personally-owned work profile devices<!-- 28331156 -->
 
 Intune Wi-Fi configuration profiles for personally-owned work profile devices will soon support configuration of pre-shared keys and proxy settings.
