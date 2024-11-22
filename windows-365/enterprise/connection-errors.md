@@ -128,7 +128,7 @@ Windows 365 Cloud PCs require access to Azure communication channels.
 
 Make sure that IP address 168.63.129.16 is reachable through any security software installed on the Cloud PC or gateway devices used in the vNET connected to your ANC.
 
-For more informationk, see [What is IP Address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
+For more information, see [What is IP Address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
 ## Other troubleshooting steps
 
