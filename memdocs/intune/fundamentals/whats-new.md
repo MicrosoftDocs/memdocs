@@ -80,6 +80,17 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
+#### Configuration values for specific managed applications on Intune enrolled iOS devices<!-- 30293382 -->
+
+Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, **IntuneMAMOID**, and **IntuneMAMDeviceID** app configuration values will be automatically sent to managed applications on Intune enrolled iOS devices for the following apps: 
+- Microsoft Excel
+- Microsoft Outlook
+- Microsoft PowerPoint
+- Microsoft Teams
+- Microsoft Word
+
+For more information, see [Plan for Change: Specific app configuration values will be automatically sent to specific apps](../fundamentals/whats-new.md#plan-for-change-specific-app-configuration-values-will-be-automatically-sent-to-specific-apps) and Intune  [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
+
 #### Additional installation error reporting for LOB apps on AOSP devices<!-- 27157460 -->
 
 Additional details are now provided for app installation reporting of Line of Business (LOB) apps on Android Open Source Project (AOSP) devices. You can view installation error codes and detailed error messages for LOB apps in Intune. For information about app installation error details, see [Monitor app information and assignments with Microsoft Intune](../apps/apps-monitor.md#app-installation-error-reporting).
@@ -181,17 +192,7 @@ A new *deployment channel* setting in Microsoft Intune enables you to store macO
 - [Add Wi-Fi settings for macOS devices in Microsoft Intune](../configuration/wi-fi-settings-macos.md)   
 - [Add wired network settings for macOS](../configuration/wired-network-settings-macos.md)  
 - [Configure and use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)  
-- [Create and assign SCEP certificate profiles in Intune](../protect/certificates-profile-scep.md) 
-
-#### Device Inventory for Windows<!-- 24853010 --> 
-
-Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
-
-You can now choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view.
-
-Applies to:
-
-- Windows 10 and later (Corporate owned devices managed by Intune)
+- [Create and assign SCEP certificate profiles in Intune](../protect/certificates-profile-scep.md)
 
 #### Evaluate compliance of Windows Subsystem for Linux (generally available)<!-- 24557103 -->
  
