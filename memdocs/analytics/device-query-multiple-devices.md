@@ -68,7 +68,7 @@ Table operators can be used to filter, summarize, and transform data streams. Th
 | --- | --- |
 | count | Returns a table with a single record containing the number of records. |
 | distinct | Produces a table with the distinct combination of the provided columns of the input table. |
-| join | Merge the rows of two tables to form a new table by matching row for the same device. Only the join type of innerunique is supported. Join statements support on syntax. Common syntax for join is LeftEntity \| join [hints] (RightEntity) on Conditions. For more info, see [Join](/kusto/query/join-operator?view=microsoft-fabric) documentation.|
+| join | Merge the rows of two tables to form a new table by matching row for the same device. Only the join type of innerunique is supported. Join statements support on syntax. Common syntax for join is LeftEntity \| join [hints] (RightEntity) on Conditions. For more info, see [Join](/kusto/query/join-operator) documentation.|
 | order by | Sort the rows of the input table into order by one or more columns. |
 | project | Select the columns to include, rename or drop, and insert new computed columns. |
 | take | Return up to the specified number of rows. |
@@ -76,7 +76,7 @@ Table operators can be used to filter, summarize, and transform data streams. Th
 | where | Filter a table to the subset of rows that satisfy a predicate. |
 
 > [!NOTE]
-> Only the join type of [innerunique](/kusto/query/join-innerunique?view=microsoft-fabric) is supported. If you join two entities that result in duplicate records, only the first record is returned.
+> Only the join type of [innerunique](/kusto/query/join-innerunique) is supported. If you join two entities that result in duplicate records, only the first record is returned.
 
 ### Scalar operators
 
@@ -196,41 +196,46 @@ The query:
 
 ```kusto
 DiskDrive 
-where Device.SerialNumber = 123 ```
+where Device.SerialNumber = 123
+```
 
 Will return all the DiskDrive information for all devices with serial number 123.
 
 The query:  
 
 ```kusto
-DiskDrive | project Device.DeviceId, Manufacturer ```
+DiskDrive | project Device.DeviceId, Manufacturer
+```
 
 Will project the Device ID and Manufacturer properties of the entity DiskDrive. 
 
 Although the Device entity that is shown as the first column by default appears as device names using Device by itself in a query will parse to Device.DeviceId.  
 
-For example, the query: 
+For example, the query:
 
 ```kusto
-
-MemoryInfo | order by Device```
+MemoryInfo | order by Device
+```
 
 Will return results ordered by the DeviceID, not by DeviceName.
 
-Similarly, the query: 
+Similarly, the query:
 
 ```kusto
-Cpu | where Device == “Desktop123”```
+Cpu | where Device == “Desktop123”
+```
 
 Will return no results unless the device ID is Desktop123. It does not query on device name. 
 
 Use the following example to query on device name:  
 
-``` Cpu | where Device.DeviceName == ‘Desktop123” ```
+```kusto
+Cpu | where Device.DeviceName == ‘Desktop123”
+```
 
-## Known limitations 
+## Known limitations
 
-Writing a query with ```project Device``` and a following distinct operator will not run.  
+Writing a query with project Device and a following distinct operator will not run.  
 
 For example, the following query will fail: Cpu | project Device | distinct Device  
 
@@ -240,11 +245,13 @@ For example, the following query will fail: DiskDrive | project Device.DeviceNam
 
 The following queries will succeed:  
 
+```kusto
 DiskDrive | project Device, Device.DeviceId 
 
 DiskDrive | project Device 
 
 DiskDrive | project Device.DeviceName 
+```
 
 Using the Device entity in aggregation functions will show a red underline. However, the query will still be able to run and will return results as expected.  
 
@@ -256,4 +263,5 @@ A single query can contain a maximum of 3 join operators. Queries with additiona
 
 A max of ~500,000 records will be returned for a query. Additional rows will be truncated and “…” will appear after the 500,000th line.  
 
-A maximum of 10 queries can be submitted per minute. Additional queries will fail. 
+A maximum of 10 queries can be submitted per minute. Additional queries will fail.
+
