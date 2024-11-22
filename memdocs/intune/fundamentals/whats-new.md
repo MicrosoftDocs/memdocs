@@ -170,7 +170,7 @@ The following settings have been deprecated by Apple and will be marked as depre
 
 ### Device management
 
-#### View profiles for your Endpoint Security policies in the Device Configuration node of the admin center<!-- 30306055 wndraft wndready wnstaged -->   
+#### View profiles for your Endpoint Security policies in the Device Configuration node of the admin center<!-- 30306055 -->   
 
 We’ve updated the Configuration view for Devices in the admin center to now display profiles for your endpoint security policies alongside your device configuration policies. This means you can view a combined list of your device configuration policies and the supported endpoint security policies in a single location where you can then select a policy to view and edit it.
 
