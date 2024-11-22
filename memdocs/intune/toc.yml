@@ -1169,9 +1169,6 @@ items:
           - name: Universal Print policy
             displayName: printers, gpo, admx, windows
             href: ./configuration/settings-catalog-printer-provisioning.md
-        - name: Properties catalog
-          displayName: windows
-          href: ./configuration/properties-catalog.md
         - name: Custom settings & scripts
           items:
           - name: Create custom profiles
