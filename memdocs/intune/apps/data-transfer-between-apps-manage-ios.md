@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 11/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -49,7 +49,9 @@ Use App protection policies with the iOS **Open-in management** feature to prote
 - **Devices managed by MDM solutions**: For devices enrolled in Intune or third-party MDM solutions, data sharing between apps with app protection policies and other managed iOS apps deployed through MDM is controlled by Intune APP policies and the iOS **Open-in management** feature. To make sure that apps you deploy using a MDM solution are also associated with your Intune app protection policies, configure the user UPN setting as described in the following section, [Configure user UPN setting](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). To specify how you want to allow data transfer to other *policy managed apps* and iOS managed apps, configure **Send org data to other apps** setting to **Policy managed apps with OS sharing**. To specify how you want to allow an app to receive data from other apps, enable **Receive data from other apps** and then choose your preferred level of receiving data. For more information about receiving and sharing app data, see [Data relocation settings](app-protection-policy-settings-ios.md#data-protection).
 
 ## Configure user UPN setting for Microsoft Intune or third-party EMM
-Configuring the user UPN setting is **required** for devices that are managed by Intune or a third-party EMM solution to identify the enrolled user account for the sending *policy managed app* when transferring data to an iOS managed app. The UPN configuration works with the app protection policies you deploy from Intune. The following procedure is a general flow on how to configure the UPN setting and the resulting user experience:
+Configuring the user UPN setting is **required** for devices that are managed by Intune or a third-party EMM solution to identify the enrolled user account for the sending *policy managed app* when transferring data to an iOS managed app. For more information about required app configuration settings, see [Device Management types](../apps/app-protection-policies.md#device-management-types). The UPN configuration works with the app protection policies you deploy from Intune. 
+
+The following procedure is a general flow on how to configure the UPN setting and the resulting user experience:
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [create and assign an app protection policy](app-protection-policies.md) for iOS/iPadOS. Configure policy settings per your company requirements and select the iOS apps that should have this policy.
 
@@ -77,7 +79,7 @@ Configuring the user UPN setting is **required** for devices that are managed by
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or your third-party MDM provider. Go to the section of the admin center in which you deploy application configuration settings to enrolled iOS devices.
 
-2. In the Application Configuration section, enter the following setting for each *policy managed app* that will transfer data to iOS managed apps:
+2. In the Application Configuration section, enter the following setting for each *policy managed app* that will transfer data to iOS managed apps, except for apps that are automatically configured based on [device management type](../apps/app-protection-policies.md#device-management-types):
 
    **key** = IntuneMAMUPN, **value** = <username@company.com>
 
