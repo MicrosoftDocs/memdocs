@@ -192,17 +192,7 @@ A new *deployment channel* setting in Microsoft Intune enables you to store macO
 - [Add Wi-Fi settings for macOS devices in Microsoft Intune](../configuration/wi-fi-settings-macos.md)   
 - [Add wired network settings for macOS](../configuration/wired-network-settings-macos.md)  
 - [Configure and use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)  
-- [Create and assign SCEP certificate profiles in Intune](../protect/certificates-profile-scep.md) 
-
-#### Device Inventory for Windows<!-- 24853010 --> 
-
-Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
-
-You can now choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view.
-
-Applies to:
-
-- Windows 10 and later (Corporate owned devices managed by Intune)
+- [Create and assign SCEP certificate profiles in Intune](../protect/certificates-profile-scep.md)
 
 #### Evaluate compliance of Windows Subsystem for Linux (generally available)<!-- 24557103 -->
  
