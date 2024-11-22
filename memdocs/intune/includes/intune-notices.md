@@ -16,7 +16,13 @@ These notices provide important information that can help you prepare for future
 
 Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, **IntuneMAMOID**, and **IntuneMAMDeviceID** app configuration values will be automatically sent to managed applications on Intune enrolled iOS devices for the following apps: Microsoft Excel, Microsoft Outlook, Microsoft PowerPoint, Microsoft Teams and Microsoft Word. Intune will continue to expand this list to include additional managed apps.
 
+#### How does this affect you or your users?
+
 If these values aren't configured correctly for iOS devices, there is a possibility of either the policy not getting delivered to the app or the wrong policy is delivered. For more information, see [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
+
+#### How can you prepare?
+
+No additional action is needed.
 
 ### Plan for Change: Implement strong mapping for SCEP and PKCS certificates
 
