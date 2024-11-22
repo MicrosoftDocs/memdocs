@@ -107,6 +107,34 @@ For more information, see [Wi-Fi settings for personally-owned work profile devi
 
 <!-- *********************************************** -->
 
+## Device enrollment
+
+### Update to "Determine based on user choice" enrollment type profile behavior <!-- 29068674 iddraft idready idstaged -->
+
+In Intune today, if an IT admin creates a "Determine based on user choice" enrollment type profile for BYOD enrollments, the user will be prompted to select between **I own this device** and **My company owns this device** to direct them to the appropriate enrollment method. Because fewer than 1% of Apple devices across all Intune tenants are currently enrolled this way, this change won't affect most enrolled devices.
+
+Today, selecting **I own this device** results in the user enrolling via profile-based user enrollment with Company Portal to secure only work related apps. With WWDC 2024, Apple ended support for this enrollment method, subsequently Intune also ended support for the same. Read more about the changes here: [Support has ended for Apple profile-based user enrollment with Company Portal](../fundamentals/whats-new.md#support-has-ended-for-apple-profile-based-user-enrollment-with-company-portal)
+
+We are updating the enrollment behavior for users who select **I own this device**. The new behavior for **I own this device** will result in an [account-driven user enrollment](../enrollment/apple-account-driven-user-enrollment.md), which also supports the use of only secure work related apps.
+
+The behavior when selecting **My company owns this device** is unchanged and will continue to result in device enrollment with the Company Portal that supports securing the entire device.
+
+Admin action: 
+
+If you use **Determine based on user choice** enrollment type profile for BYOD scenarios, make sure you have completed the required **PREREQUISITES** to set up account driven user enrollment correctly. See [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md).
+
+If you do not use **Determine based on user choice** enrollment type profile for BYOD scenarios, there are no action items
+
+Applies to:
+
+- iOS/iPadOS
+
+<!-- *********************************************** -->
+
+<!--  ## Device management  -->
+
+<!-- *********************************************** -->
+
 ## Device security
 
 ### Security baselines for HoloLens 2 in public preview<!-- 24914095 -->
