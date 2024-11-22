@@ -7,7 +7,7 @@ keywords:
 ms.author: smbhardwaj
 author: smritib17 
 manager: dougeby
-ms.date: 11/14/2024
+ms.date: 11/21/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: Elizabeth cox 
+ms.reviewer: Abby Starr 
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -43,7 +43,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -83,7 +83,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -107,7 +107,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -129,7 +129,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -204,7 +204,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -221,8 +221,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand, Inventory.
-Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for Device query, single device on-demand. 
+**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
+Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -237,7 +237,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -287,7 +287,10 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
+
+> [!NOTE]
+> Chassis Types property is currently not supported for Inventory or Device query for multiple devices.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -329,7 +332,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -408,7 +411,7 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
 
 | Property | Type | Description |
 | --- | --- | --- |
@@ -483,7 +486,7 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 
 **Description**: Provides basic network adapter information.
 
-**Supported Features**: Inventory
+**Supported Features**: Inventory, Device query for multiple devices.
 
 **Supported Platforms**: Windows
 
@@ -500,7 +503,7 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 
 **Description**: Provides basic time information.
 
-**Supported Features**: Inventory
+**Supported Features**: Inventory, Device query for multiple devices.
 
 **Supported Platforms**: Windows
 
@@ -512,7 +515,7 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 
 **Description**: Provides video controller and graphics information.
 
-**Supported Features**: Inventory
+**Supported Features**: Inventory, Device query for multiple devices.
 
 **Supported Platforms**: Windows
 
