@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2024
+ms.date: 11/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -79,6 +79,17 @@ You can use RSS to be notified when this page is updated. For more information, 
 ## Week of November 18, 2024 (Service release 2411)
 
 ### App management
+
+#### Configuration values for specific managed applications on Intune enrolled iOS devices<!-- 30293382 -->
+
+Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, **IntuneMAMOID**, and **IntuneMAMDeviceID** app configuration values will be automatically sent to managed applications on Intune enrolled iOS devices for the following apps: 
+- Microsoft Excel
+- Microsoft Outlook
+- Microsoft PowerPoint
+- Microsoft Teams
+- Microsoft Word
+
+For more information, see [Plan for Change: Specific app configuration values will be automatically sent to specific apps](../fundamentals/whats-new.md#plan-for-change-specific-app-configuration-values-will-be-automatically-sent-to-specific-apps) and Intune  [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
 
 #### Additional installation error reporting for LOB apps on AOSP devices<!-- 27157460 -->
 
@@ -159,6 +170,41 @@ The following settings have been deprecated by Apple and will be marked as depre
 
 ### Device management
 
+#### View profiles for your Endpoint Security policies in the Device Configuration node of the admin center<!-- 30306055 -->   
+
+We’ve updated the [*Configuration* view](../configuration/device-profile-monitor.md) for *Devices* in the admin center to now display profiles for your endpoint security policies alongside your device configuration policies. This means you can view a combined list of your device configuration policies and the supported endpoint security policies in a single location where you can then select a policy to view and edit it.
+
+The combined view supports the endpoint security profiles you create for the *macOS* and *Windows* platforms for the following endpoint security policy types:
+
+- Account Protection
+- Antivirus
+- Application Control
+- Attack Surface Reduction
+- Disk encryption
+- Endpoint Detection and Response
+- Endpoint Privilege Management
+- Firewall
+
+When viewing the list of policies, endpoint security policies are identified by their template type, like *Microsoft Defender Antivirus*, in the *Policy type* column.
+
+To view the combined list profiles for all device types, in the admin center go to **Devices** > *All devices* and below *Manage devices*, select **Configuration**.
+
+While you can view endpoint security policies in the device configuration node, you must still create new endpoint security policies in the endpoint security node.  Additionally, the combined view does not display endpoint security profiles for the *Windows (ConfigMgr)* platform or for *Linux*.
+
+#### Windows 365 Link is now available in public preview<!-- 29267349 -->
+
+Windows 365 Link is the first Cloud PC device built by Microsoft to connect securely to Windows 365 in seconds, providing a responsive, high-fidelity Windows desktop experience in the Microsoft Cloud.
+
+Windows 365 Link runs a small Windows based OS called Windows CPC, and shows up in Intune alongside other managed Windows devices and Cloud PCs.  
+
+Also, Device actions, such as **Wipe**, **Restart**, and **Collect diagnostics** work similarly to other Windows devices.  As the OS is purpose built to directly connect to Windows 365, this results in only a fraction of Windows configuration policies being applicable, minimizing decision points.
+
+The process to configure and apply those applicable policies is simple and familiar because the process is the same as your other Windows devices.  Secondly, Windows 365 Link has no ability to store data locally, no local apps, no local admin users, and automatically keeps itself up to date.  
+
+This means several Intune features are not applicable including application and update management, along with scripts and remediations.
+
+Windows 365 Link is now available in public preview. For more information, see [Windows 365 Link—the first Cloud PC device for Windows 365.](https://aka.ms/Windows365LinkPublicPreview)
+
 #### Store macOS certificates in user keychain<!-- 7824255 -->  
 
 A new *deployment channel* setting in Microsoft Intune enables you to store macOS authentication certificates in the user keychain. This enhancement strengthens system security and improves the user experience by reducing certificate prompts. Prior to this change, Microsoft Intune automatically stored user and device certificates in the system keychain. The deployment channel setting is available in SCEP and PKCS certificate profiles for macOS, and in VPN, Wi-Fi, and wired network settings configuration profiles for macOS. For more information about the profiles and their new setting, see:  
@@ -167,17 +213,7 @@ A new *deployment channel* setting in Microsoft Intune enables you to store macO
 - [Add Wi-Fi settings for macOS devices in Microsoft Intune](../configuration/wi-fi-settings-macos.md)   
 - [Add wired network settings for macOS](../configuration/wired-network-settings-macos.md)  
 - [Configure and use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)  
-- [Create and assign SCEP certificate profiles in Intune](../protect/certificates-profile-scep.md) 
-
-#### Device Inventory for Windows<!-- 24853010 --> 
-
-Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
-
-You can now choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view.
-
-Applies to:
-
-- Windows 10 and later (Corporate owned devices managed by Intune)
+- [Create and assign SCEP certificate profiles in Intune](../protect/certificates-profile-scep.md)
 
 #### Evaluate compliance of Windows Subsystem for Linux (generally available)<!-- 24557103 -->
  
@@ -1489,7 +1525,7 @@ Applies to:
 
 Feature updates can now be made available to end users as **Optional** updates, with the introduction of **Optional** Feature updates. End users see the update in the **Windows Update** settings page in the same way that it's shown for consumer devices.
 
-End users can easily opt in to try out the next Feature update and provide feedback. When it's time to roll out the feature as a **Required** update, then admins can change the setting on the policy, and update the rollout settings so that the update is deployed as a **Required** update to devices that don't yet have it installed.
+End users can easily opt in to try out the next Feature update and provide feedback. When it's time to roll out the feature as a **Required** update, admins can change the setting on the policy and update the rollout settings so that the update is deployed as a **Required** update to devices that don't yet have it installed.
 
 For more information on Optional Feature updates, see [Feature updates for Windows 10 and later policy in Intune](..//protect/windows-10-feature-updates.md#create-and-assign-feature-updates-for-windows-10-and-later-policy).
 

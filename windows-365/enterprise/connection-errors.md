@@ -86,7 +86,7 @@ If you only manage the user's physical device through Group Policy or you don't 
 
 **Possible solution**: If the issue persists, sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > select the cog icon next to the Cloud PC > **Restart**.
 
-### Connection Attempt timed out, Please try again or An error occurred while accessing this resource or Connection attempt timed out. Please try again.
+### Connection Attempt timed out, Please try again or An error occurred while accessing this resource
 
 If you encounter these errors, make sure that you don't have a configured CSP or GPO that blocks remote desktop connections.
 
@@ -121,6 +121,14 @@ Some other possible causes for Cloud PC connection failures include:
 ### Using a client PC with Remote Credential Guard enabled
 
 **Possible solution**: Remote Credential Guard requires connectivity to the on-premises Active Directory Domain Controller on the client PC used to access the Cloud PC. This connection is only possible using a VPN solution. Using a KDC proxy isn't currently available for Windows 365.
+
+### Azure WireServer may be blocked
+
+Windows 365 Cloud PCs require access to Azure communication channels.
+
+Make sure that IP address 168.63.129.16 is reachable through any security software installed on the Cloud PC or gateway devices used in the vNET connected to your ANC.
+
+For more information, see [What is IP Address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
 ## Other troubleshooting steps
 
