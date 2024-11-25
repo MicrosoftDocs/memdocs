@@ -50,7 +50,7 @@ When a device checks-in, it immediately checks for compliance, non-compliance an
 
 There are 4 main types of check-ins:
 
-**Maintenance check-ins** - These check-ins happen at predetermined intervals and can be client or service initiated depending on the platform.
+**Maintenance check-ins** - These check-ins happen at predetermined intervals and can be initiated by the client or service depending on the platform. The check-ins are estimated as follows:
 
 | Platform | Estimated refresh cycle|
 | --- | --- |
