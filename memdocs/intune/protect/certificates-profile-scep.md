@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/19/2024
+ms.date: 11/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -55,7 +55,8 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 **Applies to**:  
 
 - Windows 10  
-- Windows 11  
+- Windows 11
+- Android   
 - iOS  
 - macOS  
 
