@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/11/2024
+ms.date: 11/25/2024
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -46,13 +46,13 @@ This article applies to the following policies:
 
 ## Policy refresh intervals
 
-Intune notifies the device to check in with the Intune service. The notification times vary, including immediately up to a few hours. These notification times also vary between platforms. On Android devices, [Google Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed).
+When a device checks-in, it immediately checks for compliance, non-compliance and configuration for the current user/device context, receiving any pending actions, policies and apps assigned to it.
 
-If a device doesn't check in to get the policy or profile after the first notification, Intune makes three more attempts. An offline device, such as turned off, or not connected to a network, might not receive the notifications. In this case, the device gets the policy or profile on its next scheduled check-in with the Intune service. The same applies to checks for noncompliance, including devices that move from a compliant to a noncompliant state.
+There are 4 main types of check-ins:
 
-**Estimated** frequencies:
+**Maintenance check-ins** - These check-ins happen at predetermined intervals and can be client or service initiated depending on the platform.
 
-| Platform | Refresh cycle|
+| Platform | Estimated refresh cycle|
 | --- | --- |
 | Android, AOSP | About every 8 hours |
 | iOS/iPadOS | About every 8 hours |
@@ -60,9 +60,26 @@ If a device doesn't check in to get the policy or profile after the first notifi
 | Windows 10/11 PCs enrolled as devices | About every 8 hours |
 | Windows 8.1 | About every 8 hours |
 
-If devices recently enroll, then the compliance, noncompliance, and configuration check-in runs more frequently. The check-ins are **estimated** at:
+**End user driven check-ins** – These check-ins are driven by end users when they perform certain actions in the Company Portal app like going into  **Devices** > **Check Status** or **Settings** > **Sync** to check for policy or profile updates or selecting an app for download.
 
-| Platform | Frequency |
+**Admin check-ins** - These check-ins are driven by admins when they perform certain actions on a single device from the Intune portal, like [device sync](../remote-actions/device-sync.md), [remote lock](../remote-actions/device-remote-lock.md) or [reset passcode](../remote-actions/device-passcode-reset.md). Other actions like [remotely assist users](../fundamentals/remote-help.md) do not cause a device check-in.
+
+**Notification-based check-ins** - These check-ins happen through different actions that trigger a notification. For example, when a policy, profile, or app is assigned (or unassigned), updated, deleted, or when certain behind the scenes changes like Microsoft Entra group membership updates are made. Other changes don't cause an immediate notification to devices, like adding an app as available to your users.
+
+Intune notifies online devices to check-in with the Intune service. The notification times vary from immediately up to a few hours.
+These notification times also vary between platforms.
+
+- On Android devices, [Google Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed).
+
+- On iOS devices, [NotNow status can affect policy refresh intervals](/troubleshoot/mem/intune/device-configuration/2016341112-ios-device-is-currently-busy).
+
+An offline device, such as a powered off, or a disconnected device, might not receive the notifications. In this case, the device gets the policy or profile on its next scheduled check-in with Intune.
+
+It might take additional time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.  
+
+Additionally, when devices first enroll, configuration check-ins run more frequently to perform configuration, compliance and non-compliance checks. The check-ins are estimated as follows:
+
+| Platform | Estimated refresh cycle|
 | --- | --- |
 | Android, AOSP | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 | iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
@@ -70,19 +87,11 @@ If devices recently enroll, then the compliance, noncompliance, and configuratio
 | Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 | Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 
-For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
+For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
+
+## Company portal
 
 At any time, users can open the Company Portal app, **Devices** > **Check Status** or **Settings** > **Sync** to immediately check for policy or profile updates. For related information about the Intune Management Extension agent or Win32 apps, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
-
-## Intune actions that immediately send a notification to a device
-
-There are different actions that trigger a notification. For example, when a policy, profile, or app is assigned (or unassigned), updated, deleted, and so on. These action times vary between platforms.
-
-Devices check in with Intune when they receive a notification to check in, or during the scheduled check-in. When you target a device or user with an action, then Intune immediately notifies the device to check in to receive these updates. For example, a notification happens when a lock, passcode reset, app, or policy assignment action runs.
-
-Other changes don't cause an immediate notification to devices, including revising the contact information in the Company Portal app or updates to an `.ipa` file.
-
-The settings in the policy or profile are applied at every check-in. A [Windows 10 MDM policy refresh customer blog post](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) might be a good resource.
 
 ## Conflicts
 
