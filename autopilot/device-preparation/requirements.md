@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/05/2024
+ms.date: 11/25/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -69,8 +69,7 @@ The following editions are supported:
 - Windows 11 Pro for Workstations.
 - Windows 11 Enterprise.
 - Windows 11 Education.
-
-- Windows 11 LTSC.
+- [Windows 11 Enterprise LTSC](/windows/whats-new/ltsc/overview).
 
 ## [:::image type="icon" source="../images/icons/wifi-ethernet-18.svg"::: **Networking**](#tab/networking)
 
