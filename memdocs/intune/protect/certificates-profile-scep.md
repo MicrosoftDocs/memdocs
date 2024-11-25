@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/19/2024
+ms.date: 11/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -55,7 +55,8 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 **Applies to**:  
 
 - Windows 10  
-- Windows 11  
+- Windows 11
+- Android   
 - iOS  
 - macOS  
 
@@ -101,7 +102,7 @@ For more information about the KDC's requirements and enforcement date for stron
 
      1. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
      1. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owners**. You can manage revocation through an external process or directly with the certification authority.
-     1. SCEP certificate profiles are supported for Wi-Fi network configuration.  VPN configuration profile support isn't available. A future update might include support for VPN configuration profiles.  
+     1. SCEP certificate profiles are supported for Wi-Fi network configuration. VPN configuration profile support isn't available. A future update might include support for VPN configuration profiles.  
      1. The following variables aren't available for use on Android (AOSP) SCEP certificate profiles. Support for these variables will come in a future update.
         - onPremisesSamAccountName
         - OnPrem_Distinguished_Name
