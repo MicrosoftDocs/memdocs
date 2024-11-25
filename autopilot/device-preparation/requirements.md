@@ -70,6 +70,8 @@ The following editions are supported:
 - Windows 11 Enterprise.
 - Windows 11 Education.
 
+- Windows 11 LTSC.
+
 ## [:::image type="icon" source="../images/icons/wifi-ethernet-18.svg"::: **Networking**](#tab/networking)
 
 ### Networking requirements
