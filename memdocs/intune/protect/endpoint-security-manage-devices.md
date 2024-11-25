@@ -104,7 +104,6 @@ Devices that are managed by Configuration Manager don’t display policy details
 From the *Endpoint security* node in the admin center, you can select the *Summary* tab of a specific policy type to view, select, and then edit all the profiles you've created for that policy type. In this view:
 
 - *Policy type* identifies the profile.
-- 
 - *Platform* identifies the device platform.
 
 In addition to the different endpoint security policy views, you can go to **Devices** > *All devices* and below *Manage devices*, select **Configuration** to view and edit your endpoint security profiles for the macOS and Windows platforms along side your Device Configuration profiles. In this view, endpoint security policies are identified by their template type, like *Microsoft Defender Antivirus* in the *Policy type* column. See [Monitor device configuration policies in Microsoft Intune
