@@ -106,7 +106,8 @@ From the *Endpoint security* node in the admin center, you can select the *Summa
 - *Policy type* identifies the profile.
 - *Platform* identifies the device platform.
 
-In addition to the different endpoint security policy views, you can go to **Devices** > *All devices* and below *Manage devices*, select **Configuration** to view and edit your endpoint security profiles for the macOS and Windows platforms along side your Device Configuration profiles.  In this view, endpoint security policies are identified by their template type, like *Microsoft Defender Antivirus* in the *Policy type* column.
+In addition to the different endpoint security policy views, you can go to **Devices** > *All devices* and below *Manage devices*, select **Configuration** to view and edit your endpoint security profiles for the macOS and Windows platforms along side your Device Configuration profiles. In this view, endpoint security policies are identified by their template type, like *Microsoft Defender Antivirus* in the *Policy type* column. See [Monitor device configuration policies in Microsoft Intune
+](../configuration/device-profile-monitor.md).
 
 ## Remote actions for devices
 

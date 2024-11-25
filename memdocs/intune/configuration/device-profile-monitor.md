@@ -32,7 +32,7 @@ ms.collection:
 
 # Monitor device configuration policies in Microsoft Intune
 
-Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, view the devices assigned to the policy, and update the properties of an existing policy. These capabilities extend to the profiles for your endpoint security policies for macOS and Windows devices.
+Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, view the devices assigned to the policy, and update the properties of an existing policy. These capabilities extend to the profiles for your [endpoint security policies](../protect/endpoint-security-manage-devices.md#review-your-profiles-for-endpoint-security-policies) for macOS and Windows devices.
 
 You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md) to get more information about your policies and the settings configured in your policies.
 
