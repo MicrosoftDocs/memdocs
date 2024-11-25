@@ -68,6 +68,8 @@ The following editions of Windows 11 are supported:
 - Windows 11 Enterprise.
 - Windows 11 Education.
 
+- Windows 11 Enterprise LTSC.
+
 #### Windows 10
 
 A [supported version](/windows/release-health/release-information) of Windows 10 is required.
