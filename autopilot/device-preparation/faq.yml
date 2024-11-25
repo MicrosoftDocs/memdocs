@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 07/29/2024
+  ms.date: 11/25/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -74,7 +74,7 @@ sections:
       - question: |
           How do users know when the required setup is complete?
         answer: |
-          Many users aren't sure when the provisioning process is complete. To help mitigate confusion and calls to support, we added a completion page in OOBE. Administrators can configure the page to require a user to manually select **Continue** or set the page to auto-continue. This message lets the user know that OOBE setup is complete. However, additional installations that were assigned to the device group but not specified in the Windows Autopilot device preparation policy might still be occurring in the background.
+          Many users aren't sure when the provisioning process is complete. To help mitigate confusion and calls to support, we added a completion page in OOBE. The completion page lets the user know that OOBE setup is complete. However, additional installations that were assigned to the device group but not specified in the Windows Autopilot device preparation policy might still be occurring in the background.
 
       - question: |
           Can Windows Autopilot Device preparation be used by non-Microsoft mobile device management (MDM) providers?
