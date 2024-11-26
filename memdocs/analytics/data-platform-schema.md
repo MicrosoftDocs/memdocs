@@ -33,9 +33,7 @@ ms.collection:
 
 *Applies to: Microsoft Intune*
 
-This article goes over the properties supported in the Intune Data Platform.
-
-Device query allows you to quickly assess the state of devices in your environment and take action. When you enter a query on a selected device, Device query runs a query in real time. The data returned can then be filtered, grouped, and refined to answer business questions, troubleshoot issues in your environment, or respond to security threats.
+This article goes over the properties supported in the Intune Data Platform. The Intune Data Platform can be accessed via Device query for single devices, Inventory, and Device query for Multiple Devices.
 
 Each table (entity) in this page lists the types of queries that are supported.
 
@@ -57,7 +55,10 @@ Each table (entity) in this page lists the types of queries that are supported.
 ## Certificate
 
 **Description**: Certificate Authorities installed in Keychains/ca-bundles. Only certificates for computers are returned.
- **Supported for**: Device query, single device on-demand.
+
+**Supported platforms**: Windows
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -144,6 +145,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Lists all file info of the passed file or files under the passed directory.
 
+**Supported platforms**: Windows
+
 **Supported for**: Device query, single device on-demand.
 
 > [!NOTE]
@@ -169,6 +172,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Description**: Lists local user groups.  
 
+**Supported platforms**: Windows
+
 **Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
@@ -180,6 +185,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 ## LocalUserAccount
 
 **Description**: Lists local user accounts.
+
+**Supported platforms**: Windows
 
 **Supported for**: Device query, single device on-demand.
 
@@ -247,6 +254,8 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Description**: All running processes on the host system.  
 
+**Supported platforms**: Windows
+
 **Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
@@ -303,6 +312,8 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Description**: System information of the device.  
 
+**Supported platforms**: Windows
+
 **Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
@@ -339,6 +350,8 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Description**: Provides App Crash info in Windows event log file Application in look back time.
 
+**Supported platforms**: Windows
+
 **Supported for**: Device query, single device on-demand.
 
 | ReportId(Key) | string (max 256 characters) | Report ID of the App crash |
@@ -352,6 +365,8 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 ## WindowsDriver
 
 **Description**: Details for in-use Windows device drivers. This doesn't display installed but unused drivers.
+
+**Supported platforms**: Windows
 
 **Supported for**: Device query, single device on-demand.
 
@@ -371,6 +386,8 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 ## WindowsEvent
 
 **Description**: Get Windows Event logs in the specified log name and look back in time.  
+
+**Supported platforms**: Windows
 
 **Supported for**: Device query, single device on-demand.
 
@@ -410,6 +427,8 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 
 **Description**: Lists registry under the passed registry key.  
 
+**Supported platforms**: Windows
+
 **Supported for**: Device query, single device on-demand.
 
 > [!NOTE]
@@ -425,6 +444,8 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 ## WindowsService
 
 **Description**: Lists all installed Windows services and their relevant data.
+
+**Supported platforms**: Windows
 
 **Supported for**: Device query, single device on-demand.
 
