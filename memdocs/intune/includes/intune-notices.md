@@ -98,33 +98,6 @@ Here are the public repositories:
 - [Intune App SDK for Android](https://github.com/microsoftconnect/ms-intune-app-sdk-android)
 - [Intune App Wrapping Tool for Android](https://github.com/microsoftconnect/intune-app-wrapping-tool-android)
 
-### Take Action: Update to the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS
-
-To support the upcoming release of iOS/iPadOS 18.1, update to the latest versions of the Intune App SDK and the Intune App Wrapping Tool to ensure applications stay secure and run smoothly. **Important:** If you don't update to the latest versions, some app protection policies may not apply to your app in certain scenarios. Review the following GitHub announcements for more details on the specific impact:
-
-- SDK for iOS: [Update recommended prior to iOS 18.1 general availability - microsoftconnect/ms-intune-app-sdk-ios - Discussion #477](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/discussions/477)
-- Wrapper for iOS: [Update recommended prior to iOS 18.1 general availability - microsoftconnect/intune-app-wrapping-tool-ios - Discussion #125](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/discussions/125)
-
-As a best practice, always update your iOS apps to the latest App SDK or App Wrapping Tool to ensure that your app continues to run smoothly.
-
-#### How does this affect you or your users?
-
-If you have applications using the Intune App SDK or Intune App Wrapping Tool, you'll need to update to the latest version to support iOS 18.1.
-
-#### How can you prepare?
-
-For apps running on iOS 18.1, you must update to the new version of the Intune App SDK for iOS
-
-- For apps built with XCode 15 use v19.7.1 - [Release 19.7.1 - microsoftconnect/ms-intune-app-sdk-ios - GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/19.7.1)
-- For apps built with XCode 16 use v20.1.2 - [Release 20.1.2 - microsoftconnect/ms-intune-app-sdk-ios - GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/20.1.2)
-
-For apps running on iOS 18.1, you must update to the new version of the Intune App Wrapping Tool for iOS
-
-- For apps built with XCode 15 use v19.7.1 - [Release 19.7.1 - microsoftconnect/intune-app-wrapping-tool-ios - GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases/tag/19.7.1)
-- For apps built with XCode 16 use v20.1.2 - [Release 20.1.2 - microsoftconnect/intune-app-wrapping-tool-ios - GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases/tag/20.1.2)
-
-Notify your users as applicable, to ensure they upgrade their apps to the latest version prior to upgrading to iOS 18.1. You can review the Intune App SDK version in use by your users in the Microsoft Intune admin center by navigating to **Apps** > **Monitor** > **App protection status**, then review “Platform version” and “iOS SDK version”.
-
 ### Take Action: Enable multifactor authentication for your tenant before October 15, 2024
 
 Starting on or after October 15, 2024, to further increase security, Microsoft will require admins to use multi-factor authentication (MFA) when signing into the Microsoft Azure portal, Microsoft Entra admin center, and Microsoft Intune admin center. To take advantage of the extra layer of protection MFA offers, we recommend enabling MFA as soon as possible. To learn more, review [Planning for mandatory multifactor authentication for Azure and admin portals](https://aka.ms/mfaforazure).
