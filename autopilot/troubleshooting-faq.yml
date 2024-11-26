@@ -180,8 +180,23 @@ sections:
 
               To resolve and fix the issue in this scenario and redeploy the device using Windows Autopilot, follow these steps:
 
-              1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Intune admin center](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-admin-center).
+              1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+              1. In the **Home** screen, select **Devices** in the left hand pane.
+
+              1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+              1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+              1. In the **Windows | Enrollment** screen, under **Windows Autopilot**, select **Devices**.
+
+              1. Select the device that is experiencing the error, and then in the toolbar select **Unblock device**.
+
               1. Redeploy the Windows Autopilot deployment profile.
+              
+                  > [!NOTE]
+                  >
+                  > A success message might not display after selecting **Unblock device**, but the device is ready to be used again.
 
           1. Windows MDM enrollment is disabled in the Intune tenant.
 
