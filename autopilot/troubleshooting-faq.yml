@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 08/08/2024
+  ms.date: 11/26/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -369,7 +369,7 @@ sections:
     questions:
     
       - question: |
-          Why is the web sign-in option missing at the Windows sign-in screen after reboot when using pre-provisioning?
+          Why is the web sign-in option missing at the Windows sign-in screen after reboot when using Windows Autopilot pre-provisioning?
         answer: |
             The [Device password policies](/mem/intune/protect/security-baseline-settings-mdm-all#device-lock) in the Security Baseline causes issues after pre-provisioning. To resolve, change the password settings in Security Baseline to **Not Configured** or assign the baseline to a user group.
 
