@@ -382,6 +382,12 @@ sections:
 
   - name: Troubleshooting policy conflicts with Windows Autopilot
     questions:
+    
+      - question: |
+          Why is the web sign-in option missing at the Windows sign-in screen after Windows Autopilot pre-provisioning completes?
+        answer: |
+            The [Device password policies](/mem/intune/protect/security-baseline-settings-mdm-all#device-lock) in the Security Baseline causes issues after pre-provisioning. To resolve, change the password settings in Security Baseline to **Not Configured** or assign the baseline to a user group.
+
       - question: |
           Can policies conflict with Windows Autopilot working correctly?
         answer: |
