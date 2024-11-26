@@ -194,9 +194,9 @@ sections:
 
               1. Redeploy the Windows Autopilot deployment profile.
               
-                > [!NOTE]
-                >
-                > A success message might not display after selecting **Unblock device**, but the device is ready to be used again.
+                  > [!NOTE]
+                  >
+                  > A success message might not display after selecting **Unblock device**, but the device is ready to be used again.
 
           1. Windows MDM enrollment is disabled in the Intune tenant.
 
