@@ -139,6 +139,10 @@ Applies to:
 
 <!--  ## Device management  -->
 
+### Copilot assistant for device query<!-- 26933762 -->
+
+You will soon be able to use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**.
+
 <!-- *********************************************** -->
 
 ## Device security
