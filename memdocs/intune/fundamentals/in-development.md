@@ -137,7 +137,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!--  ## Device management  -->
+## Device management  
 
 ### Copilot assistant for device query<!-- 26933762 -->
 
