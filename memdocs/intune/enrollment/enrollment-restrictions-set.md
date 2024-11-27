@@ -77,7 +77,7 @@ Block devices running on a specific device platform. You can apply this restrict
    * macOS
    * Windows 10/11  
 
-In groups where both Android platforms are allowed, devices that support work profile will enroll with a work profile. Devices that don't support work profile will enroll on the Android device administrator platform. Neither work profile nor device administrator enrollment will work until you complete all prerequisites for Android enrollment.   
+In groups where both Android platforms are allowed, devices that support work profile will enroll with a work profile. Devices that don't support work profile will enroll on the Android device administrator platform. Neither work profile nor device administrator enrollment will work until you complete all prerequisites for Android enrollment. Android Corporate Owner enrollments like Corporate-owned, fully managed user devices and Corporate-owned devices with work profile aren't affected by enrollment restrictions.
 
 This restriction is in the admin center under **Enrollment device platform restrictions**.  
 
@@ -159,7 +159,8 @@ Intune also blocks personal devices using these enrollment methods:
   *  Bulk enrollment via Windows Configuration Designer  
   *  Userless Apple automated device enrollment (without user-device affinity)  
   *  Azure Virtual Desktop   
-  *  Windows 365   
+  *  Windows 365
+  *  Corporate-owned dedicated devices
 
 * Device limit restrictions can't be applied to devices in the following Windows enrollment scenarios, because these scenarios utilize shared device mode:  
 
