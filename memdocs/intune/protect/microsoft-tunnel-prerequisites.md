@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/24/2024
+ms.date: 11/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -124,7 +124,9 @@ Set up a Linux based virtual machine or a physical server on which to install th
 
   - The Subject Alternative Name (SAN) of the TLS certificate you use to secure the Tunnel Gateway endpoint must match the IP address or FQDN of the Tunnel Gateway server.
 
-  - TLS certificate can't have an expiration date longer than two years. If the date is longer than two years, it isn't accepted on iOS devices.
+  - For iOS devices, public TLS certificates must be issued from the Root CA and have a maximum expiration date of 398 days. Certificates issued by user-added or administrator added Root CAs can have a maximum expiration date of up to two years (730 days).  For more information about these TLS certificate requirements, see [About upcoming limits on trusted certificates](https://support.apple.com/102028) at support.apple.com.
+
+  - For Android devices, we recommend that public TLS certificates issued from the Root CA have a maximum expiration date of 398 days.git a
 
   - Support of wildcards is limited. For example, **\*.contoso.com** is supported, but **cont\*.com** isn't supported.
 
