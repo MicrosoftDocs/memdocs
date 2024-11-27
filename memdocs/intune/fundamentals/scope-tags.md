@@ -55,6 +55,8 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
 ## To create a scope tag
 
+Creating, updating or deleting scope tags requires an administrator assigned the Global Administrator or Intune Adminstrator Entra ID role.
+
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **Scope (Tags)** > **Create**.
 2. On the **Basics** page, provide a **Name** and optional **Description**. Choose **Next**.
 3. On the **Assignments** page, choose the groups containing the devices that you want to assign this scope tag. Choose **Next**.
