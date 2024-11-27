@@ -23,10 +23,8 @@ Review the [technical preview](../technical-preview.md) article before installin
 
 The following sections describe the new features to try out in this version:
 
-[!INCLUDE [Introducing Centralized Search  - Desired Workspace Selection](includes/2405/27927529.md)]
-[!INCLUDE [BitLocker support in Arm devices](includes/2405/27825049.md)]
-[!INCLUDE [Configuration Manager now support SQL Extended Protection for Authentication](includes/2405/28106757.md)]
-[!INCLUDE [Performance Enhancement of policy processing and collection evaluation](includes/2405/27679763.md)]
+[!INCLUDE [Operating System support added for Windows 11 24H2 and Windows Server 2025](includes/2411/26942563.md)]
+[!INCLUDE [Enhanced Security for CMG](includes/2411/27297018.md)]
 
 ## Known issues
 
