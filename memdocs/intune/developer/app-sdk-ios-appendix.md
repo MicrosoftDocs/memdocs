@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 10/14/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -61,16 +61,16 @@ To do this, the application should make use of the `registeredAccounts:` method.
 
 ### How often does the SDK retry enrollments?
 
-The SDK will automatically retry all previously failed enrollments on a 24-hour interval. The SDK does this to ensure that if a user's organization enabled MAM after the user signed in to the application, the user will successfully enroll and receive policies.
+The SDK automatically retries all previously failed enrollments on a 24-hour interval. The SDK does this to ensure that if a user's organization enabled MAM after the user signed in to the application, the user will successfully enroll and receive policies.
 
-The SDK will stop retrying when it detects that a user has successfully enrolled the application. This is because only one user can enroll an application at a particular time. If the user is unenrolled, the retries will begin again on the same 24-hour interval.
+The SDK stops retrying when it detects that a user has successfully enrolled the application. This is because only one user can enroll an application at a particular time. If the user is unenrolled, the retries begin again on the same 24-hour interval.
 
 ### Why does the user need to be deregistered?
 
-The SDK will take these actions in the background periodically:
+The SDK takes these actions in the background periodically:
 
-* If the application isn't yet enrolled, it will try to enroll all registered accounts every 24 hours.
-* If the application is enrolled, the SDK will check for MAM policy updates every 8 hours.
+* If the application isn't yet enrolled, it tries to enroll all registered accounts every 24 hours.
+* If the application is enrolled, the SDK checks for MAM policy updates every 8 hours.
 
 Deregistering a user notifies the SDK that the user will no longer use the application, and the SDK can stop any of the periodic events for that user account. It also triggers an app unenroll and selective wipe if necessary.
 
@@ -80,7 +80,7 @@ This method should be called before the user is signed out of the application.  
 
 ### Are there any other ways that an application can be unenrolled?
 
-Yes, the IT admin can send a selective wipe command to the application. This will deregister and unenroll the user, and it will wipe the user's data. The SDK automatically handles this scenario and sends a notification via the unenroll delegate method.
+Yes, the IT admin can send a selective wipe command to the application. This will deregister and unenroll the user, and it wipes the user's data. The SDK automatically handles this scenario and sends a notification via the unenroll delegate method.
 
 ### Is there a sample app that demonstrates how to integrate the SDK?
 

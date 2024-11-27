@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/30/2024
+ms.date: 10/30/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -68,19 +68,19 @@ When a supported device onboards to Microsoft Defender for Endpoint:
 - For devices that aren't fully Microsoft Entra registered, a synthetic device identity is created in Microsoft Entra ID that allows the device to retrieve policies. Fully registered devices use their current registration.
 - Policies retrieved from Microsoft Intune are enforced on the device by Microsoft Defender for Endpoint.
 
-Security settings management isn't yet supported with Government clouds. For more information, see [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
-
 ### Government cloud support
 
-As a public preview, the Defender for Endpoint security settings management scenario is supported in the following tenants:
+The Defender for Endpoint security settings management scenario is supported in the following government tenants:
 
-- US Government Community (GCC) High
+- US Government Community Cloud (GCC)
+- US Government Community High (GCC High)
 - Department of Defense (DoD)
 
 For more information, see:
 
 - [Intune US Government service description](../fundamentals/intune-govt-service-description.md)
 - [Microsoft Defender for Endpoint for US Government customers](/microsoft-365/security/defender-endpoint/gov)
+- [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
 
 ### Connectivity requirements
 
@@ -102,7 +102,8 @@ With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defende
 - Debian 9 or higher  
 - SUSE Linux Enterprise Server 12 or higher  
 - Oracle Linux 7.2 or higher  
-- Amazon Linux 2  
+- Amazon Linux 2 
+- Amazon Linux 2023
 - Fedora 33 or higher
 
 To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for Linux*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-updates).
@@ -134,12 +135,13 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2012 R2 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2016 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2019 (with [KB5025229](https://support.microsoft.com/topic/april-11-2023-kb5025229-os-build-17763-4252-e8ead788-2cd3-4c9b-8c77-d677e2d8744f))
+- Windows Server 2019 Core (with the [Server Core App Compatibility Feature on Demand](/windows-server/get-started/server-core-app-compatibility-feature-on-demand) installed)  
 - Windows Server 2022, including Server Core (with [KB5025230](https://support.microsoft.com/topic/april-11-2023-security-update-kb5025230-5048ddfb-7bf3-4e6c-b29a-7b44b789d282))
 - Domain controllers (preview). See important information in [Use of security settings management on domain controllers](#use-of-security-settings-management-on-domain-controllers) (in this article).
 
 Security settings management doesn't work on and isn't supported with the following devices:
 
-- Windows Server Core 2019 and earlier
+- Windows Server Core 2016 and earlier
 - Non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients
 - Azure Virtual Desktop (AVD and formerly Windows Virtual Desktop, WVD)
 - 32-bit versions of Windows
@@ -467,6 +469,8 @@ For the list of policy and profile combinations supported for security settings 
 
 ## Monitor status
 
+**Intune:**
+
 Status and reports for policies that target devices in this channel are available from the policy node under Endpoint security in the Microsoft Intune admin center.
 
 Drill in to the policy type and then select the policy to view its status. You can view the list of platforms, policy types, and profiles that support security settings management in the table in [Which solution should I use](#which-solution-should-i-use), earlier in this article.
@@ -474,9 +478,20 @@ Drill in to the policy type and then select the policy to view its status. You c
 When you select a policy, you can view information about the device check-in status, and can select:
 
 - **View report** - View a list of devices that received the policy. You can select a device to drill in and see its per-setting status. You can then select a setting to view more information about it, including other policies that manage that same setting, which could be a source of conflict.
-
 - **Per setting status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
 
+**Defender Portal:**
+
+You can also monitor the Intune policies that are applied from within the [Microsoft Defender portal](https://security.microsoft.com/). Within the portal, go to **Endpoints**, expand configuration management and select *Endpoint security policies*. Select a policy to view its status, and then select:
+
+- **Overview** - View an overview of the groups the policy is applied to, the policy settings that are applied, and device check-in status.
+- **Policy Settings Values** - View the settings that are configured by the policy.
+- **Policy settings status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
+- **Applied devices** - View the devices to which the policy is applied.
+- **Assigned Groups** - View the groups to which the policy is assigned.
+
+For additional information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json) in the Defender content.
+  
 ## Frequently asked questions and considerations
 
 ### Device check-in frequency

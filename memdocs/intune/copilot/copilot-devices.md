@@ -4,10 +4,10 @@
 title: Copilot in Intune shows device information and errors
 description: Microsoft Copilot in Intune can help you get information about your devices, compare devices, and get error information. Use this information to help you manage and troubleshoot device issues.
 keywords: security copilot, intune, microsoft intune, copilot, device information, device errors, device troubleshooting, analyze error code, compare devices, AI, generative-AI
-author: MandiOhlinger
-ms.author: mandia
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 04/01/2024
+ms.date: 11/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice:
@@ -31,7 +31,7 @@ ms.collection:
 
 # Use Microsoft Copilot in Intune to troubleshoot devices (public preview)
 
-Microsoft Copilot for Security is a generative-AI security analysis tool that can help your organization get information quickly. Copilot is [built into Microsoft Intune](copilot-intune-overview.md). It can help IT admins manage and troubleshoot devices.
+Microsoft Security Copilot is a generative-AI security analysis tool that can help your organization get information quickly. Copilot is [built into Microsoft Intune](copilot-intune-overview.md). It can help IT admins manage and troubleshoot devices.
 
 Copilot uses your Intune data. Admins can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them. For more information, see [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
 
@@ -50,7 +50,7 @@ This article describes how to use Copilot to manage and troubleshoot device issu
 - To use Copilot in Intune, make sure Copilot is enabled. For more information, see:
 
   - [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md#before-you-begin)
-  - [Get started with Microsoft Copilot for Security](/security-copilot/get-started-security-copilot)
+  - [Get started with Microsoft Security Copilot](/security-copilot/get-started-security-copilot)
 
 - When you use the Copilot prompts to troubleshoot your devices, you are within the scope of the device you select.
 

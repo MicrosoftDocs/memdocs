@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/01/2024
+ms.date: 11/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,7 +16,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: sheetg
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,6 +31,13 @@ ms.collection:
 - sub-certificates
 ---
 # Configure and use PKCS certificates with Intune
+
+**Applies to**L
+- Android
+- iOS/iPadOS
+- macOS
+- Windows 10/11  
+
 
 Microsoft Intune supports the use of private and public key pair (PKCS) certificates. This article reviews the requirements for PKCS certificates with Intune, including the export of a PKCS certificate then adding it to an Intune device configuration profile.
 
@@ -65,6 +72,60 @@ To use PKCS certificates with Intune, you need the following infrastructure:
   - Overview of the [Certificate Connector for Microsoft Intune](certificate-connector-overview.md)  
   - [Prerequisites](certificate-connector-prerequisites.md)  
   - [Installation and configuration](certificate-connector-install.md)  
+
+## Update certificate connector: Strong mapping requirements for KB5014754    
+
+The Key Distribution Center (KDC) requires a strong mapping format in PKCS certificates deployed by Microsoft Intune and used for certificate-based authentication. The mapping must have a security identifier (SID) extension that maps to the user or device SID. If a certificate doesn't meet the new strong mapping criteria set by the full enforcement mode date, authentication will be denied. For more information about the requirements, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
+
+In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we released an update that adds the object identifier attribute containing the user or device SID to the certificate, effectively satisfying the strong mapping requirements. This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID, and is available across all platforms, with some differences:  
+
+ * Strong mapping changes apply to *user certificates* for all OS platforms.  
+
+ * Strong mapping changes apply to *device certificates* for Microsoft Entra hybrid-joined Windows devices.  
+
+ To ensure that certficate-based authentication continues working, you must take the following actions:  
+
+- Update the Microsoft Intune Certificate Connector to version 6.2406.0.1001. For information about the latest version and how to update the certificate connector, see [Certificate connector for Microsoft Intune](certificate-connector-overview.md).  
+
+- Make changes to registry key information on the Windows server that hosts the certificate connector.  
+
+Complete the following procedure to modify the registry keys and apply the strong mapping changes to certificates. These changes apply to new PKCS certificates and PKCS certificates that are being renewed.     
+
+>[!TIP]
+> This procedure requires you to modify the registry in Windows. For more information, see the following resources on Microsoft Support:
+> - [How to back up and restore the registry in Windows - Microsoft Support](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692)
+> - [How to add, modify, or delete registry subkeys and values by using a .reg file - Microsoft Support](https://support.microsoft.com/topic/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg-file-9c7f37cf-a5e9-e1cd-c4fa-2a26218a1a23)  
+
+1. In the Windows registry, change the value for `[HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector](DWORD)EnableSidSecurityExtension` to **1**.   
+
+1. Restart the certificate connector service.  
+   1. Go to **Start** > **Run**.  
+   2. Open **services.msc**.  
+   3. Restart these services:  
+      - **PFX Create Legacy Connector for Microsoft Intune**
+       
+      - **PFX Create Certificate Connector for Microsoft Intune**  
+
+1. Changes begin applying to all new certificates, and to certificates being renewed. To verify that authentication works, we recommend testing all places where certificate-based authentication could be used, including:   
+   - Apps  
+   - Intune-integrated certification authorities  
+   - NAC solutions  
+   - Networking infrastructure  
+
+   To roll back changes:
+   
+     1. Restore the original registry settings.  
+        
+     1. Restart these services:  
+   
+        - **PFX Create Legacy Connector for Microsoft Intune**  
+          
+        - **PFX Create Certificate Connector for Microsoft Intune**  
+     
+     1. Create a new PKCS certificate profile for affected devices, to reissue certificates without the SID attribute.  
+
+        > [!TIP]
+        > If you use a Digicert CA, you must create a certificate template for users with an SID and another template for users without an SID. For more information, see the [DigiCert PKI Platform 8.24.1 release notes](https://knowledge.digicert.com/general-information/release-notes-pki).  
 
 ## Export the root certificate from the Enterprise CA
 
@@ -187,11 +248,11 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 9. In **Assignments**, select the user or device groups you want to include in the assignment. These groups receive the profile after you deploy it. For more granularity, see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*.
 
    Plan to deploy this certificate profile to the same groups that receive:
-   
+
    - The PKCS certificate profile and  
 
    - A configuration profile, such as a Wi-Fi profile that makes use of the certificate. 
-   
+
    For more information about assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).  
 
    Select **Next**.
@@ -242,17 +303,18 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
    
    |Setting     | Platform     | Details   |
    |------------|------------|------------|
-   |**Renewal threshold (%)**        |<ul><li>All         |Recommended is 20%  |
-   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option might be set to one year. <br><br> Use a validity period of five days or up to 24 months. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
-   |**Key storage provider (KSP)**   |<ul><li>Windows 10/11  |For Windows, select where to store the keys on the device. |
-   |**Certification authority**      |<ul><li>All         |Displays the internal fully qualified domain name (FQDN) of your Enterprise CA.  |
-   |**Certification authority name** |<ul><li>All         |Lists the name of your Enterprise CA, such as "Contoso Certification Authority." |
-   |**Certificate template name**    |<ul><li>All         |Lists the name of your certificate template. |
-   |**Certificate type**             |<ul><li>Android Enterprise (*Corporate-Owned and Personally-Owned Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10/11 |Select a type: <ul><li> **User** certificates can contain both user and device attributes in the subject and subject alternative name (SAN) of the certificate. </li><li>**Device** certificates can only contain device attributes in the subject and SAN of the certificate. Use Device for scenarios such as user-less devices, like kiosks or other shared devices.  <br><br> This selection affects the Subject name format. |
-   |**Subject name format**          |<ul><li>All         |For details on how to configure the subject name format, see [Subject name format](#subject-name-format) later in this article.  <br><br>For the following platforms, the Subject name format is determined by the certificate type: <ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10/11 </li></ul>  <p>  |
-   |**Subject alternative name**     |<ul><li>All         |For *Attribute*, select **User principal name (UPN)** unless otherwise required, configure a corresponding *Value*, and then select **Add**. <br><br> You can use variables or static text for the SAN of both certificate types. Use of a variable isn't required.<br><br>For more information, see [Subject name format](#subject-name-format) later in this article.|
+   |**Deployment channel**|macOS|Select how you want to deploy the profile. This setting also determines the keychain where the linked certificates are stored, so it's important to select the proper channel. <br><br/>Always select the user deployment channel in profiles with user certificates. The user channel stores certificates in the user keychain. Always select the device deployment channel in profiles with device certificates. The device channel stores certificates in the system keychain. <br><br/> It's not possible to edit the deployment channel after you deploy the profile. You must create a new profile to select a different channel.
+   |**Renewal threshold (%)**        |All         |Recommended is 20%  |
+   |**Certificate validity period**  |All         |If you didn't change the certificate template, this option might be set to one year. <br><br> Use a validity period of five days or up to 24 months. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
+   |**Key storage provider (KSP)**   |Windows 10/11  |For Windows, select where to store the keys on the device. |
+   |**Certification authority**      |All         |Displays the internal fully qualified domain name (FQDN) of your Enterprise CA.  |
+   |**Certification authority name** |All         |Lists the name of your Enterprise CA, such as "Contoso Certification Authority." |
+   |**Certificate template name**    |All         |Lists the name of your certificate template. |
+   |**Certificate type**             |<ul><li>Android Enterprise (*Corporate-Owned and Personally-Owned Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10/11 |Select a type: <ul><li> **User** certificates can contain both user and device attributes in the subject and subject alternative name (SAN) of the certificate. </li><li>**Device** certificates can only contain device attributes in the subject and SAN of the certificate. Use Device for scenarios such as user-less devices, like kiosks or other shared devices.  <br><br> This selection affects the Subject name format. <br><br/>For macOS, if this profile is configured to use the device deployment channel, you can select **User** or **Device**. If the profile is configured to use the user deployment channel, you can select only **User**. |
+   |**Subject name format**          |All         |For details on how to configure the subject name format, see [Subject name format](#subject-name-format) later in this article.  <br><br>For the following platforms, the Subject name format is determined by the certificate type: <ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10/11 </li></ul>  <p>  |
+   |**Subject alternative name**     |All         |For *Attribute*, select **User principal name (UPN)** unless otherwise required, configure a corresponding *Value*, and then select **Add**. <br><br> You can use variables or static text for the SAN of both certificate types. Use of a variable isn't required.<br><br>For more information, see [Subject name format](#subject-name-format) later in this article.|
    |**Extended key usage**           |<ul><li> Android device administrator </li><li>Android Enterprise (*Device Owner*, *Corporate-Owned and Personally-Owned Work Profile*) </li><li>Windows 10/11 |Certificates usually require *Client Authentication* so that the user or device can authenticate to a server. |
-   |**Allow all apps access to private key** |<ul><li>macOS  |Set to **Enable** to give apps that are configured for the associated mac device access to the PKCS certificate's private key. <br><br> For more information on this setting, see *AllowAllAppsAccess* the Certificate Payload section of [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) in the Apple developer documentation. |
+   |**Allow all apps access to private key** |macOS  |Set to **Enable** to give apps that are configured for the associated mac device access to the PKCS certificate's private key. <br><br> For more information on this setting, see *AllowAllAppsAccess* the Certificate Payload section of [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) in the Apple developer documentation. |
    |**Root Certificate**             |<ul><li>Android device administrator </li><li>Android Enterprise (*Device Owner*, *Corporate-Owned and Personally-Owned Work Profile*) |Select a root CA certificate profile that was previously assigned. |
 
 8. This step applies only to **Android Enterprise** devices profiles for **Fully Managed, Dedicated, and Corporate-Owned work Profile**.  
@@ -356,59 +418,6 @@ Platforms:
   > - When you specify a variable, enclose the variable name in curly brackets { } as seen in the example, to avoid an error.
   > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
   > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.  
-
-## Update certificate connector for KB5014754 requirements     
-
-The Windows Kerberos Key Distribution Center (KDC) requires a strong mapping format for certificates issued by Active Directory Certificate Services. This requirement is applicable to PKCS certificates deployed by Microsoft Intune and used for certificate-based authentication. The mapping must have a security identifier (SID) extension that maps to the user or device SID. If a certificate doesn't meet the new strong mapping criteria set by the full enforcement mode date, authentication will be denied. For more information about the requirements, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).
-
-In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we released an update that adds the object identifier attribute containing the user or device SID to the certificate, effectively satisfying the strong mapping requirements. This update applies to users and devices synced from an on-premises Active Directory to Microsoft Entra ID, and is available across all platforms, with some differences:  
-
- * Strong mapping changes apply to *user certificates* for all OS platforms.  
-
- * Strong mapping changes apply to *device certificates* for Microsoft Entra hybrid-joined Windows devices.  
-
- To ensure that certficate-based authentication continues working, you must take the following actions:  
-
-- Update the Microsoft Intune Certificate Connector to version 6.2406.0.1001. For information about the latest version and how to update the certificate connector, see [Certificate connector for Microsoft Intune](certificate-connector-overview.md).  
-- Make changes to registry key information on the Windows server that hosts the certificate connector.  
-
-Complete the following procedure to modify the registry keys and apply the strong mapping changes to certificates. These changes apply to new PKCS certificates and PKCS certificates that are being renewed.     
-
->[!TIP]
-> This procedure requires you to modify the registry in Windows. For more information, see the following resources on Microsoft Support:
-> - [How to back up and restore the registry in Windows - Microsoft Support](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692)
-> - [How to add, modify, or delete registry subkeys and values by using a .reg file - Microsoft Support](https://support.microsoft.com/topic/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg-file-9c7f37cf-a5e9-e1cd-c4fa-2a26218a1a23)  
-
-1. In the Windows registry, change the value for `[HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector](DWORD)EnableSidSecurityExtension` to **1**.   
-
-1. Restart the certificate connector service.  
-   1. Go to **Start** > **Run**.  
-   2. Open **services.msc**.  
-   3. Restart these services:  
-      - **PFX Create Legacy Connector for Microsoft Intune**
-       
-      - **PFX Create Certificate Connector for Microsoft Intune**  
-
-1. Changes begin applying to all new certificates, and to certificates being renewed. To verify that authentication works, we recommend testing all places where certificate-based authentication could be used, including:   
-   - Apps  
-   - Intune-integrated certification authorities  
-   - NAC solutions  
-   - Networking infrastructure  
-
-   To roll back changes:
-   
-     1. Restore the original registry settings.  
-        
-     1. Restart these services:  
-   
-        - **PFX Create Legacy Connector for Microsoft Intune**  
-          
-        - **PFX Create Certificate Connector for Microsoft Intune**  
-     
-     1. Create a new PKCS certificate profile for affected devices, to reissue certificates without the SID attribute.  
-
-        > [!TIP]
-        > If you use a Digicert CA, you must create a certificate template for users with an SID and another template for users without an SID. For more information, see the [DigiCert PKI Platform 8.24.1 release notes](https://knowledge.digicert.com/general-information/release-notes-pki).  
 
 ## Next steps
 

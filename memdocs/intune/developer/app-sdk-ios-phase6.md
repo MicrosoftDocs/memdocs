@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2023
+ms.date: 11/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -55,6 +55,10 @@ In addition to the Intune SDK, you need these two components to enable App Prote
 
 :::image type="content" alt-text="Diagram of MAM-CA remediation flow." source="./media/app-sdk-ios/app-ca-flow.png" lightbox="./media/app-sdk-ios/app-ca-flow.png":::
 
+### MAM compliance process flow
+
+:::image type="content" alt-text="Diagram of MAM compliance process flow." source="./media/app-sdk-ios/mam-compliance-flow.png" lightbox="./media/app-sdk-ios/mam-compliance-flow.png":::
+
 ### New APIs
 Most of the new APIs can be found in the IntuneMAMComplianceManager.h. The app needs to be aware of three differences in behavior explained below.
 
@@ -62,7 +66,7 @@ New behavior	| Description	|
 --	| --	|
 App → ADAL/MSAL: Acquire token	| When an application tries to acquire a token, it should be prepared to receive a ERROR_SERVER_PROTECTION_POLICY_REQUIRED. The app can receive this error during their initial account add flow or when accessing a token later in the application lifecycle. When the app receives this error, it won't be granted an access token and needs to be remediated to retrieve any server data.	|
 App → Intune SDK: Call remediateComplianceForIdentity	| When an app receives a ERROR_SERVER_PROTECTION_POLICY_REQUIRED from ADAL, or MSALErrorServerProtectionPoliciesRequired from MSAL it should call [[IntuneMAMComplianceManager instance] remediateComplianceForIdentity] to let Intune enroll the app and apply policy. The app may be restarted during this call. If the app needs to save state before restarting, it can do so in restartApplication delegate method in IntuneMAMPolicyDelegate. <br><br>remediateComplianceForIdentity provides all the functionality of registerAndEnrollAccount and loginAndEnrollAccount. Therefore, the app doesn't need to use either of these older APIs.	|
-Intune → App: Delegate remediation notification	|After Intune has retrieved and applied policies, it will notify the app of the result using the IntuneMAMComplianceDelegate protocol. Refer to IntuneMAMComplianceStatus in IntuneComplianceManager.h for information on how the app should handle each error. In all cases except IntuneMAMComplianceCompliant, the user won't have a valid access token. <br><br>If the app already has managed content and isn't able to enter a compliant status, the application should call selective wipe to remove any corporate content. <br><br>If we can't reach a compliant state, the app should display localized the error message and title string supplied by withErrorMessage and andErrorTitle.	|
+Intune → App: Delegate remediation notification	|After Intune has retrieved and applied policies, it notifies the app of the result using the IntuneMAMComplianceDelegate protocol. Refer to IntuneMAMComplianceStatus in IntuneComplianceManager.h for information on how the app should handle each error. In all cases except IntuneMAMComplianceCompliant, the user won't have a valid access token. <br><br>If the app already has managed content and isn't able to enter a compliant status, the application should call selective wipe to remove any corporate content. <br><br>If we can't reach a compliant state, the app should display localized the error message and title string supplied by withErrorMessage and andErrorTitle.	|
 
 Example for hasComplianceStatus method of IntuneMAMComplianceDelegate
 
@@ -157,15 +161,16 @@ guard let authorityURL = URL(string: kAuthority) else {
         self.applicationContext = try MSALPublicClientApplication(configuration: msalConfiguration)
 
 ```
-To fetch the Entra object ID for the accountId parameter of the MAM SDK compliance remediation APIs you need to do the following:
+
+To fetch the Microsoft Entra object ID for the accountId parameter of the MAM SDK compliance remediation APIs, you need to do the following steps:
 - First get the homeAccountId from userInfo[MSALHomeAccountIdKey] within MSALError object sent back by MSAL when it reports ERROR_SERVER_PROTECTION_POLICY_REQUIRED to the app.
-- This homeAccountId will be in the format ObjectId.TenantId. Extract the ObjectId value by spliting the string on the '.' and then use that value for the accountId parameter in remediation API remediateComplianceForAccountId.
+- This homeAccountId is in the format ObjectId.TenantId. Extract the ObjectId value by splitting the string on the '.' and then use that value for the accountId parameter in remediation API remediateComplianceForAccountId.
 
 ### Exit criteria
 
 #### Configuring a test user for App Protection CA
 
-1. Log in with your administrator credentials to https://portal.azure.com.
+1. Sign in with your administrator credentials to https://portal.azure.com.
 2. Select **Microsoft Entra ID** > **Security** > **Conditional Access** > **New policy**. Create a new conditional access policy.
 3. Configure conditional access policy by setting the following items:
     - Filling in the **Name** field.
@@ -182,11 +187,11 @@ Test Case	| How to test	|	Expected Outcome	|
 --	| --	| --	|
 MAM-CA always applied		| Ensure the user is targeted for both App Protection CA and MAM policy before enrolling in your app.|  Verify that your app handles the remediation cases described above and the app can get an access token.	|
 MAM-CA applied after user enrolled	| The user should be logged into the app already, but not targeted for App Protection CA.	| Target the user for App Protection CA in the console and verify that you correctly handle MAM remediation	|
-MAM-CA noncompliance	| Set up an App Protection CA policy, but don't assign a MAM policy.	| The user shouldn't be able to acquire an access token. This is useful for testing how your app handles IntuneMAMComplianceStatus error cases.	|
+MAM-CA noncompliance	| Setup an App Protection CA policy, but don't assign a MAM policy.	| The user shouldn't be able to acquire an access token. This is useful for testing how your app handles IntuneMAMComplianceStatus error cases.	|
 
 ## Next Steps
 
-After you've completed all the [Exit Criteria] above, your app is now successfully integrated with App Protection CA support. The subsequent section, [Stage 7: Web-view features], may or may not be required, depending on your app's desired app protection policy support.
+After you've completed all the [Exit Criteria] above, your app is now successfully integrated with App Protection CA support. The subsequent section, [Stage 7: Web-view features] may or may not be required, depending on your app's desired app protection policy support.
 
 <!-- Stage 6 links -->
 [Exit Criteria]:#exit-criteria

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/08/2024
+ms.date: 10/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -76,6 +76,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     > * Camera
     > * Record audio
     > * Allow body sensor data
+    > * Background location
 
 11. If the managed app supports configuration settings, the **Configuration settings format** dropdown box is visible. Select one of the following methods to add configuration information:
     - **Use configuration designer**

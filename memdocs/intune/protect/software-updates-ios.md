@@ -56,7 +56,7 @@ With policies for iOS software updates, you can:
 
 > [!NOTE]
 >
-> - iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md) will install only when the device is charging and while no users are signed in to a *Shared iPad session* on he device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
+> - iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md) will install only when the device is charging and while no users are signed in to a *Shared iPad session* on the device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
 >
 > - If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behavior may be undesirable. Consider testing to assess the impact of OS updates on the app you are running in ASAM. You can use Intune [*device restriction profiles*](../configuration/device-restrictions-ios.md#general) to configure ASAM.
 

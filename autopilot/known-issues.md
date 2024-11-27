@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/29/2024
+ms.date: 10/09/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,6 +40,12 @@ This article describes known issues that can often be resolved with configuratio
 > For issues with Autopilot with Co-management, see [Windows Autopilot with co-management](/mem/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues
+
+### DFCI enrollment fails for Professional editions of Windows 11, version 24H2
+
+Date added: *October 9, 2024*
+
+DFCI can't currently be used on devices with Professional editions of Windows 11, version 24H2. The issue is being investigated. As a workaround, ensure the device is upgraded to the Enterprise edition of Windows 11, version 24H2 during or after OOBE onboarding. After upgrading to the Enterprise edition of Windows 11, version 24H2, sync the device. Once the device is synced, reboot it to get it enrolled in DFCI.
 
 ### Autopilot deployment report doesn't support sorting
 

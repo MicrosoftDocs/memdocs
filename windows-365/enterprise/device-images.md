@@ -52,6 +52,10 @@ A custom image must also meet the following extra requirements:
 - Exist in an Azure subscription.
 - Is stored as a [managed image](/azure/virtual-machines/capture-image-resource) in Azure.
 
+> [!NOTE]
+>
+> Some editions of the Windows operating system, like N or long term service channel (LTSC) editions, aren't supported. For best results when you create a custom image, use one of the Cloud PC gallery images as a starting template.
+
 Storing a managed image on Azure incurs storage costs. However, customers can delete the managed image from Azure once they've successfully uploaded it as a Custom Image to Microsoft Intune.
 
 ## Gallery images
@@ -87,6 +91,8 @@ Each updated image includes:
   - Windows 365 gallery images include the latest Monthly Enterprise Channel release with the latest security updates.
 - [Microsoft Teams updates](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-d7092a6d-c896-424c-b362-a472d5f105de)
 - [WebRTC redirector service updates](/azure/virtual-desktop/teams-on-avd#install-the-teams-websocket-service)
+
+Applications that come pre-installed are the latest version that is available at the start of the second Tuesday of that month. Any app updates posted on that day are included in the image update of the subsequent month.
 
 Newly provisioned Cloud PCs are automatically created with the latest images. For existing Cloud PCs, you can receive the updates by reprovisioning.
 

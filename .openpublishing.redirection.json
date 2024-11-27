@@ -1,6 +1,61 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/enrollment/chrome-enterprise-device-details.md",
+      "redirect_url": "/mem/intune/remote-actions/chrome-enterprise-device-details",
+      "redirect_document_id": true
+    },    
+    {
+      "source_path": "memdocs/intune/enrollment/chrome-enterprise-remote-actions.md",
+      "redirect_url": "/mem/intune/remote-actions/chrome-enterprise-remote-actions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "memdocs/intune/user-help/sso-dialog-faqs.yml",
+      "redirect_url": "https://support.microsoft.com/topic/a6505ceb-1a20-4b15-889c-250175481506",
+      "redirect_document_id": false
+    },  
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-zips-android.md",
+      "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+      "redirect_document_id": false
+    },  
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-checkpoint-android.md",
+      "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-skycure-android.md",
+      "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md",
+      "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-zips-ios.md",
+      "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-checkpoint-ios.md",
+      "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-skycure-ios.md",
+      "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md",
+      "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "memdocs/intune/remote-actions/organizational-messages-reporting.md",
       "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
       "redirect_document_id": false

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/01/2024
+ms.date: 11/19/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -51,11 +51,9 @@ To create an ANC, you must meet these requirements:
 - If you want to create an ANC with a network or resource group that was never used in any pervious ANC creation, then you must have the Subscription owner or user administrator role.
 - For Disaster Recovery (DR) purposes, make sure that there are at least 50% of the IP addresses available in your subnet. If reprovisioning for DR is required, sufficient new IP addresses are required for each Cloud PC provisioned on the subnet.
 - For Windows 365 Government - GCC only and not GCC-H - make sure to complete the script options listed in [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
-   - If you aren't using Azure CloudShell, make sure that your PowerShell execution policy is configured to allow Unrestricted scripts. If you use Group Policy to set execution policy, make sure that the Group Policy Object (GPO) targeted at the Organizational Unit (OU) defined in the ANC is configured to allow Unrestricted scripts. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy).
+- If you aren't using Azure CloudShell, make sure that your PowerShell execution policy is configured to allow Unrestricted scripts. If you use Group Policy to set execution policy, make sure that the Group Policy Object (GPO) targeted at the Organizational Unit (OU) defined in the ANC is configured to allow Unrestricted scripts. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy).
 
 When planning your ANC VNets with ExpressRoute as the on-premises connectivity model, refer to [Azure’s documentation on VM limits](/azure/expressroute/expressroute-about-virtual-network-gateways#performance-results). For the ExpressRoute Gateway SKU, make sure that you have the correct sized Gateway for the number of Cloud PCs planned within the VNet. Exceeding this limit could cause instability in your connectivity.
-
-*******
 
 ## Create an ANC
 
@@ -68,8 +66,14 @@ When planning your ANC VNets with ExpressRoute as the on-premises connectivity m
 
     ![Screenshot of Name field](./media/create-azure-network-connection/connection-name.png)
 
-4. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy ANC](health-checks.md), you won't be able to proceed.
-5. Select a **Virtual network** and **Subnet**.
+4. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy ANC](health-checks.md), you can't proceed.
+5. Select a **Virtual network** and **Subnet**. When selecting a vNET:
+
+    - To maintain a stable and performant connection, make sure the vNET is in the region closest to the Windows 365 users.
+    - Make sure there are enough IP addresses in the vNET subnet to accommodate all required Cloud PCs. Also, consider future growth and [resizing](resize-cloud-pc.md) needs.
+    - Make sure the vNET has line of sight to a domain controller. This line of sight is required for initial provisioning and successful sign in for hybrid joined Cloud PCs.
+    - Make sure all [required endpoints](requirements-network.md) are allowed through the vNET and aren't blocked by any firewall, proxy, or Software Gateways.
+
 6. Select **Next**.
 7. For hybrid Microsoft Entra join ANCs, on the **AD domain** page, provide the following information:
 
@@ -87,6 +91,8 @@ When planning your ANC VNets with ExpressRoute as the on-premises connectivity m
 
 8. Select **Next**.
 9. On the **Review + Create** page, select **Create**.
+
+When an ANC is in use, it can't be deleted and certain configuration settings can't be edited. For more information, see [Edit Azure network connection](edit-azure-network-connection.md) and [Delete Azure network connection](delete-azure-network-connection.md).
 
 <!-- ########################## -->
 ## Next steps
