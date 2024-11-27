@@ -50,7 +50,7 @@ When a device checks-in, it immediately checks for compliance, non-compliance an
 
 There are 4 main types of check-ins:
 
-**Maintenance check-ins** - These check-ins happen at predetermined intervals and can be initiated by the client or service depending on the platform. The check-ins are estimated as follows:
+**Scheduled check-ins** - These check-ins happen at predetermined intervals and can be initiated by the client or service depending on the platform. The check-ins are estimated as follows:
 
 | Platform | Estimated refresh cycle|
 | --- | --- |
@@ -71,11 +71,12 @@ These notification times also vary between platforms.
 
 - On Android devices, [Google Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed).
 
-- On iOS devices, [NotNow status can affect policy refresh intervals](/troubleshoot/mem/intune/device-configuration/2016341112-ios-device-is-currently-busy).
+- On iOS devices, [Specific conditions can affect policy refresh intervals](/troubleshoot/mem/intune/device-configuration/2016341112-ios-device-is-currently-busy).
 
 An offline device, such as a powered off, or a disconnected device, might not receive the notifications. In this case, the device gets the policy or profile on its next scheduled check-in with Intune.
 
-It might take additional time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.  
+> [!NOTE]
+> It might take additional time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.  
 
 Additionally, when devices first enroll, configuration check-ins run more frequently to perform configuration, compliance and non-compliance checks. The check-ins are estimated as follows:
 
@@ -91,7 +92,11 @@ For app protection policy refresh intervals, go to [App Protection Policy deli
 
 ## Company portal
 
-At any time, users can open the Company Portal app, **Devices** > **Check Status** or **Settings** > **Sync** to immediately check for policy or profile updates. For related information about the Intune Management Extension agent or Win32 apps, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+At any time, users can open the Company Portal app and navigate to **Devices** > **Check Status** to evaluate your device's settings and verify access to work or school resources or navigate to **Settings** > **Sync** to get the latest updates, requirements, and communications from your organization.
+
+For related information about the Intune Management Extension agent or Win32 apps, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
+For related information, see  [Sync enrolled device for Windows](../user-help/sync-your-device-manually-windows.md) and [Check device access in Company Portal for Windows](../user-help/check-device-access-windows-cpapp.md).
 
 ## Conflicts
 
