@@ -128,12 +128,10 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2405
+### Technical preview version 2411
 
-- [Introducing Centralized Search - Desired Workspace Selection](2024/technical-preview-2405.md)
-- [BitLocker support in Arm devices](2024/technical-preview-2405.md)
-- [Configuration Manager now support SQL Extended Protection for Authentication](2024/technical-preview-2405.md)
-- [Performance Enhancement of policy processing and collection evaluation](2024/technical-preview-2405.md)
+- [Operating System support added for Windows 11 24H2 and Windows Server 2025](2024/technical-preview-2411.md)
+- [Enhanced Security for CMG](2024/technical-preview-2411.md)
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -150,6 +148,18 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+
+### Technical preview version 2405
+
+- [Introducing Centralized Search - Desired Workspace Selection](2024/technical-preview-2405.md)
+- [BitLocker support in Arm devices](2024/technical-preview-2405.md)
+- [Configuration Manager now support SQL Extended Protection for Authentication](2024/technical-preview-2405.md)
+- [Performance Enhancement of policy processing and collection evaluation](2024/technical-preview-2405.md)
+
+> [!NOTE]
+> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
+
 
 ### Technical preview version 2401
 
