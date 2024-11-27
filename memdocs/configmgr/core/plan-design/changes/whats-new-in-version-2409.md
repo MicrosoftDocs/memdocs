@@ -25,6 +25,25 @@ Always review the latest checklist for installing this update. For more informat
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
 ## Site infrastructure
+<!--24501008-->
+### Configuration Manager now supports SQL Extended Protection for Authentication
+Configuration Manager now supports SQL Extended Protection for Authentication. It's a security feature that enhances protection against MITM attacks, making SQL Server more secure when connections are made using Extended Protection. These enhancements collectively reduce the risk of unauthorized access and protect sensitive data managed by the SQL Server Database Engine. 
+
+For more information, see [Connect to the Database Engine Using Extended Protection](/sql/database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection)
+
+###  Introducing Centralized Search - Desired Workspace Selection
+<!--27679763-->
+The centralized search box now enables the option to select the desired workspace for searching. Users can easily refine their search results by selecting the desired workspace from the dropdown menu.
+
+:::image type="content" alt-text="Screenshot of centralized search workspace selection in console." source="../../media/27679763-search-workspace.png" lightbox="../../media/27679763-search-workspace.png":::
+
+### Configuration Manager does not support SQL Server 2012 and 2014
+Starting with version 2409, Configuration Manager does not support SQL Server 2012 and 2014.Upgrade to the latest version of SQL Server or at least SQL Server 2016 or later. Please note that failure to complete this upgrade will result in CM upgrades being blocked the. The error can also be seen in the pre-req check while running the CM upgrade. 
+
+## Software updates
+
+
+## OS deployment
 
 With this version of Configuration Manager, support is added for Windows 11 24H2 and Windows Server 2025.
  - Windows 11 24H2 & Windows Server 2025 are added to Product lifecycle dashboard and supported platform.
@@ -32,15 +51,10 @@ With this version of Configuration Manager, support is added for Windows 11 24H2
  - Boot image creation in SCCM on Windows Server 2025 now supports latest Windows ADK
  - Windows upgrade readiness dashboard now supports Windows 11 24H2 for upgrading clients.
    
->[!NOTE] 
-
-
-## Software updates
-
-
-## OS deployment
+>[!NOTE] Windows Server and Windows 11 24H2 do not support Firewall Rules. This will result in a non-compliant status in the Configuration Manager applet.
 
 ## Cloud-attached management
+
 
 ## Deprecated features
 
