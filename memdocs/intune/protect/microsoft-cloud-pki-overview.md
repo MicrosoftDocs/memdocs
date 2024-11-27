@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/03/2024
+ms.date: 11/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -76,14 +76,14 @@ The following table lists the features and scenarios supported with Microsoft Cl
 
 | Feature | Overview |
 | --- | --- |
-| Create multiple CAs in an Intune tenant | Create two-tier PKI hierarchy with root and issuing CA in the cloud.  |
+| Create multiple certificate authorities (CA) in an Intune tenant | Create two-tier PKI hierarchy with root and issuing CA in the cloud.  |
 | Bring your own CA (BYOCA)  | Anchor an Intune Issuing CA to a private CA through Active Directory Certificate Services or a non-Microsoft certificate service. If you have an existing PKI infrastructure, you can maintain the same root CA and create an issuing CA that chains to your external root. This option includes support for external private CA N+ tier hierarchies.  |
 | Signing and Encryption algorithms|  Intune supports RSA, key sizes 2048, 3072, and 4096. |
 | Hash algorithms  | Intune supports SHA-256, SHA-384, and SHA-512.   |
 |HSM keys (signing and encryption)|Keys are provisioned using [Azure Managed Hardware Security Module (Azure Managed HSM)](/azure/key-vault/managed-hsm/overview). <br/><br/> CAs created with a licensed Intune Suite or Cloud PKI Standalone Add-on automatically use HSM signing and encryption keys. No Azure subscription is required for Azure HSM.   |
 |Software Keys (signing and encryption) |CAs created during a trial period of Intune Suite or Cloud PKI standalone Add-on use software-backed signing and encryption keys using `System.Security.Cryptography.RSA`. |
 | Certificate registration authority  | Providing a Cloud Certificate Registration Authority supporting Simple Certificate Enrollment Protocol (SCEP) for each Cloud PKI Issuing CA.|
-|Certificate Revocation List (CRL) distribution points | Intune hosts the CRL distribution point (CDP) for each CA. <br/><br/>  The CRL validity period is seven days. Publishing and refresh happens every 3.5 days. The CRL is updated with every certificate revocation. |
+|Certificate Revocation List (CRL) distribution points | Intune hosts the CRL distribution point (CDP) for each CA. <br/><br/>  The CRL validity period is seven days. Publishing and refresh happen every 3.5 days. The CRL is updated with every certificate revocation. |
 |Authority Information Access (AIA) end points | Intune hosts the AIA endpoint for each Issuing CA. The AIA endpoint can be used by relying parties to retrieve parent certificates. |
 | End-entity certificate issuance for users and devices |  Also referred to as *leaf certificate* issuance. Support is for the SCEP (PKCS#7) protocol and certification format, and Intune-MDM enrolled devices supporting the SCEP profile. |
 | Certificate life-cycle management | Issue, renew, and revoke end-entity certificates. |
@@ -94,10 +94,10 @@ The following table lists the features and scenarios supported with Microsoft Cl
 
 ## Architecture  
 
-Microsoft Cloud PKI is made up of several key components working together to simplify the complexity and management of a public key infrastructure; a Cloud PKI service for creating and hosting certification authorities, combined with a certificate registration authority to automatically service incoming certificate requests from Intune-enrolled devices. The registration authority supports the Simple Certificate Enrollment Protocol (SCEP).
+Microsoft Cloud PKI is made up of several key components working together to simplify the complexity and management of a public key infrastructure. It includes a Cloud PKI service for creating and hosting certification authorities, combined with a certificate registration authority to automatically service incoming certificate requests from Intune-enrolled devices. The registration authority supports the Simple Certificate Enrollment Protocol (SCEP).
 
 > [!div class="mx-imgBorder"]
-> ![Drawing of the Microsoft Cloud PKI architecture.](./media/microsoft-cloud-pki/microsoft-cloud-pki-architecture.png)  
+> ![Drawing of the Microsoft Cloud PKI architecture.](./media/microsoft-cloud-pki/Architecture_flow.png)  
 
 **Components**:
 
@@ -161,7 +161,7 @@ During the trial period, you can create up to six CAs in your tenant. Cloud PKI 
 
 ## CA configuration examples  
 
-Two-tier Cloud PKI root & issuing CAs, and bring-your-own CAs can coexist in Intune.  You can use the following configurations, provided as examples, to create CAs in Microsoft Cloud PKI:
+Two-tier Cloud PKI root & issuing CAs, and bring-your-own CAs can coexist in Intune. You can use the following configurations, provided as examples, to create CAs in Microsoft Cloud PKI:
 
 * One root CA with five issuing CAs
 * Three root CAs with one issuing CA each  
@@ -179,4 +179,4 @@ For the latest changes and additions, see [What's new in Microsoft Intune](../fu
   * Cloud PKI Root CA  
   * Cloud PKI Issuing CA  
   * BYOCA Issuing CA
-* In the admin center, when you select **View all certificates** for an issuing CA, Intune only shows the first 1000 issued certificates. We're actively working to address this limitation. As a workaround, go to **Devices** > **Monitor**. Then select **Certificates** to view all issued certificates.  
+* In the admin center, when you select **View all certificates** for an issuing CA, Intune only shows the first 1,000 issued certificates. We're actively working to address this limitation. As a workaround, go to **Devices** > **Monitor**. Then select **Certificates** to view all issued certificates.  
