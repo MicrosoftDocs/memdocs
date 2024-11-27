@@ -18,13 +18,21 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2409 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2203 or later. When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability. This article summarizes the changes and new features in Configuration Manager, version 2403.
+Update 2409 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2309 or later. When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability. This article summarizes the changes and new features in Configuration Manager, version 2409.
                                                                                                                                                                                                                                                                                                                           
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2409]. After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2403.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
 ## Site infrastructure
+
+With this version of Configuration Manager, support is added for Windows 11 24H2 and Windows Server 2025.
+ - Windows 11 24H2 & Windows Server 2025 are added to Product lifecycle dashboard and supported platform.
+ - Windows 11 24H2 & Windows Server 2025 Client support is added.
+ - Boot image creation in SCCM on Windows Server 2025 now supports latest Windows ADK
+ - Windows upgrade readiness dashboard now supports Windows 11 24H2 for upgrading clients.
+   
+>[!NOTE] 
 
 
 ## Software updates
@@ -48,9 +56,9 @@ For more information, see [Removed and deprecated features for Configuration Man
 
 
 ## Next steps
-<!--At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).-->
+At this time, version 2409 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).
 
-As of May 06, 2024, version 2403 is globally available for all customers to install.
+<--!As of May 06, 2024, version 2403 is globally available for all customers to install.-->
 >[!NOTE] 
 > For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.
 
