@@ -55,6 +55,14 @@ With this version of Configuration Manager, support is added for Windows 11 24H2
 
 ## Cloud-attached management
 
+### CMG Entra Application secret renewal  
+
+“The ‘Renew Secret Key’ feature now opens a dialog with four options for the validity period. This update also prevents applications older than 800 days (approximately 2 years) from renewing their secret keys. These options are also available when creating a new app.
+
+>[!NOTE]The admin must sign in using tenant global administrator credentials and then click on the Renew button.
+
+### CMG Enhanced security option.
+
 
 ## Deprecated features
 
