@@ -132,6 +132,8 @@ The following features are available with the most recent Configuration Manager 
 
 - [Operating System support added for Windows 11 24H2 and Windows Server 2025](2024/technical-preview-2411.md)
 - [Enhanced Security for CMG](2024/technical-preview-2411.md)
+- [SQL 2012 and 2014 support is deprecated](technical-preview-2411.md)]
+- [Software metering support in Arm64 devices](technical-preview-2411.md)]
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
