@@ -25,6 +25,8 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [Operating System support added for Windows 11 24H2 and Windows Server 2025](includes/2411/26942563.md)]
 [!INCLUDE [Enhanced Security for CMG](includes/2411/27297018.md)]
+[!INCLUDE [SQL 2012 and 2014 support is deprecated](includes/2411/27212884.md)]
+[!INCLUDE [Software metering support in Arm64 devices](includes/2411/17419432.md)]
 
 
 ## Next steps
