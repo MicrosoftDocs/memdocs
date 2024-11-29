@@ -279,14 +279,15 @@ items:
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2411 features
+      href: get-started/2024/technical-preview-2411.md  
     - name: 2405 features
       href: get-started/2024/technical-preview-2405.md  
     - name: 2401 features
       href: get-started/2024/technical-preview-2401.md  
     - name: 2311 features
       href: get-started/2023/technical-preview-2311.md 
-    - name: 2307 features
-      href: get-started/2023/technical-preview-2307.md  
+
     
           
   - name: Migrate data between hierarchies
