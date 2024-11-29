@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/05/2023
+ms.date: 11/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -69,7 +69,7 @@ To learn more about this configuration, see [Enable Windows diagnostic data proc
 
 ### Windows license verification
 
-Use the *Windows license verification* category to enable use of Intune features in your tenant that require Windows E3 or equivalent licenses. 
+Use the *Windows license verification* category to enable use of Intune features in your tenant that require Windows E3 or equivalent licenses.
 
 The following features require you to attest to having Windows E3 or equivalent licenses:
 
