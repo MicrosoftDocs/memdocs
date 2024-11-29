@@ -2,12 +2,12 @@
 title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 04/08/2022
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: banreet
-ms.author: banreetkaur
+author: Baladelli    
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
