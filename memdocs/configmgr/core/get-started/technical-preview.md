@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 05/28/2024
+ms.date: 11/29/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -38,7 +38,7 @@ For information about what's new in the *current branch* of Configuration Manage
 
 For most product prerequisites, use the information in the [Supported configurations](../plan-design/configs/supported-configurations.md). The following exceptions apply to the technical preview branch:
 
-- Each install is active for 180 days before it becomes inactive.
+- Each install is active for 360 days before it becomes inactive.
 
 - English is the only language supported.
 
@@ -95,7 +95,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2405**
+- **Technical preview version 2411**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/en-in/evalcenter/evaluate-microsoft-endpoint-configuration-manager-technical-preview).
 
@@ -134,7 +134,7 @@ The following features are available with the most recent Configuration Manager 
 - [Enhanced Security for CMG](2024/technical-preview-2411.md)
 - [SQL 2012 and 2014 support is deprecated](2024/technical-preview-2411.md)
 - [Software metering support in Arm64 devices](2024/technical-preview-2411.md)
-
+- 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
 
