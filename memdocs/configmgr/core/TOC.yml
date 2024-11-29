@@ -83,7 +83,6 @@ items:
     items:
     - name: Features and capabilities
       href: plan-design/changes/features-and-capabilities.md
-      href: plan-design/changes/whats-new-incremental-versions.md
     - name: What's new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
     - name: What's new in version 2409
