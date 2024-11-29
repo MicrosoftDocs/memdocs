@@ -2,12 +2,12 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 04/22/2024
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: PalikaSingh
-ms.author: Palsi
+author: Baladelli    
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -26,8 +26,6 @@ Configuration Manager uses an in-console service method called **Updates and Ser
 ## <a name="bkmk_Baselines"></a> Baseline and update versions
 
 Use the latest baseline version when you install a new site in a new hierarchy.
-
-- Also use a baseline version to upgrade from System Center 2012 Configuration Manager.
 
 - After upgrading to Configuration Manager current branch, don't use baseline versions to stay current. Instead, only use [in-console updates](install-in-console-updates.md) to update to the newest version.
 
@@ -57,11 +55,12 @@ The following supported versions<sup>`*`</sup>, of Configuration Manager are cur
 
 | Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |
 |-------------|-----------|------------|--------------|------------------------|
+| [**2409**](../../plan-design/changes/whats-new-in-version-2409.md)<br /> (5.00.9132) | December 4, 2024 | June 4, 2026 | No | Yes |
 | [**2403**](../../plan-design/changes/whats-new-in-version-2403.md)<br /> (5.00.9128) | April 22, 2024 | October 22, 2025 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2309**](../../plan-design/changes/whats-new-in-version-2309.md)<br /> (5.00.9122) | October 9, 2023 | April 9, 2025 | No | Yes |
 
 > [!NOTE]
-> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2403.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
+> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2409.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available (2403).
 
 ##### <a name="bkmk_note1"></a> Note 1: How to get baseline media
 
@@ -86,8 +85,11 @@ The following table lists historical versions of Configuration Manager current b
 
 | Version                          | Availability date | Support end date   | Baseline | In-console update |
 |----------------------------------|-------------------|--------------------|----------|-------------------|
+| **2409** <br /> (5.00.9132)      | December 4, 2024  | June 4, 2026       | No       | Yes               |
+| **2403** <br /> (5.00.9128)      | April 22, 2024    | October 22, 2025   | Yes      | Yes               |
+| **2309** <br /> (5.00.9122)      | October 9, 2023   | April 9, 2025      | No       | Yes               |
 | **2303** <br /> (5.00.9106)      | April 10, 2023    | October 10, 2024   | Yes      | Yes               |
-| **2211** <br /> (5.00.9096)      |  December 5, 2022 | June 5, 2024       | No       | Yes               |
+| **2211** <br /> (5.00.9096)      | December 5, 2022  | June 5, 2024       | No       | Yes               |
 | **2207** <br /> (5.00.9088)      | August 12, 2022   | February 12, 2024  | No       | Yes               |
 | **2203** <br /> (5.00.9078)      | April 6, 2022     | October 6, 2023    | Yes      | Yes               |
 | **2111** <br /> (5.00.9068)      | December 1, 2021  | June 1, 2023       | No       | Yes               |
@@ -116,7 +118,7 @@ The following table lists historical versions of Configuration Manager current b
 To check the version of your Configuration Manager site, in the console go to **About Configuration Manager** at the top-left corner of the console. This dialog displays the site and console versions.
 
 > [!NOTE]
-> The console version is slightly different from the site version. The minor version of the console corresponds to the Configuration Manager release version. For example, in Configuration Manager version 1802 the initial site version is 5.0.8634.1000, and the initial console version is 5.**1802**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes.
+> The console version is slightly different from the site version. The minor version of the console corresponds to the Configuration Manager release version. For example, in Configuration Manager version 2303 the initial site version is 5.0.9122.1000, and the initial console version is 5.**9122**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes.
 
 ## <a name="bkmk_inconsole"></a> In-console updates and servicing
 
@@ -124,7 +126,7 @@ When you use a production-ready installation of Configuration Manager current br
 
 These updates include:
 
-- New versions, like version 2207, 2211, or 2303.
+- New versions, like version 2303, 2309, or 2403.
 
 - Updates that include new features for your current version.
 
