@@ -36,7 +36,7 @@ For more information, see [Connect to the Database Engine Using Extended Protect
 <!--27679763-->
 The centralized search box now enables the option to select the desired workspace for searching. Users can easily refine their search results by selecting the desired workspace from the dropdown menu.
 
-:::image type="content" source="media/27679763-search-workspace.png" alt-text="Screenshot of centralized search workspace selection in console.":::
+:::image type="content" source="media/27679763-search-workspace.png" alt-text="Screenshot of centralized search workspace selection in console." lightbox="media/27679763-search-workspace.png":::
 
 ### Configuration Manager does not support SQL Server 2012 and 2014
 
@@ -76,7 +76,7 @@ CMG Setup now uses managed Identities and third-party **Server App** to interact
  - Hence storage account key access is disabled for new CMG setup.
  - For sessions upgrading from earlier versions to 2403 CB, the 'CMG enhanced security' button is shown as enabled.
 
- :::image type="content" source="media/27297018-Cmg-Enhanced.png" alt-text="Screenshot of Cmg enhanced window selection in console.":::
+ :::image type="content" source="media/27297018-Cmg-Enhanced.png" alt-text="Screenshot of Cmg enhanced window selection in console." lightbox="media/27297018-Cmg-Enhanced.png":::
 
 ## Deprecated features
 
