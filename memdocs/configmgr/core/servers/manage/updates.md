@@ -43,7 +43,7 @@ When you install an update, the update stores installation files for that versio
 
 - Use the files in the CD. Latest folder during site recovery. Also, when your hierarchy no longer runs a baseline version, use these files to install other sites.
 
-- You can't use installation files from CD. Latest to install the first site of a new hierarchy, or to upgrade a site from System Center 2012 Configuration Manager.
+- You can't use installation files from CD. Latest to install the first site of a new hierarchy.
 
 ### Version details
 
@@ -60,7 +60,7 @@ The following supported versions<sup>`*`</sup>, of Configuration Manager are cur
 | [**2309**](../../plan-design/changes/whats-new-in-version-2309.md)<br /> (5.00.9122) | October 9, 2023 | April 9, 2025 | No | Yes |
 
 > [!NOTE]
-> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2409.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available (2403).
+> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2409.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
 
 ##### <a name="bkmk_note1"></a> Note 1: How to get baseline media
 
