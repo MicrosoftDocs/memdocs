@@ -2,12 +2,12 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 03/28/2023
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: Banreet
-ms.author: banreetkaur
+author: Baladelli
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -112,7 +112,7 @@ You can use this version with the minimum service pack and cumulative update sup
 - A primary site  
 - A secondary site  
 
-### SQL Server 2014: Standard, Enterprise
+<!--### SQL Server 2014: Standard, Enterprise
 
 You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
@@ -144,7 +144,7 @@ You can use this version with the minimum service pack and cumulative update sup
 
 - A secondary site
 
-### SQL Server 2014 Express
+<!--### SQL Server 2014 Express
 
 You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
