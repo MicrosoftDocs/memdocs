@@ -330,8 +330,7 @@ When you customize hardware inventory classes, review their configuration after 
 
 Update clients per the plan you created, especially if you configured client piloting before installing the update. For more information, see [How to upgrade clients for Windows computers](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
-### Third-party extensions
-
+<!-- ### Third-party extensions-->
 
 ### Update boot images and media
 
