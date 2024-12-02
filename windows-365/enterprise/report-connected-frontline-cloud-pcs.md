@@ -52,7 +52,7 @@ In such cases, you can do any of the following to unblock users:
 - Redistribute licenses across the Microsoft Entra group assignment.
 - Purchase more licenses.
 
-If the total number of connections exceeds the maximum concurrency limit, it means that you're using the concurrency buffer (for Frontline Cloud PCs in dedicated mode only).
+If the total number of connections exceeds the maximum concurrency limit, it means that you're using the [concurrency buffer](introduction-windows-365-frontline.md#exceeding-the-maximum-concurrency-limit) (for Frontline Cloud PCs in dedicated mode only).
 
 ## Requirements
 
