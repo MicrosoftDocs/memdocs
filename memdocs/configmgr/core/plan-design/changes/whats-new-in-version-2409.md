@@ -40,7 +40,7 @@ The centralized search box now enables the option to select the desired workspac
 
 ### Configuration Manager does not support SQL Server 2012 and 2014
 
-Starting with version 2409, Configuration Manager no longer supports SQL Server 2012 and 2014. Upgrade to the latest SQL Server version or at least SQL Server 2016. If you don’t upgrade, CM upgrades are blocked, and you see an error during the prereq check. 
+Starting with version 2409, Configuration Manager no longer supports SQL Server 2012 and 2014. Upgrade to the latest SQL Server version or at least SQL Server 2016. If you don’t upgrade, CM upgrades are blocked, and you see an error during the prereq check. For more information, see [Supported SQL Server versions for Configuration Manager](../configs/support-for-sql-server-versions.md)
 
 <!--## Software updates-->
 
@@ -95,6 +95,12 @@ CMG Setup now uses managed Identities and third-party **Server App** to interact
 
  - Site base bootable media in SSL & Non-SSL session using CMG cert will not work. For more information, see [
 Create boot media to use a CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content)
+
+## Other Updates
+
+### Performance Enhancement of policy processing and collection evaluation
+
+The performance of policy processing and collection evaluation has been enhanced. Previously, blocking chains from sp_ProcessPolicyChanges, called by PolicyPv, would run for hours, disrupting multiple workloads including collection management and policy processing.
 
 ## Deprecated features
 
