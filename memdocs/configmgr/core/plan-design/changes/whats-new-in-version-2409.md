@@ -30,7 +30,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 Configuration Manager now supports SQL extended protection for authentication. It's a security feature that enhances protection against MITM attacks, making SQL server more secure when connections are made using extended protection. These enhancements collectively reduce the risk of unauthorized access and protect sensitive data managed by the SQL Server database engine. 
 
-For more information, see [Connect to the Database Engine Using Extended Protection](/sql/database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection)
+For more information, see [Connect to the Database Engine Using Extended Protection](/sql/database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection).
 
 ###  Introducing Centralized Search - Desired Workspace Selection
 <!--27679763-->
@@ -40,7 +40,7 @@ The centralized search box now enables the option to select the desired workspac
 
 ### Configuration Manager does not support SQL Server 2012 and 2014
 
-Starting with version 2409, Configuration Manager no longer supports SQL Server 2012 and 2014. Upgrade to the latest SQL Server version or at least SQL Server 2016. If you don’t upgrade, CM upgrades are blocked, and you see an error during the prereq check. For more information, see [Supported SQL Server versions for Configuration Manager](../configs/support-for-sql-server-versions.md)
+Starting with version 2409, Configuration Manager no longer supports SQL Server 2012 and 2014. Upgrade to the latest SQL Server version or at least SQL Server 2016. If you don’t upgrade, CM upgrades are blocked, and you see an error during the prereq check. For more information, see [Supported SQL Server versions for Configuration Manager](../configs/support-for-sql-server-versions.md).
 
 <!--## Software updates-->
 
@@ -58,7 +58,7 @@ With this version of Configuration Manager, support is added for Windows 11 24H2
 
 ### Software metering support in Arm64 devices
 
-The Configuration Manager now supports Software metering for Arm64 devices. Software metering is used to monitor Windows PC desktop apps with a filename ending in .exe. For more information, see [Software metering in Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)
+The Configuration Manager now supports Software metering for Arm64 devices. Software metering is used to monitor Windows PC desktop apps with a filename ending in .exe. For more information, see [Software metering in Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
 
 ## OS deployment
@@ -67,7 +67,7 @@ The Configuration Manager now supports Software metering for Arm64 devices. Soft
 
 Configuration Manager now supports BitLocker task sequence steps for Arm64 devices. In BitLocker Management, policies that include OS drive encryption with a TPM protector and fixed drive encryption with the Auto-Unlock option are supported on Arm64 devices.
 
-For more information , see [Bitlocker Supported configurations](../../../protect/plan-design/bitlocker-management.md#supported-configurations)
+For more information, see [Bitlocker Supported configurations](../../../protect/plan-design/bitlocker-management.md#supported-configurations).
 
 ## Cloud-attached management
 
@@ -93,8 +93,7 @@ CMG Setup now uses managed Identities and third-party **Server App** to interact
 
  - Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. **VC++ Redistributable Version** need to be upgraded to latest version on **Secondary sites**. [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
- - Site base bootable media in SSL & Non-SSL session using CMG cert will not work. For more information, see [
-Create boot media to use a CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content)
+ - Site base bootable media in SSL & Non-SSL session using CMG cert will not work. For more information, see [Create boot media to use a CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content)
 
 ## Other Updates
 
