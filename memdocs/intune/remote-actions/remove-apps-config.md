@@ -102,7 +102,10 @@ This action aims to resolve the issues that customers face outside of Intune and
 
 ## Permissions for Remove apps and configurations
 
-**Permissions**: To use the **Remove apps and configuration** device action, you require a role based permission known as **Remote tasks: Change assignments**. Set the Permission to **yes** to enable the action. With the permission set to **Yes**, IT admins can initiate a **Change Assignments** action. Organization: **Read** premission is also needed.
+**Permissions**: To use the **Remove apps and configuration** device action, you require the following permissions:
+ 
+ - **Organization: Read** premission is needed.
+ - **Remote tasks: Change assignments**. Set the Permission to **yes** to enable the action. With the permission set to **Yes**, IT admins can initiate a **Change Assignments** action. 
 
 The administrator can:
 
