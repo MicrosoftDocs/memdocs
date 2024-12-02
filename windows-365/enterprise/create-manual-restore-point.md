@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2024
+ms.date: 12/04/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -35,8 +35,9 @@ Cloud PC [restore points](restore-overview.md) can be manually created both sing
 
 ## Create a single manual restore point
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > select a device > **Restore points**.
-1. Select **Create Restore Points** > **Yes**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > select a device > **Restore points** > **Create restore points**.
+2. (Optiona) If you want to share the restore point to a storage account, select **Create new restore point for share**. If you do, you must also select a **Subscription**, **Storage account**, and **Access tier**.
+3. Select **Create Restore Points** > **Yes**.
 
 The new restore point will be created. It may take up to an hour or more for the new restore point to appear in the list of restore points. If a restore point already exists for this Cloud PC it will be overwritten by the new restore point.
 
@@ -45,8 +46,13 @@ The new restore point will be created. It may take up to an hour or more for the
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk Device Actions**.
 ![Screenshot of bulk device actions.](./media/restore-bulk/bulk-device-actions.png)
 1. On the **Basics** page, select the following options:
-    1. **OS**: Windows
-    1. **Device action**: Create Cloud PC manual restore point
+    - **OS**: Windows
+    - **Device type**: Cloud PCs
+    - **Device action**: Create restore points
+3. (Optional) If you want to share the restore point to a storage account, select **Create new restore point for share**. Then select the following options:
+    - **Subscription**: One of your Azure subscriptions.
+    - **Storage account**
+    - **Access tier**
 1. Select **Next**.
 1. On the **Devices** page, choose **Select devices to include**.
 1. In the **Select devices**, choose the Cloud PCs that you want to create manual restore points for > **Select** > **Next**.
