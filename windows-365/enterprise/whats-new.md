@@ -67,7 +67,7 @@ Windows 365 support for [Intune scope tags](/mem/intune/fundamentals/scope-tags)
 
 #### Create and share restore points for up to 5,000 Cloud PCs<!--53500693-->
 
-You can now bulk create restore points for up to 5,000 Cloud PCs. You can then share the restore points to a specified Azure storage account. For more information, see [Create multiple manual restore points in bulk](create-manual-restore-point#create-multiple-manual-restore-points-in-bulk).
+You can now bulk create restore points for up to 5,000 Cloud PCs. You can then share the restore points to a specified Azure storage account. For more information, see [Create multiple manual restore points in bulk](create-manual-restore-point.md#create-multiple-manual-restore-points-in-bulk).
 
 <!-- ########################## -->
 ## Week of November 19, 2024
