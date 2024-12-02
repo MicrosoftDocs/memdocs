@@ -40,7 +40,7 @@ To connect to a different site server, use the following steps:
 
     :::image type="content" source="media/connect-to-a-new-site.png" alt-text="Connect the console to a new site.":::
 
-1. Type in the FQDN of the site server. If you've previously connected to site server, select the server from the drop-down list.
+1. Type in the FQDN of the site server. If you've previous session to site server, select the server from the drop-down list.
 
     :::image type="content" source="media/site-server-fqdn.PNG" alt-text="Site Connection window, enter the FQDN of the site server.":::
 
