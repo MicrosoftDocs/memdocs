@@ -47,6 +47,9 @@ The site database can use the default instance of a full installation of SQL Ser
 
 SQL Server must be located on the site server computer.  
 
+> [!IMPORTANT]  
+> Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. VC++ need to be upgraded to latest version on Secondary site [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+
 ### Limitations to support
 
 The following configurations aren't supported:
