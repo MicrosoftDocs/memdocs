@@ -7,6 +7,8 @@ ms.collection: essentials-manage
 author: scottbreenmsft
 ms.author: scbree
 ms.manager: dougeby
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Configure settings and applications with Microsoft Intune

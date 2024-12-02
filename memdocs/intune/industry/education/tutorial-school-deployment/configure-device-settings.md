@@ -7,6 +7,8 @@ author: scottbreenmsft
 ms.author: scbree
 ms.manager: dougeby
 ms.date: 5/2/2024
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Configure and secure devices with Microsoft Intune
