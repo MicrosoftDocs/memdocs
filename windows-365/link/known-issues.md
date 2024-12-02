@@ -29,7 +29,7 @@ ms.collection:
 - tier2
 ---
 
-# Known issues: Windows 365 Enterprise and Frontline
+# Known issues: Windows 365 Link
 
 The following items are known issues for Windows 365 Enterprise.
 
