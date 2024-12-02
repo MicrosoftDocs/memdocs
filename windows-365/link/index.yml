@@ -4,13 +4,13 @@ summary: Official product documentation for Windows 365 Link
 
 metadata:
   services: service
-  ms.service: windows-365
+  ms.service: windows-365-link
   ms.topic: hub-page
   author: erikjeMS
   ms.author: erikje
   manager: dougeby
   ms.date: 11/192024
-  ms.subservice: windows-365-link
+  ms.subservice: 
 
 highlightedContent:
   items:
