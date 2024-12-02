@@ -224,7 +224,7 @@ items:
         - name: Data for version 2403
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2403.md  
         - name: Data for version 2309
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2309.md        
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2309.md  
         - name: Configuration Manager tools
       href: plan-design/diagnostics/tools.md
     - name: Frequently asked questions (FAQ)
