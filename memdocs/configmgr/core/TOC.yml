@@ -85,14 +85,12 @@ items:
       href: plan-design/changes/features-and-capabilities.md
     - name: What's new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 2409
+      href: plan-design/changes/whats-new-in-version-2409.md
     - name: What's new in version 2403
       href: plan-design/changes/whats-new-in-version-2403.md
     - name: What's new in version 2309
       href: plan-design/changes/whats-new-in-version-2309.md  
-    - name: What's new in version 2303
-      href: plan-design/changes/whats-new-in-version-2303.md
-    - name: What's new in version 2211
-      href: plan-design/changes/whats-new-in-version-2211.md
     - name: What's changed from Configuration Manager 2012
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: Removed and deprecated
@@ -567,14 +565,12 @@ items:
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the hotfix installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 2409
+      href: servers/manage/checklist-for-installing-update-2409.md
     - name: Checklist for installing update 2403
       href: servers/manage/checklist-for-installing-update-2403.md
     - name: Checklist for installing update 2309
       href: servers/manage/checklist-for-installing-update-2309.md 
-    - name: Checklist for installing update 2303
-      href: servers/manage/checklist-for-installing-update-2303.md
-    - name: Checklist for installing update 2211
-      href: servers/manage/checklist-for-installing-update-2211.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery

@@ -24,7 +24,7 @@ To get the update for version 2409, you must use a service connection point at t
 
 After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
-- When the update is listed as **Available**, the update is ready to install. Before installing version 2403, review the following information [about installing update 2403](#about-installing-update-2403) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
+- When the update is listed as **Available**, the update is ready to install. Before installing version 2409, review the following information [about installing update 2409](#about-installing-update-2409) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
 
 - If the update displays as **Downloading** and doesn't change, review the **hman.log** and **dmpdownloader.log** for errors.
 
@@ -40,7 +40,7 @@ For more information about current branch versions, see [Baseline and update ver
 
 ### Sites
 
-Install update 2403 at the top-level site of your hierarchy. Start the installation from your central administration site (CAS) or from your stand-alone primary site. After the update is installed at the top-level site, child sites have the following update behavior:
+Install update 2409 at the top-level site of your hierarchy. Start the installation from your central administration site (CAS) or from your stand-alone primary site. After the update is installed at the top-level site, child sites have the following update behavior:
 
 - Child primary sites install the update automatically after the CAS finishes the installation of the update. You can use service windows to control when a site installs the update. For more information, see [Service windows for site servers](service-windows.md).
 
@@ -65,13 +65,39 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-As of May 06 , 2024, version 2403 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
+At this time, version 2409 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2409:
+
+[Version 2409 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
+
+> [!NOTE]
+> The version 2409 update is only applicable to sites running version 2309 or later.
+
+To opt-in to the early update ring:
+
+1. Open a Windows PowerShell session **as administrator**.
+
+1. Run the **EnableEarlyUpdateRing2409.ps1** script, using the following syntax:
+
+    `EnableEarlyUpdateRing2409.ps1 <SiteServer_Name> | SiteServer_IP>`
+
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2409.ps1 cmprimary01`
+
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md).
+
+The version 2409 update should now be available in the console.
+
+> [!IMPORTANT]
+> This script only adds your site to the early update ring for version 2409. It's not a permanent change.
+
+<!--As of May 06 , 2024, version 2403 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.-->
 
 ## Pre-update checklist
 
 ### All sites run a supported version of Configuration Manager
 
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2403, use version 2211 or later.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2409, use version 2309 or later.
 
 ### Review the status of your product licensing
 
@@ -91,7 +117,7 @@ For more information including how to manage restarts, see [Site and site system
 
 ### Review the version of the Windows ADK
 
-The version of the Windows Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 2403. For more information, see [Support for the Windows ADK](../../plan-design/configs/support-for-windows-adk.md). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
+The version of the Windows Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 2409. For more information, see [Support for the Windows ADK](../../plan-design/configs/support-for-windows-adk.md). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 
@@ -306,11 +332,6 @@ Update clients per the plan you created, especially if you configured client pil
 
 ### Third-party extensions
 
-If you use any extensions to Configuration Manager, update them to a version that supports and is compatible with Configuration Manager version 2403.
-
-### Enable any custom solutions
-
-Enable any custom solutions based on the Configuration Manager SDK or PowerShell that you've already tested in a lab environment with version 2403.
 
 ### Update boot images and media
 
@@ -336,4 +357,3 @@ For more information, see [Configuration Manager PowerShell cmdlets: Update help
 ## Next steps
 
 Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../use-docs.md#notifications).
-
