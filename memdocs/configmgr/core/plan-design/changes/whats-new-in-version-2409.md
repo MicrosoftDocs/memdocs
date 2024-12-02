@@ -18,9 +18,9 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2409 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2309 or later. When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability. This article summarizes the changes and new features in Configuration Manager, version 2409.
+Update 2409 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2309 or later. <!--When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability.--> This article summarizes the changes and new features in Configuration Manager, version 2409.
                                                                                                                                                                                                                                                                                                                           
-Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2409]. After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2409.md#post-update-checklist).
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2409](../../servers/manage/checklist-for-installing-update-2409.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2409.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
