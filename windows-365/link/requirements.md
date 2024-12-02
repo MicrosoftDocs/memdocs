@@ -59,7 +59,7 @@ For more information, see [Automatically enroll Windows 365 Link in Intune](intu
 
 ## Windows 365 SSO requirements
 
-Windows 365 Link devices can only be used to connect to Windows 365 Cloud PCs that have Entra ID single sign-on (SSO) enabled. If SSO is not enabled on the Cloud PC, the user:
+Windows 365 Link devices can only be used to connect to Windows 365 Cloud PCs that have Entra ID single sign-on (SSO) enabled. If SSO isn't enabled on the Cloud PC, the user:
 
 - Gets an error that their Cloud PC doesn't support Entra ID single sign-on
 - Can't connect to their Cloud PC.
@@ -75,7 +75,7 @@ After SSO is enabled, Windows 365 Link devices can be used to connect to those C
 
 If you're using Conditional Access to protect access to Cloud PC, make sure to include the SSO Cloud App resource in the target resources of those Conditional Access policies.
 
-Also consider suppressing the SSO Consent Prompt by configuring the SSO on service principals. (see how-to configure environment for guidance)
+Also consider suppressing the SSO Consent Prompt by configuring the SSO on service principals.
 
 ## Microsoft Teams requirements
 
