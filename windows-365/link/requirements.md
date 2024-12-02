@@ -45,13 +45,13 @@ The user who joins the device to Microsoft Entra ID must have permissions to joi
 
 Windows 365 Link devices can be used to connect to Cloud PCs that are either Entra joined or Entra hybrid joined.
 
-Windows 365 Link devices use automatic [mobile device management](/windows/client-management/mdm-overview) (MDM) enrollment to enroll in Intune for managment by the organization. To use this feature, the user who Entra joins the device must have a Microsoft Entra ID Premium license.
+Windows 365 Link devices use [automatic enrollment](/mem/intune/enrollment/windows-enroll) in Intune for management by the organization. To use this feature, the user who Entra joins the device must have a Microsoft Entra ID Premium license.
 
 For more information, see [Join Windows 365 Link to Microsoft Entra](join-microsoft-entra.md).
 
 ## Microsoft Intune requirements
 
-Windows 365 Link devices enroll for management with Intune during the Out of Box experience. The user performing enrollment must have permission to enroll the devices and comply with any defined Enrollment restrictions.
+Windows 365 Link devices enroll for management with Intune during the Out of Box Experience (OOBE). The user performing enrollment must have permission to enroll the devices and comply with any defined Enrollment restrictions.
 
 Optionally, Windows 365 Link devices can be used with the Intune corporate identifier enrollment feature to pre-upload the serial number, manufacturer, model to ensure only trusted devices go through enrollment.
 
