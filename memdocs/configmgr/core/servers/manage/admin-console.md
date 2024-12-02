@@ -209,7 +209,7 @@ Starting in version 2203, the Configuration Manager console offers a dark theme.
 ### Known issue
 
 - Console restart is required on doing the theme switch, as the node navigation pane might not properly render when you move to a new workspace.
-- Currently, there are locations in the console that may not display the dark theme correctly. We are continuosly working to improve the dark theme. 
+- Currently, there are locations in the console that may not display the dark theme correctly. We are continuously working to improve the dark theme. 
 
 
 ## Connect via Windows PowerShell
