@@ -2,7 +2,7 @@
 title: Checklist for 2409
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2409.
-ms.date: 05/06/2024
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -228,7 +228,7 @@ To define a period during which updates to a site server can be installed, use s
 ### Review supported extensions
 
 <!--SCCMdocs#587-->
-If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2403. Check with the product vendor for this information.
+If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2409. Check with the product vendor for this information.
 
 > [!TIP]
 > If you develop a third-party add-on to Configuration Manager, you should test your add-on with every monthly [technical preview branch release](../../get-started/technical-preview.md). Regular testing helps confirm compatibility, and allows for early reporting of any issues with standard interfaces.
@@ -254,7 +254,7 @@ For more information, see the [Release notes](../deploy/install/release-notes.md
 
 When the console lists the update as **Available**, you can run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
-To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 2403** update package, and select **Run prerequisite check** in the ribbon.
+To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 2409** update package, and select **Run prerequisite check** in the ribbon.
 
 For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](prepare-in-console-updates.md#before-you-install-an-in-console-update).
 
@@ -275,7 +275,7 @@ After the site updates, use the following checklist to complete common tasks and
 
 ### Confirm version and restart (if necessary)
 
-Make sure each site server and site system role is updated to version 2403. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
+Make sure each site server and site system role is updated to version 2409. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
 
 Consider restarting remote site systems that don't successfully update at first. Review your site infrastructure and make sure that applicable site servers and remote site system servers successfully restarted. Typically, site servers restart only when Configuration Manager installs .NET as a prerequisite for a site system role.
 
@@ -330,13 +330,7 @@ When you customize hardware inventory classes, review their configuration after 
 
 Update clients per the plan you created, especially if you configured client piloting before installing the update. For more information, see [How to upgrade clients for Windows computers](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
-### Third-party extensions
-
-If you use any extensions to Configuration Manager, update them to a version that supports and is compatible with Configuration Manager version 2409.
-
-### Enable any custom solutions
-
-Enable any custom solutions based on the Configuration Manager SDK or PowerShell that you've already tested in a lab environment with version 2409.
+<!-- ### Third-party extensions-->
 
 ### Update boot images and media
 
