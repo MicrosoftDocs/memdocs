@@ -48,7 +48,7 @@ In these steps, you’ll use the Model device property to create the filter.
 3. On the **Rules** page, enter the following:
     1. **Property** = "model (Model)"
     2. **Operator** = "Contains"
-    3. **Value** = "Cloud PC". To create a filter for all GPU Cloud PCs, choose "GPU" here instead.
+    3. **Value** = "Cloud PC". To create a filter for all GPU Cloud PCs, choose "GPU" here instead. To create a filter for Frontline Cloud PCs, choose "Cloud PC Frontline" here instead.
 4. To validate that it works, select **Preview**.
 5. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 6. On the **Review + create** page, select **Create**.
