@@ -54,6 +54,8 @@ The new restore point will be created. It may take up to an hour or more for the
 
 The new restore points will be created. It may take up to an hour or more for the new restore points to appear in the list of restore points. If any of the selected Cloud PCs already have a restore point, the existing restore points will be overwritten.
 
+You can bulk create restore points on up to 5,000 Cloud PCs at once.
+
 <!-- ########################## -->
 ## Next steps
 
