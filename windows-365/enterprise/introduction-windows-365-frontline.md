@@ -35,7 +35,10 @@ Windows 365 Frontline is a version of [Windows 365](../overview.md) that helps o
 
 Windows 365 Frontline is currently only available for Azure Global Cloud.
 
-Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead, you must use Windows App if you want to access your Frontline Cloud PC. You can find [Windows App](/windows-app/overview) at the [Microsoft Store](https://apps.microsoft.com/detail/9n1f85v9t8bn?ocid=pdpshare&hl=en-us&gl=US).
+Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead, you must use Windows App if you want to access your Frontline Cloud PC. You can find [Windows App](/windows-app/overview) at the [Microsoft Store](https://apps.microsoft.com/detail/9n1f85v9t8bn?ocid=pdpshare&hl=en-us&gl=US) or access [windows.cloud.microsoft](https://windows.cloud.microsoft) with your browser. 
+
+> [!NOTE]
+> Frontline Cloud PC in shared mode will only be accessible using Windows App.
 
 Windows 365 Frontline has two different modes: dedicated mode and shared mode.
 
