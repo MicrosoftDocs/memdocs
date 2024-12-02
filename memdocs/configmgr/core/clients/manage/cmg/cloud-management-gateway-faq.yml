@@ -6,7 +6,7 @@ metadata:
   author: baladelli  
   ms.author: baladell
   manager: apoorvseth
-  ms.date: 20/04/2024
+  ms.date: 12/04/2024
   ms.topic: faq
   ms.subservice: client-mgt
   ms.service: configuration-manager
@@ -151,3 +151,5 @@ sections:
           No. You may have seen the following blog post and are wondering how it applies to Configuration Manager: [Update your applications to use Microsoft Authentication Library and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363). This post is referring to any developed code that uses these authentication libraries. Configuration Manager has been using the Microsoft Graph API and Microsoft Authentication Library (MSAL) in some places for several years. All other components are updated in Configuration Manager version 2107 with the [update rollup](../../../../hotfix/2107/11121541.md). If you stay current with Configuration Manager versions, there's nothing else you need to do.
 
           Some people confuse the information in this blog post with the application registrations in Microsoft Entra ID that Configuration Manager uses for various cloud-attached services. These app registrations are cloud-based service principals that don't directly use these authentication libraries. If an Azure global administrator manually created the Configuration Manager app registrations in Microsoft Entra ID, they can double-check that those registrations have permissions for the **Microsoft Graph** API. They don't need permissions for the _Azure AD Graph_ API. For more information, see [Manually register Microsoft Entra apps](manually-register-azure-ad-apps.md).<!--10488538-->
+
+          For more information : [Migrate your apps from Azure AD Graph to Microsoft Graph](https://learn.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview).
