@@ -195,17 +195,6 @@ To let scoped administrators view which scope tags are assigned to them and the 
 - Cloud PC reader/administrator
 - A custom role with similar permissions.
 
-### Graph API bulk actions and scope tags during the public preview
-
-For the duration of the scope tags public preview, the following bulk actions don't honor scope tags when called directly from the Graph API:
-
-- Restore
-- Reprovision
-- Place Cloud PC under review
-- Remove Cloud PC under review
-- Share Cloud PC restore point to storage
-- Create Cloud PC manual restore point
-
 <!-- ########################## -->
 ## Next steps
 [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
