@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/19/2024
+ms.date: 12/04/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -54,6 +54,16 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app 
 -->
+
+<!-- ########################## -->
+## Week of December 2, 2024 (Service release 2411)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Intune scope tags are now generally available<!--51133268-->
+
+Windows 365 support for [Intune scope tags](/mem/intune/fundamentals/scope-tags) has moved out of preview and into general availability. For more information, see [Scope tags](role-based-access.md#scope-tags).
 
 <!-- ########################## -->
 ## Week of November 19, 2024
