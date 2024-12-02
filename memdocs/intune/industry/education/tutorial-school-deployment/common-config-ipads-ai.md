@@ -9,6 +9,8 @@ ms.manager: dougeby
 no-loc: [Microsoft, Apple]
 ms.collection: 
 - graph-interactive
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Apple Intelligence
