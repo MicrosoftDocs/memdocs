@@ -1,7 +1,7 @@
 ---
 title: Diagnostic and usage data for 2409
 titleSuffix: Configuration Manager
-description: Learn about the specific data that Configuration Manager collects at each level in version 2403.
+description: Learn about the specific data that Configuration Manager collects at each level in version 2409.
 ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
