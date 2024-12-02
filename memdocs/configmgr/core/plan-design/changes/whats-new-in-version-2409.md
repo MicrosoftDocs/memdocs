@@ -40,12 +40,9 @@ The centralized search box now enables the option to select the desired workspac
 
 ### Configuration Manager does not support SQL Server 2012 and 2014
 
-Starting with this version 2409, Configuration Manager no longer supports SQL Server 2012 and 2014. Upgrade to the latest SQL Server version or at least SQL Server 2016. If you don’t upgrade, CM upgrades are blocked, and you see an error during the prereq check. 
+Starting with version 2409, Configuration Manager no longer supports SQL Server 2012 and 2014. Upgrade to the latest SQL Server version or at least SQL Server 2016. If you don’t upgrade, CM upgrades are blocked, and you see an error during the prereq check. 
 
 <!--## Software updates-->
-
-
-## OS deployment
 
 ### Operating System support added for Windows 11 24H2 and Windows Server 2025
 
@@ -58,9 +55,18 @@ With this version of Configuration Manager, support is added for Windows 11 24H2
 >[!NOTE]
 >Windows Server and Windows 11 24H2 do not support Firewall Rules. This will result in a non-compliant status in the Configuration Manager applet 
 
+
+## OS deployment
+
+### BitLocker support in Arm64 devices
+
+Configuration Manager now supports BitLocker task sequence steps for Arm64 devices. In BitLocker Management, policies that include OS drive encryption with a TPM protector and fixed drive encryption with the Auto-Unlock option are supported on Arm devices.
+
+For more information , see [Bitlocker Supported configurations](https://learn.microsoft.com/en-us/mem/configmgr/protect/plan-design/bitlocker-management#supported-configurations)
+
 ## Cloud-attached management
 
-### CMG Entra Application secret renewal  
+### CMG Entra Application secret key renewal  
 
 The 'Renew Secret Key' feature now opens a dialog with four options for the validity period. This update also prevents applications older than 800 days (approximately two years) from renewing their secret keys. The same options are available when creating a new app. 
 
@@ -74,9 +80,13 @@ The 'Renew Secret Key' feature now opens a dialog with four options for the vali
 CMG Setup now uses managed Identities and third-party **Server App** to interact with CMG's Azure Storage account, instead of storage account keys. 
 
  - Hence storage account key access is disabled for new CMG setup.
- - For sessions upgrading from earlier versions to 2403 CB, the 'CMG enhanced security' button is shown as enabled.
+ - For sessions upgrading from earlier versions to 2409, the 'CMG enhanced security' button is shown as enabled.
 
  :::image type="content" source="media/27297018-Cmg-Enhanced.png" alt-text="Screenshot of Cmg enhanced window selection in console." lightbox="media/27297018-Cmg-Enhanced.png":::
+
+## Known Issues
+
+Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. **VC++ Redistributable Version** need to be upgraded to latest version on **Secondary sites**. [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 ## Deprecated features
 
@@ -86,7 +96,6 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 For more information, see [Removed and deprecated features for Configuration Manager.](deprecated/removed-and-deprecated-cmfeatures.md).
 
-<!--## Other updates-->
 
 <!--#### Improvements to Bitlocker-->
 
@@ -98,7 +107,7 @@ At this time, version 2409 is released for the early update ring. To install thi
 <!-- >[!NOTE] -->
 <!-- For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.-->
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2403](../../servers/manage/checklist-for-installing-update-2409.md).
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2409](../../servers/manage/checklist-for-installing-update-2409.md).
 
 > [!TIP]
 > To install a new site, use a baseline version of Configuration Manager.
