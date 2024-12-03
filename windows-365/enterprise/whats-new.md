@@ -69,6 +69,20 @@ Windows 365 support for [Intune scope tags](/mem/intune/fundamentals/scope-tags)
 
 You can now bulk create restore points for up to 5,000 Cloud PCs. You can then share the restore points to a specified Azure storage account. For more information, see [Create multiple manual restore points in bulk](create-manual-restore-point.md#create-multiple-manual-restore-points-in-bulk). 
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Dedicated and shared data on Connected Frontline Cloud PCs report<!--54334437--> 
+
+The Connected Frontline Cloud PCs report now shows:
+
+- Separate data for dedicated versus shared Frontline Cloud PCs.
+- The user that is currently connected and their session length
+- Ability to restart Frontline Cloud PCs to disconnect user from their session and bring concurrency below threshold limits.
+
+For more information see [Connected Frontline Cloud PCs](report-connected-frontline-cloud-pcs.md).
+
+
 <!-- ########################## -->
 ## Week of November 19, 2024
 
