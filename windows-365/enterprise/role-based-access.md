@@ -189,6 +189,10 @@ To make sure that both the Intune-owned **All devices** list and Windows 365-own
 2. Assign the created scope tag  to the dynamic device group.
 3. After the Cloud PC is provisioned and enrolled into Intune, both the All Devices list and All Cloud PCs list should display the same Cloud PCs.  
 
+If you add new scope tags to a provisioning policy, make sure you also add the scope tags to the Intune dynamic group. This addition make ssure the dynamic group honors the new scope tags. Also, check on any Cloud PCs that may have unique scope tags added to them to make sure they're still there after any updates.
+
+To make sure that Windows 365 can honor changes to Intune scope tags, this data is synced from Intune. For more information, see [Privacy, customer data, and customer content in Windows 365](/windows-365/enterprise/privacy-personal-data).
+
 To let scoped administrators view which scope tags are assigned to them and the objects within their scope, they must be assigned one of the following roles:
 
 - Intune read only
