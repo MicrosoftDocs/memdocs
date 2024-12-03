@@ -4,7 +4,7 @@ description: include file
 author: dougeby  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 10/30/2024
+ms.date: 11/13/2024
 ms.author: dougeby
 manager: dougeby
 ms.custom: include file
@@ -12,7 +12,73 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Take Action: Update to the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS
+
+To support the upcoming release of iOS/iPadOS 18.2, update to the latest versions of the Intune App SDK and the Intune App Wrapping Tool to ensure applications stay secure and run smoothly. **Important:** If you do not update to the latest versions, some app protection policies may not apply to your app in certain scenarios. Review the following GitHub announcements for more details on the specific impact:
+
+- SDK for iOS: [Update recommended prior to iOS 18.2 general availability - microsoftconnect/ms-intune-app-sdk-ios - Discussion #495](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/discussions/495) 
+- Wrapper for iOS: [Update recommended prior to iOS 18.2 general availability - microsoftconnect/intune-app-wrapping-tool-ios - Discussion #128](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/discussions/128)
+
+As a best practice, always update your iOS apps to the latest App SDK or App Wrapping Tool to ensure that your app continues to run smoothly.
+
+#### How this will affect your organization
+
+If you have applications using the Intune App SDK or Intune App Wrapping Tool, you will need to update to the latest version to support iOS 18.2.
+
+#### What you need to do to prepare
+
+For apps running on iOS 18.2, you must update to the new version of the Intune App SDK for iOS:
+- [For apps built with XCode 15 use v19.7.6 - Release 19.7.6 - microsoftconnect/ms-intune-app-sdk-ios - GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/19.7.6)
+- [For apps built with XCode 16 use v20.2.1 - Release 20.2.1 - microsoftconnect/ms-intune-app-sdk-ios - GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/20.2.1)
+
+For apps running on iOS 18.2, you must update to the new version of the Intune App Wrapping Tool for iOS:
+- [For apps built with XCode 15 use v19.7.6 - Release 19.7.6 - microsoftconnect/intune-app-wrapping-tool-ios - GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases/tag/19.7.6)
+- [For apps built with XCode 16 use v20.2.1 - Release 20.2.1 - microsoftconnect/intune-app-wrapping-tool-ios - GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases/tag/20.2.1)
+
+> [!IMPORTANT]
+>
+> The above listed SDK releases have added support for blocking screen capture, Genmojis and writing tools in response to new AI features in iOS 18.2. For apps that have updated to the above listed version of the SDK, screen capture block will be applied if you have configured *Send Org data to other apps* to a value other than *All apps*. See [iOS/iPadOS app protection policy settings](../apps/app-protection-policy-settings-ios.md#data-protection) for more info. You can configure app configuration policy setting **com.microsoft.intune.mam.screencapturecontrol = Disabled** if you wish to allow screen capture for your iOS devices. See [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md#managed-apps) for more info. Intune will be providing more granular controls for blocking specific AI features in the future. Please follow [What's new in Microsoft Intune](../fundamentals/whats-new.md) to stay up to date.
+>
+> Notify your users as applicable, to ensure they upgrade their apps to the latest version prior to upgrading to iOS 18.2. You can review the Intune App SDK version in use by your users in the Microsoft Intune admin center by navigating to **Apps** > **Monitor** > **App protection status**, then review *Platform version* and *iOS SDK version*.
+>
+> If you have questions, leave a comment on the applicable GitHub announcement. Additionally, if you have not already, navigate to the applicable GitHub repository and subscribe to *Releases* and *Discussions* (Watch > Custom > select Releases, Discussions) to ensure you stay up-to-date with the latest SDK releases, updates, and other important announcements.
+
+### Plan for Change: Specific app configuration values will be automatically sent to specific apps
+
+Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, **IntuneMAMOID**, and **IntuneMAMDeviceID** app configuration values will be automatically sent to managed applications on Intune enrolled iOS devices for the following apps: Microsoft Excel, Microsoft Outlook, Microsoft PowerPoint, Microsoft Teams and Microsoft Word. Intune will continue to expand this list to include additional managed apps.
+
+#### How does this affect you or your users?
+
+If these values aren't configured correctly for iOS devices, there is a possibility of either the policy not getting delivered to the app or the wrong policy is delivered. For more information, see [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
+
+#### How can you prepare?
+
+No additional action is needed.
+
+### Plan for Change: Implement strong mapping for SCEP and PKCS certificates
+
+With the May 10, 2022, Windows update ([KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16)), changes were made to the Active Directory Kerberos Key Distribution (KDC) behavior in Windows Server 2008 and later versions to mitigate elevation of privilege vulnerabilities associated with certificate spoofing. Windows will enforce these changes on **February 11, 2025**.
+ 
+To prepare for this change, Intune has released the ability to include the security identifier to strongly map SCEP and PKCS certificates. For more information, review the blog: [Support tip: Implementing strong mapping in Microsoft Intune certificates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-implementing-strong-mapping-in-microsoft-intune-certificates/4053376)
+
+#### How does this affect you or your users?
+
+These changes will impact SCEP and PKCS certificates delivered by Intune for Microsoft Entra hybrid joined users or devices. If a certificate can't be strongly mapped, authentication will be denied. To enable strong mapping:
+
+- SCEP certificates: Add the security identifier to your SCEP profile. We strongly recommend testing with a small group of devices and then slowly rollout updated certificates to minimize disruptions to your users.
+- PKCS certificates: Update to the latest version of the Certificate Connector, change the registry key to enable the security identifier, and then restart the connector service. **Important:** Before you modify the registry key, review how to change the registry key and how to back up and restore the registry.
+
+For detailed steps and additional guidance, review the blog: [Support tip: Implementing strong mapping in Microsoft Intune certificates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-implementing-strong-mapping-in-microsoft-intune-certificates/4053376)
+
+#### How can you prepare?
+
+If you use SCEP or PKCS certificates for Microsoft Entra Hybrid joined users or devices, you'll need to take action before February 11, 2025 to either:
+
+- **(Recommended)** Enable strong mapping by reviewing the steps described in the blog: [Support tip: Implementing strong mapping in Microsoft Intune certificates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-implementing-strong-mapping-in-microsoft-intune-certificates/4053376)
+- Alternatively, if all certificates cannot be renewed before February 11, 2025, with the SID included, enable Compatibility mode by adjusting the registry settings as described in [KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16). Compatibility mode will remain valid until September 2025.
+
 ### Update to the latest Intune App SDK and Intune App Wrapper for Android 15 support
+
 We've recently released new versions of the Intune App SDK and Intune App Wrapping Tool for Android to support Android 15. We recommend upgrading your app to the latest SDK or wrapper versions to ensure applications stay secure and run smoothly.
  
 #### How does this affect you or your users?
@@ -31,33 +97,6 @@ You should also plan to update your documentation or developer guidance if appli
 Here are the public repositories:
 - [Intune App SDK for Android](https://github.com/microsoftconnect/ms-intune-app-sdk-android)
 - [Intune App Wrapping Tool for Android](https://github.com/microsoftconnect/intune-app-wrapping-tool-android)
-
-### Take Action: Update to the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS
-
-To support the upcoming release of iOS/iPadOS 18.1, update to the latest versions of the Intune App SDK and the Intune App Wrapping Tool to ensure applications stay secure and run smoothly. **Important:** If you don't update to the latest versions, some app protection policies may not apply to your app in certain scenarios. Review the following GitHub announcements for more details on the specific impact:
-
-- SDK for iOS: [Update recommended prior to iOS 18.1 general availability - microsoftconnect/ms-intune-app-sdk-ios - Discussion #477](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/discussions/477)
-- Wrapper for iOS: [Update recommended prior to iOS 18.1 general availability - microsoftconnect/intune-app-wrapping-tool-ios - Discussion #125](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/discussions/125)
-
-As a best practice, always update your iOS apps to the latest App SDK or App Wrapping Tool to ensure that your app continues to run smoothly.
-
-#### How does this affect you or your users?
-
-If you have applications using the Intune App SDK or Intune App Wrapping Tool, you'll need to update to the latest version to support iOS 18.1.
-
-#### How can you prepare?
-
-For apps running on iOS 18.1, you must update to the new version of the Intune App SDK for iOS
-
-- For apps built with XCode 15 use v19.7.1 - [Release 19.7.1 - microsoftconnect/ms-intune-app-sdk-ios - GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/19.7.1)
-- For apps built with XCode 16 use v20.1.2 - [Release 20.1.2 - microsoftconnect/ms-intune-app-sdk-ios - GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/20.1.2)
-
-For apps running on iOS 18.1, you must update to the new version of the Intune App Wrapping Tool for iOS
-
-- For apps built with XCode 15 use v19.7.1 - [Release 19.7.1 - microsoftconnect/intune-app-wrapping-tool-ios - GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases/tag/19.7.1)
-- For apps built with XCode 16 use v20.1.2 - [Release 20.1.2 - microsoftconnect/intune-app-wrapping-tool-ios - GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases/tag/20.1.2)
-
-Notify your users as applicable, to ensure they upgrade their apps to the latest version prior to upgrading to iOS 18.1. You can review the Intune App SDK version in use by your users in the Microsoft Intune admin center by navigating to **Apps** > **Monitor** > **App protection status**, then review “Platform version” and “iOS SDK version”.
 
 ### Take Action: Enable multifactor authentication for your tenant before October 15, 2024
 

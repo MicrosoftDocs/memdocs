@@ -79,7 +79,7 @@ For example, you install the Configuration Manager console from a site server th
 
 Each time the Configuration Manager console opens:
 
-- Tt determines the configured language settings for the computer
+- It determines the configured language settings for the computer
 - Verifies whether an associated language pack is available for the Configuration Manager console
 - Opens the console by using the appropriate language pack
 

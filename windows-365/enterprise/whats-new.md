@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2024
+ms.date: 11/19/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -54,6 +54,40 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app 
 -->
+
+<!-- ########################## -->
+## Week of November 19, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Frontline
+
+#### Windows 365 Frontline in shared mode (preview)<!--52583422-->
+
+Windows 365 Frontline in shared mode gives you the ability to provision a collection of Cloud PCs that can be used across multiple users mapped to a Microsoft Entra ID group. One active Cloud PC is permitted per license. For more information, see [Windows 365 Frontline in shared mode](introduction-windows-365-frontline.md#windows-365-frontline-in-shared-mode-preview).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Configure client device redirection settings for Windows App on iOS/iPadOS/Android using Microsoft Intune<!--51893843-->
+
+You can now use Microsoft Intune Mobile Application Management to check for device posture and manage redirections for Windows App on iOS, iPadOS, and Android (preview). You can use Microsoft Intune on both corporate managed and personal devices.
+
+For more information, see [Configure client device redirection settings for Windows App and the Remote Desktop app using Microsoft Intune](/azure/virtual-desktop/client-device-redirection-intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Support for FIDO devices and passkeys on macOS and iOS<!--53495787-->
+
+Windows App and the Remote Desktop app for macOS and iOS now support FIDO devices and passkeys for Microsoft Entra ID sign in on brokered and unbrokered devices.
+For more information see [Support for FIDO2 authentication with Microsoft Entra ID](/entra/identity/authentication/concept-fido2-compatibility#native-application-support).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Use Citrix HDX Plus with Windows 365 Frontline<!--54445358-->
+
+You can now use Citrix HDX Plus with Windows 365 Frontline Cloud PCs.
 
 <!-- ########################## -->
 ## Week of October 28, 2024 (Service release 2410)
@@ -221,7 +255,7 @@ Uni-directional clipboard support for Cloud PCs has moved out of preview and is 
 
 To help secure your Windows 365 environment, the inbound port 3389 is now closed by default.
 
-#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+#### Windows 365 support for AVC mixed mode when MMR isn't enabled (preview)<!--50205898-->
 
 Windows 365 now supports AVC mixed mode when MMR is not enabled.
 

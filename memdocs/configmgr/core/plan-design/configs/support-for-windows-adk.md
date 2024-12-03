@@ -2,12 +2,12 @@
 title: Support for the Windows ADK
 titleSuffix: Configuration Manager
 description: Learn about the Windows Assessment and Deployment Kit (ADK) versions that are supported for OS deployment with Configuration Manager.
-ms.date: 05/29/2024
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: PalikaSingh
-ms.author: palsi
+author: Baladelli
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -33,14 +33,14 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
 
 The following table lists the versions of the Windows ADK that you can use with different versions of Configuration Manager.
 
-| Windows ADK version            | ConfigMgr 2211| ConfigMgr 2303 | ConfigMgr 2309 | ConfigMgr 2403  |
-|--------------------------------|----------------|----------------|----------------|----------------|
-| **ADK 10.1.26100.1 (May 2024)** <br>(10.1.26100.1)| ❌ | ✅ | ✅ | ✅ |
-| **ADK 10.1.25398.1 (updated September 2023)** <br>(10.1.25398.1)| ❌ | ❌ | ❌ | ❌ |
-| **ADK for Windows 11, version 22H2**<br>(10.1.22621.1)| ✅ | ✅ | ✅ | ✅ |
-| **ADK for Windows 11, version 21H1**<br>(10.1.22000) | ✅ | ✅ | ✅ | ✅ |
-| **ADK for Windows Server 2022**<br>(10.1.20348)  | ✅ | ✅ | ✅ | ✅ |
-| **ADK for Windows 10, version 2004**<br>(10.1.19041)| ✅ | ✅ | ✅ | ✅ |
+| Windows ADK version            | ConfigMgr 2309 | ConfigMgr 2403 | ConfigMgr 2409 |
+|--------------------------------|----------------|----------------|----------------|
+| **ADK 10.1.26100.1 (May 2024)** <br>(10.1.26100.1)| ✅ | ✅ | ✅ |
+| **ADK 10.1.25398.1 (updated September 2023)** <br>(10.1.25398.1)|❌ | ❌ | ❌ |
+| **ADK for Windows 11, version 22H2**<br>(10.1.22621.1)|  ✅ | ✅ | ✅ |
+| **ADK for Windows 11, version 21H1**<br>(10.1.22000) |  ✅ | ✅ | ✅ |
+| **ADK for Windows Server 2022**<br>(10.1.20348)  |  ✅ | ✅ | ✅ |
+| **ADK for Windows 10, version 2004**<br>(10.1.19041)|  ✅ | ✅ | ✅ |
 
 |Key|
 |--|
@@ -58,7 +58,7 @@ The following table lists the versions of the Windows ADK that you can use with 
 
     Instead use the **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1) or newer where these issues are resolved.
 
-- For information on applying the [BlackLotus UEFI bootkit vulnerability](https://prod.support.services.microsoft.com/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d) security updates to boot images from the ADKs before the **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1), see [Customize Windows PE boot images](/windows/deployment/customize-boot-image). Boot images from the **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1) and newer already have the BlackLotus UEFI bootkit vulnerability security update applied to them. For this reason, it's recommended to use boot images from the **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1) or newer.
+- For information on applying the [BlackLotus UEFI bootkit vulnerability](https://support.microsoft.com/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d) security updates to boot images from the ADKs before the **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1), see [Customize Windows PE boot images](/windows/deployment/customize-boot-image). Boot images from the **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1) and newer already have the BlackLotus UEFI bootkit vulnerability security update applied to them. For this reason, it's recommended to use boot images from the **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1) or newer.
 
 - Windows Server builds have the same Windows ADK requirement as the associated Windows client version. For example, Windows Server 2016 is the same build version as Windows 10 LTSB 2016.
 

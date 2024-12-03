@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/06/2024
+ms.date: 11/25/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -67,6 +67,7 @@ The following editions of Windows 11 are supported:
 - Windows 11 Pro for Workstations.
 - Windows 11 Enterprise.
 - Windows 11 Education.
+- [Windows 11 Enterprise LTSC](/windows/whats-new/ltsc/overview).
 
 #### Windows 10
 

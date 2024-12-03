@@ -323,6 +323,10 @@ If your app integrates with Siri Intents or makes Siri Intent Donations, please 
  ## Printing
 
  If your app implements printing and provides a custom print action on a custom menu, be sure to utilize `UIPrintInteractionController.isPrintingAvailable()` to determine if you should add your print action to your custom menu.
+
+ ## Screen capture blocking
+
+For apps that have updated to v19.7.6 or later for Xcode 15 and v20.2.1 or later for Xcode 16 of the SDK, screen capture block will be applied if you have configured `Send Org data to other apps` to a value other than “All apps”. You can configure app configuration policy setting “com.microsoft.intune.mam.screencapturecontrol = Disabled” if you wish to allow screen capture for your iOS devices.
  
 ## Notifications
 
