@@ -2,12 +2,12 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud.
-ms.date: 08/08/2021
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
+author: Baladelli
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -143,7 +143,7 @@ Update the console right away after the site updates.
 After the console update completes, verify the console and site versions are correct. Go to **About Configuration Manager** at the top-left corner of the console.
 
 > [!NOTE]
-> The console version is slightly different from the site version. The minor version of the console corresponds to the Configuration Manager release version. For example, in Configuration Manager version 1802 the initial site version is 5.0.8634.1000, and the initial console version is 5.**1802**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes.
+> The console version is slightly different from the site version. The minor version of the console corresponds to the Configuration Manager release version. For example, in Configuration Manager version 2303 the initial site version is 5.0.9122.1000, and the initial console version is 5.**9122**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes.
 
 ## Next steps
 
