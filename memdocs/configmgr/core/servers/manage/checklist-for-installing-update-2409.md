@@ -2,7 +2,7 @@
 title: Checklist for 2409
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2409.
-ms.date: 12/04/2024
+ms.date: 12/03/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -330,7 +330,9 @@ When you customize hardware inventory classes, review their configuration after 
 
 Update clients per the plan you created, especially if you configured client piloting before installing the update. For more information, see [How to upgrade clients for Windows computers](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
-<!-- ### Third-party extensions-->
+### Third-party extensions
+
+If you use any extensions to Configuration Manager, update them to the latest version to support Configuration Manager version 2409.
 
 ### Update boot images and media
 

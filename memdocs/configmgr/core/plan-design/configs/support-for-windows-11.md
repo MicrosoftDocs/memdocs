@@ -48,9 +48,9 @@ The following table lists the versions of Windows 11 that you can use as a clien
 
 | Windows 11 version                         | ConfigMgr 2309 | ConfigMgr 2403 | ConfigMgr 2409 |
 |--------------------------------------------|----------------|----------------|----------------|
-| **24H2**<br>(10.0.26100) <!--2027-10-12--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **24H2**<br>(10.0.26100) <!--2027-10-12--> | ![Supported](media/red-x.png) | ![Supported](media/red-x.png) | ![Supported](media/green-check.png) |
+| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
