@@ -792,15 +792,15 @@ For a list of the settings stored in the app logs, see [Review client app protec
 
 ## Diagnostic logs
 
-In additional to Intune logs from `edge://intunehelp/`, you may be asked by Microsoft Support to provide diagnostic logs of Microsoft Edge for iOS and Android. You can either upload the logs to Microsoft servers or save them locally and share them directly with Microsoft Support.
+In additional to Intune logs from `edge://intunehelp/`, you may be asked by Microsoft Support to provide diagnostic logs of Microsoft Edge for iOS and Android. You can either upload the logs to Microsoft server or save them locally and share them directly with Microsoft Support.
 
 ### Upload logs to Microsoft server
-Follow these steps to upload logs to Microsoft servers:
+Follow these steps to upload logs to Microsoft server:
 1. Reproduce the issue.
 2. Open the overflow menu by clicking the hamburger icon at the bottom-right corner.
 3. Swipe left and select **Help and feedback**.
 4. In the **Describe what's happening section**, provide details about the issue so the support team can identify the relevant logs.
-5. Upload the logs to Microsoft servers by clicking the button at the top-right corner.
+5. Upload the logs to Microsoft server by clicking the button at the top-right corner.
 
 
 ### Save logs locally and share directly with Microsoft Support
