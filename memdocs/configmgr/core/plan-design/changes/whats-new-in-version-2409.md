@@ -105,6 +105,8 @@ The performance of policy processing and collection evaluation has been enhanced
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
+ - MDT Integration with CM and Standalone support will be removed from the configuration manager in December 2024. Customers should remove the MDT Task sequence step to avoid Task sequence corruption and modification failures.
+
 For more information, see [Removed and deprecated features for Configuration Manager.](deprecated/removed-and-deprecated-cmfeatures.md).
 
 <!--#### Improvements to Bitlocker-->
