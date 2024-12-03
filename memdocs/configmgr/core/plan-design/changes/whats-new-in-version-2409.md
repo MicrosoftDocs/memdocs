@@ -87,7 +87,7 @@ CMG Setup now uses managed Identities and third-party **Server App** to interact
  - Hence storage account key access is disabled for new CMG setup.
  - For sessions upgrading from earlier versions to 2409, the 'CMG enhanced security' button is shown as enabled.
 
- :::image type="content" source="media/27297018-Cmg-Enhanced.png" alt-text="Screenshot of Cmg enhanced window selection in console." lightbox="media/27297018-Cmg-Enhanced.png":::
+ :::image type="content" source="media/27297018-Cmg-Enhanced.png" alt-text="Screenshot of Cmg enhanced window selection in console." lightbox="media/27297018-cmg-enhanced.png":::
 
 ## Known Issues
 
