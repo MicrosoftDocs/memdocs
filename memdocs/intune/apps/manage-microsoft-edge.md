@@ -797,22 +797,22 @@ In additional to Intune logs from `edge://intunehelp/`, you may be asked by Micr
 ### Upload logs to Microsoft server
 Follow these steps to upload logs to Microsoft server:
 1. Reproduce the issue.
-2. Open the overflow menu by clicking the hamburger icon at the bottom-right corner.
+2. Open the overflow menu by selecting the hamburger icon at the bottom-right corner.
 3. Swipe left and select **Help and feedback**.
 4. In the **Describe what's happening section**, provide details about the issue so the support team can identify the relevant logs.
-5. Upload the logs to Microsoft server by clicking the button at the top-right corner.
+5. Upload the logs to Microsoft server by selecting the button at the top-right corner.
 
 
 ### Save logs locally and share directly with Microsoft Support
 Follow these steps to save logs locally and share them:
 1. Reproduce the issue.
-2. Open overflow menu by clicking on the hamburger menu on the bottom-right corner.
+2. Open overflow menu by selecting on the hamburger menu on the bottom-right corner.
 3. Swipe left and select **Help and feedback**.
-4. Click **diagnostic data**.
+4. Select **diagnostic data**.
 6. For Microsoft Edge for iOS, tap the **Share** icon at the top-right corner. The OS sharing dialog will appear, allowing you to save the logs locally or share them via other apps.
 For Microsoft Edge for Android, open the submenu in the top-right corner and select the option to save logs. The logs will be saved in the **Download** > **Edge** folder.
 
-You may want to clear old logs by clicking the **Clear** icon at the top-right corne at step 4. Then, reproduce the issue again to ensure that only fresh logs are captured.
+If you want to clear the old logs, select the **Clear** icon at the top-right when selecting **diagnostic data**. Then, reproduce the issue again to ensure that only fresh logs are captured.
 
 > [!NOTE]
 > Saving logs also respects the Intune App Protection Policy. Therefore, you may not be allowed to save diagnostic data to local devices.
