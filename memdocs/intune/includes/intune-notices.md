@@ -12,6 +12,18 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for Change: Blocking screen capture in the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS 
+
+We recently released updated versions of the Intune App SDK and the Intune App Wrapping Tool. Included in these releases (v19.7.5+ for Xcode 15 and v20.2.0+ for Xcode 16) is the support for blocking screen capture, Genmojis and writing tools in response to the new AI features in iOS/iPadOS 18.2.  
+
+#### How does this affect you or your users?
+
+For apps that have updated to the latest Intune App SDK or Intune App Wrapping Tool versions screen capture will be blocked if you've configured “Send Org data to other apps” to a value other than “All apps”. To allow screen capture for your iOS/iPadOS devices, configure the [Managed apps app configuration policy](../apps/app-configuration-policies-managed-app.md) setting “com.microsoft.intune.mam.screencapturecontrol" to **Disabled**.
+
+#### How can you prepare?
+
+Review your app protection policies and if needed, create a [Managed apps app configuration policy](../apps/app-configuration-policies-managed-app.md) to allow screen capture by configuring the above setting *(Apps > App configuration policies > Create > Managed apps > Step 3 ‘Settings’ under General configuration)*. For more information review, [iOS app protection policy settings – Data protection](../apps/app-protection-policy-settings-ios.md#data-protection) and [App configuration policies - Managed apps](../apps/app-configuration-policies-overview.md#managed-apps).
+
 ### Take Action: Update to the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS
 
 To support the upcoming release of iOS/iPadOS 18.2, update to the latest versions of the Intune App SDK and the Intune App Wrapping Tool to ensure applications stay secure and run smoothly. **Important:** If you do not update to the latest versions, some app protection policies may not apply to your app in certain scenarios. Review the following GitHub announcements for more details on the specific impact:
@@ -21,11 +33,11 @@ To support the upcoming release of iOS/iPadOS 18.2, update to the latest version
 
 As a best practice, always update your iOS apps to the latest App SDK or App Wrapping Tool to ensure that your app continues to run smoothly.
 
-#### How this will affect your organization
+#### How does this affect you or your users?
 
 If you have applications using the Intune App SDK or Intune App Wrapping Tool, you will need to update to the latest version to support iOS 18.2.
 
-#### What you need to do to prepare
+#### How can you prepare?
 
 For apps running on iOS 18.2, you must update to the new version of the Intune App SDK for iOS:
 - [For apps built with XCode 15 use v19.7.6 - Release 19.7.6 - microsoftconnect/ms-intune-app-sdk-ios - GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/19.7.6)
