@@ -2290,11 +2290,13 @@ items:
       - name: Move your Intune Data Warehouse account data
         href: ./developer/data-warehouse-account-move.md
 
-  - name: Privacy and personal data
+  - name: Privacy, compliance, and personal data
     href: ./protect/privacy-personal-data.md
     items:
     - name: Optional diagnostic data in client apps
       href: ./protect/client-apps-optional-data.md
+    - name: Compliance in Intune
+      href: ./fundamentals/compliance-in-intune.md
     - name: Data collection
       href: ./protect/privacy-data-collect.md
     - name: Data storage and processing
