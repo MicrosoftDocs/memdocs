@@ -51,5 +51,5 @@ Configuration Manager includes several compliance features that help organizatio
 
 - [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement)
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center)
-- [Additional privacy information](/mem/configmgr/security/additional-privacy.md)
+- [Additional privacy information](/mem/configmgr/security/additional-privacy)
 - [Fundamentals of security](fundamentals-of-security.md)
