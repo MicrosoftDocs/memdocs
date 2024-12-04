@@ -28,7 +28,7 @@ Microsoft ensures that Intune complies with various industry standards and regul
 
 ## Compliance certifications
 
-Intune is covered under several compliance certifications and regulatory standards. The following table summarizes key certifications:
+Intune is covered under several compliance certifications and regulatory standards. The following table provides a sample of the key certifications that are covered:
 
 | Certification or Standard | Description | Applicability |
 |---------------------------|-------------|---------------|
@@ -37,7 +37,10 @@ Intune is covered under several compliance certifications and regulatory standar
 | [HIPAA](/compliance/regulatory/offering-hipaa-hitech)   | U.S. Health Insurance Portability and Accountability Act | United States |
 | [SOC 2 Type 2](/compliance/regulatory/offering-soc-2)  | Service Organization Controls for data security | Global |
 
-For additional certifications, visit [Microsoft Compliance Offerings](/compliance/regulatory/offering-home).
+> [!NOTE]
+> Microsoft Intune helps your organization meet regulatory compliance standards. Intune supports additional certifications, such as [ISO 22301](/compliance/regulatory/offering-iso-22301), [ISO/IEC 27017](/compliance/regulatory/offering-iso-27017), [ISO/IEC 27018](/compliance/regulatory/offering-iso-27018), [ISO/IEC 27701](/compliance/regulatory/offering-iso-27701), [SOC 1 Type 2](/compliance/regulatory/offering-soc-1), [SOC 3](/compliance/regulatory/offering-soc-3), and [WCAG](/compliance/regulatory/offering-wcag-2-1).
+
+For a complete list, see [Microsoft compliance offerings](/compliance/regulatory/offering-home).
 
 ## Compliance dependencies
 
@@ -55,7 +58,7 @@ Microsoft Intune helps enforce compliance policies and protect organizational da
 - **Conditional Access**: Ensures only compliant devices and apps managed by Intune can access sensitive data. See [Conditional Access](/mem/intune/protect/conditional-access).
 - **Device Compliance Enforcement**: Enforces device compliance policies to meet organizational security requirements. See [Device Compliance Policies](/mem/intune/protect/device-compliance-get-started).
 
-For more information about Intune compliance capabilities, visit the [Microsoft Intune documentation](/mem).
+For more information about Intune compliance capabilities, visit the [Microsoft Intune documentation](/mem/intune).
 
 ## Data residency and protection
 
