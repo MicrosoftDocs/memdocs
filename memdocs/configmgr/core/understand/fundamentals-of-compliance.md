@@ -36,7 +36,8 @@ Microsoft Intune helps enforce compliance policies and protect organizational da
 - **Device Compliance Enforcement**: Enforces device compliance policies to meet organizational security requirements. See [Device Compliance Policies](/mem/intune/protect/device-compliance-get-started).
 
 For more information about Intune compliance capabilities, visit the [Microsoft Intune documentation](/mem/intune).
-For more information about how to concurrently manage Windows 10 or later devices by using both Configuration Manager and Microsoft Intune, see [What is co-management?](/mem/configmgr/comanage/overview).
+> [!NOTE]
+> For more information about how to concurrently manage Windows 10 or later devices by using both Configuration Manager and Microsoft Intune, see [What is co-management?](/mem/configmgr/comanage/overview).
 
 ## Data encryption
 
