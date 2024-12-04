@@ -64,7 +64,7 @@ To download diagnostics:
 2. On the **Summary** page, select the **Diagnostics** page and download the diagnostics.
 
 > [!IMPORTANT]
-> For Android devices, if the Company Portal isn't signed in by the user, logs will not be available for download in the Intune portal. Diagnostic uploads exceeding 50 diagnostics or 4MB in diagnostic data cannot be downloaded directly from the Intune portal. For access to larger diagnostic uploads, reach out to [Microsoft Intune support](/mem/get-support). 
+> Diagnostic uploads exceeding 50 diagnostics or 4MB in diagnostic data cannot be downloaded directly from the Intune portal. For access to larger diagnostic uploads, reach out to [Microsoft Intune support](/mem/get-support). 
 
 Diagnostics take approximately 30 minutes to be delivered from an end user's device. The user may be required to close and reopen the app if prompted for a pin when opening the app for the diagnostics request to prompt.
 
