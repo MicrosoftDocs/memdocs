@@ -2,12 +2,12 @@
 title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 04/08/2022
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: banreet
-ms.author: banreetkaur
+author: Baladelli    
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -40,7 +40,7 @@ To connect to a different site server, use the following steps:
 
     :::image type="content" source="media/connect-to-a-new-site.png" alt-text="Connect the console to a new site.":::
 
-1. Type in the FQDN of the site server. If you've previously connected to site server, select the server from the drop-down list.
+1. Type in the FQDN of the site server. If you've previous session to site server, select the server from the drop-down list.
 
     :::image type="content" source="media/site-server-fqdn.PNG" alt-text="Site Connection window, enter the FQDN of the site server.":::
 
@@ -209,7 +209,7 @@ Starting in version 2203, the Configuration Manager console offers a dark theme.
 ### Known issue
 
 - Console restart is required on doing the theme switch, as the node navigation pane might not properly render when you move to a new workspace.
-- Currently, there are locations in the console that may not display the dark theme correctly. We are continuosly working to improve the dark theme. 
+- Currently, there are locations in the console that may not display the dark theme correctly. We are continuously working to improve the dark theme. 
 
 
 ## Connect via Windows PowerShell
