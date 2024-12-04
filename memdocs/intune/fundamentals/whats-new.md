@@ -75,6 +75,24 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of December 2, 2024
+
+### Device management
+
+#### Device Inventory for Windows<!-- 24853010 -->
+
+Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
+
+You can now choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view. 
+
+For more information, see:
+
+- [Properties catalog](../configuration/properties-catalog.md).
+- [Data collection platform](../../analytics/data-platform-schema.md).
+
+Applies to:
+
+- Windows 10 and later (Corporate owned devices managed by Intune)
 
 ## Week of November 18, 2024 (Service release 2411)
 
@@ -167,8 +185,6 @@ The following settings have been deprecated by Apple and will be marked as depre
 
 - Enable Logging
 - Logging Option
-
-### Device management
 
 #### View profiles for your Endpoint Security policies in the Device Configuration node of the admin center<!-- 30306055 -->   
 
