@@ -69,6 +69,10 @@ Windows 365 support for [Intune scope tags](/mem/intune/fundamentals/scope-tags)
 
 You can now bulk create restore points for up to 5,000 Cloud PCs. You can then share the restore points to a specified Azure storage account. For more information, see [Create multiple manual restore points in bulk](create-manual-restore-point.md#create-multiple-manual-restore-points-in-bulk). 
 
+#### Move selected Cloud PCs to a new region<!--50290712-->
+
+You can now move selected Cloud PCs to a new region. This is instead of moving all Cloud PCs in a provisioning policy.
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
@@ -81,6 +85,21 @@ The Connected Frontline Cloud PCs report now shows:
 - Ability to restart Frontline Cloud PCs to disconnect user from their session and bring concurrency below threshold limits.
 
 For more information see [Connected Frontline Cloud PCs](report-connected-frontline-cloud-pcs.md).
+
+#### Cloud PC actions report support for moving Cloud PCs<!--53672561-->
+
+You can use the Cloud PC actions report to see the status of moving Cloud PCs to new regions.
+
+#### Windows 365 Government supports bulk Troubleshoot action<!--54758451-->
+
+The Troubleshoot remote action can now be used in bulk with Windows 365 Government. For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Azure network connection limit increased<!--54859923-->
+
+The Azure network connection limit for each tenant has been increased. For more information, see [Maximum azure network connections](azure-network-connections.md#maximum-azure-network-connections).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
