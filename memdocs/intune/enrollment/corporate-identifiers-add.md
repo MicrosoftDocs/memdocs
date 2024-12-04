@@ -260,6 +260,8 @@ To confirm the reason for an enrollment failure, go to **Devices** > **Enrollmen
 - You can upload up to 10 CSV files for Windows corporate identifiers in the admin center. If you need to upload more data, we recommend using PowerShell or the Microsoft Intune Graph API to add corporate identifiers.  
 
 - Windows currently doesn't support device details in CSV files.
+  
+- Apple user enrollment with Company Portal and account driven user enrollment corporate identifiers are not currently supported because the MDM does not get access to the device serial number, IMEI, and UDID.
 
 ## Resources
 

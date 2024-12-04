@@ -224,7 +224,7 @@ For more information, go to [How many tokens can I upload.](../apps/vpp-apps-ios
 - Local admins can create Win32 apps as needed within the cross-platform, line-of-business app and web-link limit. For more information, go to [Win32 app management](../apps/apps-win32-app-management.md).
 
   > [!NOTE]
-  > [Microsoft Store for Business](/microsoft-store/microsoft-store-for-business-overview) is being retired. Starting with Windows 11, you have a new option for your private volume-licensed apps. For more information, go to [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11) and [Update to Microsoft Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077).
+  > Microsoft Store for Business is being retired. Starting with Windows 11, you have a new option for your private volume-licensed apps. For more information, go to [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11) and [Update to Microsoft Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077).
 
 #### Android
 

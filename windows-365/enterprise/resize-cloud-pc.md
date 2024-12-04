@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/09/2024
+ms.date: 10/03/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -31,30 +31,7 @@ ms.collection:
 
 # Resize a Cloud PC
 
-The **Resize** remote action, which preserves user and disk data, lets you:
-
-- Upgrade the RAM, CPU, and storage size of a Cloud PC.
-- Downgrade the RAM and CPU of Cloud PC. Resizing doesn't let you downsize disk space.
-
-These operations don't require reprovisioning of the Cloud PC.
-
-You might consider resizing a Cloud PC when a user needs:
-
-- Higher RAM and VCPU cores to run CPU intensive applications.
-- More disk space for file storing.
-- Less RAM and vCPU cores to run their current workload applications.
-
-Resizing supports:
-
-- Direct and group-based licenses.
-- Paid, preview, and trial licenses.
-- Bulk and single device operations.
-
-Resizing doesn't support:
-
-- GPU Cloud PCs. GPU Cloud PCs might show up in the resize flow, but trying to resize a GPU Cloud PC will result in an error.
-
-Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin. Contact your end users and have them save their work and sign out before you begin resizing.
+[!INCLUDE [Resize a Cloud PC intro](../includes/resize-introduction.md)]
 
 Downsizing may impact support for nested virtualization. For more information, see [Set up virtualization-based workloads support](nested-virtualization.md).
 
@@ -75,24 +52,9 @@ To resize a Cloud PC, the admin must have certain built-in Microsoft Entra roles
 
 Alternatively, you can assign a custom role that includes the permissions of these built-in roles.
 
-## IP address requirements
+[!INCLUDE [Resize a Cloud PC IP requirements](../includes/resize-ip-address-requirements.md)]
 
-When resizing a Microsoft Entra hybrid join bring-your-own-network Cloud PC, a second IP address must be available in the subnet for the Cloud PC to be resized.
-
-During the resizing operation, a second IP address is used when moving to the new size. This precaution makes sure that the Cloud PC can be rolled back to the original should an issue occur.
-
-To account for this precaution, you can:
-
-- Make sure that adequate IP addresses are available in the vNET for all Cloud PCs to be resized, or
-- Stagger your resize operations to make sure that the address scope is maintained.
-
-If inadequate addresses are available, resize failures can occur.
-
-### Other requirements
-
-In order to use **Resize** there must be available licenses in inventory for the resized Cloud PC configuration.
-
-To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Windows 365 provisioning node.
+[!INCLUDE [Resize a Cloud PC other requirements](../includes/resize-other-requirements.md)]
 
 ## Resize a single Cloud PC provisioned with a direct assigned license
 
@@ -174,13 +136,7 @@ If the source license isn't removed, and the target license isn't assigned withi
 
 If you have a combination of paid and trial licenses, the resize feature uses your paid licenses first. After these licenses run out, the resize operation uses your trial licenses.
 
-When resizing starts, the user is automatically disconnected from their Cloud PC and any unsaved work might be lost.
-
-Resizing can take from 15 to 20 minutes before the user can access their Cloud PC again. You can monitor the status in the Windows 365 provisioning blade. Users can see their Cloud PC status at https://windows365.microsoft.com.
-
-If there are no licenses in your inventory, the resizing fails. To request more licenses, contact your procurement admin. After you purchase the license and added to the inventory in the Microsoft 365 admin center, you can retry the resize operation. Licenses can be purchased from various channels: EA, CSP, MCA, and Web Direct.
-
-Devices with a state of **Resize not supported** aren't resized. The status message and details can help you identify the issue. You can still proceed with a bulk resize even if you have devices in the list that are marked as **Resize not supported**.
+[!INCLUDE [Resize a Cloud PC details](../includes/resize-details.md)]
 
 ## Resize with Step-up Licenses
 

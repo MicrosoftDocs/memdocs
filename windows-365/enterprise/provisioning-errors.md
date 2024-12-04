@@ -184,6 +184,10 @@ If you are seeing this error, some factors to consider are:
 - If the device is Intune-enrolled, you can apply Intune policy to disable the ports.
 - The user can also disable the ports manually by adding a local firewall rule onto their device. For a list of high risk ports that are recommended for blocking, please see [Security admin rules in Azure Virtual Network Manager](/azure/virtual-network-manager/concept-security-admins#protect-high-risk-ports).
 
+## Other provisioning failures
+
+If you encounter other provisioning errors not covered above, make sure all the [required endpoints](requirements-network.md?tabs=enterprise%2Cent#allow-network-connectivity) are allowed on the VNet used for your ANC and any gateway device.
+
 <!-- ########################## -->
 ## Next steps
 [Troubleshooting](troubleshooting.md).

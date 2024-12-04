@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2024
+ms.date: 08/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -190,7 +190,6 @@ To use these filters when assigning policies, browse to **Apps** > **App protect
 
 ### Device Management types
 
-
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 - **Unmanaged**: For iOS/iPadOS devices, unmanaged devices are any devices where either Intune MDM management or a 3rd party MDM/EMM solution doesn't pass the `IntuneMAMUPN` key. For Android devices, unmanaged devices are devices where Intune MDM management hasn't been detected. This includes devices managed by third-party MDM vendors.
@@ -208,6 +207,11 @@ For iOS/iPadOS, for the Device Management type to be enforced to Intune managed 
 - **IntuneMAMUPN** and **IntuneMAMOID** must be configured for all MDM managed applications. For more information, see [How to manage data transfer between iOS/iPadOS apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** must be configured for all third-party and line-of-business MDM managed applications. The **IntuneMAMDeviceID** should be configured to the device ID token. For example, `key=IntuneMAMDeviceID, value={{deviceID}}`. For more information, see [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 - If only the **IntuneMAMDeviceID** is configured, the Intune APP will consider the device as unmanaged.
+
+> [!IMPORTANT]
+> Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, **IntuneMAMOID**, and **IntuneMAMDeviceID** app configuration values will be automatically sent to managed applications on Intune enrolled iOS devices for the following apps: Microsoft Excel, Microsoft Outlook, Microsoft PowerPoint, Microsoft Teams and Microsoft Word. Intune will continue to expand this list to include additional managed apps. 
+> 
+> If these values aren't configured correctly for iOS devices, there is a possibility of either the policy not getting delivered to the app or the wrong policy is delivered. For more information, see [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335). 
 
 ## Policy settings
 To see a full list of the policy settings for iOS/iPadOS and Android, select one of the following links:

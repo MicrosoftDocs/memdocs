@@ -41,7 +41,7 @@ Your org can require you to use a specific app to do something like opening a wo
 ## How do I know I'm using a managed app?  
 When you sign in or try to access work or school data in a managed app, you receive an on-screen message that tells you the app is protected by your organization.   
 
-![managed-apps-message-ios](./media/managed-apps-message.png)  
+![Screenshot of on-screen message received about protected app.](./media/use-managed-apps-on-your-device-ios/managed-apps-message.png)  
 
 ## How do I get work or school apps?  
 
@@ -83,7 +83,7 @@ The following list describes the settings your IT support person can control wit
 ## Approve line-of-business app   
  By default, your device doesn't trust line-of-business (LOB) apps acquired outside of the App Store, which may prevent your organization's own company apps from being installed. You'll know this is happening if you open an installed LOB app and receive an *untrusted enterprise developer* message. 
 
-![iOS app message - Untrusted Enterprise Developer](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)  
+![Screenshot of iOS app message about an untrusted enterprise developer.](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)  
 
 For information about how to manually install and trust an enterprise app on your device, see [Install custom enterprise apps on iOS](https://support.apple.com/en-us/HT204460) on the Apple Support site.  
 

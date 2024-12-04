@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 11/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -55,6 +55,8 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
 ## To create a scope tag
 
+Creating, updating or deleting scope tags requires an administrator assigned the Global Administrator or Intune Adminstrator Entra ID role. Administrators with a scope tag in their role assignment cannot update or delete the scope tag from the master list of scope tags.
+
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **Scope (Tags)** > **Create**.
 2. On the **Basics** page, provide a **Name** and optional **Description**. Choose **Next**.
 3. On the **Assignments** page, choose the groups containing the devices that you want to assign this scope tag. Choose **Next**.
@@ -88,7 +90,7 @@ For objects that support scope tags, scope tags usually appear under **Propertie
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Manage devices** > **Configuration** > choose a profile.
 
 2. Choose **Properties** > **Scope (Tags)** > **Edit** > **Select scope tags** > choose the tags that you want to add to the profile. You can assign a maximum of 100 scope tags to an object.
-4. Choose **Select** > **Review + save**.
+3. Choose **Select** > **Review + save**.
 
 ## Scope tag details
 

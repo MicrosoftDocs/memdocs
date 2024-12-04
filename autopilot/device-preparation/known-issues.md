@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/27/2024
+ms.date: 11/15/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -39,6 +39,15 @@ This article describes known issues that can often be resolved with:
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 ## Known issues
+
+## Deployments fail when Managed installer policy is enabled for the tenant
+
+Date added: *October 10, 2024*<br>
+Date updated: *November 15, 2024*
+
+When the [Managed installer policy](/mem/intune/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps and Microsoft Store apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
+
+For more information, see [Known issue: Windows Autopilot device preparation with Win32 apps and managed installer policy](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-windows-autopilot-device-preparation-with-win32-apps/ba-p/4273286).
 
 ## Security group membership update failures might lead to non-compliant devices
 

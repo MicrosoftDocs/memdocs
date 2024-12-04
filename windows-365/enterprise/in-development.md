@@ -54,29 +54,7 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-## Device management
-
-### Cloud PC gallery images update to Microsoft Teams 2.1<!--50394023-->
-
-In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 applications will be updated to use Microsoft Teams 2.1. These images include:
-
-- Windows 11 Enterprise + Microsoft 365 Apps  21H2
-- Windows 10 Enterprise + Microsoft 365 Apps 22H2
-- Windows 10 Enterprise + Microsoft 365 Apps 21H2
-
-### Azure network connections inactive state<!--52127015-->
-
-In a future update, Azure network connections that meet either of the following conditions for more than four weeks will be marked as inactive:
-
-- ANCs that aren't associated with provisioning policies.
-- ANCs with provisioning policies that have no Cloud PCs associate with them.
-
-Inactive ANCs:
-
-- Can't be assigned to provisioning policies.
-- Are skipped during health checks.
-
-You'll be able to reactive such ANCs.
+<!--## Device management-->
 
 <!-- ***********************************************-->
 <!--## Device security-->
@@ -95,10 +73,6 @@ You'll be able to reactive such ANCs.
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
-### Update to Cloud PC action status report<!--49451077-->
-
-The Cloud PC action status report will show batches of devices in which actions have been triggered. Customers will be able to see the batch current progress.
-
 ### Remoting connections report deprecation<!--52990648-->
 
 The remoting connection report will be retired on December 31st, 2024. After this date, refer to the [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
@@ -114,7 +88,6 @@ The remoting connection report will be retired on December 31st, 2024. After thi
 
 <!-- ***********************************************-->
 <!--## Windows 365 Frontline-->
-
 
 ## Next steps
 

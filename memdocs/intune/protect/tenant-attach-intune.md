@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2024
+ms.date: 10/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,6 +48,9 @@ To support using Intune endpoint security policies with Configuration Manager de
   After selecting devices to synchronize, you must *enable* collections for use with endpoint security policies from Intune. Supported policies for Configuration Manager devices can only be assigned to collections you've *enabled*.
 
 - **Permissions to Microsoft Entra ID** - To complete setup of tenant attach, your account must have Global Administrator permissions to your Azure subscription.
+
+  > [!IMPORTANT]
+  > Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Microsoft Intune Plan 1 subscription). See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
 

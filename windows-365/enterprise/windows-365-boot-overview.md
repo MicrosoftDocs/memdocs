@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/26/2024
+ms.date: 11/01/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -81,7 +81,7 @@ Support for Windows 365 Boot authentication modes when users sign in to their Cl
 | :---: | :---: | :---: |
 | Username/password | Yes | Yes |
 | Windows Hello for Business | Yes | No |
-| FIDO key | No | Yes |
+| FIDO key | Yes | Yes |
 | Convenience pin | No | No |
 
 ## Multiple Cloud PCs
