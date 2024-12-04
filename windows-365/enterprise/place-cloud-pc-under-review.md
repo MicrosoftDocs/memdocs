@@ -52,7 +52,7 @@ As part of the process to place Cloud PCs under review, Windows 365 requires the
 2. Configure the storage account with the following settings;
     - **Instance details**
         - **Region**: Same region as CloudPC suggested for performance. There is no restriction on which region.
-        - **Performance**: **Premium** (supports only hot access tier) or **Standard** (supports all access tiers).
+        - **Performance**: **Premium** (supports only hot [access tier](/azure/storage/blobs/access-tiers-overview)) or **Standard** (supports all access tiers).
         - **Premium account type**: **Page blobs**
     - **Security**
         - Minimum TLS version: **Version 1.2**
