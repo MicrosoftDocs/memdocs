@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/04/2024
+ms.date: 12/06/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -82,6 +82,12 @@ The Connected Frontline Cloud PCs report now shows:
 
 For more information see [Connected Frontline Cloud PCs](report-connected-frontline-cloud-pcs.md).
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Windows 365 now supports Israel Central<!--54918015-->
+
+Windows 365 Enterprise now supports the Israel Central region in the Middle East geography. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
 
 <!-- ########################## -->
 ## Week of November 19, 2024
