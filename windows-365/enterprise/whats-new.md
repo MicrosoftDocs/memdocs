@@ -90,6 +90,17 @@ For more information see [Connected Frontline Cloud PCs](report-connected-frontl
 
 You can use the Cloud PC actions report to see the status of moving Cloud PCs to new regions.
 
+#### Windows 365 Government supports bulk Troubleshoot action<!--54758451-->
+
+The Troubleshoot remote action can now be used in bulk with Windows 365 Government. For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Azure network connection limit increased<!--54859923-->
+
+The Azure network connection limit for each tenant has been increased. For more information, see [Maximum azure network connections](azure-network-connections.md#maximum-azure-network-connections).
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
 
