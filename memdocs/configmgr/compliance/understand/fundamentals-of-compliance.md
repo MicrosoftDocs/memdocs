@@ -1,5 +1,5 @@
 ---
-title: Compliance in Configuration Manager
+title: Understand compliance in Configuration Manager
 author: dougeby
 ms.author: dougeby
 manager: dougeby
@@ -13,7 +13,7 @@ description: Learn about compliance certifications, dependencies, and features i
 ms.date: 12/3/2024
 ---
 
-# Compliance in Configuration Manager
+# Understand compliance in Configuration Manager
 
 Configuration Manager supports compliance features to help organizations meet national, regional, and industry-specific regulations. Configuration Manager aligns with Microsoft's commitment to data protection, privacy, and compliance, by offering tools to help secure and manage data effectively.
 
@@ -52,4 +52,4 @@ Configuration Manager includes several compliance features that help organizatio
 - [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement)
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center)
 - [Additional privacy information](/mem/configmgr/security/additional-privacy)
-- [Fundamentals of security](fundamentals-of-security.md)
+- [Fundamentals of security](/mem/core/understand/fundamentals-of-security)

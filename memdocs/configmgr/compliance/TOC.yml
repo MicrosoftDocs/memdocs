@@ -3,6 +3,8 @@ items:
   href: index.yml
 - name: Understand and explore
   items:
+  - name: Understand compliance in Configuration Manager
+    href: understand/fundamentals-of-compliance.md
   - name: Ensure device compliance
     href: understand/ensure-device-compliance.md
 - name: Get started
