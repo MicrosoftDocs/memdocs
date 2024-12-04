@@ -170,6 +170,21 @@ The following settings have been deprecated by Apple and will be marked as depre
 
 ### Device management
 
+#### Device Inventory for Windows<!-- 24853010 -->
+
+Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
+
+You can now choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view. 
+
+For more information, see:
+
+- [Properties catalog](../configuration/properties-catalog.md).
+- [Data collection platform](../../analytics/data-platform-schema.md).
+
+Applies to:
+
+- Windows 10 and later (Corporate owned devices managed by Intune)
+
 #### View profiles for your Endpoint Security policies in the Device Configuration node of the admin center<!-- 30306055 -->   
 
 We’ve updated the [*Configuration* view](../configuration/device-profile-monitor.md) for *Devices* in the admin center to now display profiles for your endpoint security policies alongside your device configuration policies. This means you can view a combined list of your device configuration policies and the supported endpoint security policies in a single location where you can then select a policy to view and edit it.
