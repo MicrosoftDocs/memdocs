@@ -294,7 +294,7 @@ Read the blog, [Microsoft Intune ending support for Android device administrator
 
 ### Plan for Change: Ending support for Microsoft Store for Business and Education apps
 
-In April 2023, we began ending support for the Microsoft Store for Business experience in Intune. This occurs in several stages. For more information, see: [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://aka.ms/Intune/MSfB-support)
+In April 2023, we began ending support for the Microsoft Store for Business experience in Intune. This occurs in several stages. For more information, see: [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://aka.ms/Intune/MSfB-support).
 
 ### How does this affect you or your users?
 
