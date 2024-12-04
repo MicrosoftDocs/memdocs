@@ -41,6 +41,12 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Autopilot deployment report and AutopilotEvents Graph API only returns 50 records at a time
+
+Date added: *December 4, 2024*
+
+In Intune's 2411 release, we've updated the backend infrastructure of the Autopilot deployment report for consistency with other Intune reports. With this change, the report and the AutopilotEvents Microsoft Graph API now return 50 records at a time. Customers can use `skipToken` parameter to get additional pages of data with the AutopilotEvents Graph API or use the [export API](/mem/intune/fundamentals/reports-export-graph-apis) with `reportName` **AutopilotV1DeploymentStatus** to get all records.
+
 ### DFCI enrollment fails for Professional editions of Windows 11, version 24H2
 
 Date added: *October 9, 2024*
