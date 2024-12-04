@@ -40,15 +40,15 @@ For more information about how to concurrently manage Windows 10 or later device
 
 ## Data encryption
 
-Use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients, which are joined to Active Directory. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring. For more information, see [Plan for BitLocker management](../protect/plan-design/bitlocker-management.md).
+Use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients, which are joined to Active Directory. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring. For more information, see [Plan for BitLocker management](/mem/configmgr/protect/plan-design/bitlocker-management).
 
 ## Compliance features
 
-Configuration Manager includes several compliance features that help organizations manage device compliance. For more information, see [Ensure device compliance with Configuration Manager](../compliance/understand/ensure-device-compliance.md).
+Configuration Manager includes several compliance features that help organizations manage device compliance. For more information, see [Ensure device compliance with Configuration Manager](/mem/configmgr/compliance/understand/ensure-device-compliance).
 
 ## Related articles
 
 - [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement)
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center)
-- [Additional privacy information](../security/additional-privacy.md)
+- [Additional privacy information](/mem/configmgr/security/additional-privacy.md)
 - [Fundamentals of security](fundamentals-of-security.md)
