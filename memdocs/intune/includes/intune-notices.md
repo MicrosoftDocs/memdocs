@@ -26,7 +26,7 @@ Review your app protection policies and if needed, create a [Managed apps app co
 
 ### Take Action: Update to the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS
 
-To support the upcoming release of iOS/iPadOS 18.2, update to the latest versions of the Intune App SDK and the Intune App Wrapping Tool to ensure applications stay secure and run smoothly. **Important:** If you do not update to the latest versions, some app protection policies may not apply to your app in certain scenarios. Review the following GitHub announcements for more details on the specific impact:
+To support the upcoming release of iOS/iPadOS 18.2, update to the latest versions of the Intune App SDK and the Intune App Wrapping Tool to ensure applications stay secure and run smoothly. **Important:** If you don't update to the latest versions, some app protection policies may not apply to your app in certain scenarios. Review the following GitHub announcements for more details on the specific impact:
 
 - SDK for iOS: [Update recommended prior to iOS 18.2 general availability - microsoftconnect/ms-intune-app-sdk-ios - Discussion #495](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/discussions/495) 
 - Wrapper for iOS: [Update recommended prior to iOS 18.2 general availability - microsoftconnect/intune-app-wrapping-tool-ios - Discussion #128](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/discussions/128)
@@ -206,7 +206,7 @@ For detailed step-by-step instructions visit [powershell-intune-samples/Updating
 
 In October 2024, Intune will be moving to support Android 10 and later for user-based management methods, which includes:
 
-- Android Enterprise personally-owned work profile
+- Android Enterprise personally owned work profile
 - Android Enterprise corporate owned work profile
 - Android Enterprise fully managed
 - Android Open Source Project (AOSP) user-based
