@@ -205,6 +205,25 @@ Changes in this release:
 - Hardened containers by reducing the container capabilities to minimum
 - Security updates on the base image
 
+## Next steps
+
+[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
+
+<!-- Archive of past releases
+
+### May 16, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:50b62c1d7f81e2941fc73a09856583ea752fe821e9fef448114fe7e00f90f25a
+
+- **serverImageDigest**: sha256:f6249bc16f90abc9e6fb278c74e07b1c3e295cc0614d38ae20036cee50ff5c56
+
+Changes in this release:
+
+- Hardened containers by reducing the container capabilities to minimum
+- Security updates on the base image
+
 ### April 22, 2024
 
 Image hash values:
@@ -286,8 +305,6 @@ Changes in this release:
 - Bug fix: add legacy NAT tables for the mstunnel-server container on Cent OS 7 and Red Hat 7 hosts
 - Bug fix: add SELinux policy to allow TCP DNS traffic for the containers on Red Hat hosts
 - Increase mstunnel-server container pid limit to 10000
-
-<!-- Archive of past releases
 
 ### October 2, 2023
 
@@ -584,7 +601,3 @@ Changes in this release:
 The initial public preview release of Microsoft Tunnel.
 
 End of archive -->
-
-## Next steps
-
-[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
