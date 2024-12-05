@@ -37,10 +37,6 @@ To access their Cloud PC, an end-user's hardware must meet certain requirements.
 
 For more information about the requirements of running and using Windows App, see [Get started with Windows App](/windows-app/get-started-connect-devices-desktops-apps).
 
-## Windows 365 app
-
-For information about the requirements for running the Windows 365 app, see the [Windows 365 end user documentation](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0 ).
-
 ## Microsoft Remote Desktop client for Windows
 
 Downloads available for:
