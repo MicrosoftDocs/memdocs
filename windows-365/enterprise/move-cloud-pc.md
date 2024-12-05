@@ -34,8 +34,8 @@ ms.collection:
 By editing a provisioning policy, you can move some or all existing Cloud PCs in a policy from:
 
 - One region to another single region.
-- One ANC to another ANC.
-- a Microsoft hosted network to an Azure network connection and vice versa.
+- One Azure network connection (ANC) to another ANC.
+- a Microsoft hosted network to an ANC and vice versa.
 
 ## Bulk move all Cloud PCs in a policy
 
@@ -59,7 +59,7 @@ The best time to perform moves is over the weekend to make sure the impact to us
 
 When moving many devices to a new region, start with a few non-essential Cloud PCs and check for success before moving the critical Cloud PCs.
 
-You can track the status of moving Cloud PCs with the [Cloud PC actions report](report-cloud-pc-action).
+You can track the status of moving Cloud PCs with the [Cloud PC actions report](report-cloud-pc-actions.md).
 
 New Cloud PCs created by the edited provisioning policy are assigned to the new region or ANC.
 
