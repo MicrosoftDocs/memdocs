@@ -50,7 +50,7 @@ All Cloud PCs provisioned after these changes are created in the new region.
 
 [!INCLUDE [Move a Cloud PC first steps](../includes/move-cloud-pc-steps.md)]
 6. In the **Apply this configuration to existing Cloud PCs** box, select **Region or Azure network connections for select devices (preview)** > **Apply**.
-7. Under **Select devices (prevew)**, select the devices that you want to move. You can move up to 100 devices at a time.
+7. Under **Select devices (preview)**, select the devices that you want to move. You can move up to 100 devices at a time.
 8. Choose **Select** > **Continue**.
 
 ## Best practices
