@@ -237,6 +237,12 @@ Now generally available, Microsoft Intune supports compliance checks for instanc
 
 For more information about WSL compliance, see [Evaluate compliance for Windows Subsystem for Linux](../protect/compliance-wsl.md).  
 
+### Device management 
+
+#### macOS agent 
+- Track network availability so that Intune agent can trigger another sync on network reconnection in the case of network interruption. 
+- Add traces to macOS agent log when customers killing the MDM agent. 
+
 ### Intune Apps
 
 #### Newly available protected apps for Intune<!-- 29602331 -->
@@ -332,6 +338,9 @@ For enrolled devices on unsupported OS versions (Android 9 and lower)
 While Intune doesn't prevent enrollment or management of devices on unsupported Android OS versions, functionality isn't guaranteed, and use isn't recommended.
 
 Userless methods of Android device management (Dedicated and AOSP userless) and Microsoft Teams certified Android devices are not affected by this change.
+
+#### macOS agent 
+- Bug fix: The DMG App is successfully removed from directory after editing the assignment to uninstall.
 
 #### Collection of additional device inventory details<!-- 29460196 -->
 
@@ -536,6 +545,13 @@ You can configure these screens in new and existing enrollment policies. For mor
 #### Extended expiration date for corporate-owned, user-associated AOSP enrollment tokens<!-- 25782149 -->
 
 Now when you create an enrollment token for Android Open Source Project (AOSP) corporate-owned, user-associated devices, you can select an expiration date that's up to 65 years into the future, an improvement over the previous 90 day expiration date. You can also modify the expiration date of existing enrollment tokens for Android Open Source Project (AOSP) corporate-owned, user-associated devices.
+
+### Device management
+
+#### macOS agent 
+- Add protections against client DoS attacks from an attacker unmounting the image via DiskUtility.
+- Protect DMG from attacks where an the disk is unmounted via DiskUtility and remounted via CLI with different contents. We now use Disk Arbitration (DA) to mitigate against DoS attacks via Disk Utility; these DA APIs allows us to intercept requests to unmount a mounted DMG while it's still in use and decide how to proceed. 
+- The self-destruct failed on macOS device. Use shell script to uninstall sidecar; this way, a different process running as root can do the uninstallation.
 
 ### Device security
 
