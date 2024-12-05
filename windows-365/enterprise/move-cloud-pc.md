@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2024
+ms.date: 07/25/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -31,45 +31,43 @@ ms.collection:
 
 # Move a Cloud PC
 
-By editing a provisioning policy, you can move some or all existing Cloud PCs in a policy from:
+By editing a provisioning policy, you can move existing Cloud PCs from their current region or Azure network connection (ANC) to a new one.
 
-- One region to another single region.
-- One Azure network connection (ANC) to another ANC.
-- a Microsoft hosted network to an ANC and vice versa.
+The best time to perform moves is over the weekend to make sure the impact to users is minimized. Cloud PCs are shut down during the move process, so you should notify your users before the move so that they can save their work and sign out.
 
-## Bulk move all Cloud PCs in a policy
+New Cloud PCs created by the edited provisioning policy are assigned to the new region or ANC.
 
-[!INCLUDE [Move a Cloud PC first steps](../includes/move-cloud-pc-steps.md)]
-6. In the **Apply this configuration to existing Cloud PCs** box, select **Region or Azure network connections for all devices** > **Apply**.
+## Move a Cloud PC
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policies** > select a policy.
+2. Under **General**, select **Edit**.
+3. Under **Join type details**, make changes depending on the original type:
+  
+    - For **Hybrid Microsoft Entra Join**, change the ANC\*.
+    - For **Microsoft Entra Join**:
+
+      - You can change **Network** type from ANC to Microsoft hosted network, or vice versa.
+      - If a **Microsoft hosted network** is used, change the **Geography** and/or **Region**.
+      - If an **Azure network connection** is used, change the ANC\*.
+
+4. Select **Next** > **Update**.
+5. When ready to move the existing Cloud PCs, select **Apply region change to existing Cloud PCs**.
 
 \* The domain defined in the new ANC must match that of the Cloud PCs that you want to move. The domain used in the original ANC must be reachable from the new ANC.
 
 All Cloud PCs provisioned after these changes are created in the new region.
 
-## Move a subset of Cloud PCs
+## Move process
 
-[!INCLUDE [Move a Cloud PC first steps](../includes/move-cloud-pc-steps.md)]
-6. In the **Apply this configuration to existing Cloud PCs** box, select **Region or Azure network connections for select devices (preview)** > **Apply**.
-7. Under **Select devices (preview)**, select the devices that you want to move. You can move up to 100 devices at a time.
-8. Choose **Select** > **Continue**.
+1. All Cloud PCs in the move are backed up before being moved to the new region. This backup, which can take some time, can begin while the user is signed in and active.
+2. After the backup is complete, the Cloud PC is shut down.
+3. The Cloud PC is moved. During this time, which can take several hours, the Cloud PC is inaccessible.
 
-## Best practices
+    - During the move, you can view the status in the **All Cloud PCs** list. The move is complete when the status indicates **Provisioned**.
 
-The best time to perform moves is over the weekend to make sure the impact to users is minimized. Cloud PCs are shut down and inaccessible for up to several hours during the move process. You should notify your users before the move so that they can save their work and sign out.
+4. After the move is complete, users can sign in.
 
-When moving many devices to a new region, start with a few non-essential Cloud PCs and check for success before moving the critical Cloud PCs.
-
-You can track the status of moving Cloud PCs with the [Cloud PC actions report](report-cloud-pc-actions.md).
-
-New Cloud PCs created by the edited provisioning policy are assigned to the new region or ANC.
-
-## Other move operations
-
-Cloud PCs can't be moved from one provisioning policy to another.
-
-You can't move some Cloud PCs to one region and other Cloud PCs to another region in the same policy edit operation.
-
-You can't move Cloud PCs from one virtual network or subnet to another using the edit provisioning policy method. To make VNet/subnet changes, create a new ANC with the updated vNet/subnet and then move the Cloud PCs to the new ANC.
+If an error occurs, you retry the move.
 
 <!-- ########################## -->
 ## Next steps
