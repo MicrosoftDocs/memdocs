@@ -43,7 +43,7 @@ To deploy operating systems to Configuration Manager clients that make PXE boot 
 > [!NOTE]
 > When you configure a single PXE-enabled distribution point to support multiple subnets, it's not supported to use DHCP options. To allow the network to forward client PXE requests to PXE-enabled distribution points, configure IP helpers on the routers.
 
-When you enable a PXE responder on a distribution point without Windows Deployment Service, it can be on the same server as the DHCP service.<!--3734270, SCCMDocs-pr #3416--> Add the following settings to support this configuration:
+When you enable a PXE responder on a distribution point without Windows Deployment Service, it can be on the same server as the DHCP service.<!--3734270, SCCMDocs-pr #3416--> When the PXE responder and DHCP are on the same server, add the following settings to support this configuration:
 
 - Set the DWord value **DoNotListenOnDhcpPort** to `1` in the following registry key: `HKLM\Software\Microsoft\SMS\DP`.
 - Set DHCP option 60 to `PXEClient`.
