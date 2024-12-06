@@ -118,7 +118,7 @@ A certificate chain with an ordered list of certificates enables the relying par
 The following diagram illustrates the *name matching* chain validation flow.  
 
 > [!div class="mx-imgBorder"]
-> ![Diagram of the chain validation process using the name match method.](./media/microsoft-cloud-pki-fundamentals/Chain_validation_draft1.png)
+> ![Diagram of the chain validation process using the name match method.](./media/microsoft-cloud-pki-fundamentals/Chain_validation-draft1.png)
 
 ### Ensure a chain of trust  
 
