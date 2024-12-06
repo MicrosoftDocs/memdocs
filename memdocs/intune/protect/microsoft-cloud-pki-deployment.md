@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/26/2024
+ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -55,7 +55,7 @@ Identify your relying parties. The relying party is a user or system that consum
 
 - A Wi-Fi access point using radius certificate-based authentication.  
 - A VPN server authenticating a remote user.
-- A user visiting an TLS/SSL protected web site in a web browser.
+- A user visiting an TLS/LLS protected web site in a web browser.
 
 ### Determine location for trust anchor
 
@@ -143,11 +143,11 @@ The relying party should already have the private CA certificate chain. However,
 
 Relying parties trust the Cloud PKI BYOCA issued SCEP certificate to the managed device, because it chains up to the private CA trust chain already present on the relying party.
 
-The following diagram illustrates how the respective CA certificate trust chains are deployed to Intune managed devices. In this diagram, the *private PKI* refers to the Active Directory Certificate Service or a non-Microsoft service.   
+The following diagram illustrates how the respective CA certificate trust chains are deployed to Intune managed devices.   
 
 > [!div class="mx-imgBorder"]
 > ![Diagram of the CA certificate trust chains that must be deployed to Intune managed devices.](./media/microsoft-cloud-pki-deployment/Microsoft_cloud_PKI_BYOCA_CA_deployment.png)  
-
+`*` In this diagram, *private* refers to the Active Directory Certificate Service or a non-Microsoft service.  
 
 ## Summary
 

@@ -108,7 +108,7 @@ Microsoft Cloud PKI is made up of several key components working together to sim
   * B2 - Microsoft Cloud PKI SCEP service   
   * B3 - Microsoft Cloud PKI SCEP validation service  
   
-  The *certificate registration authority* makes up B.2 and B.3 in the diagram.  
+  The *certificate registration authority* makes up B2 and B3 in the diagram.  
 
 These components replace the need for an on-premises certificate authority, NDES, and Intune certificate connector.  
 
