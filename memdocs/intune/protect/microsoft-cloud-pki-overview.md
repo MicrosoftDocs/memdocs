@@ -98,14 +98,15 @@ Microsoft Cloud PKI is made up of several key components working together to sim
 
 > [!div class="mx-imgBorder"]
 > ![Drawing of the Microsoft Cloud PKI architecture.](./media/microsoft-cloud-pki/Architecture_flow.png)  
+`*`  See **Components** for a breakdown of services.       
 
 **Components**:
 
 * A - Microsoft Intune  
 * B - Microsoft Cloud PKI services  
-  * B.1 - Microsoft Cloud PKI service
-  * B.2 - Microsoft Cloud PKI SCEP service
-  * B.3 - Microsoft Cloud PKI SCEP validation service
+  * B1 - Microsoft Cloud PKI service  
+  * B2 - Microsoft Cloud PKI SCEP service   
+  * B3 - Microsoft Cloud PKI SCEP validation service  
   
   The *certificate registration authority* makes up B.2 and B.3 in the diagram.  
 
@@ -113,11 +114,13 @@ These components replace the need for an on-premises certificate authority, NDES
 
 **Actions**:  
 
-Before the device checks in to the Intune service, an Intune administrator or Intune role with permissions to manage the Microsoft Cloud PKI service must (shown as B1 in the diagram):  
+Before the device checks in to the Intune service, an Intune administrator or Intune role with permissions to manage the Microsoft Cloud PKI service must complete the following actions:    
 
 * Create the required Cloud PKI certification authority for the root and issuing CAs in Microsoft Intune.  
 * Create and assign the required trust certificate profiles for the root and issuing CAs. 
 * Create and assign the required platform-specific SCEP certificate profiles.  
+
+These actions require components B1, B2, and B3.  
 
 > [!NOTE]
 > A Cloud PKI Issuing Certification Authority is required to issue certificates for Intune managed devices.  Cloud PKI provides a SCEP service that acts as a Certificate Registration Authority. The service requests certificates from the Issuing CA on behalf of Intune-managed devices using a SCEP profile.  
