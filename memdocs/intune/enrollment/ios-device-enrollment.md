@@ -56,7 +56,7 @@ The following table provides details about app and web-based enrollment.
 | Device reset required| ❌|❌|
 | Enrollment initiated by device user | ✔️ |✔️|
 | Supervision |❌|❌| 
-| Just-in-time registration | ❌ |✔️ |
+| Just-in-time registration | ✔️ |✔️ |
 | Required apps | Intune Company Portal app for iOS <br> Microsoft Authenticator | Microsoft Authenticator |  
 | Enrollment location | App-based enrollment takes place in the Company Portal app, Safari, and device settings app. |Web-based enrollment takes place in Safari and the device settings app.| 
 
