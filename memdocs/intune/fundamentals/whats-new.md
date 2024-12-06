@@ -212,7 +212,7 @@ The combined view supports the endpoint security profiles you create for the *ma
 
 When viewing the list of policies, endpoint security policies are identified by their template type, like *Microsoft Defender Antivirus*, in the *Policy type* column.
 
-To view the combined list profiles for all device types, in the admin center go to **Devices** > *All devices* and below *Manage devices*, select **Configuration**.
+To view the combined list profiles for all device types, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > *All devices* and below *Manage devices*, select **Configuration**.
 
 While you can view endpoint security policies in the device configuration node, you must still create new endpoint security policies in the endpoint security node. Additionally, the combined view does not display endpoint security profiles for the *Windows (ConfigMgr)* platform or for *Linux*.
 
