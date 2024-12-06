@@ -325,7 +325,7 @@ For information about this Autopilot support, see the following in the Autopilot
 
 #### Minimum OS version for Android devices is Android 10 and later for user-based management methods<!-- 14755802 -->
 
-Beginning in October 2024, Android 10 and later is the [minimum Android OS version that is supported for user-based management methods](../fundamentals/supported-devices-browsers.mdandroid), which includes:
+Beginning in October 2024, Android 10 and later is the [minimum Android OS version that is supported for user-based management methods](../fundamentals/supported-devices-browsers.md#android), which includes:
 
 - Android Enterprise personally-owned work profile
 - Android Enterprise corporate owned work profile
