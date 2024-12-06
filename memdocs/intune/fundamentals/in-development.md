@@ -7,11 +7,11 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/29/2024
+ms.date: 11/26/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-
+ 
 # optional metadata
 
 #audience:
@@ -77,14 +77,6 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
-### Additional reporting details for LOB apps on AOSP devices<!-- 27157460  -->
-
-Additional details will be provided for app installation reporting of Line of Business (LOB) apps on Android Open Source Project (AOSP) devices. You will be able to see error codes and detailed error messages for LOB apps. For information about app status details, see [Monitor app information and assignments with Microsoft Intune](../apps/apps-monitor.md).
-
-Applies to:
-
-- Android Open Source Project (AOSP) devices
-
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
@@ -97,95 +89,75 @@ Applies to:
 
 ## Device configuration
 
-### Device Firmware Configuration Interface (DFCI) support for Samsung devices<!-- 29107197 -->
+### More Wi-Fi configurations will be available for personally-owned work profile devices<!-- 28331156 -->
 
-We're adding support to use DFCI profiles to manage UEFI (BIOS) settings for Samsung devices that run Windows 10 or Windows 11. Not all Samsung devices running Windows are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+Intune Wi-Fi configuration profiles for personally-owned work profile devices will soon support configuration of pre-shared keys and proxy settings.
 
-You can manage DFCI profiles from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type. For more information about DFCI profiles, see:
+You will find these settings in the admin console in **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**. Set **Platform** to Android Enterprise and **Profile Type** to Templates and then in the **Personally-Owned Work Profile** section, select Wi-Fi and select the **Create** button.
 
-- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
-- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
+In the **Configuration settings** tab, when Basic Wi-Fi type is selected, you will see several new options:
 
-Applies to:
+1. Security type, with options for Open (no authentication), WEP-Pre-shared key, and WPA-Pre-shared key.
+2. Proxy settings, with the option to select Automatic and then specify the proxy server URL.
 
-- Windows
+It was possible to configure these in the past with Custom Configuration policies, but going forward, we recommend setting these in the Wi-Fi Configuration profile, because [Intune is ending support for Custom policies in April 2024.](https://aka.ms/Intune/Android-customprofiles).
 
-### New settings for Windows 24H2 in the Windows settings catalog<!-- 29592329 -->
+For more information, see [Wi-Fi settings for personally-owned work profile devices.](../configuration/wi-fi-settings-android-enterprise.md#personally-owned-work-profile).
 
-The Settings Catalog lists all the settings you can configure in a device policy, and all in one place. You can view these Windows settings in the Microsoft Intune admin center by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
 
-We're working on the addition of new settings for Window 24H2.
+### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
 
-Applies to:
+We're updating the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will no longer be available for download but will continue to work until deprecation.
 
-- Windows
-
-### New settings available in the Apple settings catalog <!--29038336 -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-We're adding new settings to the Settings Catalog. To view available settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
-
-#### iOS/iPadOS
-
-**Restrictions**:
-
-- Allow Apps To Be Hidden
-- Allow Apps To Be Locked
-- Allow Call Recording
-- Allow Mail Summary
-- Allow RCS Messaging
-
-##### macOS
-
-**Declarative Device Management (DDM) > Math Settings**:
-
-- Calculator
-  - Input Mode - RPN
-
-**Restrictions**:
-
-- Allow Mail Summary
-- Allow Media Sharing Modification
-
-The following settings have been deprecated by Apple and will be marked as deprecated in the Settings Catalog:
-
-#### macOS
-
-**Security > Firewall**:
-
-- Enable Logging
-- Logging Option
+For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment -->
+## Device enrollment
+
+### Update to "Determine based on user choice" enrollment type profile behavior <!-- 29068674 iddraft idready idstaged -->
+
+In Intune today, if an IT admin creates a "Determine based on user choice" enrollment type profile for BYOD enrollments, the user will be prompted to select between **I own this device** and **My company owns this device** to direct them to the appropriate enrollment method. Because fewer than 1% of Apple devices across all Intune tenants are currently enrolled this way, this change won't affect most enrolled devices.
+
+Today, selecting **I own this device** results in the user enrolling via profile-based user enrollment with Company Portal to secure only work related apps. With WWDC 2024, Apple ended support for this enrollment method, subsequently Intune also ended support for the same. Read more about the changes here: [Support has ended for Apple profile-based user enrollment with Company Portal](../fundamentals/whats-new.md#support-has-ended-for-apple-profile-based-user-enrollment-with-company-portal)
+
+We are updating the enrollment behavior for users who select **I own this device**. The new behavior for **I own this device** will result in an [account-driven user enrollment](../enrollment/apple-account-driven-user-enrollment.md), which also supports the use of only secure work related apps.
+
+The behavior when selecting **My company owns this device** is unchanged and will continue to result in device enrollment with the Company Portal that supports securing the entire device.
+
+Admin action: 
+
+If you use **Determine based on user choice** enrollment type profile for BYOD scenarios, make sure you have completed the required **PREREQUISITES** to set up account driven user enrollment correctly. See [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md).
+
+If you do not use **Determine based on user choice** enrollment type profile for BYOD scenarios, there are no action items
+
+Applies to:
+
+- iOS/iPadOS
 
 <!-- *********************************************** -->
 
-## Device management
+## Device management  
 
-### Store macOS certificates in user keychain<!-- 7824255 -->
+### Copilot assistant for device query<!-- 26933762 -->
 
-Soon you'll have the option to store macOS certificates in the user keychain. Currently, Microsoft Intune automatically stores user and device certificates in the *device* keychain. The enhancement will strengthen system security, and will improve the user experience by reducing certificate prompts.
-
-Applies to:
-
-- macOS
-
-### Device Inventory for Windows<!-- 24853010 -->
-
-Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
-
-You'll soon be able to choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view.
-
-Applies to:
-
-- Windows (Corporate owned devices managed by Intune)
+You will soon be able to use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**.
 
 <!-- *********************************************** -->
 
 ## Device security
+
+### Security baselines for HoloLens 2 in public preview<!-- 24914095 -->
+ 
+We’re working to release a public preview of two security baselines for HoloLens 2. These baselines represent Microsoft’s best practice guidelines and experience from deploying and supporting HoloLens 2 devices to customers across various industries.  The baselines include:
+ 
+- **Standard Security Baseline for HoloLens 2**:
+  The standard security baseline for HoloLens 2 represents the recommendations for configuring security settings that are applicable to all types of customers irrespective of HoloLens 2 use case scenarios.
+ 
+- **Advanced Security Baseline for HoloLens 2**:
+  The advanced security baseline for HoloLens 2 represents the recommendations for configuring security settings for the customers who have strict security controls of their environment and require stringent security policies to be applied to any device used in their environment.  
+ 
+To learn more about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
 
@@ -229,19 +201,6 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ## Monitor and troubleshoot
 
-### New device actions for single device query<!--25799823 -->
-
-We're adding the Intune remote device actions to Single device query to help you manage your devices remotely. From the device query interface, you'll be able to run device actions based on query results for faster and more efficient troubleshooting.
-
-Applies to:
-
-- Windows
-
-For more information, see:
-
-- [Device query in Microsoft Intune](../../analytics/device-query.md)
-- [Run remote actions on devices with Microsoft Intune](../remote-actions/device-management.md)
-
 ### Device Query for Multiple Devices<!--25234456 -->
 
 We're adding Device query for multiple devices. This feature allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
@@ -251,16 +210,6 @@ Device query for multiple devices will be supported for devices running Windows 
 Applies to:
 
 - Windows
-
-### ICCID will be inventoried for Android Enterprise Dedicated and Fully Managed <!-- 12846449 -->
-
-We're adding the ability to view a device's ICCID number for devices enrolled as Android Enterprise Dedicated or Android Fully Managed. Admins can view ICCID numbers in their device inventory.
-
-When available, you can find the ICCID number for Android devices by navigating to **Devices** > **Android**. Select a device of interest. In the side panel, under **Monitor** select **Hardware**. The ICCID number will be in the **Network details** group. The ICCID number isn't supported for Android Corporate-Owned Work Profile devices.
-
-Applies to:
-
-- Android
 
 <!-- *********************************************** -->
 

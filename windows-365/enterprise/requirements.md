@@ -125,6 +125,8 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
   - Central India
 - Japan
   - Japan East
+- Middle East
+  - Israel
 - Norway
   - Norway East
 - South Africa

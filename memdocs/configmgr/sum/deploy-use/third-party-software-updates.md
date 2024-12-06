@@ -21,10 +21,6 @@ ms.collection: tier3
 
 The **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
 
-> [!Note]
-> - Microsoft does not test or verify third party update catalogs or their contents in any way. Before deploying you should verify that any updates downloaded from third party update catalogs are free from malicious software and verify them in a testing environment prior to deploying them in your environment.
-> - In version 2006 and earlier, Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
-
 ## Prerequisites
 
 - Sufficient disk space on the top-level software update point's `WSUSContent` directory to store the source binary content for third-party software updates.
@@ -193,7 +189,7 @@ You can edit an existing subscription by selecting **Properties** from the ribbo
 > Some options are only available for v3 third-party update catalogs, which support categories for updates. These options are disabled for catalogs that aren't published in the  v3 format.<!--4469002-->
 
 1. In the **Third-Party Software Update Catalogs** node, right-click on the catalog and select **Properties** or select **Properties** from the ribbon.
-1. You can view the following information from the **General tab**, but not edit the information.:
+1. You can view the following information from the **General tab**, but not edit the information:
     > [!NOTE]
     > If you need to change any of the information here, you have to add a new custom catalog.  
     > Provided the download URL is unchanged, the existing catalog must be removed before one with the same download URL can be added.

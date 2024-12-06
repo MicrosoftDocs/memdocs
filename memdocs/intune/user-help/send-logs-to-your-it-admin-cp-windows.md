@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/04/2020
+ms.date: 11/08/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -28,28 +28,39 @@ ms.collection:
 - tier2
 ---
 
-# Report a problem in Company Portal for Windows      
-*Applies to Intune Company Portal for Windows* 
+# Report a problem in Company Portal for Windows       
+
+**Applies to Intune Company Portal for Windows**  
 
 Report a problem or error that occurs in the Intune Company Portal app for Windows. This article describes how to share app diagnostic logs with your support person. 
 
 > [!NOTE]
 > App logs are also shared with Microsoft Support in case the problem requires additional help. Your support person will reach out to Microsoft Support with your incident ID to work with them.    
 
-## How to report problem 
-Complete the following steps to report a problem you're experiencing in-app or during device enrollment. 
+## Report problem to support person     
+Complete the following steps to upload Company Portal app logs.   
 
 1. Open the **Company Portal** app.
-2. Select **Help & support** > **Upload logs & contact support**.  
+1. Go to **Help & support**.
+1. Select **Upload logs**.  
    
    > [!Note]	  
-   > After you click **Upload logs & contact support**, the Company Portal will send your logs to Microsoft's support team. This step is a proactive one that makes it easier to troubleshoot and resolve problems that are escalated to Microsoft support. 
+   > After you select **Upload logs**, the Company Portal sends your logs to Microsoft's support team. This step is a proactive one that makes it easier to troubleshoot and resolve problems that are escalated to Microsoft support. 
 
-3. When prompted to choose a program, select the Mail app or another preferred email app.   
+1. When prompted to choose a program, select the Mail app or another preferred email app.   
    
-4. The email app will open an email template for you to fill in. Describe the problem and the steps you took leading up to the problem. Then send the email to your support person so that they can follow up on the issue.     
+1. The email app opens an email template for you to fill in. Describe the problem and the steps you took leading up to the problem. Then send the email to your IT support person so that they can follow up on the issue.     
 
-5. Follow up with your support person as needed.  
+1. Follow up with your support person as needed.
+
+## Report problem to Microsoft   
+
+Complete the following steps to report a problem directly to Microsoft in the Feedback Hub app. Microsoft doesn't respond to this type of report but uses it to improve upon the products. You can include screenshots and diagnostic details, but the report should remain anonymous, so don't include information like name, email address, or phone number. 
+
+1. Open the **Company Portal** app.  
+1. Go to **Help & support**.  
+1. Select **Report problem to Microsoft**.
+1. Select **Report problem**. Alternatively, you can send a suggestion or leave a review of the app.        
 
 ## What is a diagnostic log?
 
@@ -60,6 +71,4 @@ Events and errors that occur in the Company Portal app are saved on your device 
 
 ## Next steps  
 
-* If your company needs additional information about app or device activity, you might need to resend [logs from the Settings app](send-logs-to-your-it-admin-settings-windows.md). 
-
-* Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
+If your workplace or school needs additional information about app or device activity, you might need to resend [logs from the Settings app](send-logs-to-your-it-admin-settings-windows.md).  

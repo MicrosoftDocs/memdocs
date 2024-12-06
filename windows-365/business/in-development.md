@@ -22,6 +22,7 @@ search.appverid: MET150
 ms.collection:
 - M365-identity-device-management
 - tier2
+ms.subservice: windows-365-business
 ---
 
 # In development for Windows 365 Business
