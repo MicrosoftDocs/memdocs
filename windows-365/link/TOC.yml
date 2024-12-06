@@ -1,0 +1,43 @@
+items:
+- name: Windows 365 Link docs
+  href: index.yml
+- name: Overview
+  items:  
+  - name: What is Windows 365 Link? 
+    href: overview.md
+  - name: What's in the box
+    href: whats-in-the-box.md
+- name: Using your Windows 365 Link
+  items:
+  - name: First time set up and sign in
+    href: setup.md
+  - name: Daily usage
+    items:
+    - name: Sign in
+      href: sign-in.md
+    - name: Quick settings
+      href: quick-settings.md
+    - name: Control-alt-delete menu
+      href: control-alt-delete.md  
+- name: Deploying Windows 365 Link
+  items:
+  - name: Deployment overview
+    href: deployment-overview.md
+  - name: Requirements
+    href: requirements.md
+  - name: Join Windows 365 Link to Microsoft Entra
+    href: join-microsoft-entra.md
+  - name: Automatically enroll in Intune
+    href: intune-automatic-enrollment.md
+  - name: Create Intune filter for Windows 365 Link
+    href: create-intune-filter.md
+  - name: Optimize enrollment restrictions
+    href: enrollment-restrictions.md
+  - name: Synchronize conditional access policies
+    href: conditional-access-policies-synchronize.md
+  - name: Suppress single sign-on prompt
+    href: single-sign-on-suppress.md
+- name: Troubleshooting
+  items:
+  - name: Known issues
+    href: known-issues.md

@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/05/2023
+ms.date: 11/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,11 +33,11 @@ ms.collection:
 
 # App and driver compatibility reports for Windows updates
 
-With Intune, you can deploy updates to Windows 10/11 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might impact your devices during or after an update:
+With Intune, you can deploy updates to Windows 10/11 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might affect your devices during or after an update:
 
 - **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
 
-- **Windows feature update compatibility risks report** - This report provides a summary view of the top compatibility risks across your organization for a chosen version of Windows. You can use this report to understand which compatibility risks impact the greatest number of devices in your organization.
+- **Windows feature update compatibility risks report** - This report provides a summary view of the top compatibility risks across your organization for a chosen version of Windows. You can use this report to understand which compatibility risks affect the greatest number of devices in your organization.
 
 To use these reports, you must first ensure that prerequisites are met and that devices are properly configured for data collection.
 
@@ -125,12 +125,12 @@ The following applies to **Readiness status**:
 - **Upgraded** - The device is already running a version of Windows equal to or greater than the target OS version.
 - **Unknown** - A readiness status couldn't be determined. Ensure that the device is properly configured to send Windows diagnostic data.
 
-For more information about the compatibility risks that impact a specific device, select the device name to open the details flyout. The tabs on the details flyout include:
+For more information about the compatibility risks that affect a specific device, select the device name to open the details flyout. The tabs on the details flyout include:
 
 - **Overview** - A summary of device properties that can be used to identify the device, and an overview of the compatibility risks impacting the device.
 - **Applications** - A table of applications with compatibility risks that are installed on the device.
 - **Drivers** - A table of drivers with compatibility risks that are installed on the device.
-- **Other** - A table of compatibility risks that might impact this device, but aren't associated with applications or drivers. Compatibility risks associated with device configurations and settings, such as some [Safeguard holds](/windows/deployment/update/safeguard-holds), fall into this category.
+- **Other** - A table of compatibility risks that might affect this device, but aren't associated with applications or drivers. Compatibility risks associated with device configurations and settings, such as some [Safeguard holds](/windows/deployment/update/safeguard-holds), fall into this category.
 
 ## Use the Windows feature update compatibility risks report
 
@@ -147,7 +147,7 @@ To use this report:
 
    - Select **Select Target OS** and choose the version of Windows you plan to deploy.
    - Optionally select **Asset type** and **Risk status** to refine the report.
-   - Select **Generate report**. This process can take several minutes. You are notified when report generation is complete.
+   - Select **Generate report**. This process can take several minutes. You're notified when report generation is complete.
 
 [![Screen shot of the Windows feature update compatibility risks report.](./media/windows-update-compatibility-reports/compatibility-risks-report.png)](./media/windows-update-compatibility-reports/compatibility-risks-report.png#lightbox)
 
@@ -162,7 +162,7 @@ The following columns are available in this report:
 - **Asset version** - The version of the asset with a compatibility risk.
 - **Affected devices** - The number of enrolled devices that might be impacted by this compatibility risk.
 - **Risk status** - A summary of the severity of the compatibility risk. Most compatibility risks are either **Medium risk** if they might block the upgrade.
-- **Issue** - A description of the compatibility risk that has been identified.
+- **Issue** - A description of the identified compatibility risk.
 
 For more information about a specific compatibility risk, including which devices are potentially impacted, select the number in the **Affected devices** column to open the details flyout. The tabs on the details flyout include:
 
@@ -187,7 +187,7 @@ In both the cases, after you upgrade Windows, you can't use the app.
 
 #### Blocking upgrade
 
-Windows detected blocking issues, and can't remove the application during upgrade. It might not work on the new OS version. Before you upgrade, remove the application, reinstall and test it on the new OS version.
+Windows detected blocking issues, and can't remove the application during upgrade. It might not work on the new OS version. Before you upgrade, remove the application, reinstall, and test it on the new OS version.
 
 #### Blocking upgrade, but can be reinstalled after upgrading
 
@@ -249,7 +249,7 @@ The data source for these reports is [Windows diagnostic data](/windows/privacy/
 
 ### Exported csv files display numerical values
 
-When report data is exported to a .csv file, the exported data doesn't use the friendly names you're used to seeing in the online reports. Use the information below to map the data in the exported file into the meaning of the value:
+When report data is exported to a .csv file, the exported data doesn't use the friendly names you're used to seeing in the online reports. Use the information in the following section to map the data in the exported file into the meaning of the value:
 
 #### Windows feature update device readiness report
 
