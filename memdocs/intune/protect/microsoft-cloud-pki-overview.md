@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/27/2024
+ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -113,20 +113,26 @@ These components replace the need for an on-premises certificate authority, NDES
 
 **Actions**:  
 
-Before the device checks in to the Intune service, an Intune administrator or Intune role with permissions to manage the Microsoft Cloud PKI service must:  
+Before the device checks in to the Intune service, an Intune administrator or Intune role with permissions to manage the Microsoft Cloud PKI service must (shown as B1 in the diagram):  
 
 * Create the required Cloud PKI certification authority for the root and issuing CAs in Microsoft Intune.  
-* Create and assign the required trust certificate profiles for the root and issuing CAs. This flow isn't shown in the diagram.
-* Create and assign the required platform-specific SCEP certificate profiles. This flow isn't shown in the diagram.  
+* Create and assign the required trust certificate profiles for the root and issuing CAs. 
+* Create and assign the required platform-specific SCEP certificate profiles.  
 
 > [!NOTE]
 > A Cloud PKI Issuing Certification Authority is required to issue certificates for Intune managed devices.  Cloud PKI provides a SCEP service that acts as a Certificate Registration Authority. The service requests certificates from the Issuing CA on behalf of Intune-managed devices using a SCEP profile.  
 
-1. A device checks in with the Intune service and receives the trusted certificate and SCEP profiles.  
-2. Based on the SCEP profile, the device creates a certificate signing request (CSR). The private key is created on the device, and never leaves the device. The CSR and the SCEP challenge are sent to the SCEP service in the cloud (SCEP URI property in the SCEP profile). The SCEP challenge is encrypted and signed using the Intune SCEP RA keys.  
-3. The SCEP validation service verifies the CSR against the SCEP challenge (*shown as B.3 in diagram*). Validation ensures the request comes from an enrolled and managed device. It also ensures the Challenge is untampered, and that it matches the expected values from the SCEP profile. If any of these checks fail, the certificate request is rejected.
-4. After the CSR is validated, the SCEP validation service, also known as the *registration authority*, requests that the issuing CA signs the CSR (*shown as B.1 in diagram*).  
-5. The signed certificate is delivered to the Intune MDM-enrolled device.
+The flow continues with the following actions, shown in the diagram as A1 through A5:    
+
+A1. A device checks in with the Intune service and receives the trusted certificate and SCEP profiles.  
+
+A2. Based on the SCEP profile, the device creates a certificate signing request (CSR). The private key is created on the device, and never leaves the device. The CSR and the SCEP challenge are sent to the SCEP service in the cloud (SCEP URI property in the SCEP profile). The SCEP challenge is encrypted and signed using the Intune SCEP RA keys.  
+
+A3. The SCEP validation service verifies the CSR against the SCEP challenge. Validation ensures the request comes from an enrolled and managed device. It also ensures the challenge is untampered, and that it matches the expected values from the SCEP profile. If any of these checks fail, the certificate request is rejected.  
+
+A4. After the CSR is validated, the SCEP validation service, also known as the *registration authority*, requests that the issuing CA signs the CSR.  
+
+A5. The signed certificate is delivered to the Intune MDM-enrolled device.  
 
  >[!NOTE]
  > The SCEP challenge is encrypted and signed using the Intune SCEP registration authority keys.  
