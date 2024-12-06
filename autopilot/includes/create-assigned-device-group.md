@@ -51,7 +51,7 @@ Headings are driven by article context. -->
 
     > [!IMPORTANT]
     >
-    > Devices are automatically added to this device group during the Windows Autopilot device preparation deployment. Manually adding devices as members of the device group created in this step is not necessary but doing so has no impact on the Windows Autopilot Device Preparation process.
+    > Devices are automatically added to this device group during the Windows Autopilot device preparation deployment. Manually adding devices as members of the device group created in this step isn't necessary, but doing so has no impact on the Windows Autopilot device preparation process.
 
 ### Adding the Intune Provisioning Client service principal
 
