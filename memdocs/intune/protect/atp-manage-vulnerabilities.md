@@ -30,7 +30,7 @@ ms.collection:
 
 # Use Microsoft Intune security tasks to remediate device vulnerabilities identified by Microsoft Defender for endpoint
 
-When you [integrate Microsoft Defender for Endpoint with Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune), you can leverage Defender's threat and vulnerability management through Intune security tasks. These tasks help Intune admins understand and address current vulnerabilities based on guidance from Defender for Endpoint. This integration enhances the discovery and prioritization of vulnerabilities, improving remediation response times across your environment.
+When you [integrate Microsoft Defender for Endpoint with Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure#connect-microsoft-defender-for-endpoint-to-intune), you can leverage Defender's threat and vulnerability management through Intune security tasks. These tasks help Intune admins understand and address current vulnerabilities based on guidance from Defender for Endpoint. This integration enhances the discovery and prioritization of vulnerabilities, improving remediation response times across your environment.
 
 [Threat & Vulnerability Management](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) is part of [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint).
 
@@ -89,7 +89,7 @@ Following is an example of the workflow for discovering and remediating an appli
 - Microsoft Defender for Endpoint ([Sign up for a free trial](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)
 
 Intune configurations for Defender for Endpoint:
-- Configure a [service-to-service connection](/mem/intune/protect/advanced-threat-protection-configured#connect-microsoft-defender-for-endpoint-to-intune) with Microsoft Defender for Endpoint.
+- Configure a [service-to-service connection](/mem/intune/protect/advanced-threat-protection-configure#connect-microsoft-defender-for-endpoint-to-intune) with Microsoft Defender for Endpoint.
 - Deploy an Intune policy that configures settings for **Microsoft Defender for Endpoint** to devices to assess risk. 
 
 
