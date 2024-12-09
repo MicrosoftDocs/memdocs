@@ -140,6 +140,11 @@ Windows Autopilot device preparation supports the Intune corporate identifier en
 - [What are enrollment restrictions?](/mem/intune/enrollment/enrollment-restrictions-set).
 - [Create device platform restrictions](/mem/intune/enrollment/create-device-platform-restrictions).
 
+> [!NOTE]
+>
+> This step is mandatory if your environment prohibits the enrollment of personal Windows devices.
+
+
 ## Tutorial
 
 For tutorials with detailed instructions on configuring Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
