@@ -565,7 +565,7 @@ In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you 
 
     If you're deploying the VPP version of OneDrive, then enter `com.microsoft.OneDrive-Mac.FinderSync`.
 
-    During Microsoft OneDrive configuration, end users are prompted to allow sync icons by enabling the Finder Sync extension. There's a sample script that can configure the finder extension for the user. For more information on the script, go to the [GitHub - Microsoft Intune Shell samples](https://github.com/microsoft/shell-intune-samples/blob/master/macOS/Config/EnableOneDriveFinderSync/EnableOneDriveFinderSync.sh).
+    During Microsoft OneDrive configuration, end users are prompted to allow sync icons by enabling the Finder Sync extension. There's a sample script that can configure the finder extension for the user. For more information on the script, go to the [GitHub - Microsoft Intune Shell samples](https://github.com/microsoft/shell-intune-samples/blob/master/macOS/Config/Enable%20OneDrive%20Finder%20Sync/EnableOneDriveFinderSync.sh).
 
 ### Device Configuration
 

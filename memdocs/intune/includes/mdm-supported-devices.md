@@ -10,23 +10,24 @@ ms.localizationpriority: high
 
 ### Apple
 
-- **User assigned devices** - devices enrolled with user affinity using Automated Device Enrollment or personally enrolled devices.
-  - iOS/iPadOS 15.x and later
-  - macOS 13.0 and later
-- **User-less devices** - devices enrolled without user affinity using Automated Device Enrollment or Apple Configurator.
+- **Devices with user affinity** - devices enrolled with user affinity using ADE (automated device enrollment) or personally enrolled devices.
+- Supported:
+  - iOS/iPadOS 16.x and later
+  - macOS 13.x and later
+- **Devices without user affinity** - devices enrolled without user affinity using ADE (automated device enrollment) or Apple Configurator.
   - Supported:
     - iOS/iPadOS 16.x and later
-    - macOS 13.0 and later
+    - macOS 13.x and later
   - Allowed to enroll:
     - iOS/iPadOS 13.x and later
-    - macOS 10.14 and later
+    - macOS 10.1x and later
 
 > [!NOTE]
 > **Supported** versions include devices running the three most recent operating system versions. These devices can enroll and take advantage of all Intune functionality that is applicable, and all new eligible features will work on these devices.
 >
 > **Allowed** versions includes devices running a non-supported version (within three versions of the supported versions). These devices can enroll and take advantage of Intune's eligible features but there is no guarantee that they will work as expected.
 >
-> Intune requires iOS 15.x or later for app protection policies and app configuration.
+> Intune requires iOS/iPadOS 16.x or later for app protection policies and app configuration.
 
 ### Android
 

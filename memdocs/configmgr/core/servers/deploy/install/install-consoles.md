@@ -2,12 +2,12 @@
 title: Install console
 titleSuffix: Configuration Manager
 description: Install the Configuration Manager console to connect to a central administration site or primary site.
-ms.date: 10/18/2022
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: baladelli
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -33,6 +33,8 @@ The Configuration Manager console is always installed on the site server for the
 ### .NET version requirements
 
 <!--10402814-->
+
+Starting in version 2403, the console requires Microsoft .NET Framework version 4.8. If you install the console on other devices, make sure to update .NET. If the device doesn't already have it, the console setup doesn't install this prerequisite.
 
 Starting in version 2107, the console requires Microsoft .NET Framework version 4.6.2, but version 4.8 is recommended. If you install the console on other devices, make sure to update .NET. If the device doesn't already have it, the console setup doesn't install this prerequisite.
 
@@ -127,7 +129,7 @@ Specifies the FQDN of the site server to which the console connects when it open
 
 ## Postinstallation information
 
-The Configuration Manager console requires installation of the built-in WebView2 extension for certain features such as Community hub and dashboards. A notification to install the extension is given to the console user when they open the console. For more information see,the [WebView2 console extension](../../manage/admin-console-extensions.md#bkmk_notification).
+The Configuration Manager console requires installation of the built-in WebView2 extension for certain features such as Community hub and dashboards. A notification to install the extension is given to the console user when they open the console. For more information see, the [WebView2 console extension](../../manage/admin-console-extensions.md#bkmk_notification).
 
 ## Next steps
 

@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/31/2024
+ms.date: 11/05/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -66,6 +66,8 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft Azure|[iOS](https://apps.apple.com/app/microsoft-azure/id1219013620)|✔|No settings|✖|N/A|✖|✖|N/A|✖| 
 |Microsoft Copilot|[Android](https://play.google.com/store/apps/details?id=com.microsoft.copilot)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
 |Microsoft Copilot|[iOS](https://apps.apple.com/us/app/microsoft-copilot/id6472538445)|✔|No settings|✔ Supported for v28.1.420324001 or later|N/A|✖|✖|N/A|✖|
+|Microsoft Designer|[Android](https://play.google.com/store/apps/details?id=com.microsoft.designer&hl=en_IN)|✔|No settings|✔|N/A|✔|✔|✔|✖|
+|Microsoft Designer|[iOS](https://apps.apple.com/us/app/microsoft-designer/id6448308247)|✔|No settings|✔|N/A|✔|✔|✔|✖|
 |Microsoft Edge|[Android](https://play.google.com/store/apps/details?id=com.microsoft.emmx)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|N/A|N/A|✔|✔ Supported for v125.0.2535.96 or later|
 |Microsoft Edge|[iOS](https://apps.apple.com/us/app/microsoft-edge/id1288723196)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|N/A|N/A|✔|✔ Supported for v126.2592.56 or later|
 |Microsoft Excel|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.excel)|✔|No settings|✔|N/A|✖|✖|✔|✖|
