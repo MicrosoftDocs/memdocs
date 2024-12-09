@@ -97,7 +97,7 @@ The following table lists the features and scenarios supported with Microsoft Cl
 Microsoft Cloud PKI is made up of several key components working together to simplify the complexity and management of a public key infrastructure. It includes a Cloud PKI service for creating and hosting certification authorities, combined with a certificate registration authority to automatically service incoming certificate requests from Intune-enrolled devices. The registration authority supports the Simple Certificate Enrollment Protocol (SCEP).
 
 > [!div class="mx-imgBorder"]
-> ![Drawing of the Microsoft Cloud PKI architecture.](./media/microsoft-cloud-pki/Architecture_flow.png)  
+> ![Drawing of the Microsoft Cloud PKI architecture.](./media/microsoft-cloud-pki/architecture-flow.png)  
 `*`  See **Components** for a breakdown of services.       
 
 **Components**:
