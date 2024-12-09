@@ -6,6 +6,8 @@ ms.topic: tutorial
 ms.author: scbree
 author: scottbreenmsft
 ms.manager: dougeby
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Tutorial: deploy and manage devices in a school
