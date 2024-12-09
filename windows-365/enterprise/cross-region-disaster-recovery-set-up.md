@@ -51,7 +51,8 @@ ms.collection:
     When configuring a backup location, consider things like data sovereignty and geographic distance between the user and the Cloud PC backup location. The greater the distance between your backup Cloud PC and your user’s connect location increases network latency and impacts performance. Full copies of your Cloud PCs are kept in the backup location, including all data stored on the Cloud PC disk.
 
 6. Select **Next**.
-7. On the **Assignments** page, add the groups that you want this user setting applied to. All Cloud PCs associated with a user share the same cross region disaster recovery settings.
+1. On the **Assignments** page, add the groups containing users that you want this user setting applied to. All Cloud PCs associated with a user will share the same cross region disaster recovery settings.
+
 8. On the **Review + create** page, select **Create**.
 
 After you finish this configuration, the first backup of the Cloud PC may take several days. To see the current state of backups, check the [Cross region disaster recovery report](cross-region-disaster-recovery-report.md). After the first backup, the recovery point objective (RPO) will be the same as for point-in-time restore plus a few minutes to replicate across regions.

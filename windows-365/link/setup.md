@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 11/19/2024
 ms.topic: overview
-ms.service: windows-365
+ms.service: windows-365-link
 ms.subservice:
 ms.localizationpriority: high
 ms.assetid: 

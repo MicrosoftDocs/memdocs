@@ -140,6 +140,15 @@ Connection problems may be caused by settings delivered by group policies. To te
 
 Settings delivered by group policies may cause connection problems. To test this problem, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
 
+### Intermittent disconnections
+
+If users encounter intermittent connection issues, consider the following: 
+
+**Possible solutions**
+
+- Make sure that SSL inspection/Termination is disabled for networks used by your Cloud PCs. For more information, see [Proxy server guidelines for Azure Virtual Desktop]( /azure/virtual-desktop/proxy-server-support).
+- When using third party software web gateways, make sure forced tunnel exceptions are in place for critical AVD traffic. For more information, see [Optimizing RDP Connectivity for Windows 365]( https://techcommunity.microsoft.com/discussions/windows365discussions/optimizing-rdp-connectivity-for-windows-365/3554327).
+
 ## Next steps
 
 [Review other troubleshooting steps](troubleshooting.md)
