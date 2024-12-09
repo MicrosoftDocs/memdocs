@@ -8,6 +8,8 @@ ms.author: scbree
 ms.manager: dougeby
 appliesto: 
   - ✅ <b>Surface devices</b>
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Management functionalities for Surface devices
