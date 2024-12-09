@@ -64,7 +64,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
    - **Name**: Enter a name for the shell script.
    - **Description**: Enter a description for the shell script. This setting is optional, but recommended.
 4. In **Script settings**, enter the following properties, and select **Next**:
-   - **Upload script**: Browse to the shell script. The script file must be less than 200 KB in size.
+   - **Upload script**: Browse to the shell script. The script file must be less than 1 MB in size.
    - **Run script as signed-in user**: Select **Yes** to run the script with the user's credentials on the device. Choose **No** (default) to run the script as the root user.
    - **Hide script notifications on devices:** By default, script notifications are shown for each script that is run. End users see a *IT is configuring your computer* notification from Intune on macOS devices.
    - **Script frequency:** Select how often the script is to be run. Choose **Not configured** (default) to run a script only once. Scripts with a frequency set will also run after a device restart.
