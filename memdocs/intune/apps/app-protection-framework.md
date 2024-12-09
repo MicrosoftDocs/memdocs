@@ -34,7 +34,7 @@ ms.collection:
 
 As more organizations implement mobile device strategies for accessing work or school data, protecting against data leakage becomes paramount. Intune's mobile application management solution for protecting against data leakage is App Protection Policies (APP). APP are rules that ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled. For more information, see [App protection policies overview](app-protection-policy.md).
 
-When configuring App Protection Policies, the number of various settings and options enable organizations to tailor the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework), and Intune is leveraging a similar taxonomy for its APP data protection framework for mobile app management.  
+When you configure App Protection Policies, the number of various settings and options enable organizations to tailor the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework), and Intune is leveraging a similar taxonomy for its APP data protection framework for mobile app management.  
 
 The APP data protection configuration framework is organized into three distinct configuration scenarios:
 
@@ -46,7 +46,7 @@ The APP data protection configuration framework is organized into three distinct
 
 ## APP Data Protection Framework deployment methodology
 
-As with any deployment of new software, features or settings, Microsoft recommends investing in a ring methodology for testing validation prior to deploying the APP data protection framework. Defining deployment rings is generally a one-time event (or at least infrequent), but IT should revisit these groups to ensure that the sequencing is still correct.
+As with any deployment of new software, features, or settings, Microsoft recommends investing in a ring methodology for testing validation prior to deploying the APP data protection framework. Defining deployment rings is generally a one-time event (or at least infrequent), but IT should revisit these groups to ensure that the sequencing is still correct.
 
 Microsoft recommends the following deployment ring approach for the APP data protection framework:
 
@@ -75,7 +75,7 @@ Administrators can incorporate the below configuration levels within their ring 
 
 ### Conditional Access Policies
 
-To ensure that only apps supporting App Protection Poliies access work or school account data, Microsoft Entra Conditional Access policies are required. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+To ensure that only apps supporting App Protection Policies access work or school account data, Microsoft Entra Conditional Access policies are required. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
  See **Require approved client apps or app protection policy with mobile devices** in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection) for steps to implement the specific policies. Finally, implement the steps in [Block legacy authentication](/azure/active-directory/conditional-access/block-legacy-authentication) to block legacy authentication capable iOS and Android apps.
 
