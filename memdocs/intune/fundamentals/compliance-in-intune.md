@@ -20,7 +20,7 @@ ms.collection:
 
 # Compliance in Microsoft Intune
 
-Intune supports compliance features to help organizations meet national, regional, and industry-specific regulations. Intune aligns with Microsoft's commitment to data protection, privacy, and compliance, by offering tools to help secure and manage data effectively.
+Intune supports compliance features to help organizations meet national, regional, and industry-specific regulations. Intune aligns with Microsoft's commitment to data protection, privacy, and compliance by offering tools to help secure and manage data effectively.
 
 ## Shared responsibility model
 
@@ -28,7 +28,7 @@ Microsoft ensures that Intune complies with various industry standards and regul
 
 ## Compliance certifications
 
-Intune is covered under several compliance certifications and regulatory standards. The following table provides a sample of the key certifications that are covered:
+Intune is covered under several compliance certifications, and regulatory standards. The following table provides a sample of the key certifications that are covered:
 
 | Certification or Standard | Description | Applicability |
 |---------------------------|-------------|---------------|
