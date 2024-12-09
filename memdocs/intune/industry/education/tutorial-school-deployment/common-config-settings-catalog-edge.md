@@ -9,6 +9,8 @@ ms.manager: dougeby
 no-loc: [Microsoft, Windows, Autopatch, Autopilot, Edge]
 ms.collection: 
 - graph-interactive
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Microsoft Edge

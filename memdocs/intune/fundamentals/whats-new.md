@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/06/2024
+ms.date: 12/09/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,6 +77,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 -->
 ## Week of December 2, 2024
 
+### Device enrollment  
+
+#### Change to enrollment behavior for iOS enrollment profile type<!-- 29068674 -->
+
+At Apple WWDC 2024, Apple ended support for profile-based Apple user enrollment. For more information, see [Support has ended for profile-based user enrollment with Company Portal](#support-has-ended-for-apple-profile-based-user-enrollment-with-company-portal). As a result of this change, we updated the behavior that occurs when you select **Determine based on user choice** as the enrollment profile type for bring-your-own-device (BYOD) enrollments.  
+
+Now when users select **I own this device** during a BYOD enrollment, Microsoft Intune enrolls them via account-driven user enrollment, rather than profile-based user enrollment, and then secures only work-related apps. Less than one percent of Apple devices across all Intune tenants are currently enrolled this way, so this change doesn't affect most enrolled devices. There is no change for iOS users who select **My company owns this device** during a BYOD enrollment. Intune enrolls them via device enrollment with Intune Company Portal, and then secures their entire device.   
+
+If you currently allow users in BYOD scenarios to determine their enrollment profile type, you must take action to ensure account-driven user enrollment works by completing all prerequisites. For more information, see [Set up account driven Apple user enrollment](../enrollment/apple-account-driven-user-enrollment.md). If you don't give users the option to choose their enrollment profile type, there are no action items.  
+
 ### Device management
 
 #### Device Inventory for Windows<!-- 24853010 -->
@@ -93,6 +103,8 @@ For more information, see:
 Applies to:
 
 - Windows 10 and later (Corporate owned devices managed by Intune)
+
+
 
 ## Week of November 18, 2024 (Service release 2411)
 
