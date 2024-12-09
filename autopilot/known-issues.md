@@ -41,6 +41,12 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Local Administrator Password Solution (LAPS) policy is not being applied during the Technician Flow
+
+Date added: *December 9, 2024*
+
+During Windows Autopilot pre-provisioning technical flow, if a LAPS policy is targeted to the device or user, it will not be applied until the user phase begins. 
+
 ### Windows Autopilot deployment report and AutopilotEvents Graph API only returns 50 records at a time
 
 Date added: *December 4, 2024*
