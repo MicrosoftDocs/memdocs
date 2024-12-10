@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Join Windows 365 Link to Microsoft Entra
+title: Allow joining Windows 365 Link to Microsoft Entra
 titleSuffix:
 description: Learn about joining Windows 365 Link to Microsoft Entra
 keywords:
@@ -29,7 +29,7 @@ ms.collection:
 - tier2
 ---
 
-# Join Windows 365 Link to Microsoft Entra
+# Allow joining Windows 365 Link to Microsoft Entra
 
 As the first step in setting up your organization's environment to support Windows 365 Link, you must allow Windows 365 Link devices to [join Microsoft Entra](/entra/identity/devices/concept-directory-join).
 
@@ -53,7 +53,7 @@ To set permissions to allow your organization's users to join their Windows 365 
 
 For more about configuring device settings for Microsoft Entra ID, see [Configure your device settings](/entra/identity/devices/device-join-plan#configure-your-device-settings).
 
-For full information about planning yoru join implementation, see [How to: Plan your Microsoft Entra join implementation](/entra/identity/devices/device-join-plan).
+For full information about planning your join implementation, see [How to: Plan your Microsoft Entra join implementation](/entra/identity/devices/device-join-plan).
 
 <!-- ########################## -->
 ## Next steps
