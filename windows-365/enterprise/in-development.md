@@ -77,6 +77,20 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 The remoting connection report will be retired on December 31st, 2024. After this date, refer to the [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
 
+## New region support
+
+Windows 365 administrators will be able to deploy Cloud PC in new regions over the course of 2025
+- Spain Central
+- Mexico Central
+- New Zealand North
+- Japan West
+- Taiwan North
+- Indonesia Central
+- Chile Central
+- Malaysia West
+- Austria East
+- Israel Northwest
+
 <!-- ***********************************************-->
 <!--## Provisioning-->
 
