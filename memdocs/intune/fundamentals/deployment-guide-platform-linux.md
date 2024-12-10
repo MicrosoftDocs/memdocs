@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/22/2024  
+ms.date: 11/04/2024  
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,7 +77,7 @@ You can enforce device compliance policies based on Linux distribution type, ver
 
 Enrollment is supported on Linux desktops running:
 
-* Ubuntu LTS, version 22.04 or 20.04. 
+* Ubuntu LTS, version 24.04, 22.04 or 20.04.
 * RedHat Enterprise Linux 8  
 * RedHat Enterprise Linux 9 
 
