@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 10/10/2024
+ms.date: 11/04/2024
 ms.localizationpriority: high
 ---
 
@@ -41,6 +41,9 @@ ms.localizationpriority: high
 
 - Ubuntu Desktop 22.04 LTS with a GNOME graphical desktop environment
 - Ubuntu Desktop 20.04 LTS with a GNOME graphical desktop environment
+- Ubuntu LTS, version 24.04
+- RedHat Enterprise Linux 8  
+- RedHat Enterprise Linux 9
 
 > [!NOTE]
 > Ubuntu Desktop already has a GNOME graphical desktop environment installed.

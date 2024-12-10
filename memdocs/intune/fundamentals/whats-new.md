@@ -75,6 +75,23 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of December 9, 2024
+
+### Tenant administration
+
+#### Intune now supports Ubuntu 24.04 LTS for Linux management.<!--28363586  -->
+
+We're now supporting device management for Ubuntu 24.04 LTS. You can enroll and manage Linux devices running Ubuntu 24.04, and assign standard compliance policies, custom configuration scripts, and compliance scripts.
+
+For more information, see the following in Intune documentation:
+
+- [Deployment guide: Manage Linux devices in Microsoft Intune](../fundamentals/deployment-guide-platform-linux.md)
+- [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-linux.md). To enroll Linux devices, ensure that they are running Ubuntu 20.04 LTS or higher.
+
+Applies to:
+
+- Linux Ubuntu Desktops
+
 ## Week of December 2, 2024
 
 ### Device enrollment  
@@ -103,8 +120,6 @@ For more information, see:
 Applies to:
 
 - Windows 10 and later (Corporate owned devices managed by Intune)
-
-
 
 ## Week of November 18, 2024 (Service release 2411)
 
