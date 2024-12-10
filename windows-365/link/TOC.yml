@@ -31,7 +31,7 @@ items:
     href: intune-automatic-enrollment.md
   - name: Create Intune filter for Windows 365 Link
     href: create-intune-filter.md
-  - name: Optimize enrollment restrictions
+  - name: Configure enrollment restrictions
     href: enrollment-restrictions.md
   - name: Synchronize conditional access policies
     href: conditional-access-policies-synchronize.md
