@@ -325,10 +325,6 @@ In the Microsoft Defender portal, as a security administrator:
 
 2. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
 
-   > [!IMPORTANT]
-   >
-   > Use of [*Microsoft Defender for Endpoint's Dynamic tag capability*](/microsoft-365/security/defender/configure-asset-rules?view=o365-worldwide&preserve-view=true) to tag devices with *MDE-Management* isn't currently supported with security settings management. Devices tagged through this capability won't successfully enroll. This issue remains under investigation.
-
    > [!TIP]
    >
    > Use the proper device tags to test and validate your rollout on a small number of devices.
