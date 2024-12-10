@@ -146,7 +146,7 @@ In this section, you enter your company-provided token. When you're done, we'll 
 
 2. On the **Set up smart card** screen:
 
-   1. Tap the link to your organization's setup instructions and review them. If your organization doesn't provide other instructions, you are sent to this article.
+   1. Tap the link to your organization's setup instructions and review them. If your organization doesn't provide other instructions, you're sent to this article.
 
    2. Tap **BEGIN**.   
 
