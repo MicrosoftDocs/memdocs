@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: ilwu
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -69,7 +69,7 @@ Add settings to manage disk encryption.
 
 - **Require Device Encryption** – Specifies whether device-level encryption is required for writable fixed disks on this computer.
 
-  Users of devices that aren’t encrypted receive a message that they must encrypt the drives to bring the device into compliance.
+  Users of devices that aren't encrypted receive a message that they must encrypt the drives to bring the device into compliance.
 
   There are several options for disk and partition encryption on Linux operating systems. At this time, Intune recognizes any encryption system that uses the underlying [dm-crypt](https://gitlab.com/cryptsetup/cryptsetup/-/wikis/DMCrypt) subsystem that has been standard on Linux systems for some time.
 
@@ -97,7 +97,7 @@ Users that fail to meet password complexity requirements can receive a message t
 
 ## Refresh compliance status
 
-If you must modify a device’s configuration, use one of the following methods to refresh the device compliance status with Intune after making changes:
+If you must modify a device's configuration, use one of the following methods to refresh the device compliance status with Intune after making changes:
 
 - If the Microsoft Intune app is still running, on the apps *device details* page or the *compliance issues* page, select the **Refresh** link. The device starts a new check-in.
 
