@@ -9,6 +9,8 @@ ms.manager: dougeby
 no-loc: [Microsoft, Apple]
 ms.collection: 
 - graph-interactive
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Apple Intelligence
@@ -38,7 +40,7 @@ To learn more, see:
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - iPads - Appple Intelligence**.
+This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - iPads - Apple Intelligence**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies

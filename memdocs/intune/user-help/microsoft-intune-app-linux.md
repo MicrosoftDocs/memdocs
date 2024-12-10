@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/27/2024
+ms.date: 11/04/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -35,11 +35,12 @@ This article describes how to install, update, and remove the Microsoft Intune a
 The Microsoft Intune app package is available at [https://packages.microsoft.com/](https://packages.microsoft.com/). For more information about how to use, install, and configure Linux software packages for Microsoft products, see [Linux Software Repository for Microsoft Products](/windows-server/administration/linux-package-repository-for-microsoft-software).  
 
 ## Requirements  
+
 The Microsoft Intune app is supported with the following operating systems:  
 
- - Ubuntu Desktop 22.04 or 20.04 LTS (physical or Hyper-V machine with x86/64 CPUs)  
+ - Ubuntu Desktop 24.04, 22.04 or 20.04 LTS (physical or Hyper-V machine with x86/64 CPUs)  
  - RedHat Enterprise Linux 8  
- - RedHat Enterprise Linux 9    
+ - RedHat Enterprise Linux 9
 
 ## Install Microsoft Intune app for Ubuntu Desktop
 Run the following commands in a command line to manually install the Microsoft Intune app and its dependencies on your device.  
@@ -52,21 +53,28 @@ Run the following commands in a command line to manually install the Microsoft I
 
 2. Install the Microsoft package signing key.  
 
+   For Ubuntu 24.04:
+
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+   sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/
+   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/24.04/prod noble main" > /etc/apt/sources.list.d/microsoft-ubuntu-noble-prod.list'
+   sudo rm microsoft.gpg
+   ```
+   For Ubuntu 22.04:  
+
+    ```bash
+    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+    sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/ 
+    sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main" > /etc/apt/sources.list.d/microsoft-ubuntu-jammy-prod.list' 
+    sudo rm microsoft.gpg
+    ```
    For Ubuntu 20.04:  
 
     ```bash
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
     sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/
     sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/20.04/prod focal main" > /etc/apt/sources.list.d/microsoft-ubuntu-focal-prod.list'
-    sudo rm microsoft.gpg
-    ```
-    
-    For Ubuntu 22.04:  
-
-    ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-    sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/ 
-    sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main" > /etc/apt/sources.list.d/microsoft-ubuntu-jammy-prod.list' 
     sudo rm microsoft.gpg
     ```
 

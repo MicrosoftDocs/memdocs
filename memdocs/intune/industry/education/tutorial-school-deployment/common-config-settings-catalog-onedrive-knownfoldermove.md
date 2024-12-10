@@ -9,6 +9,8 @@ ms.manager: dougeby
 no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 ms.collection: 
 - graph-interactive
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # OneDrive Known Folder Move
@@ -48,7 +50,7 @@ To learn more, see:
 | OneDrive |**:::no-loc text="Prevent users from syncing personal OneDrive accounts (User)":::** | Enabled | | [:::no-loc text="DisablePersonalSync":::](/sharepoint/use-group-policy#prevent-users-from-syncing-personal-onedrive-accounts) |
 | OneDrive |**:::no-loc text="Set the sync app update ring":::** | Enabled | Only enables the setting configuration. | [:::no-loc text="GPOSetUpdateRing":::](/sharepoint/use-group-policy#set-the-sync-app-update-ring) |
 | OneDrive |**:::no-loc text="Set the sync app update ring > Update ring: (Device)":::** | Production | Users get the latest features as they become available. | [:::no-loc text="GPOSetUpdateRing":::](/sharepoint/use-group-policy#set-the-sync-app-update-ring) |
-| OneDrive |**:::no-loc text="Silently move Windows known folders to OneDrive":::** | Enabled | **Important!** Make sure to pick the setting with 5 sub-settings listed below.Redirect and move your users' Documents, Pictures, and/or Desktop folders to OneDrive without any user interaction. | [:::no-loc text="KFMSilentOptIn":::](/sharepoint/use-group-policy#silently-move-windows-known-folders-to-onedrive) |
+| OneDrive |**:::no-loc text="Silently move Windows known folders to OneDrive":::** | Enabled | **!Important**: Make sure to pick the setting with 5 sub-settings listed below. Redirect and move your users' Documents, Pictures, and/or Desktop folders to OneDrive without any user interaction. | [:::no-loc text="KFMSilentOptIn":::](/sharepoint/use-group-policy#silently-move-windows-known-folders-to-onedrive) |
 | OneDrive |**:::no-loc text="Silently move Windows known folders to OneDrive > Desktop (Device)":::** | True | | [:::no-loc text="KFMSilentOptIn":::](/sharepoint/use-group-policy#silently-move-windows-known-folders-to-onedrive) |
 | OneDrive |**:::no-loc text="Silently move Windows known folders to OneDrive > Documents (Device)":::** | True | | [:::no-loc text="KFMSilentOptIn":::](/sharepoint/use-group-policy#silently-move-windows-known-folders-to-onedrive) |
 | OneDrive |**:::no-loc text="Silently move Windows known folders to OneDrive > Pictures (Device)":::** | True | | [:::no-loc text="KFMSilentOptIn":::](/sharepoint/use-group-policy#silently-move-windows-known-folders-to-onedrive) |
@@ -57,7 +59,7 @@ To learn more, see:
 | OneDrive |**:::no-loc text="Silently sign in users to the OneDrive sync app with their Windows credentials":::** | Enabled | Users who are signed in on a PC that's joined to Microsoft Entra ID can set up the sync app without entering their account credentials. | [:::no-loc text="SilentAccountConfig":::](/sharepoint/use-group-policy#silently-sign-in-users-to-the-onedrive-sync-app-with-their-windows-credentials) |
 | OneDrive |**:::no-loc text="Use OneDrive Files On-Demand":::** | Enabled | New users who set up the sync app see online-only files in File Explorer, by default. | [:::no-loc text="FilesOnDemandEnabled":::](/sharepoint/use-group-policy#use-onedrive-files-on-demand) |
 | OneDrive |**:::no-loc text="Warn users who are low on disk space":::** | Enabled | Only enables the setting configuration. | [:::no-loc text="WarningMinDiskSpaceLimitInMB":::](/sharepoint/use-group-policy#warn-users-who-are-low-on-disk-space) |
-| OneDrive |**:::no-loc text="Warn users who are low on disk space > Minimum available disk space: (Device)":::** | 2048 |  Specify a miminimum amount of available disk space in MB, and warn users when the OneDrive sync app (OneDrive.exe) downloads a file that causes them to have less than this amount. | [:::no-loc text="WarningMinDiskSpaceLimitInMB":::](/sharepoint/use-group-policy#warn-users-who-are-low-on-disk-space) |
+| OneDrive |**:::no-loc text="Warn users who are low on disk space > Minimum available disk space: (Device)":::** | 2048 |  Specify a minimum amount of available disk space in MB, and warn users when the OneDrive sync app (OneDrive.exe) downloads a file that causes them to have less than this amount. | [:::no-loc text="WarningMinDiskSpaceLimitInMB":::](/sharepoint/use-group-policy#warn-users-who-are-low-on-disk-space) |
 
 ## [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
 
