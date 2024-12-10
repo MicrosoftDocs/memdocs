@@ -29,13 +29,13 @@ ms.collection:
 - tier2
 ---
 
-# Optimize enrollment restrictions
+# Configure enrollment restrictions
 
 While [setting up your organization's environment to support Windows 365 Link](deployment-overview.md), you should make sure that your environment's enrollment restrictions don't block Windows 365 Link devices from enrolling in Intune.
 
-The first time a user signs in to their Windows 365 Link, the Out of Box Experience (OOBE) joins the device to Microsoft Entra and enrolls it in Microsoft Intune for management. This is the first time the device is introduced to Intune, and thus it's an Unknown device. Because the device is Microsoft Entra joined, Intune sets the ownership to Corporate-owned after the Intune enrollment process completes.
+The first time a user signs in to their Windows 365 Link, the Out of Box Experience (OOBE) joins the device to Microsoft Entra and enrolls it in Microsoft Intune for management. This is the first time the device is introduced to Intune, and thus it's an Unknown device. Because the device is Microsoft Entra joined, Intune sets the ownership to Corporate owned after the Intune enrollment process completes.
 
-If a [device platform restriction]() blocks personally-owned devices, Windows 365 Link devices are prevented from completing Intune enrollment. To avoid this, make sure to allow Windows 365 Link devices to enroll in Intune using one of the following methods:
+If a [device platform restriction]() blocks personally owned devices, Windows 365 Link devices are prevented from completing Intune enrollment. To avoid this prevention, make sure to allow Windows 365 Link devices to enroll in Intune using one of the following methods:
 
 - [Use a Device Enrollment Manager to bypass all restrictions](/mem/intune/enrollment/device-enrollment-manager-enroll).
 - [Use an operating system SKU filter to let Windows 365 Link devices enroll](#use-an-operating-system-sku-filter-to-let-windows-365-link-devices-enroll-in-intune).
@@ -45,13 +45,13 @@ Windows 365 Link devices don't currently support Autopilot.
 
 ## Use an operating system SKU filter to let Windows 365 Link devices enroll in Intune
 
-If there's a policy that blocks personally-owned Windows devices from enrolling in Intune it will also block Windows 365 Link devices. You can create another policy with higher priority to allow Windows 365 Link devices to enroll in Intune while still blocking other personally-owned Windows devices.
+If there's a policy that blocks personally owned Windows devices from enrolling in Intune it also blocks Windows 365 Link devices. You can create another policy with higher priority to allow Windows 365 Link devices to enroll in Intune while still blocking other personally owned Windows devices.
 
-Follow these steps to create a policy to allow Windows 365 Link devices to enroll in Intune:
+Follow these steps to create a policy to allow users to enroll Windows 365 Link devices in Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment** > **Windows** > **Device platform restriction** > **Windows restrictions**.
 2. Under **Windows restrictions**, select **Create restriction**.
-3. On the **Basics** page, type a **Name** (like *Allowed Windows 365 Link devices to enroll*) and an optional **Description** > **Next**.
+3. On the **Basics** page, type a **Name** (like *Allow enrollment of Windows 365 Link devices*) and an optional **Description** > **Next**.
 4. On the **Platform settings** page, set the following options:
     - **MDM**: *Allow*
     - **Personally owned devices**: *Allow*
