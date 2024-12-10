@@ -28,10 +28,17 @@ To learn more, see:
 
 ## [**Settings**](#tab/settings)
 
+### Organization-specific settings catalog policies
+
 | **Category** | **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|---|
 | OneDrive |**:::no-loc text="Allow syncing OneDrive accounts for only specific organizations":::** | Enabled | Only enables the setting configuration. | [:::no-loc text="AllowTenantList":::](/sharepoint/use-group-policy#allow-syncing-onedrive-accounts-for-only-specific-organizations) |
 | OneDrive |**:::no-loc text="Allow syncing OneDrive accounts for only specific organizations > Tenant ID: (Device)":::** | _tenant ID_ | **Important!** This is a tenant-specific value. [How to find your Microsoft Entra tenant ID](/entra/fundamentals/how-to-find-tenant)| [:::no-loc text="AllowTenantList":::](/sharepoint/use-group-policy#allow-syncing-onedrive-accounts-for-only-specific-organizations) |
+
+### General restrictions
+
+| **Category** | **Name** | **Value** | **Notes** | **CSP** |
+|---|---|---|---|---|
 | OneDrive |**:::no-loc text="Block file downloads when users are low on disk space":::** | Enabled | | [:::no-loc text="MinDiskSpaceLimitInMB":::](/sharepoint/use-group-policy#block-file-downloads-when-users-are-low-on-disk-space) |
 | OneDrive |**:::no-loc text="Block file downloads when users are low on disk space > Minimum available disk space: (Device)":::** | 1024 | Only enables the setting configuration. | [:::no-loc text="MinDiskSpaceLimitInMB":::](/sharepoint/use-group-policy#block-file-downloads-when-users-are-low-on-disk-space) |
 | OneDrive |**:::no-loc text="Convert synced team site files to online-only files":::** | Enabled | Files in currently syncing team sites are changed to online-only files, by default. Files later added or updated in the team site are also downloaded as online-only files. | [:::no-loc text="DehydrateSyncedTeamSites":::](/sharepoint/use-group-policy#convert-synced-team-site-files-to-online-only-files) |
