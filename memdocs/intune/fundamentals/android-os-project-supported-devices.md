@@ -58,4 +58,4 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 | DigiLens Inc.| DigiLens ARGO    | DigiOS 2068 (B1.0001.2068)            | AR/VR Headset  |                    |
 | Vuzix     | M400   | M-Series Version 3.0.2    | AR/VR Headset  |                    |
 | Vuzix     | M4000   | M-Series Version 3.0.2   | AR/VR Headset  |                    |
-| Vuzix     | Quest 3s | v71                 | AR/VR Headset           |          |
+| Meta    | Quest 3s | v71                 | AR/VR Headset           |          |
