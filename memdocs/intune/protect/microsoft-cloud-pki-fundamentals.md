@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/26/2024
+ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -113,10 +113,12 @@ After the chain is built, the following checks are performed on each certificate
 
 The certificate and its chain are considered valid after all checks are complete, and come back successful.
 
-<!-- The following diagram illustrates the *name matching* chain validation flow.   
+A certificate chain with an ordered list of certificates enables the relying party to verify a sender is trustworthy. It works both ways, from client-to-server and server-to-client. 
 
- needs redesign to meet MS standards> [!div class="mx-imgBorder"]
-> ![Diagram of the chain validation process using the name match method.](./media/microsoft-cloud-pki/chain-validation.png) -->
+The following diagram illustrates the *name matching* chain validation flow.  
+
+> [!div class="mx-imgBorder"]
+> ![Diagram of the chain validation process using the name match method.](./media/microsoft-cloud-pki-fundamentals/chain-validation.png)
 
 ### Ensure a chain of trust  
 
@@ -124,8 +126,10 @@ When you use certificates to perform certificate-based authentication, you must 
 
 The root CA must be present. If the issuing CA certificate isn't present, then it can be requested by the relying party using the native certificate chain engine for the intended OS platform. The relying party can request the issuing CA certificate using the leaf certificate's *authority information access* property.  
 
-## Certificate-based authentication
+> [!div class="mx-imgBorder"]
+> ![Diagram of the chain of validation process.](./media/microsoft-cloud-pki-fundamentals/chain-of-trust.png)  
 
+## Certificate-based authentication  
 This section provides a basic understanding of the various certificates being used when a client or device performs certificate-based authentication.  
 
 The following steps describe the handshake that takes place between a client and a relying party service during certificate-based authentication.
@@ -135,7 +139,7 @@ The following steps describe the handshake that takes place between a client and
 3. The relying party requests a certificate to be used for client authentication.  
 4. The client presents its client authentication certificate to the relying party to authenticate.
 
-<!-- diagram needs redesign > [!div class="mx-imgBorder"]
-> ![Drawing of a handshake between a client and relying party service.](./media/microsoft-cloud-pki/png)  -->
+> [!div class="mx-imgBorder"]
+> ![Diagram of a handshake between a client and relying party service.](./media/microsoft-cloud-pki-fundamentals/certificate-handshake.png)  
 
 In an environment without Microsoft Cloud PKI, a private CA is responsible for issuing both the TLS/SSL certificate used by the relying party, and the device client authentication certificate. Microsoft Cloud PKI can be used to issue the device client authentication certificate, effectively replacing the private CA for this specific task.  
