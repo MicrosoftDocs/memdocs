@@ -33,7 +33,7 @@ ms.collection:
 
 As the first step in setting up your organization's environment to support Windows 365 Link, you must allow Windows 365 Link devices to [join Microsoft Entra](/entra/identity/devices/concept-directory-join).
 
-Prior to signing in, the user must have permission to join and not be blocked by any Intune device enrollment restrictions.
+Before signing in, the user must have permission to join and not be blocked by any Intune device enrollment restrictions.
 
 The first time the device is powered on, the Out of Box Experience (OOBE):
 

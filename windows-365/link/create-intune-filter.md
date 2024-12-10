@@ -41,7 +41,7 @@ To create a filter exclusively including Windows 365 Link devices:
 4. Select the following values:
     - **Property**: **operatingSystemSKU (Operating System SKU)**.
     - **Operator**: **Equals**.
-    - **Value**: **WCPC (Widnows PC (210))**.
+    - **Value**: **WCPC (Windows PC (210))**.
 5. Select **Next**.
 6. On the **Review + create** page, select **Create**.  
 
