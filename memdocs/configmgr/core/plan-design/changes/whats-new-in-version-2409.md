@@ -93,8 +93,6 @@ CMG Setup now uses managed Identities and third-party **Server App** to interact
 
  - Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. **VC++ Redistributable Version** need to be upgraded to latest version on **Secondary sites**. [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
- - Site base bootable media in SSL & Non-SSL session using CMG cert will not work. For more information, see [Create boot media to use a CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content)
-
 ## Other Updates
 
 ### Performance Enhancement of policy processing and collection evaluation
@@ -112,11 +110,12 @@ For more information, see [Removed and deprecated features for Configuration Man
 <!--#### Improvements to Bitlocker-->
 
 ## Next steps
-At this time, version 2409 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2409.md#early-update-ring).
+<!--At this time, version 2409 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2409.md#early-update-ring).-->
 
-<!--As of May 06, 2024, version 2403 is globally available for all customers to install.-->
-<!-- >[!NOTE] -->
-<!-- For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.-->
+As of December 11, 2024, version 2409 is globally available for all customers to install.
+
+>[!NOTE]
+>For exisiting Fast ring current branch 2409 customers, you will see Slow ring upgrade package in console. Install 2409 Slow ring package to be in production current branch.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2409](../../servers/manage/checklist-for-installing-update-2409.md).
 
