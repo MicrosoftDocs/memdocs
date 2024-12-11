@@ -120,7 +120,7 @@ Android serial numbers aren't guaranteed to be unique or present. Check with you
 ### Add Windows corporate identifiers  
 
 > [!IMPORTANT]
-> Corporate identifiers are supported for devices running Windows 10 KB5039299 (with OS Build 19045.4598) and later. If you're enrolling Windows 10 devices with an earlier build, do not use the corporate identifier feature.
+> Windows corporate identifiers are only applied at enrollment, they do not determine Ownership type in Intune after enrollment. They are also only supported for devices running Windows 10 KB5039299 (with OS Build 19045.4598) and later. If you're enrolling Windows 10 devices with an earlier build, do not use the corporate identifier feature.
 
 To add corporate identifiers for corporate devices running Windows 11, list the manufacturer, model, and serial number for each device as shown in the following example.  
 
@@ -131,11 +131,11 @@ Lenovo,thinkpad t14,02234567890123
 
 Remove all periods, if applicable, from the serial number before you add it to the file.  
 
-After you add Windows corporate identifiers, Intune marks devices that match all three identifiers as corporate-owned, and marks all other enrolling devices in your tenant as personal. This means that anything you exclude from the Windows corporate identifiers is marked personal. To change the ownership type after enrollment, you have to manually adjust it in the admin center.  
+After you add Windows corporate identifiers, Intune marks devices that match all three identifiers as corporate-owned, and marks all other enrolling devices in your tenant as personal. This means that anything you exclude from the Windows corporate identifiers is marked personal, but only at enrollment. Existing Windows logic determines final state in Intune, see table below. To change the ownership type in Intune, you have to manually adjust it in the admin center.  
 
 :::image type="content" source="./media/corporate-identifiers-add/device-enrollment-add-identifiers.png" alt-text="Screenshot of selecting and adding corporate identifiers.":::
 
-The following table lists the type of ownership given to devices when they enroll without corporate identifiers and when they enroll with corporate identifiers.  
+The following table lists the type of ownership given to devices when they enroll without corporate identifiers and when they enroll with corporate identifiers. **Reminder** - corporate identifiers only change the device state *at enrollment time* - this means that after enrolling, a device state will match what you see in the **Without corporate identifiers** column in the table.  
 
 |Windows enrollment types | Without corporate identifiers | With corporate identifiers |
 |---|---|---|
@@ -153,7 +153,7 @@ The following table lists the type of ownership given to devices when they enrol
 | [Enrollment using the Intune Company Portal app](../user-help/enroll-windows-10-device.md) | Personal | Personal, unless defined by corporate identifiers |
 | Enrollment via a Microsoft 365 app, which occurs when users select the **Allow my organization to manage my device** option during app sign-in | Personal | Personal, unless defined by corporate identifiers |
 
-Windows corporate identifiers can only change ownership type if someone adds them to Microsoft Intune. If you don't have corporate identifiers for Windows in Intune, or if you remove them, devices that are Microsoft Entra domain joined are marked as corporate-owned. This includes devices enrolled via [automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with:
+Windows corporate identifiers can only change ownership type if someone adds them to Microsoft Intune. If you don't have corporate identifiers for Windows in Intune, or if you remove them, devices that are Microsoft Entra domain joined are marked as corporate-owned at enrollment. This includes devices enrolled via [automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with:
 
 - [Microsoft Entra join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx).  
 
@@ -247,6 +247,7 @@ To confirm the reason for an enrollment failure, go to **Devices** > **Enrollmen
 
 ## Known issues and limitations  
 
+- Windows corporate device identifiers apply only at enrollment time - meaning a device that has corporate identifiers uploaded, then enrolls using the **Add Work Account from Windows Settings** option, will be marked **Corporate** at enrollment, treated as a **Corporate** device for enrollment restriction evaluation, but then will show as a **Personal** device in the admin center. Admins should expect the **Without corporate identifiers** column in the table above to determine what devices will remain Corporate or Personal in their tenant for longterm. 
 - Windows corporate device identifiers are only supported for devices running:  
   
   -  Windows 10 version 22H2 (OS build 19045.4598) or later.
