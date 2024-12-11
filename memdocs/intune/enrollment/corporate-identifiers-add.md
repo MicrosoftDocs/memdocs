@@ -137,7 +137,8 @@ After you add Windows corporate identifiers, Intune marks devices that match all
 
 The following table lists the type of ownership given to devices when they enroll without corporate identifiers and when they enroll with corporate identifiers. 
 
->[!TIP] As a reminder, corporate identifiers only change the device state at enrollment time. This means that after the device enrolls, the device state matches what you see in the **Without corporate identifiers** column in the table.  
+>[!TIP]
+> As a reminder, corporate identifiers only change the device state at enrollment time. This means that after the device enrolls, the device state matches what you see in the **Without corporate identifiers** column in the table.  
 
 |Windows enrollment types | Without corporate identifiers | With corporate identifiers |
 |---|---|---|
