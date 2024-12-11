@@ -63,8 +63,11 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 - Microsoft Intune Plan 1 subscription
 
 - Better Mobile Threat Defense subscription
+<!-- THe followiong line is removed, as the link shown is failign, and no valid link can be identified:
 
   - For more information, see the Better Mobile website.  https://aad.bettermtd.com/
+
+-->
 
 ## Sample scenarios
 

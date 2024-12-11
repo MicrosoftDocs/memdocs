@@ -54,15 +54,7 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-## Device management
-
-### Cloud PC gallery images update to Microsoft Teams 2.1<!--50394023-->
-
-In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 applications will be updated to use Microsoft Teams 2.1. These images include:
-
-- Windows 11 Enterprise + Microsoft 365 Apps  21H2
-- Windows 10 Enterprise + Microsoft 365 Apps 22H2
-- Windows 10 Enterprise + Microsoft 365 Apps 21H2
+<!--## Device management-->
 
 <!-- ***********************************************-->
 <!--## Device security-->

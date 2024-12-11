@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune
+title: Learn about using Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune
 description: Learn how to use Intune policy to manage Microsoft Defender security settings on devices that aren't enrolled with Microsoft Intune.
 keywords:
 author: brenduns
@@ -30,7 +30,7 @@ ms.reviewer: laarrizz
 
 ---
 
-# Use Intune endpoint security policies to manage Microsoft Defender for Endpoint on devices not enrolled with Intune
+# Learn how to use Intune endpoint security policies to manage Microsoft Defender for Endpoint on devices that are not enrolled with Intune
 
 When you integrate Microsoft Intune with Microsoft Defender for Endpoint, you can use Intune endpoint security policies to manage the Defender security settings on devices that aren't enrolled with Intune. This capability is known as *Defender for Endpoint security settings management*.
 
@@ -205,7 +205,7 @@ In the Microsoft Intune admin center, go to the All Devices page. Devices enroll
 
 > [!TIP]
 >
-> In June 2023, security settings management began using synthetic registration for devices that don't fully register in Microsoft Entra. With this change, devices that previously had enrollment errors will begin onboarding  to Defender and then receive and process the security settings management policies.
+> In June 2023, security settings management began using synthetic registration for devices that don't fully register in Microsoft Entra. With this change, devices that previously had enrollment errors will begin onboarding to Defender and then receive and process the security settings management policies.
 
 ### What to expect in the Microsoft Azure portal
 
@@ -386,7 +386,7 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
    Instead of using system labels, you can use the management type attribute, and configure it to **MicrosoftSense**.
 
-You can create groups for these devices [in Microsoft Entra](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](../fundamentals/groups-add.md). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:  
+You can create groups for these devices [in Microsoft Entra](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](../fundamentals/groups-add.md). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:
 
 - **Windows 10 and Windows 11** - The deviceOSType or OS displays as *Windows*
 - **Windows Server** - The deviceOSType or OS displays as *Windows Server*
@@ -416,7 +416,7 @@ You can create groups for these devices [in Microsoft Entra](/azure/active-direc
 
 > [!TIP]
 >
-> Users that are delegated the ability to manage endpoint security settings may not have the ability to implement tenant-wide configurations in Microsoft Intune.  Check with your Intune administrator for more information on roles and permissions in your organization.
+> Users that are delegated the ability to manage endpoint security settings may not have the ability to implement tenant-wide configurations in Microsoft Intune. Check with your Intune administrator for more information on roles and permissions in your organization.
 
 ## Deploy policy
 
@@ -469,6 +469,8 @@ For the list of policy and profile combinations supported for security settings 
 
 ## Monitor status
 
+**Intune:**
+
 Status and reports for policies that target devices in this channel are available from the policy node under Endpoint security in the Microsoft Intune admin center.
 
 Drill in to the policy type and then select the policy to view its status. You can view the list of platforms, policy types, and profiles that support security settings management in the table in [Which solution should I use](#which-solution-should-i-use), earlier in this article.
@@ -476,8 +478,19 @@ Drill in to the policy type and then select the policy to view its status. You c
 When you select a policy, you can view information about the device check-in status, and can select:
 
 - **View report** - View a list of devices that received the policy. You can select a device to drill in and see its per-setting status. You can then select a setting to view more information about it, including other policies that manage that same setting, which could be a source of conflict.
-
 - **Per setting status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
+
+**Defender Portal:**
+
+You can also monitor the Intune policies that are applied from within the [Microsoft Defender portal](https://security.microsoft.com/). Within the portal, go to **Endpoints**, expand configuration management and select *Endpoint security policies*. Select a policy to view its status, and then select:
+
+- **Overview** - View an overview of the groups the policy is applied to, the policy settings that are applied, and device check-in status.
+- **Policy Settings Values** - View the settings that are configured by the policy.
+- **Policy settings status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
+- **Applied devices** - View the devices to which the policy is applied.
+- **Assigned Groups** - View the groups to which the policy is assigned.
+
+For additional information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json) in the Defender content.
 
 ## Frequently asked questions and considerations
 
@@ -485,7 +498,7 @@ When you select a policy, you can view information about the device check-in sta
 
 Devices managed by this capability check-in with Microsoft Intune every 90 minutes to update policy.
 
-You can manually sync a device on-demand from the [Microsoft Defender portal](https://security.microsoft.com/). Sign-in to the portal and go to **Devices**. Select a device that is managed by Microsoft Defender for Endpoint, and then select the **Policy sync** button:  
+You can manually sync a device on-demand from the [Microsoft Defender portal](https://security.microsoft.com/). Sign-in to the portal and go to **Devices**. Select a device that is managed by Microsoft Defender for Endpoint, and then select the **Policy sync** button:
 
 :::image type="content" source="./media/mde-security-integration/policy-sync-from-mde.png" alt-text="Manually sync devices managed by Microsoft Defender for Endpoint." lightbox="./media/mde-security-integration/policy-sync-from-mde.png"  :::
 

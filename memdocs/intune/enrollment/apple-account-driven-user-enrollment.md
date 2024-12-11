@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/09/2024
+ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -32,7 +32,7 @@ ms.collection:
 
 # Set up account driven Apple User Enrollment  
 
-Set up account driven Apple User Enrollment for personal devices enrolling in Microsoft Intune. Account driven user enrollment provides a faster and more user-friendly enrollment experience than [user enrollment with Company Portal](apple-user-enrollment-with-company-portal.md). The device user initiates enrollment by signing into their work account in the Settings app. After the user approves device management, the enrollment profile silently installs and Intune policies are applied. Intune uses just-in-time registration and the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps.      
+Set up account driven Apple User Enrollment for personal devices enrolling in Microsoft Intune. Account driven user enrollment provides a faster and more user-friendly enrollment experience than [user enrollment with Company Portal](apple-user-enrollment-with-company-portal.md). The device user initiates enrollment by signing into their work account in the Settings app. After the user approves device management, the enrollment profile silently installs and Intune policies are applied. Intune uses just-in-time (JIT) registration and the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps.      
 
 This article describes how to set up account driven Apple User Enrollment in Microsoft Intune. You will:   
 
@@ -41,7 +41,7 @@ This article describes how to set up account driven Apple User Enrollment in Mic
 * Prepare employees and students for enrollment.     
 
 ## Prerequisites
-Microsoft Intune supports account driven Apple User Enrollment on devices running iOS/iPadOS version 15 or later. If you assign an account driven user enrollment profile to device users running iOS/iPadOS 14.9 or earlier, Microsoft Intune will automatically enroll them via user enrollment with Company Portal.   
+Microsoft Intune supports account driven Apple User Enrollment on devices running iOS/iPadOS version 15 or later. If you assign an account driven user enrollment profile to device users running iOS/iPadOS 14.9 or earlier, Microsoft Intune automatically enrolls them via user enrollment with Company Portal.   
 
 Before beginning setup, complete the following tasks:    
 
@@ -49,12 +49,14 @@ Before beginning setup, complete the following tasks:
 - [Get Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 - [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)  
 
-You also need to set up service discovery so that Apple can reach the Intune service and retrieve enrollment information. To do this, set up and publish an HTTP well-known resource file on the same domain that employees sign into. Apple retrieves the file via an HTTP GET request to `“https://contoso.com/.well-known/com.apple.remotemanagement”`, with your organization's domain in place of `contoso.com`. Publish the file on a domain that can handle HTTP GET requests.    
+You also need to set up service discovery so that Apple can reach the Intune service and retrieve enrollment information. To complete this prerequisite, set up and publish an HTTP well-known resource file on the same domain that employees sign into. Apple retrieves the file via an HTTP GET request to `“https://contoso.com/.well-known/com.apple.remotemanagement”`, with your organization's domain in place of `contoso.com`. Publish the file on a domain that can handle HTTP GET requests.    
+
 
 > [!NOTE]
 > The well-known resource file must be saved without a file extension, such as .json, to function correctly.  
 
-Create the file in JSON format, with the content type set to `application/json`.  We've provided the following JSON samples that you can copy and paste into your file. Use the one that aligns with your environment. Replace the *YourAADTenantID* variable in the base URL with your organization's Microsoft Entra tenant ID.   
+Create the file in JSON format, with the content type set to `application/json`. We provide the following JSON samples that you can copy and paste into your file. Use the one that aligns with your environment. Replace the *YourAADTenantID* variable in the base URL with your organization's Microsoft Entra tenant ID.   
+
 
    Microsoft Intune environments:  
    ```json
@@ -102,7 +104,18 @@ Create an enrollment profile for devices enrolling via account driven user enrol
 1. Select **Create profile** > **iOS/iPadOS**.  
 1. On the **Basics** page, enter a name and description for the profile so that you can distinguish it from other profiles in the admin center. Device users don't see these details.  
 1. Select **Next**.  
-1. On the **Settings** page, for **Enrollment type**, select **Account driven user enrollment**.  
+1. On the **Settings** page, for **Enrollment type**, select how you want to enroll devices. You can choose the enrollment method or allow users to make their own choice. Their choice determines the enrollment process that Microsoft Intune carries out. It's also reflected in the device ownership attribute in Microsoft Intune. To learn more about the user's experience and what they see onscreen during enrollment, see [Set up personal iOS device for work or school](../user-help/enroll-your-device-in-intune-ios.md).  
+
+    Your options:  
+
+   - **Account driven user enrollment**: Assigned users who initiate enrollment are enrolled via account driven user enrollment.
+
+   - **Determine based on user choice**: Assigned users who initiate enrollment can select how they want to enroll their device. Their options:  
+
+       - **I own this device:** More settings appear with this selection. The user has the option to secure their entire device or only secure work-related apps and data.  
+
+       - **(Company) owns this device:** The device enrolls via Apple Device Enrollment. For more information about this enrollment method, see [Device Enrollment and MDM](https://support.apple.com/guide/deployment/device-enrollment-and-mdm-depd1c27dfe6/web) on the Apple Support website.  
+
 1. Select **Next**.  
 1. On the **Assignments** page, assign the profile to all users, or select specific groups. Device groups aren't supported in user enrollment scenarios because user enrollment requires user identities.  
 1. Select **Next**.  
@@ -118,7 +131,7 @@ This section describes the enrollment steps for device users. We recommend using
 3. Select **VPN & Device Management**. 
 4. Sign in with your work or school account, or with the Apple ID provided to you by your organization.   
 5. Select **Sign In to iCloud**.  
-6. Enter the password for the username that's shown on screen. Then select **Continue**.   
+6. Enter the password for the username that appears onscreen. Then select **Continue**.   
 7. Select **Allow Remote Management**.  
 8. Wait a few minutes while your device is configured and the management profile is installed.  
 9. To confirm your device is ready to use for work, go to **VPN & Device Management**. Confirm that your work account is listed under **MANAGED ACCOUNT**.  

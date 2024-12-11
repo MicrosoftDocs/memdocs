@@ -223,6 +223,8 @@ items:
         href: rdp-shortpath-private-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
+      - name: Bulk reprovision Frontline Cloud PCs
+        href: frontline-shared-bulk-reprovision.md
       - name: Windows 365 Switch
         href: windows-365-switch-overview.md
       - name: Resize a Cloud PC
