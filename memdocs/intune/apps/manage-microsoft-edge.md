@@ -590,6 +590,16 @@ You can configure a policy to enhance users' experience. This policy is recommen
 |:--|:----|
 |com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork |**1**: (Default) Switch to work profile even if the URL is blocked by Edge policy.<br> **2**: The blocked URLs will open under personal profile if personal profile is signed in. If personal profile is not signed in, the blocked URL will opened in InPrivate mode. |
 
+#### Manage Sub Resource Blocking
+By default, AllowListURLs and BlockListURLs apply only at the navigation level. When you embed blocked URLs (either URLs configured in BlockListURLs or URLs not configured in AllowListURLs) as sub resources within a web page, those sub resource URLs are not blocked. To further restrict these sub resources, you can configure a policy to block the sub resource URLs.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.ManageRestrictedSubresourceEnabled |**false**: (Default) Sub resource URLs will not be blocked even if the sub resource URLs are blocked.<br> **true**: Sub resource URLs will be blocked if they are listed as blocked. |
+
+> [!NOTE]
+> It is recommended to use this policy in conjunction with BlockListURLs. If used with AllowListURLs, ensure that all subresource URLs are included in the AllowListURLs. Otherwise, some sub resources may fail to load
+
 #### URL formats for allowed and blocked site list
 
 You can use various URL formats to build your allowed/blocked sites lists. These permitted patterns are detailed in the following table.
@@ -600,7 +610,8 @@ You can use various URL formats to build your allowed/blocked sites lists. These
 - You can specify port numbers in the address. If you do not specify a port number, the values used are:
   - Port 80 for http
   - Port 443 for https
-- Using wildcards for the port number is **not** supported. For example, `http://www.contoso.com:*` and `http://www.contoso.com:*/` aren't supported.
+- Using wildcards for the port number is supported. For example, you can specify `http://www.contoso.com:*` and `http://www.contoso.com:*/`.
+- Specifying IPv4 addresses with or without CIDR notation is supported. For example, you can specify 127.0.0.1 (a single IP address) or 127.0.0.1/24 (a range of IP addresses)
 
   |URL |Details |Matches |Does not match |
   |:----|:-------|:----------|:----------------|
@@ -613,6 +624,12 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   |`http://www.contoso.com:80`|Matches a single page, by using a port number |`www.contoso.com:80`| |
   |`https://www.contoso.com`|Matches a single, secure page|`www.contoso.com`|`www.contoso.com/images`|
   |`http://www.contoso.com/images/*` |Matches a single folder and all subfolders |`www.contoso.com/images/dogs` <br>`www.contoso.com/images/cats` | `www.contoso.com/videos`|
+  |`http://contoso.com:*` |Matches any port number for the HTTP service |`contoso.com:80` <br>`contoso.com:8080` | `contoso.com:443`|
+  |`https://contoso.com:*` |Matches any port number for the HTTPs service |`contoso.com:443` <br>`contoso.com:8443` | `contoso.com:80`|
+  |`http://192.168.1.1` |Matches a single IP address |`192.168.1.1`| `192.168.1.2`|
+  |`http://192.168.1.1:*` |Matches any port number for a single IP address |`192.168.1.1:8080`| `192.168.1.2:8080`|
+  |`http://10.0.0.0/24` |Matches a range of IP addresses from 10.0.0.0 to 10.0.0.255 |`10.0.0.0` <br>`10.0.0.100`| `192.168.1.1`|
+    
   
 - The following are examples of some of the inputs that you can't specify:
   - `*.com`
@@ -620,10 +637,8 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `www.contoso.com/*images`
   - `www.contoso.com/*images*pigs`
   - `www.contoso.com/page*`
-  - IP addresses
   - `https://*`
   - `http://*`
-  - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
 ### Disable Edge internal pages
