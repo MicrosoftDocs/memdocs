@@ -591,14 +591,16 @@ You can configure a policy to enhance users' experience. This policy is recommen
 |com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork |**1**: (Default) Switch to work profile even if the URL is blocked by Edge policy.<br> **2**: The blocked URLs will open under personal profile if personal profile is signed in. If personal profile is not signed in, the blocked URL will opened in InPrivate mode. |
 
 #### Manage Sub Resource Blocking
-By default, AllowListURLs and BlockListURLs apply only at the navigation level. When you embed blocked URLs (either URLs configured in BlockListURLs or URLs not configured in AllowListURLs) as sub resources within a web page, those sub resource URLs are not blocked. To further restrict these sub resources, you can configure a policy to block the sub resource URLs.
+By default, AllowListURLs and BlockListURLs apply only at the navigation level. When you embed blocked URLs (either URLs configured in BlockListURLs or URLs not configured in AllowListURLs) as sub resources within a web page, those sub resource URLs are not blocked. 
+
+To further restrict these sub resources, you can configure a policy to block the sub resource URLs.
 
 |Key |Value |
 |:--|:----|
 |com.microsoft.intune.mam.managedbrowser.ManageRestrictedSubresourceEnabled |**false**: (Default) Sub resource URLs will not be blocked even if the sub resource URLs are blocked.<br> **true**: Sub resource URLs will be blocked if they are listed as blocked. |
 
 > [!NOTE]
-> It is recommended to use this policy in conjunction with BlockListURLs. If used with AllowListURLs, ensure that all subresource URLs are included in the AllowListURLs. Otherwise, some sub resources may fail to load
+> It is recommended to use this policy in conjunction with BlockListURLs. If used with AllowListURLs, ensure that all sub resource URLs are included in the AllowListURLs. Otherwise, some sub resources may fail to load
 
 #### URL formats for allowed and blocked site list
 
