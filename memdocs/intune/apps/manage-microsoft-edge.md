@@ -561,8 +561,8 @@ Use the following key/value pairs to configure either an allowed or blocked site
 |:--|:----|
 |com.microsoft.intune.mam.managedbrowser.AllowListURLs <br><br> This policy name has been replaced by the UI of **Allowed URLs** under Edge Configuration settings|The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
 |com.microsoft.intune.mam.managedbrowser.BlockListURLs <br><br> This policy name has been replaced by the UI of **Blocked URLs** under Edge Configuration settings|The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
-|com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock |**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts aren't disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context. <br>**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked. |
-|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked <br><br> This policy name has been replaced by the UI of **Redirect restricted sites to personal context** under Edge Configuration settings |**true** allows restricted sites to be opened in the Microsoft Entra account's InPrivate context. If the Microsoft Entra account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account. <br>**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. <br>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
+|com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock <br><br> This policy name has been replaced by the UI of **Redirect restricted sites to personal context** under Edge Configuration settings|**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts aren't disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context. <br>**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked. |
+|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked |**true** allows restricted sites to be opened in the Microsoft Entra account's InPrivate context. If the Microsoft Entra account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account. <br>**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. <br>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
 |com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar | Enter the number of seconds that users will see the snack bar notification "Access to this site is blocked by your organization. We’ve opened it in InPrivate mode for you to access the site." By default, the snack bar notification is shown for 7 seconds.|
 
 The following sites except copilot.microsoft.com are always allowed regardless of the defined allow list or block list settings:
@@ -610,8 +610,8 @@ You can use various URL formats to build your allowed/blocked sites lists. These
 - You can specify port numbers in the address. If you do not specify a port number, the values used are:
   - Port 80 for http
   - Port 443 for https
-- Using wildcards for the port number is supported. For example, you can specify `http://www.contoso.com:*` and `http://www.contoso.com:*/`.
-- Specifying IPv4 addresses with or without CIDR notation is supported. For example, you can specify 127.0.0.1 (a single IP address) or 127.0.0.1/24 (a range of IP addresses)
+- Using wildcards for the port number is supported in Edge for iOS only. For example, you can specify `http://www.contoso.com:*` and `http://www.contoso.com:*/`.
+- Specifying IPv4 addresses with CIDR notation is supported. For example, you can specify 127.0.0.1/24 (a range of IP addresses).
 
   |URL |Details |Matches |Does not match |
   |:----|:-------|:----------|:----------------|
@@ -624,14 +624,10 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   |`http://www.contoso.com:80`|Matches a single page, by using a port number |`www.contoso.com:80`| |
   |`https://www.contoso.com`|Matches a single, secure page|`www.contoso.com`|`www.contoso.com/images`|
   |`http://www.contoso.com/images/*` |Matches a single folder and all subfolders |`www.contoso.com/images/dogs` <br>`www.contoso.com/images/cats` | `www.contoso.com/videos`|
-  |`http://contoso.com:*` |Matches any port number for the HTTP service |`contoso.com:80` <br>`contoso.com:8080` | `contoso.com:443`|
-  |`https://contoso.com:*` |Matches any port number for the HTTPs service |`contoso.com:443` <br>`contoso.com:8443` | `contoso.com:80`|
-  |`http://192.168.1.1` |Matches a single IP address |`192.168.1.1`| `192.168.1.2`|
-  |`http://192.168.1.1:*` |Matches any port number for a single IP address |`192.168.1.1:8080`| `192.168.1.2:8080`|
-  |`http://10.0.0.0/24` |Matches a range of IP addresses from 10.0.0.0 to 10.0.0.255 |`10.0.0.0` <br>`10.0.0.100`| `192.168.1.1`|
+  |`http://contoso.com:*` |Matches any port number for a single page |`contoso.com:80` <br>`contoso.com:8080` | |
+  |`10.0.0.0/24` |Matches a range of IP addresses from 10.0.0.0 to 10.0.0.255 |`10.0.0.0` <br>`10.0.0.100`| `192.168.1.1`| 
     
-  
-- The following are examples of some of the inputs that you can't specify:
+  - The following are examples of some of the inputs that you can't specify:
   - `*.com`
   - `*.contoso/*`
   - `www.contoso.com/*images`
