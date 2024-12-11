@@ -56,6 +56,16 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of December 9, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Move selected Cloud PCs to a new region<!--50290712-->
+
+You can now move selected Cloud PCs to a new region. This is instead of moving all Cloud PCs in a provisioning policy.
+
+<!-- ########################## -->
 ## Week of December 2, 2024 (Service release 2411)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

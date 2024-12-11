@@ -139,6 +139,9 @@ Image hash values:
 
 Changes in this release:
 -Diagnostic tool improvements 
+-Bug fixes for rootless container mode in mst-cli 
+-Localization improvements in mstunnel-setup 
+
 
 ### October 2, 2024
 
