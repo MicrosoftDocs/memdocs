@@ -58,7 +58,6 @@ If a device doesn't check in to get the policy or profile after the first notifi
 | iOS/iPadOS | About every 8 hours |
 | macOS | About every 8 hours |
 | Windows 10/11 PCs enrolled as devices | About every 8 hours |
-| Windows 8.1 | About every 8 hours |
 
 If devices recently enroll, then the compliance, noncompliance, and configuration check-in runs more frequently. The check-ins are **estimated** at:
 
@@ -68,7 +67,6 @@ If devices recently enroll, then the compliance, noncompliance, and configuratio
 | iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
 | macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
 | Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
-| Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 
 For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
 
