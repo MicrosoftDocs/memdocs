@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/22/2024
+ms.date: 12/11/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -89,8 +89,7 @@ These recommendations focus on improving performance and reducing latency in wor
 
 Larger groups take longer to sync membership updates between Microsoft Entra ID and Intune. The **All users** and **All devices** are usually the largest groups you have. If you assign Intune workloads to large Microsoft Entra groups that have many users or devices, then synchronization backlogs can happen in your Intune environment. This backlog impacts policy and app deployments, which take longer to reach managed devices.
 
-> [!IMPORTANT]
-> The update from Entra to Intune is relatively quick, typically within 5 minutes or so, but it is not instantaneous. This is most crucial for enrollment assignments, admins should try to enroll devices only after several minutes, and not immediately after adding the enrolling users to a group, for optimal performance throughout Intune. 
+The update from Microsoft Entra to Intune typically happens within 5 minutes. It's not instant. This time can affect enrollment assignments. Admins should enroll devices after several minutes, not immediately after adding the enrolling users to a group. 
 
 The built-in **All users** and **All devices** groups are Intune-only grouping objects that don't exist in Microsoft Entra ID. There isn't a continuous sync between Microsoft Entra ID and Intune. So, group membership is instant. 
 
