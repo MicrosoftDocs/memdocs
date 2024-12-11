@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2024
+ms.date: 11/11/2024
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -58,7 +58,6 @@ If a device doesn't check in to get the policy or profile after the first notifi
 | iOS/iPadOS | About every 8 hours |
 | macOS | About every 8 hours |
 | Windows 10/11 PCs enrolled as devices | About every 8 hours |
-| Windows 8.1 | About every 8 hours |
 
 If devices recently enroll, then the compliance, noncompliance, and configuration check-in runs more frequently. The check-ins are **estimated** at:
 
@@ -68,7 +67,6 @@ If devices recently enroll, then the compliance, noncompliance, and configuratio
 | iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
 | macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
 | Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
-| Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 
 For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
 
@@ -171,6 +169,12 @@ For more information on dynamic groups, go to:
 - [Add groups to organize users and devices in Intune](../fundamentals/groups-add.md)
 - [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters-performance-recommendations.md)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership)
+
+## "The sync could not be initiated (0x80072f9a)" error
+
+On Windows devices, when trying to sync in the **Settings** app > **Accounts** > **Access work or school**, you might see a `The sync could not be initiated (0x80072f9a)` error.
+
+If the Trusted Platform Module (TPM) was reset to factory settings, then the device must reenrolled to resume syncing. The device's Microsoft Entra identity is stored in the TPM. So, if the ID is removed, then reenrollment is the only way to reestablish the Microsoft Entra identity. 
 
 ## Related articles
 

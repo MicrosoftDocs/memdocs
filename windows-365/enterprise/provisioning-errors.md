@@ -186,7 +186,7 @@ If you are seeing this error, some factors to consider are:
 
 ## Other provisioning failures
 
-If you encounter other provisioning errors not covered above, make sure all the required endpoints are allowed on the VNet used for your ANC and any gateway device.
+If you encounter other provisioning errors not covered above, make sure all the [required endpoints](requirements-network.md?tabs=enterprise%2Cent#allow-network-connectivity) are allowed on the VNet used for your ANC and any gateway device.
 
 <!-- ########################## -->
 ## Next steps

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2024
+ms.date: 12/06/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -54,6 +54,89 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app 
 -->
+
+<!-- ########################## -->
+## Week of December 2, 2024 (Service release 2411)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Intune scope tags are now generally available<!--51133268-->
+
+Windows 365 support for [Intune scope tags](/mem/intune/fundamentals/scope-tags) has moved out of preview and into general availability. For more information, see [Scope tags](role-based-access.md#scope-tags).
+
+#### Create and share restore points for up to 5,000 Cloud PCs<!--53500693-->
+
+You can now bulk create restore points for up to 5,000 Cloud PCs. You can then share the restore points to a specified Azure storage account. For more information, see [Create multiple manual restore points in bulk](create-manual-restore-point.md#create-multiple-manual-restore-points-in-bulk). 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Dedicated and shared data on Connected Frontline Cloud PCs report<!--54334437--> 
+
+The Connected Frontline Cloud PCs report now shows:
+
+- Separate data for dedicated versus shared Frontline Cloud PCs.
+- The user that is currently connected and their session length
+- Ability to restart Frontline Cloud PCs to disconnect user from their session and bring concurrency below threshold limits.
+
+For more information see [Connected Frontline Cloud PCs](report-connected-frontline-cloud-pcs.md).
+
+#### Cloud PC actions report support for moving Cloud PCs<!--53672561-->
+
+You can use the Cloud PC actions report to see the status of moving Cloud PCs to new regions.
+
+#### Windows 365 Government supports bulk Troubleshoot action<!--54758451-->
+
+The Troubleshoot remote action can now be used in bulk with Windows 365 Government. For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Azure network connection limit increased<!--54859923-->
+
+The Azure network connection limit for each tenant has been increased. For more information, see [Maximum azure network connections](azure-network-connections.md#maximum-azure-network-connections).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Windows 365 now supports Israel Central<!--54918015-->
+
+Windows 365 Enterprise now supports the Israel Central region in the Middle East geography. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- ########################## -->
+## Week of November 19, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Frontline
+
+#### Windows 365 Frontline in shared mode (preview)<!--52583422-->
+
+Windows 365 Frontline in shared mode gives you the ability to provision a collection of Cloud PCs that can be used across multiple users mapped to a Microsoft Entra ID group. One active Cloud PC is permitted per license. For more information, see [Windows 365 Frontline in shared mode](introduction-windows-365-frontline.md#windows-365-frontline-in-shared-mode-preview).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Configure client device redirection settings for Windows App on iOS/iPadOS/Android using Microsoft Intune<!--51893843-->
+
+You can now use Microsoft Intune Mobile Application Management to check for device posture and manage redirections for Windows App on iOS, iPadOS, and Android (preview). You can use Microsoft Intune on both corporate managed and personal devices.
+
+For more information, see [Configure client device redirection settings for Windows App and the Remote Desktop app using Microsoft Intune](/azure/virtual-desktop/client-device-redirection-intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Support for FIDO devices and passkeys on macOS and iOS<!--53495787-->
+
+Windows App and the Remote Desktop app for macOS and iOS now support FIDO devices and passkeys for Microsoft Entra ID sign in on brokered and unbrokered devices.
+For more information see [Support for FIDO2 authentication with Microsoft Entra ID](/entra/identity/authentication/concept-fido2-compatibility#native-application-support).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Use Citrix HDX Plus with Windows 365 Frontline<!--54445358-->
+
+You can now use Citrix HDX Plus with Windows 365 Frontline Cloud PCs.
 
 <!-- ########################## -->
 ## Week of October 28, 2024 (Service release 2410)
@@ -221,7 +304,7 @@ Uni-directional clipboard support for Cloud PCs has moved out of preview and is 
 
 To help secure your Windows 365 environment, the inbound port 3389 is now closed by default.
 
-#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+#### Windows 365 support for AVC mixed mode when MMR isn't enabled (preview)<!--50205898-->
 
 Windows 365 now supports AVC mixed mode when MMR is not enabled.
 

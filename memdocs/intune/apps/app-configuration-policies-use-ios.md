@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/08/2024
+ms.date: 11/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -123,6 +123,10 @@ As the Microsoft Intune administrator, you can control which work or school acco
 |----|----|
 | IntuneMAMAllowedAccountsOnly | <ul><li>**Enabled**: The only account allowed is the managed user account defined by the [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) key.</li><li>**Disabled** (or any value that is not a case insensitive match to **Enabled**): Any account is allowed.</li></ul> |
 | IntuneMAMUPN | <ul><li>UPN of the account allowed to sign into the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
+| IntuneMAMOID | <ul><li>User Object ID of the account allowed to sign into the app. </li><li>For Intune enrolled devices, the {{userid}} token may be used to represent the enrolled user account. </li></ul>  |
+
+> [!NOTE]
+> The **IntuneMAMUPN** and **IntuneMAMOID** configuration keys are automatically configured for some MAM enabled apps, see [Device Management types](../apps/app-protection-policies.md#device-management-types) for more information.
 
    > [!NOTE]
    > The following apps process the above app configuration and only allow organization accounts:

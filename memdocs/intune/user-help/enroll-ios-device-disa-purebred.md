@@ -70,25 +70,24 @@ You'll also need to contact a Purebred agent or representative during setup.
 
 2. Write down the onscreen code.  
 
-    ![Example image of Company Portal app with onscreen message and code.](./media/copy-code-intercede.png)  
+    ![Example image of Company Portal app with onscreen message and code.](./media/enroll-ios-device-intercede/copy-code-intercede.png)  
+
 3. Switch to your smart card-enabled device and go to https://microsoft.com/devicelogin. If you're a government employee signing in from another device, you'll need to change the settings on your device so that you're redirected to the government cloud for authentication. For more information about the setting changes you need to make, see [Troubleshoot iOS/iPadOS enrollment errors](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors#authentication-doesnt-redirect-to-the-government-cloud).  
 4. Enter the code you previously wrote down.  
-
-    ![Example screenshot of the Company Portal website "Enter code" prompt.](./media/enter-code-intercede.png)   
-
 5. Insert your smart card to sign in.  
 6. Return to the Company Portal app on your mobile device and follow the onscreen instructions to enroll your device.  
 7. After enrollment is complete, Company Portal will notify you to set up your smart card. Tap the notification. If you don't get a notification, check your email.   
 
-    ![Example screenshot of the Company Portal push notification on device home screen.](./media/action-required-in-app-intercede.png)  
+    ![Example screenshot of the Company Portal push notification on device home screen.](./media/enroll-ios-device-intercede/action-required-in-app-intercede.png)  
+    
 8. On the **Setup mobile smart card access** screen:  
     a. Tap the link to your organization's set up instructions. If your organization doesn't provide additional instructions, you'll be sent to this article.  
     b. Click **Open** to open the Purebred app.  
 
-    ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/smart-card-open-disa-purebred.png)  
+    ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/enroll-ios-device-disa-purebred/smart-card-open-disa-purebred.png)  
 9. When prompted to allow Company Portal to open the Purebred Registration app, select **Open**.   
 
-    ![Example screenshot of the Company Portal prompt to open DISA Purebred app.](./media/open-app-prompt-disa-purbred.png)  
+    ![Example screenshot of the Company Portal prompt to open DISA Purebred app.](./media/enroll-ios-device-disa-purebred/open-app-prompt-disa-purbred.png)  
 10. When the app works, work with your organization's Purebred agent to configure and download the Purebred pre-enrollment configuration profile.   
 11. Go to the Settings app > **General** > **Profiles & Device Management** > **Install Profile** and tap **Install**.  
 12. Enter your device passcode.  
@@ -105,20 +104,20 @@ You'll also need to contact a Purebred agent or representative during setup.
 
     a. Tap **Continue**.   
 
-    ![Example screenshot of the Company Portal Set Import Certificates screen.](./media/import-certificate-disa-purebred.png)  
+    ![Example screenshot of the Company Portal Set Import Certificates screen.](./media/enroll-ios-device-disa-purebred/import-certificate-disa-purebred.png)  
     b. Go to iCloud Drive **Browse** > **Locations** and tap **More Locations**.  
 
-    ![Example screenshot of iCloud Drive, Browse menu highlighting More Locations option.](./media/icloud-drive-more-locations.png)  
+    ![Example screenshot of iCloud Drive, Browse menu highlighting More Locations option.](./media/enroll-ios-device-disa-purebred/icloud-drive-more-locations.png)  
     c. Tap the switch to enable **Purebred Key Chain**.  
 
-    ![Example screenshot of iCloud Drive, Browse view, highlighting that the Purebred Key Chain switch is enabled.](./media/icloud-drive-enable-purebred-keychain.png)   
+    ![Example screenshot of iCloud Drive, Browse view, highlighting that the Purebred Key Chain switch is enabled.](./media/enroll-ios-device-disa-purebred/icloud-drive-enable-purebred-keychain.png)   
 
     d. Tap **Purebred Credential Package**.  
 
-    ![Example screenshot of an iOS screen with a selectable Purebred Credential Package option.](./media/purebred-credential-package.png)  
+    ![Example screenshot of an iOS screen with a selectable Purebred Credential Package option.](./media/enroll-ios-device-disa-purebred/purebred-credential-package.png)  
     f. A list of certificates appears. Select one and then tap **Import key**.  
 
-    ![Example screenshot of a list of selectable certificates, with one already selected.](./media/import-purebred-keychain.png) 
+    ![Example screenshot of a list of selectable certificates, with one already selected.](./media/enroll-ios-device-disa-purebred/import-purebred-keychain.png) 
 21. Return to the Company Portal app and wait for Company Portal to finish setting up your device.   
 
 ## Next steps  
