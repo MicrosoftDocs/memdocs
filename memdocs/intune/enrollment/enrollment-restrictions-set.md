@@ -54,7 +54,7 @@ Each restriction type comes with one default policy that you can edit and custom
 This article provides an overview of the available enrollment restrictions, and feature limitations. To start creating restrictions, skip to [Next steps](enrollment-restrictions-set.md#next-steps) (in this article).   
 
 ## Available restrictions  
-You can configure the following restrictions in the admin center: 
+You can configure the following restrictions [https://intune.microsoft.com/?ref=AdminCenter#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/enrollment](here): 
 
 * Device limit 
 * Device platform  
@@ -65,7 +65,7 @@ You can configure the following restrictions in the admin center:
 ### Device limit 
 Put a limit on the number of devices a person can enroll. You can set the device limit from 1 to 15.  
 
-This configuration is in the admin center under **Enrollment device limit restrictions**. 
+This configuration is in the admin center under **Devices** > **Device Unboarding** > **Device Limit Restriction**.[https://intune.microsoft.com/?ref=AdminCenter#view/Microsoft_Intune_Enrollment/EnrollmentRestrictions.ReactView](link)
 
 ### Device platform  
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
@@ -73,13 +73,13 @@ Block devices running on a specific device platform. You can apply this restrict
 
    * Android device administrator
    * Android Enterprise work profile
-   * iOS/iPadOS
-   * macOS
-   * Windows 10/11  
+   * iOS/iPadOS MDM or Personally owned Devices 
+   * macOS MDM or Personally owned Devices
+   * Windows 10/11 MDM or Personally owned Devices
 
 In groups where both Android platforms are allowed, devices that support work profile will enroll with a work profile. Devices that don't support work profile will enroll on the Android device administrator platform. Neither work profile nor device administrator enrollment will work until you complete all prerequisites for Android enrollment.   
 
-This restriction is in the admin center under **Enrollment device platform restrictions**.  
+This restriction is in InTune admin center under **Devices** > **Device Unboarding** > **Device Platform Restriction** 
 
 ### OS version 
 This restriction enforces your maximum and minimum OS version requirements. This type of restriction works with the following operating systems: 
@@ -91,8 +91,7 @@ This restriction enforces your maximum and minimum OS version requirements. This
 
 \* Version restrictions are supported on these operating systems for devices enrolled via Intune Company Portal only.    
 
-This restriction is in the admin center under **Enrollment device platform restrictions**.  
-
+This restriction is in the admin center under **Device platform restrictions** as "**Allow min/max range:**
 ### Device manufacturer  
 This restriction blocks devices made by specific manufacturers, and is applicable to Android devices only. It is in the admin center under **Enrollment device platform restrictions**.    
 
