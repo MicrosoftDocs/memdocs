@@ -52,7 +52,7 @@ Before beginning setup, complete the following tasks:
 You also need to set up service discovery so that Apple can reach the Intune service and retrieve enrollment information. To do this, set up and publish an HTTP well-known resource file on the same domain that employees sign into. Apple retrieves the file via an HTTP GET request to `“https://contoso.com/.well-known/com.apple.remotemanagement”`, with your organization's domain in place of `contoso.com`. Publish the file on a domain that can handle HTTP GET requests.    
 
 > [!NOTE]
-> The well-known resource file must be saved *without* a file extension (e.g. .json) to function correctly.
+> The well-known resource file must be saved without a file extension, such as .json, to function correctly.  
 
 Create the file in JSON format, with the content type set to `application/json`.  We've provided the following JSON samples that you can copy and paste into your file. Use the one that aligns with your environment. Replace the *YourAADTenantID* variable in the base URL with your organization's Microsoft Entra tenant ID.   
 
@@ -77,8 +77,8 @@ The rest of the JSON sample is populated with all of the information you need, i
 * Version: The server version is `mdm-byod`.     
 * BaseURL: This URL is the location where the Intune service resides.
 
-> [!NOTE]
-> For more information on the technical requirements for service discovery, refer to the Apple documentation: [Implementing the simple authentication user-enrollment flow](https://developer.apple.com/documentation/devicemanagement/user_enrollment/onboarding_users_with_account_sign-in/implementing_the_simple_authentication_user-enrollment_flow)
+> [!TIP]
+> For more information about the technical requirements for service discovery, see [Implementing the simple authentication user-enrollment flow](https://developer.apple.com/documentation/devicemanagement/user_enrollment/onboarding_users_with_account_sign-in/implementing_the_simple_authentication_user-enrollment_flow) in the Apple Developer documentation. 
 
 ## Best practices   
 We recommend extra configurations to help improve the enrollment experience for device users. This section provides more information about each recommendation.   
