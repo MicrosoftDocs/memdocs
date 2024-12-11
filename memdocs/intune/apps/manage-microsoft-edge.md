@@ -561,8 +561,8 @@ Use the following key/value pairs to configure either an allowed or blocked site
 |:--|:----|
 |com.microsoft.intune.mam.managedbrowser.AllowListURLs <br><br> This policy name has been replaced by the UI of **Allowed URLs** under Edge Configuration settings|The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
 |com.microsoft.intune.mam.managedbrowser.BlockListURLs <br><br> This policy name has been replaced by the UI of **Blocked URLs** under Edge Configuration settings|The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
-|com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock |**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts aren't disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context. <br>**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked. |
-|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked <br><br> This policy name has been replaced by the UI of **Redirect restricted sites to personal context** under Edge Configuration settings |**true** allows restricted sites to be opened in the Microsoft Entra account's InPrivate context. If the Microsoft Entra account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account. <br>**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. <br>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
+|com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock <br><br> This policy name has been replaced by the UI of **Redirect restricted sites to personal context** under Edge Configuration settings|**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts aren't disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context. <br>**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked. |
+|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked |**true** allows restricted sites to be opened in the Microsoft Entra account's InPrivate context. If the Microsoft Entra account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account. <br>**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. <br>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
 |com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar | Enter the number of seconds that users will see the snack bar notification "Access to this site is blocked by your organization. We’ve opened it in InPrivate mode for you to access the site." By default, the snack bar notification is shown for 7 seconds.|
 
 The following sites except copilot.microsoft.com are always allowed regardless of the defined allow list or block list settings:
@@ -590,6 +590,18 @@ You can configure a policy to enhance users' experience. This policy is recommen
 |:--|:----|
 |com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork |**1**: (Default) Switch to work profile even if the URL is blocked by Edge policy.<br> **2**: The blocked URLs will open under personal profile if personal profile is signed in. If personal profile is not signed in, the blocked URL will opened in InPrivate mode. |
 
+#### Manage Sub Resource Blocking
+By default, AllowListURLs and BlockListURLs apply only at the navigation level. When you embed blocked URLs (either URLs configured in BlockListURLs or URLs not configured in AllowListURLs) as sub resources within a web page, those sub resource URLs are not blocked. 
+
+To further restrict these sub resources, you can configure a policy to block the sub resource URLs.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.ManageRestrictedSubresourceEnabled |**false**: (Default) Sub resource URLs will not be blocked even if the sub resource URLs are blocked.<br> **true**: Sub resource URLs will be blocked if they are listed as blocked. |
+
+> [!NOTE]
+> It is recommended to use this policy in conjunction with BlockListURLs. If used with AllowListURLs, ensure that all sub resource URLs are included in the AllowListURLs. Otherwise, some sub resources may fail to load
+
 #### URL formats for allowed and blocked site list
 
 You can use various URL formats to build your allowed/blocked sites lists. These permitted patterns are detailed in the following table.
@@ -600,7 +612,8 @@ You can use various URL formats to build your allowed/blocked sites lists. These
 - You can specify port numbers in the address. If you do not specify a port number, the values used are:
   - Port 80 for http
   - Port 443 for https
-- Using wildcards for the port number is **not** supported. For example, `http://www.contoso.com:*` and `http://www.contoso.com:*/` aren't supported.
+- Using wildcards for the port number is supported in Edge for iOS only. For example, you can specify `http://www.contoso.com:*` and `http://www.contoso.com:*/`.
+- Specifying IPv4 addresses with CIDR notation is supported. For example, you can specify 127.0.0.1/24 (a range of IP addresses).
 
   |URL |Details |Matches |Does not match |
   |:----|:-------|:----------|:----------------|
@@ -613,17 +626,17 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   |`http://www.contoso.com:80`|Matches a single page, by using a port number |`www.contoso.com:80`| |
   |`https://www.contoso.com`|Matches a single, secure page|`www.contoso.com`|`www.contoso.com/images`|
   |`http://www.contoso.com/images/*` |Matches a single folder and all subfolders |`www.contoso.com/images/dogs` <br>`www.contoso.com/images/cats` | `www.contoso.com/videos`|
-  
-- The following are examples of some of the inputs that you can't specify:
+  |`http://contoso.com:*` |Matches any port number for a single page |`contoso.com:80` <br>`contoso.com:8080` | |
+  |`10.0.0.0/24` |Matches a range of IP addresses from 10.0.0.0 to 10.0.0.255 |`10.0.0.0` <br>`10.0.0.100`| `192.168.1.1`| 
+    
+  - The following are examples of some of the inputs that you can't specify:
   - `*.com`
   - `*.contoso/*`
   - `www.contoso.com/*images`
   - `www.contoso.com/*images*pigs`
   - `www.contoso.com/page*`
-  - IP addresses
   - `https://*`
   - `http://*`
-  - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
 ### Disable Edge internal pages
