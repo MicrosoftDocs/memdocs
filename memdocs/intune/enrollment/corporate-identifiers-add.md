@@ -9,11 +9,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 08/08/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
-ms.localizationpriority: high
-ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
-
 # optional metadata
 
 #ROBOTS:
@@ -225,7 +220,7 @@ Follow up on imported devices to ensure that they enroll in Intune. After you ad
 1. Select the device identifiers you want to delete, and choose **Delete**.
 1. Confirm the deletion.  
 
-Deleting a corporate identifier for an enrolled device does not change the device's ownership. 
+Deleting a corporate identifier for an enrolled device doesn't change the device's ownership. 
 
 ## Change device ownership
 
@@ -250,7 +245,7 @@ To confirm the reason for an enrollment failure, go to **Devices** > **Enrollmen
 
 ## Known issues and limitations  
 
-- Windows corporate device identifiers only apply at enrollment time. This means that when a device with corporate identifiers enrolls using the *Add Work Account from Windows Settings* option, it is marked as corporate-owned only at enrollment time. Microsoft Intune treats it as a corporate device for the enrollment restriction evaluation, but then after that the device appears as a personal device in the admin center. See the table under [Add Windows corporate identifiers](#add-windows-corporate-identifiers) to help you determine the ownership type. Look to the **Without corporate identifiers** column to learn which devices remain corporate or personal in your tenant for the longterm. 
+- Windows corporate device identifiers only apply at enrollment time. This means that when a device with corporate identifiers enrolls using the *Add Work Account from Windows Settings* option, it's marked as corporate-owned only at enrollment time. Microsoft Intune treats it as a corporate device for the enrollment restriction evaluation, but then after that the device appears as a personal device in the admin center. See the table under [Add Windows corporate identifiers](#add-windows-corporate-identifiers) to help you determine the ownership type. Look to the **Without corporate identifiers** column to learn which devices remain corporate or personal in your tenant for the long-term. 
   
 - Windows corporate device identifiers are only supported for devices running:  
   
@@ -266,7 +261,7 @@ To confirm the reason for an enrollment failure, go to **Devices** > **Enrollmen
 
 - Windows currently doesn't support device details in CSV files.
   
-- Apple user enrollment with Company Portal and account driven user enrollment corporate identifiers are not currently supported because the MDM does not get access to the device serial number, IMEI, and UDID.
+- Apple user enrollment with Company Portal and account driven user enrollment corporate identifiers aren't currently supported because the MDM doesn't get access to the device serial number, IMEI, and UDID.
 
 ## Resources
 
