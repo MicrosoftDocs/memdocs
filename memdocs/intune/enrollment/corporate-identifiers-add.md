@@ -249,7 +249,7 @@ To confirm the reason for an enrollment failure, go to **Devices** > **Enrollmen
 
 ## Known issues and limitations  
 
-- Windows corporate device identifiers only apply at enrollment time. This means that when a device with corporate identifiers enrolls using the *Add Work Account from Windows Settings* option, it is marked as corporate-owned only at enrollment time. Microsoft Intune treats it as a corporate device for the enrollment restriction evaluation, but then after that the device appears as a personal device in the admin center. See the table under [Add Windows corporate identifiers](#add-windows-corporate-identifiers) to help you determine the ownership type. The **Without corporate identifiers** column lists the devices that remain corporate or personal in their tenant longterm. 
+- Windows corporate device identifiers only apply at enrollment time. This means that when a device with corporate identifiers enrolls using the *Add Work Account from Windows Settings* option, it is marked as corporate-owned only at enrollment time. Microsoft Intune treats it as a corporate device for the enrollment restriction evaluation, but then after that the device appears as a personal device in the admin center. See the table under [Add Windows corporate identifiers](#add-windows-corporate-identifiers) to help you determine the ownership type. Look to the **Without corporate identifiers** column to learn which devices remain corporate or personal in your tenant for the longterm. 
   
 - Windows corporate device identifiers are only supported for devices running:  
   
