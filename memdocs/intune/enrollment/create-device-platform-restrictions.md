@@ -132,6 +132,9 @@ For example, you can use a filter to allow personal Windows devices to enroll wh
 
 For more information about creating filters, see [Create a filter](../fundamentals/filters.md).
 
+> [!NOTE]
+> Processing assignment filters takes added time at enrollment. The update from Microsoft Entra to Intune to process user, group and filter assignments typically happens within 15 minutes. It's not instant. This time can affect enrollment assignments. Admins should enroll devices after several minutes, not immediately after adding the enrolling users to a group. 
+
 ### Supported filter properties  
 
 Enrollment restrictions support fewer filter properties than other group-targeted policies. This is because devices aren't yet enrolled, so Intune doesn't have the device info to support all properties. The limited selection of properties become available when you:  
