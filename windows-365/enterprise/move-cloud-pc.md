@@ -57,7 +57,7 @@ All Cloud PCs provisioned after these changes are created in the new region.
 
 The best time to perform moves is over the weekend to make sure the impact to users is minimized. Cloud PCs are shut down and inaccessible for up to several hours during the move process. You should notify your users before the move so that they can save their work and sign out.
 
-When moving many devices to a new region, start with a few non-essential Cloud PCs and check for success before moving the critical Cloud PCs.
+When moving many devices to a new region, start with a few non-critical Cloud PCs and check for success before moving the critical Cloud PCs.
 
 You can track the status of moving Cloud PCs with the [Cloud PC actions report](report-cloud-pc-actions.md).
 
