@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2024
+ms.date: 12/18/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -76,7 +76,50 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
+## Week of December 16, 2024 (Service release 2412)
 
+### Device configuration
+
+#### Ending support for administrative templates when creating a new configuration profile<!-- 29989512 -->
+
+Customers cannot create new Administrative Templates configuration profile through **Devices > Configuration > Create > New policy > Windows 10 and later > Administrative Templates**. A (retired) tag is seen next to **Administrative Templates** and the **Create** button is now greyed out. Other templates will continue to be supported.
+
+However, customers can now use the Settings Catalog for creating new **Administrative Templates** configuration profile by navigating to **Devices > Configuration > Create > New policy > Windows 10 and later > Settings Catalog**.
+
+There are no changes in the following UI experiences: 
+
+- Editing an existing Administrative template.
+- Deleting an existing Administrative template.
+- Adding, modifying or deleting settings in an existing Administrative template.
+- **Imported Administrative templates (Preview)** template, which is used for Custom ADMX.
+
+For more information, see [Use ADMX templates on Windows 10/11 devices in Microsoft Intune](..\configuration\administrative-templates-windows.md).
+
+Applies to:
+
+- Windows
+
+### Device management
+
+#### More Wi-Fi configurations are now available for personally-owned work profile devices<!-- 28331156 -->
+
+Intune Wi-Fi configuration profiles for Android Enterprise personally-owned work profile devices now support configuration of pre-shared keys and proxy settings. 
+
+You can find these settings in the admin console in **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**. Set **Platform** to Android Enterprise and then in the **Personally-Owned Work Profile** section, select Wi-Fi and select the **Create** button. 
+
+In the **Configuration settings** tab, when you select Basic Wi-Fi type, several new options are available:
+
+1. Security type, with options for Open (no authentication), WEP-Pre-shared key, and WPA-Pre-shared key.
+
+2. Proxy settings, with the option to select Automatic and then specify the proxy server URL.
+
+It was possible to configure these in the past with Custom Configuration policies, but going forward, we recommend setting these in the Wi-Fi Configuration profile, because [Intune is ending support for Custom policies in April 2024.](https://aka.ms/Intune/Android-customprofiles).
+
+For more information, see [Wi-Fi settings for personally-owned work profile devices.](../configuration/wi-fi-settings-android-enterprise.md#personally-owned-work-profile).
+
+Applies to:
+
+- Android Enterprise
 
 ## Week of December 9, 2024
 
