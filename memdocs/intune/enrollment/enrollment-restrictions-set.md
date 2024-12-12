@@ -79,7 +79,9 @@ Block devices running on a specific device platform. You can apply this restrict
 
 In groups where both Android platforms are allowed, devices that support work profile will enroll with a work profile. Devices that don't support work profile will enroll on the Android device administrator platform. Neither work profile nor device administrator enrollment will work until you complete all prerequisites for Android enrollment.   
 
-This restriction is in the admin center under **Enrollment device platform restrictions**.  
+This restriction is in the admin center under **Enrollment device platform restrictions**. 
+> [!NOTE]
+> Device platform enrollment restrictions use assignment filters. The update between Microsoft Entra and Intune that processes user, group, and filter assignments typically happens within 15 minutes. It's not instant. This amount of time can affect enrollment assignments. You should wait and enroll devices several minutes after adding the enrolling users to a group, not immediately after. 
 
 ### OS version 
 This restriction enforces your maximum and minimum OS version requirements. This type of restriction works with the following operating systems: 
@@ -156,7 +158,8 @@ Intune also blocks personal devices using these enrollment methods:
 * Enrollment restrictions are applied to enrollments that are user-driven. Intune enforces the default policy in enrollment scenarios that aren't user-driven, such as:  
   
   *  Windows Autopilot self-deploying mode and Autopilot for pre-provisioned deployment  
-  *  Bulk enrollment via Windows Configuration Designer  
+  *  Bulk enrollment via Windows Configuration Designer
+  *  Co-managed enrollments  
   *  Userless Apple automated device enrollment (without user-device affinity)  
   *  Azure Virtual Desktop   
   *  Windows 365   

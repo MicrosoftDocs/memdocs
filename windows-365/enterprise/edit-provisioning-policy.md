@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/24/2024
+ms.date: 12/04/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -61,7 +61,7 @@ If you remove users from the provisioning policy assignment:
 To apply a configuration change to existing Cloud PCs:
 
 1. Modify and save the changes to an existing provisioning policy.
-2. From the policy page, select **Apply current configuration**.
+2. From the policy page, select **Apply this configuration**.
 3. Select the configuration change to apply to existing Cloud PCs from the available list including:
     1. Region.
     2. Single sign-on.
@@ -69,7 +69,7 @@ To apply a configuration change to existing Cloud PCs:
 
 >[!Important]
 >
->- When you apply a new region, Cloud PCs are shutdown during the application process. Users are disconnected and any unsaved work is lost.
+>- When you apply a new region, Cloud PCs are shutdown during the application process for the targeted Cloud PCs. Users are disconnected and any unsaved work is lost.
 >- When you apply single sign-on, Cloud PCs deployed before April 2023 are shutdown during the application process. As this operation takes time, applying SSO to a large number of Cloud PCs can restart the VMs over a long period of time and won't complete immediately.
 
 ## Apply the current configuration for Frontline in shared mode

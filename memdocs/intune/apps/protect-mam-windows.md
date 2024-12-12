@@ -78,7 +78,7 @@ Preventing data loss is a part of protecting your organizational data. Data loss
 This MAM service syncs compliance state per user, per app, and per device to the Microsoft Entra CA service. This includes the threat information received from the Mobile Threat Defense (MTD) vendors starting with Windows Security Center.
 
 > [!NOTE]
-> This MAM service uses the same conditional access compliance workflow that is used to [manage Microsoft Edge on iOS and Android devices](../apps/manage-microsoft-edge.md).
+> This MAM service uses the same Conditional Access compliance workflow that is used to [manage Microsoft Edge on iOS and Android devices](../apps/manage-microsoft-edge.md).
 
 When a change is detected, the MAM service updates the device compliance state immediately. The service also includes MTD health state as part of the compliance state.
 
@@ -88,7 +88,7 @@ When a change is detected, the MAM service updates the device compliance state i
 The MAM Client communicates the client heath state (or health metadata) to the MAM Service upon check-in. The health state includes any failure of APP Health Checks for **Block** or **Wipe** conditions. In addition, Microsoft Entra ID guides end-users through remediation steps when they attempt to access a blocked CA resource.
 
 ### Conditional Access Compliance
-Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using policy managed applications on Windows. To do this, you'll need a conditional access policy that targets all potential users. Follow the steps in [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows), which allows Microsoft Edge for Windows, but blocks other web browsers from connecting to Microsoft 365 endpoints.
+Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using policy managed applications on Windows. To do this, you'll need a Conditional Access policy that targets all potential users. Follow the steps in [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows), which allows Microsoft Edge for Windows, but blocks other web browsers from connecting to Microsoft 365 endpoints.
 
 With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started).
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/02/2024
+ms.date: 12/12/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -54,15 +54,7 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-## Device management
-
-### Cloud PC gallery images update to Microsoft Teams 2.1<!--50394023-->
-
-In a future update, Windows 365 Cloud PC gallery images with Microsoft 365 applications will be updated to use Microsoft Teams 2.1. These images include:
-
-- Windows 11 Enterprise + Microsoft 365 Apps  21H2
-- Windows 10 Enterprise + Microsoft 365 Apps 22H2
-- Windows 10 Enterprise + Microsoft 365 Apps 21H2
+<!--## Device management-->
 
 <!-- ***********************************************-->
 <!--## Device security-->
@@ -86,7 +78,15 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 The remoting connection report will be retired on December 31st, 2024. After this date, refer to the [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
 
 <!-- ***********************************************-->
-<!--## Provisioning-->
+## Provisioning
+
+### Windows 365 support for Spain Central region<!--54919607-->
+
+Windows 365 Enterprise will support the Spain Central region. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
+
+### Windows 365 support for Mexico Central region<!--54919656-->
+
+Windows 365 Enterprise will support the Mexico Central region. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
 
 <!-- ***********************************************-->
 <!--## Security-->
@@ -95,7 +95,11 @@ The remoting connection report will be retired on December 31st, 2024. After thi
 ## Windows 365 app-->
 
 <!-- ***********************************************-->
-<!--## Windows 365 Frontline-->
+## Windows 365 Frontline
+
+### Concurrency buffer usage alert<!--54902162-->
+
+You’ll be able to set up a new alert to monitor concurrency buffer usage for Windows 365 Frontline.
 
 ## Next steps
 

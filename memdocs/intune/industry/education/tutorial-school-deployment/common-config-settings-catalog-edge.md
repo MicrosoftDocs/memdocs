@@ -9,6 +9,8 @@ ms.manager: dougeby
 no-loc: [Microsoft, Windows, Autopatch, Autopilot, Edge]
 ms.collection: 
 - graph-interactive
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Microsoft Edge
@@ -119,6 +121,8 @@ Content-Type: application/json
 
 ## (Optional) Startup, home page and new tab page
 
+### [**Settings**](#tab/settings)
+
 | **Category** | **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|---|
 | Microsoft Edge > Startup, home page and new tab page |**:::no-loc text="Action to take on startup":::** | _custom_ | Specify how Microsoft Edge behaves when it starts. | [:::no-loc text="RestoreOnStartup":::](/deployedge/microsoft-edge-policies#restoreonstartup) |
@@ -126,6 +130,23 @@ Content-Type: application/json
 | Microsoft Edge > Startup, home page and new tab page |**:::no-loc text="Home page URL (Device)":::** | _custom_ _url_ | | [:::no-loc text="HomepageLocation":::](/deployedge/microsoft-edge-policies#homepagelocation) |
 | Microsoft Edge > Startup, home page and new tab page |**:::no-loc text="Configure the new tab page URL":::** | Disabled | This policy determines the page that's opened when new tabs are created (including when new windows are opened). It also affects the startup page if that's set to open to the new tab page. | [:::no-loc text="NewTabPageLocation":::](/deployedge/microsoft-edge-policies#newtabpagelocation) |
 | Microsoft Edge > Startup, home page and new tab page |**:::no-loc text="New tab page URL (Device)":::** | _custom_ _url_ | | [:::no-loc text="NewTabPageLocation":::](/deployedge/microsoft-edge-policies#newtabpagelocation) |
+
+### [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
+
+[!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
+
+This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - Windows - Microsoft Edge (Optional)**.
+
+```msgraph-interactive
+POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
+Content-Type: application/json
+
+{"name":"_MSLearn_Example_CommonEDU - Windows - Microsoft Edge (Optional)","description":"https://aka.ms/ManageEduDevices","platforms":"windows10","technologies":"mdm","roleScopeTagIds":["0"],"settings":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_restoreonstartup","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_restoreonstartup_1","children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_restoreonstartup_restoreonstartup","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_restoreonstartup_restoreonstartup_5","children":[]}}]}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_homepagelocation","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_homepagelocation_1","children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_homepagelocation_homepagelocation","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"https://www.office.com"}}]}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_newtabpagelocation","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_newtabpagelocation_1","children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_newtabpagelocation_newtabpagelocation","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"https://www.office.com"}}]}}}]}
+```
+
+[!INCLUDE [graph-explorer-steps](../../../includes/graph-explorer-steps.md)]
+
+---
 
 ## (Optional) Content settings in Microsoft 365 admin center
 

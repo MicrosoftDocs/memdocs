@@ -6,6 +6,8 @@ ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
 ms.manager: dougeby
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Manage devices with Microsoft Intune

@@ -33,7 +33,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Planned end of support|
 |-------|---------------------------|----------------------|
-| The **MDT Integration with CM and Standalone** support will be removed from the configuration manager. Customer should remove MDT TS step to avoid TS corruption/modification failures  | Dec 2024 | The first release after Oct 10, 2025 |
+| The **MDT Integration with CM and Standalone**  is no longer supported with Configuration Manager. Customers should remove MDT TS steps, followed by removing MDT integration, to avoid TS corruption and modification failures.  | Dec 2024 | The first release after Oct 10, 2025 |
 | **Office 365 Client Management dashboard add-in support statement**.<!-- 12454890 --> For more information, see [Office 365 Client Management dashboard](../../../../sum/deploy-use/office-365-dashboard.md). | April 2024 | The first release after April 1, 2025 |
 | [Windows Information Protection](../../../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md#windows-information-protection) <!-- MAXADO-6010051 --> | July 2022 | TBD |
 | The site system roles for on-premises MDM and macOS clients: **enrollment proxy point and enrollment point**.<!-- 12454901,12927803 --> | January 2022 | Mar 31, 2024 |
@@ -74,12 +74,12 @@ The following features are no longer supported. In some cases, they're no longer
 | Desktop Analytics tile and page for **Security Updates**<!-- 8099536 --> | December 2020 | March 2021 |
 | Desktop Analytics option to **View recent data** for device enrollment and security updates.<!-- 7080949 --> For more information, see [Data latency](../../../../desktop-analytics/troubleshooting.md#data-latency).|May 2020|July 2020|
 | Windows Analytics and Upgrade Readiness integration. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | October 14, 2019 | January 31, 2020 |
-| Device health attestation assessment for conditional access compliance policies <!--1235616 aka 3608202--> For more information, see [What happened to hybrid MDM](../../../../mdm/understand/what-happened-to-hybrid.md).| July 3, 2019 | Version 1910 |
+| Device health attestation assessment for Conditional Access compliance policies <!--1235616 aka 3608202--> For more information, see [What happened to hybrid MDM](../../../../mdm/understand/what-happened-to-hybrid.md).| July 3, 2019 | Version 1910 |
 | The Configuration Manager Company Portal app | May 21, 2019 | Version 1910 |
 | The application catalog, including both site system roles: the application catalog website point and web service point. For more information, see [Remove the application catalog](../../../../apps/plan-design/plan-for-and-configure-application-management.md#remove-the-application-catalog). | May 21, 2019 | Version 1910 |
 |Certificate-based authentication with Windows Hello for Business settings in Configuration Manager<br>For more information, see [Windows Hello for Business settings](../../../../protect/deploy-use/windows-hello-for-business-settings.md).|December 2017|Version 1910|
 |System Center Endpoint Protection for Mac and Linux<br>For more information, see [End of support blog post](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).|October 2018|December 31, 2018|
-|On-premises conditional access<br>For more information, see [What happened to hybrid MDM](../../../../mdm/understand/what-happened-to-hybrid.md).|January 30, 2019|September 1, 2019|
+|On-premises Conditional Access<br>For more information, see [What happened to hybrid MDM](../../../../mdm/understand/what-happened-to-hybrid.md).|January 30, 2019|September 1, 2019|
 |Hybrid mobile device management (MDM)<br>For more information, see [What happened to hybrid MDM](../../../../mdm/understand/what-happened-to-hybrid.md).<br><br>Starting with the 1902 Intune service release, expected at the end of February 2019, new customers can't create a new hybrid connection.<!--Intune feature 2683117-->|August 14, 2018|September 1, 2019|
 |Security Content Automation Protocol (SCAP) extensions. <!--3607889--><br>|September 2018|Version 1810|
 |The **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#configure-software-center).<!--1358309-->|August 11, 2017| Version 1806|

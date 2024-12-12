@@ -45,7 +45,7 @@ To be successful, use the following configurations in concert, which are detaile
 
 - **Use a device compliance policy to set the level of risk you want to allow**. Risk levels are reported by Microsoft Defender for Endpoint. Devices that exceed the allowed risk level are identified as noncompliant. See [Create and assign compliance policy to set device risk level](../protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level) and [Create and assign app protection policy to set device risk level](../protect/advanced-threat-protection-configure.md#create-and-assign-app-protection-policy-to-set-device-risk-level).
 
-- **Use a conditional access policy** to block users from accessing corporate resources from devices that are noncompliant. See [Create a conditional access policy](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy).
+- **Use a Conditional Access policy** to block users from accessing corporate resources from devices that are noncompliant. See [Create a Conditional Access policy](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy).
 
 When you integrate Intune with Microsoft Defender for Endpoint, you can take advantage of Microsoft Defender for Endpoints Threat & Vulnerability Management (TVM) and [use Intune to remediate endpoint weakness identified by TVM](atp-manage-vulnerabilities.md).
 
@@ -66,7 +66,7 @@ Microsoft Defender for Endpoint can help resolve security events like this scena
 
 You can integrate Microsoft Defender for Endpoint with Microsoft Intune as a Mobile Threat Defense solution. Integration can help you prevent security breaches and limit the impact of breaches within an organization.
 
-Because you have an Intune device compliance policy to classify devices with a *Medium* or *High* level of risk as noncompliant, the compromised device is classified as noncompliant. This classification allows your conditional access policy to kick in and block access from that device to your corporate resources.
+Because you have an Intune device compliance policy to classify devices with a *Medium* or *High* level of risk as noncompliant, the compromised device is classified as noncompliant. This classification allows your Conditional Access policy to kick in and block access from that device to your corporate resources.
 
 For devices that run Android, you can use Intune policy to modify the configuration of Microsoft Defender for Endpoint on Android. For more information, see [Microsoft Defender for Endpoint web protection](../protect/advanced-threat-protection-manage-android.md).
 
@@ -94,7 +94,7 @@ For the system requirements for Microsoft Defender for Endpoint, see [Minimum re
 
 ## Next steps
 
-- To connect Microsoft Defender for Endpoint to Intune, onboard devices, and configure conditional access policies, see [Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md).
+- To connect Microsoft Defender for Endpoint to Intune, onboard devices, and configure Conditional Access policies, see [Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md).
 
 Learn more from the Intune documentation:
 
