@@ -139,7 +139,7 @@ Windows 10 or Windows 11 Administrative Templates are supported for Windows 10 o
 
 To list supported Administrative Templates, you'll need to use the filter in Settings catalog.
 
-## Compliance and Conditional access
+## Compliance and Conditional Access
 
 You can secure your Windows 10 or Windows 11 Enterprise multi-session VMs by configuring compliance policies and Conditional Access policies in the Microsoft Intune admin center. The following compliance policies are supported on Windows 10 or Windows 11 Enterprise multi-session VMs:
 

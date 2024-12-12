@@ -149,14 +149,14 @@ This task list provides an overview. For more specific information, go to [Autom
     - You want to use multifactor authentication (MFA).
     - You want to prompt users to update their expired password when they first sign in.
     - You want to prompt users to reset their expired passwords during enrollment.
-    - You want devices registered in Microsoft Entra ID. When they're registered, you can use features available with Microsoft Entra ID, such as conditional access.
+    - You want devices registered in Microsoft Entra ID. When they're registered, you can use features available with Microsoft Entra ID, such as Conditional Access.
 
     > [!NOTE]
     > During the Setup Assistant, users must enter their organization Microsoft Entra credentials (`user@contoso.com`). When they enter their credentials, the enrollment starts. If you want, users can also enter their Apple ID to access Apple specific features, such as Apple Pay.
     >
     > After the Setup Assistant completes, users can use the device. When the home screen shows, the enrollment is complete, and user affinity is established. The device isn't fully registered with Microsoft Entra ID, and doesn't show in a user's device list in Microsoft Entra ID.
     >
-    > If users need access to resources protected by conditional access or should be fully registered with Microsoft Entra ID, then [install the Company Portal app](../apps/apps-company-portal-macos.md). After it's installed, users open the Company Portal app, and sign in with their organization Microsoft Entra account (`user@contoso.com`). During this second login, any conditional access policies are evaluated, and Microsoft Entra registration is complete. Users can install and use organizational resources, including LOB apps.
+    > If users need access to resources protected by Conditional Access or should be fully registered with Microsoft Entra ID, then [install the Company Portal app](../apps/apps-company-portal-macos.md). After it's installed, users open the Company Portal app, and sign in with their organization Microsoft Entra account (`user@contoso.com`). During this second login, any Conditional Access policies are evaluated, and Microsoft Entra registration is complete. Users can install and use organizational resources, including LOB apps.
 
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apple Configurator** enrollment and create an enrollment profile. Choose to **Enroll with user affinity** (associate a user to the device), or **Enroll without user affinity** (user-less devices or shared devices).
 

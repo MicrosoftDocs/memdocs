@@ -89,7 +89,7 @@ Set up your new iPhone. Complete these steps on your new iPhone unless otherwise
 4. Initiate the device enrollment workflow:   
     1. On your new device, open a productivity app, such as Microsoft Teams, and sign in with your work account.  
     2. Complete the MFA requirements or passwordless authentication using Authenticator on your old phone. 
-    3. You'll get blocked by conditional access and prompted to enroll your new device.     
+    3. You'll get blocked by Conditional Access and prompted to enroll your new device.     
 
 ## Step 3: Device enrollment  
 When you open a productivity app, such as Microsoft Teams, and sign in with your work account, you'll be prompted to install the Company Portal app for iOS and enroll your device. Complete these steps to finish setting up your device for work.   

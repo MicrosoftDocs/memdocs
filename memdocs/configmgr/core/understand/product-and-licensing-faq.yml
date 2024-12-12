@@ -101,7 +101,7 @@ sections:
           |iOS, Android, macOS enrollment|No|Yes|
           |Autopilot|No|Yes|
           |Mobile Application Management (MAM)|No|Yes|
-          |Conditional access<br>(additional AADP1 required)|Yes|Yes|
+          |Conditional Access<br>(additional AADP1 required)|Yes|Yes|
           |Device profiles|Yes|Yes|
           |Software update management|Yes|Yes|
           |Inventory|Yes|Yes|
@@ -117,7 +117,7 @@ sections:
           - [Windows Autopilot requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
           - [Tenant attach prerequisites](../../tenant-attach/prerequisites.md)
           - [Endpoint analytics licensing prerequisites](../../../analytics/overview.md#licensing-prerequisites)
-          - [Use conditional access with Intune](../../../intune/protect/conditional-access.md#ways-to-use-conditional-access-with-intune)
+          - [Use Conditional Access with Intune](../../../intune/protect/conditional-access.md#ways-to-use-conditional-access-with-intune)
           - [TeamViewer prerequisites](../../../intune/remote-actions/teamviewer-support.md#prerequisites)
 
       - question: |
