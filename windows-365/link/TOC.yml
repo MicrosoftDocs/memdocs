@@ -33,7 +33,7 @@ items:
     href: create-intune-filter.md
   - name: Configure enrollment restrictions
     href: enrollment-restrictions.md
-  - name: Synchronize conditional access policies
+  - name: Synchronize Conditional Access policies
     href: conditional-access-policies-synchronize.md
   - name: Suppress single sign-on prompt
     href: single-sign-on-suppress.md

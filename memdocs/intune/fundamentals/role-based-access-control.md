@@ -59,7 +59,7 @@ You can assign built-in roles to groups without further configuration. You can't
 - **Application Manager**: Manages mobile and managed applications, can read device information and can view device configuration profiles.
 - **Endpoint Privilege Manager**: Manages Endpoint Privilege Management policies in the Intune console.
 - **Endpoint Privilege Reader**: Endpoint Privilege Readers can view Endpoint Privilege Management policies in the Intune console.
-- **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
+- **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, Conditional Access, and Microsoft Defender for Endpoint.
 - **Help Desk Operator**: Performs remote tasks on users and devices, and can assign applications or policies to users or devices.
 - **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
 - **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.

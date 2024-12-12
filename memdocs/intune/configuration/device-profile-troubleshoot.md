@@ -40,7 +40,7 @@ This article applies to the following policies:
 - App protection policies
 - App configuration policies
 - Compliance policies
-- Conditional access policies
+- Conditional Access policies
 - Device configuration profiles
 - Enrollment policies
 

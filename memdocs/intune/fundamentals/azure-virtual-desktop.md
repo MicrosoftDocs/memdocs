@@ -51,7 +51,7 @@ For more information on Azure Virtual Desktop licensing requirements, see [What 
 
 For information about working with multi-session remote desktops, see [Windows 10 or Windows 11 Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
 
-Intune treats Azure Virtual Desktop personal VMs the same as Windows 10 or Windows 11 Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
+Intune treats Azure Virtual Desktop personal VMs the same as Windows 10 or Windows 11 Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and Conditional Access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
 
 ## Limitations
 
