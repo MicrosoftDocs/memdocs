@@ -133,7 +133,7 @@ For example, you can use a filter to allow personal Windows devices to enroll wh
 For more information about creating filters, see [Create a filter](../fundamentals/filters.md).
 
 > [!NOTE]
-> Processing assignment filters takes added time at enrollment. The update from Microsoft Entra to Intune to process user, group and filter assignments typically happens within 15 minutes. It's not instant. This time can affect enrollment assignments. Admins should enroll devices after several minutes, not immediately after adding the enrolling users to a group. 
+> It takes extra time to process assignment filters during enrollment. The update between Microsoft Entra and Intune that processes user, group, and filter assignments typically happens within 15 minutes.  It's not instant. This amount of time can affect enrollment assignments. You should wait and enroll devices several minutes after adding the enrolling users to a group, not immediately after.
 
 ### Supported filter properties  
 
