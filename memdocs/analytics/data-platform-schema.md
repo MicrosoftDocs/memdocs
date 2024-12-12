@@ -85,10 +85,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported for**: single device query on-demand, Inventory.
 
-| **Property** | **Type** | **Descripti![image](https://github.com/user-attachments/assets/e2a2397f-382c-4c6b-b32b-4f556a8af687)
-![image](https://github.com/user-attachments/assets/638ce28b-c318-4881-96c6-675d147f84c7)
-![image](https://github.com/user-attachments/assets/392d055a-e500-4cc3-bd03-53b720e4ea2f)
-on** |
+| **Property** | **Type** | **Description** |
 | --- | --- | --- |
 | ProcessorId | string (max length 256 characters) | The DeviceID of the CPU. |
 | Model | string (max length 256 characters) | The model of the CPU. |
