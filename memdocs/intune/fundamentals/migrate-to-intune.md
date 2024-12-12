@@ -136,7 +136,7 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
     :::image type="content" source="./media/migrate-to-intune/recommendations-page.png" alt-text="Screenshot of migration evaluation example in the Microsoft Intune admin center after migrating Microsoft 365 Basic Mobility and Security policies to Intune":::
 
     - Not all device settings correspond exactly to Intune settings and values. So, they can't be moved with precise one-to-one mapping. You need to review and possibly adjust these settings.
-    - The conditional access (CA) settings that control the Office 365 services are the same CA policies in Microsoft Entra ID. So, you don't need to review or make changes to them unless you want to.
+    - The Conditional Access (CA) settings that control the Office 365 services are the same CA policies in Microsoft Entra ID. So, you don't need to review or make changes to them unless you want to.
 
 4. Select an item in the list. The **Compliance policy recommendation overview** page opens. Review the instructions.
 5. Select **Details** to review the recommended settings and group assignments:
@@ -206,13 +206,13 @@ This section describes what happens behind the scenes when you migrate from Basi
   - [Configurations policy mapping from Basic Mobility and Security to Intune](policy-map-configurations.md)
   - [Miscellaneous policy mapping from Basic Mobility and Security to Intune](policy-map-miscellaneous.md)
 
-- When you complete the migration, your migrated policies are in Microsoft Intune admin center. The new policies include compliance policies, device configuration profiles, and conditional access policies. The new policies are in the following locations:
+- When you complete the migration, your migrated policies are in Microsoft Intune admin center. The new policies include compliance policies, device configuration profiles, and Conditional Access policies. The new policies are in the following locations:
 
   | Intune policy type | Intune location |
   | --- | --- |
   | [Compliance policies](../protect/device-compliance-get-started.md)</br></br>Specify the device settings as access requirements. | [Microsoft Intune Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance** |
   | [Configuration profiles](../configuration/device-profiles.md) </br></br> Specify other settings that aren't part of the access requirements, including email profiles. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
-  | [Conditional access policies]( ../protect/conditional-access.md)</br></br> Microsoft Entra Conditional Access blocks access if the settings aren't compliant. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional access** > **Classic policies** |
+  | [Conditional Access policies]( ../protect/conditional-access.md)</br></br> Microsoft Entra Conditional Access blocks access if the settings aren't compliant. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional Access** > **Classic policies** |
 
 ## Known issues
 

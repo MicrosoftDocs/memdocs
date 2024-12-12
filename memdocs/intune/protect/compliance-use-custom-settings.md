@@ -49,7 +49,7 @@ Before you can add custom settings to a policy, you must prepare a JSON file, an
 
   The scripts must be uploaded to the Microsoft Intune admin center before you create a compliance policy. You select the script when you’re configuring a policy to support custom settings.
 
-After you deploy custom compliance settings and devices report back, you can view the results alongside the built-in compliance setting details in the Microsoft Intune admin center. Custom compliance settings can be used for conditional access decisions in the same way built-in compliance settings are. Together they form a compound rule set, equally affecting the device compliance state.
+After you deploy custom compliance settings and devices report back, you can view the results alongside the built-in compliance setting details in the Microsoft Intune admin center. Custom compliance settings can be used for Conditional Access decisions in the same way built-in compliance settings are. Together they form a compound rule set, equally affecting the device compliance state.
 
 ## Prerequisites
 

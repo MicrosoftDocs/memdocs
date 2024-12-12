@@ -87,7 +87,7 @@ Alternate redirection methods aren't supported with Intune. For example, you can
 
 ## Registration CNAME  
 
-Microsoft Entra ID uses a different CNAME during device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered to Microsoft Entra ID (also called *workplace joined*). If you plan to use conditional access, you should configure the *EnterpriseRegistration* CNAME for each company name you have.  
+Microsoft Entra ID uses a different CNAME during device registration for iOS/iPadOS, Android, and Windows devices. Intune Conditional Access requires devices to be registered to Microsoft Entra ID (also called *workplace joined*). If you plan to use Conditional Access, you should configure the *EnterpriseRegistration* CNAME for each company name you have.  
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |

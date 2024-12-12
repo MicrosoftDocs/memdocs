@@ -171,8 +171,8 @@ To fetch the Microsoft Entra object ID for the accountId parameter of the MAM SD
 #### Configuring a test user for App Protection CA
 
 1. Sign in with your administrator credentials to https://portal.azure.com.
-2. Select **Microsoft Entra ID** > **Security** > **Conditional Access** > **New policy**. Create a new conditional access policy.
-3. Configure conditional access policy by setting the following items:
+2. Select **Microsoft Entra ID** > **Security** > **Conditional Access** > **New policy**. Create a new Conditional Access policy.
+3. Configure Conditional Access policy by setting the following items:
     - Filling in the **Name** field.
     - Enabling the policy.
     - Assigning the policy to a user or group.

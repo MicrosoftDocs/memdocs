@@ -138,7 +138,7 @@ In the Lookout MES Console, select **System** > **Manage Enrollment** > **Enroll
 
 - For **Disconnected Status**, specify the number of days before an unconnected device is marked as disconnected.
 
-  Disconnected devices are considered as noncompliant and are blocked from accessing your company applications based on the Intune conditional access policies. You can specify values between 1 and 90 days.
+  Disconnected devices are considered as noncompliant and are blocked from accessing your company applications based on the Intune Conditional Access policies. You can specify values between 1 and 90 days.
 
   ![Lookout enrollment settings on the System module](./media/lookout-mtd-connector-integration/lookout-console-enrollment-settings.png)
 
