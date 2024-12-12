@@ -132,7 +132,7 @@ Collection of properties can only be stopped (deleted) at the category level.
 
 To stop collecting properties, navigate to the **Properties catalog** profile, and remove collection for every property in a particular category.
 
-If a properties policy is deleted, you will be able to see the last-collected data in Resource Explorer for up to 28 days.
+Even if a properties policy is deleted, you will still be able to see the last-collected data in Resource Explorer for up to 28 days.
 
 ## Supported Properties
 
