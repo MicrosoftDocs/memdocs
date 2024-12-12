@@ -105,15 +105,15 @@ See the following for more information about Microsoft Entra ID:
 - [Microsoft Entra Domain Services product information](https://azure.microsoft.com/services/active-directory-ds)
 - [Active Directory Domain Services documentation](/azure/active-directory-domain-services/)
 
-## Conditional access device compliance policy improvements
+## Conditional Access device compliance policy improvements
 
-A new device compliance policy rule is available to help you block access to corporate resources that support conditional access, when users are using apps that are part of a non-compliant list of apps. The non-compliant list of apps can be defined by the admin when adding the new compliant rule **Apps that cannot be installed**. This rule requires the admin to enter the **App Name**, the **App ID**, and the **App Publisher** (optional) when adding an app to the non-compliant list. This setting only applies to iOS and Android devices.
+A new device compliance policy rule is available to help you block access to corporate resources that support Conditional Access, when users are using apps that are part of a non-compliant list of apps. The non-compliant list of apps can be defined by the admin when adding the new compliant rule **Apps that cannot be installed**. This rule requires the admin to enter the **App Name**, the **App ID**, and the **App Publisher** (optional) when adding an app to the non-compliant list. This setting only applies to iOS and Android devices.
 
 Additionally, this helps organizations to mitigate data leakage through unsecured apps, and prevent excessive data consumption through certain apps.
 
 ### Try it out
 
-**Scenario:** Identify apps that might be causing data leakage by sending corporate data outside your company, or that are causing excessive data consumption, then [create a conditional access device compliance policy](../../mdm/understand/what-happened-to-hybrid.md) that adds these apps into the non-compliant list of apps. This will block access to corporate resources that support conditional access until the user can remove the blocked app.
+**Scenario:** Identify apps that might be causing data leakage by sending corporate data outside your company, or that are causing excessive data consumption, then [create a Conditional Access device compliance policy](../../mdm/understand/what-happened-to-hybrid.md) that adds these apps into the non-compliant list of apps. This will block access to corporate resources that support Conditional Access until the user can remove the blocked app.
 
 ## Antimalware client version alert
 Beginning with this preview version, Configuration Manager Endpoint Protection provides an alert if more than 20% (default) of managed clients are using an expired version of the antimalware client (i.e. Windows Defender or Endpoint Protection client).
@@ -124,7 +124,7 @@ Ensure Endpoint Protection is enabled on all desktop and server clients using cl
 To configure the percentage at which the alert is generated, expand **Monitoring** > **Alerts** > **All Alerts**, double-click **Antimalware clients out of date** and modify the **Raise alert if percentage of managed clients with an outdated version of the antimalware client is more than** option.
 
 ## Compliance assessment for Windows Update for Business updates
-You can now configure a compliance policy update rule to include a Windows Update for Business assessment result as part of the conditional access evaluation.
+You can now configure a compliance policy update rule to include a Windows Update for Business assessment result as part of the Conditional Access evaluation.
 > [!IMPORTANT]
 > You must have Windows 10 Insider Preview Build 15019 or later to use compliance assessment for Windows Update for Business updates.
 

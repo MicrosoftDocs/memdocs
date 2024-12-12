@@ -121,9 +121,9 @@ Trigger clients to switch to the next available software update point. For more 
 
 Trigger Windows 10 or later clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).
 
-### Check conditional access compliance
+### Check Conditional Access compliance
 
-Trigger clients to check compliance for conditional access policies. For more information, see [Conditional access](../../../comanage/quickstart-conditional-access.md).
+Trigger clients to check compliance for Conditional Access policies. For more information, see [Conditional Access](../../../comanage/quickstart-conditional-access.md).
 
 ### Wake Up
 

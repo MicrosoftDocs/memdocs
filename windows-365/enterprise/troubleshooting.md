@@ -45,11 +45,11 @@ For connections using the Remote Desktop client for Windows to access Cloud PCs,
 
 After the installation, the optimizations to redirect audio and video to your local Windows endpoint don’t work. The user must close Teams and sign out from or restart the Cloud PC to activate the Optimized status.
 
-## Conditional access
+## Conditional Access
 
-Make sure that you apply conditional access policies to both the dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the conditional access UI of Microsoft Intune admin center or Microsoft Entra ID.
+Make sure that you apply Conditional Access policies to both the dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the Conditional Access UI of Microsoft Intune admin center or Microsoft Entra ID.
 
-Any conditional access policy that you apply will affect:
+Any Conditional Access policy that you apply will affect:
 
 - Access to the end-user web portal
 - The connection to the Cloud PC from the Remote Desktop apps.

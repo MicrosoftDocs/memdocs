@@ -108,7 +108,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
 5. From the **Devices - Overview** pane, select **Conditional Access** to display details about access policies.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Conditional access." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-05.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-05.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Conditional Access." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-05.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-05.png":::
 
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Conditional Access**.

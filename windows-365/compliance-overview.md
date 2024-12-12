@@ -44,7 +44,7 @@ Windows 365 leverages other Microsoft services for compliance, including:
 - [Microsoft Purview](/purview/purview): A suite of data governance and compliance tools.
 - [Microsoft Entra ID](/entra/fundamentals/whatis): Identity and access management, formerly known as Azure Active Directory (Azure AD).
 - [Microsoft Purview Compliance Manager](/purview/compliance-manager): Tools for managing compliance across your organization.
-- [Microsoft Intune](/mem): Enforces device compliance and conditional access policies to protect access to Windows 365 Cloud PCs.
+- [Microsoft Intune](/mem): Enforces device compliance and Conditional Access policies to protect access to Windows 365 Cloud PCs.
 
 ## Microsoft Intune capabilities for compliance
 

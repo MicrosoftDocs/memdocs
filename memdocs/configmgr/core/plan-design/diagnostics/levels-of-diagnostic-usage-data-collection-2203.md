@@ -703,7 +703,7 @@ For Configuration Manager version 2203, this level includes the following data:
 
 - Top 50 CPUs in the environment
 
-- Type of Exchange Active Sync (EAS) conditional access policies (block or quarantine) for devices that Microsoft Intune manages
+- Type of Exchange Active Sync (EAS) Conditional Access policies (block or quarantine) for devices that Microsoft Intune manages
 
 - Microsoft Store for Business application details: non-aggregate list of synced applications including AppID, online state or offline state, and total purchased license counts
 

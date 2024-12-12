@@ -28,13 +28,13 @@ In the following video, Microsoft corporate vice president Brad Anderson introdu
 
 | Immediate value | Getting started |
 |-----------------|-----------------|
-| - [Conditional access](#bkmk_ca)<br> - [Remote actions from Intune](#bkmk_remote)<br> - [Client health](#bkmk_client-health)<br> - [Hybrid Microsoft Entra ID](#bkmk_hybrid-aad)<br> - [Windows Autopilot](#bkmk_autopilot) | - [Paths to co-management](#bkmk_paths)<br> - [Set up hybrid Microsoft Entra ID](#bkmk_setup-hybrid-aad)<br> - [Upgrade Windows](#bkmk_upgrade-win10)<br> - [Get help from FastTrack](#bkmk_fasttrack) |
+| - [Conditional Access](#bkmk_ca)<br> - [Remote actions from Intune](#bkmk_remote)<br> - [Client health](#bkmk_client-health)<br> - [Hybrid Microsoft Entra ID](#bkmk_hybrid-aad)<br> - [Windows Autopilot](#bkmk_autopilot) | - [Paths to co-management](#bkmk_paths)<br> - [Set up hybrid Microsoft Entra ID](#bkmk_setup-hybrid-aad)<br> - [Upgrade Windows](#bkmk_upgrade-win10)<br> - [Get help from FastTrack](#bkmk_fasttrack) |
 
 ## Immediate value
 
 |Title |Description |Link |
 |-|-|-|
-| <a name="bkmk_ca"></a>**Conditional access with device compliance** | Control user access to corporate resources based on compliance rules from Intune. | [![Thumbnail of conditional access video.](media/thumbnail-conditional-access.png)](quickstart-conditional-access.md) |
+| <a name="bkmk_ca"></a>**Conditional Access with device compliance** | Control user access to corporate resources based on compliance rules from Intune. | [![Thumbnail of Conditional Access video.](media/thumbnail-conditional-access.png)](quickstart-conditional-access.md) |
 | <a name="bkmk_remote"></a>**Remote actions from Intune** | Run remote actions from Intune for co-managed devices. For example, wipe and reset a device and maintain enrollment and account. | [![Thumbnail of remote actions video.](media/thumbnail-remote-action.png)](quickstart-remote-actions.md) |
 | <a name="bkmk_client-health"></a>**Configuration Manager client health** | Maintain visibility of Configuration Manager client health from the Microsoft Intune admin center. | [![Thumbnail of client health video.](media/thumbnail-client-health.png)](quickstart-client-health.md) |
 | <a name="bkmk_hybrid-aad"></a>**Microsoft Entra ID** | With Microsoft Entra ID you can take advantage of improved productivity for your users and security for your resources, across both cloud and on-prem environments. | [![Thumbnail of hybrid Microsoft Entra video.](media/thumbnail-azure-ad.png)](quickstart-hybrid-aad.md) |

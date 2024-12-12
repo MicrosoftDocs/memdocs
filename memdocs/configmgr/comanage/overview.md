@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
 # What is co-management?
 
 <!-- 1350871 -->
-Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It helps you unlock more cloud-powered capabilities like conditional access.
+Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It helps you unlock more cloud-powered capabilities like Conditional Access.
 
 Co-management enables you to concurrently manage Windows 10 or later devices by using both Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
 
@@ -45,7 +45,7 @@ For more information on the paths, see [Paths to co-management](quickstart-paths
 
 When you enroll existing Configuration Manager clients in co-management, you gain the following immediate value:
 
-- Conditional access with device compliance
+- Conditional Access with device compliance
 
 - Intune-based remote actions, for example: restart, remote control, or factory reset
 

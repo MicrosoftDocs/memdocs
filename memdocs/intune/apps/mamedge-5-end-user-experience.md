@@ -32,7 +32,7 @@ ms.collection:
 
 # Step 5. Understand Microsoft Edge for Business end user experience for Windows
 
-Now that you've configured your Microsoft Entra conditional access policy and created your first app protection policy for Windows, you can launch **Microsoft Edge for Business** using a managed or unmanaged device.
+Now that you've configured your Microsoft Entra Conditional Access policy and created your first app protection policy for Windows, you can launch **Microsoft Edge for Business** using a managed or unmanaged device.
 
 The end user experience in Microsoft Edge for Business is designed to be productive, secure, and user-friendly. This secure enterprise browser experience includes the following features:
 
