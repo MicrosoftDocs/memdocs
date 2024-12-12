@@ -44,7 +44,7 @@ You can modify proxy server settings on individual client computers. You can als
 Managed devices require configurations that let **All Users** access services through firewalls.
 
 > [!NOTE]
-> The inspection of SSL traffic is not supported on 'manage.microsoft.us', or 'has.spserv.microsoft.com' endpoint.
+> The inspection of SSL traffic is not supported on '*.manage.microsoft.us', or 'has.spserv.microsoft.com' endpoint.
 
 For more information about Windows 10 auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../enrollment/windows-enroll.md).  
 
