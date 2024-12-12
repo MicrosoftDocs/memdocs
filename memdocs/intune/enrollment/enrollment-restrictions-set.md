@@ -81,7 +81,7 @@ In groups where both Android platforms are allowed, devices that support work pr
 
 This restriction is in the admin center under **Enrollment device platform restrictions**. 
 > [!NOTE]
-> Device platform enrollment restrictions use assignment filters. The update from Microsoft Entra to Intune to process user, group and filter assignments typically happens within 15 minutes. It's not instant. This time can affect enrollment assignments. Admins should enroll devices after several minutes, not immediately after adding the enrolling users to a group. 
+> Device platform enrollment restrictions use assignment filters. The update between Microsoft Entra and Intune that processes user, group, and filter assignments typically happens within 15 minutes. It's not instant. This amount of time can affect enrollment assignments. You should wait and enroll devices several minutes after adding the enrolling users to a group, not immediately after. 
 
 ### OS version 
 This restriction enforces your maximum and minimum OS version requirements. This type of restriction works with the following operating systems: 
