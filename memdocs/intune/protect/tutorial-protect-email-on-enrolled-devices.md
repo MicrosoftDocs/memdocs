@@ -210,7 +210,7 @@ When the test policies are no longer needed, you can remove them.
 
 3. In the **Policy name** list, select the context menu (**...**) for your test policy, and then select **Delete**. Select **OK** to confirm.
 
-4. Select **Endpoint security** > **Conditional access** > **policies**.
+4. Select **Endpoint security** > **Conditional Access** > **policies**.
 
 5. In the **Policy name** list, select the context menu (**...**) for your test policy, and then select **Delete**. Select **Yes** to confirm.
 

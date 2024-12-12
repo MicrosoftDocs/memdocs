@@ -291,9 +291,9 @@ You can now associate multiple Apple volume-purchase program tokens with Configu
 
 You can now sync custom line of business apps from the Windows Store for Business.
 
-### Conditional access device compliance policy improvements
+### Conditional Access device compliance policy improvements
 
-A new device compliance policy rule is available to help you block access to corporate resources that support conditional access, when users are using apps that are part of a noncompliant list of apps. The noncompliant list of apps can be defined by the admin when adding the new compliant rule **Apps that cannot be installed**. This rule requires the admin to enter the **App Name**, the **App ID**, and the **App Publisher** (optional) when adding an app to the noncompliant list. This setting only applies to iOS and Android devices.
+A new device compliance policy rule is available to help you block access to corporate resources that support Conditional Access, when users are using apps that are part of a noncompliant list of apps. The noncompliant list of apps can be defined by the admin when adding the new compliant rule **Apps that cannot be installed**. This rule requires the admin to enter the **App Name**, the **App ID**, and the **App Publisher** (optional) when adding an app to the noncompliant list. This setting only applies to iOS and Android devices.
 
 Additionally, this helps organizations to mitigate data leakage through unsecured apps, and prevent excessive data consumption through certain apps.
 

@@ -83,7 +83,7 @@ These settings are backed by the Conditional Access policy [GraphAggregatorServi
 
 This setting modifies one classic Conditional Access policy:
 
-- **Endpoint security** > **Conditional access** > **Classic policies** > **[GraphAggregatorService] Device policy** > **Conditions** > **Client apps (Preview)** > **Mobile apps and desktop clients** > **Exchange ActiveSync clients** > **Apply policy only to supported platform**
+- **Endpoint security** > **Conditional Access** > **Classic policies** > **[GraphAggregatorService] Device policy** > **Conditions** > **Client apps (Preview)** > **Mobile apps and desktop clients** > **Exchange ActiveSync clients** > **Apply policy only to supported platform**
 
 ### Are there any security groups you want to exclude from access control?
 
@@ -95,7 +95,7 @@ This setting modifies five classic Conditional Access policies:
 - [Office 365 SharePoint Online] Device policy
 - [Outlook Service for OneDrive] Device policy
 
-- **Endpoint security** > **Conditional access** > policy name > **Users and groups** > **Exclude**
+- **Endpoint security** > **Conditional Access** > policy name > **Users and groups** > **Exclude**
 
 ## Device security policy Name and Description
 

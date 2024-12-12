@@ -134,13 +134,13 @@ When you configure Conditional Access policies in the Microsoft Intune admin cen
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** >**Conditional access** > **Create new policy**.
+2. Select **Endpoint security** >**Conditional Access** > **Create new policy**.
 
 3. For **Name**, enter **Test policy for modern auth clients**.
 
 4. Under **Assignments**, for *Users*, select **0 users and groups selected**. On the **Include** tab, select **All users**. The value for *Users* updates to *All users*.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/conditional-access-users.png" alt-text="Begin configuration of the conditional access policy.":::
+   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/conditional-access-users.png" alt-text="Begin configuration of the Conditional Access policy.":::
 
 5. Under **Assignments**, for *Target resources*, select **No target resources selected**. Ensure that *Select what this policy applies to* is set to **Cloud apps**. Because we want to protect Microsoft 365 Exchange Online email, select it by following these steps:
 
@@ -258,7 +258,7 @@ When the test policies are no longer needed, you can remove them.
 
 3. In the **Policy name** list, select the context menu (**...**) for your test policy, and then select **Delete**. Select **OK** to confirm.
 
-4. Go to **Endpoint security** > **Conditional access** > Policies.
+4. Go to **Endpoint security** > **Conditional Access** > Policies.
 
 5. In the **Policy Name** list, select the context menu (**...**) for each of your test policies, and then select **Delete**. Select **Yes** to confirm.
 
