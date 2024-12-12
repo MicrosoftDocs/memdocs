@@ -81,7 +81,7 @@ Add an icon for your app in Software Center. To try it out see [Create applicati
 
 ## Check compliance from Software Center for co-managed devices
 <!-- 1356374 -->
-In this release, users can use Software Center to check the compliance of their co-managed Windows 10 devices even when conditional access is managed by Intune. For details, see [Co-management for Windows 10 devices](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
+In this release, users can use Software Center to check the compliance of their co-managed Windows 10 devices even when Conditional Access is managed by Intune. For details, see [Co-management for Windows 10 devices](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
 
 
 ## Support for Exploit Guard

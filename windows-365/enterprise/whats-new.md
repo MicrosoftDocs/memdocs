@@ -416,7 +416,7 @@ Customers that have Modern Microsoft Cloud Agreements can upgrade their existing
 
 #### Single sign-on Windows 365 clients authentication change<!--49918010-->
 
-Single sign-on for Windows 365 is transitioning to use the Windows Cloud Login Entra ID cloud app for Windows authentication starting with the Windows and Web clients. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+Single sign-on for Windows 365 is transitioning to use the Windows Cloud Login Entra ID cloud app for Windows authentication starting with the Windows and Web clients. For more information, see [Set Conditional Access policies](set-conditional-access-policies.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -672,7 +672,7 @@ For more information, see [Microsoft Purview Customer Lockbox](/purview/customer
 
 #### New faster sign-in frequency option (preview)<!--48439987-->
 
-When single sign-on is enabled, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option provides a faster reauthentication period of 5-10 minutes depending on the client used. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+When single sign-on is enabled, selecting the **Conditional Access** > **Session** > **Sign-in frequency** > **Every time** option provides a faster reauthentication period of 5-10 minutes depending on the client used. For more information, see [Set Conditional Access policies](set-conditional-access-policies.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Boot
