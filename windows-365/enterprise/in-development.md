@@ -99,7 +99,7 @@ Windows 365 Enterprise will support the Mexico Central region. For more informat
 
 ### Concurrency buffer usage alert<!--54902162-->
 
-You’ll be able to set up a new alert to monitor concurrency buffer usage for Windows 365 Frontline.
+You’ll be able to set up a new alert to monitor concurrency buffer usage for Windows 365 Frontline in dedicated mode.
 
 ## Next steps
 
