@@ -55,7 +55,7 @@ sections:
           - Add additional security layers. For example, [Azure App Proxy](/azure/active-directory/manage-apps/application-proxy).
           
       - question: |
-          Can I use it with conditional access?
+          Can I use it with Conditional Access?
         answer: |
           Yes, and that configuration is easiest if you use [Azure App Proxy](/azure/active-directory/manage-apps/application-proxy).
           

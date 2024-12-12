@@ -16,9 +16,9 @@ ms.reviewer: mstewart,aaroncz
 
 # Use Microsoft Entra ID for co-management
 
-In the cloud, identity is the new control plane. Microsoft Entra ID allows you to link your users, devices, and applications across both cloud and on-premises environments. Registering your devices to Microsoft Entra ID enables you to improve productivity for your users and security for your resources. Having devices in Microsoft Entra ID is the foundation for both co-management and device-based conditional access.
+In the cloud, identity is the new control plane. Microsoft Entra ID allows you to link your users, devices, and applications across both cloud and on-premises environments. Registering your devices to Microsoft Entra ID enables you to improve productivity for your users and security for your resources. Having devices in Microsoft Entra ID is the foundation for both co-management and device-based Conditional Access.
 
-For more information on device-based conditional access, see [How To: Require managed devices for cloud app access with conditional access](/azure/active-directory/conditional-access/require-managed-devices).
+For more information on device-based Conditional Access, see [How To: Require managed devices for cloud app access with Conditional Access](/azure/active-directory/conditional-access/require-managed-devices).
 
 In the following video, senior program manager Sandeep Deo and product marketing manager Adam Harbour discuss and demo Microsoft Entra ID for co-management:
 
@@ -66,11 +66,11 @@ Windows Hello for Business brings strong password-less authentication to Windows
 
 For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
-### Device-based conditional access
+### Device-based Conditional Access
 
-Enable conditional access based on the device state to better protect your organization's data. Device-based conditional access requires a managed device. This device must be a compliant device or a Microsoft Entra hybrid joined device. For Microsoft Entra joined devices, you need Intune to mark the device as compliant. But for Microsoft Entra hybrid joined devices, the device state itself is used to evaluate conditional access. Co-management provides you the additional advantage of evaluating compliance through Intune for Microsoft Entra hybrid joined devices. This feature makes sure the device configuration is intact.
+Enable Conditional Access based on the device state to better protect your organization's data. Device-based Conditional Access requires a managed device. This device must be a compliant device or a Microsoft Entra hybrid joined device. For Microsoft Entra joined devices, you need Intune to mark the device as compliant. But for Microsoft Entra hybrid joined devices, the device state itself is used to evaluate Conditional Access. Co-management provides you the additional advantage of evaluating compliance through Intune for Microsoft Entra hybrid joined devices. This feature makes sure the device configuration is intact.
 
-For more information on device-based conditional access, see [How To: Require managed devices for cloud app access with conditional access](/azure/active-directory/conditional-access/require-managed-devices).
+For more information on device-based Conditional Access, see [How To: Require managed devices for cloud app access with Conditional Access](/azure/active-directory/conditional-access/require-managed-devices).
 
 ### Automatic device licensing
 

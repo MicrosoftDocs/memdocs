@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure Microsoft Defender for Endpoint in Microsoft Intune
-description: Configure Microsoft Defender for Endpoint in Intune, including connecting to Defender for Endpoint, onboarding devices, assigning compliance for risk levels, and conditional access policies.
+description: Configure Microsoft Defender for Endpoint in Intune, including connecting to Defender for Endpoint, onboarding devices, assigning compliance for risk levels, and Conditional Access policies.
 keywords: configure, manage, capabilities, attack surface reduction, next-generation protection, security controls, endpoint detection and response, auto investigation and remediation, security controls, controls, microsoft defender for endpoint, mde
 author: brenduns 
 ms.author: brenduns
@@ -38,7 +38,7 @@ Use the information and procedures in this article to configure integration of M
 - **Establish a service-to-service connection between Intune and Microsoft Defender for Endpoint**. This connection lets Microsoft Defender for Endpoint collect data about machine risk from supported devices you manage with Intune. See the [prerequisites](../protect/advanced-threat-protection.md#prerequisites) to use Microsoft Defender for Endpoint with Intune.
 - **Use Intune policy to onboard devices with Microsoft Defender for Endpoint**. You onboard devices to configure them to communicate with Microsoft Defender for Endpoint and to provide data that helps assess their risk level.
 - **Use Intune device compliance policies to set the level of risk you want to allow**. Microsoft Defender for Endpoint reports a devices risk level. Devices that exceed the allowed risk level are identified as noncompliant.
-- **Use a conditional access policy** to block users from accessing corporate resources from devices that are noncompliant.
+- **Use a Conditional Access policy** to block users from accessing corporate resources from devices that are noncompliant.
 - **Use** [**app protection policies**](../protect/mtd-app-protection-policy.md) for Android and iOS/iPadOS, to set device risk levels. App protection policies work with both enrolled and unenrolled devices.
 
 In addition to managing settings for Microsoft Defender for Endpoint on devices that enroll with Intune, you can manage Defender for Endpoint security configurations on devices that aren’t enrolled with Intune. This scenario is called *Security Management for Microsoft Defender for Endpoint* and requires configuring the *Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations* toggle to *On*. For more information, see [MDE Security Configuration Management](../protect/mde-security-integration.md).
@@ -282,16 +282,16 @@ Use the procedure to [create an application protection policy for either iOS/iPa
 > [!IMPORTANT]
 > If you create an app protection policy for any protected app, the device's threat level is assessed. Depending on the configuration, devices that don’t meet an acceptable level are either blocked or selectively wiped through conditional launch. If blocked, they are prevented from accessing corporate resources until the threat on the device is resolved and reported to Intune by the chosen MTD vendor.
 
-## Create a conditional access policy
+## Create a Conditional Access policy
 
-Conditional access policies can use data from Microsoft Defender for Endpoint to block access to resources for devices that exceed the threat level you set. You can block access from the device to corporate resources, such as SharePoint or Exchange Online.
+Conditional Access policies can use data from Microsoft Defender for Endpoint to block access to resources for devices that exceed the threat level you set. You can block access from the device to corporate resources, such as SharePoint or Exchange Online.
 
 > [!TIP]
 >
 > Conditional Access is a Microsoft Entra technology. The *Conditional Access* node found in the Microsoft Intune admin center is the node from *Microsoft Entra*.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Endpoint security** > **Conditional access** > **Create new policy**.  Because Intune presents the policy creation user interface for Conditional Access from the Azure portal, the interface is different than the policy creation workflow you might be familiar with.
+2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.  Because Intune presents the policy creation user interface for Conditional Access from the Azure portal, the interface is different than the policy creation workflow you might be familiar with.
 3. Enter a policy **Name**.
 4. For **Users**, use the *Include* and *Exclude* tabs to configure groups that will receive this policy.
 5. For **Target resources**, set *Select what this policy applies to* to **Cloud apps**, and then choose which apps to protect. For example, choose **Select apps** and then for *Select*, search for and select **Office 365 SharePoint Online** and **Office 365 Exchange Online**.

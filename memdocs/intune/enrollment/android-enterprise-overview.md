@@ -95,7 +95,7 @@ Android Enterprise doesn't provide a default email app or native email profile o
 
 Gmail and Nine Work are two Exchange ActiveSync (EAS) client apps in the Play Store that support Android Enterprise app configuration. Intune provides configuration templates for Gmail and Nine Work apps so you can manage them as work apps. You can configure other email apps that support app configuration profiles in an app configuration policy.   
 
-If you're using Exchange ActiveSync conditional access for a personal or corporate-owned device, consider using the Gmail or Nine Work email app. The Microsoft Outlook for Android app, and any other email app that uses modern authentication via MSAL, is also supported. For more information, see [How to configure email settings in Microsoft Intune](../configuration/email-settings-configure.md). 
+If you're using Exchange ActiveSync Conditional Access for a personal or corporate-owned device, consider using the Gmail or Nine Work email app. The Microsoft Outlook for Android app, and any other email app that uses modern authentication via MSAL, is also supported. For more information, see [How to configure email settings in Microsoft Intune](../configuration/email-settings-configure.md). 
 
    > [!TIP]
    > Azure AD Authentication Library (ADAL) has been deprecated, so we recommend updating apps that currently use ADAL to MSAL. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363). 

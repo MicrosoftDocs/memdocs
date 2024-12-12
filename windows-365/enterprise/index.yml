@@ -90,7 +90,7 @@ conceptualContent:
           text: Deploy security baselines
         - url: set-conditional-access-policies.md
           itemType: how-to-guide
-          text: Set conditional access policies
+          text: Set Conditional Access policies
       footerLink:
         url: security-guidelines.md
         text: See more

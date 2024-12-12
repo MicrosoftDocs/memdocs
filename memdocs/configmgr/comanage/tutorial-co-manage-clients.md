@@ -183,4 +183,4 @@ When you enable co-management, you'll assign a collection as a *Pilot group*. Th
 
 - Review the status of co-managed devices with the [Co-management dashboard](how-to-monitor.md)
 - Start getting [immediate value](quickstarts.md#immediate-value) from co-management
-- Use [conditional access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources
+- Use [Conditional Access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources
