@@ -78,15 +78,50 @@ Some settings are available in device configuration templates and in the setting
 ## Apple declarative configurations
 
 This section is specific to the configurations that are under the Declarative Device Management (DDM) category in the settings catalog. You can learn more about DDM at [Intro to declarative device management and Apple devices](https://support.apple.com/guide/deployment/depb1bab77f8/1/web/1.0) on Apple's website.
-	
+### Disk Management
+
+Use Disk Management setting to install disk management settings on devices. This configuration is located in the **Declarative Device Management (DDM)** category of the settings catalog. You can learn more about Disk Management using the following documentation:
+
+|Apple Platform Guides|Apple Developer|Apple YAML|Intune documentation|
+| -------- | -------- | -------- | -------- |
+|[Storage management declarative configuration](https://support.apple.com/en-tm/guide/deployment/dep2b9f009ed/web)|[Disk Management Settings](https://developer.apple.com/documentation/devicemanagement/diskmanagementsettings)|[Disk Management Settings](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/diskmanagement.settings.yaml)||
+
+Known issues
+
+- None
+
+### Math Settings
+
+Use Math Settings to configure the Math and Calculator apps on devices. This configuration is located in the **Declarative Device Management (DDM)** category of the settings catalog. You can learn more about Math Settings using the following documentation:
+
+|Apple Platform Guides|Apple Developer|Apple YAML|Intune documentation|
+| -------- | -------- | -------- | -------- |
+|[Math and Calculator app declarative configuration](https://support.apple.com/en-tm/guide/deployment/dep7881be3bb/web)|[Math Settings](https://developer.apple.com/documentation/devicemanagement/mathsettings)|[Math Settings](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/math.settings.yaml)||
+
+Known issues
+
+- None
+
 ### Passcode
 Use the passcode configuration to require that devices have a password or passcode that meet your organization's requirements. This configuration is located in the **Declarative Device Management (DDM)** category of the settings catalog. You can learn more about Passcode using the following documentation:
 
-| Apple Platform Guides | Apple Developer | Apple YAML | Intune documentation
+| Apple Platform Guides | Apple Developer | Apple YAML | Intune documentation|
 | -------  | ------- | ------- | ------- |
-| <ul><li>[Passcodes and passwords](https://support.apple.com/guide/security/sec20230a10d/web)</li><li>[Passcode declarative configuration](https://support.apple.com/guide/deployment/depf72b010a8/1/web/1.0)</li></ul>| [Passcode](https://developer.apple.com/documentation/devicemanagement/passcode)| [Passcode](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/passcode.settings.yaml)
+| <ul><li>[Passcodes and passwords](https://support.apple.com/guide/security/sec20230a10d/web)</li><li>[Passcode declarative configuration](https://support.apple.com/guide/deployment/depf72b010a8/1/web/1.0)</li></ul>| [Passcode](https://developer.apple.com/documentation/devicemanagement/passcode)| [Passcode](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/passcode.settings.yaml)||
 
 #### Known issues
+- None
+
+### Safari Extension Settings
+
+Use the Safari extensions settings to manage extensions in the Safari browser. This configuration is located in the **Declarative Device Management (DDM)** category of the settings catalog. You can learn more about Safari Extension Settings using the following documentation:
+
+|Apple Platform Guides|Apple Developer|Apple YAML|Intune documentation|
+| -------- | -------- | -------- | -------- |
+|[Safari extensions management declarative configuration](https://support.apple.com/en-tm/guide/deployment/depff7fad9d8/web)|[Safari Extension Settings](https://developer.apple.com/documentation/devicemanagement/safariextensionsettings)|[Safari Extension Settings](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/safari.extensions.settings.yaml)||
+
+Known issues
+
 - None
 
 ### Software Update
@@ -97,6 +132,18 @@ Use the Software Update configuration to enforce an update to install at a speci
 | <ul><li>[Software Update declarative configuration](https://support.apple.com/guide/deployment/depca14ecd4d/1/web/1.0)</li><li>[Installing and enforcing software updates](https://support.apple.com/guide/deployment/depd30715cbb/web)</li></ul>| [Software Update Enforcement Specific](https://developer.apple.com/documentation/devicemanagement/softwareupdateenforcementspecific)| [Software Update Enforcement Specific](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/softwareupdate.enforcement.specific.yaml)| [Use the settings catalog to configure managed software updates](../protect/managed-software-updates-ios-macos.md) |
 
 #### Known issues
+- None
+
+### Software Update Settings
+
+Use the Software Update Settings configuration to defer OS updates and control how users can manually interact with software updates in System Settings. This configuration is located in the **Declarative Device Management (DDM)** category of the settings catalog. You can learn more about Passcode using the following documentation:
+
+|Apple Platform Guides|Apple Developer|Apple YAML|Intune documentation|
+| -------- | -------- | -------- | -------- |
+|[Software Update Settings declarative configuration](https://support.apple.com/en-tm/guide/deployment/dep0578d8b8a/web)|[Software Update Settings](https://developer.apple.com/documentation/devicemanagement/softwareupdatesettings)|[Software Update Settings](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/softwareupdate.settings.yaml)|[Use the settings catalog to configure managed software updates](../protect/managed-software-updates-ios-macos.md)|
+
+Known issues
+
 - None
 
 ## Apple MDM payload settings
@@ -145,7 +192,21 @@ Use the Firewall configuration to manage the native macOS application firewall. 
 | Apps allowed | Networking > Firewall | Applications (Allowed = True) |
 | Apps blocked  | Networking > Firewall | Applications (Allowed = False) |
 | Enable stealth mode | Networking > Firewall | Enable Stealth Mode |
-	
+### Font
+
+> [!NOTE]
+> Font files being uploaded to Intune must be less than 2MB in size.
+
+Use the Font payload to configure fonts on devices. This configuration is located in the **System Configuration** category of the settings catalog. You can learn more about Font using the following documentation:
+
+|Apple Platform Guides|Apple Developer|Apple YAML|Intune documentation|
+| -------- | -------- | -------- | -------- |
+|[Fonts MDM payload settings](https://support.apple.com/en-tm/guide/deployment/depeba084b8/web)|[Font](https://developer.apple.com/documentation/devicemanagement/font)|[Font](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.font.yaml)||
+
+Known issues
+
+- None
+
 ### System Policy Control (Gatekeeper)
 Use the System Policy Control payload to configure Gatekeeper settings. This configuration is located in the **System Policy Control** category of the settings catalog. You can learn more about System Policy Control using the following documentation:
 
@@ -162,7 +223,6 @@ Use the System Policy Control payload to configure Gatekeeper settings. This con
 | -------- | ------- | ------- |
 | Do not allow user to override Gatekeeper  | System Policy Control > System Policy Control | Enable Assessment |
 | Allow apps downloaded from these locations | System Policy Control > System Policy Control | Allow Identified Developers |
-	
 ### System Extensions
 Use the System Extensions payload to configure system extensions to be automatically loaded or prevent users from approving specific extensions. This configuration is located in the **System Configuration** category of the settings catalog. You can learn more about System Extensions using the following documentation:
 
