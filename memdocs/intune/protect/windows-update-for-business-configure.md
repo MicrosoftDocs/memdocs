@@ -56,9 +56,9 @@ Intune provides the following policy types to manage updates, which you assign t
 
 ## Policy limitations for Workplace Joined devices
 
-Microsoft introduced a cloud service as part of the Windows Update for Business product family, [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). As a cloud service, WUfB ds supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren’t supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings for Windows 10 and later* policy type.
+Microsoft introduced a cloud service as part of the Windows Update for Business product family, [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). As a cloud service, Windows Update for Business ds supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren’t supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings for Windows 10 and later* policy type.
 
-The following Intune policy types for Windows Updates use WUfB ds, which prevents their support on WPJ devices:
+The following Intune policy types for Windows Updates use Windows Update for Business ds, which prevents their support on WPJ devices:
 
 - Driver Updates for Windows 10 and later
 - Feature Updates for Windows 10 and later
@@ -66,7 +66,7 @@ The following Intune policy types for Windows Updates use WUfB ds, which prevent
 
 If you support WPJ devices with Intune, the following information can help you understand the differences in capabilities based on policy type, for both WPJ devices and AADJ devices.
 
-| Capability | WUfB </br> via Update Ring policy | WUfB-ds </br> via Driver, Feature, and Quality update policies|
+| Capability | Windows Update for Business </br> via Update Ring policy | Windows Update for Business-ds </br> via Driver, Feature, and Quality update policies|
 |-|-|-|
 | **WPJ device support**      | Yes                  | No                                           |
 | **AADJ device support**     | Yes                  | Yes                                          |
@@ -75,8 +75,8 @@ If you support WPJ devices with Intune, the following information can help you u
 | **Control which updates to install** |***Feature***:  Yes </br>  - Defer *all* feature updates by specified days</br></br></br>***Quality***: Yes</br>  - Defer *all* quality updates by specified days</br></br>***Drivers***: Yes</br> - *Allow* or *Block* all *Recommended* drivers</br> - No support for *Other* drivers | ***Feature***:  Yes</br> - Manage *individual* updates</br>  - Specify *Start Date* or *Gradual Rollout* start and end dates. </br></br>  ***Quality***: Use Update Ring policies</br></br></br></br> ***Drivers***: Yes</br> - Manage individual *Recommended* and *Other* drivers. </br></br><!-- </br></br> - Recommended drivers: Per-update  *Allow* or  *Pause* of *Recommended* updates</br>  - Optional drivers: Per-update *Allow* or *Pause* of *Optional* updates</br></br>***Expedited Quality***: Yes    -->                 |
 | **Pause Updates** | ***Feature***: </br>  - Pause all updates  </br></br>  ***Quality***: </br>  - Pause all updates </br></br>  ***Drivers***:  </br>  - Block all updates | ***Feature***: </br>  - Pause individual updates</br></br> ***Quality***: </br>  - Pause individual updates</br></br>***Drivers***: </br>  - Pause individual updates                                                                                 |
 | **Expedite Quality Update** | No                   | Yes                                         |
-| **Reports - Summary count of devices**: </br>  - Feature updates</br>  - Quality updates  | WUfB reports | WUfB reports |
-| **Reports – Detailed status**:</br>  - Per Update  | WUfB reports  | Yes, in Intune              |
+| **Reports - Summary count of devices**: </br>  - Feature updates</br>  - Quality updates  | Windows Update for Business reports | Windows Update for Business reports |
+| **Reports – Detailed status**:</br>  - Per Update  | Windows Update for Business reports  | Yes, in Intune              |
 
 ## Move from update ring deferrals to feature updates policy
 

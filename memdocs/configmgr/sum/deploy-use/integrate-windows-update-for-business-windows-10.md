@@ -18,13 +18,13 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-Windows Update for Business allows you to keep Windows 10 or later devices in your organization always up-to-date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager can differentiate between Windows computers that use WUfB and WSUS for getting software updates.  
+Windows Update for Business allows you to keep Windows 10 or later devices in your organization always up-to-date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager can differentiate between Windows computers that use Windows Update for Business and WSUS for getting software updates.  
 
 > [!WARNING]
 > If you are using co-management for your devices and you have moved the [Windows Update policies](../../comanage/workloads.md#windows-update-policies) to Intune, then your devices will get their [Windows Update for Business policies from Intune](/mem/intune/protect/windows-update-for-business-configure).
 > - If the Configuration Manager client is still installed on the co-managed device then settings for Cumulative Updates and Feature Updates are managed by Intune. However, third-party patching, if enabled in [**Client Settings**](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates), is still managed by Configuration Manager.  
 
- Some Configuration Manager features are no longer available when Configuration Manager clients are configured to receive updates from WU, which includes WUfB or Windows Insiders:  
+ Some Configuration Manager features are no longer available when Configuration Manager clients are configured to receive updates from WU, which includes Windows Update for Business or Windows Insiders:  
 
 - Windows Update compliance reporting:  
   - Configuration Manager will be unaware of the updates that are published to WU. The Configuration Manager clients configured to received updates from WU will display **unknown** for these updates in the Configuration Manager console.  
@@ -35,35 +35,35 @@ Windows Update for Business allows you to keep Windows 10 or later devices in yo
 
 - Overall Endpoint Protection reporting for Defender based on update compliance status won't return accurate results because of the missing scan data.  
 
-- Configuration Manager won't be able to deploy or report compliance on Microsoft app updates for clients configured to use WUfB to receive updates. This includes updates for Microsoft 365 Apps, Internet Explorer, Edge, and Visual Studio.
+- Configuration Manager won't be able to deploy or report compliance on Microsoft app updates for clients configured to use Windows Update for Business to receive updates. This includes updates for Microsoft 365 Apps, Internet Explorer, Edge, and Visual Studio.
 
-- Configuration Manager can still deploy 3rd party updates that are published to WSUS and managed through Configuration Manager to clients that are connected to WUfB to receive updates. If you don't want any 3rd party updates to be installed on clients connecting to WUfB, then disable the client setting named [Enable software updates on clients](../../core/clients/deploy/about-client-settings.md#software-updates).
+- Configuration Manager can still deploy 3rd party updates that are published to WSUS and managed through Configuration Manager to clients that are connected to Windows Update for Business to receive updates. If you don't want any 3rd party updates to be installed on clients connecting to Windows Update for Business, then disable the client setting named [Enable software updates on clients](../../core/clients/deploy/about-client-settings.md#software-updates).
 
-- Configuration Manager full client deployment that uses the software updates infrastructure won't work for clients that are connected to WUfB to receive updates.  
+- Configuration Manager full client deployment that uses the software updates infrastructure won't work for clients that are connected to Windows Update for Business to receive updates.  
 
-## Identify clients that use WUfB for Windows updates
+## Identify clients that use Windows Update for Business for Windows updates
 
-Use the following procedure to identify clients that use WUfB to get Windows updates and upgrades. Then configure these clients to stop using WSUS to get updates, and deploy a client agent setting to disable the software updates workflow for these clients.  
+Use the following procedure to identify clients that use Windows Update for Business to get Windows updates and upgrades. Then configure these clients to stop using WSUS to get updates, and deploy a client agent setting to disable the software updates workflow for these clients.  
 
-### Prerequisites for WUfB
+### Prerequisites for Windows Update for Business
 
 - Clients that run Windows 10 Desktop Pro or Windows 10 Enterprise Edition version 1511 or later
 
-- [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) is deployed and clients use WUfB to get Windows updates and upgrades.  
+- [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) is deployed and clients use Windows Update for Business to get Windows updates and upgrades.  
 
-### To identify clients that use WUfB  
+### To identify clients that use Windows Update for Business  
 
 1. Ensure the Windows Update Agent isn't scanning against WSUS, if it was previously enabled. The following registry key can be used to indicate whether the computer is scanning against WSUS or Windows Update. If the registry key doesn't exist, it's not scanning against WSUS.
     - **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\UseWUServer**
 1. There's a new attribute, **UseWUServer**, under the **Windows Update** node in Configuration Manager Resource Explorer.
-1. Create a collection based on the **UseWUServer** attribute for all the computers that are connected via WUfB for updates and upgrades. You can create a collection based on a query similar to the one below:  
+1. Create a collection based on the **UseWUServer** attribute for all the computers that are connected via Windows Update for Business for updates and upgrades. You can create a collection based on a query similar to the one below:  
 
     ```wql
     Select sr.* from SMS_R_System as sr join SMS_G_System_WINDOWSUPDATE as su on sr.ResourceID=su.ResourceID where su.UseWUServer is null
     ```
 
-1. Create a client agent setting to disable the software update workflow. Deploy the setting to the collection of computers that are connected directly to WUfB.
-1. The computers that are managed via WUfB will display **Unknown** in the compliance status and won't be counted as part of the overall compliance percentage.  
+1. Create a client agent setting to disable the software update workflow. Deploy the setting to the collection of computers that are connected directly to Windows Update for Business.
+1. The computers that are managed via Windows Update for Business will display **Unknown** in the compliance status and won't be counted as part of the overall compliance percentage.  
 
 ## Configure Windows Update for Business deferral policies
 <!-- 1290890 -->

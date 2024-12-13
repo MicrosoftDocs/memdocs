@@ -79,11 +79,11 @@ To enhance your use of gradual rollouts, you can configure *Intelligent rollouts
 
 With intelligent rollouts, the Windows Update for Business Deployment Service uses data that it collects from devices to optimize the device members in the offer groups of your gradual rollout deployments. The first offer group includes the fewest number of devices that have the largest pool of variations in your environment. You can think of this first offer group as a *pilot ring* for the deployment.
 
-To enable intelligent rollout, you deploy a [settings catalog](../configuration/settings-catalog.md) profile for device configuration to *Allow WUfB Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles. You only need to deploy this profile to a device a single time. The change then applies to all future deployments for that device.
+To enable intelligent rollout, you deploy a [settings catalog](../configuration/settings-catalog.md) profile for device configuration to *Allow Windows Update for Business Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles. You only need to deploy this profile to a device a single time. The change then applies to all future deployments for that device.
 
 ### Likely issue safeguard holds
 
-The Windows Update for Business setting that you enable, *Allow WUfB Cloud Processing*, is the same setting that enables the Deployment Service to create a *likely issue* safeguard hold for a device. To learn more, see [Safeguard holds](/windows/deployment/update/wufb-reports-workbook) in the documentation for Windows Update for Business reports.
+The Windows Update for Business setting that you enable, *Allow Windows Update for Business Cloud Processing*, is the same setting that enables the Deployment Service to create a *likely issue* safeguard hold for a device. To learn more, see [Safeguard holds](/windows/deployment/update/wufb-reports-workbook) in the documentation for Windows Update for Business reports.
 
 As your rollout progresses, the deployment service monitors for unexpected issues. The service uses insights from the Windows ecosystem to create *likely issue* safeguard holds to proactively pause deployments to devices that are likely to encounter an issue. By applying safeguard holds to devices that are likely to have issues with the update, devices and end users are protected from potential productivity affecting issues.
 
@@ -97,9 +97,9 @@ To learn more, see [Manage safeguards using the Windows Update for Business depl
 
 3. For Platform, select **Windows 10 and later** and then for Profile type, select **Settings catalog**.
 
-4. On the **Configuration settings** page, select **Add settings**, and then on the *Settings picker* page, search for **Allow WUfB Cloud Processing**.  This setting is in the *System* category. Select the checkbox for this setting and then close the *Settings picker* window to return to the *Configuration settings* page.
+4. On the **Configuration settings** page, select **Add settings**, and then on the *Settings picker* page, search for **Allow Windows Update for Business Cloud Processing**.  This setting is in the *System* category. Select the checkbox for this setting and then close the *Settings picker* window to return to the *Configuration settings* page.
 
-5. Set *Allow WUfB Cloud Processing* to **Enabled**.
+5. Set *Allow Windows Update for Business Cloud Processing* to **Enabled**.
 
 6. On the **Assignments** page, assign the profile to the same groups you use for your Feature update profiles, and then complete and *Create* this settings catalog profile, to deploy it.
 

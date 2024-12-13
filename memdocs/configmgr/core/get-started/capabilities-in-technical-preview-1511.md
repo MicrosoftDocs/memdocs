@@ -23,8 +23,8 @@ This article introduces the features that are available in the Technical Preview
 The following are new features you can try out with this version.  
 
 ##  <a name="BKMK_WUfB"></a> Integration with Windows Update for Business in Windows 10  
- Configuration Manager now has the ability to differentiate a Windows 10 computer that is directly connected via Windows Update for Business versus the ones connected to WSUS for getting Windows 10 updates and upgrades.  For computers connected via WUfB, the updates and upgrades can be managed at the cadence set by an administrative user via Group Policies or MDM policies and these updates/upgrades can be installed directly from WUfB.    
-For computers connected via WUfB, Configuration Manager will not be able to report on compliance status (including Windows Updates or Definition Updates). Also Configuration Manager will not be able to deploy Microsoft Updates or 3rd party updates to these computers.  
+ Configuration Manager now has the ability to differentiate a Windows 10 computer that is directly connected via Windows Update for Business versus the ones connected to WSUS for getting Windows 10 updates and upgrades.  For computers connected via Windows Update for Business, the updates and upgrades can be managed at the cadence set by an administrative user via Group Policies or MDM policies and these updates/upgrades can be installed directly from Windows Update for Business.    
+For computers connected via Windows Update for Business, Configuration Manager will not be able to report on compliance status (including Windows Updates or Definition Updates). Also Configuration Manager will not be able to deploy Microsoft Updates or 3rd party updates to these computers.  
 
  **Prerequisites for this scenario:**  
 
@@ -40,11 +40,11 @@ For computers connected via WUfB, Configuration Manager will not be able to repo
 
 2.  Take note of  the new attribute **UseWUServer**, under the **Windows Update** node in Configuration Manager Resource Explorer.  
 
-3.  Create a collection based on the **UseWUServer** attribute for all the computers that are connected via WUfB for updates and upgrades.  
+3.  Create a collection based on the **UseWUServer** attribute for all the computers that are connected via Windows Update for Business for updates and upgrades.  
 
-4.  Create a  client agent setting to disable the software update workflow and deploy the setting to the collection of computers that are connected directly to WUfB.  
+4.  Create a  client agent setting to disable the software update workflow and deploy the setting to the collection of computers that are connected directly to Windows Update for Business.  
 
-5.  The computers that are managed via WUfB will display **Unknown** in the compliance status and won't be counted as part of the overall compliance percentage.  
+5.  The computers that are managed via Windows Update for Business will display **Unknown** in the compliance status and won't be counted as part of the overall compliance percentage.  
 
 ##  <a name="BKMK_Office365ProPlus"></a> Managing Microsoft 365 Apps for enterprise Client Update through Configuration Manager  
 Configuration Manager now has the ability to manage Microsoft 365 desktop client updates using the Configuration Manager Software Update Management workflow.
