@@ -66,7 +66,7 @@ The following Intune policy types for Windows Updates use Windows Update for Bus
 
 If you support WPJ devices with Intune, the following information can help you understand the differences in capabilities based on policy type, for both WPJ devices and AADJ devices.
 
-| Capability | Windows Update for Business </br> via Update Ring policy | Windows Update for Business-ds </br> via Driver, Feature, and Quality update policies|
+| Capability | Windows Update for Business </br> via Update Ring policy | Windows Autopatch </br> via Driver, Feature, and Quality update policies|
 |-|-|-|
 | **WPJ device support**      | Yes                  | No                                           |
 | **AADJ device support**     | Yes                  | Yes                                          |
