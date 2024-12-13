@@ -152,9 +152,9 @@ For details about email profiles, see [configure access to organization email us
 
   Choose the password type required on the device. When set to **Not configured**, which is the default choice, Intune doesn't change or update this setting. Your options:  
   
-  - **Not configured**: Password is determined by the device's default settings. Their OS might allow simple passwords, like *0000* and *1234*.  
-  - **Alphanumeric**: Password must contain a mix of uppercase letters, lowercase letters, and numeric characters.  
-  - **Numeric**: Passwords at minimum must be a set of numeric characters, such as *123456789*. Alphabetic passwords and alphanumeric passwords are also supported.  
+  - **Not configured**: The password is determined by the device's default settings. A user's OS might allow simple passwords, like *0000* and *1234*.  
+  - **Alphanumeric**: The password must contain a mix of uppercase letters, lowercase letters, and numeric characters.  
+  - **Numeric**: The password at minimum must be a set of numeric characters, such as *123456789*. Alphabetic passwords and alphanumeric passwords are also supported.  
 
 - **Number of non-alphanumeric characters in password**  
   Enter the minimum number of special characters, such as `&`, `#`, `%`, `!`, and so on, that must be in the password. 
@@ -164,10 +164,10 @@ For details about email profiles, see [configure access to organization email us
 - **Maximum minutes after screen lock before password is required**  
   *Supported for iOS 8.0 and later*
 
-  Select how much time can pass after the screen locks before the user must enter a password to access the device again. Options include the default of **Not configured**, **Immediately**, and from **1 minute** to **4 hours**.  
+  Select how much time is allowed to pass after the screen locks before users have to enter a password to access their device. Options include the default of **Not configured**, **Immediately**, and from **1 minute** to **4 hours**.  
 
 - **Maximum minutes of inactivity until screen locks**  
-  Enter the amount of idle time allowed before the device locks its screen. Options include the default of **Not configured**, **Immediately**, and from **1 minute** to **15 minutes**.
+  Select the amount of idle time allowed before the device locks its screen. Options include the default of **Not configured**, **Immediately**, and from **1 minute** to **15 minutes**.
 
 - **Password expiration (days)**  
   *Supported for iOS 8.0 and later*
