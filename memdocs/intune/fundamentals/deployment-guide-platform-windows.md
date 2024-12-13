@@ -80,7 +80,7 @@ Use Intune endpoint security features to configure device security and to manage
 |[Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md)|When you integrate Intune with Microsoft Defender for Endpoint, you not only help prevent security breaches, but you can take advantage of Microsoft Defender for Endpoints Threat & Vulnerability Management (TVM) and use Intune to remediate endpoint weakness identified by TVM.| 
 |[Manage BitLocker policy](../protect/encrypt-devices.md)| Ensure that devices are encrypted upon enrollment by creating a policy that configures BitLocker on managed devices. | 
 |[Manage security baseline profiles](../protect/security-baselines-configure.md)| Use the security baselines in Intune to help you secure and protect your users and devices. A security baseline includes the best practices and recommendations for settings that impact security.  | 
-|[Use Windows Update for Business for software updates](/windows/deployment/update/waas-configure-wufb)|Configure a Windows Update rollout strategy with Windows Update client policies. This article introduces you to the policy types you can use to manage Windows 10/11 software updates, and how to transition from update ring deferrals to a feature updates policy. |   
+|[Use Windows Update client policies for software updates](/windows/deployment/update/waas-configure-wufb)|Configure a Windows Update rollout strategy with Windows Update client policies. This article introduces you to the policy types you can use to manage Windows 10/11 software updates, and how to transition from update ring deferrals to a feature updates policy. |   
 
 ## Step 5: Configure device settings     
 

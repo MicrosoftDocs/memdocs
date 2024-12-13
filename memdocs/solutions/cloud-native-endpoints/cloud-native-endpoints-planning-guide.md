@@ -160,7 +160,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   Many on-premises solutions can't deploy updates to cloud-native endpoints or deploy them efficiently. From a security perspective, this workload may be the most important. It should be the first workload that you transition to support cloud-native Windows endpoints.
 
-  - **Deploy Windows updates** using a cloud-based system, like Windows Update client policies. Using Intune or Configuration Manager (with a [CMG](../../configmgr/core/clients/manage/cmg/overview.md) and [co-management](../../configmgr/comanage/how-to-prepare-win10.md)), you can use Windows Update for Business to deploy security updates and feature updates.
+  - **Deploy Windows updates** using a cloud-based system, like Windows Update client policies. Using Intune or Configuration Manager (with a [CMG](../../configmgr/core/clients/manage/cmg/overview.md) and [co-management](../../configmgr/comanage/how-to-prepare-win10.md)), you can use Windows Update client policies to deploy security updates and feature updates.
 
     For more information, go to:
 

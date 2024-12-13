@@ -225,7 +225,7 @@ You can now use Configuration Manager to manage Microsoft Surface driver updates
 <!-- 1290890 -->
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update client policies. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
 
-For details, see [Integration with Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
+For details, see [Integration with Windows Update client policies in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
 ### Improved user notifications for Microsoft 365 updates
 Improvements have been made to apply the Office Click-to-Run user experience when a client installs a Microsoft 365 update. This includes pop-up and in-app notifications, and a countdown experience. For more information, see [Restart behavior and client notifications for Microsoft 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md)

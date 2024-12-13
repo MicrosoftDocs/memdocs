@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Learn about using Windows Update for Business in Microsoft Intune
-description: Manage Windows 10 and Windows 11 software updates by using Intune policy for Update rings for Windows and Windows feature updates for Windows Update for Business settings in Microsoft Intune.
+title: Learn about using Windows Update client policies in Microsoft Intune
+description: Manage Windows 10 and Windows 11 software updates by using Intune policy for Update rings for Windows and Windows feature updates for Windows Update client policies in Microsoft Intune.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
@@ -56,9 +56,9 @@ Intune provides the following policy types to manage updates, which you assign t
 
 ## Policy limitations for Workplace Joined devices
 
-Microsoft introduced a cloud service as part of the Windows Update for Business product family, [Windows Autopatch](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service). As a cloud service, Windows Update for Business ds supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren’t supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings for Windows 10 and later* policy type.
+Microsoft introduced a cloud service as part of the Windows Update product family, [Windows Autopatch](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service). As a cloud service, Windows Autopatch supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren’t supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings for Windows 10 and later* policy type.
 
-The following Intune policy types for Windows Updates use Windows Update for Business ds, which prevents their support on WPJ devices:
+The following Intune policy types for Windows Updates use Windows Autopatch, which prevents their support on WPJ devices:
 
 - Driver Updates for Windows 10 and later
 - Feature Updates for Windows 10 and later
@@ -66,7 +66,7 @@ The following Intune policy types for Windows Updates use Windows Update for Bus
 
 If you support WPJ devices with Intune, the following information can help you understand the differences in capabilities based on policy type, for both WPJ devices and AADJ devices.
 
-| Capability | Windows Update for Business </br> via Update Ring policy | Windows Autopatch </br> via Driver, Feature, and Quality update policies|
+| Capability | Windows Update client policies </br> via Update Ring policy | Windows Autopatch </br> via Driver, Feature, and Quality update policies|
 |-|-|-|
 | **WPJ device support**      | Yes                  | No                                           |
 | **AADJ device support**     | Yes                  | Yes                                          |

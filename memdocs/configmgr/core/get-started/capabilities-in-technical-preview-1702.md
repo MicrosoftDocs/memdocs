@@ -131,7 +131,7 @@ You can now configure a compliance policy update rule to include a Windows Updat
 > You must have Windows 10 Insider Preview Build 15019 or later to use compliance assessment for Windows Update client policy updates.
 
 ### Allow Windows Update for Business to manage Windows 10 updates
-To gather compliance assessment information for Windows Update client policy updates, use the following procedure to configure the client agent setting to explicitly allow Windows Update for Business to manage Windows 10 updates.
+To gather compliance assessment information for Windows Update client policy updates, use the following procedure to configure the client agent setting to explicitly allow Windows Update client policies to manage Windows 10 updates.
 1. In the Configuration Manager console, go to **Administration** > **Client Settings**.
 2. In the properties for the client settings, go to **Software Updates**, and select **Yes** for the **Manage Windows 10 updates with Windows Update client policies** setting.
 

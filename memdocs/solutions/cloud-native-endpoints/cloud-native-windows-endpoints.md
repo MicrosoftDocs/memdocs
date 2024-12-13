@@ -475,15 +475,15 @@ For more information, see [Troubleshooting policy conflicts with Windows Autopil
 ### Windows Update client policies
 <a name="windows-update-for-business"></a>
 
-*Windows Update client policies* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update for Business can be configured using:
+*Windows Update client policies* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update client policies can be configured using:
 
 - [Windows update rings](../../intune/protect/windows-10-update-rings.md)
 - [Windows Feature Updates](../../intune/protect/windows-10-feature-updates.md)
 
 For more information, go to:
 
-- [Learn about using Windows Update for Business in Microsoft Intune](../../intune/protect/windows-update-for-business-configure.md)
-- [Module 4.2 - Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKsEc_BmAbvwI5l6RPQ2Y2ak&index=6&t=5s) from the Intune for Education Deployment Workshop video series
+- [Learn about using Windows Update client policies in Microsoft Intune](../../intune/protect/windows-update-for-business-configure.md)
+- [Module 4.2 - Windows Update client policies Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKsEc_BmAbvwI5l6RPQ2Y2ak&index=6&t=5s) from the Intune for Education Deployment Workshop video series
 
 If you'd like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](../../configmgr/comanage/overview.md).
 

@@ -413,7 +413,7 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update client policies. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
 
 ### Prerequisites
-Windows 10 devices managed by Windows Update for Business must have Internet connectivity.
+Windows 10 devices managed by Windows Update client policies must have Internet connectivity.
 
 #### To create a Windows Update for Business deferral policy
 1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**

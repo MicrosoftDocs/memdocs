@@ -200,7 +200,7 @@ The following topic types have no state IDs:
 
 | State message ID | State message description                 |
 |:-----------------|:------------------------------------------|
-| 1                | Windows Update for Business client status |
+| 1                | Windows Update client policies: client status |
 
 ## Content
 
