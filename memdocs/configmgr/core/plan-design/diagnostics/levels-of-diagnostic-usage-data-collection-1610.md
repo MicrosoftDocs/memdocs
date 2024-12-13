@@ -329,8 +329,7 @@ For Configuration Manager version 1610, this level includes the following:
 
     -   Windows 10 dashboard content versions  
 
-    -   Count of Windows 10 clients that use Windows Update for Business  
-
+    -   Count of Windows 10 clients that use Windows Update client policies
     -   Cluster patching statistics  
 
     -   Count of deployed Microsoft 365 updates  

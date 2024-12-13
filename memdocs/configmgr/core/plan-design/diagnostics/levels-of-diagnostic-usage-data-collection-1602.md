@@ -231,7 +231,7 @@ Beginning with Configuration Manager version 1602, this level includes the follo
 
   -   Windows 10 dashboard content versions
 
-  -   Count of Windows 10 clients that use Windows Update for Business
+  -   Count of Windows 10 clients that use Windows Update client policies
 
   -   Cluster patching statistics
 

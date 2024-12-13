@@ -49,7 +49,7 @@ When you deploy a policy, typically, the following executables can run:
 - All software deployed through Configuration Manager that devices install after they process the Application Control policy
 - Updates to built-in Windows components from:
     - Windows Update
-    - Windows Update for Business
+    - Windows Update client policies
     - Windows Server Update Services
     - Configuration Manager
     - Optionally, software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes Windows Defender SmartScreen and other Microsoft services. The device must be running Windows Defender SmartScreen and Windows 10 version 1709 or later for this software to be trusted.

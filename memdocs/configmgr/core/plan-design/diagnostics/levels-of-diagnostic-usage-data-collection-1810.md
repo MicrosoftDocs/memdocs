@@ -58,8 +58,7 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - ***[Updated]*** Count of Windows 10 devices by branch, build, and unique Active Directory forest  
 
-- Count of Windows 10 clients that use Windows Update for Business  
-
+- Count of Windows 10 clients that use Windows Update client policies
 - Database performance metrics: replication processing information, top SQL Server stored procedures by processor, and disk usage
 
 - Distribution point and management point types and basic configuration information: protected, prestaged, PXE, multicast, SSL state, pull/peer distribution points, MDM-enabled, and SSL-enabled

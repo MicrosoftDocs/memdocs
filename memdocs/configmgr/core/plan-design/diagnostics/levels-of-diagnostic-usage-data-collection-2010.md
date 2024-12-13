@@ -170,7 +170,7 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Basic OS deployment counts of images
 
-- Count of Windows 10 clients that use Windows Update for Business
+- Count of Windows 10 clients that use Windows Update client policies
 
 - Count of operating systems for managed devices and policies set by the Exchange Connector
 

@@ -347,8 +347,7 @@ For Configuration Manager version 1702, this level includes the following:
 
     - Count of updates that are created and deployed with System Center Update Publisher  
 
-    - Count of Windows 10 clients that use Windows Update for Business  
-
+    - Count of Windows 10 clients that use Windows Update client policies
     - Number of automatic deployment rules that are tied to synchronization  
 
     - Number of automatic deployment rules that create new or add updates to an existing group  

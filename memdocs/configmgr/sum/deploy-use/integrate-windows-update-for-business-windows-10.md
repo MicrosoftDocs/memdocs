@@ -1,5 +1,5 @@
 ---
-title: Integrate Windows Update for Business
+title: Integrate Windows Update client policies
 titleSuffix: Configuration Manager
 description: Use Windows Update for Business to keep Windows up-to-date for devices connected to the Windows Update service.
 author: BalaDelli
@@ -14,7 +14,7 @@ ms.reviewer: mstewart,aaroncz
 ms.collection: tier3
 ---
 
-# Integrate with Windows Update for Business
+# Integrate with Windows Update client policies
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -41,17 +41,21 @@ Windows Update for Business allows you to keep Windows 10 or later devices in yo
 
 - Configuration Manager full client deployment that uses the software updates infrastructure won't work for clients that are connected to Windows Update for Business to receive updates.  
 
-## Identify clients that use Windows Update for Business for Windows updates
+## Identify clients that use Windows Update client policies for Windows updates
+<a name="identify-clients-that-use-wufb-for-windows-updates"></a>
 
 Use the following procedure to identify clients that use Windows Update for Business to get Windows updates and upgrades. Then configure these clients to stop using WSUS to get updates, and deploy a client agent setting to disable the software updates workflow for these clients.  
 
-### Prerequisites for Windows Update for Business
+### Prerequisites for Windows Update client policies
+<a name="prerequisites-for-wufb"></a>
+<a name="BKMK_WUfB"></a>
 
 - Clients that run Windows 10 Desktop Pro or Windows 10 Enterprise Edition version 1511 or later
 
 - [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) is deployed and clients use Windows Update for Business to get Windows updates and upgrades.  
 
-### To identify clients that use Windows Update for Business  
+### To identify clients that use Windows Update client policies
+<a name="to-identify-clients-that-use-windows-update-for-business"></a>
 
 1. Ensure the Windows Update Agent isn't scanning against WSUS, if it was previously enabled. The following registry key can be used to indicate whether the computer is scanning against WSUS or Windows Update. If the registry key doesn't exist, it's not scanning against WSUS.
     - **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\UseWUServer**

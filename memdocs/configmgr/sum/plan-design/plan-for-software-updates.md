@@ -154,7 +154,8 @@ Place a software update point in an internet-facing network and enable it to all
 
 For more information on the advantages and disadvantages of internet-based client management, see [Manage clients on the internet](../../core/clients/manage/manage-clients-internet.md).
 
-#### Windows Update for Business
+#### Windows Update client policies
+<a name="windows-update-for-business"></a>
 
 Windows Update for Business allows you to keep Windows 10 or later devices always up-to-date with the latest quality and feature updates. These devices connect directly to the Windows Update cloud service. Configuration Manager can differentiate between Windows computers that use Windows Update for Business and WSUS for getting software updates.
 

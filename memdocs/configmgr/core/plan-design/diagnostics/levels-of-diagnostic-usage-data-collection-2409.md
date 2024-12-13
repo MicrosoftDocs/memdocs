@@ -181,7 +181,7 @@ For Configuration Manager version 2409, this level includes the following data:
 
 - Basic OS deployment counts of images
 
-- Count of Windows clients that use Windows Update for Business
+- Count of Windows clients that use Windows Update client policies
 
 - Count of operating systems for managed devices and policies set by the Exchange Connector
 

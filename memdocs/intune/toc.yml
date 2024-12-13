@@ -1008,7 +1008,7 @@ items:
               href: ./protect/software-updates-macos.md    
           - name: Windows updates
             items:
-            - name: Use Windows Update for Business
+            - name: Use Windows Update client policies
               href: ./protect/windows-update-for-business-configure.md
             - name: Update rings policy
               href: ./protect/windows-10-update-rings.md

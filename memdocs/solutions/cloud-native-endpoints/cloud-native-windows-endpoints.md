@@ -472,7 +472,8 @@ The following settings in the **Windows security baseline** can cause issues wit
 
 For more information, see [Troubleshooting policy conflicts with Windows Autopilot](/autopilot/troubleshooting-faq#troubleshooting-policy-conflicts-with-windows-autopilot).
 
-### Windows Update for Business
+### Windows Update client policies
+<a name="windows-update-for-business"></a>
 
 *Windows Update for Business* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update for Business can be configured using:
 

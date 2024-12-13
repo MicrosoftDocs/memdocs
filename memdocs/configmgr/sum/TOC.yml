@@ -82,7 +82,7 @@ items:
     href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
   - name: Manage Surface drivers
     href: deploy-use/surface-drivers.md   
-  - name: Integration with Windows Update for Business
+  - name: Integration with Windows Update client policies
     href: deploy-use/integrate-windows-update-for-business-windows-10.md
   - name: Third-party software updates
     href: deploy-use/third-party-software-updates.md

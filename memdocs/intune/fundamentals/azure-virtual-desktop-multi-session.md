@@ -195,7 +195,8 @@ Scripts configured to run in the system context and assigned to devices are supp
 
 Scripts configured to run in the user context and assigned to users are supported on Windows 10 and Windows 11 Enterprise multi-session. This can be configured under Script settings by setting **Run this script using the logged on credentials** to **Yes**.
 
-## Windows Update for Business
+## Windows Update client policies
+<a name="windows-update-for-business"></a>
 
 You can use the [settings catalog](../configuration/settings-catalog.md) to manage Windows Update settings for quality (security) updates for Windows 10 or Windows 11 Enterprise multi-session VMs. To find the supported settings in the catalog, configure a settings filter for *Enterprise multi-session* and then expand the *Windows Update for Business* category.
 
