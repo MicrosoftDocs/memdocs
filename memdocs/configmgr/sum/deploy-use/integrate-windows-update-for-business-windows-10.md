@@ -105,7 +105,7 @@ For more information about the Windows Insider program, see [Getting started wit
 1. In **Software Library** > **Windows Servicing** > **Windows Update for Business Policies**
 1. On the **Home** tab, in the **Deployment** group, select **Deploy Windows Update for Business Policy**.
 1. Configure the following settings:
-    - **Configuration policy to deploy**: Select the Windows Update for Business policy that you would like to deploy.
+    - **Configuration policy to deploy**: Select the Windows Update client policy that you would like to deploy.
     - **Collection**: Click **Browse** to select the collection where you want to deploy the policy.
     - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you're deploying the policy, enable this option to let policy settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).
     - **Schedule**: Specify the compliance evaluation schedule by which the deployed policy is evaluated on client computers. The schedule can be either a simple or a custom schedule.
