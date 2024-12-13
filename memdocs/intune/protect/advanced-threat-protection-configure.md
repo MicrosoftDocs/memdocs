@@ -236,6 +236,8 @@ For devices that run iOS/iPadOS (in Supervised Mode), there's specialized abilit
 
 8. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list of configuration profiles.
 
+<!-- The .mobileconfig profile download from Defender is missing, with resolution pending. This information is not accurate at this time.
+
 Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for iOS team provides a custom .mobileconfig profile to deploy to iPad/iOS devices. The .mobileconfig profile is used to analyze network traffic to ensure a safe browsing experience - a feature of Defender for iOS.
 
 1. Download the .mobile profile, which is hosted here: [https://aka.ms/mdatpiossupervisedprofile](https://aka.ms/mdatpiossupervisedprofile).
@@ -261,6 +263,7 @@ Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for 
    Select **Next**.
 
 10. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list of configuration profiles.
+-->
 
 ### View the count of devices that are onboarded to Microsoft Defender for Endpoint
 You can view a report on device onboarding status from within the Intune admin center by going to **Endpoint security** > **Endpoint detection and response** > and selecting the **EDR Onboarding Status** tab. 
