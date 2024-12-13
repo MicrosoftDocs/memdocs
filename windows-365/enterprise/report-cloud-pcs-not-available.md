@@ -11,7 +11,7 @@ ms.date: 12/18/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
-ms.localizationpriority: highs
+ms.localizationpriority: high
 ms.assetid: 
 
 # optional metadata
