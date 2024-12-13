@@ -81,14 +81,14 @@ Use the following procedure as a guide to create policies to manage driver updat
 
      - **Make updates available after (days)** – This setting is a deferral period that delays when Windows Update begins to deploy and install the new recommended update that was automatically added to the policy with a status of *Approved*. The delay supports from zero to 30 days and starts from the day the update is added to the policy, not from the date the update was made available or published by the OEM. The deferral is intended to provide you with time to identify and if necessary, pause deployment of the new recommended update.
 
-    For example, consider a driver update policy that uses automatic approvals and has a deferral of three days. On June 1, WUfB-DS identifies a new recommended driver update that applies to devices with this policy and adds the update to the policy as approved. Due to the deferral period of three days, Windows Update waits to offer this update to any device until June 4, three days after it was added to the policy. If the deferral was set to zero days, Windows Update would begin installing the update on devices immediately.
+    For example, consider a driver update policy that uses automatic approvals and has a deferral of three days. On June 1, Windows Autopatch identifies a new recommended driver update that applies to devices with this policy and adds the update to the policy as approved. Due to the deferral period of three days, Windows Update waits to offer this update to any device until June 4, three days after it was added to the policy. If the deferral was set to zero days, Windows Update would begin installing the update on devices immediately.
 
    > [!TIP]  
    > After a policy is created, you won't be able to edit the policy to change the approval type. If the approval type is automatic, you can edit the value for *Make updates available after (days)*.
 
 4. For **Scope tags**, select any desired scope tags to apply.
 
-5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md). Devices must be assigned to this policy and the policy saved before WUfB-DS can identify the applicable driver updates to add to this policies driver list.
+5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md). Devices must be assigned to this policy and the policy saved before Windows Autopatch can identify the applicable driver updates to add to this policies driver list.
 
    > [!TIP]  
    > We recommend that a device be assigned a single policy for driver update policies. Assignment of a device to only one policy helps to prevent the installation of a driver update that is declined in one policy but approved in a second policy. Keep in mind that policies for Windows driver updates don't support options to remove or roll-back driver updates.
@@ -140,10 +140,10 @@ While viewing the Windows driver update policy list, you can view details about 
 - The first tab displays the policies **Properties**, where you can review and edit the policy configuration.
 - The other two tabs comprise the policies driver list.
 
-You can use the *driver list* to review the driver updates that WUfB-DS identifies as applicable for one or more devices that receive that policy. From the list, you can view and manage the approval status of each update.
+You can use the *driver list* to review the driver updates that Windows Autopatch identifies as applicable for one or more devices that receive that policy. From the list, you can view and manage the approval status of each update.
 
 > [!TIP]  
-> The driver list is not a record of the driver versions currently installed on devices assigned to the policy. Instead, it is a list of driver updates identified by and collected by WUfB-DS, which can be installed on devices to upgrade their existing drivers to a newer version. Intune does not collect an inventory of installed drivers.
+> The driver list is not a record of the driver versions currently installed on devices assigned to the policy. Instead, it is a list of driver updates identified by and collected by Windows Autopatch, which can be installed on devices to upgrade their existing drivers to a newer version. Intune does not collect an inventory of installed drivers.
 
 The driver list is divided into two tabs:
 

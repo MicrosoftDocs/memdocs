@@ -33,7 +33,7 @@ ms.collection:
 
 # Windows Driver update management in Microsoft Intune
 
-With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Intune and the Windows Update for Business deployment service (DS) take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and WUfB-DS sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
+With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Intune and the Windows Update for Business deployment service (DS) take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and Windows Autopatch sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
 
 Using Windows driver update policies, you remain in control of which driver updates can install on your devices. You can:
 
@@ -42,7 +42,7 @@ Using Windows driver update policies, you remain in control of which driver upda
   Later, when a newer driver update from the OEM is released and identified as the current *recommended* driver update, Intune automatically adds it to the policy and moves the previously recommended driver to the list of other drivers.
 
   > [!TIP]  
-  > An approved recommended driver update that is moved to the *other drivers* list due to a newer recommended driver update becoming available, remains approved. When a newer recommended and approved driver update is available, WUfB-DS will install only that latest approved version. If the latest approved update version is paused, the deployment service will automatically offer the next most recent and approved update version, which is now on the *other drivers* list. This behavior ensures that the last known-good driver update version that was approved can continue to install on devices, while the more recent recommended version remains paused.
+  > An approved recommended driver update that is moved to the *other drivers* list due to a newer recommended driver update becoming available, remains approved. When a newer recommended and approved driver update is available, Windows Autopatch will install only that latest approved version. If the latest approved update version is paused, the deployment service will automatically offer the next most recent and approved update version, which is now on the *other drivers* list. This behavior ensures that the last known-good driver update version that was approved can continue to install on devices, while the more recent recommended version remains paused.
 
   With this policy configuration, you can also choose to review the available updates to selectively approve, pause, or decline *any* update that remains available for devices with the policy.
 
@@ -85,7 +85,7 @@ Your organization must have one of the following subscriptions that include a li
 
 *Review your subscription details for applicability to Windows 11*.
 
-If you're blocked when creating new policies for capabilities that require WUfB-DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants' licenses meet the WUfB-DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+If you're blocked when creating new policies for capabilities that require Windows Autopatch and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants' licenses meet the Windows Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 ### Device & Edition requirements
 
@@ -163,10 +163,10 @@ For more information about WPJ limitations for Intune Windows Update policies, s
   
 **Windows Driver Update Management architecture**:
 
-1. Microsoft Intune provides the Microsoft Entra IDs and Intune policy settings for devices to WUfB-DS. Intune also provides the list of driver approvals and pause commands to WUfB-DS.
-2. WUfB-DS configures Windows Updates based on the information provided by Intune. Windows Updates provides the applicable driver update inventory per device ID.
+1. Microsoft Intune provides the Microsoft Entra IDs and Intune policy settings for devices to Windows Autopatch. Intune also provides the list of driver approvals and pause commands to Windows Autopatch.
+2. Windows Autopatch configures Windows Updates based on the information provided by Intune. Windows Updates provides the applicable driver update inventory per device ID.
 3. Devices send data to Microsoft so that Windows Update can identify the applicable driver updates for a device during its regular Windows Update scans for updates.  Any approved updates install on the device.
-4. WUfB-DS reports Windows diagnostic data back to Intune for reports.
+4. Windows Autopatch reports Windows diagnostic data back to Intune for reports.
 
 ## Plan for driver updates
 
@@ -229,11 +229,11 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
   Installing drivers with older versions than those already present on a device isn't possible through driver update management.
 
-### What is the WUfB-DS synchronization frequency?
+### What is the Windows Autopatch synchronization frequency?
 
-- Intune to WUfB-DS syncs run each day, and you can use the *Sync* option to run a synchronization on demand. The time to complete a synchronization depends on the device information involved but should usually take only a few minutes to complete.
+- Intune to Windows Autopatch syncs run each day, and you can use the *Sync* option to run a synchronization on demand. The time to complete a synchronization depends on the device information involved but should usually take only a few minutes to complete.
 
-  Devices sync with the WUfB-DS service each day when the device runs a Windows Update scan.
+  Devices sync with the Windows Autopatch service each day when the device runs a Windows Update scan.
 
 ### What drivers are available to be managed?
 
@@ -243,7 +243,7 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 - Updates that are published to Windows Update have a requirement to use a Windows mechanism that enables securely updating the firmware or driver without requiring the BIOS/UEFI to be unlocked.
 
-### If a vendor has their own app for scanning and installing driver and firmware updates, is there a delay in update availability between their app and WUfB-DS?
+### If a vendor has their own app for scanning and installing driver and firmware updates, is there a delay in update availability between their app and Windows Autopatch?
 
 - The possibility of a delay depends on the vendor or OEM who determines the availability of their updates. Because driver updates are digitally signed by the same portal before they're published to Windows Updates, driver updates might become available through Windows Update before they become available via the vendors tools.
 
@@ -254,7 +254,7 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 ### How quickly are paused updates actually paused?
 
-- Pause is a best effort, and when an update is paused, WUfB-DS removes the approval. However, devices won't know that an update is paused until it's next scan for updates.
+- Pause is a best effort, and when an update is paused, Windows Autopatch removes the approval. However, devices won't know that an update is paused until it's next scan for updates.
   - If a device hasn't yet scanned for the update, then the paused update isn't offered, and *Pause* works as expected.
   - If a device scans for updates and discovers an update is paused and that the device is in the process of downloading, installing, or waiting to restart, then Windows Update on the device attempts a "best effort" to remove that driver update from being installed. If it can't halt the installation, the update completes its installation.
   - If an update completes its installation before the next scan for updates, nothing happens, and the update remains installed.
