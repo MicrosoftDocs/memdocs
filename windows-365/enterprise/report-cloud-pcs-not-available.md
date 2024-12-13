@@ -64,7 +64,7 @@ You can use the **Columns** and **Add filter** options to customize the report:
 
 You can use the **View details** link to see the recent history of the Cloud PC. You can then cross-reference multiple conditions and timelines to find potential root causes of Cloud PC unavailability.
 
-By using the various columns together, an experienced admin may draw clues to the state of the device and the underlying cause of any problems. For example, a user complains to your help desk that they can't access their Cloud PC. you check this report and see no data in the **Host health** or **System status** columns, the **Device status** is **Provisioned**, and the **Connection error** says **Client Disconnect**. Other Cloud PCs in the same region aren't in the list. This issue is probably specific to this user, possibly something to do with the physical client configuration, network configuration, or network infrastructure.
+By using the various columns together, an experienced admin may draw clues to the state of the device and the underlying cause of any problems. For example, a user complains to your help desk that they can't access their Cloud PC. You check this report and see no data in the **Host health** or **System status** columns, the **Device status** is **Provisioned**, and the **Connection error** says **Client Disconnect**. Other Cloud PCs in the same region aren't in the list. This issue is probably specific to this user, possibly something to do with the physical client configuration, network configuration, or network infrastructure.
 
 ## Bulk device actions
 
@@ -75,7 +75,7 @@ You can use **Bulk device actions** to perform device actions on multiple Cloud 
 3. Select **Bulk device actions** > specific device action.
 4. Based on the specific action, complete the subsequent pages.
 
-The time it takes complete the actions varies depends on the specific action.
+The time it takes complete the actions varies depending on the specific action.
 
 <!-- ########################## -->
 ## Next steps
