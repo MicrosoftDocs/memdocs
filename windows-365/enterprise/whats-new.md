@@ -56,7 +56,7 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
-## Week of December 9, 2024
+## Week of December 17, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
