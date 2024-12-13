@@ -145,7 +145,7 @@ With this path, you provide a name for the onboarding policy and select both the
 
    :::image type="content" source="./media/advanced-threat-protection-configure/select-preconfigured-policy.jpg" alt-text="Screen shot that displays the path to the preconfigured policy option.":::
 
-3. For Platform, select **Windows** for devices managed directly by Intune, or **Windows (ConfigMgr) ** for devices managed through the Tenant Attach scenario.  For Profile select **Endpoint detection and response**.
+3. For Platform, select **Windows** for devices managed directly by Intune, or **Windows (ConfigMgr)** for devices managed through the Tenant Attach scenario.  For Profile select **Endpoint detection and response**.
 
 4. Specify a Name for the policy.
 
