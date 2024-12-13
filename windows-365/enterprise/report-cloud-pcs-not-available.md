@@ -8,10 +8,10 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 12/18/2024
-ms.topic: overview
+ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
-ms.localizationpriority: high
+ms.localizationpriority: highs
 ms.assetid: 
 
 # optional metadata
@@ -82,4 +82,4 @@ The time it takes complete the actions varies depends on the specific action.
 
 [Remoting connection report](report-remoting-connection.md)
 
-[Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+[Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md). 
