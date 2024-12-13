@@ -23,7 +23,7 @@ This article introduces the features that are available in the Technical Preview
 The following are new features you can try out with this version.  
 
 ##  <a name="BKMK_WUfB"></a> Integration with Windows Update for Business in Windows 10  
- Configuration Manager now has the ability to differentiate a Windows 10 computer that is directly connected via Windows Update for Business (WUfB) versus the ones connected to WSUS for getting Windows 10 updates and upgrades.  For computers connected via WUfB, the updates and upgrades can be managed at the cadence set by an administrative user via Group Policies or MDM policies and these updates/upgrades can be installed directly from WUfB.    
+ Configuration Manager now has the ability to differentiate a Windows 10 computer that is directly connected via Windows Update for Business versus the ones connected to WSUS for getting Windows 10 updates and upgrades.  For computers connected via WUfB, the updates and upgrades can be managed at the cadence set by an administrative user via Group Policies or MDM policies and these updates/upgrades can be installed directly from WUfB.    
 For computers connected via WUfB, Configuration Manager will not be able to report on compliance status (including Windows Updates or Definition Updates). Also Configuration Manager will not be able to deploy Microsoft Updates or 3rd party updates to these computers.  
 
  **Prerequisites for this scenario:**  

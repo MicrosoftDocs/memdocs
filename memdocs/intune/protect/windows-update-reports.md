@@ -241,7 +241,7 @@ To use the report:
 
    - **Client-side data**:
      - **On Hold**:
-       - **Deferred** – Windows Update for Business (WUfB) policies are causing the device to defer the update being offered.
+       - **Deferred** – Windows Update for Business policies are causing the device to defer the update being offered.
      - **Offering**:
        - **Offer Received** – The device scanned against Windows Update (WU) and identifies that the update is applicable but hasn't begun to download it.
      - **Installing**:

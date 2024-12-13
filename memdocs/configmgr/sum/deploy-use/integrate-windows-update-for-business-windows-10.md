@@ -1,7 +1,7 @@
 ---
 title: Integrate Windows Update for Business
 titleSuffix: Configuration Manager
-description: Use Windows Update for Business (WUfB) to keep Windows up-to-date for devices connected to the Windows Update service.
+description: Use Windows Update for Business to keep Windows up-to-date for devices connected to the Windows Update service.
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
@@ -18,7 +18,7 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-Windows Update for Business (WUfB) allows you to keep Windows 10 or later devices in your organization always up-to-date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager can differentiate between Windows computers that use WUfB and WSUS for getting software updates.  
+Windows Update for Business allows you to keep Windows 10 or later devices in your organization always up-to-date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager can differentiate between Windows computers that use WUfB and WSUS for getting software updates.  
 
 > [!WARNING]
 > If you are using co-management for your devices and you have moved the [Windows Update policies](../../comanage/workloads.md#windows-update-policies) to Intune, then your devices will get their [Windows Update for Business policies from Intune](/mem/intune/protect/windows-update-for-business-configure).

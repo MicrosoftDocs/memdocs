@@ -157,7 +157,7 @@ Before you can monitor results and update status for expedited updates, your Int
 
 ### Limitations for Workplace Joined devices
 
-Intune policies for *Quality updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides for additional capabilities that are not supported for WPJ devices.
+Intune policies for *Quality updates for Windows 10 and later* require the use of Windows Update for Business and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides for additional capabilities that are not supported for WPJ devices.
 
 For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 

@@ -44,7 +44,7 @@ Configuration Manager provides comprehensive control over feature updates for Wi
 | [Upgrade Windows via task sequence](../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | The details of creating a task sequence to upgrade Windows with additional recommendations. |
 | [Phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md) | Phased deployments automate a coordinated, sequenced rollout of a task sequence across multiple collections. |
 | [Optimize Windows update delivery](../../sum/deploy-use/optimize-windows-10-update-delivery.md) | Use Configuration Manager to manage update content to stay current with Windows. |
-| [Windows Update for Business integration (optional)](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md) | Explains how to define and deploy Windows Update for Business (WUfB) policies using Configuration Manager. |
+| [Windows Update for Business integration (optional)](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md) | Explains how to define and deploy Windows Update for Business policies using Configuration Manager. |
 | [Use co-management with Microsoft Intune and Windows Update for Business (optional)](../../comanage/overview.md) | Provides an overview of co-management. |
 
 ## Product lifecycle
