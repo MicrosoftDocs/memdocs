@@ -44,7 +44,7 @@ For more information on the Intune feature, see [Use compliance policies to set 
 
 ## Windows Update policies
 
-Windows Update client policies let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices managed directly by Windows Update for Business.
+Windows Update client policies let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices managed directly by Windows Update client policies.
 
 > [!NOTE]
 > To use Windows Autopatch with these devices, this workload needs to be managed by Intune. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).

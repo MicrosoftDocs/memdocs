@@ -2677,7 +2677,7 @@ Specifies that Setup completes the installation, ignoring any dismissible compat
 
 #### Dynamically update Windows Setup with Windows Update
 
-Enable setup to perform Dynamic Update operations, such as search, download, and install updates. This setting corresponds to the Windows Setup command-line option `/DynamicUpdate`. This setting isn't compatible with Configuration Manager software updates. Enable this option when you manage updates with stand-alone Windows Server Update Services (WSUS) or Windows Update for Business.
+Enable setup to perform Dynamic Update operations, such as search, download, and install updates. This setting corresponds to the Windows Setup command-line option `/DynamicUpdate`. This setting isn't compatible with Configuration Manager software updates. Enable this option when you manage updates with stand-alone Windows Server Update Services (WSUS) or Windows Update client policies.
 
 #### Override policy and use default Microsoft Update
 

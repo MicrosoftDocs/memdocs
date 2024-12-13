@@ -41,7 +41,7 @@ With cloud config, you use Microsoft Intune policies to turn a Windows client de
 - Configures end users to be standard users on devices, giving IT more control over the apps installed on devices.
 - Removes built-in apps and the Microsoft Store app, simplifying the end user experience.
 - Applies endpoint security settings and a compliance policy. These policies help keep devices secure and help IT monitor device health.
-- Ensures that devices are automatically updated through Windows Update for Business.
+- Ensures that devices are automatically updated through Windows Update client policies.
 - Optionally, you can also:
 
   - Add other Microsoft 365 apps, like Outlook, Word, Excel, PowerPoint.

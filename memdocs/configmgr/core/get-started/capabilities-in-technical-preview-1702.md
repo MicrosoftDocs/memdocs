@@ -131,7 +131,7 @@ You can now configure a compliance policy update rule to include a Windows Updat
 ### Allow Windows Update for Business to manage Windows 10 updates
 To gather compliance assessment information for Windows Update for Business updates, use the following procedure to configure the client agent setting to explicitly allow Windows Update for Business to manage Windows 10 updates.
 1. In the Configuration Manager console, go to **Administration** > **Client Settings**.
-2. In the properties for the client settings, go to **Software Updates**, and select **Yes** for the **Manage Windows 10 updates with Windows Update for Business** setting.
+2. In the properties for the client settings, go to **Software Updates**, and select **Yes** for the **Manage Windows 10 updates with Windows Update client policies** setting.
 
 ### Create a compliance policy for Windows Update for Business assessment
 1. In the Configuration Manager console, go to **Assets and Compliance** > **Compliance Settings** > **Compliance policies**.

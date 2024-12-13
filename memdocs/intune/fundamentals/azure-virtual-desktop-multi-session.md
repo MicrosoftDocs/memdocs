@@ -198,7 +198,7 @@ Scripts configured to run in the user context and assigned to users are supporte
 ## Windows Update client policies
 <a name="windows-update-for-business"></a>
 
-You can use the [settings catalog](../configuration/settings-catalog.md) to manage Windows Update settings for quality (security) updates for Windows 10 or Windows 11 Enterprise multi-session VMs. To find the supported settings in the catalog, configure a settings filter for *Enterprise multi-session* and then expand the *Windows Update for Business* category.
+You can use the [settings catalog](../configuration/settings-catalog.md) to manage Windows Update settings for quality (security) updates for Windows 10 or Windows 11 Enterprise multi-session VMs. To find the supported settings in the catalog, configure a settings filter for *Enterprise multi-session* and then expand the *Windows Update client policies* category.
 
 The following settings are available in the catalog, with the links opening the Windows CSP documentation:
 

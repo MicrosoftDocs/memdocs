@@ -307,7 +307,7 @@ This phase is designed to help you build out security settings for your organiza
 - [BitLocker Encryption](#bitlocker-encryption)
 - [Windows Local Administrator Password Solution (LAPS)](#windows-local-administrator-password-solution-laps)
 - [Security baselines](#security-baselines)
-- [Windows Update for Business](#windows-update-for-business)
+- [Windows Update client policies](#windows-update-for-business)
 
 ### Microsoft Defender Antivirus (MDAV)
 
@@ -475,7 +475,7 @@ For more information, see [Troubleshooting policy conflicts with Windows Autopil
 ### Windows Update client policies
 <a name="windows-update-for-business"></a>
 
-*Windows Update for Business* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update for Business can be configured using:
+*Windows Update client policies* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update for Business can be configured using:
 
 - [Windows update rings](../../intune/protect/windows-10-update-rings.md)
 - [Windows Feature Updates](../../intune/protect/windows-10-feature-updates.md)

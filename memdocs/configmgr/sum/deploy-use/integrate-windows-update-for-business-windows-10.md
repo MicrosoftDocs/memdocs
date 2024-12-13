@@ -37,7 +37,7 @@ Windows Update for Business allows you to keep Windows 10 or later devices in yo
 
 - Configuration Manager won't be able to deploy or report compliance on Microsoft app updates for clients configured to use Windows Update for Business to receive updates. This includes updates for Microsoft 365 Apps, Internet Explorer, Edge, and Visual Studio.
 
-- Configuration Manager can still deploy 3rd party updates that are published to WSUS and managed through Configuration Manager to clients that are connected to Windows Update for Business to receive updates. If you don't want any 3rd party updates to be installed on clients connecting to Windows Update for Business, then disable the client setting named [Enable software updates on clients](../../core/clients/deploy/about-client-settings.md#software-updates).
+- Configuration Manager can still deploy 3rd party updates that are published to WSUS and managed through Configuration Manager to clients that are connected to Windows Update for Business to receive updates. If you don't want any 3rd party updates to be installed on clients connecting to Windows Update client policies, then disable the client setting named [Enable software updates on clients](../../core/clients/deploy/about-client-settings.md#software-updates).
 
 - Configuration Manager full client deployment that uses the software updates infrastructure won't work for clients that are connected to Windows Update for Business to receive updates.  
 
@@ -52,7 +52,7 @@ Use the following procedure to identify clients that use Windows Update for Busi
 
 - Clients that run Windows 10 Desktop Pro or Windows 10 Enterprise Edition version 1511 or later
 
-- [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) is deployed and clients use Windows Update for Business to get Windows updates and upgrades.  
+- [Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) is deployed and clients use Windows Update for Business to get Windows updates and upgrades.  
 
 ### To identify clients that use Windows Update client policies
 <a name="to-identify-clients-that-use-windows-update-for-business"></a>
@@ -66,12 +66,12 @@ Use the following procedure to identify clients that use Windows Update for Busi
     Select sr.* from SMS_R_System as sr join SMS_G_System_WINDOWSUPDATE as su on sr.ResourceID=su.ResourceID where su.UseWUServer is null
     ```
 
-1. Create a client agent setting to disable the software update workflow. Deploy the setting to the collection of computers that are connected directly to Windows Update for Business.
+1. Create a client agent setting to disable the software update workflow. Deploy the setting to the collection of computers that are connected directly to Windows Update client policies.
 1. The computers that are managed via Windows Update for Business will display **Unknown** in the compliance status and won't be counted as part of the overall compliance percentage.  
 
 ## Configure Windows Update for Business deferral policies
 <!-- 1290890 -->
-You can configure deferral policies for Windows 10 or later Feature Updates or Quality Updates for Windows devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows Servicing**.
+You can configure deferral policies for Windows 10 or later Feature Updates or Quality Updates for Windows devices managed directly by Windows Update client policies. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows Servicing**.
 
 > [!NOTE]
 > You can set deferral policies for Windows Insider. <!--507201-->  

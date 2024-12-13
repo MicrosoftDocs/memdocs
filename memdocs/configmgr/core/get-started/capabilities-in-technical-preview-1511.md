@@ -23,14 +23,14 @@ This article introduces the features that are available in the Technical Preview
 The following are new features you can try out with this version.  
 
 ##  <a name="BKMK_WUfB"></a> Integration with Windows Update for Business in Windows 10  
- Configuration Manager now has the ability to differentiate a Windows 10 computer that is directly connected via Windows Update for Business versus the ones connected to WSUS for getting Windows 10 updates and upgrades.  For computers connected via Windows Update for Business, the updates and upgrades can be managed at the cadence set by an administrative user via Group Policies or MDM policies and these updates/upgrades can be installed directly from Windows Update for Business.    
-For computers connected via Windows Update for Business, Configuration Manager will not be able to report on compliance status (including Windows Updates or Definition Updates). Also Configuration Manager will not be able to deploy Microsoft Updates or 3rd party updates to these computers.  
+ Configuration Manager now has the ability to differentiate a Windows 10 computer that is directly connected via Windows Update for Business versus the ones connected to WSUS for getting Windows 10 updates and upgrades.  For computers connected via Windows Update client policies, the updates and upgrades can be managed at the cadence set by an administrative user via Group Policies or MDM policies and these updates/upgrades can be installed directly from Windows Update client policies.    
+For computers connected via Windows Update client policies, Configuration Manager will not be able to report on compliance status (including Windows Updates or Definition Updates). Also Configuration Manager will not be able to deploy Microsoft Updates or 3rd party updates to these computers.  
 
  **Prerequisites for this scenario:**  
 
 -   Windows 10 Desktop Pro or Windows 10 Enterprise Edition version 1511 or later  
 
--   Computers to be managed via [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb).  
+-   Computers to be managed via [Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb).  
 
 ### Try it out!  
  Try to complete the following task and then use the feedback information near the top of this topic to let us know how it worked:  
@@ -42,7 +42,7 @@ For computers connected via Windows Update for Business, Configuration Manager w
 
 3.  Create a collection based on the **UseWUServer** attribute for all the computers that are connected via Windows Update for Business for updates and upgrades.  
 
-4.  Create a  client agent setting to disable the software update workflow and deploy the setting to the collection of computers that are connected directly to Windows Update for Business.  
+4.  Create a  client agent setting to disable the software update workflow and deploy the setting to the collection of computers that are connected directly to Windows Update client policies.  
 
 5.  The computers that are managed via Windows Update for Business will display **Unknown** in the compliance status and won't be counted as part of the overall compliance percentage.  
 

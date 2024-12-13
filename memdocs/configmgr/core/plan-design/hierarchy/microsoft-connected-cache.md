@@ -46,7 +46,7 @@ When clients download cloud-managed content, they use Delivery Optimization from
 
 - For [co-management workloads](../../../comanage/workloads.md):
 
-  - Windows Update for Business: Windows feature and quality updates
+  - Windows Update client policies: Windows feature and quality updates
 
   - Office Click-to-Run apps: Microsoft 365 Apps and updates
 

@@ -52,7 +52,7 @@ Use the following procedure as a guide to create policies to manage driver updat
 > Policies for Windows update rings, and policies that use the settings catalog, can include configurations that can block the installation of Windows driver updates. To ensure driver updates are not blocked, review your policies for the following configurations:
 >
 > - Windows update ring policy: Ensure the *Windows driver* setting is set to *Allow*.
-> - Settings catalog policy: In the *Windows Update for Business* category, ensure that *Exclude WU Drivers in Quality Update* is set to *Allow Windows Update drivers*.
+> - Settings catalog policy: In the *Windows Update client policies* category, ensure that *Exclude WU Drivers in Quality Update* is set to *Allow Windows Update drivers*.
 >
 > By default, both settings use a configuration that will *allow* Windows driver updates.
 

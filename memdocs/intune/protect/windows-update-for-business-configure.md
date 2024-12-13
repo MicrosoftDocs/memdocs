@@ -32,9 +32,9 @@ ms.collection:
 
 # Manage Windows 10 and Windows 11 software updates in Intune
 
-Use Microsoft Intune to manage the install of Windows 10/11 software updates from Windows Update for Business.
+Use Microsoft Intune to manage the install of Windows 10/11 software updates from Windows Update client policies.
 
-By using Windows Update for Business, you simplify the update management experience. You don't need to approve individual updates for groups of devices and can manage risk in your environments by configuring an update rollout strategy. With Intune, you can [configure update settings](windows-update-settings.md) on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
+By using Windows Update client policies, you simplify the update management experience. You don't need to approve individual updates for groups of devices and can manage risk in your environments by configuring an update rollout strategy. With Intune, you can [configure update settings](windows-update-settings.md) on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
 
 Intune stores only the update policy assignments, not the updates themselves. When you save a policy, Intune passes the configuration details to Windows Update, which then determines which of these updates are offered to each device. Devices access Windows Update directly for the updates.
 
@@ -56,7 +56,7 @@ Intune provides the following policy types to manage updates, which you assign t
 
 ## Policy limitations for Workplace Joined devices
 
-Microsoft introduced a cloud service as part of the Windows Update for Business product family, [Windows Autopatch](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service). As a cloud service, Windows Update for Business ds supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren’t supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings for Windows 10 and later* policy type.
+Microsoft introduced a cloud service as part of the Windows Update for Business product family, [Windows Autopatch](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service). As a cloud service, Windows Update for Business ds supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren’t supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings for Windows 10 and later* policy type.
 
 The following Intune policy types for Windows Updates use Windows Update for Business ds, which prevents their support on WPJ devices:
 
@@ -116,4 +116,4 @@ To learn about report options for Update rings policy and Windows feature update
 - [Use Windows feature updates](../protect/windows-10-feature-updates.md)
 - [Expedite quality updates](../protect/windows-10-expedite-updates.md)
 - [Use Windows driver updates policy](../protect/windows-driver-updates-policy.md)
-- For more information, see [Manage updates using Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) in the Windows documentation.
+- For more information, see [Manage updates using Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) in the Windows documentation.

@@ -20,7 +20,7 @@ ms.collection: tier3
 
 For many customers, a successful path to getting and staying current with Windows monthly updates starts with a good content distribution strategy using Configuration Manager. The size of the monthly quality updates can be a cause of concern for large organizations. There are a few technologies available that are intended to help reduce bandwidth and network load to optimize update delivery. This article explains these technologies, compares them, and provides recommendations to help you make decisions on which one to use.  
  
-Windows provides several types of updates. For more information, see [Update types in Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business). This article focuses on Windows *quality* updates with Configuration Manager. 
+Windows provides several types of updates. For more information, see [Update types in Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business). This article focuses on Windows *quality* updates with Configuration Manager. 
 
 
 ## Express update delivery
@@ -130,7 +130,7 @@ Microsoft recommends that you optimize Windows 10 or later quality update delive
 
 Due to the nature of express installation files, their content size is considerably larger than traditional self-contained files. This size results in longer update download times from the Windows Update service to the Configuration Manager site server. The amount of disk space required for both the site server and distribution points also increases. The total time required to download and distribute quality updates could be longer. However, the device-side benefits should be noticeable during the download and installation of quality updates by the devices. For more information, see [Using Express Installation Files](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708456(v=ws.10)#using-express-installation-files).
 
-If the server-side tradeoffs of larger-size updates are blockers for the adoption of express support, but the device-side benefits are critical to your business and environment, Microsoft recommends that you use [Windows Update for Business](integrate-windows-update-for-business-windows-10.md) with Configuration Manager. Windows Update for Business provides all of the benefits of express without the need to download, store, and distribute express installation files throughout your environment. Clients download content directly from the Windows Update service, thus can still use Delivery Optimization.
+If the server-side tradeoffs of larger-size updates are blockers for the adoption of express support, but the device-side benefits are critical to your business and environment, Microsoft recommends that you use [Windows Update client policies](integrate-windows-update-for-business-windows-10.md) with Configuration Manager. Windows Update for Business provides all of the benefits of express without the need to download, store, and distribute express installation files throughout your environment. Clients download content directly from the Windows Update service, thus can still use Delivery Optimization.
 
 
 

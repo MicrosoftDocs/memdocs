@@ -160,12 +160,12 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   Many on-premises solutions can't deploy updates to cloud-native endpoints or deploy them efficiently. From a security perspective, this workload may be the most important. It should be the first workload that you transition to support cloud-native Windows endpoints.
 
-  - **Deploy Windows updates** using a cloud-based system, like Windows Update for Business. Using Intune or Configuration Manager (with a [CMG](../../configmgr/core/clients/manage/cmg/overview.md) and [co-management](../../configmgr/comanage/how-to-prepare-win10.md)), you can use Windows Update for Business to deploy security updates and feature updates.
+  - **Deploy Windows updates** using a cloud-based system, like Windows Update client policies. Using Intune or Configuration Manager (with a [CMG](../../configmgr/core/clients/manage/cmg/overview.md) and [co-management](../../configmgr/comanage/how-to-prepare-win10.md)), you can use Windows Update for Business to deploy security updates and feature updates.
 
     For more information, go to:
 
     - [Manage Windows 10 and Windows 11 software updates in Intune](../../intune/protect/windows-update-for-business-configure.md)
-    - [Integrate Configure Manager with Windows Update for Business](../../configmgr/sum/deploy-use/integrate-windows-update-for-business-windows-10.md)
+    - [Integrate Configure Manager with Windows Update client policies](../../configmgr/sum/deploy-use/integrate-windows-update-for-business-windows-10.md)
     - [Choose how to manage updates to Microsoft 365 Apps](/deployoffice/choose-how-manage-updates-microsoft-365-apps)
 
   - **Deploy Microsoft 365 app updates** using the following options:

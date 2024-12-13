@@ -17,7 +17,7 @@ ms.subservice: education
 
 Microsoft Intune and Intune for Education can configure many Windows Update configuration settings. This article summarizes the configurations that are most commonly used for student and teacher devices.
 
-Use Microsoft Intune or Intune for Education to manage the install of Windows 10/11 software updates from Windows Update for Business. You can configure update settings on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
+Use Microsoft Intune or Intune for Education to manage the install of Windows 10/11 software updates from Windows Update client policies. You can configure update settings on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
 
 ## Update rings for Windows 10 and later
 

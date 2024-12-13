@@ -48,7 +48,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 - Devices must run Windows 10 version 1607 or later, or Windows 11.
   
   > [!NOTE]
-  > Although not required to configure Windows Update for Business, if the Microsoft Account Sign-In Assistant (wlidsvc) service is disabled, Windows Update doesn't offer feature updates to devices running Windows 10 1709 or later, or Windows 11. For more information, see [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
+  > Although not required to configure Windows Update client policies, if the Microsoft Account Sign-In Assistant (wlidsvc) service is disabled, Windows Update doesn't offer feature updates to devices running Windows 10 1709 or later, or Windows 11. For more information, see [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
 
 - Devices must be one of the following supported Windows editions:
 
@@ -76,7 +76,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 
 ### Limitations for Workplace Joined devices
 
-Intune Update rings for Windows 10 and later require the use of Windows Update for Business, which supports devices that are Workplace Joined (WPJ). However, the following Intune Windows Update policy types use Windows Update for Business and [Windows Autopatch](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service), which provides for additional capabilities that are not supported for WPJ devices.
+Intune Update rings for Windows 10 and later require the use of Windows Update client policies, which supports devices that are Workplace Joined (WPJ). However, the following Intune Windows Update policy types use Windows Update for Business and [Windows Autopatch](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service), which provides for additional capabilities that are not supported for WPJ devices.
 
 - Driver updates for Windows 10 and later
 - Feature updates for Windows 10 and later
@@ -218,7 +218,7 @@ Consider the following when you use Uninstall:
 
 - Once the feature or quality update pause elapses on an Update Ring, devices will reinstall previously uninstalled feature or quality updates if they're still applicable.
 
-- Uninstallation will not be successful when the feature update was applied using an Enablement Package. An Enablement Package is the most common way devices update to Windows 10 22H2 from Windows 10 2004, 20H2, and 21H2 via Windows Update for Business. To learn more about Enablement Packages, see [KB5015684: Featured update to Windows 10, version 22H2 by using an enablement package - Microsoft Support](https://support.microsoft.com/topic/kb5015684-featured-update-to-windows-10-version-22h2-by-using-an-enablement-package-09d43632-f438-47b5-985e-d6fd704eee61).  To learn more about using a script to uninstall Enablement Packages, see [Uninstalling Windows updates on managed devices using Intune](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/uninstalling-windows-updates-on-managed-devices-using-intune/ba-p/3778267)
+- Uninstallation will not be successful when the feature update was applied using an Enablement Package. An Enablement Package is the most common way devices update to Windows 10 22H2 from Windows 10 2004, 20H2, and 21H2 via Windows Update client policies. To learn more about Enablement Packages, see [KB5015684: Featured update to Windows 10, version 22H2 by using an enablement package - Microsoft Support](https://support.microsoft.com/topic/kb5015684-featured-update-to-windows-10-version-22h2-by-using-an-enablement-package-09d43632-f438-47b5-985e-d6fd704eee61).  To learn more about using a script to uninstall Enablement Packages, see [Uninstalling Windows updates on managed devices using Intune](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/uninstalling-windows-updates-on-managed-devices-using-intune/ba-p/3778267)
 
 - For feature updates specifically, the time you can uninstall the update is limited from 2-60 days. This period is configured by the update rings Update setting **Set feature update uninstall period (2 – 60 days)**. You can't roll back a feature update that's been installed on a device after the update has been installed for longer than the configured uninstall period.
 
