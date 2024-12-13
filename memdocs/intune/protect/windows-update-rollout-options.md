@@ -87,7 +87,7 @@ The Windows Update for Business setting that you enable, *Allow Windows Update f
 
 As your rollout progresses, the deployment service monitors for unexpected issues. The service uses insights from the Windows ecosystem to create *likely issue* safeguard holds to proactively pause deployments to devices that are likely to encounter an issue. By applying safeguard holds to devices that are likely to have issues with the update, devices and end users are protected from potential productivity affecting issues.
 
-To learn more, see [Manage safeguards using the Windows Update for Business deployment service](/graph/windowsupdates-manage-safeguards) in the Graph API documentation for device updates.
+To learn more, see [Manage safeguards using the Windows Autopatch](/graph/windowsupdates-manage-safeguards) in the Graph API documentation for device updates.
 
 ### Enable intelligent rollouts
 

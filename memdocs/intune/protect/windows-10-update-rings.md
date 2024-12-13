@@ -76,7 +76,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 
 ### Limitations for Workplace Joined devices
 
-Intune Update rings for Windows 10 and later require the use of Windows Update for Business, which supports devices that are Workplace Joined (WPJ). However, the following Intune Windows Update policy types use Windows Update for Business and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service), which provides for additional capabilities that are not supported for WPJ devices.
+Intune Update rings for Windows 10 and later require the use of Windows Update for Business, which supports devices that are Workplace Joined (WPJ). However, the following Intune Windows Update policy types use Windows Update for Business and [Windows Autopatch](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service), which provides for additional capabilities that are not supported for WPJ devices.
 
 - Driver updates for Windows 10 and later
 - Feature updates for Windows 10 and later

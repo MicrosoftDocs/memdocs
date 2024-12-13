@@ -69,7 +69,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - The core functionality of creating and targeting a feature update only requires a license for Intune. The core functionality includes creating the policy and selecting a feature update to update devices, using the **Make updates available as soon as possible** option or specifying a start date, and reporting. Capabilities supported by client policies on Professional SKU devices don't require a license.
 
-- Additional cloud-based functionality requires an additional license. To use a cloud-based capability, in addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
+- Additional cloud-based functionality requires an additional license. To use a cloud-based capability, in addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Autopatch:
 
   - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 
@@ -79,7 +79,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   - Microsoft 365 Business Premium
 
-  Beginning in November of 2022, the Windows Update for Business deployment service license is checked and enforced.
+  Beginning in November of 2022, the Windows Autopatch license is checked and enforced.
   
   The cloud-based capabilities requiring the additional license are indicated in the *Create feature update deployment* or policy creation page and include the following items and potentially new features:
 
@@ -87,7 +87,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   
   - [Optional feature updates](#create-and-assign-feature-updates-for-windows-10-and-later-policy)
 
-  - Windows 10 (SxS): The Windows 10 (SxS) feature is a cloud-only feature. If you're blocked when creating new policies for capabilities that require Windows Update for Business deployment service and you get your licenses to use Windows Update for Business through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the Windows Update for Business ds license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+  - Windows 10 (SxS): The Windows 10 (SxS) feature is a cloud-only feature. If you're blocked when creating new policies for capabilities that require Windows Autopatch and you get your licenses to use Windows Update for Business through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the Windows Update for Business ds license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 - Devices must:  
   - Run a version of Windows 10/11 that remains in support.
@@ -102,7 +102,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
     - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
-    - Windows Update for Business deployment service
+    - Windows Autopatch
 
 - Enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy feature updates.
 
@@ -119,7 +119,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 ### Limitations for Workplace Joined devices
 
-Intune policies for *Feature updates for Windows 10 and later* require the use of Windows Update for Business and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service). Where Windows Update for Business supports WPJ devices, Windows Update for Business ds provides more capabilities that aren't supported for WPJ devices.
+Intune policies for *Feature updates for Windows 10 and later* require the use of Windows Update for Business and [Windows Autopatch](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service). Where Windows Update for Business supports WPJ devices, Windows Update for Business ds provides more capabilities that aren't supported for WPJ devices.
 
 For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 
@@ -152,7 +152,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
-- Managed devices that receive feature update policy are automatically enrolled with the [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview). The deployment service manages the updates a device receives.  Microsoft Intune uses this service and works with your Intune policies for Windows updates to deploy feature updates to devices.
+- Managed devices that receive feature update policy are automatically enrolled with the [Windows Autopatch](/windows/deployment/update/deployment-service-overview). The deployment service manages the updates a device receives.  Microsoft Intune uses this service and works with your Intune policies for Windows updates to deploy feature updates to devices.
 
   When a device is no longer assigned to any feature update policies, the device remains enrolled in the deployment service.  This change allows time to assign the device to a different policy and ensure that in the meantime the device doesn't receive a feature update that wasn't intended.
 
@@ -276,7 +276,7 @@ For each profile you can view:
 
 - **Support End Date** – The end of support date for the feature update version.
 > [!NOTE]
-> The date provided is for the Enterprise and Education editions of Windows.  To find the support dates for other editions supported by Windows Update for Business deployment service, see the [Microsoft Product Lifecycle site](https://aka.ms/lifecycle).
+> The date provided is for the Enterprise and Education editions of Windows.  To find the support dates for other editions supported by Windows Autopatch, see the [Microsoft Product Lifecycle site](https://aka.ms/lifecycle).
 
 Selecting a profile from the list opens the profiles **Overview** pane where you can:
 

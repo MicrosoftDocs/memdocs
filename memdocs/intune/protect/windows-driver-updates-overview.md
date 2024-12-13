@@ -33,7 +33,7 @@ ms.collection:
 
 # Windows Driver update management in Microsoft Intune
 
-With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Intune and the Windows Update for Business deployment service (DS) take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and Windows Autopatch sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
+With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Intune and the Windows Autopatch (DS) take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and Windows Autopatch sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
 
 Using Windows driver update policies, you remain in control of which driver updates can install on your devices. You can:
 
@@ -76,7 +76,7 @@ To use Windows Driver Update management, your organization must have the followi
 
 **Windows subscriptions and licenses**:
 
-Your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
+Your organization must have one of the following subscriptions that include a license for Windows Autopatch:
 
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
@@ -153,7 +153,7 @@ For more information, see [Role-based access control for Microsoft Intune](../fu
 
 ### Limitations for Workplace Joined devices
 
-Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update for Business and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service). Where Windows Update for Business supports WPJ devices, Windows Update for Business ds provides for other capabilities that aren't supported for WPJ devices.
+Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update for Business and [Windows Autopatch](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service). Where Windows Update for Business supports WPJ devices, Windows Update for Business ds provides for other capabilities that aren't supported for WPJ devices.
 
 For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 

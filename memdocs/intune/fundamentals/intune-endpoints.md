@@ -221,10 +221,10 @@ You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. F
 |*.do.dsp.mp.microsoft.com| Delivery Optimization |
 |*.notify.windows.com| Push Notifications |
 |*.wns.windows.com| Push Notifications |
-|devicelistenerprod.microsoft.com| Windows Update for Business deployment service |
-|devicelistenerprod.eudb.microsoft.com| Windows Update for Business deployment service |
-|login.windows.net| Windows Update for Business deployment service |
-|payloadprod*.blob.core.windows.net| Windows Update for Business deployment service |
+|devicelistenerprod.microsoft.com| Windows Autopatch |
+|devicelistenerprod.eudb.microsoft.com| Windows Autopatch |
+|login.windows.net| Windows Autopatch |
+|payloadprod*.blob.core.windows.net| Windows Autopatch |
 |time.windows.com| NTP Sync |
 |www.msftconnecttest.com| NTP Sync |
 |www.msftncsi.com| NTP Sync |
@@ -392,9 +392,10 @@ To find your tenant location navigate to the Intune admin center > **Tenant admi
 
 ---
 
-## Windows Update for Business deployment service
+## Windows Autopatch
+<a name="windows-update-for-business-deployment-service"></a>
 
-For more information on the required endpoints for Windows Update for Business deployment service, see [Windows Update for Business deployment service prerequisites](/windows/deployment/update/deployment-service-prerequisites#required-endpoints).
+For more information on the required endpoints for Windows Autopatch, see [Windows Autopatch prerequisites](/windows/deployment/update/deployment-service-prerequisites#required-endpoints).
 
 ## Endpoint analytics
 
