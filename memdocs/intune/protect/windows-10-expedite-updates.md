@@ -79,7 +79,7 @@ In addition to a license for Intune, your organization must have one of the foll
 - Windows Virtual Desktop Access E3 or E5
 - Microsoft 365 Business Premium
 
-Beginning in November of 2022, the Windows Update for Business deployment service (WUfB ds) license will be checked and enforced.
+Beginning in November of 2022, the Windows Update for Business deployment service license will be checked and enforced.
 
 If you're blocked when creating new policies for capabilities that require Windows Update for Business ds and you get your licenses to use Windows Update for Business through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the Windows Update for Business ds license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
@@ -157,7 +157,7 @@ Before you can monitor results and update status for expedited updates, your Int
 
 ### Limitations for Workplace Joined devices
 
-Intune policies for *Quality updates for Windows 10 and later* require the use of Windows Update for Business and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where Windows Update for Business supports WPJ devices, Windows Update for Business ds provides for additional capabilities that are not supported for WPJ devices.
+Intune policies for *Quality updates for Windows 10 and later* require the use of Windows Update for Business and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service). Where Windows Update for Business supports WPJ devices, Windows Update for Business ds provides for additional capabilities that are not supported for WPJ devices.
 
 For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 

@@ -56,7 +56,7 @@ Intune provides the following policy types to manage updates, which you assign t
 
 ## Policy limitations for Workplace Joined devices
 
-Microsoft introduced a cloud service as part of the Windows Update for Business product family, [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). As a cloud service, Windows Update for Business ds supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren’t supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings for Windows 10 and later* policy type.
+Microsoft introduced a cloud service as part of the Windows Update for Business product family, [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service). As a cloud service, Windows Update for Business ds supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren’t supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings for Windows 10 and later* policy type.
 
 The following Intune policy types for Windows Updates use Windows Update for Business ds, which prevents their support on WPJ devices:
 

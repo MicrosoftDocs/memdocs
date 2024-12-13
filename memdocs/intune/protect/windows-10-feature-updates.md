@@ -79,7 +79,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   - Microsoft 365 Business Premium
 
-  Beginning in November of 2022, the Windows Update for Business deployment service (WUfB ds) license is checked and enforced.
+  Beginning in November of 2022, the Windows Update for Business deployment service license is checked and enforced.
   
   The cloud-based capabilities requiring the additional license are indicated in the *Create feature update deployment* or policy creation page and include the following items and potentially new features:
 
@@ -119,7 +119,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 ### Limitations for Workplace Joined devices
 
-Intune policies for *Feature updates for Windows 10 and later* require the use of Windows Update for Business and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where Windows Update for Business supports WPJ devices, Windows Update for Business ds provides more capabilities that aren't supported for WPJ devices.
+Intune policies for *Feature updates for Windows 10 and later* require the use of Windows Update for Business and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service). Where Windows Update for Business supports WPJ devices, Windows Update for Business ds provides more capabilities that aren't supported for WPJ devices.
 
 For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 
