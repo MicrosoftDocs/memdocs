@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure integration of Microsoft Defender for Endpoint in Microsoft Intune
+title: Onboard and Configure Devices with Microsoft Defender for Endpoint via Microsoft Intune
 description: Integrate Microsoft Defender for Endpoint with Microsoft Intune, including connecting the products, onboarding devices, and assigning policies for compliance and risk level assessment.
 keywords: configure, manage, capabilities, attack surface reduction, next-generation protection, security controls, endpoint detection and response, auto investigation and remediation, security controls, controls, microsoft defender for endpoint, mde
 author: brenduns 
@@ -31,7 +31,7 @@ ms.collection:
 - sub-secure-endpoints
 ---
 
-# Connect and configure Microsoft Defender for Endpoint for use with Intune
+# Integrate Microsoft Defender for Endpoint with Intune and Onboard Devices
 
 Use the information and procedures in this article to connect Microsoft Defender for Endpoint with Intune and to then onboard and configure devices for Defender for Endpoint. Information in this article includes the following general steps:
 
