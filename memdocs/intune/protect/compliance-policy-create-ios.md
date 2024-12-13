@@ -154,7 +154,7 @@ For details about email profiles, see [configure access to organization email us
   
   - **Not configured**: Password is determined by the device's default settings. Their OS might allow simple passwords, like *0000* and *1234*.  
   - **Alphanumeric**: Password must contain a mix of uppercase letters, lowercase letters, and numeric characters.  
-  - **Numeric**: Passwords at minimum must be a set of numeric characters, such as *123456789*, and can also contain alphabetic characters, such as *abcdef*.  
+  - **Numeric**: Passwords at minimum must be a set of numeric characters, such as *123456789*. Alphabetic passwords and alphanumeric passwords are also supported.  
 
 - **Number of non-alphanumeric characters in password**  
   Enter the minimum number of special characters, such as `&`, `#`, `%`, `!`, and so on, that must be in the password. 
