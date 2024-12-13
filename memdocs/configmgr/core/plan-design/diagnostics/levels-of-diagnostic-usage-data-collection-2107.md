@@ -539,7 +539,7 @@ For Configuration Manager version 2107, this level includes the following data:
 
 - Count of Windows Update client policies created and deployed
 
-- Aggregated statistics of Windows Update for Business configurations
+- Aggregated statistics of Windows Update client policies configurations
 
 - Number of automatic deployment rules that are tied to synchronization
 

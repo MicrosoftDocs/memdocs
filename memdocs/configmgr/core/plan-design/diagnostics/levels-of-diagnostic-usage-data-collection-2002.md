@@ -489,7 +489,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - ***[Removed]*** Count of Windows Update client policies created and deployed  
 
-- Aggregated statistics of Windows Update for Business configurations  
+- Aggregated statistics of Windows Update client policies configurations  
 
 - ***[Removed]*** Number of automatic deployment rules that are tied to synchronization  
 
