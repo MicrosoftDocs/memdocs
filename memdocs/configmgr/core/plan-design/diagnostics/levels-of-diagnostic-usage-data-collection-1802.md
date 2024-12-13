@@ -393,7 +393,7 @@ For Configuration Manager version 1802, this level includes the following data:
 
 - Count of updates that are created and deployed with System Center Update Publisher  
 
-- Count of Windows Update for Business policies created and deployed
+- Count of Windows Update client policies created and deployed
 
 - ***[New]*** Aggregated statistics of Windows Update for Business configurations
 

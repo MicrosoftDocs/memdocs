@@ -488,7 +488,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - ***[Removed]*** Count of updates that are created and deployed with System Center Update Publisher  
 
-- ***[Removed]*** Count of Windows Update for Business policies created and deployed  
+- ***[Removed]*** Count of Windows Update client policies created and deployed  
 
 - Aggregated statistics of Windows Update for Business configurations  
 

@@ -108,8 +108,10 @@ After you enable co-management, Configuration Manager continues to manage all wo
 #### Compliance policies
 Compliance policies define the rules and settings that a device must comply with to be considered compliant by Conditional Access policies. You can also use compliance policies to monitor and remediate compliance issues with devices independently of Conditional Access.
 
-#### Windows Update for Business policies
-Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business. For details, see [Configure Windows Update for Business deferral policies](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
+#### Windows Update client policies
+<a name="windows-update-for-business-policies"></a>
+
+Windows Update client policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business. For details, see [Configure Windows Update for Business deferral policies](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
 
 ### Remote actions available in Intune on Azure for co-managed devices
 When a Windows 10 device is enabled for co-management, you have the following remote actions available to you from Intune on Azure:  
@@ -123,7 +125,7 @@ When a Windows 10 device is enabled for co-management, you have the following re
 Before you switch workloads from Configuration Manager to Intune, create the profiles and policies you need in Intune to ensure your devices continue to be protected.
 You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles.    
 <!-- - [Device compliance policies](/mem/intune/protect/compliance-policy-create-windows)  -->
-- [Windows Update for Business policies](/mem/intune/protect/windows-update-for-business-configure)  
+- [Windows Update client policies](/mem/intune/protect/windows-update-for-business-configure)  
 - [Device configuration profiles](/mem/intune/configuration/device-profile-create)  
 
 ### Architectural overview for co-management

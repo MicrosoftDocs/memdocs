@@ -42,7 +42,7 @@ When clients download cloud-managed content, they use Delivery Optimization from
 
 - Microsoft Store apps (UWP)
 
-- If you enable [Windows Update for Business policies](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md): Windows feature and quality updates
+- If you enable [Windows Update client policies](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md): Windows feature and quality updates
 
 - For [co-management workloads](../../../comanage/workloads.md):
 

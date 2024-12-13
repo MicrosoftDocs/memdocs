@@ -583,7 +583,7 @@ For Configuration Manager version 2309, this level includes the following data:
 
 - Count of updates that are created and deployed with System Center Update Publisher
 
-- Count of Windows Update for Business policies created and deployed
+- Count of Windows Update client policies created and deployed
 
 - Aggregated statistics of Windows Update for Business configurations
 

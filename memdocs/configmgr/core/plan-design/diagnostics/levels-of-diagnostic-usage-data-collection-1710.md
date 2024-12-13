@@ -394,7 +394,7 @@ For Configuration Manager version 1710, this level includes the following:
 
     - Count of Windows 10 clients that use Windows Update for Business  
 
-    - Count of Windows Update for Business policies created and deployed
+    - Count of Windows Update client policies created and deployed
 
     - Number of automatic deployment rules that are tied to synchronization  
 

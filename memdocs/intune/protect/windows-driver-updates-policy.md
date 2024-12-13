@@ -158,7 +158,7 @@ The driver list is divided into two tabs:
   - Firmware updates
   - Optional driver updates, or updates that the OEM doesn't intend to be installed on all devices by default
   
-  These updates can be managed and deployed through policies for Windows driver updates, but not through classic client Windows Update for Business policies.
+  These updates can be managed and deployed through policies for Windows driver updates, but not through classic client Windows Update client policies.
 
 > [!TIP]  
 > When a driver update is no longer needed by any device in the policy, that update version is removed from the driver list, and the policy. Policies retain only the driver update versions that can be used to update a driver on a device with that policy.
