@@ -106,7 +106,7 @@ The following are general prerequisites for you to enable co-management:
 After you enable co-management, Configuration Manager continues to manage all workloads. When you decide that you are ready, you can have Intune start managing available workloads. In this release, you can have Intune manage the following workloads.   
 
 #### Compliance policies
-Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access policies. You can also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access.
+Compliance policies define the rules and settings that a device must comply with to be considered compliant by Conditional Access policies. You can also use compliance policies to monitor and remediate compliance issues with devices independently of Conditional Access.
 
 #### Windows Update for Business policies
 Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business. For details, see [Configure Windows Update for Business deferral policies](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  

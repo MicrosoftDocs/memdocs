@@ -38,7 +38,7 @@ Make sure the co-management prerequisites are set up before you start this proce
 
 Now that you've enabled co-management, look at the following articles for immediate value you can gain in your environment:
 
-- [Conditional access](quickstart-conditional-access.md)  
+- [Conditional Access](quickstart-conditional-access.md)  
 
 - [Remote actions from Intune](quickstart-remote-actions.md)  
 

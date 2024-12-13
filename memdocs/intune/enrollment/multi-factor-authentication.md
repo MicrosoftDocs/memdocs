@@ -59,7 +59,7 @@ Complete these steps to enable multifactor authentication during Microsoft Intun
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 1. Go to **Devices**.
-1. Expand **Manage devices**, and then select **Conditional access**. This conditional access area is the same as the conditional access area available in the Microsoft Entra admin center. For more information about the available settings, see [Building a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies).  
+1. Expand **Manage devices**, and then select **Conditional Access**. This Conditional Access area is the same as the Conditional Access area available in the Microsoft Entra admin center. For more information about the available settings, see [Building a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies).  
 1. Choose **Create new policy**.  
 1. Name your policy.      
 1. Select the **Users** category.

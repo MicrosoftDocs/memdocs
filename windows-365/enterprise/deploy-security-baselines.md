@@ -62,4 +62,4 @@ For more information, see [Use security baselines to configure Windows devices i
 
 For a detailed list of the 24H1 settings, see [Settings list for the Windows 365 Cloud PC security baseline in Intune](/mem/intune/protect/security-baseline-settings-windows-365?pivots=win365-24h1).
 
-[Set conditional access policies](set-conditional-access-policies.md).
+[Set Conditional Access policies](set-conditional-access-policies.md).
