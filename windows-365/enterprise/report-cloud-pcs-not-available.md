@@ -70,12 +70,12 @@ By using the various columns together, an experienced admin may draw clues to th
 
 You can use **Bulk device actions** to perform device actions on multiple Cloud PCs at one time.
 
-1. Optional. Use **Add filters** to filter the table data to see the Cloud PCs that you want manage.
+1. Optional. Use **Add filters** to filter the table data to see the Cloud PCs that you want to manage.
 2. Select the Cloud PCs that you want to manage (maximum of 100,000 Cloud PCs).
 3. Select **Bulk device actions** > specific device action.
 4. Based on the specific action, complete the subsequent pages.
 
-The time it takes complete the actions varies depending on the specific action.
+The time it takes to complete the actions varies depending on the specific action.
 
 <!-- ########################## -->
 ## Next steps
