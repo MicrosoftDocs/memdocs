@@ -63,7 +63,7 @@ For more information about public preview items, see [Public preview in Windows 
 
 #### Restore, restart, and troubleshoot actions in the Cloud PCs that aren't available report<!--46873590-->
 
-You can now use the **Bulk device actions** command on the **Cloud PCs that aren't available** report to restore, restart, and troubleshoot actions directly from the report. For more information, seee [Cloud PCs that aren't available report](report-cloud-pcs-not-available.md).
+You can now use the **Bulk device actions** command on the **Cloud PCs that aren't available** report to restore, restart, and troubleshoot actions directly from the report. For more information, see [Cloud PCs that aren't available report](report-cloud-pcs-not-available.md).
 
 <!-- ########################## -->
 ## Week of December 9, 2024
