@@ -112,7 +112,7 @@ For more information, see [Removed and deprecated features for Configuration Man
 ## Next steps
 <!--At this time, version 2409 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2409.md#early-update-ring).-->
 
-As of December 11, 2024, version 2409 is globally available for all customers to install.
+As of December 16, 2024, version 2409 is globally available for all customers to install.
 
 >[!NOTE]
 >For exisiting Fast ring current branch 2409 customers, you will see Slow ring upgrade package in console. Install 2409 Slow ring package to be in production current branch.
