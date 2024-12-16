@@ -221,7 +221,8 @@ You can now use Configuration Manager to manage Microsoft Surface driver updates
 2. [Synchronize the Microsoft Surface drivers](../../../sum/get-started/synchronize-software-updates.md).
 3. [Deploy synchronized Microsoft Surface drivers](../../../sum/deploy-use/deploy-software-updates.md)
 
-### Configure Windows Update for Business deferral policies
+### Configure deferral policies with Windows Update client policies
+<a name="configure-windows-update-for-business-deferral-policies"></a>
 <!-- 1290890 -->
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update client policies. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
 
