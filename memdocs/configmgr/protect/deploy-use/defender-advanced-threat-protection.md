@@ -63,6 +63,7 @@ Up-level operating systems include:
 - Windows Server Semi-Annual Channel (SAC), version 1803 or later
 - Windows Server 2019
 - Windows Server 2022
+- Windows Server 2025
 
 Down-level operating systems that support MDE Client include:
 - Windows Server 2016
