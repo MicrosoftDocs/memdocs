@@ -223,7 +223,7 @@
 		</g>
 		<g id="shape79-52" v:mID="79" v:groupContext="shape" transform="translate(337.607,-394.256)">
 			<title>Sheet.79</title>
-			<desc>Windows Update client policies</desc>
+			<desc>Windows Update for Business policies</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="31.8463" cy="547.742" width="63.7" height="24.1875"/>
 			<rect x="0" y="535.649" width="63.6927" height="24.1875" class="st6"/>
@@ -1044,7 +1044,7 @@
 		</g>
 		<g id="shape336-218" v:mID="336" v:groupContext="shape" transform="translate(342.107,-200.89)">
 			<title>Sheet.336</title>
-			<desc>Windows Update client policies</desc>
+			<desc>Windows Update for Business policies</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="31.8463" cy="549.304" width="63.7" height="21.0632"/>
 			<rect x="0" y="538.773" width="63.6927" height="21.0632" class="st6"/>
