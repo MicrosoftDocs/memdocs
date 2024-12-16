@@ -139,7 +139,7 @@ Use the Software Update configuration to enforce an update to install at a speci
 
 ### Software Update Settings
 
-Use the Software Update Settings configuration to defer OS updates and control how users can manually interact with software updates in System Settings. This configuration is located in the **Declarative Device Management (DDM)** category of the settings catalog. You can learn more about Passcode using the following documentation:
+Use the Software Update Settings configuration to defer OS updates and control how users can manually interact with software updates in System Settings. This configuration is located in the **Declarative Device Management (DDM)** category of the settings catalog. You can learn more about Software Update Settings using the following documentation:
 
 |Apple Platform Guides|Apple Developer|Apple YAML|Intune documentation|
 | -------- | -------- | -------- | -------- |
