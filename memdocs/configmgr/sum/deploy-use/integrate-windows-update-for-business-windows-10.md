@@ -69,7 +69,8 @@ Use the following procedure to identify clients that use Windows Update client p
 1. Create a client agent setting to disable the software update workflow. Deploy the setting to the collection of computers that are connected directly to Windows Update client policies.
 1. The computers that are managed via Windows Update client policies will display **Unknown** in the compliance status and won't be counted as part of the overall compliance percentage.  
 
-## Configure Windows Update for Business deferral policies
+## Configure deferral policies with Windows Update client policies
+<a name="configure-windows-update-for-business-deferral-policies"></a>
 <!-- 1290890 -->
 You can configure deferral policies for Windows 10 or later Feature Updates or Quality Updates for Windows devices managed directly by Windows Update client policies. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows Servicing**.
 
@@ -82,7 +83,8 @@ For more information about the Windows Insider program, see [Getting started wit
 - Windows 10 version 1703 or later
 - Windows 10 or later devices managed by Windows Update client policies must have Internet connectivity
 
-#### To create a Windows Update for Business deferral policy
+#### To create a deferral policy with Windows Update client policies
+<a name="to-create-a-windows-update-for-business-deferral-policy"></a>
 
 1. In **Software Library** > **Windows Servicing** > **Windows Update for Business Policies**
 1. On the **Home** tab, in the **Create** group, select **Create Windows Update for Business Policy** to open the Create Windows Update for Business Policy Wizard.
@@ -104,7 +106,8 @@ For more information about the Windows Insider program, see [Getting started wit
 1. Select **Include drivers with Windows Update** to automatically update drivers from Windows Updates. If you clear this setting, driver updates aren't downloaded from Windows Updates.
 1. Complete the wizard to create the new deferral policy.
 
-#### To deploy a Windows Update for Business deferral policy
+#### To deploy a deferral policy with Windows Update client policies
+<a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>
 
 1. In **Software Library** > **Windows Servicing** > **Windows Update for Business Policies**
 1. On the **Home** tab, in the **Deployment** group, select **Deploy Windows Update for Business Policy**.

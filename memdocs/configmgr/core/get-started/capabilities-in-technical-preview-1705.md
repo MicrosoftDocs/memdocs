@@ -23,7 +23,7 @@ This article introduces the features that are available in the Technical Preview
 **Known Issues in this Technical Preview:**
 -   **Operations Manager Suite connector does not upgrade**. When you upgrade from a previous version of the Technical Preview that had the OMS connector configured, that connector is not upgraded and is no longer available in the console. After upgrade, you must [use the Azure Services wizard](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms) and reestablish connection to your OMS workspace.
 -   **Surface drivers do not synchronize successfully**. Even though support for surface drivers are listed in **What's New** in the Configuration Manager console for the technical preview, this feature does not yet work as expected.
--   **Unable to create Windows Update for Business deferral policies**. Even though the ability to configure Windows Update for Business deferral policies is listed in **What's New** in the Configuration Manager console for the technical preview, the wizard does not open and you are unable to configure any policies.
+-   **Unable to create Windows Update for Business deferral policies**. Even though the ability to configure deferral policies is listed in **What's New** in the Configuration Manager console for the technical preview, the wizard does not open and you are unable to configure any policies.
 
 
 <!--  Known Issues Template

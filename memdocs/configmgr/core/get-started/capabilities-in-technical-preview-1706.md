@@ -408,14 +408,17 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 2. [Synchronize the Microsoft Surface drivers](../../sum/get-started/synchronize-software-updates.md).
 3. [Deploy synchronized Microsoft Surface drivers](../../sum/deploy-use/deploy-software-updates.md)
 
-## Configure Windows Update for Business deferral policies
+## Configure deferral policies with Windows Update client policies
+<a name="configure-windows-update-for-business-deferral-policies"></a>
 <!-- 1290890 -->
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update client policies. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
 
 ### Prerequisites
 Windows 10 devices managed by Windows Update client policies must have Internet connectivity.
 
-#### To create a Windows Update for Business deferral policy
+#### To create a deferral policy with Windows Update client policies
+<a name="to-create-a-windows-update-for-business-deferral-policy"></a>
+
 1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
 2. On the **Home** tab, in the **Create** group, select **Create Windows Update for Business Policy** to open the Create Windows Update for Business Policy Wizard.
 3. On the **General** page, provide a name and description for the policy.
@@ -432,7 +435,9 @@ Windows 10 devices managed by Windows Update client policies must have Internet 
 7. Select **Include drivers with Windows Update** to automatically update drivers from Windows Updates. If you clear this setting, driver updates are not downloaded from Windows Updates.
 8. Complete the wizard to create the new deferral policy.
 
-#### To deploy a Windows Update for Business deferral policy
+#### To deploy a deferral policy with Windows Update client policies
+<a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>
+
 1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
 2. On the **Home** tab, in the **Deployment** group, select **Deploy Windows Update for Business Policy**.
 3. Configure the following settings:

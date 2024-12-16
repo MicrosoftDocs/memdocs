@@ -126,16 +126,21 @@ To configure the percentage at which the alert is generated, expand **Monitoring
 ## Compliance assessment for Windows Update client policy updates
 <a name="compliance-assessment-for-windows-update-for-business-updates"></a>
 
-You can now configure a compliance policy update rule to include a Windows Update for Business assessment result as part of the Conditional Access evaluation.
+You can now configure a compliance policy update rule to include an assessment result as part of the Conditional Access evaluation.
+
 > [!IMPORTANT]
 > You must have Windows 10 Insider Preview Build 15019 or later to use compliance assessment for Windows Update client policy updates.
 
-### Allow Windows Update for Business to manage Windows 10 updates
+### Allow Windows Update client policies to manage Windows 10 updates
+<a name="allow-windows-update-for-business-to-manage-windows-10-updates"></a>
+
 To gather compliance assessment information for Windows Update client policy updates, use the following procedure to configure the client agent setting to explicitly allow Windows Update client policies to manage Windows 10 updates.
 1. In the Configuration Manager console, go to **Administration** > **Client Settings**.
 2. In the properties for the client settings, go to **Software Updates**, and select **Yes** for the **Manage Windows 10 updates with Windows Update client policies** setting.
 
-### Create a compliance policy for Windows Update for Business assessment
+### Create a compliance policy for Windows Update client policies
+<a name="create-a-compliance-policy-for-windows-update-for-business-assessment"></a>
+
 1. In the Configuration Manager console, go to **Assets and Compliance** > **Compliance Settings** > **Compliance policies**.
 2. Click **Create Compliance Policy** or select an existing compliance policy to modify.
 3. On the General page, provide a name and description, select **Compliance rules for devices managed with the Configuration Manager client**, set the non-compliance severity for reporting, and click **Next**.
