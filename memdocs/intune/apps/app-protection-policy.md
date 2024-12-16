@@ -51,6 +51,9 @@ Your employees use mobile devices for both personal and work tasks. While making
 
 You can use Intune app protection policies **independent of any mobile-device management (MDM) solution**. This independence helps you protect your company's data with or without enrolling devices in a device management solution. By implementing **app-level policies**, you can restrict access to company resources and keep data within the purview of your IT department.
 
+  > [!NOTE]
+  > To ensure that policies are enforced, we recommend using Conditional Access together with Intune app protection policies. See **Require app protection policy** in https://learn.microsoft.com/entra/identity/conditional-access/howto-policy-approved-app-or-app-protection
+
 ### App protection policies on devices
 
 App protection policies can be configured for apps that run on devices that are:
