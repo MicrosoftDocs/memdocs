@@ -91,7 +91,7 @@ The version 2409 update should now be available in the console.
 > [!IMPORTANT]
 > This script only adds your site to the early update ring for version 2409. It's not a permanent change.-->
 
-As of December 11 , 2024, version 2409 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
+As of December 16 , 2024, version 2409 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
 
 ## Pre-update checklist
 
