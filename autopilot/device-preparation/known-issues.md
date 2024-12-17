@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/15/2024
+ms.date: 12/18/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,13 +40,13 @@ This article describes known issues that can often be resolved with:
 
 ## Known issues
 
-## Apps and scripts tabs do not display properly when editing the Device preparation profile 
+## Apps and scripts tabs don't display properly when editing the Device preparation profile
 
 Date added: *December 18, 2024*
 
-There's a known issue in displaying the **Applications** and **Scripts** tabs in the editing flow of the Windows Autopilot device preparation policy due to which the tabs might display incorrect information (e.g. show list of applications instead of scripts under the **Scripts** tab). The issue is impacting only the view in Intune and not the configuration being applied to the device. It is being investigated.
+During the editing flow of the Windows Autopilot device preparation policy, there's a known issue when displaying the **Applications** and **Scripts** tabs where the tabs might display incorrect information. For example, under the **Scripts** tab, a list of applications might be shown instead of a list of scripts. The issue is impacting only the view in Microsoft Intune and not the configuration being applied to the device. The issue is being investigated.
 
-As a workaround, select the table header (**Allowed Applications** or **Allowed Scripts**) to reload the table's contents.
+As a workaround, select the table header **Allowed Applications** or **Allowed Scripts** to reload the table's contents.
 
 ## Win32 and WinGet applications are skipped when Managed installer policy is enabled for the tenant
 
