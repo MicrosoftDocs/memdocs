@@ -40,7 +40,7 @@ This article describes known issues that can often be resolved with:
 
 ## Known issues
 
-## Apps and scripts tabs don't display properly when editing the Device preparation profile
+## Apps and scripts tabs don't display properly when editing the Windows Autopilot device preparation profile
 
 Date added: *December 18, 2024*
 
