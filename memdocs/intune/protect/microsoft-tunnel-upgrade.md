@@ -133,14 +133,15 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:bf93470b1a4b74b5d4aa8144c09f05fa59a9647d1aeefcdffef29697a172aa6a
+- **agentImageDigest**:  sha256:110b111d7f3fee3d13ac29da62560800c26d2a05bdc337c965b0ce1f2ec2756c
 
-- **serverImageDigest**: sha256:9886240ee473583753daf10929921f7c7c54bbf6f68095395aa2089688090fb3
+- **serverImageDigest**: sha256:3a5844f4e7156c966a2d0f5affd8b15ac3b441bd301a5a0b7c9b7db2ae6f5ed3
 
 Changes in this release:
--Diagnostic tool improvements 
--Bug fixes for rootless container mode in mst-cli 
--Localization improvements in mstunnel-setup 
+- Diagnostic tool improvements
+- Bug fixes for rootless container mode in mst-cli
+- Localization improvements in mstunnel-setup
+- Improvement on error handling
 
 
 ### October 2, 2024
