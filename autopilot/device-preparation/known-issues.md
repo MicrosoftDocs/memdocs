@@ -40,7 +40,15 @@ This article describes known issues that can often be resolved with:
 
 ## Known issues
 
-## Deployments fail when Managed installer policy is enabled for the tenant
+## Apps and scripts tabs do not display properly when editing the Device preparation profile 
+
+Date added: *December 18, 2024*
+
+There's a known issue in displaying the **Applications** and **Scripts** tabs in the editing flow of the Windows Autopilot device preparation policy due to which the tabs might display incorrect information (e.g. show list of applications instead of scripts under the **Scripts** tab). The issue is impacting only the view in Intune and not the configuration being applied to the device. It is being investigated.
+
+As a workaround, select the table header (**Allowed Applications** or **Allowed Scripts**) to reload the table's contents.
+
+## Win32 and WinGet applications are skipped when Managed installer policy is enabled for the tenant
 
 Date added: *October 10, 2024*<br>
 Date updated: *November 15, 2024*
