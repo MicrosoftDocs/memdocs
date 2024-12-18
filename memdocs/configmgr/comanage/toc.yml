@@ -13,7 +13,7 @@ items:
     href: quickstarts.md
   - name: Immediate value
     items:
-    - name: Conditional access
+    - name: Conditional Access
       href: quickstart-conditional-access.md
     - name: Remote actions from Intune
       href: quickstart-remote-actions.md

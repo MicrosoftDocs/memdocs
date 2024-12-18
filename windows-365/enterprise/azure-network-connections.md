@@ -123,7 +123,7 @@ After completing either of these operations, you can delete the ANC.
 
 ## Maximum Azure network connections
 
-Each tenant has a limit of 10 Azure network connections. If your organization needs more than 10 Azure network connections, contact support.
+Each tenant has a limit of 50 Azure network connections. If your organization needs more than 50 Azure network connections, contact support.
 
 ## Inactive ANCs
 

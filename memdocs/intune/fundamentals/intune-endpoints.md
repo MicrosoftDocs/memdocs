@@ -113,7 +113,7 @@ ID |Desc |Category |ER |Addresses |Ports|
 165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` |**UDP:** 123|
 169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
 173 | Autopilot - Third party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
-182 | Autopilot - Diagnostics upload| Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR> | **TCP:** 443|
+182 | Autopilot - Diagnostics upload | Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR>`lgmsapewus2.blob.core.windows.net`<BR>`lgmsapesea.blob.core.windows.net`<BR>`lgmsapeaus.blob.core.windows.net`<BR>`lgmsapeind.blob.core.windows.net`<BR> | **TCP:** 443|
 
 ### Remote Help
 
@@ -153,10 +153,9 @@ For Intune-managed Windows devices managed using Mobile Device Management (MDM),
 | --- | ---- | -------- | ----- | --------- | ----- |
 | 172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
 
-**Port requirements** - For peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP. It uses Teredo on port 3544 for NAT traversal (use of Teredo is optional)
-For client-service communication, it uses HTTP or HTTPS over port 80/443.
+**Port requirements** - For client-service communication, it uses HTTP or HTTPS over port 80/443. Optionally, for peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP and Teredo on port 3544 for NAT traversal. For more information, see [Delivery Optimization documentation](/windows/deployment/do/) 
 
-**Proxy requirements** - To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Windows Update](/windows/deployment/update/windows-update-troubleshooting).
+**Proxy requirements** - To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Delivery Optimization](/windows/deployment/do/waas-delivery-optimization-faq#what-are-the-requirements-if-i-use-a-proxy).
 
 **Firewall requirements** - Allow the following hostnames through your firewall to support Delivery Optimization. For communication between clients and the Delivery Optimization cloud service:
 

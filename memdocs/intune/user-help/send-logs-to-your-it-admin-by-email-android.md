@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2023
+ms.date: 11/08/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -48,13 +48,14 @@ The send logs option in the Company Portal is unavailable for sovereign cloud en
 
 1. There are two ways to share logs and initiate email support in the app:
    
-    * From the home screen, tap **Menu** > **Help** > **Send logs**.    
-    * From an error message, tap **HELP** or **SEND INFO**, if available. 
-
-    We recommend sending the email as described in this procedure because it gives you the opportunity to explain the problem you encountered to your support person. If you're already in contact with your support person, an email may not be necessary. To send logs only, with no email support, go to **Help** > **Email Support**, and tap **Upload Logs Only**. 
-2. Tap  **SEND LOGS, THEN EMAIL**.  
-3. The app sends your logs. Open your email app when prompted.   
-4. An email message opens with the incident ID pre-populated in the subject field. 
+    * In the app, open the **Menu** and go to **Help** > **Send logs**.    
+    * When you receive an error message, tap **HELP** or **SEND INFO**, if available. 
+   
+1. Tap  **SEND LOGS, THEN EMAIL**.  
+   > [!NOTE]
+   > We recommend sending the email as described in this procedure because it gives you the opportunity to explain the problem you encountered to your support person. If you're already in contact with your support person, an email may not be necessary. To send logs only, with no email support, tap **Upload Logs Only**.  
+1. The app sends your logs. Open your email app when prompted.   
+1. An email message opens with the incident ID pre-populated in the subject field. 
     1. Enter your support person's email address. 
     2. Describe the problem that you came across. 
     3. Send the email and follow-up with your support person later if needed. 
@@ -62,16 +63,16 @@ The send logs option in the Company Portal is unavailable for sovereign cloud en
 ## Send logs from Microsoft Intune app   
 
 1. In the Microsoft Intune app, there are two ways to initiate email support.  
-    * From the home screen: Tap **Menu** > **Help** > **Get Support**.  
-    * From an error message: Tap **HELP** or **SEND INFO**, if available.  
+    * In the app, open the **Menu** and go to **Help** > **Get Support**.  
+    * When you receive an error message, tap **HELP** or **SEND INFO**, if available.  
 
     > [!NOTE]
-    > **Menu** could be a software button or a hardware button, depending on which Android device you have.
+    > The app's menu could be a software button or a hardware button, depending on which Android device you have.
 
-3. Tap **UPLOAD LOGS**.  
-4. After the upload is complete, tap **EMAIL** and select your email app.  
-5. An email message will open with the incident ID pre-populated in the subject field. In the body of the email, describe the problem that you came across. 
-6. Send the email and follow-up with your support person later if needed.   
+1. Tap **UPLOAD LOGS**.  
+1. After the upload is complete, tap **EMAIL** and select your email app.  
+1. An email message opens with the incident ID pre-populated in the subject field. In the body of the email, describe the problem that you came across. 
+1. Send the email and follow-up with your support person later if needed.   
 
 ## Save logs to share with your support person
 You must have a file viewing app to save and share Company Portal logs. If you're on a device with a work profile, the file viewing app needs to be in the work profile.  

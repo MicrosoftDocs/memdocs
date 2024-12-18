@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 6/18/2024
+ms.date: 11/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -267,7 +267,7 @@ Applies only to co-managed devices running Windows 10/11. Intune-only devices re
 
 ### Microsoft Defender for Endpoint rules
 
-For additional information on Microsoft Defender for Endpoint integration in conditional access scenarios, see [Configure Conditional Access in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-conditional-access).
+For additional information on Microsoft Defender for Endpoint integration in Conditional Access scenarios, see [Configure Conditional Access in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-conditional-access).
 
 - **Require the device to be at or under the machine risk score**:  
   Use this setting to take the risk assessment from your defense threat services as a condition for compliance. Choose the maximum allowed threat level:
@@ -278,6 +278,21 @@ For additional information on Microsoft Defender for Endpoint integration in con
   - **High** - This option is the least secure, and allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
   
   To set up Microsoft Defender for Endpoint as your defense threat service, see [Enable Microsoft Defender for Endpoint with Conditional Access](advanced-threat-protection.md).
+
+## Windows Subsystem for Linux  
+
+The settings in this section require the Windows Subsystem for Linux (WSL) plug-in. For more information, see [Evaluate compliance for Windows Subsystem for Linux](compliance-wsl.md). 
+
+For **Allowed Linux distributions and versions**, enter at least one Linux distribution name. Optionally, enter a minimum or maximum OS version.
+
+  > [!NOTE]
+  > The distribution names and versions you enter affect the compliance policy in the following ways:  
+  > - If no distribution is provided, all distributions are allowed. This is the default behavior.  
+  > - If only distribution names are provided, all installed versions of that distribution are allowed. 
+  > - If a distribution name and a minimum OS version are provided, all installed distributions with the provided name and minimum version or later are allowed.  
+  > - If a distribution name and a maximum OS version are provided, all installed distributions with the provided name and maximum version or earlier are allowed.
+  > - If a distribution name, a minimum OS version, and a maximum OS version are provided, all installed distributions and OS versions within the provided range are allowed. 
+
 
 ## Windows Holographic for Business
 

@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Exchange without device management
+title: Manage access to Exchange without device management
 titleSuffix: Microsoft Intune
 description: Use Microsoft Intune to give employees access to their Microsoft 365 Exchange Online email without setting up a device management system.
 keywords: Microsoft 365 Exchange email access
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 11/07/2024
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -20,7 +20,7 @@ ms.assetid: 88a0d3b9-2622-403b-8374-1396afd8066e
 #ROBOTS:
 #audience:
 
-ms.reviewer: pchacon
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,11 +30,14 @@ ms.collection:
 - M365-identity-device-management
 - sub-device-compliance
 ---
+
 # Protect Microsoft 365 Exchange Online without requiring device management
 
-If you want to give employees access to their work email without the overhead of setting up a device management system, you can. You can give access to Microsoft 365 Exchange Online through Intune. To complete the necessary steps, confirm you have licenses for Microsoft 365, or Microsoft Entra ID P1 and Intune. Employees need to have a [supported iOS/iPadOS or Android device](../fundamentals/supported-devices-browsers.md).
+When you use Microsoft Intune, you can still manage employee access to their work email through Microsoft 365 Exchange Online without the overhead of enrolling their devices. This limited access through Exchange Online for unenrolled devices can be accomplished using app-based Conditional Access policies.
 
-If you decide to set up a device management system, you can. This type of app protection works independently of device management.
+To complete the necessary steps, confirm you have licenses for Microsoft 365, or Microsoft Entra ID P1 and Intune. Employees need to have a [supported iOS/iPadOS or Android device](../fundamentals/supported-devices-browsers.md).
+
+If you decide to set up a device management system, you can as this type of app protection works independently of device management.
 
 ## Action plan
 
@@ -46,14 +49,14 @@ If you decide to set up a device management system, you can. This type of app pr
 
 ## What to tell employees and students
 
-* Ask your employees and students to download and install Microsoft Outlook or Microsoft SharePoint for iOS/iPadOS from the Apple App Store or for Android from the Google Play Store.
-* If you block access to apps that don't use modern authentication, let the employees and students know of this restriction.
+- Ask your employees and students to download and install Microsoft Outlook or Microsoft SharePoint for iOS/iPadOS from the Apple App Store or for Android from the Google Play Store.
+- If you block access to apps that don't use modern authentication, let the employees and students know of this restriction.
 
 ## Next steps
 
 You have used app-based Conditional Access to increase the security of company data. As part of next steps, you can learn more about the other ways you can increase the protection of your company's data, including:
 
-* Setting up app protection policies to help you protect your company data against intentional or unintentional data leaks.
-* Use of Azure Information Protection to protect company data outside your network.
+- Setting up app protection policies to help you protect your company data against intentional or unintentional data leaks.
+- Use of Azure Information Protection to protect company data outside your network.
 
 Want help with enabling this or other EMS or Microsoft 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Microsoft Entra ID P1, use your [FastTrack benefits](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

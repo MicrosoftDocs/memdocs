@@ -45,11 +45,11 @@ To help protect access to Exchange, Intune relies on an on-premises component th
 > [!IMPORTANT]
 > Intune will be removing support for the Exchange On-Premises Connector feature from the Intune service beginning in the 2007 (July) release. Existing customers with an active connector will be able to continue with the current functionality at this time. New customers and existing customers that do not have an active connector will no longer be able to create new connectors or manage Exchange ActiveSync (EAS) devices from Intune. For those tenants, Microsoft recommends the use of Exchange [hybrid modern authentication (HMA)](/office365/enterprise/hybrid-modern-auth-overview) to protect access to Exchange on-premises. HMA enables both Intune App Protection Policies (also known as MAM) and Conditional Access through Outlook Mobile for Exchange on-premises.
 
-The information in this article can help you install and monitor the Intune Exchange connector. You can use the connector with your [conditional access policies](conditional-access-exchange-create.md) to allow or block access to your Exchange on-premises mailboxes.
+The information in this article can help you install and monitor the Intune Exchange connector. You can use the connector with your [Conditional Access policies](conditional-access-exchange-create.md) to allow or block access to your Exchange on-premises mailboxes.
 
 The connector is installed and runs on your on-premises hardware. It discovers devices that connect to Exchange, communicating device information to the Intune service. The connector allows or blocks devices based on whether the devices are enrolled and compliant. These communications use the HTTPS protocol.
 
-When a device tries to access your on-premises Exchange server, the Exchange connector maps Exchange ActiveSync (EAS) records in Exchange Server to Intune records to make sure the device enrolls with Intune and complies with your device's policies. Depending on your conditional access policies, the device can be allowed or blocked. For more information, see [What are common ways to use conditional access with Intune?](conditional-access-intune-common-ways-use.md)
+When a device tries to access your on-premises Exchange server, the Exchange connector maps Exchange ActiveSync (EAS) records in Exchange Server to Intune records to make sure the device enrolls with Intune and complies with your device's policies. Depending on your Conditional Access policies, the device can be allowed or blocked. For more information, see [What are common ways to use Conditional Access with Intune?](conditional-access-intune-common-ways-use.md)
 
 Both *discovery* and *allow and block* operations are done by using standard Exchange PowerShell cmdlets. These operations use the service account that's provided when the Exchange connector is initially installed.
 
@@ -62,9 +62,9 @@ Follow these general steps to set up a connection that enables Intune to communi
 3. Validate the Exchange connection.
 4. Repeat these steps for each additional Exchange organization you want to connect to Intune.
 
-## How conditional access for Exchange on-premises works
+## How Conditional Access for Exchange on-premises works
 
-Conditional access for Exchange on-premises works differently than Azure Conditional Access based policies. You install the Intune Exchange on-premises connector to directly interact with Exchange server. The Intune Exchange connector pulls in all the Exchange Active Sync (EAS) records that exist at the Exchange server so Intune can take these EAS records and map them to Intune device records. These records are devices enrolled and recognized by Intune. This process allows or blocks e-mail access.
+Conditional Access for Exchange on-premises works differently than Azure Conditional Access based policies. You install the Intune Exchange on-premises connector to directly interact with Exchange server. The Intune Exchange connector pulls in all the Exchange Active Sync (EAS) records that exist at the Exchange server so Intune can take these EAS records and map them to Intune device records. These records are devices enrolled and recognized by Intune. This process allows or blocks e-mail access.
 
 If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (pronounced "command-let") that directs the Exchange server to block access to e-mail. Following are more details on how this process works:
 
@@ -87,7 +87,7 @@ If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (p
 
 8. The Microsoft Entra Device Registration saves the device state information.
 
-9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
+9. If the user meets the Conditional Access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
 
 10. Exchange server sends the notification to EAS client so the user can access e-mail.
 
@@ -184,7 +184,7 @@ Follow these steps to install the Intune Exchange connector. If you have multipl
 
 4. In the **User (domain\user)** and **Password** fields, enter credentials to connect to your Exchange server. The account you specify must have a license to use Intune.
 
-5. Provide credentials to send notifications to a user's Exchange Server mailbox. This user can be dedicated to just notifications. The notifications user needs an Exchange mailbox to send notifications by email. You can configure these notifications by using conditional access policies in Intune.
+5. Provide credentials to send notifications to a user's Exchange Server mailbox. This user can be dedicated to just notifications. The notifications user needs an Exchange mailbox to send notifications by email. You can configure these notifications by using Conditional Access policies in Intune.
 
    Make sure the Autodiscover service and Exchange Web Services are configured on the Exchange CAS. For more information, see [Client Access server](/Exchange/architecture/client-access/client-access?view=exchserver-2019&preserve-view=true).
 
@@ -288,9 +288,9 @@ In addition to the in-console status, you can use the [System Center Operations 
 
 An Intune Exchange connector automatically synchronizes EAS and Intune device records regularly. If the compliance status of a device changes, the automatic sync process regularly updates records so that device access can be blocked or allowed.
 
-- A **quick sync** occurs regularly, several times a day. A quick sync retrieves device information for Intune-licensed and on-premises Exchange users that are targeted for conditional access and that have changed since the last sync.
+- A **quick sync** occurs regularly, several times a day. A quick sync retrieves device information for Intune-licensed and on-premises Exchange users that are targeted for Conditional Access and that have changed since the last sync.
 
-- A **full sync** occurs once daily by default. A full sync retrieves device information for all Intune-licensed and on-premises Exchange users that are targeted for conditional access. A full sync also retrieves Exchange Server information and ensures that the configuration that Intune specifies is updated on the Exchange server.
+- A **full sync** occurs once daily by default. A full sync retrieves device information for all Intune-licensed and on-premises Exchange users that are targeted for Conditional Access. A full sync also retrieves Exchange Server information and ensures that the configuration that Intune specifies is updated on the Exchange server.
 
 You can force a connector to run a sync by using the **Quick Sync** or **Full Sync** options on the Intune dashboard:
 
@@ -305,4 +305,4 @@ You can force a connector to run a sync by using the **Quick Sync** or **Full Sy
 
 ## Next steps
 
-Create a [conditional access policy for on-premises Exchange servers](conditional-access-exchange-create.md).
+Create a [Conditional Access policy for on-premises Exchange servers](conditional-access-exchange-create.md).

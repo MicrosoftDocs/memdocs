@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2024
+ms.date: 09/23/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,6 +27,11 @@ ms.collection:
 ---
 
 # macOS device settings to configure and use kernel and system extensions in Intune
+
+> [!IMPORTANT]
+> This template is deprecated in the August 2024 service release (2408). Existing policies continue to work. But, you can't create new policies using this template.
+>
+> Instead, use the settings catalog to create new policies that configure the System Extension payload. To learn more about the settings catalog, go to the [macOS settings catalog](settings-catalog.md).
 
 > [!NOTE]
 >
