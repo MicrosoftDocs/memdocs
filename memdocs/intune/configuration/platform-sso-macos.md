@@ -249,6 +249,9 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
 11. In **Assignments**, select the user or device groups that receive your profile. For devices with user affinity, assign to users or user groups. For devices with multiple users that are enrolled without user affinity, assign to devices or device groups.
 
+    > [!IMPORTANT]
+    > For devices with user affinity, assignments using device groups or filters are not supported for Platform SSO settings. When using device group assignment or user group assignment with filters on devices with user affinity, the user may be unable to access resources protected by Conditional Access as a result of Platform SSO settings being applied incorrectly or Entra device registration being bypassed by the Company Portal app when Platform SSO is not enabled.
+
     For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
