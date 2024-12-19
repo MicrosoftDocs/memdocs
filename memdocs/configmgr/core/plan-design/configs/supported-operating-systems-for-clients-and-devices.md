@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 05/01/2024
+ms.date: 12/19/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager supports installing client software on Windows and macOS computers.
+Configuration Manager supports installing client software on Windows computers.
 
 ## General requirements and limitations
 
@@ -66,6 +66,8 @@ For more information, see the following articles:
 
 ### Supported server OS versions
 
+- **Windows Server 2025**: IoT, Standard, Datacenter (_starting in Configuration Manager version 2409_)<!-- 10200029 -->
+          
 - **Windows Server 2022**: IoT, Standard, Datacenter (_starting in Configuration Manager version 2107_)<!-- 10200029 -->
     - *Windows Server IoT 2022 for Storage* is not supported
 
@@ -89,6 +91,8 @@ For more information, see the following articles:
 The following versions specifically refer to the Server Core installation of the OS. <sup>[Note 2](#bkmk_note2)</sup>
 
 Windows Server semi-annual channel versions are Server Core installations, such as Windows Server, version 1809. As a Configuration Manager client, they're supported the same as the associated Windows 11 or Windows 10 semi-annual channel version. For more information, see [Support for Windows 11](support-for-windows-11.md) or [Support for Windows 10](support-for-windows-10.md).
+
+- **Windows Server 2025** (x64) <sup>[Note 1](#bkmk_note1)</sup> (_starting in version 2409_)<!-- 10200029 -->
 
 - **Windows Server 2022** (x64) <sup>[Note 1](#bkmk_note1)</sup> (_starting in version 2107_)<!-- 10200029 -->
 
