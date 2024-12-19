@@ -2,12 +2,12 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
-ms.date: 12/01/2023
+ms.date: 12/19/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: Banreet
-ms.author: banreetkaur
+author: Baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -19,6 +19,32 @@ ms.reviewer: mstewart,aaroncz
 *Applies to: Configuration Manager (current branch)*
 
 This article details the Windows versions that you can use to host a Configuration Manager site or site system role.
+
+## Windows Server 2025
+
+_Applies to Datacenter: Azure Edition, Standard and Datacenter editions_
+
+Site servers:
+
+- Central administration site
+- Primary site
+- Secondary site
+
+Site system servers:
+
+- Certificate registration point
+- Cloud management gateway connection point
+- Data warehouse service point
+- Distribution point <sup>[Note 1](#bkmk_note1)</sup>
+- Endpoint Protection point
+- Fallback status point
+- Management point
+- Reporting services point
+- Service connection point
+- Site database server <sup>[Note 2](#bkmk_note2)</sup>
+- SMS Provider
+- Software update point
+- State migration point
 
 ## Windows Server 2022
 
@@ -145,6 +171,7 @@ This support has the following limitation:
 
 The server core installation of the following server OS versions is supported for use as a **distribution point**:
 
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server, version 1809
