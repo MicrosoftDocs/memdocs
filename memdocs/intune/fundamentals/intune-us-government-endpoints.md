@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/04/2021  
+ms.date: 12/19/2024  
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -52,14 +52,16 @@ The following tables list the ports and services that the Intune client accesses
 
 | Endpoint | IP address |
 |---------------------|-----------|
-|*.manage.microsoft.us | 52.227.99.114 <br> 20.141.108.112 <br> 13.72.17.166 <br> 52.126.185.115 <br> 52.227.211.91 <br> 23.97.10.212 <br> 52.227.29.124 <br> 52.247.174.16 <br> 52.227.29.244 <br> 52.227.208.144 <br> 52.227.1.233 <br> 20.141.104.221 <br> 52.247.134.218 <br> 20.141.78.227 <br> 13.77.236.201  |
+|*.manage.microsoft.us | 52.227.99.114 <br> 20.141.108.112 <br> 13.72.17.166 <br> 52.126.185.115 <br> 52.227.211.91 <br> 23.97.10.212 <br> 52.227.29.124 <br> 52.247.174.16 <br> 52.227.29.244 <br> 52.227.208.144 <br> 52.227.1.233 <br> 20.141.104.221 <br> 52.247.134.218 <br> 20.141.78.227 <br> 13.77.236.201 <br> 62.10.86.128/25 <br> 62.10.87.128/25 <br> 20.159.110.0/25 <br> 20.159.111.0/25 <br>|
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
 
-## US Government customer designated endpoints:
+## US Government customer designated endpoints
+
 - Azure portal: https:\//portal.azure.us/ 
 - Microsoft 365: https:\//portal.office365.us/ 
 - Intune Company Portal: https:\//portal.manage.microsoft.us/ 
 - Microsoft Intune admin center: https:\//intune.microsoft.us/
+
 ## Network requirements for PowerShell scripts and Win32 apps  
 
 If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
@@ -68,8 +70,8 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also n
 | --- | --- |--- |
 |FXPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net |
 
+## Partner service endpoints that Intune depends on
 
-## Partner service endpoints that Intune depends on:
 - Azure AD Sync service: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
 - Evo STS: https:\//login.microsoftonline.us
 - Directory Proxy: https:\//directoryproxy.microsoftazure.us/DirectoryProxy.svc
@@ -82,5 +84,6 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also n
 [!INCLUDE [Intune notices](../includes/apple-device-network-information.md)]
 
 ## Next steps
+
 [Network endpoints for Microsoft Intune](intune-endpoints.md)
 

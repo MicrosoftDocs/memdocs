@@ -117,6 +117,7 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 
 With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac#system-requirements) agent version **101.23052.0004** or later, security settings management supports the following macOS versions:
 
+- macOS 15 (Sequoia)
 - macOS 14 (Sonoma)
 - macOS 13 (Ventura)
 - macOS 12 (Monterey)

@@ -2,12 +2,12 @@
 title: Setup wizard
 titleSuffix: Configuration Manager
 description: Use the Configuration Manager setup wizard to install a new site.
-ms.date: 04/08/2022
+ms.date: 12/16/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: overview
-author: sheetg09
-ms.author: sheetg
+author: Baladelli
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

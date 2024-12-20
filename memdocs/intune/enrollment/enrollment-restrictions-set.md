@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2024
+ms.date: 12/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -79,9 +79,12 @@ Block devices running on a specific device platform. You can apply this restrict
 
 In groups where both Android platforms are allowed, devices that support work profile will enroll with a work profile. Devices that don't support work profile will enroll on the Android device administrator platform. Neither work profile nor device administrator enrollment will work until you complete all prerequisites for Android enrollment.   
 
-This restriction is in the admin center under **Enrollment device platform restrictions**. 
+
+This restriction is in the admin center under **Devices** > **Device onboarding** > **Enrollment** > **Device platform restriction**.  
+
 > [!NOTE]
 > Device platform enrollment restrictions use assignment filters. The update between Microsoft Entra and Intune that processes user, group, and filter assignments typically happens within 15 minutes. It's not instant. This amount of time can affect enrollment assignments. You should wait and enroll devices several minutes after adding the enrolling users to a group, not immediately after. 
+
 
 ### OS version 
 This restriction enforces your maximum and minimum OS version requirements. This type of restriction works with the following operating systems: 
@@ -93,10 +96,10 @@ This restriction enforces your maximum and minimum OS version requirements. This
 
 \* Version restrictions are supported on these operating systems for devices enrolled via Intune Company Portal only.    
 
-This restriction is in the admin center under **Enrollment device platform restrictions**.  
+This restriction is in the admin center under **Devices** > **Device onboarding** > **Enrollment** > **Device platform restriction**.  
 
 ### Device manufacturer  
-This restriction blocks devices made by specific manufacturers, and is applicable to Android devices only. It is in the admin center under **Enrollment device platform restrictions**.    
+This restriction blocks devices made by specific manufacturers, and is applicable to Android devices only. It is in the admin center under **Devices** > **Device onboarding** > **Enrollment** > **Device platform restriction**.    
 
 ### Personally owned devices  
 This restriction helps prevent device users from accidentally enrolling their personal devices, and applies to devices running:  
@@ -106,7 +109,7 @@ This restriction helps prevent device users from accidentally enrolling their pe
 * macOS
 * Windows 10/11 
 
-This restriction is in the admin center under **Enrollment device platform restrictions**.  
+This restriction is in the admin center under **Devices** > **Device onboarding** > **Enrollment** > **Device platform restriction**.  
 
 #### Blocking personal Android devices  
 By default, until you manually make changes in the admin center, your Android Enterprise work profile device settings and Android device administrator device settings are the same. 
