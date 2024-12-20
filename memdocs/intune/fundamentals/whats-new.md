@@ -78,6 +78,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of December 16, 2024 (Service release 2412)
 
+### App management
+
+#### Increased scale for Customization policies<!-- 25308499 -->
+
+You can now create up to 25 policies that customize the Company Portal and Intune app experience. The previous maximum number of Customization policies was 10. Navigate to the Intune admin center, and select **Tenant administration** > **Customization**.
+
+For more information about customizing the Company Portal and Intune apps, see [Customizing the user experience](../apps/company-portal-app#customizing-the-user-experience).
+
 ### Device security
 
 #### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint<!-- 13204113 -->
