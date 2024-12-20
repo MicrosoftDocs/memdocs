@@ -97,7 +97,7 @@ As of December 16 , 2024, version 2409 is globally available for all customers t
 
 ### All sites run a supported version of Configuration Manager
 
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2409, use version 2309 or later.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2409, use version 2303 or later.
 
 ### Review the status of your product licensing
 
