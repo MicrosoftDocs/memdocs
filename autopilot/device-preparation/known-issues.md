@@ -40,6 +40,12 @@ This article describes known issues that can often be resolved with:
 
 ## Known issues
 
+## **Export logs** button in the out-of-box experience (OOBE) does not show any success or failure indication.
+
+Date added: *January 6, 2025*
+
+When a failure occurs during the provisioning process, an **Export logs** option is displayed to the user. When selected, it saves the file to the first USB drive on the device without displaying the browse dialog. This is for security reasons. Currently, users will not see failure or success messages to indicate the logs were saved. This will be fixed in the future.
+
 ## Apps and scripts tabs don't display properly when editing the Windows Autopilot device preparation profile
 
 Date added: *December 18, 2024*
