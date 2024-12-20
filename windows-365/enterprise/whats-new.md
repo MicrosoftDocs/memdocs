@@ -294,7 +294,7 @@ Azure Monitor Agent can now  be installed on Windows 365 Enterprise and Windows 
 
 #### Session lock experience configuration for single sign-on<!--48440155-->
 
-You can now configure the remote session lock experience when single sign-on is enabled between the default disconnect behavior and showing the remote lock screen. For more information, see [Configure single sign-on for Windows 365 using Microsoft Entra authentication](configure-single-sign-on.md).
+You can now [configure the remote session lock experience](https://learn.microsoft.com/en-us/azure/virtual-desktop/configure-session-lock-behavior?tabs=intune#configure-the-session-lock-behavior) when single sign-on is enabled between the default disconnect behavior and showing the remote lock screen. For more information, see [Configure single sign-on for Windows 365 using Microsoft Entra authentication](configure-single-sign-on.md).
 
 #### Windows 365 support for Microsoft Purview Customer Key is now generally available<!--46980464-->
 
