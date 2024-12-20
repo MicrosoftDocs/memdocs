@@ -84,7 +84,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 You can now create up to 25 policies that customize the Company Portal and Intune app experience. The previous maximum number of Customization policies was 10. Navigate to the Intune admin center, and select **Tenant administration** > **Customization**.
 
-For more information about customizing the Company Portal and Intune apps, see [Customizing the user experience](../apps/company-portal-app#customizing-the-user-experience).
+For more information about customizing the Company Portal and Intune apps, see [Customizing the user experience](../apps/company-portal-app#customizing-the-user-experience.md).
 
 ### Device security
 
