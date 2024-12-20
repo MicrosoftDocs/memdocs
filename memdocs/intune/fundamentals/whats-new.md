@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2024
+ms.date: 12/20/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,6 +77,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 -->
 
 ## Week of December 16, 2024 (Service release 2412)
+
+### Device security
+
+#### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint<!-- 13204113 -->
+
+You can now manage the Microsoft Defender for Endpoint CSP setting for [tamper protection](/windows/client-management/mdm/defender-csp) on unenrolled devices you mange as part of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
+ 
+With this support, tamper protection configurations from *Windows Security Experience* profiles for *Antivirus* policies now apply to all devices instead of only to those that are enrolled with Intune.
 
 ### Device configuration
 
