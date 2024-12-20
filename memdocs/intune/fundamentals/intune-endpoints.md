@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/18/2024
+ms.date: 12/20/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -153,7 +153,7 @@ For Intune-managed Windows devices managed using Mobile Device Management (MDM),
 | --- | ---- | -------- | ----- | --------- | ----- |
 | 172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
 
-**Port requirements** - For client-service communication, it uses HTTP or HTTPS over port 80/443. Optionally, for peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP and Teredo on port 3544 for NAT traversal. For more information, see [Delivery Optimization documentation](/windows/deployment/do/) 
+**Port requirements** - For client-service communication, it uses HTTP or HTTPS over port 80/443. Optionally, for peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP and Teredo on port 3544 for NAT traversal. For more information, see [Delivery Optimization documentation](/windows/deployment/do/)
 
 **Proxy requirements** - To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Delivery Optimization](/windows/deployment/do/waas-delivery-optimization-faq#what-are-the-requirements-if-i-use-a-proxy).
 
@@ -172,6 +172,7 @@ For Delivery Optimization metadata:
 | 178 | MEM - Apple Dependencies | Default<BR>Required | False | `itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`5-courier.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR> |**TCP:** 80, 443, 5223|
 
 For more information, see the following resources:
+
 - [Use Apple products on enterprise networks](https://support.apple.com/HT210060)
 - [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944)
 - [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999)
@@ -294,16 +295,16 @@ The following tables list the ports and services that the Intune client accesses
 
 If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need to grant access to endpoints in which your tenant currently resides.
 
-To find your tenant location (or Azure Scale Unit (ASU), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row tells you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
+To find your tenant location or Azure Scale Unit (ASU), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row tells you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
 
 > [!NOTE]
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
 |Azure Scale Unit (ASU) | Storage name | CDN | Port |
-| --- | --- |--- | --- |
-|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net | **TCP:** 443 |
-| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net | **TCP:** 443 |
-| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |**TCP:** 443 |
+| --- | --- |------------- | --- |
+|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net<br>imeswda-afd-primary.manage.microsoft.com<br>imeswda-afd-secondary.manage.microsoft.com<br>imeswda-afd-hotfix.manage.microsoft.com | **TCP:** 443 |
+| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net<br>imeswdb-afd-primary.manage.microsoft.com<br>imeswdb-afd-secondary.manage.microsoft.com<br>imeswdb-afd-hotfix.manage.microsoft.com | **TCP:** 443 |
+| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net<br>imeswdc-afd-primary.manage.microsoft.com<br>imeswdc-afd-secondary.manage.microsoft.com<br>imeswdc-afd-hotfix.manage.microsoft.com |**TCP:** 443 |
 
 ## Microsoft Store
 
