@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2023
+ms.date: 10/31/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -509,6 +509,11 @@ Calling `protectForOID` with empty string for the identity parameter will tag th
 This operation will remove encryption from the file/directory if it was previously encrypted.
 When a selective wipe command is issued, the file/directory won't be deleted.
 
+> [!WARNING]
+> It is important to ensure that only files belonging to a particular identity become protected
+> with that identity. Otherwise, other identities may experience data loss when the owning identity
+> signs out, as files will be wiped and encryption key access will be lost.
+
 #### Displaying Protected File Content
 
 It is equally critical to have the correct identity set when file content is being *displayed* to prevent unauthorized users from viewing managed data.
@@ -596,6 +601,17 @@ After this notification completes, buffers that were protected via this class wi
 An app can prevent these buffers becoming unreadable by calling `MAMDataProtectionManager.unprotect` on all buffers when handling the `MANAGEMENT_REMOVED` notification.
 It is also safe to call `protectForOID` during this notification, if you wish to preserve identity information.
 Encryption is guaranteed to be disabled during the notification and calling `protectForOID` in the handler won't encrypt data buffers.
+
+> [!WARNING]
+> Encryption operations should be avoided early in the app process. The SDK will perform encryption
+> initialization asynchronously as early as possible after app startup. However, if an app makes
+> an encryption request in app startup, it may be blocked until encryption initialization is
+> complete.
+
+> [!NOTE]
+> The Intune App SDK encryption API should be used only to encrypt data as required by Intune
+> policy. No protection will be applied to accounts that are not targeted with encryption policy
+> enabled, so it cannot be used as general-purpose encryption library.
 
 ### Content Providers
 

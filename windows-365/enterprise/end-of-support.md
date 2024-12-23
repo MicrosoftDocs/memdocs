@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/25/2024
+ms.date: 10/14/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -54,6 +54,20 @@ These status values for custom images also appear under the **OS support status*
 ## Provisioning policies
 
 Starting on the end of support date, gallery images that use the expired OS won’t be selectable for newly created provisioning policies. The images also won’t be available for use when editing existing provisioning policies.
+
+## Device action limitations for unsupported images
+
+Cloud PCs associated with provisioning policies using images in the unsupported state can’t be reprovisioned or reset. Any device actions requiring provisioning, like reprovisioning, can’t be performed on such Cloud PCs. The resize device action isn’t impacted by unsupported state.
+
+## Removed images
+
+Gallery images might rarely be removed prior to the End of Support date. Such removed images go through the same **Warning** and **Unsupported** states as the OS.
+
+While in the Warning state, you can use existing provisioning policies to deploy devices using the image, but you can’t create new provisioning policies using the image.
+
+For images in the  **Unsupported** state, no provisioning is possible.
+
+Planned removals are always preceded by proactive message center communications.
 
 <!-- ########################## -->
 ## Next steps

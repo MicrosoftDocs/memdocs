@@ -2,7 +2,7 @@
 title: Cloud management gateway overview
 titleSuffix: Configuration Manager
 description: Learn about managing internet-based clients with Configuration Manager by using the cloud management gateway (CMG) service in Azure.
-ms.date: 08/02/2021
+ms.date: 12/16/2024
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: overview

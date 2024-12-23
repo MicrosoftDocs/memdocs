@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2023
+ms.date: 10/31/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -602,7 +602,7 @@ Most notifications are [MAMUserNotification]s, which provide information specifi
 
 - Your app called [unregisterAccountForMAM].
 - An IT admin initiated a remote wipe.
-- Admin-required conditional access policies weren't satisfied.
+- Admin-required Conditional Access policies weren't satisfied.
 
 > [!WARNING]
 > An app should never register for both the `WIPE_USER_DATA` and `WIPE_USER_AUXILIARY_DATA` notifications.

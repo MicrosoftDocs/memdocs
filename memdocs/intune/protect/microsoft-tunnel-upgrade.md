@@ -129,6 +129,32 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 >
 > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
 
+### December 2, 2024
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:bf93470b1a4b74b5d4aa8144c09f05fa59a9647d1aeefcdffef29697a172aa6a
+
+- **serverImageDigest**: sha256:9886240ee473583753daf10929921f7c7c54bbf6f68095395aa2089688090fb3
+
+Changes in this release:
+-Diagnostic tool improvements 
+-Bug fixes for rootless container mode in mst-cli 
+-Localization improvements in mstunnel-setup 
+
+
+### October 2, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:7921c2e97217fa17de4ab69396d943e4975d323417b8b813211e2f8b639f64e1
+
+- **serverImageDigest**: sha256:0efab5013351bcd81f186973e75ed5d9f91bbe6271e3be481721500f946fc9ec
+
+Changes in this release:
+-Upgrade from .NET 6 to .NET 8
+- Upgrade ocserv to version 1.3.0
+- Fix rootless container bug in installer
 
 ### September 12, 2024
 
@@ -168,6 +194,25 @@ Image hash values:
 Changes in this release:
 - AL base image - Use Azure Linux as the base image for the Tunnel containers
 - Improvement on cert revocation check
+
+### May 16, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:50b62c1d7f81e2941fc73a09856583ea752fe821e9fef448114fe7e00f90f25a
+
+- **serverImageDigest**: sha256:f6249bc16f90abc9e6fb278c74e07b1c3e295cc0614d38ae20036cee50ff5c56
+
+Changes in this release:
+
+- Hardened containers by reducing the container capabilities to minimum
+- Security updates on the base image
+
+## Next steps
+
+[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
+
+<!-- Archive of past releases
 
 ### May 16, 2024
 
@@ -263,8 +308,6 @@ Changes in this release:
 - Bug fix: add legacy NAT tables for the mstunnel-server container on Cent OS 7 and Red Hat 7 hosts
 - Bug fix: add SELinux policy to allow TCP DNS traffic for the containers on Red Hat hosts
 - Increase mstunnel-server container pid limit to 10000
-
-<!-- Archive of past releases
 
 ### October 2, 2023
 
@@ -561,7 +604,3 @@ Changes in this release:
 The initial public preview release of Microsoft Tunnel.
 
 End of archive -->
-
-## Next steps
-
-[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)

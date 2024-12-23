@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/20/2024
+ms.date: 10/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -42,6 +42,8 @@ If you already have a work or school account, **sign in** with that account and 
 
 >[!WARNING]
 >You can't combine an existing work or school account after you sign up for a new account.
+
+[!INCLUDE [MFA requirement for admin center](../includes/mfa-console.md)]
 
 ## How to sign up for Intune
 

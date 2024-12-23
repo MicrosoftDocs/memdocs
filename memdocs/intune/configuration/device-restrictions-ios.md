@@ -801,6 +801,9 @@ You can also:
   - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.
 
   - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.
+ 
+  > [!NOTE]
+  > **Require devices to use Wi-Fi networks set up via configuration profiles** does not support Wi-Fi profiles deployed using [custom profiles](custom-settings-ios.md).
 
     This feature applies to:  
     - iOS/iPadOS 14.5 and newer

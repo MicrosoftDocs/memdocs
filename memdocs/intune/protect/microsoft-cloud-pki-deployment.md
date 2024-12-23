@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/26/2024
+ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -55,7 +55,7 @@ Identify your relying parties. The relying party is a user or system that consum
 
 - A Wi-Fi access point using radius certificate-based authentication.  
 - A VPN server authenticating a remote user.
-- A user visiting an SSL protected web site in a web browser.
+- A user visiting an TLS/LLS protected web site in a web browser.
 
 ### Determine location for trust anchor
 
@@ -71,13 +71,13 @@ When using certificates to perform certificate-based authentication, ensure that
 If the issuing CA certificate is missing, a relying party can request it via the Authority Information Access (AIA) property in the certificate by using the native OS platform certificate chaining engine.
 
 > [!NOTE]
-> When connecting to a relying party such as a Wi-Fi access point or VPN server, an SSL/TLS connection is first established by the managed Intune device when attempting to connect. Microsoft Cloud PKI doesn't provide these TLS/SSL certificates.  You must obtain these certificates through another PKI or CA service.  As a result, when you create a Wi-Fi or VPN profile, you also have to create a trusted certificate profile and assign it to managed devices to trust the TLS/SSL connection. The trusted certificate profile must contain the public keys for the root and issuing CAs responsible for issuing the TLS/SSL certificate.  
+> When connecting to a relying party such as a Wi-Fi access point or VPN server, an TLS/SSL connection is first established by the managed Intune device when attempting to connect. Microsoft Cloud PKI doesn't provide these TLS/SSL certificates.  You must obtain these certificates through another PKI or CA service.  As a result, when you create a Wi-Fi or VPN profile, you also have to create a trusted certificate profile and assign it to managed devices to trust the TLS/SSL connection. The trusted certificate profile must contain the public keys for the root and issuing CAs responsible for issuing the TLS/SSL certificate.  
 
 ## Deployment options
 
 This section describes the Microsoft Intune-supported deployment options for Microsoft Cloud PKI.  
 
-There are methods for deploying CA certificates to relying parties not managed by Intune, such as radius servers, Wi-Fi access points, VPN servers, and web app servers supporting certificate-based authentication.  
+There are methods for deploying CA certificates to relying parties not managed by Intune. Relying parties such as radius servers, Wi-Fi access points, VPN servers, and web app servers supporting certificate-based authentication.  
 
 If the relying party is a member of an Active Directory Domain, then use Group Policy to deploy CA certificates. For more information, see:
 
@@ -86,7 +86,7 @@ If the relying party is a member of an Active Directory Domain, then use Group P
 
 If the relying party isn't a member of Active Directory Domain, ensure the CA certificate trust chain for the Microsoft Cloud PKI root and issuing CA is installed in the security store of the relying party. The appropriate security store varies depending on the OS platform and the hosting application providing the service.  
 
-Also consider the relying party software configuration needed to support additional certification authorities.  
+Also consider the relying party software configuration needed to support other certification authorities.  
 
 ### Option 1: Microsoft Cloud PKI root CA
 
@@ -109,15 +109,16 @@ Relying parties require the following CA certificate trust chain.
 |Cloud PKI CA certificate| Root CA certificate required, issuing CA optional but recommended | If the relying party's server or service is a member server in Active Directory (AD) domain, use Group Policy to deploy CA certificates. If it's not in AD domain, a manual installation method might be required. |
 |Private CA certificate| Root CA certificate required, issuing CA certificate optional but recommended | If the relying party's server or service is a member server in Active Directory (AD) domain, use Group Policy to deploy CA certificates. If it's not in AD domain, a manual installation method might be required. |
 
-<!-- The following diagram shows certificates in action for both client and relying parties.    
+The following diagram shows certificates in action for both client and relying parties.    
 
 > [!div class="mx-imgBorder"]
-> ![Diagram showing the certificate flow for client and relying parties.](./media/microsoft-cloud-pki/)  
+> ![Diagram of the certificate flow for client and relying parties.](./media/microsoft-cloud-pki-deployment/certs-in-play-for-CBA.png)   
 
-The following diagram shows the respective CA certificate trust chains that must be deployed to both managed devices and relying parties to ensure Cloud PKI certificates issued to Intune managed devices are trusted and can be used to authenticate to relying parties.   
+The following diagram shows the respective CA certificate trust chains that must be deployed to both managed devices and relying parties. The CA trust chains ensure Cloud PKI certificates issued to Intune-managed devices are trusted and can be used to authenticate to relying parties.   
 
 > [!div class="mx-imgBorder"]
-> ![Diagram of Microsoft Cloud PKI, root CA deployment flow.](./media/microsoft-cloud-pki/) -->
+> ![Diagram of the Microsoft Cloud PKI root CA deployment flow.](./media/microsoft-cloud-pki-deployment/root-ca-deployment.png)  
+
 
 ### Option 2: Bring your own CA (BYOCA)
 
@@ -142,10 +143,11 @@ The relying party should already have the private CA certificate chain. However,
 
 Relying parties trust the Cloud PKI BYOCA issued SCEP certificate to the managed device, because it chains up to the private CA trust chain already present on the relying party.
 
-<!-- The following diagram illustrates how the respective CA certificate trust chains are deployed to Intune managed devices.  
+The following diagram illustrates how the respective CA certificate trust chains are deployed to Intune managed devices.   
 
 > [!div class="mx-imgBorder"]
-> ![Diagram showing the respective CA certificate trust chains that must be deployed to Intune managed devices.] -->
+> ![Diagram of the CA certificate trust chains that must be deployed to Intune managed devices.](./media/microsoft-cloud-pki-deployment/byoca-ca-deployment.png)  
+`*` In this diagram, *private* refers to the Active Directory Certificate Service or a non-Microsoft service.  
 
 ## Summary
 

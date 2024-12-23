@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/12/2023
+ms.date: 11/21/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -61,7 +61,7 @@ Individual Android apps are enabled for APP in a few ways:
 
     For more information on this tool, see [prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md).
 
-To see a list of apps enabled with APP, see [managed apps with a rich set of mobile application protection policies](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+To see a list of apps enabled with APP, see [managed apps with a rich set of mobile application protection policies](/mem/intune/apps/apps-supported-intune-apps).
 
 ## Deployment scenarios
 

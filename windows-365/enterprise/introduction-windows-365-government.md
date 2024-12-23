@@ -45,11 +45,10 @@ For more information about Cloud PCs and Windows 365, see [What is Windows 365?]
 
 ## Features not yet supported Windows 365 Government
 
-The following features aren't yet supported for Windows 365 GCC or GCC High. 
+The following features aren't yet supported for Windows 365 GCC or GCC High.
 
 - Unified dashboard
 - Windows 365 Security baseline
-- RDP Shortpath for public networks
 - Windows 365 System based alerting on Microsoft Intune for Cloud PCs
 - User initiated feedback in End User Portal and Windows 365 Web Client
 - Citrix HDX Plus for Windows 365
@@ -61,14 +60,17 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 - Audit logs support in Azure Log Analytics
 - [New Microsoft Teams client](/microsoftteams/new-teams-desktop-admin)
 - Windows 365 Boot (available for GCC, not available for GCC High)
-- Windows App
 - Microsoft Purview forensic evidence
 - Windows 365 Switch
-- Windows 365 Frontline (available for GCC, not available for GCC High)
-- Cloud PC connection quality report
+- Windows 365 Frontline (available for FedRAMP, not available for GCC or GCC High)
 - Cross region disaster recovery
 - [Support for Omnissa Horizon clients and the Blast protocol](set-up-omnissa-horizon.md)
-- [Microsoft Purview Customer Key](purview-customer-key.md) 
+- [Microsoft Purview Customer Key](purview-customer-key.md)
+- [HP Anyware for Windows 365](hp-anyware-set-up.md)
+- RDP Shortpath for public networks via TURN
+- Windows 365 Link
+- Configure client device redirection for Windows App on iOS/iPadOS/Android using Intune
+- Intune scope tags
 
 ## Next steps
 

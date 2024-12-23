@@ -119,6 +119,8 @@ items:
           href: windows-365-boot-restrict-user-access-physical-device.md
       - name: Partner connectors for Windows 365
         items:
+        - name: Partner integration scenarios
+          href: partner-integration-scenarios.md
         - name: Citrix requirements
           href: requirements-citrix.md
         - name: Set up Citrix HDX Plus for Windows 365
@@ -179,7 +181,7 @@ items:
         href: forensic-evidence-set-up.md
     - name: Identity and access management
       items:
-      - name: Set conditional access policies
+      - name: Set Conditional Access policies
         href: set-conditional-access-policies.md
       - name: Configure single sign-on
         href: configure-single-sign-on.md
@@ -221,6 +223,8 @@ items:
         href: rdp-shortpath-private-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
+      - name: Bulk reprovision Frontline Cloud PCs
+        href: frontline-shared-bulk-reprovision.md
       - name: Windows 365 Switch
         href: windows-365-switch-overview.md
       - name: Resize a Cloud PC

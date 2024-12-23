@@ -810,7 +810,7 @@ Due to the rollout timelines, we're updating our documentation to the new experi
 
 #### BlackBerry Protect Mobile now supports app protection policies<!-- 13357196  -->
 
-You can now use Intune app protection policies with *BlackBerry Protect Mobile* (powered by Cylance AI). With this change, Intune supports BlackBerry Protect Mobile for mobile application management (MAM) scenarios for [unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md). This support includes the use of risk assessment with Conditional access and configuration of Conditional Launch settings for unenrolled devices.
+You can now use Intune app protection policies with *BlackBerry Protect Mobile* (powered by Cylance AI). With this change, Intune supports BlackBerry Protect Mobile for mobile application management (MAM) scenarios for [unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md). This support includes the use of risk assessment with Conditional Access and configuration of Conditional Launch settings for unenrolled devices.
 
 While configuring the CylancePROTECT Mobile connector (formerly BlackBerry Mobile), you now can select options to turn on *App protection policy evaluation* for both Android and iOS/iPadOS devices.
 
@@ -2907,12 +2907,12 @@ For related information, see [Plan for Change: Ending support for Microsoft Stor
 
 ### Device configuration
 
-#### Remote Help now supports conditional access capability<!--16108299 -->  
-Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multifactor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses.
+#### Remote Help now supports Conditional Access capability<!--16108299 -->  
+Administrators can now utilize Conditional Access capability when setting up policies and conditions for Remote Help. For example, multifactor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses.
 
 For more information, see:
 
-- [Conditional access](../protect/conditional-access.md)
+- [Conditional Access](../protect/conditional-access.md)
 - [Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help)
 
 ### Device security
@@ -3725,7 +3725,7 @@ Configure Microsoft Intune to skip or show a new Setup Assistant pane called **T
 As a public preview, you can use the Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway for iOS/iPadOS. With this preview for iOS devices that haven't enrolled with Intune, supported apps on those unenrolled devices can use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This feature includes VPN gateway support for:
 
 - Secure access to on-premises apps and resources using modern authentication
-- Single Sign On and conditional access
+- Single Sign On and Conditional Access
 
 For more information, go to:
 
@@ -3749,7 +3749,7 @@ Applies to:
 - Windows 11
 
 #### SentinelOne – New mobile threat defense partner<!-- 13911932 -->  
-You can now use [SentinelOne](../protect/sentinelone-mobile-threat-defense-connector.md) as an integrated Mobile Threat Defense (MTD) partner with Intune. By configuring the SentinelOne connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment in your compliance policy. The SentinelOne connector can also send risk levels to app protection policies.
+You can now use [SentinelOne](../protect/sentinelone-mobile-threat-defense-connector.md) as an integrated Mobile Threat Defense (MTD) partner with Intune. By configuring the SentinelOne connector in Intune, you can control mobile device access to corporate resources using Conditional Access that's based on risk assessment in your compliance policy. The SentinelOne connector can also send risk levels to app protection policies.
 
 ### Device configuration
 
@@ -4063,7 +4063,7 @@ For more information, see [Use Access policies to require multiple administrativ
 As a public preview, you can now use Microsoft Tunnel with unenrolled devices. This capability is called [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md) (MAM). This preview supports Android, and without any changes to your existing Tunnel infrastructure, supports the Tunnel VPN gateway for:
 
 - Secure access to on-premises apps and resources using modern authentication
-- Single Sign On and conditional access
+- Single Sign On and Conditional Access
 
 To use Tunnel MAM, unenrolled devices must install Microsoft Edge, Microsoft Defender for Endpoint, and the Company Portal. You can then use the Microsoft Intune admin center to configure the following profiles for the unenrolled devices:
 
@@ -4557,7 +4557,7 @@ As of October 12, 2022, the name Microsoft Endpoint Manager will no longer be us
 For more information, see [Intune documentation]( ../../index.yml).
 
 #### Grace period status visible in Windows Company Portal<!-- 14746606 -->  
-Windows Company Portal now displays a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If users don't update their device by the given date, their device status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) and [Check access from Device details page](../user-help/check-device-access-windows-cpapp.md#check-access-from-device-details-page).
+Windows Company Portal now displays a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If users don't update their device by the given date, their device status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) and [Check access from Device details page](../user-help/check-device-access-windows-cpapp.md).
 
 #### Linux device management available in Microsoft Intune<!-- 14616038 -->  
 Microsoft Intune now supports Linux device management for devices running Ubuntu Desktop 22.04 or 20.04 LTS. Intune admins don't need to do anything to enable Linux enrollment in the Microsoft Intune admin center.  Linux users can [enroll supported Linux devices](../user-help/enroll-device-linux.md) on their own and use the Microsoft Edge browser to access corporate resources online.
@@ -4751,7 +4751,7 @@ The **All devices** option is now available for [compliance policy](../protect/c
 When you include the *All devices* group, you can then exclude individual groups of devices to further refine the assignment scope.
 
 #### Trend Micro – New mobile threat defense partner<!-- 11017779 -->
-You can now use [Trend Micro Mobile Security as a Service](../protect/trend-micro-mobile-threat-defense-connector.md) as an integrated mobile threat defense (MTD) partner with Intune. By configuring the Trend MTD connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment.
+You can now use [Trend Micro Mobile Security as a Service](../protect/trend-micro-mobile-threat-defense-connector.md) as an integrated mobile threat defense (MTD) partner with Intune. By configuring the Trend MTD connector in Intune, you can control mobile device access to corporate resources using Conditional Access that's based on risk assessment.
  
 For more information, see:
 - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)

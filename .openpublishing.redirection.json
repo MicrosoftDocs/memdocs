@@ -11,6 +11,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "memdocs/intune/user-help/sso-dialog-faqs.yml",
+      "redirect_url": "https://support.microsoft.com/topic/a6505ceb-1a20-4b15-889c-250175481506",
+      "redirect_document_id": false
+    },  
+    {
       "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-zips-android.md",
       "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
       "redirect_document_id": false
@@ -2769,6 +2774,11 @@
       "source_path": "memdocs/intune/protect/endpoint-security-firewall-rule-tool.md",
       "redirect_url": "/mem/intune/protect/endpoint-security-firewall-policy",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "windows-365/link/conditional-access-policies-synchronize.md",
+      "redirect_url": "/windows-365/link/conditional-access-policies",
+      "redirect_document_id": false
+    } 
   ]
 }

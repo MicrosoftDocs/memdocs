@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 10/14/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -412,6 +412,9 @@ The return value of this method tells the SDK if the application must handle the
 * If true is returned, the application must handle the restart.
 
 * If false is returned, the SDK will restart the application after this method returns. The SDK immediately shows a dialog box that tells the user to restart the application.
+
+>[!NOTE]
+>.NET MAUI apps do not require a restart.
 
 ## Exit Criteria
 
