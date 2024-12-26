@@ -45,9 +45,9 @@ With Intune device configuration policy, you can turn off all or part of the web
 - **Android Enterprise Fully Managed profile**. Use an app configuration profile and the [configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer) to disable the entire web protection feature or to disable only the use of VPNs.
 
 > [!IMPORTANT]
-> **Below browsers are supported with defender loopback VPN** 
+> **Below browsers are supported with Defender loopback VPN** 
 > GOOGLE_CHROME, EDGE, OPERA, SAMSUNG_INTERNET, FIREFOX, BRAVE, TOR, WEB_BROWSER_LEOPARD, DUCKDUCKGO, DOLPHIN
-> **Following browsers are supported with accessibility service without defender loopback VPN**
+> **Following browsers are supported with accessibility service without Defender loopback VPN**
 > GOOGLE_CHROME, EDGE, OPERA, SAMSUNG_INTERNET
 > **Note:** Work profile scenarios (BYOD -Android Enterprise personally owned devices using a work profile and COPE - Android Enterprise corporate owned work profile) do not support the accessibility service.
 
