@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/24/2024
+ms.date: 12/20/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: srink
+ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -97,7 +97,7 @@ The data columns shown in the tables are:
 
 ID |Desc |Category |ER |Addresses |Ports
 -- |---------------------------------------------------------------- |---------------------|--- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------|
-163 | Intune client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.71.199.64/28, 13.73.244.48/28, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 20.49.93.160/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29` | **TCP:** 80, 443|
+163 | Intune client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29, 104.208.197.64/27, 172.160.217.160/27, 172.201.237.160/27, 172.202.86.192/27, 172.205.63.0/25, 172.212.214.0/25, 172.215.131.0/27, 20.168.189.128/27, 20.199.207.192/28, 20.204.194.128/31, 20.208.149.192/27, 20.208.157.128/27, 20.214.131.176/29, 20.43.129.0/24, 20.91.147.72/29, 4.145.74.224/27, 4.150.254.64/27, 4.154.145.224/27, 4.200.254.32/27, 4.207.244.0/27, 4.213.25.64/27, 4.213.86.128/25, 4.216.205.32/27, 4.237.143.128/25, 40.84.70.128/25, 48.218.252.128/25, 57.151.0.192/27, 57.153.235.0/25, 57.154.140.128/25, 57.154.195.0/25, 57.155.45.128/25, 68.218.134.96/27, 74.224.214.64/27, 74.242.35.0/25, 172.208.170.0/25, 74.241.231.0/25, 74.242.184.128/25` | **TCP:** 80, 443|
 172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR> `*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443|
 170 | MEM - Win32Apps| Default<BR>Required | False | `swda01-mscdn.manage.microsoft.com`<br>`swda02-mscdn.manage.microsoft.com`<br>`swdb01-mscdn.manage.microsoft.com`<br>`swdb02-mscdn.manage.microsoft.com`<br>`swdc01-mscdn.manage.microsoft.com`<br>`swdc02-mscdn.manage.microsoft.com`<br>`swdd01-mscdn.manage.microsoft.com`<br>`swdd02-mscdn.manage.microsoft.com`<br>`swdin01-mscdn.manage.microsoft.com`<BR>`swdin02-mscdn.manage.microsoft.com` | **TCP:** 443|
 97 | Consumer Outlook.com, OneDrive, Device authentication and Microsoft account | Default<BR>Required | False | `account.live.com`<BR>`login.live.com`<BR> |**TCP:** 443  |
@@ -113,7 +113,7 @@ ID |Desc |Category |ER |Addresses |Ports|
 165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` |**UDP:** 123|
 169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
 173 | Autopilot - Third party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
-182 | Autopilot - Diagnostics upload| Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR> | **TCP:** 443|
+182 | Autopilot - Diagnostics upload | Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR>`lgmsapewus2.blob.core.windows.net`<BR>`lgmsapesea.blob.core.windows.net`<BR>`lgmsapeaus.blob.core.windows.net`<BR>`lgmsapeind.blob.core.windows.net`<BR> | **TCP:** 443|
 
 ### Remote Help
 
@@ -153,7 +153,7 @@ For Intune-managed Windows devices managed using Mobile Device Management (MDM),
 | --- | ---- | -------- | ----- | --------- | ----- |
 | 172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
 
-**Port requirements** - For client-service communication, it uses HTTP or HTTPS over port 80/443. Optionally, for peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP and Teredo on port 3544 for NAT traversal. For more information, see [Delivery Optimization documentation](/windows/deployment/do/) 
+**Port requirements** - For client-service communication, it uses HTTP or HTTPS over port 80/443. Optionally, for peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP and Teredo on port 3544 for NAT traversal. For more information, see [Delivery Optimization documentation](/windows/deployment/do/)
 
 **Proxy requirements** - To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Delivery Optimization](/windows/deployment/do/waas-delivery-optimization-faq#what-are-the-requirements-if-i-use-a-proxy).
 
@@ -172,6 +172,7 @@ For Delivery Optimization metadata:
 | 178 | MEM - Apple Dependencies | Default<BR>Required | False | `itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`5-courier.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR> |**TCP:** 80, 443, 5223|
 
 For more information, see the following resources:
+
 - [Use Apple products on enterprise networks](https://support.apple.com/HT210060)
 - [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944)
 - [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999)
@@ -294,16 +295,28 @@ The following tables list the ports and services that the Intune client accesses
 
 If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need to grant access to endpoints in which your tenant currently resides.
 
-To find your tenant location (or Azure Scale Unit (ASU), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row tells you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
+To find your tenant location or Azure Scale Unit (ASU), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row tells you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
 
 > [!NOTE]
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
 |Azure Scale Unit (ASU) | Storage name | CDN | Port |
-| --- | --- |--- | --- |
-|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net | **TCP:** 443 |
-| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net | **TCP:** 443 |
-| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |**TCP:** 443 |
+| --- | --- |------------- | --- |
+|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net<br>imeswda-afd-primary.manage.microsoft.com<br>imeswda-afd-secondary.manage.microsoft.com<br>imeswda-afd-hotfix.manage.microsoft.com | **TCP:** 443 |
+| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net<br>imeswdb-afd-primary.manage.microsoft.com<br>imeswdb-afd-secondary.manage.microsoft.com<br>imeswdb-afd-hotfix.manage.microsoft.com | **TCP:** 443 |
+| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net<br>imeswdc-afd-primary.manage.microsoft.com<br>imeswdc-afd-secondary.manage.microsoft.com<br>imeswdc-afd-hotfix.manage.microsoft.com |**TCP:** 443 |
+
+## Network requirements for macOS app and script deployments
+
+If you're using Intune to deploy apps or scripts on macOS, you also need to grant access to endpoints in which your tenant currently resides.
+
+To find your tenant location or Azure Scale Unit (ASU), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under Tenant location as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row tells you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
+
+|Azure Scale Unit (ASU) | CDN | Port |
+| --- |------------- | --- |
+|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | macsidecar.manage.microsoft.com | **TCP:** 443 |
+| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | macsidecareu.manage.microsoft.com | **TCP:** 443 |
+| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| macsidecarap.manage.microsoft.com |**TCP:** 443 |
 
 ## Microsoft Store
 
