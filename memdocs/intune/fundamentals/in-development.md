@@ -89,22 +89,6 @@ Applies to:
 
 ## Device configuration
 
-### More Wi-Fi configurations will be available for personally-owned work profile devices<!-- 28331156 -->
-
-Intune Wi-Fi configuration profiles for personally-owned work profile devices will soon support configuration of pre-shared keys and proxy settings.
-
-You will find these settings in the admin console in **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**. Set **Platform** to Android Enterprise and **Profile Type** to Templates and then in the **Personally-Owned Work Profile** section, select Wi-Fi and select the **Create** button.
-
-In the **Configuration settings** tab, when Basic Wi-Fi type is selected, you will see several new options:
-
-1. Security type, with options for Open (no authentication), WEP-Pre-shared key, and WPA-Pre-shared key.
-2. Proxy settings, with the option to select Automatic and then specify the proxy server URL.
-
-It was possible to configure these in the past with Custom Configuration policies, but going forward, we recommend setting these in the Wi-Fi Configuration profile, because [Intune is ending support for Custom policies in April 2024.](https://aka.ms/Intune/Android-customprofiles).
-
-For more information, see [Wi-Fi settings for personally-owned work profile devices.](../configuration/wi-fi-settings-android-enterprise.md#personally-owned-work-profile).
-
-
 ### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
 
 We're updating the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will no longer be available for download but will continue to work until deprecation.

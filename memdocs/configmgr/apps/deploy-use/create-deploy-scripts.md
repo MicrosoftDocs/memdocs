@@ -2,7 +2,7 @@
 title: Create and run scripts
 titleSuffix: Configuration Manager
 description: Create and run PowerShell scripts on client devices.
-ms.date: 09/18/2023
+ms.date: 12/16/2024
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Microsoft Defender for Endpoint
 titleSuffix: Configuration Manager
 description: Learn how to manage and monitor Microsoft Defender for Endpoint, a new service that helps enterprises respond to advanced attacks.
-ms.date: 08/01/2023
+ms.date: 12/16/2024
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: conceptual
@@ -35,12 +35,12 @@ You can onboard the following operating systems using Configuration Manager:
 
 - Windows 11
 - Windows 10, version  1709 or newer
-- Windows 8.1
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server Semi-Annual Channel (SAC), version 1803 or newer
 - Windows Server 2016
-- Windows Server 2012 R2<!-- 10200029 -->
+
 
 > [!IMPORTANT]
 > Operating systems that have reached the end of their [product lifecycle](/lifecycle/faq/general-lifecycle) aren't typically supported for onboarding unless they have been enrolled into the [Extended Security Updates (ESU program)](/lifecycle/faq/extended-security-updates). For more information about supported operating systems and capabilities with Microsoft Defender for Endpoint, see [Minimum requirements for Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/minimum-requirements#supported-windows-versions). <!-- MAX 6198973-->
@@ -63,13 +63,10 @@ Up-level operating systems include:
 - Windows Server Semi-Annual Channel (SAC), version 1803 or later
 - Windows Server 2019
 - Windows Server 2022
+- Windows Server 2025
 
 Down-level operating systems that support MDE Client include:
-- Windows Server 2012 R2
 - Windows Server 2016
-
-Down-level operating systems that require MMA Agent:
-- Windows 8.1
 
 > [!NOTE]
 > Currently, the [modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/bc-p/2904464) is generally available. Configuration Manager version 2107 with the update rollup supports configuration using Endpoint Protection policies, including those policies created in the Microsoft Intune admin center using tenant attach. Configuration Manager version 2207 now supports automatic deployment of MDE Client, if you choose to use through Client Settings. For older supported versions, see [Server migration scenarios](/microsoft-365/security/defender-endpoint/server-migration).
@@ -91,9 +88,9 @@ Up-level clients require an onboarding configuration file for onboarding to Micr
 - Windows Server Semi-Annual Channel (SAC), version 1803 and later
 - Windows Server 2019
 - Windows Server 2022
+- Windows Server 2025
 
 Down-level operating systems that support MDE Client include:
-- Windows Server 2012 R2
 - Windows Server 2016
 
 #### Prerequisites
