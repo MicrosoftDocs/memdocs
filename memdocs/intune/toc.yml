@@ -421,7 +421,7 @@ items:
             items: 
             - name: Overview
               href: ./apps/mamedge-overview.md
-            - name: Step 1. Create Microsoft Entra conditional access
+            - name: Step 1. Create Microsoft Entra Conditional Access
               href: ./apps/mamedge-1-mamca.md
             - name: Step 2. Create an app protection policy
               href: ./apps/mamedge-2-app.md
@@ -1578,7 +1578,7 @@ items:
           displayName: group; category; categorize; security group;   
         - name: Require multifactor authentication  
           href: ./enrollment/multi-factor-authentication.md   
-          displayName: multi-factor; enrollment; MFA; verification; conditional access
+          displayName: multi-factor; enrollment; MFA; verification; Conditional Access
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
           displayName: intune; enrollment; terms and conditions; policy 
@@ -2161,7 +2161,7 @@ items:
         items: 
         - name: Overview
           href: ./apps/mamedge-overview.md
-        - name: Step 1. Create Microsoft Entra conditional access
+        - name: Step 1. Create Microsoft Entra Conditional Access
           href: ./apps/mamedge-1-mamca.md
         - name: Step 2. Create an app protection policy
           href: ./apps/mamedge-2-app.md
@@ -2290,9 +2290,12 @@ items:
       - name: Move your Intune Data Warehouse account data
         href: ./developer/data-warehouse-account-move.md
 
-  - name: Privacy and personal data
-    href: ./protect/privacy-personal-data.md
+  - name: Privacy, compliance, and personal data
     items:
+    - name: Privacy and personal data
+      href: ./protect/privacy-personal-data.md
+    - name: Compliance in Intune
+      href: ./fundamentals/compliance-in-intune.md
     - name: Optional diagnostic data in client apps
       href: ./protect/client-apps-optional-data.md
     - name: Data collection
