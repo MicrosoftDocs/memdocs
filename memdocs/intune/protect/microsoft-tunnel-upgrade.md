@@ -138,11 +138,11 @@ Image hash values:
 - **serverImageDigest**: sha256:3a5844f4e7156c966a2d0f5affd8b15ac3b441bd301a5a0b7c9b7db2ae6f5ed3
 
 Changes in this release:
+
 - Diagnostic tool improvements
 - Bug fixes for rootless container mode in mst-cli
 - Localization improvements in mstunnel-setup
 - Improvement on error handling
-
 
 ### October 2, 2024
 
@@ -153,7 +153,8 @@ Image hash values:
 - **serverImageDigest**: sha256:0efab5013351bcd81f186973e75ed5d9f91bbe6271e3be481721500f946fc9ec
 
 Changes in this release:
--Upgrade from .NET 6 to .NET 8
+
+- Upgrade from .NET 6 to .NET 8
 - Upgrade ocserv to version 1.3.0
 - Fix rootless container bug in installer
 
@@ -165,7 +166,7 @@ Image hash values:
 
 - **serverImageDigest**: sha256:6484d311d1bd6cbe55d71306595715bafa6a20a000be6fd6f9e530716cef6c16
 
-Changes in this release:
+Changes in this release:  
 - Add diagnostic tools for host troubleshooting
 - Upgrade Azure Linux image to 2.0.20240829
 
