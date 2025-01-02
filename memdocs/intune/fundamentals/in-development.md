@@ -61,9 +61,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Endpoint Privilege Manager support for ARM64<!-- 28313554 -->
+### Endpoint Privilege Manager support for Arm64<!-- 28313554 -->
 
-You'll soon be able to use [Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) file elevations on devices that run on ARM64 architecture.
+You'll soon be able to use [Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) file elevations on devices that run on Arm64 architecture.
 
 Applies to:
 
@@ -102,7 +102,7 @@ The Apps workload in Intune will be updated to provide a more consistent UI and 
 
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
-Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you will be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions. 
+Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions. 
 
 For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
 
@@ -138,7 +138,7 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 
 ### Copilot assistant for device query<!-- 26933762 -->
 
-You will soon be able to use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**.
+You'll soon be able to use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**.
 
 <!-- *********************************************** -->
 
@@ -146,7 +146,7 @@ You will soon be able to use Copilot to generate a KQL query to help you get dat
 
 ### Updated security baseline for Microsoft Edge v128<!-- 29463902 -->
  
-We’re working on an update to add an Intune security baseline for Microsoft Edge v128. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Edge.
+We’re working on an update to add an Intune security baseline for Microsoft Edge v128. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Microsoft Edge.
 
 For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
@@ -180,7 +180,7 @@ To learn more about security baselines with Intune, see [Use security baselines 
 
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
 
-We are adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform, that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+We're adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform, that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
 
 The template will support settings related to global exclusion settings. Applicable to antivirus and EDR engines on the client, the settings can configure exclusions to stop associated real time protection EDR alerts for the excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
 
