@@ -85,6 +85,16 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
+### Apple VPP using new API v2.0<!-- 29567109  -->
+
+Apple recently updated how apps and books are managed through the Apple volume purchase program (VPP). Apple has updated their related API to version 2.0 and deprecated version 1.0. To support the Apple updates, Microsoft Intune will soon use the new API, which is faster and more scalable than the previous version.
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+
 ### Update to Apps workload experience in Intune<!-- 15507048 -->
 
 The Apps workload in Intune will be updated to provide a more consistent UI and improved navigation structure so you can find the information you need faster. To find the **App** workload in Intune, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps**.
