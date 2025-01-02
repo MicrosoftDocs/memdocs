@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/26/2024
+ms.date: 01/03/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,6 +61,14 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
+### Endpoint Privilege Manager support for ARM64<!-- 28313554 -->
+
+You'll soon be able to use [Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) file elevations on devices that run on ARM64 architecture.
+
+Applies to:
+
+- Windows
+
 ### Use Copilot with Endpoint Privilege Manager to help identify potential elevation risks<!-- 27265509 -->
 
 We’re adding support for Copilot to help you investigate Endpoint Privilege Manager (EPM) elevation details. Copilot will help you evaluate information from you EPM elevation requests to identify potential indicators of compromise by using information from [Microsoft Defender](/defender-endpoint/microsoft-defender-endpoint).
@@ -76,6 +84,21 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 <!-- ***********************************************-->
 
 ## App management
+
+### Update to Apps workload experience in Intune<!-- 15507048 -->
+
+The Apps workload in Intune will be updated to provide a more consistent UI and improved navigation structure so you can find the information you need faster. To find the **App** workload in Intune, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps**.
+
+
+### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
+
+Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you will be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions. 
+
+For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
+
+Applies to:
+
+- Windows
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -99,8 +122,6 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 
 <!--  ## Device enrollment  -->
 
-
-
 <!-- *********************************************** -->
 
 ## Device management  
@@ -112,6 +133,28 @@ You will soon be able to use Copilot to generate a KQL query to help you get dat
 <!-- *********************************************** -->
 
 ## Device security
+
+### Updated security baseline for Microsoft Edge v128<!-- 29463902 -->
+ 
+We’re working on an update to add an Intune security baseline for Microsoft Edge v128. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Edge.
+
+For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
+
+Applies to:
+
+- Windows
+
+### Updated security baseline for Windows version 24H2<!-- 29819143 -->
+
+We're working on an update to add an Intune security baseline for **Windows version 24H2**. The new baseline version will use the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
+
+Use of [Intune security baselines](../protect/security-baselines.md) can help you maintain best-practice configurations for your Windows devices and can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft.
+
+As with all baselines, the default baseline will represent the recommended configurations for each setting, which you can modify to meet the requirements of your organization.
+
+Applies to:
+
+- Windows
 
 ### Security baselines for HoloLens 2 in public preview<!-- 24914095 -->
  
