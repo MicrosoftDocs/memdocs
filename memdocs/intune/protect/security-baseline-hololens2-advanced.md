@@ -78,16 +78,12 @@ To learn more about using security baselines, see:
 - [Use security baselines](../protect/security-baselines.md)
 - [Manage security baselines](../protect/security-baselines-configure.md).
 
-::: zone pivot="version-1" 
 **HoloLens 2 Advanced security baseline for (version 1)** - *January 2025*
 
 <!-- This baseline isn't available via the security compliance toolkit at this time. Remove this, or add something similar with a link to the source baseline if one is available: 
 
 For information about the most recent baseline versions and settings from Microsoft, including versions of this baseline that might not be available through Intune, download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center.
 -->
-
-::: zone-end  
-::: zone pivot="version-1"
 
 ## Account Management
 
@@ -472,8 +468,6 @@ For information about the most recent baseline versions and settings from Micros
 - **Manage Preview Builds**  
   Baseline default: *Disable Preview builds*  
   [Learn more](/windows/client-management/mdm/policy-csp-Update#managepreviewbuilds)
-
-::: zone-end
 
 ## Learn more
 
