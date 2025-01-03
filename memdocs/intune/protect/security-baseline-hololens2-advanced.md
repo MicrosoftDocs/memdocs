@@ -29,29 +29,28 @@ ms.collection:
 - sub-secure-endpoints
 
 <!-- 
-zone_pivot_groups: hololense2-advanced-baselines
+zone_pivot_groups: hololens2-advanced-baselines
 -->
 
 ---
 
 
-<!-- Pivot details:  (Not yet in use as only one version is available)
+<!-- Pivot details:
 
-- id: hololense2-advanced-baselines
+- id: hololense2-advanced-security-baseline
   title: Microsoft HoloLense 2 advanced baseline versions
   prompt: Choose a version
   pivots:
     - id: version-1 
-      title: HoloLens 2 Advanced (MONTH/YEAR)
-    - id: version-2
-      title: HoloLens 2 Advanced (MONTH/YEAR)
+      title: HoloLens 2 Advanced (January 2025)
+
 -->
 
 # Settings reference for Microsoft HoloLens 2 advanced security baseline for Microsoft Intune
 
 This article is a reference for the settings that are available in the Microsoft HoloLens 2 advanced security baseline for Microsoft Intune.
 
-To view settings for the Microsoft HoloLens 2 *standard* security baseline, see [Settings reference for the Microsoft HoloLens 2 standard security baseline for Microsoft Intune](../protect/security-baseline-hololense2-standard.md).
+To view settings for the Microsoft HoloLens 2 *standard* security baseline, see [Settings reference for the Microsoft HoloLens 2 standard security baseline for Microsoft Intune](../protect/security-baseline-hololens2-standard.md).
 
 ## About this reference article
 

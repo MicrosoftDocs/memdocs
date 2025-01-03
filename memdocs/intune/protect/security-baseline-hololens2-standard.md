@@ -27,22 +27,27 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - sub-secure-endpoints
-
-<!-- 
-zone_pivot_groups: hololense2-standard-baselines
--->
+zone_pivot_groups: hololens2-standard-baselines
 
 ---
 
+<!-- Pivots and versions still in use: 
+- May 2024 v24h1    > "mde-v24h1"
+- December 2020 v6  > "atp-december-2020"
+- September 2020 v5 > "atp-sept-2020"
+- April 2020 v4     > "atp-april-2020"
+- March 2020 v3     > "atp-march-2020"
 
-<!-- Pivot details:  (Not yet in use as only one version is available)
+-->
 
-- id: hololense2-standard-baselines
+<!-- Pivot details:
+
+- id: hololens2-standard-security-baseline
   title: Microsoft HoloLense 2 standard baseline versions
   prompt: Choose a version
   pivots:
     - id: version-1 
-      title: HoloLens 2 Standard (MONTH/YEAR)
+      title: HoloLens 2 Standard (January 2025)
     - id: version-2
       title: HoloLens 2 Standard (MONTH/YEAR)
 -->
@@ -51,7 +56,7 @@ zone_pivot_groups: hololense2-standard-baselines
 
 This article is a reference for the settings that are available in the Microsoft HoloLens 2 standard security baseline for Microsoft Intune.
 
-To view settings for the Microsoft HoloLens 2 *advanced* security baseline, see [Settings reference for the Microsoft HoloLens 2 advanced security baseline for Microsoft Intune](../protect/security-baseline-hololense2-advanced.md).
+To view settings for the Microsoft HoloLens 2 *advanced* security baseline, see [Settings reference for the Microsoft HoloLens 2 advanced security baseline for Microsoft Intune](../protect/security-baseline-hololens2-advanced.md).
 
 ## About this reference article
 

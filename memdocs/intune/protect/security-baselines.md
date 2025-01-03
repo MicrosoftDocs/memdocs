@@ -117,10 +117,10 @@ The following security baseline instances are available for use with Intune. Use
   - [Microsoft Edge version 80 and later](../protect/security-baseline-settings-edge.md?pivots-edge-april-2020) - April 2020
   - [Preview: Microsoft Edge version 77 and later](../protect/security-baseline-settings-edge.md?pivots=edge-october-2019) - October 2019
 
-- **Advanced Security Baseline for HoloLens 2**:  
+- **HoloLens 2 - Advanced security baseline settings**:  
   - [Version 1 - Hololens 2 advanced security](../protect/security-baseline-hololens2-advanced.md) - *January 2025*
 
-- **Standard Security Baseline for HoloLens 2**:  
+- **HoloLens 2 - Standard security baseline settings**:  
   - [Version 1 - Hololens 2 standard security](../protect/security-baseline-hololens2-standard.md) - *January 2025*
 
 - **Windows 365 Security Baseline**:  
