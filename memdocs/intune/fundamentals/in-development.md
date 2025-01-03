@@ -136,6 +136,26 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 
 ## Device management  
 
+### Remote Help supports Azure Virtual Desktop muti-session <!-- 24590822 -->
+
+Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Going forward, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
+
+For more information, see:
+
+- [Remote Help](../fundamentals/remote-help.md)
+- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
+
+###  Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
+
+We're adding a feature that will allow a customer to:
+
+- Configure one device cleanup rule per platform (Windows, iOS/macOS,iPadOS, Android, Linux)
+- Configure a different RBAC permission and assign the permission to different RBAC roles
+
+Platform level targeting of the Device Cleanup rule will help administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level. 
+
+For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules).
+
 ### Copilot assistant for device query<!-- 26933762 -->
 
 You'll soon be able to use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**.
