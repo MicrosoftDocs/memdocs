@@ -28,21 +28,24 @@ ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
 
-<!-- 
-zone_pivot_groups: hololens2-advanced-baselines
--->
-
 ---
 
+<!-- FOR METADATA: 
+
+zone_pivot_groups: hololens2-advanced-baselines
+
+-->
 
 <!-- Pivot details:
 
-- id: hololense2-advanced-security-baseline
+- id: hololense2-advanced-security
   title: Microsoft HoloLense 2 advanced baseline versions
   prompt: Choose a version
   pivots:
     - id: version-1 
       title: HoloLens 2 Advanced (January 2025)
+    - id: version-2  
+      title: HoloLens 2 Advanced (Date/Month)
 
 -->
 
@@ -129,7 +132,7 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Allow Autofill**  
   Baseline default: *Block*  
-  [Learn more](windows/client-management/mdm/policy-csp-Browser#allowautofill)
+  [Learn more](/windows/client-management/mdm/policy-csp-Browser#allowautofill)
 
 - **Allow Cookies**  
   Baseline default: *Block only cookies from third party websites*  

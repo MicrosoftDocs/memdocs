@@ -66,20 +66,6 @@ groups:
     - id: office-may-2023
       title: May 2023
 
-- id: hololens2-standard-security-baseline
-  title: Microsoft HoloLense 2 standard baseline versions
-  prompt: Choose a version
-  pivots:
-    - id: version-1
-      title: HoloLens 2 Standard (January 2025)
-
-- id: hololense2-advanced-security-baseline
-  title: Microsoft HoloLense 2 advanced baseline versions
-  prompt: Choose a version
-  pivots:
-  - id: version-1 
-    title: HoloLens 2 Advanced (January 2025)
-
 - id: apple-enterprise-sso
   title: Enterprise single sign-on platform
   prompt: Select your platform

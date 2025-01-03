@@ -27,26 +27,15 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - sub-secure-endpoints
-zone_pivot_groups: hololens2-standard-baselines
 
 ---
+<!-- FOR METADATA: 
 
-<!-- Pivots and versions still in use: 
-- May 2024 v24h1    > "mde-v24h1"
-- December 2020 v6  > "atp-december-2020"
-- September 2020 v5 > "atp-sept-2020"
-- April 2020 v4     > "atp-april-2020"
-- March 2020 v3     > "atp-march-2020"
-
--->
+zone_pivot_groups: hololens2-Standard-baselines
 
 <!-- Pivot details:
 
-- id: hololens2-standard-security-baseline
-  title: Microsoft HoloLense 2 standard baseline versions
-  prompt: Choose a version
-  pivots:
-    - id: version-1 
+    - id: version-1
       title: HoloLens 2 Standard (January 2025)
     - id: version-2
       title: HoloLens 2 Standard (MONTH/YEAR)
