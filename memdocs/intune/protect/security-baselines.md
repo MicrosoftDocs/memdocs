@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2024
+ms.date: 01/27/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -110,14 +110,20 @@ The following security baseline instances are available for use with Intune. Use
   - [Version 2306 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=v2023) *Released in November 2023*
   - [May 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=office-may-2023)
 
-- **Microsoft Edge Baseline**:
+- **Microsoft Edge Baseline**:  
   - [Microsoft Edge version 117](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) - November 2023
   - [Microsoft Edge version 112 and later](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v112) - May 2023
   - [Microsoft Edge version 85 and later](../protect/security-baseline-settings-edge.md?pivots-edge-sept-2020) - September 2020
   - [Microsoft Edge version 80 and later](../protect/security-baseline-settings-edge.md?pivots-edge-april-2020) - April 2020
   - [Preview: Microsoft Edge version 77 and later](../protect/security-baseline-settings-edge.md?pivots=edge-october-2019) - October 2019
 
-- **Windows 365 Security Baseline**:
+- **Advanced Security Baseline for HoloLens 2**:  
+  - [Version 1 - Hololens 2 advanced security](../protect/security-baseline-hololens2-advanced.md) - *January 2025*
+
+- **Standard Security Baseline for HoloLens 2**:  
+  - [Version 1 - Hololens 2 standard security](../protect/security-baseline-hololens2-standard.md) - *January 2025*
+
+- **Windows 365 Security Baseline**:  
   - [Version 24H1](security-baseline-settings-windows-365.md?pivots=win365-24h1)
   - [November 2021](security-baseline-settings-windows-365.md?pivots=win365-nov21)
 
