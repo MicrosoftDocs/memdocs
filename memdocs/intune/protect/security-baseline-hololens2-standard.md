@@ -78,6 +78,13 @@ To learn more about using security baselines, see:
 For information about the most recent baseline versions and settings from Microsoft, including versions of this baseline that might not be available through Intune, download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center.
 -->
 
+## Accounts
+
+- **Allow Microsoft Account Connection**  
+   Baseline default: *Block*  
+  [Learn more](/windows/client-management/mdm/policy-csp-Accounts#allowmicrosoftaccountconnection)
+
+<!-- NOT IN BASELINE  
 ## Account Management
 
 - **Deletion Policy**  
@@ -100,12 +107,7 @@ For information about the most recent baseline versions and settings from Micros
   Baseline default: *Configured*  
   [Learn more](/windows/client-management/mdm/accountmanagement-csp#userprofilemanagementstoragecapacitystopdeletion)
 
-## Accounts
-
-- **Allow Microsoft Account Connection**  
-   Baseline default: *Block*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Accounts#allowmicrosoftaccountconnection)
-
+-->
 ## Administrative Templates
 
 ### System > Power Management > Video and Display Settings
@@ -119,39 +121,19 @@ For information about the most recent baseline versions and settings from Micros
 
 ## Browser
 
-- **Allow Autofill**  
-  Baseline default: *Block*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser#allowautofill)
-
 - **Allow Cookies**  
   Baseline default: *Block only cookies from third party websites*  
   [Learn more](/windows/client-management/mdm/policy-csp-Browser#allowcookies)
 
-- **Allow Do Not Track**  
-  Baseline default: *Block*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser#allowdonottrack)
-
 - **Allow Password Manager**  
   Baseline default: *Block*  
   [Learn more](/windows/client-management/mdm/policy-csp-Browser#allowpasswordmanager)
-
-- **Allow Popups**  
-  Baseline default: *Block*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser#allowpopups)
-
-- **Allow Search Suggestions in Address Bar**  
-  Baseline default: *Block*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser#allowsearchsuggestionsinaddressbar)
 
 - **Allow Smart Screen**  
   Baseline default: *Allow*  
   [Learn more](/windows/client-management/mdm/policy-csp-Browser#allowsmartscreen)
 
 ## Connectivity
-
-- **Allow Bluetooth**  
-   Baseline default: *Disallow Bluetooth. The radio in the Bluetooth control panel will be grayed out and the user will not be able to turn Bluetooth on.*  
-  [Learn more](/windows/client-management/mdm/policy-csp-connectivity#allowbluetooth)
 
 - **Allow USB Connection**  
   Baseline default: *Not allowed.*  
@@ -164,8 +146,7 @@ For information about the most recent baseline versions and settings from Micros
   [Learn more](/windows/client-management/mdm/policy-csp-devicelock#devicepasswordenabled)
 
   - **Max Device Password Failed Attempts**  
-    Baseline default: *Configured*  
-    Value: *10*  
+    Baseline default: *Not configured*  
     [Learn more](/windows/client-management/mdm/policy-csp-devicelock#maxdevicepasswordfailedattempts)
 
   - **Allow Idle Return Without Password**  
@@ -178,12 +159,11 @@ For information about the most recent baseline versions and settings from Micros
 
   - **Max Inactivity Time Device Lock**  
     Baseline default: *Configured*  
-    Value: *10*  
+    Value: *3*  
     [Learn more](/windows/client-management/mdm/policy-csp-devicelock#maxinactivitytimedevicelock)
 
   - **Device Password History**  
-     Baseline default: *Configured*  
-    Value: *15*  
+    Baseline default: *Not configured*  
     [Learn more](/windows/client-management/mdm/policy-csp-devicelock#devicepasswordhistory)
 
   - **Allow Simple Device Password**  
@@ -196,7 +176,7 @@ For information about the most recent baseline versions and settings from Micros
 
   - **Min Device Password Length**  
     Baseline default: *Configured*  
-    Value: *12*  
+    Value: *8*  
     [Learn more](/windows/client-management/mdm/policy-csp-devicelock#mindevicepasswordlength)
 
 ## Experience
@@ -224,24 +204,6 @@ For information about the most recent baseline versions and settings from Micros
 - **Block third party cookies**  
   Baseline default: *Enabled*
 
-- **Configure Do Not Track**  
-  Baseline default: *Disabled*
-
-- **Enable AutoFill for addresses**  
-  Baseline default: *Disabled*
-
-- **Enable AutoFill for payment instruments**  
-  Baseline default: *Disabled*
-
-- **Enable search suggestions**  
-  Baseline default: *Disabled*
-
-- **Default pop-up window setting**  
-  Baseline default: *Enabled*
-
-  - **Default pop-up window setting (Device)**
-    Baseline default: *Do not allow any site to show popups*
-
 ### Extensions
 
 - **Control which extensions cannot be installed**  
@@ -251,12 +213,6 @@ For information about the most recent baseline versions and settings from Micros
     Baseline default: *
 
 ### Password manager and protection
-
-- **Configures a setting that asks users to enter their device password while using password autofill**  
-  Baseline default: *Enabled*
-
-  - **Configures a setting that asks users to enter their device password while using password autofill (Device)**  
-    Baseline default: *Autofill off*
 
 - **Enable saving passwords to the password manager**  
   Baseline default: *Disabled*
@@ -273,67 +229,6 @@ For information about the most recent baseline versions and settings from Micros
   Value: *7*  
   [Learn more](/windows/client-management/mdm/policy-csp-MixedReality#aadgroupmembershipcachevalidityindays)
 
-## Privacy
-
-- **Let Apps Access Account Info**  
-  Baseline default: *Force deny.*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Privacy#letappsaccessaccountinfo)
-
-- **Let Apps Access Account Info Force Allow These Apps**  
-  Baseline default: *Configured*  
-  Values:  
-  - *Microsoft.Dynamics365.Guides_8wekyb3d8bbwe*
-  - *Microsoft.MicrosoftRemoteAssist_8wekyb3d8bbwe*
-  
-  [Learn more](/windows/client-management/mdm/policy-csp-Privacy#letappsaccessaccountinfo_forceallowtheseapps)
-
-- **Let Apps Access Background Spatial Perception**  
-  Baseline default: *Force deny.*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Privacy#letappsaccessbackgroundspatialperception)
-
-- **Let Apps Access Background Spatial Perception Force Allow These Apps**  
-  Baseline default: *Configured*  
-  - *Microsoft.Dynamics365.Guides_8wekyb3d8bbwe*
-  - *Microsoft.MicrosoftRemoteAssist_8wekyb3d8bbwe*
-
-  [Learn more](/windows/client-management/mdm/policy-csp-Privacy#letappsaccessbackgroundspatialperception_forceallowtheseapps)
-
-- **Let Apps Access Camera**  
-  Baseline default: *Force deny.*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Privacy#letappsaccesscamera)
-
-- **Let Apps Access Camera Force Allow These Apps**  
-  Baseline default: *Configured*  
-  Values:  
-  - *Microsoft.Dynamics365.Guides_8wekyb3d8bbwe*
-  - *Microsoft.MicrosoftRemoteAssist_8wekyb3d8bbwe*
-
-  [Learn more](/windows/client-management/mdm/policy-csp-Privacy#letappsaccesscamera_forceallowtheseapps)
-
-- **Let Apps Access Microphone**  
-  Baseline default: *Force deny.*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Privacy#letappsaccessmicrophone)
-
-- **Let Apps Access Microphone Force Allow These Apps**  
-  Baseline default: *Configured*  
-  Values:  
-  - *Microsoft.Dynamics365.Guides_8wekyb3d8bbwe*
-  - *Microsoft.MicrosoftRemoteAssist_8wekyb3d8bbwe*
-
-  [Learn more](/windows/client-management/mdm/policy-csp-Privacy#letappsaccessmicrophone_forceallowtheseapps)
-
-## Search
-
-- **Allow Search To Use Location**  
-  Baseline default: *Block*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Search#allowsearchtouselocation)
-
-## Security
-
-- **Allow Add Provisioning Package**  
-  Baseline default: *Block*  
-  [Learn more](/windows/client-management/mdm/policy-csp-Security#allowaddprovisioningpackage)
-
 ## Settings
 
 - **Allow VPN**  
@@ -342,6 +237,7 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Page Visibility List**  
   Baseline default: *Configured*  
+  Value: *hide:emailandaccounts;workplace;otherusers;bluetooth;usb;network-proxy;network-wifi;network-ethernet;network-airplanemode;powersleep;certificates;developers;windowsinsider;*  
   [Learn more](/windows/client-management/mdm/policy-csp-Settings#pagevisibilitylist)
 
 ## System
@@ -350,105 +246,72 @@ For information about the most recent baseline versions and settings from Micros
   Baseline default: *SD card use is not allowed and USB drives are disabled. This setting does not prevent programmatic access to the storage card.*  
   [Learn more](/windows/client-management/mdm/policy-csp-System#allowstoragecard)
 
-- **Allow Telemetry**  
-  Baseline default: *Security*  
-  [Learn more](/windows/client-management/mdm/policy-csp-System#allowtelemetry)
-
 ## Tenant Lockdown
 
 - **Require Network In OOBE (Device)**  
   Baseline default: *True*
 
-## Wi-Fi Settings
-
-- **Allow Manual Wi Fi Configuration**  
-  Baseline default: *Allow*  
-  [Learn more](/windows/client-management/mdm/policy-csp-wifi#allowmanualwificonfiguration)
-
-> [!IMPORTANT]
->
-> Allow or block connections to Wi-Fi outside of MDM server-installed networks. If you change this setting to Block, you must deploy enterprise Wi-Fi profiles to the device using the Wi-Fi CSP before you apply this setting. Otherwise, the device will go offline since it won't be able to connect to Wi-Fi. Note that choosing to block Wi-Fi connections will delete any previously installed user-configured Wi-Fi profiles from the device, though not all non-MDM profiles will be deleted. Learn more
-
 ## Windows Hello For Business
 
-- **Lowercase Letters**  
-  Baseline default: *Required*  
-  [Learn more](/windows/client-management/mdm/PassportForWork-csp/#devicetenantidpoliciespincomplexitylowercaseletters)
-
-- **Require Security Device**  
-  Baseline default: *true*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesrequiresecuritydevice)
-
-- **Maximum PIN Length**  
-  Baseline default: *Configured*  
-  Value: *6*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitymaximumpinlength)
-
-- **Disable Post Logon Provisioning (Windows Insiders only)**  
-  Baseline default: *Not configured*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesdisablepostlogonprovisioning)
+- **Enable Pin Recovery**  
+  Baseline default: *false*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesenablepinrecovery)
 
 - **Restrict use of TPM 1.2**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesexcludesecuritydevicestpm12)
 
-- **PIN History**  
-  Baseline default: *Configured*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityhistory)
-
-- **Special Characters**  
-  Baseline default: *Requires the use of at least one special characters in PIN.*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityspecialcharacters)
-
-- **Minimum PIN Length**  
-  Baseline default: *Configured*  
-    Value: *6*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityminimumpinlength)
-
-- **Uppercase Letters**  
-  Baseline default: *Required*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityuppercaseletters)
-
-- **Enable Windows Hello Provisioning For Security Keys (Windows Insiders only)**  
-  Baseline default: *Not configured*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesenablewindowshelloprovisioningforsecuritykeys)
-
-- **Use Windows Hello For Business (Device)**  
-  Baseline default: *true*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusepassportforwork)
-
-- **Use Cloud Trust For On Prem Auth**  
-  Baseline default: *Not configured*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusecloudtrustforonpremauth)
+- **Digits**  
+  Baseline default: *Requires the use of at least one digits in PIN.*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitydigits)
 
 - **Expiration**  
   Baseline default: *Configured*  
     Value: *90*  
   [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexityexpiration)
 
-- **Use Remote Passport**  
-  Baseline default: *Not configured*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesremoteuseremotepassport)
+- **PIN History**  
+  Baseline default: *Configured*  
+  Value: *10*
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityhistory)
 
-- **Disable Post Logon Credential Caching (Windows Insiders only)**  
-  Baseline default: *Not configured*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp)
+- **Lowercase Letters**  
+  Baseline default: *Allowed*  
+  [Learn more](/windows/client-management/mdm/PassportForWork-csp/#devicetenantidpoliciespincomplexitylowercaseletters)
 
-- **Use Hello Certificates As Smart Card Certificates**  
-  Baseline default: *Disabled*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusehellocertificatesassmartcardcertificates)
+- **Maximum PIN Length**  
+  Baseline default: *Configured*  
+  Value: *6*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitymaximumpinlength)
+
+- **Minimum PIN Length**  
+  Baseline default: *Configured*  
+    Value: *6*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityminimumpinlength)
+
+- **Special Characters**  
+  Baseline default: *Allows the use of special characters in PIN.*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityspecialcharacters)
+
+- **Uppercase Letters**  
+  Baseline default: *Allowed*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityuppercaseletters)
+
+- **Require Security Device**  
+  Baseline default: *true*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesrequiresecuritydevice)
 
 - **Use Certificate For On Prem Auth**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusecertificateforonpremauth)
 
-- **Enable Pin Recovery**  
-  Baseline default: *false*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesenablepinrecovery)
+- **Use Hello Certificates As Smart Card Certificates**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusehellocertificatesassmartcardcertificates)
 
-- **Digits**  
-  Baseline default: *Requires the use of at least one digits in PIN.*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitydigits)
+- **Use Windows Hello For Business (Device)**  
+  Baseline default: *true*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusepassportforwork)
 
 ## Windows Update For Business
 

@@ -99,20 +99,23 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Profile Inactivity Threshold**  
   Baseline default: *Configured*  
+  Value: *30*
   [Learn more](/windows/client-management/mdm/accountmanagement-csp#userprofilemanagementprofileinactivitythreshold)
 
 - **Storage Capacity Start Deletion**  
   Baseline default: *Configured*  
+  Value: *25*
   [Learn more](/windows/client-management/mdm/accountmanagement-csp#userprofilemanagementstoragecapacitystartdeletion)
 
 - **Storage Capacity Stop Deletion**  
   Baseline default: *Configured*  
+  Value: *50*
   [Learn more](/windows/client-management/mdm/accountmanagement-csp#userprofilemanagementstoragecapacitystopdeletion)
 
 ## Accounts
 
 - **Allow Microsoft Account Connection**  
-   Baseline default: *Block*  
+  Baseline default: *Block*  
   [Learn more](/windows/client-management/mdm/policy-csp-Accounts#allowmicrosoftaccountconnection)
 
 ## Administrative Templates
@@ -124,7 +127,7 @@ For information about the most recent baseline versions and settings from Micros
   [Learn more](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin)
 
   - **When plugged in, turn display off after (seconds)**  
-     Baseline default: *30*
+    Baseline default: *30*
 
 ## Browser
 
@@ -187,7 +190,7 @@ For information about the most recent baseline versions and settings from Micros
 
   - **Max Inactivity Time Device Lock**  
     Baseline default: *Configured*  
-    Value: *10*  
+    Value: *3*  
     [Learn more](/windows/client-management/mdm/policy-csp-devicelock#maxinactivitytimedevicelock)
 
   - **Device Password History**  
@@ -244,6 +247,8 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Enable search suggestions**  
   Baseline default: *Disabled*
+
+### Content settings
 
 - **Default pop-up window setting**  
   Baseline default: *Enabled*
@@ -351,7 +356,7 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Page Visibility List**  
   Baseline default: *Configured*  
-  Value: *hide:emailandaccounts;workplace;otherusers;bluetooth;usb;network-proxy;network-wifi;network-ethernet;network-airplanemode;powersleep;certificates;developers;windowsinsider;*
+  Value: *hide:emailandaccounts;workplace;otherusers;bluetooth;usb;network-proxy;network-wifi;network-ethernet;network-airplanemode;powersleep;certificates;developers;windowsinsider;*  
   [Learn more](/windows/client-management/mdm/policy-csp-Settings#pagevisibilitylist)
 
 ## System
@@ -381,85 +386,65 @@ For information about the most recent baseline versions and settings from Micros
 
 ## Windows Hello For Business
 
-- **Lowercase Letters**  
-  Baseline default: *Required*  
-  [Learn more](/windows/client-management/mdm/PassportForWork-csp/#devicetenantidpoliciespincomplexitylowercaseletters)
-
-- **Require Security Device**  
-  Baseline default: *True*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesrequiresecuritydevice)
-
-- **Maximum PIN Length**  
-  Baseline default: *Configured*  
-  Value: *6*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitymaximumpinlength)
-
-- **Disable Post Logon Provisioning (Windows Insiders only)**  
-  Baseline default: *Not configured*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesdisablepostlogonprovisioning)
+- **Enable Pin Recovery**  
+  Baseline default: *False*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesenablepinrecovery)
 
 - **Restrict use of TPM 1.2**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesexcludesecuritydevicestpm12)
 
-- **PIN History**  
-  Baseline default: *Configured*  
-  Value: *10*
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityhistory)
-
-- **Special Characters**  
-  Baseline default: *Requires the use of at least one special characters in PIN.*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityspecialcharacters)
-
-- **Minimum PIN Length**  
-  Baseline default: *Configured*  
-    Value: *6*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityminimumpinlength)
-
-- **Uppercase Letters**  
-  Baseline default: *Required*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityuppercaseletters)
-
-- **Enable Windows Hello Provisioning For Security Keys (Windows Insiders only)**  
-  Baseline default: *Not configured*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesenablewindowshelloprovisioningforsecuritykeys)
-
-- **Use Windows Hello For Business (Device)**  
-  Baseline default: *True*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusepassportforwork)
-
-- **Use Cloud Trust For On Prem Auth**  
-  Baseline default: *Not configured*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusecloudtrustforonpremauth)
+- **Digits**  
+  Baseline default: *Requires the use of at least one digits in PIN.*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitydigits)
 
 - **Expiration**  
   Baseline default: *Configured*  
     Value: *90*  
   [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexityexpiration)
 
-- **Use Remote Passport**  
-  Baseline default: *Not configured*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesremoteuseremotepassport)
+- **PIN History**  
+  Baseline default: *Configured*  
+  Value: *10*
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityhistory)
 
-- **Disable Post Logon Credential Caching (Windows Insiders only)**  
-  Baseline default: *Not configured*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp)
+- **Lowercase Letters**  
+  Baseline default: *Required*  
+  [Learn more](/windows/client-management/mdm/PassportForWork-csp/#devicetenantidpoliciespincomplexitylowercaseletters)
 
-- **Use Hello Certificates As Smart Card Certificates**  
-  Baseline default: *Disabled*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusehellocertificatesassmartcardcertificates)
+- **Maximum PIN Length**  
+  Baseline default: *Configured*  
+  Value: *6*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitymaximumpinlength)
+
+- **Minimum PIN Length**  
+  Baseline default: *Configured*  
+    Value: *6*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityminimumpinlength)
+
+- **Special Characters**  
+  Baseline default: *Requires the use of at least one special characters in PIN.*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityspecialcharacters)
+
+- **Uppercase Letters**  
+  Baseline default: *Required*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityuppercaseletters)
+
+- **Require Security Device**  
+  Baseline default: *True*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesrequiresecuritydevice)
 
 - **Use Certificate For On Prem Auth**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusecertificateforonpremauth)
 
-- **Enable Pin Recovery**  
-  Baseline default: *False*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesenablepinrecovery)
+- **Use Hello Certificates As Smart Card Certificates**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusehellocertificatesassmartcardcertificates)
 
-- **Digits**  
-  Baseline default: *Requires the use of at least one digits in PIN.*  
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitydigits)
+- **Use Windows Hello For Business (Device)**  
+  Baseline default: *True*  
+  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusepassportforwork)
 
 ## Windows Update For Business
 
