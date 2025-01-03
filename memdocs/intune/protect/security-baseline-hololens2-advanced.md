@@ -51,9 +51,12 @@ zone_pivot_groups: hololens2-advanced-baselines
 
 # Settings reference for Microsoft HoloLens 2 advanced security baseline for Microsoft Intune
 
+**HoloLens 2 Advanced security baseline for (version 1)** - *January 2025*
+
 This article is a reference for the settings that are available in the Microsoft HoloLens 2 advanced security baseline for Microsoft Intune.
 
-To view settings for the Microsoft HoloLens 2 *standard* security baseline, see [Settings reference for the Microsoft HoloLens 2 standard security baseline for Microsoft Intune](../protect/security-baseline-hololens2-standard.md).
+> [!TIP]
+> To view settings for the Microsoft HoloLens 2 *standard* security baseline, see [Settings reference for the Microsoft HoloLens 2 standard security baseline for Microsoft Intune](../protect/security-baseline-hololens2-standard.md).
 
 ## About this reference article
 
@@ -78,7 +81,6 @@ To learn more about using security baselines, see:
 - [Use security baselines](../protect/security-baselines.md)
 - [Manage security baselines](../protect/security-baselines-configure.md).
 
-**HoloLens 2 Advanced security baseline for (version 1)** - *January 2025*
 
 <!-- This baseline isn't available via the security compliance toolkit at this time. Remove this, or add something similar with a link to the source baseline if one is available: 
 
