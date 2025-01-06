@@ -153,7 +153,7 @@ Check your Intune reporting to see what devices or users might be affected. For 
 
 To manage the supported OS version in your organization, you can use Microsoft Intune controls for both MDM and APP. For more information, see [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md).
 
-### Plan for change: Intune is moving to support macOS 13 and higher later<!--28391869-->
+### Plan for change: Intune is moving to support macOS 13 and higher later later this year<!--28391869-->
 
 Later this year, we expect macOS 15 Sequoia to be released by Apple. Microsoft Intune, the Company Portal app and the Intune mobile device management agent will be moving to support macOS 13 and later. Since the Company Portal app for iOS and macOS are a unified app, this change will occur shortly after the release of macOS 15. This doesn't affect existing enrolled devices.
 
