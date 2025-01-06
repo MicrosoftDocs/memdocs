@@ -7,7 +7,7 @@ keywords: Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 01/06/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
