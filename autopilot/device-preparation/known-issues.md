@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 12/18/2024
+ms.date: 01/06/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,11 +40,11 @@ This article describes known issues that can often be resolved with:
 
 ## Known issues
 
-## **Export logs** button in the out-of-box experience (OOBE) does not show any success or failure indication.
+## Exporting logs during the out-of-box experience (OOBE) doesn't show result
 
 Date added: *January 6, 2025*
 
-When a failure occurs during the provisioning process, an **Export logs** option is displayed to the user. When selected, it saves the file to the first USB drive on the device without displaying the browse dialog. This is for security reasons. Currently, users will not see failure or success messages to indicate the logs were saved. This will be fixed in the future.
+When a failure occurs during the provisioning process, an **Export logs** option is displayed to the user. When selected, it saves the file to the first USB drive on the device without displaying the browse dialog. The browse dialog isn't displayed for security reasons. Currently, users don't see failure or success messages to indicate the logs were saved. This issue will be fixed in the future.
 
 ## Apps and scripts tabs don't display properly when editing the Windows Autopilot device preparation profile
 
