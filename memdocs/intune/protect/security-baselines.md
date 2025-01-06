@@ -138,7 +138,7 @@ You can view the list of available baselines in the [Microsoft Intune admin cent
 
 To view more information about the baseline versions you use, select a baseline type, like *Security Baseline for Windows 10 and later* to open its *Profiles* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. The details include the most recent and current baseline version. You can select a single version to view deeper details about the profiles that use that version.
 
-You can choose to [change of the version](../protect/security-baselines-configure.md#update-a-profile-to-the-latest-version) of a baseline that's in use with a given profile. When you change the version, you don't have to create a new baseline profile to take advantage of updated versions. Instead you can select a baseline profile and use the built-in option to change the instance version for that profile to a new one.
+You can choose to [change the version](../protect/security-baselines-configure.md#update-a-profile-to-the-latest-version) of a baseline that's in use with a given profile. When you change the version, you don't have to create a new baseline profile to take advantage of updated versions. Instead you can select a baseline profile and use the built-in option to change the instance version for that profile to a new one.
 
 ## Avoid conflicts
 
@@ -177,7 +177,7 @@ Migrating from on-premises Active Directory group policies to a pure cloud solut
 
 ### Where can I find details about using or configuring the settings that are available in a security baseline?
 
-Each security baseline manages device configurations by applying the options found in a configuration service provider on a device. For example, settings that apply to Microsoft Defender are taken from th Microsoft Defender CSP. Because Intune is a configuration vehicle for those options and doesn’t determine their functionality or scope, the CSP documentation owns the content for how to configure each option.
+Each security baseline manages device configurations by applying the options found in a configuration service provider on a device. For example, settings that apply to Microsoft Defender are taken from the Microsoft Defender CSP. Because Intune is a configuration vehicle for those options and doesn’t determine their functionality or scope, the CSP documentation owns the content for how to configure each option.
 
 Within the Intune security baseline policy UI, Intune provides information text that is taken from the source CSP and provides a link to that CSP. In some cases, the CSP might be part of a larger content set that includes proactive guidance that remains beyond the scope of Intune to include or duplicate in our content. However, Intune does document the list of settings in each security baseline version and its default configuration.
 
