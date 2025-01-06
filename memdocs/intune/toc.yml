@@ -1681,8 +1681,16 @@ items:
             - name: Set up enrollment for shared device mode    
               href: ./enrollment/automated-device-enrollment-shared-device-mode.md
               displayName: devices, frontline worker, automated device enrollment 
-            - name: Walkthrough - Set up enrollment with Apple School Manager
-              href: ./enrollment/apple-school-manager-set-up-ios.md
+            - name: Walkthrough - Set up enrollment with Apple School Manager 
+              - name: Prerequisites
+                href: ./enrollment/apple-school-manager-set-up-ios.md
+              - name: Step 1 - Get an Apple token and assign devices
+                href: ./enrollment/apple-school-manager-step-1.md
+              - name: Step 2 - Create an Apple enrollment profile 
+                href: ./enrollment/apple-school-manager-step-2.md
+              - name: Step 3 - Sync managed devices  
+                href: ./enrollment/apple-school-manager-step-3.md
+      
           - name: Set up Apple device enrollment
             items:              
             - name: Overview    
