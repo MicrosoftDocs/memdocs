@@ -234,6 +234,13 @@ Policy conflicts can occur when multiple Intune policies are applied to a device
 
 To learn more about conflict resolution for policies, see [Compliance and device configuration policies that conflict](../configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
 
+## How Intune evaluates the Default Compliance Policy
+
+In Intune, the default compliance policy is evaluated for every device on every calculation. The evaluation process sets the device to non-compliant if any of the following is false.
+- "Has a compliance policy assigned" - At least one applicable compliance policy must be assigned to device with an applicable setting inside.
+- "Is active" - Device should remain in contact with Intune (turned on with internet and actively connecting. Default grace is 30 days.)
+- "Enrolled user exists" - User that is actively using the device exist and has a valid Intune license.
+
 ## Next steps
 
 [Compliance policies overview](device-compliance-get-started.md)
