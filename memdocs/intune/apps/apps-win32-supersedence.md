@@ -40,7 +40,7 @@ App supersedence can only be applied to Win32 apps. For more information, see [A
 
 A Microsoft Intune permission is required to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, Intune admins need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Intune admin center. To find this permission in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
 
-This Win32 app supersedence permission has been added to the following built-in roles:
+This Win32 app supersedence permission is added to the following built-in roles:
 
 - Application Manager
 - School administrator
@@ -53,7 +53,7 @@ This Win32 app supersedence permission has been added to the following built-in 
 The following steps help you create a supersedence relationship between apps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps**, and then select a Win32 app from the list. If you haven't added a Win32 app, you can follow the steps to [add a Win32 app to Intune](apps-win32-add.md).
+2. Select **Apps** > **All apps**, and then select a Win32 app from the list. To add a Win32 app, see [add a Win32 app to Intune](apps-win32-add.md).
 3. After you select the existing Win32 app, select **Properties**.
 4. In the **Supersedence** section, select **Edit** > **Add** to choose apps that should be superseded.
 
@@ -65,7 +65,7 @@ The following steps help you create a supersedence relationship between apps:
 7. Once this step is finalized, select **Review + save** > **Save**.
 
     > [!IMPORTANT]
-    > Superseding apps do not get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that aren't targeted will be ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence will take place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, please refer to the matrix below. This behavior is in direct contrast to dependencies, which doesn't require targeting. Additionally, only apps that are targeted will show install statuses in Microsoft Intune admin center.
+    > Superseding apps do not get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that aren't targeted is ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence takes place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, refer to the matrix below. This behavior is in direct contrast to dependencies, which doesn't require targeting. Additionally, only apps that are targeted will show install statuses in Microsoft Intune admin center.
 
 ## Supersedence behavior
 
@@ -200,7 +200,7 @@ The first available check-in will commonly happen between 1-8 hours after the as
 
 ### Auto-update limitations
 
-The maximum number of superseding apps a Win32 app can have is 10. User must be logged in to the device to receive the superseding app.
+A Win32 app can have a maximum of 10 superseding apps. User must be logged in to the device to receive the superseding app.
 
 When an app is targeted with available intent to a group that contains the user, and the user requested the app install from the Company Portal, Intune creates a device based assignment to track both the user consent and internal targeting to process the app during check-in. This device based assignment is used to install the app on the devices. However, in situations where the targeting changes during the lifecycle of the app, a few scenarios can occur. If you take any of the following actions once the app is already installed on the device, Intune will remove user consent and the app will no longer be targeted with available intent:
 
