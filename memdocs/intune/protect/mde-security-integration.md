@@ -272,7 +272,7 @@ To support use with Microsoft Defender security settings management, your polici
 | Antivirus              | Defender Update controls               | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Microsoft Defender Antivirus           | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Microsoft Defender Antivirus exclusions| ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
-| Antivirus              | Windows Security Experience            | *Note 1*                                                       | ![Supported](./media/mde-security-integration/green-check.png) |
+| Antivirus              | Windows Security Experience            | ![Supported](./media/mde-security-integration/green-check.png) ![Supported](./media/mde-security-integration/green-check.png) |
 | Attack Surface Reduction | Attack Surface Reduction Rules       | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 |Attack Surface Reduction|Device Control                          | *Note 1*                                                       | ![Supported](./media/mde-security-integration/green-check.png) |
 | Endpoint detection and response | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png)| ![Supported](./media/mde-security-integration/green-check.png)|
@@ -304,7 +304,7 @@ To support use with Microsoft Defender security settings management, your polici
 
 - **[Firewall](endpoint-security-firewall-policy.md)** policies focus on the Defender firewall on your devices.
 
-- **Firewall Rules** are a type of profile for [Firewall](endpoint-security-firewall-policy.md) policy that are comprised of are granular rules for Firewalls, including specific ports, protocols, applications, and networks.
+- **Firewall Rules** are a type of profile for [Firewall](endpoint-security-firewall-policy.md) policy that is comprised of granular rules for Firewalls, including specific ports, protocols, applications, and networks.
 
 ## Configure your tenant to support Defender for Endpoint security settings management
 
@@ -325,10 +325,6 @@ In the Microsoft Defender portal, as a security administrator:
    > If you have the *Manage security settings in Security Center* permission in the Microsoft Defender portal, and are simultaneously enabled to view devices from all Device Groups (no [role-based access control](/microsoft-365/security/defender-endpoint/rbac) limits on your user permissions), you can also perform this action.
 
 2. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
-
-   > [!IMPORTANT]
-   >
-   > Use of [*Microsoft Defender for Endpoint's Dynamic tag capability*](/microsoft-365/security/defender/configure-asset-rules?view=o365-worldwide&preserve-view=true) to tag devices with *MDE-Management* isn't currently supported with security settings management. Devices tagged through this capability won't successfully enroll. This issue remains under investigation.
 
    > [!TIP]
    >
@@ -413,7 +409,7 @@ You can create groups for these devices [in Microsoft Entra](/azure/active-direc
 > Custom scripts and [Microsoft Entra dynamic device groups](/azure/active-directory/enterprise-users/groups-dynamic-membership) created before this change that specify rules that reference only *Windows* might exclude *Windows Servers* when used with the Security Management for Microsoft Defender for Endpoint solution. For example:
 >
 > - If you have a rule that uses the `equals` or `not equals` operator to identify *Windows*, this change will affect your rule. That is because previously both *Windows* and *Windows Server* were reported as *Windows*. To continue to include both, you must update the rule to also reference *Windows Server*.
-> - If you have a rule that use the `contains` or `like` operator to specify *Windows*, then the rule won't be affected by this change. These operators can find both *Windows* and *Windows Server*.
+> - If you have a rule that uses the `contains` or `like` operator to specify *Windows*, then the rule won't be affected by this change. These operators can find both *Windows* and *Windows Server*.
 
 > [!TIP]
 >
