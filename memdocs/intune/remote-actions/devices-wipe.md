@@ -43,7 +43,7 @@ The **Wipe** device action restores a device to its factory default settings. Th
 |**Wipe**| Checked | No | Wipes all MDM Policies. Keeps user accounts and data. Resets user settings back to default. Resets the operating system to its default state and settings.|
 
 > [!NOTE]
-> The Wipe action is not available for iOS/iPadOS devices enrolled using Account Driven Apple User Enrollment. To create an Account Driven Apple User Enrollment profile: [Set up iOS/iPadOS and iPadOS Account driven Apple User Enrollment]([../enrollment/ios-user-enrollment.md](https://learn.microsoft.com/en-us/mem/intune/enrollment/apple-account-driven-user-enrollment))
+> The Wipe action is not available for iOS/iPadOS devices enrolled using Account Driven Apple User Enrollment. To create an Account Driven Apple User Enrollment profile, see [Set up iOS/iPadOS and iPadOS Account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md).
 
 > [!NOTE]
 > By design, Zebra has defined the Wipe action on any Android Zebra device to only remove corporate data from devices, and not perform a factory reset.
