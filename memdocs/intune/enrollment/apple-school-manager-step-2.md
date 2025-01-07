@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/06/2025
+ms.date: 01/07/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -29,18 +29,19 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Create an Apple enrollment profile  
+# Create an Apple enrollment profile for school devices  
 After you get your Apple token, you can create an enrollment profile for school devices. An essential part of setup is creating enrollment profiles. The profiles contain the settings that apply to devices during device enrollment. 
 
 ## Create a profile  
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.    
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+1. Expand **Device onboarding**, and then select **Enrollment**.    
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, Choose **Enrollment program tokens**.  
-1. Select a token.
-1. Select **Profiles** > **Create profile** > **iOS/iPadOS**.  
+1. Choose a token, and then select **Profiles**. 
+1. Select **Create profile** > **iOS/iPadOS**.  
 
-1. Under **Create Profile**, enter a **Name** and **Description** for the profile, for administrative purposes. Users don't see these details. 
+1. For **Basics**, give the profile a **Name** and **Description** for administrative purposes. Users don't see these details. 
 
  ![Example screenshot of the profile name and description fields in the admin center.](./media/apple-school-manager-set-up-ios/image05.png)
 
@@ -49,11 +50,11 @@ After you get your Apple token, you can create an enrollment profile for school 
 
 
 1. For **User Affinity**, decide if devices with this profile must enroll with an assigned user or without an assigned user.  
-    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the company portal for services like installing apps. This option also lets users authenticate their devices by using the company portal. If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint).   Apple School Manager's Shared iPad mode requires user enroll without user affinity.
+    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the company portal for services like installing apps. This option also lets users authenticate their devices by using the company portal. If using Active Directory Federation Services (AD FS), user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint).   Apple School Manager's Shared iPad mode requires user enroll without user affinity.
 
     - **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user, such as a shared device. Use this option for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 
-1. If you chose **Enroll with User Affinity**, you can let users authenticate with Company Portal, Setup Assistant (legacy), and Setup Assistant with modern authentication. Select the option. For more information about authentication methods, see [Authentication methods for automated device enrollment in Intune](automated-device-enrollment-authentication.md).  
+1. If you chose **Enroll with User Affinity**, select how users must authenticate: Company Portal, Setup Assistant (legacy), or Setup Assistant with modern authentication. For more information about authentication methods, see [Authentication methods for automated device enrollment in Intune](automated-device-enrollment-authentication.md).  
 
     > [!NOTE]
     > If you want any of the following features, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
@@ -63,8 +64,8 @@ After you get your Apple token, you can create an enrollment profile for school 
     >
     > These features aren't supported when authenticating with Apple Setup Assistant.
 
-1. Choose **Device Management Settings** and choose if you want devices using this profile to be supervised.
-    **Supervised** devices give you more management options and disabled Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling Intune's supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
+1. Choose **Device Management Settings**, and choose if you want devices using this profile to be supervised.
+    *Supervision* gives you more management options and disabled Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling Intune's supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
 
     Users are notified that their devices are supervised in two ways:
 
@@ -74,11 +75,11 @@ After you get your Apple token, you can create an enrollment profile for school 
      > [!NOTE]
      > A device enrolled without supervision can only be reset to supervised by using the Apple Configurator. Resetting the device in this manner requires connecting an iOS/iPadOS device to a Mac with a USB cable. For more information, see the [Apple Configurator docs](https://support.apple.com/guide/apple-configurator-mac) (opens Apple Support).  
 
-1. Choose if you want locked enrollment for devices using this profile. **Locked enrollment** disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. Such devices must have the **Supervised** Management Mode set to *Yes*. 
+1. Choose if you want locked enrollment for devices using this profile. **Locked enrollment** disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. Such devices must have the **Supervised** Management Mode set to *yes*. 
 
-1. You can let multiple users sign on to enrolled iPads by using a managed Apple ID. To do so, choose **Yes** under **Shared iPad** (this option requires **Enroll without User Affinity** and **Supervised** mode set to **Yes**.) Managed Apple IDs are created in the Apple School Manager portal. Learn more about [shared iPad](../fundamentals/education-settings-configure-ios-shared.md) and [Apple's shared iPad requirements](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
+1. You can let multiple users sign on to enrolled iPads by using a managed Apple ID. To do so, choose **Yes** under **Shared iPad** (this option requires **Enroll without User Affinity** and **Supervised** mode set to **Yes**.) Managed Apple IDs are created in the Apple School Manager portal. Learn more about [shared iPad](../fundamentals/education-settings-configure-ios-shared.md) and [shared iPad requirements for Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
-1. Choose if you want the devices using this profile to be able to **Sync with computers**. **Deny All** means that all devices using this profile won't be able to sync with any data on any computer. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.  
+1. Choose if you want the devices using this profile to be able to **Sync with computers**. **Deny All** means that devices using this profile can't sync with any data on any computer. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.  
 
 1. If you chose **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator Certificate to import.
 
@@ -91,7 +92,7 @@ After you get your Apple token, you can create an enrollment profile for school 
     |Setting |Description  |
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     |**Department Name**    |  Appears when users tap <strong>About Configuration</strong> during activation. |
-    | **Department Phone**  | Appears when the user clicks the <strong>Need Help</strong> button during activation.                                                          |
+    | **Department Phone**  | Appears when the user selects the <strong>Need Help</strong> button during activation.                                                          |
     |**Setup Assistant Options** | The following optional settings can be set up later in the iOS/iPadOS <strong>Settings</strong> menu. |
     |**Passcode** | Prompt for passcode during activation. Always require a passcode for unsecured devices unless access is controlled in some other manner (like kiosk mode that restricts the device to one app). |
     |**Location Services**   | If enabled, Setup Assistant prompts for the service during activation. |
@@ -113,7 +114,7 @@ After you get your Apple token, you can create an enrollment profile for school 
 This series of articles describes how to set up Microsoft Intune for devices purchased through Apple School Manager. 
 
 1. [Prerequisites](apple-school-manager-set-up-ios.md)
-1. [Get an Apple token and assign devices](apple-school-manager-step-1.md)  
+1. [Get an Apple token for school devices](apple-school-manager-step-1.md)  
 1. 🡺 Create an Apple enrollment profile (*You are here*)  
-1. [Sync managed devices](apple-school-manager-step-3.md) 
+1. [Sync and distribute devices](apple-school-manager-step-3.md) 
 

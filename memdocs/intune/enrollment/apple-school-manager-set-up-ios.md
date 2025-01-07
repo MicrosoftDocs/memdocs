@@ -42,16 +42,16 @@ To enable Apple School Manager enrollment, you use both the Microsoft Intune adm
 
 - Get an [Apple mobile device management (MDM) push certificate](apple-mdm-push-certificate-get.md).  
 - Set up the [MDM Authority](../fundamentals/mdm-authority-set.md).  
-- If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). For more information, see [Get adfs endpoint](/powershell/module/adfs/get-adfsendpoint).
-- Devices must be purchased from the [Apple School Management](http://school.apple.com) program.  
+- If using Active Directory Federation Services (AD FS), user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). For more information, see [Get ADFS endpoint](/powershell/module/adfs/get-adfsendpoint).
+- Devices must be purchased from [Apple School Manager](http://school.apple.com).  
 
-Apple School Manager enrollment can't be used with the [device enrollment manager](device-enrollment-manager-enroll.md).  
+Apple School Manager enrollment can't be used with the [device enrollment manager](device-enrollment-manager-enroll.md) account.  
 
 ## Next steps    
 
 This series of articles describes how to set up Microsoft Intune for devices purchased through Apple School Manager. 
 
 1. 🡺 Prerequisites (*You are here*)  
-1. [Get an Apple token and assign devices](apple-school-manager-step-1.md)  
+1. [Get an Apple token for school devices](apple-school-manager-step-1.md)  
 1. [Create an Apple enrollment profile](apple-school-manager-step-2.md)  
-1. [Sync managed devices](apple-school-manager-step-3.md) 
+1. [Sync and distribute devices](apple-school-manager-step-3.md) 

@@ -140,9 +140,10 @@ Use [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School
 
 ### Step 1: Download the Intune public key certificate
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**. 
+1. Expand **Device onboarding**, and then select **Enrollment**.  
 1. Select the **Apple** tab. 
-1. Select **Enrollment Program Tokens** > **Add**.
+1. Select **Enrollment Program Tokens** > **Create**.
 
 1. On the **Basics** tab:
 
@@ -210,9 +211,10 @@ Now that you've installed your token, you can create an enrollment profile for a
 > [!NOTE]
 > Devices will be blocked from enrolling if there aren't enough Company Portal licenses for a VPP token or if the token expires. Intune alerts you when a token is about to expire or licenses are running low.  
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to   **Devices** > **Enrollment**. 
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to   **Devices**.
+1. Expand **Device onboarding**, and then select **Enrollment**. 
 1. Select the **Apple** tab. 
-1. Choose **Enrollment Program Tokens**. 
+1. Choose **Enrollment program tokens**. 
 1. Choose a token, and then select **Profiles**.  
 1. Select **Create profile** > **iOS/iPadOS**.
 1. For **Basics**, give the profile a **Name** and **Description** for administrative purposes. Users don't see these details.
