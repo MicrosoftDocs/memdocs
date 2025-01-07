@@ -122,6 +122,26 @@ Applies to:
 
 ## Device configuration
 
+### Android settings in the Settings Catalog <!-- 26981326 -->
+
+The settings catalog will soon support Android Enterprise and AOSP.
+
+Currently, to configure Android settings, you use the built-in templates. The settings from these templates are also available in the settings catalog. More settings will continue to be added.
+
+In the Intune admin center, when you create a device configuration profile, you select the **Profile Type** (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > select your **Platform** > **Profile Type**). All the profile types are moved to **Profile Type** > **Templates**.
+
+This change:
+
+- Will be a UI change with no impact on your existing policies. Your existing policies won't changing. You will still be able to create, edit, and assign these policies the same way.
+- Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
+
+To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](/configuration/settings-catalog.md).
+
+Applies to:
+
+- Android Enterprise
+- AOSP
+
 ### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
 
 We're updating the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will no longer be available for download but will continue to work until deprecation.
