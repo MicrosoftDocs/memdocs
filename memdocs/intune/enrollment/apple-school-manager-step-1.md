@@ -49,7 +49,7 @@ In the first set of steps, you download the Intune public key certificate requir
      > [!TIP]
      > The following steps describe what you need to do in Apple School Manager. For the specific steps, see the [Apple School Manager User Guide](https://support.apple.com/guide/apple-school-manager/device-workflow-axm6a88f692e/1/web/1) (opens Apple Support).  
 
-1. Choose **Create a token via Apple School Manager**, and sign in to [Apple School Manager](https://school.apple.com with your company Apple ID. You can use this Apple ID to renew your Apple School Manager token.
+1. Choose **Create a token via Apple School Manager**, and sign in to [Apple School Manager](https://school.apple.com) with your company Apple ID. You can use this Apple ID to renew your Apple School Manager token.
 1. In Apple School Manager, go to your MDM Server assignments to add an MDM server.
 1. Enter the mobile device management (MDM) server name. The server name is for your reference to identify the MDM server. It isn't the name or URL of the Microsoft Intune server.
 1. Upload the public key certificate file (.pem file).  
