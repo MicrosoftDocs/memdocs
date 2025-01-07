@@ -238,7 +238,7 @@ To learn more about conflict resolution for policies, see [Compliance and device
 
 In Intune, the default compliance policy is evaluated for every device on every calculation. The evaluation process identifies the device as noncompliant if any of the following statements are false:  
 - The device has a compliance policy assigned: At least one applicable compliance policy must be assigned to the device with an applicable setting. 
-- The device is active: The device should remain in contact with Intune. This requires it to to be turned on with an internet connection. The default grace period is 30 days.  
+- The device is active: The device should remain in contact with Intune. This requires it to be turned on with an internet connection. The default grace period is 30 days.  
 - The enrolled user exists: The user that is actively using the device exists and has a valid Intune license.
 
 ## Next steps
