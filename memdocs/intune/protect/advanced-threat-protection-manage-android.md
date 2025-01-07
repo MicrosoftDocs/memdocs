@@ -46,9 +46,9 @@ With Intune device configuration policy, you can turn off all or part of the web
 
 > [!IMPORTANT]
 > **Below browsers are supported with Defender loopback VPN** 
-> GOOGLE_CHROME, EDGE, OPERA, SAMSUNG_INTERNET, FIREFOX, BRAVE, TOR, WEB_BROWSER_LEOPARD, DUCKDUCKGO, DOLPHIN
+> Chrome, Edge, Opera, Samsung Internet, Firefox, Brave, Tor, Browser Leopard, DuckDuckGo, Dolphin
 > **Following browsers are supported with accessibility service without Defender loopback VPN**
-> GOOGLE_CHROME, EDGE, OPERA, SAMSUNG_INTERNET
+> Chrome, Edge, Opera, Samsung Internet
 > **Note:** Work profile scenarios (BYOD -Android Enterprise personally owned devices using a work profile and COPE - Android Enterprise corporate owned work profile) do not support the accessibility service.
 
 To configure web protection on devices, use the following procedures to create and deploy the applicable configuration.
