@@ -37,7 +37,7 @@ After you get your Apple token, you can create an enrollment profile for school 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.    
 1. Select the **Apple** tab.  
-1. Under **Bulk Enrollment Methods**, Choose **Enrollment program tokens**.  
+1. Under **Bulk Enrollment Methods**, choose **Enrollment program tokens**.  
 1. Choose a token, and then select **Profiles**. 
 1. Select **Create profile** > **iOS/iPadOS**.  
 
@@ -112,7 +112,7 @@ After you get your Apple token, you can create an enrollment profile for school 
 This series of articles describes how to set up Microsoft Intune for devices purchased through Apple School Manager. 
 
 1. [Prerequisites](apple-school-manager-set-up-ios.md)
-1. [Get an Apple token for school devices](apple-school-manager-step-1.md)  
-1. 🡺 Create an Apple enrollment profile (*You are here*)  
-1. [Sync and distribute devices](apple-school-manager-step-3.md) 
+1. [Get an Apple token for school devices](apple-school-manager-step-1.md).  
+1. 🡺 Create an Apple enrollment profile (*You are here*).  
+1. [Sync and distribute devices](apple-school-manager-step-3.md). 
 
