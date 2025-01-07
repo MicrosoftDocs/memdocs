@@ -1683,7 +1683,7 @@ items:
               displayName: devices, frontline worker, automated device enrollment 
             - name: Walkthrough - Set up enrollment with Apple School Manager 
               items:
-              - name: Prerequisites 
+              - name: Prerequisites
                 href: ./enrollment/apple-school-manager-set-up-ios.md
               - name: Step 1 - Get an Apple token and assign devices
                 href: ./enrollment/apple-school-manager-step-1.md
