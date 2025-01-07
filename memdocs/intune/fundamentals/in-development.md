@@ -135,7 +135,7 @@ This change:
 - Will be a UI change with no impact on your existing policies. Your existing policies won't changing. You will still be able to create, edit, and assign these policies the same way.
 - Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
 
-To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](/configuration/settings-catalog.md).
+To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
 
 Applies to:
 
