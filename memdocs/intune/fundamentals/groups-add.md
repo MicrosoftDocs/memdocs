@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/18/2023
+ms.date: 11/27/2024
 ms.topic: how-to
 #customer intent: As an IT admin, I want to add groups, so that users and devices are organized.
 ms.service: microsoft-intune
@@ -40,7 +40,7 @@ Intune uses Microsoft Entra groups to manage devices and users. As an Intune adm
 
 You can add the following types of groups:
 
-- **Assigned groups** - Manually add users or devices into a static group. 
+- **Assigned groups** - Manually add users or devices into a static group.
 - **Dynamic groups** (Requires Microsoft Entra ID P1 or P2) - Automatically add users or devices to user groups or device groups based on an expression you create.
 
   For example, when a user is added with the manager title, the user is automatically added to an **All managers** users group. Or, when a device has the iOS/iPadOS device OS type, the device is automatically added to an **All iOS/iPadOS devices** devices group.
@@ -111,7 +111,7 @@ You can also use [device categories](../enrollment/device-group-mapping.md) to a
 
 ## Intune All users and All devices groups
 
-When assigning policies and apps in the Intune admin center, you can choose to assign to **All users** or **All devices** groups, which are automatically created by Intune. 
+When assigning policies and apps in the Intune admin center, you can choose to assign to **All users** or **All devices** groups, which are automatically created by Intune.
 
 The **All devices** group targets all devices that are enrolled into management. The **All users** group is a simple way to target all users that are assigned an Intune license. These groups are considered "virtual" because you don't create them or view them in Microsoft Entra ID. They're convenient to use because they're already in your tenant, and they're a faster targeting unit than Microsoft Entra groups.
 
@@ -123,7 +123,7 @@ When assigning policies and applications to large groups, such as **All users** 
 For more guidance on using Filters, go to:
 
 - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
-- [Performance recommendations for Grouping, Targeting and Filtering in large Microsoft Intune environments](filters-performance-recommendations.md)
+- [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](filters-performance-recommendations.md)
 
 ## See also
 

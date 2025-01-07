@@ -27,10 +27,10 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2409](../../../plan-design/changes/whats-new-in-version-2409.md)
 - [What's new in version 2403](../../../plan-design/changes/whats-new-in-version-2403.md)
 - [What's new in version 2309](../../../plan-design/changes/whats-new-in-version-2309.md)
-- [What's new in version 2303](../../../plan-design/changes/whats-new-in-version-2303.md)
-- [What's new in version 2211](../../../plan-design/changes/whats-new-in-version-2211.md)
+
 
 
 > [!TIP]
@@ -44,7 +44,7 @@ For information about the new features introduced with different versions, see t
 ### Clients are not able download content from CMG when branch cache is enabled
 _Applies to: version 2403_
 
-After Enabling Branch Cache on Primary Sites clients are not able to Download Apps/Packages from CMG. Clients are only downloading some part of the content like 20-30% then the downloading is getting stuck. In some clients after downloading some blocks of the packages from CMG the clients are looking for branch cache to download the rest of the content. None of the client downloads whole content from CMG so that others can get content using branch cache. The **CTM.log** on the client has entries similar to the following:
+After enabling Branch Cache on primary sites, clients are unable to download apps and packages from the CMG. They typically manage to download only 20-30% of the content before the process gets stuck. In some cases, after downloading certain blocks of packages from the CMG, clients look for Branch Cache to retrieve the remaining content. However, none of the clients are able to download the complete content from the CMG, which prevents others from using Branch Cache to access it. The **CTM.log** on the client includes entries similar to the following:
 
 ```log
 (CTM.log - CTMJob({63B4C4CE-2DC4-4062-93C7-E5019B3B6CE1}): CCTMJob::Start - State=DownloadingContentFromPeers)
@@ -53,7 +53,7 @@ CTM.log _- CTMJob({D21758B0-D895-474E-9695-1023A25A1770}): CCTMJob::_PerformDown
 To work around this issue, disable branch cache.
 
 > [!NOTE]
->Clients are able to download Content from On-Premise DP when Branch Cache is Enabled.
+> Clients are able to download content from the on-premise DP when Branch Cache is enabled.
 
 ## Endpoint Protection
 ### Security configurations removed from Intune

@@ -2,7 +2,7 @@
 title: Enable third-party updates
 titleSuffix: Configuration Manager
 description: Enable third-party updates in Configuration Manager
-ms.date: 08/02/2021
+ms.date: 10/08/2024
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: conceptual
@@ -14,14 +14,12 @@ ms.reviewer: mstewart,aaroncz
 ms.collection: tier3
 ---
 
+
 # Enable third-party updates
 
 *Applies to: Configuration Manager (current branch)*
 
 The **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
-
-> [!Note]  
-> In version 2006 and earlier, Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
 
 ## Prerequisites
 
@@ -191,7 +189,7 @@ You can edit an existing subscription by selecting **Properties** from the ribbo
 > Some options are only available for v3 third-party update catalogs, which support categories for updates. These options are disabled for catalogs that aren't published in the  v3 format.<!--4469002-->
 
 1. In the **Third-Party Software Update Catalogs** node, right-click on the catalog and select **Properties** or select **Properties** from the ribbon.
-1. You can view the following information from the **General tab**, but not edit the information.:
+1. You can view the following information from the **General tab**, but not edit the information:
     > [!NOTE]
     > If you need to change any of the information here, you have to add a new custom catalog.  
     > Provided the download URL is unchanged, the existing catalog must be removed before one with the same download URL can be added.

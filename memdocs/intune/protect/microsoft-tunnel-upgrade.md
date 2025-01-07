@@ -129,6 +129,34 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 >
 > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
 
+### December 2, 2024
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:110b111d7f3fee3d13ac29da62560800c26d2a05bdc337c965b0ce1f2ec2756c
+
+- **serverImageDigest**: sha256:3a5844f4e7156c966a2d0f5affd8b15ac3b441bd301a5a0b7c9b7db2ae6f5ed3
+
+Changes in this release:
+
+- Diagnostic tool improvements
+- Bug fixes for rootless container mode in mst-cli
+- Localization improvements in mstunnel-setup
+- Improvement on error handling
+
+### October 2, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:7921c2e97217fa17de4ab69396d943e4975d323417b8b813211e2f8b639f64e1
+
+- **serverImageDigest**: sha256:0efab5013351bcd81f186973e75ed5d9f91bbe6271e3be481721500f946fc9ec
+
+Changes in this release:
+
+- Upgrade from .NET 6 to .NET 8
+- Upgrade ocserv to version 1.3.0
+- Fix rootless container bug in installer
 
 ### September 12, 2024
 
@@ -138,7 +166,7 @@ Image hash values:
 
 - **serverImageDigest**: sha256:6484d311d1bd6cbe55d71306595715bafa6a20a000be6fd6f9e530716cef6c16
 
-Changes in this release:
+Changes in this release:  
 - Add diagnostic tools for host troubleshooting
 - Upgrade Azure Linux image to 2.0.20240829
 
@@ -168,6 +196,25 @@ Image hash values:
 Changes in this release:
 - AL base image - Use Azure Linux as the base image for the Tunnel containers
 - Improvement on cert revocation check
+
+### May 16, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:50b62c1d7f81e2941fc73a09856583ea752fe821e9fef448114fe7e00f90f25a
+
+- **serverImageDigest**: sha256:f6249bc16f90abc9e6fb278c74e07b1c3e295cc0614d38ae20036cee50ff5c56
+
+Changes in this release:
+
+- Hardened containers by reducing the container capabilities to minimum
+- Security updates on the base image
+
+## Next steps
+
+[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
+
+<!-- Archive of past releases
 
 ### May 16, 2024
 
@@ -263,8 +310,6 @@ Changes in this release:
 - Bug fix: add legacy NAT tables for the mstunnel-server container on Cent OS 7 and Red Hat 7 hosts
 - Bug fix: add SELinux policy to allow TCP DNS traffic for the containers on Red Hat hosts
 - Increase mstunnel-server container pid limit to 10000
-
-<!-- Archive of past releases
 
 ### October 2, 2023
 
@@ -561,7 +606,3 @@ Changes in this release:
 The initial public preview release of Microsoft Tunnel.
 
 End of archive -->
-
-## Next steps
-
-[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)

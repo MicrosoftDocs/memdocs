@@ -48,7 +48,7 @@ The Remote Help app is available from Microsoft to install on both devices enrol
 
 The Remote Help app supports the following capabilities on Windows:
 
-- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Setup Conditional Access for Remote Help](#setup-conditional-access-for-remote-help)
+- **Conditional Access**: Administrators can now utilize Conditional Access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up Conditional Access, go to [Setup Conditional Access for Remote Help](#setup-conditional-access-for-remote-help)
 
 - **Compliance Warnings**: Before a helper can connect to a user's device, the helper sees a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
@@ -116,6 +116,10 @@ Some users may choose to opt out of automatic updates. However, when a new versi
 Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
 The most recent version of Remote Help is **5.1.1419.0**
+
+### Deploy Remote Help as an Enterprise App Catalog app
+The Enterprise App Catalog is a collection of prepackaged Win32 apps that have been designed and prepared by Microsoft to support Intune. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities. Remote Help is available in the Enterprise App Catalog. To learn more, see [Add an Enterprise App Catalog app to Microsoft Intune](/mem/intune/apps/apps-add-enterprise-app#add-a-windows-catalog-app-win32-to-intune).
+
 
 ### Deploy Remote Help as a Win32 app
 
@@ -275,9 +279,9 @@ Depending on the environment that Remote Help is utilized in, it may be necessar
 - C:\Program Files\Remote help\RHService.exe
 - C:\Program Files\Remote help\RemoteHelpRDP.exe
 
-## Setup conditional access for Remote Help
+## Setup Conditional Access for Remote Help
 
-This section outlines the steps for provisioning the Remote Help service on the tenant for conditional access.
+This section outlines the steps for provisioning the Remote Help service on the tenant for Conditional Access.
 
 1. Open PowerShell in admin mode.
     - It may be necessary to install [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation)  
@@ -391,7 +395,7 @@ Microsoft Edge WebView2 is required to use Remote Help. If you get an error mess
 
 ## Known Issues
 For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service isn't running.
-After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30-60 seconds after restart), or manually start the service through services.msc.
+After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30 minutes after restart), or manually start the service through services.msc.
 For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
 
 ## What's New for Remote Help

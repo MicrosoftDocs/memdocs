@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/29/2024
+ms.date: 12/09/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,6 +40,27 @@ This article describes known issues that can often be resolved with configuratio
 > For issues with Autopilot with Co-management, see [Windows Autopilot with co-management](/mem/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues
+
+### Local Administrator Password Solution (LAPS) policy isn't being applied during the Technician Flow
+
+Date added: *December 9, 2024*
+
+During Windows Autopilot pre-provisioning technical flow, if a LAPS policy is targeted to the device or user, it isn't applied until the user phase begins.
+
+### Windows Autopilot deployment report and AutopilotEvents Graph API only returns 50 records at a time
+
+Date added: *December 4, 2024*
+
+In Intune's 2411 release, we've updated the backend infrastructure of the Windows Autopilot deployment report for consistency with other Intune reports. With this change, the Windows Autopilot deployment report and the [AutopilotEvents Microsoft Graph API](/graph/api/resources/intune-troubleshooting-devicemanagementautopilotevent) now return 50 records at a time. To show more than 50 records at a time:
+
+- Use the `skipToken` parameter to get additional pages of data with the AutopilotEvents Graph API.
+- Use the [export API](/mem/intune/fundamentals/reports-export-graph-apis) with `reportName` **AutopilotV1DeploymentStatus** to get all records.
+
+### DFCI enrollment fails for Professional editions of Windows 11, version 24H2
+
+Date added: *October 9, 2024*
+
+DFCI can't currently be used on devices with Professional editions of Windows 11, version 24H2. The issue is being investigated. As a workaround, ensure the device is upgraded to the Enterprise edition of Windows 11, version 24H2 during or after OOBE onboarding. After upgrading to the Enterprise edition of Windows 11, version 24H2, sync the device. Once the device is synced, reboot it to get it enrolled in DFCI.
 
 ### Autopilot deployment report doesn't support sorting
 

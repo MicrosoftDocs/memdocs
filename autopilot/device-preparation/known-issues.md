@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/27/2024
+ms.date: 01/06/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -39,6 +39,29 @@ This article describes known issues that can often be resolved with:
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 ## Known issues
+
+## Exporting logs during the out-of-box experience (OOBE) doesn't show result
+
+Date added: *January 6, 2025*
+
+When a failure occurs during the provisioning process, an **Export logs** option is displayed to the user. When selected, it saves the file to the first USB drive on the device without displaying the browse dialog. The browse dialog isn't displayed for security reasons. Currently, users don't see failure or success messages to indicate the logs were saved. This issue will be fixed in the future.
+
+## Apps and scripts tabs don't display properly when editing the Windows Autopilot device preparation profile
+
+Date added: *December 18, 2024*
+
+During the editing flow of the Windows Autopilot device preparation policy, there's a known issue when displaying the **Applications** and **Scripts** tabs where the tabs might display incorrect information. For example, under the **Scripts** tab, a list of applications might be shown instead of a list of scripts. The issue is impacting only the view in Microsoft Intune and not the configuration being applied to the device. The issue is being investigated.
+
+As a workaround, select the table header **Allowed Applications** or **Allowed Scripts** to reload the table's contents.
+
+## Win32 and WinGet applications are skipped when Managed installer policy is enabled for the tenant
+
+Date added: *October 10, 2024*<br>
+Date updated: *November 15, 2024*
+
+When the [Managed installer policy](/mem/intune/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps and Microsoft Store apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
+
+For more information, see [Known issue: Windows Autopilot device preparation with Win32 apps and managed installer policy](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-windows-autopilot-device-preparation-with-win32-apps/ba-p/4273286).
 
 ## Security group membership update failures might lead to non-compliant devices
 

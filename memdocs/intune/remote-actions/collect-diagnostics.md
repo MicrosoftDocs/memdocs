@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/06/2024
+ms.date: 10/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -32,18 +32,39 @@ ms.collection:
 
 # Collect diagnostics from an Intune managed device
 
-The **Collect diagnostics** remote action lets you collect and download managed device logs without interrupting the user. Only nonuser locations and file types are accessed.
+The **Collect diagnostics** remote action lets you collect and download managed device diagnostics without interrupting the user. Only nonuser locations and file types are accessed.
 
 > [!NOTE]
->  Intune App Protection logs are available to download from the diagnostics tab in the **Troubleshooting** pane. However, M365 remote application logs are only available to their specific support engineers.
+>  Intune App Protection logs are available to download from the diagnostics tab in the **Troubleshooting** pane. However, M365 remote application diagnostics are only available to their specific support engineers.
+>
+> Devices do not have to be managed by MDM (Mobile device mangement) to have Intune app protection or M365 app diagnostics collected, only managed by an Intune app protection policy.
 > 
 > The data is stored in Microsoft support systems and isn't subject to Intune data management policies or protections. Some applications might collect and store data using systems other than Intune.
 
 ## Collect diagnostics for Microsoft 365 remote applications
 
-The Microsoft 365 remote application diagnostics allows Intune admins to request Intune app protection logs and Microsoft 365 application logs (where applicable) directly from the Intune console. Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application. 
+The Microsoft 365 remote application diagnostics allows Intune admins to request Intune app protection diagnostics and Microsoft 365 application diagnostics (where applicable) directly from the Intune console. Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application.
 
+Applications with support for M365 application diagnostics:
+
+- Outlook iOS/Android
+- Teams iOS/Android
+- OneDrive iOS/Android
+- Microsoft Edge iOS/Android
+- Microsoft Word iOS
+- Microsoft Excel iOS
+- Microsoft PowerPoint iOS
+- OneNote iOS
+- Microsoft 365 (Office) iOS
+  
 ### Collect diagnostics from a M365 Application
+
+Requirements to collect diagnostics from an M365 application:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Navigate to **Tenant administration** > **Device diagnostics** > Make sure the 3rd setting is enabled.
+3. Create and deploy an Intune App Protection policy to a user, more information [here](../apps/app-protection-policies.md).
+4. Confirm the application has been managed by Intune App Protection policy.  This can be checked locally on the device and/or loading the user into the Intune Troubleshooting Pane and opening the App Protection summary page.
 
 To use the *Collect diagnostics* action:
 
@@ -64,7 +85,7 @@ To download diagnostics:
 2. On the **Summary** page, select the **Diagnostics** page and download the diagnostics.
 
 > [!IMPORTANT]
-> For Android devices, if the Company Portal isn't signed in by the user, logs will not be available for download in the Intune portal. Diagnostic uploads exceeding 50 diagnostics or 4MB in diagnostic data cannot be downloaded directly from the Intune portal. For access to larger diagnostic uploads, reach out to [Microsoft Intune support](/mem/get-support). 
+> Diagnostic uploads exceeding 50 diagnostics or 4MB in diagnostic data cannot be downloaded directly from the Intune portal. For access to larger diagnostic uploads, reach out to [Microsoft Intune support](/mem/get-support). 
 
 Diagnostics take approximately 30 minutes to be delivered from an end user's device. The user may be required to close and reopen the app if prompted for a pin when opening the app for the diagnostics request to prompt.
 
@@ -148,6 +169,7 @@ Registry Keys:
 - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI
 - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
 - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+- HKLM\SOFTWARE\Microsoft\DeviceInventory
 - HKLM\SOFTWARE\Policies
 - HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL
 - HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
@@ -200,6 +222,7 @@ Files:
 
 - %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\\*.etl
 - %ProgramFiles%\Microsoft EPM Agent\Logs\\\*.*
+- %Program Files%\Microsoft Device Inventory Agent\Logs
 - %ProgramData%\Microsoft\IntuneManagementExtension\Logs\\\*.*
 - %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
 - %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html

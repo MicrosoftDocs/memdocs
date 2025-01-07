@@ -7,11 +7,11 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/01/2024
+ms.date: 11/26/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-
+ 
 # optional metadata
 
 #audience:
@@ -77,25 +77,6 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
-### Updates to app configuration policies for Android Enterprise devices<!-- 26711672 -->
-
-App configuration policies for Android Enterprise devices will soon support overriding the following additional permissions:
-
-- Access background location
-- Bluetooth (connect)
-
-For more information about app configuration policies for Android Enterprise devices, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
-
-Applies to:
-
-- Android Enterprise devices
-
-### New UI for Intune Company Portal app for Windows<!-- 27219294 -->
-
-The UI for the Intune Company Portal app for Windows will be updated. Users will be able to use the same functionality they’re used to with an improved experience for their desktop app. With the updated design, users will see improvements in user experience for the **Home**, **Devices**, and **Downloads & updates** pages. The new design will be more intuitive and will highlight areas where users need to take action.
-
-For more information, see [New look for Intune Company Portal app for Windows](https://techcommunity.microsoft.com/t5/intune-customer-success/new-look-for-intune-company-portal-app-for-windows/ba-p/4158755).
-
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
@@ -106,19 +87,78 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
+
+### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
+
+We're updating the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will no longer be available for download but will continue to work until deprecation.
+
+For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment -->
+## Device enrollment
+
+### Update to "Determine based on user choice" enrollment type profile behavior <!-- 29068674 iddraft idready idstaged -->
+
+In Intune today, if an IT admin creates a "Determine based on user choice" enrollment type profile for BYOD enrollments, the user will be prompted to select between **I own this device** and **My company owns this device** to direct them to the appropriate enrollment method. Because fewer than 1% of Apple devices across all Intune tenants are currently enrolled this way, this change won't affect most enrolled devices.
+
+Today, selecting **I own this device** results in the user enrolling via profile-based user enrollment with Company Portal to secure only work related apps. With WWDC 2024, Apple ended support for this enrollment method, subsequently Intune also ended support for the same. Read more about the changes here: [Support has ended for Apple profile-based user enrollment with Company Portal](../fundamentals/whats-new.md#support-has-ended-for-apple-profile-based-user-enrollment-with-company-portal)
+
+We are updating the enrollment behavior for users who select **I own this device**. The new behavior for **I own this device** will result in an [account-driven user enrollment](../enrollment/apple-account-driven-user-enrollment.md), which also supports the use of only secure work related apps.
+
+The behavior when selecting **My company owns this device** is unchanged and will continue to result in device enrollment with the Company Portal that supports securing the entire device.
+
+Admin action: 
+
+If you use **Determine based on user choice** enrollment type profile for BYOD scenarios, make sure you have completed the required **PREREQUISITES** to set up account driven user enrollment correctly. See [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md).
+
+If you do not use **Determine based on user choice** enrollment type profile for BYOD scenarios, there are no action items
+
+Applies to:
+
+- iOS/iPadOS
 
 <!-- *********************************************** -->
 
-### Defender for Endpoint security settings support in government cloud environments<!-- 24191406 -->
+## Device management  
 
-Customer tenants in US Government Community Cloud (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
+### Copilot assistant for device query<!-- 26933762 -->
 
-For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
+You will soon be able to use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**.
+
+<!-- *********************************************** -->
+
+## Device security
+
+### Security baselines for HoloLens 2 in public preview<!-- 24914095 -->
+ 
+We’re working to release a public preview of two security baselines for HoloLens 2. These baselines represent Microsoft’s best practice guidelines and experience from deploying and supporting HoloLens 2 devices to customers across various industries.  The baselines include:
+ 
+- **Standard Security Baseline for HoloLens 2**:
+  The standard security baseline for HoloLens 2 represents the recommendations for configuring security settings that are applicable to all types of customers irrespective of HoloLens 2 use case scenarios.
+ 
+- **Advanced Security Baseline for HoloLens 2**:
+  The advanced security baseline for HoloLens 2 represents the recommendations for configuring security settings for the customers who have strict security controls of their environment and require stringent security policies to be applied to any device used in their environment.  
+ 
+To learn more about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
+
+### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
+
+We are adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform, that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+
+The template will support settings related to global exclusion settings. Applicable to antivirus and EDR engines on the client, the settings can configure exclusions to stop associated real time protection EDR alerts for the excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
+
+Applies to:
+
+- Linux
+
+### New Microsoft Tunnel readiness check for auditd package<!-- 28148207 -->
+
+We're updating the [Microsoft Tunnel readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to detect if the **auditd** package for Linux System Auditing (LSA) is installed on your Linux Server. When this check is in place, the mst-readiness tool will raise a warning if the audit package isn't installed. Auditing isn't a required prerequisite for the Linux Server, but recommended.
+
+For more information on *auditd* and how to install it on your Microsoft Tunnel server, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#linux-system-auditing).
+
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
@@ -135,69 +175,6 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Device management
-
-### Minimum OS version for Android devices will be Android 10 and later for user-based management methods<!-- 14755802 -->
-
-From October 2024, the minimum OS supported for Android devices will be Android 10 and later for user-based management methods, which includes:
-
-- Android Enterprise personally-owned work profile
-- Android Enterprise corporate owned work profile
-- Android Enterprise fully managed
-- Android Open Source Project (AOSP) user-based
-- Android device administrator
-- App protection policies (APP)
-- App configuration policies (ACP) for managed apps
-
-For enrolled devices on unsupported OS versions (Android 9 and lower)
-
-- Intune technical support won't be provided.
-- Intune won't make changes to address bugs or issues.
-- New and existing features aren't guaranteed to work.
-
-While Intune won't prevent enrollment or management of devices on unsupported Android OS versions, functionality isn't guaranteed, and use isn't recommended.
-
-Userless methods of Android device management (Dedicated and AOSP userless) and Microsoft Teams certified Android devices won't be affected by this change.
-
-### Device Inventory for Windows<!-- 24853010 -->
-
-Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
-
-You'll soon be able to choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view.
-
-Applies to:
-
-- Windows (Corporate owned devices managed by Intune)
-
-### Collection of additional device inventory details<!-- 29460196 -->
-
-We're adding additional files and registry keys to be collected to assist in troubleshooting the Device Hardware Inventory feature.
-
-Applies to:
-
-- Windows
-
-<!-- *********************************************** -->
-
-## Device security
-
-### New strong mapping requirements for Intune-issued SCEP certificates<!-- 29005591 -->
-
-To align with the Windows Kerberos Distribution Center's (KDC) strong mapping attribute requirements described in [KB5014754](https://support.microsoft.com/help/5014754), SCEP certificates issued by Microsoft Intune will be required to have the following tag in the Subject Alternative Name (SAN) field:
-
-`URL=tag:microsoft.com,2022-09-14:sid:<value>`
-
-This tag will ensure that certificates are compliant with the KDC's latest requirements, and that certificate-based authentication continues working. Microsoft Intune will be adding support for the SID variable in SCEP profiles. You will be able to modify or create a new SCEP profile to include the OnPremisesSecurityIdentifier variable in the SCEP profile. This action will trigger Microsoft Intune to issue new certificates with the appropriate tag to all applicable users and devices.
-
-These requirements apply to:
-
-- Android, iOS/iPadOS, and macOS user certificates.
-- Windows 10/11 user and device certificates.
-
-They don't apply to device certificates used with Microsoft Entra joined users or devices, because SID is an on-premises identifier.
-
-<!-- *********************************************** -->
-
 <!-- ## Intune apps -->
 
 <!-- *********************************************** -->
@@ -206,7 +183,17 @@ They don't apply to device certificates used with Microsoft Entra joined users o
 
 <!-- *********************************************** -->
 
-<!-- ## Monitor and troubleshoot -->
+## Monitor and troubleshoot
+
+### Device Query for Multiple Devices<!--25234456 -->
+
+We're adding Device query for multiple devices. This feature allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
+
+Device query for multiple devices will be supported for devices running Windows 10 or later. This feature will be included as part of Advanced Analytics.
+
+Applies to:
+
+- Windows
 
 <!-- *********************************************** -->
 

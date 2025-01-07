@@ -162,6 +162,14 @@ This option:
 
 For more information, go to [Microsoft Entra certificate-based authentication on iOS and macOS](/entra/identity/authentication/concept-certificate-based-authentication-mobile-ios).
 
+#### Configure keyvault recovery (optional)
+
+When using password sync authentication you can enable keyvault recovery to ensure that data can be recovered in the event that a user forgets their password. IT Admins should review Apple's documentation and evaluate whether using Institutional FileVault Recovery Keys is a good option for them.
+
+- [Manage FileVault with mobile device management](https://support.apple.com/en-ie/guide/deployment/dep0a2cb7686/web)
+
+- [FileVault MDM payload settings for Apple devices](https://support.apple.com/en-ie/guide/deployment/dep32bf53500/1/web/1.0)
+- 
 ## Step 2 - Create the Platform SSO policy in Intune
 
 To configure the Platform SSO policy, use the following steps to create an [Intune settings catalog](settings-catalog.md) policy. The Microsoft Enterprise SSO plug-in requires the settings listed.

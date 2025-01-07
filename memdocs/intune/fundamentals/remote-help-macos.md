@@ -56,7 +56,7 @@ The Remote Help web app supports the following capabilities on macOS:
 
 - **Use Remote Help with unenrolled devices**: Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
 
-- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For more information on setting up conditional access, see [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
+- **Conditional Access**: Administrators can now utilize Conditional Access capability when setting up policies and conditions for Remote Help. For more information on setting up Conditional Access, see [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
 
 - **Compliance Warnings**: Remote Help will show non-compliance warnings if the device the helper is connecting to isn't compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 

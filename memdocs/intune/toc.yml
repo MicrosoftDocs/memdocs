@@ -90,16 +90,6 @@ items:
         href: ./configuration/tutorial-walkthrough-administrative-templates.md
         displayName: admx, administrative template, gpo, windows 
 
-  - name: Microsoft Copilot + Intune
-    items:
-    - name: Copilot in Intune
-      href: ./copilot/copilot-intune-overview.md
-    - name: Troubleshoot a device using Copilot
-      href: ./copilot/copilot-devices.md
-    - name: FAQ
-      href: ./copilot/copilot-intune-faq.md
-    - name: Intune plugin in Copilot for Security
-      href: ./copilot/security-copilot.md
   - name: Plan
     items:
     - name: Planning guide
@@ -189,6 +179,71 @@ items:
     - name: Step 5 - Enroll devices
       displayName: deployment, mdm, android, ios, ipados, macos, windows
       href: ./fundamentals/deployment-guide-enroll.md
+  - name: Microsoft Copilot + Intune
+    items:
+    - name: Copilot in Intune
+      href: ./copilot/copilot-intune-overview.md
+    - name: Troubleshoot a device using Copilot
+      href: ./copilot/copilot-devices.md
+    - name: FAQ
+      href: ./copilot/copilot-intune-faq.md
+    - name: Intune plugin in Security Copilot
+      href: ./copilot/security-copilot.md
+
+  - name: Endpoint analytics
+    items:
+    - name: Overview
+      items:
+      - name: What is Endpoint analytics?
+        href: ../analytics/overview.md
+    - name: Concepts
+      items:
+      - name: Scores, baselines, and insights
+        href: ../analytics/scores.md           
+    - name: How to guides
+      items:
+      - name: Enroll Intune devices
+        href: ../analytics/enroll-intune.md
+      - name: Enroll Configuration Manager devices
+        href: ../analytics/enroll-configmgr.md
+      - name: Manage settings
+        href: ../analytics/settings.md  
+    - name: Reports
+      items:
+      - name: Startup performance
+        href: ../analytics/startup-performance.md
+      - name: Restart frequency
+        href: ../analytics/restart-frequency.md    
+      - name: Application reliability
+        href: ../analytics/app-reliability.md
+      - name: Work from anywhere
+        href: ../analytics/work-from-anywhere.md
+      - name: Endpoint analytics in Microsoft Adoption Score
+        href: ../analytics/adoption-score.md    
+    - name: Intune Advanced Analytics
+      items:
+      - name: What is Advanced Analytics?
+        href: ../analytics/advanced-endpoint-analytics.md
+      - name: Anomaly detection
+        href: ../analytics/anomaly-detection.md
+      - name: Enhanced device timeline
+        href: ../analytics/enhanced-device-timeline.md    
+      - name: Device scopes
+        href: ../analytics/device-scopes.md        
+      - name: Device query
+        href: ../analytics/device-query.md
+      - name: Data platform schema
+        href: ../analytics/data-platform-schema.md
+      - name: Battery health
+        href: ../analytics/battery-health.md
+      - name: Resource Performance
+        href: ../analytics/resource-performance-report.md
+    - name: Get support
+      href: ../analytics/get-support.md
+    - name: Data collection
+      href: ../analytics/data-collection.md
+    - name: Troubleshoot
+      href: ../analytics/troubleshoot.md
 
   - name: How-to guides
     items:
@@ -338,11 +393,35 @@ items:
               - name: Step 6. Use app protection actions
                 href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
+          - name: Assign and deploy apps using Microsoft Intune
+            items: 
+            - name: Overview
+              href: /microsoft-365/solutions/apps-assign-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              displayName: assign, deploy, app, apps, monitor, troubleshoot
+            - name: Understand app management
+              href: /microsoft-365/solutions/apps-assign-management?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Understand app assignments
+              href: /microsoft-365/solutions/apps-assign-assignments?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Understand app deployment
+              href: /microsoft-365/solutions/apps-assign-deployment?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Assign apps to your organization
+              items: 
+              - name: Assign apps overview      
+                href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json     
+              - name: Step 1. Confirm users, devices, or groups
+                href: /microsoft-365/solutions/apps-assign-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 2. Assign apps to users, devices, or groups
+                href: /microsoft-365/solutions/apps-assign-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 3. Verify and monitor app assignments
+                href: /microsoft-365/solutions/apps-assign-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 4. Troubleshoot app deployment issues
+                href: /microsoft-365/solutions/apps-assign-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+
           - name: Secure your corporate data using Edge for Business
             items: 
             - name: Overview
               href: ./apps/mamedge-overview.md
-            - name: Step 1. Create Microsoft Entra conditional access
+            - name: Step 1. Create Microsoft Entra Conditional Access
               href: ./apps/mamedge-1-mamca.md
             - name: Step 2. Create an app protection policy
               href: ./apps/mamedge-2-app.md
@@ -1090,6 +1169,9 @@ items:
           - name: Universal Print policy
             displayName: printers, gpo, admx, windows
             href: ./configuration/settings-catalog-printer-provisioning.md
+        - name: Properties catalog
+          displayName: windows
+          href: ./configuration/properties-catalog.md
         - name: Custom settings & scripts
           items:
           - name: Create custom profiles
@@ -1247,7 +1329,13 @@ items:
           - name: eSIM bulk activation with activation codes (import CSV)
             href: ./configuration/esim-device-configuration.md
 
-      - name: Configuration profile settings lists
+      - name: Settings catalog lists
+        items:
+        - name: Apple
+          displayName: ios, ipados, macos
+          href: ./configuration/apple-settings-catalog-configurations.md
+
+      - name: Device Configuration template settings lists
         items:
         - name: Android device administrator
           items: 
@@ -1476,6 +1564,9 @@ items:
         - name: Get Apple MDM push certificate   
           href: ./enrollment/apple-mdm-push-certificate-get.md
           displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment  
+        - name: Configure Chrome Enterprise connector 
+          href: ./enrollment/chrome-enterprise-connector-configure.md 
+          displayName: chrome os; connector; device management; google admin       
         - name: Add corporate identifiers
           href: ./enrollment/corporate-identifiers-add.md
           displayName: COD; corporate owned; IMEI; device ownership; serial   
@@ -1487,7 +1578,7 @@ items:
           displayName: group; category; categorize; security group;   
         - name: Require multifactor authentication  
           href: ./enrollment/multi-factor-authentication.md   
-          displayName: multi-factor; enrollment; MFA; verification; conditional access
+          displayName: multi-factor; enrollment; MFA; verification; Conditional Access
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
           displayName: intune; enrollment; terms and conditions; policy 
@@ -1506,14 +1597,6 @@ items:
             href: ./enrollment/create-device-platform-restrictions.md  
           - name: Create device limit restrictions  
             href: ./enrollment/create-device-limit-restrictions.md  
-        - name: Configure Chrome Enterprise connector
-          items: 
-          - name: Configure Chrome Enterprise connector
-            href: ./enrollment/chrome-enterprise-connector-configure.md 
-          - name: View ChromeOS device information in Intune
-            href: ./enrollment/chrome-enterprise-device-details.md              
-          - name: Remote device actions for ChromeOS  
-            href: ./enrollment/chrome-enterprise-remote-actions.md  
   
       - name: Set up Windows enrollment
         items:  
@@ -1711,6 +1794,8 @@ items:
           href: ./remote-actions/find-primary-user.md
       - name: Other actions
         items:
+        - name: Remote actions for ChromeOS
+          href: ./remote-actions/chrome-enterprise-remote-actions.md
         - name: Locate device
           href: ./remote-actions/device-locate.md
         - name: Rename device
@@ -1723,6 +1808,8 @@ items:
           href: ./remote-actions/device-sync.md
         - name: Examine device inventory
           href: ./remote-actions/device-inventory.md
+        - name: View ChromeOS device information
+          href: ./remote-actions/chrome-enterprise-device-details.md
         - name: Collect diagnostics
           href: ./remote-actions/collect-diagnostics.md
         - name: Remove apps and configuration
@@ -1756,8 +1843,6 @@ items:
           href: ./fundamentals/review-logs-using-azure-monitor.md
         - name: Device configuration profile status
           href: ./configuration/device-profile-monitor.md                    
-        - name: Endpoint analytics
-          href: ../analytics/
 
   - name: Industry guides
     items: 
@@ -1842,6 +1927,16 @@ items:
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu.md
             - name: OneDrive Known Folder Move
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove.md
+          - name: Intune policies for iPads in Education
+            items:
+            - name: Device restrictions
+              href: ./industry/education/tutorial-school-deployment/common-config-ipads-device-restrictions.md
+            - name: Apple Intelligence
+              href: ./industry/education/tutorial-school-deployment/common-config-ipads-ai.md
+            - name: iPads with no user affinity
+              href: ./industry/education/tutorial-school-deployment/common-config-ipads-nouser.md
+            - name: Optional restrictions
+              href: ./industry/education/tutorial-school-deployment/common-config-ipads-optional.md
 
       - name: Intune for Education docs
         href: /intune-education/
@@ -2038,11 +2133,35 @@ items:
           - name: Step 6. Use app protection actions
             href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
+      - name: Assign and deploy apps using Microsoft Intune
+        items: 
+        - name: Overview
+          href: /microsoft-365/solutions/apps-assign-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          displayName: assign, deploy, app, apps, monitor, troubleshoot
+        - name: Understand app management
+          href: /microsoft-365/solutions/apps-assign-management?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+        - name: Understand app assignments
+          href: /microsoft-365/solutions/apps-assign-assignments?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+        - name: Understand app deployment
+          href: /microsoft-365/solutions/apps-assign-deployment?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+        - name: Assign apps to your organization
+          items: 
+          - name: Assign apps overview      
+            href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json     
+          - name: Step 1. Confirm users, devices, or groups
+            href: /microsoft-365/solutions/apps-assign-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          - name: Step 2. Assign apps to users, devices, or groups
+            href: /microsoft-365/solutions/apps-assign-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          - name: Step 3. Verify and monitor app assignments
+            href: /microsoft-365/solutions/apps-assign-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          - name: Step 4. Troubleshoot app deployment issues
+            href: /microsoft-365/solutions/apps-assign-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            
       - name: Secure your corporate data using Edge for Business
         items: 
         - name: Overview
           href: ./apps/mamedge-overview.md
-        - name: Step 1. Create Microsoft Entra conditional access
+        - name: Step 1. Create Microsoft Entra Conditional Access
           href: ./apps/mamedge-1-mamca.md
         - name: Step 2. Create an app protection policy
           href: ./apps/mamedge-2-app.md
@@ -2171,9 +2290,12 @@ items:
       - name: Move your Intune Data Warehouse account data
         href: ./developer/data-warehouse-account-move.md
 
-  - name: Privacy and personal data
-    href: ./protect/privacy-personal-data.md
+  - name: Privacy, compliance, and personal data
     items:
+    - name: Privacy and personal data
+      href: ./protect/privacy-personal-data.md
+    - name: Compliance in Intune
+      href: ./fundamentals/compliance-in-intune.md
     - name: Optional diagnostic data in client apps
       href: ./protect/client-apps-optional-data.md
     - name: Data collection
