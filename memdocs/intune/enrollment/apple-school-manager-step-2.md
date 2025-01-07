@@ -43,10 +43,9 @@ After you get your Apple token, you can create an enrollment profile for school 
 
 1. For **Basics**, give the profile a **Name** and **Description** for administrative purposes. Users don't see these details. 
 
- ![Example screenshot of the profile name and description fields in the admin center.](./media/apple-school-manager-set-up-ios/image05.png)
+   ![Example screenshot of the profile name and description fields in the admin center.](./media/apple-school-manager-set-up-ios/image05.png)
 
->[!TIP]
-> You can use the name you enter here to create a dynamic group in Microsoft Entra ID. To assign devices with this enrollment profile, for example, use the name to define the enrollmentProfileName parameter in your dynamic group rules. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).  
+   You can use the name you enter here to create a dynamic group in Microsoft Entra ID. To assign devices with this enrollment profile to a group, for example, enter the name in the *enrollmentProfileName* parameter in your dynamic group rules. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).  
 
 
 1. For **User Affinity**, decide if devices with this profile must enroll with an assigned user or without an assigned user.  
@@ -64,8 +63,7 @@ After you get your Apple token, you can create an enrollment profile for school 
     >
     > These features aren't supported when authenticating with Apple Setup Assistant.
 
-1. Choose **Device Management Settings**, and choose if you want devices using this profile to be supervised.
-    *Supervision* gives you more management options and disabled Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling Intune's supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
+1. Choose **Device Management Settings**. Decide if you want devices using this profile to be supervised. *Supervision* gives you more management options and disables Apple Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling Intune's supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
 
     Users are notified that their devices are supervised in two ways:
 
@@ -75,19 +73,19 @@ After you get your Apple token, you can create an enrollment profile for school 
      > [!NOTE]
      > A device enrolled without supervision can only be reset to supervised by using the Apple Configurator. Resetting the device in this manner requires connecting an iOS/iPadOS device to a Mac with a USB cable. For more information, see the [Apple Configurator docs](https://support.apple.com/guide/apple-configurator-mac) (opens Apple Support).  
 
-1. Choose if you want locked enrollment for devices using this profile. **Locked enrollment** disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. Such devices must have the **Supervised** Management Mode set to *yes*. 
+1. Choose if you want locked enrollment for devices using this profile. **Locked enrollment** disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. Such devices must have the supervised management mode set to *yes*. 
 
 1. You can let multiple users sign on to enrolled iPads by using a managed Apple ID. To do so, choose **Yes** under **Shared iPad** (this option requires **Enroll without User Affinity** and **Supervised** mode set to **Yes**.) Managed Apple IDs are created in the Apple School Manager portal. Learn more about [shared iPad](../fundamentals/education-settings-configure-ios-shared.md) and [shared iPad requirements for Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
-1. Choose if you want the devices using this profile to be able to **Sync with computers**. **Deny All** means that devices using this profile can't sync with any data on any computer. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.  
+1. Choose if you want the devices using this profile to be able to **Sync with computers**. **Deny All** means that devices using this profile can't sync with any data on any computer. 
 
 1. If you chose **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator Certificate to import.
 
 1. You can specify a naming format for devices that is automatically applied when they enroll. To do so, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names using this profile. You can specify a template format that includes the device type and serial number.
 
-1. Choose **OK**.
+1. Select **OK**.
 
-1. Choose **Setup Assistant Settings** to configure the following profile settings:  
+1. Select **Setup Assistant Settings** to configure the following profile settings:  
 
     |Setting |Description  |
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
