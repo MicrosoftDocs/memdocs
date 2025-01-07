@@ -53,15 +53,15 @@ After you get your Apple token, you can create an enrollment profile for school 
 
     - **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user, such as a shared device. Use this option for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 
-1. If you chose **Enroll with User Affinity**, you can let users authenticate with Company Portal, Setup Assistant (legacy), and Setup Assistant with modern authentication. Select the option.  For more information about authentication methods, see [Authentication methods for automated device enrollment in Intune](automated-device-enrollment-authentication.md).  
+1. If you chose **Enroll with User Affinity**, you can let users authenticate with Company Portal, Setup Assistant (legacy), and Setup Assistant with modern authentication. Select the option. For more information about authentication methods, see [Authentication methods for automated device enrollment in Intune](automated-device-enrollment-authentication.md).  
 
     > [!NOTE]
-    > If you want do any of the following, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
+    > If you want any of the following features, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
     >    - use multifactor authentication
     >    - prompt users who need to change their password when they first sign in
     >    - prompt users to reset their expired passwords during enrollment
     >
-    > These aren't supported when authenticating with Apple Setup Assistant.
+    > These features aren't supported when authenticating with Apple Setup Assistant.
 
 1. Choose **Device Management Settings** and choose if you want devices using this profile to be supervised.
     **Supervised** devices give you more management options and disabled Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling Intune's supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
@@ -72,13 +72,13 @@ After you get your Apple token, you can create an enrollment profile for school 
    - The **Settings** > **General** > **About** screen says: "This iPhone is supervised. Contoso can monitor your Internet traffic and locate this device."
 
      > [!NOTE]
-     > A device enrolled without supervision can only be reset to supervised by using the Apple Configurator. Resetting the device in this manner requires connecting an iOS/iPadOS device to a Mac with a USB cable. Learn more about this on [Apple Configurator docs](https://support.apple.com/guide/apple-configurator-mac).
+     > A device enrolled without supervision can only be reset to supervised by using the Apple Configurator. Resetting the device in this manner requires connecting an iOS/iPadOS device to a Mac with a USB cable. For more information, see the [Apple Configurator docs](https://support.apple.com/guide/apple-configurator-mac) (opens Apple Support).  
 
 1. Choose if you want locked enrollment for devices using this profile. **Locked enrollment** disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. Such devices must have the **Supervised** Management Mode set to *Yes*. 
 
 1. You can let multiple users sign on to enrolled iPads by using a managed Apple ID. To do so, choose **Yes** under **Shared iPad** (this option requires **Enroll without User Affinity** and **Supervised** mode set to **Yes**.) Managed Apple IDs are created in the Apple School Manager portal. Learn more about [shared iPad](../fundamentals/education-settings-configure-ios-shared.md) and [Apple's shared iPad requirements](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
-1. Choose if you want the devices using this profile to be able to **Sync with computers**. **Deny All** means that all devices using this profile won't be able to sync with any data on any computer. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.
+1. Choose if you want the devices using this profile to be able to **Sync with computers**. **Deny All** means that all devices using this profile won't be able to sync with any data on any computer. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.  
 
 1. If you chose **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator Certificate to import.
 
@@ -88,21 +88,21 @@ After you get your Apple token, you can create an enrollment profile for school 
 
 1. Choose **Setup Assistant Settings** to configure the following profile settings:  
 
-    |                 Setting                  |                                                                                               Description                                                                                               |
+    |Setting |Description  |
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    |     <strong>Department Name</strong>     |                                                             Appears when users tap <strong>About Configuration</strong> during activation.                                                              |
-    |    <strong>Department Phone</strong>     |                                                          Appears when the user clicks the <strong>Need Help</strong> button during activation.                                                          |
-    | <strong>Setup Assistant Options</strong> |                                                     The following optional settings can be set up later in the iOS/iPadOS <strong>Settings</strong> menu.                                                      |
-    |        <strong>Passcode</strong>         | Prompt for passcode during activation. Always require a passcode for unsecured devices unless access is controlled in some other manner (like kiosk mode that restricts the device to one app). |
-    |    <strong>Location Services</strong>    |                                                                 If enabled, Setup Assistant prompts for the service during activation.                                                                  |
-    |         <strong>Restore</strong>         |                                                                If enabled, Setup Assistant prompts for iCloud backup during activation.                                                                 |
-    |   <strong>iCloud and Apple ID</strong>   |                         If enabled, Setup Assistant prompts the user to sign in an Apple ID and the Apps & Data screen will allow the device to be restored from iCloud backup.                         |
-    |  <strong>Terms and Conditions</strong>   |                                                   If enabled, Setup Assistant prompts users to accept Apple's terms and conditions during activation.                                                   |
-    |        <strong>Touch ID</strong>         |                                                                 If enabled, Setup Assistant prompts for this service during activation.                                                                 |
-    |        <strong>Apple Pay</strong>        |                                                                 If enabled, Setup Assistant prompts for this service during activation.                                                                 |
-    |          <strong>Zoom</strong>           |                                                                 If enabled, Setup Assistant prompts for this service during activation.                                                                 |
-    |          <strong>Siri</strong>           |                                                                 If enabled, Setup Assistant prompts for this service during activation.                                                                 |
-    |     <strong>Diagnostic Data</strong>     |                                                                 If enabled, Setup Assistant prompts for this service during activation.                                                                 |
+    |**Department Name**    |  Appears when users tap <strong>About Configuration</strong> during activation. |
+    | **Department Phone**  | Appears when the user clicks the <strong>Need Help</strong> button during activation.                                                          |
+    |**Setup Assistant Options** | The following optional settings can be set up later in the iOS/iPadOS <strong>Settings</strong> menu. |
+    |**Passcode** | Prompt for passcode during activation. Always require a passcode for unsecured devices unless access is controlled in some other manner (like kiosk mode that restricts the device to one app). |
+    |**Location Services**   | If enabled, Setup Assistant prompts for the service during activation. |
+    |**Restore** |If enabled, Setup Assistant prompts for iCloud backup during activation.                                                                 |
+    | **iCloud and Apple ID**  | If enabled, Setup Assistant prompts the user to sign in with an Apple ID, and the Apps & Data screen allows the device to be restored from iCloud backup.                         |
+    | **Terms and Conditions**|If enabled, Setup Assistant prompts users to accept Apple's terms and conditions during activation.|
+    |**Touch ID**|If enabled, Setup Assistant prompts for this service during activation. |
+    |**Apple Pay** | If enabled, Setup Assistant prompts for this service during activation.                                                                 |
+    | **Zoom**  |If enabled, Setup Assistant prompts for this service during activation. |
+    | **Siri**|If enabled, Setup Assistant prompts for this service during activation.  |
+    | **Diagnostic Data** |If enabled, Setup Assistant prompts for this service during activation. |
 
 
 1. Choose **OK**.
