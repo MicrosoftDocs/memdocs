@@ -142,6 +142,19 @@ Applies to:
 - Android Enterprise
 - AOSP
 
+
+### The Settings Catalog lists all the settings you can configure in a device policy<!-- 30305854 -->
+
+The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
+
+There will soon be new settings in the Settings Catalog to *Configure Multiple Display Mode* for Windows 24H2. To see available settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
+
+The **Configure Multiple Display Mode** setting allows monitors to extend or clone the display by default, facilitating the need for manual setup. It streamlines the multi-monitor configuration process, ensuring a consistent and user-friendly experience.
+
+Applies to:
+
+- Windows 
+
 ### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
 
 We're updating the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will no longer be available for download but will continue to work until deprecation.
@@ -154,7 +167,13 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 
 <!-- *********************************************** -->
 
-## Device management  
+## Device management
+
+### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
+
+Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). The remote actions **Retire**, **Wipe** and **Delete** will support MAA. Onboarding Remote device actions to MAA, will help mitigate the risk of unauthorized or compromised remote actions being taken on device(s) by a single administrative account thereby enhancing the overall security posture of the environment.
+
+For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
 ### Remote Help supports Azure Virtual Desktop muti-session <!-- 24590822 -->
 
