@@ -85,6 +85,7 @@ For example, the default settings for firewall configuration might not merge con
 The following security baseline instances are available for use with Intune. Use the links to view the settings for recent instances of each baseline.
 
 - **Security Baseline for Windows 10 and later**:  
+  - [Version 24H2](security-baseline-settings-mdm-all.md?pivots=mdm-24h2)
   - [Version 23H2](security-baseline-settings-mdm-all.md?pivots=mdm-23h2)
   - [November 2021](security-baseline-settings-mdm-all.md?pivots=november-2021)
   - [December 2020](security-baseline-settings-mdm-all.md?pivots=december-2020)
