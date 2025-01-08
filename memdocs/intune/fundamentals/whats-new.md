@@ -97,7 +97,7 @@ For more information about customizing the Company Portal and Intune apps, see [
 
 #### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint<!-- 13204113 -->
  
-> [NOTE!]
+> [!NOTE]
 >
 > *Rollout of this feature is delayed and now expected to be available on or around January 18th, 2025.*
 
