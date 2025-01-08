@@ -133,7 +133,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 > [!NOTE]
 > The virtual home button requires granting overlay permission to MHS. The notification badge functionality requires granting notification permission to MHS.The brightness slider, adaptive brightness toggle, and autorotate toggle require granting write settings permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant these permissions to prevent possible breakout scenarios from the Settings application.
 > 
-> Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen. The user will have the option to disable the permission and may allow users access to the settings app. It is recommended to only configure notifications and features which require permissions only when necessary.
+> Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It is recommended to only configure access to notifications and features which require permissions when necessary.
 
 **Configurations for a custom screensaver**: 
 
@@ -153,7 +153,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 > [!NOTE]
 > The screensaver requires granting overlay permission and exact alarm permission (OS 14+) to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant overlay and exact alarm permission to prevent possible breakout scenarios from the Settings application.
 > 
-> > Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen. The user will have the option to disable the permission and may allow users access to the settings app. It is recommended to only configure notifications and features which require permissions only when necessary.
+> Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It is recommended to only configure access to notifications and features which require permissions when necessary.
 
 **Configurations to help with troubleshooting issues on the device**:
 
@@ -169,7 +169,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 >[!NOTE]
 > The automatic relaunch functionality requires granting exact alarm permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant exact alarm permission to prevent possible breakout scenarios from the Settings application.
 > 
-> Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen. The user will have the option to disable the permission and may allow users access to the settings app. It is recommended to only configure notifications and features which require permissions only when necessary.
+> Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It is recommended to only configure access to notifications and features which require permissions when necessary.
 
 **Configurations to customize Managed Home Screen experience when device is set up with Microsoft Entra shared device mode**:
 
@@ -206,7 +206,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 > [!NOTE]
 > The automatic sign out feature requires granting overlay permission and exact alarm permission (OS 14+) to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant overlay and exact alarm permission to prevent possible breakout scenarios from the Settings application.
 > 
-> > Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen. The user will have the option to disable the permission and may allow users access to the settings app. It is recommended to only configure notifications and features which require permissions only when necessary.
+>  Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It is recommended to only configure access to notifications and features which require permissions when necessary.
 
 ## Enter JSON Data
 
