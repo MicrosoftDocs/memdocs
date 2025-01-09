@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/27/2024
+ms.date: 01/09/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -39,7 +39,7 @@ ms.collection:
 After you've [added an app](apps-add.md) to Microsoft Intune, you can assign the app to users and devices. It's important to note that you can deploy an app to a device whether or not the device is managed by Intune.
 
 > [!NOTE]
-> The **Available for enrolled devices** deployment intent is supported for **user groups** and **device groups** when targeting Android Enterprise fully managed devices (COBO) and Android Enterprise corporate-owned personally-enabled (COPE) devices.
+> The **Available for enrolled devices** deployment intent is supported for **user groups** and **device groups** when targeting Android Enterprise fully managed devices (COBO) and Android Enterprise corporate-owned personally enabled (COPE) devices.
 
 ## Options when assigning managed apps
 
@@ -64,7 +64,7 @@ The following table lists the various options when *assigning* apps to users and
 > 
 > For almost all app types and platforms, *Available assignments* are only valid when assigning to user groups, not device groups. Win32 apps can be assigned to either user or device groups.
 > 
-> If managed Google Play pre-production track apps are assigned as required on Android Enterprise personally-owned work profile devices, they will not install on the device. To work around this, create two identical user groups and assign the pre-production track as "available" to one and "required" to the other. The result will be that the pre-production track successfully deploys to the device. 
+> If managed Google Play preproduction track apps are assigned as required on Android Enterprise personally owned work profile devices, they won't install on the device. To work around this, create two identical user groups and assign the preproduction track as "available" to one and "required" to the other. The result will be that the preproduction track successfully deploys to the device. 
 
 ## Assign an app
 
@@ -85,10 +85,10 @@ The following table lists the various options when *assigning* apps to users and
      > - To configure what happens to managed apps when devices are no longer managed, you can select the intended setting under **Uninstall on device removal**. For more information, see [App uninstall setting for iOS/iPadOS managed apps](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
      > - If you have created an iOS/iPadOS VPN profile that contains per-app VPN settings, you can select the VPN profile under **VPN**. When the app is run, the VPN connection is opened. For more information, see [VPN settings for iOS/iPadOS devices](../configuration/vpn-settings-ios.md).
      > - To configure whether a required iOS/iPadOS app is installed as a removable app by end users, you can select the setting under **Install as removable**. 
-     > - To configure a way to prevent the iCloud backup of the managed iOS/iPadOS app, you can click on one of the following settings after adding a group assignment - VPN, or Uninstall on device removal, or Install as removable. Then, configure the setting called Prevent iCloud app backup. For more information, see [Prevent iCloud app backup setting for iOS/iPadOS and macOS apps](#prevent-icloud-app-backup-setting-for-iosipados-and-macos-apps).
+     > - To configure a way to prevent the iCloud backup of the managed iOS/iPadOS app, you can select on one of the following settings after adding a group assignment - VPN, or Uninstall on device removal, or Install as removable. Then, configure the setting called Prevent iCloud app backup. For more information, see [Prevent iCloud app backup setting for iOS/iPadOS and macOS apps](#prevent-icloud-app-backup-setting-for-iosipados-and-macos-apps).
 	  >
      > **For macOS apps only**: 
-     > - To configure a way to prevent the iCloud backup of the managed macOS app, you can click on one of the following settings after adding a group assignment - VPN, or Uninstall on device removal, or Install as removable. Then, configure the setting called Prevent iCloud app backup. For more information, see [Prevent iCloud app backup setting for iOS/iPadOS and macOS apps](#prevent-icloud-app-backup-setting-for-iosipados-and-macos-apps).
+     > - To configure a way to prevent the iCloud backup of the managed macOS app, you can select on one of the following settings after adding a group assignment - VPN, or Uninstall on device removal, or Install as removable. Then, configure the setting called Prevent iCloud app backup. For more information, see [Prevent iCloud app backup setting for iOS/iPadOS and macOS apps](#prevent-icloud-app-backup-setting-for-iosipados-and-macos-apps).
 	  >
      > **For Android apps only**: 
 	  > - If you deploy an Android app as **Available with or without enrollment**, reporting status will only be available on enrolled devices.
@@ -150,10 +150,10 @@ The information in the following table can help you understand the resulting int
 > [!NOTE]
 > For managed iOS store apps only, when you add these apps to Microsoft Intune and assign them as **Required**, the apps are automatically created with both **Required** and **Available** intents.<br><br>
 > iOS Store apps (not iOS/iPadOS VPP apps) that are targeted with required intent will be enforced on the device at the time of the device check-in and will also show in the Company Portal app.<br><br>
-> When conflicts occur in **Uninstall on device removal** setting, the app is not removed from the device when the device is no longer managed.
+> When conflicts occur in **Uninstall on device removal** setting, the app isn't removed from the device when the device is no longer managed.
 
 > [!NOTE]
-> Apps deployed as Required to corporate-owned work profile and corporate-owned fully managed devices cannot be uninstalled manually by the user.
+> Apps deployed as Required to corporate-owned work profile and corporate-owned fully managed devices can't be uninstalled manually by the user.
 
 ## Managed Google Play app deployment to unmanaged devices
 
