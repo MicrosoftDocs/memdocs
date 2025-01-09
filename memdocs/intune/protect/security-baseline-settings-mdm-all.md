@@ -7,7 +7,7 @@ description: View the default setting configuration of the various Microsoft Int
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/01/2024
+ms.date: 01/09/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,42 +29,54 @@ ms.collection:
 zone_pivot_groups: windows-mdm-versions
 ---
 
-# List of the settings in the Windows MDM security baseline in Intune
+# Windows MDM security baseline settings reference for Microsoft Intunein Intune
 
-This article is a reference for the settings that are available in the different versions of the Windows Mobile Device Management (MDM) security baseline for Windows 10 and Windows 11 devices that you manage with Microsoft Intune. You can use the provided Tabs to select and view the settings in the current baseline version and a few older versions that might still be in use.
+This article is a reference for the settings that are available in the Windows Mobile Device Management (MDM) security baseline for Microsoft Intune.
 
-For each setting you’ll find the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, could also set different defaults.
+## About this reference article
 
-When the Intune UI includes a *Learn more* link for a setting, you’ll find that here as well. Use that link to view the settings *policy configuration service provider* (CSP) or relevant content that explains the settings operation.
+Each security baseline is a group of preconfigured Windows settings that help you apply and enforce granular security settings that the relevant security teams recommend. You can also customize each baseline you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple device configuration settings.
 
-When a new version of a baseline becomes available, it replaces the previous version. Profiles instances that you’ve created before the availability of a new version:
+The details that display in this article are based on baseline version you select at the top of the article. For each version, this article displays:
+
+- A list of each and its configuration as found in the default instance of that baseline version.
+- When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
+
+When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
-- Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
+- Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
-To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
+To learn more about using security baselines, see:
+- [Use security baselines](../protect/security-baselines.md)
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
+- [Manage security baselines](../protect/security-baselines-configure.md)
+
 
 ::: zone pivot="mdm-23h2"
-**Security Baseline for Windows, version 23H2**
+## Security Baseline for Windows, version 23H2
 
 The settings in this baseline are taken from the **version 23H2** of the Group Policy security baseline as found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and include only the settings that apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
 
 ::: zone-end
 ::: zone pivot="mdm-november-2021"
-**Security Baseline for Windows, November 2021**
+## Security Baseline for Windows, November 2021
+
 ::: zone-end
 ::: zone pivot="mdm-december-2020"
-**Security Baseline for Windows, December 2020**
+## Security Baseline for Windows, December 2020
+
 ::: zone-end
 ::: zone pivot="mdm-august-2020"
-**Security Baseline for Windows, August 2020**
+## Security Baseline for Windows, August 2020
+
 ::: zone-end
 
 ::: zone pivot="mdm-23h2"
 
-## Administrative Templates
+### Administrative Templates
 
-### Control Panel > Personalization
+#### Control Panel > Personalization
 
 - **Prevent enabling lock screen camera**  
   Baseline default: *Enabled*  
@@ -74,7 +86,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#preventlockscreenslideshow)
 
-### MS Security Guide
+#### MS Security Guide
 
 - **Apply UAC restrictions to local accounts on network logons**  
   Baseline default: *Enabled*  
@@ -98,7 +110,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#wdigestauthentication)
 
-### MSS (Legacy)
+#### MSS (Legacy)
 
 - **MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)**  
   Baseline default: *Enabled*  
@@ -120,19 +132,19 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowthecomputertoignorenetbiosnamereleaserequestsexceptfromwinsservers)
 
-### Network > DNS Client
+#### Network > DNS Client
 
 - **Turn off multicast name resolution**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-admx-dnsclient?WT.mc_id=Portal-fx#turn_off_multicast)
 
-### Network > Network Connections
+#### Network > Network Connections
 
 - **Prohibit use of Internet Connection Sharing on your DNS domain network**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-admx-networkconnections?WT.mc_id=Portal-fx#nc-showsharedaccessui)
 
-### Network > Network Provider
+#### Network > Network Provider
 
 - **Hardened UNC Paths**  
   Baseline default: *Enabled*  
@@ -145,13 +157,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
     | `\\*\SYSVOL`   | RequireMutualAuthentication=1,RequireIntegrity=1 |
     | `\\*\NETLOGON` | RequireMutualAuthentication=1,RequireIntegrity=1 |
 
-### Network > Windows Connection Manager
+#### Network > Windows Connection Manager
 
 - **Prohibit connection to non-domain networks when connected to domain authenticated network**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-windowsconnectionmanager?WT.mc_id=Portal-fx#prohitconnectiontonondomainnetworkswhenconnectedtodomainauthenticatednetwork)
 
-### Printers
+#### Printers
 
 - **Configure Redirection Guard**  
   Baseline default: *Enabled*  
@@ -191,13 +203,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Manage processing of Queue-specific files: (Device)**  
     Baseline default: *Limit Queue-specific files to Color profiles*
 
-### Start Menu and Taskbar > Notifications
+#### Start Menu and Taskbar > Notifications
 
 - **Turn off toast notifications on the lock screen (User)**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-admx-wpn?WT.mc_id=Portal-fx#nolockscreentoastnotification)
 
-### System > Credentials Delegation
+#### System > Credentials Delegation
 
 - **Encryption Oracle Remediation**  
   Baseline default: *Enabled*  
@@ -209,7 +221,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-credentialsdelegation?WT.mc_id=Portal-fx#remotehostallowsdelegationofnonexportablecredentials)
 
-### System > Device Installation > Device Installation Restrictions
+#### System > Device Installation > Device Installation Restrictions
 
 - **Prevent installation of devices using drivers that match these device setup classes**  
   Baseline default: *Enabled*  
@@ -219,7 +231,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Prevented Classes**  
     Baseline default: *{d48179be-ec20-11d1-b6b8-00c04fa372a7}*
 
-### System > Early Launch Antimalware
+#### System > Early Launch Antimalware
 
 - **Boot-Start Driver Initialization Policy**  
   Baseline default: *Enabled*  
@@ -227,7 +239,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Choose the boot-start drivers that can be initialized:**  
     Baseline default: *Good, unknown and bad but critical*
 
-### System > Group Policy
+#### System > Group Policy
 
 - **Configure registry policy processing**  
   Baseline default: *Enabled*  
@@ -237,7 +249,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Process even if the Group Policy objects have not changed (Device)**  
     Baseline default: *True*
 
-### System > Internet Communication Management > Internet Communication settings
+#### System > Internet Communication Management > Internet Communication settings
 
 - **Turn off downloading of print drivers**  
   Baseline default: *Enabled*  
@@ -247,13 +259,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disableinternetdownloadforwebpublishingandonlineorderingwizards)
 
-### System > Local Security Authority
+#### System > Local Security Authority
 
 - **Allow Custom SSPs and APs to be loaded into LSASS**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-lsa#allowcustomsspsaps)
 
-### System > Power Management > Sleep Settings
+#### System > Power Management > Sleep Settings
 
 - **Allow standby states (S1-S3) when sleeping (on battery)**  
   Baseline default: *Disabled*  
@@ -271,13 +283,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#requirepasswordwhencomputerwakespluggedin)
 
-### System > Remote Assistance
+#### System > Remote Assistance
 
 - **Configure Solicited Remote Assistance**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-remoteassistance?WT.mc_id=Portal-fx#solicitedremoteassistance)
 
-### System > Remote Procedure Call
+#### System > Remote Procedure Call
 
 - **Restrict Unauthenticated RPC clients**  
   Baseline default: *Enabled*  
@@ -285,13 +297,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **RPC Runtime Unauthenticated Client Restriction to Apply:**  
     Baseline default: *Authenticated*
 
-### Windows Components > App runtime
+#### Windows Components > App runtime
 
 - **Allow Microsoft accounts to be optional**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-appruntime?WT.mc_id=Portal-fx#allowmicrosoftaccountstobeoptional)
 
-### Windows Components > AutoPlay Policies
+#### Windows Components > AutoPlay Policies
 
 - **Disallow Autoplay for non-volume devices**  
   Baseline default: *Enabled*  
@@ -309,13 +321,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Turn off Autoplay on:**  
     Baseline default: *All drives*
 
-### Windows Components > BitLocker Drive Encryption > Fixed Data Drives
+#### Windows Components > BitLocker Drive Encryption > Fixed Data Drives
 
 - **Deny write access to fixed drives not protected by BitLocker**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrequireencryption)
 
-### Windows Components > BitLocker Drive Encryption > Removable Data Drives
+#### Windows Components > BitLocker Drive Encryption > Removable Data Drives
 
 - **Deny write access to removable drives not protected by BitLocker**  
   Baseline default: *Enabled*  
@@ -323,13 +335,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Do not allow write access to devices configured in another organization**  
     Baseline default: *False*
 
-### Windows Components > Credential User Interface
+#### Windows Components > Credential User Interface
 
 - **Enumerate administrator accounts on elevation**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-credentialsui?WT.mc_id=Portal-fx#enumerateadministrators)
 
-### Windows Components > Event Log Service > Application
+#### Windows Components > Event Log Service > Application
 
 - **Specify the maximum log file size (KB)**  
   Baseline default: *Enabled*  
@@ -337,7 +349,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Maximum Log Size (KB)**  
     Baseline default: *32768*
 
-### Windows Components > Event Log Service > Security
+#### Windows Components > Event Log Service > Security
 
 - **Specify the maximum log file size (KB)**  
   Baseline default: *Enabled*  
@@ -345,7 +357,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Maximum Log Size (KB)**  
     Baseline default: *196608*
 
-### Windows Components > Event Log Service > System
+#### Windows Components > Event Log Service > System
 
 - **Specify the maximum log file size (KB)**  
   Baseline default: *Enabled*  
@@ -353,7 +365,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Maximum Log Size (KB)**  
     Baseline default: *32768*
 
-### Windows Components > File Explorer
+#### Windows Components > File Explorer
 
 - **Configure Windows Defender SmartScreen**  
   Baseline default: *Enabled*  
@@ -369,7 +381,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffheapterminationoncorruption)
 
-### Windows Components > Internet Explorer > Internet Control Panel > Advanced Page
+#### Windows Components > Internet Explorer > Internet Control Panel > Advanced Page
 
 - **Allow software to run or install even if the signature is invalid**  
   Baseline default: *Disabled*  
@@ -401,13 +413,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowenhancedprotectedmode)
 
-### Windows Components > Internet Explorer > Internet Control Panel
+#### Windows Components > Internet Explorer > Internet Control Panel
 
 - **Prevent ignoring certificate errors**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableignoringcertificateerrors)
 
-### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Internet Zone
+#### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Internet Zone
 
 - **Access data sources across domains**  
   Baseline default: *Enabled*  
@@ -595,7 +607,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Web sites in less privileged Web content zones can navigate into this zone**  
     Baseline default: *Disable*
 
-### Windows Components > Internet Explorer > Internet Control Panel > Security Page
+#### Windows Components > Internet Explorer > Internet Control Panel > Security Page
 
 - **Intranet Sites: Include all network paths (UNCs)**  
   Baseline default: *Disabled*  
@@ -605,7 +617,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowcertificateaddressmismatchwarning)
 
-### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Intranet Zone
+#### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Intranet Zone
 
 - **Don't run antimalware programs against ActiveX controls**  
   Baseline default: *Enabled*  
@@ -625,7 +637,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Java permissions**  
     Baseline default: *High safety*
 
-### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Local Machine Zone
+#### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Local Machine Zone
 
 - **Don't run antimalware programs against ActiveX controls**  
   Baseline default: *Enabled*  
@@ -639,7 +651,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Java permissions**  
     Baseline default: *Disable Java*
 
-### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Internet Zone
+#### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Internet Zone
 
 - **Turn on SmartScreen Filter scan**  
   Baseline default: *Enabled*  
@@ -647,7 +659,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Use SmartScreen Filter**  
     Baseline default: *Enable*
 
-### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Intranet Zone
+#### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Intranet Zone
 
 - **Java permissions**  
   Baseline default: *Enabled*  
@@ -655,7 +667,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Java permissions**  
     Baseline default: *Disable Java*
 
-### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Local Machine Zone
+#### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Local Machine Zone
 
 - **Java permissions**  
   Baseline default: *Enabled*  
@@ -663,7 +675,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Java permissions**  
     Baseline default: *Disable Java*
 
-### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Restricted Sites Zone
+#### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Restricted Sites Zone
 
 - **Java permissions**  
   Baseline default: *Enabled*  
@@ -677,7 +689,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Use SmartScreen Filter**  
       Baseline default: *Enable*
 
-### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Trusted Sites Zone
+#### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Trusted Sites Zone
 
 - **Java permissions**  
   Baseline default: *Enabled*  
@@ -685,7 +697,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Java permissions**  
     Baseline default: *Disable Java*
 
-### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Restricted Sites Zone
+#### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Restricted Sites Zone
 
 - **Access data sources across domains**  
   Baseline default: *Enabled*  
@@ -921,7 +933,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Web sites in less privileged Web content zones can navigate into this zone**  
     Baseline default: *Disable*
 
-### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Trusted Sites Zone
+#### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Trusted Sites Zone
 
 - **Don't run antimalware programs against ActiveX controls**  
   Baseline default: *Enabled*  
@@ -941,7 +953,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Java permissions**  
     Baseline default: *High safety*
 
-### Windows Components > Internet Explorer
+#### Windows Components > Internet Explorer
 
 - **Prevent bypassing SmartScreen Filter warnings**  
   Baseline default: *Enabled*  
@@ -989,7 +1001,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowautocomplete)
 
-### Windows Components > Internet Explorer > Security Features > Add-on Management
+#### Windows Components > Internet Explorer > Security Features > Add-on Management
 
 - **Remove "Run this time" button for outdated ActiveX controls in Internet Explorer**  
   Baseline default: *Enabled*  
@@ -999,7 +1011,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotblockoutdatedactivexcontrols)
 
-### Windows Components > Internet Explorer > Security Features
+#### Windows Components > Internet Explorer > Security Features
 
 - **Allow fallback to SSL 3.0 (Internet Explorer)**  
   Baseline default: *Enabled*  
@@ -1007,91 +1019,91 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Allow insecure fallback for:**  
     Baseline default: *No Sites*
 
-### Windows Components > Internet Explorer > Security Features > Consistent Mime Handling
+#### Windows Components > Internet Explorer > Security Features > Consistent Mime Handling
 
 - **Internet Explorer Processes**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#consistentmimehandlinginternetexplorerprocesses)
 
-### Windows Components > Internet Explorer > Security Features > Mime Sniffing Safety Feature
+#### Windows Components > Internet Explorer > Security Features > Mime Sniffing Safety Feature
 
 - **Internet Explorer Processes**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#mimesniffingsafetyfeatureinternetexplorerprocesses)
 
-### Windows Components > Internet Explorer > Security Features > MK Protocol Security Restriction
+#### Windows Components > Internet Explorer > Security Features > MK Protocol Security Restriction
 
 - **Internet Explorer Processes**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#mkprotocolsecurityrestrictioninternetexplorerprocesses)
 
-### Windows Components > Internet Explorer > Security Features > Notification bar
+#### Windows Components > Internet Explorer > Security Features > Notification bar
 
 - **Internet Explorer Processes**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#notificationbarinternetexplorerprocesses)
 
-### Windows Components > Internet Explorer > Security Features > Protection From Zone Elevation
+#### Windows Components > Internet Explorer > Security Features > Protection From Zone Elevation
 
 - **Internet Explorer Processes**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#protectionfromzoneelevationinternetexplorerprocesses)
 
-### Windows Components > Internet Explorer > Security Features > Restrict ActiveX Install
+#### Windows Components > Internet Explorer > Security Features > Restrict ActiveX Install
 
 - **Internet Explorer Processes**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictactivexinstallinternetexplorerprocesses)
 
-### Windows Components > Internet Explorer > Security Features > Restrict File Download
+#### Windows Components > Internet Explorer > Security Features > Restrict File Download
 
 - **Internet Explorer Processes**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictfiledownloadinternetexplorerprocesses)
 
-### Windows Components > Internet Explorer > Security Features > Scripted Window Security Restrictions
+#### Windows Components > Internet Explorer > Security Features > Scripted Window Security Restrictions
 
 - **Internet Explorer Processes**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#scriptedwindowsecurityrestrictionsinternetexplorerprocesses)
 
-### Windows Components > Microsoft Defender Antivirus > MAPS
+#### Windows Components > Microsoft Defender Antivirus > MAPS
 
 - **Configure the 'Block at First Sight' feature**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#disableblockatfirstseen)
 
-### Windows Components > Microsoft Defender Antivirus > Real-time Protection
+#### Windows Components > Microsoft Defender Antivirus > Real-time Protection
 
 - **Turn on process scanning whenever real-time protection is enabled**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#realtimeprotection-disablescanonrealtimeenable)
 
-### Windows Components > Microsoft Defender Antivirus > Scan
+#### Windows Components > Microsoft Defender Antivirus > Scan
 
 - **Scan packed executables**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#scan-disablepackedexescanning)
 
-### Windows Components > Microsoft Defender Antivirus
+#### Windows Components > Microsoft Defender Antivirus
 
 - **Turn off routine remediation**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#disableroutinelytakingaction)
 
-### Windows Components > Remote Desktop Services > Remote Desktop Connection Client
+#### Windows Components > Remote Desktop Services > Remote Desktop Connection Client
 
 - **Do not allow passwords to be saved**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#donotallowpasswordsaving)
 
-### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Device and Resource Redirection
+#### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Device and Resource Redirection
 
 - **Do not allow drive redirection**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#donotallowdriveredirection)
 
-### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security
+#### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security
 
 - **Always prompt for password upon connection**  
   Baseline default: *Enabled*  
@@ -1107,13 +1119,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Encryption Level**  
     Baseline default: *High Level*  
 
-### Windows Components > RSS Feeds
+#### Windows Components > RSS Feeds
 
 - **Prevent downloading of enclosures**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableenclosuredownloading)
 
-### Windows Components > Windows Logon Options
+#### Windows Components > Windows Logon Options
 
 - **Enable MPR notifications for the system**  
   Baseline default: *Disabled*  
@@ -1123,7 +1135,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-windowslogon?WT.mc_id=Portal-fx#allowautomaticrestartsignon)
 
-### Windows Components > Windows PowerShell
+#### Windows Components > Windows PowerShell
 
 - **Turn on PowerShell Script Block Logging**  
   Baseline default: *Enabled*  
@@ -1131,7 +1143,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Log script block invocation start / stop events:**  
     Baseline default: *False*  
 
-### Windows Components > Windows Remote Management (WinRM) > WinRM Client
+#### Windows Components > Windows Remote Management (WinRM) > WinRM Client
 
 - **Allow Basic authentication**  
   Baseline default: *Disabled*  
@@ -1145,7 +1157,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#disallowdigestauthentication)
 
-### Windows Components > Windows Remote Management (WinRM) > WinRM Service
+#### Windows Components > Windows Remote Management (WinRM) > WinRM Service
 
 - **Allow Basic authentication**  
   Baseline default: *Disabled*  
@@ -1159,7 +1171,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#disallowstoringofrunascredentials)
 
-## Auditing
+### Auditing
 
 - **Account Logon Audit Credential Validation**  
   Baseline default: *Success+ Failure*  
@@ -1253,7 +1265,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Success+ Failure*  
   [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsystemintegrity)
 
-## Browser
+### Browser
 
 - **Allow Password Manager**  
   Baseline default: *Block*  
@@ -1275,13 +1287,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-Browser?WT.mc_id=Portal-fx#preventsmartscreenpromptoverrideforfiles)
 
-## Data Protection
+### Data Protection
 
 - **Allow Direct Memory Access**  
   Baseline default: *Block*  
   [Learn more](/windows/client-management/mdm/policy-csp-dataprotection?WT.mc_id=Portal-fx#allowdirectmemoryaccess)
 
-## Defender
+### Defender
 
 - **Allow Archive Scanning**  
   Baseline default: *Allowed. Scans the archive files.*  
@@ -1385,7 +1397,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Send all samples automatically.*  
   [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#submitsamplesconsent)
 
-## Device Guard
+### Device Guard
 
 - **Configure System Guard Launch**  
   Baseline default: *Unmanaged Enables Secure Launch if supported by hardware*  
@@ -1403,7 +1415,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Turns on VBS with Secure Boot.*  
   [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#requireplatformsecurityfeatures)
 
-## Device Lock
+### Device Lock
 
 - **Device Password Enabled**  
   Baseline default: *Enabled*  
@@ -1417,13 +1429,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
     Value: *14*  
     [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#mindevicepasswordlength)
 
-## Dma Guard
+### Dma Guard
 
 - **Device Enumeration Policy**  
   Baseline default: *Block all (Most restrictive)*  
   [Learn more](/windows/client-management/mdm/policy-csp-dmaguard?WT.mc_id=Portal-fx#deviceenumerationpolicy)
 
-## Experience
+### Experience
 
 - **Allow Windows Spotlight (User)**  
   Baseline default: *Allow*  
@@ -1435,7 +1447,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
     Baseline default: *Block*  
     [Learn more](/windows/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowthirdpartysuggestionsinwindowsspotlight)
 
-## Firewall
+### Firewall
 
 - **Enable Domain Network Firewall**  
   Baseline default: *True*  
@@ -1509,13 +1521,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
     Baseline default: *False*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
 
-## Lanman Workstation
+### Lanman Workstation
 
 - **Enable Insecure Guest Logons**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#enableinsecureguestlogons)
 
-## Local Policies Security Options
+### Local Policies Security Options
   <!-- UI Links add - in place of url which uses _ -->
 - **Accounts Limit Local Account Use Of Blank Passwords To Console Logon Only**  
   Baseline default: *Enabled*  
@@ -1603,14 +1615,14 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_virtualizefileandregistrywritefailurestoperuserlocations)
 
-## Local Security Authority
+### Local Security Authority
 
 - **Configure Lsa Protected Process**  
   Baseline default: *Enabled with UEFI lock. LSA will run as protected process and this configuration is UEFI locked.*  
   [Learn more](/windows/client-management/mdm/policy-csp-lsa#configurelsaprotectedprocess)
   <!-- UI Link is a 404 -->
 
-## Microsoft App Store
+### Microsoft App Store
 
 - **Allow Game DVR**  
   Baseline default: *Block*  
@@ -1624,9 +1636,9 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-ApplicationManagement?WT.mc_id=Portal-fx#msialwaysinstallwithelevatedprivileges)
 
-## Microsoft Edge
+### Microsoft Edge
 
-### SmartScreen settings
+#### SmartScreen settings
 
 - **Configure Microsoft Defender SmartScreen**  
   Baseline default: *Enabled*
@@ -1634,19 +1646,19 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**  
   Baseline default: *Enabled*
 
-## Privacy
+### Privacy
 
 - **Let Apps Activate With Voice Above Lock**  
   Baseline default: *Force deny. Windows apps cannot be activated by voice while the screen is locked, and users cannot change it.*  
   [Learn more](/windows/client-management/mdm/policy-csp-Privacy?WT.mc_id=Portal-fx#letappsactivatewithvoiceabovelock)
 
-## Search
+### Search
 
 - **Allow Indexing Encrypted Stores Or Items**  
   Baseline default: *Block*  
   [Learn more](/windows/client-management/mdm/policy-csp-Search?WT.mc_id=Portal-fx#allowindexingencryptedstoresoritems)
 
-## Smart Screen
+### Smart Screen
 
 - **Enable Smart Screen In Shell**  
   Baseline default: *Enabled*  
@@ -1656,7 +1668,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-smartscreen?WT.mc_id=Portal-fx#preventoverrideforfilesinshell)
 
-### Enhanced Phishing Protection
+#### Enhanced Phishing Protection
 
 - **Notify Malicious**  
   Baseline default: *Enabled*
@@ -1670,7 +1682,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **Service Enabled**  
   Baseline default: *Enabled*
 
-## System Services
+### System Services
 
 - **Configure Xbox Accessory Management Service Startup Mode**  
   Baseline default: *Disabled*  
@@ -1688,13 +1700,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-SystemServices?WT.mc_id=Portal-fx#configurexboxlivenetworkingservicestartupmode)
 
-## Task Scheduler
+### Task Scheduler
 
 - **Enable Xbox Game Save Task**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-TaskScheduler?WT.mc_id=Portal-fx#enablexboxgamesavetask)
 
-## User Rights
+### User Rights
 
 - **Access From Network**  
   Baseline default: *Configured*  
@@ -1781,13 +1793,13 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Value: *Administrators* (*S-1-5-32-544)  
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#takeownership)
 
-## Virtualization Based Technology
+### Virtualization Based Technology
 
 - **Hypervisor Enforced Code Integrity**  
   Baseline default: *(Enabled with UEFI lock) Turns on Hypervisor-Protected Code Integrity with UEFI lock.*  
   [Learn more](/windows/client-management/mdm/policy-csp-VirtualizationBasedTechnology?WT.mc_id=Portal-fx#hypervisorenforcedcodeintegrity)
 
-## Wi-Fi Settings
+### Wi-Fi Settings
 
 - **Allow Auto Connect To Wi Fi Sense Hotspots**  
   Baseline default: *Block*  
@@ -1797,19 +1809,19 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Block*  
   [Learn more](/windows/client-management/mdm/policy-csp-wifi?WT.mc_id=Portal-fx#allowinternetsharing)
 
-## Windows Hello For Business
+### Windows Hello For Business
 
 - **Facial Features Use Enhanced Anti Spoofing**  
   Baseline default: *true*  
   [Learn more](/windows/client-management/mdm/PassportForWork-csp/?WT.mc_id=Portal-fx#devicebiometricsfacialfeaturesuseenhancedantispoofing)
 
-## Windows Ink Workspace
+### Windows Ink Workspace
 
 - **Allow Windows Ink Workspace**  
   Baseline default: *Ink workspace is enabled (feature is turned on), but the user cannot access it above the lock screen.*  
   [Learn more](/windows/client-management/mdm/policy-csp-WindowsInkWorkspace?WT.mc_id=Portal-fx#allowwindowsinkworkspace)
 
-## LAPS
+### LAPS
 <!-- UI option uses 'Azure AD`, as does the CSP for options while the CSP description uses Microsoft Entra ID -->
 - **Backup Directory**  
   Baseline default: *Backup the password to Azure AD only*  
@@ -1822,7 +1834,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 <!-- Begin older baselines that share similar category structures -->
 
 ::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
-## Above Lock
+### Above Lock
 
 - **Voice activate apps from locked screen**:  
   Baseline default: *Disabled*  
@@ -1832,7 +1844,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Yes*  
   [Learn More](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)  
 
-## App Runtime
+### App Runtime
 
 - **Microsoft accounts optional for Microsoft store apps**:  
   Baseline default: *Enabled*  
@@ -1841,7 +1853,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 ::: zone-end
 ::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
-## Application Management
+### Application Management
 
 - **Block app installations with elevated privileges**:  
   Baseline default: *Yes*  
@@ -1855,7 +1867,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Yes*  
   [Learn more](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-## Audit
+### Audit
 
 Audit settings configure the events that are generated for the conditions of the setting.
 
@@ -1931,7 +1943,7 @@ Audit settings configure the events that are generated for the conditions of the
 - **System Audit System Integrity (Device)**:  
   Baseline default: *Success and Failure*
 
-## Auto Play
+### Auto Play
 
 - **Auto play default auto run behavior**:  
   Baseline default: *Do not execute*  
@@ -1945,7 +1957,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-autoplay#autoplay-disallowautoplayfornonvolumedevices) 
 
-## BitLocker
+### BitLocker
 
 - **BitLocker removable drive policy**:  
   Baseline default: *Configure*  
@@ -1955,7 +1967,7 @@ Audit settings configure the events that are generated for the conditions of the
     Baseline default: *Yes*  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=872540)
 
-## Browser
+### Browser
 
 - **Block Password Manager**:  
   Baseline default: *Yes*  
@@ -1977,7 +1989,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067126)
 
-## Connectivity
+### Connectivity
 
 - **Configure secure access to UNC paths**:  
   Baseline default: *Configure Windows to only allow access to the specified UNC paths after fulfilling additional security requirements*  
@@ -1994,25 +2006,25 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067136)
 
-## Credentials Delegation
+### Credentials Delegation
 
 - **Remote host delegation of non-exportable credentials**:  
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067103)
 
-## Credentials UI
+### Credentials UI
 
 - **Enumerate administrators**:  
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067021)
 
-## Data Protection
+### Data Protection
 
 - **Block direct memory access**:  
   Baseline default: Yes  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067031)
 
-## Device Guard
+### Device Guard
 
 - **Virtualization based security**:  
   Baseline default: *Enable VBS with secure boot*
@@ -2028,7 +2040,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enable with UEFI lock*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=872424)
 
-## Device Installation
+### Device Installation
 
 - **Block hardware device installation by setup classes**:  
   Baseline default: *Yes*  
@@ -2063,7 +2075,7 @@ Audit settings configure the events that are generated for the conditions of the
   - **Hardware device identifiers that are blocked**:  
     Baseline default: *No default configuration*
 
-## Device Lock
+### Device Lock
 
 - **Require password**:  
   Baseline default: *Yes*  
@@ -2109,12 +2121,12 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067105)
 
-## DMA Guard
+### DMA Guard
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**:  
   Baseline default: *Block all*
 
-## Event Log Service
+### Event Log Service
 
 - **Application log maximum file size in KB**:  
   Baseline default: *32768*  
@@ -2128,7 +2140,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *196608*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067042)
 
-## Experience
+### Experience
 
 - **Block Windows Spotlight**:  
   Baseline default: *Yes*  
@@ -2145,7 +2157,7 @@ Audit settings configure the events that are generated for the conditions of the
 ::: zone-end
 ::: zone pivot="mdm-august-2020"
 
-## Exploit Guard
+### Exploit Guard
 
 - **Upload XML**:  
   Baseline default: *Sample xml is provided*  
@@ -2154,7 +2166,7 @@ Audit settings configure the events that are generated for the conditions of the
 ::: zone-end
 ::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
-## File Explorer
+### File Explorer
 
 - **Block data execution prevention**:  
   Baseline default: *Disabled*  
@@ -2164,7 +2176,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067107)
 
-## Firewall
+### Firewall
 
 For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796) in the Windows Protocols documentation.
 
@@ -2236,7 +2248,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
     Baseline default: *Yes*  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=872567)
 
-## Internet Explorer
+### Internet Explorer
 <!-- /windows/client-management/mdm/policy-csp-internetexplorer -->
 
 - **Internet Explorer encryption support**:  
@@ -2711,7 +2723,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#allowautocomplete)
 
-## Local Policies Security Options
+### Local Policies Security Options
 <!-- /windows/client-management/mdm/policy-csp-localpoliciessecurityoptions -->
 
 - **Block remote logon with blank password**:  
@@ -2801,7 +2813,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 ::: zone-end
 ::: zone pivot="mdm-december-2020,mdm-november-2021"
 
-## Microsoft Defender
+### Microsoft Defender
 
 - **Block Adobe Reader from creating child processes**:  
   Baseline default: *Enable*  
@@ -3018,7 +3030,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 ::: zone-end
 ::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
-## MS Security Guide
+### MS Security Guide
 
 - **SMB v1 client driver start configuration**:  
   Baseline default: *Disabled driver*  
@@ -3040,7 +3052,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067193)
 
-## MSS Legacy
+### MSS Legacy
 
 - **Network IPv6 source routing protection level**:  
   Baseline default: *Highest protection*  
@@ -3058,7 +3070,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067326)
 
-## Power
+### Power
 
 - **Require password on wake while on battery**:  
   Baseline default: *Enabled*  
@@ -3076,13 +3088,13 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067196)
 
-## Remote Assistance
+### Remote Assistance
 
 - **Remote Assistance solicited**:  
   Baseline default: *Disable Remote Assistance*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067198)
 
-## Remote Desktop Services
+### Remote Desktop Services
 
 - **Remote desktop services client connection encryption level**:  
   Baseline default: *High*  
@@ -3103,7 +3115,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067248)
 
-## Remote Management
+### Remote Management
 
 - **Block client digest authentication**:  
   Baseline default: *Enabled*  
@@ -3129,19 +3141,19 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067226)
 
-## Remote Procedure Call
+### Remote Procedure Call
 
 - **RPC unauthenticated client options**:  
   Baseline default: *Authenticated*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067225)
 
-## Search
+### Search
 
 - **Disable indexing encrypted items**:  
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067303)
 
-## Smart Screen
+### Smart Screen
 
 - **Turn on Windows SmartScreen**  
   Baseline default: *Yes*  
@@ -3151,13 +3163,13 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=872783)
 
-## System
+### System
 
 - **System boot start driver initialization**:  
   Baseline default: *Good unknown and bad critical*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067307)
 
-## Wi-Fi
+### Wi-Fi
 
 - **Block Automatically connecting to Wi-Fi hotspots**:  
   Baseline default: *Yes*  
@@ -3167,19 +3179,19 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067327)
 
-## Windows Connection Manager
+### Windows Connection Manager
 
 - **Block connection to non-domain networks**:  
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067323)
 
-## Windows Ink Workspace
+### Windows Ink Workspace
 
 - **Ink Workspace**:  
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067241)
 
-## Windows PowerShell
+### Windows PowerShell
 
 - **PowerShell script block logging**:  
   Baseline default: *Enabled*  
