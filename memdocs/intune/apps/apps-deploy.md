@@ -135,6 +135,8 @@ The information in the following table can help you understand the resulting int
 |User Uninstall|Device Required|Both exist, Intune resolves Required|
 |User Uninstall|Device Uninstall|Both exist, Intune resolves Uninstall|
 |Device Required|Device Uninstall|Required|
+|Device Required|Device Available|Required and Available|
+|Device Available|Device Uninstall|Uninstall|
 |User Required and Available|User Available|Required and Available|
 |User Required and Available|User Uninstall|Required and Available|
 |User Required and Available|Device Required|Both exist, Required and Available
