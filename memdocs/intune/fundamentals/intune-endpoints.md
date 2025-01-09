@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/20/2024
+ms.date: 01/09/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -293,7 +293,7 @@ The following tables list the ports and services that the Intune client accesses
 
 ## Network requirements for PowerShell scripts and Win32 apps  
 
-If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need to grant access to endpoints in which your tenant currently resides.
+If you are using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [Powershell scripts](../apps/intune-management-extension.md), [Remediations](../fundamentals/remediations.md), [Endpoint analytics](../../analytics/overview.md), [Custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
 
 To find your tenant location or Azure Scale Unit (ASU), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row tells you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
 
@@ -314,9 +314,9 @@ To find your tenant location or Azure Scale Unit (ASU), sign in to the [Microsof
 
 |Azure Scale Unit (ASU) | CDN | Port |
 | --- |------------- | --- |
-|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | macsidecar.manage.microsoft.com | **TCP:** 443 |
-| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | macsidecareu.manage.microsoft.com | **TCP:** 443 |
-| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| macsidecarap.manage.microsoft.com |**TCP:** 443 |
+|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | macsidecar.manage.microsoft.com<br>macsidecarprod.azureedge.net (azureedge.net domains will be disabled after 3/31/2025) | **TCP:** 443 |
+| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | macsidecareu.manage.microsoft.com<br>macsidecarprodeu.azureedge.net (azureedge.net domains will be disabled after 3/31/2025) | **TCP:** 443 |
+| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| macsidecarap.manage.microsoft.com<br>macsidecarprodap.azureedge.net (azureedge.net domains will be disabled after 3/31/2025) |**TCP:** 443 |
 
 ## Microsoft Store
 
