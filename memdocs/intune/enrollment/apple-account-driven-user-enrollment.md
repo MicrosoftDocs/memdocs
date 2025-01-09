@@ -74,6 +74,24 @@ The rest of the JSON sample is populated with all of the information you need, i
 * Version: The server version is `mdm-byod`.     
 * BaseURL: This URL is the location where the Intune service resides.  
 
+If the service discovery isn't configured correctly, users receive the following error message:
+
+* Title: Sign-in Failed  
+* Description: Your Apple ID does not support the expected services on this device. Contact your administrator to sign in.  
+
+In order to solve this issue, make sure that your webserver is hosting the service discovery file with the content type set to `application/json`.
+You can validate that by running the following commands:  
+
+```cmd
+   curl -I "https://contoso.com/.well-known/com.apple.remotemanagement"
+   ```
+
+```cmd
+   curl -I "https://contoso.com/.well-known/com.apple.remotemanagement?user-identifier=firstname.surname@contoso.com&model-family=iPhone"
+   ```
+
+Both of these commands should return `Content-Type: application/json`. 
+
 ## Best practices   
 We recommend extra configurations to help improve the enrollment experience for device users. This section provides more information about each recommendation.   
 
@@ -151,24 +169,6 @@ If the Microsoft Authenticator app is on the device before enrollment begins, en
 * Description: The Enrollment SSO application has been installed on the device.  
 
 To get around this issue, the device user must uninstall the Microsoft Authenticator app and restart enrollment.  
-
-### Enrollment fails because of issues with the service discovery
-If the service discovery mentioned in the [Prerequisites](#prerequisites) have not been configured correctly, users will notice the following error message:
-
-* Title: Sign-in Failed
-* Description: Your Apple ID does not support the expected services on this device. Contact your administrator to sign in.
-
-In order to solve this issue, make sure that your webserver is hosting the service discovery file with the content type set to `application/json`.
-You can validate that by running the following commands:
-```cmd
-   curl -I "https://contoso.com/.well-known/com.apple.remotemanagement"
-   ```
-
-```cmd
-   curl -I "https://contoso.com/.well-known/com.apple.remotemanagement?user-identifier=firstname.surname@contoso.com&model-family=iPhone"
-   ```
-
-Both of these commands should return `Content-Type: application/json`
 
 ## Next steps  
 * For an overview of supported Apple User Enrollment features and management actions in Microsoft Intune, see [Overview of Apple User Enrollment in Microsoft Intune](ios-user-enrollment-supported-actions.md).  
