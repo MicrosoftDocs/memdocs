@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 01/09/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,37 +32,46 @@ zone_pivot_groups: edge-baseline-versions
 
 # List of the settings in the Microsoft Edge security baseline in Intune
 
-This article is a reference for the settings that are available in the different versions of the Microsoft Edge security baseline that you can deploy with Microsoft Intune. You can use the tabs below to select and view the settings in the current baseline version and a few older versions that might still be in use.
+This article is a reference for the settings that are available in the Microsoft Edge security baseline for Microsoft Intune.
 
-For each setting you’ll find the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types could also set different defaults.
+In May 2023, the settings for the Microsoft Edge baselines updated to a new format. This article provides a reference for Microsoft Edge baselines version 85 and earlier. To view the settings reference for newer baselines, see [Microsoft Edge security baseline settings reference for Microsoft Intune](../protect/security-baseline-v2-edge-settings.md).
 
-<!--When the Intune UI includes a *Learn more* link for a setting, you’ll find that here as well. Use that link to view the settings *policy configuration service provider* (CSP) or relevant content that explains the settings operation. -->
-Although the settings in the Intune UI for this baseline omit *Learn more* links, this article includes links to relevant content.
+## About this reference article
 
-When a new version of a baseline becomes available, it replaces the previous version. Profiles instances that you’ve created prior to the availability of a new version:
+Each security baseline is a group of preconfigured Windows settings that help you apply and enforce granular security settings that the relevant security teams recommend. You can also customize each baseline you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple device configuration settings.
+
+The details that display in this article are based on baseline version you select at the top of the article. For each version, this article displays:
+
+- A list of each and its configuration as found in the default instance of that baseline version.
+- When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
+
+When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
-- Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
+- Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
-To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
+To learn more about using security baselines, see:
+- [Use security baselines](../protect/security-baselines.md)
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
+- [Manage security baselines](../protect/security-baselines-configure.md)
 
-<!-- - [Compare baselines](../protect/security-baselines.md) to discover what's changed from version to version.  -->
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
+
 
 ::: zone pivot="edge-sept-2020"
-**Microsoft Edge baseline for September 2020 (Edge version 85)**  
+## Microsoft Edge baseline for September 2020 (Edge version 85)
+
 ::: zone-end
 ::: zone pivot="edge-april-2020"
-**Microsoft Edge baseline for April 2020 (Edge version 80)**  
+## Microsoft Edge baseline for April 2020 (Edge version 80)
 ::: zone-end
 ::: zone pivot="edge-october-2019"
-**Microsoft Edge baseline for October 2019**
+## Microsoft Edge baseline for October 2019
 
 > [!NOTE]
-> The Microsoft Edge baseline for October 2019 is in Public Preview.
+> The Microsoft Edge baseline for October 2019 is a Public Preview.
 ::: zone-end
 
-## Microsoft Edge
+### Microsoft Edge
 
 ::: zone pivot="edge-sept-2020,edge-april-2020"
 
