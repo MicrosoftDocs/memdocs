@@ -57,13 +57,12 @@ If you use a security baseline for Microsoft Edge version 85 or earlier, see [Li
 
 ## About this reference article
 
-Each security baseline is a group of preconfigured Windows settings that help you apply and enforce granular security settings that the relevant security teams recommend. You can also customize each baseline you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple device configuration profiles.
+Each security baseline is a group of preconfigured Windows settings that help you apply and enforce granular security settings that the relevant security teams recommend. You can also customize each baseline you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple device configuration settings.
 
-The details that are displayed in this article are based on baseline version that is selected at the top of the article. For each selection, this article displays:
+The details that display in this article are based on baseline version you select at the top of the article. For each version, this article displays:
 
-- A list of each setting in that baseline version.
-- The default configuration of each setting in that baseline version.
-- When available, a link to the underlying configuration service provider (CSP) documentation, or other related content from the relevant product group that provides context and possibly additional details for the settings use.
+- A list of each and its configuration as found in the default instance of that baseline version.
+- When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
 
 When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
 
@@ -71,18 +70,19 @@ When a new version of a baseline becomes available, it replaces the previous ver
 
   > [!TIP]  
   > Because the new baselines versions introduced in May 2023 or later exist side-by-side with the last baseline version from the older format, baselines for the last available version of that older format remain accessible to use and to edit.
-- Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
+
+- Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see:
-
 - [Use security baselines](../protect/security-baselines.md)
-- [Manage security baselines](../protect/security-baselines-configure.md).
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
+- [Manage security baselines](../protect/security-baselines-configure.md)
+
 
 ::: zone pivot="edge-v128"
 ## Microsoft Edge baseline for version 128 (January 2025) 
 
 For information about the most recent baseline versions and settings from Microsoft, including versions of this baseline that might not be available through Intune, download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center.
-
 
 - **Allow unconfigured sites to be reloaded in Internet Explorer mode**  
   Baseline default: *Disabled*
