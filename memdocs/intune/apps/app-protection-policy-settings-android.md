@@ -114,6 +114,9 @@ There are some exempt apps and platform services that Intune app protection poli
   |com.google.android.apps.maps |Google Maps |Addresses are allowed for navigation. |
   |com.android.documentsui|Android Document Picker|Allowed when opening or creating a file.|
   |com.google.android.documentsui |Android Document Picker (Android 10+)|Allowed when opening or creating a file.|
+  |com.samsung.android.providers.contacts | Samsung contacts provider | Allowed for Samsung devices. |
+  |com.android.providers.blockednumber | Android Block number provider | Allowed for Android devices. |
+  
 
 For more information, see [Data transfer policy exceptions for apps](app-protection-policies-exception.md).
 
