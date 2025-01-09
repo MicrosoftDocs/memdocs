@@ -314,9 +314,9 @@ To find your tenant location or Azure Scale Unit (ASU), sign in to the [Microsof
 
 |Azure Scale Unit (ASU) | CDN | Port |
 | --- |------------- | --- |
-|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | macsidecar.manage.microsoft.com | **TCP:** 443 |
-| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | macsidecareu.manage.microsoft.com | **TCP:** 443 |
-| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| macsidecarap.manage.microsoft.com |**TCP:** 443 |
+|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | macsidecar.manage.microsoft.com<br>macsidecarprod.azureedge.net (azureedge.net domains will be disabled after 3/31/2025) | **TCP:** 443 |
+| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | macsidecareu.manage.microsoft.com<br>macsidecarprodeu.azureedge.net (azureedge.net domains will be disabled after 3/31/2025) | **TCP:** 443 |
+| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| macsidecarap.manage.microsoft.com<br>macsidecarprodap.azureedge.net (azureedge.net domains will be disabled after 3/31/2025) |**TCP:** 443 |
 
 ## Microsoft Store
 
