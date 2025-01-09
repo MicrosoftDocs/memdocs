@@ -49,22 +49,28 @@ This article is a reference for the default configuration of settings that are a
 
 ## About this reference article
 
-The details in this article reflect the baseline version that is selected at the top of the article. For each selection, this article displays:
+# Windows MDM security baseline settings reference for Microsoft Intunein Intune
 
-- A list of each setting found in the selected baseline version.
-- The default configuration of each setting in that baseline version, which is the recommended configuration as provided by the the relevant security team.
-- When the Intune UI includes a *Learn more* link for a setting, you’ll find that same link here as well. Linked information is usually the source configuration service provider (CSP) documentation, or other related content from the settings product group, which can provide context and additional details for that setting.
+This article is a reference for the settings that are available in the Windows Mobile Device Management (MDM) security baseline for Microsoft Intune.
 
-> [!TIP]
-> Because products and the security landscape evolve, the recommended defaults from one baseline version might not match the defaults you find in other versions of the same baseline. Also, different baseline types that include the same setting, like the *MDM security* and the *Defender for Endpoint* baselines, might set different defaults for that setting.
+## About this reference article
 
-When a new version of a baseline becomes available, it replaces the previous version. Profiles instances that you’ve created before the availability of a new version:
+Each security baseline is a group of preconfigured Windows settings that help you apply and enforce granular security settings that the relevant security teams recommend. You can also customize each baseline you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple device configuration settings.
+
+The details that display in this article are based on baseline version you select at the top of the article. For each version, this article displays:
+
+- A list of each and its configuration as found in the default instance of that baseline version.
+- When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
+
+When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
-- Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
+- Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
-To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
-
+To learn more about using security baselines, see:
+- [Use security baselines](../protect/security-baselines.md)
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
+- [Manage security baselines](../protect/security-baselines-configure.md)
 
 ::: zone pivot="mdm-24h2"
 ## Security Baseline for Windows, version 24h2 
