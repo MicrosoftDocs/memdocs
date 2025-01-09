@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2025
+ms.date: 01/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -252,6 +252,7 @@ The following policy types support the *Linux* platform.
 | Antivirus                            | Microsoft Defender Antivirus | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus                            | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Endpoint detection and response | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+| Endpoint detection and response | Microsoft Defender Global Exclusions (AV+EDR) | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 
 ### macOS
 

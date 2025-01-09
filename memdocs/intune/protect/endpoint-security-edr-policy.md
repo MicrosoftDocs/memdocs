@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/19/2024
+ms.date: 01/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -123,7 +123,9 @@ The EDR onboarding status tab includes:
 
 ### Devices managed by Microsoft Intune
 
-**Linux** - To manage EDR for Linux devices, select the **Linux** platform. The following profile is available:
+#### Linux
+
+To manage EDR for Linux devices, select the **Linux** platform. The following profiles are available:
 
 - **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
   - Devices enrolled with Intune.
@@ -136,7 +138,23 @@ The EDR onboarding status tab includes:
 
   To learn more about Defender for Endpoint settings that are available for Linux, see [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences#device-tags) in the Defender documentation.
 
-**macOS** - To manage EDR for macOS devices, select the **macOS** platform. The following profile is available:
+- **Microsoft Defender Global Exclusions (AV+EDR)** - Use this profile to manage both endpoint detection and response exclusion and Antivirus exclusions on Linux devices. Exclusions you can deploy through this profile are added to exclusions that devices might receive from other sources, including EDR and Antivirus exclusions managed by Intune or Microsoft Defender Antivirus policies. Settings from multiple sources are subject to policy merge, and create a super set of exclusions for applicable devices and users.
+
+  This profile supports use with:
+  - Devices enrolled with Intune.
+  - Devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
+
+  The EDR global exclusion template for Linux includes a simple template where you can **Add** and then edit one or more instances of exclusion configurations. This is the same configuration process as when configuring Intune policy for [Microsoft Defender Antivirus Exclusions](../protect/endpoint-security-antivirus-policy.md#linux) for Linux devices. The EDR global exclusion profile for Linux doesn't replace Microsoft Defender Antivirus Exclusions profiles you might already use for Linux.
+
+  To configure exclusions, each entry you add supports the following options: 
+  - **Path** - Define a path to exclude from endpoint detection and response. This can be a file or directory. Wild cards aren't supported. 
+  - **Process name** - Define a process name to exclude from endpoint detection and response. This can be a file name or full path. Wild cards aren't supported. 
+  
+For more information about Linux exclusions, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-exclusions) in the Microsoft Defender documentation.
+
+#### macOS
+
+To manage EDR for macOS devices, select the **macOS** platform. The following profile is available:
 
 - **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
   - Devices enrolled with Intune.
@@ -149,7 +167,9 @@ The EDR onboarding status tab includes:
 
   To learn more about Defender for Endpoint settings that are available for macOS, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences#device-tags) in the Defender documentation.
 
-**Windows** - To manage EDR for Windows devices, select the **Windows** platform. The following profile is available:
+#### Windows
+
+To manage EDR for Windows devices, select the **Windows** platform. The following profile is available:
 
 - **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
 
@@ -160,7 +180,7 @@ The EDR onboarding status tab includes:
   >
   > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform that is now named more simply as *Windows*.
   >
-  > The *Windows* platform supports devices communicating through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+  > The *Windows* platform supports devices communicating through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which isn't supported through Microsoft Intune natively.
   >
   > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
@@ -349,7 +369,7 @@ This update can be necessary due to a change in the onboarding payload for Micro
 Updating the onboarding information directs the device to start utilizing the new onboarding payload at the next *Restart*.
 
 > [!NOTE]
-> This information will not necessarily move a device between tenants without fully offboarding the device from the original tenant. For options migrating devices between Microsoft Defender for Endpoint organizations, engage Microsoft Support.
+> This information won't necessarily move a device between tenants without fully offboarding the device from the original tenant. For options migrating devices between Microsoft Defender for Endpoint organizations, engage Microsoft Support.
 
 ### Process to update the payload
 
@@ -372,7 +392,7 @@ Updating the onboarding information directs the device to start utilizing the ne
 > [!NOTE]
 > If previously using the *Auto from connector* option to retrieve the onboarding information, engage Microsoft support to confirm the use of the new onboarding information.
 >
-> For organizations updating onboarding information at the direction of Microsoft support, Microsoft will direct you when the connector has been updated to leverage the new onboarding payload.
+> For organizations updating onboarding information at the direction of Microsoft support, Microsoft will direct you when the connector has been updated to use the new onboarding payload.
 
 ## EDR policy reports and monitoring
 
