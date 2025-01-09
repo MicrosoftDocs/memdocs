@@ -1767,7 +1767,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 ::: zone pivot="win365-nov21"
 
-**Windows 365 Cloud PC security baseline November 2021**:
+## Windows 365 Cloud PC security baseline November 2021
 
 ### Above Lock
 
