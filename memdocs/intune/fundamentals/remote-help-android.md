@@ -233,13 +233,7 @@ In this section:
 > [!IMPORTANT]
 > If the device is running in kiosk mode, the Settings app (which is where the permission is granted) needs to be designated as a system app so that it can launch. See [Granting overlay permissions to Managed Home Screen for Android Enterprise dedicated devices](https://techcommunity.microsoft.com/t5/intune-customer-success/granting-overlay-permissions-to-managed-home-screen-for-android/ba-p/3247041) for detailed instructions.
 
-The Remote Help app needs the **Display over other apps** or **Appear on top** permission to display the Remote Help session UI. To grant this permission, complete the following steps:
-
-1. After installing the Remote Help app, launch it.  
-
-2. If the permission isn't already granted, the app displays a prompt that launches **Settings** to grant the permission.  
-
-3. Tap **Grant** on the prompt, scroll down to **Appear on top** and turn the setting **On**. (The specific UI may differ depending on your device.)
+The Remote Help app needs the **Display over other apps** or **Appear on top** permission to display the Remote Help session UI. To grant this permission, create an OEMConfig profile that configures the permissions in the OEMConfig app. 
 
 ##### Knox KLMS Agent consent
 

@@ -44,7 +44,7 @@ Microsoft Intune is a **cloud-based endpoint management solution**. It manages u
 
 You can protect access and data on organization-owned and users personal devices. And, Intune has compliance and reporting features that support the [Zero Trust security model](zero-trust-with-microsoft-intune.md).
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWAoF9]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=dbd45acc-fa88-41aa-a9ac-7a751378d603]
 
 This article lists some features and benefits of Microsoft Intune.
 
