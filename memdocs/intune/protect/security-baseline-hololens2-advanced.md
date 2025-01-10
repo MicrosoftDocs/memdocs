@@ -62,7 +62,7 @@ Each security baseline is a group of preconfigured Windows settings that help yo
 
 The details that display in this article are based on baseline version you select at the top of the article. For each version, this article displays:
 
-- A list of each and its configuration as found in the default instance of that baseline version.
+- A list of each setting with its configuration as found in the default instance of that baseline version.
 - When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
 
 When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
