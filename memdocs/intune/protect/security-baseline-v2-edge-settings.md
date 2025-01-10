@@ -74,7 +74,8 @@ When a new version of a baseline becomes available, it replaces the previous ver
 To learn more about using security baselines, see:
 
 - [Use security baselines](../protect/security-baselines.md)
-- [Manage security baselines](../protect/security-baselines-configure.md).
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
+- [Manage security baselines](../protect/security-baselines-configure.md)
 
 ## Microsoft Edge
 
