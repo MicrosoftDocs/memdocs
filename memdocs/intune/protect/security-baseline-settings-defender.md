@@ -49,15 +49,13 @@ Each security baseline is a group of preconfigured Windows settings that help yo
 
 The details that display in this article are based on baseline version you select at the top of the article. For each version, this article displays:
 
-- A list of each setting and its configuration as found in the default instance of that baseline version.
+- A list of each setting with its configuration as found in the default instance of that baseline version.
 - When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
 
 When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
-
-This article is a reference for the settings that are available in the different versions of the Microsoft Defender for Endpoint security baseline that you can deploy with Microsoft Intune. Use the tabs to select and view the settings in the most recent baseline version and a few older versions that might still be in use.
 
 To learn more about using security baselines, see:
 - [Use security baselines](../protect/security-baselines.md)

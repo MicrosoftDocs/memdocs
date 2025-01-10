@@ -29,7 +29,7 @@ ms.collection:
 zone_pivot_groups: windows-mdm-versions
 ---
 
-# Windows MDM security baseline settings reference for Microsoft Intunein Intune
+# Windows MDM security baseline settings reference for Microsoft Intune
 
 This article is a reference for the settings that are available in the Windows Mobile Device Management (MDM) security baseline for Microsoft Intune.
 
@@ -39,7 +39,7 @@ Each security baseline is a group of preconfigured Windows settings that help yo
 
 The details that display in this article are based on baseline version you select at the top of the article. For each version, this article displays:
 
-- A list of each and its configuration as found in the default instance of that baseline version.
+- A list of each setting with its configuration as found in the default instance of that baseline version.
 - When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
 
 When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
@@ -48,6 +48,7 @@ When a new version of a baseline becomes available, it replaces the previous ver
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see:
+
 - [Use security baselines](../protect/security-baselines.md)
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
 - [Manage security baselines](../protect/security-baselines-configure.md)
