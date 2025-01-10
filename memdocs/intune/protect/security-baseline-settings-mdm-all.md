@@ -48,6 +48,7 @@ When a new version of a baseline becomes available, it replaces the previous ver
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see:
+
 - [Use security baselines](../protect/security-baselines.md)
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
 - [Manage security baselines](../protect/security-baselines-configure.md)
