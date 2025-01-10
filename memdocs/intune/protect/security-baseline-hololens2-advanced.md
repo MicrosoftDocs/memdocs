@@ -75,7 +75,7 @@ To learn more about using security baselines, see:
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
 - [Manage security baselines](../protect/security-baselines-configure.md)
 
-## HoloLens 2 Advanced security baseline for (version 1)** - *January 2025*
+## HoloLens 2 Advanced security baseline for (version 1) - *January 2025*
 
 ### Account Management
 

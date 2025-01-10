@@ -70,7 +70,7 @@ To learn more about using security baselines, see:
 
 ## HoloLens 2 Standard security baseline (version 1) - *January 2025*
 
-### #Accounts
+### Accounts
 
 - **Allow Microsoft Account Connection**  
    Baseline default: *Block*  
