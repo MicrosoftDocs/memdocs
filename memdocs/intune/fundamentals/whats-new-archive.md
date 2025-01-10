@@ -1626,7 +1626,7 @@ Applies to:
 
 For more information on these settings, see [Apple's developer website](https://developer.apple.com/documentation/devicemanagement/settingscommand/command/settings). For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-#### New setting available in the macOS settings catalog<!-- 24809885  -->
+#### New settings available in the macOS settings catalog<!-- 24809885  -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
@@ -2090,8 +2090,7 @@ In Intune, you can use the new **Store app** type to deploy Store apps to your d
 
 Now, you can use the **Turn off the Store application** policy to disable end users' direct access to Store apps. When it's disabled, end users can still access and install Store apps from the Windows Company Portal app and through Intune app management. If you want to allow random store app installs outside of Intune, then don't configure this policy.
 
-The previous **Only display the private store within the Microsoft Store app** policy doesn't prevent end users from directly accessing the store using the Windows Package Manager `winget` APIs. So, if your goal is to block random unmanaged Store application installs on client devices, then it's recommended to use the **Turn off the Store application** policy. Don't use the **Only display the private store within the Microsoft Store app** policy
-.
+The previous **Only display the private store within the Microsoft Store app** policy doesn't prevent end users from directly accessing the store using the Windows Package Manager `winget` APIs. So, if your goal is to block random unmanaged Store application installs on client devices, then it's recommended to use the **Turn off the Store application** policy. Don't use the **Only display the private store within the Microsoft Store app** policy.
 Applies to:
 
 - Windows 10 and later
@@ -2578,7 +2577,7 @@ Applies to:
 ### App management
 
 #### Microsoft Store for Business or Microsoft Store for Education<!-- 24250535 -->  
-Apps added from the Microsoft Store for Business or Microsoft Store for Education won't deploy to devices and users. Apps show as "not applicable" in reporting. Apps already deployed are unaffected. Use the [new Microsoft Store app](../apps/store-apps-microsoft.md) to deploy Microsoft Store apps to devices or users. For related information, see [Plan for Change: Ending support for Microsoft Store for Business and Education apps](whats-new.md#plan-for-change-ending-support-for-microsoft-store-for-business-and-education-apps) for upcoming dates when Microsoft Store for Business apps will no longer deploy and Microsoft Store for Business apps will be removed.
+Apps added from the Microsoft Store for Business or Microsoft Store for Education won't deploy to devices and users. Apps show as "not applicable" in reporting. Apps already deployed are unaffected. Use the [new Microsoft Store app](../apps/store-apps-microsoft.md) to deploy Microsoft Store apps to devices or users. For related information, see [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://aka.ms/Intune/MSfB-support) for upcoming dates when Microsoft Store for Business apps will no longer deploy and Microsoft Store for Business apps will be removed.
 
 For more information, see the following resources:
 
@@ -2903,7 +2902,7 @@ The Microsoft Store for Business connector is no longer available in the [Micros
 
 It's now also possible to delete Microsoft Store for Business apps from the **Apps** pane in the Microsoft Intune admin center so that you can clean up your environment as you move to the new Microsoft Store app type.
 
-For related information, see [Plan for Change: Ending support for Microsoft Store for Business and Education apps](whats-new.md#plan-for-change-ending-support-for-microsoft-store-for-business-and-education-apps) for upcoming dates when Microsoft Store for Business apps won't deploy and Microsoft Store for Business apps are removed.
+For related information, see [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://aka.ms/Intune/MSfB-support) for upcoming dates when Microsoft Store for Business apps won't deploy and Microsoft Store for Business apps are removed.
 
 ### Device configuration
 
@@ -4262,7 +4261,7 @@ All configurations need to be done in the Microsoft Intune admin center. The Mic
 ### App management
 
 #### Ending support for Windows Information Protection<!-- 15991481 -->
-Windows Information Protection (WIP) policies without enrollment are being deprecated. You can no longer create new WIP policies without enrollment. Until December of 2022, you can modify existing policies until the deprecation of the *without enrollment* scenario is complete. For more information, go to [Plan for Change: Ending support for Windows Information Protection](whats-new.md#plan-for-change-ending-support-for-windows-information-protection).
+Windows Information Protection (WIP) policies without enrollment are being deprecated. You can no longer create new WIP policies without enrollment. Until December of 2022, you can modify existing policies until the deprecation of the *without enrollment* scenario is complete. For more information, go to [Support tip: End of support guidance for Windows Information Protection](https://aka.ms/Intune-WIP-support).
 
 ### Device Configuration
 
