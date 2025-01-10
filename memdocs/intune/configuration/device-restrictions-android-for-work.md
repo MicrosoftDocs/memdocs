@@ -165,7 +165,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 - **System notifications and information**: Allow users to access the device status bar, and receive notifications from the status bar when in kiosk mode. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the status bar, and disable notifications on the status bar.
   - **Show system information in device's status bar**: Users can see system information on the status bar. Users can't see or receive notifications from the status bar.
-  - **Show system notifications and information in device's status bar**: Users can see the system information, and receive notifications from the status bar. To see notifications, enable the device home button using the **Enabled system navigation features** setting.
+  - **Show system notifications and information in device's status bar**: Users can see the system information, and receive notifications from the status bar. To see notifications, enable the device home button using the **Enabled system navigation features** setting. If this setting isn't enabled, no notification sound or vibration is expected on Kiosk devices.
 
   This setting applies to:
 
