@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2024
+ms.date: 12/18/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -54,6 +54,16 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app 
 -->
+
+<!-- ########################## -->
+## Week of December 17, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Restore, restart, and troubleshoot actions in the Cloud PCs that aren't available report<!--46873590-->
+
+You can now use the **Bulk device actions** command on the **Cloud PCs that aren't available** report to restore, restart, and troubleshoot actions directly from the report. For more information, see [Cloud PCs that aren't available report](report-cloud-pcs-not-available.md).
 
 <!-- ########################## -->
 ## Week of December 9, 2024
