@@ -29,7 +29,7 @@ ms.collection:
 zone_pivot_groups: windows-mdm-versions
 ---
 
-# Windows MDM security baseline settings reference for Microsoft Intunein Intune
+# Windows MDM security baseline settings reference for Microsoft Intune
 
 This article is a reference for the settings that are available in the Windows Mobile Device Management (MDM) security baseline for Microsoft Intune.
 
