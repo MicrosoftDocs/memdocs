@@ -75,7 +75,9 @@ You can also let unlicensed admins sign in to the Intune admin center to help wi
 
 * Device users must access the Company Portal website through Microsoft Edge to view apps assigned for specific versions of Windows. Other browsers such as Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.  
 
-* After enrollment, you'll see two records in the Microsoft Intune admin center if automatic MDM enrollment is disabled and devices are joined to Microsoft Entra ID. To stop the duplicate records, instruct users on joined devices to **Settings** > **Accounts** > **Access work or school**. Then they can **Connect** using the same account.  
+* After enrollment, you'll see two records in the Microsoft Intune admin center if automatic MDM enrollment is disabled and devices are joined to Microsoft Entra ID. To stop the duplicate records, instruct users on joined devices to **Settings** > **Accounts** > **Access work or school**. Then they can **Connect** using the same account.
+
+* Devices that were already Entra ID-joined before Automatic Enrollment was enabled won't automatically enroll. To trigger enrollment on these devices, run **"deviceenroller.exe /c /AutoEnrollMDM"** from an administrative command prompt.
 
 ## Next steps  
 
