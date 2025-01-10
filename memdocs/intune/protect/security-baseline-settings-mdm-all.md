@@ -43,13 +43,7 @@ zone_pivot_groups: windows-mdm-versions
       title: August 2020
 -->
 
-# List of the settings in the Windows MDM security baseline in Intune
-
-This article is a reference for the default configuration of settings that are available in the different versions of the Windows Mobile Device Management (MDM) security baseline for Windows 10 and Windows 11 devices that you manage with Microsoft Intune. You can use the provided Tabs to select and view the settings in the current baseline version and a few older versions that might still be in use.
-
-## About this reference article
-
-# Windows MDM security baseline settings reference for Microsoft Intunein Intune
+# Windows MDM security baseline settings reference for Microsoft Intune
 
 This article is a reference for the settings that are available in the Windows Mobile Device Management (MDM) security baseline for Microsoft Intune.
 
@@ -85,7 +79,6 @@ The settings in this baseline are taken from the Windows 11 **version 24h2** sec
 The settings in this baseline are taken from the **version 23H2** of the Group Policy security baseline as found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and include only the settings that apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
 
 ::: zone-end
-
 
 ::: zone pivot="mdm-23h2"
 
