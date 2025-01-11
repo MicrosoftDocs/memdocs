@@ -35,7 +35,7 @@ As the second step to [set up your organization's environment to support Windows
 
 After a Windows 365 Link device is [joined to Entra ID](join-microsoft-entra.md), it can be managed with Intune if automatic enrollment is enabled by setting **MDM user scope**. The user must also have the appropriate Microsoft Entra Premium license. Without setting **MDM user scope**, automatic enrollment doesn't occur and Windows 365 Link devices can't be managed by, and don't appear in, Intune.
 
-To set up automatically enrollment in Intune for Windows 365 Link devices:
+To set up automatic enrollment in Intune for Windows 365 Link devices:
 
 1. Sign in to the [Microsoft Entra admin center](https://aad.portal.azure.com/) > **Show more** > **Settings** > **Mobility**.
 2. On the **Mobility (MDM and WIP)** page, select **Microsoft Intune**.

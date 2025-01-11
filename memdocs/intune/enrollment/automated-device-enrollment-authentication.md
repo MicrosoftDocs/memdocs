@@ -50,7 +50,7 @@ Use the Intune Company Portal app as the authentication method if you want to:
  - Use multifactor authentication (MFA).
  - Prompt users to change their passwords when they first sign in.
  - Prompt users to reset their expired passwords during enrollment.  
- - Register devices in Microsoft Entra ID and use features available with Microsoft Entra ID, such as conditional access.
+ - Register devices in Microsoft Entra ID and use features available with Microsoft Entra ID, such as Conditional Access.
  - Automatically install the Company Portal app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install Company Portal app during enrollment without user Apple IDs. 
  - You want to lock the device until the Company Portal app installs.
 
@@ -65,7 +65,7 @@ This option provides the same security as Intune Company Portal authentication b
 * Use multifactor authentication (MFA).  
 * Prompt users to change their passwords when they first sign in.
 * Prompt users to reset their expired passwords during enrollment.  
-* Register devices in Microsoft Entra ID and use features available with Microsoft Entra ID, such as conditional access. 
+* Register devices in Microsoft Entra ID and use features available with Microsoft Entra ID, such as Conditional Access. 
 * Automatically install the Company Portal app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install Company Portal app during enrollment without user Apple IDs. 
 * Allow users to use the device even when the Company Portal app isn't installed.  
 
@@ -86,7 +86,7 @@ In both scenarios, the Company Portal installation option is hidden from the dev
 
 ### Multifactor authentication  
 
-Multifactor authentication (MFA) will be required if a [conditional access policy that requires it](multi-factor-authentication.md) is applied at enrollment or during Company Portal sign-in. However, MFA is optional, based on the Microsoft Entra settings in the targeted conditional access policy.  
+Multifactor authentication (MFA) will be required if a [Conditional Access policy that requires it](multi-factor-authentication.md) is applied at enrollment or during Company Portal sign-in. However, MFA is optional, based on the Microsoft Entra settings in the targeted Conditional Access policy.  
 
 External authentication methods are supported in Microsoft Entra ID, which means you can use your preferred MFA solution to facilitate MFA during device enrollment. If you choose to use a third-party MFA provider, before you deploy enrollment profiles to all devices, do a test run to ensure that both the Microsoft Entra MFA screen and MFA work during enrollment. For more information and support details about external authentication methods, see [Public preview: External authentication methods in Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/public-preview-external-authentication-methods-in-microsoft/ba-p/4078808).  
 
@@ -96,9 +96,9 @@ After they go through the Setup Assistant screens, the device user lands on the 
 
 - Won’t be fully registered with Microsoft Entra ID.  
 - Won’t show up in the user’s device list in Microsoft Entra ID.   
-- Won’t have access to resources protected by conditional access.  
+- Won’t have access to resources protected by Conditional Access.  
 - Won’t be evaluated for device compliance.  
-- Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by conditional access.  
+- Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by Conditional Access.  
 
 ## Option 3: Just in Time Registration for Setup Assistant with modern authentication
 

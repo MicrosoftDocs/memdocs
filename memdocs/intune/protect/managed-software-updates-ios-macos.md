@@ -171,7 +171,26 @@ Managed software updates use the same reporting as device configuration policies
 > [!IMPORTANT]
 > A policy that reports Success only means that the configuration successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy will report error as the device sees this as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
 
-## Delay visibility of updates
+## Using the Software Update Settings declarative configuration
+
+When you configure managed software updates, you might want to manage aspects of the software update process leading up to the enforcement of an update. Using this configuration, you can:
+
+- Require that an admin or standard user can perform updates on the device
+
+- Control how users can manually interact with software update settings like automatic download and install or the behavior of Rapid Security Responses 
+
+- Hide updates from users for a specified time period
+
+- Suppress update notifications up to one hour before the enforcement deadline
+
+- Control whether users are allowed to update to the latest major update, latest minor update, or are offered both.
+
+Previously in MDM, these settings were spread across multiple payloads such as Restrictions, Managed Settings, and Software Update. As of August 2024, it's recommended to use the DDM-based Software Update Settings configuration to manage updates. To create a Software Update Settings policy, go to the Settings catalog > Declarative Device Management (DDM) > Software Update Settings. More information on these settings is available in the documentation section for the [Software Update Settings declarative configuration](/mem/intune/configuration/apple-settings-catalog-configurations).
+
+## Delay visibility of updates using MDM
+
+> [!NOTE]
+> As of August 2024, it's recommended to use the DDM-based Software Update Settings configuration to manage update settings such as deferrals. 
 
 When you configure managed software updates, you might want to hide updates from users for a specified time period. To hide the updates, use a settings catalog policy that configures an update restriction.
 
@@ -192,3 +211,4 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - [macOS software update policies in Intune](software-updates-macos.md)
 - [Software updates planning guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
 - [Software updates planning guide for managed macOS devices in Intune](software-updates-guide-macos.md)
+

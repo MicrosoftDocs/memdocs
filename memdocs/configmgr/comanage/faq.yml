@@ -104,7 +104,7 @@ sections:
       - question: |
           I've enabled co-management, which workload should I switch first?
         answer: |
-          **Compliance** is the workload that most customers switch first. If you switch this workload to Intune, you can still require devices to evaluate settings from Configuration Manager. When you configure a compliance policy in Intune, enable it to require device [compliance from Configuration Manager](../../intune/protect/compliance-policy-create-windows.md#configuration-manager-compliance). Then you can use device compliance state to control [conditional access](../../intune/protect/conditional-access.md) to cloud-based resources. This configuration lets you start using the cloud services without changing the compliance checks you already have in Configuration Manager.
+          **Compliance** is the workload that most customers switch first. If you switch this workload to Intune, you can still require devices to evaluate settings from Configuration Manager. When you configure a compliance policy in Intune, enable it to require device [compliance from Configuration Manager](../../intune/protect/compliance-policy-create-windows.md#configuration-manager-compliance). Then you can use device compliance state to control [Conditional Access](../../intune/protect/conditional-access.md) to cloud-based resources. This configuration lets you start using the cloud services without changing the compliance checks you already have in Configuration Manager.
 
           After compliance, the most common workloads are **Office Click-to-Run apps**, **Client apps**, and **Windows Update policies**.
 
@@ -140,7 +140,7 @@ sections:
       - question: |
           With co-management, can I use compliance policies in Intune and compliance settings in Configuration Manager to assess overall device compliance?
         answer: |
-          Yes. Once you have your environment co-managed, and switch the compliance workload to Intune, you can use your existing Configuration Manager compliance settings and integrate them with [conditional access](../../intune/protect/conditional-access.md). For more information, see the following articles:
+          Yes. Once you have your environment co-managed, and switch the compliance workload to Intune, you can use your existing Configuration Manager compliance settings and integrate them with [Conditional Access](../../intune/protect/conditional-access.md). For more information, see the following articles:
 
           - [Include custom configuration baselines as part of compliance policy assessment](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines)
 

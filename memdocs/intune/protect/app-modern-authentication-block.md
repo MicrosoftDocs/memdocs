@@ -37,7 +37,7 @@ App-based Conditional Access with app protection policies rely on applications u
 
 ## Block access to apps
 
-To block access to apps that don't use modern authentication, use Intune app protection policies to implement conditional access. For more information, see [App-based Conditional Access with Intune](app-based-conditional-access-intune.md).
+To block access to apps that don't use modern authentication, use Intune app protection policies to implement Conditional Access. For more information, see [App-based Conditional Access with Intune](app-based-conditional-access-intune.md).
 
 ## Additional information
 

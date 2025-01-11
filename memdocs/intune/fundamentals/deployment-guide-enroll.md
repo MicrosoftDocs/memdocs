@@ -105,7 +105,7 @@ If you're looking for more control, including where the terms appear, consider c
 For more information, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).  
 
 ### Require multifactor authentication  
-Require users to authenticate via multi-factor authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a conditional access policy with an MFA policy. Microsoft Entra ID P1 or P2 is required.  
+Require users to authenticate via multi-factor authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a Conditional Access policy with an MFA policy. Microsoft Entra ID P1 or P2 is required.  
 
 For more information, see [Require multifactor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md).   
 

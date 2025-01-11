@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/02/2024
+ms.date: 12/12/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -78,7 +78,15 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 The remoting connection report will be retired on December 31st, 2024. After this date, refer to the [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
 
 <!-- ***********************************************-->
-<!--## Provisioning-->
+## Provisioning
+
+### Windows 365 support for Spain Central region<!--54919607-->
+
+Windows 365 Enterprise will support the Spain Central region. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
+
+### Windows 365 support for Mexico Central region<!--54919656-->
+
+Windows 365 Enterprise will support the Mexico Central region. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
 
 <!-- ***********************************************-->
 <!--## Security-->
@@ -87,7 +95,15 @@ The remoting connection report will be retired on December 31st, 2024. After thi
 ## Windows 365 app-->
 
 <!-- ***********************************************-->
-<!--## Windows 365 Frontline-->
+## Windows 365 Frontline
+
+### Concurrency buffer usage alert<!--54902162-->
+
+You’ll be able to set up a new alert to monitor concurrency buffer usage for Windows 365 Frontline in dedicated mode.
+
+### More precise Windows 365 Frontline concurrency control<!--49324723-->
+
+In a future update, you'll be able to allocate concurrent sessions for Windows 365 Frontline Cloud PCs in dedicated mode for each Microsoft Entra group assigned in the provisioning policy. This lets you reserve sessions to specific groups so sessions won't be consumed by other groups, and help you control your maximum concurrency limits.
 
 ## Next steps
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/23/2024
+ms.date: 01/09/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -101,6 +101,8 @@ There are some exempt apps and platform services that Intune app protection poli
   |com.azure.authenticator |Azure Authenticator app, which is required for successful authentication in many scenarios. |
   |com.microsoft.windowsintune.companyportal |Intune Company Portal|
   |com.android.providers.contacts |Native contacts app |  
+  |com.samsung.android.providers.contacts | Samsung contacts provider. Allowed for Samsung devices. |
+  |com.android.providers.blockednumber | Android Block number provider. Allowed for Android devices. |
 
 ### Conditional exemptions
   These apps and services are only allowed for data transfer to and from Intune-managed apps under certain conditions.
@@ -114,6 +116,8 @@ There are some exempt apps and platform services that Intune app protection poli
   |com.google.android.apps.maps |Google Maps |Addresses are allowed for navigation. |
   |com.android.documentsui|Android Document Picker|Allowed when opening or creating a file.|
   |com.google.android.documentsui |Android Document Picker (Android 10+)|Allowed when opening or creating a file.|
+
+  
 
 For more information, see [Data transfer policy exceptions for apps](app-protection-policies-exception.md).
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2024
+ms.date: 12/18/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -54,6 +54,26 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app 
 -->
+
+<!-- ########################## -->
+## Week of December 17, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Restore, restart, and troubleshoot actions in the Cloud PCs that aren't available report<!--46873590-->
+
+You can now use the **Bulk device actions** command on the **Cloud PCs that aren't available** report to restore, restart, and troubleshoot actions directly from the report. For more information, see [Cloud PCs that aren't available report](report-cloud-pcs-not-available.md).
+
+<!-- ########################## -->
+## Week of December 9, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Move selected Cloud PCs to a new region<!--50290712-->
+
+You can now move selected Cloud PCs to a new region. This is instead of moving all Cloud PCs in a provisioning policy.
 
 <!-- ########################## -->
 ## Week of December 2, 2024 (Service release 2411)
@@ -406,7 +426,7 @@ Customers that have Modern Microsoft Cloud Agreements can upgrade their existing
 
 #### Single sign-on Windows 365 clients authentication change<!--49918010-->
 
-Single sign-on for Windows 365 is transitioning to use the Windows Cloud Login Entra ID cloud app for Windows authentication starting with the Windows and Web clients. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+Single sign-on for Windows 365 is transitioning to use the Windows Cloud Login Entra ID cloud app for Windows authentication starting with the Windows and Web clients. For more information, see [Set Conditional Access policies](set-conditional-access-policies.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -662,7 +682,7 @@ For more information, see [Microsoft Purview Customer Lockbox](/purview/customer
 
 #### New faster sign-in frequency option (preview)<!--48439987-->
 
-When single sign-on is enabled, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option provides a faster reauthentication period of 5-10 minutes depending on the client used. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+When single sign-on is enabled, selecting the **Conditional Access** > **Session** > **Sign-in frequency** > **Every time** option provides a faster reauthentication period of 5-10 minutes depending on the client used. For more information, see [Set Conditional Access policies](set-conditional-access-policies.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Boot

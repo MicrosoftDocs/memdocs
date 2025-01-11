@@ -54,7 +54,7 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 
 If you'll use Conditional Access policy to limit user access, we recommend configuring this policy after you provision your tenant to support the Microsoft Tunnel Gateway cloud app, but before you install the Tunnel Gateway.
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint Security** > **Conditional access** > **Create new policy**. The admin center presents the Microsoft Entra interface for creating conditional access policies.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint Security** > **Conditional Access** > **Create new policy**. The admin center presents the Microsoft Entra interface for creating Conditional Access policies.
 
 2. Specify a name for this policy.
 
