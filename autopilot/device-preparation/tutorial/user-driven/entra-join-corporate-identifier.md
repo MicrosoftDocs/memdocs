@@ -36,11 +36,11 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 ## Add Windows corporate identifier for devices
 
-Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted Windows devices can be enrolled in Intune. If Intune enrollment restrictions are being used to block personal device enrollments, corporate identifiers need to be uploaded for all devices that are enrolled through Windows Autopilot device preparation before deployment. To add a corporate identifier to the device in Intune, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
+Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted Windows devices can be enrolled in Intune. If Intune enrollment restrictions are being used to block personal device enrollments, corporate identifiers need to be uploaded for all devices that are enrolled through Windows Autopilot device preparation before deployment. To add corporate identifier dor devices in Intune, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
     > [!IMPORTANT]
     >
-    > This step of adding a Windows corporate identifier to a device is specific to Intune enrollments and isn't required if personal devices aren't being blocked in the environment. If personal devices aren't being blocked in the environment, corporate identifiers aren't required and the next step would be to deploy the device. 
+    > This step of adding Windows corporate identifiers dor devices is specific to Intune enrollments and isn't required if personal devices aren't being blocked in the environment. If personal devices aren't being blocked in the environment, corporate identifiers aren't required, and the next step would be to deploy the device. 
 
 For more information, see:
 
