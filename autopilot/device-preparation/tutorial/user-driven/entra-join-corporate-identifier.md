@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 01/13/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -36,7 +36,7 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 ## Add Windows corporate identifier for devices
 
-Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted Windows devices can be enrolled in Intune. If your organization is using Intune enrollment restrictions to block personal device enrollments, corporate identifiers need to be uploaded for all devices which will be enrolled through Windows Autopilot device preparation before deployment. This is specific to Intune enrollments and is not required if you're not blocking personal devices in your environment. 
+Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted Windows devices can be enrolled in Intune. If your organization is using Intune enrollment restrictions to block personal device enrollments, corporate identifiers need to be uploaded for all devices that are enrolled through Windows Autopilot device preparation before deployment. This requirement is specific to Intune enrollments and isn't required if you're not blocking personal devices in your environment. 
 
 If corporate identifiers aren't being used, then proceed with deploying the device. Otherwise, to add a corporate identifier to the device in Intune, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
