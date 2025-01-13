@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/01/2024
+ms.date: 01/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -200,13 +200,7 @@ This policy provides the necessary data protection and establishes a means of de
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App protection policies** > **+ Create policy** >  and select **iOS/iPadOS**.
 2. On the *Basics* tab, enter a *Name* for the policy, and a *Description* (optional), and then select **Next**.
-3. On the *Apps* tab:  
-   1. Set *Target apps on all device types* to **No**.
-   1. For *Device types*, select **Unmanaged**.
-
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-protection-target-policy.png" alt-text="Configure the app protection policy to target unmanaged devices.":::
-
-4. For LOB apps, select on **+ Select custom apps**  to open the *Select apps to target* pane. Next, on the *Select apps to target* pane:  
+3. On the *Apps* tab, for LOB apps, select **+ Select custom apps**  to open the *Select apps to target* pane. Then, on the *Select apps to target* pane:  
    1. For *Bundle ID*, specify the LOB apps Bundle ID and then select **Add**.
    1. Select the app you just added,  and then **Select**.
 
