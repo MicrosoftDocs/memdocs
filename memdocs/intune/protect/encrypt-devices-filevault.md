@@ -132,6 +132,9 @@ You can add this permission and right to your own [custom RBAC roles](../fundame
 
 9. On the **Review + create** page, when you're done, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
+  > [!IMPORTANT]
+  > The Defer setting must be configured to Enabled to successfully apply FileVault settings.
+
 ### Enable FileVault through the Setup Assistant
 
 For devices that run macOS 14 and later, your settings catalog policy can also enforce FileVault encryption through the macOS Setup Assistant, before a user arrives at the home screen. This goal requires extra configurations:
