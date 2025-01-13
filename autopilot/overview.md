@@ -35,7 +35,7 @@ Windows Autopilot simplifies the Windows device lifecycle, for both IT and end u
 
 See the following video:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4C7G9?autoplay=false]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=af8941a0-1b9c-4bbd-8b75-9754d8badf56]
 
 > [!NOTE]
 >
