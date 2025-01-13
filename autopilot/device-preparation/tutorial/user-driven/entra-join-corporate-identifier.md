@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 7 of 7 - Add Windows corporate identifier to device (optional)
-description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 7 of 7 - Add optional Windows corporate identifier to device.
+title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 7 of 7 - Add Windows corporate identifier to device
+description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 7 of 7 - Add Windows corporate identifier to device.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
