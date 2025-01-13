@@ -117,7 +117,13 @@ You can add this permission and right to your own [custom RBAC roles](../fundame
 
    To enable FileVault, select and configure the following settings from the *Full Disk Encryption* category:
 
-   - FileVault > **Enable** - Set to **On**
+   - FileVault > Configure the following:
+     - **Enable** - Set to **On** 
+     - **Defer** - Set to **Enabled**
+     
+       > [!IMPORTANT]
+       > The *Defer* setting must be configured to *Enabled* to successfully apply FileVault settings.
+
    - FileVault Recovery Key Escrow > **Location** - Specify a description of the location where the recovery key is escrowed. This text is inserted into the message the user sees when enabling FileVault.
 
    > [!TIP]
@@ -131,9 +137,6 @@ You can add this permission and right to your own [custom RBAC roles](../fundame
 8. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see Assign user and device profiles. Select **Next**.
 
 9. On the **Review + create** page, when you're done, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
-
-  > [!IMPORTANT]
-  > The Defer setting must be configured to Enabled to successfully apply FileVault settings.
 
 ### Enable FileVault through the Setup Assistant
 
