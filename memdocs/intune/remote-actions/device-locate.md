@@ -69,6 +69,9 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 - Windows Holographic for Business
 - Windows Phone
 
+> [!NOTE]
+> The locate device capability (excluding the lost device sound alert) is not supported in GCC High environments.
+
 ## Locate a lost or stolen device
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
