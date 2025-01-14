@@ -33,14 +33,14 @@ ms.collection:
 
 # Jamf Mobile Threat Defense connector with Intune
 
-Control mobile device access to corporate resources using conditional access based on risk assessment conducted by Jamf. Jamf is a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices by the Jamf service, including:
+Control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by Jamf. Jamf is a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices by the Jamf service, including:
 
 - Operating system vulnerabilities
 - Malicious apps installed
 - Malicious network profiles
 - Cryptojacking
 
-You can configure *conditional access* policies that are based on Jamf's risk assessment, enabled through Intune device compliance policies. Risk assessment policy can allow or block noncompliant devices from accessing corporate resources based on detected threats.
+You can configure *Conditional Access* policies that are based on Jamf's risk assessment, enabled through Intune device compliance policies. Risk assessment policy can allow or block noncompliant devices from accessing corporate resources based on detected threats.
 
 ## How do Intune and Jamf Mobile Threat Defense help protect your company resources?
 

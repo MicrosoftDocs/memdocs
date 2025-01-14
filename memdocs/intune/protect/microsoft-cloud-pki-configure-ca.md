@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/12/2024
+ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect

@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/30/2023
+ms.date: 11/27/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ Use Microsoft Intune to manage the install of Windows 10/11 software updates fro
 
 By using Windows Update for Business, you simplify the update management experience. You don't need to approve individual updates for groups of devices and can manage risk in your environments by configuring an update rollout strategy. With Intune, you can [configure update settings](windows-update-settings.md) on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
 
-Intune stores only the update policy assignments, not the updates themselves. When you save a policy, Intune passes the configuration details to Windows Update, which then determines which updates will be offered to each device. Devices access Windows Update directly for the updates.
+Intune stores only the update policy assignments, not the updates themselves. When you save a policy, Intune passes the configuration details to Windows Update, which then determines which of these updates are offered to each device. Devices access Windows Update directly for the updates.
 
 Learn more about Windows [*feature* and *quality* updates](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) in the Windows documentation.
 
@@ -46,13 +46,13 @@ Intune provides the following policy types to manage updates, which you assign t
 
 - **Update rings for Windows 10 and later**: This policy is a collection of settings that configures when devices that run Windows 10 and Windows 11 updates get installed. Update ring policies are supported for devices that run Windows 10 version 1607 or later, and Windows 11. For more information, see [Update rings policy](../protect/windows-10-update-rings.md).
 
-- **Feature updates for Windows 10 and later**: Use [Feature updates](../protect/windows-10-feature-updates.md) policy updates devices to the Windows version you specify, and then freezes the feature set version on those devices. This version freeze remains in place until you choose to update them to a later Windows version. While the feature version remains static, devices can continue to install quality and security updates that are available for their feature version.
+- **Feature updates for Windows 10 and later**: The [Feature updates](../protect/windows-10-feature-updates.md) policy updates devices to the Windows version that you specify, and then freezes the feature set version on those devices. This version freeze remains in place until you choose to update them to a later Windows version. While the feature version remains static, devices can continue to install quality and security updates that are available for their feature version.
 
   You can also use Feature updates policy to [upgrade your devices that run Windows 10 to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
 
-- **Quality updates for Windows 10 and later**: With Quality updates for Windows 10 and later, also referred to as Expedited updates, you can expedite the install of the most recent Windows 10 and Windows 11 security updates as quickly as possible on devices you manage with Microsoft Intune. Expedited install is accomplished without the need to pause or edit your existing monthly servicing policies. For more information, see [Expedite updates policy](../protect/windows-10-expedite-updates.md).
+- **Quality updates for Windows 10 and later**: With Quality updates for Windows 10 and later, also referred to as Expedited updates, you can expedite the install of the most recent Windows 10 and Windows 11 security updates on devices that you manage with Microsoft Intune. Expedited install is accomplished without the need to pause or edit your existing monthly servicing policies. For more information, see [Expedite updates policy](../protect/windows-10-expedite-updates.md).
 
-- **Driver updates for Windows 10 and later**: With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Your policies can automatically install the newest recommended driver for you, or wait for an admin to manually approve drivers before they are installed. Intune and the Windows Update for Business (WUfB) deployment service (DS) take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. For more information, see [Driver updates policy](../protect/windows-driver-updates-policy.md).
+- **Driver updates for Windows 10 and later**: With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Your policies can automatically install the newest recommended driver for you, or wait for an admin to manually approve drivers before they're installed. Intune and the Windows Update for Business (WUfB) deployment service (DS) take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. For more information, see [Driver updates policy](../protect/windows-driver-updates-policy.md).
 
 ## Policy limitations for Workplace Joined devices
 
@@ -78,7 +78,6 @@ If you support WPJ devices with Intune, the following information can help you u
 | **Reports - Summary count of devices**: </br>  - Feature updates</br>  - Quality updates  | WUfB reports | WUfB reports |
 | **Reports – Detailed status**:</br>  - Per Update  | WUfB reports  | Yes, in Intune              |
 
-
 ## Move from update ring deferrals to feature updates policy
 
 When using Intune to manage Windows updates, it's possible to use both *update rings* policy with update deferrals, and *feature updates* policy to manage the updates you want to install on devices. If you're using feature updates, we recommend you end use of deferrals as configured in your update rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations. You can continue to use the user experience settings from update rings, as they don't create issues when combined with feature updates policy.
@@ -103,9 +102,9 @@ Use the following process to ensure Windows Update has processed your feature up
 
    After the saved policy is assigned to devices, it will take a few minutes for Windows Update to process the policy.
 
-2. View the [Windows 10 feature updates (Organizational)](../protect/windows-update-reports.md#use-the-windows-10-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed.  Once all devices show **OfferReady**, Windows Update has completed processing the policy.
+2. View the [Windows 10 feature updates (Organizational)](../protect/windows-update-reports.md#use-the-windows-10-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed. Once all devices show **OfferReady**, Windows Update has completed processing the policy.
 
-3. After devices are verified to be in the **OfferReady** state you can safely reconfigure the [Windows 10 and later update ring policy](../protect/windows-10-update-rings.md) for that same set of devices to change the setting **Feature update deferral period (days)** to a value of **0**.
+3. After devices are verified to be in the **OfferReady** state you can safely reconfigure the [Windows 10 and later update ring policy](../protect/windows-10-update-rings.md), for that same set of devices to change the setting **Feature update deferral period (days)** to a value of **0**.
 
 ## Reporting on updates
 

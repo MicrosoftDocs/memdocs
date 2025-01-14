@@ -243,7 +243,7 @@ When this client setting option is enabled, user available applications that req
 
 ### Software Center shows user additional compliance information
 <!-- 1235616 -->
- When using Device Health Attestation status as a compliance policy rule for conditional access to company resources, Software Center now shows the user the Device Health Attestation setting that is not compliant.
+ When using Device Health Attestation status as a compliance policy rule for Conditional Access to company resources, Software Center now shows the user the Device Health Attestation setting that is not compliant.
 
 
  ## Software updates 

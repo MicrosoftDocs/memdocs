@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 01/14/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -31,7 +31,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 >
 > - **Step 6: Create Windows Autopilot device preparation policy**
 
-- Step 7: [Add Windows corporate identifier to device (optional)](entra-join-corporate-identifier.md)
+- Step 7: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
 
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 
@@ -172,11 +172,11 @@ In the **Configuration settings** page:
 
 If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
 
-## Next step: Add Windows corporate identifier to device (optional)
+## Next step: Add Windows corporate identifier to device
 
 > [!div class="nextstepaction"]
-> [Step 7: Add Windows corporate identifier to device (optional)](entra-join-corporate-identifier.md)
+> [Step 7: Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
 
 > [!NOTE]
 >
-> Adding a [corporate identifier](../../overview.md#corporate-identifiers-for-windows) to the device is an optional step. If corporate identifiers aren't being used, then the next step is to deploy the device.
+> Windows Autopilot device preparation only requires [corporate identifiers for Windows](../../overview.md#corporate-identifiers-for-windows) if Intune enrollment restrictions are being used to block personal device enrollments. If Intune enrollment restrictions aren't being used to block personal device enrollments, then the next step is to deploy the device.

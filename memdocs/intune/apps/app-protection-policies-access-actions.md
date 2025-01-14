@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 01/06/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -85,7 +85,7 @@ Set one of the following actions:
 - Allow specified (Wipe nonspecified)
 
 **What happens if the IT admin inputs a different list of iOS/iPadOS model identifier(s) between policies targeted to the same apps for the same Intune user?**<br>
-When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifiers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is "iPhone5,3". 
+When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. The resultant policy sent down to the targeted app opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifiers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies `iPhone5,2;iPhone5,3`, while *Policy B* specifies `iPhone5,3`, the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is `iPhone5,3`. 
 
 ### Android policy settings
 
@@ -111,7 +111,7 @@ To use the **Device manufacturer(s)** setting, input a semi-colon separated list
 Example input: *Manufacturer A;Manufacturer B* 
 
 >[!NOTE]
-> These are some common manufacturers reported from devices using Intune, and can be used as input: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
+> The following list are some common manufacturers reported from devices using Intune, and can be used as input: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
 
 On end-user devices, the Intune client would take action based on a simple matching of device model strings specified in Intune for Application Protection Policies. Matching depends entirely on what the device reports. You (the IT administrator) are encouraged to ensure that the intended behavior occurs by testing this setting based on various device manufacturers and models, and targeted to a small user group. The default value is **Not configured**.<br>
 Set one of the following actions: 
@@ -119,7 +119,7 @@ Set one of the following actions:
 - Allow specified (Wipe on nonspecified)
 
 **What happens if the IT admin inputs a different list of Android manufacturer(s) between policies targeted to the same apps for the same Intune user?**<br>
-When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app being opened by the targeted Intune user would be an intersection of the listed Android manufacturers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "Google;Samsung", while *Policy B* specifies "Google", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is "Google." 
+When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. The resultant policy sent down to the targeted app being opened by the targeted Intune user would be an intersection of the listed Android manufacturers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies `Google;Samsung`, while *Policy B* specifies `Google`, the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is `Google`. 
 
 ### Additional settings and actions 
 

@@ -116,8 +116,8 @@ Applying a Microsoft Entra maximum device limit of less than 1,000 to a DEM acco
 ### Certificates  
 You must use device-level certificates to manage Wi-Fi and email connections.  
 
-### Conditional access  
-Conditional access is only supported with DEM on devices running:  
+### Conditional Access  
+Conditional Access is only supported with DEM on devices running:  
 
 * Windows 10, version 1803 and later  
 * Windows 11     

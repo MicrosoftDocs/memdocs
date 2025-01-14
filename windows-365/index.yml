@@ -40,6 +40,11 @@ productDirectory:
       imageSrc: ./media/win365icon.png
       summary: Learn more about Windows 365 Business
       url: ./business/index.yml
+    # Card
+    - title: Windows 365 Link
+      imageSrc: ./media/win365icon.png
+      summary: Learn more about Windows 365 Link
+      url: ./link/index.yml
 
 additionalContent:
   sections:

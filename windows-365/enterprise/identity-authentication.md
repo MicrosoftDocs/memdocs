@@ -104,7 +104,7 @@ To access the Windows 365 service, users must first authenticate to the service 
 
 #### Multifactor authentication
 
-Follow the instructions in [Set conditional access policies](set-conditional-access-policies.md) to learn how to enforce Microsoft Entra multifactor authentication for your Cloud PCs. That article also tells you how to configure how often your users are prompted to enter their credentials.
+Follow the instructions in [Set Conditional Access policies](set-conditional-access-policies.md) to learn how to enforce Microsoft Entra multifactor authentication for your Cloud PCs. That article also tells you how to configure how often your users are prompted to enter their credentials.
 
 #### Passwordless authentication
 
