@@ -5,11 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-<<<<<<< HEAD
-ms.date: 12/02/2024
-=======
-ms.date: 11/25/2024
->>>>>>> fd354374a513bf76ccddd238c90504f392712dd1
+ms.date: 01/13/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
