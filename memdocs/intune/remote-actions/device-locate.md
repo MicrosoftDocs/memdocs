@@ -70,7 +70,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 - Windows Phone
 
 > [!NOTE]
-> The locate device capability (excluding the lost device sound alert) is not supported in GCC High environments.
+> The locate device capability (excluding the lost device sound alert) is not supported on GCC High environments.
 
 ## Locate a lost or stolen device
 
