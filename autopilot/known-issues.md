@@ -58,10 +58,10 @@ In Intune's 2411 release, we've updated the backend infrastructure of the Window
 
 ### DFCI enrollment fails for Professional editions of Windows 11, version 24H2
 
-Date added: *October 9, 2024*
+Date added: *October 9, 2024*<br>
 Date updated: *January 14, 2025*
 
-DFCI can't currently be configured during the out-of-box experience (OOBE) on devices with Professional editions of Windows 11, version 24H2. Devices with [KB5046740](https://support.microsoft.com/topic/november-21-2024-kb5046740-os-build-26100-2454-preview-2040f716-b719-482a-8aff-f7f02c79b147) or later installed will be automatically enrolled in DFCI post-provisioning after a reboot.
+DFCI can't currently be configured during the out-of-box experience (OOBE) on devices with Professional editions of Windows 11, version 24H2. Devices with Professional editions of Windows 11, version 24H2 that have [KB5046740](https://support.microsoft.com/topic/november-21-2024-kb5046740-os-build-26100-2454-preview-2040f716-b719-482a-8aff-f7f02c79b147) or later installed are automatically enrolled in DFCI post-provisioning after a reboot.
 
 If DFCI needs to be configured during OOBE provisioning on 24H2 devices, follow these steps:
 
