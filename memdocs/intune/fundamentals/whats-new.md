@@ -75,6 +75,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
 ## Week of January 13, 2025
 
 ### Device security
@@ -242,6 +243,7 @@ To learn more about how to target policies to VisionOS devices, see [Managed app
 Applies to:
 
 - Microsoft Teams for iOS on VisionOS devices
+<<<<<<< HEAD
 
 ### Device configuration
 
@@ -395,6 +397,8 @@ For more information, see:
 
 - [Device query in Microsoft Intune](../../analytics/device-query.md)
 - [Run remote actions on devices with Microsoft Intune](../remote-actions/device-management.md)
+=======
+>>>>>>> c29131f731cf051ead10825fc305fca40367012e
 
 ## Week of October 28, 2024
 
