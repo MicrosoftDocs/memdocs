@@ -134,7 +134,9 @@ For more information, see [Enrollment time grouping in Microsoft Intune](/mem/in
 
 ### Corporate identifiers for Windows
 
-Windows Autopilot device preparation supports the Intune corporate identifier enrollment feature. Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted devices go through Windows Autopilot device preparation. Corporate identifiers for Windows is optional for Windows Autopilot device preparation. Corporate identifiers for Windows isn't required for a Windows Autopilot device preparation deployment to work. For more information, see:
+Windows Autopilot device preparation supports the Intune corporate identifier enrollment feature. Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted devices go through Windows Autopilot device preparation.
+
+Windows Autopilot device preparation only requires corporate identifiers for Windows if Intune enrollment restrictions are being used to block personal device enrollments. For more information, see:
 
 - [Identify devices as corporate-owned](/mem/intune/enrollment/corporate-identifiers-add).
 - [What are enrollment restrictions?](/mem/intune/enrollment/enrollment-restrictions-set).
