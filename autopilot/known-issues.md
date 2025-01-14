@@ -63,7 +63,7 @@ Date updated: *January 15, 2025*
 
 DFCI can't currently be configured during the out-of-box experience (OOBE) on devices with Professional editions of Windows 11, version 24H2
 
-To enroll with DFCI devices that have Professional editions of Windows 11, version 24H2 and have already been provisioned, install [KB5046740](https://support.microsoft.com/topic/november-21-2024-kb5046740-os-build-26100-2454-preview-2040f716-b719-482a-8aff-f7f02c79b147) or later. Devices with Professional editions of Windows 11, version 24H2 that have KB5046740 or later installed are automatically enrolled in DFCI after a reboot.
+For devices that have already been provisioned and have Professional editions of Windows 11, version 24H2, install [KB5046740](https://support.microsoft.com/topic/november-21-2024-kb5046740-os-build-26100-2454-preview-2040f716-b719-482a-8aff-f7f02c79b147) or later to enroll in DFCI. Devices with Professional editions of Windows 11, version 24H2 that have KB5046740 or later installed are automatically enrolled in DFCI after a reboot.
 
 If DFCI needs to be configured during OOBE provisioning on 24H2 devices, follow these steps:
 
