@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2025
+ms.date: 01/14/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of January 13, 2025  
+
+### Monitor and troubleshoot
+
+#### Use Support Assistant to resolve issue<!-- 29084113 -->
+
+Support Assistant is now available in Intune. It leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic. Currently, the Support Assistant is in preview. You can enable and disable Support Assistant by choosing to opt-in and opt-out at any time. For related information, see [How to get support in the Microsoft Intune admin center](/mem/get-support/use-support-assistant).
+
 ## Week of December 30, 2024  
 
 ### Device enrollment  
