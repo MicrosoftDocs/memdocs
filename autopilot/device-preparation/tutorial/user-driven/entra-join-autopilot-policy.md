@@ -179,4 +179,4 @@ If multiple Windows Autopilot device preparation polices are deployed to a user,
 
 > [!NOTE]
 >
-> Adding a [corporate identifier](../../overview.md#corporate-identifiers-for-windows) to the device is an optional step. If corporate identifiers aren't being used, then the next step is to deploy the device.
+> Windows Autopilot device preparation only requires [corporate identifiers for Windows](../../overview.md#corporate-identifiers-for-windows) if Intune enrollment restrictions are being used to block personal device enrollments. If Intune enrollment restrictions aren't being used to block personal device enrollments, then the next step is to deploy the device.
