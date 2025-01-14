@@ -1068,7 +1068,7 @@ ACME is supported for Apple Device Enrollment, Apple Configurator enrollment, an
 - iPadOS 16.1 or later
 - macOS 13.1 or later  
 
-This capability is also supported in [GCC high tenants](../fundamentals/intune-govt-service-description.md).      
+This capability is also supported in [GCC High tenants](../fundamentals/intune-govt-service-description.md).      
 
 ## Week of July 22, 2024 (Service release 2407)
 
