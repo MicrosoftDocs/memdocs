@@ -40,7 +40,7 @@ Corporate identifiers in Intune allows pre-uploading of Windows device identifie
 
 > [!IMPORTANT]
 >
-> This step of adding Windows corporate identifiers for devices is specific to Intune enrollments and isn't required if personal devices aren't being blocked in the environment. If personal devices aren't being blocked in the environment, the next step would be to deploy the device. 
+> This step of adding Windows corporate identifiers for devices is specific to Intune enrollments and isn't required if personal devices aren't being blocked in the environment. If personal devices aren't being blocked in the environment, this step can be skipped. The next step would instead be to deploy the device. 
 
 For more information, see:
 
