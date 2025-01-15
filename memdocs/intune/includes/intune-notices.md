@@ -12,6 +12,35 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Move to new Microsoft Graph Beta API properties for Windows Autopilot self-deploying mode and pre-provisioning
+
+In late February 2025, a select number of old Microsoft Graph Beta API [windowsAutopilotDeploymentProfile](/graph/api/resources/intune-shared-windowsautopilotdeploymentprofile) properties used for Windows Autopilot self-deploying mode and pre-provisioning will be removed and stop working. The same data can be found using newer Graph API properties.
+
+#### How does this affect you or your users?
+
+If you have automation or scripts using the following Windows Autopilot properties, you must update to the new properties to prevent them from breaking.
+
+| Old | New |
+| -------- | ------- |
+| enableWhiteglove | preprovisioningAllowed |
+| extractHardwareHash | hardwareHashExtractionEnabled |
+| language | Locale |
+| outOfBoxExperienceSettings | outOfBoxExperienceSetting |
+| outOfBoxExperienceSettings.HidePrivacySettings | outOfBoxExperienceSetting.PrivacySettingsHidden |
+| outOfBoxExperienceSettings.HideEULA | outOfBoxExperienceSetting.EULAHidden |
+| outOfBoxExperienceSettings.SkipKeyboardSelectionPage | outOfBoxExperienceSettings.KeyboardSelectionPageSkipped |
+| outOfBoxExperienceSettings.HideEscapeLink | outOfBoxExperienceSettings.EscapeLinkHidden |
+
+#### How can you prepare?
+
+Update your automation or scripts to use the new Graph API properties to avoid deployment issues.
+
+**Additional information:**
+
+- [windowsAutopilotDeploymentProfile resource type - Microsoft Graph Beta | Microsoft Learn](/graph/api/resources/intune-shared-windowsautopilotdeploymentprofile)
+- [azureADWindowsAutopilotDeploymentProfile resource type - Microsoft Graph Beta | Microsoft Learn](/graph/api/resources/intune-enrollment-azureadwindowsautopilotdeploymentprofile)
+- [outOfBoxExperienceSettings resource type - Microsoft Graph Beta | Microsoft Learn](/graph/api/resources/intune-enrollment-outofboxexperiencesettings)
+
 ### Plan for Change: Blocking screen capture in the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS 
 
 We recently released updated versions of the Intune App SDK and the Intune App Wrapping Tool. Included in these releases (v19.7.5+ for Xcode 15 and v20.2.0+ for Xcode 16) is the support for blocking screen capture, Genmojis and writing tools in response to the new AI features in iOS/iPadOS 18.2.  
