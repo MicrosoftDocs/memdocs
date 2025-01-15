@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/27/2024
+ms.date: 01/14/2025
 ms.topic: how-to
 #customer intent: As an IT admin, I want to add groups, so that users and devices are organized.
 ms.service: microsoft-intune
@@ -97,6 +97,29 @@ Consider some of the other dynamic user and device groups you can create, such a
 - Marketing
 - Human Resources
 - All Charlotte employees
+
+## Edit a group
+
+As an Intune admin, you can edit groups, such as changing the group members, owner, and properties.
+
+Use the following steps to edit an existing group:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Groups** > **All groups** > *select the name of a group to edit*.
+3. Under the **Manage** menu group, select an area of the group to edit, such as **Properties**, **Members**, or **Owners**.
+
+When you add new members, you can choose from **Users**, **Groups**, **Devices**, and **Enterprise applications**.
+
+## Delete a group
+
+As an Intune admin, you can delete groups that are no longer needed.
+
+Use the following steps to delete an existing group:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Groups** > **All groups** > *select the name of a group to delete* > **Delete**.
+
+To view a list of recently deleted groups, select **Groups** > **Deleted groups**. Note that after deleting a group, the deleted groups list may may take time to update.
 
 ## Device groups
 

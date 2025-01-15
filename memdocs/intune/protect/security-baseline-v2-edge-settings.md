@@ -78,7 +78,6 @@ To learn more about using security baselines, see:
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
 - [Manage security baselines](../protect/security-baselines-configure.md)
 
-
 ::: zone pivot="edge-v128"
 ## Microsoft Edge baseline for version 128 (January 2025) 
 
