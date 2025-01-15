@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2024
+ms.date: 01/13/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -210,6 +210,8 @@ For more information, see [Configuring container networking with Podman](https:/
 ### Linux system auditing
 
 Linux system auditing can help identify security-relevant information or security violations on a Linux server that hosts Microsoft Tunnel. Linux system auditing is recommended for Microsoft Tunnel, but not required. To use system auditing, a Linux server must have the **auditd** package installed to `/etc/audit/auditd.conf`.
+
+Each time you run [mst-readiness tool](#run-the-readiness-tool), the tool might dispilay a warning that indicates that *auditd* is missing. To enable auditing of tunnel specific directories, make sure to install the auditd package prior to running mstunnel-setup.
 
 Details on how to implement auditing depend on the Linux platform you use:
 
@@ -521,6 +523,12 @@ To use the readiness tool:
    The script prompts you to use a different machine with a web browser, which you use to authenticate to Microsoft Entra ID and to Intune. The tool reports success or an error.
 
 For more information about this tool, see [Reference for mst-cli](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
+
+### Manually install auditd for Linux system auditing
+
+The readiness tool checks for the presence of the *auditd* package for Linux system auditing. Because *auditd* is optional and not required, the readiness script will return a warning when this package isn't detected.
+
+*Auditd* is installed by default by RHEL 7 and later versions, but might not be installed by default by Ubuntu distributions. When not present you can manually install it on the Linux server. For information on how to manually install installing this, see [Linux system auditing](#linux-system-auditing) earlier in this article.
 
 ### Manually load ip_tables
 
