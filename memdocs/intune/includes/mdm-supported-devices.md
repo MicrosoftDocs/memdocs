@@ -33,7 +33,7 @@ ms.localizationpriority: high
 
 - For user-based management methods: Android 10.0 and later
 - For userless management methods: Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
-- Android enterprise
+- Android Enterprise: Android 8.0 and later
 - Android open source project device: [See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 

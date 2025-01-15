@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/13/2024
+ms.date: 01/09/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,27 +52,26 @@ This article is a reference for the settings that are available in the Microsoft
 
 ## About this reference article
 
-Each security baseline is a group of preconfigured settings that help you apply and enforce granular security settings that the relevant security teams recommend. You can also customize each baseline you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple device configuration profiles.
+Each security baseline is a group of preconfigured Windows settings that help you apply and enforce granular security settings that the relevant security teams recommend. You can also customize each baseline you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple device configuration settings.
 
-The details that are displayed in this article are based on baseline version that is selected at the top of the article. For each selection, this article displays:
+The details that display in this article are based on baseline version you select at the top of the article. For each version, this article displays:
 
-- A list of each setting in that baseline version.
-- The default configuration of each setting in that baseline version.
-- When available, a link to the underlying configuration service provider (CSP) documentation, or other related content from the relevant product group that provides context and possibly additional details for the settings use.
+- A list of each setting with its configuration as found in the default instance of that baseline version.
+- When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
 
 When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
-- Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
+- Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see:
-
 - [Use security baselines](../protect/security-baselines.md)
-- [Manage security baselines](../protect/security-baselines-configure.md).
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
+- [Manage security baselines](../protect/security-baselines-configure.md)
 
 ::: zone pivot="office-may-2023"
 
-**Microsoft 365 Apps for Enterprise security baseline for May 2023**
+## Microsoft 365 Apps for Enterprise security baseline for May 2023
 
 This baseline version was first made available in May of 2023. It was replaced by the Baseline *Version 2306*
 
@@ -81,7 +80,7 @@ For more information about the following settings that are included in this base
 ::: zone-end
 ::: zone pivot="v2306"
 
-**Microsoft 365 Apps for Enterprise for security baseline version 2306**
+## Microsoft 365 Apps for Enterprise for security baseline version 2306
 
 This baseline version was first made available in November 2023, and replaces the *May 2023* version.
 
@@ -90,9 +89,9 @@ For more information about the following settings that are included in this base
 ::: zone-end
 ::: zone pivot="office-may-2023,v2306"
 
-## Administrative Templates
+### Administrative Templates
 
-*MS Security Guide*
+### MS Security Guide
 
 - **Block Flash activation in Office documents**  
   Baseline default: *Enabled*  
@@ -130,11 +129,9 @@ For more information about the following settings that are included in this base
   - **Word: (Device)**  
     Baseline default: *69632*
 
+### Microsoft Access 2016
 
-
-## Microsoft Access 2016
-
-*Application Settings > Security > Trust Center*
+#### Application Settings > Security > Trust Center
 
 - **Block macros from running in Office files from the Internet (User)**  
   Baseline default: *Enabled*
@@ -156,29 +153,29 @@ For more information about the following settings that are included in this base
   Baseline default: *Enabled*  
   - Baseline default: *Disable all with notification*
 
-*Application Settings > Security > Trust Center > Trusted Locations*
+#### Application Settings > Security > Trust Center > Trusted Locations
 
 - **Allow Trusted Locations on the network (User)**  
   Baseline default: *Disabled*
 
 ### Microsoft Excel 2016
 
-*Data Recovery*
+#### Data Recovery
 
 - **Do not show data extraction options when opening corrupt workbooks (User)**  
   Baseline default: *Enabled*
 
-*Excel Options > Advanced*
+#### Excel Options > Advanced
 
 - **Ask to update automatic links (User)**  
   Baseline default: *Enabled*
 
-*Excel Options > Advanced > General*
+#### Excel Options > Advanced > General
 
 - **Load pictures from Web pages not created in Excel (User)**  
   Baseline default: *Disabled*
 
-*Excel Options > Save*
+#### Excel Options > Save
 
 - **Disable AutoRepublish (User)**  
   Baseline default: *Enabled*
@@ -186,7 +183,7 @@ For more information about the following settings that are included in this base
 - **Do not show AutoRepublish warning alert (User)**  
   Baseline default: *Disabled*
 
-*Excel Options > Security*
+#### Excel Options > Security
 
 - **Force file extension to match file type (User)**  
   Baseline default: *Enabled*  
@@ -203,7 +200,7 @@ For more information about the following settings that are included in this base
   Baseline default: *Enabled*  
   - Baseline default: *Disable all with notification*
 
-*Excel Options > Security > Trust Center*
+#### Excel Options > Security > Trust Center
 
 ::: zone-end
 ::: zone pivot="v2306"
@@ -239,7 +236,7 @@ For more information about the following settings that are included in this base
   Baseline default: *Enabled*  
   - Baseline default: *Disable all except digitally signed macros*
 
-*Excel Options > Security > Trust Center > External Content*
+#### Excel Options > Security > Trust Center > External Content
 
 - **Always prevent untrusted Microsoft Query files from opening (User)**  
   Baseline default: *Enabled*
@@ -257,7 +254,7 @@ For more information about the following settings that are included in this base
 ::: zone-end
 ::: zone pivot="office-may-2023,v2306"
 
-*Excel Options > Security > Trust Center > File Block Settings*
+#### Excel Options > Security > Trust Center > File Block Settings
 
 - **dBase III / IV files (User)**  
   Baseline default: *Enabled*  
@@ -328,7 +325,7 @@ For more information about the following settings that are included in this base
   - **File block setting: (User)**  
     Baseline default: *Open/Save blocked, use open policy*
 
-*Excel Options > Security > Trust Center > Protected View*
+#### Excel Options > Security > Trust Center > Protected View
 
 - **Always open untrusted database files in Protected View (User)**  
   Baseline default: *Enabled*
@@ -348,12 +345,12 @@ For more information about the following settings that are included in this base
 - **Turn off Protected View for attachments opened from Outlook (User)**  
   Baseline default: *Disabled*
 
-*Excel Options > Security > Trust Center > Trusted Locations*
+#### Excel Options > Security > Trust Center > Trusted Locations
 
 - **Allow Trusted Locations on the network (User)**  
   Baseline default: *Disabled*
 
-## Microsoft Lync Feature Policies
+### Microsoft Lync Feature Policies
 
 - **Configure SIP security mode**  
   Baseline default: *Enabled*
@@ -361,9 +358,9 @@ For more information about the following settings that are included in this base
 - **Disable HTTP fallback for SIP connection**  
   Baseline default: *Enabled*
 
-## Microsoft Office 2016
+### Microsoft Office 2016
 
-*Customize*
+#### Customize
 
 - **Disable UI extending from documents and templates (User)**  
   Baseline default: *Enabled*
@@ -395,7 +392,7 @@ For more information about the following settings that are included in this base
   - **Disallow in Visio (User)**  
     Baseline default: *True*
 
-*Security Settings*
+#### Security Settings
 
 - **ActiveX Control Initialization (User)**  
   Baseline default: *Enabled*  
@@ -467,24 +464,24 @@ For more information about the following settings that are included in this base
 - **Protect document metadata for rights managed Office Open XML Files (User)**  
   Baseline default: *Enabled*
 
-*Security Settings > Trust Center*
+#### Security Settings > Trust Center
 
 - **Allow mix of policy and user locations (User)**  
   Baseline default: *Disabled*
 
-*Server Settings*
+#### Server Settings
 
 - **Disable the Office client from polling the SharePoint Server for published links (User)**  
   Baseline default: *Enabled*
 
-*Smart Documents (Word, Excel)*
+#### Smart Documents (Word, Excel)
 
 - **Disable Smart Document's use of manifests (User)**  
   Baseline default: *Enabled*
 
-## Microsoft Office 2016 (Machine)
+### Microsoft Office 2016 (Machine)
 
-*Security Settings > IE Security*
+#### Security Settings > IE Security
 
 - **Add-on Management**  
   Baseline default: *Enabled*
@@ -1071,9 +1068,9 @@ For more information about the following settings that are included in this base
   - **spDesign.exe (Device)**  
     Baseline default: *True*
 
-## Microsoft Outlook 2016
+### Microsoft Outlook 2016
 
-*Security > Security Form Settings*
+#### Security > Security Form Settings
 
 The "Outlook Security Mode" policy controls how security settings in Outlook are enforced. To manage any of the dependent Outlook security policies using Microsoft Intune, Office cloud policy service, or Group policy this policy must be enabled and the Outlook Security Policy dropdown set to "Use Outlook Security Group Policy".
 
@@ -1195,9 +1192,9 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   - **Guard behavior: (User)  
     Baseline default: *Automatically Deny*
 
-## Microsoft PowerPoint 2016
+### Microsoft PowerPoint 2016
 
-*PowerPoint Options > Security*
+#### PowerPoint Options > Security
 
 ::: zone-end
 ::: zone pivot="v2306"
@@ -1224,7 +1221,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 - **Turn off file validation (User)**  
   Baseline default: *Disabled*
 
-*PowerPoint Options > Security > Trust Center*
+#### PowerPoint Options > Security > Trust Center
 
 - **Block macros from running in Office files from the Internet (User**)  
   Baseline default: *Enabled*
@@ -1248,7 +1245,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   Baseline default: *Enabled*  
   - Baseline default: *Disable all except digitally signed macros*
 
-*PowerPoint Options > Security > Trust Center > File Block Settings*
+#### PowerPoint Options > Security > Trust Center > File Block Settings
 
 - **PowerPoint 97-2003 presentations, shows, templates and add-in files (User)**  
   Baseline default: *Enabled*  
@@ -1259,7 +1256,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   Baseline default: *Enabled*  
   - Baseline default: *Blocked files are not opened*
 
-*PowerPoint Options > Security > Trust Center > Protected View*
+#### PowerPoint Options > Security > Trust Center > Protected View
 
 - **Do not open files from the Internet zone in Protected View (User)**  
   Baseline default: *Disabled*
@@ -1277,14 +1274,14 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 - **Turn off Protected View for attachments opened from Outlook (User)**  
   Baseline default: *Disabled*
 
-*PowerPoint Options > Security > Trust Center > Trusted Locations*
+#### PowerPoint Options > Security > Trust Center > Trusted Locations
 
 - **Allow Trusted Locations on the network (User)**  
   Baseline default: *Disabled*
 
-## Microsoft Project 2016
+### Microsoft Project 2016
 
-*Project Options > Security > Trust Center*
+#### Project Options > Security > Trust Center
 
 - **Allow Trusted Locations on the network (User)**  
   Baseline default: *Disabled*
@@ -1308,15 +1305,15 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   Baseline default: *Enabled*  
   - Baseline default: *Disable all except digitally signed macros*
 
-## Microsoft Publisher 2016
+### Microsoft Publisher 2016
 
-*Security*
+#### Security
 
 - **Publisher Automation Security Level (User)**  
   Baseline default: *Enabled*  
   - Baseline default: *By UI (prompted)*
 
-*Security > Trust Center*
+#### Security > Trust Center
 
 ::: zone-end
 ::: zone pivot="v2306"
@@ -1341,9 +1338,9 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   Baseline default: *Enabled*  
   - Baseline default: *Disable all except digitally signed macros*
 
-## Microsoft Visio 2016
+### Microsoft Visio 2016
 
-*Visio Options > Security > Trust Center*
+#### Visio Options > Security > Trust Center
 
 - **Allow Trusted Locations on the network (User)**  
   Baseline default: *Disabled*
@@ -1370,7 +1367,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   Baseline default: *Enabled*  
   - Baseline default: *Disable all except digitally signed macros*
 
-*Visio Options > Security > Trust Center > File Block Settings*
+#### Visio Options > Security > Trust Center > File Block Settings
 
 - **Visio 2000-2002 Binary Drawings, Templates and Stencils (User)**  
   Baseline default: *Enabled*  
@@ -1387,9 +1384,9 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   - **File block setting: (User)**  
     Baseline default: *Open/Save blocked*
 
-## Microsoft Word 2016
+### Microsoft Word 2016
 
-*Word Options > Security > Trust Center*
+#### Word Options > Security > Trust Center
 
 - **Block macros from running in Office files from the Internet (User)**  
   Baseline default: *Enabled*
@@ -1420,7 +1417,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   Baseline default: *Enabled*
   - Baseline default: *Disable all except digitally signed macros*
 
-*Word Options > Security > Trust Center > File Block Settings*
+#### Word Options > Security > Trust Center > File Block Settings
 
 - **Set default file block behavior (User)**  
   Baseline default: *Enabled*
@@ -1466,7 +1463,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   - **File block setting: (User)**  
     Baseline default: *Open/Save blocked, use open policy*
 
-*Word Options > Security > Trust Center > Protected View*
+#### Word Options > Security > Trust Center > Protected View
 
 - **Do not open files from the Internet zone in Protected View (User)**  
   Baseline default: *Disabled*
@@ -1485,12 +1482,12 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 - **Turn off Protected View for attachments opened from Outlook (User)**  
   Baseline default: *Disabled*
 
-*Word Options > Security*
+#### Word Options > Security
 
 - **Turn off file validation (User)**  
   Baseline default: *Disabled*
 
-*Word Options > Security > Trust Center > Trusted Locations*
+#### Word Options > Security > Trust Center > Trusted Locations
 
 - **Allow Trusted Locations on the network (User)**  
   Baseline default: *Disabled*

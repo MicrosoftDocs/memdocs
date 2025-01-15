@@ -111,6 +111,7 @@ The following security baseline instances are available for use with Intune. Use
   - [May 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=office-may-2023)
 
 - **Microsoft Edge Baseline**:  
+  - [Microsoft Edge version 128](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v128) - January 2025
   - [Microsoft Edge version 117](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) - November 2023
   - [Microsoft Edge version 112 and later](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v112) - May 2023
   - [Microsoft Edge version 85 and later](../protect/security-baseline-settings-edge.md?pivots-edge-sept-2020) - September 2020
@@ -187,7 +188,7 @@ Each security baseline manages device configurations by applying the options fou
 
 Within the Intune security baseline policy UI, Intune provides information text that is taken from the source CSP and provides a link to that CSP. In some cases, the CSP might be part of a larger content set that includes proactive guidance that remains beyond the scope of Intune to include or duplicate in our content. However, Intune does document the list of settings in each security baseline version and its default configuration.
 
-## Next steps
+## Learn more
 
 - [Create security baseline profiles](security-baselines-configure.md)
 
