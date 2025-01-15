@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: List of settings for the Microsoft HoloLense 2 advanced security baseline in Intune
+title: List of settings for the Microsoft HoloLens 2 advanced security baseline in Intune
 titleSuffix: Microsoft Intune
 description: View a list of the settings in the Microsoft Intune advanced security baseline for Microsoft HoloLens 2. This list includes the default values for settings as found in the default configuration of the baseline.
 author: brenduns
@@ -65,7 +65,7 @@ The details that display in this article are based on baseline version you selec
 - A list of each setting with its configuration as found in the default instance of that baseline version.
 - When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
 
-When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
+When a new version of a baseline becomes available, it replaces the previous version. Profile instances that were created before the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.

@@ -104,7 +104,7 @@ The following security baseline instances are available for use with Intune. Use
   - [Version 3](security-baseline-settings-defender.md?pivots=atp-march-2020)
 
   > [!NOTE]
-  > The Microsoft Defender for Endpoint security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
+  > The Microsoft Defender for Endpoint security baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 - **Microsoft 365 Apps for Enterprise**:  
   - [Version 2306 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=v2023) *Released in November 2023*
@@ -119,10 +119,10 @@ The following security baseline instances are available for use with Intune. Use
   - [Preview: Microsoft Edge version 77 and later](../protect/security-baseline-settings-edge.md?pivots=edge-october-2019) - October 2019
 
 - **HoloLens 2 - Advanced security baseline settings**:  
-  - [Version 1 - Hololens 2 advanced security](../protect/security-baseline-hololens2-advanced.md) - *January 2025*
+  - [Version 1 - HoloLens 2 advanced security](../protect/security-baseline-hololens2-advanced.md) - *January 2025*
 
 - **HoloLens 2 - Standard security baseline settings**:  
-  - [Version 1 - Hololens 2 standard security](../protect/security-baseline-hololens2-standard.md) - *January 2025*
+  - [Version 1 - HoloLens 2 standard security](../protect/security-baseline-hololens2-standard.md) - *January 2025*
 
 - **Windows 365 Security Baseline**:  
   - [Version 24H1](security-baseline-settings-windows-365.md?pivots=win365-24h1)
