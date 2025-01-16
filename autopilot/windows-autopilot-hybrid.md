@@ -5,8 +5,8 @@ description: Use Windows Autopilot to enroll Microsoft Entra hybrid joined devic
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.reviewer: jubaptis
-ms.date: 01/15/2025
+ms.reviewer: madakeva
+ms.date: 01/17/2025
 ms.topic: how-to
 ms.service: windows-client
 ms.subservice: autopilot
@@ -18,6 +18,10 @@ ms.collection:
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2025</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2022</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2019</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2016</a>
 ---
 
 # Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot
@@ -30,10 +34,14 @@ Intune and Windows Autopilot can be used to set up Microsoft Entra hybrid joined
 
 ## Requirements
 
+### [:::image type="icon" source="images/icons/software-18.svg"::: **General**](#tab/general-requirements)
+
 - Successfully configured the [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify the device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
 - If [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) is configured as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
 
-### Device enrollment requirements
+### [:::image type="icon" source="images/icons/software-18.svg"::: **Device enrollement**](#tab/device-enrollemnt-requirements)
+
+<!-- ### Device enrollment requirements -->
 
 The device to be enrolled must follow these requirements:
 
@@ -47,7 +55,9 @@ The device to be enrolled must follow these requirements:
 
 Although not required, configuring Microsoft Entra hybrid join for Active Directory Federated Services (ADFS) enables a faster Windows Autopilot Microsoft Entra registration process during deployments. Federated customers that aren't supporting the use of passwords and using AD FS need to follow the steps in the article [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login) to properly configure the authentication experience.
 
-### Intune connector server requirements
+### [:::image type="icon" source="images/icons/software-18.svg"::: **Intune connector**](#tab/intune-connector-requirements)
+
+<!-- ### Intune connector server requirements -->
 
 - The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later with .NET Framework version 4.7.2 or later.
 
@@ -68,6 +78,8 @@ Multi-domain support section removed
 -->
 
 - The Intune Connector requires the [same endpoints as Intune](/mem/intune/fundamentals/intune-endpoints).
+
+---
 
 ## Set up Windows automatic MDM enrollment
 
@@ -126,11 +138,15 @@ The organizational unit that has the rights to create computers must match:
 
 ## Install the Intune Connector
 
-### [:::image type="icon" source="images/icons/software-18.svg"::: **Low Privileged Connector**](#tab/low-privileged-connector)
+> [!IMPORTANT]
+>
+> Intune 2501 uses an updated Intune Connector that strengths security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview). When downloading the Intune Connector, the updated Intune Connector is downloaded. The previous legacy Intune Connector is no longer available for download. The previous legacy Intune Connector will still continue to work through the end of March 2025, but needs to be updated to the updated Intune Connector before then to avoid loss of functionality. For more information, see [blog]().
+
+### [:::image type="icon" source="images/icons/software-18.svg"::: **Updated Connector**](#tab/updated-connector)
 
 Before beginning the installation, make sure that all of the [Intune connector server requirements](#intune-connector-server-requirements) are met.
 
-#### Install steps for Intune low privileged Intune connector
+#### Install steps for Intune updated connector
 
 1. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems signing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends to turn off Internet Explorer Enhanced Security Configuration.  To turn off Internet Explorer Enhanced Security Configuration:
 
@@ -141,6 +157,8 @@ Before beginning the installation, make sure that all of the [Intune connector s
    1. In the right **PROPERTIES** pane of Server Manager, select the **On** or **Off** link next to **IE Enhanced Security Configuration**.
 
    1. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
+
+1. If the previous legacy Intune Connector is installed, uninstall it before installing the updated Intune Connector. For more information, see [Uninstall the ODJ Connector](#uninstall-the-odj-connector).
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -156,11 +174,11 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 1. Follow the instructions to download the Connector.
 
-1. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
+1. Open the downloaded Connector setup file, *ODJConnectorSetupMsi.msi*, to install the Connector.
 
-1. At the end of the setup, select **Configure Now**.
+1. At the end of the setup, select the checkbox **Launch Intune connector for Active Directory**.
 
-1. Select **Sign In**.
+1. In the **Intune connector for Active Directory** window, select **Sign In**.
 
 1. Enter the credentials of an Intune administrator role. The user account must have an assigned Intune license.
 
@@ -194,7 +212,11 @@ After the Intune Connector for Active Directory is installed, it will start logg
 >
 > The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
 
-### [:::image type="icon" source="images/icons/software-18.svg"::: **Legacy Intune Connector**](#tab/legacy-connector)
+### [:::image type="icon" source="images/icons/software-18.svg"::: **Legacy Connector**](#tab/legacy-connector)
+
+> [!IMPORTANT]
+>
+> The legacy Intune Connector is deprecated and no longer available for download. These instructions assume that the legacy Intune Connector is already downloaded or installed. Best practices is to download and install the [updated Intune Connector](#install-the-intune-connector?tabs=updated-connector).
 
 Before beginning the installation, make sure that all of the [Intune connector server requirements](#intune-connector-server-requirements) are met.
 
@@ -210,21 +232,11 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
    1. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Open the previously downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the legacy Intune Connector.
 
-1. In the **Home** screen, select **Devices** in the left hand pane.
-
-1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
-
-1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
-
-1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Intune Connector for Active Directory**.
-
-1. In the **Intune Connector for Active Directory** screen, select **Add**.
-
-1. Follow the instructions to download the Connector.
-
-1. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
+> [!NOTE]
+>
+> If the legacy Intune Connector is already installed, go to the **Start** menu > **Intune Connector for Active Directory** > **Intune Connector for Active Directory**.
 
 1. At the end of the setup, select **Configure Now**.
 
@@ -480,12 +492,65 @@ The ODJ connector is installed locally on a computer via an executable file. If 
 
 To uninstall the ODJ Connector from the computer, follow these steps:
 
+
+### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2025**](#tab/windows-server-2025)
+
 1. Sign into the computer hosting the ODJ connector.
-1. Right-click on the **Start** menu and select **Settings**.
-1. In the **Windows Settings** window, select **Apps**.
-1. Under **Apps & features**, find and select **Intune Connector for Active Directory**.
-1. Under **Intune Connector for Active Directory**, select the **Uninstall** button, and then select the **Uninstall** button again.
+
+1. Right click on the **Start** menu and then select **Settings** > **Apps** > **Installed apps**.
+
+    Or
+
+    Select the following **Installed apps** shortcut:
+
+    > [!div class="nextstepaction"]
+    > [Installed apps](ms-settings:appsfeatures-app)
+
+1. In the **Apps > Installed apps** window, find **Intune Connector for Active Directory**.
+
+1. Next to **Intune Connector for Active Directory**, select **...** > **Uninstall**, and then select the **Uninstall** button.
+
 1. The ODJ connector proceeds to uninstall.
+
+### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2019/2022**](#tab/windows-server-2019-2022)
+
+1. Sign into the computer hosting the ODJ connector.
+
+1. Select the **Start** menu and then select **Settings** > **Apps**.
+
+    Or
+
+    Select the following **Apps** shortcut:
+
+    > [!div class="nextstepaction"]
+    > [Apps](ms-settings:appsfeatures)
+
+1. Under **Apps & features**, find and select **Intune Connector for Active Directory**.
+
+1. Under **Intune Connector for Active Directory**, select the **Uninstall** button, and then select the **Uninstall** button again.
+
+1. The ODJ connector proceeds to uninstall.
+
+### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2016**](#tab/windows-server-2016)
+
+1. Sign into the computer hosting the ODJ connector.
+
+1. Right-click the **Start** menu and then select **Settings** > **System** > **Apps & features**.
+
+    Or
+
+    Select the following **Apps** shortcut:
+
+    > [!div class="nextstepaction"]
+    > [Apps](ms-settings:appsfeatures)
+
+1. Under **Apps & features**, find and select **Intune Connector for Active Directory**.
+
+1. Under **Intune Connector for Active Directory**, select the **Uninstall** button, and then select the **Uninstall** button again.
+
+1. The ODJ connector proceeds to uninstall.
+
+---
 
 ## Next steps
 
