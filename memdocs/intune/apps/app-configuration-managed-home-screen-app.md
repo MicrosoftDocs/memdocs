@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/08/2025
+ms.date: 01/16/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -204,9 +204,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 > For devices running Android 14 and higher, by default, the exact alarm permission will be denied. To make sure critical user functionality isn't impacted, end-users will be prompted to grant exact alarm permission upon first launch of Managed Home Screen.
 
 > [!NOTE]
-> The automatic sign out feature requires granting overlay permission and exact alarm permission (OS 14+) to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it's recommended to use OEMconfig to auto-grant overlay and exact alarm permission to prevent possible breakout scenarios from the Settings application.
-> 
->  Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It's recommended to only configure access to notifications and features which require permissions when necessary.
+> The automatic sign out feature requires granting both [overlay permission](https://techcommunity.microsoft.com/t5/intune-customer-success/granting-overlay-permissions-to-managed-home-screen-for-android/ba-p/3247041) and exact alarm permission (OS 14+) to MHS. Users are prompted for permission upon startup of MHS, which requires the user to make device permission updates in the Settings application. When possible, use [OEMConfig](android-oem-configuration-overview.md) to auto-grant overlay and exact alarm permission to MHS to prevent possible breakout scenarios when using the Settings application. However, only configure access to notifications and features that require permissions when necessary. Note that based on the OS version of the device, a notification may be presented to the user that alerts them to these permissions being granted, even if these permissions were auto-granted.  
 
 ## Enter JSON Data
 
