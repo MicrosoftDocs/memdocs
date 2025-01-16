@@ -90,7 +90,7 @@ Devices must have access to the following endpoint:
 
 > [!NOTE]
 >
-> Endpoints for government customers are located at [Network endpoints for US government deployments](..\intune-us-government-endpoints)
+> Endpoints for government customers are located at [Network endpoints for US government deployments](/fundamentals/intune-us-government-endpoints)
 
 ### Supported platforms
 
