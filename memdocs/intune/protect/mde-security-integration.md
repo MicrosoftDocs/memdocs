@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2025
+ms.date: 01/16/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,6 +87,10 @@ For more information, see:
 Devices must have access to the following endpoint:
 
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
+
+> [!NOTE]
+>
+> Endpoints for government customers are located at [Network endpoints for US government deployments](..\intune-us-government-endpoints)
 
 ### Supported platforms
 
