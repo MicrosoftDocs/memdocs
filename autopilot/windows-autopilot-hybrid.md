@@ -144,7 +144,7 @@ The organizational unit that has the rights to create computers must match:
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Updated Connector**](#tab/updated-connector)
 
-Before beginning the installation, make sure that all of the [Intune connector server requirements](#intune-connector-server-requirements) are met.
+Before beginning the installation, make sure that all of the [Intune connector server requirements](#requirements?tabs=intune-connector-requirements) are met.
 
 #### Install steps for Intune updated connector
 
@@ -218,7 +218,7 @@ After the Intune Connector for Active Directory is installed, it will start logg
 >
 > The legacy Intune Connector is deprecated and no longer available for download. These instructions assume that the legacy Intune Connector is already downloaded or installed. Best practices is to download and install the [updated Intune Connector](#install-the-intune-connector?tabs=updated-connector).
 
-Before beginning the installation, make sure that all of the [Intune connector server requirements](#intune-connector-server-requirements) are met.
+Before beginning the installation, make sure that all of the [Intune connector server requirements](#requirements?tabs=intune-connector-requirements) are met.
 
 #### Install steps for the legacy Intune connector
 
