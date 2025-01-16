@@ -45,7 +45,7 @@ To learn more, see:
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - iPads - No user affinity**.
+This will create a policy in your tenant with the name **:::no-loc text="_MSLearn_Example_CommonEDU - iPads - No user affinity":::**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
