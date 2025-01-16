@@ -144,7 +144,7 @@ The organizational unit that has the rights to create computers must match:
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Updated Connector**](#tab/updated-connector)
 
-Before beginning the installation, make sure that all of the [Intune connector server requirements](windows-autopilot-hybrid.md#requirements?tabs=intune-connector-requirements) are met.
+Before beginning the installation, make sure that all of the [Intune connector server requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) are met.
 
 #### Install steps for Intune updated connector
 
@@ -216,9 +216,9 @@ After the Intune Connector for Active Directory is installed, it will start logg
 
 > [!IMPORTANT]
 >
-> The legacy Intune Connector is deprecated and no longer available for download. These instructions assume that the legacy Intune Connector is already downloaded or installed. Best practices is to download and install the [updated Intune Connector](windows-autopilot-hybrid.md.md#install-the-intune-connector?tabs=updated-connector).
+> The legacy Intune Connector is deprecated and no longer available for download. These instructions assume that the legacy Intune Connector is already downloaded or installed. Best practices is to download and install the [updated Intune Connector](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector).
 
-Before beginning the installation, make sure that all of the [Intune connector server requirements](windows-autopilot-hybrid.md#requirements?tabs=intune-connector-requirements) are met.
+Before beginning the installation, make sure that all of the [Intune connector server requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) are met.
 
 #### Install steps for the legacy Intune connector
 
