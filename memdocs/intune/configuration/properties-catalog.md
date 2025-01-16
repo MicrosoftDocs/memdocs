@@ -43,7 +43,7 @@ Windows 10
 
 - To use Inventory, devices must be corporate owned, Intune managed (includes co-managed), and Microsoft Entra joined.
 
-- For a user to configure a policy to start collecting inventory data from devices, they must have the Device Configurations **Create** permission.
+- For a user to configure a policy to start collecting inventory data from devices, they must have the Device Configurations **Create** permission and the Organization **Read** permission.
 
 - For a user to view collected data about devices, they must have the Managed Devices **Read** permission.
 
