@@ -27,9 +27,7 @@ Select the tab that corresponds to the version of the Intune Connector that is b
 
 Before beginning the installation, make sure that all of the [Intune connector server requirements](../../windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) are met.
 
-#### Install steps for the updated Intune connector
-
-##### Turn off Internet Explorer Enhanced Security Configuration
+#### Turn off Internet Explorer Enhanced Security Configuration
 
 By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems signing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends turning off Internet Explorer Enhanced Security Configuration. To turn off Internet Explorer Enhanced Security Configuration:
 
@@ -115,13 +113,11 @@ After the Intune Connector for Active Directory is installed, it will start logg
 
 > [!IMPORTANT]
 >
-> The legacy Intune Connector is deprecated and no longer available for download. These instructions assume that the legacy Intune Connector is already downloaded or installed. Best practice is to download and install the [updated Intune Connector](../../windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector).
+> The legacy Intune Connector is deprecated and no longer available for download. These instructions assume that the legacy Intune Connector is already installed or has been downloaded in the past. Best practice is to download and install the [updated Intune Connector](../../windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector).
 
 Before beginning the installation, make sure that all of the [Intune connector server requirements](../../windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) are met.
 
-#### Install steps for the legacy Intune connector
-
-##### Disable Internet Explorer Enhanced Security Configuration
+#### Disable Internet Explorer Enhanced Security Configuration
 
 By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems signing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends turning off Internet Explorer Enhanced Security Configuration. To turn off Internet Explorer Enhanced Security Configuration:
 
