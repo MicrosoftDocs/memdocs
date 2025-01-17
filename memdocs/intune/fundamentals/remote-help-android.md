@@ -126,7 +126,7 @@ The Remote Help app requires Camera permissions.
 
 You can autogrant them through app configuration policy:
 
-1. Go to **Apps** > **App Configuration Policies** > **Add** a new policy for **Managed devices**.
+1. Go to **Apps** > **Configuration** > **Create** a new policy for **Managed devices**.
 
 2. Create the policy for **Android Enterprise** with type **Fully managed, Dedicated, and Corporate-Owned Work Profile Only**. Target the policy to the **Remote Help** app that you approved earlier.
 

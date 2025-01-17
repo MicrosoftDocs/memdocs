@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Policies for Office apps
+title: Policies for Microsoft 365 apps
 titleSuffix: Microsoft Intune
-description: Understand the policies available for Office apps.
+description: Understand the policies available for Microsoft 365 apps.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -30,9 +30,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Policies for Office apps
+# Policies for Microsoft 365
 
-Intune provides policies specifically for Microsoft 365 (Office) apps. You can select specific options to create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. There are many policies for Office apps that you can add to Microsoft Intune and apply to groups of end users.
+Intune provides policies specifically for Microsoft 365 (Office) apps. You can select specific options to create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. There are many policies for Microsoft 365 apps that you can add to Microsoft Intune and apply to groups of end users.
 
 Examples of just a few of the Office app policies include the following:
 - Microsoft Word: *Turn off Protected View for attachments opened from Outlook*
@@ -48,14 +48,14 @@ You can also protect access to Exchange on-premises mailboxes by creating Intune
 
 ## Prerequisites
 
-You must meet the requirements to use policies for Office apps. For more information, see [Requirements for using the Office cloud policy service](/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service).
+You must meet the requirements to use policies for Microsoft 365 apps. For more information, see [Requirements for using the Office cloud policy service](/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service).
 
 ## To add an Office app policy
 
 After you set up Intune for your organization, you can create an Office app policy.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **Policies for Office apps** > **Create**.
+2. Select **Apps** > **Policies for Microsoft 365** > **Create**.
 3. Add the following values:
     - **Name:** Type a name (required) for your new policy.
     - **Description:** (Optional) Type a description.

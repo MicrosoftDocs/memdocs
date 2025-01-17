@@ -63,7 +63,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 ### Create an iOS/iPadOS or Android app protection policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App protection policies**. This selection opens the **App protection policies** details, where you create new policies and edit existing policies.
+2. Select **Apps** > **Protection**. This selection opens the **Protection** details, where you create new policies and edit existing policies.
 3. Select **Create policy** and select either **iOS/iPadOS** or **Android**. The **Create policy** pane is displayed.
 4. On the **Basics** page, add the following values:
 
@@ -132,7 +132,7 @@ You can edit an existing policy and apply it to the targeted users. For more inf
 
 ### To change the list of apps associated with the policy
 
-1. In the **App protection policies** pane, select the policy you want to change.
+1. In the **Protection** pane, select the policy you want to change.
 
 2. In the *Intune App Protection* pane, select **Properties**.
 
@@ -153,7 +153,7 @@ You can edit an existing policy and apply it to the targeted users. For more inf
  
 #### To change the list of user groups
 
-1. In the **App protection policies** pane, select the policy you want to change.
+1. In the **Protection** pane, select the policy you want to change.
 
 2. In the *Intune App Protection* pane, select **Properties**.
 
@@ -171,9 +171,9 @@ You can edit an existing policy and apply it to the targeted users. For more inf
 
 ### To change policy settings
 
-1. In the **App protection policies** pane, select the policy you want to change.
+1. In the **Protection** pane, select the policy you want to change.
 
-2. In the *Intune App Protection* pane, select **Properties**.
+2. Next, select **Properties**.
 
 3. Next to the section corresponding to the settings you want to change, select **Edit**. Then change the settings to new values.
 
@@ -186,7 +186,7 @@ In many organizations, it's common to allow end users to use both Intune Mobile 
 
 Because Intune app protection policies target a user's identity, the protection settings for a user can apply to both enrolled (MDM managed) and nonenrolled devices (no MDM). Therefore, you can target an Intune app protection policy to either Intune enrolled or unenrolled iOS/iPadOS and Android devices using filters. For more information on creating filters see, [Use filters when assigning policies](../fundamentals/filters.md) . You can have one protection policy for unmanaged devices in which strict data loss prevention (DLP) controls are in place, and a separate protection policy for MDM managed devices, where the DLP controls may be a little more relaxed. For more information how this works on personal Android Enterprise devices, see [App protection policies and work profiles](android-deployment-scenarios-app-protection-work-profiles.md).
 
-To use these filters when assigning policies, browse to **Apps** > **App protection policies** in the Intune admin center, and then select **Create policy**. You can also edit an existing app protection policy. Navigate to the **Assignments** page and select **Edit filter** to include or exclude filters for the assigned group. 
+To use these filters when assigning policies, browse to **Apps** > **Protection** in the Intune admin center, and then select **Create policy**. You can also edit an existing app protection policy. Navigate to the **Assignments** page and select **Edit filter** to include or exclude filters for the assigned group. 
 
 ### Device Management types
 

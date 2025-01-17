@@ -58,7 +58,7 @@ Once you have selected the included groups for your application configuration po
 ## Create an app configuration policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
+2. Choose the **Apps** > **Configuration** > **Create** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. On the **Basics** page, set the following details:
     - **Name** - The name of the profile that appears in the Microsoft Intune admin center.
     - **Description** - The description of the profile that appears in the Microsoft Intune admin center.
@@ -228,8 +228,8 @@ Additionally, Intune supports the following token types in the property list:
 
 Apple's Automated Device Enrollments are not compatible with the app store version of the Company Portal app by default. However, you can configure the Company Portal app to support iOS/iPadOS ADE devices even when users have downloaded the Company Portal from the App Store by using the following steps.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Intune Company Portal app if it has not been added yet, by going to **Apps** > **All apps** > **Add** > **iOS Store App**.
-2. Go to **Apps** > **App configuration policies**, to create an app configuration policy for the Company Portal app.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Intune Company Portal app if it has not been added yet, by going to **Apps** > **All Apps** > **Create** > **iOS Store App**.
+2. Go to **Apps** > **Configuration**, to create an app configuration policy for the Company Portal app.
 3. Create an app configuration policy with the XML below. More information on how to create an app configuration policy and enter XML data can be found at [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 
     - **Use the Company Portal on an Automated Device Enrollment (ADE) device enrolled with user affinity**: 

@@ -139,7 +139,7 @@ Use the following options to configure your notifications on the portal through 
 1. On the **Basics** page, add details such as **Name** and **Description**. Click **Next**.
 1. On the **Apps** page, click **Select public apps**, then find and select the **Microsoft Teams** apps. Click **Next**.
 1. On the **Data Protection** page, find the **Org data notifications** setting and select the **Block org Data** option. Set the **Assignments** for the groups of users to include and then create your policy.
-1. Once the app protection policy has been created, go to **Apps** > **App configuration policies** > **Add** > **Managed apps**. 
+1. Once the app protection policy has been created, go to **Apps** > **Configuration** > **Create** > **Managed apps**. 
 
    :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-03.png" alt-text="app-configuration-policies-at-a-glance" border="true" :::
 
@@ -156,7 +156,7 @@ Use the following options to configure your notifications on the portal through 
 
 1. Set the **Assignments** for the groups of users to include and then create your policy.
 
-1. Once the policy has been created, go to **Apps** > **App protection policies**. Find your newly created **App protection policy** and check whether the policy has been deployed by reviewing the **Deployed** column. The **Deployed** column should display **Yes** for the created policy. If it displays **No**, refresh the page, and check after 10 minutes.
+1. Once the policy has been created, go to **Apps** > **Protection**. Find your newly created **App protection policy** and check whether the policy has been deployed by reviewing the **Deployed** column. The **Deployed** column should display **Yes** for the created policy. If it displays **No**, refresh the page, and check after 10 minutes.
 
 ### For the notifications to show up on iOS and Android devices
 

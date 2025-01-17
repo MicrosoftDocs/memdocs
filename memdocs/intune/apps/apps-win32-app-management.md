@@ -113,7 +113,7 @@ On a device where a Win32 app with grace period settings has been deployed, low-
 Set the app availability and other app assignment properties using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** or **Apps** > **Windows**.
+2. Select **Apps** > **All Apps** or **Apps** > **Windows**.
 3. Select an app from the list with **Windows app (Win32)** as its **Type**.
 4. From the app pane, select **Properties** and then **Edit** next to the **Assignments** section. Then select **Add group**, **Add all users**, or **Add all devices** below one of the assignment types.
 

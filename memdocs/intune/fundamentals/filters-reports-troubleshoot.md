@@ -82,7 +82,7 @@ These reports show filter information for each device that's evaluated in an app
 To see these reports, use the following steps:
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > select an app > **Device install status**.
+2. Select **Apps** > **All Apps** > select an app > **Device install status**.
 3. Select the **Filter** column > **Filters evaluated**. The following information is shown:
 
     - The filters that were evaluated.
