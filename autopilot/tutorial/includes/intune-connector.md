@@ -17,15 +17,13 @@ user-driven/hybrid-azure-ad-join-intune-connector.md
 
 Headings are driven by article context. -->
 
-## Install the Intune Connector
-
 > [!IMPORTANT]
 >
 > Intune 2501 uses an updated Intune Connector that strengths security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview). When the Intune Connector is downloaded, the updated Intune Connector is downloaded. The previous legacy Intune Connector is no longer available for download. The previous legacy Intune Connector will continue to work through the end of March 2025, but needs to be updated to the updated Intune Connector before then to avoid loss of functionality. For more information, see [blog]().
 
 Select the tab that corresponds to the version of the Intune Connector that is being installed:
 
-### [:::image type="icon" source="images/icons/software-18.svg"::: **Updated Connector**](#tab/updated-connector)
+### [:::image type="icon" source="../../images/icons/software-18.svg"::: **Updated Connector**](#tab/updated-connector)
 
 Before beginning the installation, make sure that all of the [Intune connector server requirements](../../windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) are met.
 
@@ -113,7 +111,7 @@ After authenticating, the Intune Connector for Active Directory finishes install
 
 After the Intune Connector for Active Directory is installed, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, **Admin** and **Operational** logs can be found.
 
-### [:::image type="icon" source="images/icons/software-18.svg"::: **Legacy Connector**](#tab/legacy-connector)
+### [:::image type="icon" source="../../images/icons/software-18.svg"::: **Legacy Connector**](#tab/legacy-connector)
 
 > [!IMPORTANT]
 >
