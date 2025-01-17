@@ -1,14 +1,13 @@
 ---
 # required metadata
-
-title: Create and deploy app protection policies 
+title: Create and deploy app protection policies
 titleSuffix: Microsoft Intune
 description: This article describes how to create and assign Microsoft Intune app protection policies (APP).
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/20/2024
+ms.date: 01/16/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -31,10 +30,7 @@ ms.collection:
 - highpri
 - FocusArea_Apps_Protect
 ---
-
 # How to create and assign app protection policies
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Learn how to create and assign Microsoft Intune app protection policies (APP) for users of your organization. This article also describes how to make changes to existing policies.
 
@@ -67,14 +63,15 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 3. Select **Create policy** and select either **iOS/iPadOS** or **Android**. The **Create policy** pane is displayed.
 4. On the **Basics** page, add the following values:
 
- | Value | Description |
- |:-------------|:-----------------------------------------------|
- | Name | The name of this app protection policy. |
- | Description | [Optional] The description of this app protection policy. |
+     | Value | Description |
+     |:-------------|:-----------------------------------------------|
+     | Name | The name of this app protection policy. |
+     | Description | [Optional] The description of this app protection policy. |
+    
+    ![Screenshot of the Basics page of the Create policy pane](./media/app-protection-policies/app-protection-add-policies-01.png)
+    
+5. Click **Next** to display the **Apps** page.  
 
-![Screenshot of the Basics page of the Create policy pane](./media/app-protection-policies/app-protection-add-policies-01.png)
-
-5. Click **Next** to display the **Apps** page.  \
     The **Apps** page allows you to choose which apps should be targeted by this policy. You must add at least one app.
 
     | Value/Option | Description |
@@ -88,28 +85,31 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     > [!NOTE]
     > **Public apps** are supported are apps from Microsoft and partners that are commonly used with Microsoft Intune. These Intune protected apps are enabled with a rich set of support for mobile application protection policies. For more information, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md). Custom apps are LOB apps that have been integrated with the Intune SDK or wrapped by the Intune App Wrapping Tool. For more information see [Microsoft Intune App SDK Overview](../developer/app-sdk.md) and [Prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md).
 
-6. Click **Next** to display the **Data protection** page.  \
+6. Click **Next** to display the **Data protection** page. 
+
     This page provides settings for data loss prevention (DLP) controls, including cut, copy, paste, and save-as restrictions. These settings determine how users interact with data in the apps that this app protection policy applies.
 
     **Data protection settings**: 
     - **iOS/iPadOS data protection** - For information, see [iOS/iPadOS app protection policy settings - Data protection](app-protection-policy-settings-ios.md#data-protection).
     - **Android data protection** - For information, see [Android app protection policy settings - Data protection](app-protection-policy-settings-android.md#data-protection).
 
-7. Click **Next** to display the **Access requirements** page.  \
+7. Click **Next** to display the **Access requirements** page.  
+
     This page provides settings to allow you to configure the PIN and credential requirements that users must meet to access apps in a work context.
 
     **Access requirements settings**: 
     - **iOS/iPadOS access requirements** - For information, see [iOS/iPadOS app protection policy settings - Access requirements](app-protection-policy-settings-ios.md#access-requirements).
     - **Android access requirements** - For information, see [Android app protection policy settings - Access requirements](app-protection-policy-settings-android.md#access-requirements).
 
-8. Click **Next** to display the **Conditional launch** page.  \
+8. Click **Next** to display the **Conditional launch** page.  
+
     This page provides settings to set the sign-in security requirements for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to sign in to your company app. Then select the **Action** you want to take if users don't meet your requirements. In some cases, multiple actions can be configured for a single setting.
 
     **Conditional launch settings**: 
     - **iOS/iPadOS conditional launch** - For information, see [iOS/iPadOS app protection policy settings - Conditional launch](app-protection-policy-settings-ios.md#conditional-launch).
     - **Android conditional launch** - For information, see [Android app protection policy settings - Conditional launch](app-protection-policy-settings-android.md#conditional-launch).
 
-9. Click **Next** to display the **Assignments** page. \
+9. Click **Next** to display the **Assignments** page. 
    The **Assignments** page allows you to assign the app protection policy to groups of users. You must apply the policy to a group of users to have the policy take effect.
 
 10. Click **Next: Review + create** to review the values and settings you entered for this app protection policy.
@@ -223,5 +223,5 @@ To see a full list of the policy settings for iOS/iPadOS and Android, select one
 [Monitor compliance and user status](app-protection-policies-monitor.md)
 
 ## See also
-* [Where to find work or school apps for Android (user help)](../user-help/use-managed-apps-on-your-device-android.md)
+- [Where to find work or school apps for Android (user help)](../user-help/use-managed-apps-on-your-device-android.md)
 - [Where to find work or school apps for iOS/iPadOS (user help)](../user-help/use-managed-apps-on-your-device-ios.md) 

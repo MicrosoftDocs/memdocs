@@ -56,7 +56,7 @@ To use Win32 app management, be sure the following criteria are met:
 
   > [!NOTE]
   >
-  > The [Microsoft Intune management extension (IME)](../apps/intune-management-extension.md) provides Intune's Win32 app type capabilities on managed clients. It is installed automatically when a PowerShell script or Win32 app is assigned to the user or device. Additionally, the Intune management extension agent checks every hour (or on service or device restart) for any new Win32 app assignments.
+  > The [Microsoft Intune management extension (IME)](../apps/intune-management-extension.md) provides Intune's Win32 app type capabilities on managed clients. It's installed automatically when a PowerShell script or Win32 app is assigned to the user or device. Additionally, the Intune management extension agent checks every hour (or on service or device restart) for any new Win32 app assignments.
 
 ## Prepare the Win32 app content for upload
 
@@ -80,7 +80,7 @@ You can configure Delivery Optimization to download Win32 app content in either 
 
 ## Install required and available apps on devices
 
-The user will see Windows notifications for the required and available app installations. The following image shows an example notification where the app installation is not complete until the device is restarted.
+The user will see Windows notifications for the required and available app installations. The following image shows an example notification where the app installation isn't complete until the device is restarted.
 
 ![Screenshot of Windows notifications for an app installation.](./media/apps-win32-app-management/apps-win32-app-08.png)
 
@@ -90,7 +90,7 @@ The following image notifies the user that app changes are being made to the dev
 
 Additionally, the Company Portal app shows more app installation status messages to users. The following conditions apply to Win32 dependency features:
 
-- App failed to be installed. Dependencies defined by the admin were not met.
+- App failed to be installed. Dependencies defined by the admin weren't met.
 - App was installed successfully but requires a restart.
 - App is in the process of being installed but requires a restart to continue.
 
@@ -105,10 +105,10 @@ On a device where a Win32 app with grace period settings has been deployed, low-
 > [!IMPORTANT]
 > The **Restart grace period** setting in the **Assignment** section is available only when **Device restart behavior** of the **Program** section is set to either of the following options:
 >
-> - **Determine behavior based on return codes** - Commonly set to Hard Reboot, however if return code is mapped to Soft Reboot, the user will only get a reboot notification and restart grace period settings will not be applied.
+> - **Determine behavior based on return codes** - Commonly set to Hard Reboot, however if return code is mapped to Soft Reboot, the user will only get a reboot notification and restart grace period settings won't be applied.
 > - **Intune will force a mandatory device restart**
 >
-> Win32 apps installed by Intune on a managed device won't be automatically uninstalled from that device if it is unenrolled from Intune management. Admins should restrict app assignment and installation to corporate managed devices to reduce the risk of applications and data becoming unmanaged.
+> Win32 apps installed by Intune on a managed device won't be automatically uninstalled from that device if it's unenrolled from Intune management. Admins should restrict app assignment and installation to corporate managed devices to reduce the risk of applications and data becoming unmanaged.
 
 Set the app availability and other app assignment properties using the following steps:
 
@@ -124,7 +124,7 @@ Set the app availability and other app assignment properties using the following
     - **Uninstall**
 
     > [!NOTE]
-    > Win32 apps installed using the **Available for enrolled devices** assignment will not be automatically reinstalled by Intune if they are uninstalled from a device in any way.
+    > Win32 apps installed using the **Available for enrolled devices** assignment won't be automatically reinstalled by Intune if they're uninstalled from a device in any way.
 
 5. If **Add group** was used, select a group on the **Select groups** pane to specify which groups will be assigned the app.
 6. To modify additional properties of the assignment, select the corresponding text under one of the assignment headings, including **Group mode**, **End user notifications**, **Availability**, **Installation deadline**, **Restart grace period**, or **Delivery optimization priority**.
@@ -139,7 +139,7 @@ Set the app availability and other app assignment properties using the following
     - **App installation deadline** to **As soon as possible** or **A specific date and time** and select your date and time. This date and time specify when the app is installed on the targeted device. When more than one assignment is made for the same user or device, the app installation deadline time is picked based on the earliest time possible.
       
       > [!NOTE]
-      > If a win32 app is configured with a deadline to install, it will be downloaded but it won't install until the deadline. The Company Portal does not provide this level of detail. The Company Portal will show an **Installing** status for the app as soon as it is downloaded. Once the app is installed, the Company Portal will show the app installation status as **Installed**. The time between showing an **Installing** status verses an **Installed** status depends on the configuration for the deadline in Intune.
+      > If a win32 app is configured with a deadline to install, it will be downloaded but it won't install until the deadline. The Company Portal doesn't provide this level of detail. The Company Portal will show an **Installing** status for the app as soon as it's downloaded. Once the app is installed, the Company Portal will show the app installation status as **Installed**. The time between showing an **Installing** status verses an **Installed** status depends on the configuration for the deadline in Intune.
 
     - **Restart grace period** to **Enabled** or **Disabled**. The restart grace period starts as soon as the app installation has finished on the device. When the setting is disabled, the device can restart without warning.
 

@@ -101,9 +101,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Show adaptive brightness toggle | bool | FALSE | Turn this setting to TRUE to allow end users to turn adaptive brightness on and off on the device. Adaptive brightness allows the device to select an optimal brightness based on ambient lighting.  | ❌ |
 | Show autorotate toggle | bool | FALSE | Turn this setting to TRUE to allow end users to access a toggle to turn on and off the device's auto-rotation setting. | ❌ |
 | Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting menu. Accessible information includes device's make, model, serial number, and IPv4 and IPv6 details. On OS version 9 and newer, to let users see the device's serial number, ensure that **Show serial number for all supported OS version on MHS** is configured to display `{{SerialNumber}}`. MAC address details are available from the **Device Information** page of the Managed Home Screen (MHS) app. Use the MAC address when troubleshooting device connectivity issues. | ✔️ |
-| Show device's name on MHS | bool | FALSE | Turn this setting to True to easily view the device's Intune admin center "device name" property from the Managed Settings menu when **Show device info setting** is set to True. Make sure to also include the string property "Device's name," which is auto-populated by Intune with the correct value. | ❌ |
-| Show serial number for all supported OS version on MHS | choice | {{SerialNumber}} | Ensure that in-app config device_serial_number is configured to display {{SerialNumber}} when **Show device info setting** is set to True. This value is auto-populated by Intune with the correct value. | ❌ |
-| Show device name for all supported OS version on MHS | choice | {{DeviceName}} | Ensure that app configuration device name is configured to display `{{DeviceName}}`. This value is auto-populated by Intune with the correct value. | ❌ |
+| Show device's name on MHS | bool | FALSE | Turn this setting to True to easily view the device's Intune admin center "device name" property from the Managed Settings menu when **Show device info setting** is set to True. Make sure to also include the string property "Device's name," which is autopopulated by Intune with the correct value. | ❌ |
+| Show serial number for all supported OS version on MHS | choice | {{SerialNumber}} | Ensure that in-app config device_serial_number is configured to display {{SerialNumber}} when **Show device info setting** is set to True. This value is autopopulated by Intune with the correct value. | ❌ |
+| Show device name for all supported OS version on MHS | choice | {{DeviceName}} | Ensure that app configuration device name is configured to display `{{DeviceName}}`. This value is autopopulated by Intune with the correct value. | ❌ |
 | Enable virtual home button | bool | FALSE | True allows end users to have access to a Managed Home Screen home button that will return   the user to the Managed Home Screen from the current task they are in. | ✔️ |
 | Type of virtual home button | string | swipe_up | Use swipe_up to access home button with   a swipe up gesture. Use float to access a sticky, persistent home   button that can be moved around the screen by the end user. | ✔️ |
 | Enable notifications badge | bool | FALSE | Enables the notification badge for app icons that   shows the number of new notifications on the app. If you enable this setting,   end users will see notification badges on apps that have unread   notifications. If you keep this configuration key disabled, the end user won't see any notification badged to apps that might have unread notifications. | ✔️ |
@@ -120,7 +120,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 > On Android devices running OS 10, when an end-user tries to connect to a network via the Managed Home Screen app, they'll get prompted with a consent via notifications. Because of this prompt, users on OS 10 will need to have access to the status bar and notifications in order to complete the consent step. Use the [General settings for fully managed and dedicated devices](../configuration/device-restrictions-android-for-work.md#dedicated-devices) to make status bar and notifications available to your end-users, if appropriate. Additionally, when an end-user tries to connect to a password protected network via the Managed Home Screen app, they'll be asked to input the password. Even if the password is correct, the network will only change if the device isn't already connected to a stable network.
 
 > [!IMPORTANT]
-> End users cannot automatically connect to Enterprise Wi-Fi networks they select from the MHS settings menu, even if that network has been pre-configured using either Intune or another external source. While managed devices can still reliably utilize these networks, end users cannot initialize a connection from within MHS to the preconfigured networks.
+> End users can't automatically connect to Enterprise Wi-Fi networks they select from the MHS settings menu, even if that network has been pre-configured using either Intune or another external source. While managed devices can still reliably utilize these networks, end users can't initialize a connection from within MHS to the preconfigured networks.
 
 > [!IMPORTANT]
 > For devices running on Android 10+ and using Managed Home Screen, for Bluetooth pairing to successfully work on devices that require a pairing key, admins must enable the following Android system apps:
@@ -131,9 +131,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 > For more information on how to enable Android system apps, go to: [Manage Android Enterprise system apps](apps-ae-system.md#enable-a-system-app-in-intune)
 
 > [!NOTE]
-> The virtual home button requires granting overlay permission to MHS. The notification badge functionality requires granting notification permission to MHS.The brightness slider, adaptive brightness toggle, and autorotate toggle require granting write settings permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it's recommended to use OEMconfig to auto-grant these permissions to prevent possible breakout scenarios from the Settings application.
+> The virtual home button requires granting overlay permission to MHS. The notification badge functionality requires granting notification permission to MHS.The brightness slider, adaptive brightness toggle, and autorotate toggle require granting write settings permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it's recommended to use OEMconfig to autogrant these permissions to prevent possible breakout scenarios from the Settings application.
 > 
-> Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It's recommended to only configure access to notifications and features which require permissions when necessary.
+> Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were autogranted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It's recommended to only configure access to notifications and features which require permissions when necessary.
 
 **Configurations for a custom screensaver**: 
 
@@ -151,9 +151,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 > as soon as the device's lock screen appears.
 
 > [!NOTE]
-> The screensaver requires granting overlay permission and exact alarm permission (OS 14+) to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it's recommended to use OEMconfig to auto-grant overlay and exact alarm permission to prevent possible breakout scenarios from the Settings application.
+> The screensaver requires granting overlay permission and exact alarm permission (OS 14+) to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it's recommended to use OEMconfig to autogrant overlay and exact alarm permission to prevent possible breakout scenarios from the Settings application.
 > 
-> Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It's recommended to only configure access to notifications and features which require permissions when necessary.
+> Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were autogranted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It's recommended to only configure access to notifications and features which require permissions when necessary.
 
 **Configurations to help with troubleshooting issues on the device**:
 
@@ -167,9 +167,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 | MAX time outside MHS | integer | 600 | Set the maximum amount of absolute time, in   seconds, that a user can spend outside of Managed Home Screen before it's   automatically re-launched. By default, this configuration is set to 600   seconds. **Enable MAX time outside of MHS** must be set to true to use this   setting. | ❌ |
 
 >[!NOTE]
-> The automatic relaunch functionality requires granting exact alarm permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it's recommended to use OEMconfig to auto-grant exact alarm permission to prevent possible breakout scenarios from the Settings application.
+> The automatic relaunch functionality requires granting exact alarm permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it's recommended to use OEMconfig to autogrant exact alarm permission to prevent possible breakout scenarios from the Settings application.
 > 
-> Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It's recommended to only configure access to notifications and features which require permissions when necessary.
+> Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were autogranted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It's recommended to only configure access to notifications and features which require permissions when necessary.
 
 **Configurations to customize Managed Home Screen experience when device is set up with Microsoft Entra shared device mode**:
 
@@ -204,9 +204,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 > For devices running Android 14 and higher, by default, the exact alarm permission will be denied. To make sure critical user functionality isn't impacted, end-users will be prompted to grant exact alarm permission upon first launch of Managed Home Screen.
 
 > [!NOTE]
-> The automatic sign out feature requires granting overlay permission and exact alarm permission (OS 14+) to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it's recommended to use OEMconfig to auto-grant overlay and exact alarm permission to prevent possible breakout scenarios from the Settings application.
+> The automatic sign out feature requires granting overlay permission and exact alarm permission (OS 14+) to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it's recommended to use OEMconfig to autogrant overlay and exact alarm permission to prevent possible breakout scenarios from the Settings application.
 > 
->  Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were auto-granted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It's recommended to only configure access to notifications and features which require permissions when necessary.
+>  Based on the OS version of the device, a notification may be presented to the user alerting them that the permission has been granted, even if the permissions were autogranted. This notification will bring the user to the permission-granting screen which may allow the user access to the settings app. It's recommended to only configure access to notifications and features which require permissions when necessary.
 
 ## Enter JSON Data
 
