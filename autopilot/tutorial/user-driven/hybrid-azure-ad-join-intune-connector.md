@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 01/17/2025
+ms.date: 01/21/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -49,7 +49,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 ## Install the Intune Connector
 
-[!INCLUDE [Install the Intune Connector](../includes/intune-connector.md)]
+[!INCLUDE [Install the Intune Connector](../../includes/intune-connector.md)]
 
 ## Next step: Increase the computer account limit in the Organizational Unit (OU)
 

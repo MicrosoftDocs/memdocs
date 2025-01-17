@@ -138,7 +138,143 @@ The organizational unit that has the rights to create computers must match:
 
 ## Install the Intune Connector
 
-[!INCLUDE [Install the Intune Connector](includes/intune-connector.md)]
+> [!IMPORTANT]
+>
+> Intune 2501 uses an updated Intune Connector that strengths security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview). When downloading the Intune Connector, the updated Intune Connector is downloaded. The previous legacy Intune Connector is no longer available for download. The previous legacy Intune Connector will still continue to work through the end of March 2025, but needs to be updated to the updated Intune Connector before then to avoid loss of functionality. For more information, see [blog]().
+
+### [:::image type="icon" source="images/icons/software-18.svg"::: **Updated Connector**](#tab/updated-connector)
+
+Before beginning the installation, make sure that all of the [Intune connector server requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) are met.
+
+#### Install steps for Intune updated connector
+
+1. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems signing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends to turn off Internet Explorer Enhanced Security Configuration.  To turn off Internet Explorer Enhanced Security Configuration:
+
+   1. On the server where the Intune Connector is being installed, open **Server Manager**.
+
+   1. In the left pane of Server Manager, select **Local Server**.
+
+   1. In the right **PROPERTIES** pane of Server Manager, select the **On** or **Off** link next to **IE Enhanced Security Configuration**.
+
+   1. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
+
+1. If the previous legacy Intune Connector is installed, uninstall it before installing the updated Intune Connector. For more information, see [Uninstall the ODJ Connector](#uninstall-the-odj-connector).
+
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Devices** in the left hand pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Intune Connector for Active Directory**.
+
+1. In the **Intune Connector for Active Directory** screen, select **Add**.
+
+1. Follow the instructions to download the Connector.
+
+1. Open the downloaded Connector setup file, *ODJConnectorSetupMsi.msi*, to install the Connector.
+
+1. At the end of the setup, select the checkbox **Launch Intune connector for Active Directory**.
+
+1. In the **Intune connector for Active Directory** window, select **Sign In**.
+
+1. Enter the credentials of an Intune administrator role. The user account must have an assigned Intune license.
+
+> [!NOTE]
+>
+> The Intune administrator role is a temporary requirement at the time of installation.
+
+After authenticating, the Intune Connector for Active Directory finishes installing. Once it finishes installing, verify that it is active in Intune by following these steps:
+
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Devices** in the left hand pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Intune Connector for Active Directory**.
+
+1. Confirm that the connection status in the **Status** column is **Active**.
+
+> [!NOTE]
+>
+> - After signing into the Connector, it can take several minutes to appear in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
+>
+> - Inactive Intune connectors still appear in the Intune Connectors page and will automatically be cleaned up after 30 days.
+
+After the Intune Connector for Active Directory is installed, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, **Admin** and **Operational** logs can be found.
+
+> [!NOTE]
+>
+> The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
+
+### [:::image type="icon" source="images/icons/software-18.svg"::: **Legacy Connector**](#tab/legacy-connector)
+
+> [!IMPORTANT]
+>
+> The legacy Intune Connector is deprecated and no longer available for download. These instructions assume that the legacy Intune Connector is already downloaded or installed. Best practices is to download and install the [updated Intune Connector](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector).
+
+Before beginning the installation, make sure that all of the [Intune connector server requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) are met.
+
+#### Install steps for the legacy Intune connector
+
+1. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems signing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends to turn off Internet Explorer Enhanced Security Configuration.  To turn off Internet Explorer Enhanced Security Configuration:
+
+   1. On the server where the Intune Connector is being installed, open **Server Manager**.
+
+   1. In the left pane of Server Manager, select **Local Server**.
+
+   1. In the right **PROPERTIES** pane of Server Manager, select the **On** or **Off** link next to **IE Enhanced Security Configuration**.
+
+   1. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
+
+1. Open the previously downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the legacy Intune Connector.
+
+> [!NOTE]
+>
+> If the legacy Intune Connector is already installed, go to the **Start** menu > **Intune Connector for Active Directory** > **Intune Connector for Active Directory**.
+
+1. At the end of the setup, select **Configure Now**.
+
+1. Select **Sign In**.
+
+1. Enter the credentials of an Intune administrator role. The user account must have an assigned Intune license.
+
+> [!NOTE]
+>
+> The Intune administrator role is a temporary requirement at the time of installation.
+
+After authenticating, the Intune Connector for Active Directory finishes installing. Once it finishes installing, verify that it is active in Intune by following these steps:
+
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Devices** in the left hand pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Intune Connector for Active Directory**.
+
+1. Confirm that the connection status in the **Status** column is **Active**.
+
+> [!NOTE]
+>
+> - After signing into the Connector, it can take several minutes to appear in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
+>
+> - Inactive Intune connectors still appear in the Intune Connectors page and will automatically be cleaned up after 30 days.
+
+After the Intune Connector for Active Directory is installed, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, **Admin** and **Operational** logs can be found.
+
+> [!NOTE]
+>
+> The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
+
+---
 
 ### Configure web proxy settings
 

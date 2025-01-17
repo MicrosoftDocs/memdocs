@@ -7,9 +7,9 @@ metadata:
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj
-  ms.reviewer: jubaptis
+  ms.reviewer: madakeva
   manager: aaroncz
-  ms.date: 11/26/2024
+  ms.date: 01/21/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -166,6 +166,11 @@ sections:
         answer: |
           ETW tracing can be used to get detailed information from Windows Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [Troubleshooting Windows Autopilot](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
 
+      - question: |
+          Why is the Intune Connector not logging in Event Viewer even though logging is enabled?
+        answer: |
+          The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
+
 
   - name: Troubleshooting Windows Autopilot device import and enrollment
     questions:
@@ -193,7 +198,7 @@ sections:
               1. Select the device that is experiencing the error, and then in the toolbar select **Unblock device**.
 
               1. Redeploy the Windows Autopilot deployment profile.
-              
+
                   > [!NOTE]
                   >
                   > A success message might not display after selecting **Unblock device**, but the device is ready to be used again.
@@ -382,7 +387,7 @@ sections:
 
   - name: Troubleshooting policy conflicts with Windows Autopilot
     questions:
-    
+
       - question: |
           Why is the web sign-in option missing at the Windows sign-in screen after Windows Autopilot pre-provisioning completes?
         answer: |
