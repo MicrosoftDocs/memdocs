@@ -12,8 +12,8 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
-pre-provisioning/hybrid-azure-ad-join-intune-connector.md
-user-driven/hybrid-azure-ad-join-intune-connector.md
+pre-provisioning/hybrid-azure-ad-join-intune-connector
+user-driven/hybrid-azure-ad-join-intune-connector
 
 Headings are driven by article context. -->
 
@@ -23,9 +23,9 @@ Headings are driven by article context. -->
 
 Select the tab that corresponds to the version of the Intune Connector that is being installed:
 
-### [:::image type="icon" source="/../images/icons/software-18.svg"::: **Updated Connector**](#tab/updated-connector)
+### [:::image type="icon" source="/autopilot/images/icons/software-18.svg"::: **Updated Connector**](#tab/updated-connector)
 
-Before beginning the installation, make sure that all of the [Intune connector server requirements](/../windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) are met.
+Before beginning the installation, make sure that all of the [Intune connector server requirements](/autopilot/windows-autopilot-hybrid?tabs=intune-connector-requirements#requirements) are met.
 
 #### Turn off Internet Explorer Enhanced Security Configuration
 
@@ -59,7 +59,7 @@ By default Windows Server has Internet Explorer Enhanced Security Configuration 
 
 #### Install the Intune Connector on the server
 
-1. If the previous legacy Intune Connector is installed, uninstall it first before installing the updated Intune Connector. For more information, see [Uninstall the ODJ Connector](/../windows-autopilot-hybrid.md#uninstall-the-odj-connector).
+1. If the previous legacy Intune Connector is installed, uninstall it first before installing the updated Intune Connector. For more information, see [Uninstall the ODJ Connector](/autopilot/windows-autopilot-hybrid#uninstall-the-odj-connector).
 
 1. Open the **ODJConnectorSetupMsi.msi** file that downloaded to launch the **Intune Connector for Active Directory Setup** install.
 
@@ -113,13 +113,13 @@ After authenticating, the Intune Connector for Active Directory finishes install
 
 After the Intune Connector for Active Directory is installed, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, **Admin** and **Operational** logs can be found.
 
-### [:::image type="icon" source="/../images/icons/software-18.svg"::: **Legacy Connector**](#tab/legacy-connector)
+### [:::image type="icon" source="/autopilot/images/icons/software-18.svg"::: **Legacy Connector**](#tab/legacy-connector)
 
 > [!IMPORTANT]
 >
-> The legacy Intune Connector is deprecated and no longer available for download. These instructions assume that the legacy Intune Connector is already installed or has been downloaded in the past. Best practice is to download and install the [updated Intune Connector](/../windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector).
+> The legacy Intune Connector is deprecated and no longer available for download. These instructions assume that the legacy Intune Connector is already installed or has been downloaded in the past. Best practice is to download and install the [updated Intune Connector](/autopilot/windows-autopilot-hybrid?tabs=updated-connector#install-the-intune-connector).
 
-Before beginning the installation, make sure that all of the [Intune connector server requirements](/../windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) are met.
+Before beginning the installation, make sure that all of the [Intune connector server requirements](/autopilot/windows-autopilot-hybrid?tabs=intune-connector-requirements#requirements) are met.
 
 #### Disable Internet Explorer Enhanced Security Configuration
 
