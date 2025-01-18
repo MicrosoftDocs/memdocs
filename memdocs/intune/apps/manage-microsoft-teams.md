@@ -131,18 +131,12 @@ Use the following options to configure your notifications on the portal through 
 ### To set the policies in Intune
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. In the left navigation pane, navigate to **Apps > App protection policies**.
-
-   :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-01.png" alt-text="Create the policy" border="true" :::
-
+1. In the left navigation pane, navigate to **Apps** > **Protection**.
 1. Click **Create Policy** and select your desired platform, such as **iOS/iPadOS**.
 1. On the **Basics** page, add details such as **Name** and **Description**. Click **Next**.
 1. On the **Apps** page, click **Select public apps**, then find and select the **Microsoft Teams** apps. Click **Next**.
 1. On the **Data Protection** page, find the **Org data notifications** setting and select the **Block org Data** option. Set the **Assignments** for the groups of users to include and then create your policy.
 1. Once the app protection policy has been created, go to **Apps** > **Configuration** > **Create** > **Managed apps**. 
-
-   :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-03.png" alt-text="app-configuration-policies-at-a-glance" border="true" :::
-
 1. On the **Basics** page, add a **Name** and click **Select public apps**, then find and select the **Microsoft Teams** apps. Click **Next**.
 1. Under **General configuration settings**, set any of the notification keys to **1** to turn the feature **ON** for chat, channels, all other notifications or any of these combinations. And, set to **0** to turn off the feature. 
 

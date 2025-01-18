@@ -647,7 +647,7 @@ items:
                   href: ./apps/data-transfer-between-apps-manage-ios.md
               - name: Review app protection logs
                 href: ./apps/app-protection-policy-settings-log.md
-            - name: Policies for Office apps
+            - name: Policies for Microsoft 365 apps
               href: ./apps/app-office-policies.md 
             - name: Quiet time policies
               href: ./apps/apps-quiet-time-policies.md                       
@@ -1235,7 +1235,7 @@ items:
           - name: Import custom ADMX and ADML
             displayName: gpo, windows
             href: ./configuration/administrative-templates-import-custom.md
-          - name: Update Office using ADMX
+          - name: Update Microsoft 365 using ADMX
             displayName: gpo, windows
             href: ./configuration/administrative-templates-update-office.md
           - name: Create Microsoft Edge policy using ADMX
