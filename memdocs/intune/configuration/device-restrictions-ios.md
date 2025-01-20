@@ -803,7 +803,7 @@ You can also:
   - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.
  
   > [!NOTE]
-  > **Require devices to use Wi-Fi networks set up via configuration profiles** does not support Wi-Fi profiles deployed using [custom profiles](custom-settings-ios.md).
+  > **Require devices to use Wi-Fi networks set up via configuration profiles** does not support Wi-Fi profiles deployed using [custom profiles](custom-settings-ios.md). If this setting is deployed for a device while no template based  Wi-Fi network is also deployed through Intune for that device the configuration policy will report in error state for the setting.
 
     This feature applies to:  
     - iOS/iPadOS 14.5 and newer
