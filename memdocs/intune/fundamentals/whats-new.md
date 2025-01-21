@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/14/2025
+ms.date: 01/21/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -76,7 +76,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of January 13, 2025  
+## Week of January 20, 2025  
 
 ### Monitor and troubleshoot
 
