@@ -125,7 +125,7 @@ To enable the Intune App SDK, follow these steps:
     
        ![Intune App SDK iOS: keychain sharing](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
        > [!NOTE]
-       > If you have configured MSAL to use a custom keychain access group rather than the default of `com.microsoft.adalcache`, then you do not need to specify this keychain acceess group here and should instead specify the custom keychain group. You should also [configure Intune](#configure-settings-for-the-intune-app-sdk) to use the same custom access group via the ADALCacheKeychainGroupOverride setting within the IntuneMAMSettings Info.plist dictionary.
+       > If you have configured MSAL to use a custom keychain access group rather than the default of `com.microsoft.adalcache`, then you do not need to specify this keychain access group here and should instead specify the custom keychain group. You should also [configure Intune](#configure-settings-for-the-intune-app-sdk) to use the same custom access group via the ADALCacheKeychainGroupOverride setting within the IntuneMAMSettings Info.plist dictionary.
     
     1. If you're editing the entitlements file directly, rather than using the Xcode UI shown above to create the keychain access groups, prepend the keychain access groups with `$(AppIdentifierPrefix)` (Xcode handles this automatically). For example:
     
