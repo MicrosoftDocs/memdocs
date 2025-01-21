@@ -1123,6 +1123,10 @@ items:
             href: ./protect/security-baseline-v2-edge-settings.md
           - name: Microsoft Edge baseline settings (version 85 and older)
             href: ./protect/security-baseline-settings-edge.md
+          - name: HoloLens 2 - Advanced security baseline settings
+            href: ./protect/security-baseline-hololens2-advanced.md
+          - name: HoloLens 2 - Standard security baseline settings
+            href: ./protect/security-baseline-hololens2-advanced.md
           - name: Windows 365 baseline settings
             href: ./protect/security-baseline-settings-windows-365.md
         - name: Microsoft Tunnel command-line tools
