@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/30/2024
+ms.date: 01/21/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,7 +47,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-When configuring device restriction policies, the broad range of settings enable you to tailor protection to your specific needs. <!-- removing while iOS security framework docs are pending freshness update. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for iOS device restriction policies. The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by device type:-->
+When you configure device restriction policies, the broad range of settings enable you to tailor protection to your specific needs. <!-- removing while iOS security framework docs are pending freshness update. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for iOS device restriction policies. The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by device type:-->
 
 <!--- For personal devices, see [iOS/iPadOS personal device security configurations](../enrollment/ios-ipados-personal-device-security-configurations.md)
 - For supervised devices, see [iOS/iPadOS supervised device security configurations](../enrollment/ios-ipados-supervised-device-security-configurations.md)-->     
@@ -100,7 +100,7 @@ When you're ready to proceed, create an [iOS/iPadOS device restrictions configur
 
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
-  - **Block installing apps using App Store**: **Yes** doesn't show the app store on the device home screen. Users can continue to use iTunes or the Apple Configurator to install apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the app store on the home screen.
+  - **Block installing apps using App Store**: When set to **Yes**, the app store isn't shown on the device home screen. Users can continue to use iTunes or the Apple Configurator to install apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the app store on the home screen.
   - **Block automatic app downloads**: **Yes** prevents automatic downloading of apps bought on other devices and automatic updates to new apps. It doesn't affect updates to existing apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow apps bought on other iOS/iPadOS devices to download and update on the device.
 
 - **Block playback of explicit music, podcast, and iTunes U**: **Yes** prevents explicit iTunes music, podcast, or news content. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the device to access content rated as adult from the store.
@@ -128,7 +128,7 @@ Use these settings to configure iOS/iPadOS devices to run specific apps in auton
 
 For the ASAM configuration to apply, users must manually open the specific app. This task also applies to the Company Portal app.
 
-- For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the user authenticates. When the apps actions are completed by users, or you remove this policy, the device returns to its normal state.
+- For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the user authenticates. When the users complete the app's actions, or you remove this policy, the device returns to its normal state.
 
 - Not all apps support autonomous single app mode. To put an app in ASAM, a bundle ID or a key value pair delivered by an app config policy are typically required. For more information, see the [`autonomousSingleAppModePermittedAppIDs` restriction](https://developer.apple.com/documentation/devicemanagement/restrictions) in Apple's MDM documentation. For more information on the specific settings required for the app you're configuring, see the vendor documentation.
 
@@ -172,9 +172,9 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Safari cookies**: By default, Apple allows all cookies, and blocks cross site tracking. Use this setting to allow users to enable or disable these features. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS allows all cookies and blocks cross site tracking, and might allow users to enable and disable these features.
-  - **Allow all cookies, and allow cross site tracking**: Cookies are allowed, and can be disabled by users. By default, cross site tracking is blocked, and can be enabled by users.
+  - **Allow all cookies, and allow cross site tracking**: Cookies are allowed, and users can disable the cookies. By default, cross site tracking is blocked, and users can enable cross site tracking.
   - **Block all cookies, and block cross site tracking**: Cookies and cross site tracking are both blocked. Users can't enable or disable either setting.
-  - **Allow all cookies, and block cross site tracking**: Cookies are allowed, and can be disabled by users. By default, cross site tracking is blocked, and can't be enabled or disabled by users.
+  - **Allow all cookies, and block cross site tracking**: Cookies are allowed, and users can disable the cookies. By default, cross site tracking is blocked, and users can't enable or disable cross site tracking.
 
 - **Block Safari JavaScript**: **Yes** prevents Java scripts in the browser from running on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Java scripts.
 
@@ -798,18 +798,23 @@ You can also:
 
   - On iOS/iPadOS 14.5 and newer devices, use this setting. Don't use the **Require joining Wi-Fi networks only using configuration profiles** setting.
 
-  - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.
+  - When set to **Yes**:
+  
+    - Make sure you configure a Wi-Fi device configuration profile using the [built-in Wi-Fi template](wi-fi-settings-configure.md) (not the settings catalog). Don't assign Wi-Fi profiles created using [custom profiles](custom-settings-ios.md), as this setting doesn't support custom Wi-Fi profiles.
+
+      If you don't use the built-in Wi-Fi device configuration template, then the policy shows an error state for this settiing (**Require devices to use Wi-Fi networks set up via configuration profiles**).
+
+    - Make sure that the Wi-Fi device configuration profile is already on the devices **before** you assign this setting (**Require devices to use Wi-Fi networks set up via configuration profiles**).
+
+      If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.
 
   - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.
- 
-  > [!NOTE]
-  > **Require devices to use Wi-Fi networks set up via configuration profiles** does not support Wi-Fi profiles deployed using [custom profiles](custom-settings-ios.md). If this setting is deployed for a device while no template based  Wi-Fi network is also deployed through Intune for that device the configuration policy will report in error state for the setting.
 
     This feature applies to:  
+
     - iOS/iPadOS 14.5 and newer
 
-## Next steps
+## Related articles
 
-[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-
-You can also restrict device features and settings on [macOS](device-restrictions-macos.md) devices.
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- Restrict device features and settings on [macOS](device-restrictions-macos.md) devices.
