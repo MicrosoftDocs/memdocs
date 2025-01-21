@@ -58,6 +58,13 @@ To access help and support in the admin center, you have some options:
 
   When you open **Help and support** this way, it's pinned at the side. You can select any other option and it stays pinned.
 
+### Use Support Assistant to resolve issues
+
+The Support Assistant leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. The Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic.
+
+> [!NOTE]
+> You can enable and disable the Support Assistant by choosing to opt-in and opt-out at any time.
+
 ### Choose the right support scenario
 
 In **Help and support**, select any available option to focus support on your scenario. You can only see tiles for the services that you have subscriptions to use.
