@@ -39,7 +39,7 @@ To learn more, see [Use the settings catalog to configure settings on Windows, i
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - Windows - Privacy**.
+This will create a policy in your tenant with the name **:::no-loc text="_MSLearn_Example_CommonEDU - Windows - Privacy":::**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies

@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/16/2024
+ms.date: 01/14/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -85,11 +85,13 @@ For more information about how employees and students can access these actions i
 ## Certificates  
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
-Devices that are already enrolled do not get an ACME certificate on unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 
+Devices that are already enrolled do not get an ACME certificate unless they re-enroll into Microsoft Intune. Acme is supported on devices running: 
 
 - iOS 16.0 or later  
 
 - iPadOS 16.1 or later  
+
+This capability is also supported in [GCC High tenants](../fundamentals/intune-govt-service-description.md). 
 
 ## Known issues and limitations 
 
