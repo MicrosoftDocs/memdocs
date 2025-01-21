@@ -89,6 +89,7 @@ The following features are currently not available and aren't supported in GCC H
 | Expedited updates | For more information on this feature, go to [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md). |
 | Feature updates | For more information on this feature, go to [Feature updates for Windows in Intune](../protect/windows-10-feature-updates.md). |
 | Windows Autopilot | The following features are in the planning phase: </br></br>- Customize out-of-box experience (OOBE) and rename devices during provisioning based on organizational structure </br>- Self-deploying and pre-provisioning mode </br> - More admin-specified configurations delivered before allowing desktop access. </br> - Enhanced optional desktop onboarding experience inside the Windows Company Portal app </br> - The ability to associate a device with a tenant. </br></br>For information about Windows Autopilot, go to [Windows Autopilot overview](/autopilot/overview). |
+| BIOS configuration policies on Windows | For more information on this feature, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](../configuration/bios-configuration.md). |
 
 ### Not available
 
