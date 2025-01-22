@@ -51,7 +51,7 @@ To learn more, see:
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - Windows - Start menu**.
+This will create a policy in your tenant with the name **:::no-loc text="_MSLearn_Example_CommonEDU - Windows - Start menu":::**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
