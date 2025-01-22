@@ -71,7 +71,9 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
     > - [How to configure a firewall for Active Directory domains and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts)
     > - [Hybrid Identity Required Ports and Protocols](/azure/active-directory/hybrid/reference-connect-ports)
 
-- To increase scale and availability, multiple connectors can be installed in the environment. We recommend installing the Connector on a server that's not running any other Intune connectors. Each connector must be able to create computer objects in any domain that needs to be supported.
+- To increase scale and availability, multiple connectors can be installed in a domain. Each connector must be able to create computer objects in the domain that it supports.
+
+- For the updated Intune Connector, installation needs to be done with an account that has domain admin rights. This allows the Intune Connector install to properly create Managed Service Accounts (MSAs).
 
 <!-- MAXADO-8594181
 Multi-domain support section removed
@@ -376,6 +378,8 @@ To uninstall the ODJ Connector from the computer, follow these steps:
 
 1. The ODJ connector proceeds to uninstall.
 
+1. In some cases, the ODJ connector might not fully uninstall until the original ODJ installer `ODJConnectorBootstrapper.exe` is run again. To verify that the ODJ connector is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
+
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2019/2022**](#tab/windows-server-2019-2022)
 
 1. Sign into the computer hosting the ODJ connector.
@@ -395,6 +399,8 @@ To uninstall the ODJ Connector from the computer, follow these steps:
 
 1. The ODJ connector proceeds to uninstall.
 
+1. In some cases, the ODJ connector might not fully uninstall until the original ODJ installer `ODJConnectorBootstrapper.exe` is run again. To verify that the ODJ connector is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
+
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2016**](#tab/windows-server-2016)
 
 1. Sign into the computer hosting the ODJ connector.
@@ -413,6 +419,8 @@ To uninstall the ODJ Connector from the computer, follow these steps:
 1. Under **Intune Connector for Active Directory**, select the **Uninstall** button, and then select the **Uninstall** button again.
 
 1. The ODJ connector proceeds to uninstall.
+
+1. In some cases, the ODJ connector might not fully uninstall until the original ODJ installer `ODJConnectorBootstrapper.exe` is run again. To verify that the ODJ connector is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
 
 ---
 

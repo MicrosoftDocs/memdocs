@@ -19,7 +19,7 @@ Headings are driven by article context. -->
 
 > [!IMPORTANT]
 >
-> Starting with Intune 2501, Intune uses an updated Intune Connector that strengths security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview). When the Intune Connector is downloaded, the updated Intune Connector is downloaded. The previous legacy Intune Connector is no longer available for download. The previous legacy Intune Connector will continue to work through the end of March 2025, but needs to be updated to the updated Intune Connector before then to avoid loss of functionality. For more information, see [blog]().
+> Starting with Intune 2501, Intune uses an updated Intune Connector that strengths security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts). When the Intune Connector is downloaded, the updated Intune Connector is downloaded. The previous legacy Intune Connector is no longer available for download. The previous legacy Intune Connector will continue to work through the end of March 2025, but needs to be updated to the updated Intune Connector before then to avoid loss of functionality. For more information, see [blog]().
 
 Select the tab that corresponds to the version of the Intune Connector that is being installed:
 
@@ -55,13 +55,13 @@ By default Windows Server has Internet Explorer Enhanced Security Configuration 
 
 1. In the **Intune Connector for Active Directory** screen, select **Add**.
 
-1. In the **Add connector** window that opens, under **Configuring the Intune connector for Active Directory**, select **Download the on-premises Intune Connector for Active Directory**. The link downloads a file called **ODJConnectorSetupMsi.msi**.
+1. In the **Add connector** window that opens, under **Configuring the Intune connector for Active Directory**, select **Download the on-premises Intune Connector for Active Directory**. The link downloads a file called `ODJConnectorBootstrapper.exe`.
 
 #### Install the Intune Connector on the server
 
 1. If the previous legacy Intune Connector is installed, uninstall it first before installing the updated Intune Connector. For more information, see [Uninstall the ODJ Connector](/autopilot/windows-autopilot-hybrid#uninstall-the-odj-connector).
 
-1. Open the **ODJConnectorSetupMsi.msi** file that downloaded to launch the **Intune Connector for Active Directory Setup** install.
+1. Open the `ODJConnectorBootstrapper.exe` file that downloaded to launch the **Intune Connector for Active Directory Setup** install.
 
 1. Step through the **Intune Connector for Active Directory Setup** install.
 
@@ -150,7 +150,7 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems signing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends turning off Internet Explorer Enhanced Security Configuration. To turn off Internet Explorer Enhanced Security Configuration:
 
-1. Sign into the server where the Intune Connector is being installed with an account that has local administrator rights.
+1. Sign into the server where the Intune Connector is being installed with an account that has local administrator rights and domain admin rights. Domain admin rights are required so that the Intune Connector installer can properly create an MSA.
 
 1. Open **Server Manager**.
 
@@ -162,7 +162,7 @@ By default Windows Server has Internet Explorer Enhanced Security Configuration 
 
 #### Install the legacy Intune Connector on the server
 
-1. Open the previously downloaded **ODJConnectorBootstrapper.exe** file to launch the **Intune Connector for Active Directory Setup** install.
+1. Open the previously downloaded `ODJConnectorBootstrapper.exe` file to launch the **Intune Connector for Active Directory Setup** install.
 
     > [!NOTE]
     >
