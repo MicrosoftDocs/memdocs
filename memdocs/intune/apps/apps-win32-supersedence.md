@@ -38,7 +38,7 @@ Supersedence relationships can be created when adding or modifying a Win32 app w
 
 App supersedence can only be applied to Win32 apps. For more information, see [Add a Win32 app](apps-win32-add.md) to Intune.
 
-A Microsoft Intune permission is required to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, Intune admins need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Intune admin center. To find this permission in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
+A Microsoft Intune permission is required to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, Intune administrators need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Intune admin center. To find this permission in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
 
 This Win32 app supersedence permission is added to the following built-in roles:
 
@@ -204,11 +204,11 @@ A Win32 app can have a maximum of 10 superseding apps. User must be logged in to
 
 When an app is targeted with available intent to a group that contains the user, and the user requested the app install from the Company Portal, Intune creates a device based assignment to track both the user consent and internal targeting to process the app during check-in. This device based assignment is used to install the app on the devices. However, in situations where the targeting changes during the lifecycle of the app, a few scenarios can occur. If you take any of the following actions once the app is already installed on the device, Intune will remove user consent and the app will no longer be targeted with available intent:
 
-1.	You remove the user from the Group membership of the targeted group in the Entra portal.
+1.	You remove the user from the Group membership of the targeted group in the Microsoft Entra admin center.
 2.	You removed the assignment to the targeted group.
 3.	You changed the intent of the app from **Available** to something else. For example, you could change the intent to **Unintall** or **Exclude**. 
 
-It’s important to note that even if you re-target the app with **Available** intent later, the auto-update supersedence will not occur because user consent has been removed. 
+It’s important to note that even if you re-target the app with **Available** intent later, the auto-update supersedence won't occur because user consent has been removed. 
 
 > [!NOTE]
 > The **Uninstall** intent takes precedence over **Available** intent.
