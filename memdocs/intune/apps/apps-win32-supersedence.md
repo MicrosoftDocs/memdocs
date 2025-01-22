@@ -65,7 +65,7 @@ The following steps help you create a supersedence relationship between apps:
 7. Once this step is finalized, select **Review + save** > **Save**.
 
     > [!IMPORTANT]
-    > Superseding apps don't get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that aren't targeted will be ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence takes place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, see the matrix below. This behavior is in direct contrast to dependencies, which doesn't require targeting. Additionally, only apps that are targeted will show install statuses in Microsoft Intune admin center.
+    > Superseding apps don't get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that aren't targeted are ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence takes place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, see the matrix below. This behavior is in direct contrast to dependencies, which doesn't require targeting. Additionally, only apps that are targeted show install statuses in Microsoft Intune admin center.
 
 ## Supersedence behavior
 
@@ -73,7 +73,7 @@ A *superseding app* is an app that updates or replaces other apps. A *superseded
 
 | Scenarios | Targeting for required intent | Targeting for available intent |
 |-|-|-|
-| **Scenario   1:**<br> The superseded app exists on the device and **Uninstall previous version** is set to **Yes**. | The superseded app is uninstalled, and the superseding app will be installed on the device.<p> **NOTE:** Even if the superseded app isn't targeted, it's uninstalled. | Only superseding apps are shown in the company portal and can be installed. |
+| **Scenario   1:**<br> The superseded app exists on the device and **Uninstall previous version** is set to **Yes**. | The superseded app is uninstalled, and the superseding app are installed on the device.<p> **NOTE:** Even if the superseded app isn't targeted, it's uninstalled. | Only superseding apps are shown in the company portal and can be installed. |
 | **Scenario   2:**<br>The superseded app exists on the device and **Uninstall previous version** is set to **No**. | The superseding app will be installed on the device. Whether the superseded app will be uninstalled or not is dependent on the superseding app's installer. | Only superseding apps are shown in the company portal and can be installed. |
 | **Scenario   3:**<br>The superseded app doesn't exist on the device. | The superseding app is   installed. | The new app appears in the   Company Portal. |
 
