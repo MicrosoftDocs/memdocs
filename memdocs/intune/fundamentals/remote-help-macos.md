@@ -88,7 +88,6 @@ General prerequisites for Remote Help are listed here [Prerequisites for Remote 
 
 ### Remote Help Native macOS App supported operating systems
 
-- macOS 12 (Monterey)
 - macOS 13 (Ventura)
 - macOS 14 (Sonoma)
 - macOS 15 (Sequoia)
