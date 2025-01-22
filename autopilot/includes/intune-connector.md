@@ -81,7 +81,12 @@ By default Windows Server has Internet Explorer Enhanced Security Configuration 
     >
     > The account used to enroll the Intune connector is only a temporary requirement at the time of installation. The account isn't used going forward after the server is enrolled.
 
-1. Once the sign in process is complete, a **The Intune connector for Active Directory successfully enrolled** confirmation window appears. Select **OK** to close the window. The **Enrollment** tab shows **Intune connector for Active Directory is enrolled** and the **Sign In** button is greyed out.
+1. Once the sign in process completes:
+
+   1. A **The Intune connector for Active Directory successfully enrolled** confirmation window appears. Select **OK** to close the window.
+   1. An **A Managed Service Account with name "<MSA_name>" was successfully set up** confirmation window appears. Notate the name of the MSA that was created, and then select **OK** to close the window.
+
+1. The **Enrollment** tab shows **Intune connector for Active Directory is enrolled**. The **Sign In** button is greyed out and **Configure Managed Service Account** is enabled.
 
 1. Close the **Intune connector for Active Directory** window.
 
@@ -113,11 +118,31 @@ After authenticating, the Intune Connector for Active Directory finishes install
 
 After the Intune Connector for Active Directory is installed, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, **Admin** and **Operational** logs can be found.
 
+#### Configure the MSA to allow creating objects in OUs
+
+By default, MSAs only have access to create computer objects in the **Computers** container. MSAs don't have access to create computer objects in Organizational Units (OUs). To allow the MSA to create objects in OUs, the OUs need to be added to the `ODJConnectorEnrollmentWiazard.exe.config` XML file found in `ODJConnectorEnrollmentWizard` directory where the Intune Connector was installed, normally `C:\Program Files\Microsoft Intune\ODJConnector\`.
+
+To configure the MSA to allow creating objects in OUs, follow these steps:
+
+1. On the server where the Intune Connector is installed, navigate to `ODJConnectorEnrollmentWizard` directory where the Intune Connector was installed, normally `C:\Program Files\Microsoft Intune\ODJConnector\`.
+
+1. In the `ODJConnectorEnrollmentWizard` directory, open the `ODJConnectorEnrollmentWiazard.exe.config` XML file in a text editor, for example, **Notepad**.
+
+1. In the `ODJConnectorEnrollmentWiazard.exe.config` XML file, add in any desired OUs that the MSA should have access to create computer objects in. The OU name should be the distinguished name and if applicable, needs to be escaped.
+
+1. Once all desired OUs are added, save the `ODJConnectorEnrollmentWiazard.exe.config` XML file.
+
+1. Open the **Intune connector for Active Directory** by navigating to **Intune connector for Active Directory** > **Intune connector for Active Directory** from the **Start** menu.
+
+1. Under the **Enrollment** tab in the **Intune connector for Active Directory** window, select **Configure Managed Service Account**.
+
+1. An **A Managed Service Account with name "<MSA_name>" was successfully set up** confirmation window appears. Select **OK** to close the window.
+
 ### [:::image type="icon" source="/autopilot/images/icons/software-18.svg"::: **Legacy Connector**](#tab/legacy-connector)
 
 > [!IMPORTANT]
 >
-> The legacy Intune Connector is deprecated and no longer available for download. These instructions assume that the legacy Intune Connector is already installed or has been downloaded in the past. Best practice is to download and install the [updated Intune Connector](/autopilot/windows-autopilot-hybrid?tabs=updated-connector#install-the-intune-connector).
+> The legacy Intune Connector is deprecated and no longer available for download. These instructions assume that the legacy Intune Connector is already installed or is already downloaded. Best practice is to download and install the [updated Intune Connector](/autopilot/windows-autopilot-hybrid?tabs=updated-connector#install-the-intune-connector).
 
 Before beginning the installation, make sure that all of the [Intune connector server requirements](/autopilot/windows-autopilot-hybrid?tabs=intune-connector-requirements#requirements) are met.
 
@@ -139,9 +164,9 @@ By default Windows Server has Internet Explorer Enhanced Security Configuration 
 
 1. Open the previously downloaded **ODJConnectorBootstrapper.exe** file to launch the **Intune Connector for Active Directory Setup** install.
 
-> [!NOTE]
->
-> If the legacy Intune Connector is already installed, go to the **Start** menu > **Intune Connector for Active Directory** > **Intune Connector for Active Directory**, and then proceed to [Sign in to the legacy Intune Connector](#sign-in-to-the-legacy-intune-connector).
+    > [!NOTE]
+    >
+    > If the legacy Intune Connector is already installed, go to the **Start** menu > **Intune Connector for Active Directory** > **Intune Connector for Active Directory**, and then proceed to [Sign in to the legacy Intune Connector](#sign-in-to-the-legacy-intune-connector).
 
 1. In the **Intune Connector for Active Directory Setup** installer window, select **I agree to the license terms and conditions**, and then select **Install**.
 
@@ -165,7 +190,9 @@ By default Windows Server has Internet Explorer Enhanced Security Configuration 
     >
     > The account used to enroll the Intune connector is only a temporary requirement at the time of installation. The account isn't used going forward after the server is enrolled.
 
-1. Once the sign in process is complete, a **The Intune connector for Active Directory successfully enrolled** confirmation window appears. Select **OK** to close the window. The **Enrollment** tab shows **Intune connector for Active Directory is enrolled** and the **Sign In** button is greyed out.
+1. Once the sign in process is complete, a **The Intune connector for Active Directory successfully enrolled** confirmation window appears. Select **OK** to close the window.
+
+1. The **Enrollment** tab shows **Intune connector for Active Directory is enrolled** and the **Sign In** button is greyed out.
 
 1. Close the **Intune connector for Active Directory** window.
 
