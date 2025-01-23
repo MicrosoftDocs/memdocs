@@ -1613,7 +1613,7 @@ items:
           - name: Create and validate CNAME records
             href: ./enrollment/windows-enrollment-create-cname.md
           - name: Set up Intune Connector for Active Directory
-            href: /autopilot/windows-autopilot-hybrid.md
+            href: /autopilot/windows-autopilot-hybrid
           - name: Set up Enrollment Status Page
             href: ./enrollment/windows-enrollment-status.md
           - name: Set up Windows Enrollment Attestation
