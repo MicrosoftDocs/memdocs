@@ -114,6 +114,7 @@ Add these configurations to your group:
 You can't use dynamic groups with the default enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
 
 ## Step 4: Enroll devices  
+
 > [!NOTE]
 > The Microsoft Authenticator app will be automatically installed during enrollment of a fully managed device. This app is required for this enrollment method and cannot be uninstalled.
 
