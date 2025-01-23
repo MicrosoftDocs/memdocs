@@ -54,7 +54,7 @@ Intune creates a shortcut to the web app on the user's device. For iOS/iPadOS de
 To add an app to Intune as a shortcut to an app on the web, do the following:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the **Other** types, select **Web link**. Other options include **iOS/iPadOS web clip**, **macOS web clip**, and **Windows web link**.
 4. Click **Select**. The **Add app** steps are displayed.
 1. On the **App information** page, add the following information:
