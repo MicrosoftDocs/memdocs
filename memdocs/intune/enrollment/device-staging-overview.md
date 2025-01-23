@@ -66,7 +66,7 @@ In the first stage, an Intune admin completes the following steps:
 
 1. Set the token's expiration date. 
 
-1. Optionally, in the admin center, create a dynamic device group or an assignment filter and assign policies and apps, which will reach the device after stage 3.
+1. Optionally, in the admin center, create a dynamic device group or an assignment filter. Then assign policies and apps, which reach the device after stage 3.
 
 In the second stage, an Intune admin or third-party vendor completes the following steps: 
  
