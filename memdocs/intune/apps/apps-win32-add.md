@@ -263,7 +263,7 @@ After you've added your rules, select **Next** to display the **Dependencies** p
 
 App dependencies define a relationship between apps where one app requires one or more dependent apps to be installed. If Intune has not yet installed an app on a device, any apps configured as dependent apps must be installed first. If an app is already installed on a device, Intune will install any newly configured dependent apps, that are configured for automatic installation, the next time Intune evaluates app policy on the device.
 
-You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. After your Win32 app has been added, you'll see the **Dependencies** option on the pane for your Win32 app. There's a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. 
+You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. After your Win32 app has been added, you'll see the **Dependencies** option on the pane for your Win32 app. There's a maximum of 100 dependencies, which include the dependencies of any included dependencies, as well as the app itself. 
 
 Any Win32 app dependency needs to also be a Win32 app. It doesn't support depending on other app types, such as single MSI LOB apps or Microsoft Store apps.
 
