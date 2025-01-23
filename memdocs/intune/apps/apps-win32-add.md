@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/11/2024
+ms.date: 01/23/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -74,7 +74,10 @@ The following steps help you add a Windows app to Intune:
 On the **App information** page, add the details for your app. Depending on the app that you chose, some of the values on this page might be automatically filled in.
 
 - **Name**: Enter the name of the app as it appears in the company portal. Make sure all app names that you use are unique. If the same app name exists twice, only one of the apps appears in the company portal.
-- **Description**: Enter the description of the app. The description appears in the company portal.
+- **Description**: Enter the description of the app. The description appears in the Company Portal. You can select the **Edit Description** option to display the **Edit description** pane. Within this pane, you can optionally use Markdown to create an app description with rich text formatting.​​ However, only the Markdown styles shown in this section are supported. HTML isn't supported.
+
+    ![Screenshot of the 'Edit description' pane.](./media/apps-win32-app-management/apps-win32-app-11.png)
+
 - **Publisher**: Enter the name of the publisher of the app.
 - **Category**: Select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the company portal.
 - **Show this as a featured app in the Company Portal**: Display the app prominently on the main page of the company portal when users browse for apps.
