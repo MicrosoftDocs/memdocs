@@ -161,7 +161,8 @@ You can target apps and policies to either assigned or dynamic device groups. Yo
 Users can now [enroll their corporate-owned work profile devices](android-dedicated-devices-fully-managed-enroll.md).
 
 > [!NOTE]
-> The Microsoft Intune app is automatically installed during enrollment. This app is required for enrollment and can't be uninstalled.  If you deploy the Intune Company Portal app to a device and the user attempts to launch the app, they will be redirected to the Microsoft Intune app, and the Company Portal app icon will be hidden.
+> The Microsoft Intune app is automatically installed during enrollment. This app is required for enrollment and can't be uninstalled. If you deploy the Intune Company Portal app to a device and the user attempts to launch the app, they will be redirected to the Microsoft Intune app, and the Company Portal app icon will be hidden.
+> The Microsoft Authenticator app is automatically installed during enrollment. This app is required for enrollment and can't be uninstalled. 
 
 ## Token types   
 When you create the enrollment profile in the admin center, you have to select a token type. There are two types of tokens. Each type enables a different enrollment flow.   
