@@ -92,16 +92,16 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 
 ## Get started
 
-You can find most app-related information in the **Apps** workload, which you can access by doing the following:
+You can find most app-related information in the **Apps** workload, which you can access by doing the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Apps**.
 
     ![The Apps workload pane](./media/app-management/apps-workload.png)
 
-The apps workload provides links to access common app information and functionality.
+This apps area, known as the Apps workload, provides links to access common app information and functionality.
 
-The top of the App workload navigation menu provides commonly used app details:
+The top of the Apps workload navigation menu provides commonly used app details:
 - **Overview**: Select this option to view the tenant name, the MDM authority, the tenant location, the account status, app installation status, and app protection policy status.
 - **All Apps**: Select this option to display a list of all available apps. You can add additional apps from this page. Additionally, you can see the status of each app, as well as whether each app is assigned. For more information, see [Add apps](apps-add.md) and [Assign apps](apps-deploy.md).
 - **Monitor**
