@@ -125,6 +125,9 @@ On the **Program** page, configure the app installation and removal commands for
 
 - **Allow available uninstall**: Select **Yes** to provide the uninstall option for this app for users from the Company Portal. Select **No** to prevent users from uninstalling the app from the Company Portal.
 
+  > [!NOTE]
+  > If a Win32 app has dependencies or is a dependent app itself, the Company Portal will not show the uninstall option for the app, even when **Allow available uninstall** is set to **Yes**.
+
 - **Install behavior**: Set the install behavior to either **System** or **User**.
 
     > [!NOTE]
