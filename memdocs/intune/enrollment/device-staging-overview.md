@@ -66,7 +66,7 @@ In the first stage, an Intune admin completes the following steps:
 
 1. Set the token's expiration date. 
 
-1. Optionally, in the admin center, create a dynamic device group or an assignment filter so you can assign policies and apps in the user stage. The dynamic device group feature isn't available to configure in the remaining stages. 
+1. Optionally, in the admin center, create a dynamic device group or an assignment filter. Then assign policies and apps, which reach the device after stage 3.
 
 In the second stage, an Intune admin or third-party vendor completes the following steps: 
  
@@ -81,7 +81,7 @@ In the second stage, an Intune admin or third-party vendor completes the followi
 
 4. Turn off the device and distribute it to the end user.   
 
-During stage 2, the Intune assignment filter is the only available option for targeting policies and apps. After the final stage ends, you can use other supported targeting options. Example: User security groups and dynamic groups 
+During stage 2, the Intune assignment filter on the all devices group is the only available option for targeting policies and apps. After the final stage ends, you can use other supported targeting options. Example: User security groups and dynamic groups 
 
 In the third, and final stage, an end user completes the following steps: 
 
