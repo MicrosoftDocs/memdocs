@@ -34,7 +34,7 @@ As an administrator, you can add users directly or synchronize users from your o
 
 ## Add users to Intune
 
-You can manually add users to your Intune subscription via the [Microsoft 365 admin center](https://admin.microsoft.com) or the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). An administrator can edit user accounts to assign Intune licenses. You can assign licenses in either the Microsoft 365 admin center or the Microsoft Intune admin center. For more information on using the Microsoft 365 admin center, see [Add users individually or in bulk to the Microsoft 365 admin center](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
+You can manually add users to your Intune subscription via the [Microsoft 365 admin center](https://admin.microsoft.com), the [Microsoft Entra admin center](https://entra.microsoft.com), or the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). An administrator can edit user accounts to assign Intune licenses. You can assign licenses in either the Microsoft 365 admin center or the Microsoft Intune admin center. For more information on using the Microsoft 365 admin center, see [Add users individually or in bulk to the Microsoft 365 admin center](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
 ### Add Intune users in the Microsoft 365 admin center
 
