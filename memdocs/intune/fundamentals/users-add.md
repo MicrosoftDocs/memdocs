@@ -52,7 +52,7 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
    - **Identity:**
        - **FirstName**
        - **Last name**
-       - **User type** - Choose either **Member** or **Guest**. Both of these user types are internal to your organization. Members are commonly full-time employees in your organization. Guests are have an account in your tenant, but have guest-level privileges. It's possible they were created within your tenant prior to the availability of B2B collaboration.
+       - **User type** - Choose either **Member** or **Guest**. Both of these user types are internal to your organization. Members are commonly full-time employees in your organization. Guests have an account in your tenant, but have guest-level privileges. It's possible they were created within your tenant prior to the availability of B2B collaboration.
        - **Authorization info** - You can add up to 5 certificate user IDs. These are used as a part of Certificate Based Authentication and require a specific format. For more information, see [Mapping to the certificateUserIds attribute in Microsoft Entra ID](/entra/identity/authentication/concept-certificate-based-authentication-certificateuserids).
    - **Job information:** Add any job-related information, such as the user's job title, department, or manager.
    - **Contact information:** Add any relevant contact information for the user.
@@ -82,7 +82,7 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
    1. From the menu that appears, choose one administrative unit from the list and select the **Select** button.
    1. Select the **Review + create** button.
 
-5. On the **Review + Create** tab, review the details to be sure there information is correct and details passed validation.
+5. On the **Review + Create** tab, review the details to be sure the information is correct and details passed validation.
    Review the details and select the **Create** button if everything looks good.
 
 > [!NOTE]
