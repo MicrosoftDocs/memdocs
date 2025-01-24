@@ -128,7 +128,7 @@ After you've added users to your Intune subscription, we recommend that you gran
 
 ### Give admin permissions in Microsoft 365
 
-1. Sign in to the [Microsoft Intune admin center](https://admin.microsoft.com) with a global administrator account >  select **Users** > **Active users** > choose the user to give admin permissions.
+1. Sign in to the[Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account >  select **Users** > **Active users** > choose the user to give admin permissions.
 2. In the user pane, choose **Manage roles** under **Roles**.
 3. In the **Manage roles** pane, choose the admin permission to grant from the list of available roles.
 4. Choose **Save changes**.
