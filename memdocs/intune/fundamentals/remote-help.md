@@ -95,7 +95,7 @@ Limitations:
   - Windows 10/11 on ARM64 devices
   - Windows 365
   - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
-  - macOS 12, 13, 14, and 15
+  - macOS 13, 14, and 15
 
     Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
 
@@ -108,7 +108,7 @@ This feature applies to:
 - Windows 10 on ARM64 devices
 - Windows 365
 - Android Enterprise Dedicated (Samsung and Zebra devices)
-- macOS 12, 13, 14, and 15
+- macOS 13, 14, and 15
 
 ## Data and privacy
 
