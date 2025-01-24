@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/20/2024
+ms.date: 01/24/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,28 +30,20 @@ ms.collection:
 
 # Assign licenses to users so they can enroll devices in Intune
 
-Whether you manually add users or synchronize from your on-premises Active Directory, you must first assign each user an Intune Plan 1 license before users can enroll their devices in Intune. For a list of licenses, see [Microsoft Intune licensing](licenses.md).
+Whether you manually add users or synchronize from your on-premises Active Directory, you must first assign each user license before users can enroll their devices in Intune. For a list of licenses, see [Microsoft Intune licensing](licenses.md).
 
 > [!NOTE]
-> Users assigned Intune app protection policy and not enrolling their devices into Microsoft Intune will also require an Intune license to receive policy.
+> Users assigned Intune app protection policy and not enrolling their devices into Microsoft Intune will also require an Intune license to receive the policy.
 
-## Assign an Intune license in the Microsoft Intune admin center
+## Assign an Intune license in the Microsoft 365 admin center
 
-You can use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Microsoft Entra ID.
+You can use the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Microsoft Entra ID.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All Users** > choose a user > **Licenses** > **Assignments**.
+1. In the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854), select **Users** > **Active users** > *choose an unlicensed user* > **Licenses and apps**.
 
-2. Choose the box for **Intune** > **Save**. If you want to use the Enterprise Mobility + Security E5 or other license, choose that box instead.
+2. Choose the box for **Intune** > **Save changes**. If you want to use the Enterprise Mobility + Security E5 or other license, choose that box instead. For more information about Microsoft Intune licenses, see [Microsoft Intune licensing](licenses.md).
 
-   ![Screenshot of the Microsoft 365 admin center Product licenses section.](./media/licenses-assign/mem-assign-license.png)
-
-3. The user account now has the permissions needed to use the service and enroll devices into management.
-
-<a name='assign-an-intune-license-by-using-azure-active-directory'></a>
-
-## Assign an Intune license by using Microsoft Entra ID
-
-You can also assign Intune licenses to users by using Microsoft Entra ID. For more information, see the [License users in Microsoft Entra article](/azure/active-directory/active-directory-licensing-group-assignment-azure-portal).
+The user account now has the permissions needed to use the service and enroll devices into Intune management.
 
 ## Use School Data Sync to assign licenses to users in Intune for Education
 
