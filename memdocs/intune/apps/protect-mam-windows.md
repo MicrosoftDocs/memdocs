@@ -42,7 +42,7 @@ You can enable protected Mobile Application Management (MAM) access to org data 
 - Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID
 
 > [!NOTE]
-> Intune Mobile Application Management (MAM) for Windows is available for Windows 10, build 19045.3636, KB5031445 or later and Windows 11, build 10.0.22621.2506, KB5031455 (22H2) or later.  This includes the supporting changes for Microsoft Intune (2309 release), Microsoft Edge (v117 stable branch and later for Windows 11 and v118.0.2088.71 and later for Windows 11) and Windows Security Center (v 1.0.2310.2002 and later). App Protection Conditional Access is generally available.
+> Intune Mobile Application Management (MAM) for Windows is available for Windows 10, build 19045.3636, KB5031445 or later and Windows 11, build 10.0.22621.2506, KB5031455 (22H2) or later.  This includes the supporting changes for Microsoft Intune (2309 release), Microsoft Edge (v117 stable branch and later for Windows 11 and v118.0.2088.71 and later for Windows 10) and Windows Security Center (v 1.0.2310.2002 and later). App Protection Conditional Access is generally available.
 > 
 > Windows MAM is supported in government cloud environments. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../apps/apps-deploy-gcc-dod.md).
 >
