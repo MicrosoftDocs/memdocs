@@ -70,8 +70,6 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
    1. From the menu that appears, choose up to 20 groups from the list and select the **Select** button.
    1. Select the **Review + create** button.
 
-      :::image type="content" source="media/how-to-create-delete-users/add-group-assignment.png" alt-text="Screenshot of the add group assignment process.":::
-
    **To assign a role to the new user**:
 
    1. Select **+ Add role**.
@@ -142,15 +140,13 @@ You can configure directory synchronization to import user accounts from your on
 
 Be sure your AD admins have access to your Microsoft Entra subscription, and are trained to complete common AD and Microsoft Entra tasks.
 
-<a name='how-to-sync-on-premises-users-with-azure-ad'></a>
-
 ### How to sync on-premises users with Microsoft Entra ID
 
 - To move existing users from on-premises Active Directory to Microsoft Entra ID, you can set up [hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity). Hybrid identities exist in both services - on-premises AD and Microsoft Entra ID.
 
 - You can also export Active Directory users using the UI or through script. An internet search can help you find the best option for your organization.
 
-- To synchronize your user accounts with Microsoft Entra ID, use the [Microsoft Entra Connect wizard](https://www.microsoft.com/download/details.aspx?id=47594). The Microsoft Entra Connect wizard provides a simplified and guided experience for connecting your on-premises identity infrastructure to the cloud. Choose your topology and needs (single or multiple directories, password hash sync, pass-through authentication, or federation). The wizard deploys and configures all components required to get your connection up and running. Including: sync services, Active Directory Federation Services (AD FS), and the [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview?view=graph-powershell-1.0&branch=main) module.
+- To synchronize your user accounts with Microsoft Entra ID, use the [Microsoft Entra Connect wizard](https://www.microsoft.com/download/details.aspx?id=47594). The Microsoft Entra Connect wizard provides a simplified and guided experience for connecting your on-premises identity infrastructure to the cloud. Choose your topology and needs (single or multiple directories, password hash sync, pass-through authentication, or federation). The wizard deploys and configures all components required to get your connection up and running. Including: sync services, Active Directory Federation Services (AD FS), and the [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview?view=graph-powershell-1.0) module.
 
 > [!TIP]
 > Microsoft Entra Connect encompasses functionality that was previously released as Dirsync and Azure AD Sync. Learn more about [directory integration](/previous-versions/azure/azure-services/jj573653(v=azure.100)). To learn about syncing user accounts from a local directory to Microsoft Entra ID, see [Similarities between Active Directory and Microsoft Entra ID](/previous-versions/azure/azure-services/dn518177(v=azure.100)).
