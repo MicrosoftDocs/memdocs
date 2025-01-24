@@ -94,13 +94,33 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 
 You can add Intune users in bulk by uploading a *csv* file containing the full list of users. The following steps allow you to add multiple users to Intune:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **Bulk operations** > **Bulk create**. The **Bulk create user** pane is displayed.
-2. Download, edit, and upload a *csv* template containing a list of users that you want to add to Intune.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least a [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator).
+2. Select **Users** > **All users** > **Bulk operations** > **Bulk create**. The **Bulk create users** pane is displayed.
+3. Download, edit, and upload a *csv* template containing a list of users that you want to add to Intune.
 
 The *csv* file is a comma-separated value list that can be edited in Notepad or Excel. For more information about using a *csv* file to add Intune users, see [Bulk create users in Microsoft Entra ID](/azure/active-directory/enterprise-users/users-bulk-add).
 
 > [!NOTE]
 > You can also invite multiple guest users to your Intune tenant. For more information, see [Tutorial: Bulk invite Microsoft Entra B2B collaboration users](/entra/external-id/tutorial-bulk-invite).
+
+## Delete user from Intune
+
+When a user has left your organization, you can delete them from your Intune tenant. If needed, you can choose to delete multiple users using **Bulk operations**.
+
+To delete an individual user from Intune:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least a [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator).
+2. Browse to **Users** > **All users**.
+3. Select the user you want to delete.
+4. Select **Delete**.
+
+To delete multiple users from Intune:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least a [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator).
+2. Select **Users** > **All users** > **Bulk operations** > **Bulk delete**. The **Bulk delete users** pane is displayed.
+4. Download, edit, and upload a *csv* template containing a list of users that you want to delete from Intune.
+
+For related information, see [Bulk delete users in Microsoft Entra ID](/entra/identity/users/users-bulk-delete).
 
 ## Grant admin permissions
 
@@ -108,7 +128,7 @@ After you've added users to your Intune subscription, we recommend that you gran
 
 ### Give admin permissions in Microsoft 365
 
-1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with a global administrator account >  select **Users** > **Active users** > choose the user to give admin permissions.
+1. Sign in to the[Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account >  select **Users** > **Active users** > choose the user to give admin permissions.
 2. In the user pane, choose **Manage roles** under **Roles**.
 3. In the **Manage roles** pane, choose the admin permission to grant from the list of available roles.
 4. Choose **Save changes**.
