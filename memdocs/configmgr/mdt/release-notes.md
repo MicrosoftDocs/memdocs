@@ -58,17 +58,12 @@ The following OS versions are supported for deployment with this build of MDT:
 - Windows 10, version 1803
 - Windows 10, version 1709
 - Other [supported versions](/windows/release-information/) of Windows 10
-- Windows 8.1
-- Windows 7
 - Windows Server 2019
 - Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2012
-- Windows Server 2008 R2
 
 > [!NOTE]
 >
-> MDT doesn't support Windows 10 ARM64 devices or any Windows versions release after those listed above.
+> MDT doesn't support Windows 10 ARM64 devices or any Windows versions released after those listed above.
 
 FAQ: [Is this release only supported with Windows 10, Windows ADK, or Configuration Manager version *X*?](./faq.yml#what-s-the-mdt-support-life-cycle-)
 
