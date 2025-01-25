@@ -89,7 +89,7 @@ Using the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId
 
 ### Microsoft Intune admin center
 
-Using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can view the **Total licensed users** and the **Total Intune licenses**. To find these details, sign-in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Tenant status** and select the **Tenant details** tab. Aditionally, you can view the assigned licenses available for a user in Intune by selecting **Users** > *select a user* > **Licenses**.
+Using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can view the **Total licensed users** and the **Total Intune licenses**. To find these details, sign-in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Tenant status** and select the **Tenant details** tab. Additionally, you can view the assigned licenses available for a user in Intune by selecting **Users** > *select a user* > **Licenses**.
 
 ### Microsoft Entra admin center
 
