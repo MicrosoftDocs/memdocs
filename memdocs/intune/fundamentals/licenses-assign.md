@@ -66,7 +66,7 @@ See this [overview of School Data Sync](https://support.office.com/article/Overv
 
 ## How to restore users accidentally unlicensed
 
-- If you have accidentally removed the license for one or more users, you can restore their device compliance and management by re-assigning the license for those users. For more information, see [Assign Microsoft Intune licenses](#assign-an-intune-license-in-the-microsoft-intune-admin-center).
+- If you have accidentally removed the license for one or more users, you can restore their device compliance and management by re-assigning the license for those users. For more information, see [Assign Microsoft Intune licenses](#assign-an-intune-license-in-the-microsoft-365-admin-center).
 
 ## Understanding the type of licenses you have purchased
 
@@ -75,6 +75,24 @@ How you purchased Intune determines your subscription information:
 - If you purchased Intune through an Enterprise Agreement, you can find your subscription information in the Volume License portal under **Subscriptions**.
 - If you purchased Intune through a Cloud Solution Provider, check with your reseller.
 - If you purchased Intune with a CC# or Invoice, then your licenses will be user-based.
+
+## Look up current licenses
+
+### Microsoft 365 admin center
+
+Using the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854), you can manage the subscription licenses your organization has available. To find these details, sign-in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854), select **Billing** > **Licenses**, then select the **Subscriptions** tab. Additionally, you can view the products owned by your organization in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) by selecting **Billing** > **Your products**, then select the **Products** tab. The [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) also provides licenses details for users by selecting **Users** > **Active users** > *select a user* > **Licenses and apps**.
+
+> [!NOTE]
+> Managing licenses is only available with in the Microsoft 365 Admin Center.
+
+### Microsoft Intune admin center
+
+Using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can view the **Total licensed users** and the **Total Intune licenses**. To find these details, sign-in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Tenant status** and select the **Tenant details** tab. Aditionally, you can view the assigned licenses available for a user in Intune by selecting **Users** > *select a user* > **Licenses**.
+
+### Microsoft Entra admin center
+
+Much like Microsoft Intune admin center, you can use the [Microsoft Entra admin center](https://entra.microsoft.com) to view available product licenses and assigned user license. To view product licenses in the [Microsoft Entra admin center](https://entra.microsoft.com), select **Licenses** under the **Billing** section, and select **All products**. To view the assigned licenses available for a user, select **Users** > **All users** > *select a user* > **Licenses**.
+
 
 ## Look up current licenses using PowerShell
 
