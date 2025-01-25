@@ -47,7 +47,7 @@ The user account now has the permissions needed to use the service and enroll de
 
 ## Use School Data Sync to assign licenses to users in Intune for Education
 
-If you are an educational organization, you can use School Data Sync (SDS) to assign Intune for Education licenses to synced users. Just choose the Intune for Education checkbox when you're setting up your SDS profile.  
+If you're an educational organization, you can use School Data Sync (SDS) to assign Intune for Education licenses to synced users. Just choose the Intune for Education checkbox when you're setting up your SDS profile.  
 
 ![Screenshot of SDS profile setting](./media/licenses-assign/i4e-sds-profile-setup-setting.png)
 
@@ -60,7 +60,7 @@ See this [overview of School Data Sync](https://support.office.com/article/Overv
 ## How user and device licenses affect access to services
 
 - Each **user** that you assign a user software license to may access and use the online services and related software (including System Center software) to manage applications and up to 15 MDM devices.
-- You can purchase licenses for any devices separately from user licenses. Device licenses do not need to be assigned to the devices. Each device that accesses and uses the online services and related software (including System Center software) must have a device license available in the Microsoft 365 tenant.
+- You can purchase licenses for any devices separately from user licenses. Device licenses don't need to be assigned to the devices. Each device that accesses and uses the online services and related software (including System Center software) must have a device license available in the Microsoft 365 tenant.
 - If a device is used by more than one user, each device requires a device based software license or all users require a user software license.
 - If you remove a license from a user that has managed devices, it may affect the compliance or management of those devices.  
 
@@ -77,6 +77,8 @@ How you purchased Intune determines your subscription information:
 - If you purchased Intune with a CC# or Invoice, then your licenses will be user-based.
 
 ## Look up current licenses
+
+You must use [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) to manage your licenses. However, you can view license details in Microsoft Intune admin center and Microsoft Entra admin center.
 
 ### Microsoft 365 admin center
 
@@ -126,9 +128,9 @@ A list of the **Account ID**, the **Active Units**, and the **Consumed Units** w
 
 Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Microsoft Entra ID P1 or P2 or Intune services in the EMS package. You can assign one or a subset of services using [Microsoft Graph PowerShell cmdlets](/powershell/module/microsoft.graph.users.actions/set-mguserlicense).
 
-To selectively assign user licenses for EMS services, open PowerShell as an administrator on a computer with the [Microsoft Graph PowerShel](/powershell/microsoftgraph/installation) installed. You can install PowerShell on a local computer or on an ADFS server.
+To selectively assign user licenses for EMS services, open PowerShell as an administrator on a computer with the [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation) installed. You can install PowerShell on a local computer or on an ADFS server.
 
-You must create a new license SKU definition that applies only to the desired service plans. To do this, disable the plans you don't want to apply. For example, you might create a license SKU definition that does not assign an Intune license. To see a list of available services, type:
+You must create a new license SKU definition that applies only to the desired service plans. To do this, disable the plans you don't want to apply. For example, you might create a license SKU definition that doesn't assign an Intune license. To see a list of available services, type:
 
 ```powershell
 (Get-MgSubscribedSku | Where {$_.SkuPartNumber -eq "EMS"}).ServiceStatus
