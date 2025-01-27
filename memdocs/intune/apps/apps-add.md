@@ -95,7 +95,7 @@ The following table lists the specific app types and how you can add them in the
 
 <sup>1</sup> For more information about Android Enterprise and Android work profiles, see [Understanding licensed apps](apps-add.md#understanding-licensed-apps).
 
-You can add an app in Microsoft Intune by selecting **Apps** > **All apps** > **Add**. The **Select app type** pane is displayed and allows you to select the **App type**.
+You can add an app in Microsoft Intune by selecting **Apps** > **All Apps** > **Create**. The **Select app type** pane is displayed and allows you to select the **App type**.
 
 >[!TIP]
 > An LOB app is one that you add from an app installation file. For example, to install an iOS/iPadOS LOB app, you add the application by selecting **Line-of-business app** as the **App type** in the **Select app type** pane. You then select the app package file (extension .ipa). These types of apps are typically written in-house or as a custom app.
@@ -233,7 +233,7 @@ Intune will automatically reinstall, update, or remove a required app based on t
 When you need to uninstall an app from user's devices, use the following steps.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > *the app* > **Assignments** > **Add group**.
+2. Select **Apps** > **All Apps** > *the app* > **Assignments** > **Add group**.
 3. In the **Add group** pane, select **Uninstall**.
 4. Select **Included Groups** to select the groups of users that are affected by this app assignment.
 5. Select the groups that you want to apply the uninstall assignment.
@@ -252,7 +252,7 @@ When you need to uninstall an app from user's devices, use the following steps.
 
 ## Delete an app from Intune
 
-Once you have removed assignments for an app and revoked any app licenses for an app associated with a token, you can delete the app from Intune. Delete the app in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > *right-click on the app to delete* > **Delete**.
+Once you have removed assignments for an app and revoked any app licenses for an app associated with a token, you can delete the app from Intune. Delete the app in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All Apps** > *right-click on the app to delete* > **Delete**.
 
 ## App installation errors
 
