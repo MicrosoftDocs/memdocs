@@ -120,7 +120,7 @@ There are two ways to add LOB apps to Managed Google Play:
     > [!NOTE]
     > Private apps may take several minutes to become available to sync. If the app doesn't appear the first time you perform a sync, wait a couple minutes, click the **Select** button for the private app you want to sync, and then initiate a new sync.
 
-For more information about Managed Google Play private apps including a FAQ, see Google's support article: [https://support.google.com/googleplay/work/answer/9146439](https://support.google.com/googleplay/work/answer/9146439)
+For more information about Managed Google Play private apps including an FAQ, see Google's support article: [https://support.google.com/googleplay/work/answer/9146439](https://support.google.com/googleplay/work/answer/9146439)
 
 >[!IMPORTANT]
 >Private apps added using this method can never be made public. Only use this publishing option if you're sure that this app will always be private to your organization.
@@ -234,7 +234,7 @@ For more information, see the [Manage App Updates](https://support.google.com/go
 
 You can choose to configure the Wi-Fi requirement for dedicated, fully managed and corporate-owned work profile devices by configuring app auto-updates in [device configurations policies](../configuration/device-restrictions-android-for-work.md).
 
-For dedicated, fully managed, corporate-owned, and personally-owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
+For dedicated, fully managed, corporate-owned, and personally owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
 
 - **Default**: The app's updates are subject to default conditions (described above).
 - **High Priority**: The app will update as soon as possible from when a new update is released, disregarding all of the default conditions. This may be disruptive for some users since the update can occur while the device is being used.
