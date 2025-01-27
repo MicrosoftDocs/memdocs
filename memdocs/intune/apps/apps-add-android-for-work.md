@@ -40,13 +40,14 @@ Managed Google Play is Google's enterprise app store and sole source of applicat
 To make it easier for you to configure and use Android Enterprise management, upon connecting your Intune tenant to Managed Google Play, Intune automatically adds five common Android Enterprise related apps to the Intune admin center. The five apps are follow:
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios. This app is automatically installed to fully managed devices during the device enrollment process.
-- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification. This app is automatically installed to fully managed devices during the device enrollment process.
+- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification. This app is automatically installed to fully managed and corporate-owned work profile devices during the device enrollment process.
+
 - **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise personally owned work profile scenarios. This app is automatically installed to fully managed devices during the device enrollment process.
 - **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Used for both Android Enterprise dedicated multi-app kiosk and fully managed user affiliated device scenarios. IT admins should create an assignment to install this app on dedicated devices that are going to be used in multi-app kiosk scenarios.
 - **[Microsoft Launcher](https://play.google.com/store/apps/details?id=com.microsoft.launcher)** - Used for Android Enterprise fully managed scenarios. IT admins can create a policy to make the Microsoft Launcher the default launcher on fully managed devices and customize the home screen. For more information, see [Configure Microsoft Launcher](./configure-microsoft-launcher.md)
 
 >[!NOTE]
->When an end user enrolls their Android Enterprise fully managed device, the Intune Company Portal app is automatically installed and the application icon may be visible to the end user. If the end user attempts to launch the Intune Company Portal app, the end user is redirected to the Microsoft Intune app and the Company Portal app icon will be subsequently hidden.
+>When an end user enrolls their Android Enterprise fully managed device, the Intune Company Portal app automatically installs on the device. The app icon might be visible to the end user. If the end user attempts to launch the Intune Company Portal app, the end user is redirected to the Microsoft Intune app, and the Company Portal app icon is subsequently hidden.
 >Additionally, the Microsoft Intune and Authenticator apps won't be able to have an uninstall issued to them as they're crucial applications for multiple Android Enterprise enrollment scenarios.
 
 ## Before you start
@@ -119,7 +120,7 @@ There are two ways to add LOB apps to Managed Google Play:
     > [!NOTE]
     > Private apps may take several minutes to become available to sync. If the app doesn't appear the first time you perform a sync, wait a couple minutes, click the **Select** button for the private app you want to sync, and then initiate a new sync.
 
-For more information about Managed Google Play private apps including a FAQ, see Google's support article: [https://support.google.com/googleplay/work/answer/9146439](https://support.google.com/googleplay/work/answer/9146439)
+For more information about Managed Google Play private apps including an FAQ, see Google's support article: [https://support.google.com/googleplay/work/answer/9146439](https://support.google.com/googleplay/work/answer/9146439)
 
 >[!IMPORTANT]
 >Private apps added using this method can never be made public. Only use this publishing option if you're sure that this app will always be private to your organization.
@@ -218,7 +219,7 @@ On both work profile devices and corporate-owned devices, you can use Intune to 
 By default, an Android Enterprise fully managed device won't allow employees to install any apps that aren't approved by the organization. Also, employees won't be able to remove any installed apps against policy. If you wish to allow users to access the full Google Play store to install apps rather than only having access to the approved apps in Managed Google Play store, you can set the **Allow access to all apps in Google Play store** to **Allow**. With this setting, the user can access all the apps in the Google Play store using their corporate account, however purchases may be limited. You can remove the limited purchases restriction by allowing users to add new accounts to the device. Doing so will enable end users to have the ability to purchase apps from the Google Play store using personal accounts, as well as conduct in-app purchases. For more information, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 > [!NOTE]
-> The Microsoft Intune app, the Microsoft Authenticator app, and the Company Portal app will be installed as required apps onto all fully managed devices during onboarding. Having these apps automatically installed provides Conditional Access support, and Microsoft Intune app users can see and resolve compliance issues.
+> The Microsoft Intune app, Microsoft Authenticator app, and the Company Portal app are installed as required apps on all fully managed and corporate-owned work profile devices during onboarding. Having these apps automatically installed provides Conditional Access support, and Microsoft Intune app users can see and resolve compliance issues.
 
 ## Update a Managed Google Play app
 
@@ -233,7 +234,7 @@ For more information, see the [Manage App Updates](https://support.google.com/go
 
 You can choose to configure the Wi-Fi requirement for dedicated, fully managed and corporate-owned work profile devices by configuring app auto-updates in [device configurations policies](../configuration/device-restrictions-android-for-work.md).
 
-For dedicated, fully managed, corporate-owned, and personally-owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
+For dedicated, fully managed, corporate-owned, and personally owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
 
 - **Default**: The app's updates are subject to default conditions (described above).
 - **High Priority**: The app will update as soon as possible from when a new update is released, disregarding all of the default conditions. This may be disruptive for some users since the update can occur while the device is being used.
