@@ -158,8 +158,6 @@ Intune also blocks personal devices using these enrollment methods:
 
 ## Limitations  
 
-* Enrollment restrictions are best effort, not a guaranteed security feature. Device details can be spoofable, meaning someone can impersonate a corporate device, or a certain Windows version or model, to bypass enrollment restrictions.
-  
 * Enrollment restrictions are applied to enrollments that are user-driven. Intune enforces the default policy in enrollment scenarios that aren't user-driven, such as:  
   
   *  Windows Autopilot self-deploying mode and Autopilot for pre-provisioned deployment  
