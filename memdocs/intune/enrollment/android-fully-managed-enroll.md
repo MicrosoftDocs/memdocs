@@ -115,7 +115,7 @@ You can't use dynamic groups with the default enrollment profile. For more infor
 
 ## Step 4: Enroll devices
 > [!NOTE]
-> The Microsoft Authenticator app will be automatically installed during enrollment of a fully managed device. This app is required for this enrollment method and cannot be uninstalled.
+> The Microsoft Authenticator app automatically installs on fully managed devices during enrollment. This app is required for this enrollment method and cannot be uninstalled.
 
 After you set up the enrollment profile, token, and dynamic group, you can use any of these provisioning methods to enroll devices as fully managed:  
 
