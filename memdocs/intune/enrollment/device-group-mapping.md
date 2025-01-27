@@ -54,7 +54,8 @@ Decide if it's necessary to show the device category selection prompt to end use
 ## Step 1: Create device category in Intune  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Device categories**.  
+2. Go to **Devices**. 
+3. Expand **Manage devices**, and then select **Device categories**.  
 3. Choose **Create device category** to add a new category.  
 4. Enter the name of the new category, such as `HR` and an optional description.
 5. Select **Next**.  
