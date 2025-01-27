@@ -47,7 +47,7 @@ To make it easier for you to configure and use Android Enterprise management, up
 - **[Microsoft Launcher](https://play.google.com/store/apps/details?id=com.microsoft.launcher)** - Used for Android Enterprise fully managed scenarios. IT admins can create a policy to make the Microsoft Launcher the default launcher on fully managed devices and customize the home screen. For more information, see [Configure Microsoft Launcher](./configure-microsoft-launcher.md)
 
 >[!NOTE]
->When an end user enrolls their Android Enterprise fully managed device, the Intune Company Portal app is automatically installed and the application icon may be visible to the end user. If the end user attempts to launch the Intune Company Portal app, the end user is redirected to the Microsoft Intune app and the Company Portal app icon will be subsequently hidden.
+>When an end user enrolls their Android Enterprise fully managed device, the Intune Company Portal app automatically installs on the device. The app icon might be visible to the end user. If the end user attempts to launch the Intune Company Portal app, the end user is redirected to the Microsoft Intune app, and the Company Portal app icon is subsequently hidden.
 >Additionally, the Microsoft Intune and Authenticator apps won't be able to have an uninstall issued to them as they're crucial applications for multiple Android Enterprise enrollment scenarios.
 
 ## Before you start
@@ -219,7 +219,7 @@ On both work profile devices and corporate-owned devices, you can use Intune to 
 By default, an Android Enterprise fully managed device won't allow employees to install any apps that aren't approved by the organization. Also, employees won't be able to remove any installed apps against policy. If you wish to allow users to access the full Google Play store to install apps rather than only having access to the approved apps in Managed Google Play store, you can set the **Allow access to all apps in Google Play store** to **Allow**. With this setting, the user can access all the apps in the Google Play store using their corporate account, however purchases may be limited. You can remove the limited purchases restriction by allowing users to add new accounts to the device. Doing so will enable end users to have the ability to purchase apps from the Google Play store using personal accounts, as well as conduct in-app purchases. For more information, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 > [!NOTE]
-> The Microsoft Intune app, the Microsoft Authenticator app, and the Company Portal app will be installed as required apps onto all fully managed and corporate-owned work profile devices during onboarding. Having these apps automatically installed provides Conditional Access support, and Microsoft Intune app users can see and resolve compliance issues.
+> The Microsoft Intune app, Microsoft Authenticator app, and the Company Portal app are installed as required apps on all fully managed and corporate-owned work profile devices during onboarding. Having these apps automatically installed provides Conditional Access support, and Microsoft Intune app users can see and resolve compliance issues.
 
 ## Update a Managed Google Play app
 
