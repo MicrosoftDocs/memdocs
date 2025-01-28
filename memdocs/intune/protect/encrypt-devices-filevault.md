@@ -117,7 +117,13 @@ You can add this permission and right to your own [custom RBAC roles](../fundame
 
    To enable FileVault, select and configure the following settings from the *Full Disk Encryption* category:
 
-   - FileVault > **Enable** - Set to **On**
+   - FileVault > Configure the following:
+     - **Enable** - Set to **On** 
+     - **Defer** - Set to **Enabled**
+     
+       > [!IMPORTANT]
+       > The *Defer* setting must be configured to *Enabled* to successfully apply FileVault settings.
+
    - FileVault Recovery Key Escrow > **Location** - Specify a description of the location where the recovery key is escrowed. This text is inserted into the message the user sees when enabling FileVault.
 
    > [!TIP]

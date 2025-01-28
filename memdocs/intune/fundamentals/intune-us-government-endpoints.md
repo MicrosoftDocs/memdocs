@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/19/2024  
+ms.date: 1/16/2025  
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -69,6 +69,18 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also n
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |
 |FXPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net |
+
+## Microsoft Defender for Endpoint
+
+For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements).
+
+To support Defender for Endpoint security settings management, allow the following hostnames through your firewall.
+For communication between clients and the cloud service:
+
+- \*.dm.microsoft.us - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
+
+  > [!IMPORTANT]
+  > SSL Inspection is not supported on endpoints required for Microsoft Defender for Endpoint.
 
 ## Partner service endpoints that Intune depends on
 
