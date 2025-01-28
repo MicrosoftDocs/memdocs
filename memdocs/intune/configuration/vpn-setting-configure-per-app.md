@@ -158,7 +158,7 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
 
 After adding your VPN profile, associate the app and Microsoft Entra group to the profile.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps**.
 2. Select an app from the list > **Properties** > **Assignments** > **Edit**.
 3. Go to the **Required** or **Available for enrolled devices** section.
 4. Select **Add group** > Select the group [you created](#step-1---create-a-group-for-your-vpn-users) (in this article) > **Select**.

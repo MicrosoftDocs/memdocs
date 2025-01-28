@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/31/2024
+ms.date: 01/21/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of January 20, 2025  
+
+### Monitor and troubleshoot
+
+#### Use Support Assistant to resolve issues<!-- 29084113 -->
+
+Support Assistant is now available in Intune. It leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic. Currently, the Support Assistant is in preview. You can enable and disable Support Assistant by choosing to opt-in and opt-out at any time. For related information, see [How to get support in the Microsoft Intune admin center](/mem/get-support).
+
 ## Week of December 30, 2024  
 
 ### Device enrollment  
@@ -96,10 +105,15 @@ For more information about customizing the Company Portal and Intune apps, see [
 ### Device security
 
 #### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint<!-- 13204113 -->
+ 
+> [!NOTE]
+>
+> *Rollout of this feature is delayed and now expected to be available on or around January 18th, 2025.*
 
-You can now manage the Microsoft Defender for Endpoint CSP setting for [tamper protection](/windows/client-management/mdm/defender-csp) on unenrolled devices you mange as part of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
+You can now manage the Microsoft Defender for Endpoint CSP setting for [tamper protection](/windows/client-management/mdm/defender-csp) on unenrolled devices you manage as part of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
  
 With this support, tamper protection configurations from *Windows Security Experience* profiles for *Antivirus* policies now apply to all devices instead of only to those that are enrolled with Intune.
+
 
 ### Device configuration
 
@@ -225,159 +239,6 @@ To learn more about how to target policies to VisionOS devices, see [Managed app
 Applies to:
 
 - Microsoft Teams for iOS on VisionOS devices
-
-### Device configuration
-
-#### New settings available in the Windows settings catalog<!-- 30159445 -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
-
-A new setting **Set Copilot Hardware Key** is now available in the Settings Catalog. To see this and other settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
-
-Applies to:
-
-- Windows 11
-
-#### Device Firmware Configuration Interface (DFCI) support for Samsung devices<!-- 29107197 --> 
-
-You can now use DFCI profiles to manage UEFI (BIOS) settings for Samsung devices that run Windows 10 or Windows 11. Not all Samsung devices running Windows are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
-
-You can manage DFCI profiles from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
-
-For more information about DFCI profiles, see:
-
-- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
-- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/autopilot/dfci-management)
-
-Applies to:
-
-- Windows
-
-#### New settings available in the Apple settings catalog <!--29038336 -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-We've added new settings to the Settings Catalog. To view available settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
-
-##### iOS/iPadOS
-
-**Restrictions**:
-
-- Allow Apps To Be Hidden
-- Allow Apps To Be Locked
-- Allow Call Recording
-- Allow Default Browser Modification
-- Allow External Intelligence Integrations
-- Allow External Intelligence Integrations Sign In
-- Allow Mail Summary
-- Allow RCS Messaging
-
-##### macOS
-
-**Restrictions**:
-
-- Allow External Intelligence Integrations
-- Allow External Intelligence Integrations Sign In
-- Allow Mail Summary
-- Allow Media Sharing Modification
-- Force Bypass Screen Capture Alert
-
-The following settings have been deprecated by Apple and will be marked as deprecated in the Settings Catalog:
-
-##### macOS
-
-**Networking > Firewall**:
-
-- Enable Logging
-- Logging Option
-
-#### View profiles for your Endpoint Security policies in the Device Configuration node of the admin center<!-- 30306055 -->
-
-We’ve updated the [*Configuration* view](../configuration/device-profile-monitor.md) for *Devices* in the Microsoft Intune admin center to now display profiles for your endpoint security policies alongside your device configuration policies. This means you can view a combined list of your device configuration policies and the supported endpoint security policies in a single location where you can then select a policy to view and edit it.
-
-The combined view supports the endpoint security profiles you create for the *macOS* and *Windows* platforms for the following endpoint security policy types:
-
-- Account Protection
-- Antivirus
-- Application Control
-- Attack Surface Reduction
-- Disk encryption
-- Endpoint Detection and Response
-- Endpoint Privilege Management
-- Firewall
-
-When viewing the list of policies, endpoint security policies are identified by their template type, like *Microsoft Defender Antivirus*, in the *Policy type* column.
-
-To view the combined list profiles for all device types, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > *All devices* and below *Manage devices*, select **Configuration**.
-
-While you can view endpoint security policies in the device configuration node, you must still create new endpoint security policies in the endpoint security node. Additionally, the combined view does not display endpoint security profiles for the *Windows (ConfigMgr)* platform or for *Linux*.
-
-#### Intune support for Windows 365 Link is now available in public preview<!-- 29267349 -->
-
-Windows 365 Link is the first Cloud PC device built by Microsoft to connect securely to Windows 365 in seconds, providing a responsive, high-fidelity Windows desktop experience in the Microsoft Cloud.
-
-Windows 365 Link runs a small Windows based OS called Windows CPC, and shows up in Intune alongside other managed Windows devices and Cloud PCs.
-
-Also, Device actions, such as **Wipe**, **Restart**, and **Collect diagnostics** work similarly to other Windows devices. As the OS is purpose built to directly connect to Windows 365, this results in only a fraction of Windows configuration policies being applicable, minimizing decision points.
-
-The process to configure and apply those applicable policies is simple and familiar because the process is the same as your other Windows devices. Secondly, Windows 365 Link has no ability to store data locally, no local apps, no local admin users, and automatically keeps itself up to date.
-
-This means several Intune features are not applicable including application and update management, along with scripts and remediations.
-
-Windows 365 Link is now available in public preview. For more information, see [Windows 365 Link—the first Cloud PC device for Windows 365.](https://aka.ms/Windows365LinkPublicPreview)
-
-#### Store macOS certificates in user keychain<!-- 7824255 -->  
-
-A new *deployment channel* setting in Microsoft Intune enables you to store macOS authentication certificates in the user keychain. This enhancement strengthens system security and improves the user experience by reducing certificate prompts. Prior to this change, Microsoft Intune automatically stored user and device certificates in the system keychain. The deployment channel setting is available in Simple Certificate Enrollment Protocol (SCEP) and Public Key Cryptography Standards (PKCS) certificate profiles for macOS, and in VPN, Wi-Fi, and wired network settings configuration profiles for macOS.
-
-For more information about the profiles and their new setting, see:
-
-- [Add VPN settings on macOS devices in Microsoft Intune](../configuration/vpn-settings-macos.md)   
-- [Add Wi-Fi settings for macOS devices in Microsoft Intune](../configuration/wi-fi-settings-macos.md)   
-- [Add wired network settings for macOS](../configuration/wired-network-settings-macos.md)  
-- [Configure and use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)  
-- [Create and assign SCEP certificate profiles in Intune](../protect/certificates-profile-scep.md)
-
-#### Evaluate compliance of Windows Subsystem for Linux (generally available)<!-- 24557103 -->
- 
-Now generally available, Microsoft Intune supports compliance checks for instances of Windows Subsystem for Linux (WSL) running on a Windows host device. You can create a Windows 10/11 compliance policy that contains the allowed Linux distribution names and versions evaluated on WSL. Microsoft Intune includes the WSL compliance results in the overall compliance state of the host device.
-
-For more information about WSL compliance, see [Evaluate compliance for Windows Subsystem for Linux](../protect/compliance-wsl.md).
-
-### Intune Apps
-
-#### Newly available protected apps for Intune<!-- 29602331 -->
-
-The following protected app is now available for Microsoft Intune:
-
-- Microsoft Designer by Microsoft Corporation
-
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-
-### Monitor and troubleshoot
-
-#### ICCID is inventoried for Android Enterprise Dedicated and Fully Managed <!-- 12846449 -->
-
-We've added the ability to view a device's ICCID number for devices enrolled as Android Enterprise Dedicated or Android Fully Managed. Admins can view ICCID numbers in their [device inventory](../remote-actions/device-inventory.md#hardware-device-details).
-
-You can now find the ICCID number for Android devices by navigating to **Devices** > **Android**. Select a device of interest. In the side panel, under **Monitor** select **Hardware**. The ICCID number will be in the **Network details** group. The ICCID number isn't supported for Android Corporate-Owned Work Profile devices.
-
-Applies to:
-
-- Android dedicated and fully managed
-
-#### New device actions for single device query<!--25799823 -->
-
-We've added the Intune remote device actions to Single device query to help you manage your devices remotely. From the device query interface, you'll be able to run device actions based on query results for faster and more efficient troubleshooting.
-
-Applies to:
-
-- Windows
-
-For more information, see:
-
-- [Device query in Microsoft Intune](../../analytics/device-query.md)
-- [Run remote actions on devices with Microsoft Intune](../remote-actions/device-management.md)
 
 ## Week of October 28, 2024
 
@@ -1061,7 +922,9 @@ ACME is supported for Apple Device Enrollment, Apple Configurator enrollment, an
 
 - iOS 16.0 or later
 - iPadOS 16.1 or later
-- macOS 13.1 or later
+- macOS 13.1 or later  
+
+This capability is also supported in [GCC High tenants](../fundamentals/intune-govt-service-description.md).      
 
 ## Week of July 22, 2024 (Service release 2407)
 
