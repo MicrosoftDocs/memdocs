@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/15/2024
+ms.date: 01/29/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -80,9 +80,10 @@ For details about email profiles, see [configure access to organization email us
   - **Block** - Mark rooted (jailbroken) devices as not compliant.
 
 - **Require the device to be at or under the Device Threat Level**  
-  *Supported for iOS 8.0 and later*
-Select the maximum allowed device threat level evaluated by your mobile threat defense service. 
-  Use this setting to take the risk assessment as a condition for compliance. Choose the allowed threat level:
+  *Supported for iOS 8.0 and later*  
+
+   Select the maximum allowed device threat level evaluated by your mobile threat defense service. 
+   Use this setting to take the risk assessment as a condition for compliance. Choose the allowed threat level:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Secured** - This option is the most secure, and means that the device can't have any threats. a device with any level of threats is evaluated as noncompliant.
   - **Low** - The device is evaluated as compliant if only low-level threats are present. Anything higher puts the device in a noncompliant status.
