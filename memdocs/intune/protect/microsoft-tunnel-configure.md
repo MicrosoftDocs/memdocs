@@ -130,9 +130,9 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
    - Download the tool directly by using a web browser. Go to <https://aka.ms/microsofttunneldownload> to download the file **mstunnel-setup**.
 
    - Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab,  select **Create** to open the *Create a server* pane, and then select **Download script**.
-
+   
      ![Screen capture for download of installation script](./media/microsoft-tunnel-configure/download-installation-script.png)
-
+     
    - Use a Linux command to download the tunnel software directly. For example, on the server where you'll install the tunnel, you can use **wget** or **curl** to open the link [https://aka.ms/microsofttunneldownload](https://aka.ms/microsofttunneldownload).
 
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
@@ -412,7 +412,8 @@ Intune periodically releases updates to the Microsoft Tunnel server. To stay in 
 
 By default, after a new upgrade is available Intune automatically starts the upgrade of tunnel servers as soon as possible, at each of your tunnel sites. To help you manage upgrades, you can configure options that manage the upgrade process:
 
-- You can allow automatic upgrade of servers at a site, or require admin approval before upgrades being.
+- You can allow automatic upgrade of servers at a site, or require admin approval before upgrades begin.
+
 - You can configure a maintenance window, which limits when upgrades at a site can start.
 
 For more information about upgrades for Microsoft Tunnel, including how to view tunnel status and configure upgrade options, see [Upgrade Microsoft Tunnel](microsoft-tunnel-upgrade.md).

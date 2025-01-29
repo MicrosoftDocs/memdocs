@@ -43,7 +43,7 @@ The **Wipe** device action restores a device to its factory default settings. Th
 |**Wipe**| Checked | No | Wipes all MDM Policies. Keeps user accounts and data. Resets user settings back to default. Resets the operating system to its default state and settings.|
 
 > [!NOTE]
-> The Wipe action is not available for iOS/iPadOS devices enrolled with User Enrollment. To create a User Enrollment profile: [Set up iOS/iPadOS and iPadOS User Enrollment](../enrollment/ios-user-enrollment.md)
+> The Wipe action is not available for iOS/iPadOS devices enrolled using Account Driven Apple User Enrollment. To create an Account Driven Apple User Enrollment profile, see [Set up iOS/iPadOS and iPadOS Account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md).
 
 > [!NOTE]
 > By design, Zebra has defined the Wipe action on any Android Zebra device to only remove corporate data from devices, and not perform a factory reset.
@@ -270,12 +270,15 @@ If you want to completely remove an Apple automated device enrollment (ADE) devi
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the device > **Retire**.
-3. Visit [business.apple.com](http://business.apple.com) and search for the device by its serial number.
-4. Select the device, and then select **Release from Organization**.
+3. Visit [business.apple.com](http://business.apple.com), go to the **Devices** section, and search for the device by its serial number.
+4. Select the device, open the **...** menu, and then select **Release from Organization**.
 
-5. Check **I understand this cannot be undone**, and then select **Release**.
+5. Check **I understand this cannot be undone**, and then select **Continue**.
 
-    ![Screenshot for Apple reassign](./media/devices-wipe/apple-reassign.png)
+    ![Screenshot for Apple reassign](./media/devices-wipe/ade-release-device.png)
+
+> [!NOTE]
+> In some cases, the iOS device must be restored with iTunes to apply this change. Please find further instructions from Apple [here](https://support.apple.com/guide/itunes/restore-to-factory-settings-itnsdb1fe305/windows).
 
 ## Device states
 

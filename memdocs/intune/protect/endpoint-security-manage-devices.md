@@ -99,6 +99,16 @@ To view the report, select a device and then select **Device configuration**, wh
 
 Devices that are managed by Configuration Manager don’t display policy details in the report. To view additional information for these devices, use the Configuration Manager console.
 
+## Review your profiles for endpoint security policies
+
+From the *Endpoint security* node in the admin center, you can select the *Summary* tab of a specific policy type to view, select, and then edit all the profiles you've created for that policy type. In this view:
+
+- *Policy type* identifies the profile.
+- *Platform* identifies the device platform.
+
+In addition to the different endpoint security policy views, you can go to **Devices** > *All devices* and below *Manage devices*, select **Configuration** to view and edit your endpoint security profiles for the macOS and Windows platforms along side your Device Configuration profiles. In this view, endpoint security policies are identified by their template type, like *Microsoft Defender Antivirus* in the *Policy type* column. See [Monitor device configuration policies in Microsoft Intune
+](../configuration/device-profile-monitor.md).
+
 ## Remote actions for devices
 
 Remote actions are actions you can start or apply to a device from the Microsoft Intune admin center. When you view details for a device, you can access remote actions that apply to the device.

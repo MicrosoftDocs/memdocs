@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/09/2024
+ms.date: 12/02/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -47,10 +47,10 @@ The benefits of app management in Microsoft Intune include:
 Examples of using app management with Microsoft Intune include:
 - Deploying, protecting, and managing apps for specific groups of users within your organization
 - Configuring app settings, such as data sharing restrictions, to ensure compliance with corporate policies
-- Implementing conditional access policies to control access to apps based on factors like device compliance, location, and user risk
+- Implementing Conditional Access policies to control access to apps based on factors like device compliance, location, and user risk
 - Automating app updates to keep employees up-to-date with the latest features and security patches
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4MRyj]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=54058b9c-868c-441e-aa55-09131997eaeb]
 
 ## Mobile Application Management (MAM) basics
 

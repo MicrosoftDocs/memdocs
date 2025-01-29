@@ -79,7 +79,7 @@ Return to **Enrollment types** to see a list of your enrollment profiles. Intune
 ## Step 3: Prepare employees for enrollment  
 When an employee attempts to sign into a work app on their personal device, the app alerts them to the enrollment requirement and redirects them to the Company Portal website for enrollment.  
 
-Alternatively, you can provide employees and students with a URL that opens the Company Portal website. If you aren't utilizing conditional access, it's important to share the enrollment link with device users so that they know how to initiate enrollment. The link to share is:  
+Alternatively, you can provide employees and students with a URL that opens the Company Portal website. If you aren't utilizing Conditional Access, it's important to share the enrollment link with device users so that they know how to initiate enrollment. The link to share is:  
 
  `https://portal.manage.microsoft.com/enrollment/webenrollment/ios`   
 

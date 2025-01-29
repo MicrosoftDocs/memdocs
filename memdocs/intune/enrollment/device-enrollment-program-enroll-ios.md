@@ -140,9 +140,10 @@ Use [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School
 
 ### Step 1: Download the Intune public key certificate
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**. 
+1. Expand **Device onboarding**, and then select **Enrollment**.  
 1. Select the **Apple** tab. 
-1. Select **Enrollment Program Tokens** > **Add**.
+1. Select **Enrollment Program Tokens** > **Create**.
 
 1. On the **Basics** tab:
 
@@ -210,13 +211,17 @@ Now that you've installed your token, you can create an enrollment profile for a
 > [!NOTE]
 > Devices will be blocked from enrolling if there aren't enough Company Portal licenses for a VPP token or if the token expires. Intune alerts you when a token is about to expire or licenses are running low.  
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to   **Devices** > **Enrollment**. 
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to   **Devices**.
+1. Expand **Device onboarding**, and then select **Enrollment**. 
 1. Select the **Apple** tab. 
-1. Choose **Enrollment Program Tokens**. 
+1. Choose **Enrollment program tokens**. 
 1. Choose a token, and then select **Profiles**.  
 1. Select **Create profile** > **iOS/iPadOS**.
 1. For **Basics**, give the profile a **Name** and **Description** for administrative purposes. Users don't see these details.
-1. Select **Next**.  
+1. Select **Next**.
+
+   > [!IMPORTANT]
+   > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business Manager or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple is not assigned an enrollment policy and someone turns it on to set it up, enrollment will fail. 
 
     > [!IMPORTANT]
     > If you make changes to an existing enrollment profile, the new settings won't take effect on assigned devices until devices are reset back to factory settings and reactivated. The device name template setting is the only setting you can change that doesn't require a factory reset to take effect. Changes to the naming template take effect at the next check-in.    
@@ -308,7 +313,7 @@ Now that you've installed your token, you can create an enrollment profile for a
     > [!NOTE]
     > If you set **Sync with computers** to **Deny all**, the port will be limited on iOS and iPadOS devices. The port will be limited to only charging. It will be blocked from using iTunes or Apple Configurator 2.
     >
-    >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a Mac device, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
+    >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain a copy of this certificate. If you want to connect to the iOS/iPadOS device from a Mac device, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
 
 1. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import. The limit is 10 certificates.  
 1. For **Await final configuration**, your options are:  
@@ -385,7 +390,7 @@ The following table describes the Setup Assistant screens shown during automated
 | **Apple Pay** | Shows the Apple Pay setup pane, which gives users the option to set up Apple Pay on their devices. For iOS/iPadOS 7.0 and later. |
 | **Zoom** | Shows the zoom setup pane, which gives users the option to configure zoom settings. For iOS/iPadOS 8.3 and later, and deprecated in iOS/iPadOS 17.  |
 | **Siri** | Shows the Siri setup pane to users. For iOS/iPadOS 7.0 and later. |
-| **Diagnostics Data** | Shows the diagnostics pane where users can opt-in to send diagnostic data to Apple. For iOS/iPadOS 7.0 and later. |  
+| **Diagnostics Data** | Shows the diagnostics pane where users can opt in to send diagnostic data to Apple. For iOS/iPadOS 7.0 and later. |  
 | **Display Tone** | Shows the display tone setup pane, where users can configure the display's white balance settings. For iOS/iPadOS 9.3.2 and later, and deprecated in iOS/iPadOS 15. |  
 | **Privacy** | Shows the privacy setup pane to the user. For iOS/iPadOS 11.3 and later. |  
 | **Android Migration** | Shows a setup pane meant for previous Android users. On this screen, users can migrate data from an Android device. For iOS/iPadOS 9.0 and later.|

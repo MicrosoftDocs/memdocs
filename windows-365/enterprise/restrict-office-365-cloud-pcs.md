@@ -37,9 +37,9 @@ This article describes how to limit access to Office 365 services. You can use t
 
 1. Create a Microsoft Entra security group to manage which users are controlled by the new policy. Add to this group all the Cloud PC users who will be subjected to the new policy. Only users in this group will be restricted to using Cloud PCs when accessing Office 365 services. If you want to change a user’s access, you can just remove them from this group.
 
-2. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Conditional access** > **Create new policy**.
+2. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
-    ![Create conditional access policy screen shot](./media/restrict-office-365-cloud-pcs/create-conditional-policy.png)
+    ![Create Conditional Access policy screen shot](./media/restrict-office-365-cloud-pcs/create-conditional-policy.png)
 
 3. Type a **Name** for your new Conditional Access policy. For example, “Restrict Office 365 access to CPCs”.
 

@@ -49,7 +49,6 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 
 - Unified dashboard
 - Windows 365 Security baseline
-- RDP Shortpath for public networks
 - Windows 365 System based alerting on Microsoft Intune for Cloud PCs
 - User initiated feedback in End User Portal and Windows 365 Web Client
 - Citrix HDX Plus for Windows 365
@@ -68,7 +67,10 @@ The following features aren't yet supported for Windows 365 GCC or GCC High.
 - [Support for Omnissa Horizon clients and the Blast protocol](set-up-omnissa-horizon.md)
 - [Microsoft Purview Customer Key](purview-customer-key.md)
 - [HP Anyware for Windows 365](hp-anyware-set-up.md)
-- Bulk Troubleshoot action
+- RDP Shortpath for public networks via TURN
+- Windows 365 Link
+- Configure client device redirection for Windows App on iOS/iPadOS/Android using Intune
+- Intune scope tags
 
 ## Next steps
 
