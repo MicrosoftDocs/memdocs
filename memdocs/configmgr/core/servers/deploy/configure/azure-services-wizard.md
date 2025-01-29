@@ -271,6 +271,7 @@ For more information on how to interact with these notifications, see [Configura
 
 > [!NOTE]
 > You need to have at least the "Cloud Application Administrator" Microsoft Entra role assigned to be able to renew the key.
+> From ConfigMgr 2409 onwards, Microsoft graph replaces the Azure AD graph which has [changed permissions for the same role](https://learn.microsoft.com/en-us/graph/migrate-azure-ad-graph-permissions-differences). The mimimum privileged security role for renewing the security key now is **Privileged Role Administrator**
 
 ### Renew key for created app
 
