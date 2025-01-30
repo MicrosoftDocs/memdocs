@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2025
+ms.date: 02/05/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,69 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of February 5, 2025  (Service release 2501)
+
+### Microsoft Intune Suite
+ 
+#### Use Microsoft Security Copilot with Endpoint Privilege Manager to help identify potential elevation risks<!-- 27265509 -->
+
+When your Azure Tenant is licensed for Microsoft Security Copilot, you can now use Security Copilot to help you investigate Endpoint Privilege Manager (EPM) file elevation requests from within the EPM [support approved](../protect/epm-support-approved.md#use-microsoft-security-copilot-to-analyze-file-elevation-requests) work flow.
+
+With this capability, while reviewing the properties of a file elevation request, you will now find option to **Analyze with Copilot**.  Use of this option directs Security Copilot to use the files hash in a prompt Microsoft Defender Threat Intelligence to evaluate the file potential indicators of compromise so you can then make a more informed decision to either approve or deny that file elevation request. Some of the results that are returned to your current view in the admin center include:
+
+- The files’ reputation
+- Information about the trust of the publisher
+- The risk score for the user requesting the file elevation
+- The Risk score of the device from which the elevation was submitted
+
+EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).  To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+
+To learn more about Microsoft Security Copilot, see, [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot).
+
+### App management
+
+#### Apple VPP using new API v2.0<!-- 29567109  -->
+
+Apple recently updated the API for their volume purchase program (VPP), which is used to manage apps and books. Apple's related API is now version 2.0. Version 1.0 is deprecated. To support the Apple updates, Microsoft Intune has updated to use the new API, which is faster and more scalable than the previous version.
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+#### Update to Apps workload experience in Intune<!-- 15507048 -->
+
+The Apps area in Intune, commonly known as the Apps workload, is updated to provide a more consistent UI and improved navigation structure so you can find the information you need faster. To find the **App** workload in Intune, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps**.
+
+## Device security
+
+#### Updated security baseline for Microsoft Edge v128<!-- 29463902 -->
+
+You can now deploy the Intune security baseline for **Microsoft Edge version 128**. This update brings support for recent settings so you can continue to maintain best-practice configurations for Microsoft Edge.
+
+[View the default configuration of settings in the updated baseline](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v128).
+
+For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
+
+Applies to:
+ 
+- Windows
+
+## Intune apps
+
+#### Newly available protected app for Intune<!-- 30061339 -->
+
+The following protected app is now available for Microsoft Intune:
+
+- MoveInSync by MoveInSync Technologies
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+
+
+
+
 
 ## Week of January 27, 2025
 

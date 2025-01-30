@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/03/2025
+ms.date: 02/05/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -69,12 +69,6 @@ Applies to:
 
 - Windows
 
-### Use Copilot with Endpoint Privilege Manager to help identify potential elevation risks<!-- 27265509 -->
-
-We’re adding support for Copilot to help you investigate Endpoint Privilege Manager (EPM) elevation details. Copilot will help you evaluate information from you EPM elevation requests to identify potential indicators of compromise by using information from [Microsoft Defender](/defender-endpoint/microsoft-defender-endpoint).
-
-EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md). To learn more about how you can use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
-
 ### Endpoint Privilege Manager elevation rule support for file arguments and parameters<!--28077130 -->
 
 Soon, the file elevation rules for Endpoint Privilege Manager (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
@@ -84,21 +78,6 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 <!-- ***********************************************-->
 
 ## App management
-
-### Apple VPP using new API v2.0<!-- 29567109  -->
-
-Apple recently updated how apps and books are managed through the Apple volume purchase program (VPP). Apple has updated their related API to version 2.0 and deprecated version 1.0. To support the Apple updates, Microsoft Intune will soon use the new API, which is faster and more scalable than the previous version.
-
-Applies to:
-
-- iOS/iPadOS
-- macOS
-
-
-### Update to Apps workload experience in Intune<!-- 15507048 -->
-
-The Apps workload in Intune will be updated to provide a more consistent UI and improved navigation structure so you can find the information you need faster. To find the **App** workload in Intune, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps**.
-
 
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
@@ -202,16 +181,6 @@ You'll soon be able to use Copilot to generate a KQL query to help you get data 
 <!-- *********************************************** -->
 
 ## Device security
-
-### Updated security baseline for Microsoft Edge v128<!-- 29463902 -->
- 
-We’re working on an update to add an Intune security baseline for Microsoft Edge v128. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Microsoft Edge.
-
-For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
-
-Applies to:
-
-- Windows
 
 ### Updated security baseline for Windows version 24H2<!-- 29819143 -->
 
