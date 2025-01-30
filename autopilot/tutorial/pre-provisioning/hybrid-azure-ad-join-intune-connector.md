@@ -55,9 +55,3 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 > [!div class="nextstepaction"]
 > [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
-
-## Related content
-
-For more information on the Intune connector, see the following article:
-
-- [Install the Intune Connector](../../windows-autopilot-hybrid.md#install-the-intune-connector).
