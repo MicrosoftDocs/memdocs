@@ -29,6 +29,10 @@ Select the tab that corresponds to the version of the Intune Connector for Activ
 
 Before beginning the installation, make sure that all of the [Intune connector server requirements](/autopilot/windows-autopilot-hybrid?tabs=intune-connector-requirements#requirements) are met.
 
+> [!TIP]
+>
+> It's preferable, but not required, that the administrator installing and configuring the Intune Connector for Active Directory has rights to modify permissions on OUs in the domain. This requirement allows the Intune Connector for Active Directory installer and configuration process to properly set permissions for the MSA on the **Computer** container or OUs where computer objects are created. If the administrator installing and configuring the Intune Connector for Active Directory doesn't have these permissions, additional steps need to be taken by an administrator that does have the appropriate permissions. For more information, see the **Increase the computer account limit in the Organizational Unit** steps/section.
+
 #### Turn off Internet Explorer Enhanced Security Configuration
 
 By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems signing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends turning off Internet Explorer Enhanced Security Configuration. To turn off Internet Explorer Enhanced Security Configuration:
@@ -139,6 +143,7 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
 
     ```xml
       <appSettings>
+
         <!-- Semicolon separated list of OUs that will be used for Hybrid Autopilot, using LDAP distinguished name format.
             The ODJ Connector will only have permission to create computer objects in these OUs.
             The value here should be the same as the value in the Hybrid Autopilot configuration profile in the Azure portal - https://learn.microsoft.com/en-us/mem/intune/configuration/domain-join-configure
@@ -156,7 +161,11 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
 
 1. Once all desired OUs are added, save the `ODJConnectorEnrollmentWiazard.exe.config` XML file.
 
-1. Open the **Intune Connector for Active Directory** by navigating to **Intune Connector for Active Directory** > **Intune Connector for Active Directory** from the **Start** menu.
+1. As an administrator that has appropriate permissions to modify OU permissions, open the **Intune Connector for Active Directory** by navigating to **Intune Connector for Active Directory** > **Intune Connector for Active Directory** from the **Start** menu.
+
+    > [!IMPORTANT]
+    >
+    > If the administrator installing and configuring the Intune Connector for Active Directory doesn't have permissions to modify OU permissions, then the section/steps **Increase the computer account limit in the Organizational Unit** need to be followed instead by an administrator that does have permissions to modify OU permissions.
 
 1. Under the **Enrollment** tab in the **Intune Connector for Active Directory** window, select **Configure Managed Service Account**.
 

@@ -73,7 +73,9 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 
 - To increase scale and availability, multiple connectors can be installed in a domain. Each connector must be able to create computer objects in the domain that it supports.
 
-- For the updated Intune Connector for Active Directory, installation needs to be done with an account that has domain admin rights. This allows the Intune Connector for Active Directory install to properly create Managed Service Accounts (MSAs).
+- The administrator installing the Intune Connector for Active Directory must be a local administrator on the server where the Intune Connector for Active Directory is being installed.
+
+- For the updated Intune Connector for Active Directory, installation needs to be done with an account that has domain admin rights. This allows the Intune Connector for Active Directory install to properly create Managed Service Accounts (MSAs) and set permissions correctly for the OUs that the MSA will be adding computers to.
 
 <!-- MAXADO-8594181
 Multi-domain support section removed
@@ -104,51 +106,6 @@ If there is a web proxy in the networking environment, ensure that the Intune Co
 ## Increase the computer account limit in the Organizational Unit
 
 [!INCLUDE [Increase the computer account limit in the Organizational Unit](includes/computer-account-limit.md)]
-
-<!--  The Intune Connector for Active Directory creates autopilot-enrolled computers in the on-premises Active Directory domain. The computer that hosts the Intune Connector for Active Directory must have the rights to create the computer objects within the domain.
-
-In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights must be delegated to computers that host the Intune Connector for Active Directory on the organizational unit where Microsoft Entra hybrid joined devices are created.
-
-The organizational unit that has the rights to create computers must match:
-
-- The organizational unit entered in the Domain Join profile.
-- If no profile is selected, the computer's domain name for the organization's domain.
-
-1. Open **Active Directory Users and Computers (DSA.msc)**.
-
-1. Right-click the organizational unit to use to create Microsoft Entra hybrid joined computers > **Delegate Control**.
-
-    :::image type="content" source="./media/windows-autopilot-hybrid/delegate-control.png" alt-text="Screenshot of the Delegate Control command.":::
-
-1. In the **Delegation of Control** wizard, select **Next** > **Add** > **Object Types**.
-
-1. In the **Object Types** pane, select the **Computers** > **OK**.
-
-    :::image type="content" source="./media/windows-autopilot-hybrid/object-types-computers.png" alt-text="Screenshot of the Object Types pane.":::
-
-1. In the **Select Users, Computers, or Groups** pane, in the **Enter the object names to select** box, enter the name of the computer where the Connector is installed.
-
-    :::image type="content" source="./media/windows-autopilot-hybrid/enter-object-names.png" alt-text="Screenshot of the Select Users, Computers, or Groups pane.":::
-
-1. Select **Check Names** to validate the entry > **OK** > **Next**.
-
-1. Select **Create a custom task to delegate** > **Next**.
-
-1. Select **Only the following objects in the folder** > **Computer objects**.
-
-1. Select **Create selected objects in this folder** and **Delete selected objects in this folder**.
-
-    :::image type="content" source="./media/windows-autopilot-hybrid/only-following-objects.png" alt-text="Screenshot of the Active Directory Object Type pane.":::
-
-1. Select **Next**.
-
-1. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
-
-    :::image type="content" source="./media/windows-autopilot-hybrid/full-control.png" alt-text="Screenshot of the Permissions pane.":::
-
-1. Select **Next** > **Finish**.
-
--->
 
 ## Create a device group
 
