@@ -41,7 +41,7 @@ You can also read:
 - Information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)
 
 > [!NOTE]
-> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) can take up to three days to rollout and will be in the following order:
+> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) can take up to three days to roll out and will be in the following order:
 >
 > - Day 1: Asia Pacific (APAC)
 > - Day 2: Europe, Middle East, Africa (EMEA)
@@ -84,20 +84,20 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 When your Azure Tenant is licensed for Microsoft Security Copilot, you can now use Security Copilot to help you investigate Endpoint Privilege Manager (EPM) file elevation requests from within the EPM [support approved](../protect/epm-support-approved.md#use-microsoft-security-copilot-to-analyze-file-elevation-requests) work flow.
 
-With this capability, while reviewing the properties of a file elevation request, you will now find option to **Analyze with Copilot**.  Use of this option directs Security Copilot to use the files hash in a prompt Microsoft Defender Threat Intelligence to evaluate the file potential indicators of compromise so you can then make a more informed decision to either approve or deny that file elevation request. Some of the results that are returned to your current view in the admin center include:
+With this capability, while reviewing the properties of a file elevation request, you'll now find option to **Analyze with Copilot**. Use of this option directs Security Copilot to use the files hash in a prompt Microsoft Defender Threat Intelligence to evaluate the file potential indicators of compromise so you can then make a more informed decision to either approve or deny that file elevation request. Some of the results that are returned to your current view in the admin center include:
 
 - The files’ reputation
 - Information about the trust of the publisher
 - The risk score for the user requesting the file elevation
 - The Risk score of the device from which the elevation was submitted
 
-EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).  To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md). To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
 
 To learn more about Microsoft Security Copilot, see, [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot).
 
 ### App management
 
-#### Apple VPP using new API v2.0<!-- 29567109  -->
+#### Apple VPP using new API v2.0<!-- 29567109 -->
 
 Apple recently updated the API for their volume purchase program (VPP), which is used to manage apps and books. Apple's related API is now version 2.0. Version 1.0 is deprecated. To support the Apple updates, Microsoft Intune has updated to use the new API, which is faster and more scalable than the previous version.
 
@@ -160,11 +160,11 @@ Applies to:
 
 #### Use Support Assistant to resolve issues<!-- 29084113 -->
 
-Support Assistant is now available in Intune. It leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic. Currently, the Support Assistant is in preview. You can enable and disable Support Assistant by choosing to opt-in and opt-out at any time. For related information, see [How to get support in the Microsoft Intune admin center](/mem/get-support).
+Support Assistant is now available in Intune. It leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic. Currently, the Support Assistant is in preview. You can enable and disable Support Assistant by choosing to opt in and opt out at any time. For related information, see [How to get support in the Microsoft Intune admin center](/mem/get-support).
 
-## Week of December 30, 2024  
+## Week of December 30, 2024
 
-### Device enrollment  
+### Device enrollment
 
 #### Intune ends support for Android device administrator on devices with access to Google Mobile Services<!-- 24563742 -->
 As of December 31, 2024, Microsoft Intune no longer supports Android device administrator management on devices with access to Google Mobile Services (GMS). This change comes after Google deprecated Android device administrator management and ceased support. Intune support and help documentation remains for devices without access to GMS running Android 15 or earlier, and Microsoft Teams devices migrating to Android Open Source Project (AOSP) management. For more information about how this change impacts your tenant, see [Intune ending support for Android device administrator on devices with GMS access in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443). 
@@ -204,7 +204,7 @@ There are no changes in the following UI experiences:
 
 - Editing an existing Administrative template.
 - Deleting an existing Administrative template.
-- Adding, modifying or deleting settings in an existing Administrative template.
+- Adding, modifying, or deleting settings in an existing Administrative template.
 - **Imported Administrative templates (Preview)** template, which is used for Custom ADMX.
 
 For more information, see [Use ADMX templates on Windows 10/11 devices in Microsoft Intune](..\configuration\administrative-templates-windows.md).
@@ -219,7 +219,7 @@ Applies to:
 
 Intune Wi-Fi configuration profiles for Android Enterprise personally-owned work profile devices now support configuration of pre-shared keys and proxy settings. 
 
-You can find these settings in the admin console in **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**. Set **Platform** to Android Enterprise and then in the **Personally-Owned Work Profile** section, select Wi-Fi and select the **Create** button. 
+You can find these settings in the admin console in **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**. Set **Platform** to Android Enterprise and then in the **Personally-Owned Work Profile** section, select Wi-Fi and then select the **Create** button. 
 
 In the **Configuration settings** tab, when you select Basic Wi-Fi type, several new options are available:
 
@@ -239,14 +239,14 @@ Applies to:
 
 ### Tenant administration
 
-#### Intune now supports Ubuntu 24.04 LTS for Linux management.<!--28363586  -->
+#### Intune now supports Ubuntu 24.04 LTS for Linux management.<!--28363586 -->
 
 We're now supporting device management for Ubuntu 24.04 LTS. You can enroll and manage Linux devices running Ubuntu 24.04, and assign standard compliance policies, custom configuration scripts, and compliance scripts.
 
 For more information, see the following in Intune documentation:
 
 - [Deployment guide: Manage Linux devices in Microsoft Intune](../fundamentals/deployment-guide-platform-linux.md)
-- [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-linux.md). To enroll Linux devices, ensure that they are running Ubuntu 20.04 LTS or higher.
+- [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-linux.md). To enroll Linux devices, ensure that they're running Ubuntu 20.04 LTS or higher.
 
 Applies to:
 
@@ -254,15 +254,15 @@ Applies to:
 
 ## Week of December 2, 2024
 
-### Device enrollment  
+### Device enrollment
 
 #### Change to enrollment behavior for iOS enrollment profile type<!-- 29068674 -->
 
-At Apple WWDC 2024, Apple ended support for profile-based Apple user enrollment. For more information, see [Support has ended for profile-based user enrollment with Company Portal](#support-has-ended-for-apple-profile-based-user-enrollment-with-company-portal). As a result of this change, we updated the behavior that occurs when you select **Determine based on user choice** as the enrollment profile type for bring-your-own-device (BYOD) enrollments.  
+At Apple WWDC 2024, Apple ended support for profile-based Apple user enrollment. For more information, see [Support has ended for profile-based user enrollment with Company Portal](#support-has-ended-for-apple-profile-based-user-enrollment-with-company-portal). As a result of this change, we updated the behavior that occurs when you select **Determine based on user choice** as the enrollment profile type for bring-your-own-device (BYOD) enrollments.
 
-Now when users select **I own this device** during a BYOD enrollment, Microsoft Intune enrolls them via account-driven user enrollment, rather than profile-based user enrollment, and then secures only work-related apps. Less than one percent of Apple devices across all Intune tenants are currently enrolled this way, so this change doesn't affect most enrolled devices. There is no change for iOS users who select **My company owns this device** during a BYOD enrollment. Intune enrolls them via device enrollment with Intune Company Portal, and then secures their entire device.   
+Now when users select **I own this device** during a BYOD enrollment, Microsoft Intune enrolls them via account-driven user enrollment, rather than profile-based user enrollment, and then secures only work-related apps. Less than one percent of Apple devices across all Intune tenants are currently enrolled this way, so this change doesn't affect most enrolled devices. There is no change for iOS users who select **My company owns this device** during a BYOD enrollment. Intune enrolls them via device enrollment with Intune Company Portal, and then secures their entire device.
 
-If you currently allow users in BYOD scenarios to determine their enrollment profile type, you must take action to ensure account-driven user enrollment works by completing all prerequisites. For more information, see [Set up account driven Apple user enrollment](../enrollment/apple-account-driven-user-enrollment.md). If you don't give users the option to choose their enrollment profile type, there are no action items.  
+If you currently allow users in BYOD scenarios to determine their enrollment profile type, you must take action to ensure account-driven user enrollment works by completing all prerequisites. For more information, see [Set up account driven Apple user enrollment](../enrollment/apple-account-driven-user-enrollment.md). If you don't give users the option to choose their enrollment profile type, there are no action items.
 
 ### Device management
 
@@ -295,7 +295,7 @@ Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, *
 - Microsoft Teams
 - Microsoft Word
 
-For more information, see [Plan for Change: Specific app configuration values will be automatically sent to specific apps](../fundamentals/whats-new.md#plan-for-change-specific-app-configuration-values-will-be-automatically-sent-to-specific-apps) and Intune  [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
+For more information, see [Plan for Change: Specific app configuration values will be automatically sent to specific apps](../fundamentals/whats-new.md#plan-for-change-specific-app-configuration-values-will-be-automatically-sent-to-specific-apps) and Intune [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
 
 #### Additional installation error reporting for LOB apps on AOSP devices<!-- 27157460 -->
 
@@ -371,13 +371,13 @@ Beginning in October 2024, Android 10 and later is the [minimum Android OS versi
 
 For enrolled devices on unsupported OS versions (Android 9 and lower)
 
-- Intune technical support is not provided.
+- Intune technical support isn't provided.
 - Intune won't make changes to address bugs or issues.
 - New and existing features aren't guaranteed to work.
 
 While Intune doesn't prevent enrollment or management of devices on unsupported Android OS versions, functionality isn't guaranteed, and use isn't recommended.
 
-Userless methods of Android device management (Dedicated and AOSP userless) and Microsoft Teams certified Android devices are not affected by this change.
+Userless methods of Android device management (Dedicated and AOSP userless) and Microsoft Teams certified Android devices aren't affected by this change.
 
 #### Collection of additional device inventory details<!-- 29460196 -->
 
@@ -434,7 +434,7 @@ For more information, see:
 
 - [What's new for the certificate connector](../protect/certificate-connector-overview.md#september-19-2024)
 
-- [Apply PFX changes to certificate](../protect/certificates-pfx-configure.md)  
+- [Apply PFX changes to certificate](../protect/certificates-pfx-configure.md)
 
 ## Week of September 23, 2024 (Service release 2409)
 
@@ -999,9 +999,9 @@ ACME is supported for Apple Device Enrollment, Apple Configurator enrollment, an
 
 - iOS 16.0 or later
 - iPadOS 16.1 or later
-- macOS 13.1 or later  
+- macOS 13.1 or later
 
-This capability is also supported in [GCC High tenants](../fundamentals/intune-govt-service-description.md).      
+This capability is also supported in [GCC High tenants](../fundamentals/intune-govt-service-description.md).
 
 
 
