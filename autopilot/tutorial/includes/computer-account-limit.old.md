@@ -46,7 +46,7 @@ To increase the computer account limit in the Organizational Unit (OU) that comp
 
     > [!NOTE]
     >
-    > If an OU isn't being specified and computers instead join the default **Computers** container, right-click on the **Computers** container and select **Delegate Control**.
+    > If computers are joining the default **Computers** container instead of an OU, right-click on the **Computers** container and select **Delegate Control**.
 
 1. In the **Welcome to the Delegation of Control Wizard** window of the **Delegation of Control Wizard**, select **Next**.
 

@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 01/21/2025
+ms.date: 01/31/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -47,7 +47,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 >
 > If the Intune Connector is already installed and configured, skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md).
 
-## Install the Intune Connector
+## Install the Intune Connector for Active Directory
 
 [!INCLUDE [Install the Intune Connector](../../includes/intune-connector.md)]
 

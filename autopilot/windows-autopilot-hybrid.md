@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: madakeva
-ms.date: 01/21/2025
+ms.date: 01/31/2025
 ms.topic: how-to
 ms.service: windows-client
 ms.subservice: autopilot
@@ -59,13 +59,13 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 
 <!-- ### Intune connector server requirements -->
 
-- The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later with .NET Framework version 4.7.2 or later.
+- The Intune Connector for Active Directory, also known as the Offline Domain Join (ODJ) connector, must be installed on a computer that's running Windows Server 2016 or later with .NET Framework version 4.7.2 or later.
 
-- The server hosting the Intune Connector must have access to the Internet and Active Directory.
+- The server hosting the Intune Connector for Active Directory must have access to the Internet and Active Directory.
 
     > [!NOTE]
     >
-    > The Intune Connector server requires standard domain client access to domain controllers, which includes the RPC port requirements it needs to communicate with Active Directory. For more information, see the following articles:
+    > The Intune Connector for Active Directory server requires standard domain client access to domain controllers, which includes the RPC port requirements it needs to communicate with Active Directory. For more information, see the following articles:
     >
     > - [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
     > - [How to configure a firewall for Active Directory domains and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts)
@@ -73,13 +73,13 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 
 - To increase scale and availability, multiple connectors can be installed in a domain. Each connector must be able to create computer objects in the domain that it supports.
 
-- For the updated Intune Connector, installation needs to be done with an account that has domain admin rights. This allows the Intune Connector install to properly create Managed Service Accounts (MSAs).
+- For the updated Intune Connector for Active Directory, installation needs to be done with an account that has domain admin rights. This allows the Intune Connector for Active Directory install to properly create Managed Service Accounts (MSAs).
 
 <!-- MAXADO-8594181
 Multi-domain support section removed
 -->
 
-- The Intune Connector requires the [same endpoints as Intune](/mem/intune/fundamentals/intune-endpoints).
+- The Intune Connector for Active Directory requires the [same endpoints as Intune](/mem/intune/fundamentals/intune-endpoints).
 
 ---
 
@@ -93,11 +93,21 @@ Multi-domain support section removed
 
 1. Use the default values in the **MDM Terms of use URL**, **MDM Discovery URL**, and **MDM Compliance URL** boxes, and then select **Save**.
 
+## Install the Intune Connector for Active Directory
+
+[!INCLUDE [Install the Intune Connector for Active Directory](includes/intune-connector.md)]
+
+### Configure web proxy settings
+
+If there is a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](/mem/intune/enrollment/autopilot-hybrid-connector-proxy).
+
 ## Increase the computer account limit in the Organizational Unit
 
-The Intune Connector for Active Directory creates autopilot-enrolled computers in the on-premises Active Directory domain. The computer that hosts the Intune Connector must have the rights to create the computer objects within the domain.
+[!INCLUDE [Increase the computer account limit in the Organizational Unit](includes/computer-account-limit.md)]
 
-In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights must be delegated to computers that host the Intune Connector on the organizational unit where Microsoft Entra hybrid joined devices are created.
+<!--  The Intune Connector for Active Directory creates autopilot-enrolled computers in the on-premises Active Directory domain. The computer that hosts the Intune Connector for Active Directory must have the rights to create the computer objects within the domain.
+
+In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights must be delegated to computers that host the Intune Connector for Active Directory on the organizational unit where Microsoft Entra hybrid joined devices are created.
 
 The organizational unit that has the rights to create computers must match:
 
@@ -138,13 +148,7 @@ The organizational unit that has the rights to create computers must match:
 
 1. Select **Next** > **Finish**.
 
-## Install the Intune Connector
-
-[!INCLUDE [Install the Intune Connector](includes/intune-connector.md)]
-
-### Configure web proxy settings
-
-If there is a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](/mem/intune/enrollment/autopilot-hybrid-connector-proxy).
+-->
 
 ## Create a device group
 
@@ -328,7 +332,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). The options include:
 
-    - Provide an OU in which control is delegated to the Windows device that is running the Intune Connector.
+    - Provide an OU in which control is delegated to the Windows device that is running the Intune Connector for Active Directory.
     - Provide an OU in which control is delegated to the root computers in organization's on-premises Active Directory.
     - If this field is left blank, the computer object is created in the Active Directory default container. The default container is normally the `CN=Computers` container. For more information, see [Redirect the users and computers containers in Active Directory domains](/troubleshoot/windows-server/identity/redirect-users-computers-containers).
 
@@ -358,7 +362,6 @@ The ODJ connector is installed locally on a computer via an executable file. If 
 
 To uninstall the ODJ Connector from the computer, follow these steps:
 
-
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2025**](#tab/windows-server-2025)
 
 1. Sign into the computer hosting the ODJ connector.
@@ -379,6 +382,10 @@ To uninstall the ODJ Connector from the computer, follow these steps:
 1. The ODJ connector proceeds to uninstall.
 
 1. In some cases, the ODJ connector might not fully uninstall until the original ODJ installer `ODJConnectorBootstrapper.exe` is run again. To verify that the ODJ connector is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
+
+    > [!NOTE]
+    >
+    > The legacy **ODJ connector** installer can be downloaded from the [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d). The legacy **ODJ connector** installer should only be used for uninstalling the Intune Connector for Active Directory.
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2019/2022**](#tab/windows-server-2019-2022)
 
@@ -401,6 +408,10 @@ To uninstall the ODJ Connector from the computer, follow these steps:
 
 1. In some cases, the ODJ connector might not fully uninstall until the original ODJ installer `ODJConnectorBootstrapper.exe` is run again. To verify that the ODJ connector is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
 
+    > [!NOTE]
+    >
+    > The legacy **ODJ connector** installer can be downloaded from the [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d). The legacy **ODJ connector** installer should only be used for uninstalling the legacy Intune Connector for Active Directory.
+
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2016**](#tab/windows-server-2016)
 
 1. Sign into the computer hosting the ODJ connector.
@@ -421,6 +432,10 @@ To uninstall the ODJ Connector from the computer, follow these steps:
 1. The ODJ connector proceeds to uninstall.
 
 1. In some cases, the ODJ connector might not fully uninstall until the original ODJ installer `ODJConnectorBootstrapper.exe` is run again. To verify that the ODJ connector is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
+
+    > [!NOTE]
+    >
+    > The legacy **ODJ connector** installer can be downloaded from the [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d). The legacy **ODJ connector** installer should only be used for uninstalling the legacy Intune Connector for Active Directory.
 
 ---
 

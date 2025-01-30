@@ -5,9 +5,9 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 01/31/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -45,7 +45,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 ## Increase the computer account limit in the Organizational Unit (OU)
 
-[!INCLUDE [Increase the computer account limit in the Organizational Unit (OU)](../includes/computer-account-limit.md)]
+[!INCLUDE [Increase the computer account limit in the Organizational Unit (OU)](../../includes/computer-account-limit.md)]
 
 ## Next step: Register devices as Autopilot devices
 
