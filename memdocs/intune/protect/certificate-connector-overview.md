@@ -58,7 +58,7 @@ After the connector installs, you can run configuration of the connector again a
 
 Intune supports installing of multiple instances of the connector in a tenant, and each instance can support different features. If you use multiple connectors that support different features, certificate requests are always routed to a relevant connector. For example, if you install two connectors that support PKCS, and install two more that support both PKCS and SCEP, certificate tasks for PKCS can be managed by any of the four connectors, but tasks for SCEP are only directed to the two connectors that support SCEP.
   
-Each instance of the certificate connector has the same network requirements as devices that are managed by Intune. For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
+Each instance of the certificate connector has the same network requirements as devices that are managed by Intune. For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/intune-endpoints.md).
 
 ## Capabilities of the certificate connector
 

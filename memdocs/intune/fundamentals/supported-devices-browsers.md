@@ -116,5 +116,5 @@ Microsoft Intune is supported with the following web browsers:
 
 For network configuration requirements, or to learn more about setting up devices using the configuration service provider (CSP), see:
 
-* [Intune network configuration requirements and bandwidth](network-bandwidth-use.md)   
+* [Intune network configuration requirements and bandwidth](intune-endpoints.md)
 * [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference)  

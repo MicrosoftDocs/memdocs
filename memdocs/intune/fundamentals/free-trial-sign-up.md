@@ -45,7 +45,7 @@ When you complete the signup process, you'll have a new tenant. A tenant is a de
 Before setting up Microsoft Intune, review the following requirements:
 
 - [Supported operating systems and browsers](supported-devices-browsers.md)
-- [Network configuration requirements and bandwidth](network-bandwidth-use.md)
+- [Network configuration requirements and bandwidth](intune-endpoints.md)
 
 ## Sign up for a Microsoft Intune free trial
 

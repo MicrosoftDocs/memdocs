@@ -81,7 +81,7 @@ The **PFX Certificate Connector** supports certificate deployment for PKCS #12 c
 - Supports certificate revocation (requires the connector run version **6.2008.60.607** or later)
 - Has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices)
 
-  For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
+  For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/intune-endpoints.md).
 
 **The Windows server where the connector installs**:
 
@@ -125,7 +125,7 @@ If  you use a [third-party Certification Authority](certificate-authority-add-sc
 - Supports *Federal Information Processing Standard* (FIPS) mode. FIPS isn't required. When FIPS is enabled, you can issue and revoke certificates.
 - Has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
-  For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
+  For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/intune-endpoints.md).
 
 **The Windows server where the connector installs**:
 
