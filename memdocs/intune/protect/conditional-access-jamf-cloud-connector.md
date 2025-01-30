@@ -96,7 +96,7 @@ For APNS to function correctly on the network, you must enable outgoing connecti
 
 For more information about these ports, see the following articles:
 
-- [Intune network configuration requirements and bandwidth](../fundamentals/intune-endpoints.md).
+- [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).
 - [Network Ports Used by Jamf Pro](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro) on jamf.com.
 - [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944) on support.apple.com
 

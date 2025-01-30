@@ -48,7 +48,7 @@ Requirements for the computer where you install the connector software:
 
 - Transport Layer Security (TLS) 1.2. For more information, see [Enable support for TLS 1.2 in your environment](/troubleshoot/azure/active-directory/enable-support-tls-environment) in the Microsoft Entra documentation.
 
-- The server must meet the same network requirements as managed devices. See [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/intune-endpoints.md).
+- The server must meet the same network requirements as managed devices. See [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).
 
 - To support automatic updates of the connector software, the server must have access to the **Azure update service**:
   - Port: **443**
