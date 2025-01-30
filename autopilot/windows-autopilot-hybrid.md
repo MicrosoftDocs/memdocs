@@ -75,7 +75,12 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 
 - The administrator installing the Intune Connector for Active Directory must be a local administrator on the server where the Intune Connector for Active Directory is being installed.
 
-- For the updated Intune Connector for Active Directory, installation needs to be done with an account that has domain admin rights. This allows the Intune Connector for Active Directory install to properly create Managed Service Accounts (MSAs) and set permissions correctly for the OUs that the MSA will be adding computers to.
+- For the updated Intune Connector for Active Directory, installation needs to be done with an account that has the following domain rights:
+
+  - **Required** - Create **msDs-ManagedServiceAccount** objects in the Managed Service Accounts container
+  - **Optional** - Modify permissions in OUs in Active Directory - if the administrator installing the updated Intune Connector for Active Directory doesn't have this right, additional configuration steps are required by an administrator who has these rights. For more information, see the section [Increase the computer account limit in the Organizational Unit](#increase-the-computer-account-limit-in-the-organizational-unit) in this article.
+
+    These rights allows the Intune Connector for Active Directory install to properly create Managed Service Accounts (MSAs) and set permissions correctly for the OUs that the MSA will be adding computers to.
 
 <!-- MAXADO-8594181
 Multi-domain support section removed
@@ -313,15 +318,15 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 >
 > The naming capability for Windows Autopilot for Microsoft Entra hybrid join doesn't support variables such as **%SERIAL%**. It only supports prefixes for the computer name.
 
-## Uninstall the ODJ Connector
+## Uninstall the Intune Connector for Active Directory
 
-The ODJ connector is installed locally on a computer via an executable file. If the ODJ connector needs to be uninstalled from a computer, it needs to also be done locally on the computer. The ODJ connector can't be removed through the Intune portal or through a graph API call.
+The Intune Connector for Active Directory is installed locally on a computer via an executable file. If the Intune Connector for Active Directory needs to be uninstalled from a computer, it needs to also be done locally on the computer. The Intune Connector for Active Directory can't be removed through the Intune portal or through a graph API call.
 
-To uninstall the ODJ Connector from the computer, follow these steps:
+To uninstall the Intune Connector for Active Directory from the server, follow these steps:
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2025**](#tab/windows-server-2025)
 
-1. Sign into the computer hosting the ODJ connector.
+1. Sign into the computer hosting the Intune Connector for Active Directory.
 
 1. Right click on the **Start** menu and then select **Settings** > **Apps** > **Installed apps**.
 
@@ -336,17 +341,17 @@ To uninstall the ODJ Connector from the computer, follow these steps:
 
 1. Next to **Intune Connector for Active Directory**, select **...** > **Uninstall**, and then select the **Uninstall** button.
 
-1. The ODJ connector proceeds to uninstall.
+1. The Intune Connector for Active Directory proceeds to uninstall.
 
-1. In some cases, the ODJ connector might not fully uninstall until the original ODJ installer `ODJConnectorBootstrapper.exe` is run again. To verify that the ODJ connector is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
+1. In some cases, the Intune Connector for Active Directory might not fully uninstall until the original Intune Connector for Active Directory installer `ODJConnectorBootstrapper.exe` is run again. To verify that the Intune Connector for Active Directory is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
 
     > [!NOTE]
     >
-    > The legacy **ODJ connector** installer can be downloaded from the [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d). The legacy **ODJ connector** installer should only be used for uninstalling the Intune Connector for Active Directory.
+    > The legacy **Intune Connector for Active Directory** installer can be downloaded from the [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d). The legacy **Intune Connector for Active Directory** installer should only be used for uninstalling the Intune Connector for Active Directory.
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2019/2022**](#tab/windows-server-2019-2022)
 
-1. Sign into the computer hosting the ODJ connector.
+1. Sign into the computer hosting the Intune Connector for Active Directory.
 
 1. Select the **Start** menu and then select **Settings** > **Apps**.
 
@@ -361,17 +366,17 @@ To uninstall the ODJ Connector from the computer, follow these steps:
 
 1. Under **Intune Connector for Active Directory**, select the **Uninstall** button, and then select the **Uninstall** button again.
 
-1. The ODJ connector proceeds to uninstall.
+1. The Intune Connector for Active Directory proceeds to uninstall.
 
-1. In some cases, the ODJ connector might not fully uninstall until the original ODJ installer `ODJConnectorBootstrapper.exe` is run again. To verify that the ODJ connector is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
+1. In some cases, the Intune Connector for Active Directory might not fully uninstall until the original Intune Connector for Active Directory installer `ODJConnectorBootstrapper.exe` is run again. To verify that the Intune Connector for Active Directory is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
 
     > [!NOTE]
     >
-    > The legacy **ODJ connector** installer can be downloaded from the [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d). The legacy **ODJ connector** installer should only be used for uninstalling the legacy Intune Connector for Active Directory.
+    > The legacy **Intune Connector for Active Directory** installer can be downloaded from the [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d). The legacy **Intune Connector for Active Directory** installer should only be used for uninstalling the legacy Intune Connector for Active Directory.
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2016**](#tab/windows-server-2016)
 
-1. Sign into the computer hosting the ODJ connector.
+1. Sign into the computer hosting the Intune Connector for Active Directory.
 
 1. Right-click the **Start** menu and then select **Settings** > **System** > **Apps & features**.
 
@@ -386,13 +391,13 @@ To uninstall the ODJ Connector from the computer, follow these steps:
 
 1. Under **Intune Connector for Active Directory**, select the **Uninstall** button, and then select the **Uninstall** button again.
 
-1. The ODJ connector proceeds to uninstall.
+1. The Intune Connector for Active Directory proceeds to uninstall.
 
-1. In some cases, the ODJ connector might not fully uninstall until the original ODJ installer `ODJConnectorBootstrapper.exe` is run again. To verify that the ODJ connector is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
+1. In some cases, the Intune Connector for Active Directory might not fully uninstall until the original Intune Connector for Active Directory installer `ODJConnectorBootstrapper.exe` is run again. To verify that the Intune Connector for Active Directory is fully uninstalled, run the `ODJConnectorBootstrapper.exe` installer again. If it prompts to **Uninstall**, select to uninstall it. Otherwise, close the `ODJConnectorBootstrapper.exe` installer.
 
     > [!NOTE]
     >
-    > The legacy **ODJ connector** installer can be downloaded from the [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d). The legacy **ODJ connector** installer should only be used for uninstalling the legacy Intune Connector for Active Directory.
+    > The legacy **Intune Connector for Active Directory** installer can be downloaded from the [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d). The legacy **Intune Connector for Active Directory** installer should only be used for uninstalling the legacy Intune Connector for Active Directory.
 
 ---
 

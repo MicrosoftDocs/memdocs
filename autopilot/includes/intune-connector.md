@@ -65,7 +65,18 @@ By default Windows Server has Internet Explorer Enhanced Security Configuration 
 
 #### Install the Intune Connector for Active Directory on the server
 
-1. If the previous legacy Intune Connector for Active Directory is installed, uninstall it first before installing the updated Intune Connector for Active Directory. For more information, see [Uninstall the ODJ Connector](/autopilot/windows-autopilot-hybrid#uninstall-the-odj-connector).
+> [!IMPORTANT]]
+>
+> The Intune Connector for Active Directory installation needs to be done with an account that has the following domain rights:
+>
+> - **Required** - Create **msDs-ManagedServiceAccount** objects in the Managed Service Accounts container.
+> - **Optional** - Modify permissions in OUs in Active Directory - if the administrator installing the updated Intune Connector for Active Directory doesn't have this right, additional configuration steps are required by an administrator who has these rights. For more information, see the section [Increase the computer account limit in the Organizational Unit](#increase-the-computer-account-limit-in-the-organizational-unit) in this article.
+
+1. If the previous legacy Intune Connector for Active Directory is installed, uninstall it first before installing the updated Intune Connector for Active Directory. For more information, see [Uninstall the Intune Connector for Active Directory](/autopilot/windows-autopilot-hybrid#uninstall-the-intune-connector-for-active-directory).
+
+    > [!IMPORTANT]
+    >
+    > When uninstalling the previous legacy Intune Connector for Active Directory, make sure to run the legacy **Intune Connector for Active Directory** installer as part of the uninstall process. If the legacy Intune Connector for Active Directory installer prompts to **Uninstall** it when it's run, select to uninstall it.This step will ensure that the previous legacy Intune Connector for Active Directory is fully uninstalled. The legacy Intune Connector for Active Directory installer can be downloaded from [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d).
 
 1. Open the `ODJConnectorBootstrapper.exe` file that downloaded to launch the **Intune Connector for Active Directory Setup** install.
 
