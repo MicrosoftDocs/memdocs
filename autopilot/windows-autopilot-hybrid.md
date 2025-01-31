@@ -361,7 +361,7 @@ To uninstall the Intune Connector for Active Directory from the server, select t
 
 1. Sign into the computer hosting the Intune Connector for Active Directory.
 
-1. Select the **Start** menu and then select **Settings** > **Apps**.
+1. Right-click the **Start** menu and then select **Settings** > **Apps**.
 
     Or
 
