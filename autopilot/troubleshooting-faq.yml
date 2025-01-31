@@ -452,6 +452,23 @@ sections:
 
           1. Continue on error for ESP failures. If the problem occurs with this option enabled, some applications including **Teams** might not install. However, ESP continues and doesn't fail.
 
+  - name: Troubleshooting the Intune Connector for Active Directory
+    questions:
+      - question: |
+          Why is the Intune Connector for Active Directory not logging in Event Viewer even though logging is enabled?
+        answer: |
+          The Intune Connector for Active Directory originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector for Active Directory has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
+
+      - question: |
+          Why does uninstalling the Intune Connector for Active Directory through the Settings app not fully remove the application?
+        answer: |
+          The Intune Connector for Active Directory needs to be uninstalled using both the Settings app and the Intune Connector for Active Directory installed executable **ODJConnectorBoostrapper.exe**. When uninstalling the Intune Connector for Active Directory, run **ODJConnectorBoostrapper.exe** and select the **Uninstall** option. The **ODJConnectorBoostrapper.exe** installer version needs to match the version of the connector thats being uninstalled.
+
+      - question: |
+          Why is the error "The MSA account couldn't be granted permission to create computer objects in the following OUs:"? occurring when installing the Intune Connector for Active Directory?
+        answer: |
+          The administrator installing and configuring the Intune Connector for Active Directory doesn't have the required permissions to modify OUs in Active Directory. For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot: Requirements](windows-autopilot-hybrid#requirements?tabs=intune-connector-requirements) and [Install the Intune Connector for Active Directory on the server](windows-autopilot-hybrid#install-the-intune-connector-for-active-directory-on-the-server).
+
 
 additionalContent: |
     ## Related content

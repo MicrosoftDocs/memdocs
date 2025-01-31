@@ -34,6 +34,14 @@ Intune and Windows Autopilot can be used to set up Microsoft Entra hybrid joined
 
 ## Requirements
 
+The list of requirements for performing Microsoft Entra hybrid join during Windows Autopilot is organized into three different categories:
+
+- **General** - general requirements.
+- **Device enrollment** - device enrollment requirements.
+- **Intune connector** - Intune Connector for Active Directory requirements.
+
+Select the appropriate tab to see the relevant requirements:
+
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **General**](#tab/general-requirements)
 
 - Successfully configured the [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify the device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
@@ -322,7 +330,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 The Intune Connector for Active Directory is installed locally on a computer via an executable file. If the Intune Connector for Active Directory needs to be uninstalled from a computer, it needs to also be done locally on the computer. The Intune Connector for Active Directory can't be removed through the Intune portal or through a graph API call.
 
-To uninstall the Intune Connector for Active Directory from the server, follow these steps:
+To uninstall the Intune Connector for Active Directory from the server, select the appropriate tab for the version of the Windows Server OS and then follow the steps:
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2025**](#tab/windows-server-2025)
 
@@ -332,10 +340,10 @@ To uninstall the Intune Connector for Active Directory from the server, follow t
 
     Or
 
-    Select the following **Installed apps** shortcut:
+    Select the following **Apps > Installed apps** shortcut:
 
     > [!div class="nextstepaction"]
-    > [Installed apps](ms-settings:appsfeatures-app)
+    > [Open Apps > Installed apps](ms-settings:appsfeatures-app)
 
 1. In the **Apps > Installed apps** window, find **Intune Connector for Active Directory**.
 
@@ -360,7 +368,7 @@ To uninstall the Intune Connector for Active Directory from the server, follow t
     Select the following **Apps** shortcut:
 
     > [!div class="nextstepaction"]
-    > [Apps](ms-settings:appsfeatures)
+    > [Open Apps](ms-settings:appsfeatures)
 
 1. Under **Apps & features**, find and select **Intune Connector for Active Directory**.
 
@@ -385,7 +393,7 @@ To uninstall the Intune Connector for Active Directory from the server, follow t
     Select the following **Apps** shortcut:
 
     > [!div class="nextstepaction"]
-    > [Apps](ms-settings:appsfeatures)
+    > [Open Apps](ms-settings:appsfeatures)
 
 1. Under **Apps & features**, find and select **Intune Connector for Active Directory**.
 

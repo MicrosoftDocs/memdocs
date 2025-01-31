@@ -19,12 +19,12 @@ Headings are driven by article context. -->
 
 ### [:::image type="icon" source="/autopilot/images/icons/software-18.svg"::: **Updated Connector**](#tab/updated-connector)
 
-    > [!IMPORTANT]
-    >
-    > This step is only needed under one of the following conditions:
-    >
-    > - The administrator that installed and configured the Intune Connector for Active Directory didn't have appropriate rights to set permissions on the **Computer** container or on OUs in the domain.
-    > - The `ODJConnectorEnrollmentWiazard.exe.config` XML file wasn't modified to add OUs that the MSA should have permissions for.
+> [!IMPORTANT]
+>
+> This step is only needed under one of the following conditions:
+>
+> - The administrator that installed and configured the Intune Connector for Active Directory didn't have appropriate rights to set permissions on the **Computer** container or on OUs in the domain.
+> - The `ODJConnectorEnrollmentWiazard.exe.config` XML file wasn't modified to add OUs that the MSA should have permissions for.
 
 Since the purpose of Intune Connector for Active Directory is to join computers to a domain and add them to an OU, the [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts) being used for the Intune Connector for Active Directory needs to have permissions to create computer accounts in the OU where the computers are joined to the on-premises domain.
 
