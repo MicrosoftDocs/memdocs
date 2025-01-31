@@ -191,7 +191,7 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
 
 > [!IMPORTANT]
 >
-> The legacy Intune Connector for Active Directory is deprecated. These instructions assume that the legacy Intune Connector for Active Directory is already installed or is already downloaded. Best practice is to download and install the [updated Intune Connector for Active Directory](/autopilot/windows-autopilot-hybrid?tabs=updated-connector#install-the-intune-connector).
+> The legacy Intune Connector for Active Directory is deprecated. These instructions assume that the legacy Intune Connector for Active Directory is already installed or is already downloaded. Best practice is to download and install the updated Intune Connector for Active Directory. For more information, select the **Updated Connector** tab instead.
 
 Before beginning the installation, make sure that all of the [Intune connector server requirements](/autopilot/windows-autopilot-hybrid?tabs=intune-connector-requirements#requirements) are met.
 
