@@ -28,7 +28,7 @@ appliesto:
 
 > [!IMPORTANT]
 >
-> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Windows Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
 Intune and Windows Autopilot can be used to set up Microsoft Entra hybrid joined devices. To do so, follow the steps in this article. For more information about Microsoft Entra hybrid join, see [Understanding Microsoft Entra hybrid join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 
@@ -47,7 +47,7 @@ Select the appropriate tab to see the relevant requirements:
 - Successfully configured the [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify the device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
 - If [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) is configured as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
 
-### [:::image type="icon" source="images/icons/software-18.svg"::: **Device enrollement**](#tab/device-enrollemnt-requirements)
+### [:::image type="icon" source="images/icons/software-18.svg"::: **Device enrollment**](#tab/device-enrollemnt-requirements)
 
 <!-- ### Device enrollment requirements -->
 
@@ -61,7 +61,7 @@ The device to be enrolled must follow these requirements:
 - Undergo the out-of-box experience (OOBE).
 - Use an authorization type that Microsoft Entra ID supports in OOBE.
 
-Although not required, configuring Microsoft Entra hybrid join for Active Directory Federated Services (ADFS) enables a faster Windows Autopilot Microsoft Entra registration process during deployments. Federated customers that aren't supporting the use of passwords and using AD FS need to follow the steps in the article [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login) to properly configure the authentication experience.
+Although not required, configuring Microsoft Entra hybrid join for Active Directory Federated Services (ADFS) enables a faster Windows Autopilot Microsoft Entra registration process during deployments. Federated customers that aren't supporting the use of passwords and using ADFS need to follow the steps in the article [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login) to properly configure the authentication experience.
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Intune connector**](#tab/intune-connector-requirements)
 
@@ -88,7 +88,7 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
   - **Required** - Create **msDs-ManagedServiceAccount** objects in the Managed Service Accounts container
   - **Optional** - Modify permissions in OUs in Active Directory - if the administrator installing the updated Intune Connector for Active Directory doesn't have this right, additional configuration steps are required by an administrator who has these rights. For more information, see the section [Increase the computer account limit in the Organizational Unit](#increase-the-computer-account-limit-in-the-organizational-unit) in this article.
 
-    These rights allows the Intune Connector for Active Directory install to properly create Managed Service Accounts (MSAs) and set permissions correctly for the OUs that the MSA will be adding computers to.
+    These rights allow the Intune Connector for Active Directory install to properly create Managed Service Accounts (MSAs) and set permissions correctly for the OUs that the MSA is adding computers to.
 
 <!-- MAXADO-8594181
 Multi-domain support section removed
@@ -114,7 +114,7 @@ Multi-domain support section removed
 
 ### Configure web proxy settings
 
-If there is a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](/mem/intune/enrollment/autopilot-hybrid-connector-proxy).
+If there's a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](/mem/intune/enrollment/autopilot-hybrid-connector-proxy).
 
 ## Increase the computer account limit in the Organizational Unit
 
@@ -136,33 +136,33 @@ If there is a web proxy in the networking environment, ensure that the Intune Co
 
 1. Select **Edit** in the **Rule syntax** box and enter one of the following code lines:
 
-    - To create a group that includes all Autopilot devices, enter:
+    - To create a group that includes all Windows Autopilot devices, enter:
 
       `(device.devicePhysicalIDs -any _ -startsWith "[ZTDId]")`
 
-    - Intune's Group Tag field maps to the OrderID attribute on Microsoft Entra devices. To create a group that includes all of Autopilot devices with a specific Group Tag (OrderID), enter:
+    - Intune's Group Tag field maps to the OrderID attribute on Microsoft Entra devices. To create a group that includes all of Windows Autopilot devices with a specific Group Tag (OrderID), enter:
 
       `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
 
-    - To create a group that includes all Autopilot devices with a specific Purchase Order ID, enter:
+    - To create a group that includes all Windows Autopilot devices with a specific Purchase Order ID, enter:
 
       `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
 
 1. Select **Save** > **Create**.
 
-## Register Autopilot devices
+## Register Windows Autopilot devices
 
-Select one of the following ways to enroll Autopilot devices.
+Select one of the following ways to enroll Windows Autopilot devices.
 
-### Register Autopilot devices that are already enrolled
+### Register Windows Autopilot devices that are already enrolled
 
-1. Create an Autopilot deployment profile with the setting **Convert all targeted devices to Autopilot** set to **Yes**.
+1. Create a Windows Autopilot deployment profile with the setting **Convert all targeted devices to Autopilot** set to **Yes**.
 
-1. Assign the profile to a group that contains the members that need to be automatically registered with Autopilot.
+1. Assign the profile to a group that contains the members that need to be automatically registered with Windows Autopilot.
 
 For more information, see [Create an Autopilot deployment profile](profiles.md).
 
-### Register Autopilot devices that aren't enrolled
+### Register Windows Autopilot devices that aren't enrolled
 
 Devices that aren't yet enrolled into Windows Autopilot can be manually registered. For more information, see [Manual registration](manual-registration.md).
 
@@ -170,7 +170,7 @@ Devices that aren't yet enrolled into Windows Autopilot can be manually register
 
 If purchasing new devices, some OEMs can register the devices on behalf of the organization. For more information, see [OEM registration](oem-registration.md).
 
-### Display registered Autopilot device
+### Display registered Windows Autopilot device
 
 Before devices enroll in Intune, *registered* Windows Autopilot devices are displayed in three places (with names set to their serial numbers):
 
@@ -189,7 +189,7 @@ After the Windows Autopilot devices are *enrolled*, the devices are displayed in
 >
 > After devices are enrolled, the devices are still displayed in the **Windows Autopilot Devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and in the **Autopilot** pane in [Microsoft 365 admin center](https://admin.microsoft.com/), but those objects are the Windows Autopilot registered objects.
 
-A device object is pre-created in Microsoft Entra ID once a device is registered in Autopilot. When a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
+A device object is pre-created in Microsoft Entra ID once a device is registered in Windows Autopilot. When a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
 
 ## VPNs
 
@@ -222,9 +222,9 @@ The following VPN solutions are **known** not to work with Windows Autopilot and
 >
 > Omission of a specific VPN client from this list doesn't automatically mean it's supported or that it works with Windows Autopilot. This list only lists the VPN clients that are **known** not to work with Windows Autopilot.
 
-## Create and assign an Autopilot deployment profile
+## Create and assign a Windows Autopilot deployment profile
 
-Autopilot deployment profiles are used to configure the Autopilot devices.
+Windows Autopilot deployment profiles are used to configure the Windows Autopilot devices.
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -240,7 +240,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. In the **Create profile** screen, on the **Basics** page, enter a **Name** and optional **Description**.
 
-1. If all devices in the assigned groups should automatically register to Windows Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups register with the Autopilot deployment service. Personally owned devices aren't registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. Instead the devices need to be directly deleted. For more information, see [Delete Autopilot devices](add-devices.md#delete-autopilot-devices).
+1. If all devices in the assigned groups should automatically register to Windows Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Windows Autopilot devices in assigned groups register with the Windows Autopilot deployment service. Personally owned devices aren't registered to Windows Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Windows Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Windows Autopilot deployment service. Instead the devices need to be directly deleted. For more information, see [Delete Autopilot devices](add-devices.md#delete-autopilot-devices).
 
 1. Select **Next**.
 
@@ -264,7 +264,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 > [!NOTE]
 >
-> Intune periodically checks for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
+> Intune periodically checks for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Windows Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Windows Autopilot service, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
 
 ## (Optional) Turn on the enrollment status page
 
@@ -336,7 +336,7 @@ To uninstall the Intune Connector for Active Directory from the server, select t
 
 1. Sign into the computer hosting the Intune Connector for Active Directory.
 
-1. Right click on the **Start** menu and then select **Settings** > **Apps** > **Installed apps**.
+1. Right-click on the **Start** menu and then select **Settings** > **Apps** > **Installed apps**.
 
     Or
 

@@ -462,12 +462,17 @@ sections:
       - question: |
           Why does uninstalling the Intune Connector for Active Directory through the Settings app not fully remove the application?
         answer: |
-          The Intune Connector for Active Directory needs to be uninstalled using both the Settings app and the Intune Connector for Active Directory installed executable **ODJConnectorBoostrapper.exe**. When uninstalling the Intune Connector for Active Directory, run **ODJConnectorBoostrapper.exe** and select the **Uninstall** option. The **ODJConnectorBoostrapper.exe** installer version needs to match the version of the connector thats being uninstalled.
+          The Intune Connector for Active Directory needs to be uninstalled using both the Settings app and the Intune Connector for Active Directory installed executable **ODJConnectorBoostrapper.exe**. When uninstalling the Intune Connector for Active Directory, run **ODJConnectorBoostrapper.exe** and select the **Uninstall** option. The **ODJConnectorBoostrapper.exe** installer version needs to match the version of the connector that's being uninstalled.
 
       - question: |
           Why is the error "The MSA account couldn't be granted permission to create computer objects in the following OUs" occurring when installing the Intune Connector for Active Directory?
         answer: |
           The administrator installing and configuring the Intune Connector for Active Directory doesn't have the required permissions to modify OUs in Active Directory. For more information, see [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) and [Install the Intune Connector for Active Directory on the server](windows-autopilot-hybrid.md#install-the-intune-connector-for-active-directory-on-the-server).
+
+      - question: |
+          Why did the Intune Connector for Active Directory all of a sudden stop working?
+        answer: |
+          Make sure that the Intune Connector for Active Directory is updated to the updated version and that the legacy version isn't still being used. For more information, see [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
 
 
 additionalContent: |

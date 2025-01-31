@@ -14,6 +14,7 @@ ms.localizationpriority: medium
 
 user-driven/hybrid-azure-ad-join-computer-account-limit.md
 pre-provisioning/hybrid-azure-ad-join-computer-account-limit.md
+windows-autopilot-hybrid.md
 
 Headings are driven by article context. -->
 
@@ -26,27 +27,27 @@ Headings are driven by article context. -->
 > - The administrator that installed and configured the Intune Connector for Active Directory didn't have appropriate rights to set permissions on the **Computer** container or on OUs in the domain.
 > - The `ODJConnectorEnrollmentWiazard.exe.config` XML file wasn't modified to add OUs that the MSA should have permissions for.
 
-Since the purpose of Intune Connector for Active Directory is to join computers to a domain and add them to an OU, the [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts) being used for the Intune Connector for Active Directory needs to have permissions to create computer accounts in the OU where the computers are joined to the on-premises domain.
+The purpose of Intune Connector for Active Directory is to join computers to a domain and add them to an OU. For this reason, the [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts) being used for the Intune Connector for Active Directory needs to have permissions to create computer accounts in the OU where the computers are joined to the on-premises domain.
 
 With default permissions in Active Directory, domain joins by the Intune Connector for Active Directory might initially work without any permission modifications to the OU in Active Directory. However after MSA attempts to join more than 10 computers to the on-premises domain, it would stop working because by default, Active Directory only allows any single account to join up to 10 computers to the on-premises domain.
 
 The following users aren't restricted by the 10 computer domain join limitation:
 
-- Users in the Administrators or Domain Administrators groups: In order to comply with the least privilege principles model, it's not recommended to make the MSA an administrator or domain administrator.
+- Users in the Administrators or Domain Administrators groups: In order to comply with the least privilege principles model, Microsoft doesn't recommend making the MSA an administrator or domain administrator.
 - Users with delegated permissions on Organizational Unit (OUs) and containers in Active Directory to create computer accounts: This method is recommended since it follows the least privilege principles model.
 
-To fix this limitation, the MSA needs the **Create computer accounts** permission in the Organizational Unit (OU) where the computers are joined to in the on-premises domain. The Intune Connector for Active Directory will properly set the permissions for the MSAs to the OUs as long as one of the following conditions is met:
+To fix this limitation, the MSA needs the **Create computer accounts** permission in the Organizational Unit (OU) where the computers are joined to in the on-premises domain. The Intune Connector for Active Directory sets the permissions for the MSAs to the OUs as long as one of the following conditions is met:
 
 - The administrator installing the Intune Connector for Active Directory has the necessary permissions to set permissions on the OUs.
 - The administrator configuring the Intune Connector for Active Directory has the necessary permissions to set permissions on the OUs.
 
-If the administrator installing or configuring the Intune Connector for Active Directory doesn't have the necessary permissions to set permissions on the OUs, then the following steps need to be followed by an administrator that has the necessary permissions to set permissions on the OUs:
+If the administrator installing or configuring the Intune Connector for Active Directory doesn't have the necessary permissions to set permissions on the OUs, then the following steps need to be followed:
 
-To increase the computer account limit in the Organizational Unit (OU) that computers are joining to during Autopilot, follow these steps :
+1. Sign into a computer that has access to the **Active Directory Users and Computers** console with an account that as the necessary permissions to set permissions on OUs.
 
-1. On a computer that has access to the **Active Directory Users and Computers** console, open the **Active Directory Users and Computers** console by running **DSA.msc**.
+1. Open the **Active Directory Users and Computers** console by running **DSA.msc**.
 
-1. Expand the desired domain and navigate to the organizational unit (OU) that computers are joining to during Autopilot.
+1. Expand the desired domain and navigate to the organizational unit (OU) that computers are joining to during Windows Autopilot.
 
     > [!NOTE]
     >
@@ -92,22 +93,22 @@ To increase the computer account limit in the Organizational Unit (OU) that comp
 
 ### [:::image type="icon" source="/autopilot/images/icons/software-18.svg"::: **Legacy Connector**](#tab/legacy-connector)
 
-Since the purpose of Intune Connector for Active Directory is to join computers to a domain and add them to an OU, the server running the Intune Connector for Active Directory needs to have permissions to create computer accounts in the OU where the computers are joined to the on-premises domain.
+The purpose of Intune Connector for Active Directory is to join computers to a domain and add them to an OU. For this reason, the server running the Intune Connector for Active Directory needs to have permissions to create computer accounts in the OU where the computers are joined to the on-premises domain.
 
 With default permissions in Active Directory, domain joins by the Intune Connector for Active Directory might initially work without any permission modifications to the OU in Active Directory. However after the server running the Intune Connector for Active Directory attempts to join more than 10 computers to the on-premises domain, it would stop working because by default, Active Directory only allows any single account to join up to 10 computers to the on-premises domain.
 
 The following users aren't restricted by the 10 computer domain join limitation:
 
-- Users in the Administrators or Domain Administrators groups - in order to comply with the least privilege principles model, it's not recommended to make the computer account running the Intune Connector for Active Directory an administrator or domain administrator.
+- Users in the Administrators or Domain Administrators groups - in order to comply with the least privilege principles model, Microsoft doesn't recommend making the computer account running the Intune Connector for Active Directory an administrator or domain administrator.
 - Users with delegated permissions on Organizational Unit (OUs) and containers in Active Directory to create computer accounts - this method is recommended since it follows the least privilege principles model.
 
 To fix this limitation, the server running the Intune Connector for Active Directory needs the **Create computer accounts** permission in the Organizational Unit (OU) where the computers are joined to in the on-premises domain:
 
-To increase the computer account limit in the Organizational Unit (OU) that computers are joining to during Autopilot, follow these steps on a computer that has access to the **Active Directory Users and Computers** console:
+To increase the computer account limit in the Organizational Unit (OU) that computers are joining to during Windows Autopilot, follow these steps on a computer that has access to the **Active Directory Users and Computers** console:
 
 1. Open the **Active Directory Users and Computers** console by running **DSA.msc**.
 
-1. Expand the desired domain and navigate to the organizational unit (OU) that computers are joining to during Autopilot.
+1. Expand the desired domain and navigate to the organizational unit (OU) that computers are joining to during Windows Autopilot.
 
     > [!NOTE]
     >
