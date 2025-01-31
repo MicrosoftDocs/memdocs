@@ -70,7 +70,7 @@ By default Windows Server has Internet Explorer Enhanced Security Configuration 
 > The Intune Connector for Active Directory installation needs to be done with an account that has the following domain rights:
 >
 > - **Required** - Create **msDs-ManagedServiceAccount** objects in the Managed Service Accounts container.
-> - **Optional** - Modify permissions in OUs in Active Directory - if the administrator installing the updated Intune Connector for Active Directory doesn't have this right, additional configuration steps are required by an administrator who has these rights. For more information, see the section [Increase the computer account limit in the Organizational Unit](#increase-the-computer-account-limit-in-the-organizational-unit) in this article.
+> - **Optional** - Modify permissions in OUs in Active Directory - if the administrator installing the updated Intune Connector for Active Directory doesn't have this right, additional configuration steps are required by an administrator who has these rights. For more information, see the step/section **Increase the computer account limit in the Organizational Unit**.
 
 1. If the previous legacy Intune Connector for Active Directory is installed, uninstall it first before installing the updated Intune Connector for Active Directory. For more information, see [Uninstall the Intune Connector for Active Directory](/autopilot/windows-autopilot-hybrid#uninstall-the-intune-connector-for-active-directory).
 
