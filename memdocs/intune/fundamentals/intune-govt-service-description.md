@@ -60,8 +60,12 @@ These government instances are also known as **IL4** and **IL5**, where **IL** r
 - GCC is the same instance as Microsoft Intune in the commercial space. Other services, like Microsoft 365, have a separate GCC instance. Intune doesn't have a separate GCC instance.
 
   So, when you see **GCC** in this Intune article, it refers to the commercial service. When you see **GCC High** or **DoD**, it refers to the government cloud.
-
+  
   GCC instances are commonly used by state and local government customers that require extra accreditation for the cloud services they use.
+  
+- Intune is now Common Criteria Certified (the first ever cloud service on the planet to do so!!!) and is on the NIAP Product Compliance List (PCL).  You can see the certification materials by going to <u>[NIAP - Product Details](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.niap-ccevs.org%2Fproducts%2F11298&data=05%7C02%7Cpfetty%40microsoft.com%7Ca5ffd4bcb2734da3e3cf08dd2f78c275%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638718917980476450%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=1lLrKDSGDZ0KI7KE8%2BTzuS2nuo4sddZfkLS9yIX8t7Q%3D&reserved=0)</u>
+
+- There is also a Secure Technical Implementation Guide for Administrators to use to help lock down their Intune tenants.  This document can be found by going to [https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Intune_Service_Desktop_V1R1_STIG.zip](https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Intune_Service_Desktop_V1R1_STIG.zip)
 
 ## Feature differences in Intune GCC High and DoD
 
