@@ -2839,6 +2839,11 @@
       "source_path": "windows-365/enterprise/windows-365-switch-known-issues.md",
       "redirect_url": "/troubleshoot/windows-365/windows-365-switch-known-issues",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/network-bandwidth-use.md",
+      "redirect_url": "/mem/intune/fundamentals/intune-endpoints",
+      "redirect_document_id": false
     }
   ]
 }
