@@ -120,8 +120,6 @@ items:
       - name: macOS
         displayName: software updates
         href: ./protect/software-updates-guide-macos.md
-    - name: Network configuration
-      href: ./fundamentals/network-bandwidth-use.md
     - name: Using Windows 10 VMs with Intune
       href: ./fundamentals/windows-10-virtual-machines.md
     - name: Using Azure Virtual Desktop with Intune
@@ -1123,6 +1121,10 @@ items:
             href: ./protect/security-baseline-v2-edge-settings.md
           - name: Microsoft Edge baseline settings (version 85 and older)
             href: ./protect/security-baseline-settings-edge.md
+          - name: HoloLens 2 - Advanced security baseline settings
+            href: ./protect/security-baseline-hololens2-advanced.md
+          - name: HoloLens 2 - Standard security baseline settings
+            href: ./protect/security-baseline-hololens2-advanced.md
           - name: Windows 365 baseline settings
             href: ./protect/security-baseline-settings-windows-365.md
         - name: Microsoft Tunnel command-line tools
