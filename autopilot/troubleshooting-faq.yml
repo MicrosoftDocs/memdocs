@@ -467,7 +467,7 @@ sections:
       - question: |
           Why is the error "The MSA account couldn't be granted permission to create computer objects in the following OUs" occurring when installing the Intune Connector for Active Directory?
         answer: |
-          The administrator installing and configuring the Intune Connector for Active Directory doesn't have the required permissions to modify OUs in Active Directory. For more information, see [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) and [Install the Intune Connector for Active Directory on the server](windows-autopilot-hybrid.md#install-the-intune-connector-for-active-directory-on-the-server).
+          The administrator installing and configuring the Intune Connector for Active Directory doesn't have the required permissions as outlined in the Intune Connector for Active Directory requirements. For more information, see [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) and [Install the Intune Connector for Active Directory on the server](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector-for-active-directory-on-the-server).
 
       - question: |
           Why did the Intune Connector for Active Directory all of a sudden stop working?
