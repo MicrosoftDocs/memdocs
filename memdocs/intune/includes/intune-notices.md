@@ -14,13 +14,13 @@ These notices provide important information that can help you prepare for future
 
 ### Plan for change: User alerts on iOS for when screen capture actions are blocked
 
-In an upcoming version (20.3.0) of the Intune App SDK and Intune App Wrapping Tool for iOS, support will be added to alert users when a screen capture action (including recording and mirroring) is detected in a managed app. Note that, the alert is only visible to users if you have configured an app protection policy (APP) to block screen capture.
+In an upcoming version (20.3.0) of the Intune App SDK and Intune App Wrapping Tool for iOS, support is added to alert users when a screen capture action (including recording and mirroring) is detected in a managed app. The alert is only visible to users if you have configured an app protection policy (APP) to block screen capture.
 
 #### How does this affect you or your users?
 
-If APP has been configured to block screen capturing, users will see an alert indicating that screen capture actions are blocked by their organization when they attempt to screenshot, screen record, or screen mirror.
+If APP has been configured to block screen capturing, users see an alert indicating that screen capture actions are blocked by their organization when they attempt to screenshot, screen record, or screen mirror.
 
-For apps, such as Microsoft Outlook, that have updated to the latest Intune App SDK or Intune App Wrapping Tool versions, screen capture will be blocked if you have configured “Send Org data to other apps” to a value other than “All apps”. To allow screen capture for your iOS/iPadOS devices, configure the Managed apps app configuration policy setting “com.microsoft.intune.mam.screencapturecontrol" to **Disabled**.
+For apps that have updated to the latest Intune App SDK or Intune App Wrapping Tool versions, screen capture is blocked if you've configured “Send Org data to other apps” to a value other than “All apps”. To allow screen capture for your iOS/iPadOS devices, configure the Managed apps app configuration policy setting “com.microsoft.intune.mam.screencapturecontrol" to **Disabled**.
 
 #### How can you prepare?
 
