@@ -51,6 +51,9 @@ The **Wipe** device action restores a device to its factory default settings. Th
 > - [Use Zebra StageNow](https://techdocs.zebra.com/stagenow/5-11/profiles/wipedevice/)
 > - [Use OEM Config Data Wipe Configuration](https://techdocs.zebra.com/oemconfig/latest/mc/)
 
+> [!NOTE]
+> For fully managed Samsung devices (Android Enterprise), please make sure that you do NOT have "Factory Reset" set to "Block" under Device Restrictions. If "Factory Reset" is toggled to "Block" and a Wipe action is in initiated, the device will lose contact with Intune and will also be prevented from being factory reset.
+
 > [!IMPORTANT]
 >
 > The Wipe action doesn't remove the Autopilot registration from the device. To remove the Autopilot registration from the device, see [Deregister from Autopilot using Intune](/autopilot/registration-overview#deregister-from-autopilot-using-intune)
