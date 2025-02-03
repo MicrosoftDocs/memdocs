@@ -108,7 +108,8 @@ Windows Hello for Business is a biometric authentication feature that allows use
 
 > [!TIP]
 > **Passwordless for Students**
-> If you're interested in using Windows Hello for Business with students, you may be interested in checking out our guidance on how you can use Temporary Access Pass. For more information, see [Passwordless for Students](/microsoft-365/education/deploy/protect-passwordless-students)
+>
+> If you're interested in using Windows Hello for Business with students, you may be interested in checking out our guidance on how you can use Temporary Access Pass. For more information, see [Passwordless for Students](/microsoft-365/education/deploy/protect-passwordless-students).
 
 It's common for Windows Hello for Business to be disabled at the tenant level. Then, a policy can be targted at users or devices that need it. For example, staff and teachers.
 
