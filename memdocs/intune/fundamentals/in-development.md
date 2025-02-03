@@ -79,6 +79,29 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
+### Additional device details for Managed Home Screen<!-- 27006536 -->
+
+Android **OS version**, **Security patch** and **Last device reboot time** details will be available from the **Device Information** page of the Managed Home Screen app. For related information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+Applies to:
+- Android Enterprise devices
+
+### Managed Home Screen authentication support in public preview<!-- 25348926 -->
+Managed Home Screen for Android devices will natively support authentication in Microsoft Entra ID with a QR code and PIN. This capability will eliminate the need for users to enter and re-enter long UPNs and alphanumeric passwords.
+
+Applies to:
+
+- Android devices
+
+
+### Display ringtone selector for Managed Home Screen<!-- 26826233 -->
+
+In Intune, you can choose to expose a setting in the Managed Home Screen app to allow users to select a ringtone. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+Applies to:
+
+- Android devices
+
 ### Update to Apps workload experience in Intune<!-- 15507048 -->
 
 The Apps workload in Intune will be updated to provide a more consistent UI and improved navigation structure so you can find the information you need faster. To find the **App** workload in Intune, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps**.
@@ -125,7 +148,6 @@ Applies to:
 
 - Android Enterprise
 - AOSP
-
 
 ### The Settings Catalog lists all the settings you can configure in a device policy<!-- 30305854 -->
 
