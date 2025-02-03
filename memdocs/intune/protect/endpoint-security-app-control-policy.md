@@ -70,7 +70,7 @@ The following devices are supported for App Control for Business policies when t
 
 - **Windows Enterprise or Education**:
   - Windows 10 version 1903 or later
-  - Windows 11 version 1903 or later
+  - Windows 11
 
 - **Windows Professional**:
   - Windows 10 with [KB5019959](https://support.microsoft.com/topic/november-8-2022-kb5019959-os-builds-19042-2251-19043-2251-19044-2251-and-19045-2251-f65e0600-2135-4efd-a979-08d1df34dce8)

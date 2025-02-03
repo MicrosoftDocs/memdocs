@@ -253,6 +253,7 @@ It is critical to ensure that the devices you manage are secured using the diffe
 - [Account protection][MEM-7]
 - [Security Baselines](/mem/intune/protect/security-baselines)
 - [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
+- [Web Content Filtering on Edge](/deployedge/microsoft-edge-web-content-filtering)
 
 ### [Intune For Education](#tab/intune-for-education)
 
@@ -282,6 +283,7 @@ For more information, see [Security][INT-4].
 > - [Account protection][MEM-7]
 > - [Security Baselines](/mem/intune/protect/security-baselines)
 > - [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
+> - [Web Content Filtering on Edge](/deployedge/microsoft-edge-web-content-filtering)
 
 ::: zone-end
 
