@@ -89,7 +89,7 @@ With this capability, while reviewing the properties of a file elevation request
 - The files’ reputation
 - Information about the trust of the publisher
 - The risk score for the user requesting the file elevation
-- The Risk score of the device from which the elevation was submitted
+- The risk score of the device from which the elevation was submitted
 
 EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md). To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
 
