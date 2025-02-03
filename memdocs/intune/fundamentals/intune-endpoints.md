@@ -346,7 +346,7 @@ The **Installer Url** property either shows the external download location or th
 
 **Microsoft-hosted Win32 app fallback cache:**
 
-- Varies by region, example: *sparkcdneus2.azureedge.net, sparkcdnwus2.azureedge.net*
+- cdn.winget.microsoft.com
 
 **Delivery Optimization (optional, required for peering):**
 
