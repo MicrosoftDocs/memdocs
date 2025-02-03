@@ -37,10 +37,8 @@ Microsoft Intune uses Google Mobile Services (GMS) to communicate with the Micro
 > [!NOTE]
 > These GMS related limitations also apply to Device Administrator management and Android (AOSP) Management.
 
-> [!NOTE]
-> Microsoft Intune is ending support for [Android device administrator management](../enrollment/android-enroll-device-administrator.md) on devices with access to Google Mobile Services (GMS) on December 31, 2024. After that date, device enrollment, technical support, bug fixes, and security fixes will be unavailable.
-> For devices running Android 15 or earlier that don't have access GMS (excluding Microsoft Teams certified Android devices), Intune will continue allowing device administrator enrollment and will maintain limited support, since Android Enterprise management is unavailable to these devices. However, device administrator use on these devices is still not recommended, since Google's device administrator deprecation means there could be future functionality impact outside Intune's ability to mitigate.
-> For more information, and to learn about alternatives to device administrator, see [Ending support for Android device administrator on GMS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/microsoft-intune-ending-support-for-android-device-administrator/ba-p/3915443).  
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Install the Intune Company Portal app without access to the Google Play Store
 
 ### For users outside of People's Republic of China

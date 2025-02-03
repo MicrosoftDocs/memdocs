@@ -40,7 +40,7 @@ To set up your organization's environment to deploy and manage Windows 365 Link 
 3. [Configure Microsoft Entra Mobility settings to automatically enroll Windows 365 Link devices in Intune](intune-automatic-enrollment.md).
 4. [Create an Intune filter for Windows 365 Link devices](create-intune-filter.md) (optional).
 5. [Configure enrollment restrictions to let Windows 365 Link devices enroll](enrollment-restrictions.md).
-6. [Validate Conditional Access policies](conditional-access-policies-synchronize.md).
+6. [Validate Conditional Access policies](conditional-access-policies.md).
 7. [Suppress single sign-on consent prompt](single-sign-on-suppress.md) (recommended).
 
 After setting up deployment for your Windows 365 Link devices, you can start [onboarding](onboarding.md) them.

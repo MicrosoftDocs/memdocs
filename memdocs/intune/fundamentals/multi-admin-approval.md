@@ -51,7 +51,7 @@ To create an access policy, your account must be assigned the [*Intune Service A
 
 To be an approver for access policies, an account must be in the approver group that’s assigned to the access policy for a specific type of resource.
 
-If your organization allows unlicensed administrators for Intune roles, all approver groups must also be a member group of one or more Intune role assignments. 
+All approver groups must also be a member group of one or more Intune role assignments. There is no specific requirement for which role assignment the approver group must be added to. If the approver group is not added to a role assignment this will result in approver group members being removed from the group periodically.
 
 ## How multi admin approval and Access policies work
 

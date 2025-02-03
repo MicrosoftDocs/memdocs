@@ -4,7 +4,7 @@
       "source_path": "memdocs/intune/enrollment/chrome-enterprise-device-details.md",
       "redirect_url": "/mem/intune/remote-actions/chrome-enterprise-device-details",
       "redirect_document_id": true
-    },    
+    },
     {
       "source_path": "memdocs/intune/enrollment/chrome-enterprise-remote-actions.md",
       "redirect_url": "/mem/intune/remote-actions/chrome-enterprise-remote-actions",
@@ -14,27 +14,27 @@
       "source_path": "memdocs/intune/user-help/sso-dialog-faqs.yml",
       "redirect_url": "https://support.microsoft.com/topic/a6505ceb-1a20-4b15-889c-250175481506",
       "redirect_document_id": false
-    },  
+    },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-zips-android.md",
       "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
       "redirect_document_id": false
-    },  
+    },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-checkpoint-android.md",
       "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-skycure-android.md",
       "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md",
       "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-zips-ios.md",
       "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
@@ -2735,7 +2735,7 @@
       "redirect_url": "/windows-365/enterprise/requirements-omnissa-horizon",
       "redirect_document_id": false
     },
-   {
+    {
       "source_path": "memdocs/configmgr/core/clients/manage/monitor-windows-analytics.md",
       "redirect_url": "/mem/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove",
       "redirect_document_id": false
@@ -2773,6 +2773,76 @@
     {
       "source_path": "memdocs/intune/protect/endpoint-security-firewall-rule-tool.md",
       "redirect_url": "/mem/intune/protect/endpoint-security-firewall-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/link/conditional-access-policies-synchronize.md",
+      "redirect_url": "/windows-365/link/conditional-access-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/business/troubleshoot-windows-365-business.md",
+      "redirect_url": "/troubleshoot/windows-365/troubleshoot-windows-365-business",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/business/known-issues.md",
+      "redirect_url": "/troubleshoot/windows-365/known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/known-issues-enterprise.md",
+      "redirect_url": "/troubleshoot/windows-365/known-issues-enterprise",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/troubleshoot-azure-network-connection.md",
+      "redirect_url": "/troubleshoot/windows-365/troubleshoot-azure-network-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/health-checks.md",
+      "redirect_url": "/troubleshoot/windows-365/health-checks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/connection-errors.md",
+      "redirect_url": "/troubleshoot/windows-365/connection-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/provisioning-errors.md",
+      "redirect_url": "/troubleshoot/windows-365/provisioning-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/troubleshoot-partner-connector.md",
+      "redirect_url": "/troubleshoot/windows-365/troubleshoot-partner-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/troubleshoot-windows-365-app.md",
+      "redirect_url": "/troubleshoot/windows-365/troubleshoot-windows-365-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/troubleshoot-windows-365-boot.md",
+      "redirect_url": "/troubleshoot/windows-365/troubleshoot-windows-365-boot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/windows-365-boot-known-issues.md",
+      "redirect_url": "/troubleshoot/windows-365/windows-365-boot-known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/windows-365-switch-known-issues.md",
+      "redirect_url": "/troubleshoot/windows-365/windows-365-switch-known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/network-bandwidth-use.md",
+      "redirect_url": "/mem/intune/fundamentals/intune-endpoints",
       "redirect_document_id": false
     }
   ]

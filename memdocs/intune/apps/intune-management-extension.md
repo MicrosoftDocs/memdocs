@@ -63,7 +63,7 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 
 - The Intune management extension agent checks after every reboot for any new scripts or changes. After you assign the policy to the Microsoft Entra groups, the PowerShell script runs, and the run results are reported. Once the script executes, it doesn't execute again unless there's a change in the script or policy. If the script fails, the Intune management extension agent retries the script three times for the next three consecutive Intune management extension agent check-ins.
 
-- For shared devices, the PowerShell script will run for every new user that signs in.
+- A PowerShell script assigned to the device will run for every new user that signs in, except on multi-session SKUs where user check-in is disabled. 
 
 - PowerShell scripts are executed before Win32 apps run. In other words, PowerShell scripts execute first. Then, Win32 apps execute.
 
