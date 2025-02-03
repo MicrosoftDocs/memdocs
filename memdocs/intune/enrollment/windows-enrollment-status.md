@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/29/2024
+ms.date: 02/03/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -58,8 +58,8 @@ This article describes the information that the enrollment status page tracks an
 ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/windows/client-management/mdm/enrollmentstatustracking-csp) and [FirstSyncStatus CSP](/windows/client-management/mdm/dmclient-csp) to track app installation.  
 
 ## Create new profile  
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Go to **Devices** > **Enrollment**.  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices**.   
+1. Expand **Device onboarding**, and then select **Enrollment**.  
 1. Select the **Windows** tab.  
 1. Under **Windows Autopilot**, select **Enrollment Status Page**.  
 1. Select **Create**.  
@@ -70,16 +70,16 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 1. In **Settings**, configure the following settings:  
 
     - **Show app and profile configuration progress**: Your options:
-      - **No**: The enrollment status page doesn't appear during device setup. Select this option if you don't want to show the ESP to users.  
-      - **Yes**: The enrollment status page appears during device setup.
+      - **No**: The enrollment status page doesn't appear during device setup. Select this option if you don't want to show the configuration progress to users.  
+      - **Yes**: The enrollment status page appears during device setup. More options become available if you select this one.  
 
-    - **Show an error when installation takes longer than specified number of minutes**: The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on your devices.
+    - **Show an error when installation takes longer than specified number of minutes**: A A time-out error message is shown after your desired time. The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on your devices.
 
-    - **Show custom message when time limit or error occur**: Include a message that tells people what happened and who to contact for help. Your options:  
+    - **Show custom message when time limit or error occur**: Include a custom message that tells people what happened and who to contact for help. Your options:  
        - **No**: The default message is shown to users when an error occurs. That message is: "Setup could not be completed. Please try again or contact your support person for help."  
        - **Yes**: Your custom message is shown to users when an error occurs. Enter your message in the provided text box.  
 
-    - **Turn on log collection and diagnostics page for end users**: It's recommended to turn on this option since the user's logs and diagnostics could aid with troubleshooting. Your options:  
+    - **Turn on log collection and diagnostics page for end users**: We recommended turning on this option since the user's logs and diagnostics could aid with troubleshooting. Your options:  
        - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.  
        - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11.  
 
@@ -89,10 +89,10 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
     - **Block device use until all apps and profiles are installed**: Your options:
        - **No**: Users can leave the ESP before Intune is finished setting up the device.
-       - **Yes**: Users can't leave the ESP until Intune is done setting up the device. This option unlocks additional settings for this scenario.  
+       - **Yes**: Users can't leave the ESP until Intune is done setting up the device. This option unlocks more settings for this scenario.  
 
     - **Allow users to reset device if installation error occurs**: Your options:  
-        - **No**: The ESP doesn't give users the option to reset theirs devices when an installation fails.  
+        - **No**: The ESP doesn't give users the option to reset their devices when an installation fails.  
         - **Yes**: The ESP gives users the option to reset their devices when an installation fails.  
 
     - **Allow users to use device if installation error occurs**: Your options:  
@@ -101,7 +101,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
     - **Block device use until these required apps are installed if they are assigned to the user/device**: Your options:  
          - **All**: All assigned apps must be installed before users can use their devices.  
-         - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list. This option unlocks the **Blocking apps** settings.
+         - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list with more settings related to blocking apps.
 
     - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [technician flow](/autopilot/pre-provision). This setting is only available if *blocking apps* are added and only applies to devices going through pre-provisioning. Your options:  
          - **No**: An attempt is made to install the blocking apps. Autopilot deployment fails if a blocking app fails to install. No attempt is made to install nonblocking apps. When the end user receives the resealed device and signs in for the first time, the ESP attempts to install the nonblocking apps.
