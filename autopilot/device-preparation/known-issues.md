@@ -61,6 +61,9 @@ Date updated: *November 15, 2024*
 
 When the [Managed installer policy](/mem/intune/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps and Microsoft Store apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
 
+> [!NOTE]
+> Managed installer policy is always enabled automatically for Education customers due to the requirements for [Windows 11 SE](/education/windows/tutorial-deploy-apps-winse/).
+
 For more information, see [Known issue: Windows Autopilot device preparation with Win32 apps and managed installer policy](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-windows-autopilot-device-preparation-with-win32-apps/ba-p/4273286).
 
 ## Security group membership update failures might lead to non-compliant devices
