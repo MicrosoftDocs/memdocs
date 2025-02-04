@@ -39,7 +39,7 @@ On Android Enterprise fully managed devices, Launcher allows enterprise IT admin
 
 ## How to configure the Microsoft Launcher app
 
-Once the Microsoft Launcher application has been [added to Intune](../apps/apps-add.md), navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App configuration policies**. Add a configuration policy for **Managed devices** running **Android** and choose **Microsoft Launcher** as the associated app. Click on **Configuration settings** to configure the different available Microsoft Launcher settings.
+Once the Microsoft Launcher application has been [added to Intune](../apps/apps-add.md), navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **Configuration**. Add a configuration policy for **Managed devices** running **Android** and choose **Microsoft Launcher** as the associated app. Click on **Configuration settings** to configure the different available Microsoft Launcher settings.
 
 ## Choosing a Configuration Settings Format
 

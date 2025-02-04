@@ -42,7 +42,7 @@ Once you add an Enterprise App Catalog app to Intune, you can assign that app to
 The following steps help you add a Windows App Catalog app to Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. Select **Enterprise App Catalog app** on the **Select app type** pane under the **Other** app types.
 4. Click **Select** to add the app type. 
    The **Add app** pane appear and shows the steps needed to add the app to Intune.
@@ -210,7 +210,7 @@ The **Rules format** provides the following options:
    > [!NOTE]
    > We recommend encoding your script as UTF-8 BOM. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
 
-When you add the app to Intune, the version of your Windows catalog app (Win32) is displayed in the Microsoft Intune admin center. The app version is provided in the **All apps** list, where you can filter by Windows catalog app (Win32) and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Columns** > **Version** to display the app version in the app list.
+When you add the app to Intune, the version of your Windows catalog app (Win32) is displayed in the Microsoft Intune admin center. The app version is provided in the **All Apps** list, where you can filter by Windows catalog app (Win32) and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Columns** > **Version** to display the app version in the app list.
 
 After you've added your rules, select **Next** to display the **Scope tags** step.
 

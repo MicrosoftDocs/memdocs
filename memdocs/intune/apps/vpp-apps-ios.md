@@ -145,7 +145,7 @@ You can synchronize the app names, metadata and license information for your pur
 
 ## Assign a volume-purchased app
 
-1. Select **Apps** > **All apps**.
+1. Select **Apps** > **All Apps**.
 2. On the list of apps pane, choose the app you want to assign, and then choose **Properties**. Select **Edit** next to **Assignments**.
 3. On the **Assignments** tab, choose whether the app will be **Required** or **Available for enrolled devices**.
 4. Choose **Add group** under the assignment type you've selected, then on the **Select groups** pane choose the Microsoft Entra user or device groups to which you want to assign the app.
@@ -243,10 +243,10 @@ You can delete purchased apps that don't have any available or used licenses ass
 
 To delete a VPP app, use the following steps:
 1. Create a new location in [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). 
-2. Revoke all licenses for the app that use the associated location token. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *select the app to delete* > **App licenses** > **Revoke licenses**.
+2. Revoke all licenses for the app that use the associated location token. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *select the app to delete* > **App licenses** > **Revoke licenses**.
 3. In Apple Business Manager or Apple School Manager, transfer all licenses for the app from the original location to the new location. 
 4. Sync the location token in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
-5. Delete the app in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > *right-click on the app to delete* > **Delete**.
+5. Delete the app in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All Apps** > *right-click on the app to delete* > **Delete**.
 
 Deleting a VPP app will cause the following results:
 - The associated app assignments will be removed. 
@@ -260,7 +260,7 @@ Deleting a VPP app will cause the following results:
 Access to Apple Business Manager location token and apps (Apple VPP tokens and VPP apps) can be controlled independently using permissions assigned to custom administrator roles in Intune.
 
 * To allow an Intune custom role to manage Apple Business Manager location tokens, in Microsoft Intune admin center, select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**, assign permissions for **Managed apps**.
-* To allow an Intune custom role to manage apps purchased using iOS/iPadOS VPP tokens under **Apps** > **All apps**, assign permissions for **Mobile apps**. 
+* To allow an Intune custom role to manage apps purchased using iOS/iPadOS VPP tokens under **Apps** > **All Apps**, assign permissions for **Mobile apps**. 
 
 > [!NOTE]
 > You can view and manage VPP apps with only the **Mobile apps** permission assigned. Previously, the **Managed apps** permission was required to view and manage VPP apps. This change does not apply to Intune for Education tenants who still need to assign the **Managed apps** permission.   
