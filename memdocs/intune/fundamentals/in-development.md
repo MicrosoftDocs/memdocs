@@ -121,19 +121,6 @@ Applies to:
 - Android Enterprise
 - AOSP
 
-
-### The Settings Catalog lists all the settings you can configure in a device policy<!-- 30305854 -->
-
-The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
-
-There will soon be new settings in the Settings Catalog to *Configure Multiple Display Mode* for Windows 24H2. To see available settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
-
-The **Configure Multiple Display Mode** setting allows monitors to extend or clone the display by default, facilitating the need for manual setup. It streamlines the multi-monitor configuration process, ensuring a consistent and user-friendly experience.
-
-Applies to:
-
-- Windows 
-
 ### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
 
 We're updating the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will no longer be available for download but will continue to work until deprecation.

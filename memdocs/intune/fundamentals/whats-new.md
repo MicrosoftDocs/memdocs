@@ -110,6 +110,21 @@ Applies to:
 
 The Apps area in Intune, commonly known as the Apps workload, is updated to provide a more consistent UI and improved navigation structure so you can find the information you need faster. To find the **App** workload in Intune, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps**.
 
+### Device configuration
+
+#### New settings available in the Windows settings catalog to Configure multiple display mode<!-- 30305854 -->
+
+The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog to *Configure Multiple Display Mode* for
+Windows 24H2. To see available settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
+
+The **Configure Multiple Display Mode** setting allows monitors to extend or clone the display by default, facilitating the need for manual setup. It streamlines the multi-monitor configuration process, ensuring a consistent and user-friendly experience.
+
+Applies to:
+
+- Windows
+
 ### Device security
 
 #### Updated security baseline for Microsoft Edge v128<!-- 29463902 -->
