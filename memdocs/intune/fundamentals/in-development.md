@@ -129,6 +129,48 @@ Applies to:
 
 ## Device configuration
 
+### New settings available in the Apple settings catalog<!-- 30457000 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+#### iOS/iPadOS
+
+**Managed Settings**:
+- Default Applications
+- Wallpaper
+
+**Networking > Domains**:
+- Cross Site Tracking Prevention Relaxed Apps
+
+**Restrictions**:
+- Allowed External Intelligence Workspace IDs
+- Allow Notes Transcription Summary
+- Allow Satellite Connection
+- Allow Visual Intelligence Summary
+
+#### macOS
+
+**Networking > Domains**:
+
+- Cross Site Tracking Prevention Relaxed Apps
+
+**Restrictions**:
+
+- Allow Bookstore
+- Allow Bookstore Erotica
+- Allow Explicit Content
+- Rating Apps
+- Rating Movies
+- Rating Region
+- Rating TV Shows
+
+**System Configuration > File Provider**:
+
+- Management Allows Known Folder Syncing
+- Management Known Folder Syncing Allow List
+
 ### Android settings in the Settings Catalog <!-- 26981326 -->
 
 The settings catalog will soon support Android Enterprise and AOSP.
@@ -174,6 +216,23 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 <!-- *********************************************** -->
 
 ## Device management
+
+### Configure devices to stay on the latest OS version using declarative device management (DDM)<!-- 28323647 -->
+
+As part of the [Settings Catalog](../configuration/settings-catalog.md), you'll be able to configure devices to automatically update to the latest OS version using DDM. To use these new settings in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type.
+
+**Declarative device management > Software Update Enforce Latest**.
+
+- **Enforce Latest Software Update Version**: If true, devices will upgrade to the latest OS version that is available for that device model. This uses the Software Update Enforcement configuration and will force devices to restart and install the update after the deadline passes.
+- **Delay In Days**: Specify the number of days that should pass before a deadline is enforced after a new update is released by Apple.
+- **Install Time**: Specify the local device time for when updates are enforced. This setting uses the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
+
+Learn more about configuring managed updates through DDM at [Managed software updates] (../protect/managed-software-updates-ios-macos.md).
+
+Applies To:
+
+- iOS/iPadOS
+
 
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 
