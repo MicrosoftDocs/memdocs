@@ -82,7 +82,7 @@ Microsoft recommends following the principle of least-permissions by only assign
 are [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions) and assignment **should be limited**.  
 
 > [!TIP]
-> Utilize [Entra Permissions Management](/security/business/identity-access/microsoft-entra-permissions-management) to identify privileged administrators and assist in managing least-permissions.
+> Utilize [Entra Permissions Management](/entra/permissions-management/overview) to identify privileged administrators and assist in managing least-permissions.
 
 | Microsoft Entra role | All Intune data | Intune audit data |
 | --- | :---: | :---: |
