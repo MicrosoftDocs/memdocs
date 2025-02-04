@@ -164,7 +164,7 @@ User experience settings control the end-user experience for device restart and 
 - **Restart checks (EDU Restart)**  
   
   > [!NOTE]
-  > In policies where this value is currently set to *Skip*, the value will remain in place until that value is changed to *Allow* and saved. However, When creating new policies, it will not be available, and you can use [Settings catalogue](../configuration/settings-catalog.md) to set this value if required.
+  > In policies where this value is currently set to *Skip*, the value will remain in place until that value is changed to *Allow* and saved. However, When creating new policies, it will not be available, and you can use [Settings catalog](../configuration/settings-catalog.md) to set this value if required.
   
   **Default**: Allow
 
