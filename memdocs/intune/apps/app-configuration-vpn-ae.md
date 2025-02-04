@@ -106,7 +106,7 @@ If you’re not familiar with creating app configuration policies, see [Add app 
 ## Use the Configuration Designer
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+2. Select **Apps** > **Configuration** > **Create** > **Managed devices**.
 3. In **Basics**, enter the following properties:
 
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **App config policy: Cisco AnyConnect VPN policy for Android Enterprise work profile devices**.
@@ -166,7 +166,7 @@ Use this option if you don't have, or don't know all the required VPN settings u
 
 In these steps, create a temporary policy. The policy won't be saved. The intent is to copy the certificate token. You'll use this token when creating the VPN policy using JSON (next section).
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > Configuration** > **Add** > **Managed devices**.
 2. In **Basics**, enter the following properties:
 
     - **Name**: Enter any name. This policy is temporary, and won't be saved.
@@ -196,7 +196,7 @@ In these steps, create a temporary policy. The policy won't be saved. The intent
 
 ### Create the VPN policy using JSON
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Configuration** > **Create** > **Managed devices**.
 
 2. In **Basics**, enter the following properties:
 
