@@ -73,7 +73,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
       - **No**: The enrollment status page doesn't appear during device setup. Select this option if you don't want to show the configuration progress to users.  
       - **Yes**: The enrollment status page appears during device setup. More options become available if you select this one.  
 
-    - **Show an error when installation takes longer than specified number of minutes**: A A time-out error message is shown after your desired time. The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on your devices.
+    - **Show an error when installation takes longer than specified number of minutes**: A time-out error message is shown after your desired time. The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on your devices.
 
     - **Show custom message when time limit or error occur**: Include a custom message that tells people what happened and who to contact for help. Your options:  
        - **No**: The default message is shown to users when an error occurs. That message is: "Setup could not be completed. Please try again or contact your support person for help."  
@@ -109,7 +109,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
          > [!TIP]
          >
-         >  When using this feature, expect provisioning time to increase during the technican phase. The more apps assigned, the longer it could take. If you're using a third party to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.
+         >  When using this feature, expect provisioning time to increase during the technician phase. The more apps assigned, the longer it could take. If you're using a third party to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.
 
 1. Select **Next**.
 1. In **Assignments**, select the groups to receive your profile. Optionally, select **Edit filter** to restrict the assignment further.  
@@ -297,7 +297,7 @@ This section lists the known issues for the enrollment status page.
 - A reboot during device setup forces the user to enter their credentials before the account setup phase. User credentials aren't preserved during reboot. Instruct the device users to enter their credentials to continue to the account setup phase.  
 - The ESP always times out on devices running Windows 10, version 1903 and earlier, and
 enrolled via the *Add work and school account* option. The ESP waits for Microsoft Entra registration to complete. The issue is fixed on Windows 10 version 1903 and later.  
-- Hybrid Microsoft Entra Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Microsoft Entra Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-premises AD connector time to create the new device record to Microsoft Entra ID.  
+- Hybrid Microsoft Entra Autopilot deployment with ESP takes longer than the time-out duration entered in the ESP profile. On Hybrid Microsoft Entra Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the time-out duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-premises AD connector time to create the new device record to Microsoft Entra ID.  
 - Windows sign in page isn't prepopulated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
   - the user credentials aren't preserved
   - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase
