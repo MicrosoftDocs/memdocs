@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/07/2024
+ms.date: 02/04/2025
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -85,7 +85,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     The **Devices - Overview** pane provides device details, such as the following information:
     - **Manage devices by platform** - You can quickly see the number of devices that are managed for each platform. Selecting a platform allows you to see additional details.
-    - **Configuration policy assignment failures** - You can check wither you have any profiles with errors or conflicts. 
+    - **Configuration policy assignment failures** - You can check whether you have any profiles with errors or conflicts. 
     - **Noncompliant devices** - You can see a count of noncompliant devices for your tenant.
     - **Deployment status per Windows update ring** - You can see if there are any Windows device with update errors or conflicts.  
 
