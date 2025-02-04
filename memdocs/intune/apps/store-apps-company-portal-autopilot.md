@@ -43,7 +43,7 @@ You can choose to install the **Company Portal** app using the steps below. The 
 ## Create and Assign the Company Portal app
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your admin account.
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In **Select app type** pane, select **Microsoft Store app (new)** under the **Store app** section.
 4. Choose **Select** at the bottom of the page to begin creating an app from the Microsoft Store.
 5. Select **Search the Microsoft Store app (new)**.

@@ -106,7 +106,7 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
 > [!NOTE]
 > Ensure only a single Defender app configuration policy targets the unenrolled device. Targeting more than 1 app configuration policy with different tunnel settings for Defender for Endpoint will create tunnel connection issues on the device.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration policies** > **Add** > **Managed Apps**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
 
 2. On the *Basics* tab:
 
@@ -156,7 +156,7 @@ The new policy appears in the list of App configuration policies.
 
 Create an App configuration policy for Microsoft Edge. This policy configures Microsoft Edge to support identity-switch, providing the ability to automatically connect the VPN Tunnel when signing-in or switching to a Microsoft "Work or school" account, and automatically disconnect the VPN tunnel when switching to a Microsoft personal account.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration policies** > **Add** > **Managed Apps**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
 
 2. On the *Basics* tab:
 
@@ -196,7 +196,7 @@ Create an app protection policy to automatically start the Microsoft Tunnel VPN 
 > [!NOTE]  
 > When the app is started, the Tunnel VPN connection will attempt to start, once started, the device will have access to the on-premises network routes available via the Microsoft Tunnel Gateway. If you wish to limit the tunnel network access to specific apps, then configure the "Per-App VPN (Android only) settings.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App protection policies** > **Create policy** > **Android**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Protection** > **Create policy** > **Android**.
 
 2. On the *Basics* tab, enter a *Name* for this policy, and a *Description (optional)*, and then select **Next**.
 
