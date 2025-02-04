@@ -74,7 +74,7 @@ Use the **Rename** action to give your device a new name. If you already renamed
 
 When you rename a Windows device, the new name must follow these rules:
 
-- Less than or equal to 63 bytes, not including trailing NULL
+- Less than or equal to 63 characters, not including trailing NULL
 - Not null or an empty string
 - Allowed ASCII: Letters (a-z, A-Z), numbers (0-9), and hyphens
 - Allowed Unicode: characters >= 0x80, must be valid UTF8, must be IDN-mappable (that is, RtlIdnToNameprepUnicode succeeds; see RFC 3492)
