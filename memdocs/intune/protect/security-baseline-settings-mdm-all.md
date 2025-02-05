@@ -81,18 +81,6 @@ The settings in this baseline are taken from the Windows 11 **version 24h2** sec
 The settings in this baseline are taken from the **version 23H2** of the Group Policy security baseline as found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and include only the settings that apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
 
 ::: zone-end
-::: zone pivot="mdm-november-2021"
-## Security Baseline for Windows, November 2021
-
-::: zone-end
-::: zone pivot="mdm-december-2020"
-## Security Baseline for Windows, December 2020
-
-::: zone-end
-::: zone pivot="mdm-august-2020"
-## Security Baseline for Windows, August 2020
-
-::: zone-end
 
 ::: zone pivot="mdm-23h2"
 
