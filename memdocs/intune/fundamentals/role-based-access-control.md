@@ -34,11 +34,12 @@ ms.collection:
 
 Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources. By [assigning roles](assign-role.md) to your Intune users, you can limit what they can see and change. Each role has a set of permissions that determine what users with that role can access and change within your organization.
 
-To create, edit, or assign roles, your account must have one of the following permissions in Microsoft Entra ID:
+To create, edit, or assign roles, your account must have one of the following roles in Microsoft Entra ID:
 
 - **Global Administrator**
 - **Intune Service Administrator** (also known as **Intune Administrator**)
-- An Intune role with Role permissions
+  or
+- Be assigned an Intune role with Role permissions (recommended to ensure least-permissions) 
 
 ## Roles
 
@@ -78,7 +79,10 @@ You can create your own roles with custom permissions. For more information abou
 ### Microsoft Entra roles with Intune access
 
 Microsoft recommends following the principle of least-permissions by only assigning the minimum required permissions for an administrator to perform their duties. Global Administrator and Intune Service Administrator
-are [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions) and assignment should be limited.  
+are [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions) and assignment **should be limited**.  
+
+> [!TIP]
+> Utilize [Entra Permissions Management](/entra/permissions-management/overview) to identify privileged administrators and assist in managing least-permissions.
 
 | Microsoft Entra role | All Intune data | Intune audit data |
 | --- | :---: | :---: |
@@ -121,6 +125,10 @@ To see a role assignment, choose **Intune** > **Tenant administration** > **Role
 - **Basics**: The assignments name and description.
 - **Members**: All users in the listed Azure security groups have permission to manage the users/devices that are listed in Scope (Groups).
 - **Scope (Groups)**: Scope Groups are Microsoft Entra security groups of users or devices or both for which administrators in that role assignment are limited to performing operations on. For example, deployment of a policy or application to a user or remotely locking a device. All users and devices in these Microsoft Entra security groups can be managed by the users in Members.
+> [!TIP]
+> Limit access to only specified scope groups by **only** selecting the specific security groups for the assignment.  Do not add "Add all users" and "Add all devices" to ensure assignments cannot target all users or all devices.
+
+- 
 - **[Scope Tags](scope-tags.md)**: Users in Members can see the resources that have the same scope tags.
 
 > [!NOTE]

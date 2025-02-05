@@ -92,42 +92,41 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 
 ## Get started
 
-You can find most app-related information in the **Apps** workload, which you can access by doing the following:
+You can find most app-related information in the **Apps** workload, which you can access by doing the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Apps**.
 
     ![The Apps workload pane](./media/app-management/apps-workload.png)
 
-The apps workload provides links to access common app information and functionality.
+This apps area, known as the Apps workload, provides links to access common app information and functionality.
 
-The top of the App workload navigation menu provides commonly used app details:
+The top of the Apps workload navigation menu provides commonly used app details:
 - **Overview**: Select this option to view the tenant name, the MDM authority, the tenant location, the account status, app installation status, and app protection policy status.
-- **All apps**: Select this option to display a list of all available apps. You can add additional apps from this page. Additionally, you can see the status of each app, as well as whether each app is assigned. For more information, see [Add apps](apps-add.md) and [Assign apps](apps-deploy.md).
+- **All Apps**: Select this option to display a list of all available apps. You can add additional apps from this page. Additionally, you can see the status of each app, as well as whether each app is assigned. For more information, see [Add apps](apps-add.md) and [Assign apps](apps-deploy.md).
 - **Monitor**
     - **App licenses**: View, assign, and monitor volume-purchased apps from the app stores. For more information, see [iOS volume-purchased program (VPP) apps](vpp-apps-ios.md).
     - **Discovered apps**: View apps that were assigned by Intune or installed on a device. For more information, see [Intune discovered apps](app-discovered-apps.md).
     - **App install status**: View the status of an app assignment that you created. For more information, see [Monitor app information and assignments with Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
     - **App Protection status**: View the status of an app protection policy for a user that you select.
     - **App Configuration status**: Provides details about the configuration state of each app based on user.
-- **By Platform**: Select these platforms to view the available apps by platform.
+- **Platforms**: Select these platforms to view the available apps by platform.
     - Windows
     - iOS
     - macOS
     - Android
-- **Policy**:
-    - **App protection policies**: Select this option to associate settings with an app and help protect the company data it uses. For example, you might restrict the capabilities of an app to communicate with other apps, or you might require the user to enter a PIN to access a company app. For more information, see [App protection policies](app-protection-policies.md).
-    - **App configuration policies**: Select this option to supply settings that might be required when a user runs an app. For more information, see [App configuration policies](app-configuration-policies-overview.md), [iOS app configuration policies](app-configuration-policies-use-ios.md), and [Android app configuration policies](app-configuration-policies-use-android.md).
+- **Managed apps**:
+    - **Protection**: Select this option to associate settings with an app and help protect the company data it uses. For example, you might restrict the capabilities of an app to communicate with other apps, or you might require the user to enter a PIN to access a company app. For more information, see [App protection policies](app-protection-policies.md).
+    - **Configuration**: Select this option to supply settings that might be required when a user runs an app. For more information, see [App configuration policies](app-configuration-policies-overview.md), [iOS app configuration policies](app-configuration-policies-use-ios.md), and [Android app configuration policies](app-configuration-policies-use-android.md).
     - **iOS app provisioning profiles**: iOS apps include a provisioning profile and code that is signed by a certificate. When the certificate expires, the app can no longer be run. Intune gives you the tools to proactively assign a new provisioning profile policy to devices that have apps that are nearing expiration. For more information, see [iOS app provisioning profiles](app-provisioning-profile-ios.md).
     - **S mode supplemental policies**: Select this option to authorize additional applications to run on your managed S mode devices. For more information, see [S mode supplemental policies](apps-win32-s-mode.md).
-    - **Policies for Office apps**: Select this option to create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. You must meet the requirements to use policies for Office apps. For more information about requirements, see [Requirements for using the Office cloud policy service](/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service). App protection policies are not supported for other apps that connect to on-premises Exchange or SharePoint services. For related information, see [Overview of the Office cloud policy service for Microsoft 365 Apps for enterprise](/deployoffice/overview-office-cloud-policy-service).
-    - **Policy sets**: Select this option to create an assignable collection of apps, policies, and other management objects you've created. For more information, see [Policy sets](../fundamentals/policy-sets.md).
-    - **Quiet time**: Select this option to set up quiet time for an app. For more information, see [Quiet time](apps-quiet-time-policies.md).
-- **Other**:
+    - **Policies for Microsoft 365**: Select this option to create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. You must meet the requirements to use policies for Microsoft 365 apps. For more information about requirements, see [Requirements for using the Office cloud policy service](/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service). App protection policies are not supported for other apps that connect to on-premises Exchange or SharePoint services. For related information, see [Overview of the Office cloud policy service for Microsoft 365 Apps for enterprise](/deployoffice/overview-office-cloud-policy-service).
     - **App selective wipe**: Select this option to remove only corporate data from a selected user's device. For more information, see [App selective wipe](apps-selective-wipe.md).
+    - **Quiet time**: Select this option to set up quiet time for an app. For more information, see [Quiet time](apps-quiet-time-policies.md).
+- **Organize apps**:
+    - **Assignment filters**: Select this option to create a filter that can be used to filter managed apps or managed devices. For more information, see [Filters](../fundamentals/filters.md).
     - **App categories**: Add, pin, and delete app category names.
     - **E-books**: Some app stores give you the ability to purchase multiple licenses for an app or books that you want to use in your company. For more information, see [Manage volume-purchased apps and books with Microsoft Intune](vpp-apps.md).
-    - **Filters**: Select this option to create a filter that can be used to filter managed apps or managed devices. For more information, see [Filters](../fundamentals/filters.md).
 - **Help and support**: Troubleshoot, request support, or view Intune status. For more information, see [Troubleshoot problems](../fundamentals/help-desk-operators.md).
 
 ## Additional information

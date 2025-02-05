@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2025
+ms.date: 01/16/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,13 +38,10 @@ You can explicitly choose to wipe your company's corporate data from the end use
 ## Create an app protection policy using conditional launch actions
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App protection Policies**.
+2. Select **Apps** > **Protection**.
 3. Select **Create policy** and select the platform of the device for your policy. 
 4. Select **Configure required settings** to see the list of settings available to be configured for the policy. 
 5. By scrolling down in the Settings pane, you'll see a section titled **Conditional launch** with an editable table.
-
-    ![Screenshot of the Intune app protection access actions](./media/app-protection-policies-access-actions/apps-selective-wipe-access-actions01.png)
-
 6. Select a **Setting** and enter the **Value** that users must meet to sign in to your company app. 
 7. Select the **Action** you want to take if users don't meet your requirements. In some cases, multiple actions can be configured for a single setting. For more information, see [How to create and assign app protection policies](app-protection-policies.md).
 

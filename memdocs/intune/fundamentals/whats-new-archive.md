@@ -3091,7 +3091,7 @@ As part of our continuing efforts to improve the Intune reporting infrastructure
 - There isn't a **User install status** report on the **Monitor** section of the **App configuration policies** workload.
 - The **Device install status** report under the **Monitor** section of the **App configuration policies** workload no longer shows the **Pending state** in the **Status** column.
 
-You can configure policy reporting in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App configuration policies**.
+You can configure policy reporting in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Configuration**.
 
 ## Week of July 3, 2023
 
@@ -4887,7 +4887,7 @@ Applies to:
 ### App management
 
 #### Control the display of Managed Google Play apps<!-- 621615   -->  
-You can group Managed Google Play apps into collections and control the order that collections are displayed when selecting apps in Intune. You can also make apps visible via search only. This capability is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > **Add** > **Managed Google Play app**. For more information, see [Add a Managed Google Play store app directly in the Intune admin center](../apps/apps-add-android-for-work.md#add-a-managed-google-play-store-app-directly-in-the-microsoft-intune-admin-center).
+You can group Managed Google Play apps into collections and control the order that collections are displayed when selecting apps in Intune. You can also make apps visible via search only. This capability is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All Apps** > **Create** > **Managed Google Play app**. For more information, see [Add a Managed Google Play store app directly in the Intune admin center](../apps/apps-add-android-for-work.md#add-a-managed-google-play-store-app-directly-in-the-microsoft-intune-admin-center).
 
 ### Device configuration
 
@@ -5095,7 +5095,7 @@ Intune now supports both Microsoft Defender for Endpoint and one non-Mobile Thre
 ### App management
 
 #### Use filters with app configuration policies for managed devices<!-- 7423842  -->  
-You can use filters to refine the assignment scope when deploying app configuration policies for managed devices. You must first [create a filter](filters.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration policy by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune admin center](filters.md).
+You can use filters to refine the assignment scope when deploying app configuration policies for managed devices. You must first [create a filter](filters.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration policy by selecting **Apps** > **Configuration** > **Create** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune admin center](filters.md).
 
 ### Device configuration
 
@@ -5413,7 +5413,7 @@ As an admin, you can create and assign two new types of Intune apps:
 - **iOS/iPadOS web clip** 
 - **Windows web link**
 
-These new app types work in a similar way to the existing **web link** application type, however they apply only for their specific platform, whereas web link applications apply across all platforms. With these new app types, you can assign to groups and also use assignment filters to limit the scope of assignment. This functionality is in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apps** > **All Apps** > **Add**.
+These new app types work in a similar way to the existing **web link** application type, however they apply only for their specific platform, whereas web link applications apply across all platforms. With these new app types, you can assign to groups and also use assignment filters to limit the scope of assignment. This functionality is in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apps** > **All Apps** > **Create**.
 
 ### Device management
 
