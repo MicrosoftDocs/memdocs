@@ -79,6 +79,15 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
+### Apple VPP using new API v2.0<!-- 29567109  -->
+
+Apple recently updated how apps and books are managed through the Apple volume purchase program (VPP). Apple has updated their related API to version 2.0 and deprecated version 1.0. To support the Apple updates, Microsoft Intune will soon use the new API, which is faster and more scalable than the previous version.
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
 Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions. 

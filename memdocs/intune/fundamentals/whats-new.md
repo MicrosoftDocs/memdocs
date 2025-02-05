@@ -97,15 +97,6 @@ To learn more about Microsoft Security Copilot, see, [Microsoft Security Copilot
 
 ### App management
 
-#### Apple VPP using new API v2.0<!-- 29567109 -->
-
-Apple recently updated the API for their volume purchase program (VPP), which is used to manage apps and books. Apple's related API is now version 2.0. Version 1.0 is deprecated. To support the Apple updates, Microsoft Intune has updated to use the new API, which is faster and more scalable than the previous version.
-
-Applies to:
-
-- iOS/iPadOS
-- macOS
-
 #### Update to Apps workload experience in Intune<!-- 15507048 -->
 
 The Apps area in Intune, commonly known as the Apps workload, is updated to provide a more consistent UI and improved navigation structure so you can find the information you need faster. To find the **App** workload in Intune, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps**.
