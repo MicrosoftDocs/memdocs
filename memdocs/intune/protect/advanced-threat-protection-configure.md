@@ -218,7 +218,7 @@ For devices that run iOS/iPadOS (in Supervised Mode), there's specialized abilit
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Apps** > **App configuration policies** > **+ Add**, and then select**Managed devices** from the drop down list.
+2. Select **Apps** > **Configuration** > **Create**, and then select**Managed devices** from the drop down list.
 
 3. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, select **Platform** as **iOS/iPadOS** then choose **Next**.
 

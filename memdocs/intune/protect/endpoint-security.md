@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 01/28/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -81,21 +81,19 @@ For more information, see [Manage devices with endpoint security in Microsoft In
 
 ## Manage Security baselines
 
-Security baselines in Intune are preconfigured groups of settings that are best practice recommendations from the relevant Microsoft security teams for the product. Intune supports security baselines for Windows 10/11 device settings, Microsoft Edge, Microsoft Defender for Endpoint Protection, and more.
-
-You can use security baselines to rapidly deploy a *best practice* configuration of device and application settings to protect your users and devices. Security baselines are supported for devices that run Windows 10 version 1809 and later, and Windows 11.
+Security baselines in Intune are preconfigured groups of Windows device configuration settings that are pre-configured with defaults that set the *best practice* recommendations from the relevant Microsoft security teams. Intune supports security baselines for Windows device settings, Microsoft Edge, Microsoft Defender for Endpoint Protection, and more.
 
 For more information, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
-Security baselines are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices so you can avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
+Security baselines are one of several methods in Intune to configure device configuration settings. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices so you can avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
 
 ## Review Security tasks from Microsoft Defender for Endpoint
 
 When you integrate Intune with Microsoft Defender for Endpoint, you can review *Security tasks* in Intune that identify at-risk devices and provide steps to mitigate that risk. You can then use the tasks to report back to Microsoft Defender for Endpoint when those risks are successfully mitigated.
 
-- Your Microsoft Defender for Endpoint team determines what devices are at risk and pass that information to your Intune team as a security task. With a few clicks, they create a security task for Intune that identifies the devices at risk, the vulnerability, and provides guidance on how to mitigate that risk.
+- Your Microsoft Defender for Endpoint team determines what devices are at risk and pass that information to your Intune team as a *Security task*. With only a few clicks, they create Security tasks for Intune that identify the devices at risk, the vulnerability, and that provide guidance on how to mitigate that risk.
 
-- The Intune Admins review security tasks and then act within Intune to remediate those tasks. Once mitigated, they set the task to complete, which communicates that status back to the Microsoft Defender for Endpoint team.
+- Intune Admins can select and review security tasks, and then act within Intune to remediate those tasks. Once mitigated they set the task to complete, which communicates that status back to the Microsoft Defender for Endpoint team.
 
 Through Security tasks both teams remain in sync as to which devices are at risk, and how and when those risks are remediated.
 
@@ -103,7 +101,7 @@ To learn more about using Security tasks, see [Use Intune to remediate vulnerabi
 
 ## Use policies to manage device security
 
-As a security admin, use the security policies that are found under *Manage* in the Endpoint security node. With these policies, you can configure device security without having to navigate the larger body and range of settings in device configuration profiles or security baselines.
+As a security admin, use the security policies that are found under *Manage* in the Endpoint security node. With these policies, you can configure device security without having to navigate the larger body and range of device configuration settings available through device configuration profiles or security baselines.
 
 ![Manage policies](./media/endpoint-security/endpoint-security-policies.png)
 
@@ -276,7 +274,7 @@ If conflicts happen, you can use Intune's built-in tools to identify and resolve
 - [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
 - [Monitor your security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
-## Next steps
+## Related content
 
 Configure:
 
