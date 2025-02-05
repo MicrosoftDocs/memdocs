@@ -65,7 +65,7 @@ Create a Win32 app policy for the [Intune WSL plugin](https://github.com/microso
 
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least an Intune administrator.
 
-3. Go to **Apps** > **All apps** > **Add**.  
+3. Go to **Apps** > **All Apps** > **Add**.  
 
 4. For **App type**, scroll down to **Other**, and then select **Windows app (Win32)**.  
 

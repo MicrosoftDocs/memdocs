@@ -51,7 +51,7 @@ Intune app protection policies (APP) are data protection policies targeted to us
 
 Individual Android apps are enabled for APP in a few ways:
 
-1. **Natively integrated into Microsoft first-party apps**: Microsoft 365 (Office) apps for Android, and a selection of other Microsoft apps, come with Intune APP built-in. These Office apps, such as Word, OneDrive, Outlook, and so on, don't need any more customization to apply policies. These apps can be installed by end users directly from Google Play Store.
+1. **Natively integrated into Microsoft first-party apps**: Microsoft 365 (Office) apps for Android, and a selection of other Microsoft apps, come with Intune APP built-in. These Microsoft 365 apps, such as Word, OneDrive, Outlook, and so on, don't need any more customization to apply policies. These apps can be installed by end users directly from Google Play Store.
 
 2. **Integrated into app builds by developers using the Intune SDK**: App developers can integrate the Intune SDK into their source code and recompile their apps to support Intune APP policy features.
 

@@ -31,8 +31,6 @@ Guided update supersedence for Enterprise App Management allows you to check for
 
 In the **Overview** pane for a selected Enterprise App Catalog app, you can view the available updates by selecting the tile **Enterprise App Catalog apps with available updates**.
 
-:::image type="content" alt-text="Screenshot the app's Overview pane with the tile 'Enterprise App Catalog apps with available updates'." source="./media/apps-eam-supersedence/apps-eam-supersedence-01.png" lightbox="./media/apps-eam-supersedence/apps-eam-supersedence-01.png" :::
-
 The **Enterprise App Catalog apps with updates** pane provides a list of Enterprise App Catalog apps that can be updated. This list provides the following app details:
 - **App name**: - The name of the app.
 - **Publisher**: - The publisher of the app.
