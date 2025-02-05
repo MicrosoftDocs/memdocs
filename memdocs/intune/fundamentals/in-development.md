@@ -217,6 +217,30 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 
 ## Device management
 
+### New settings for Windows LAPS policy<!-- 30287386 -->
+
+We are updating Intunes policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) by adding new settings and updating some existing settings. Use of [LAPS](/windows-server/identity/laps/laps-overview) which is a Windows built-in solution can help you secure the built-in local administrator account that is present on each Windows device.  
+
+The new settings will include the following:
+
+- AutomaticAccountManagementEnabled
+- AutomaticAccountManagementTarget
+- AutomaticAccountManagementNameOrPrefix
+- AutomaticAccountManagementEnableAccount
+- AutomaticAccountManagementRandomizeName
+- PassphraseLength
+
+The following settings will update to support new options:
+
+- PasswordComplexity
+- PostAuthenticationActions
+
+The settings found in Intune LAPS policy are available from the Windows [LAPS CSP](/windows/client-management/mdm/LAPS-csp).
+
+Applies to:
+
+- Windows
+
 ### Configure devices to stay on the latest OS version using declarative device management (DDM)<!-- 28323647 -->
 
 As part of the [Settings Catalog](../configuration/settings-catalog.md), you'll be able to configure devices to automatically update to the latest OS version using DDM. To use these new settings in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type.
