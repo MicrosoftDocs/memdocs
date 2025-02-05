@@ -7,11 +7,7 @@ description: View the default setting configuration of the various Microsoft Int
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-<<<<<<< HEAD
-ms.date: 01/27/2025
-=======
-ms.date: 01/09/2025
->>>>>>> 2948f72015a612c1e5b6e77fc01ad4424f94adcb
+ms.date: 02/07/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,18 +53,13 @@ Each security baseline is a group of preconfigured Windows settings that help yo
 
 The details that display in this article are based on baseline version you select at the top of the article. For each version, this article displays:
 
-<<<<<<< HEAD
-- A list of each and its configuration as found in the default instance of that baseline version.
-=======
 - A list of each setting with its configuration as found in the default instance of that baseline version.
->>>>>>> 2948f72015a612c1e5b6e77fc01ad4424f94adcb
 - When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
 
 When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
-<<<<<<< HEAD
 
 To learn more about using security baselines, see:
 - [Use security baselines](../protect/security-baselines.md)
@@ -80,28 +71,16 @@ To learn more about using security baselines, see:
 
 The settings in this baseline are taken from the Windows 11 **version 24h2** security baseline as found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and include only the settings that apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
 
+<!-- Settings for 24h2 are pending. All 24h2 settings should go here as a single block to facilitate what might be the removal of pivots at a future date. -->
+
 ::: zone-end
 
 ::: zone pivot="mdm-23h2"
 ## Security Baseline for Windows, version 23H2 
-=======
-
-To learn more about using security baselines, see:
-
-- [Use security baselines](../protect/security-baselines.md)
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
-- [Manage security baselines](../protect/security-baselines-configure.md)
-
-
-::: zone pivot="mdm-23h2"
-## Security Baseline for Windows, version 23H2
->>>>>>> 2948f72015a612c1e5b6e77fc01ad4424f94adcb
 
 The settings in this baseline are taken from the **version 23H2** of the Group Policy security baseline as found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and include only the settings that apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
 
 ::: zone-end
-<<<<<<< HEAD
-=======
 ::: zone pivot="mdm-november-2021"
 ## Security Baseline for Windows, November 2021
 
@@ -114,7 +93,6 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 ## Security Baseline for Windows, August 2020
 
 ::: zone-end
->>>>>>> 2948f72015a612c1e5b6e77fc01ad4424f94adcb
 
 ::: zone pivot="mdm-23h2"
 
