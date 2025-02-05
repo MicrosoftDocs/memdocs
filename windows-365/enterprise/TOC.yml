@@ -301,38 +301,17 @@ items:
         href: ../end-user-access-cloud-pc.md
 - name: Troubleshoot
   items:
-    - name: Troubleshooting
-      href: troubleshooting.md
-    - name: Known issues 
-      href: known-issues-enterprise.md
-    - name: Azure network connections
-      href: troubleshoot-azure-network-connection.md
-    - name: Azure network connection health checklist
-      href: health-checks.md
-    - name: Connectivity health checks
-      href: health-checks-connectivity.md
-    - name: Remote Desktop client
-      href: /azure/virtual-desktop/troubleshoot-client?context=/windows-365/context/pr-context
-    - name: Connection errors
-      href: connection-errors.md
-    - name: Provisioning errors
-      href: provisioning-errors.md
-    - name: Partner connectors
-      href: troubleshoot-partner-connector.md
-    - name: Windows 365 app
-      href: troubleshoot-windows-365-app.md
-    - name: Windows 365 Boot
-      href: troubleshoot-windows-365-boot.md
-    - name: Windows 365 Boot known issues
-      href: windows-365-boot-known-issues.md
-    - name: Windows 365 Switch known issues
-      href: windows-365-switch-known-issues.md
+  - name: Troubleshooting
+    href: troubleshooting.md
+  - name: Connectivity health checks
+    href: health-checks-connectivity.md
+  - name: Remote Desktop client
+    href: /azure/virtual-desktop/troubleshoot-client?context=/windows-365/context/pr-context
 - name: Reference
   items:
-    - name: Get audit logs by using PowerShell
-      href: get-cloud-pc-audit-logs-using-powershell.md
-    - name: Business continuity and disaster recovery
-      href: business-continuity-disaster-recovery.md
-    - name: Windows 365 Graph APIs
-      href: permission-scopes.md
-
+  - name: Get audit logs by using PowerShell
+    href: get-cloud-pc-audit-logs-using-powershell.md
+  - name: Business continuity and disaster recovery
+    href: business-continuity-disaster-recovery.md
+  - name: Windows 365 Graph APIs
+    href: permission-scopes.md

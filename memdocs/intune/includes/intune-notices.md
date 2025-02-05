@@ -12,6 +12,49 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for change: User alerts on iOS for when screen capture actions are blocked
+
+In an upcoming version (20.3.0) of the Intune App SDK and Intune App Wrapping Tool for iOS, support is added to alert users when a screen capture action (including recording and mirroring) is detected in a managed app. The alert is only visible to users if you have configured an app protection policy (APP) to block screen capture.
+
+#### How does this affect you or your users?
+
+If APP has been configured to block screen capturing, users see an alert indicating that screen capture actions are blocked by their organization when they attempt to screenshot, screen record, or screen mirror.
+
+For apps that have updated to the latest Intune App SDK or Intune App Wrapping Tool versions, screen capture is blocked if you've configured “Send Org data to other apps” to a value other than “All apps”. To allow screen capture for your iOS/iPadOS devices, configure the Managed apps app configuration policy setting “com.microsoft.intune.mam.screencapturecontrol" to **Disabled**.
+
+#### How can you prepare?
+
+Update your IT admin documentation and notify your helpdesk or users as needed. You can learn more about blocking screen capture in the blog: [New block screen capture for iOS/iPadOS MAM protected apps](https://aka.ms/Intune/iOS-screen-capture)
+
+### Move to new Microsoft Graph Beta API properties for Windows Autopilot self-deploying mode and pre-provisioning
+
+In late February 2025, a select number of old Microsoft Graph Beta API [windowsAutopilotDeploymentProfile](/graph/api/resources/intune-shared-windowsautopilotdeploymentprofile) properties used for Windows Autopilot self-deploying mode and pre-provisioning will be removed and stop working. The same data can be found using newer Graph API properties.
+
+#### How does this affect you or your users?
+
+If you have automation or scripts using the following Windows Autopilot properties, you must update to the new properties to prevent them from breaking.
+
+| Old | New |
+| -------- | ------- |
+| enableWhiteglove | preprovisioningAllowed |
+| extractHardwareHash | hardwareHashExtractionEnabled |
+| language | Locale |
+| outOfBoxExperienceSettings | outOfBoxExperienceSetting |
+| outOfBoxExperienceSettings.HidePrivacySettings | outOfBoxExperienceSetting.PrivacySettingsHidden |
+| outOfBoxExperienceSettings.HideEULA | outOfBoxExperienceSetting.EULAHidden |
+| outOfBoxExperienceSettings.SkipKeyboardSelectionPage | outOfBoxExperienceSettings.KeyboardSelectionPageSkipped |
+| outOfBoxExperienceSettings.HideEscapeLink | outOfBoxExperienceSettings.EscapeLinkHidden |
+
+#### How can you prepare?
+
+Update your automation or scripts to use the new Graph API properties to avoid deployment issues.
+
+**Additional information:**
+
+- [windowsAutopilotDeploymentProfile resource type - Microsoft Graph Beta | Microsoft Learn](/graph/api/resources/intune-shared-windowsautopilotdeploymentprofile)
+- [azureADWindowsAutopilotDeploymentProfile resource type - Microsoft Graph Beta | Microsoft Learn](/graph/api/resources/intune-enrollment-azureadwindowsautopilotdeploymentprofile)
+- [outOfBoxExperienceSettings resource type - Microsoft Graph Beta | Microsoft Learn](/graph/api/resources/intune-enrollment-outofboxexperiencesettings)
+
 ### Plan for Change: Blocking screen capture in the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS 
 
 We recently released updated versions of the Intune App SDK and the Intune App Wrapping Tool. Included in these releases (v19.7.5+ for Xcode 15 and v20.2.0+ for Xcode 16) is the support for blocking screen capture, Genmojis and writing tools in response to the new AI features in iOS/iPadOS 18.2.  
@@ -35,7 +78,7 @@ As a best practice, always update your iOS apps to the latest App SDK or App Wra
 
 #### How does this affect you or your users?
 
-If you have applications using the Intune App SDK or Intune App Wrapping Tool, you will need to update to the latest version to support iOS 18.2.
+If you have applications using the Intune App SDK or Intune App Wrapping Tool, you'll need to update to the latest version to support iOS 18.2.
 
 #### How can you prepare?
 
@@ -61,7 +104,7 @@ Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, *
 
 #### How does this affect you or your users?
 
-If these values aren't configured correctly for iOS devices, there is a possibility of either the policy not getting delivered to the app or the wrong policy is delivered. For more information, see [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
+If these values aren't configured correctly for iOS devices, there's a possibility of either the policy not getting delivered to the app or the wrong policy is delivered. For more information, see [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
 
 #### How can you prepare?
 
@@ -87,7 +130,7 @@ For detailed steps and additional guidance, review the blog: [Support tip: Imple
 If you use SCEP or PKCS certificates for Microsoft Entra Hybrid joined users or devices, you'll need to take action before February 11, 2025 to either:
 
 - **(Recommended)** Enable strong mapping by reviewing the steps described in the blog: [Support tip: Implementing strong mapping in Microsoft Intune certificates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-implementing-strong-mapping-in-microsoft-intune-certificates/4053376)
-- Alternatively, if all certificates cannot be renewed before February 11, 2025, with the SID included, enable Compatibility mode by adjusting the registry settings as described in [KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16). Compatibility mode will remain valid until September 2025.
+- Alternatively, if all certificates can't be renewed before February 11, 2025, with the SID included, enable Compatibility mode by adjusting the registry settings as described in [KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16). Compatibility mode will remain valid until September 2025.
 
 ### Update to the latest Intune App SDK and Intune App Wrapper for Android 15 support
 
@@ -102,7 +145,7 @@ If you have applications using the Intune App SDK or Intune App Wrapping Tool fo
 If you choose to build apps targeting Android API 35, you'll need to adopt the new version of the Intune App SDK for Android (v11.0.0). If you’ve wrapped your app and are targeting API 35 you'll need to use the new version of the App wrapper (v1.0.4549.6).
 
 > [!NOTE]
-> As a reminder, while apps must update to the latest SDK if targeting Android 15, apps do not need to update the SDK to simply run on Android 15.
+> As a reminder, while apps must update to the latest SDK if targeting Android 15, apps don't need to update the SDK to run on Android 15.
 
 You should also plan to update your documentation or developer guidance if applicable to include this change in support for the SDK.
 
@@ -162,7 +205,7 @@ Later this year, we expect macOS 15 Sequoia to be released by Apple. Microsoft I
 This change only affects you if you currently manage, or plan to manage, macOS devices with Intune. This change might not affect you because your users have likely already upgraded their macOS devices. For a list of supported devices, see [macOS Ventura is compatible with these computers](https://support.apple.com/102861).
 
 > [!NOTE]
-> Devices that are currently enrolled on macOS 12.x or below will continue to remain enrolled even when those versions are no longer supported. New devices will be unable to enroll if they are running macOS 12.x or below.
+> Devices that are currently enrolled on macOS 12.x or below will continue to remain enrolled even when those versions are no longer supported. New devices will be unable to enroll if they're running macOS 12.x or below.
 
 #### How can you prepare?
 
@@ -214,7 +257,7 @@ Today, when creating iOS/iPadOS enrollment profiles, “Device enrollment with C
 
 #### How does this affect you or your users?
 
-This is an update to the user interface when creating new iOS/iPadOS enrollment profiles to display “Web based device enrollment” as the default method, existing profiles are not impacted. For *new* tenants, if no enrollment profile is created, the user will enroll using web-based device enrollment.
+This is an update to the user interface when creating new iOS/iPadOS enrollment profiles to display “Web based device enrollment” as the default method, existing profiles aren't impacted. For *new* tenants, if no enrollment profile is created, the user will enroll using web-based device enrollment.
 
 #### How can you prepare?
 
@@ -229,7 +272,7 @@ Update your documentation and user guidance as needed. If you currently use devi
 
 We've been working with Jamf on a migration plan to help customers transition macOS devices from Jamf Pro’s Conditional Access integration to their Device Compliance integration. The Device Compliance integration uses the newer Intune partner compliance management API, which involves a simpler setup than the partner device management API and brings macOS devices onto the same API as iOS devices managed by Jamf Pro. The platform Jamf Pro’s Conditional Access feature is built on will no longer be supported after January 31, 2025.
 
-Note that customers in some environments cannot be transitioned initially, for more details and updates read the blog: [Support tip: Transitioning Jamf macOS devices from Conditional Access to Device Compliance](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-transitioning-jamf-macos-devices-from-conditional/ba-p/3913059).
+Note that customers in some environments can't be transitioned initially, for more details and updates read the blog: [Support tip: Transitioning Jamf macOS devices from Conditional Access to Device Compliance](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-transitioning-jamf-macos-devices-from-conditional/ba-p/3913059).
 
 #### How does this affect you or your users?
 
