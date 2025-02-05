@@ -37,7 +37,7 @@ ms.collection:
 Intune provides several ways to monitor the properties of apps that you manage and to manage app assignment status.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps**.
+2. Select **Apps** > **All Apps**.
 3. In the list of apps, select an app to monitor. You'll then see the app pane, which includes an overview of the device status and the user status.
 
 > [!NOTE]

@@ -68,7 +68,7 @@ Add the iOS/iPadOS app Slack for EMM to your Intune tenant and create an app con
 
 Add Slack for EMM as a managed iOS/iPadOS app in Intune and assign your Slack users. Apps are platform-specific, so you need to add a separate Intune app for your Slack users on Android devices.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Create**.
 
 2. Under **App type**, choose **iOS store app** and click **Select**.
 
@@ -87,7 +87,7 @@ Add an app configuration policy for the iOS/iPadOS Slack for EMM app.
 > [!NOTE]
 > App configuration policies for managed devices are platform-specific, so you need to add a separate policy for your Slack users on Android devices.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Configuration** > **Create** > **Managed devices**.
 
 2. For **Name**, enter "Slack app configuration policy test".
 
@@ -148,13 +148,13 @@ Add the Slack Managed Google Play app to your Intune tenant and create an app co
 
 Add Slack as a Managed Google Play app in Intune and assign your Slack users. Apps are platform-specific, so you need to add a separate Intune app for your Slack users on iOS/iPadOS devices.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Create**.
 
 2. Under **App type**, choose **Managed Google Play app** and click **Select**.
 
 3. In the **Search** box, enter the search term "Slack" and select the app. Click **Approve** in the **Manage Google Play** pane. Click **Approve** to also approve permissions of the app. After verifying the app's approval settings, click **Done**. Click **Select**.
 
-4. On the **All apps** pane, click **Refresh** to update the app list. Then, click the newly added **Slack** app.
+4. On the **All Apps** pane, click **Refresh** to update the app list. Then, click the newly added **Slack** app.
 
 5. Next to **Assignments**, click **Edit**.
 
@@ -168,7 +168,7 @@ Add Slack as a Managed Google Play app in Intune and assign your Slack users. Ap
 
 Add an app configuration policy for Slack. App configuration policies for managed devices are platform-specific, so you need to add a separate policy for your Slack users on iOS/iPadOS devices.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Configuration** > **Create** > **Managed devices**.
 
 2. For **Name**, enter "Slack app configuration policy test".
 
