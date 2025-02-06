@@ -7,7 +7,7 @@ description: View the default setting configuration of the various Microsoft Int
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/06/2025
+ms.date: 02/12/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,9 +67,9 @@ To learn more about using security baselines, see:
 - [Manage security baselines](../protect/security-baselines-configure.md)
 
 ::: zone pivot="mdm-24h2"
-## Security Baseline for Windows, version 24h2 
+## Security Baseline for Windows, version 24H2 
 
-The settings in this baseline are taken from the Windows 11 **version 24h2** security baseline as found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and include only the settings that apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
+The settings in this baseline are taken from the Windows 11 **version 24H2** security baseline as found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and include only the settings that apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
 
 ### Administrative Templates
 
