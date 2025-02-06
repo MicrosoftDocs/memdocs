@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/03/2025
+ms.date: 02/05/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -69,12 +69,6 @@ Applies to:
 
 - Windows
 
-### Use Copilot with Endpoint Privilege Manager to help identify potential elevation risks<!-- 27265509 -->
-
-We’re adding support for Copilot to help you investigate Endpoint Privilege Manager (EPM) elevation details. Copilot will help you evaluate information from you EPM elevation requests to identify potential indicators of compromise by using information from [Microsoft Defender](/defender-endpoint/microsoft-defender-endpoint).
-
-EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md). To learn more about how you can use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
-
 ### Endpoint Privilege Manager elevation rule support for file arguments and parameters<!--28077130 -->
 
 Soon, the file elevation rules for Endpoint Privilege Manager (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
@@ -93,12 +87,6 @@ Applies to:
 
 - iOS/iPadOS
 - macOS
-
-
-### Update to Apps workload experience in Intune<!-- 15507048 -->
-
-The Apps workload in Intune will be updated to provide a more consistent UI and improved navigation structure so you can find the information you need faster. To find the **App** workload in Intune, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps**.
-
 
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
@@ -141,19 +129,6 @@ Applies to:
 
 - Android Enterprise
 - AOSP
-
-
-### The Settings Catalog lists all the settings you can configure in a device policy<!-- 30305854 -->
-
-The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
-
-There will soon be new settings in the Settings Catalog to *Configure Multiple Display Mode* for Windows 24H2. To see available settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
-
-The **Configure Multiple Display Mode** setting allows monitors to extend or clone the display by default, facilitating the need for manual setup. It streamlines the multi-monitor configuration process, ensuring a consistent and user-friendly experience.
-
-Applies to:
-
-- Windows 
 
 ### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
 
@@ -202,16 +177,6 @@ You'll soon be able to use Copilot to generate a KQL query to help you get data 
 <!-- *********************************************** -->
 
 ## Device security
-
-### Updated security baseline for Microsoft Edge v128<!-- 29463902 -->
- 
-We’re working on an update to add an Intune security baseline for Microsoft Edge v128. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Microsoft Edge.
-
-For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
-
-Applies to:
-
-- Windows
 
 ### Updated security baseline for Windows version 24H2<!-- 29819143 -->
 

@@ -75,7 +75,7 @@ When you configure clients to use the Connected Cache server, they no longer req
 
 4. If the cache doesn't include the content, then the Connected Cache server gets it from the CDN.
 
-5. If the cache server fails to respond, the client downloads the content from the CDN.
+5. If the cache server fails to respond, the client downloads the content from the CDN. To delay this behavior, set the [DelayCacheServerFallbackForeground/DelayCacheServerFallbackBackground](/windows/deployment/do/waas-delivery-optimization-reference#delay-foreground-download-cache-server-fallback-in-sec) setting(s) to avoid the immediate fallback.
 
 6. Clients will also use DO to get pieces of the content from peers, such as client B and client C.
 
