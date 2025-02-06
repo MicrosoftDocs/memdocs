@@ -1855,6 +1855,33 @@ The settings in this baseline are taken from the Windows 11 **version 24h2** sec
   Baseline default: *Backup the password to Azure AD only*  
   [Learn more](/windows/client-management/mdm/LAPS-csp/?WT.mc_id=Portal-fx#policiesbackupdirectory)
 
+## Kerberos
+
+- **PK Init Hash Algorithm Configuration**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-Kerberos?WT.mc_id=Portal-fx#pkinithashalgorithmconfiguration)
+
+  - **PK Init Hash Algorithm SHA256**  
+  Baseline default: *Default*  
+  [Learn more](/windows/client-management/mdm/policy-csp-Kerberos?WT.mc_id=Portal-fx#pkinithashalgorithmsha256)
+
+  - **PK Init Hash Algorithm SHA384**  
+  Baseline default: *Default*  
+  [Learn more](/windows/client-management/mdm/policy-csp-Kerberos?WT.mc_id=Portal-fx#pkinithashalgorithmsha384)
+
+  - **PK Init Hash Algorithm SHA512**  
+  Baseline default: *Default*  
+  [Learn more](/windows/client-management/mdm/policy-csp-Kerberos?WT.mc_id=Portal-fx#pkinithashalgorithmsha512)
+
+  - **PK Init Hash Algorithm SHA1 PK Init Hash Algorithm SHA1**  
+  Baseline default: *Default*  
+  [Learn more](/windows/client-management/mdm/policy-csp-Kerberos?WT.mc_id=Portal-fx#pkinithashalgorithmsha1)
+
+## Sudo
+
+- **Enable Sudo**  
+  Baseline default: *Sudo is allowed in 'inline' mode.*  
+  [Learn more](/windows/client-management/mdm/policy-csp-sudo)
 
 ::: zone-end
 
