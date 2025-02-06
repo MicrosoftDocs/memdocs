@@ -102,11 +102,6 @@ Applies to:
 
 - Android devices
 
-### Update to Apps workload experience in Intune<!-- 15507048 -->
-
-The Apps workload in Intune will be updated to provide a more consistent UI and improved navigation structure so you can find the information you need faster. To find the **App** workload in Intune, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps**.
-
-
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
 Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions. 

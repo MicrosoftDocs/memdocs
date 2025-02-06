@@ -50,7 +50,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 You can add Microsoft Edge version 77 and later to Intune using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **App type** list under the **Microsoft Edge, version 77 and later**, select **macOS**.
 
 ## Configure app information
