@@ -1855,7 +1855,7 @@ The settings in this baseline are taken from the Windows 11 **version 24h2** sec
   Baseline default: *Backup the password to Azure AD only*  
   [Learn more](/windows/client-management/mdm/LAPS-csp/?WT.mc_id=Portal-fx#policiesbackupdirectory)
 
-## Kerberos
+### Kerberos
 
 - **PK Init Hash Algorithm Configuration**  
   Baseline default: *Enabled*  
@@ -1877,7 +1877,7 @@ The settings in this baseline are taken from the Windows 11 **version 24h2** sec
   Baseline default: *Default*  
   [Learn more](/windows/client-management/mdm/policy-csp-Kerberos?WT.mc_id=Portal-fx#pkinithashalgorithmsha1)
 
-## Sudo
+### Sudo
 
 - **Enable Sudo**  
   Baseline default: *Sudo is allowed in 'inline' mode.*  
