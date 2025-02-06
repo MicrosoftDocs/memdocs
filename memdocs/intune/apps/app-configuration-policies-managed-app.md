@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/16/2024
+ms.date: 01/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -46,15 +46,15 @@ For more information, see [App configuration policies for Microsoft Intune](app-
 
 ## Add an app configuration policy for managed apps on iOS/iPadOS and Android devices
 
-Use the following steps to create a Managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
+Use the following steps to create a Managed app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed apps**.
+2. Choose the **Apps** > **Configuration** > **Create** > **Managed apps**.
 3. On the **Basics** page, set the following details:
     - **Name**: The name of the profile that will appear in the portal.
     - **Description**: The  description of the profile that will appear in the portal.
-    - **Device enrollment type**: Managed apps is selected.
-4. Choose either **Select public apps** or **Select custom apps** to choose the app that you are going to configure. Select the app from the list of apps that you've approved and synchronized with Intune.
+    - **Device enrollment type**: 'Managed apps' is selected.
+4. Choose either **Select public apps** or **Select custom apps** to choose the app that you're going to configure. Select the app from the list of apps that you've approved and synchronized with Intune.
 5. Click **Next** to display the **Settings** page.
 6. The **Settings page** provides options that are displayed based on the app that you're configuring:
 
@@ -79,7 +79,7 @@ Use the following steps to create a Managed apps app configuration policy. After
 11. Choose the groups you want to exclude and then click **Select**.
 
     >[!NOTE]
-    >When adding a group, if any other group has already been included for a given assignment type, it is pre-selected and unchangeable for other include assignment types. Therefore, that group that has been used, cannot be used as an excluded group.
+    >When adding a group, if any other group has already been included for a given assignment type, it's preselected and unchangeable for other include assignment types. Therefore, that group that has been used, can't be used as an excluded group.
 
 12. Click **Next** to display the **Review + create** page.
 13. Click **Create** to add the app configuration policy to Intune.
@@ -89,12 +89,12 @@ Use the following steps to create a Managed apps app configuration policy. After
 Use the following steps to create a **Managed apps** app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed apps**.
+2. Choose the **Apps** > **Configuration** > **Create** > **Managed apps**.
 3. On the **Basics** page, set the following details:
     - **Name**: The name of the profile that will appear in the portal.
     - **Description**: (Optional) The  description of the profile that will appear in the portal.
     - **Device enrollment type**: Managed apps is selected.
-4. Choose either **Select public apps** or **Select custom apps** to choose the app that you are going to configure. Select the app from the list of apps that you've approved, added, and synchronized with Intune.
+4. Choose either **Select public apps** or **Select custom apps** to choose the app that you're going to configure. Select the app from the list of apps that you've approved, added, and synchronized with Intune.
     
     > [!NOTE]
     > At this time, the only supported app is Microsoft Edge for Windows. No other public or custom apps are currently supported.
@@ -119,7 +119,7 @@ Use the following steps to create a **Managed apps** app configuration policy. A
 17. Choose the groups you want to exclude and then click **Select**.
 
     >[!NOTE]
-    >When adding a group, if any other group has already been included for a given assignment type, it is pre-selected and unchangeable for other include assignment types. Therefore, that group that has been used, cannot be used as an excluded group.
+    >When adding a group, if any other group has already been included for a given assignment type, it's preselected and unchangeable for other include assignment types. Therefore, that group that has been used, can't be used as an excluded group.
 
 18. Click **Next** to display the **Review + create** page.
 19. Click **Create** to add the app configuration policy to Intune.
