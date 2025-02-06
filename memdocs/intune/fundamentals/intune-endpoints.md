@@ -346,7 +346,7 @@ The **Installer Url** property either shows the external download location or th
 
 **Microsoft-hosted Win32 app fallback cache:**
 
-- cdn.winget.microsoft.com
+- cdn.storeedgefd.dsx.mp.microsoft.com
 
 **Delivery Optimization (optional, required for peering):**
 
