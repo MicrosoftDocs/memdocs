@@ -7,7 +7,7 @@ keywords:
 author: dougeby  
 ms.author: dougeby
 manager: dougeby
-ms.date: 06/08/2017
+ms.date: 02/06/2025
 ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
