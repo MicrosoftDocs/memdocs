@@ -120,7 +120,7 @@ In the Intune admin center, when you create a device configuration profile, you 
 
 This change:
 
-- Will be a UI change with no impact on your existing policies. Your existing policies won't changing. You will still be able to create, edit, and assign these policies the same way.
+- Will be a UI change with no impact on your existing policies. Your existing policies won't change. You'll still be able to create, edit, and assign these policies the same way.
 - Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
 
 To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
@@ -150,7 +150,7 @@ Intune *access policies* help protect against a compromised administrative accou
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
-### Remote Help supports Azure Virtual Desktop muti-session <!-- 24590822 -->
+### Remote Help supports Azure Virtual Desktop multi-session <!-- 24590822 -->
 
 Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Going forward, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
 
