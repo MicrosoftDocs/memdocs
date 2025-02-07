@@ -61,17 +61,17 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Endpoint Privilege Manager support for Arm64<!-- 28313554 -->
+### Endpoint Privilege Management support for Arm64<!-- 28313554 -->
 
-You'll soon be able to use [Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) file elevations on devices that run on Arm64 architecture.
+You'll soon be able to use [Endpoint Protection Management](/mem/intune/protect/epm-overview) (EPM) file elevations on devices that run on Arm64 architecture.
 
 Applies to:
 
 - Windows
 
-### Endpoint Privilege Manager elevation rule support for file arguments and parameters<!--28077130 -->
+### Endpoint Privilege Management elevation rule support for file arguments and parameters<!--28077130 -->
 
-Soon, the file elevation rules for Endpoint Privilege Manager (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
+Soon, the file elevation rules for Endpoint Privilege Management (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
 
 EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).
 
@@ -120,7 +120,7 @@ In the Intune admin center, when you create a device configuration profile, you 
 
 This change:
 
-- Will be a UI change with no impact on your existing policies. Your existing policies won't changing. You will still be able to create, edit, and assign these policies the same way.
+- Will be a UI change with no impact on your existing policies. Your existing policies won't change. You'll still be able to create, edit, and assign these policies the same way.
 - Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
 
 To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
@@ -144,13 +144,13 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 
 ## Device management
 
-### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
+### Remote actions with multiple administrative approvals (MAA)<!-- 27043113 -->
 
-Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). The remote actions **Retire**, **Wipe** and **Delete** will support MAA. Onboarding Remote device actions to MAA, will help mitigate the risk of unauthorized or compromised remote actions being taken on device(s) by a single administrative account thereby enhancing the overall security posture of the environment.
+Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe** and **Delete** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on device(s) by a single administrative account thereby enhancing the overall security posture of the environment.
 
-For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
+For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
-### Remote Help supports Azure Virtual Desktop muti-session <!-- 24590822 -->
+### Remote Help supports Azure Virtual Desktop multi-session <!-- 24590822 -->
 
 Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Going forward, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
 
@@ -163,7 +163,7 @@ For more information, see:
 
 We're adding a feature that will allow a customer to:
 
-- Configure one device cleanup rule per platform (Windows, iOS/macOS,iPadOS, Android, Linux)
+- Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
 - Configure a different RBAC permission and assign the permission to different RBAC roles
 
 Platform level targeting of the Device Cleanup rule will help administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level. 
@@ -192,7 +192,7 @@ Applies to:
 
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
 
-We're adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform, that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+We're adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
 
 The template will support settings related to global exclusion settings. Applicable to antivirus and EDR engines on the client, the settings can configure exclusions to stop associated real time protection EDR alerts for the excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
 
