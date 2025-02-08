@@ -32,7 +32,7 @@ ms.collection:
 
 # Support third-party device compliance partners in Intune
 
-Several third-party device compliance partners have been evaluated as a supported partner solution that you can integrate with Microsoft Intune. When you use a [third-party device compliance partner](#supported-device-compliance-partners), the partner adds the compliance state data it collects to Microsoft Entra ID. You can then use the device compliance data from the partner along side the compliance results you collect with Intune to power your [conditional access policies](../protect/device-compliance-get-started.md#integrate-with-conditional-access) that help to protect your organization and data.
+Several third-party device compliance partners have been evaluated as a supported partner solution that you can integrate with Microsoft Intune. When you use a [third-party device compliance partner](#supported-device-compliance-partners), the partner adds the compliance state data it collects to Microsoft Entra ID. You can then use the device compliance data from the partner along side the compliance results you collect with Intune to power your [Conditional Access policies](../protect/device-compliance-get-started.md#integrate-with-conditional-access) that help to protect your organization and data.
 
 Third-party partners support one or more of the following platforms:
 
@@ -61,6 +61,7 @@ The following compliance partners are supported as generally available:
 - Addigy
 - BlackBerry UEM
 - Citrix Workspace device compliance
+- Clomo MDM
 - IBM MaaS360
 - Jamf Pro
 - Kandji
@@ -86,7 +87,7 @@ The following compliance partners are supported as generally available:
 
 ## Configure Intune to work with a device compliance partner
 
-Enable support for a device compliance partner to use compliance state data from that partner with your conditional access policies.
+Enable support for a device compliance partner to use compliance state data from that partner with your Conditional Access policies.
 
 ### Add a compliance partner to Intune
 
@@ -139,8 +140,10 @@ To enable a device compliance partner to work with Intune, you must complete con
 
 - [42Gears SureMDM](https://docs.42gears.com/suremdm/docs/SureMDM/ConditionalAccessintheSureMDMCon.html)
 - [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
+- [Clomo MDM](https://support.clomo.com/?page_id=61477)
 - [Kandji Device Compliance](https://support.kandji.io/support/solutions/articles/72000630314)
 - [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)
+  
 
 ## Enroll your devices to your device compliance partner
 

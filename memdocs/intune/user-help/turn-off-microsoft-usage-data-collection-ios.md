@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2022
+ms.date: 02/04/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -56,7 +56,7 @@ The **Enable Advanced Logging** setting is available in the Intune Company Porta
 
 To modify this setting on an iOS/iPadOS device:
 1. Open the **Settings** app.
-2. Find **Comp Portal**.
+2. Find **Company Portal**.
 3. Under **Diagnostics**, turn on or off the **Enable Advanced Logging** toggle.
 
 ## Next steps  

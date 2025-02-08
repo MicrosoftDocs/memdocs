@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/01/2023
+ms.date: 11/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -37,7 +37,7 @@ The following steps help you deploy a Windows update package to Intune.
 ## Step 2: Create the Win32 app
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under **Other** app types, select **Windows app (Win32)**.
 4. Click **Select**, locate the **Add app** pane, and then select **Select app package file**.
 5. In the **App package file** pane, select the *.intunewin* file, and then select **OK**.

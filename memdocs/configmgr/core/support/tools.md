@@ -2,12 +2,12 @@
 title: Configuration Manager Tools
 titleSuffix: Configuration Manager
 description: Learn about the tools to help you manage and troubleshoot your Configuration Manager infrastructure.
-ms.date: 04/05/2021
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: overview
-author: banreet
-ms.author: banreetkaur
+author: Baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection:

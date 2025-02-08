@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/01/2023
+ms.date: 11/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -48,7 +48,7 @@ In earlier versions of the [Microsoft Intune admin center](https://go.microsoft.
 To add a built-in app to your available apps in Microsoft Intune, do the following:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the available **Other** types, select **Built-In app**.
 4. Click **Select**. The **Add app** steps are displayed.
 5. In the **Select Built-in apps** page, click **Select app** to select the apps that you want to include.
@@ -67,7 +67,7 @@ To add a built-in app to your available apps in Microsoft Intune, do the followi
 
 You can modify information about the built-in app. This information helps you to identify the app in Intune and helps users find the app in the company portal.
 
-1. Select **Apps** > **All apps** and select the built-in app that you want to modify.  
+1. Select **Apps** > **All Apps** and select the built-in app that you want to modify.  
    A pane for the built-in app is displayed.
 2. Select  **Properties**.
 3. Select **Edit** next to **App information**.

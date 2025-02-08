@@ -52,7 +52,11 @@ We're working to resolve a few scenarios that prevent Windows 10 devices from au
 
 Endpoint Privilege Management doesn't support UAC being explicitly disabled. Windows policy controls for UAC Prompt Behavior exist to control the behavior of UAC. If organizations take extra steps to disable UAC outside of the existing policy controls, like disabling Windows services, they might experience issues with Endpoint Privilege Management.
 
-### Organizations use Application Control for Business might experience issues running Endpoint Privilege Management
+### Organizations that enable Administrator Protection might experience issues with Endpoint Privilege Management
+
+Administrator Protection doesn't currently support elevations initiated from Endpoint Privilege Management. If organizations enable Administrator Protection on devices where standard users rely on EPM to handle elevation, the elevation will fail. We're working to resolve this issue in a future release.
+
+### Organizations using Application Control for Business might experience issues running Endpoint Privilege Management
 
 Application Control for Business policies that don't account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function. For more information about troubleshooting application control, see [WDAC debugging and troubleshooting](/windows/security/application-security/application-control/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting).
 
@@ -116,7 +120,7 @@ Endpoint Privilege Management doesn’t manage elevation requests by users that 
 
 ### What files can be elevated to administrator?
 
-Endpoint Privilege Management supports executable files including those with the `.msi` extension and `.ps1` PowerShell scripts.
+Endpoint Privilege Management supports executable files including those with the `.exe` `.msi` extensions and `.ps1` PowerShell scripts.
 
 ### Why doesn't 'Run with elevated access" show on start menu items?
 

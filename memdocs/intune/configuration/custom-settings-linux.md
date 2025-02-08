@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/15/2024
+ms.date: 01/09/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 #ROBOTS:
 #audience:
-ms.reviewer: ilwu
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -61,7 +61,7 @@ This article lists the steps to add an existing script and has a GitHub repo wit
 
     - **Execution context**: Select the context the script is executed in. Your options:
       - **User** (default): When a user signs in to the device, the script runs. If a user never signs into the device, or there isn't any user affinity, then the script doesn't run.
-      - **Root**: The script always runs (with or without users logged in) at the device level.
+      - **Root**: The script always runs (with or without users logged in) at the device level. The first time the script executes, the end user might have to consent. After they consent, it should continue to execute on its schedule.
 
     - **Execution frequency**: Select how frequently the script is executed. The default is **Every 15 minutes**.
 

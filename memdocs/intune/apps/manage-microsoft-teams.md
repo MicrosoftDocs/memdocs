@@ -36,14 +36,14 @@ ms.collection:
 
 Microsoft Teams is the hub for team collaboration in Microsoft 365 that integrates the people, content, and tools your team needs to be more engaged and effective.
 
-The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as conditional access. At a minimum, you'll want to deploy a conditional access policy that allows connectivity to Teams for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
+The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as Conditional Access. At a minimum, you'll want to deploy a Conditional Access policy that allows connectivity to Teams for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
 
 ## Apply Conditional Access
 
-Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Teams for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Teams for iOS and Android. To do this, you will need a Conditional Access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
 > [!NOTE]
-> To leverage app-based conditional access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
+> To leverage app-based Conditional Access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
 
 Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Teams for iOS and Android, but blocks third-party OAuth capable mobile device clients from connecting to Microsoft 365 endpoints.
 
@@ -131,18 +131,12 @@ Use the following options to configure your notifications on the portal through 
 ### To set the policies in Intune
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. In the left navigation pane, navigate to **Apps > App protection policies**.
-
-   :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-01.png" alt-text="Create the policy" border="true" :::
-
+1. In the left navigation pane, navigate to **Apps** > **Protection**.
 1. Click **Create Policy** and select your desired platform, such as **iOS/iPadOS**.
 1. On the **Basics** page, add details such as **Name** and **Description**. Click **Next**.
 1. On the **Apps** page, click **Select public apps**, then find and select the **Microsoft Teams** apps. Click **Next**.
 1. On the **Data Protection** page, find the **Org data notifications** setting and select the **Block org Data** option. Set the **Assignments** for the groups of users to include and then create your policy.
-1. Once the app protection policy has been created, go to **Apps** > **App configuration policies** > **Add** > **Managed apps**. 
-
-   :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-03.png" alt-text="app-configuration-policies-at-a-glance" border="true" :::
-
+1. Once the app protection policy has been created, go to **Apps** > **Configuration** > **Create** > **Managed apps**. 
 1. On the **Basics** page, add a **Name** and click **Select public apps**, then find and select the **Microsoft Teams** apps. Click **Next**.
 1. Under **General configuration settings**, set any of the notification keys to **1** to turn the feature **ON** for chat, channels, all other notifications or any of these combinations. And, set to **0** to turn off the feature. 
 
@@ -156,7 +150,7 @@ Use the following options to configure your notifications on the portal through 
 
 1. Set the **Assignments** for the groups of users to include and then create your policy.
 
-1. Once the policy has been created, go to **Apps** > **App protection policies**. Find your newly created **App protection policy** and check whether the policy has been deployed by reviewing the **Deployed** column. The **Deployed** column should display **Yes** for the created policy. If it displays **No**, refresh the page, and check after 10 minutes.
+1. Once the policy has been created, go to **Apps** > **Protection**. Find your newly created **App protection policy** and check whether the policy has been deployed by reviewing the **Deployed** column. The **Deployed** column should display **Yes** for the created policy. If it displays **No**, refresh the page, and check after 10 minutes.
 
 ### For the notifications to show up on iOS and Android devices
 

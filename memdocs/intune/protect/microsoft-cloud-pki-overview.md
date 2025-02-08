@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/03/2024
+ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -76,14 +76,14 @@ The following table lists the features and scenarios supported with Microsoft Cl
 
 | Feature | Overview |
 | --- | --- |
-| Create multiple CAs in an Intune tenant | Create two-tier PKI hierarchy with root and issuing CA in the cloud.  |
+| Create multiple certificate authorities (CA) in an Intune tenant | Create two-tier PKI hierarchy with root and issuing CA in the cloud.  |
 | Bring your own CA (BYOCA)  | Anchor an Intune Issuing CA to a private CA through Active Directory Certificate Services or a non-Microsoft certificate service. If you have an existing PKI infrastructure, you can maintain the same root CA and create an issuing CA that chains to your external root. This option includes support for external private CA N+ tier hierarchies.  |
 | Signing and Encryption algorithms|  Intune supports RSA, key sizes 2048, 3072, and 4096. |
 | Hash algorithms  | Intune supports SHA-256, SHA-384, and SHA-512.   |
 |HSM keys (signing and encryption)|Keys are provisioned using [Azure Managed Hardware Security Module (Azure Managed HSM)](/azure/key-vault/managed-hsm/overview). <br/><br/> CAs created with a licensed Intune Suite or Cloud PKI Standalone Add-on automatically use HSM signing and encryption keys. No Azure subscription is required for Azure HSM.   |
 |Software Keys (signing and encryption) |CAs created during a trial period of Intune Suite or Cloud PKI standalone Add-on use software-backed signing and encryption keys using `System.Security.Cryptography.RSA`. |
 | Certificate registration authority  | Providing a Cloud Certificate Registration Authority supporting Simple Certificate Enrollment Protocol (SCEP) for each Cloud PKI Issuing CA.|
-|Certificate Revocation List (CRL) distribution points | Intune hosts the CRL distribution point (CDP) for each CA. <br/><br/>  The CRL validity period is seven days. Publishing and refresh happens every 3.5 days. The CRL is updated with every certificate revocation. |
+|Certificate Revocation List (CRL) distribution points | Intune hosts the CRL distribution point (CDP) for each CA. <br/><br/>  The CRL validity period is seven days. Publishing and refresh happen every 3.5 days. The CRL is updated with every certificate revocation. |
 |Authority Information Access (AIA) end points | Intune hosts the AIA endpoint for each Issuing CA. The AIA endpoint can be used by relying parties to retrieve parent certificates. |
 | End-entity certificate issuance for users and devices |  Also referred to as *leaf certificate* issuance. Support is for the SCEP (PKCS#7) protocol and certification format, and Intune-MDM enrolled devices supporting the SCEP profile. |
 | Certificate life-cycle management | Issue, renew, and revoke end-entity certificates. |
@@ -94,39 +94,48 @@ The following table lists the features and scenarios supported with Microsoft Cl
 
 ## Architecture  
 
-Microsoft Cloud PKI is made up of several key components working together to simplify the complexity and management of a public key infrastructure; a Cloud PKI service for creating and hosting certification authorities, combined with a certificate registration authority to automatically service incoming certificate requests from Intune-enrolled devices. The registration authority supports the Simple Certificate Enrollment Protocol (SCEP).
+Microsoft Cloud PKI is made up of several key components working together to simplify the complexity and management of a public key infrastructure. It includes a Cloud PKI service for creating and hosting certification authorities, combined with a certificate registration authority to automatically service incoming certificate requests from Intune-enrolled devices. The registration authority supports the Simple Certificate Enrollment Protocol (SCEP).
 
 > [!div class="mx-imgBorder"]
-> ![Drawing of the Microsoft Cloud PKI architecture.](./media/microsoft-cloud-pki/microsoft-cloud-pki-architecture.png)  
+> ![Drawing of the Microsoft Cloud PKI architecture.](./media/microsoft-cloud-pki/architecture-flow.png)  
+`*`  See **Components** for a breakdown of services.       
 
 **Components**:
 
 * A - Microsoft Intune  
 * B - Microsoft Cloud PKI services  
-  * B.1 - Microsoft Cloud PKI service
-  * B.2 - Microsoft Cloud PKI SCEP service
-  * B.3 - Microsoft Cloud PKI SCEP validation service
+  * B1 - Microsoft Cloud PKI service  
+  * B2 - Microsoft Cloud PKI SCEP service   
+  * B3 - Microsoft Cloud PKI SCEP validation service  
   
-  The *certificate registration authority* makes up B.2 and B.3 in the diagram.  
+  The *certificate registration authority* makes up B2 and B3 in the diagram.  
 
 These components replace the need for an on-premises certificate authority, NDES, and Intune certificate connector.  
 
 **Actions**:  
 
-Before the device checks in to the Intune service, an Intune administrator or Intune role with permissions to manage the Microsoft Cloud PKI service must:  
+Before the device checks in to the Intune service, an Intune administrator or Intune role with permissions to manage the Microsoft Cloud PKI service must complete the following actions:    
 
 * Create the required Cloud PKI certification authority for the root and issuing CAs in Microsoft Intune.  
-* Create and assign the required trust certificate profiles for the root and issuing CAs. This flow isn't shown in the diagram.
-* Create and assign the required platform-specific SCEP certificate profiles. This flow isn't shown in the diagram.  
+* Create and assign the required trust certificate profiles for the root and issuing CAs. 
+* Create and assign the required platform-specific SCEP certificate profiles.  
+
+These actions require components B1, B2, and B3.  
 
 > [!NOTE]
 > A Cloud PKI Issuing Certification Authority is required to issue certificates for Intune managed devices.  Cloud PKI provides a SCEP service that acts as a Certificate Registration Authority. The service requests certificates from the Issuing CA on behalf of Intune-managed devices using a SCEP profile.  
 
-1. A device checks in with the Intune service and receives the trusted certificate and SCEP profiles.  
-2. Based on the SCEP profile, the device creates a certificate signing request (CSR). The private key is created on the device, and never leaves the device. The CSR and the SCEP challenge are sent to the SCEP service in the cloud (SCEP URI property in the SCEP profile). The SCEP challenge is encrypted and signed using the Intune SCEP RA keys.  
-3. The SCEP validation service verifies the CSR against the SCEP challenge (*shown as B.3 in diagram*). Validation ensures the request comes from an enrolled and managed device. It also ensures the Challenge is untampered, and that it matches the expected values from the SCEP profile. If any of these checks fail, the certificate request is rejected.
-4. After the CSR is validated, the SCEP validation service, also known as the *registration authority*, requests that the issuing CA signs the CSR (*shown as B.1 in diagram*).  
-5. The signed certificate is delivered to the Intune MDM-enrolled device.
+The flow continues with the following actions, shown in the diagram as A1 through A5:    
+
+A1. A device checks in with the Intune service and receives the trusted certificate and SCEP profiles.  
+
+A2. Based on the SCEP profile, the device creates a certificate signing request (CSR). The private key is created on the device, and never leaves the device. The CSR and the SCEP challenge are sent to the SCEP service in the cloud (SCEP URI property in the SCEP profile). The SCEP challenge is encrypted and signed using the Intune SCEP RA keys.  
+
+A3. The SCEP validation service verifies the CSR against the SCEP challenge. Validation ensures the request comes from an enrolled and managed device. It also ensures the challenge is untampered, and that it matches the expected values from the SCEP profile. If any of these checks fail, the certificate request is rejected.  
+
+A4. After the CSR is validated, the SCEP validation service, also known as the *registration authority*, requests that the issuing CA signs the CSR.  
+
+A5. The signed certificate is delivered to the Intune MDM-enrolled device.  
 
  >[!NOTE]
  > The SCEP challenge is encrypted and signed using the Intune SCEP registration authority keys.  
@@ -161,7 +170,7 @@ During the trial period, you can create up to six CAs in your tenant. Cloud PKI 
 
 ## CA configuration examples  
 
-Two-tier Cloud PKI root & issuing CAs, and bring-your-own CAs can coexist in Intune.  You can use the following configurations, provided as examples, to create CAs in Microsoft Cloud PKI:
+Two-tier Cloud PKI root & issuing CAs, and bring-your-own CAs can coexist in Intune. You can use the following configurations, provided as examples, to create CAs in Microsoft Cloud PKI:
 
 * One root CA with five issuing CAs
 * Three root CAs with one issuing CA each  
@@ -179,4 +188,4 @@ For the latest changes and additions, see [What's new in Microsoft Intune](../fu
   * Cloud PKI Root CA  
   * Cloud PKI Issuing CA  
   * BYOCA Issuing CA
-* In the admin center, when you select **View all certificates** for an issuing CA, Intune only shows the first 1000 issued certificates. We're actively working to address this limitation. As a workaround, go to **Devices** > **Monitor**. Then select **Certificates** to view all issued certificates.  
+* In the admin center, when you select **View all certificates** for an issuing CA, Intune only shows the first 1,000 issued certificates. We're actively working to address this limitation. As a workaround, go to **Devices** > **Monitor**. Then select **Certificates** to view all issued certificates.  
