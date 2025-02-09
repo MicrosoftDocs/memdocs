@@ -76,7 +76,9 @@ Class CCM_Application : CCM_SoftwareBase
 
 -   [GetProperty Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/getproperty-method-in-class-ccm_application.md)  
 
--   [Install Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/install-method-in-class-ccm_application.md)  
+-   [Install Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/install-method-in-class-ccm_application.md)
+
+-   [Repair Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/repair-method-in-class-ccm_application.md)  
 
 -   [Uninstall Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/uninstall-method-in-class-ccm_application.md)  
 
