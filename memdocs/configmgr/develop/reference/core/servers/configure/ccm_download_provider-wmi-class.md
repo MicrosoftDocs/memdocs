@@ -1,7 +1,7 @@
 ---
-title: CCM_Download_Provider Class
+title: CCM_DownloadProvider Class
 titleSuffix: Configuration Manager
-description: In Configuration Manager, the CCM_Download_Provider class defines and registers a non-Microsoft download plug-in provider.
+description: In Configuration Manager, the CCM_DownloadProvider class defines and registers a non-Microsoft download plug-in (alternate content) provider.
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
@@ -14,18 +14,19 @@ ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
-# CCM_Download_Provider WMI Class
-The **CCM_Download_Provider** class, in Configuration Manager, defines and registers a non-Microsoft download plug-in provider.  
+# CCM_DownloadProvider WMI Class
+The **CCM_DownloadProvider** class, in Configuration Manager, defines and registers a non-Microsoft download plug-in (alternate content) provider.  
 
 ## Syntax  
 
 ```  
-class CCM_Download_Provider: CCM_Policy  
+class CCM_DownloadProvider: CCM_Policy  
 {  
     string  LogicalName;  
     string  CLSID;   
     uint32  Priority;   
-    String  GlobalSettings;   
+    string  GlobalSettings; 
+    string  PolicySource;
     string  Reserved;   
 };  
 
@@ -59,6 +60,13 @@ class CCM_Download_Provider: CCM_Policy
  Qualifiers: [in]  
 
  Provider specific data. Use this for any client-wide configuration for the provider.  
+
+ `PolicySource`  
+ Data type: String  
+
+ Qualifiers: [in]  
+
+ The source of the policy, typically "Local" when the instance is created on a client in the root\ccm\policy\machine\RequestedConfig namespace.  
 
  `Reserved`  
  Data type: String  
