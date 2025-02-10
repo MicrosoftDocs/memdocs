@@ -200,7 +200,6 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 
 ## Device management
 
-<<<<<<< HEAD
 ### New settings for Windows LAPS policy<!-- 30287386 -->
 
 We are updating Intunes policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) by adding new settings and updating some existing settings. Use of [LAPS](/windows-server/identity/laps/laps-overview) which is a Windows built-in solution can help you secure the built-in local administrator account that is present on each Windows device.  
@@ -243,9 +242,6 @@ Applies To:
 
 
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
-=======
-### Remote actions with multiple administrative approvals (MAA)<!-- 27043113 -->
->>>>>>> a0920b05ac31cf0ed16df22d522865d3cad129bf
 
 Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe** and **Delete** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on device(s) by a single administrative account thereby enhancing the overall security posture of the environment.
 
