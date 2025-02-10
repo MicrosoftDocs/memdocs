@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/06/2025
+ms.date: 02/10/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -78,6 +78,15 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 <!-- ***********************************************-->
 
 ## App management
+
+### VPP token name more easily available in Apps workload<!-- 5479088 -->
+
+You will soon be able to view a new **VPP token name** column to quickly see the token and app association. This column will be available in the **All apps** list (**Apps** > **All apps**) and the app selection pane for **App configuration policies** (**Apps** > **App configuration policies**). For more information about VPP apps, see [Manage volume-purchased apps and books with Microsoft Intune](../apps/vpp-apps.md).
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
 
 ### Additional device details for Managed Home Screen<!-- 27006536 -->
 
