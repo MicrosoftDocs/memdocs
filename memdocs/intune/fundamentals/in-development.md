@@ -124,6 +124,21 @@ Applies to:
 
 ## Device configuration
 
+### New Default Enforcement device control setting available in the Windows settings catalog<!-- 30253799 -->
+
+The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
+
+There will soon be new settings in the Settings Catalog for Windows 24H2. To see these settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later ** > **Settings catalog** for profile type.
+
+This setting is available in both the settings catalog and the ASR device control template. The Default Enforcement device control setting enables a default enforcement to be applied if:
+
+- There are no policy rules present, or
+- At the end of the policy rules evaluation none were matched.
+
+Applies to:
+
+- Windows
+
 ### New settings available in the Apple settings catalog<!-- 30457000 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
