@@ -192,7 +192,7 @@ For more information about customizing the Company Portal and Intune apps, see [
  
 > [!NOTE]
 >
-> *Rollout of this feature is delayed and now expected to be available in mid-February.*
+> *Rollout of this feature is delayed and now expected to be available in May 2025.*
 
 You can now manage the Microsoft Defender for Endpoint CSP setting for [tamper protection](/windows/client-management/mdm/defender-csp) on unenrolled devices you manage as part of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
  
