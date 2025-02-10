@@ -32,7 +32,7 @@ ms.collection:
 To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. Also:
 
 - If we anticipate that you'll need to take action before a change, we'll publish a complementary post in the Office message center.
-- When a feature enters production, whether it's in preview or generally available, the feature description will move from this article to [What's new](whats-new.md).
+- When a feature enters production, whether it's in preview or generally available, the feature description moves from this article to [What's new](whats-new.md).
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 
 This article and the [What's new](whats-new.md) article are updated periodically. Check back for more updates.
@@ -90,7 +90,7 @@ Applies to:
 
 ### Additional device details for Managed Home Screen<!-- 27006536 -->
 
-Android **OS version**, **Security patch** and **Last device reboot time** details will be available from the **Device Information** page of the Managed Home Screen app. For related information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+Android **OS version**, **Security patch**, and **Last device reboot time** details will be available from the **Device Information** page of the Managed Home Screen app. For related information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 Applies to:
 - Android Enterprise devices
@@ -226,7 +226,7 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 
 ### New settings for Windows LAPS policy<!-- 30287386 -->
 
-We are updating Intunes policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) by adding new settings and updating some existing settings. Use of [LAPS](/windows-server/identity/laps/laps-overview) which is a Windows built-in solution can help you secure the built-in local administrator account that is present on each Windows device.  
+We're updating Intunes policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) by adding new settings and updating some existing settings. Use of [LAPS](/windows-server/identity/laps/laps-overview) which is a Windows built-in solution can help you secure the built-in local administrator account that is present on each Windows device.  
 
 The new settings will include the following:
 
@@ -267,13 +267,13 @@ Applies To:
 
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 
-Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe** and **Delete** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on device(s) by a single administrative account thereby enhancing the overall security posture of the environment.
+Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
 
 For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
 ### Remote Help supports Azure Virtual Desktop multi-session <!-- 24590822 -->
 
-Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Going forward, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
+Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Soon, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
 
 For more information, see:
 
