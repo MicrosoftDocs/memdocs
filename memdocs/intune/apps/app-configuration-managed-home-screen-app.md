@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/16/2025
+ms.date: 02/10/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -109,6 +109,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Enable notifications badge | bool | FALSE | Enables the notification badge for app icons that   shows the number of new notifications on the app. If you enable this setting,   end users will see notification badges on apps that have unread   notifications. If you keep this configuration key disabled, the end user won't see any notification badged to apps that might have unread notifications. | ✔️ |
 | Battery and Signal Strength   indicator bar | bool | FALSE | Turning this setting to True shows the   battery and signal strength indicator bar. | ❌ |
 | Type of virtual app switcher button | string |  | The configuration key is `virtual_app_switcher_type` and the possible values are `none`, `float`, and `swipe_up`. Use `swipe_up` to access app switcher button with a swipe up gesture. Use `float` to access a sticky, persistent app switcher button that can be moved around the screen by the end user. | ❌ |
+| Show ringtone selector | bool | FALSE | The configuration key is `show_ringtone_selector` and the possible values are `True`, or `False`. `True` shows the ringtone selector in MHS and allows the user to select a ringtone. `False` hides the ringtone selector.  | ❌ |
 
 > [!IMPORTANT]
 > The Managed Home Screen app has been updated at the API level to better adhere with the Google Play Store's requirements. In doing so, there were some changes to how Wi-Fi configuration works from Managed Home Screen. The changes include the following: 
@@ -711,6 +712,10 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "virtual_app_switcher_type",
             "valueString": "float"
+        }
+        {
+            "key": "show_ringtone_selector",
+            "valueString": true
         }
     ]
 }
