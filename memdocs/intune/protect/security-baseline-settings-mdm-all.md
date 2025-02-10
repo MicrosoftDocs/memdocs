@@ -1401,24 +1401,24 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
   [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#submitsamplesconsent)
 
 - **Enable Convert Warn To Block**  
-  Baseline default: *Warn verdicts are not converted to block*  
+  Baseline default: *Warn verdicts are converted to block*  
   [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationenableconvertwarntoblock)
 
 - **Hide Exclusions From Local Users**  
-  Baseline default: *If you disable or do not configure this setting, local users will be able to see exclusions in the Windows Security App and via PowerShell.*  
+  Baseline default: *If you enable this setting, local users will no longer be able to see the exclusion list in Windows Security App or via PowerShell.*  
   [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocalusers)
 
 - **Oobe Enable Rtp And Sig Update**  
-  Baseline default: *If you either disable or do not configure this setting, real-time protection and Security Intelligence Updates during OOBE is not enabled.*  
+  Baseline default: *If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.*  
   [Learn more](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationoobeenablertpandsigupdate)
 
 - **Passive Remediation**  
   Baseline default: *Configured*  
-  Value: *Passive Remediation is turned off (default)*  
+  Value: *PASSIVEREMEDIATIONFLAGSENSEAUTOREMEDIATION: Passive Remediation Sense AutoRemediation*  
   [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationpassiveremediation)
 
 - **Quick Scan Include Exclusions**  
-  Baseline default: *If you set this setting to 0 or do not configure it, exclusions are not scanned during quick scans.*  
+  Baseline default: *If you set this setting to 1, all files and directories that are excluded from real-time protection using contextual exclusions are scanned during a quick scan.*  
   [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationquickscanincludeexclusions)
 
 ### Device Guard
@@ -1862,25 +1862,25 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
   [Learn more](/windows/client-management/mdm/policy-csp-Kerberos?WT.mc_id=Portal-fx#pkinithashalgorithmconfiguration)
 
   - **PK Init Hash Algorithm SHA256**  
-  Baseline default: *Default*  
+  Baseline default: *Supported*  
   [Learn more](/windows/client-management/mdm/policy-csp-Kerberos?WT.mc_id=Portal-fx#pkinithashalgorithmsha256)
 
   - **PK Init Hash Algorithm SHA384**  
-  Baseline default: *Default*  
+  Baseline default: *Supported*  
   [Learn more](/windows/client-management/mdm/policy-csp-Kerberos?WT.mc_id=Portal-fx#pkinithashalgorithmsha384)
 
   - **PK Init Hash Algorithm SHA512**  
-  Baseline default: *Default*  
+  Baseline default: *Supported*  
   [Learn more](/windows/client-management/mdm/policy-csp-Kerberos?WT.mc_id=Portal-fx#pkinithashalgorithmsha512)
 
   - **PK Init Hash Algorithm SHA1 PK Init Hash Algorithm SHA1**  
-  Baseline default: *Default*  
+  Baseline default: *Not Supported*  
   [Learn more](/windows/client-management/mdm/policy-csp-Kerberos?WT.mc_id=Portal-fx#pkinithashalgorithmsha1)
 
 ### Sudo
 
 - **Enable Sudo**  
-  Baseline default: *Sudo is allowed in 'inline' mode.*  
+  Baseline default: *Sudo is disabled.*  
   [Learn more](/windows/client-management/mdm/policy-csp-sudo)
 
 ::: zone-end
