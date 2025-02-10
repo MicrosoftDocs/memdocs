@@ -2841,6 +2841,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "memdocs/intune/fundamentals/whats-new-archive-classic.md",
+      "redirect_url": "mem/intune/fundamentals/whats-new",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "memdocs/intune/fundamentals/network-bandwidth-use.md",
       "redirect_url": "/mem/intune/fundamentals/intune-endpoints",
       "redirect_document_id": false

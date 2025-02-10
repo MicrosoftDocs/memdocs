@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/03/2025
+ms.date: 02/05/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,23 +61,17 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Endpoint Privilege Manager support for Arm64<!-- 28313554 -->
+### Endpoint Privilege Management support for Arm64<!-- 28313554 -->
 
-You'll soon be able to use [Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) file elevations on devices that run on Arm64 architecture.
+You'll soon be able to use [Endpoint Protection Management](/mem/intune/protect/epm-overview) (EPM) file elevations on devices that run on Arm64 architecture.
 
 Applies to:
 
 - Windows
 
-### Use Copilot with Endpoint Privilege Manager to help identify potential elevation risks<!-- 27265509 -->
+### Endpoint Privilege Management elevation rule support for file arguments and parameters<!--28077130 -->
 
-We’re adding support for Copilot to help you investigate Endpoint Privilege Manager (EPM) elevation details. Copilot will help you evaluate information from you EPM elevation requests to identify potential indicators of compromise by using information from [Microsoft Defender](/defender-endpoint/microsoft-defender-endpoint).
-
-EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md). To learn more about how you can use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
-
-### Endpoint Privilege Manager elevation rule support for file arguments and parameters<!--28077130 -->
-
-Soon, the file elevation rules for Endpoint Privilege Manager (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
+Soon, the file elevation rules for Endpoint Privilege Management (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
 
 EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).
 
@@ -93,12 +87,6 @@ Applies to:
 
 - iOS/iPadOS
 - macOS
-
-
-### Update to Apps workload experience in Intune<!-- 15507048 -->
-
-The Apps workload in Intune will be updated to provide a more consistent UI and improved navigation structure so you can find the information you need faster. To find the **App** workload in Intune, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps**.
-
 
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
@@ -132,7 +120,7 @@ In the Intune admin center, when you create a device configuration profile, you 
 
 This change:
 
-- Will be a UI change with no impact on your existing policies. Your existing policies won't changing. You will still be able to create, edit, and assign these policies the same way.
+- Will be a UI change with no impact on your existing policies. Your existing policies won't change. You'll still be able to create, edit, and assign these policies the same way.
 - Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
 
 To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
@@ -141,19 +129,6 @@ Applies to:
 
 - Android Enterprise
 - AOSP
-
-
-### The Settings Catalog lists all the settings you can configure in a device policy<!-- 30305854 -->
-
-The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
-
-There will soon be new settings in the Settings Catalog to *Configure Multiple Display Mode* for Windows 24H2. To see available settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
-
-The **Configure Multiple Display Mode** setting allows monitors to extend or clone the display by default, facilitating the need for manual setup. It streamlines the multi-monitor configuration process, ensuring a consistent and user-friendly experience.
-
-Applies to:
-
-- Windows 
 
 ### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
 
@@ -169,13 +144,13 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 
 ## Device management
 
-### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
+### Remote actions with multiple administrative approvals (MAA)<!-- 27043113 -->
 
-Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). The remote actions **Retire**, **Wipe** and **Delete** will support MAA. Onboarding Remote device actions to MAA, will help mitigate the risk of unauthorized or compromised remote actions being taken on device(s) by a single administrative account thereby enhancing the overall security posture of the environment.
+Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe** and **Delete** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on device(s) by a single administrative account thereby enhancing the overall security posture of the environment.
 
-For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
+For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
-### Remote Help supports Azure Virtual Desktop muti-session <!-- 24590822 -->
+### Remote Help supports Azure Virtual Desktop multi-session <!-- 24590822 -->
 
 Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Going forward, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
 
@@ -188,7 +163,7 @@ For more information, see:
 
 We're adding a feature that will allow a customer to:
 
-- Configure one device cleanup rule per platform (Windows, iOS/macOS,iPadOS, Android, Linux)
+- Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
 - Configure a different RBAC permission and assign the permission to different RBAC roles
 
 Platform level targeting of the Device Cleanup rule will help administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level. 
@@ -202,16 +177,6 @@ You'll soon be able to use Copilot to generate a KQL query to help you get data 
 <!-- *********************************************** -->
 
 ## Device security
-
-### Updated security baseline for Microsoft Edge v128<!-- 29463902 -->
- 
-We’re working on an update to add an Intune security baseline for Microsoft Edge v128. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Microsoft Edge.
-
-For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
-
-Applies to:
-
-- Windows
 
 ### Updated security baseline for Windows version 24H2<!-- 29819143 -->
 
@@ -227,7 +192,7 @@ Applies to:
 
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
 
-We're adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform, that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+We're adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
 
 The template will support settings related to global exclusion settings. Applicable to antivirus and EDR engines on the client, the settings can configure exclusions to stop associated real time protection EDR alerts for the excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
 
