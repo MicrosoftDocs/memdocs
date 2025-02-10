@@ -99,8 +99,17 @@ Other OEMs are pending.
 ### DFCI enrollment fails for Professional editions of Windows 11, version 24H2
 
 Date added: *October 9, 2024*
+Date updated: *February 11, 2025*
 
-DFCI can't currently be used on devices with Professional editions of Windows 11, version 24H2. The issue is being investigated. As a workaround, ensure the device is upgraded to the Enterprise edition of Windows 11, version 24H2 during or after OOBE onboarding. After upgrading to the Enterprise edition of Windows 11, version 24H2, sync the device. Once the device is synced, reboot it to get it enrolled in DFCI.
+DFCI can't currently be configured during the out-of-box experience (OOBE) on devices with Professional editions of Windows 11, version 24H2
+
+For devices that have already been provisioned and have Professional editions of Windows 11, version 24H2, install KB5046740 or later to enroll in DFCI. Devices with Professional editions of Windows 11, version 24H2 that have KB5046740 or later installed are automatically enrolled in DFCI after a reboot.
+
+If DFCI needs to be configured during OOBE provisioning on 24H2 devices, follow these steps:
+
+1. During OOBE onboarding, ensure the device is upgraded to the Enterprise edition of Windows 11, version 24H2.
+2. After upgrading to the Enterprise edition of Windows 11, version 24H2, sync the device.
+3. Once the device is synced, reboot it to get it enrolled in DFCI.
 
 ## Related content
 
