@@ -40,7 +40,7 @@ Device query for multiple devices allows you to gain comprehensive insights abou
   - The Intune Advanced Analytics add-on
   - Microsoft Intune Suite
 
-- For a user to use Device query, you must assign the Managed Devices - Query permission to them.
+- For a user to use Device query, you must assign the Managed Devices - Query permission to them and they cannot have a scope tag assigned to them. Alternatively, the user can have either the Global Administrator role or Intune Administrator role.
 
 - Devices must be Intune managed and corporate owned.
 
