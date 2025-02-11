@@ -63,7 +63,7 @@ In this tutorial, we set up an Intune [app protection policy](../apps/app-protec
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Apps** > **App protection policies** > **Create policy**, and then select **iOS/iPadOS**.
+2. Select **Apps** > **Protection** > **Create policy**, and then select **iOS/iPadOS**.
 
 3. On the **Basics** page, configure the following settings:
 

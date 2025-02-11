@@ -322,11 +322,11 @@ When a device is using an OS version later than the version in the rule, access 
     - Is installed from a known source
 
 - **Block USB debugging on device**  
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  - **Block** - Prevent devices from using the USB debugging feature.  
+- **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
+- **Block** - Prevent devices from using the USB debugging feature.  
 
-  You don't have to configure this setting because USB debugging is already disabled on Android Enterprise devices.
-
+  You don't have to configure this setting for Android Enterprise fully managed devices, dedicated devices, and corporate-owned devices with work profiles, because USB debugging is already disabled.  
+  
 - **Minimum security patch level**  
   Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the YYYY-MM-DD format.
 

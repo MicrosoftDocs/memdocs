@@ -7,7 +7,7 @@ keywords: Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 01/06/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -47,7 +47,7 @@ You can assign apps by using this method only if they are free of charge in the 
 >When you work with Microsoft Intune, we recommend that you use either the Microsoft Edge or Google Chrome browser.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the available **Store app** types, select **iOS store app**.
 4. Click **Select**.<br>
    The **Add app** steps are displayed.

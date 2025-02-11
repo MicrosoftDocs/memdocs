@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/08/2024
+ms.date: 02/06/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -53,7 +53,7 @@ The send logs option in the Company Portal is unavailable for sovereign cloud en
    
 1. Tap  **SEND LOGS, THEN EMAIL**.  
    > [!NOTE]
-   > We recommend sending the email as described in this procedure because it gives you the opportunity to explain the problem you encountered to your support person. If you're already in contact with your support person, an email may not be necessary. To send logs only, with no email support, tap **Upload Logs Only**.  
+   > We recommend sending the email as described in this procedure because it gives you the opportunity to explain the problem you encountered to your support person. If you're already in contact with your support person, an email may not be necessary. To send logs only, with no email support, tap **SEND LOGS ONLY**.  
 1. The app sends your logs. Open your email app when prompted.   
 1. An email message opens with the incident ID pre-populated in the subject field. 
     1. Enter your support person's email address. 

@@ -70,7 +70,7 @@ Use the following steps to configure the app:
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Apps** > **App configuration policies** > **Add** > **Managed apps**.
+2. Select **Apps** > **Configuration** > **Create** > **Managed apps**.
 
 3. On the **Create app configuration policy**, pane enter the following information:
 
@@ -111,7 +111,7 @@ Use the following steps to configure the app:
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Apps** > **App configuration policies** > **Add** > **Managed apps**.
+2. Select **Apps** > **Configuration** > **Create** > **Managed apps**.
 
 3. On the **Create app configuration policy**, pane enter the following information:
 
