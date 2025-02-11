@@ -7,7 +7,7 @@ keywords:
 ms.author: smbhardwaj
 author: smritib17 
 manager: dougeby
-ms.date: 11/21/2024
+ms.date: 02/10/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,7 +43,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
+**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -83,7 +83,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device query on-demand, Inventory.
+**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -129,7 +129,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device query on-demand, Inventory.
+**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -204,7 +204,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device query on-demand, Inventory.
+**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -287,7 +287,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: evice query for multiple devices, Single device query on-demand, Inventory.
+**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 > [!NOTE]
 > Chassis Types property is currently not supported for Inventory or Device query for multiple devices.
