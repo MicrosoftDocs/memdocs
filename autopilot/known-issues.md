@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 01/15/2025
+ms.date: 02/11/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -45,7 +45,7 @@ This article describes known issues that can often be resolved with configuratio
 
 Date added: *February 11, 2025*
 
-By design, the Windows Autopilot report will automatically update deployment status from **In progress** to **Failed** after 4 hours if Intune did not receive a success or failure status. It's possible that the report did not receive the latest status from the device before it is powered off which results in an incorrect **Failed** status, even when the deployment has been successful.
+By design, the Windows Autopilot report automatically updates deployment status from **In progress** to **Failed** after 4 hours if Intune didn't receive a success or failure status. It's possible that the report didn't receive the latest status from the device before the device is powered off which results in an incorrect **Failed** status, even when the deployment is successful.
 
 ### Local Administrator Password Solution (LAPS) policy isn't being applied during the Technician Flow
 
