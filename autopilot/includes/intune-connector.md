@@ -6,7 +6,7 @@ ms.reviewer: madakeva
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 01/31/2025
+ms.date: 02/11/2025
 ms.localizationpriority: medium
 ---
 
@@ -22,7 +22,9 @@ The purpose of the Intune Connector for Active Directory, also known as the Offl
 
 > [!IMPORTANT]
 >
-> Starting with Intune 2501, Intune uses an updated Intune Connector for Active Directory that strengths security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts). When the Intune Connector for Active Directory is downloaded from within Intune, the updated Intune Connector for Active Directory is downloaded. The previous legacy Intune Connector for Active Directory is still available for download at [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d), but Microsoft recommends using the updated Intune Connector for Active Directory installer going forward. The previous legacy Intune Connector for Active Directory will continue to work through sometime in May 2025. However, it needs to be updated to the updated Intune Connector for Active Directory before then to avoid loss of functionality. For more information, see [Intune Connector for Active Directory with low-privileged account for Autopilot Hybrid Microsoft Entra join deployments]().
+> Starting with Intune 2501, Intune uses an updated Intune Connector for Active Directory that strengthens security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts). When the Intune Connector for Active Directory is downloaded from within Intune, the updated Intune Connector for Active Directory is downloaded. The previous legacy Intune Connector for Active Directory is still available for download at [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d), but Microsoft recommends using the updated Intune Connector for Active Directory installer going forward. The previous legacy Intune Connector for Active Directory will continue to work through sometime in May 2025. However, it needs to be updated to the updated Intune Connector for Active Directory before then to avoid loss of functionality. For more information, see [Intune Connector for Active Directory with low-privileged account for Autopilot Hybrid Microsoft Entra join deployments]().
+>
+> Updating of the Intune Connector for Active Directory to the updated version isn't done automatically. The legacy Intune Connector for Active Directory needs to be manually uninstalled followed by the updated connector manually downloaded and installed. Instructions for the manual uninstall and install process of the Intune Connector for Active Directory are provided in the following sections.
 
 Select the tab that corresponds to the version of the Intune Connector for Active Directory that is being installed:
 
@@ -72,6 +74,8 @@ By default Windows Server has Internet Explorer Enhanced Security Configuration 
 >
 > - **Required** - Create **msDs-ManagedServiceAccount** objects in the Managed Service Accounts container.
 > - **Optional** - Modify permissions in OUs in Active Directory - if the administrator installing the updated Intune Connector for Active Directory doesn't have this right, additional configuration steps are required by an administrator who has these rights. For more information, see the step/section **Increase the computer account limit in the Organizational Unit**.
+
+1. Sign into the server where the Intune Connector for Active Directory is being installed with an account that has local administrator rights.
 
 1. If the previous legacy Intune Connector for Active Directory is installed, uninstall it first before installing the updated Intune Connector for Active Directory. For more information, see [Uninstall the Intune Connector for Active Directory](/autopilot/windows-autopilot-hybrid#uninstall-the-intune-connector-for-active-directory).
 
