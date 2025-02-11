@@ -7,7 +7,7 @@ keywords:
 ms.author: smbhardwaj
 author: smritib17 
 manager: dougeby
-ms.date: 11/21/2024
+ms.date: 02/10/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -227,45 +227,18 @@ Cpu | where Device.DeviceName == ‘Desktop123”
 
 ## Known limitations
 
-Writing a query with project Device and a following distinct operator doesn't run.  
+- Using the Device entity in aggregation functions shows a red underline. However, the query can  still run and can return results as expected. For example, the following query shows a red underline under **Device** but still runs:
 
-For example, the following query fails:
+    ```kusto
+    Cpu | summarize max(Device) by Manufacturer.
+    ```
 
-```kusto
-Cpu | project Device | distinct Device
-```
+- When writing queries with a join operator, $left and $right parameters show a red underline under $left and $right. However, the query can still run and returns results as expected.  
 
-Writing a query that projects multiple Device columns doesn't run, except for Device and Device.DeviceId.  
+- A single query can contain a maximum of 3 join operators. Queries with additional joins fail.
 
-For example, the following query fails:
+- A max of ~500,000 records are returned for a query. Additional rows are truncated and “…” appear after the 500,000th line.  
 
-```kusto
-DiskDrive | project Device.DeviceName, Device.DeviceId
-```
+- A maximum of 10 queries can be submitted per minute. Additional queries will fail.
 
-The following queries succeed:  
-
-```kusto
-DiskDrive | project Device, Device.DeviceId 
-
-DiskDrive | project Device 
-
-DiskDrive | project Device.DeviceName 
-```
-
-Using the Device entity in aggregation functions shows a red underline. However, the query can  still run and can return results as expected.  
-
-For example, the following query shows a red underline under **Device** but still runs:
-
-```kusto
-Cpu | summarize max(Device) by Manufacturer.
-```
-
-When writing queries with a join operator, $left and $right parameters show a red underline under $left and $right. However, the query can still run and returns results as expected.  
-
-A single query can contain a maximum of 3 join operators. Queries with additional joins fail.
-
-A max of ~500,000 records are returned for a query. Additional rows are truncated and “…” appear after the 500,000th line.  
-
-A maximum of 10 queries can be submitted per minute. Additional queries fail.
-
+- A maximum of 1,000 queries can be submitted per month.
