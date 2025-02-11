@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 12/09/2024
+ms.date: 02/11/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -41,6 +41,12 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Windows Autopilot report incorrectly shows failure even though the deployment was successful
+
+Date added: *February 11, 2025*
+
+The Windows Autopilot report automatically updates deployment status from **In progress** to **Failed** after 4 hours if Intune didn't receive a success or failure status. It's possible that the report didn't receive the latest status from the device before the device is powered off which results in an incorrect **Failed** status, even when the deployment is successful.
+
 ### Local Administrator Password Solution (LAPS) policy isn't being applied during the Technician Flow
 
 Date added: *December 9, 2024*
@@ -58,9 +64,18 @@ In Intune's 2411 release, we've updated the backend infrastructure of the Window
 
 ### DFCI enrollment fails for Professional editions of Windows 11, version 24H2
 
-Date added: *October 9, 2024*
+Date added: *October 9, 2024*<br>
+Date updated: *January 15, 2025*
 
-DFCI can't currently be used on devices with Professional editions of Windows 11, version 24H2. The issue is being investigated. As a workaround, ensure the device is upgraded to the Enterprise edition of Windows 11, version 24H2 during or after OOBE onboarding. After upgrading to the Enterprise edition of Windows 11, version 24H2, sync the device. Once the device is synced, reboot it to get it enrolled in DFCI.
+DFCI can't currently be configured during the out-of-box experience (OOBE) on devices with Professional editions of Windows 11, version 24H2
+
+For devices that have already been provisioned and have Professional editions of Windows 11, version 24H2, install [KB5046740](https://support.microsoft.com/topic/november-21-2024-kb5046740-os-build-26100-2454-preview-2040f716-b719-482a-8aff-f7f02c79b147) or later to enroll in DFCI. Devices with Professional editions of Windows 11, version 24H2 that have KB5046740 or later installed are automatically enrolled in DFCI after a reboot.
+
+If DFCI needs to be configured during OOBE provisioning on 24H2 devices, follow these steps:
+
+1. During OOBE onboarding, ensure the device is upgraded to the Enterprise edition of Windows 11, version 24H2.
+2. After upgrading to the Enterprise edition of Windows 11, version 24H2, sync the device.
+3. Once the device is synced, reboot it to get it enrolled in DFCI.
 
 ### Autopilot deployment report doesn't support sorting
 
@@ -83,7 +98,7 @@ The following workarounds are available until the issue is resolved:
 1. Apply the autologon registry entries either manually or via a script. For example:
 
     ```cmd
-    reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "AutoAdminLogon" /t REG_DWORD /d 1 /f
+    reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "AutoAdminLogon" /t REG_SZ /d 1 /f
 
     reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DefaultDomainName" /t REG_SZ /d "." /f
 

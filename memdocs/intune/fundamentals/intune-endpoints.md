@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/20/2024
+ms.date: 02/03/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -117,9 +117,11 @@ ID |Desc |Category |ER |Addresses |Ports|
 
 ### Remote Help
 
+In addition to configuring the network requirements listed in the following table, you need to configure the network requirements for Azure communication services as well. For more information, see [Azure communication services network requirements](/azure/communication-services/concepts/voice-video-calling/network-requirements).
+
 ID |Desc |Category |ER |Addresses |Ports|Notes|
 -- |-- |-----|--- | --------------| --------------------------------|------------|
-181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`rdprelayv3eastusprod-0.support.services.microsoft.com`<BR>`*.trouter.skype.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`go.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`trouter2-usce-1-a.trouter.teams.microsoft.com`<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`trouter-azsc-usea-0-a.trouter.skype.com`<BR> | **TCP:** 443|
+181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`*.trouter.skype.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`go.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`trouter2-usce-1-a.trouter.teams.microsoft.com`<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`trouter-azsc-usea-0-a.trouter.skype.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443|
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443|
 188 | Remote Help Dependency for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR>`*.gov.teams.microsoft.us` | **TCP:** 443|
 
@@ -288,35 +290,35 @@ The following tables list the ports and services that the Intune client accesses
 |Domains    |IP address      |
 |-----------|----------------|
 | login.microsoftonline.com <br> *.officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net <br> enterpriseregistration.windows.net | More information [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
-|*.manage.microsoft.com <br> manage.microsoft.com <br>|104.46.162.96/27<br>13.67.13.176/28<br>13.67.15.128/27<br>13.69.231.128/28<br>13.69.67.224/28<br>13.70.78.128/28<br>13.70.79.128/27<br>13.71.199.64/28<br>13.73.244.48/28<br>13.74.111.192/27<br>13.77.53.176/28<br>13.86.221.176/28<br>13.89.174.240/28<br>13.89.175.192/28<br>20.189.172.160/27<br>20.189.229.0/25<br>20.191.167.0/25<br>20.37.153.0/24<br>20.37.192.128/25<br>20.38.81.0/24<br>20.41.1.0/24<br>20.42.1.0/24<br>20.42.130.0/24<br>20.42.224.128/25<br>20.43.129.0/24<br>20.44.19.224/27<br>20.49.93.160/27<br>20.192.174.216/29<br>20.192.159.40/29<br>20.204.193.12/30<br>20.204.193.10/31<br>40.119.8.128/25<br>40.67.121.224/27<br>40.70.151.32/28<br>40.71.14.96/28<br>40.74.25.0/24<br>40.78.245.240/28<br>40.78.247.128/27<br>40.79.197.64/27<br>40.79.197.96/28<br>40.80.180.208/28<br>40.80.180.224/27<br>40.80.184.128/25<br>40.82.248.224/28<br>40.82.249.128/25<br>52.150.137.0/25<br>52.162.111.96/28<br>52.168.116.128/27<br>52.182.141.192/27<br>52.236.189.96/27<br>52.240.244.160/27|
+|*.manage.microsoft.com <br> manage.microsoft.com <br>|104.46.162.96/27<br>13.67.13.176/28<br>13.67.15.128/27<br>13.69.231.128/28<br>13.69.67.224/28<br>13.70.78.128/28<br>13.70.79.128/27<br>13.74.111.192/27<br>13.77.53.176/28<br>13.86.221.176/28<br>13.89.174.240/28<br>13.89.175.192/28<br>20.189.172.160/27<br>20.189.229.0/25<br>20.191.167.0/25<br>20.37.153.0/24<br>20.37.192.128/25<br>20.38.81.0/24<br>20.41.1.0/24<br>20.42.1.0/24<br>20.42.130.0/24<br>20.42.224.128/25<br>20.43.129.0/24<br>20.44.19.224/27<br>20.192.174.216/29<br>20.192.159.40/29<br>20.204.193.12/30<br>20.204.193.10/31<br>40.119.8.128/25<br>40.67.121.224/27<br>40.70.151.32/28<br>40.71.14.96/28<br>40.74.25.0/24<br>40.78.245.240/28<br>40.78.247.128/27<br>40.79.197.64/27<br>40.79.197.96/28<br>40.80.180.208/28<br>40.80.180.224/27<br>40.80.184.128/25<br>40.82.248.224/28<br>40.82.249.128/25<br>52.150.137.0/25<br>52.162.111.96/28<br>52.168.116.128/27<br>52.182.141.192/27<br>52.236.189.96/27<br>52.240.244.160/27|
 -->
 
 ## Network requirements for PowerShell scripts and Win32 apps  
 
-If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need to grant access to endpoints in which your tenant currently resides.
+If you are using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [Powershell scripts](../apps/intune-management-extension.md), [Remediations](../fundamentals/remediations.md), [Endpoint analytics](../../analytics/overview.md), [Custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
 
-To find your tenant location or Azure Scale Unit (ASU), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row tells you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
+Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the table below for the CDN endpoints and ports required:
 
 > [!NOTE]
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
-|Azure Scale Unit (ASU) | Storage name | CDN | Port |
-| --- | --- |------------- | --- |
-|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net<br>imeswda-afd-primary.manage.microsoft.com<br>imeswda-afd-secondary.manage.microsoft.com<br>imeswda-afd-hotfix.manage.microsoft.com | **TCP:** 443 |
-| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net<br>imeswdb-afd-primary.manage.microsoft.com<br>imeswdb-afd-secondary.manage.microsoft.com<br>imeswdb-afd-hotfix.manage.microsoft.com | **TCP:** 443 |
-| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net<br>imeswdc-afd-primary.manage.microsoft.com<br>imeswdc-afd-secondary.manage.microsoft.com<br>imeswdc-afd-hotfix.manage.microsoft.com |**TCP:** 443 |
+|Region | CDN | Port |
+| --- |------------- | --- |
+|North America | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net<br>imeswda-afd-primary.manage.microsoft.com<br>imeswda-afd-secondary.manage.microsoft.com<br>imeswda-afd-hotfix.manage.microsoft.com | **TCP:** 443 |
+|Europe | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net<br>imeswdb-afd-primary.manage.microsoft.com<br>imeswdb-afd-secondary.manage.microsoft.com<br>imeswdb-afd-hotfix.manage.microsoft.com | **TCP:** 443 |
+|Asia Pacific | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net<br>imeswdc-afd-primary.manage.microsoft.com<br>imeswdc-afd-secondary.manage.microsoft.com<br>imeswdc-afd-hotfix.manage.microsoft.com |**TCP:** 443 |
 
 ## Network requirements for macOS app and script deployments
 
 If you're using Intune to deploy apps or scripts on macOS, you also need to grant access to endpoints in which your tenant currently resides.
 
-To find your tenant location or Azure Scale Unit (ASU), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under Tenant location as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row tells you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
+Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the table below for the CDN endpoints and ports required:
 
-|Azure Scale Unit (ASU) | CDN | Port |
+|Region | CDN | Port |
 | --- |------------- | --- |
-|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | macsidecar.manage.microsoft.com | **TCP:** 443 |
-| AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | macsidecareu.manage.microsoft.com | **TCP:** 443 |
-| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| macsidecarap.manage.microsoft.com |**TCP:** 443 |
+|North America | macsidecar.manage.microsoft.com<br>macsidecarprod.azureedge.net<br>(azureedge.net domains will be disabled after 3/31/2025) | **TCP:** 443 |
+|Europe | macsidecareu.manage.microsoft.com<br>macsidecarprodeu.azureedge.net<br>(azureedge.net domains will be disabled after 3/31/2025) | **TCP:** 443 |
+|Asia Pacific| macsidecarap.manage.microsoft.com<br>macsidecarprodap.azureedge.net<br>(azureedge.net domains will be disabled after 3/31/2025) |**TCP:** 443 |
 
 ## Microsoft Store
 
@@ -346,7 +348,7 @@ The **Installer Url** property either shows the external download location or th
 
 **Microsoft-hosted Win32 app fallback cache:**
 
-- Varies by region, example: *sparkcdneus2.azureedge.net, sparkcdnwus2.azureedge.net*
+- cdn.storeedgefd.dsx.mp.microsoft.com
 
 **Delivery Optimization (optional, required for peering):**
 

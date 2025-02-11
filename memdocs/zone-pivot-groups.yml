@@ -26,6 +26,8 @@ groups:
   title: Microsoft Edge baseline versions
   prompt: Choose a version
   pivots:
+    - id: edge-v128
+      title: Edge v128 (January 2025)
     - id: edge-v117
       title: Edge v117 (November 2023)
     - id: edge-v112
