@@ -350,18 +350,6 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Monitor and troubleshoot
-
-### Device Query for Multiple Devices<!--25234456 -->
-
-We're adding Device query for multiple devices. This feature allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
-
-Device query for multiple devices will be supported for devices running Windows 10 or later. This feature will be included as part of Advanced Analytics.
-
-Applies to:
-
-- Windows
-
 <!-- *********************************************** -->
 
 <!-- ## Tenant administration -->
