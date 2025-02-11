@@ -202,7 +202,7 @@ In these next steps, you create security groups, and add users to these groups. 
   - [Dynamic Group Membership in Microsoft Entra ID (Part 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
   - [Dynamic Group Membership in Microsoft Entra ID (Part 2)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Microsoft Entra ID P1 or P2 includes other services that are commonly used when managing apps and devices, including [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access](/azure/active-directory/conditional-access/overview).
+- Microsoft Entra ID P1 or P2 includes other services that are commonly used when managing apps and devices, including [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [Conditional Access](/azure/active-directory/conditional-access/overview).
 
 - Many administrators ask when to use user groups and when to use device groups. For some guidance, go to [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
 

@@ -6,10 +6,9 @@ titleSuffix: Microsoft Intune
 description: To support hybrid and remote workers, convert or migrate your workloads to support cloud-native endpoints. This planning guide focuses on deploying apps and updates with Intune, moving from Group Policy Objects, and using Windows Autopilot.
 keywords:
 author: MandiOhlinger
-
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2024
+ms.date: 01/08/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
@@ -143,7 +142,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   - Traditional policy enforcement using group policy isn't possible with cloud-native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](../../intune/configuration/settings-catalog.md) and [administrative templates](../../intune/configuration/administrative-templates-windows.md).
 
-    [Group Policy analytics in Intune](../../intune/configuration/group-policy-analytics.md) can analyze your on-premises GPOs, see if those same settings are supported in the cloud, and create a policy using those settings.
+    You can reference and analyze existing GPOs using [Group Policy analytics in Intune](../../intune/configuration/group-policy-analytics.md), which allows you to see if settings within your GPOs are supported in the cloud. Group Policy analytics also allows you to create Intune policies from GPOs, if that's the right step for your organization. In general, we recommend that customers implement policies that conform to their requirements, instead of directly migrating existing GPOs to Intune. When you create policies based off your requirements, then you rationalize, optimize, and streamline your Intune policies.
 
   - If you have existing policies that issue certificates, manage BitLocker, and provide endpoint protection, then you need to create new policies in Intune or Configuration Manager (with a [CMG](../../configmgr/core/clients/manage/cmg/overview.md) and [co-management](../../configmgr/comanage/how-to-prepare-win10.md)).
 

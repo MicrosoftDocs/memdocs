@@ -58,7 +58,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand.
+**Supported for**: single device query on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -83,7 +83,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device query on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -107,7 +107,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
+**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -129,7 +129,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device query on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -147,7 +147,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand.
+**Supported for**: single device query on-demand.
 
 > [!NOTE]
 > This is a parameterized entity where you must pass in the path of the File you want to query. For example, pass in `FileInfo('c:\windows\system32\drivers\etc\hosts') | take 10`. If a directory is passed, it will return info on the files in the directory and sub-directories.
@@ -174,7 +174,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand.
+**Supported for**: single device query on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -188,7 +188,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand.
+**Supported for**: single device query on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -204,7 +204,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
+**Supported for**: Device query, Device query for multiple devices, Single device query on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -221,8 +221,8 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
-Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for Device query, single device on-demand.
+**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
+Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for single device query on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -237,7 +237,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
+**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -256,7 +256,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand.
+**Supported for**: single device query on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -287,7 +287,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
+**Supported for**: evice query for multiple devices, Single device query on-demand, Inventory.
 
 > [!NOTE]
 > Chassis Types property is currently not supported for Inventory or Device query for multiple devices.
@@ -314,7 +314,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand.
+**Supported for**: single device query on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -332,7 +332,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
+**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -352,7 +352,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand.
+**Supported for**: single device query on-demand.
 
 | ReportId(Key) | string (max 256 characters) | Report ID of the App crash |
 | --- | --- | --- |
@@ -368,7 +368,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand.
+**Supported for**: single device query on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -389,7 +389,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand.
+**Supported for**: single device query on-demand.
 
 > [!NOTE]
 > When constructing the query, you must specify the log name and look back time, for example: `WindowsEvent(Application, 1d) | take 1`.
@@ -411,7 +411,7 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, Device query for multiple devices, Single device on-demand, Inventory.
+**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | Property | Type | Description |
 | --- | --- | --- |
@@ -429,7 +429,7 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand.
+**Supported for**: single device query on-demand.
 
 > [!NOTE]
 > You must pass in the registry key you are trying to query. For example, `WindowsRegistry('HKEY_LOCAL_MACHINE\\ServiceLastKnownStatus')`.
@@ -447,7 +447,7 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query, single device on-demand.
+**Supported for**: single device query on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |

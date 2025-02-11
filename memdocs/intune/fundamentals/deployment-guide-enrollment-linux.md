@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 01/09/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: ilwu
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -48,7 +48,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| You use Ubuntu Desktop (20.04 or 22.04 LTS on x86/64). | ✅ |
+| You use Ubuntu Desktop (24.04, 22.04, or 20.04 LTS on x86/64). | ✅ |
 | You use Ubuntu Server. | ❌ |
 | You use RedHat Enterprise Linux 8 or 9. |✅ |
 | Devices are owned by the organization or school. | ✅ |

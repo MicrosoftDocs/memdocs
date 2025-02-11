@@ -35,7 +35,10 @@ Windows 365 Frontline is a version of [Windows 365](../overview.md) that helps o
 
 Windows 365 Frontline is currently only available for Azure Global Cloud.
 
-Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead, you must use Windows App if you want to access your Frontline Cloud PC. You can find [Windows App](/windows-app/overview) at the [Microsoft Store](https://apps.microsoft.com/detail/9n1f85v9t8bn?ocid=pdpshare&hl=en-us&gl=US).
+Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead, you must use Windows App if you want to access your Frontline Cloud PC. You can find [Windows App](/windows-app/overview) at the [Microsoft Store](https://apps.microsoft.com/detail/9n1f85v9t8bn?ocid=pdpshare&hl=en-us&gl=US) or access [windows.cloud.microsoft](https://windows.cloud.microsoft) with your browser. 
+
+> [!NOTE]
+> Frontline Cloud PC in shared mode is only accessible using Windows App.
 
 Windows 365 Frontline has two different modes: dedicated mode and shared mode.
 
@@ -54,6 +57,11 @@ Windows 365 Frontline dedicated mode is designed specifically for workers who ne
 - Contingent staff.
 
 The maximum number of active Windows 365 Frontline Cloud PC sessions in your organization is equal to the number of Windows 365 Frontline licenses that you purchased. For example, if you purchase 10 licenses, up to 30 Cloud PCs can be provisioned in dedicated mode. Ten of those Cloud PCs can be active at a given time. The active sessions are managed automatically. When a user signs off from their Cloud PC, the session is released for another user to start using their Cloud PC. A concurrency buffer exists to exceed the maximum a limited number of times per day. For more information, see [Exceeding the maximum concurrency limit ](#exceeding-the-maximum-concurrency-limit).
+
+> [!NOTE]
+>
+> Windows 365 Frontline Cloud PCs in dedicated mode will automatically power off after the user signs off from the Cloud PC, and will be powered on when the user attempts to connect. It may take more time for the user to connect when the Cloud PC is being powered on. This connection time does not include executing logon scripts set by organizations.
+> After the user sign off, the Cloud PC remains powered on for two hours. If the user attempts to reconnect while the Cloud PC is powered on, the connection time will be same as Windows 365 Enterprise Cloud PCs.
 
 ## Windows 365 Frontline in shared mode (preview)
 
@@ -166,7 +174,7 @@ The following features aren't yet supported for Windows 365 Frontline.
 - [Move a Cloud PC](move-cloud-pc.md)
 - Cross region disaster recovery
 
-Windows 365 Frontline in shared mode is only available in the following regions:
+Windows 365 Frontline in shared mode can only be provisioned in the following Azure regions:
 
 - Australia East
 - Canada Central

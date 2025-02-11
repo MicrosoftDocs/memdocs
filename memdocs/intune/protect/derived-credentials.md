@@ -118,7 +118,7 @@ Before you configure an issuer, review that issuer's documentation to understand
 
 Depending on the issuer you choose, you might need staff to be available at the time of enrollment to help users complete the process. Also review your current Intune configurations to ensure they don't block access that's necessary for devices or users to complete the credential request.
 
-For example, you might use conditional access to block access to email for noncompliant devices. If you rely on email notifications to inform the user to start the derived credential enrollment process, your users might not receive those instructions until they're compliant with policy.
+For example, you might use Conditional Access to block access to email for noncompliant devices. If you rely on email notifications to inform the user to start the derived credential enrollment process, your users might not receive those instructions until they're compliant with policy.
 
 Similarly, some derived credential request workflows require the use of the device camera to scan an on-screen QR code. This code links that device to the authentication request that occurred against the derived credential issuer with the user's smart card credentials. If device configuration policies block camera use, the user can't complete the derived credential enrollment request.
 
@@ -128,7 +128,7 @@ Similarly, some derived credential request workflows require the use of the devi
 
 - Users aren't notified that they must enroll for derived credentials until you target them with a policy that requires derived credentials.
 
-- Notification can be through app notification for the Company Portal, through email, or both. If you choose to use email notifications and you use enabled conditional access, users might not receive the email notification if their device isn't compliant.
+- Notification can be through app notification for the Company Portal, through email, or both. If you choose to use email notifications and you use enabled Conditional Access, users might not receive the email notification if their device isn't compliant.
 
   > [!IMPORTANT]
   > To ensure notifications related to device credentials are successfully received by end users, you should enable app notifications for the Company Portal, email notifications, or both.

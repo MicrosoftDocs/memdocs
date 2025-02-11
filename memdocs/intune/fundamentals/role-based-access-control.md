@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/20/2024
+ms.date: 12/02/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -34,11 +34,12 @@ ms.collection:
 
 Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources. By [assigning roles](assign-role.md) to your Intune users, you can limit what they can see and change. Each role has a set of permissions that determine what users with that role can access and change within your organization.
 
-To create, edit, or assign roles, your account must have one of the following permissions in Microsoft Entra ID:
+To create, edit, or assign roles, your account must have one of the following roles in Microsoft Entra ID:
 
 - **Global Administrator**
 - **Intune Service Administrator** (also known as **Intune Administrator**)
-- An Intune role with Role permissions
+  or
+- Be assigned an Intune role with Role permissions (recommended to ensure least-permissions) 
 
 ## Roles
 
@@ -59,7 +60,7 @@ You can assign built-in roles to groups without further configuration. You can't
 - **Application Manager**: Manages mobile and managed applications, can read device information and can view device configuration profiles.
 - **Endpoint Privilege Manager**: Manages Endpoint Privilege Management policies in the Intune console.
 - **Endpoint Privilege Reader**: Endpoint Privilege Readers can view Endpoint Privilege Management policies in the Intune console.
-- **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
+- **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, Conditional Access, and Microsoft Defender for Endpoint.
 - **Help Desk Operator**: Performs remote tasks on users and devices, and can assign applications or policies to users or devices.
 - **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
 - **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.
@@ -77,8 +78,11 @@ You can create your own roles with custom permissions. For more information abou
 
 ### Microsoft Entra roles with Intune access
 
-Microsoft recommends following the principle of least-permissions by only assigning the minimum required permissions for an administrator to perform their duties.  Global Administrator and Intune Service Administrator
-are [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions) and assignment should be limited.  
+Microsoft recommends following the principle of least-permissions by only assigning the minimum required permissions for an administrator to perform their duties. Global Administrator and Intune Service Administrator
+are [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions) and assignment **should be limited**.  
+
+> [!TIP]
+> Utilize [Entra Permissions Management](/entra/permissions-management/overview) to identify privileged administrators and assist in managing least-permissions.
 
 | Microsoft Entra role | All Intune data | Intune audit data |
 | --- | :---: | :---: |
@@ -97,6 +101,16 @@ are [privileged roles](/entra/identity/role-based-access-control/privileged-role
 > [!TIP]
 > Intune also shows three Microsoft Entra extensions: **Users**, **Groups**, and **Conditional Access**, which are controlled using Microsoft Entra RBAC. Additionally, the **User Account Administrator** only performs Microsoft Entra user/group activities and does not have full permissions to perform all activities in Intune. For more information, see [RBAC with Microsoft Entra ID](/azure/active-directory/active-directory-assign-admin-roles).
 
+## Privileged Identity Management for Intune
+
+Intune supports two methods of role elevation. There are performance and least privilege differences between the two methods.
+
+- **Method 1**: Create a just-in-time (JIT) policy with [Microsoft Entra Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) for the Microsoft Entra built-in **Intune Administrator** role and assign it an administrator account.
+
+- **Method 2**: Utilize [Privileged Identity Management (PIM) for Groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups) with an Intune RBAC role assignment. For more information about using PIM for Groups with Intune RBAC roles, see: [Configuring Microsoft Intune just-in-time admin access with Microsoft Entra PIM for Groups | Microsoft Community Hub](https://techcommunity.microsoft.com/blog/intunecustomersuccess/configuring-microsoft-intune-just-in-time-admin-access-with-azure-ad-pim-for-gro/3843972)
+
+When using PIM elevation for Microsoft Entra ID built-in Intune Administrator role, elevation typically happens within 10 seconds. PIM Groups based elevation for Intune Custom Roles can take up to 15 minutes to be applied.
+
 ## Role assignments
 
 A role assignment defines:
@@ -111,6 +125,10 @@ To see a role assignment, choose **Intune** > **Tenant administration** > **Role
 - **Basics**: The assignments name and description.
 - **Members**: All users in the listed Azure security groups have permission to manage the users/devices that are listed in Scope (Groups).
 - **Scope (Groups)**: Scope Groups are Microsoft Entra security groups of users or devices or both for which administrators in that role assignment are limited to performing operations on. For example, deployment of a policy or application to a user or remotely locking a device. All users and devices in these Microsoft Entra security groups can be managed by the users in Members.
+> [!TIP]
+> Limit access to only specified scope groups by **only** selecting the specific security groups for the assignment.  Do not add "Add all users" and "Add all devices" to ensure assignments cannot target all users or all devices.
+
+- 
 - **[Scope Tags](scope-tags.md)**: Users in Members can see the resources that have the same scope tags.
 
 > [!NOTE]

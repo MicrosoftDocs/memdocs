@@ -55,7 +55,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 ## Create an app configuration policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
+2. Choose the **Apps** > **Configuration** > **Create** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. On the **Basics** page, set the following details:
     - **Name** - The name of the profile that appears in the portal.
     - **Description** - The description of the profile that appears in the portal.
@@ -208,7 +208,7 @@ You can also preconfigure app permissions to access Android device features. By 
 
 For example, an app uses the device's microphone. The user is prompted to grant the app permission to use the microphone.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** >  **Add** > **Managed devices**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Configuration** > **Create** > **Managed devices**.
 2. Add the following properties:
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Android Enterprise prompt permissions app policy for entire company**.
     - **Description**. Enter a description for the profile. This setting is optional, but recommended.

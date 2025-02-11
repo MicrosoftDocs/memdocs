@@ -7,6 +7,8 @@ zone_pivot_groups: platforms-windows-ios
 author: scottbreenmsft
 ms.author: scbree
 ms.manager: dougeby
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Reset and wipe devices

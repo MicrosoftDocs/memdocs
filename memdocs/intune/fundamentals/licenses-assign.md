@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/20/2024
+ms.date: 01/24/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,32 +30,24 @@ ms.collection:
 
 # Assign licenses to users so they can enroll devices in Intune
 
-Whether you manually add users or synchronize from your on-premises Active Directory, you must first assign each user an Intune Plan 1 license before users can enroll their devices in Intune. For a list of licenses, see [Microsoft Intune licensing](licenses.md).
+Whether you manually add users or synchronize from your on-premises Active Directory, you must first assign each user license before users can enroll their devices in Intune. For a list of licenses, see [Microsoft Intune licensing](licenses.md).
 
 > [!NOTE]
-> Users assigned Intune app protection policy and not enrolling their devices into Microsoft Intune will also require an Intune license to receive policy.
+> Users assigned Intune app protection policy and not enrolling their devices into Microsoft Intune will also require an Intune license to receive the policy.
 
-## Assign an Intune license in the Microsoft Intune admin center
+## Assign an Intune license in the Microsoft 365 admin center
 
-You can use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Microsoft Entra ID.
+You can use the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Microsoft Entra ID.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All Users** > choose a user > **Licenses** > **Assignments**.
+1. In the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854), select **Users** > **Active users** > *choose an unlicensed user* > **Licenses and apps**.
 
-2. Choose the box for **Intune** > **Save**. If you want to use the Enterprise Mobility + Security E5 or other license, choose that box instead.
+2. Choose the box for **Intune** > **Save changes**. If you want to use the Enterprise Mobility + Security E5 or other license, choose that box instead. For more information about Microsoft Intune licenses, see [Microsoft Intune licensing](licenses.md).
 
-   ![Screenshot of the Microsoft 365 admin center Product licenses section.](./media/licenses-assign/mem-assign-license.png)
-
-3. The user account now has the permissions needed to use the service and enroll devices into management.
-
-<a name='assign-an-intune-license-by-using-azure-active-directory'></a>
-
-## Assign an Intune license by using Microsoft Entra ID
-
-You can also assign Intune licenses to users by using Microsoft Entra ID. For more information, see the [License users in Microsoft Entra article](/azure/active-directory/active-directory-licensing-group-assignment-azure-portal).
+The user account now has the permissions needed to use the service and enroll devices into Intune management.
 
 ## Use School Data Sync to assign licenses to users in Intune for Education
 
-If you are an educational organization, you can use School Data Sync (SDS) to assign Intune for Education licenses to synced users. Just choose the Intune for Education checkbox when you're setting up your SDS profile.  
+If you're an educational organization, you can use School Data Sync (SDS) to assign Intune for Education licenses to synced users. Just choose the Intune for Education checkbox when you're setting up your SDS profile.  
 
 ![Screenshot of SDS profile setting](./media/licenses-assign/i4e-sds-profile-setup-setting.png)
 
@@ -68,13 +60,13 @@ See this [overview of School Data Sync](https://support.office.com/article/Overv
 ## How user and device licenses affect access to services
 
 - Each **user** that you assign a user software license to may access and use the online services and related software (including System Center software) to manage applications and up to 15 MDM devices.
-- You can purchase licenses for any devices separately from user licenses. Device licenses do not need to be assigned to the devices. Each device that accesses and uses the online services and related software (including System Center software) must have a device license available in the Microsoft 365 tenant.
+- You can purchase licenses for any devices separately from user licenses. Device licenses don't need to be assigned to the devices. Each device that accesses and uses the online services and related software (including System Center software) must have a device license available in the Microsoft 365 tenant.
 - If a device is used by more than one user, each device requires a device based software license or all users require a user software license.
 - If you remove a license from a user that has managed devices, it may affect the compliance or management of those devices.  
 
 ## How to restore users accidentally unlicensed
 
-- If you have accidentally removed the license for one or more users, you can restore their device compliance and management by re-assigning the license for those users. For more information, see [Assign Microsoft Intune licenses](#assign-an-intune-license-in-the-microsoft-intune-admin-center).
+- If you have accidentally removed the license for one or more users, you can restore their device compliance and management by re-assigning the license for those users. For more information, see [Assign Microsoft Intune licenses](#assign-an-intune-license-in-the-microsoft-365-admin-center).
 
 ## Understanding the type of licenses you have purchased
 
@@ -83,6 +75,26 @@ How you purchased Intune determines your subscription information:
 - If you purchased Intune through an Enterprise Agreement, you can find your subscription information in the Volume License portal under **Subscriptions**.
 - If you purchased Intune through a Cloud Solution Provider, check with your reseller.
 - If you purchased Intune with a CC# or Invoice, then your licenses will be user-based.
+
+## Look up current licenses
+
+You must use [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) to manage your licenses. However, you can view license details in Microsoft Intune admin center and Microsoft Entra admin center.
+
+### Microsoft 365 admin center
+
+Using the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854), you can manage the subscription licenses your organization has available. To find these details, sign-in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854), select **Billing** > **Licenses**, then select the **Subscriptions** tab. Additionally, you can view the products owned by your organization in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) by selecting **Billing** > **Your products**, then select the **Products** tab. The [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) also provides licenses details for users by selecting **Users** > **Active users** > *select a user* > **Licenses and apps**.
+
+> [!NOTE]
+> Managing licenses is only available with in the Microsoft 365 Admin Center.
+
+### Microsoft Intune admin center
+
+Using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can view the **Total licensed users** and the **Total Intune licenses**. To find these details, sign-in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Tenant status** and select the **Tenant details** tab. Additionally, you can view the assigned licenses available for a user in Intune by selecting **Users** > *select a user* > **Licenses**.
+
+### Microsoft Entra admin center
+
+Much like Microsoft Intune admin center, you can use the [Microsoft Entra admin center](https://entra.microsoft.com) to view available product licenses and assigned user license. To view product licenses in the [Microsoft Entra admin center](https://entra.microsoft.com), select **Licenses** under the **Billing** section, and select **All products**. To view the assigned licenses available for a user, select **Users** > **All users** > *select a user* > **Licenses**.
+
 
 ## Look up current licenses using PowerShell
 
@@ -116,9 +128,9 @@ A list of the **Account ID**, the **Active Units**, and the **Consumed Units** w
 
 Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Microsoft Entra ID P1 or P2 or Intune services in the EMS package. You can assign one or a subset of services using [Microsoft Graph PowerShell cmdlets](/powershell/module/microsoft.graph.users.actions/set-mguserlicense).
 
-To selectively assign user licenses for EMS services, open PowerShell as an administrator on a computer with the [Microsoft Graph PowerShel](/powershell/microsoftgraph/installation) installed. You can install PowerShell on a local computer or on an ADFS server.
+To selectively assign user licenses for EMS services, open PowerShell as an administrator on a computer with the [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation) installed. You can install PowerShell on a local computer or on an ADFS server.
 
-You must create a new license SKU definition that applies only to the desired service plans. To do this, disable the plans you don't want to apply. For example, you might create a license SKU definition that does not assign an Intune license. To see a list of available services, type:
+You must create a new license SKU definition that applies only to the desired service plans. To do this, disable the plans you don't want to apply. For example, you might create a license SKU definition that doesn't assign an Intune license. To see a list of available services, type:
 
 ```powershell
 (Get-MgSubscribedSku | Where {$_.SkuPartNumber -eq "EMS"}).ServiceStatus

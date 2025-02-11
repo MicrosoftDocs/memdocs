@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/18/2023
+ms.date: 01/14/2025
 ms.topic: how-to
 #customer intent: As an IT admin, I want to add groups, so that users and devices are organized.
 ms.service: microsoft-intune
@@ -40,7 +40,7 @@ Intune uses Microsoft Entra groups to manage devices and users. As an Intune adm
 
 You can add the following types of groups:
 
-- **Assigned groups** - Manually add users or devices into a static group. 
+- **Assigned groups** - Manually add users or devices into a static group.
 - **Dynamic groups** (Requires Microsoft Entra ID P1 or P2) - Automatically add users or devices to user groups or device groups based on an expression you create.
 
   For example, when a user is added with the manager title, the user is automatically added to an **All managers** users group. Or, when a device has the iOS/iPadOS device OS type, the device is automatically added to an **All iOS/iPadOS devices** devices group.
@@ -98,6 +98,29 @@ Consider some of the other dynamic user and device groups you can create, such a
 - Human Resources
 - All Charlotte employees
 
+## Edit a group
+
+As an Intune admin, you can edit groups, such as changing the group members, owner, and properties.
+
+Use the following steps to edit an existing group:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Groups** > **All groups** > *select the name of a group to edit*.
+3. Under the **Manage** menu group, select an area of the group to edit, such as **Properties**, **Members**, or **Owners**.
+
+When you add new members, you can choose from **Users**, **Groups**, **Devices**, and **Enterprise applications**.
+
+## Delete a group
+
+As an Intune admin, you can delete groups that are no longer needed.
+
+Use the following steps to delete an existing group:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Groups** > **All groups** > *select the name of a group to delete* > **Delete**.
+
+To view a list of recently deleted groups, select **Groups** > **Deleted groups**. Note that after deleting a group, the deleted groups list may may take time to update.
+
 ## Device groups
 
 You can create **device groups** when you need to run administrative tasks based on the device identity, not the user identity. They're useful for managing devices that don't have dedicated users, such as kiosk devices, devices shared by shift workers, or devices assigned to a specific location.
@@ -111,7 +134,7 @@ You can also use [device categories](../enrollment/device-group-mapping.md) to a
 
 ## Intune All users and All devices groups
 
-When assigning policies and apps in the Intune admin center, you can choose to assign to **All users** or **All devices** groups, which are automatically created by Intune. 
+When assigning policies and apps in the Intune admin center, you can choose to assign to **All users** or **All devices** groups, which are automatically created by Intune.
 
 The **All devices** group targets all devices that are enrolled into management. The **All users** group is a simple way to target all users that are assigned an Intune license. These groups are considered "virtual" because you don't create them or view them in Microsoft Entra ID. They're convenient to use because they're already in your tenant, and they're a faster targeting unit than Microsoft Entra groups.
 
@@ -123,7 +146,7 @@ When assigning policies and applications to large groups, such as **All users** 
 For more guidance on using Filters, go to:
 
 - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
-- [Performance recommendations for Grouping, Targeting and Filtering in large Microsoft Intune environments](filters-performance-recommendations.md)
+- [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](filters-performance-recommendations.md)
 
 ## See also
 

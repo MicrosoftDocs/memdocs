@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/01/2024
+ms.date: 01/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -100,7 +100,7 @@ Microsoft Tunnel for MAM iOS uses the following Intune policies and profiles:
 
 Create an app configuration policy for apps that use Tunnel for MAM. This policy configures an app to use a specific Microsoft Tunnel Gateway Site, proxy, and trusted certificate(s) for Edge and line-of-business (LOB) apps. These resources are used when connecting to on-premises resources.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration policies** > **Add** > **Managed Apps**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
 
 2. On the *Basics* tab, enter a *Name* for the policy and a *Description* (optional).
 
@@ -161,7 +161,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Ed
 > [!NOTE]  
 > If you already have an app configuration policy created for your LOB App, you can edit that policy to include Edge and the required *key/value pair* settings.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **App Configuration policies** > **Add** > **Managed Apps**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
 
 2. On the *Basics* tab:
 
@@ -198,15 +198,9 @@ An App protection policy is required to configure Microsoft Tunnel for apps that
 
 This policy provides the necessary data protection and establishes a means of delivering app configuration policy to apps. To create an app protection policy, use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App protection policies** > **+ Create policy** >  and select **iOS/iPadOS**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Protection** > **+ Create policy** >  and select **iOS/iPadOS**.
 2. On the *Basics* tab, enter a *Name* for the policy, and a *Description* (optional), and then select **Next**.
-3. On the *Apps* tab:  
-   1. Set *Target apps on all device types* to **No**.
-   1. For *Device types*, select **Unmanaged**.
-
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-protection-target-policy.png" alt-text="Configure the app protection policy to target unmanaged devices.":::
-
-4. For LOB apps, select on **+ Select custom apps**  to open the *Select apps to target* pane. Next, on the *Select apps to target* pane:  
+3. On the *Apps* tab, for LOB apps, select **+ Select custom apps**  to open the *Select apps to target* pane. Then, on the *Select apps to target* pane:  
    1. For *Bundle ID*, specify the LOB apps Bundle ID and then select **Add**.
    1. Select the app you just added,  and then **Select**.
 
@@ -439,7 +433,7 @@ When you create a custom app configuration policy, the newly added app might not
 
 **Workaround**: This issue can be resolved by refreshing the Intune admin center and accessing the policy again:
 
-1. In the Intune admin center, go to **Apps** > **App Configuration Policies** > **Add**.
+1. In the Intune admin center, go to **Apps** > **Configuration** > **Create**.
 2. Select custom apps, add a Bundle or Package ID for iOS, complete the flow, and create the app config policy.
 3. Edit the basic settings. The newly added bundle ID should appear in the list of targeted custom apps.
 

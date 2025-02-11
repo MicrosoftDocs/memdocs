@@ -2,10 +2,10 @@
 title: Co-management workloads
 titleSuffix: Configuration Manager
 description: Learn about the workloads that you can switch from Configuration Manager to Microsoft Intune.
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: Baladelli
+ms.author: baladell
 manager: apoorvseth
-ms.date: 03/24/2023
+ms.date: 12/04/2024
 ms.topic: conceptual
 ms.subservice: co-management
 ms.service: configuration-manager
@@ -38,7 +38,7 @@ Co-management supports the following workloads:
 
 ## Compliance policies
 
-Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access policies. Also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. You can add evaluation of custom configuration baselines as a compliance policy assessment rule. For more information, see [Include custom configuration baselines as part of compliance policy assessment](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
+Compliance policies define the rules and settings that a device must comply with to be considered compliant by Conditional Access policies. Also use compliance policies to monitor and remediate compliance issues with devices independently of Conditional Access. You can add evaluation of custom configuration baselines as a compliance policy assessment rule. For more information, see [Include custom configuration baselines as part of compliance policy assessment](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 
 For more information on the Intune feature, see [Use compliance policies to set rules for devices you manage with Intune](../../intune/protect/device-compliance-get-started.md).
 
@@ -62,6 +62,7 @@ For more information on the Intune feature, see [Deploy resource access profiles
 
 > [!NOTE]
 > The resource access workload is also part of device configuration. These policies are managed by Intune when you switch the [Device Configuration](#device-configuration) workload.
+> Starting in version 2403, The resource access policies node is removed from console. Slider is mandated to Intune and upgrade is blocked if old policieis are still available.
 
 ## Endpoint Protection
 

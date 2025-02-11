@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/21/2024
+ms.date: 02/05/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,21 +61,42 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Use Copilot with Endpoint Privilege Manager to help identify potential elevation risks<!-- 27265509 -->
+### Endpoint Privilege Management support for Arm64<!-- 28313554 -->
 
-We’re adding support for Copilot to help you investigate Endpoint Privilege Manager (EPM) elevation details. Copilot will help you evaluate information from you EPM elevation requests to identify potential indicators of compromise by using information from [Microsoft Defender](/defender-endpoint/microsoft-defender-endpoint).
+You'll soon be able to use [Endpoint Protection Management](/mem/intune/protect/epm-overview) (EPM) file elevations on devices that run on Arm64 architecture.
 
-EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md). To learn more about how you can use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+Applies to:
 
-### Endpoint Privilege Manager elevation rule support for file arguments and parameters<!--28077130 -->
+- Windows
 
-Soon, the file elevation rules for Endpoint Privilege Manager (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
+### Endpoint Privilege Management elevation rule support for file arguments and parameters<!--28077130 -->
+
+Soon, the file elevation rules for Endpoint Privilege Management (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
 
 EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).
 
 <!-- ***********************************************-->
 
 ## App management
+
+### Apple VPP using new API v2.0<!-- 29567109  -->
+
+Apple recently updated how apps and books are managed through the Apple volume purchase program (VPP). Apple has updated their related API to version 2.0 and deprecated version 1.0. To support the Apple updates, Microsoft Intune will soon use the new API, which is faster and more scalable than the previous version.
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
+
+Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions. 
+
+For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
+
+Applies to:
+
+- Windows
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -89,31 +110,89 @@ Applies to:
 
 ## Device configuration
 
-### New settings for Windows 24H2 in the Windows settings catalog<!-- 29592329 -->
+### Android settings in the Settings Catalog <!-- 26981326 -->
 
-The Settings Catalog lists all the settings you can configure in a device policy, and all in one place. You can view these Windows settings in the Microsoft Intune admin center by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later for platform** > **Settings catalog** for profile type.
+The settings catalog will soon support Android Enterprise and AOSP.
 
-We're working on the addition of new settings for Window 24H2.
+Currently, to configure Android settings, you use the built-in templates. The settings from these templates are also available in the settings catalog. More settings will continue to be added.
+
+In the Intune admin center, when you create a device configuration profile, you select the **Profile Type** (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > select your **Platform** > **Profile Type**). All the profile types are moved to **Profile Type** > **Templates**.
+
+This change:
+
+- Will be a UI change with no impact on your existing policies. Your existing policies won't change. You'll still be able to create, edit, and assign these policies the same way.
+- Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
+
+To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
 
 Applies to:
 
-- Windows
+- Android Enterprise
+- AOSP
+
+### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
+
+We're updating the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will no longer be available for download but will continue to work until deprecation.
+
+For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment -->
+<!--  ## Device enrollment  -->
 
 <!-- *********************************************** -->
 
-<!-- ## Device management -->
+## Device management
+
+### Remote actions with multiple administrative approvals (MAA)<!-- 27043113 -->
+
+Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe** and **Delete** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on device(s) by a single administrative account thereby enhancing the overall security posture of the environment.
+
+For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
+
+### Remote Help supports Azure Virtual Desktop multi-session <!-- 24590822 -->
+
+Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Going forward, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
+
+For more information, see:
+
+- [Remote Help](../fundamentals/remote-help.md)
+- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
+
+###  Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
+
+We're adding a feature that will allow a customer to:
+
+- Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
+- Configure a different RBAC permission and assign the permission to different RBAC roles
+
+Platform level targeting of the Device Cleanup rule will help administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level. 
+
+For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules).
+
+### Copilot assistant for device query<!-- 26933762 -->
+
+You'll soon be able to use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**.
 
 <!-- *********************************************** -->
 
 ## Device security
 
+### Updated security baseline for Windows version 24H2<!-- 29819143 -->
+
+We're working on an update to add an Intune security baseline for **Windows version 24H2**. The new baseline version will use the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
+
+Use of [Intune security baselines](../protect/security-baselines.md) can help you maintain best-practice configurations for your Windows devices and can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft.
+
+As with all baselines, the default baseline will represent the recommended configurations for each setting, which you can modify to meet the requirements of your organization.
+
+Applies to:
+
+- Windows
+
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
 
-We are adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform, that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+We're adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
 
 The template will support settings related to global exclusion settings. Applicable to antivirus and EDR engines on the client, the settings can configure exclusions to stop associated real time protection EDR alerts for the excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
 
@@ -126,7 +205,6 @@ Applies to:
 We're updating the [Microsoft Tunnel readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to detect if the **auditd** package for Linux System Auditing (LSA) is installed on your Linux Server. When this check is in place, the mst-readiness tool will raise a warning if the audit package isn't installed. Auditing isn't a required prerequisite for the Linux Server, but recommended.
 
 For more information on *auditd* and how to install it on your Microsoft Tunnel server, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#linux-system-auditing).
-
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 

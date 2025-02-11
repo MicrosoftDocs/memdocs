@@ -33,7 +33,7 @@ ms.collection:
 
 Windows 365 offers GPU-enabled Cloud PCs that are suitable for graphics intense workloads that need to be performance optimized. These offerings can help with graphic design, image and video rendering, 3D modeling, and data processing and visualization applications that require a GPU to perform.
 
-Three GPU offerings are available for Window 365 Enterprise (including FedRamp) and Windows 365 Frontline Cloud PCs:
+Three GPU offerings are available for Window 365 Enterprise (including FedRamp) and Windows 365 Frontline Cloud PCs in dedicated mode:
 
 | GPU offering | Minimum specs | Powered by | Intended for |
 | --- | --- |

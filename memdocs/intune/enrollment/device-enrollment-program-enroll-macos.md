@@ -152,9 +152,9 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
         - Registers with Microsoft Entra ID.  
         - Is added to the user's device record in Microsoft Entra ID.  
         - Can be evaluated for device compliance.  
-        - Gains access to resources protected by conditional access.
+        - Gains access to resources protected by Conditional Access.
 
-        If the user doesn't sign in to the Company Portal to complete registration, they'll be redirected to the Company Portal app each time they try to open a managed app with conditional access protection.  
+        If the user doesn't sign in to the Company Portal to complete registration, they'll be redirected to the Company Portal app each time they try to open a managed app with Conditional Access protection.  
 
         Devices running macOS 10.15 and later can use this method. Older macOS devices fall back to using the legacy Setup Assistant method. For more information about how to get the Company Portal app to Mac users, see [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).    
 
@@ -283,7 +283,7 @@ Optionally, you can select a default enrollment profile. The default profile is 
 
 Distribute prepared devices throughout your organization.  
 
-* New or wiped Macs: New or wiped Macs configured in Apple Business Manager or Apple School Manager automatically enroll in Microsoft Intune during Setup Assistant when someone turns on the device. If you assigned the device to a macOS enrollment profile with user affinity, the device user must sign in to the Company Portal after Setup Assistant is done to finish Microsoft Entra registration and conditional access requirements.  
+* New or wiped Macs: New or wiped Macs configured in Apple Business Manager or Apple School Manager automatically enroll in Microsoft Intune during Setup Assistant when someone turns on the device. If you assigned the device to a macOS enrollment profile with user affinity, the device user must sign in to the Company Portal after Setup Assistant is done to finish Microsoft Entra registration and Conditional Access requirements.  
 
 * Existing Macs: You can enroll devices that already went through Setup Assistant. Complete these steps to enroll corporate-owned Macs running macOS 10.13 and later.    
 
@@ -300,7 +300,7 @@ Distribute prepared devices throughout your organization.
   1. Follow the onscreen prompts to download the Microsoft Intune management profile, certificates, and policies. 
      >[!TIP]
      > You can confirm which profiles are on the device anytime by returning to **System Preferences** > **Profiles**.  
-  1. If you assigned the device to a macOS enrollment profile with user affinity, sign in to the Company Portal app to complete Microsoft Entra registration and conditional access requirements, and finish enrollment.  
+  1. If you assigned the device to a macOS enrollment profile with user affinity, sign in to the Company Portal app to complete Microsoft Entra registration and Conditional Access requirements, and finish enrollment.  
 
 ## Renew enrollment program token    
 Complete these steps to renew a server token that's about to expire. This procedure ensures that the associated enrollment program token in Intune remains active.         
