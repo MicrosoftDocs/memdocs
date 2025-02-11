@@ -58,7 +58,7 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `definitionupdates.microsoft.com`
 
-- `configmgrbits.cdn.microsoft.com`
+- `Configmgrbits.cdn.manage.microsoft.com`
 
 - `configmgrbits.azureedge.net` (azureedge.net domains will be disabled after 3/31/2025)
 
@@ -205,7 +205,7 @@ Your top-level site server needs access to the following endpoint to download th
 Computers with the Configuration Manager console require access to the following internet endpoints for specific features:
 
 > [!NOTE]
-> For push notifications from Microsoft to show in the console, the service connection point needs access to `configmgrbits.azureedge.net`. It also needs access to this endpoint for [updates and servicing](#updates-and-servicing), so you may have already allowed it.
+> For push notifications from Microsoft to show in the console, the service connection point needs access to `Configmgrbits.cdn.manage.microsoft.com`. It also needs access to this endpoint for [updates and servicing](#updates-and-servicing), so you may have already allowed it.
 
 ### In-console feedback
 
