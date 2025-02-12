@@ -81,7 +81,7 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ### VPP token name more easily available in Apps workload<!-- 5479088 -->
 
-You will soon be able to view a new **VPP token name** column to quickly see the token and app association. This column will be available in the **All apps** list (**Apps** > **All apps**) and the app selection pane for **App configuration policies** (**Apps** > **App configuration policies**). For more information about VPP apps, see [Manage volume-purchased apps and books with Microsoft Intune](../apps/vpp-apps.md).
+You'll soon be able to view a new **VPP token name** column to quickly see the token and app association. This column will be available in the **All apps** list (**Apps** > **All apps**) and the app selection pane for **App configuration policies** (**Apps** > **App configuration policies**). For more information about VPP apps, see [Manage volume-purchased apps and books with Microsoft Intune](../apps/vpp-apps.md).
 
 Applies to:
 
@@ -96,7 +96,7 @@ Applies to:
 - Android Enterprise devices
 
 ### Managed Home Screen authentication support in public preview<!-- 25348926 -->
-Managed Home Screen for Android devices will natively support authentication in Microsoft Entra ID with a QR code and PIN. This capability will eliminate the need for users to enter and re-enter long UPNs and alphanumeric passwords.
+Managed Home Screen for Android devices will natively support authentication in Microsoft Entra ID with a QR code and PIN. This capability eliminates the need for users to enter and re-enter long UPNs and alphanumeric passwords.
 
 Applies to:
 
@@ -226,7 +226,7 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 
 ### New settings for Windows LAPS policy<!-- 30287386 -->
 
-We're updating Intunes policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) by adding new settings and updating some existing settings. Use of [LAPS](/windows-server/identity/laps/laps-overview) which is a Windows built-in solution can help you secure the built-in local administrator account that is present on each Windows device.  
+We're updating Intunes policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) by adding new settings and updating some existing settings. Use of [LAPS](/windows-server/identity/laps/laps-overview) which is a Windows built-in solution can help you secure the built-in local administrator account that is present on each Windows device.
 
 The new settings will include the following:
 
@@ -264,10 +264,9 @@ Applies To:
 
 - iOS/iPadOS
 
-
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 
-Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
+Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA helps to mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
 
 For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
@@ -298,18 +297,6 @@ You'll soon be able to use Copilot to generate a KQL query to help you get data 
 <!-- *********************************************** -->
 
 ## Device security
-
-### Updated security baseline for Windows version 24H2<!-- 29819143 -->
-
-We're working on an update to add an Intune security baseline for **Windows version 24H2**. The new baseline version will use the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
-
-Use of [Intune security baselines](../protect/security-baselines.md) can help you maintain best-practice configurations for your Windows devices and can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft.
-
-As with all baselines, the default baseline will represent the recommended configurations for each setting, which you can modify to meet the requirements of your organization.
-
-Applies to:
-
-- Windows
 
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
 
