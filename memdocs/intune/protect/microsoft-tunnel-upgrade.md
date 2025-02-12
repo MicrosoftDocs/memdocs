@@ -129,6 +129,22 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 >
 > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
 
+### February 6, 2024
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:4f4ffd280315d4d63e6d3b54a79f70a76a3f9e5c234d8dbc7c49f382c6cac413
+
+- **serverImageDigest**: sha256:03b0c6cf241806422d87be770d887023c06518b5e9aa57bdb4b876fb1a64f8e1
+
+Changes in this release:
+
+- Upgrade Azure Linux version to 2.0.20241230
+- Security updates
+- Localization fixes
+- Enhanced diagnostic in mstunnel_monitor service
+- Clear stale agent errors after successful upgrade
+
 ### December 2, 2024
 
 Image hash values:
