@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/18/2024
+ms.date: 01/30/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #audience:
 params:
   siblings_only: true
-ms.reviewer: andreibiswas, anuragjain
+ms.reviewer: arnab, anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -166,6 +166,8 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the status bar, and disable notifications on the status bar.
   - **Show system information in device's status bar**: Users can see system information on the status bar. Users can't see or receive notifications from the status bar.
   - **Show system notifications and information in device's status bar**: Users can see the system information, and receive notifications from the status bar. To see notifications, enable the device home button using the **Enabled system navigation features** setting.
+ 
+    When a device is enrolled and using the Managed Home Screen app, enabling **System notifications** allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.   
 
   This setting applies to:
 

@@ -140,10 +140,10 @@ User experience settings control the end-user experience for device restart and 
       **Default**: 5 PM  
       Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#activehoursend)  
 
-  - **Auto install and restart at scheduled time** - Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on users can delay countdown and restart.  
+  - **Auto install and restart at a scheduled time** - Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on users can delay countdown and restart.  
     Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate)  
 
-    When set to *Auto install and restart at scheduled time*, you can configure the following settings:
+    When set to *Auto install and restart at a scheduled time*, you can configure the following settings:
 
     - **Automatic behavior frequency** - Use this setting to schedule when updates are installed, including the week, the day, and the time.  
       **Default**: Every week
@@ -164,7 +164,7 @@ User experience settings control the end-user experience for device restart and 
 - **Restart checks (EDU Restart)**  
   
   > [!NOTE]
-  > In policies where this value is currently set to *Skip*, the value will remain in place until that value is changed to *Allow* and saved. However, When creating new policies, it will not be available, and you can use [Settings catalogue](../configuration/settings-catalog.md) to set this value if required.
+  > In policies where this value is currently set to *Skip*, the value will remain in place until that value is changed to *Allow* and saved. However, When creating new policies, it will not be available, and you can use [Settings catalog](../configuration/settings-catalog.md) to set this value if required.
   
   **Default**: Allow
 

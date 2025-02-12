@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2024
+ms.date: 01/27/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -104,20 +104,27 @@ The following security baseline instances are available for use with Intune. Use
   - [Version 3](security-baseline-settings-defender.md?pivots=atp-march-2020)
 
   > [!NOTE]
-  > The Microsoft Defender for Endpoint security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
+  > The Microsoft Defender for Endpoint security baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 - **Microsoft 365 Apps for Enterprise**:  
   - [Version 2306 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=v2023) *Released in November 2023*
   - [May 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=office-may-2023)
 
 - **Microsoft Edge Baseline**:
+  - [Microsoft Edge version 128](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v128) - January 2025
   - [Microsoft Edge version 117](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) - November 2023
   - [Microsoft Edge version 112 and later](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v112) - May 2023
   - [Microsoft Edge version 85 and later](../protect/security-baseline-settings-edge.md?pivots-edge-sept-2020) - September 2020
   - [Microsoft Edge version 80 and later](../protect/security-baseline-settings-edge.md?pivots-edge-april-2020) - April 2020
   - [Preview: Microsoft Edge version 77 and later](../protect/security-baseline-settings-edge.md?pivots=edge-october-2019) - October 2019
 
-- **Windows 365 Security Baseline**:
+- **HoloLens 2 - Advanced security baseline settings**:  
+  - [Version 1 - HoloLens 2 advanced security](../protect/security-baseline-hololens2-advanced.md) - *January 2025*
+
+- **HoloLens 2 - Standard security baseline settings**:  
+  - [Version 1 - HoloLens 2 standard security](../protect/security-baseline-hololens2-standard.md) - *January 2025*
+
+- **Windows 365 Security Baseline**:  
   - [Version 24H1](security-baseline-settings-windows-365.md?pivots=win365-24h1)
   - [November 2021](security-baseline-settings-windows-365.md?pivots=win365-nov21)
 
@@ -181,7 +188,7 @@ Each security baseline manages device configurations by applying the options fou
 
 Within the Intune security baseline policy UI, Intune provides information text that is taken from the source CSP and provides a link to that CSP. In some cases, the CSP might be part of a larger content set that includes proactive guidance that remains beyond the scope of Intune to include or duplicate in our content. However, Intune does document the list of settings in each security baseline version and its default configuration.
 
-## Next steps
+## Learn more
 
 - [Create security baseline profiles](security-baselines-configure.md)
 

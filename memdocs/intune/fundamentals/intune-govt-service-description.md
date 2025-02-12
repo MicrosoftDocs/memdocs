@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/30/2024
+ms.date: 02/06/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.suite: ems
@@ -60,8 +60,16 @@ These government instances are also known as **IL4** and **IL5**, where **IL** r
 - GCC is the same instance as Microsoft Intune in the commercial space. Other services, like Microsoft 365, have a separate GCC instance. Intune doesn't have a separate GCC instance.
 
   So, when you see **GCC** in this Intune article, it refers to the commercial service. When you see **GCC High** or **DoD**, it refers to the government cloud.
-
+  
   GCC instances are commonly used by state and local government customers that require extra accreditation for the cloud services they use.
+  
+- Intune is now Common Criteria certified and is on the National Information Assurance Partnership (NIAP) Product Compliance List (PCL).
+
+  To see the certification materials, go to [NIAP - Product Details](https://www.niap-ccevs.org/products/11298).
+
+- Administrators can get help locking down their Intune tenants using the Secure Technical Implementation Guide (STIG).
+
+  To download this document from the `dod.cyber.mil` website, go to [https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Intune_Service_Desktop_V1R1_STIG.zip](https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Intune_Service_Desktop_V1R1_STIG.zip).
 
 ## Feature differences in Intune GCC High and DoD
 
@@ -74,8 +82,8 @@ The following features are available and supported in Microsoft GCC High and/or 
 | Standard MDM features | ✅ <br/><br/> You can use app policies, device configuration profiles, compliance policies, and more. |
 | Mobile Threat Defense (MTD) | ✅ <br/><br/>Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices with MTD vendors that **also support** the GCC High environment can be used. When you sign in to a GCC High tenant, you see the connectors that are available in these environments. |
 | Microsoft Defender for Endpoint security settings management | ✅ <br/><br/> On devices onboarded to Defender but not enrolled in Intune, you can use Intune endpoint security policies to manage Defender security settings. <br/><br/>This support extends to the US Government Community Cloud (GCC), US Government Community High (GCC High), and Department of Defense (DoD) environments. <br/><br/>For more information on this feature, go to [Defender for Endpoint security settings management](../protect/mde-security-integration.md). |
-| Platform support | ✅ <br/><br/> You can use the same operating systems - Android, AOSP, iOS/iPadOS, Linux, macOS, and Windows. <br/><br/>- **Android (AOSP)**: There are some device restrictions. For more information, go to [Supported operating systems and browsers in Intune - AOSP](supported-devices-browsers.md#android). <br/>- **Linux**: Generally available (GA) in February 2024.|
-| Remote Help | ✅ <br/><br/> Remote Help is supported in GCC on Android, macOS, and Windows devices. It's not supported in GCC High or DoD.<br/><br/> For more information on this feature, go to [Remote Help in Microsoft Intune](../fundamentals/remote-help.md). |
+| Platform support | ✅ <br/><br/> You can use the same operating systems - Android, Android Open Source Project (AOSP), iOS/iPadOS, Linux, macOS, and Windows. <br/><br/>- **Android (AOSP)**: There are some device restrictions. For more information, go to [Supported operating systems and browsers in Intune - AOSP](supported-devices-browsers.md#android). <br/>- **Linux**: Generally available (GA) in February 2024.|
+| Remote Help | ✅ <br/><br/> Remote Help is supported in GCC on Android, macOS, and Windows devices. Remote Help is not supported in GCC High or DoD.<br/><br/> For more information on this feature, go to [Remote Help in Microsoft Intune](../fundamentals/remote-help.md). |
 | Windows Autopilot device preparation | ✅ <br/><br/> Some features are available now, such as user-driven deployments, and some are still [in the planning phase](#in-the-planning-phase). For more information on the recent changes to Windows Autopilot device preparation, go to [Blog: Windows deployment with the next generation of Windows Autopilot](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/windows-deployment-with-the-next-generation-of-windows-autopilot/ba-p/4148169). <br/><br/> To get started with Windows Autopilot device preparation, go to [Windows Autopilot Device Preparation overview](/autopilot/device-preparation/overview). |
 | Log Analytics | ✅ <br/><br/> You can send Intune log data to Azure Storage, Event Hubs, or Log Analytics. <br/><br/> For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](review-logs-using-azure-monitor.md). |
 | Microsoft Intune Plan 2 </br>and Microsoft Intune Suite | For more information on these plans, go to [Use Intune Suite add-on capabilities](intune-add-ons.md). <br/><br/> The following Plan 2 features support the GCC High and DoD environments: </br>- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md) </br>- [Firmware-over-the-air update](../protect/fota-updates-android.md) </br>- [Specialty devices management](../fundamentals/specialty-devices-with-intune.md) </br></br>  The following Microsoft Intune Suite features support the GCC High and DoD environments: </br>- [Endpoint Privilege Management](../protect/epm-overview.md) </br>- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
@@ -89,6 +97,7 @@ The following features are currently not available and aren't supported in GCC H
 | Expedited updates | For more information on this feature, go to [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md). |
 | Feature updates | For more information on this feature, go to [Feature updates for Windows in Intune](../protect/windows-10-feature-updates.md). |
 | Windows Autopilot | The following features are in the planning phase: </br></br>- Customize out-of-box experience (OOBE) and rename devices during provisioning based on organizational structure </br>- Self-deploying and pre-provisioning mode </br> - More admin-specified configurations delivered before allowing desktop access. </br> - Enhanced optional desktop onboarding experience inside the Windows Company Portal app </br> - The ability to associate a device with a tenant. </br></br>For information about Windows Autopilot, go to [Windows Autopilot overview](/autopilot/overview). |
+| BIOS configuration policies on Windows | For more information on this feature, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](../configuration/bios-configuration.md). |
 
 ### Not available
 
