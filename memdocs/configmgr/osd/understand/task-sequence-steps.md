@@ -1668,7 +1668,7 @@ Use this step to remove or configure the Configuration Manager client on the ref
 This step completely removes the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured OS image, it installs a new Configuration Manager client each time.
 
 > [!TIP]
-> By default, the task sequence engine only removes the client during the **Build and capture a reference operating system image** task sequence. The task sequence engine doesn't remove the client during other capture methods, such as capture media or a custom task sequence. You can overide this behavior for an OS deployment task sequence. Set the task sequence variable **SMSTSUninstallCCMClient** to **TRUE** before the **Prepare ConfigMgr Client for Capture** step. This variable and behavior only applies to OS deployment task sequences. It removes the client after the next restart of the device.
+> By default, the task sequence engine only removes the client during the **Build and capture a reference operating system image** task sequence. The task sequence engine doesn't remove the client during other capture methods, such as capture media or a custom task sequence. You can override this behavior for an OS deployment task sequence. Set the task sequence variable **SMSTSUninstallCCMClient** to **TRUE** before the **Prepare ConfigMgr Client for Capture** step. This variable and behavior only apply to OS deployment task sequences. It removes the client after the next restart of the device.
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 

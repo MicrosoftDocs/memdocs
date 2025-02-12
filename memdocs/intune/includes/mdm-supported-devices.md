@@ -50,7 +50,7 @@ ms.localizationpriority: high
 
 ### Microsoft
 
-- Windows 10/11 (Home, S, Pro, Education, Enterprise, and IoT Enterprise editions)
+- Windows 10/11 (Home, S, Pro, Pro Education, Education, Enterprise, and IoT Enterprise editions)
 - Windows 10/11 Cloud PCs on Windows 365
 
   > [!NOTE]
