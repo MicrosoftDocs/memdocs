@@ -76,6 +76,20 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
+## Week of February 10, 2025
+
+### Monitor and troubleshoot
+
+#### Device Query for Multiple Devices<!--25234456 -->
+
+We've added Device query for multiple devices. This feature allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
+
+Device query for multiple devices is now supported for devices running Windows 10 or later. This feature is now included as part of Advanced Analytics.
+
+Applies to:
+
+- Windows
+
 ## Week of February 5, 2025  (Service release 2501)
 
 ### Microsoft Intune Suite
@@ -192,7 +206,7 @@ For more information about customizing the Company Portal and Intune apps, see [
  
 > [!NOTE]
 >
-> *Rollout of this feature is delayed and now expected to be available in mid-February.*
+> *Rollout of this feature is delayed and now expected to be available in May 2025.*
 
 You can now manage the Microsoft Defender for Endpoint CSP setting for [tamper protection](/windows/client-management/mdm/defender-csp) on unenrolled devices you manage as part of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
  

@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/05/2025
+ms.date: 02/10/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -32,7 +32,7 @@ ms.collection:
 To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. Also:
 
 - If we anticipate that you'll need to take action before a change, we'll publish a complementary post in the Office message center.
-- When a feature enters production, whether it's in preview or generally available, the feature description will move from this article to [What's new](whats-new.md).
+- When a feature enters production, whether it's in preview or generally available, the feature description moves from this article to [What's new](whats-new.md).
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 
 This article and the [What's new](whats-new.md) article are updated periodically. Check back for more updates.
@@ -79,14 +79,37 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
-### Apple VPP using new API v2.0<!-- 29567109  -->
+### VPP token name more easily available in Apps workload<!-- 5479088 -->
 
-Apple recently updated how apps and books are managed through the Apple volume purchase program (VPP). Apple has updated their related API to version 2.0 and deprecated version 1.0. To support the Apple updates, Microsoft Intune will soon use the new API, which is faster and more scalable than the previous version.
+You will soon be able to view a new **VPP token name** column to quickly see the token and app association. This column will be available in the **All apps** list (**Apps** > **All apps**) and the app selection pane for **App configuration policies** (**Apps** > **App configuration policies**). For more information about VPP apps, see [Manage volume-purchased apps and books with Microsoft Intune](../apps/vpp-apps.md).
 
 Applies to:
 
 - iOS/iPadOS
 - macOS
+
+### Additional device details for Managed Home Screen<!-- 27006536 -->
+
+Android **OS version**, **Security patch**, and **Last device reboot time** details will be available from the **Device Information** page of the Managed Home Screen app. For related information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+Applies to:
+- Android Enterprise devices
+
+### Managed Home Screen authentication support in public preview<!-- 25348926 -->
+Managed Home Screen for Android devices will natively support authentication in Microsoft Entra ID with a QR code and PIN. This capability will eliminate the need for users to enter and re-enter long UPNs and alphanumeric passwords.
+
+Applies to:
+
+- Android devices
+
+
+### Display ringtone selector for Managed Home Screen<!-- 26826233 -->
+
+In Intune, you can choose to expose a setting in the Managed Home Screen app to allow users to select a ringtone. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+Applies to:
+
+- Android devices
 
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
@@ -109,6 +132,63 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device configuration
+
+### New Default Enforcement device control setting available in the Windows settings catalog<!-- 30253799 -->
+
+The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
+
+There will soon be new settings in the Settings Catalog for Windows 24H2. To see these settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later ** > **Settings catalog** for profile type.
+
+This setting is available in both the settings catalog and the ASR device control template. The Default Enforcement device control setting enables a default enforcement to be applied if:
+
+- There are no policy rules present, or
+- At the end of the policy rules evaluation none were matched.
+
+Applies to:
+
+- Windows
+
+### New settings available in the Apple settings catalog<!-- 30457000 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+#### iOS/iPadOS
+
+**Managed Settings**:
+- Default Applications
+- Wallpaper
+
+**Networking > Domains**:
+- Cross Site Tracking Prevention Relaxed Apps
+
+**Restrictions**:
+- Allowed External Intelligence Workspace IDs
+- Allow Notes Transcription Summary
+- Allow Satellite Connection
+- Allow Visual Intelligence Summary
+
+#### macOS
+
+**Networking > Domains**:
+
+- Cross Site Tracking Prevention Relaxed Apps
+
+**Restrictions**:
+
+- Allow Bookstore
+- Allow Bookstore Erotica
+- Allow Explicit Content
+- Rating Apps
+- Rating Movies
+- Rating Region
+- Rating TV Shows
+
+**System Configuration > File Provider**:
+
+- Management Allows Known Folder Syncing
+- Management Known Folder Syncing Allow List
 
 ### Android settings in the Settings Catalog <!-- 26981326 -->
 
@@ -144,15 +224,56 @@ For more information, see [Deploy Microsoft Entra hybrid joined devices by using
 
 ## Device management
 
-### Remote actions with multiple administrative approvals (MAA)<!-- 27043113 -->
+### New settings for Windows LAPS policy<!-- 30287386 -->
 
-Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe** and **Delete** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on device(s) by a single administrative account thereby enhancing the overall security posture of the environment.
+We're updating Intunes policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) by adding new settings and updating some existing settings. Use of [LAPS](/windows-server/identity/laps/laps-overview) which is a Windows built-in solution can help you secure the built-in local administrator account that is present on each Windows device.  
+
+The new settings will include the following:
+
+- AutomaticAccountManagementEnabled
+- AutomaticAccountManagementTarget
+- AutomaticAccountManagementNameOrPrefix
+- AutomaticAccountManagementEnableAccount
+- AutomaticAccountManagementRandomizeName
+- PassphraseLength
+
+The following settings will update to support new options:
+
+- PasswordComplexity
+- PostAuthenticationActions
+
+The settings found in Intune LAPS policy are available from the Windows [LAPS CSP](/windows/client-management/mdm/LAPS-csp).
+
+Applies to:
+
+- Windows
+
+### Configure devices to stay on the latest OS version using declarative device management (DDM)<!-- 28323647 -->
+
+As part of the [Settings Catalog](../configuration/settings-catalog.md), you'll be able to configure devices to automatically update to the latest OS version using DDM. To use these new settings in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type.
+
+**Declarative device management > Software Update Enforce Latest**.
+
+- **Enforce Latest Software Update Version**: If true, devices will upgrade to the latest OS version that is available for that device model. This uses the Software Update Enforcement configuration and will force devices to restart and install the update after the deadline passes.
+- **Delay In Days**: Specify the number of days that should pass before a deadline is enforced after a new update is released by Apple.
+- **Install Time**: Specify the local device time for when updates are enforced. This setting uses the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
+
+Learn more about configuring managed updates through DDM at [Managed software updates] (../protect/managed-software-updates-ios-macos.md).
+
+Applies To:
+
+- iOS/iPadOS
+
+
+### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
+
+Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
 
 For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
 ### Remote Help supports Azure Virtual Desktop multi-session <!-- 24590822 -->
 
-Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Going forward, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
+Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Soon, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
 
 For more information, see:
 
@@ -228,18 +349,6 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- ## Role-based access control -->
 
 <!-- *********************************************** -->
-
-## Monitor and troubleshoot
-
-### Device Query for Multiple Devices<!--25234456 -->
-
-We're adding Device query for multiple devices. This feature allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
-
-Device query for multiple devices will be supported for devices running Windows 10 or later. This feature will be included as part of Advanced Analytics.
-
-Applies to:
-
-- Windows
 
 <!-- *********************************************** -->
 
