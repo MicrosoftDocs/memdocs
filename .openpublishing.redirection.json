@@ -2846,6 +2846,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "memdocs/intune/fundamentals/network-bandwidth-use.md",
+      "redirect_url": "/mem/intune/fundamentals/intune-endpoints",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "memdocs/configmgr/apps/understand/introduction-to-application-management.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/introduction-to-application-management"
     },
