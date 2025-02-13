@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 01/15/2025
+ms.date: 02/11/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,6 +40,12 @@ This article describes known issues that can often be resolved with configuratio
 > For issues with Autopilot with Co-management, see [Windows Autopilot with co-management](/mem/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues
+
+### Windows Autopilot report incorrectly shows failure even though the deployment was successful
+
+Date added: *February 11, 2025*
+
+The Windows Autopilot report automatically updates deployment status from **In progress** to **Failed** after 4 hours if Intune didn't receive a success or failure status. It's possible that the report didn't receive the latest status from the device before the device is powered off which results in an incorrect **Failed** status, even when the deployment is successful.
 
 ### Local Administrator Password Solution (LAPS) policy isn't being applied during the Technician Flow
 

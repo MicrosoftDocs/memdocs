@@ -230,6 +230,8 @@ items:
         href: ../analytics/device-scopes.md
       - name: Device query
         href: ../analytics/device-query.md
+      - name: Device query for multiple devices
+        href: ../analytics/device-query-multiple-devices.md        
       - name: Data platform schema
         href: ../analytics/data-platform-schema.md
       - name: Battery health
