@@ -126,7 +126,7 @@ The following table lists status details and their descriptions:
 
 | Status detail | Description |
 | --- | --- |
-| Entra key can't be attested    | Entra team didn't store the ENTRA certificate's key in TPM. If device is enrolled with AP ODJ, then this Status Detail is temporary.                                                         |
+| Entra key can't be attested    | Entra team didn't store the ENTRA certificate's key in TPM. This impacts AP ODJ enrolled devices.                                                         |
 | Attestation is in process       | Device is still working on attestation when Intune queries for its latest status.                                                 |
 | TPM isn't trusted              | Device contains a TPM that isn't trusted and therefore can't be attested.                                                           |
 | TPM isn't available            | Device doesn't have TPM 2.0 or TPM can't be attested due to firmware needing update. For more information on how to update firmware, see [Resources](#resources)                                          |
@@ -140,6 +140,7 @@ The following table lists status details and their descriptions:
 | Entra token is missing device identity | ENTRA token for enrollment is missing ENTRA device identity.                                                               |
 
 > [!NOTE]
+> AP ODJ devices will always fail attestation at enrollment, to attest devices enrolled through AP ODJ method, this must be done from the report after enrollment. See next section on the Attest device action. 
 > For more information, see the [Resources](#resources) section.
 
 ## Attest device action
@@ -160,6 +161,10 @@ To attest some *Not Started* devices:
 If devices are failing attestation, depending on the value in the **Status detail** column, you can retry attestation using the **Attest device** action.
 If any of the following **Status details** appear, we recommend re-attempting the **Attest device** action.
 
+- Entra key can't be attested
+
+- TPM isn't available
+  
 - AIK certificate wasn't provided by client
 
 - Attestation is in process
