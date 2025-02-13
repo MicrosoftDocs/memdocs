@@ -237,7 +237,7 @@ Cpu | where Device.DeviceName == ‘Desktop123”
 
 - A single query can contain a maximum of 3 join operators. Queries with additional joins fail.
 
-- A max of ~500,000 records are returned for a query. Additional rows are truncated and “…” appear after the 500,000th line.  
+- A max of ~500,000 records are returned for a query.  
 
 - A maximum of 10 queries can be submitted per minute. Additional queries will fail.
 
