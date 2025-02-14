@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/31/2024
+ms.date: 02/14/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -122,11 +122,11 @@ After the report is generated, The top-level details that you see include:
 
 By selecting an entry, you can find more detailed information about the device. You can also select an entry using the left-hand **Select** column and re-attest using the [Attest device action](#attest-device-action) at the top of the report.
 
-The following table lists status details and their descriptions:
+The following table lists status details and their descriptions. 
 
 | Status detail | Description |
 | --- | --- |
-| Entra key can't be attested    | Entra team didn't store the ENTRA certificate's key in TPM. If device is enrolled with AP ODJ, then this Status Detail is temporary.                                                         |
+| Entra key can't be attested    | Entra team didn't store the ENTRA certificate's key in TPM. This impacts AP ODJ enrolled devices.                                                         |
 | Attestation is in process       | Device is still working on attestation when Intune queries for its latest status.                                                 |
 | TPM isn't trusted              | Device contains a TPM that isn't trusted and therefore can't be attested.                                                           |
 | TPM isn't available            | Device doesn't have TPM 2.0 or TPM can't be attested due to firmware needing update. For more information on how to update firmware, see [Resources](#resources)                                          |
@@ -137,10 +137,13 @@ The following table lists status details and their descriptions:
 | MDM key is already in TPM       | Device indicates that the MDM key is already stored in TPM. But Intune is unable to attest it because AIK certificate or AIK public key is missing, or ENTRA key can't be attested. |
 | Feature isn't supported        | This status shows for devices that aren't yet attestable. Examples include Hyper-V and Azure virtual machines, Azure Virtual Desktop session hosts, Windows 365 Cloud PCs, Microsoft Dev Box.                     |
 | Entra token doesn't match device identity | ENTRA token for enrollment doesn't match the ENTRA key presented in the enrollment request. You can fix this issue by upgrading to the latest Windows build and by retrying attestation.                                          |
-| Entra token is missing device identity | ENTRA token for enrollment is missing ENTRA device identity.                                                               |
+| Entra token is missing device identity | ENTRA token for enrollment is missing ENTRA device identity.             
+
+For more information, see the [Resources](#resources) section.                                                     |
 
 > [!NOTE]
-> For more information, see the [Resources](#resources) section.
+> AP ODJ devices always fail attestation at enrollment. To attest devices enrolled through an AP ODJ method, attestation must be done from the report after enrollment. For more information, see [Attest device action](#attest-device-action). 
+
 
 ## Attest device action
 
@@ -160,6 +163,10 @@ To attest some *Not Started* devices:
 If devices are failing attestation, depending on the value in the **Status detail** column, you can retry attestation using the **Attest device** action.
 If any of the following **Status details** appear, we recommend re-attempting the **Attest device** action.
 
+- Entra key can't be attested
+
+- TPM isn't available
+  
 - AIK certificate wasn't provided by client
 
 - Attestation is in process
