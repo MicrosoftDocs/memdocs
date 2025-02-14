@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 02/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,12 +36,6 @@ You can control mobile device access to corporate resources using Conditional Ac
 
 You can configure Conditional Access policies based on CrowdStrike Falcon for Mobile risk assessment enabled through Intune device compliance policies. These policies can  allow or block noncompliant devices to access corporate resources based on detected threats.
 
-## Supported platforms
-
-- **Android 9.0 and later**
-
-- **iOS 15.0 and later**
-
 ## Prerequisites
 
 - Microsoft Entra ID P1
@@ -50,6 +44,12 @@ You can configure Conditional Access policies based on CrowdStrike Falcon for Mo
 
 - CrowdStrike Falcon for Mobile subscription.  
   See the [CrowdStrike Falcon for Mobile](https://www.crowdstrike.com/products/endpoint-security/falcon-for-mobile/) website.
+
+## Supported platforms
+
+- **Android 9.0 and later**
+
+- **iOS 15.0 and later**
 
 ## How do Intune and CrowdStrike Falcon for Mobile help protect your company resources?
 
@@ -101,7 +101,7 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 
 :::image type="content" source="./media/crowdstrike-falcon-defense-connector/crowdstrike-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
-## Next steps
+## Related content
 
 - [Integrate CrowdStrike Falcon for Mobile with Intune](crowdstrike-falcon-mtd-connector-integration.md)
 

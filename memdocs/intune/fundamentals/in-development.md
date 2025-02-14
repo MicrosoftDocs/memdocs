@@ -286,9 +286,9 @@ We're adding a feature that will allow a customer to:
 - Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
 - Configure a different RBAC permission and assign the permission to different RBAC roles
 
-Platform level targeting of the Device Cleanup rule will help administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level. 
+Platform level targeting of the Device Cleanup rule will help administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
 
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules).
+For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
 
 ### Copilot assistant for device query<!-- 26933762 -->
 
