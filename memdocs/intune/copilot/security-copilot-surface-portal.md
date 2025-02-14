@@ -104,7 +104,7 @@ Once you have set up Security Copilot, you can start using Copilot for Surface M
 
 Your feedback is vital to guide the current and planned development of the product. The best way to provide feedback is to use the feedback buttons at the bottom of each completed prompt, directly within the product.
 
-    :::image type="content" source="./media/security-copilot-surface-portal/surface_management_portal_04.png" alt-text="Screenshot that shows the **Feeback** prompt.":::
+:::image type="content" source="./media/security-copilot-surface-portal/surface_management_portal_04.png" alt-text="Screenshot that shows the Feeback prompt.":::
 
 ## Privacy and data security in Security Copilot
 
@@ -112,4 +112,4 @@ To understand how Security Copilot handles your prompts and the output data that
 
 ## Responsible AI FAQ in Microsoft Security Copilot
 
-At Microsoft, we take our commitment to responsible AI seriously. Security Copilot is being developed in accordance with our [AI principles](/ai/principles-and-approach?activetab=pivot1:primaryr5&rtc=1). To learn more about how Microsoft approaches responsible AI for Security Copilot, see [Responsible AI FAQ](/copilot/security/rai-faqs-security-copilot?source=recommendations).
+At Microsoft, we take our commitment to responsible AI seriously. Security Copilot is being developed in accordance with our [AI principles](https://go.microsoft.com/fwlink/?linkid=2304711). To learn more about how Microsoft approaches responsible AI for Security Copilot, see [Responsible AI FAQ](/copilot/security/rai-faqs-security-copilot?source=recommendations).
