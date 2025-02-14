@@ -60,7 +60,7 @@ First, you need to make note of the **Microsoft Entra tenant name** and **tenant
 
     - **Name**: A friendly name for the app. For example, `CMG-ServerApp`.
     - **Supported account types**: Leave this setting as the default option, **Accounts in this organizational directory only**.
-    - **Redirect URI**: Select: **Public client/native (mobile &desktop)** and type **http://localhost** as URI
+    - **Redirect URI**: Select: **Web** and type **http://localhost** as URI
 
 1. Select **Register** to create the app.
 
