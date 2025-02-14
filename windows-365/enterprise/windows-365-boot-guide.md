@@ -45,6 +45,7 @@ For more information about guided scenarios in general, see [Intune guided scena
 ## Prerequisites
 
 - Each physical device and Cloud PC must be running Windows 11 Enterprise or Professional, version 22621.3374 or later.
+- A Windows 365 Enterprise license is required to make Windows 365 Boot provisioning policies. 
 - You must have the Intune Service Administrator role.
 
 Before adding physical devices to the group, you must ensure that they meet the [Windows 365 Boot requirements](windows-365-boot-physical-device-requirements.md).
