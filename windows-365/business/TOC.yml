@@ -43,9 +43,3 @@ items:
       href: set-conditional-access-policies.md
     - name: Configure single sign-on
       href: configure-single-sign-on.md
-- name: Troubleshoot
-  items:
-  - name: Troubleshooting
-    href: troubleshoot-windows-365-business.md
-  - name: Known issues 
-    href: known-issues.md

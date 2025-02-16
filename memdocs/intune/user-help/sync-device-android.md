@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/01/2024
+ms.date: 02/06/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -44,7 +44,7 @@ To force a sync:
 3. Scroll down to **Management Policy** and tap **Sync**. Wait while Company Portal syncs your device. When complete, the screen shows the timestamp of the last successful sync.  
 
 ## Next steps  
-After you sync a device, you may receive notifications from Company Portal about updating its settings. Microsoft Learn offers how-to articles to help guide you through these updates. To find these articles, go to the table of contents and choose **Android device management** > **Update device settings**.  
+After you sync a device, you may receive notifications from Company Portal about updating its settings. Microsoft Learn offers how-to articles to help guide you through these updates. To find these articles, go to the table of contents and choose **Android device management** > **Update Android device settings**.  
 
 The Company Portal **Sync** feature is different from the **Check device settings** feature. The latter feature forces Company Portal to verify that your settings meet your organization's requirements. Whenever Company Portal prompts you to make changes to your settings, make the change and then select **Check device settings** to regain access to work or school apps. For more information about this feature, see [Check device compliance](check-compliance-on-your-device-android.md).   
 
