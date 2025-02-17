@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/15/2024
+ms.date: 02/13/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -230,20 +230,18 @@ If you want to remove devices from the Intune admin center, you can delete them 
 > * Depending on the device platform, it may retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](devices-wipe.md#retire) section for the expected behavior.
 > * BitLocker encryption is suspended if managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
 
-### Automatically delete devices with cleanup rules
+### Automatically remove devices with cleanup rules
 
-You can configure Intune to automatically remove devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices deleted in this way are removed from Intune management. This setting affects all devices managed by Intune, not just specific ones.
-
-When a device clean-up rule runs, it deletes the device from Intune. At that point, the device must go through a re-enrollment process in order for it to show up in the console.
+You can configure Intune to automatically remove devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices removed in this way are obfuscated and removed from Intune management. This setting affects all devices managed by Intune, not just specific ones.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Device cleanup rules** > **Yes**.
 3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
 4. Choose **Save**.
 
-If a removed device checks in before its device certification expires, it reappears in the admin center.
+When a device cleanup rule runs, it removes the device from Intune. This action doesn't trigger a Wipe or Retire action.
 
-The device clean-up rule doesn't trigger a wipe or retire.
+If a removed device checks-in before its device certification expires, it reappears in the admin center. Once the device certification expires, the device must go through a re-enrollment process for it to show up in the console.
 
 > [!IMPORTANT]
 > The device clean-up rule doesn't trigger a Bitlocker suspension when Bitlocker encryption is managed by Intune. To create a Bitlocker profile: [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
