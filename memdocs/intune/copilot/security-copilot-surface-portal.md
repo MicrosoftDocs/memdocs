@@ -92,7 +92,7 @@ Once you have set up Security Copilot, you can start using Copilot for Surface M
 
 **Sample prompts**:
 - Troubleshoot Surface devices.
-- List the end of service date for all Surface device models.
+- List all my Surface device models' end of service date.
 - Compare technical specifications of two Surface devices.
 - Generate a warranty coverage report for all devices.
 - What are the best practices for protecting Surface devices?
