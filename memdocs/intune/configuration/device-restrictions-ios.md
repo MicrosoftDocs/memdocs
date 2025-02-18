@@ -653,7 +653,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
     
   > [!NOTE]
   > - When there's a restricted app on the device, this setting reports as **Not compliant**.
-  > To prevent an app from running or being shown on iOS/iPadOS, create an [Intune settings catalog](settings-catalog.md) policy > **Restrictions** > **Allow Listed App Bundle IDs** or **Blocked App Bundle IDs** settings.
+  > - To prevent an app from running or being shown on iOS/iPadOS, create an [Intune settings catalog](settings-catalog.md) policy > **Restrictions** > **Allow Listed App Bundle IDs** or **Blocked App Bundle IDs** settings.
   
 To add apps to these lists, you can:
 
