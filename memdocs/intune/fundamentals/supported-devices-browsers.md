@@ -44,7 +44,10 @@ Intune supports devices running the following operating systems (OS):
 * Linux
 * macOS
 * Windows
-* Chrome OS  
+* Chrome OS
+
+> [!NOTE]
+> App protection policies are not supported on Chrome OS
 
 [!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
 

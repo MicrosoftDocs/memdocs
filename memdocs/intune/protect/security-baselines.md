@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/27/2025
+ms.date: 02/12/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,6 +85,7 @@ For example, the default settings for firewall configuration might not merge con
 The following security baseline instances are available for use with Intune. Use the links to view the settings for recent instances of each baseline.
 
 - **Security Baseline for Windows 10 and later**:  
+  - [Version 24H2](security-baseline-settings-mdm-all.md?pivots=mdm-24h2)
   - [Version 23H2](security-baseline-settings-mdm-all.md?pivots=mdm-23h2)
   - [November 2021](security-baseline-settings-mdm-all.md?pivots=november-2021)
   - [December 2020](security-baseline-settings-mdm-all.md?pivots=december-2020)
@@ -110,7 +111,7 @@ The following security baseline instances are available for use with Intune. Use
   - [Version 2306 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=v2023) *Released in November 2023*
   - [May 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=office-may-2023)
 
-- **Microsoft Edge Baseline**:  
+- **Microsoft Edge Baseline**:
   - [Microsoft Edge version 128](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v128) - January 2025
   - [Microsoft Edge version 117](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) - November 2023
   - [Microsoft Edge version 112 and later](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v112) - May 2023

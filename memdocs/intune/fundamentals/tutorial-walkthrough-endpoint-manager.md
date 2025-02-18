@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/07/2024
+ms.date: 02/04/2025
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -85,7 +85,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     The **Devices - Overview** pane provides device details, such as the following information:
     - **Manage devices by platform** - You can quickly see the number of devices that are managed for each platform. Selecting a platform allows you to see additional details.
-    - **Configuration policy assignment failures** - You can check wither you have any profiles with errors or conflicts. 
+    - **Configuration policy assignment failures** - You can check whether you have any profiles with errors or conflicts. 
     - **Noncompliant devices** - You can see a count of noncompliant devices for your tenant.
     - **Deployment status per Windows update ring** - You can see if there are any Windows device with update errors or conflicts.  
 
@@ -154,7 +154,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     For more information about adding and assigning apps, see [Add apps to Microsoft Intune](../apps/apps-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
 
-9. From the **Apps - Overview** pane, select **All apps** to see a list of apps that have been added to Intune.
+9. From the **Apps - Overview** pane, select **All Apps** to see a list of apps that have been added to Intune.
 
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Client apps** > **Apps**.
