@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/21/2025
+ms.date: 02/18/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -652,10 +652,8 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - **Approved apps**: List the apps that users are allowed to install. To stay compliant, users must not install other apps. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list. But if they do, it's reported in Intune.
     
   > [!NOTE]
-  > When there's a restricted app on the device, this setting reports as 'Not compliant'.
-  
-  > [!TIP]
-  > To prevent an app from running or being shown on iOS/iPadOS, use the Allow Listed App Bundle IDs or Block Listed App Bundle IDs restriction settings in the settings catalog.
+  > - When there's a restricted app on the device, this setting reports as **Not compliant**.
+  > To prevent an app from running or being shown on iOS/iPadOS, create an [Intune settings catalog](settings-catalog.md) policy > **Restrictions** > **Allow Listed App Bundle IDs** or **Blocked App Bundle IDs** settings.
   
 To add apps to these lists, you can:
 
