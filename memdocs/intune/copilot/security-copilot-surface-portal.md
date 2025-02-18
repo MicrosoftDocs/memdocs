@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/14/2025
+ms.date: 02/18/2025
 ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice:
@@ -36,7 +36,7 @@ ms.collection:
 
 Microsoft Security Copilot is a cloud-based AI platform that provides a natural language Copilot experience that can be used to provide information and resolve issues. [Surface Management Portal](/surface/surface-management-portal) provides a centralized platform to manage and monitor Surface devices at scale. Surface Management Portal integration with Microsoft Copilot for Security helps Surface device administrators be more efficient, and resolve hardware issues faster and at scale. 
 
-Copilot for Security provides visibility into your environment's warranty coverage landscape, and end-of-servicing timelines. Additionally, it offers insights into various aspects of device management, including compliance policies, malware protection, and other threats to reduce risks.
+Copilot for Surface Management Portal provides visibility into your environment's warranty coverage landscape, and end-of-servicing timelines. Additionally, it offers insights into various aspects of device management, including compliance policies, malware protection, and other threats to reduce risks.
 
 ## Know before you begin
 
