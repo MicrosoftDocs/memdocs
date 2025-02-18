@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2024
+ms.date: 02/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -118,7 +118,9 @@ If you want to apply settings on a device, regardless of who's signed in, then a
 
 For example:
 
-- Device groups are useful for managing devices that don't have a dedicated user. For example, you have devices that print tickets, scan inventory, are shared by shift workers, are assigned to a specific warehouse, and so on. Put these devices in a devices group (how? devices without associated users do show up to group - iOS), and assign your policies to this devices group.
+- Device groups are useful for managing devices that don't have a dedicated user. These devices can print tickets, scan inventory, be shared by shift workers & health workers, and so on. Put these devices in a devices group and assign your policies to this devices group.
+
+  For example, you can enroll userless iOS/iPadOS devices using [Shared iPad](../enrollment/device-enrollment-shared-ipad.md) or [Microsoft Entra Shared Device Mode](../enrollment/automated-device-enrollment-shared-device-mode.md). Then, add these devices to a devices group. When you're ready to assign policies, assign thee policies to this devices group.
 
 - You create a [Device Firmware Configuration Interface (DFCI) Intune profile](device-firmware-configuration-interface-windows.md) that updates settings in the BIOS. For example, you configure this policy to disable the device camera, or lock down the boot options to prevent users from booting up another OS. This policy is a good scenario to assign to a devices group.
 
