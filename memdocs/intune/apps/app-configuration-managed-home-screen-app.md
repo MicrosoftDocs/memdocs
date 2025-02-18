@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/16/2025
+ms.date: 02/10/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -100,7 +100,8 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Show brightness slider | bool | FALSE | Turn this setting to TRUE to allow end users to access a brightness slider to adjust the device screen brightness. | ❌ |
 | Show adaptive brightness toggle | bool | FALSE | Turn this setting to TRUE to allow end users to turn adaptive brightness on and off on the device. Adaptive brightness allows the device to select an optimal brightness based on ambient lighting.  | ❌ |
 | Show autorotate toggle | bool | FALSE | Turn this setting to TRUE to allow end users to access a toggle to turn on and off the device's autorotation setting. | ❌ |
-| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting menu. Accessible information includes device's make, model, serial number, and IPv4 and IPv6 details. On OS version 9 and newer, to let users see the device's serial number, ensure that **Show serial number for all supported OS version on MHS** is configured to display `{{SerialNumber}}`. MAC address details are available from the **Device Information** page of the Managed Home Screen (MHS) app. Use the MAC address when troubleshooting device connectivity issues. | ✔️ |
+| Show ringtone selector | bool | FALSE | The configuration key is `show_ringtone_selector` and the possible values are `True`, or `False`. `True` allows end users to access a menu to select a ringtone in MHS. `False` hides the ringtone selector.  | ❌ |
+| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting menu. Accessible information includes device's make, model, serial number, OS level, security patch, last reboot time and IPv4 and IPv6 details. On OS version 9 and newer, to let users see the device's serial number, ensure that **Show serial number for all supported OS version on MHS** is configured to display `{{SerialNumber}}`. MAC address details are available from the **Device Information** page of the Managed Home Screen (MHS) app. Use the MAC address when troubleshooting device connectivity issues. | ✔️ |
 | Show device's name on MHS | bool | FALSE | Turn this setting to True to easily view the device's Intune admin center "device name" property from the Managed Settings menu when **Show device info setting** is set to True. Make sure to also include the string property "Device's name," which is autopopulated by Intune with the correct value. | ❌ |
 | Show serial number for all supported OS version on MHS | choice | {{SerialNumber}} | Ensure that in-app config device_serial_number is configured to display {{SerialNumber}} when **Show device info setting** is set to True. This value is autopopulated by Intune with the correct value. | ❌ |
 | Show device name for all supported OS version on MHS | choice | {{DeviceName}} | Ensure that app configuration device name is configured to display `{{DeviceName}}`. This value is autopopulated by Intune with the correct value. | ❌ |
@@ -711,6 +712,10 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "virtual_app_switcher_type",
             "valueString": "float"
+        }
+        {
+            "key": "show_ringtone_selector",
+            "valueString": true
         }
     ]
 }
