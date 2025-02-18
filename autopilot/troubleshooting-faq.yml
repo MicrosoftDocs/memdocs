@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: madakeva
   manager: aaroncz
-  ms.date: 02/11/2025
+  ms.date: 02/18/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -467,12 +467,19 @@ sections:
       - question: |
           Why is the error "The MSA account couldn't be granted permission to create computer objects in the following OUs" occurring when installing the Intune Connector for Active Directory?
         answer: |
-          The administrator installing and configuring the Intune Connector for Active Directory doesn't have the required permissions as outlined in the Intune Connector for Active Directory requirements. For more information, see [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements) and [Install the Intune Connector for Active Directory on the server](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector-for-active-directory-on-the-server).
+          This error might occur for several different type of failures including:
+
+          - The administrator installing and configuring the Intune Connector for Active Directory doesn't have the required permissions as outlined in the [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
+          - The organization unit (OU) specified in the Intune Connector for Active Directory `ODJConnectorEnrollmentWiazard.exe.config` XML configuration file doesn't exist.
+
+          For detailed information on the error and what caused it, see the `ODJConnectorUI.log` normally located in the folder `C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard`.
+
+          For more information, see [Install the Intune Connector for Active Directory on the server](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector-for-active-directory-on-the-server).
 
       - question: |
           Why did enrollments start failing when using the Intune Connector for Active Directory?
         answer: |
-          Make sure that the Intune Connector for Active Directory is updated to version **6.2407.2000.8** or later and that the legacy version isn't still being used. For more information, see [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
+          Make sure that the Intune Connector for Active Directory is updated to version **6.2501.2000.5** or later and that the legacy version isn't still being used. For more information, see [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
 
 
 additionalContent: |
