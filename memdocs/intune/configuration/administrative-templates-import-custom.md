@@ -164,6 +164,9 @@ When the import completes, your ADMX templates are shown in the list. You can al
 
 10. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
+> [!NOTE]
+> RBAC administrators will need "Device configurations/Delete" permission in order to modify or update an ADMX policy with "Not Configured" setting.
+
 ## Replace existing ADMX files
 
 If you upload an ADMX file with settings that are already imported, then the upload fails.

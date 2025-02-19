@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 02/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,7 +16,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
  
-ms.reviewer: mattcall
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -105,7 +105,7 @@ The information in this report can help identify applications on a per-user basi
 
 In addition to the dedicated reports, you can view basic details about EPM policies from the Policies tab of the Endpoint Privilege Management node. This node is the same location in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) where you create policies for EPM: In the admin center, go to **Endpoint security** > **Endpoint Privilege Management**, and select the **Policies** node.
 
-## Next steps
+## Related content
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
