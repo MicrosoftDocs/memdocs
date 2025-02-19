@@ -180,7 +180,7 @@ In the `info.plist` for the Xcode app project, confirm the following settings:
 
   1. Using the **Intune App SDK for iOS** ([a required prerequisite](#prerequisites)), create an `info.plist` **Array** property and name it **Queried URL Schemes**.
 
-      Add the string items listed in the [Intune App SDK for iOS developer guide – Step 5](app-sdk-ios.md#build-the-sdk-into-your-mobile-app). This step creates the Intune MAM SDK URL schemes.
+      Add the string items listed in the [Intune App SDK for iOS developer guide – Step 5](app-sdk-ios-phase5.md). This step creates the Intune MAM SDK URL schemes.
   
       The following example shows the info.plist using **Queried URL Schemes**:
 
@@ -203,7 +203,7 @@ In the `info.plist` for the Xcode app project, confirm the following settings:
 
   When you integrated the **Intune App SDK for iOS** with your app project ([a required prerequisite](#prerequisites)), these settings should have been configured.
 
-  **If these settings aren't configured**, then you need to configure them. To create the IntuneMAMSettings `info.plist` Dictionary property and associated Microsoft Authentication Library strings, follow the **Intune App SDK for iOS** ([a required prerequisite](#prerequisites)) developer guide at [Configure MSAL settings for Intune App SDK](app-sdk-ios.md#configure-msal-settings-for-the-intune-app-sdk) guidance.
+  **If these settings aren't configured**, then you need to configure them. To create the IntuneMAMSettings `info.plist` Dictionary property and associated Microsoft Authentication Library strings, follow the **Intune App SDK for iOS** ([a required prerequisite](#prerequisites)) developer guide at [Configure MSAL settings for Intune App SDK](app-sdk-ios-phase2.md).
 
   The following example shows these values configured:
 

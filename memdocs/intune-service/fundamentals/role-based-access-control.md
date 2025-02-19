@@ -66,7 +66,7 @@ You can assign built-in roles to groups without further configuration. You can't
 - **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.
 - **Organizational Messages Manager**: Manages organizational messages in Intune console.
 - **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
-- **School Administrator**: Manages Windows 10 devices in [Intune for Education](introduction-intune-education.md).
+- **School Administrator**: Manages Windows 10 devices in [Intune for Education](../industry/education/introduction-intune-education.md).
 - **Cloud PC Administrator**: A Cloud PC Administrator has read and write access to all Cloud PC features located within the Cloud PC area.
 - **Cloud PC Reader**: A Cloud PC Reader has read access to all Cloud PC features located within the Cloud PC area.
 

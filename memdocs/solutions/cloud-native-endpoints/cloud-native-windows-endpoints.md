@@ -725,7 +725,7 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 - [Co-management for Windows devices](../../configmgr/comanage/overview.md)
 - [Windows Subscription Activation](/windows/deployment/windows-10-subscription-activation)
 - Configure an Intune [device compliance policy](../../intune-service/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on a Microsoft Entra [Conditional Access policy](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
-- Add [Store Apps](../../intune-service/apps/windows-store-for-business.md)
+- Add [Store Apps](../../intune-service/apps/store-apps-microsoft.md)
 - Add [Win32 apps](../../intune-service/apps/apps-win32-app-management.md)
 - [Use certificates for authentication in Intune](../../intune-service/protect/certificates-configure.md)
 - Deploy network profiles, including [VPN](../../intune-service/configuration/vpn-settings-windows-10.md) and [Wi-Fi](../../intune-service/configuration/wi-fi-settings-windows.md)

@@ -32,7 +32,7 @@ ms.collection:
 
 On Windows devices, use Intune to run devices as a kiosk, sometimes known as a dedicated device. A device in kiosk mode can run one app, or run many apps. You can show and customize a start menu, add different apps, including Win32 apps, add a specific home page to a web browser, and more.
 
-This scenario is common for frontline workers (FLW). For more information on FLW devices in Microsoft Intune, go to [FLW device management for devices in Microsoft Intune](../fundamentals/frontline-worker-overview.md).
+This scenario is common for frontline workers (FLW). For more information on FLW devices in Microsoft Intune, go to [FLW device management for devices in Microsoft Intune](../../solutions/frontline-worker/frontline-worker-overview.md).
 
 This feature applies to:
 

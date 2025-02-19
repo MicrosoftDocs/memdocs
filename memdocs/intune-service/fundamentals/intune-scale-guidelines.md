@@ -261,7 +261,7 @@ In this section:
 
 - Grant local admins the permissions to read Autopilot devices and upload new Autopilot devices.
 - Local admins shouldn't create Autopilot profiles. When you delegate to a large number of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area.
-For more information on Autopilot, go to [Use Autopilot to enroll Windows devices in Intune](../enrollment/tutorial-use-autopilot-enroll-devices.md).
+For more information on Autopilot, go to [Use Autopilot to enroll Windows devices in Intune](/autopilot/tutorial/autopilot-scenarios).
 
 #### Enrollment status page
 

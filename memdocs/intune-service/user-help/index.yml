@@ -44,7 +44,7 @@ landingContent:
     - linkListType: overview
       links:
       - text: About Windows device enrollment  
-        url: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md
+        url: device-enrollment-overview-windows.md
     - linkListType: how-to-guide
       links:
       - text: Enroll Windows 10/11 device 
@@ -66,7 +66,7 @@ landingContent:
       - text: Sync device 
         url: sync-your-device-manually-ios.md
       - text: Set device passcode  
-        url: set-or-change-your-passcode-ios.md
+        url: password-does-not-meet-it-administrator-requirements.md
       - text: Remove Company Portal from iOS/iPadOS device 
         url: unenroll-your-device-from-intune-ios.md 
     - linkListType: concept
@@ -126,9 +126,9 @@ landingContent:
       - text: Install mobile threat defense app 
         url: set-up-mobile-threat-defense.md 
       - text: Turn off USB debugging (Android)
-        url: you-need-to-turn-off-usb-debugging-android.md
+        url: update-device-settings-android.md
       - text: Turn on Windows Defender (Windows 10/11)
-        url: turn-on-defender-windows.md
+        url: update-device-settings-windows.md
     - linkListType: concept
       links:
       - text: Learn about device password requirements   

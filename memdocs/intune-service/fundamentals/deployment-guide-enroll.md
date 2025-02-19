@@ -178,9 +178,9 @@ Enroll new or wiped devices purchased from Apple Business Manager or Apple Schoo
 
 * [BYOD enrollment for Macs](../enrollment/macos-enroll.md): Enable enrollment in Intune for personally owned Macs in bring-your-own-device (BYOD) scenarios. Intune-licensed device users initialize enrollment by signing into the Company Portal app on their device.  
 
-* [Apple User Enrollment](../enrollment/ios-user-enrollment.md): Enable Apple User Enrollment for personally owned iOS/iPadOS devices in BYOD scenarios. This option gives device owners the option to secure the entire device or just work-related apps and data, and keeps managed data and apps on a separate volume away from the user's personal data. Enrollment takes place in the Company Portal app.   
+* [Apple User Enrollment](../enrollment/apple-user-enrollment-with-company-portal.md): Enable Apple User Enrollment for personally owned iOS/iPadOS devices in BYOD scenarios. This option gives device owners the option to secure the entire device or just work-related apps and data, and keeps managed data and apps on a separate volume away from the user's personal data. Enrollment takes place in the Company Portal app.   
 
-* [Apple Device Enrollment](../enrollment/ios-user-enrollment.md): Enable Apple Device Enrollment for personally owned iOS/iPadOS devices in BYOD scenarios. This method gives you more control over device configuration settings than User Enrollment. For example, you can apply more granular requirements for passcodes. 
+* [Apple Device Enrollment](../enrollment/apple-user-enrollment-with-company-portal.md): Enable Apple Device Enrollment for personally owned iOS/iPadOS devices in BYOD scenarios. This method gives you more control over device configuration settings than User Enrollment. For example, you can apply more granular requirements for passcodes. 
 
 --- 
 ## Enrollment for Linux  

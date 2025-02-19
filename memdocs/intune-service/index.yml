@@ -256,7 +256,7 @@ conceptualContent:
         - url: ./fundamentals/intune-add-ons.md
           itemType: how-to-guide
           text: Use Intune Suite add-on capabilities
-        - url: ./remote-actions/remote-help.md
+        - url: ./fundamentals/remote-help.md
           itemType: how-to-guide
           text: Remote help
         - url: ./protect/microsoft-tunnel-mam.md
@@ -355,7 +355,7 @@ conceptualContent:
 
     - title: Education
       links:
-        - url: ./fundamentals/introduction-intune-education.md
+        - url: ./industry/education/introduction-intune-education.md
           itemType: how-to-guide
           text: What is Intune for Education?
         - url: /intune-education/

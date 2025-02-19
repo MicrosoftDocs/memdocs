@@ -126,7 +126,7 @@ By default, Intune classifies iOS/iPadOS devices as personally owned. To be clas
 - Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program).
 
 > [!NOTE]
-> An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).  
+> An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](apple-user-enrollment-with-company-portal.md).  
 
 #### Blocking personal Macs  
 By default, Intune classifies macOS devices as personally owned. To be classified as corporate-owned, a Mac must fulfill one of the following conditions:

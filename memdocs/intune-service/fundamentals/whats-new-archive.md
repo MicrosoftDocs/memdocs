@@ -1896,7 +1896,7 @@ Flip the toggle in the Microsoft Intune admin center to try out the new experien
 For more information, see:
 
 - [New Microsoft Intune Devices experience - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-devices-experience/ba-p/3777342)
-- [Try new Devices experience - Microsoft Learn](microsoft-intune-admin-center-devices.md)
+- [Try new Devices experience - Microsoft Learn](public-preview.md)
 
 ### Device security
 
@@ -3439,7 +3439,7 @@ Other features and functionality added in this release include:
 - Edit the details of a scheduled message.
 
 Scope tags were previously unavailable for organizational messages. With the addition of scope tag support, Intune adds the default scope tag to every message created before June 2023. Admins that want access to those messages must be associated with a role that has the same tag. For more information about available features and how to set up organizational messages, see
-[Overview of organizational messages](../remote-actions/organizational-messages-overview.md).
+[Overview of organizational messages](/microsoft-365/admin/misc/organizational-messages-microsoft-365).
 
 ## Week of May 22, 2023 (Service release 2305)
 
@@ -3556,7 +3556,7 @@ Applies to:
 #### Renaming Proactive remediation to Remediations and moving to a new location<!-- 16526263  -->  
 Proactive remediations are now Remediations and are available from **Devices** > **Remediations**. You can still find Remediations in both the new location and the existing **Reports** > **Endpoint Analytics** location until the next Intune service update.
 
-Remediations are currently not available in the new [Devices experience preview](microsoft-intune-admin-center-devices.md).
+Remediations are currently not available in the new [Devices experience preview](public-preview.md).
 
 Applies to:
 
@@ -3840,7 +3840,7 @@ The **Update organizational message control** RBAC permission for organizational
 Existing custom roles for managing Organizational Messages must be modified to add this permission for users to modify this setting.
 
 - For more information, about role-based access control (RBAC), see [RBAC with Microsoft Intune](role-based-access-control.md).
-- For more information, about prerequisites for organization messages, see [Organizational messages prerequisites](../remote-actions/organizational-messages-prerequisites.md#role-based-access-control-requirements).
+- For more information, about prerequisites for organization messages, see [Organizational messages prerequisites](/microsoft-365/admin/misc/organizational-messages-microsoft-365#role-based-access-control-requirements).
 
 ### Device management
 
@@ -3957,12 +3957,12 @@ The **Assign** RBAC permissions for organizational messages determines who can a
 This permission is also added to the **Organizational Messages Manager** built-in role.  Existing custom roles for managing Organizational Messages must be modified to add this permission for users to modify this setting.
 
 - For more information, about role-based access control (RBAC), see [RBAC with Microsoft Intune](role-based-access-control.md).
-- For more information, about prerequisites for organization messages, see [Organizational messages prerequisites](../remote-actions/organizational-messages-prerequisites.md#role-based-access-control-requirements).
+- For more information, about prerequisites for organization messages, see [Organizational messages prerequisites](/microsoft-365/admin/misc/organizational-messages-microsoft-365#role-based-access-control-requirements).
 
 ### Tenant administration
 
 #### Delete organizational messages<!-- 15273028  -->  
-You can now delete organizational messages from Microsoft Intune.  After you delete a message, it's removed from Intune, and no longer appears in the admin center. You can delete a message anytime, regardless of its status. Intune automatically cancels active messages after you delete them. For more information, see [Delete organizational messages](../remote-actions/organizational-messages-cancel.md#delete-message).  
+You can now delete organizational messages from Microsoft Intune.  After you delete a message, it's removed from Intune, and no longer appears in the admin center. You can delete a message anytime, regardless of its status. Intune automatically cancels active messages after you delete them. For more information, see [Delete organizational messages](/microsoft-365/admin/misc/organizational-messages-microsoft-365#delete-message).  
 
 #### Review audit logs for organizational messages<!-- 16576073 -->  
 Use audit logs to track and monitor organizational message events in Microsoft Intune. To access the logs, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Audit logs**. For more information, see [Audit logs for Intune activities](monitor-audit-logs.md#view-the-audit-logs).  
@@ -4159,7 +4159,7 @@ The Devices area in the admin center now has a more consistent UI, with more cap
 * Monitoring and reports are within the management workflows, giving you easy access to key metrics and reports without having to leave the workflow.
 * A consistent way across list views to search, sort, and filter data.
 
-For more information about the updated UI, see [Try new Devices experience in Microsoft Intune](microsoft-intune-admin-center-devices.md).
+For more information about the updated UI, see [Try new Devices experience in Microsoft Intune](public-preview.md).
 
 ### Device security
 
@@ -4206,7 +4206,7 @@ We've added two more states to organizational message reporting details to make 
 - **Pending**: The message hasn't been scheduled yet and is currently in progress.
 - **Failed**: The message failed to schedule due to a service error.
 
-For information about reporting details, see [View reporting details for organizational messages](../remote-actions/organizational-messages-reporting.md).  
+For information about reporting details, see [View reporting details for organizational messages](/microsoft-365/admin/misc/organizational-messages-microsoft-365).  
 
 
 #### More reporting information related to tenant attach devices<!-- 9220597  -->  
@@ -4317,7 +4317,7 @@ Applies to:
 
 #### Organizational messages now support custom destination URLs <!-- 16576068  -->
 
-You can now add any custom destination URL to organizational messages in the taskbar, notifications area, and Get Started app. This feature applies to Windows 11. Messages created with Microsoft Entra registered domains that are in a scheduled or active state are still supported. For more information, see [Create organizational messages](../remote-actions/organizational-messages-create.md?tabs=taskbar#step-1-create-a-message). 
+You can now add any custom destination URL to organizational messages in the taskbar, notifications area, and Get Started app. This feature applies to Windows 11. Messages created with Microsoft Entra registered domains that are in a scheduled or active state are still supported. For more information, see [Create organizational messages](/microsoft-365/admin/misc/organizational-messages-microsoft-365?tabs=taskbar#step-1-create-a-message). 
 
 ## Week of February 20, 2023 (Service release 2302)
 
@@ -5062,7 +5062,7 @@ During public preview, you can:
 * Cancel scheduled or active messages.  
 * Configure a new built-in role in Intune called *Organizational Messages Manager*, which allows assigned admins to view and configure messages.  
 
-All configurations need to be done in the Microsoft Intune admin center. The Microsoft Graph API isn't available to use with organizational messages. For more information, see [Overview of organizational messages](../remote-actions/organizational-messages-overview.md).
+All configurations need to be done in the Microsoft Intune admin center. The Microsoft Graph API isn't available to use with organizational messages. For more information, see [Overview of organizational messages](/microsoft-365/admin/misc/organizational-messages-microsoft-365).
 
 ## Week of November 7, 2022
 
@@ -5703,7 +5703,7 @@ Applies to:
 - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 #### iOS/iPadOS settings catalog supports declarative device management (DDM)<!-- 15016105 -->
-On iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/ios-user-enrollment.md), the settings catalog automatically uses Apple's declarative device management (DDM) when configuring settings.
+On iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/apple-user-enrollment-with-company-portal.md), the settings catalog automatically uses Apple's declarative device management (DDM) when configuring settings.
 - No action is required to use DDM. The feature is built into the settings catalog.
 - There's no impact to existing policies in the settings catalog.
 - iOS/iPadOS devices that aren't enabled for DDM continue to use Apple's standard MDM protocol.

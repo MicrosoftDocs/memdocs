@@ -104,7 +104,7 @@ To unenroll the device, see [Remove your Windows device from management](../user
 ## Next steps
 
 In this task, you learned how to enroll a device running Windows 10/11 into Intune. For more information about the device user experience, see these resources:
- * [Windows device enrollment with Intune Company Portal](../user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)  
+ * [Windows device enrollment with Intune Company Portal](../user-help/device-enrollment-overview-windows.md)  
  * [What info can your company see when you enroll your device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)    
 
 To continue to evaluate Microsoft Intune, go to the next step:  
