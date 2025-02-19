@@ -39,7 +39,7 @@ End users need the Microsoft Authenticator (iOS) to register their device, and t
 
 Optionally, you can use Intune to add and deploy the Microsoft Authenticator, and Mobile Threat Defense (MTD) apps as well.
 
-[!INCLUDE [mtd-mam-note](../../intune/protect/includes/mtd-mam-note.md)]
+[!INCLUDE [mtd-mam-note](../../intune-service/protect/includes/mtd-mam-note.md)]
 >
 > For unenrolled devices, you **do not need an iOS app configuration policy** that sets up the Mobile Threat Defense for iOS app you use with Intune. This is a key difference compared to Intune enrolled devices.
 

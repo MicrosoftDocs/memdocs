@@ -169,15 +169,15 @@ Microsoft Entra Join endpoints can access on-premises resources, and can use sin
 
 Microsoft Intune, which is a 100% cloud solution, can manage Windows client devices that are Microsoft Entra Join or Hybrid Microsoft Entra Join. Intune has many built-in features and settings that can manage settings, control device features, help secure your endpoints, and more.
 
-The [High level planning guide to move to cloud-native endpoints: Intune features you should know](cloud-native-endpoints-planning-guide.md#intune-features-you-should-know) lists some of these features. [What is Intune](../../intune/fundamentals/what-is-intune.md) is also a good resource.
+The [High level planning guide to move to cloud-native endpoints: Intune features you should know](cloud-native-endpoints-planning-guide.md#intune-features-you-should-know) lists some of these features. [What is Intune](../../intune-service/fundamentals/what-is-intune.md) is also a good resource.
 
 On Hybrid Microsoft Entra Join endpoints, you can use on-premises group policies objects (GPO) or Intune to control policy settings. It's possible to also use a combination of GPO and Intune, but this combination adds administrative overhead and complexity. If you enable [co-management](../../configmgr/comanage/overview.md) (Intune (cloud) + Configuration Manager (on-premises)), then you can use some Microsoft Entra features, such as Conditional Access.
 
-For some guidance, go to [Deployment guide: Setup or move to Microsoft Intune](../../intune/fundamentals/deployment-guide-intune-setup.md).
+For some guidance, go to [Deployment guide: Setup or move to Microsoft Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md).
 
 #### What device join states are required for device compliance and/or Conditional Access?
 
-Both Hybrid Microsoft Entra Join and Microsoft Entra Join endpoints support [compliance policies](../../intune/protect/device-compliance-get-started.md) and [Conditional Access](../../intune/protect/conditional-access.md) when managed by Intune or co-managed by Intune and Configuration Manager.
+Both Hybrid Microsoft Entra Join and Microsoft Entra Join endpoints support [compliance policies](../../intune-service/protect/device-compliance-get-started.md) and [Conditional Access](../../intune-service/protect/conditional-access.md) when managed by Intune or co-managed by Intune and Configuration Manager.
 
 #### Are there limitations for Hybrid Microsoft Entra Join?
 

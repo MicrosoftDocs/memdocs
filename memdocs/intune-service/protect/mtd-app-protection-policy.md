@@ -35,7 +35,7 @@ ms.collection:
 
 Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk on mobile and Windows devices. You can create an Intune app protection policy that assesses risk to determine if the application is allowed to access corporate data or not.
 
-[!INCLUDE [mtd-mam-note](../../intune/protect/includes/mtd-mam-note.md)]
+[!INCLUDE [mtd-mam-note](../../intune-service/protect/includes/mtd-mam-note.md)]
 
 ## Before you begin
 

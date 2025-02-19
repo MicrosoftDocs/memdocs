@@ -29,7 +29,7 @@ To take full advantage of new Configuration Manager features, after you update t
 ### Use Intune role-based access control (RBAC) for tenant attached devices 
 <!--8126836, 6415648, 8348644, IN14996522, 13058986-->
 
-You can now use Intune role-based access control (RBAC) when interacting with tenant attached devices from the Microsoft Intune admin center. For example, when using Intune as the role-based access control authority, a user with Intune's [Help Desk Operator role](../../../../intune/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. For more information, see [Intune role-based access control for tenant attached clients](../../../cloud-attach/use-intune-rbac.md).
+You can now use Intune role-based access control (RBAC) when interacting with tenant attached devices from the Microsoft Intune admin center. For example, when using Intune as the role-based access control authority, a user with Intune's [Help Desk Operator role](../../../../intune-service/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. For more information, see [Intune role-based access control for tenant attached clients](../../../cloud-attach/use-intune-rbac.md).
 
 ### Enhanced security for Configuration Manager administration service
 <!--12952905-->

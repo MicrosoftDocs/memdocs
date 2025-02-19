@@ -28,7 +28,7 @@ You can view the status of [Windows 10 Device Health Attestation](/windows/secur
 
 - *Code Integrity* improves OS security by validating the integrity of a driver or system file each time it's loaded into memory. For more information, see [Enable virtualization-based protection of code integrity](/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity).
 
-This functionality is available for on-premises resources managed by Configuration Manager and [mobile devices managed with Microsoft Intune](../../../../intune/protect/compliance-policy-create-windows.md#device-health). You can specify whether reporting is done via the cloud or on-premises infrastructure. On-premises device health attestation monitoring enables you to monitor client PCs without internet access.
+This functionality is available for on-premises resources managed by Configuration Manager and [mobile devices managed with Microsoft Intune](../../../../intune-service/protect/compliance-policy-create-windows.md#device-health). You can specify whether reporting is done via the cloud or on-premises infrastructure. On-premises device health attestation monitoring enables you to monitor client PCs without internet access.
 
 ## Enable health attestation
 

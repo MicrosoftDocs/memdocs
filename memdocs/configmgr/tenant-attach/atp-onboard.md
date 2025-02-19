@@ -23,7 +23,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 <!--Adding Include for Prerequisites-->
 
 [!INCLUDE [Prerequisites for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-prerequisties.md)]
-- [Microsoft Intune and Microsoft Defender for Endpoint integration enabled](../../intune/protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune)
+- [Microsoft Intune and Microsoft Defender for Endpoint integration enabled](../../intune-service/protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune)
 - Client which meets the minimum requirements for, and is onboarded to [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).<!--Adding MDE License Requirement & MAX 6198973-->
 
 ## <a name="bkmk_onboard"></a> Create Microsoft Defender for Endpoint policies

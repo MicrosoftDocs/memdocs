@@ -39,7 +39,7 @@ The administrative user needs the following permissions:
 
   - **Read BitLocker Recovery Key**
 
-- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user
+- An [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned to the user
 
 ## View recovery keys
 

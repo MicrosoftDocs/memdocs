@@ -35,7 +35,7 @@ ms.collection:
 
 During Mobile Threat Defense (MTD) setup, you've configured a policy for classifying threats in your Mobile Threat Defense partner console and you've created the app protection policy in Intune. If you've already configured the Intune connector in the MTD partner console, you can now enable the MTD connection for MTD partner applications.
 
-[!INCLUDE [mtd-mam-note](../../intune/protect/includes/mtd-mam-note.md)]
+[!INCLUDE [mtd-mam-note](../../intune-service/protect/includes/mtd-mam-note.md)]
 
 ## Classic Conditional Access policies for Mobile Threat Defense (MTD) apps
 

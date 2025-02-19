@@ -34,4 +34,4 @@ You want your users to securely access your organization's resources. Protect bo
 
 - Protect data stored on on-premises Windows clients with BitLocker Drive Encryption (BDE). Configuration Manager provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM). For more information, see [Plan for BitLocker management](../plan-design/bitlocker-management.md).
 
-Use other components of Microsoft Intune to protect your devices. For more information, see [Protect devices with Microsoft Intune](../../../intune/protect/device-protect.md).
+Use other components of Microsoft Intune to protect your devices. For more information, see [Protect devices with Microsoft Intune](../../../intune-service/protect/device-protect.md).

@@ -41,7 +41,7 @@ The user account needs the following permissions:
    - Apply the permission to both targeted device collections and targeted user collections.
 - The **Read** permission for **Application** in Configuration Manager.
 - The **Approve** permission for **Application** in Configuration Manager.
-- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
+- An [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
 ## Application status
 
