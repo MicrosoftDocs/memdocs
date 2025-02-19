@@ -777,7 +777,7 @@
     },
     {
       "source_path": "memdocs/intune/user-help/troubleshoot-your-device-iOS.md",
-      "redirect_url": "/mem/intune-service/user-help/send-errors-to-your-it-admin-ios",
+      "redirect_url": "/mem/intune-service/user-help/send-logs-to-microsoft-ios",
       "redirect_document_id": true
     },
     {
