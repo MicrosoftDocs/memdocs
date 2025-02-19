@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/20/2023
+ms.date: 02/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ Microsoft can collect event data, and provide recommendations to improve perform
 
 In Intune, you can create a Windows Health Monitoring device configuration profile to enable this data collection, and then deploy this profile to your devices.
 
-Use this profile as part of your mobile device management (MDM) solution to optimize your Windows devices.
+To help optimize your Windows devices, use this profile as part of your mobile device management (MDM) solution.
 
 This feature applies to:
 
@@ -46,6 +46,7 @@ This article shows you how to create the profile, and enable the monitoring.
 
 - Endpoint Analytics has its own prerequisites. For more information, including enrollment requirements, go to [What is Endpoint analytics?](../../analytics/overview.md).
 - If you use co-management, then to use this profile, the Device Configuration workload must be in Intune. For more information on these features, go to [What is co-management?](../../configmgr/comanage/overview.md) and [Switch Configuration Manager workloads to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Create the profile
 
@@ -79,8 +80,9 @@ This article shows you how to create the profile, and enable the monitoring.
 
       [DeviceHealthMonitoring/AllowDeviceHealthMonitoring CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#allowdevicehealthmonitoring)
 
-    - **Scope**: Choose the event information you want collected and evaluated. Your options:
+    - **Scope**: Choose the event information you want collected and evaluated. Your option:
       - **Endpoint analytics**
+
       [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#configdevicehealthmonitoringscope)
 
 8. Select **Next**.
