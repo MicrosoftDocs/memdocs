@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2023
+ms.date: 02/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,9 +32,16 @@ ms.collection:
 
 Microsoft Intune includes different email settings you can deploy to devices in your organization. Email device configuration profiles include the connection settings used by your email app to access organization email.
 
-Most platforms have a native or built-in email app on the device. Using Intune, you can configure the built-in email app or deploy other email apps that connect to your email system, like Microsoft Exchange. End users then connect, authenticate, and synchronize their organizational email accounts on their devices.
+Configuring email settings in Intune is a two-step process. First, you deploy the email app, and then you create and deploy the email profile.
 
-By creating and deploying an email profile, you can confirm settings are standard across many devices. And, help reduce support calls from end users who don't know the correct email settings.
+Most platforms have a native or built-in email app on the device. Using Intune, you can configure the built-in email app or deploy other email apps that connect to your email system, like Microsoft Exchange. In another Intune profile, you add your email system settings, like an email server name and authentication method.
+
+When the policies are ready, you assign them to your users and groups. Once assigned, your users get access to your organization's email without configuring it themselves.
+
+When you configure the email settings using Intune, you:
+
+- Confirm settings are standard across many devices.
+- Reduce support calls from end users who don't know the correct email settings.
 
 You can use email profiles to configure email settings for the following devices:
 
@@ -47,7 +54,7 @@ You can use email profiles to configure email settings for the following devices
 
 This article shows you how to create an email profile in Microsoft Intune. It also includes links to the different platforms for more specific settings.
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Before you begin
 
@@ -55,7 +62,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
 - Email is based on identity and user settings. Email profiles are typically assigned to user groups, not device groups. Some considerations:
 
-  - If the email profile includes user certificates, then assign the email profile to user groups. You can have multiple user certificate profiles that are assigned. These multiple profiles create a chain of profile deployments. Deploy this profile chain to user groups.
+  - If the email profile includes user certificates, then assign the email profile to user groups. You can assign multiple user certificate profiles. These multiple profiles create a chain of profile deployments. Deploy this profile chain to user groups.
 
     If one profile in this chain is deployed to a device group, users can be continuously prompted to enter their password.
 
@@ -72,7 +79,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
 On user devices, you decide the email apps that can connect to and access organization email. You also need to determine the email apps your organization allows, and then deploy the email app to your users.
 
-After the email app is deployed, then you can create and deploy an email device configuration profile, if the profile is needed. Depending on the platform and email app you choose, you can use an app configuration policy **or** an email device configuration profile to preconfigure the email app with your organization settings.
+After the email app is deployed, then you can create and deploy an email device configuration profile, if the email profile is needed. Depending on the platform and email app you choose, you can use an app configuration policy **or** an email device configuration profile to preconfigure the email app with your organization settings.
 
 This section describes some of the common email apps you can use, and the policy or profile type you can use for each platform.
 
@@ -159,10 +166,10 @@ After the app is deployed and installed:
 
 For more information on app configuration policies, go to:
 
-- [App configuration policies in Microsoft Intune](../apps/app-configuration-policies-overview.md)
+- [Learn about app configuration policies in Microsoft Intune](../apps/app-configuration-policies-overview.md)
 - [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md)
 - [Manage messaging collaboration access by using Outlook for iOS and Android with Microsoft Intune](../apps/app-configuration-policies-outlook.md)
-- [Deploying Outlook for iOS and Android app configuration settings in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Deploy Outlook for iOS and Android app configuration settings in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 > [!TIP]
 > When you create an app configuration policy, you select the enrollment type – **Managed devices** or **Managed apps**. Be sure you know what to choose.
@@ -217,9 +224,9 @@ After the app is deployed and installed:
 
 For more information on app configuration policies, go to:
 
-- [App configuration policies in Microsoft Intune](../apps/app-configuration-policies-overview.md)
+- [Learn about app configuration policies in Microsoft Intune](../apps/app-configuration-policies-overview.md)
 - [Add app configuration policies for managed iOS/iPadOS devices](../apps/app-configuration-policies-use-ios.md)
-- [Deploying Outlook for iOS and Android app configuration settings in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Deploy Outlook for iOS and Android app configuration settings in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 > [!TIP]
 > When you create an app configuration policy, you select the enrollment type – **Managed devices** or **Managed apps**. Be sure you know what to choose.
@@ -270,7 +277,7 @@ After the app is deployed and installed:
 
 ---
 
-## Step 2 - Create the profile
+## Step 2 - Create the email profile
 
 After the email app is assigned to the device, this next step creates the device configuration policy that configures the email connection. If your email app uses an app configuration policy to configure the app, then skip this step.
 
@@ -303,7 +310,7 @@ After the email app is assigned to the device, this next step creates the device
     - [Windows 10/11](email-settings-windows-10.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -351,6 +358,6 @@ If the user already configured an email account, then the email profile is assig
 
 If you make changes to an email profile you previously assigned, end users might see a message asking them to approve the reconfiguration of their email settings.
 
-## Next steps
+## Related articles
 
-Once the profile is created, it isn't doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+Once the profile is created, it might not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).

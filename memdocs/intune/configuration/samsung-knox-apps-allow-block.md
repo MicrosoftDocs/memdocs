@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2024
+ms.date: 02/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -50,7 +50,7 @@ These settings are only used on devices that run Samsung Knox Standard.
 
 ## Create an allowed or blocked app list
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -69,7 +69,7 @@ These settings are only used on devices that run Samsung Knox Standard.
     For a list of apps that are blocked from running on the device:
 
     - **Name**: Enter **PreventStartPackages**.
-    - **Description**: Enter a description that gives an overview of the setting, and any other relevant information to help you locate the profile. For example, enter **List of apps that are blocked from running**.
+    - **Description**: Enter a description that gives an overview of the setting, and any other relevant information that can help you locate the profile. For example, enter **List of apps that are blocked from running**.
     - **OMA-URI** (case sensitive): Enter `./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages`.
     - **Data type**: Select **String**.
     - **Value**: Enter a list of the app package names you want to block. You can use `;`, `:`, or `|` as a delimiter. For example, enter `package1;package2;`.
@@ -77,13 +77,13 @@ These settings are only used on devices that run Samsung Knox Standard.
     For a list of apps that users are allowed to install from the Google Play store while excluding all other apps:
 
     - **Name**: Enter **AllowInstallPackages**.
-    - **Description**: Enter a description that gives an overview of the setting, and any other relevant information to help you locate the profile. For example, enter **List of apps that users can install from Google Play**.
+    - **Description**: Enter a description that gives an overview of the setting, and any other relevant information that can help you locate the profile. For example, enter **List of apps that users can install from Google Play**.
     - **OMA-URI** (case sensitive): Enter `./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages`.
     - **Data type**: Select **String**.
     - **Value**: Enter a list of the app package names you want to allow. You can use `;`, `:`, or `|` as a delimiter. For example, enter `package1;package2;`.
 
 8. **Save** your changes > **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -98,6 +98,6 @@ These settings are only used on devices that run Samsung Knox Standard.
 
 The next time each targeted device checks in, the app settings are applied.
 
-## Resources
+## Related articles
 
 The profile is created, but might not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
