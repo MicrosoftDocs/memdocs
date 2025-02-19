@@ -71,7 +71,7 @@ To change this key value, use the Windows Configuration Designer (WCD) tool to c
 
 For more information, see [Cortana voice support](/windows-hardware/customize/desktop/cortana-voice-support).
 
-[!INCLUDE [cortana-app-deprecation](../memdocs/intune/includes/cortana-app-deprecation.md)]
+[!INCLUDE [cortana-app-deprecation](../memdocs/intune-service/includes/cortana-app-deprecation.md)]
 
 ### BitLocker encryption
 
