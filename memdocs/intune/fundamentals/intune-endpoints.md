@@ -180,11 +180,11 @@ For more information, see the following resources:
 - [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999)
 - [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609)
 
-#### Android AOSP dependencies
+####  dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 | --- | ---- | -------- | ----- | --------- | ----- |
-| 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.azureedge.net`<BR> | **TCP:** 443 |
+| 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.azureedge.net`<BR>'intunecdnpeasd.manage.microsoft.com'<BR>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com)<br> | **TCP:** 443 |
 
 > [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as Play Integrity Verdict, Managing apps from the Google Play Store, 
@@ -304,9 +304,9 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 |Region | CDN | Port |
 | --- |------------- | --- |
-|North America | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net<br>imeswda-afd-primary.manage.microsoft.com<br>imeswda-afd-secondary.manage.microsoft.com<br>imeswda-afd-hotfix.manage.microsoft.com | **TCP:** 443 |
-|Europe | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net<br>imeswdb-afd-primary.manage.microsoft.com<br>imeswdb-afd-secondary.manage.microsoft.com<br>imeswdb-afd-hotfix.manage.microsoft.com | **TCP:** 443 |
-|Asia Pacific | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net<br>imeswdc-afd-primary.manage.microsoft.com<br>imeswdc-afd-secondary.manage.microsoft.com<br>imeswdc-afd-hotfix.manage.microsoft.com |**TCP:** 443 |
+|North America | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net<br>imeswda-afd-primary.manage.microsoft.com<br>imeswda-afd-secondary.manage.microsoft.com<br>imeswda-afd-hotfix.manage.microsoft.com<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
+|Europe | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net<br>imeswdb-afd-primary.manage.microsoft.com<br>imeswdb-afd-secondary.manage.microsoft.com<br>imeswdb-afd-hotfix.manage.microsoft.com<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
+|Asia Pacific | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net<br>imeswdc-afd-primary.manage.microsoft.com<br>imeswdc-afd-secondary.manage.microsoft.com<br>imeswdc-afd-hotfix.manage.microsoft.com<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) |**TCP:** 443 |
 
 ## Network requirements for macOS app and script deployments
 
@@ -316,9 +316,9 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 |Region | CDN | Port |
 | --- |------------- | --- |
-|North America | macsidecar.manage.microsoft.com<br>macsidecarprod.azureedge.net<br>(azureedge.net domains will be disabled after 3/31/2025) | **TCP:** 443 |
-|Europe | macsidecareu.manage.microsoft.com<br>macsidecarprodeu.azureedge.net<br>(azureedge.net domains will be disabled after 3/31/2025) | **TCP:** 443 |
-|Asia Pacific| macsidecarap.manage.microsoft.com<br>macsidecarprodap.azureedge.net<br>(azureedge.net domains will be disabled after 3/31/2025) |**TCP:** 443 |
+|North America | macsidecar.manage.microsoft.com<br>macsidecarprod.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
+|Europe | macsidecareu.manage.microsoft.com<br>macsidecarprodeu.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
+|Asia Pacific| macsidecarap.manage.microsoft.com<br>macsidecarprodap.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) |**TCP:** 443 |
 
 ## Microsoft Store
 
