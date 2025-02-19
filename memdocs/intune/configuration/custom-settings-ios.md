@@ -53,7 +53,7 @@ This article provides some guidance on using Apple Configurator and Apple Profil
 ## Before you begin
 
 - Create an [iOS/iPadOS custom device configuration profile](custom-settings-configure.md).
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)].
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## What you need to know
 
