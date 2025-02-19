@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/16/2024
+ms.date: 02/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -145,7 +145,7 @@ You can synchronize the app names, metadata and license information for your pur
 
 ## Assign a volume-purchased app
 
-1. Select **Apps** > **All Apps**.
+1. In Intune, select **Apps** > **All Apps**.
 2. On the list of apps pane, choose the app you want to assign, and then choose **Properties**. Select **Edit** next to **Assignments**.
 3. On the **Assignments** tab, choose whether the app will be **Required** or **Available for enrolled devices**.
 4. Choose **Add group** under the assignment type you've selected, then on the **Select groups** pane choose the Microsoft Entra user or device groups to which you want to assign the app.
@@ -154,15 +154,15 @@ You can synchronize the app names, metadata and license information for your pur
     > When you create a new assignment for a Apple Volume Purchase Program (VPP) app, the default license type is "device". Existing assignments remain unchanged.
 5. Once you are done, choose **Save**.
 
->[!NOTE]
->The Available deployment intent is not supported for device groups, only user groups are supported. The list of apps displayed is associated with a token. If you have an app that is associated with multiple VPP tokens, you see the same app being displayed multiple times; once for each token.
-   
->[!NOTE]
->Apps assigned as Available do not become managed on the device until the user initiates an install of the application. Once an app assigned as Available has been installed, or the user has attempted to install the application, Intune will ensure that the app is licensed.
-   
-> [!NOTE]  
-> Intune (or any other MDM for that matter) does not actually install VPP apps. Instead, Intune connects to your VPP account and tells Apple which app licenses to assign to which devices. From there, all the actual installation is handled between Apple and the device.
+> [!NOTE]
+> The Available deployment intent is not supported for device groups, only user groups are supported. The list of apps displayed is associated with a token. If you have an app that is associated with multiple VPP tokens, you see the same app being displayed multiple times; once for each token.
 > 
+> Apps assigned as Available do not become managed on the device until the user initiates an install of the application. Once an app assigned as Available has been installed, or the user has attempted to install the application, Intune will ensure that the app is licensed.
+
+Intune (or any other MDM for that matter) does not actually install VPP apps. Instead, Intune connects to your VPP account and tells Apple which app licenses to assign to which devices. From there, all the actual installation is handled between Apple and the device.
+
+> [!NOTE]
+> The **VPP token name** column, available in the Apps workload, allows you to quickly determine the token and app association. This column is available in the **All apps** list (**Apps** > **All apps**) and the app selection pane for **App configuration policies** (**Apps** > **App configuration policies**).
 
 ## End-User Prompts for VPP
 
