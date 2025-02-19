@@ -88,5 +88,9 @@
   "docs_build_engine": {},
   "skip_source_output_uploading": false,
   "contribution_branch_mappings": {},
-  "need_generate_pdf_url_template": true
+  "need_generate_pdf_url_template": true,
+  "redirection_files": [
+    ".openpublishing.redirection.json",
+    ".openpublishing.redirection.intune.json"
+  ]
 }
