@@ -31,9 +31,8 @@ ms.localizationpriority: high
 
 ### Android
 
-- For user-based management methods: Android 10.0 and later
+- For user-based management methods: Android 10.0 and later [Intune moving to support Android 10 and later for user-based management methods in October 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-moving-to-support-android-10-and-later-for-user-based-management-methods-/4055307)
 - For userless management methods: Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
-- Android Enterprise: Android 8.0 and later
 - Android open source project device: [See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
