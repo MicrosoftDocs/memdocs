@@ -230,6 +230,14 @@ Below are specific cases where app B has been created to supersede app A.
 | Upgrade   failure  | Intune attempts to auto-update   app A to app B but the installation of app B failed and app A was already   removed from the device. | Users won't be able to   reinstall app A from the Company Portal as it's superseded by app B, but are   able to try to reinstall app B from the Company Portal. |
 
 
+Limitations: 
+
+- Any Application Assignment Changes will result in deleting the component that's responsible of auto-updating the App.
+
+- This Component can't be manually configured, it's created once App is installed via Company Portal by End-User.
+
+- App Assignment Must be well-studied prior deployment to avoid any changes in assignment after installation and breaking the auto-update eventually.  
+
 ## Next steps
 
 - [Troubleshoot Win32 app issues](apps-win32-troubleshoot.md)
