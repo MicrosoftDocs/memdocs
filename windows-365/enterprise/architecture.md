@@ -65,14 +65,14 @@ By using your own Azure virtual network, Windows 365 lets you use Virtual Networ
 
 ## Microsoft Intune integration
 
-[Microsoft Intune](/mem/intune/fundamentals/what-is-intune) is used to manage all of your Cloud PCs. Microsoft Intune and associated Windows components have various [network endpoints that must be allowed](/mem/intune/fundamentals/intune-endpoints) through the Virtual Network. Apple and Android endpoints may be safely ignored if you don’t use Microsoft Intune for managing those device types.
+[Microsoft Intune](/mem/intune-service/fundamentals/what-is-intune) is used to manage all of your Cloud PCs. Microsoft Intune and associated Windows components have various [network endpoints that must be allowed](/mem/intune-service/fundamentals/intune-endpoints) through the Virtual Network. Apple and Android endpoints may be safely ignored if you don’t use Microsoft Intune for managing those device types.
 
 > [!TIP]
-> Be sure to allow access to [Windows Notification Services (WNS)](/mem/intune/fundamentals/intune-endpoints#windows-push-notification-services-wns). You might not immediately notice an impact if access is blocked. However, WNS enables Microsoft Intune to trigger actions on Windows endpoints immediately instead of waiting for normal policy polling intervals on those devices or policy polling at startup/logon behavior. WNS [recommends](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) direct connectivity from the Windows client to WNS.
+> Be sure to allow access to [Windows Notification Services (WNS)](/mem/intune-service/fundamentals/intune-endpoints#windows-push-notification-services-wns). You might not immediately notice an impact if access is blocked. However, WNS enables Microsoft Intune to trigger actions on Windows endpoints immediately instead of waiting for normal policy polling intervals on those devices or policy polling at startup/logon behavior. WNS [recommends](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) direct connectivity from the Windows client to WNS.
 
 You only need to grant access to a subset of endpoints based on your Microsoft Intune tenant location. To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. Under **Tenant location**, you’ll see something similar to "North America 0501" or "Europe 0202". The rows in the Microsoft Intune documentation are differentiated by geographic region. Regions are indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Because tenants may be relocated within a region, it’s best to allow access to an entire region rather than a specific endpoint in that region.
 
-For more information about Microsoft Intune service regions and data location information, see [Data storage and processing in Intune](/mem/intune/protect/privacy-data-store-process).
+For more information about Microsoft Intune service regions and data location information, see [Data storage and processing in Intune](/mem/intune-service/protect/privacy-data-store-process).
 
 ## Identity services
 

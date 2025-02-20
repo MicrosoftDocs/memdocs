@@ -67,7 +67,7 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 Multi-domain support section removed
 -->
 
-- The Intune Connector requires the [same endpoints as Intune](/mem/intune/fundamentals/intune-endpoints).
+- The Intune Connector requires the [same endpoints as Intune](/mem/intune-service/fundamentals/intune-endpoints).
 
 ## Set up Windows automatic MDM enrollment
 
@@ -194,7 +194,7 @@ After the Intune Connector for Active Directory is installed, it will start logg
 
 ### Configure web proxy settings
 
-If there is a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](/mem/intune/enrollment/autopilot-hybrid-connector-proxy).
+If there is a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](/mem/intune-service/enrollment/autopilot-hybrid-connector-proxy).
 
 ## Create a device group
 
@@ -330,7 +330,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. Select **Next**.
 
-1. On the **Scope tags** page, select [scope tags](/mem/intune/fundamentals/scope-tags) for this profile.
+1. On the **Scope tags** page, select [scope tags](/mem/intune-service/fundamentals/scope-tags) for this profile.
 
 1. Select **Next**.
 
@@ -396,7 +396,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. Select **OK** > **Create**. The profile is created and displayed in the list.
 
-1. [Assign a device profile](/mem/intune/configuration/device-profile-assign#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
+1. [Assign a device profile](/mem/intune-service/configuration/device-profile-assign#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
 
 > [!NOTE]
 >
@@ -417,7 +417,7 @@ To uninstall the ODJ Connector from the computer, follow these steps:
 
 ## Next steps
 
-After Windows Autopilot is configured, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](/mem/intune/remote-actions/device-management).
+After Windows Autopilot is configured, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](/mem/intune-service/remote-actions/device-management).
 
 ## Related content
 

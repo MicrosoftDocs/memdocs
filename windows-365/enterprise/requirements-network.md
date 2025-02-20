@@ -89,7 +89,7 @@ You must allow traffic in your network configuration to the following service UR
 | Device or service | Network connectivity required URLs and ports | Notes |
 | --- | --- | --- |
 | Physical device | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#remote-desktop-clients) | For Remote Desktop client connectivity and updates. |
-| Microsoft Intune service | [Link](/mem/intune/fundamentals/intune-endpoints) | For Intune cloud services like device management, application delivery, and endpoint analytics. |
+| Microsoft Intune service | [Link](/mem/intune-service/fundamentals/intune-endpoints) | For Intune cloud services like device management, application delivery, and endpoint analytics. |
 | Azure Virtual Desktop session host virtual machine | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#session-host-virtual-machines) | For remote connectivity between Cloud PCs and the backend Azure Virtual Desktop service. |
 | Windows 365 service | [Link](#windows-365-service) | For provisioning and health checks. |
 
@@ -122,7 +122,7 @@ All endpoints connect over port 443 unless otherwise specified.
 Port 3389 is disabled by default for all newly provisioned Cloud PCs. Microsoft recommends that you keep port 3389 closed. However, if you need port 3389 to be open for any reprovisioned or newly provisioned Cloud PCs using the Azure Network Connection (ANC) deployment option, you can review the following options:
 
 - [Windows 365 Security Baselines](deploy-security-baselines.md). Customers can use the Windows 365 Security Baselines to effectively manage port 3389 for Windows 365 Cloud PCs. These baselines provide comprehensive tools and configurations designed to enhance security measures while allowing necessary access. By adjusting Firewall Settings and setting the **Default Inbound Action for Public Profile** to *Allow*, organizations can make sure that port 3389 is appropriately configured to meet operational needs. Review and customize these settings according to your specific organizational requirements.
-- [Create a custom Firewall rule in Microsoft Intune](/mem/intune/protect/endpoint-security-firewall-policy). Customers can use custom Firewall rules in Microsoft Intune to configure port 3389 for Windows 365 Cloud PCs. This option involves creating a custom rule within Intune's security policies tailored to allow inbound traffic on port 3389, which is used for access to Cloud PCs. By defining the rule parameters such as port number, protocol (TCP), and restricting specific IP addresses or networks, you can make sure that access to port 3389 is tightly controlled and limited to authorized entities only.
+- [Create a custom Firewall rule in Microsoft Intune](/mem/intune-service/protect/endpoint-security-firewall-policy). Customers can use custom Firewall rules in Microsoft Intune to configure port 3389 for Windows 365 Cloud PCs. This option involves creating a custom rule within Intune's security policies tailored to allow inbound traffic on port 3389, which is used for access to Cloud PCs. By defining the rule parameters such as port number, protocol (TCP), and restricting specific IP addresses or networks, you can make sure that access to port 3389 is tightly controlled and limited to authorized entities only.
 
 These options aren't applicable for customers using a Microsoft-hosted network.
 
@@ -135,9 +135,9 @@ You must allow traffic in your Azure network configuration to:
 
 All endpoints connect over port 443 unless specified otherwise.
 
-- GCC: [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
+- GCC: [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints).
 - GCC: [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list).
-- GCCH: [Microsoft Intune network endpoints for US government deployments](/mem/intune/fundamentals/intune-us-government-endpoints).
+- GCCH: [Microsoft Intune network endpoints for US government deployments](/mem/intune-service/fundamentals/intune-us-government-endpoints).
 - GCCH: [Required URLs for Azure Virtual Desktop for US government deployments](/azure/virtual-desktop/safe-url-list?tabs=azure-for-us-government).
 
 #### Cloud PC required URLs

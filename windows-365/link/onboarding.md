@@ -46,7 +46,7 @@ With the right permissions, a standard user can onboard Windows 365 Link devices
 
 ## Admin driven onboarding
 
-When onboarding devices shared by multiple users, you can use an account that is designated as a [Device Enrollment Manager](/mem/intune/enrollment/device-enrollment-manager-enroll) (DEM). This account doesn't need admin privileges in the tenant but is allowed to enroll up to 1000 devices in Intune.
+When onboarding devices shared by multiple users, you can use an account that is designated as a [Device Enrollment Manager](/mem/intune-service/enrollment/device-enrollment-manager-enroll) (DEM). This account doesn't need admin privileges in the tenant but is allowed to enroll up to 1000 devices in Intune.
 
 A Device Enrollment Manager is still subject to the limit on the number of devices that can be joined to Entra ID. For more information, see [Join Windows 365 Link to Microosft Entra](join-microsoft-entra.md). Consider increasing the **Maximum number of devices per user** to a value you expect a DEM to enroll.
 
@@ -100,4 +100,4 @@ To onboard Windows 365 Link devices using this method, follow these steps:
 
 ## Next steps
 
-For more information about managing devices in Microsoft Intune, see the [Microsoft Intune documentation](/mem/intune/fundamentals/what-is-intune).
+For more information about managing devices in Microsoft Intune, see the [Microsoft Intune documentation](/mem/intune-service/fundamentals/what-is-intune).

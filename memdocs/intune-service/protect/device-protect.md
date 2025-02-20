@@ -75,8 +75,8 @@ Following are a few of the security settings and tasks you can manage through av
   - Android *firmware* updates:
     - [Firmware Over-the-Air (FOTA)](../protect/fota-updates-android.md) - Supported by some OEMs, you can use FOTA to remotely update firmware of devices.
     - [Zebra LifeGuard Over-the-Air (LG OTA)](../protect/zebra-lifeguard-ota-integration.md) - Manage firmware updates for supported Zebra devices through the Intune admin center.
-  - [iOS](/mem/intune/protect/managed-software-updates-ios-macos) - Manage device operating system versions, and when devices check for and install updates.
-  - [macOS](/mem/intune/protect/managed-software-updates-ios-macos) - Manage software updates for macOS devices that enrolled as supervised devices.
+  - [iOS](/mem/intune-service/protect/managed-software-updates-ios-macos) - Manage device operating system versions, and when devices check for and install updates.
+  - [macOS](/mem/intune-service/protect/managed-software-updates-ios-macos) - Manage software updates for macOS devices that enrolled as supervised devices.
   - [Windows](../protect/windows-update-for-business-configure.md)- To manage the Windows Update experience for devices, you can configure when devices scan or install updates, hold a set of your managed devices at specific feature versions, and more.
 
 - **Security baselines** – Deploy [security baselines](../protect/security-baselines.md) to establish a core security posture on your Windows devices. Security baselines are preconfigured groups of Windows settings that come recommended by the relevant product teams. You can use baselines as provided or edit instances of them to meet your security goals for targeted groups of devices.

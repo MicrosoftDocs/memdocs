@@ -38,7 +38,7 @@ To begin management setup, power on your device and sign in with your work or sc
 
 ## What is Apple's Automated Device Enrollment?
 
-Your organization might have purchased their devices through an Apple program called *Automated Device Enrollment* (formerly referred to as their device enrollment program or *DEP*). Automated Device Enrollment lets organizations buy large amounts of iOS, iPadOS or macOS devices. Organizations can then configure and manage those devices within their preferred mobile device management provider, such as Intune. If you're an administrator and want more information about Apple ADE, see [Automatically enroll macOS devices with Apple's Automated Device Enrollment with ABM/ASM](/mem/intune/enrollment/device-enrollment-program-enroll-macos).  
+Your organization might have purchased their devices through an Apple program called *Automated Device Enrollment* (formerly referred to as their device enrollment program or *DEP*). Automated Device Enrollment lets organizations buy large amounts of iOS, iPadOS or macOS devices. Organizations can then configure and manage those devices within their preferred mobile device management provider, such as Intune. If you're an administrator and want more information about Apple ADE, see [Automatically enroll macOS devices with Apple's Automated Device Enrollment with ABM/ASM](/mem/intune-service/enrollment/device-enrollment-program-enroll-macos).  
 
 ## Get your device managed
 

@@ -31,7 +31,7 @@ ms.collection:
 
 # Digital forensics and Windows 365 Enterprise Cloud PCs
 
-Just like physical devices, Windows 365 Enterprise Cloud PCs can be deployed, secured, and managed using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). As part of PC ownership, you may be asked to submit Cloud PCs to internal or third parties to perform digital forensics. Digital forensics is the science that addresses the recovery and investigation of digital data to support criminal investigations or civil proceedings.
+Just like physical devices, Windows 365 Enterprise Cloud PCs can be deployed, secured, and managed using [Microsoft Intune](/mem/intune-service/fundamentals/what-is-intune). As part of PC ownership, you may be asked to submit Cloud PCs to internal or third parties to perform digital forensics. Digital forensics is the science that addresses the recovery and investigation of digital data to support criminal investigations or civil proceedings.
 
 To support these forensics, Windows 365 offers the ability to [place a Cloud PC under review](place-cloud-pc-under-review.md). This action will securely save a snapshot of the Cloud PC to the customer’s Azure Storage Account. When transferred to that account, the customer has complete ownership of the snapshot. To make the snapshot tamper-evident, the customer should create a file hash of the snapshot as soon as the snapshot has been saved in the Azure Storage account.
 

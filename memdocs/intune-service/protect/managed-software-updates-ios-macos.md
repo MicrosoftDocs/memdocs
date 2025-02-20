@@ -185,7 +185,7 @@ When you configure managed software updates, you might want to manage aspects of
 
 - Control whether users are allowed to update to the latest major update, latest minor update, or are offered both.
 
-Previously in MDM, these settings were spread across multiple payloads such as Restrictions, Managed Settings, and Software Update. As of August 2024, it's recommended to use the DDM-based Software Update Settings configuration to manage updates. To create a Software Update Settings policy, go to the Settings catalog > Declarative Device Management (DDM) > Software Update Settings. More information on these settings is available in the documentation section for the [Software Update Settings declarative configuration](/mem/intune/configuration/apple-settings-catalog-configurations).
+Previously in MDM, these settings were spread across multiple payloads such as Restrictions, Managed Settings, and Software Update. As of August 2024, it's recommended to use the DDM-based Software Update Settings configuration to manage updates. To create a Software Update Settings policy, go to the Settings catalog > Declarative Device Management (DDM) > Software Update Settings. More information on these settings is available in the documentation section for the [Software Update Settings declarative configuration](/mem/intune-service/configuration/apple-settings-catalog-configurations).
 
 ## Delay visibility of updates using MDM
 

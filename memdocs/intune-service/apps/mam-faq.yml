@@ -59,7 +59,7 @@ sections:
     questions: 
       - question: Which apps can be managed by app protection policies?
         answer: |
-          Any app that has been integrated with the [Intune App SDK](../developer/app-sdk.md) or wrapped by the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md) can be managed using Intune app protection policies. See the official list of [Intune-managed apps](/mem/intune/apps/apps-supported-intune-apps) available for public use.
+          Any app that has been integrated with the [Intune App SDK](../developer/app-sdk.md) or wrapped by the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md) can be managed using Intune app protection policies. See the official list of [Intune-managed apps](/mem/intune-service/apps/apps-supported-intune-apps) available for public use.
           
       - question: What are the baseline requirements to use app protection policies on an Intune-managed app?
         answer: |

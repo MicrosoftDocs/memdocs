@@ -21,7 +21,7 @@ Enrolling devices with provisioning packages is an efficient way to deploy a lar
 You can create provisioning packages using either **Windows Configuration Designer** or **Set Up School PCs** applications, which are described in the following sections.
 
 > [!IMPORTANT]
-> To create a bulk enrollment token, which is used to join Entra, you must have a supported Microsoft Entra role assignment. For more information, see [Roles and permissions](/mem/intune/enrollment/windows-bulk-enroll#roles-and-permissions).
+> To create a bulk enrollment token, which is used to join Entra, you must have a supported Microsoft Entra role assignment. For more information, see [Roles and permissions](/mem/intune-service/enrollment/windows-bulk-enroll#roles-and-permissions).
 
 ## Windows Configuration Designer
 

@@ -62,7 +62,7 @@ For more information on how a given policy may affect your environment, see [Tro
 
 ## Help users in your organization
 
-You can use the Intune Troubleshooting page to view enrollment issues, remediation steps, and user details. For more information, see [Use the troubleshooting portal to help users at your company](/mem/intune/fundamentals/help-desk-operators).
+You can use the Intune Troubleshooting page to view enrollment issues, remediation steps, and user details. For more information, see [Use the troubleshooting portal to help users at your company](/mem/intune-service/fundamentals/help-desk-operators).
 
 [App Assure](https://www.microsoft.com/fasttrack/microsoft-365/app-assure) is a service for Microsoft’s enterprise customers who encounter application compatibility issues. App Assure will help remediate issues with your ISV, line-of-business and Microsoft-developed apps at no extra cost. If you encounter any app compatibility issues, follow the instructions above to submit a case and include a short description of the issue.
 

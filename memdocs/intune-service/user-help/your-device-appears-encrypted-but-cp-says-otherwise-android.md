@@ -53,7 +53,7 @@ This section only applies to the Company Portal app. If your device offers you t
 
 Some Android devices on version 7.0 and later encrypt data in ways that are inconsistent with certain Android platform standards. These encryption methods put device information at risk. As a result, these devices aren't supported.
 
-For a non-exhaustive list of supported Android devices, see the article [Supported operating systems and browsers in Intune](/mem/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices). If your device isn't listed, refer to the device manufacturer or contact your support person.
+For a non-exhaustive list of supported Android devices, see the article [Supported operating systems and browsers in Intune](/mem/intune-service/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices). If your device isn't listed, refer to the device manufacturer or contact your support person.
 
 > [!NOTE]
 > Microsoft works with manufacturers to address any issues we find while testing or that users report to us. We update this article whenever new information is available.

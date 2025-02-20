@@ -30,7 +30,7 @@ Intune allows you to perform actions on devices without having to sign in to the
 
 Remote actions can be performed on one or multiple devices at once.
 
-To learn more about remote actions in Intune, see [Remote actions](/mem/intune/remote-actions/device-management).
+To learn more about remote actions in Intune, see [Remote actions](/mem/intune-service/remote-actions/device-management).
 
 ### [Intune For Education](#tab/intune-for-education)
 
@@ -67,7 +67,7 @@ Here are some examples of the reports available in Intune:
 - Security reports
 - Application reports
 
-To learn more about reports in Intune, see [Reports in Intune](/mem/intune/fundamentals/reports).
+To learn more about reports in Intune, see [Reports in Intune](/mem/intune-service/fundamentals/reports).
 
 ### [Intune For Education](#tab/intune-for-education)
 

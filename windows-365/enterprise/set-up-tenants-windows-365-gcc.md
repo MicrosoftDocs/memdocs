@@ -33,7 +33,7 @@ ms.collection:
 
 The fastest way to use Windows 365 is to use AADJ, gallery images and the Microsoft Hosted Network option. The instructions on this page are only if you must use either or both:
 
-- **Custom images**. Windows 365 provides optimized gallery images, including [images with Microsoft 365 apps preinstalled](/windows-365/enterprise/device-images). After the gallery image is deployed, Intune can be used for further customization of [common settings](/mem/intune/configuration/settings-catalog-common-features) and [application deployment](/mem/intune/apps/apps-windows-10-app-deploy). If you must use your existing custom image, for more information, see [add a custom image](./add-device-images.md).
+- **Custom images**. Windows 365 provides optimized gallery images, including [images with Microsoft 365 apps preinstalled](/windows-365/enterprise/device-images). After the gallery image is deployed, Intune can be used for further customization of [common settings](/mem/intune-service/configuration/settings-catalog-common-features) and [application deployment](/mem/intune-service/apps/apps-windows-10-app-deploy). If you must use your existing custom image, for more information, see [add a custom image](./add-device-images.md).
 - **Azure Network Connections (ANC)**. ANCs let you provision Cloud PCs that are attached to a virtual network that you manage. Examples include:
     - Azure Virtual Network (VNet).
     - Azure VPN Gateway or a dedicated connection via ExpressRoute.

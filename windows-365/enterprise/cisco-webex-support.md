@@ -58,7 +58,7 @@ These instructions don't support connections through a web browser.
     `msiexec /i %path%\Webex.msi ALLUSERS=1 ENABLEVDI=1 AUTOUPGRADEENABLED=0`
 5. To complete the MSI installer, follow the installation instructions.
 
-Alternatively, the admin can deploy the Cisco Webex VDI client. For more information about deploying apps, see the [Win32 App management guide](/mem/intune/apps/apps-win32-app-management).
+Alternatively, the admin can deploy the Cisco Webex VDI client. For more information about deploying apps, see the [Win32 App management guide](/mem/intune-service/apps/apps-win32-app-management).
 
 ## Install the plugin on the local Windows PC
 
@@ -82,4 +82,4 @@ To benefit from these optimizations, users must sign in to their Cloud PC from a
 
 ## Next steps
 
-For more information about deploying apps, see the [Win32 App management guide](/mem/intune/apps/apps-win32-app-management).
+For more information about deploying apps, see the [Win32 App management guide](/mem/intune-service/apps/apps-win32-app-management).

@@ -19,7 +19,7 @@ This article summarizes restrictions for Apple Intelligence introduced in iPadOS
 
 To learn more, see:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune/configuration/settings-catalog)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune-service/configuration/settings-catalog)
 - [Restrictions payload](https://developer.apple.com/documentation/devicemanagement/restrictions)
 - [iPadOS 18](https://www.apple.com/ipados/ipados-18)
 

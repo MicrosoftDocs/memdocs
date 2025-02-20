@@ -82,7 +82,7 @@ To manage any of the redirections by using the Settings Catalog, create and assi
 
 8. On the *Review + create** page, select **Create**.
 
-For more help using the settings catalog to create a device configuration policy, see [Use the settings catalog to configure settings on Windows and macOS devices](/mem/intune/configuration/settings-catalog).
+For more help using the settings catalog to create a device configuration policy, see [Use the settings catalog to configure settings on Windows and macOS devices](/mem/intune-service/configuration/settings-catalog).
 
 > [!Note]
 > The settings catalog configures policies by using the Policy CSP. To make sure that these settings take precedence over a conflicting GPO, you can also configure the [ControlPolicyConflict CSP]( /windows/client-management/mdm/policy-csp-controlpolicyconflict#controlpolicyconflict-policies).

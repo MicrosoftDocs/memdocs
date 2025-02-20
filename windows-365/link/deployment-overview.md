@@ -45,7 +45,7 @@ To set up your organization's environment to deploy and manage Windows 365 Link 
 
 After setting up deployment for your Windows 365 Link devices, you can start [onboarding](onboarding.md) them.
 
-For more information about managing devices in microsoft Intune, see the [Microsoft Intune documentation](/mem/intune/fundamentals/what-is-intune).
+For more information about managing devices in microsoft Intune, see the [Microsoft Intune documentation](/mem/intune-service/fundamentals/what-is-intune).
 
 <!-- ########################## -->
 ## Next steps

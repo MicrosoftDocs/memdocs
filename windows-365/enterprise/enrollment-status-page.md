@@ -60,4 +60,4 @@ Both targeting strategies are supported for Microsoft Entra hybrid join and Micr
 <!-- ########################## -->
 ## Next steps
 
-[Learn more about the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+[Learn more about the Enrollment Status Page](/mem/intune-service/enrollment/windows-enrollment-status).

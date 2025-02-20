@@ -31,9 +31,9 @@ ms.collection:
 
 # Device configuration for Cloud PCs
 
-After a Cloud PC is [provisioned](provisioning.md), you can manage it like any other Windows device in Microsoft Intune. You can create [device configuration profiles](/mem/intune/configuration/device-profiles) to turn different settings on and off in Windows.
+After a Cloud PC is [provisioned](provisioning.md), you can manage it like any other Windows device in Microsoft Intune. You can create [device configuration profiles](/mem/intune-service/configuration/device-profiles) to turn different settings on and off in Windows.
 
 <!-- ########################## -->
 ## Next steps
 
-For more information, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles) in the Microsoft Intune documentation.
+For more information, see [Apply features and settings on your devices using device profiles](/mem/intune-service/configuration/device-profiles) in the Microsoft Intune documentation.

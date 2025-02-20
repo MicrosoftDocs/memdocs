@@ -36,7 +36,7 @@ Windows 365 Security Baselines version 24H1 are a set of policy templates built 
 The settings in the Windows 365 Cloud PC security baseline version 24H1 apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
 
 > [!TIP]
-> Like any configuration change, it is always a good idea to test the security baseline on a pilot group of Cloud PCs. For information on how to build a rollout plan in Microsoft Intune, see the [Microsoft Intune planning guide](/mem/intune/fundamentals/intune-planning-guide#task-5-create-a-rollout-plan). For information on Microsoft Defender for Endpoint features can be tested, see [Test how Microsoft Defender for Endpoint features work in audit mode](/microsoft-365/security/defender-endpoint/audit-windows-defender).
+> Like any configuration change, it is always a good idea to test the security baseline on a pilot group of Cloud PCs. For information on how to build a rollout plan in Microsoft Intune, see the [Microsoft Intune planning guide](/mem/intune-service/fundamentals/intune-planning-guide#task-5-create-a-rollout-plan). For information on Microsoft Defender for Endpoint features can be tested, see [Test how Microsoft Defender for Endpoint features work in audit mode](/microsoft-365/security/defender-endpoint/audit-windows-defender).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) select **Endpoint Security** > **Security Baselines**.
 ![Screenshot of view security baselines](./media/deploy-security-baselines/view-security-baselines.png)
@@ -58,8 +58,8 @@ As soon as you create the profile, it's pushed to the assigned group and is appl
 <!-- ########################## -->
 ## Next steps
 
-For more information, see [Use security baselines to configure Windows devices in Intune](/mem/intune/protect/security-baselines).
+For more information, see [Use security baselines to configure Windows devices in Intune](/mem/intune-service/protect/security-baselines).
 
-For a detailed list of the 24H1 settings, see [Settings list for the Windows 365 Cloud PC security baseline in Intune](/mem/intune/protect/security-baseline-settings-windows-365?pivots=win365-24h1).
+For a detailed list of the 24H1 settings, see [Settings list for the Windows 365 Cloud PC security baseline in Intune](/mem/intune-service/protect/security-baseline-settings-windows-365?pivots=win365-24h1).
 
 [Set Conditional Access policies](set-conditional-access-policies.md).

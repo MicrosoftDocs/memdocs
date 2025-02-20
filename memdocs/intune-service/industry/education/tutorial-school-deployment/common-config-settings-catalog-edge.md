@@ -27,7 +27,7 @@ Microsoft Edge supports mandatory and recommended policies. Mandatory policies o
 
 To learn more, see:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune-service/configuration/settings-catalog)
 - [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies)
 - [Configure Microsoft Edge policy settings on Windows devices](/deployedge/configure-microsoft-edge)
 

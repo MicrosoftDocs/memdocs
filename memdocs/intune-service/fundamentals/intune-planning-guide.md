@@ -623,7 +623,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
   - Tools and resources
   - Q & A
 
-The community-based [Intune forum](https://social.technet.microsoft.com/Forums/home) and [end-user documentation](/mem/intune/user-help/use-managed-devices-to-get-work-done) are also great resources.
+The community-based [Intune forum](https://social.technet.microsoft.com/Forums/home) and [end-user documentation](/mem/intune-service/user-help/use-managed-devices-to-get-work-done) are also great resources.
 
 ## Related articles
 

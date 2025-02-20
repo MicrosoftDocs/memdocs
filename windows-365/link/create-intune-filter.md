@@ -45,9 +45,9 @@ To create a filter exclusively including Windows 365 Link devices:
 5. Select **Next**.
 6. On the **Review + create** page, select **Create**.  
 
-This new filter can now be used on various policy assignments to include or exclude Windows 365 Link devices for [supported Windows workloads](/mem/intune/fundamentals/filters-supported-workloads#windows-1011).
+This new filter can now be used on various policy assignments to include or exclude Windows 365 Link devices for [supported Windows workloads](/mem/intune-service/fundamentals/filters-supported-workloads#windows-1011).
 
-For more information, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters).
+For more information, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune-service/fundamentals/filters).
 
 <!-- ########################## -->
 ## Next steps

@@ -37,7 +37,7 @@ ms.collection:
 * Windows 11
 * iOS/iPadOS
 
-Enable productivity on school devices while protecting your school's data with Microsoft Intune for Education. *Intune for Education* is a cloud-based, mobile device management (MDM) service for schools. In the Intune for Education portal you can focus on school-related settings and devices that belong to staff and students, while also leveraging the capabilities of Microsoft Intune. Use Intune for Education by itself, together with [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), and with supported [Microsoft Education tools](https://microsoft.com/education).  
+Enable productivity on school devices while protecting your school's data with Microsoft Intune for Education. *Intune for Education* is a cloud-based, mobile device management (MDM) service for schools. In the Intune for Education portal you can focus on school-related settings and devices that belong to staff and students, while also leveraging the capabilities of Microsoft Intune. Use Intune for Education by itself, together with [Microsoft Intune](/mem/intune-service/fundamentals/what-is-intune), and with supported [Microsoft Education tools](https://microsoft.com/education).  
 
 With Intune for Education, you can:
 
@@ -51,7 +51,7 @@ For more information about Intune for Education, see [Overview of Intune for Edu
 
 ## Next steps
 
-* Ensure your organization meets [Microsoft Intune technical requirements and capabilities](/mem/intune/fundamentals/supported-devices-browsers).  
+* Ensure your organization meets [Microsoft Intune technical requirements and capabilities](/mem/intune-service/fundamentals/supported-devices-browsers).  
 * Try Microsoft Intune [with a 90 day free trial](https://signup.microsoft.com/Signup?OfferId=5eec053c-cc40-4cd5-a06a-ea8d75cf2686&ali=1).  
 * Sign in to [Intune for Education](https://intuneeducation.portal.azure.com) with your admin account.  
 * [Learn about express configuration](/intune-education/what-is-express-configuration) to get started in Intune for Education.  

@@ -25,7 +25,7 @@ Update ring policies are a collection of settings that configure when devices th
 
 To learn more, see:
 
-- [Update rings for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-update-rings)
+- [Update rings for Windows 10 and later policy in Intune](/mem/intune-service/protect/windows-10-update-rings)
 - [The Windows Update policies you should set and why](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-windows-update-policies-you-should-set-and-why/ba-p/3270914)
 - [YouTube: Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKvpS9zPyFt9fc9HgepQxaw9&index=1)
 - [YouTube: Windows Update for Business Fundamentals (Japanese)](https://youtu.be/o6_eGOyv-_g)
@@ -76,7 +76,7 @@ Content-Type: application/json
 
 Settings described in this section aren't available in an Update ring policy and should be configured using a settings catalog type configuration profile.
 
-To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
+To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune-service/configuration/settings-catalog).
 
 > [!TIP]
 > When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search field to find the desired policy.
@@ -128,7 +128,7 @@ Using the **update ring** you configured earlier, set the **Feature update defer
 
 ### Control feature version
 
-A [Feature update policy](/mem/intune/protect/windows-10-feature-updates) can be configured to set devices to a particular version of Windows. Devices running older versions of Windows will update to the specified version. Devices with newer versions of Windows won't perform any feature updates.
+A [Feature update policy](/mem/intune-service/protect/windows-10-feature-updates) can be configured to set devices to a particular version of Windows. Devices running older versions of Windows will update to the specified version. Devices with newer versions of Windows won't perform any feature updates.
 
 To set a feature update policy:
 

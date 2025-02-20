@@ -19,7 +19,7 @@ There are many device restriction settings and configuration options you have av
 
 Intune includes *device restriction policies* that help administrators control a wide range of settings and features on Android, iOS/iPadOS, macOS, and Windows devices to protect your organization's resources.
 
-To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
+To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune-service/configuration/settings-catalog).
 
 > [!TIP]
 > When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search field to find the desired policy.

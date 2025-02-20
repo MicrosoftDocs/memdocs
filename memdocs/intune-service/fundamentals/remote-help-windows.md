@@ -118,7 +118,7 @@ Download the latest version of Remote Help direct from Microsoft at [aka.ms/down
 The most recent version of Remote Help is **5.1.1419.0**
 
 ### Deploy Remote Help as an Enterprise App Catalog app
-The Enterprise App Catalog is a collection of prepackaged Win32 apps that have been designed and prepared by Microsoft to support Intune. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities. Remote Help is available in the Enterprise App Catalog. To learn more, see [Add an Enterprise App Catalog app to Microsoft Intune](/mem/intune/apps/apps-add-enterprise-app#add-a-windows-catalog-app-win32-to-intune).
+The Enterprise App Catalog is a collection of prepackaged Win32 apps that have been designed and prepared by Microsoft to support Intune. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities. Remote Help is available in the Enterprise App Catalog. To learn more, see [Add an Enterprise App Catalog app to Microsoft Intune](/mem/intune-service/apps/apps-add-enterprise-app#add-a-windows-catalog-app-win32-to-intune).
 
 
 ### Deploy Remote Help as a Win32 app

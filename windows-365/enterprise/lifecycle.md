@@ -31,7 +31,7 @@ ms.collection:
 
 # Cloud PC lifecycle
 
-Windows 365 coordinates and manages the lifecycles of all your Cloud PCs. Because Cloud PCs exist only in the cloud, managing Cloud PC lifecycles is easier than [managing physical Windows device lifecycles](/mem/intune/fundamentals/device-lifecycle). Cloud PCs never leave the manageability and security inherently provided by the cloud.
+Windows 365 coordinates and manages the lifecycles of all your Cloud PCs. Because Cloud PCs exist only in the cloud, managing Cloud PC lifecycles is easier than [managing physical Windows device lifecycles](/mem/intune-service/fundamentals/device-lifecycle). Cloud PCs never leave the manageability and security inherently provided by the cloud.
 
 The Cloud PC lifecycle has five stages:
 
@@ -56,11 +56,11 @@ Cloud PCs need to be configured and secured, just like any other endpoint in you
 
  After being joined, Cloud PCs are enrolled into Microsoft Intune. This enrollment means that every Cloud PC is instantly ready for [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/overview) and management through Microsoft Intune, including [co-management](/mem/configmgr/comanage/overview) if needed.
 
-Microsoft Intune helps you to validate that your Cloud PCs are compliant by using [compliance policies](/mem/intune/protect/device-compliance-get-started). Windows 365 also provides an optimized [security baseline](/mem/intune/protect/security-baselines) for Cloud PCs. This optional baseline helps you make sure that your Cloud PCs are securely configured with minimal overhead. These baselines have been optimized to ensure that remote connectivity isn't impacted.
+Microsoft Intune helps you to validate that your Cloud PCs are compliant by using [compliance policies](/mem/intune-service/protect/device-compliance-get-started). Windows 365 also provides an optimized [security baseline](/mem/intune-service/protect/security-baselines) for Cloud PCs. This optional baseline helps you make sure that your Cloud PCs are securely configured with minimal overhead. These baselines have been optimized to ensure that remote connectivity isn't impacted.
 
 ## Protect
 
-Windows 365 integrates with the rest of Microsoft 365 to make sure that you can secure your Cloud PCs. You can use Microsoft Intune’s [integration with Microsoft Defender for Endpoint](/mem/intune/protect/advanced-threat-protection) to protect your Cloud PCs from the moment that they’re provisioned. This protection includes using the endpoint detection and response capabilities of Microsoft Defender for Endpoint to [determine device risk](/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level).
+Windows 365 integrates with the rest of Microsoft 365 to make sure that you can secure your Cloud PCs. You can use Microsoft Intune’s [integration with Microsoft Defender for Endpoint](/mem/intune-service/protect/advanced-threat-protection) to protect your Cloud PCs from the moment that they’re provisioned. This protection includes using the endpoint detection and response capabilities of Microsoft Defender for Endpoint to [determine device risk](/mem/intune-service/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level).
 
 Windows 365 can also be protected by [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/overview). This protection includes optionally excluding Windows 365 itself from device compliance policies to ensure that your end users can access their Cloud PCs from any device. You can still use multi-factor authentication, sign-in risk, and other controls to ensure that the user is securely authenticated.
 

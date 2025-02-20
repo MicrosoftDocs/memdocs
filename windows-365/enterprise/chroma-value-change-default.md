@@ -35,14 +35,14 @@ The chroma value determines the color space used for encoding. By default, the c
 
 ## Requirements
 
-- Microsoft Entra ID account that is assigned the [Policy and Profile manager](/mem/intune/fundamentals/role-based-access-control-reference#policy-and-profile-manager) built-in RBAC role.
+- Microsoft Entra ID account that is assigned the [Policy and Profile manager](/mem/intune-service/fundamentals/role-based-access-control-reference#policy-and-profile-manager) built-in RBAC role.
 - A group containing the devices you want to configure.
 
 ## Increase the default chroma value to 4:4:4
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. [Create or edit a configuration profile](/mem/intune/configuration/administrative-templates-windows) for **Windows 10 and later** devices, with the **Settings catalog** profile type.
+2. [Create or edit a configuration profile](/mem/intune-service/configuration/administrative-templates-windows) for **Windows 10 and later** devices, with the **Settings catalog** profile type.
 
 3. In the settings picker, browse to **Administrative templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Remote Session Environment**.
 
@@ -60,7 +60,7 @@ The chroma value determines the color space used for encoding. By default, the c
 
 6. Select **Next**.
 
-7. *Optional*: On the **Scope tags** tab, select a scope tag to filter the profile. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+7. *Optional*: On the **Scope tags** tab, select a scope tag to filter the profile. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
 
 8. On the **Assignments** tab, select the group containing the computers providing a remote session you want to configure, then select **Next**.
 

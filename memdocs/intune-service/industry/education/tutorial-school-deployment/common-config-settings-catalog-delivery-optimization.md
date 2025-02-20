@@ -21,7 +21,7 @@ Windows Delivery Optimization helps you get Windows updates and Microsoft Store 
 
 To learn more, see:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune-service/configuration/settings-catalog)
 - [Delivery Optimization reference](/windows/deployment/do/waas-delivery-optimization-reference)
 - [YouTube: Delivery Optimization](https://www.youtube.com/playlist?list=PLMuDtq95SdKtN9lntgTcuhsYCsSQR4Dyl)
 

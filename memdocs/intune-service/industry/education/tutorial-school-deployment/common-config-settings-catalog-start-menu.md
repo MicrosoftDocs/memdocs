@@ -24,7 +24,7 @@ Students can benefit from a Start menu that is customized to provide access to e
 
 To learn more, see:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune-service/configuration/settings-catalog)
 - [Customize the Start menu and taskbar layout on Windows 10 and later devices](/windows/configuration/start/windows-10-start-layout-options-and-policies)
 - [Customize and export the Start layout](/en-us/windows/configuration/start/customize-and-export-start-layout)
 - [Configure Windows Taskbar](/en-us/windows/configuration/taskbar/?pivots=windows-11)

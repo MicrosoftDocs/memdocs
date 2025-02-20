@@ -101,7 +101,7 @@ After compliance checks are complete, users can access apps configured with the 
 The volume and cryptographic keys created to manage the work data on the device are erased when the device unenrolls from Intune. 
 
 ### Onboarding documentation resources    
-For end user help and how-to guides, see [Microsoft Intune user help docs](/mem/intune/user-help/). Feel free to use the articles in that doc set as templates for your organization's onboarding resources.  
+For end user help and how-to guides, see [Microsoft Intune user help docs](/mem/intune-service/user-help/). Feel free to use the articles in that doc set as templates for your organization's onboarding resources.  
 
 For more details about Apple Device Enrollment features and functionality, see [Device Enrollment and MDM]( https://support.apple.com/guide/deployment/device-enrollment-and-mdm-depd1c27dfe6/web) on the Apple support website.  
 

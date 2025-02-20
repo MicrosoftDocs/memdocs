@@ -15,13 +15,13 @@ ms.subservice: education
 
 # iPads with no user affinity
 
-iPads used in earlier grades are commonly enrolled with no user affinity to simplify the user experience for younger students and to allow sharing of devices. For more information, please refer to [Enroll devices with Automated Device Enrollment](/mem/intune/industry/education/tutorial-school-deployment/enroll-ios-ade).
+iPads used in earlier grades are commonly enrolled with no user affinity to simplify the user experience for younger students and to allow sharing of devices. For more information, please refer to [Enroll devices with Automated Device Enrollment](/mem/intune-service/industry/education/tutorial-school-deployment/enroll-ios-ade).
 
 These iPads generally have additional restrictions that are not suitable for 1:1 devices.
 
 To learn more, see:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune/configuration/settings-catalog)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune-service/configuration/settings-catalog)
 - [Restrictions payload](https://developer.apple.com/documentation/devicemanagement/restrictions)
 
 > [!TIP]

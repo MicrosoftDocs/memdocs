@@ -19,8 +19,8 @@ This article summarizes the configurations that are most commonly used for stude
 
 To learn more, see:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
-- [Configure and secure devices with Microsoft Intune](/mem/intune/industry/education/tutorial-school-deployment/configure-device-settings)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune-service/configuration/settings-catalog)
+- [Configure and secure devices with Microsoft Intune](/mem/intune-service/industry/education/tutorial-school-deployment/configure-device-settings)
 - [Review MDM payloads for Apple devices](https://support.apple.com/guide/deployment/review-mdm-payloads-dep5370d089/web)
 - [MDM payload list for iPhone and iPad devices](https://support.apple.com/guide/deployment/payload-list-for-iphone-and-ipad-depdca795ebd/1/web/1.0)
 

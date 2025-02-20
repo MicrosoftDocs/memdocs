@@ -26,7 +26,7 @@ There are several key areas to review when you're planning to implement on-premi
 - Device enrollment
 
 > [!IMPORTANT]
-> While the site or any mobile device doesn't connect to Microsoft Intune, your organization still requires Intune licenses to use this feature. For more information, see [Microsoft Intune licensing](/mem/intune/fundamentals/licenses).
+> While the site or any mobile device doesn't connect to Microsoft Intune, your organization still requires Intune licenses to use this feature. For more information, see [Microsoft Intune licensing](/mem/intune-service/fundamentals/licenses).
 
 Consider the following requirements before preparing the Configuration Manager infrastructure to handle on-premises MDM.
 

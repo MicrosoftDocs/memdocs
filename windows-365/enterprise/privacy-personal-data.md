@@ -53,7 +53,7 @@ Depending on a tenant's region and preference, Windows 365 stores its customer c
 
 To manage the Cloud PC, certain data relating to the Cloud PC (like the machine’s name, diagnostic data, and service-generated data) is stored in Azure data centers in North America, Europe, or Asia Pacific, as defined by the tenant's location. This storage is mapped based on Microsoft Online tenant's country/region to the nearest Azure region.
 
-Other customer data, diagnostic data, or service-generated data may be collected by [Azure Virtual Desktop](/azure/virtual-desktop/data-locations) or [Intune](/mem/intune/protect/privacy-personal-data) because Windows 365 depends on these services.
+Other customer data, diagnostic data, or service-generated data may be collected by [Azure Virtual Desktop](/azure/virtual-desktop/data-locations) or [Intune](/mem/intune-service/protect/privacy-personal-data) because Windows 365 depends on these services.
 
 For more information on where your data is located, see:
 
@@ -70,15 +70,15 @@ When a user is removed from Windows 365, Windows 365 keeps non-alert personal da
 
 For more information on data retention, see [Data retention, deletion, and destruction in Microsoft 365](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
 
-Windows 365 defaults to Microsoft Intune’s standard practice to [audit, export, or delete personal data](/mem/intune/protect/privacy-data-audit-export-delete).
+Windows 365 defaults to Microsoft Intune’s standard practice to [audit, export, or delete personal data](/mem/intune-service/protect/privacy-data-audit-export-delete).
 
 Personal data is processed in the audited compliance boundary of the Intune service under the technical security measures assured through [Microsoft Online Services Terms](https://www.microsoft.com/licensing/docs).
 
 For more information about individual data retention and storage policies of all dependent service, see:
 
 - [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations)
-- [Data collection in Intune](/mem/intune/protect/privacy-data-collect)
-- [Data storage and processing in Intune](/mem/intune/protect/privacy-data-store-process)
+- [Data collection in Intune](/mem/intune-service/protect/privacy-data-collect)
+- [Data storage and processing in Intune](/mem/intune-service/protect/privacy-data-store-process)
 
 ## Isolation and access control
 
