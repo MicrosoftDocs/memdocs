@@ -8,7 +8,7 @@ keywords:
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 02/13/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -139,7 +139,7 @@ Windows 10 or Windows 11 Administrative Templates are supported for Windows 10 o
 
 To list supported Administrative Templates, you'll need to use the filter in Settings catalog.
 
-## Compliance and Conditional access
+## Compliance and Conditional Access
 
 You can secure your Windows 10 or Windows 11 Enterprise multi-session VMs by configuring compliance policies and Conditional Access policies in the Microsoft Intune admin center. The following compliance policies are supported on Windows 10 or Windows 11 Enterprise multi-session VMs:
 
@@ -226,7 +226,7 @@ The following Windows 10 or Windows 11 desktop device remote actions aren't supp
 Deleting VMs from Azure will leave orphaned device records in the Microsoft Intune admin center. AVD machines are deleted automatically after 30 days and removed permanently after 60 days. 
 For more information, see:
 - [Using Intune device cleanup rules](https://techcommunity.microsoft.com/t5/device-management-in-microsoft/using-intune-device-cleanup-rules-updated-version/ba-p/3760854).
-- [Automatically delete devices with cleanup rules](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules)
+- [Automatically remove devices with cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules)
 
 ## Security baselines
 

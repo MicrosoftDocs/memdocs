@@ -31,7 +31,7 @@ Use client settings to configure the appearance and behaviors of Software Center
 
 - Configure which default tabs are visible, and add up to five custom tabs to Software Center.<!--4063773-->
 
-  In Configuration Manager 2103 and earlier, when single sign on with multifactor authentication is used, you may not be able to sign into custom tabs that load a website that's subject to conditional access policies. <!--10436429-->
+  In Configuration Manager 2103 and earlier, when single sign on with multifactor authentication is used, you may not be able to sign into custom tabs that load a website that's subject to Conditional Access policies. <!--10436429-->
 
 - You can configure co-managed devices to use the Company Portal for both Intune and Configuration Manager apps. For more information, see [Use the Company Portal app on co-managed devices](../../comanage/company-portal.md).<!--CMADO-3601237,INADO-4297660-->
 

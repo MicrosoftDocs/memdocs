@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 01/16/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,13 +38,10 @@ You can explicitly choose to wipe your company's corporate data from the end use
 ## Create an app protection policy using conditional launch actions
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App protection Policies**.
+2. Select **Apps** > **Protection**.
 3. Select **Create policy** and select the platform of the device for your policy. 
 4. Select **Configure required settings** to see the list of settings available to be configured for the policy. 
 5. By scrolling down in the Settings pane, you'll see a section titled **Conditional launch** with an editable table.
-
-    ![Screenshot of the Intune app protection access actions](./media/app-protection-policies-access-actions/apps-selective-wipe-access-actions01.png)
-
 6. Select a **Setting** and enter the **Value** that users must meet to sign in to your company app. 
 7. Select the **Action** you want to take if users don't meet your requirements. In some cases, multiple actions can be configured for a single setting. For more information, see [How to create and assign app protection policies](app-protection-policies.md).
 
@@ -85,7 +82,7 @@ Set one of the following actions:
 - Allow specified (Wipe nonspecified)
 
 **What happens if the IT admin inputs a different list of iOS/iPadOS model identifier(s) between policies targeted to the same apps for the same Intune user?**<br>
-When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifiers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is "iPhone5,3". 
+When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. The resultant policy sent down to the targeted app opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifiers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies `iPhone5,2;iPhone5,3`, while *Policy B* specifies `iPhone5,3`, the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is `iPhone5,3`. 
 
 ### Android policy settings
 
@@ -111,7 +108,7 @@ To use the **Device manufacturer(s)** setting, input a semi-colon separated list
 Example input: *Manufacturer A;Manufacturer B* 
 
 >[!NOTE]
-> These are some common manufacturers reported from devices using Intune, and can be used as input: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
+> The following list are some common manufacturers reported from devices using Intune, and can be used as input: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
 
 On end-user devices, the Intune client would take action based on a simple matching of device model strings specified in Intune for Application Protection Policies. Matching depends entirely on what the device reports. You (the IT administrator) are encouraged to ensure that the intended behavior occurs by testing this setting based on various device manufacturers and models, and targeted to a small user group. The default value is **Not configured**.<br>
 Set one of the following actions: 
@@ -119,7 +116,7 @@ Set one of the following actions:
 - Allow specified (Wipe on nonspecified)
 
 **What happens if the IT admin inputs a different list of Android manufacturer(s) between policies targeted to the same apps for the same Intune user?**<br>
-When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app being opened by the targeted Intune user would be an intersection of the listed Android manufacturers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "Google;Samsung", while *Policy B* specifies "Google", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is "Google." 
+When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. The resultant policy sent down to the targeted app being opened by the targeted Intune user would be an intersection of the listed Android manufacturers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies `Google;Samsung`, while *Policy B* specifies `Google`, the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is `Google`. 
 
 ### Additional settings and actions 
 

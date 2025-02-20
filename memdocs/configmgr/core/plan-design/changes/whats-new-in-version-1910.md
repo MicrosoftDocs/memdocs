@@ -129,7 +129,7 @@ For more information, see [Microsoft Connected Cache with Configuration Manager]
 
 You can now add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you can now use the **Evaluate this baseline as part of compliance policy assessment** option. When you add or edit a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**.
 
-For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure Active Directory. You can then use it for conditional access to your Microsoft 365 resources.
+For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure Active Directory. You can then use it for Conditional Access to your Microsoft 365 resources.
 
 For more information, see [Include custom configuration baselines as part of compliance policy assessment](../../../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 

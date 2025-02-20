@@ -85,7 +85,7 @@ For example, if you select the **VPP Expiry Date** connector, the **iOS Volume-P
 
 ## Service health and message center  
 
-The Service health and message center page are where you can view details about the Intune *Service health*, *Issues in your environment that require action*, and *Message center* posts that can provide information about updates and planned changes.
+The Service health and message center page is where you can view details about the Intune *Service health*, *Issues in your environment that require action*, and *Message center* posts that can provide information about updates and planned changes.
 
 You can only set up your communication preferences for Intune Message center through the Microsoft 365 admin center. To do so, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/) and go to **Health** > **Service health**. Select **Customize**, and then open the **Email** tab. On the *Email* tab, select the checkbox for **Send me email notifications about service health**, and then configure the additional preferences to meet your requirements.
 ### Service health

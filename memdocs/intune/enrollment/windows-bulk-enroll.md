@@ -129,6 +129,6 @@ You can check for success/failure of the settings in your package in the **Provi
 
 When not using an open network, you must use [device-level certificates](../protect/certificates-configure.md) to initiate connections. Bulk enrolled devices are unable to use to user-targeted certificates for network access. 
 
-### Conditional access
+### Conditional Access
 
-Conditional access is available for devices enrolled via bulk enrollment running Windows 11 or Windows 10, version 1803 and later.  
+Conditional Access is available for devices enrolled via bulk enrollment running Windows 11 or Windows 10, version 1803 and later.  

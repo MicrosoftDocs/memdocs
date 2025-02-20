@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 02/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ Microsoft Tunnel, a VPN gateway solution for Microsoft Intune, periodically rece
 - When upgrades are available
 - How to control when upgrades happen.
 
-Intune handles the upgrade of servers assigned to each tunnel site for you. When upgrades for site begin, all servers in the site upgrade one at a time, which is referred to as an upgrade cycle. While a server is upgrading, the Microsoft Tunnel on the server isn't available for use. Upgrading a single server at a time helps minimize disruptions to users when the site includes multiple servers.
+Intune handles the upgrade of servers assigned to each tunnel site for you. When you start the upgrade for site, all servers in the site upgrade one at a time, which is referred to as an upgrade cycle. While a server is upgrading, the Microsoft Tunnel on that server isn't available for use. Upgrading a single server at a time helps minimize disruptions to users when the site includes multiple servers.
 
 During an upgrade cycle:
 
@@ -46,7 +46,7 @@ During an upgrade cycle:
 
 ## Use upgrade controls
 
-To help control when Intune begins the upgrade cycle, configure the following settings at each site. You can configure the settings when [creating a new site](../protect/microsoft-tunnel-configure.md#create-a-site), or by editing the properties of an existing site:
+To help control when Intune starts the upgrade cycle, configure the following settings at each site. You can configure the settings when [creating a new site](../protect/microsoft-tunnel-configure.md#create-a-site), or by editing the properties of an existing site:
 
 - **Automatically upgrade servers at this site**
 - **Limit server upgrades to maintenance window**
@@ -127,18 +127,38 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 
 > [!IMPORTANT]
 >
-> Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
+> Container releases take place in stages. If you notice that your container images aren't the most recent, please be assured that they will be updated and delivered within the following week.
+
+### February 6, 2024
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:4f4ffd280315d4d63e6d3b54a79f70a76a3f9e5c234d8dbc7c49f382c6cac413
+
+- **serverImageDigest**: sha256:03b0c6cf241806422d87be770d887023c06518b5e9aa57bdb4b876fb1a64f8e1
+
+Changes in this release:
+
+- Upgrade Azure Linux version to 2.0.20241230
+- Security updates
+- Localization fixes
+- Enhanced diagnostic in mstunnel_monitor service
+- Clear stale agent errors after successful upgrade
 
 ### December 2, 2024
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:bf93470b1a4b74b5d4aa8144c09f05fa59a9647d1aeefcdffef29697a172aa6a
+- **agentImageDigest**:  sha256:110b111d7f3fee3d13ac29da62560800c26d2a05bdc337c965b0ce1f2ec2756c
 
-- **serverImageDigest**: sha256:9886240ee473583753daf10929921f7c7c54bbf6f68095395aa2089688090fb3
+- **serverImageDigest**: sha256:3a5844f4e7156c966a2d0f5affd8b15ac3b441bd301a5a0b7c9b7db2ae6f5ed3
 
 Changes in this release:
--Diagnostic tool improvements 
+
+- Diagnostic tool improvements
+- Bug fixes for rootless container mode in mst-cli
+- Localization improvements in mstunnel-setup
+- Improvement on error handling
 
 ### October 2, 2024
 
@@ -149,7 +169,8 @@ Image hash values:
 - **serverImageDigest**: sha256:0efab5013351bcd81f186973e75ed5d9f91bbe6271e3be481721500f946fc9ec
 
 Changes in this release:
--Upgrade from .NET 6 to .NET 8
+
+- Upgrade from .NET 6 to .NET 8
 - Upgrade ocserv to version 1.3.0
 - Fix rootless container bug in installer
 
@@ -161,7 +182,7 @@ Image hash values:
 
 - **serverImageDigest**: sha256:6484d311d1bd6cbe55d71306595715bafa6a20a000be6fd6f9e530716cef6c16
 
-Changes in this release:
+Changes in this release:  
 - Add diagnostic tools for host troubleshooting
 - Upgrade Azure Linux image to 2.0.20240829
 
@@ -179,7 +200,12 @@ Changes in this release:
 - Support customizing container creation options during installation
 - Security updates on the base image
 
-  
+## Related content
+
+[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
+
+<!-- Archive of past releases
+
 ### June 20, 2024
 
 Image hash values:
@@ -191,25 +217,6 @@ Image hash values:
 Changes in this release:
 - AL base image - Use Azure Linux as the base image for the Tunnel containers
 - Improvement on cert revocation check
-
-### May 16, 2024
-
-Image hash values:
-
-- **agentImageDigest**: sha256:50b62c1d7f81e2941fc73a09856583ea752fe821e9fef448114fe7e00f90f25a
-
-- **serverImageDigest**: sha256:f6249bc16f90abc9e6fb278c74e07b1c3e295cc0614d38ae20036cee50ff5c56
-
-Changes in this release:
-
-- Hardened containers by reducing the container capabilities to minimum
-- Security updates on the base image
-
-## Next steps
-
-[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
-
-<!-- Archive of past releases
 
 ### May 16, 2024
 

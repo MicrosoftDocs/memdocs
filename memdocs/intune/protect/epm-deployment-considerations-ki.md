@@ -16,7 +16,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
  
-ms.reviewer: mattcall
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -120,7 +120,7 @@ Endpoint Privilege Management doesn’t manage elevation requests by users that 
 
 ### What files can be elevated to administrator?
 
-Endpoint Privilege Management supports executable files including those with the `.msi` extension and `.ps1` PowerShell scripts.
+Endpoint Privilege Management supports executable files including those with the `.exe` `.msi` extensions and `.ps1` PowerShell scripts.
 
 ### Why doesn't 'Run with elevated access" show on start menu items?
 
