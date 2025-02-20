@@ -31,8 +31,6 @@ ms.localizationpriority: high
 
 ### Android
 
-Android OS version support:
-
 **Android 10.0 and later for user-based management methods**. These methods are:
 - Android Enterprise personally owned with a work profile
 - Android Enterprise corporate owned work profile
@@ -45,8 +43,8 @@ Android OS version support:
 - AOSP userless
 
 **Additional**
-- Samsung KNOX Standard 3.0 and higher:[requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+)
-- Android open source project devices:[See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
+- Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+)
+- Android open source project devices: [See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
 
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
