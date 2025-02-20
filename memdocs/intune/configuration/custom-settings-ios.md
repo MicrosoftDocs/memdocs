@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2023
+ms.date: 02/18/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,16 +35,16 @@ ms.collection:
 >
 > For example, use the built-in [Wi-Fi profile](wi-fi-settings-configure.md) to deploy a Wi-Fi connection. Use the built-in [certificates profile](../protect/certificates-configure.md) for authentication.
 
-Using Microsoft Intune, you can add or create custom settings for your iOS/iPadOS devices using "custom profiles". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
+Using Microsoft Intune, you can add or create custom settings for your iOS/iPadOS devices using **custom profiles**. Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
 This feature applies to:
 
 - iOS/iPadOS
 
-When using iOS/iPadOS devices, there are two ways to get custom settings into Intune:
+When you use iOS/iPadOS devices, there are two ways to get custom settings into Intune:
 
-- [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12) (opens Apple's website)
-- [Apple Profile Manager](https://support.apple.com/profile-manager) (opens Apple's website)
+- [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) (opens Apple's website)
+- [Apple Profile Manager](https://support.apple.com/guide/server/intro-to-profile-manager-apd0e2214c6/5.12/mac) (opens Apple's website)
 
 You can use these tools to export settings to a configuration profile. In Intune, you import this file, and then assign the profile to your iOS/iPadOS users and devices. Once assigned, the settings are distributed. They also create a baseline or standard for iOS/iPadOS in your organization.
 
@@ -52,7 +52,8 @@ This article provides some guidance on using Apple Configurator and Apple Profil
 
 ## Before you begin
 
-Create an [iOS/iPadOS custom device configuration profile](custom-settings-configure.md).
+- Create an [iOS/iPadOS custom device configuration profile](custom-settings-configure.md).
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## What you need to know
 
@@ -60,9 +61,9 @@ Create an [iOS/iPadOS custom device configuration profile](custom-settings-confi
 
 - When using **Apple Profile Manager**, be sure to:
 
-  - Enable [mobile device management](https://help.apple.com/serverapp/mac/5.7/#/apd05B9B761-D390-4A75-9251-E9AD29A61D0C) in Profile Manager.
-  - Add [iOS/iPadOS devices](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984) in Profile Manager.
-  - After you add a device in Profile Manager, go to **Under the Library** > **Devices** > select your device > **Settings**. Enter the general settings for the device.
+  - In Apple Profile Manager, enable [mobile device management](https://help.apple.com/serverapp/mac/5.7/#/apd05B9B761-D390-4A75-9251-E9AD29A61D0C).
+  - In Apple Profile Manager, add [iOS/iPadOS devices](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984).
+  - After you add a device in Apple Profile Manager, go to **Under the Library** > **Devices** > select your device > **Settings**. Enter the general settings for the device.
 
     Download and save this file. You enter this file in the Intune profile.
 
@@ -80,10 +81,9 @@ When you configure the profile, enter the following settings:
   When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceid` or any other device-specific value.
 
   > [!NOTE]
-  > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information.
+  > Variables aren't validated in the UI, and are case sensitive. As a result, you can see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information.
 
-## Next steps
+## Related articles
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md).
-
-See how to [create the profile on macOS devices](custom-settings-macos.md).
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Create custom profiles on macOS devices](custom-settings-macos.md).

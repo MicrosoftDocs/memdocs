@@ -7,7 +7,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 01/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -37,7 +37,8 @@ This article describes how to get started with terms and conditions in Intune.
 Complete these steps to create an Intune terms and conditions policy. 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Go to **Tenant administration** > **Terms and conditions**.  
+1. Go to **Tenant administration**.
+1. Expand **End user experiences**, and then select **Terms and conditions**.  
 1. Choose **Create**.
 1. On the **Basics** page, enter the following information:
 
@@ -49,13 +50,13 @@ Complete these steps to create an Intune terms and conditions policy.
 
    - **Title**: The display name for your terms. Users see the title in the Company Portal app.  
    - **Terms and conditions**: The terms and conditions that users see and must either accept or reject.
-   - **Summary of Terms**: Enter a brief, high-level explanation of what the user is agreeing to. This text is visible to device users.   
+   - **Summary of terms**: Enter a brief, high-level explanation of what the user is agreeing to. This text is visible to device users.   
    
       Example message: *By enrolling your device, you're agreeing to the terms of use set out by Contoso. Read the terms carefully before proceeding.*  
 
 1. Select **Next**.
 
-1. On the **Select scope tags**, select a scope tag from the list to add it to the terms and conditions, or select the default scope tag. Then select **Next**. 
+1. Choose **Select scope tags**, and then select a scope tag from the list to add it to the terms and conditions, or select the default scope tag. Then select **Next**. 
 
 1. On the **Assignments** page, choose who you want to assign the terms to. Your options:
     - **Add all users**: Choose this option to assign these terms and conditions to all device users.
@@ -86,7 +87,7 @@ An acceptance report provides the details of an individual's agreement to your t
 
 To view and export acceptance reports: 
 
-1. Go to **Tenant administration** > **Terms and conditions**.
+1. Go to **Terms and conditions**.  
 2. Select your terms from the table. 
 3. Select **Acceptance Reporting** to view available reports.  
 4. Select **Export** to save the reports to your device.  
@@ -109,9 +110,9 @@ Microsoft Intune provides a version control setting so that you can track versio
 
 To edit terms and conditions:  
 
-1. Select **Tenant administration** > **Terms and conditions**.
+1. Go to **Terms and conditions**.  
 2. From the table, choose the terms and conditions you want to edit.  
-3. Select **Properties** and then next to **Terms**, select **Edit.**
+3. Select **Properties**, and then next to **Terms**, select **Edit.**
 4. Adjust the existing content as needed. 
 5. If you edit the meaning of the terms at all, select the checkbox next to **Require users to re-accept, and increment the version number to *next version*.** In place of *next step*, you'll see the actual version number. 
 6. Select **Review + save**.  

@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/11/2024
+ms.date: 01/23/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -52,7 +52,7 @@ Much like a standard line-of-business (LOB) app, you can add a Win32 app to Micr
 The following steps help you add a Windows app to Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. On the **Select app type** pane, under the **Other** app types, select **Windows app (Win32)**.
 
     > [!IMPORTANT]
@@ -74,7 +74,10 @@ The following steps help you add a Windows app to Intune:
 On the **App information** page, add the details for your app. Depending on the app that you chose, some of the values on this page might be automatically filled in.
 
 - **Name**: Enter the name of the app as it appears in the company portal. Make sure all app names that you use are unique. If the same app name exists twice, only one of the apps appears in the company portal.
-- **Description**: Enter the description of the app. The description appears in the company portal.
+- **Description**: Enter the description of the app. The description appears in the Company Portal. You can select the **Edit Description** option to display the **Edit description** pane. Within this pane, you can optionally use Markdown to create an app description with rich text formatting.​​ However, only the Markdown styles shown in this section are supported. HTML isn't supported.
+
+    ![Screenshot of the 'Edit description' pane.](./media/apps-win32-app-management/apps-win32-app-11.png)
+
 - **Publisher**: Enter the name of the publisher of the app.
 - **Category**: Select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the company portal.
 - **Show this as a featured app in the Company Portal**: Display the app prominently on the main page of the company portal when users browse for apps.
@@ -252,7 +255,7 @@ On the **Detection rules** pane, configure the rules to detect the presence of t
    > [!NOTE]
    > We recommend encoding your script as UTF-8 BOM. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
 
-The version of your Win32 app is displayed in the Microsoft Intune admin center. The app version is provided in the **All apps** list, where you can filter by Win32 apps and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Columns** > **Version** to display the app version in the app list.
+The version of your Win32 app is displayed in the Microsoft Intune admin center. The app version is provided in the **All Apps** list, where you can filter by Win32 apps and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Columns** > **Version** to display the app version in the app list.
 
 After you've added your rules, select **Next** to display the **Dependencies** page.
 
@@ -260,7 +263,7 @@ After you've added your rules, select **Next** to display the **Dependencies** p
 
 App dependencies define a relationship between apps where one app requires one or more dependent apps to be installed. If Intune has not yet installed an app on a device, any apps configured as dependent apps must be installed first. If an app is already installed on a device, Intune will install any newly configured dependent apps, that are configured for automatic installation, the next time Intune evaluates app policy on the device.
 
-You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. After your Win32 app has been added, you'll see the **Dependencies** option on the pane for your Win32 app. There's a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. 
+You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. After your Win32 app has been added, you'll see the **Dependencies** option on the pane for your Win32 app. There's a maximum of 100 dependencies, which include the dependencies of any included dependencies, as well as the app itself. 
 
 Any Win32 app dependency needs to also be a Win32 app. It doesn't support depending on other app types, such as single MSI LOB apps or Microsoft Store apps.
 
