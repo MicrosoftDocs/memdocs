@@ -8,13 +8,13 @@ items:
       displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/what-is-intune.md
       items:
-      - name: Manage and secure your identities
+      - name: Overview - Manage and secure your identities
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-identities.md
-      - name: Manage devices and control features
+      - name: Overview - Manage devices and control features
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-devices.md
-      - name: Manage apps and protect their data
+      - name: Overview - Manage apps and protect their data
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-apps.md
       - name: Zero Trust with Microsoft Intune
