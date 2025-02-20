@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/14/2025
+ms.date: 02/20/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of February 17, 2025
+
+### Monitor and troubleshoot
+
+#### Limited live chat support in Intune<!-- 30477421 -->
+
+Intune is introducing limited live chat support within the Intune admin console. Live chat will not be available for all tenants or inquiries at this time.
 
 ## Week of February 10, 2025
 
