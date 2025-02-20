@@ -68,7 +68,7 @@ items:
       - name: Cloud PC role-based access control
         href: role-based-access.md
       - name: Intune role-based access control
-        href: /mem/intune/fundamentals/role-based-access-control?context=/windows-365/context/pr-context
+        href: /mem/intune-service/fundamentals/role-based-access-control?context=/windows-365/context/pr-context
       - name: Cloud PC sizes
         href: cloud-pc-size-recommendations.md
       - name: GPU Cloud PC
@@ -288,9 +288,9 @@ items:
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
-        href: /mem/intune/protect/windows-10-update-rings?context=/windows-365/context/pr-context
+        href: /mem/intune-service/protect/windows-10-update-rings?context=/windows-365/context/pr-context
       - name: Windows 10 feature updates
-        href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
+        href: /mem/intune-service/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
       - name: Windows Updates and Windows 365 Frontline
         href: windows-update-frontline-cloud-pc.md
     - name: End-user experience

@@ -259,28 +259,28 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Providing a Custom Theme]:app-sdk-android-phase7.md#providing-a-custom-theme
 
 <!-- Microsoft Learn documentation: Intune overview -->
-[Intune App SDK overview]:/mem/intune/developer/app-sdk
-[Microsoft Intune app management]:/mem/intune/apps/app-management
-[Android app protection policy settings]:/mem/intune/apps/app-protection-policy-settings-android
+[Intune App SDK overview]:/mem/intune-service/developer/app-sdk
+[Microsoft Intune app management]:/mem/intune-service/apps/app-management
+[Android app protection policy settings]:/mem/intune-service/apps/app-protection-policy-settings-android
 [Overview of the Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer
 [Microsoft Entra ID]:https://azure.microsoft.com/services/active-directory/
 [App Protection CA]:/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection
-[application configuration policies for managed Android Enterprise devices]:/mem/intune/apps/app-configuration-policies-use-android
-[application configuration policies for managed apps]:/mem/intune/apps/app-configuration-policies-managed-app
-[App Wrapping Tool for Android]:/mem/intune/developer/app-wrapper-prepare-android
-[Prepare line-of-business apps for app protection policies]:/mem/intune/developer/apps-prepare-mobile-application-management
-[Turn off Microsoft usage data collection]:/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android
+[application configuration policies for managed Android Enterprise devices]:/mem/intune-service/apps/app-configuration-policies-use-android
+[application configuration policies for managed apps]:/mem/intune-service/apps/app-configuration-policies-managed-app
+[App Wrapping Tool for Android]:/mem/intune-service/developer/app-wrapper-prepare-android
+[Prepare line-of-business apps for app protection policies]:/mem/intune-service/developer/apps-prepare-mobile-application-management
+[Turn off Microsoft usage data collection]:/mem/intune-service/user-help/turn-off-microsoft-usage-data-collection-android
 
 <!-- Microsoft Learn documentation: Intune testing -->
 [Microsoft partner]:https://partner.microsoft.com/business-opportunities/why-microsoft
 [Microsoft CDX tenant creation site]:https://cdx.transform.microsoft.com/my-tenants/create-tenant
-[Set up Intune]:/mem/intune/fundamentals/setup-steps
-[Create users]:/mem/intune/fundamentals/users-add
-[Create groups]:/mem/intune/fundamentals/groups-add
-[Assign licenses]:/mem/intune/fundamentals/licenses-assign
-[Create and assign app protection policies]:/mem/intune/apps/app-protection-policies
-[app configuration policy]:/mem/intune/apps/app-configuration-policies-overview
+[Set up Intune]:/mem/intune-service/fundamentals/setup-steps
+[Create users]:/mem/intune-service/fundamentals/users-add
+[Create groups]:/mem/intune-service/fundamentals/groups-add
+[Assign licenses]:/mem/intune-service/fundamentals/licenses-assign
+[Create and assign app protection policies]:/mem/intune-service/apps/app-protection-policies
+[app configuration policy]:/mem/intune-service/apps/app-configuration-policies-overview
 [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/active-directory-app-registration
 
 <!-- Other Microsoft links -->

@@ -238,13 +238,13 @@ If you're unsure if any of these features apply to your app, revisit [Key Decisi
 [Stage 7: App Participation Features]:app-sdk-android-phase7.md
 
 <!-- Microsoft Learn documentation -->
-[App configuration policies for Microsoft Intune]:/mem/intune/apps/app-configuration-policies-overview
-[Enroll Android devices]:/mem/intune/enrollment/android-enroll
-[application configuration policies for managed Android Enterprise devices]:/mem/intune/apps/app-configuration-policies-use-android
-[application configuration policies for managed apps]:/mem/intune/apps/app-configuration-policies-managed-app
+[App configuration policies for Microsoft Intune]:/mem/intune-service/apps/app-configuration-policies-overview
+[Enroll Android devices]:/mem/intune-service/enrollment/android-enroll
+[application configuration policies for managed Android Enterprise devices]:/mem/intune-service/apps/app-configuration-policies-use-android
+[application configuration policies for managed apps]:/mem/intune-service/apps/app-configuration-policies-managed-app
 [Graph API documentation for MAM Targeted Config]:/graph/api/resources/intune-mam-targetedmanagedappconfiguration
-[Validate the applied app configuration policy]:/mem/intune/apps/app-configuration-policies-overview#validate-the-applied-app-configuration-policy
-[Android enterprise app configuration policies]:/mem/intune/apps/app-configuration-policies-overview#android-enterprise-app-configuration-policies
+[Validate the applied app configuration policy]:/mem/intune-service/apps/app-configuration-policies-overview#validate-the-applied-app-configuration-policy
+[Android enterprise app configuration policies]:/mem/intune-service/apps/app-configuration-policies-overview#android-enterprise-app-configuration-policies
 
 <!-- 3rd party links -->
 [managed configurations]:https://developer.android.com/work/managed-configurations

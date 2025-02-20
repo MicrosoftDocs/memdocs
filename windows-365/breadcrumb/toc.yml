@@ -14,10 +14,10 @@ items:
       tocHref: /windows-365/enterprise/
       topicHref: /windows-365/enterprise/index
     - name: Windows 365 Enterprise
-      tocHref: /mem/intune/
+      tocHref: /mem/intune-service/
       topicHref: /windows-365/enterprise/index
     - name: Windows 365 Enterprise
-      tocHref: /mem/intune/protect/
+      tocHref: /mem/intune-service/protect/
       topicHref: /windows-365/enterprise/index
     - name: Windows 365 Enterprise
       tocHref: /purview/

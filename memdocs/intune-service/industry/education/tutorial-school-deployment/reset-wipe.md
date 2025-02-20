@@ -163,6 +163,6 @@ ________________________________________________________
 
 <!-- Reference links in article -->
 
-[MEM-1]: /mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-portal
-[MEM-2]: /mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-portal
-[MEM-3]: /mem/intune/remote-actions/devices-wipe#delete-devices-from-the-azure-active-directory-portal
+[MEM-1]: /mem/intune-service/remote-actions/devices-wipe#delete-devices-from-the-intune-portal
+[MEM-2]: /mem/intune-service/remote-actions/devices-wipe#delete-devices-from-the-intune-portal
+[MEM-3]: /mem/intune-service/remote-actions/devices-wipe#delete-devices-from-the-azure-active-directory-portal

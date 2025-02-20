@@ -432,7 +432,7 @@ After you've completed all the [Exit Criteria], continue to [Stage 4: MAM Integr
 [class and method replacements]:app-sdk-android-appendix.md#class-and-method-replacements
 
 <!-- Microsoft Learn documentation -->
-[Download the SDK files]:/mem/intune/developer/app-sdk-get-started#download-the-sdk-files
+[Download the SDK files]:/mem/intune-service/developer/app-sdk-get-started#download-the-sdk-files
 [Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview#languages-and-frameworks
 [MSAL documentation]:https://github.com/AzureAD/microsoft-authentication-library-for-android
 

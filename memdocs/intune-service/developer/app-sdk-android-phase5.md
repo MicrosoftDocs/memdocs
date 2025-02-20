@@ -809,7 +809,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [Register for notifications from the SDK]:app-sdk-android-phase7.md#register-for-notifications-from-the-sdk
 
 <!-- Links to other Intune docs -->
-[Issue a selective wipe from the Microsoft Intune admin center]:/mem/intune/apps/apps-selective-wipe
+[Issue a selective wipe from the Microsoft Intune admin center]:/mem/intune-service/apps/apps-selective-wipe
 
 <!-- Class links -->
 [AppIdentitySwitchResultCallback]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html

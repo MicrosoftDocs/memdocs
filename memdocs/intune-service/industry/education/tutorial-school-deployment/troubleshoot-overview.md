@@ -81,4 +81,4 @@ ________________________________________________________
 [MEM-7]: /troubleshoot/mem/intune/troubleshoot-win32-app-install
 [MEM-8]: /troubleshoot/mem/intune/troubleshoot-csp-custom-settings
 [MEM-9]: /autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview
-[MEM-10]: /mem/intune/remote-actions/collect-diagnostics
+[MEM-10]: /mem/intune-service/remote-actions/collect-diagnostics

@@ -485,7 +485,7 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [Appendix]:app-sdk-ios-appendix.md
 
 <!-- external links -->
-[application configuration policies for managed iOS Enterprise devices]:/mem/intune/apps/app-configuration-policies-use-ios
-[application configuration policies for managed apps]:/mem/intune/apps/app-configuration-policies-managed-app
-[App configuration policies for Microsoft Intune]:/mem/intune/apps/app-configuration-policies-overview
-[Validate the applied app configuration policy]:/mem/intune/apps/app-configuration-policies-overview#validate-the-applied-app-configuration-policy
+[application configuration policies for managed iOS Enterprise devices]:/mem/intune-service/apps/app-configuration-policies-use-ios
+[application configuration policies for managed apps]:/mem/intune-service/apps/app-configuration-policies-managed-app
+[App configuration policies for Microsoft Intune]:/mem/intune-service/apps/app-configuration-policies-overview
+[Validate the applied app configuration policy]:/mem/intune-service/apps/app-configuration-policies-overview#validate-the-applied-app-configuration-policy

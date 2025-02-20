@@ -4,9 +4,9 @@ items:
   topicHref: /mem/index
   items:
   - name: Intune service
-    tocHref: /mem/intune/
-    topicHref: /mem/intune/
+    tocHref: /mem/intune-service/
+    topicHref: /mem/intune-service/
     items:
     - name: Protect
-      tocHref: /mem/intune/configuration
-      topicHref: /mem/intune/protect/index
+      tocHref: /mem/intune-service/configuration
+      topicHref: /mem/intune-service/protect/index

@@ -80,22 +80,22 @@ productDirectory:
     - title: How-to guides
       imageSrc: ./media/icons/tasks.svg
       summary: Guides to help you perform common tasks in Intune
-      url: /mem/intune/index#how-to-guides
+      url: /mem/intune-service/index#how-to-guides
     # Card
     - title: Platform and industry guides
       imageSrc: ./media/icons/tasks.svg
       summary: Guides that consolidate information specific to a platform or industry.
-      url: /mem/intune/index#platform-and-industry-guides
+      url: /mem/intune-service/index#platform-and-industry-guides
     # Card
     - title: Related services
       imageSrc: ./media/icons/cloud-services.svg
       summary: Resource to find information about related services, such as Microsoft 365.
-      url: /mem/intune/index#related-services
+      url: /mem/intune-service/index#related-services
     # Card
     - title: Intune community resources
       imageSrc: ./media/icons/community.svg
       summary: Resources to help you connect with the Intune community.
-      url: /mem/intune/index#intune-community-resources
+      url: /mem/intune-service/index#intune-community-resources
 
 conceptualContent:
   sections:
