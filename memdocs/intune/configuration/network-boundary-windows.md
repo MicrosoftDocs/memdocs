@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create a Windows Network Boundary profile in Microsoft Intune
-description: Add a Windows Network Boundary policy to Windows devices using Microsoft Intune. Add trusted sites, trusted domains, IPv4 and IPv6 ranges, and proxy servers to a device configuration policy. Sites in this boundary are trusted by Microsoft Defender Application Guard in Microsoft Edge.
+description: Add a Windows Network Boundary policy to Windows devices using Microsoft Intune. Add trusted sites, trusted domains, IPv4 and IPv6 ranges, and proxy servers to a device configuration policy. Microsoft Defender Application Guard in Microsoft Edge trusts sites in this boundary.
 keywords: network boundary, ipv4, ipv6, windows, proxy server, ip range, microsoft intune, endpoint management
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 02/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,9 +29,9 @@ ms.collection:
 
 # Use a network boundary to add trusted sites on Windows devices in Microsoft Intune
 
-When using Microsoft Defender Application Guard and Microsoft Edge, you can protect your environment from sites that your organization doesn't trust. This feature is called a network boundary. 
+When using Microsoft Defender Application Guard and Microsoft Edge, you can protect your environment from sites that your organization doesn't trust. This feature is called a network boundary.
 
-In a network bound, you can add network domains, IPV4 and IPv6 ranges, proxy servers, and more. Microsoft Defender Application Guard in Microsoft Edge trusts sites in this boundary.
+In a network boundary, you can add network domains, IPV4 and IPv6 ranges, proxy servers, and more. Microsoft Defender Application Guard in Microsoft Edge trusts sites in this boundary.
 
 In Intune, you can create a network boundary profile, and deploy this policy to your devices.
 
@@ -67,6 +67,7 @@ This article shows you how to create the profile, and add trusted sites.
 6. Select **Next**.
 7. In **Configuration settings**, configure the following settings:
 
+    - **Import**: This option lets you import a `.csv` file with your network boundary details.
     - **Boundary type**: This setting creates an isolated network boundary. Sites in this boundary are considered trusted by Microsoft Defender Application Guard. Your options:
       - **IPv4 range**: Enter a comma-separated list of IPv4 ranges of devices in your network. Data from these devices is considered part of your organization, and is protected. These locations are considered a safe destination for organization data to be shared to.
       - **IPv6 range**: Enter a comma-separated list of IPv6 ranges of devices in your network. Data from these devices is considered part of your organization, and is protected. These locations are considered a safe destination for organization data to be shared to.
@@ -82,7 +83,7 @@ This article shows you how to create the profile, and add trusted sites.
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -94,8 +95,7 @@ This article shows you how to create the profile, and add trusted sites.
 
 The next time each device checks in, the policy is applied.
 
-## Resources
+## Related articles
 
-After the [profile is assigned](device-profile-assign.md), be sure to [monitor its status](device-profile-monitor.md).
-
-[Microsoft Defender Application Guard overview](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)
+- After the [profile is assigned](device-profile-assign.md), be sure to [monitor its status](device-profile-monitor.md).
+- [Microsoft Defender Application Guard overview](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)

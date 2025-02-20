@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android devices 
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 02/19/2025
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -79,7 +79,7 @@ For example, devices that are used for augmented or virtual reality typically do
 
 **Android (AOSP)** enrollment devices don't offer or include Google Mobile Services (GMS). These devices:
 
-- Can be specialty devices, such as augmented or virtual reality devices, including Realwear and HTC.
+- Can be specialty devices, like augmented or virtual reality devices, including Realwear and HTC.
 - Don't support GMS.
 - Are used in countries/regions that block GMS.
 
@@ -92,7 +92,7 @@ To learn more about Android (AOSP), go to [About the Android Open Source Project
 ---
 
 > [!NOTE]
-> For Android device administrator (DA), Google is deprecating and reducing features. It's recommended that you move to Android Enterprise or Android (AOSP) for your FLW devices.
+> For Android device administrator (DA), Google is deprecating and reducing features. We recommended that you move to Android Enterprise or Android (AOSP) for your FLW devices.
 
 ## Step 2 - Shared device or user associated device
 
@@ -156,7 +156,7 @@ The following scenarios are common for FLW:
 
   The devices are enrolled in Intune as **Android Enterprise dedicated devices**.
 
-  Users have access to the apps and settings on the device. Using policy settings, you can restrict users from different features, such as debugging, system applications, and more.
+  Users have access to the apps and settings on the device. Using policy settings, you can restrict users from different features, like debugging, system applications, and more.
 
   For this scenario, you want users to use specific apps, but don't want the device locked to only those apps.
 
@@ -172,13 +172,13 @@ The following scenarios are common for FLW:
 
       In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode**. Set it to **Not configured**:
 
-      :::image type="content" source="./media/android-dedicated-device-kiosk-not-configured.png" alt-text="Dedicated device is the enrollment profile type and kiosk mode is not configured in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android-dedicated-device-kiosk-not-configured.png":::
+      :::image type="content" source="./media/android-dedicated-device-kiosk-not-configured.png" alt-text="Dedicated device is the enrollment profile type and kiosk mode isn't configured in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android-dedicated-device-kiosk-not-configured.png":::
 
 - **Scenario 2: Locked screen device with pinned apps**
 
   The devices are enrolled in Intune as **Android Enterprise dedicated devices**.
 
-  For this scenario, you install the Intune Managed Home Screen (MHS) app, which allows you to customize the managed device experience. You can pin one app or many apps, select a wallpaper, set icon positions, require a PIN, and more. This scenario is often used for **dedicated devices**, such as shared devices.
+  For this scenario, you install the Intune Managed Home Screen (MHS) app, which allows you to customize the managed device experience. You can pin one app or many apps, select a wallpaper, set icon positions, require a PIN, and more. This scenario is often used for **dedicated devices**, like shared devices.
 
   **What you need to know**:
 
@@ -235,21 +235,21 @@ The following scenarios are common for FLW:
 
 Microsoft Entra shared device mode (SDM) is another option for **Android Enterprise dedicated device** enrollments.
 
-Entra SDM offers an app and identity driven sign in/sign out experience, which improves the end user experience and productivity (less sign in prompts). It compliments **Scenario 1** and **Scenario 2** described at [Step 3 - Home screen and device experience](#step-3---home-screen-and-device-experience) (in this article).
+Microsoft Entra SDM offers an app and identity driven sign in/sign out experience, which improves the end user experience and productivity (less sign in prompts). It compliments **Scenario 1** (Device wide access with multiple apps) and **Scenario 2** (Locked screen device with pinned apps) described at [Step 3 - Home screen and device experience](#step-3---home-screen-and-device-experience) (in this article).
 
-For more information on Entra shared device mode (SDM), go to [Entra shared device mode for FLW](frontline-worker-overview.md#microsoft-entra-shared-device-mode-for-flw).
+For more information on Microsoft Entra shared device mode (SDM), go to [Microsoft Entra shared device mode for FLW](frontline-worker-overview.md#microsoft-entra-shared-device-mode-for-flw).
 
 **What you need to know**:
 
-- Android enrollment in Intune as a shared device and Entra SDM are complimentary. Android enrollment in Intune as a shared device doesn't depend on Entra SDM. Entra SDM is an option on top of the Intune shared device enrollment.
+- Android enrollment in Intune as a shared device and Microsoft Entra SDM are complimentary. Android enrollment in Intune as a shared device doesn't depend on Microsoft Entra SDM. Microsoft Entra SDM is an option on top of the Intune shared device enrollment.
 
-- Entra SDM is a feature of Entra. It's not an Intune feature. For more information on Entra SDM for Android Enterprise devices, go to:
+- Microsoft Entra SDM is a feature of Microsoft Entra. It's not an Intune feature. For more information on Microsoft Entra SDM for Android Enterprise devices, go to:
 
   - [Shared device mode for Android devices](/azure/active-directory/develop/msal-android-shared-devices)
   - [Enroll Android Enterprise dedicated devices into Microsoft Entra Shared device mode - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/enroll-android-enterprise-dedicated-devices-into-azure-ad-shared/ba-p/1820093) blog post
   - [Intune supports sign out for apps not optimized with Microsoft Entra shared device mode on AE 9+ - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/endpoint-manager-supports-sign-out-for-apps-not-optimized-with/ba-p/3034398) blog post
 
-- For end users to have the full sign in/sign out experience, apps must support the Microsoft Authentication Library (MSAL). For more information, go to [Enable cross-app SSO on Android using MSAL](/azure/active-directory/develop/msal-android-single-sign-on).
+- For end users to have the full sign in/sign out experience, apps must support the Microsoft Authentication Library (MSAL). For more information, go to [Enable cross-app single sign-on (SSO) on Android using MSAL](/azure/active-directory/develop/msal-android-single-sign-on).
 
 ## Related articles
 

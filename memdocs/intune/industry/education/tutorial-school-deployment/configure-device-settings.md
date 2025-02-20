@@ -255,6 +255,8 @@ It is critical to ensure that the devices you manage are secured using the diffe
 - [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
 - [Web Content Filtering on Edge](/deployedge/microsoft-edge-web-content-filtering)
 
+Microsoft recommmends phishing resistant credentials and using Windows Hello for Business on Windows devices where possible. For more information, and to find out how to do this for students, see [Passwordless for Students](/microsoft-365/education/deploy/protect-passwordless-students?tabs=windows).
+
 ### [Intune For Education](#tab/intune-for-education)
 
 It is critical to ensure that the devices you manage are secured using the different security technologies available in Windows.

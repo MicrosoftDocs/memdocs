@@ -45,6 +45,9 @@ There are two categories of app protection policy settings for Windows:
 
 > [!IMPORTANT]
 > Intune MAM on Windows supports unmanaged devices.  If a device is already managed, then Intune MAM enrollment will be blocked and APP settings will not be applied.  If a device becomes managed after MAM enrollment, APP settings will no longer be applied.
+> 
+> Additionally, the device must not be EntraID Joined or Mobile Device Management (MDM) enrolled to any tenant, including the tenant of your MAM user. The device must also not be Workplace Joined to more than two users besides the MAM user (limit is 3 total).
+
 
 ## Data protection
 
