@@ -37,6 +37,7 @@ This report helps you:
 
 - Understand the maximum number of concurrent connections for each Cloud PC license size that you own (maximum concurrency limit).
 - See which users are currently connected to their Frontline Cloud PC and see their session length.
+- See which users are currently using the concurrency buffer (Frontline Cloud PCs in dedicated mode only).
 - Restart Frontline Cloud PCs to get concurrency below the set threshold.
 - Make sure you have purchased the right number of licenses for your peak usage.
 
@@ -52,7 +53,7 @@ In such cases, you can do any of the following to unblock users:
 - Redistribute licenses across the Microsoft Entra group assignment.
 - Purchase more licenses.
 
-If the total number of connections exceeds the maximum concurrency limit, it means that you're using the concurrency buffer (for Frontline Cloud PCs in dedicated mode only).
+If the total number of connections exceeds the maximum concurrency limit, it means that you're using the [concurrency buffer](introduction-windows-365-frontline.md#exceeding-the-maximum-concurrency-limit) (for Frontline Cloud PCs in dedicated mode only).
 
 ## Requirements
 
@@ -65,13 +66,17 @@ To assign these permissions, go to **Tenant administration** > **Roles** > **Cre
 
 ## Use the Connected Frontline Cloud PCs report
 
-To get to the **Connected Frontline Cloud PCs** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Cloud PC overview** > **Connected Frontline Cloud PCs** > select a Cloud PC size.
+To get to the **Connected Frontline Cloud PCs** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Cloud PC overview** > **Connected Frontline Cloud PCs (preview)** > select a Cloud PC size.
 
 :::image type="content" source="./media/report-connected-frontline-cloud-pcs/view-report.png" alt-text="Screenshot of getting to the Cloud PC utilization report." lightbox="./media/report-connected-frontline-cloud-pcs/view-report.png":::
 
-If you have provisioned Frontline Cloud PCs in shared mode the related assignments are displayed under the selected Cloud PC size.
+If you have provisioned Frontline Cloud PCs in shared mode, the related assignments are displayed under the selected Cloud PC size.
 
 ## Report data
+
+This report is specific to Windows 365 Frontline dedicated and shared mode. It doesn't apply to other Windows 365 plans. If you haven't purchased any Windows 365 Frontline licenses for your tenant, no data is displayed in the report.
+
+### Concurrent connection history
 
 The report shows the following data aggregated for the last 28 days:
 
@@ -83,9 +88,13 @@ The report shows the following data aggregated for the last 28 days:
 - **Limit**: Maximum concurrency limit, which is equal to the number of licenses purchased.
 - **Reached concurrency limit**: Warnings for approaching and reaching the maximum concurrency limit.
 
+The **Concurrent connection history** chart shows when you reach or exceed the max concurrency limit for your tenant or selected group assignment. If you see the total number of connections exceed the max concurrency limit, you're using your concurrency buffer (Frontline dedicated mode only). For more information, see [Exceeding the maximum concurrency limit](introduction-windows-365-frontline.md#exceeding-the-maximum-concurrency-limit).
+
+### Connected devices
+
 To see which users are currently connected, select **Connected**.
 
-This report is specific to Windows 365 Frontline dedicated and shared mode. It doesn't apply to other Windows 365 plans. If you haven't purchased any Windows 365 Frontline licenses for your tenant, no data is displayed in the report.
+This section shows which Cloud PCs are currently connected. To bring concurrency below the maximum limit, you can restart Cloud PCs to disconnect the user from their session.
 
 <!-- ########################## -->
 ## Next steps

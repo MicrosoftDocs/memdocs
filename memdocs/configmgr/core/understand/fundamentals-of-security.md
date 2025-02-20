@@ -10,7 +10,9 @@ author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: tier3
+ms.collection: 
+- essentials-security
+- tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 01/28/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -81,21 +81,19 @@ For more information, see [Manage devices with endpoint security in Microsoft In
 
 ## Manage Security baselines
 
-Security baselines in Intune are preconfigured groups of settings that are best practice recommendations from the relevant Microsoft security teams for the product. Intune supports security baselines for Windows 10/11 device settings, Microsoft Edge, Microsoft Defender for Endpoint Protection, and more.
-
-You can use security baselines to rapidly deploy a *best practice* configuration of device and application settings to protect your users and devices. Security baselines are supported for devices that run Windows 10 version 1809 and later, and Windows 11.
+Security baselines in Intune are preconfigured groups of Windows device configuration settings that are pre-configured with defaults that set the *best practice* recommendations from the relevant Microsoft security teams. Intune supports security baselines for Windows device settings, Microsoft Edge, Microsoft Defender for Endpoint Protection, and more.
 
 For more information, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
-Security baselines are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices so you can avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
+Security baselines are one of several methods in Intune to configure device configuration settings. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices so you can avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
 
 ## Review Security tasks from Microsoft Defender for Endpoint
 
 When you integrate Intune with Microsoft Defender for Endpoint, you can review *Security tasks* in Intune that identify at-risk devices and provide steps to mitigate that risk. You can then use the tasks to report back to Microsoft Defender for Endpoint when those risks are successfully mitigated.
 
-- Your Microsoft Defender for Endpoint team determines what devices are at risk and pass that information to your Intune team as a security task. With a few clicks, they create a security task for Intune that identifies the devices at risk, the vulnerability, and provides guidance on how to mitigate that risk.
+- Your Microsoft Defender for Endpoint team determines what devices are at risk and pass that information to your Intune team as a *Security task*. With only a few clicks, they create Security tasks for Intune that identify the devices at risk, the vulnerability, and that provide guidance on how to mitigate that risk.
 
-- The Intune Admins review security tasks and then act within Intune to remediate those tasks. Once mitigated, they set the task to complete, which communicates that status back to the Microsoft Defender for Endpoint team.
+- Intune Admins can select and review security tasks, and then act within Intune to remediate those tasks. Once mitigated they set the task to complete, which communicates that status back to the Microsoft Defender for Endpoint team.
 
 Through Security tasks both teams remain in sync as to which devices are at risk, and how and when those risks are remediated.
 
@@ -103,7 +101,7 @@ To learn more about using Security tasks, see [Use Intune to remediate vulnerabi
 
 ## Use policies to manage device security
 
-As a security admin, use the security policies that are found under *Manage* in the Endpoint security node. With these policies, you can configure device security without having to navigate the larger body and range of settings in device configuration profiles or security baselines.
+As a security admin, use the security policies that are found under *Manage* in the Endpoint security node. With these policies, you can configure device security without having to navigate the larger body and range of device configuration settings available through device configuration profiles or security baselines.
 
 ![Manage policies](./media/endpoint-security/endpoint-security-policies.png)
 
@@ -111,7 +109,7 @@ To learn more about using these security policies, see [Manage device security w
 
 Endpoint security policies are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices, and avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
 
-Also found under *Manage* are *Device compliance* and *Conditional access* policies. These policies types aren't focused security policies for configuring endpoints, but are important tools for managing devices and access to your corporate resources.
+Also found under *Manage* are *Device compliance* and *Conditional Access* policies. These policies types aren't focused security policies for configuring endpoints, but are important tools for managing devices and access to your corporate resources.
 
 ## Use device compliance policy
 
@@ -125,24 +123,24 @@ The [available compliance settings](../protect/device-compliance-get-started.md#
 
 In addition to the policy rules, compliance policies support [Actions for noncompliance](../protect/actions-for-noncompliance.md). These actions are a time-ordered sequence of actions to apply to noncompliant devices. Actions include sending email or notifications to alert device users about noncompliance, remotely locking devices, or even retiring noncompliant devices and removing any company data that might be on it.
 
-When you integrate Intune Microsoft Entra [Conditional Access policies](#configure-conditional-access) to enforce compliance policies, Conditional access can use the compliance data to gate access to corporate resources for both managed devices, and from devices that you don't manage.
+When you integrate Intune Microsoft Entra [Conditional Access policies](#configure-conditional-access) to enforce compliance policies, Conditional Access can use the compliance data to gate access to corporate resources for both managed devices, and from devices that you don't manage.
 
 To learn more, see [Set rules on devices to allow access to resources in your organization using Intune](../protect/device-compliance-get-started.md).
 
 Device compliance policies are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices, and to avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
 
-## Configure conditional access
+## Configure Conditional Access
 
 To protect your devices and corporate resources, you can use Microsoft Entra Conditional Access policies with Intune.
 
-Intune passes the results of your device compliance policies to Microsoft Entra, which then uses conditional access policies to enforce which devices and apps can access your corporate resources. Conditional access policies also help to gate access for devices that you don't manage with Intune, and can use compliance details from [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) you integrate with Intune.
+Intune passes the results of your device compliance policies to Microsoft Entra, which then uses Conditional Access policies to enforce which devices and apps can access your corporate resources. Conditional Access policies also help to gate access for devices that you don't manage with Intune, and can use compliance details from [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) you integrate with Intune.
 
-The following are two common methods of using conditional access with Intune:
+The following are two common methods of using Conditional Access with Intune:
 
-- **Device-based conditional access**, to ensure only managed and compliant devices can access network resources.
-- **App-based conditional access**, which uses app-protection policies to manage access to network resources by users on devices that you don't manage with Intune.
+- **Device-based Conditional Access**, to ensure only managed and compliant devices can access network resources.
+- **App-based Conditional Access**, which uses app-protection policies to manage access to network resources by users on devices that you don't manage with Intune.
 
-To learn more about using conditional access with Intune, see [Learn about Conditional Access and Intune](../protect/conditional-access.md).
+To learn more about using Conditional Access with Intune, see [Learn about Conditional Access and Intune](../protect/conditional-access.md).
 
 ## Set up Integration with Microsoft Defender for Endpoint
 
@@ -162,7 +160,7 @@ While Intune can integrate with several [Mobile Threat Defense partners](../prot
 To manage tasks in the Endpoint security node of the Microsoft Intune admin center, an account must:
 
 - Be assigned a license for Intune.
-- Have role-based access control (RBAC) permissions equal to the permissions provided by the built-in Intune role of **Endpoint Security Manager**. The *Endpoint Security Manager* role grants access to the Microsoft Intune admin center. This role can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
+- Have role-based access control (RBAC) permissions equal to the permissions provided by the built-in Intune role of **Endpoint Security Manager**. The *Endpoint Security Manager* role grants access to the Microsoft Intune admin center. This role can be used by individuals who manage security and compliance features, including security baselines, device compliance, Conditional Access, and Microsoft Defender for Endpoint.
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
@@ -276,11 +274,11 @@ If conflicts happen, you can use Intune's built-in tools to identify and resolve
 - [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
 - [Monitor your security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
-## Next steps
+## Related content
 
 Configure:
 
 - [Security baselines](../protect/security-baselines.md)
 - [Compliance policies](../protect/device-compliance-get-started.md)
-- [Conditional access policies](#configure-conditional-access)
+- [Conditional Access policies](#configure-conditional-access)
 - [Integration with Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)

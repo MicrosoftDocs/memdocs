@@ -33,7 +33,7 @@ ms.collection:
 
 [Azure network connections](azure-network-connections.md) (ANC) let you provision Cloud PCs that are attached to a virtual network that you manage.
 
-You can have up to 10 ANCs per tenant.
+You can have up to 50 ANCs per tenant.
 
 As part of the connection process, the Windows 365 service is granted the following permissions:
 

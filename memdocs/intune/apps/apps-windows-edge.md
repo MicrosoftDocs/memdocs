@@ -53,7 +53,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 You can add a Microsoft Edge version 77 and later to Intune using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **App type** list under the **Microsoft Edge, version 77 and later**, select **Windows 10**.
 
 ## Configure app information
@@ -108,7 +108,7 @@ The app you've created is displayed in the apps list, where you can assign it to
 When you need to uninstall Microsoft Edge from user's devices, use the following steps.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > *Microsoft Edge* app > **Assignments** > **Add group**.
+2. Select **Apps** > **All Apps** > *Microsoft Edge* app > **Assignments** > **Add group**.
 3. In the **Add group** pane, select **Uninstall**.
 
     > [!NOTE]

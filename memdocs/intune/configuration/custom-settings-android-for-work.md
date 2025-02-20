@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2023
+ms.date: 02/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection:
 
 # Use custom settings for Android Enterprise devices in Microsoft Intune
 
-Using Microsoft Intune, you can add or create custom settings for your Android Enterprise personally owned devices with a work profile using a custom profile. Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
+Using Microsoft Intune, you can add or create custom settings for your Android Enterprise personally owned devices with a work profile using a **custom profile**. Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
 This feature applies to:
 
@@ -39,13 +39,17 @@ Android Enterprise custom profiles use Open Mobile Alliance Uniform Resource Ide
 
 Intune supports the following limited number of Android Enterprise custom profiles:
 
-- `./Vendor/MSFT/WiFi/Profile/SSID/Settings`: [Create a Wi-Fi profile with a pre-shared key](wi-fi-profile-shared-key.md) has some examples.
+- `./Vendor/MSFT/WiFi/Profile/SSID/Settings`: [Create a Wi-Fi profile with a preshared key](wi-fi-profile-shared-key.md) has some examples.
 - `./Vendor/MSFT/VPN/Profile/Name/PackageList`: [Create a per-app VPN profile](android-pulse-secure-per-app-vpn.md) has some examples.
 - `./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste`: See the [example](#example) in this article. This setting is also available in the user interface. For more information, see [Android Enterprise device settings to allow or restrict features](device-restrictions-android-for-work.md).
 
 If you need to add more settings, then use [OEMConfig for Android Enterprise](android-oem-configuration-overview.md).
 
 This article shows you how to create a custom profile for Android Enterprise devices. It also provides an example of a custom profile that blocks copy-and-paste.
+
+## Prerequisites
+
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Create the profile
 
@@ -86,7 +90,7 @@ This article shows you how to create a custom profile for Android Enterprise dev
 
     Select **Next**.
 
-9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -148,7 +152,7 @@ In this example, you create a custom profile that restricts copy and paste actio
 
     You can also [monitor its status](device-profile-monitor.md).
 
-## Next steps
+## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- Create a [custom profile on Android device administrator devices](custom-settings-android.md).
+- [Assign the profile](device-profile-assign.md)
+- [Monitor its status](device-profile-monitor.md)

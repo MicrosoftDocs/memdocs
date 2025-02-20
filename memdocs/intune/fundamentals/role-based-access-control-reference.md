@@ -186,7 +186,7 @@ Application Managers manage mobile and managed applications, can read device inf
 
 ## Endpoint Security Manager
 
-Manages security and compliance features such as security baselines, device compliance, conditional access, and Microsoft Defender ATP.
+Manages security and compliance features such as security baselines, device compliance, Conditional Access, and Microsoft Defender ATP.
 
 | Permission | Action |
 | ---------- | ------ |

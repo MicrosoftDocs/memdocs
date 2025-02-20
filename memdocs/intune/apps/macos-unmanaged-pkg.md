@@ -65,7 +65,7 @@ The containing app files can be listed under the **Included apps** section in th
 ## Select the app type
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the **Other** app types, select **macOS app (PKG)**.
 4. Click **Select**. The **Add app** steps are displayed.
 

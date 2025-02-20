@@ -8,7 +8,7 @@ keywords:
 author: Smritib17  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 02/13/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -51,7 +51,7 @@ For more information on Azure Virtual Desktop licensing requirements, see [What 
 
 For information about working with multi-session remote desktops, see [Windows 10 or Windows 11 Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
 
-Intune treats Azure Virtual Desktop personal VMs the same as Windows 10 or Windows 11 Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
+Intune treats Azure Virtual Desktop personal VMs the same as Windows 10 or Windows 11 Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and Conditional Access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
 
 ## Limitations
 
@@ -67,9 +67,6 @@ Also, the following profiles aren't currently supported:
 - [Wi-Fi](../configuration/device-profiles.md#wi-fi)
 
 Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-allowuserstoconnectremotely) isn't disabled.
-
-> [!NOTE]
-> Configuration and compliance policies for Secure Boot and features leveraging vTPM (Virtual Trusted Platform Module) are not supported at this time for Azure Virtual Desktop VMs.
 
 ### Cloning physical and virtual devices
 
@@ -92,7 +89,7 @@ The following Windows 10 desktop device remote actions aren't supported/recommen
 
 ### Retirement
 
-Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
+Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
 
 ### Known issues
 

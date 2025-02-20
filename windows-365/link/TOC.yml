@@ -21,7 +21,7 @@ items:
       href: control-alt-delete.md  
 - name: Deploying Windows 365 Link
   items:
-  - name: Deployment overivew
+  - name: Deployment overview
     href: deployment-overview.md
   - name: Requirements
     href: requirements.md
@@ -31,9 +31,13 @@ items:
     href: intune-automatic-enrollment.md
   - name: Create Intune filter for Windows 365 Link
     href: create-intune-filter.md
-  - name: Optimize enrollment restrictions
+  - name: Configure enrollment restrictions
     href: enrollment-restrictions.md
-  - name: Synchronize conditional access policies
-    href: conditional-access-policies-synchronize.md
+  - name: Configure Conditional Access policies
+    href: conditional-access-policies.md
   - name: Suppress single sign-on prompt
-    href: single-sign-on-suppress.md    
+    href: single-sign-on-suppress.md
+- name: Troubleshooting
+  items:
+  - name: Known issues
+    href: known-issues.md

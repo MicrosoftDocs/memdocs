@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 02/13/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -74,10 +74,11 @@ Changes to DNS records might take up to 72 hours to propagate. You can't verify 
 ## Step 2: Verify CNAME 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Go to **Devices** > **Enrollment**.  
+1. Go to **Devices**.
+1. Expand **Device onboarding** and select **Enrollment**.  
 1. Select the **Windows** tab.  
 1. Under **Enrollment options**, select **CNAME Validation**.  
-4. For **Domain**, enter the company website, and then choose **Test**.  
+1. For **Domain**, enter the company website, and then choose **Test**.  
 
 ## Best practices and recommendations    
 
@@ -87,7 +88,7 @@ Alternate redirection methods aren't supported with Intune. For example, you can
 
 ## Registration CNAME  
 
-Microsoft Entra ID uses a different CNAME during device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered to Microsoft Entra ID (also called *workplace joined*). If you plan to use conditional access, you should configure the *EnterpriseRegistration* CNAME for each company name you have.  
+Microsoft Entra ID uses a different CNAME during device registration for iOS/iPadOS, Android, and Windows devices. Intune Conditional Access requires devices to be registered to Microsoft Entra ID (also called *workplace joined*). If you plan to use Conditional Access, you should configure the *EnterpriseRegistration* CNAME for each company name you have.  
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |

@@ -2,7 +2,7 @@
 title: Work from anywhere report in Endpoint analytics
 titleSuffix: Microsoft Intune
 description: The Work from anywhere report in Endpoint analytics provides insights to help your end users be productive from anywhere.
-ms.date: 10/23/2023
+ms.date: 02/13/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -60,7 +60,7 @@ Benefits of each cloud management type:<!--IN7207657-->
 | Manage your clients anywhere | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
 | View and take action on all Windows PCs from Microsoft Intune admin center| |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
 | Modernize your directory approach with Microsoft Entra ID | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
-|Enhance Zero Trust with conditional access| | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
+|Enhance Zero Trust with Conditional Access| | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
 | Make device provisioning easier by enabling Windows Autopilot |  | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
 | Gain more remote access with Intune | | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
 | Split PC management workloads between cloud and on-premises | | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| |
@@ -99,7 +99,7 @@ In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness
 
 > [!NOTE]
 >
-> - In most cases, devices with a Windows 11 readiness status of **Unknown** are simply inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune/remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules), or target only active devices with the [Intune data collection policy](enroll-intune.md#bkmk_onboard) that controls Endpoint analytics enrollment.
+> - In most cases, devices with a Windows 11 readiness status of **Unknown** are simply inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune/remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules), or target only active devices with the [Intune data collection policy](enroll-intune.md#bkmk_onboard) that controls Endpoint analytics enrollment.
 > - Windows 11 hardware readiness insights do not impact your Work from anywhere score.
 
 ## <a name="bkmk_np"></a> No commercial median

@@ -39,7 +39,7 @@ Microsoft Intune is a cloud-based service that helps you manage your devices and
 
 This article provides an overview of the steps to start your Intune deployment.
 
-:::image type="content" source="./media/get-started-with-intune/get-started-overview.png" alt-text="Diagram that shows the different steps to get started with Microsoft Intune, including set up, adding apps, using compliance & conditional access, configuring device features, and then enrolling devices to be managed.":::
+:::image type="content" source="./media/get-started-with-intune/get-started-overview.png" alt-text="Diagram that shows the different steps to get started with Microsoft Intune, including set up, adding apps, using compliance & Conditional Access, configuring device features, and then enrolling devices to be managed.":::
 
 > [!TIP]
 > As a companion to this article, the Microsoft 365 admin center also has some setup guidance. The guide customizes your experience based on your environment. To access this deployment guide, go to the [Microsoft Intune setup guide in the Microsoft 365 admin center](https://go.microsoft.com/fwlink/?linkid=2224812), and sign in with the **Global Reader** (at a minimum). For more information on these deployment guides and the roles needed, go to [Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365).

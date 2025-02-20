@@ -74,7 +74,7 @@ This article shows you how to see the available remote actions, and lists some o
 
     - **By platform**: View lists of devices by the specific platform.
     - **Enrollment**: Opens the enrollment page and lists the different enrollment options for each platform.
-    - **Configuration**, **Compliance**, **Conditional access**: These options let you create new policies and view & update existing policies.
+    - **Configuration**, **Compliance**, **Conditional Access**: These options let you create new policies and view & update existing policies.
     - **Device cleanup rules**: Automatically removes inactive devices from Intune. For more information, go to [Automatically delete devices with cleanup rules](devices-wipe.md#delete-devices-from-the-intune-admin-center).
     - **Device categories**: Create [device categories](../enrollment/device-group-mapping.md) to help organize devices and build dynamic device groups.
     - **Help and Support** provides a shortcut on troubleshooting tips, requesting support, or checking the status of Intune.
