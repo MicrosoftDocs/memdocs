@@ -81,19 +81,19 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App protection policies** > **Create policy**.
+2. Select **Apps** > **Protection** > **Create policy**.
 3. Add the following values:
     - **Name:** Type a name (required) for your new policy.
     - **Description:** (Optional) Type a description.
     - **Platform:** Choose **Windows 10** as the supported platform for your WIP policy.
     - **Enrollment state:** Choose **Without enrollment** as the enrollment state for your policy.
-4. Choose **Create**. The policy is created and appears in the table on the **App protection policies** pane.
+4. Choose **Create**. The policy is created and appears in the table on the **Protection** pane.
 
 ## To add recommended apps to your protected apps list
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App protection policies**.
-3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
+2. Select **Apps** > **Protection**.
+3. On the **Protection** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.
 5. Select **Add apps**. The **Add apps** information shows you a filtered list of apps. The list at the top of the pane allows you to change the list filter.
 6. Select each app that you want to allow access your corporate data.
@@ -105,8 +105,8 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 **To add a Store app**
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App protection policies**.
-3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
+2. Select **Apps** > **Protection**.
+3. On the **Protection** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.
 5. Select **Add apps**. The **Add apps** information shows you a filtered list of apps. The list at the top of the pane allows you to change the list filter.
 6. From the list, select **Store apps**.
@@ -118,8 +118,8 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 
 **To add a desktop app**
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App protection policies**.
-3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
+2. Select **Apps** > **Protection**.
+3. On the **Protection** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.
 5. Select **Add apps**. The **Add apps** information shows you a filtered list of apps. The list at the top of the pane allows you to change the list filter.
 6. From the list, select **Desktop apps**.

@@ -41,7 +41,7 @@ The following Windows Autopilot scenarios are described in this guide:
 
 These scenarios are summarized in the following video:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Ci1b?autoplay=false]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=7e47e04e-7f51-4eba-9a23-d65f3411b425]
 
 ## Windows Autopilot capabilities
 
