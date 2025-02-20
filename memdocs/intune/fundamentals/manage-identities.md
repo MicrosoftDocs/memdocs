@@ -3,7 +3,7 @@
 
 title: Manage and secure user and group identities overview
 titleSuffix: Microsoft Intune
-description: Learn more about the concepts and features you should know when managing identities in Microsoft Intune. Use existing users and groups, control access using RBAC, establish user affinity, and secure and authenticate users.
+description: Get an overview of the concepts and features you should know when managing identities in Microsoft Intune. Use existing users and groups, control access using RBAC, establish user affinity, and secure and authenticate users.
 keywords:
 author: MandiOhlinger
   
