@@ -298,124 +298,124 @@ items:
           - name: Purchase and add apps for Microsoft Intune
             items:
             - name: Overview
-              href: /microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               displayName: purchase, buy, app, license
             - name: Understand app types
               items:
               - name: App types overview
-                href: /microsoft-365/solutions/apps-type-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-type-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Understand store apps
-                href: /microsoft-365/solutions/apps-type-store?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-type-store?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Understand line-of-business apps
-                href: /microsoft-365/solutions/apps-type-lob?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-type-lob?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Understand built-in apps
-                href: /microsoft-365/solutions/apps-type-built-in?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-type-built-in?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Understand web apps
-                href: /microsoft-365/solutions/apps-type-web?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-type-web?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Understand Microsoft apps
-                href: /microsoft-365/solutions/apps-type-microsoft?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-type-microsoft?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Understand app purchases
               items:
               - name: Purchase apps overview
-                href: /microsoft-365/solutions/apps-purchase-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-purchase-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Purchase store apps
-                href: /microsoft-365/solutions/apps-purchase-store?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-purchase-store?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Purchase apps in-volume
-                href: /microsoft-365/solutions/apps-purchase-volume?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-purchase-volume?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Understand app licenses
               items:
               - name: App licenses overview
-                href: /microsoft-365/solutions/apps-license-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-license-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Manage app licenses
-                href: /microsoft-365/solutions/apps-license-manage?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-license-manage?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Add apps to Intune
               items:
               - name: Add apps overview
-                href: /microsoft-365/solutions/apps-add-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-add-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 1. Assess app requirements
-                href: /microsoft-365/solutions/apps-add-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-add-step-1?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 2. Create categories for apps
-                href: /microsoft-365/solutions/apps-add-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-add-step-2?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 3. Purchase apps
-                href: /microsoft-365/solutions/apps-add-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-add-step-3?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 4. Add apps to Intune
-                href: /microsoft-365/solutions/apps-add-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-add-step-4?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 5. Manage apps and licenses
-                href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
 
           - name: Configure apps using Microsoft Intune
             items:
             - name: Overview
-              href: /microsoft-365/solutions/apps-config-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-config-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               displayName: configure, app, apps, channel
             - name: Step 1. Configure the Company Portal
-              href: /microsoft-365/solutions/apps-config-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-config-step-1?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Step 2. Configure Microsoft Outlook
-              href: /microsoft-365/solutions/apps-config-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-config-step-2?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Step 3. Configure Microsoft 365 Apps
-              href: /microsoft-365/solutions/apps-config-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-config-step-3?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Step 4. Configure Microsoft Edge
-              href: /microsoft-365/solutions/apps-config-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-config-step-4?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Step 5. Configure Microsoft Teams
-              href: /microsoft-365/solutions/apps-config-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-config-step-5?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Step 6. Configure other apps
-              href: /microsoft-365/solutions/apps-config-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-config-step-6?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Step 7. Verify app configuration
-              href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
 
           - name: Secure and protect apps using Microsoft Intune
             items:
             - name: Overview
-              href: /microsoft-365/solutions/apps-protect-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-protect-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               displayName: secure, protect, app, apps, conditional, launch, framework, basic, enhanced, high
             - name: Understand app data protection
-              href: /microsoft-365/solutions/apps-protect-data-protection?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-protect-data-protection?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Understand app protection access requirements
-              href: /microsoft-365/solutions/apps-protect-access-requirements?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-protect-access-requirements?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Understand app protection conditional launch
-              href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Understand app protection health checks
-              href: /microsoft-365/solutions/apps-protect-health-checks?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-protect-health-checks?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Use the app protection framework
               items:
               - name: App protection framework overview
-                href: /microsoft-365/solutions/apps-protect-framework?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-protect-framework?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 1. Apply basic data protection
-                href: /microsoft-365/solutions/apps-protect-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-protect-step-1?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 2. Apply enhanced data protection
-                href: /microsoft-365/solutions/apps-protect-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-protect-step-2?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 3. Apply high data protection
-                href: /microsoft-365/solutions/apps-protect-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-protect-step-3?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 4. Understand app protection delivery
-                href: /microsoft-365/solutions/apps-protect-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-protect-step-4?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 5. Verify and monitor app protection
-                href: /microsoft-365/solutions/apps-protect-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-protect-step-5?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 6. Use app protection actions
-                href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
 
           - name: Assign and deploy apps using Microsoft Intune
             items:
             - name: Overview
-              href: /microsoft-365/solutions/apps-assign-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-assign-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               displayName: assign, deploy, app, apps, monitor, troubleshoot
             - name: Understand app management
-              href: /microsoft-365/solutions/apps-assign-management?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-assign-management?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Understand app assignments
-              href: /microsoft-365/solutions/apps-assign-assignments?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-assign-assignments?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Understand app deployment
-              href: /microsoft-365/solutions/apps-assign-deployment?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-assign-deployment?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
             - name: Assign apps to your organization
               items:
               - name: Assign apps overview
-                href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 1. Confirm users, devices, or groups
-                href: /microsoft-365/solutions/apps-assign-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-assign-step-1?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 2. Assign apps to users, devices, or groups
-                href: /microsoft-365/solutions/apps-assign-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-assign-step-2?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 3. Verify and monitor app assignments
-                href: /microsoft-365/solutions/apps-assign-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-assign-step-3?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
               - name: Step 4. Troubleshoot app deployment issues
-                href: /microsoft-365/solutions/apps-assign-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+                href: /microsoft-365/solutions/apps-assign-step-4?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
 
           - name: Secure your corporate data using Edge for Business
             items:
@@ -2051,124 +2051,124 @@ items:
       - name: Purchase and add apps for Microsoft Intune
         items:
         - name: Overview
-          href: /microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           displayName: purchase, buy, app, license
         - name: Understand app types
           items:
           - name: App types overview
-            href: /microsoft-365/solutions/apps-type-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-type-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Understand store apps
-            href: /microsoft-365/solutions/apps-type-store?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-type-store?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Understand line-of-business apps
-            href: /microsoft-365/solutions/apps-type-lob?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-type-lob?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Understand built-in apps
-            href: /microsoft-365/solutions/apps-type-built-in?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-type-built-in?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Understand web apps
-            href: /microsoft-365/solutions/apps-type-web?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-type-web?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Understand Microsoft apps
-            href: /microsoft-365/solutions/apps-type-microsoft?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-type-microsoft?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Understand app purchases
           items:
           - name: Purchase apps overview
-            href: /microsoft-365/solutions/apps-purchase-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-purchase-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Purchase store apps
-            href: /microsoft-365/solutions/apps-purchase-store?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-purchase-store?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Purchase apps in-volume
-            href: /microsoft-365/solutions/apps-purchase-volume?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-purchase-volume?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Understand app licenses
           items:
           - name: App licenses overview
-            href: /microsoft-365/solutions/apps-license-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-license-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Manage app licenses
-            href: /microsoft-365/solutions/apps-license-manage?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-license-manage?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Add apps to Intune
           items:
           - name: Add apps overview
-            href: /microsoft-365/solutions/apps-add-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-add-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 1. Assess app requirements
-            href: /microsoft-365/solutions/apps-add-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-add-step-1?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 2. Create categories for apps
-            href: /microsoft-365/solutions/apps-add-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-add-step-2?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 3. Purchase apps
-            href: /microsoft-365/solutions/apps-add-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-add-step-3?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 4. Add apps to Intune
-            href: /microsoft-365/solutions/apps-add-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-add-step-4?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 5. Manage apps and licenses
-            href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
 
       - name: Configure apps using Microsoft Intune
         items:
         - name: Overview
-          href: /microsoft-365/solutions/apps-config-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-config-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           displayName: configure, app, apps, channel
         - name: Step 1. Configure the Company Portal
-          href: /microsoft-365/solutions/apps-config-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-config-step-1?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Step 2. Configure Microsoft Outlook
-          href: /microsoft-365/solutions/apps-config-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-config-step-2?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Step 3. Configure Microsoft 365 Apps
-          href: /microsoft-365/solutions/apps-config-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-config-step-3?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Step 4. Configure Microsoft Edge
-          href: /microsoft-365/solutions/apps-config-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-config-step-4?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Step 5. Configure Microsoft Teams
-          href: /microsoft-365/solutions/apps-config-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-config-step-5?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Step 6. Configure other apps
-          href: /microsoft-365/solutions/apps-config-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-config-step-6?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Step 7. Verify app configuration
-          href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
 
       - name: Secure and protect apps using Microsoft Intune
         items:
         - name: Overview
-          href: /microsoft-365/solutions/apps-protect-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-protect-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           displayName: secure, protect, app, apps, conditional, launch, framework, basic, enhanced, high
         - name: Understand app data protection
-          href: /microsoft-365/solutions/apps-protect-data-protection?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-protect-data-protection?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Understand app protection access requirements
-          href: /microsoft-365/solutions/apps-protect-access-requirements?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-protect-access-requirements?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Understand app protection conditional launch
-          href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Understand app protection health checks
-          href: /microsoft-365/solutions/apps-protect-health-checks?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-protect-health-checks?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Use the app protection framework
           items:
           - name: App protection framework overview
-            href: /microsoft-365/solutions/apps-protect-framework?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-protect-framework?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 1. Apply basic data protection
-            href: /microsoft-365/solutions/apps-protect-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-protect-step-1?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 2. Apply enhanced data protection
-            href: /microsoft-365/solutions/apps-protect-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-protect-step-2?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 3. Apply high data protection
-            href: /microsoft-365/solutions/apps-protect-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-protect-step-3?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 4. Understand app protection delivery
-            href: /microsoft-365/solutions/apps-protect-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-protect-step-4?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 5. Verify and monitor app protection
-            href: /microsoft-365/solutions/apps-protect-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-protect-step-5?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 6. Use app protection actions
-            href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
 
       - name: Assign and deploy apps using Microsoft Intune
         items:
         - name: Overview
-          href: /microsoft-365/solutions/apps-assign-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-assign-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           displayName: assign, deploy, app, apps, monitor, troubleshoot
         - name: Understand app management
-          href: /microsoft-365/solutions/apps-assign-management?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-assign-management?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Understand app assignments
-          href: /microsoft-365/solutions/apps-assign-assignments?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-assign-assignments?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Understand app deployment
-          href: /microsoft-365/solutions/apps-assign-deployment?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+          href: /microsoft-365/solutions/apps-assign-deployment?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
         - name: Assign apps to your organization
           items:
           - name: Assign apps overview
-            href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 1. Confirm users, devices, or groups
-            href: /microsoft-365/solutions/apps-assign-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-assign-step-1?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 2. Assign apps to users, devices, or groups
-            href: /microsoft-365/solutions/apps-assign-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-assign-step-2?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 3. Verify and monitor app assignments
-            href: /microsoft-365/solutions/apps-assign-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-assign-step-3?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
           - name: Step 4. Troubleshoot app deployment issues
-            href: /microsoft-365/solutions/apps-assign-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            href: /microsoft-365/solutions/apps-assign-step-4?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
 
       - name: Secure your corporate data using Edge for Business
         items:
@@ -2368,9 +2368,9 @@ items:
       - name: Powershell scripts for Remediations
         href: ./fundamentals/powershell-scripts-remediation.md
     - name: Using the Intune docs
-      href: /mem/use-docs?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+      href: /mem/use-docs?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
     - name: Get support
-      href: /mem/get-support?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+      href: /mem/get-support?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
 
   - name: Troubleshoot issues
-    href: /troubleshoot/mem/intune/welcome-intune?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+    href: /troubleshoot/mem/intune/welcome-intune?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json

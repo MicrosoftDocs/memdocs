@@ -111,7 +111,7 @@ The users of apps and devices at your company (your company's workforce) might h
 Before adding apps to Intune, consider reviewing the support app types and assess your app requirements. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 > [!TIP]
-> To better understand app types, app purchases, and app licenses for Intune, see the solution [Purchase and add apps for Microsoft Intune](/microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json). This solution content also provides recommended steps to assess app requirements, create app categories, purchases apps, and add apps. Additionally, this solution content explains how to manage apps and app licenses.
+> To better understand app types, app purchases, and app licenses for Intune, see the solution [Purchase and add apps for Microsoft Intune](/microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json). This solution content also provides recommended steps to assess app requirements, create app categories, purchases apps, and add apps. Additionally, this solution content explains how to manage apps and app licenses.
 
 ### Add Microsoft apps
 
