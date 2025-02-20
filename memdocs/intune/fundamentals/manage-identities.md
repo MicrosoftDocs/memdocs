@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Manage and secure user and group identities in Microsoft Intune
+title: Manage and secure user and group identities overview
 titleSuffix: Microsoft Intune
 description: Learn more about the concepts and features you should know when managing identities in Microsoft Intune. Use existing users and groups, control access using RBAC, establish user affinity, and secure and authenticate users.
 keywords:
@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 07/23/2024
+ms.date: 02/19/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection:
 - highpri
 ---
 
-# Manage user and group identities in Microsoft Intune
+# Learn about managing user and group identities in Microsoft Intune
 
 Managing and protecting user identities is a significant part of any endpoint management strategy and solution. Identity management includes the user accounts and groups that access your organization resources.
 
@@ -38,7 +38,7 @@ Managing and protecting user identities is a significant part of any endpoint ma
 
 Admins have to manage account membership, authorize and authenticate access to resources, manage settings that affect user identities, and secure & protect the identities from malicious intent.
 
-Microsoft Intune can do all these tasks, and more. Intune is a cloud-based service that can manage user identities through policy, including security and authentication policies. For more information on Intune and its benefits, go to [What is Microsoft Intune?](what-is-intune.md).
+Microsoft Intune can do all these tasks, and more. [Intune is a cloud-based service](what-is-intune.md) that can manage user identities through policy, including security and authentication policies.
 
 From a service perspective, Intune uses Microsoft Entra ID for identity storage and permissions. Using the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), you can manage these tasks in a central location designed for endpoint management.
 
@@ -58,7 +58,7 @@ An important decision is to determine how to get the user accounts and groups in
 
 - If you **currently use Microsoft 365** and have your users and groups in the Microsoft 365 admin center, then these users and groups are also available in the Intune admin center.
 
-  Microsoft Entra ID and Intune use a "tenant", which is your organization, such as Contoso or Microsoft. If you have multiple tenants, sign into the Intune admin center in the same Microsoft 365 tenant as your existing users and groups. Your users and groups are automatically shown and available.
+  Microsoft Entra ID and Intune use a **tenant**, which is your organization, like Contoso or Microsoft. If you have multiple tenants, sign into the Intune admin center in the same Microsoft 365 tenant as your existing users and groups. Your users and groups are automatically shown and available.
 
   For more information on what a tenant is, go to [Quickstart: Set up a tenant](/azure/active-directory/develop/quickstart-create-new-tenant).
 
@@ -82,17 +82,17 @@ For more information and guidance, go to [Known issues and limitations with clou
 
 ## Roles and permissions control access
 
-For the different admin-type of tasks, Intune uses role-based access control (RBAC). The roles you assign determine the resources an admin can access in the Intune admin center, and what they can do with those resources. There are some built-in roles that focus on endpoint management, such as Application Manager, Policy and Profile Manager, and more.
+For the different admin-type of tasks, Intune uses role-based access control (RBAC). The roles you assign determine the resources an admin can access in the Intune admin center, and what they can do with those resources. There are some built-in roles that focus on endpoint management, like Application Manager, and Policy and Profile Manager.
 
 Since Intune uses Microsoft Entra ID, you also have access to the built-in Microsoft Entra roles, like the Intune Service Administrator.
 
-Each role has its own create, read, update or delete permissions as needed. You can also create custom roles if your admins need a specific permission. When you add or create your administrator-type of users and groups, you can assign these accounts to the different roles. The Intune admin center has this information in a central location and can be easily updated.
+Each role has its own create, read, update, or delete permissions as needed. You can also create custom roles if your admins need a specific permission. When you add or create your administrator-type of users and groups, you can assign these accounts to the different roles. The Intune admin center has this information in a central location and can be easily updated.
 
 For more information, go to [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
 
 ## Create user affinity when devices enroll
 
-When users sign into their devices the first time, the device becomes associated with that user. This feature is called user affinity.
+When users sign into their devices the first time, the device becomes associated with that user. This feature is called **user affinity**.
 
 Any policies assigned or deployed to the user identity go with the user to all of their devices. When a user is associated with the device, they can access their email accounts, their files, their apps, and more.
 
@@ -102,10 +102,11 @@ In Intune, you can create policies for both scenarios on Android, iOS/iPadOS, ma
 
 For more specific information, go to the enrollment guides for your platforms:
 
-- [Deployment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
-- [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](deployment-guide-enrollment-ios-ipados.md)
-- [Deployment guide: Enroll macOS devices in Microsoft Intune](deployment-guide-enrollment-macos.md)
-- [Deployment guide: Enroll Windows devices in Microsoft Intune](deployment-guide-enrollment-windows.md)
+- [Enrollment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
+- [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](deployment-guide-enrollment-ios-ipados.md)
+- [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md)
+- [Enrollment guide: Enroll macOS devices in Microsoft Intune](deployment-guide-enrollment-macos.md)
+- [Enrollment guide: Enroll Windows devices in Microsoft Intune](deployment-guide-enrollment-windows.md)
 
 ## Assign policies to users and groups
 
@@ -117,7 +118,7 @@ The settings catalog in Intune includes thousands of settings to manage iOS/iPad
 
 For more information on policies in Intune, go to:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](../configuration/settings-catalog.md)
 - [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
 
 ## Secure your user identities
@@ -128,7 +129,7 @@ Your user and group accounts access organization resources. You need to keep the
 
   Passwords are entered on a device and then transmitted over the network to the server. They can be intercepted and used by anyone and anywhere. A server breach can reveal stored credentials.
 
-  With Windows Hello for Business, users sign in and authenticate with a PIN or biometric, such as facial and fingerprint recognition. This information is stored locally on the device and isn't sent to external devices or servers.
+  With Windows Hello for Business, users sign in and authenticate with a PIN or biometric, like facial and fingerprint recognition. This information is stored locally on the device and isn't sent to external devices or servers.
 
   When Windows Hello for Business is deployed to your environment, you can use Intune to create Windows Hello for Business policies for your devices. These policies can configure PIN settings, allowing biometric authentication, use security keys, and more.
 
@@ -140,14 +141,14 @@ Your user and group accounts access organization resources. You need to keep the
   To manage Windows Hello for Business, you use one of the following options:
 
   - [During device enrollment](../protect/windows-hello.md): Configure tenant-wide policy that applies Windows Hello settings to devices at the time the device enrolls with Intune.
-  - [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the baselines for *Microsoft Defender for Endpoint security* or *Security Baseline for Windows 10 and later*.
-  - [Settings catalog](../configuration/settings-catalog.md): The settings from endpoint security Account protection profiles are available in the Intune settings catalog.
+  - [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the **Microsoft Defender for Endpoint security** or **Security Baseline for Windows 10 and later** baselines.
+  - [Settings catalog](../configuration/settings-catalog.md): The settings from endpoint security account protection profiles are available in the Intune settings catalog.
 
-- **Certificate-based authentication** is also a part of a password-less strategy. You can use certificates to authenticate your users to applications and organization resources through a VPN, a Wi-Fi connection, or email profiles. With certificates, users don't need to enter usernames and passwords, and can make access to these resources easier.
+- **Certificate-based authentication** is also a part of a password-less strategy. You can use certificates to authenticate your users to applications and organization resources through a VPN, a Wi-Fi connection, or email profiles. With certificates, users don't need to enter usernames and passwords, and certificates can make access to these resources easier.
 
   For more information, go to [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 
-- **multifactor authentication (MFA)** is a feature available with Microsoft Entra ID. For users to successfully authenticate, at least two different verification methods are required. When MFA is deployed to your environment, you can also require MFA when devices are enrolling into Intune.
+- **Multifactor authentication (MFA)** is a feature available with Microsoft Entra ID. For users to successfully authenticate, at least two different verification methods are required. When MFA is deployed to your environment, you can also require MFA when devices are enrolling into Intune.
 
   For more information, go to:
 
@@ -158,7 +159,7 @@ Your user and group accounts access organization resources. You need to keep the
 
   For more information, see [Zero Trust with Microsoft Intune](zero-trust-with-microsoft-intune.md).
 
-## Next steps
+## Related articles
 
-- [Manage devices](manage-devices.md)
-- [Manage apps](manage-apps.md)
+- [Learn about managing devices in Intune](manage-devices.md)
+- [Learn about managing apps in Intune](manage-apps.md)

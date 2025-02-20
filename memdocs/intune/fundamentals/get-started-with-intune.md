@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2023
+ms.date: 02/19/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -55,7 +55,7 @@ This article provides an overview of the steps to start your Intune deployment.
   - [Move to cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
   - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
   - [Deployment guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
-  - [Microsoft Intune fundamentals online training](/training/paths/endpoint-manager-fundamentals/).
+  - [Microsoft Intune fundamentals online training](/training/paths/endpoint-manager-fundamentals/)
 
 - Determine your license needs and any other prerequisites for your Intune deployment. The following list provides some of the most common prerequisites:
 
@@ -187,7 +187,7 @@ If you use Configuration Manager, then there are two steps to cloud attach your 
 
 1. [Tenant attach](../../configmgr/tenant-attach/prerequisites.md): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based Intune admin center.
 
-2. [Co-management(../../configmgr/comanage/overview.md): Manage Windows client devices with Configuration Manager and Microsoft Intune. Configuration Manager manages some workloads, and Intune manages other workloads.
+2. [Co-management](../../configmgr/comanage/overview.md): Manage Windows client devices with Configuration Manager and Microsoft Intune. Configuration Manager manages some workloads, and Intune manages other workloads.
 
     For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage compliance & Conditional Access policies.
 
