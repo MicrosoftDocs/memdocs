@@ -1771,8 +1771,6 @@ items:
           href: ./remote-actions/device-remote-lock.md
         - name: Reset passcode
           href: ./remote-actions/device-passcode-reset.md
-        - name: Windows 10 PIN reset
-          href: ./remote-actions/device-windows-pin-reset.md
         - name: Self-service password reset
           href: ./remote-actions/password-reset.md
       - name: Remove and restart
