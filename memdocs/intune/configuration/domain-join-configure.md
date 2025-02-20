@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/14/2023
+ms.date: 02/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,6 +42,10 @@ This feature applies to:
 
 This article shows you how to create a domain join profile for a hybrid Autopilot deployment. You can also see the available settings.
 
+## Prerequisites
+
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -68,7 +72,7 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -86,8 +90,7 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 
 It's now ready for you to [deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
 
-## Next steps
+## Related articles
 
-After the profile is [assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
-
-[Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
+- After the profile is [assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
+- [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
