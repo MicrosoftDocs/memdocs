@@ -44,7 +44,7 @@ There are three categories of policy settings: *Data relocation*, *Access requir
 ## Data protection
 
 > [!IMPORTANT]
-> For apps that have updated to v19.7.6 or later for Xcode 15 and v20.2.1 or later for Xcode 16 of the SDK, screen capture block is applied if you have configured **Send Org data to other apps** setting to a value other than "All apps". You can configure app configuration policy setting `com.microsoft.intune.mam.screencapturecontrol` = `Disabled` (**Apps** > **Configuration** > **Create** > **Managed apps** > under the **Settings** step, select **General configuration settings**) if you need to allow screen capture for your iOS devices. 
+> For apps that have updated to v19.7.6 or later for Xcode 15 and v20.2.1 or later for Xcode 16 of the SDK, screen capture block is applied if you have configured **Send Org data to other apps** setting to a value other than "All apps". You can configure app configuration policy setting `com.microsoft.intune.mam.screencapturecontrol` = `Disabled` (**Apps** > **Configuration** > **Create** > **Managed apps** > under the **Settings** step, select **General configuration settings**) if you need to allow screen capture for your iOS devices. Apps must be restarted after receiving the updated app configuration policy for it to take effect.
 
 ### Data Transfer
 | Setting | How to use | Default value |
