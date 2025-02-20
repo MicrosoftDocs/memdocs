@@ -58,7 +58,7 @@ If a user has multiple Windows 365 SKUs assigned to them, they get multiple Clou
 
 **Provisioning policy**: The policy used to create the device.
 
-**Image**: The image used during provisioning. This image might not be the current Cloud PC version. For example, an administrator may have updated Windows using Windows Update client policies and this update wouldn’t be reflected in this list view.  
+**Image**: The image used during provisioning. This image might not be the current Cloud PC version. For example, an administrator may have updated Windows using Windows Update for Business and this update wouldn’t be reflected in this list view.  
 
 **PC type**: The Windows 365 SKU assigned to the user. A user may have more than one license/SKU assigned to them. If so, they have more Cloud PCs in this list view.  
 
