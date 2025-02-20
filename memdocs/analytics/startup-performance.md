@@ -57,7 +57,7 @@ Startup performance provides an insight on the number of devices that have delay
 
 Select a particular device, to see its boot and sign-in history. The history helps you determine if the issue is a regression and when it might have occurred.
 
-While there are many articles on how to optimize Group Policies performance, you might choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](../intune/protect/security-baselines.md) and [Group Policy analytics](../intune/configuration/group-policy-analytics.md).
+While there are many articles on how to optimize Group Policies performance, you might choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](../intune-service/protect/security-baselines.md) and [Group Policy analytics](../intune-service/configuration/group-policy-analytics.md).
 
 ### <a name="bkmk_sb"></a> Slow boot and sign-in times
 
@@ -72,7 +72,7 @@ The **Startup performance** page has reporting tabs that provide support for the
 - **Model performance**. This tab lets you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
 - **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (for example, GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. Select a device to see its boot and sign-in history, which can help you identify if there was a recent regression
   > [!Note]
-  > In the **Device performance** tabs of Endpoint analytics, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
+  > In the **Device performance** tabs of Endpoint analytics, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
 
 - **Startup processes**. Startup processes can negatively affect user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab shows you which processes are impacting the sign-in "time to responsive desktop" phase and keeps the CPU above 50% after the desktop has rendered. The table only lists processes that affect a minimum of 10 devices in your tenant. When you review the startup processes, the following data calculations are displayed:
   - **Device count**: The count of devices that experienced a delay to a responsive desktop from the process.
@@ -86,4 +86,4 @@ The **Startup performance** page has reporting tabs that provide support for the
 ## Next steps
 
 - Use the [Work from anywhere report](work-from-anywhere.md).
-- Use [Remediations](../intune/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.
+- Use [Remediations](../intune-service/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.

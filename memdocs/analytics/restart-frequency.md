@@ -50,7 +50,7 @@ The difference between **Shutdown (no update)** and **Restart (no update)** is t
 In the device performance tab, two default columns are available; total number of restarts and the number of Stop errors (blue screen errors) each device has had in the last 30 days. You can sort by these columns to find problematic devices. You can also use this tab to review the total number of devices that have sent restart records. For example, the screenshot shows 31 records, meaning 31 devices have sent restart data.
 
 > [!NOTE]
-> In the **Device performance** tabs of Endpoint analytics, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
+> In the **Device performance** tabs of Endpoint analytics, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
 
 ## Model performance tab
 

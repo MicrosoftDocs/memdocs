@@ -23,7 +23,7 @@ The insights show not only how much your score can improve by replacing batterie
 
 ## Licensing Requirements
 
-The battery health report is part of Intune Advanced Analytics features and is included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+The battery health report is part of Intune Advanced Analytics features and is included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ## Prerequisites
 
@@ -124,7 +124,7 @@ For more information, go to:
 
 - [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
 
-- [Use Intune Suite add-on capabilities](../intune/fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
 
 - [Device scopes](device-scopes.md)
 
