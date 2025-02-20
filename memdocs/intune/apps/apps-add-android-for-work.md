@@ -40,13 +40,13 @@ Managed Google Play is Google's enterprise app store and sole source of applicat
 To make it easier for you to configure and use Android Enterprise management, upon connecting your Intune tenant to Managed Google Play, Intune automatically adds five common Android Enterprise related apps to the Intune admin center. The five apps are follow:
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios. This app is automatically installed to fully managed devices during the device enrollment process.
-- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification. This app is automatically installed to fully managed devices during the device enrollment process.
+- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification. This app is automatically installed to fully managed and corporate-owned work profile devices during the device enrollment process.
 - **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise personally owned work profile scenarios. This app is automatically installed to fully managed devices during the device enrollment process.
 - **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Used for both Android Enterprise dedicated multi-app kiosk and fully managed user affiliated device scenarios. IT admins should create an assignment to install this app on dedicated devices that are going to be used in multi-app kiosk scenarios.
 - **[Microsoft Launcher](https://play.google.com/store/apps/details?id=com.microsoft.launcher)** - Used for Android Enterprise fully managed scenarios. IT admins can create a policy to make the Microsoft Launcher the default launcher on fully managed devices and customize the home screen. For more information, see [Configure Microsoft Launcher](./configure-microsoft-launcher.md)
 
 >[!NOTE]
->When an end user enrolls their Android Enterprise fully managed device, the Intune Company Portal app is automatically installed and the application icon may be visible to the end user. If the end user attempts to launch the Intune Company Portal app, the end user is redirected to the Microsoft Intune app and the Company Portal app icon will be subsequently hidden.
+>When an end user enrolls their Android Enterprise fully managed device, the Intune Company Portal app automatically installs on the device. The app icon might be visible to the end user. If the end user attempts to launch the Intune Company Portal app, the end user is redirected to the Microsoft Intune app, and the Company Portal app icon is subsequently hidden.
 >Additionally, the Microsoft Intune and Authenticator apps won't be able to have an uninstall issued to them as they're crucial applications for multiple Android Enterprise enrollment scenarios.
 
 ## Before you start
@@ -74,7 +74,7 @@ Browse and approve store apps in a view hosted within Intune. This view opens di
 ### Add a Managed Google Play store app directly in the Microsoft Intune admin center
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
 4. Click **Select**. The **Managed Google Play** app store is displayed.
 
@@ -102,7 +102,7 @@ There are two ways to add LOB apps to Managed Google Play:
 ### Managed Google Play private (LOB) app publishing directly in the Microsoft Intune admin center
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
 4. Click **Select**. The **Managed Google Play** app store is displayed within Intune.
 5. Select **Private apps** (next to the *lock* icon) in the Google Play window.
@@ -119,7 +119,7 @@ There are two ways to add LOB apps to Managed Google Play:
     > [!NOTE]
     > Private apps may take several minutes to become available to sync. If the app doesn't appear the first time you perform a sync, wait a couple minutes, click the **Select** button for the private app you want to sync, and then initiate a new sync.
 
-For more information about Managed Google Play private apps including a FAQ, see Google's support article: [https://support.google.com/googleplay/work/answer/9146439](https://support.google.com/googleplay/work/answer/9146439)
+For more information about Managed Google Play private apps including an FAQ, see Google's support article: [https://support.google.com/googleplay/work/answer/9146439](https://support.google.com/googleplay/work/answer/9146439)
 
 >[!IMPORTANT]
 >Private apps added using this method can never be made public. Only use this publishing option if you're sure that this app will always be private to your organization.
@@ -137,7 +137,7 @@ For more information about Managed Google Play private apps including a FAQ, see
     > Follow Google's support documentation to make the app available only to your organization. The app won't be available on the public Google Play store.
  For more information about uploading and publishing Android apps, see [Google Developer Console Help](https://support.google.com/googleplay/android-developer/answer/113469).
 1. After you've published your app, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Apps** > **All apps** > **Add**. 
+1. Select **Apps** > **All Apps** > **Create**. 
 1. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**. 
 1. Click **Select**. The **Managed Google Play** app store is displayed within Intune. 
 1. Select **Private apps** (next to the *lock* icon) in the Google Play window. 
@@ -156,7 +156,7 @@ Web links will open with Microsoft Edge or any other browser app you choose to d
 To create a Managed Google Play web link:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
 4. Click **Select**. The **Managed Google Play** app store is displayed within Intune.
 5. Select **Web apps** (next to the *Globe* icon) in the Google Play window.
@@ -176,7 +176,7 @@ Collections are a way to group your Managed Google Play apps and determine the o
 To create a Managed Google Play collection:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
 4. Click **Select**. The **Managed Google Play** app store is displayed within Intune.
 5. Select **Organize Apps** in the Google Play window.
@@ -195,7 +195,7 @@ Apps that aren't part of any collection won't appear on the end users' Play Stor
 If you have approved an app from the store and don't see it in the **Apps** workload, force an immediate sync as follows:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Apps** > **All apps** > **Add**. 
+1. Select **Apps** > **All Apps** > **Create**. 
 1. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**. 
 1. Click **Select**. The **Managed Google Play** app store is displayed within Intune. 
 1. Click **Sync** on the **App** pane to sync with the Managed Google Play service. 
@@ -218,7 +218,7 @@ On both work profile devices and corporate-owned devices, you can use Intune to 
 By default, an Android Enterprise fully managed device won't allow employees to install any apps that aren't approved by the organization. Also, employees won't be able to remove any installed apps against policy. If you wish to allow users to access the full Google Play store to install apps rather than only having access to the approved apps in Managed Google Play store, you can set the **Allow access to all apps in Google Play store** to **Allow**. With this setting, the user can access all the apps in the Google Play store using their corporate account, however purchases may be limited. You can remove the limited purchases restriction by allowing users to add new accounts to the device. Doing so will enable end users to have the ability to purchase apps from the Google Play store using personal accounts, as well as conduct in-app purchases. For more information, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 > [!NOTE]
-> The Microsoft Intune app, the Microsoft Authenticator app, and the Company Portal app will be installed as required apps onto all fully managed devices during onboarding. Having these apps automatically installed provides Conditional Access support, and Microsoft Intune app users can see and resolve compliance issues.
+> The Microsoft Intune app, Microsoft Authenticator app, and the Company Portal app are installed as required apps on all fully managed and corporate-owned work profile devices during onboarding. Having these apps automatically installed provides Conditional Access support, and Microsoft Intune app users can see and resolve compliance issues.
 
 ## Update a Managed Google Play app
 
@@ -233,7 +233,7 @@ For more information, see the [Manage App Updates](https://support.google.com/go
 
 You can choose to configure the Wi-Fi requirement for dedicated, fully managed and corporate-owned work profile devices by configuring app auto-updates in [device configurations policies](../configuration/device-restrictions-android-for-work.md).
 
-For dedicated, fully managed, corporate-owned, and personally-owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
+For dedicated, fully managed, corporate-owned, and personally owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
 
 - **Default**: The app's updates are subject to default conditions (described above).
 - **High Priority**: The app will update as soon as possible from when a new update is released, disregarding all of the default conditions. This may be disruptive for some users since the update can occur while the device is being used.
@@ -242,7 +242,7 @@ For dedicated, fully managed, corporate-owned, and personally-owned work profile
 To edit the app update mode:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps**.
+2. Select **Apps** > **All Apps**.
 3. Select the app from the apps list.
 4. Select **Properties**.
 5. Select **Edit** by the **Assignments** section.
@@ -278,7 +278,7 @@ You can distribute a non-production version of a Managed Google Play app to devi
 > Required app deployments for non-production app tracks are currently unavailable for devices enrolled in Android Enterprise personally owned work profile (BYOD).
 ## Delete Managed Google Play apps
 
-When necessary, you can delete Managed Google Play apps from Microsoft Intune. To delete a Managed Google Play app, open Microsoft Intune in the portal and select **Apps** > **All apps**. From the app list, select the ellipses (...) to the right of the Managed Google Play app, then select **Delete** from the displayed list.
+When necessary, you can delete Managed Google Play apps from Microsoft Intune. To delete a Managed Google Play app, open Microsoft Intune in the portal and select **Apps** > **All Apps**. From the app list, select the ellipses (...) to the right of the Managed Google Play app, then select **Delete** from the displayed list.
 
 > [!NOTE]
 > If an app is unapproved or deleted from the managed Google Play store, it will not be removed from the Intune client apps list. This allows you to still target an uninstall policy to users even if the app is unapproved.

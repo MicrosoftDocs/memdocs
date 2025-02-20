@@ -718,8 +718,6 @@ items:
       href: clients/deploy/plan/determine-the-site-system-roles-for-clients.md
     - name: Security and privacy for clients
       href: clients/deploy/plan/security-and-privacy-for-clients.md
-    - name: Recommendations for client deployment
-      href: clients/deploy/plan/best-practices-for-client-deployment.md
     - name: Determine whether to block clients
       href: clients/deploy/plan/determine-whether-to-block-clients.md
     - name: Planning for client deployment to Mac computers
@@ -966,7 +964,3 @@ items:
     href: clients/deploy/deploy-clients-cmg-token.md
   - name: Microsoft Entra authentication workflow
     href: clients/manage/azure-ccmsetup.md
-  - name: Use a cloud-based distribution point
-    href: plan-design/hierarchy/use-a-cloud-based-distribution-point.md
-  - name: Install cloud-based distribution points
-    href: servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md
