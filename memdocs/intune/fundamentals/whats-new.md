@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2025
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,46 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of February 24, 2025  (Service release 2502)
+
+### App management
+
+#### VPP token name more easily available in Apps workload<!-- 5479088 -->
+
+The **VPP token name** column, available in the Apps workload, allows you to quickly determine the token and app association. This column is now available in the **All apps** list (**Apps** > **All apps**) and the app selection pane for **App configuration policies** (**Apps** > **App configuration policies**). For more information about VPP apps, see [Manage volume-purchased apps and books with Microsoft Intune](../apps/vpp-apps.md).
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+### Device configuration
+
+#### New Default Enforcement device control setting available in the Windows settings catalog<!-- 30253799 -->
+
+The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog for Windows 24H2. To see these settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later ** > **Settings catalog** for profile type.
+
+This setting is available in both the settings catalog and the ASR device control template. The Default Enforcement device control setting enables a default enforcement to be applied if:
+
+- There are no policy rules present, or
+- At the end of the policy rules evaluation none were matched.
+
+Applies to:
+
+- Windows
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 30508606 -->
+
+The following protected app is now available for Microsoft Intune:
+
+- Applications Manager - Intune by ManageEngine
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of February 17, 2025
 

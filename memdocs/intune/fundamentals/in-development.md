@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/10/2025
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -79,15 +79,6 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
-### VPP token name more easily available in Apps workload<!-- 5479088 -->
-
-You'll soon be able to view a new **VPP token name** column to quickly see the token and app association. This column will be available in the **All apps** list (**Apps** > **All apps**) and the app selection pane for **App configuration policies** (**Apps** > **App configuration policies**). For more information about VPP apps, see [Manage volume-purchased apps and books with Microsoft Intune](../apps/vpp-apps.md).
-
-Applies to:
-
-- iOS/iPadOS
-- macOS
-
 ### Additional device details for Managed Home Screen<!-- 27006536 -->
 
 Android **OS version**, **Security patch**, and **Last device reboot time** details will be available from the **Device Information** page of the Managed Home Screen app. For related information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
@@ -101,7 +92,6 @@ Managed Home Screen for Android devices will natively support authentication in 
 Applies to:
 
 - Android devices
-
 
 ### Display ringtone selector for Managed Home Screen<!-- 26826233 -->
 
@@ -132,21 +122,6 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device configuration
-
-### New Default Enforcement device control setting available in the Windows settings catalog<!-- 30253799 -->
-
-The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
-
-There will soon be new settings in the Settings Catalog for Windows 24H2. To see these settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later ** > **Settings catalog** for profile type.
-
-This setting is available in both the settings catalog and the ASR device control template. The Default Enforcement device control setting enables a default enforcement to be applied if:
-
-- There are no policy rules present, or
-- At the end of the policy rules evaluation none were matched.
-
-Applies to:
-
-- Windows
 
 ### New settings available in the Apple settings catalog<!-- 30457000 -->
 
