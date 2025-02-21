@@ -120,7 +120,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     > These policy settings are enforced only when using apps in the work context. When end users use the app to do a personal task, they aren't affected by these policies. Note that when you create a new file it is considered a personal file.
 
     > [!IMPORTANT]
-    > It can take time for app protection policies to apply to existing devices. End users will see a notification on the device when the app protection policy is applied. Apply your app protection policies to devices before applying condidtional access rules.
+    > It can take time for app protection policies to apply to existing devices. End users will see a notification on the device when the app protection policy is applied. Apply your app protection policies to devices before applying conditional access rules.
 
 End users can download the apps from the App store or Google Play. For more information, see:
 * [Where to find work or school apps for iOS/iPadOS](../user-help/use-managed-apps-on-your-device-ios.md) 
