@@ -91,6 +91,24 @@ Applies to:
 
 ### Device configuration
 
+#### New Windows AI settings available in the Windows settings catalog<!-- 30339749 -->
+ 
+The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog for Windows. To see these settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** > **Settings catalog** for profile type.
+
+The new settings are:
+
+- Disable AI Data Analysis
+- Set Deny Uri List For Recall
+- Set Deny App List For Recall
+- Set Maximum Storage Space For Recall Snapshots
+- Set Maximum Storage Duration For Recall Snapshots
+
+Applies to:
+
+- Windows
+
 #### New Default Enforcement device control setting available in the Windows settings catalog<!-- 30253799 -->
 
 The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
