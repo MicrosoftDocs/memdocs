@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2025
+ms.date: 02/20/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -74,7 +74,7 @@ A *superseding app* is an app that updates or replaces other apps. A *superseded
 | Scenarios | Targeting for required intent | Targeting for available intent |
 |-|-|-|
 | **Scenario   1:**<br> The superseded app exists on the device and **Uninstall previous version** is set to **Yes**. | The superseded app is uninstalled, and the superseding app are installed on the device.<p> **NOTE:** Even if the superseded app isn't targeted, it's uninstalled. | Only superseding apps are shown in the company portal and can be installed. |
-| **Scenario   2:**<br>The superseded app exists on the device and **Uninstall previous version** is set to **No**. | The superseding app will be installed on the device. Whether the superseded app will be uninstalled or not is dependent on the superseding app's installer. | Only superseding apps are shown in the company portal and can be installed. |
+| **Scenario   2:**<br>The superseded app exists on the device and **Uninstall previous version** is set to **No**. | The superseding app is installed on the device. Whether the superseded app will be uninstalled or not is dependent on the superseding app's installer. | Only superseding apps are shown in the company portal and can be installed. |
 | **Scenario   3:**<br>The superseded app doesn't exist on the device. | The superseding app is   installed. | The new app appears in the   Company Portal. |
 
 ### Understand app update versus app replacement within supersedence
@@ -88,8 +88,8 @@ Understanding how supersedence is applied when updating an app versus replacing 
 
 | Customer   scenario | Description | Expected behavior | Additional information |
 |-|-|-|-|
-| App   update | IT admin wants to update an app   with a newer version of the same app. | The installer of the newer   version of the app (the superseding app) will automatically update the older   version of the app to the newer version. | Since the installer completes the updating, it isn't necessary to send down an uninstall command   to the older version. Hence, the Uninstall previous version is toggled off. |
-| App   replacement | IT admin wants to replace an app   with an entirely different app. | The superseded app is   uninstalled and the superseding app will be installed. Both install and   uninstall will be based on IT Pro's defined install/uninstall command line. | Since the two apps are different,   the admin can turn the Uninstall previous version toggle on to uninstall the   older app from the device. |
+| App   update | IT admin wants to update an app   with a newer version of the same app. | The installer of the newer   version of the app (the superseding app) automatically updates the older   version of the app to the newer version. | Since the installer completes the updating, it isn't necessary to send down an uninstall command   to the older version. Hence, the Uninstall previous version is toggled off. |
+| App   replacement | IT admin wants to replace an app   with an entirely different app. | The superseded app is   uninstalled and the superseding app is installed. Both the install and   uninstall actions are based on the IT Pro's defined install/uninstall command line. | Since the two apps are different,   the admin can turn the Uninstall previous version toggle on to uninstall the   older app from the device. |
 
 ### Understand in-place app update versus supersedence app update
 
@@ -202,13 +202,13 @@ The first available check-in will commonly happen between 1-8 hours after the as
 
 A Win32 app can have a maximum of 10 superseding apps. User must be logged in to the device to receive the superseding app.
 
-When an app is targeted with available intent to a group that contains the user, and the user requested the app install from the Company Portal, Intune creates a device based assignment to track both the user consent and internal targeting to process the app during check-in. This device based assignment is used to install the app on the devices. However, in situations where the targeting changes during the lifecycle of the app, a few scenarios can occur. If you take any of the following actions once the app is already installed on the device, Intune will remove user consent and the app will no longer be targeted with available intent:
+When an app is targeted with available intent to a group that contains the user, and the user requested the app install from the Company Portal, Intune creates a device based assignment to track both the user consent and internal targeting to process the app during check-in. This device based assignment is used to install the app on the devices. However, in situations where the targeting changes during the lifecycle of the app, a few scenarios can occur. If you take any of the following actions once the app is already installed on the device, Intune will remove user consent, and the app will no longer be targeted with available intent:
 
 1.	You remove the user from the Group membership of the targeted group in the Microsoft Entra admin center.
 2.	You removed the assignment to the targeted group.
 3.	You changed the intent of the app from **Available** to something else. For example, you could change the intent to **Unintall** or **Exclude**. 
 
-It’s important to note that even if you re-target the app with **Available** intent later, the auto-update supersedence won't occur because user consent has been removed. 
+It’s important to note that even if you retarget the app with **Available** intent later, the auto-update supersedence won't occur because user consent has been removed. 
 
 > [!NOTE]
 > The **Uninstall** intent takes precedence over **Available** intent.
@@ -229,6 +229,14 @@ Below are specific cases where app B has been created to supersede app A.
 | Uninstall   after supersedence update | App A was auto-updated to app B,   but app A wasn't removed from the device. Later, the user requests an   uninstall of app B from the device and app B is uninstalled successfully. | App A is still present on the   device. |
 | Upgrade   failure  | Intune attempts to auto-update   app A to app B but the installation of app B failed and app A was already   removed from the device. | Users won't be able to   reinstall app A from the Company Portal as it's superseded by app B, but are   able to try to reinstall app B from the Company Portal. |
 
+
+Limitations: 
+
+- Any Application Assignment Changes will result in deleting the component that's responsible of auto-updating the App.
+
+- This Component can't be manually configured, it's created once App is installed via Company Portal by End-User.
+
+- App Assignment Must be well-studied prior deployment to avoid any changes in assignment after installation and breaking the auto-update eventually.  
 
 ## Next steps
 
