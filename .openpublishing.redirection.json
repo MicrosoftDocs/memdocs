@@ -2873,6 +2873,12 @@
     {
       "source_path": "memdocs/configmgr/sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/manage-express-installation-files-for-windows-10-updates"
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/device-windows-pin-reset.md",
+      "redirect_url": "/windows/security/identity-protection/hello-for-business/pin-reset",
+      "redirect_document_id": false
     }
+
   ]
 }

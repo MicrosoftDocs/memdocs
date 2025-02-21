@@ -8,10 +8,10 @@ items:
       displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/what-is-intune.md
       items:
-      - name: Overview - Manage and secure your identities
+      - name: Overview - Manage and secure identities
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-identities.md
-      - name: Overview - Manage devices and control features
+      - name: Overview - Manage and secure devices
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-devices.md
       - name: Overview - Manage apps and protect their data
@@ -1771,8 +1771,6 @@ items:
           href: ./remote-actions/device-remote-lock.md
         - name: Reset passcode
           href: ./remote-actions/device-passcode-reset.md
-        - name: Windows 10 PIN reset
-          href: ./remote-actions/device-windows-pin-reset.md
         - name: Self-service password reset
           href: ./remote-actions/password-reset.md
       - name: Remove and restart
