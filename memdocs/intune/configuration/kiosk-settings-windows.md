@@ -7,7 +7,7 @@ keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/30/2023
+ms.date: 02/20/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,7 +34,7 @@ ms.collection:
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-On Windows 10/11 devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
+On Windows 10/11 devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode. To configure multi-app kiosk on Windows 11, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
 
 This article describes some of the settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to configure your Windows client devices to run in kiosk mode.
 
