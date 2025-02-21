@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 09/13/2024
+ms.date: 02/21/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -376,7 +376,7 @@ Completely removing a device from a tenant requires the device records in Intune
 
 1. **ZtdDeviceDuplicated**: This error occurs when there are duplicate hardware hashes in the CSV file. Only one of the duplicates is processed, and the others result in this error. If this error occurs, look for the other duplicates of the same device to see what the actual result was. If a duplicate that was successfully processed is found, the duplicate row from the CSV file can be removed.
 
-1. **InvalidZtdHardwareHash**: This error occurs when one or more fields in the hardware hash are invalid or empty. Both the manufacturer and serial number information need to be included. If they're not, the device cannot be registered for Autopilot. To check the serial number and manufacturer information, open command prompt and run the following command:
+1. **InvalidZtdHardwareHash**: This error occurs when one or more fields in the hardware hash are invalid or empty. Both the manufacturer and serial number information need to be included. If they're not, the device can't be registered for Windows Autopilot. To check the serial number and manufacturer information, open a command prompt and run the following command:
 
       ```cmd
    wmic baseboard get manufacturer, serialnumber
