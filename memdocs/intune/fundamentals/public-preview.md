@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2024
+ms.date: 02/20/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,9 +45,9 @@ When working with features in public preview, these features:
 - Typically go through feature changes before they're generally available (GA).
 - Are fully supported by Microsoft.
 - Might only be available in selected geographic regions or cloud environments. For example, the feature might not exist in the [Azure Government](/azure/azure-government/documentation-government-welcome) cloud.
-- Individual features in preview can have more usage and support restrictions. If so, this information is typically noted in the feature documentation.
+- Can have more usage and support restrictions. If so, this information is typically noted in the feature documentation.
 
-## Resources
+## Related articles
 
 - Review the [important notices](whats-new.md#notices).
 - See what's [in development](in-development.md).
