@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 02/19/2025
+ms.date: 02/20/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
@@ -45,7 +45,7 @@ Device management involves:
 - Configuring features built into the device, like enabling Bluetooth and preventing automatic connections to Wi-Fi hotspots
 - Securing the devices and preventing unauthorized access to organization resources from the devices, like using mobile threat defense and encrypting hard disks
 - Creating compliance rules that maintain device integrity, like setting a minimum OS version and preventing simple passwords
-- Being responsible for organization owned devices and personally owned devices that access your organization resources.
+- Being responsible for organization owned devices and personally owned devices that access your organization resources
 
 From a service perspective, Intune uses Microsoft Entra ID for device storage and permissions. Using the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), you can manage device tasks and policies in a central location designed for endpoint management.
 
