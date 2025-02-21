@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/05/2024
+ms.date: 02/21/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -44,8 +44,11 @@ There are three categories of policy settings: *Data relocation*, *Access requir
 ## Data protection
 
 > [!IMPORTANT]
-> For apps that have updated to v19.7.6 or later for Xcode 15 and v20.2.1 or later for Xcode 16 of the SDK, if you have configured **Send Org data to other apps** setting to a value other than "All apps", screen capture block is applied for the following scenarios: <ul><li>Screenshots</li><li>On-device screen recording</li><li>Screen sharing via on-device apps like Teams and Zoom mobile</li><li>Screen mirroring to another device via AirPlay</li><li>Screen mirroring or recording via QuickTime on a connected Mac</li></ul>
-><p>You can configure app configuration policy setting `com.microsoft.intune.mam.screencapturecontrol` = `Disabled` (**Apps** > **Configuration** > **Create** > **Managed apps** > under the **Settings** step, select **General configuration settings**) if you need to allow screen capture for your iOS devices. Apps must be restarted after receiving the updated app configuration policy for it to take effect.
+> For apps that have updated to v19.7.6 or later for Xcode 15 and v20.2.1 or later for Xcode 16 of the SDK, if you have configured **Send Org data to other apps** setting to a value other than **All apps**, screen capture block is applied for the following scenarios: <ul><li>Screenshots</li><li>On-device screen recording</li><li>Screen sharing via on-device apps like Teams and Zoom mobile</li><li>Screen mirroring to another device via AirPlay</li><li>Screen mirroring or recording via QuickTime on a connected Mac</li></ul>
+> 
+> You can configure the app configuration policy setting `com.microsoft.intune.mam.screencapturecontrol` = `Disabled` to allow screen capture for your iOS devices. This setting is available in Intune by selecting **Apps** > **Configuration** > **Create** > **Managed apps**. In the **Settings** step, select **General configuration settings**.
+> 
+> Apps must be restarted after receiving the updated app configuration policy for it to take effect.
 
 ### Data Transfer
 | Setting | How to use | Default value |
