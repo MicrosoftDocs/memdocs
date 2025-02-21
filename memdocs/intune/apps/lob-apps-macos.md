@@ -40,7 +40,7 @@ ms.collection:
 Use the information in this article to help you add macOS line-of-business apps to Microsoft Intune. 
 
 > [!NOTE]
-> macOS LOB apps have a maximum size limit of 2 GB per app.
+> macOS LOB apps have a maximum size limit of 8 GB per app.
 >
 > macOS LOB apps need to have a logo. If they don't have a logo, they will not be displayed in the apps section.
 >
