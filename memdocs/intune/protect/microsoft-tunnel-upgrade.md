@@ -129,7 +129,7 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 >
 > Container releases take place in stages. If you notice that your container images aren't the most recent, please be assured that they will be updated and delivered within the following week.
 
-### February 6, 2024
+### February 6, 2025
 
 Image hash values:
 
