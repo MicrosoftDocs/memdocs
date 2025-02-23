@@ -203,7 +203,7 @@ This section describes the compliance profile settings available for fully manag
 
 - **Intune app runtime integrity**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  - **Require** - Encrypt data storage on your devices.  
+  - **Require** - Checks that the Intune app has the default runtime environment installed, and is properly signed.  
 
 ## Personally owned work profile  
 This section describes the compliance profile settings available for personal devices enrolling with work profiles. Setting categories include: 
