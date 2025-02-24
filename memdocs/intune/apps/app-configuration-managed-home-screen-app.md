@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/16/2025
+ms.date: 02/20/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -207,6 +207,9 @@ Based on the OS version of the device, a notification may be presented to the us
 
 > [!NOTE]
 > The automatic sign out feature requires granting both [overlay permission](https://techcommunity.microsoft.com/t5/intune-customer-success/granting-overlay-permissions-to-managed-home-screen-for-android/ba-p/3247041) and exact alarm permission (OS 14+) to MHS. Users are prompted for permission upon startup of MHS, which requires the user to make device permission updates in the Settings application. When possible, use [OEMConfig](../configuration/android-oem-configuration-overview.md) to auto-grant overlay and exact alarm permission to MHS to prevent possible breakout scenarios when using the Settings application. However, only configure access to notifications and features that require permissions when necessary. Note that based on the OS version of the device, a notification may be presented to the user that alerts them to these permissions being granted, even if these permissions were auto-granted.
+
+> [!NOTE]
+> Managed Home Screen natively supports QR Code Authentication in Microsoft Entra ID. Authentication involves both a QR code and PIN. This capability eliminates the need for users to enter and re-enter long UPNs and alphanumeric passwords.
 
 ## Enter JSON Data
 
