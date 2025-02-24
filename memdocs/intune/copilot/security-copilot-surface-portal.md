@@ -64,7 +64,7 @@ This article shows you how to access your [Microsoft Surface Management Portal d
 
 Copilot for Surface Management Portal brings the capabilities of Security Copilot to the Microsoft Surface Management Portal admin center, enabling you to respond to Surface device issues and escalations quickly. Bringing AI to Surface Management Portal allows teams to immediately understand warranty coverage of their device fleet and determine remediation steps in a timely manner. As an administrator, you can compare the latest Surface for Business devices with their current Surface devices. You can also learn more about protecting your organizations devices from malware and other threats, so that you can reduce risks.
 
-:::image type="content" source="./media/security-copilot-surface-portal/surface_management_portal_01.png" lightbox="./media/security-copilot-surface-portal/surface_management_portal_01.png" alt-text="Screenshot that shows Copilot in the Surface Management Portal.":::
+:::image type="content" source="./media/security-copilot-surface-portal/surface-management-portal-01.png" lightbox="./media/security-copilot-surface-portal/surface-management-portal-01.png" alt-text="Screenshot that shows Copilot in the Surface Management Portal.":::
 
 ## Enable the Security Copilot Integration in Surface Management Portal
 
@@ -75,11 +75,11 @@ Enable integration of Security Copilot:
 1. Sign in to the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989).
 2. In the prompt bar, select **Sources** at the right corner.
 
-    :::image type="content" source="./media/security-copilot-surface-portal/surface_management_portal_02.png" alt-text="Screenshot that shows the Sources icon.":::
+    :::image type="content" source="./media/security-copilot-surface-portal/surface-management-portal-02.png" alt-text="Screenshot that shows the Sources icon.":::
 
 3. In **Manage Sources**, activate the **Surface Management Portal** plugin.
 
-    :::image type="content" source="./media/security-copilot-surface-portal/surface_management_portal_03.png" alt-text="Screenshot that shows the select for **Surface Management Portal** plugin.":::
+    :::image type="content" source="./media/security-copilot-surface-portal/surface-management-portal-03.png" alt-text="Screenshot that shows the select for **Surface Management Portal** plugin.":::
 
 4. Close the plugin pane.
 
@@ -104,7 +104,7 @@ Once you have set up Security Copilot, you can start using Copilot for Surface M
 
 Your feedback is vital to guide the current and planned development of the product. The best way to provide feedback is to use the feedback buttons at the bottom of each completed prompt, directly within the product.
 
-:::image type="content" source="./media/security-copilot-surface-portal/surface_management_portal_04.png" alt-text="Screenshot that shows the Feeback prompt.":::
+:::image type="content" source="./media/security-copilot-surface-portal/surface-management-portal-04.png" alt-text="Screenshot that shows the Feeback prompt.":::
 
 ## Privacy and data security in Security Copilot
 
