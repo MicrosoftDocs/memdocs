@@ -43,8 +43,8 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 - [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot)
 - [Microsoft Security Copilot experiences](/copilot/security/experiences-security-copilot)
 - [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot)
-- [Understand authentication in Microsoft Security Copilot](/copilot/security/security-copilot/authentication)
-- [Prompting in Microsoft Security Copilot](/copilot/security/security-copilot/prompting-security-copilot)
+- [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication)
+- [Prompting in Microsoft Security Copilot](/copilot/security/prompting-security-copilot)
 
 ## Security Copilot integration in Microsoft Intune
 
