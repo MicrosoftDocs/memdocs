@@ -185,7 +185,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
   
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
     2. Select **Devices** > **Device onboarding** > **Enrollment** > **Windows** tab > **Windows Autopilot** > **Enrollment Status Page**.
-    3. Select **Create**, enter a name for the **Enrollment Status Page** > **Next**.
+    3. Select **Create** > enter a name for the **Enrollment Status Page** > **Next**.
     4. In the **Settings** tab, enter the following values, and then select **Next**:
 
         | Setting |    Value |
@@ -242,9 +242,9 @@ With this enrollment option, you:
 
 When you configure OneDrive **Known Folder Move**, user files and data are automatically saved in OneDrive. When you remove built-in Windows apps and the Microsoft Store, the Start menu and device experience are simplified.
 
-This step helps simplify the Windows user experience. 
+This step helps simplify the Windows user experience.
 
-### ✅ 1 - Configure OneDrive Known Folder Move with an Administrative Template
+### ✅ 1 - Configure OneDrive Known Folder Move using the settings catalog
 
 With **Known Folder Move**, users data (files and folders) is saved to OneDrive. When users sign in to another device, OneDrive automatically synchronizes the data to the new device. Users don't have to manually move their files.
 
@@ -266,15 +266,15 @@ To configure **Known Folder Move**, create a settings catalog policy in Intune:
 
     ??I assume device settings, not user??
 
-    | Setting | Value |
-    | --- | --- |
-    | Prevent users from moving their Windows known folders to OneDrive | Enabled |
-    | Prevent users from redirecting their Windows known folders to their PC | Enabled |
-    | Silently move Windows known folders to OneDrive | Enabled <br/><br/> This setting is listed twice. Select the option that only has **Show notification to users after folders have been redirected (Device)** and **Tenant ID (Device)**. |
-    | Show notification to users after folders have been redirected: (Device) | Yes. You can also choose to hide the notification. |
-    | Tenant ID: (Device) | Enter your organization's tenant ID. <br/><br/>Your tenant ID is shown in Microsoft Entra admin center > [Properties page](https://go.microsoft.com/fwlink/?linkid=2155017) > **Tenant ID**. |
-    | Silently sign in users to the OneDrive sync app with their Windows credentials | Enabled |
-    | Use OneDrive Files On-Demand | Enabled |
+    | Setting category | Setting | Value |
+    | --- | --- | --- |
+    | **OneDrive** | Prevent users from moving their Windows known folders to OneDrive | Enabled |
+    | &nbsp; | Prevent users from redirecting their Windows known folders to their PC | Enabled |
+    | &nbsp; | Silently move Windows known folders to OneDrive | Enabled <br/><br/> This setting is listed twice. Select the option that only has **Show notification to users after folders have been redirected (Device)** and **Tenant ID (Device)**. |
+    | &nbsp; | Show notification to users after folders have been redirected: (Device) | Yes. You can also choose to hide the notification. |
+    | &nbsp; | Tenant ID: (Device) | Enter your organization's tenant ID. <br/><br/>Your tenant ID is shown in Microsoft Entra admin center > [Properties page](https://go.microsoft.com/fwlink/?linkid=2155017) > **Tenant ID**. |
+    | &nbsp; | Silently sign in users to the OneDrive sync app with their Windows credentials | Enabled |
+    | &nbsp; | Use OneDrive Files On-Demand | Enabled |
 
 7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
@@ -321,7 +321,7 @@ To prevent these outside apps, use the following steps:
 
     | Setting category | Setting | Value |
     | --- | --- | --- |
-    | Microsoft App Store | Require Private Store Only | Only Private store is enabled |
+    | **Microsoft App Store** | Require Private Store Only | Only Private store is enabled |
 
 7. In **Assignments**, assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 8. In **Review + create**  review your profile and select **Create**.
@@ -332,7 +332,7 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
 
 ### ✅ 1 - Deploy Microsoft Edge
 
-1. [Add Microsoft Edge to Intune](../apps/apps-windows-edge.md).
+1. [Add Microsoft Edge](../apps/apps-windows-edge.md) to Intune.
 2. For **App settings**, select the **Stable Channel**.
 3. Assign the Microsoft Edge app to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
@@ -376,9 +376,9 @@ Configure the security baseline in Intune:
 
     | Setting category | Setting | Reason for changing |
     | --- | --- | --- |
-    | Browser | Allow Password Manager | If you want to allow end users to use password managers, then allow this setting. |
-    | Remote Assistance ?? | Remote Assistance solicited | This setting allows your support staff to remotely connect to devices. Microsoft recommends disabling this setting unless your organization requires it. |
-    | Firewall | All Firewall settings | If you need to allow certain connections to devices based on your organization's needs, then change the default Firewall settings. |
+    | **Browser** | Allow Password Manager | If you want to allow end users to use password managers, then allow this setting. |
+    | **Remote Assistance** ?? | Remote Assistance solicited | This setting allows your support staff to remotely connect to devices. Microsoft recommends disabling this setting unless your organization requires it. |
+    | **Firewall** | All Firewall settings | If you need to allow certain connections to devices based on your organization's needs, then change the default Firewall settings. |
 
     Select **Next**.
 
@@ -437,27 +437,28 @@ Configure the Update ring in Intune:
 3. In **Basics**, enter a name for the update ring. Select **Next**.
 4. In **Update ring settings**, configure the following values and select **Next**:
 
-    | Setting | Value |
-    | --- | --- |
-    | ?? Servicing channel | Semi-annual channel |
-    | Microsoft product updates | Allow |
-    | Windows drivers | Allow |
-    | Quality update deferral period (days) | 0 |
-    | Feature update deferral period (days) | 0 |
-    | Set feature update uninstall period | 10 |
-    | Automatic update behavior | Reset to default |
-    | ?? Restart checks | Allow |
-    | Option to pause Windows updates | Enable |
-    | Option to check for Windows updates | Enable |
-    | ?? Require user approval to dismiss restart notification | No |
-    | ?? Remind user prior to required auto-restart with dismissible reminder (hours) | Leave this setting unconfigured |
-    | ?? Remind user prior to required auto-restart with permanent reminder (minutes) | Leave this setting unconfigured |
-    | Change notification update level | Use the default Windows Update notifications |
-    | Use deadline settings | Allow |
-    | Deadline for feature updates | 7 |
-    | Deadline for quality updates | 2 |
-    | Grace period | 2 |
-    | Auto reboot before deadline | Yes |
+    | Setting category | Setting | Value |
+    | --- | --- | --- |
+    | **Update settings** | ?? Servicing channel | Semi-annual channel |
+    | &nbsp; | Microsoft product updates | Allow |
+    | &nbsp; | Windows drivers | Allow |
+    | &nbsp; | Quality update deferral period (days) | 0 |
+    | &nbsp; | Feature update deferral period (days) | 0 |
+    | &nbsp; | Set feature update uninstall period | 10 |
+    | &nbsp; | &nbsp; | &nbsp; |
+    | **User experience settings** | Automatic update behavior | Reset to default |
+    | &nbsp; | ?? Restart checks | Allow |
+    | &nbsp; | Option to pause Windows updates | Enable |
+    | &nbsp; | Option to check for Windows updates | Enable |
+    | &nbsp; | ?? Require user approval to dismiss restart notification | No |
+    | &nbsp; | ?? Remind user prior to required auto-restart with dismissible reminder (hours) | Leave this setting unconfigured |
+    | &nbsp; | ?? Remind user prior to required auto-restart with permanent reminder (minutes) | Leave this setting unconfigured |
+    | &nbsp; | Change notification update level | Use the default Windows Update notifications |
+    | &nbsp; | Use deadline settings | Allow |
+    | &nbsp; | Deadline for feature updates | 7 |
+    | &nbsp; | Deadline for quality updates | 2 |
+    | &nbsp; | Grace period | 2 |
+    | &nbsp; | Auto reboot before deadline | Yes |
 
 5. Assign the Update ring to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
