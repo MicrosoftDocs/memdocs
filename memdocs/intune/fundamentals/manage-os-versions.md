@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/23/2024
+ms.date: 02/24/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -113,7 +113,7 @@ resources.
 
 To allow multiple APPs with different OS requirements to be targeted to
 the same user, you can [create
-filters](https://learn.microsoft.com/en-us/mem/intune/fundamentals/filters)
+filters](../fundamentals/filters.md)
 which target the APP to a specific OS version.
 
 There are two types of filters for Intune: Managed devices and Managed
@@ -161,10 +161,10 @@ major OS version you want to target, such as iOS 16 and 17.
 
 4.  Complete the **Apps**, **Data protection** and **Access
     requirements** pages with the
-    [iOS](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios),
-    [Android](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android)
+    [iOS](../apps/app-protection-policy-settings-ios.md),
+    [Android](../apps/app-protection-policy-settings-android.md)
     or
-    [Windows](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows)
+    [Windows](../apps/app-protection-policy-settings-windows.md)
     app protection policy settings which meet the requirements for your
     organization. Within the **Device conditions** section on the
     **Conditional launch page** (or Health Checks page for Windows APP),
