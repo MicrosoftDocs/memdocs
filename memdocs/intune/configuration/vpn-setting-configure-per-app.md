@@ -105,7 +105,7 @@ Import the VPN server's root certificate issued by the CA into an Intune profile
 
     :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png" alt-text="Create a trusted certificate profile for iOS/iPadOS devices in Microsoft Intune and Intune admin center.":::
 
-When you're ready to assign the profile, assign this profile to the group you created in [Step 1](#step-1---create-a-group-for-your-vpn-users) (in this article). When you assign the profile, the users or devices in the group receive the policy the next time they check-in with the Intune service.
+When you're ready to assign the profile, assign this profile to the group you created in [Step 1 - Create a group for your VPN users](#step-1---create-a-group-for-your-vpn-users) (in this article). When you assign the profile, the users or devices in the group receive the policy the next time they check-in with the Intune service.
 
 ## Step 3 - Create a SCEP or PKCS certificate profile
 
@@ -122,7 +122,7 @@ Be sure to configure the certificate for client authentication. You can set clie
 
 :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png" alt-text="Create a SCEP certificate profile in Microsoft Intune and Intune admin center. Include the subject name format, key usage, extended key usage, and more.":::
 
-When you're ready to assign the profile, assign this profile to the group you created in [Step 1](#step-1---create-a-group-for-your-vpn-users) (in this article). When you assign the profile, the users or devices in the group receive the policy the next time they check-in with the Intune service.
+When you're ready to assign the profile, assign this profile to the group you created in [Step 1 - Create a group for your VPN users](#step-1---create-a-group-for-your-vpn-users) (in this article). When you assign the profile, the users or devices in the group receive the policy the next time they check-in with the Intune service.
 
 ## Step 4 - Create a per-app VPN profile
 
@@ -158,7 +158,7 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
 
 5. Select **Next**, and continue [creating the VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
 
-When you're ready to assign the profile, assign this profile to the group you created in [Step 1](#step-1---create-a-group-for-your-vpn-users) (in this article). When you assign the profile, the users or devices in the group receive the policy the next time they check-in with the Intune service.
+When you're ready to assign the profile, assign this profile to the group you created in [Step 1 - Create a group for your VPN users](#step-1---create-a-group-for-your-vpn-users) (in this article). When you assign the profile, the users or devices in the group receive the policy the next time they check-in with the Intune service.
 
 ## Step 5 - Associate an app with the VPN profile
 
@@ -167,8 +167,8 @@ After adding your VPN profile, associate the app and Microsoft Entra group to th
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps**.
 2. Select an app from the list > **Properties** > **Assignments** > **Edit**.
 3. Go to the **Required** or **Available for enrolled devices** section.
-4. Select **Add group** > Select the group [you created in Step 1](#step-1---create-a-group-for-your-vpn-users) (in this article) > **Select**.
-5. In **VPNs**, select the per-app VPN profile [you created in Step 4](#step-4---create-a-per-app-vpn-profile) (in this article).
+4. Select **Add group** > Select the group you created in [Step 1 - Create a group for your VPN users](#step-1---create-a-group-for-your-vpn-users) (in this article) > **Select**.
+5. In **VPNs**, select the per-app VPN profile you created in [Step 4 - Create a per-app VPN profile](#step-4---create-a-per-app-vpn-profile) (in this article).
 
     :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png" alt-text="Two screenshots that show assigning an app to the per-app VPN profile in Microsoft Intune and Intune admin center.":::
 
