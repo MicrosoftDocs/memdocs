@@ -102,20 +102,7 @@ Organizations are using app protection policy settings today when apps are opene
 
 For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
-## Managing a new operating system version rollout
-
-You can use the Intune capabilities described in this article to help you move your organizations devices to a new operating system version within the timeline you define. The following steps provide a sample deployment model to move your users from operating system v1 to operating system v2 in seven days.
-
-1. Use [device enrollment restrictions](../enrollment/enrollment-restrictions-set.md) to require operating system v2 as the minimum version to enroll the device. This ensures new end-user devices are compliant at enrollment time.
-2. Use Intune [app protection policies](../apps/app-protection-policy.md) to warn users when a protected app opens or resumes that the newer operating system v2 is required.
-3. Use [device compliance policies](../protect/device-compliance-get-started.md) to require operating system v2 as the minimum version for a device to be compliant. Use **Actions for noncompliance** to allow a seven-day grace period and to send end users an email notification with your timeline and requirements.
-   - These policies can inform end users that their devices need to be updated through email, the Intune Company Portal, and when the app is opened for apps enabled with an app protection policy.
-   - You can run a compliance report to identify users that are out of compliance.
-4. Use Intune app protection policies to block users when an app opens or resumes if the device isn't running operating system v2.
-5. Use device compliance policies to require operating system v2 as the minimum version for a device to be compliant.
-   - These policies require devices to be updated for them to continue to access organizational data. Protected services are blocked when used with device Conditional Access. Apps enabled with an app protection policy are blocked when opened or when they access organizational data.
-
-## How conditional launch and filters work together
+## Managing multiple OS versions using Intune app protection policies
 
 In APP, you can only configure one minimum OS version in the conditional
 launch settings but you could create multiple APPs with different
@@ -210,6 +197,21 @@ Create additional APPs for each OS version, for instance:
 Organizations can create multiple APPs that require different minimum OS versions. By doing this, you can filter the assignment of these APPs to only apply to each major OS version. This ensures that each APP is compatible with the specific OS version it is assigned to, providing a tailored approach to app protection.
 
 As OS vendors release new minor OS updates or patches, you can also update each APP with the new minimum OS version. This continuous updating process ensures that your organization remains secure by always using the latest OS versions. Keeping your apps and OS versions up-to-date helps protect against vulnerabilities and enhances overall security.
+
+
+## Managing a new operating system version rollout
+
+You can use the Intune capabilities described in this article to help you move your organizations devices to a new operating system version within the timeline you define. The following steps provide a sample deployment model to move your users from operating system v1 to operating system v2 in seven days.
+
+1. Use [device enrollment restrictions](../enrollment/enrollment-restrictions-set.md) to require operating system v2 as the minimum version to enroll the device. This ensures new end-user devices are compliant at enrollment time.
+2. Use Intune [app protection policies](../apps/app-protection-policy.md) to warn users when a protected app opens or resumes that the newer operating system v2 is required.
+3. Use [device compliance policies](../protect/device-compliance-get-started.md) to require operating system v2 as the minimum version for a device to be compliant. Use **Actions for noncompliance** to allow a seven-day grace period and to send end users an email notification with your timeline and requirements.
+   - These policies can inform end users that their devices need to be updated through email, the Intune Company Portal, and when the app is opened for apps enabled with an app protection policy.
+   - You can run a compliance report to identify users that are out of compliance.
+4. Use Intune app protection policies to block users when an app opens or resumes if the device isn't running operating system v2.
+5. Use device compliance policies to require operating system v2 as the minimum version for a device to be compliant.
+   - These policies require devices to be updated for them to continue to access organizational data. Protected services are blocked when used with device Conditional Access. Apps enabled with an app protection policy are blocked when opened or when they access organizational data.
+
 
 ## Next steps
 
