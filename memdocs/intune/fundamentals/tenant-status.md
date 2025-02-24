@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/20/2023
+ms.date: 02/24/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -37,7 +37,7 @@ The Microsoft Intune tenant status page is a centralized hub where you can view 
 - Licensed users and enrolled devices
 
 > [!IMPORTANT]
-> Note that to access the Tenant administration page, one needs to have the Intune Read Only Operator RBAC role or one of the activated Entra Identity Management (PIM) roles.
+> To access the Tenant administration page, you need to have the Intune Read Only Operator RBAC role or one of the activated Entra Identity Management (PIM) roles.
 
 You can also view the status of the Intune connectors you've configured, and health messages for the Intune service and general messages for Tenants.
 
