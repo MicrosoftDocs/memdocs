@@ -26,10 +26,10 @@ ms.collection:
 
 By following this [guided scenario](guided-scenarios-overview.md), you can assign the Microsoft Edge app to your users on iOS/iPadOS or Android devices at your organization. Assigning this app allows your users to seamlessly browse content using their corporate devices.
 
-Microsoft Edge lets users cut through the clutter of the web with built-in features that help them consolidate, arrange and manage work content. Users of iOS/iPadOS and Android devices who sign in with their corporate Microsoft Entra accounts in the Microsoft Edge application will find their browser preloaded with workplace **Favorites** and website filters you define.
+Microsoft Edge lets users cut through the clutter of the web with built-in features that help them consolidate, arrange, and manage work content. Users of iOS/iPadOS and Android devices who sign in with their corporate Microsoft Entra accounts in the Microsoft Edge application will find their browser preloaded with workplace **Favorites** and website filters you define.
 
 > [!NOTE]
-> If you have blocked users from enrolling either iOS/iPadOS or Android devices, this scenario will not enable enrollment, and the users will need to install Edge for themselves.
+> If you have blocked users from enrolling either iOS/iPadOS or Android devices, this scenario won't enable enrollment, and the users will need to install Microsoft Edge for themselves.
 The following Microsoft Edge enterprise features that are enabled by Intune policies include:
 
 - **Dual-Identity** - Users can add both a work account, as well as a personal account, for browsing. There's complete separation between the two identities, which is similar to the architecture and experience in Microsoft 365 and Outlook. Intune admins will be able to set the desired policies for a protected browsing experience within the work account.
@@ -82,10 +82,10 @@ In this step, you can choose the user groups that you want to include to have Mi
 The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices select **Create** to complete the guided scenario. 
 
 > [!NOTE]
-> Edge may take up to 12 hours to receive configuration. For more information, see [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).
+> Microsoft Edge may take up to 12 hours to receive configuration. For more information, see [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).
 
 > [!IMPORTANT]
-> Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resources will not be saved.
+> Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resources won't be saved.
 
 ## Next steps
 
