@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/20/2023
+ms.date: 02/24/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -35,6 +35,9 @@ The Microsoft Intune tenant status page is a centralized hub where you can view 
 - Your tenant name and location
 - Service release versions
 - Licensed users and enrolled devices
+
+> [!IMPORTANT]
+> To access the Tenant administration page, you need to have the Intune Read Only Operator RBAC role or one of the activated Entra Identity Management (PIM) roles.
 
 You can also view the status of the Intune connectors you've configured, and health messages for the Intune service and general messages for Tenants.
 
@@ -65,7 +68,7 @@ When you open the *Connector status* tab, any unhealthy connectors display at th
 When there's more than a single connector of any one type, the status is a summary for all of those same connectors. The least healthy status of any single connector is used as the health for the group.  
 
 > [!IMPORTANT]
-> Some connectors can report a status of *Healthy* or *Connected* but might not be functioning correctly. If you encounter issues with a specific connector, review the any applicable connector logs or open a case with [support](../../get-support.md) to investigate further.
+> Some connectors can report a status of *Healthy* or *Connected* but might not be functioning correctly. If you encounter issues with a specific connector, review any applicable connector logs or open a case with [support](../../get-support.md) to investigate further.
 
 **Connector status:**
 
