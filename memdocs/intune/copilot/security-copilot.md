@@ -39,6 +39,7 @@ Microsoft Security Copilot is a cloud-based AI platform that provides a natural 
 ## Know before you begin
 
 If you're new to Security Copilot, you should familiarize yourself with it by reading these articles:
+
 - [What is Microsoft Security Copilot?](/security-copilot/microsoft-security-copilot)
 - [Microsoft Security Copilot experiences](/security-copilot/experiences-security-copilot)
 - [Get started with Microsoft Security Copilot](/security-copilot/get-started-security-copilot)
