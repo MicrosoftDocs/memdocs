@@ -104,7 +104,7 @@ For more information, see [How to create and assign app protection policies](../
 
 ## Managing multiple OS versions using Intune app protection policies
 
-In APP, you can only configure one minimum OS version in the conditional
+In App Protection Policies (APP), you can only configure one minimum OS version in the conditional
 launch settings but you could create multiple APPs with different
 minimum OS values. However, because APPs are assigned to user groups,
 this means a user with multiple devices that are running different OS
