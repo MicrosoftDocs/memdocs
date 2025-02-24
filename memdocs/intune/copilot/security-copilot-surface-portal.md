@@ -42,11 +42,11 @@ Copilot for Surface Management Portal provides visibility into your environment'
 
 If you're new to Security Copilot, you should familiarize yourself with it by reading these articles:
 
-- [What is Microsoft Security Copilot?](/security-copilot/microsoft-security-copilot)
-- [Microsoft Security Copilot experiences](/security-copilot/experiences-security-copilot)
-- [Get started with Microsoft Security Copilot](/security-copilot/get-started-security-copilot)
-- [Understand authentication in Microsoft Security Copilot](/security-copilot/authentication)
-- [Prompting in Microsoft Security Copilot](/security-copilot/prompting-security-copilot)
+- [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot)
+- [Microsoft Security Copilot experiences](/copilot/security/experiences-security-copilot)
+- [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot)
+- [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication)
+- [Prompting in Microsoft Security Copilot](/copilot/security/prompting-security-copilot)
 
 ## Security Copilot integration in Microsoft Surface Management Portal
 
