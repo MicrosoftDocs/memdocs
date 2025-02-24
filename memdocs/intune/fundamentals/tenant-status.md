@@ -68,7 +68,7 @@ When you open the *Connector status* tab, any unhealthy connectors display at th
 When there's more than a single connector of any one type, the status is a summary for all of those same connectors. The least healthy status of any single connector is used as the health for the group.  
 
 > [!IMPORTANT]
-> Some connectors can report a status of *Healthy* or *Connected* but might not be functioning correctly. If you encounter issues with a specific connector, review the any applicable connector logs or open a case with [support](../../get-support.md) to investigate further.
+> Some connectors can report a status of *Healthy* or *Connected* but might not be functioning correctly. If you encounter issues with a specific connector, review any applicable connector logs or open a case with [support](../../get-support.md) to investigate further.
 
 **Connector status:**
 
