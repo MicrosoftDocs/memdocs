@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/03/2025
+ms.date: 02/24/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -180,7 +180,7 @@ For more information, see the following resources:
 - [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999)
 - [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609)
 
-####  dependencies
+####  Android AOSP dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 | --- | ---- | -------- | ----- | --------- | ----- |
