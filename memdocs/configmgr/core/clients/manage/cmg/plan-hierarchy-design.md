@@ -48,7 +48,8 @@ Fourth Coffee has a CAS in an on-premises datacenter at their headquarters in Se
 As clients roam onto the internet, they communicate with the CMG in the West US Azure region. The CMG forwards this communication to the CMG connection point in the client's assigned primary site.
 
 > [!TIP]
-> You don't need to deploy more than one CMG for the purposes of geolocation. The Configuration Manager client is mostly unaffected by the slight latency that can occur with the cloud service, even when geographically distant.
+> When providing global client support, content downloads from a geographically distant Cloud Management Gateway's storage account can be affected by cloud service communication latency between countries or regions. Although the delay from one network location to another may not be significant, the necessity for communication to traverse different regions can increase latency. For applications with large content (either in terms of the number of files or file size), the download timing can vary between proximate and distant CMGs (storage accounts). For Client operational communication, the impact is lower, as the routing to Storage account is different than the routing to CMG VM Api Service. 
+> 
 
 ## Multiple environments
 <!-- SCCMDocs#1225 -->
