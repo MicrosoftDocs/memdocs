@@ -348,7 +348,7 @@ The locked view mode is often used together with MAM policy **com.microsoft.intu
 > By default, users are not allowed to create new tabs in locked view mode. To allow tab creation, set the MDM policy **[EdgeLockedViewModeAllowedActions](/deployedge/microsoft-edge-mobile-policies#edgelockedviewmodeallowedactions)** to **newtabs**.
 
 ### Switch network stack between Chromium and iOS 
-By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services, auto search suggestions and sending feedback. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
+By default, Microsoft Edge for both iOS and Android uses the Chromium network stack for Microsoft Edge service communication, including sync services, auto search suggestions and sending feedback. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
 
 Organizations can modify their network stack preference by configuring the following setting.
 
