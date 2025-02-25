@@ -1371,286 +1371,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "windows-365/add-device-images.md",
-      "redirect_url": "/windows-365/enterprise/add-device-images",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/app-assure.md",
-      "redirect_url": "/windows-365/enterprise/app-assure",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/app-overview.md",
-      "redirect_url": "/windows-365/enterprise/app-overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/architecture.md",
-      "redirect_url": "/windows-365/enterprise/architecture",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/assign-apps.md",
-      "redirect_url": "/windows-365/enterprise/assign-apps",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/assign-licenses.md",
-      "redirect_url": "/windows-365/enterprise/assign-licenses",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/assign-users-as-local-admin.md",
-      "redirect_url": "/windows-365/enterprise/assign-users-as-local-admin",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/automated-provisioning-steps.md",
-      "redirect_url": "/windows-365/enterprise/automated-provisioning-steps",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/cloud-pc-size-recommendations.md",
-      "redirect_url": "/windows-365/enterprise/cloud-pc-size-recommendations",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/create-custom-image-support-teams.md",
-      "redirect_url": "/windows-365/enterprise/create-custom-image-support-teams",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/create-device-configuration-profile.md",
-      "redirect_url": "/windows-365/enterprise/create-device-configuration-profile",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/create-dynamic-device-group-all-cloudpcs.md",
-      "redirect_url": "/windows-365/enterprise/create-dynamic-device-group-all-cloudpcs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/create-dynamic-device-group-for-specific-configuration.md",
-      "redirect_url": "/windows-365/enterprise/create-dynamic-device-group-for-specific-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/create-dynamic-device-group-from-specific-policy.md",
-      "redirect_url": "/windows-365/enterprise/create-dynamic-device-group-from-specific-policy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/create-on-premises-network-connection.md",
-      "redirect_url": "/windows-365/enterprise/create-on-premises-network-connection",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/create-provisioning-policy.md",
-      "redirect_url": "/windows-365/enterprise/create-provisioning-policy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/delete-on-premises-network-connection.md",
-      "redirect_url": "/windows-365/enterprise/delete-on-premises-network-connection",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/delete-provisioning-policy.md",
-      "redirect_url": "/windows-365/enterprise/delete-provisioning-policy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/deploy-security-baselines.md",
-      "redirect_url": "/windows-365/enterprise/deploy-security-baselines",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/deployment-overview.md",
-      "redirect_url": "/windows-365/enterprise/deployment-overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/device-configuration.md",
-      "redirect_url": "/windows-365/enterprise/device-configuration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/device-images-convert-generation-2.md",
-      "redirect_url": "/windows-365/enterprise/device-images-convert-generation-2",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/device-images.md",
-      "redirect_url": "/windows-365/enterprise/device-images",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/device-management-overview.md",
-      "redirect_url": "/windows-365/enterprise/device-management-overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/edit-on-premises-network-connection.md",
-      "redirect_url": "/windows-365/enterprise/edit-on-premises-network-connection",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/edit-provisioning-policy.md",
-      "redirect_url": "/windows-365/enterprise/edit-provisioning-policy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/end-grace-period.md",
-      "redirect_url": "/windows-365/enterprise/end-grace-period",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/end-user-access-cloud-pc.md",
-      "redirect_url": "windows-365/end-user-access-cloud-pc",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/end-user-hardware-requirements.md",
-      "redirect_url": "windows-365/end-user-hardware-requirements",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/business/get-users-started.md",
-      "redirect_url": "/windows-365/get-users-started",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/get-cloud-pc-audit-logs-using-powershell.md",
-      "redirect_url": "/windows-365/enterprise/get-cloud-pc-audit-logs-using-powershell",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/health-checks.md",
-      "redirect_url": "/windows-365/enterprise/health-checks",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/in-development.md",
-      "redirect_url": "/windows-365/enterprise/in-development",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/lifecycle.md",
-      "redirect_url": "/windows-365/enterprise/lifecycle",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/manage-rdp-device-redirections.md",
-      "redirect_url": "/windows-365/enterprise/manage-rdp-device-redirections",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/on-premises-network-connections.md",
-      "redirect_url": "/windows-365/enterprise/on-premises-network-connections",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/permission-scopes.md",
-      "redirect_url": "/windows-365/enterprise/permission-scopes",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/planning-guide.md",
-      "redirect_url": "/windows-365/enterprise/planning-guide",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/privacy-personal-data.md",
-      "redirect_url": "/windows-365/enterprise/privacy-personal-data",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/provide-localized-windows-experience.md",
-      "redirect_url": "/windows-365/enterprise/provide-localized-windows-experience",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/provisioning-errors.md",
-      "redirect_url": "/windows-365/enterprise/provisioning-errors",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/provisioning.md",
-      "redirect_url": "/windows-365/enterprise/provisioning",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/remotely-manage-cloud-pc.md",
-      "redirect_url": "/windows-365/enterprise/remotely-manage-cloud-pc",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/report-remoting-connection.md",
-      "redirect_url": "/windows-365/enterprise/report-remoting-connection",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/report-resource-performance.md",
-      "redirect_url": "/windows-365/enterprise/report-resource-performance",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/reprovision-cloud-pc.md",
-      "redirect_url": "/windows-365/enterprise/reprovision-cloud-pc",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/requirements-network.md",
-      "redirect_url": "/windows-365/enterprise/requirements-network",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/requirements.md",
-      "redirect_url": "/windows-365/enterprise/requirements",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/resize-cloud-pc.md",
-      "redirect_url": "/windows-365/enterprise/resize-cloud-pc",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/role-based-access.md",
-      "redirect_url": "/windows-365/enterprise/role-based-access",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/security-guidelines.md",
-      "redirect_url": "/windows-365/enterprise/security-guidelines",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/set-conditional-access-policies.md",
-      "redirect_url": "/windows-365/enterprise/set-conditional-access-policies",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/teams-on-cloud-pc.md",
-      "redirect_url": "/windows-365/enterprise/teams-on-cloud-pc",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/troubleshoot-on-premises-network-connection.md",
-      "redirect_url": "/windows-365/enterprise/troubleshoot-on-premises-network-connection",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/troubleshooting.md",
-      "redirect_url": "/windows-365/enterprise/troubleshooting",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/whats-new.md",
-      "redirect_url": "/windows-365/enterprise/whats-new",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "memdocs/analytics/recommended-software.md",
       "redirect_url": "/mem/analytics/work-from-anywhere",
       "redirect_document_id": true
@@ -1679,36 +1399,6 @@
       "source_path": "memdocs/configmgr/sum/deploy-use/uup-preview.md",
       "redirect_url": "/mem/configmgr/sum/",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "windows-365/enterprise/on-premises-network-connections.md",
-      "redirect_url": "/windows-365/enterprise/azure-network-connections",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/create-on-premises-network-connection.md",
-      "redirect_url": "/windows-365/enterprise/create-azure-network-connection",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/edit-on-premises-network-connection.md",
-      "redirect_url": "/windows-365/enterprise/edit-azure-network-connection",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/delete-on-premises-network-connection.md",
-      "redirect_url": "/windows-365/enterprise/delete-azure-network-connection",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/troubleshoot-on-premises-network-connection.md",
-      "redirect_url": "/windows-365/enterprise/troubleshoot-azure-network-connection",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/get-users-started.md",
-      "redirect_url": "/windows-365/end-user-access-cloud-pc",
-      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/remote-actions/remote-assist-mobile-devices.md",
@@ -2526,11 +2216,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "windows-365/enterprise/business-continuity-disaster-recovery.md",
-      "redirect_url": "/windows-365/business-continuity-disaster-recovery",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "memdocs/intune/protect/wandera-mtd-connector.md",
       "redirect_url": "/mem/intune/protect/jamf-mtd-connector",
       "redirect_document_id": false
@@ -2543,11 +2228,6 @@
     {
       "source_path": "memdocs/intune/fundamentals/introduction-intune-education.md",
       "redirect_url": "/mem/intune/industry/education/introduction-intune-education",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/troubleshoot-citrix-hdx-plus.md",
-      "redirect_url": "/windows-365/enterprise/troubleshoot-partner-connector",
       "redirect_document_id": false
     },
     {
@@ -2726,16 +2406,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "windows-365/enterprise/set-up-vmware-horizon.md",
-      "redirect_url": "/windows-365/enterprise/set-up-omnissa-horizon",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/requirements-vmware-horizon.md",
-      "redirect_url": "/windows-365/enterprise/requirements-omnissa-horizon",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "memdocs/configmgr/core/clients/manage/monitor-windows-analytics.md",
       "redirect_url": "/mem/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove",
       "redirect_document_id": false
@@ -2773,71 +2443,6 @@
     {
       "source_path": "memdocs/intune/protect/endpoint-security-firewall-rule-tool.md",
       "redirect_url": "/mem/intune/protect/endpoint-security-firewall-policy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/link/conditional-access-policies-synchronize.md",
-      "redirect_url": "/windows-365/link/conditional-access-policies",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/business/troubleshoot-windows-365-business.md",
-      "redirect_url": "/troubleshoot/windows-365/troubleshoot-windows-365-business",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/business/known-issues.md",
-      "redirect_url": "/troubleshoot/windows-365/known-issues",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/known-issues-enterprise.md",
-      "redirect_url": "/troubleshoot/windows-365/known-issues-enterprise",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/troubleshoot-azure-network-connection.md",
-      "redirect_url": "/troubleshoot/windows-365/troubleshoot-azure-network-connection",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/health-checks.md",
-      "redirect_url": "/troubleshoot/windows-365/health-checks",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/connection-errors.md",
-      "redirect_url": "/troubleshoot/windows-365/connection-errors",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/provisioning-errors.md",
-      "redirect_url": "/troubleshoot/windows-365/provisioning-errors",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/troubleshoot-partner-connector.md",
-      "redirect_url": "/troubleshoot/windows-365/troubleshoot-partner-connector",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/troubleshoot-windows-365-app.md",
-      "redirect_url": "/troubleshoot/windows-365/troubleshoot-windows-365-app",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/troubleshoot-windows-365-boot.md",
-      "redirect_url": "/troubleshoot/windows-365/troubleshoot-windows-365-boot",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/windows-365-boot-known-issues.md",
-      "redirect_url": "/troubleshoot/windows-365/windows-365-boot-known-issues",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "windows-365/enterprise/windows-365-switch-known-issues.md",
-      "redirect_url": "/troubleshoot/windows-365/windows-365-switch-known-issues",
       "redirect_document_id": false
     },
     {
@@ -2884,6 +2489,5 @@
       "redirect_url": "/information-protection/get-started/infoprotect-quick-start-tutorial",
       "redirect_document_id": false
     }
-
   ]
 }
