@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 03/27/2024
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-business
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -39,7 +39,7 @@ To enable SSO using Microsoft Entra ID authentication, there are four tasks you 
 
 1. Configure the target device groups.
 
-1. Review your conditional access policies.
+1. Review your Conditional Access policies.
 
 1. Configure your organizational settings to enable SSO.
 
@@ -53,7 +53,7 @@ When SSO is enabled, users sign in to Windows using a Microsoft Entra ID authent
 
 - Users benefit from a single sign-on experience and can reconnect without authentication prompt when allowed.
 - Users can sign back into their session using passwordless authentication like FIDO keys.
-- Conditional access policies, including multifactor authentication and sign-in frequency, are re-evaluated when the user reconnects to their session.
+- Conditional Access policies, including multifactor authentication and sign-in frequency, are re-evaluated when the user reconnects to their session.
 
 ## Prerequisites
 
@@ -186,9 +186,9 @@ To configure the service principal, use the [Microsoft Graph PowerShell SDK](/po
    Remove-MgServicePrincipalRemoteDesktopSecurityConfigurationTargetDeviceGroup -ServicePrincipalId $WCLspId -TargetDeviceGroupId "<Group object ID>"
    ```
 
-## Review your conditional access policies
+## Review your Conditional Access policies
 
-When SSO is turned on, a new Microsoft Entra ID app is introduced to authenticate users to the Cloud PC. If you have conditional access policies that apply when accessing Windows 365, review the recommendations to [set conditional access policies](set-conditional-access-policies.md) for Windows 365 to make sure users have the desired experience and to secure your environment.
+When SSO is turned on, a new Microsoft Entra ID app is introduced to authenticate users to the Cloud PC. If you have Conditional Access policies that apply when accessing Windows 365, review the recommendations to [set Conditional Access policies](set-conditional-access-policies.md) for Windows 365 to make sure users have the desired experience and to secure your environment.
 
 ## Turn on SSO for all Cloud PCs in your account
 

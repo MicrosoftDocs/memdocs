@@ -32,7 +32,7 @@ ms.collection:
 
 # Monitor device configuration policies in Microsoft Intune
 
-Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, view the devices assigned to the policy, and update the properties of an existing policy.
+Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, view the devices assigned to the policy, and update the properties of an existing policy. These capabilities extend to the profiles for your [endpoint security policies](../protect/endpoint-security-manage-devices.md#review-your-profiles-for-endpoint-security-policies) for macOS and Windows devices.
 
 You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md) to get more information about your policies and the settings configured in your policies.
 
@@ -62,7 +62,7 @@ After you create your device configuration policy, Intune provides reporting dat
 # [By policy](#tab/policy)
 
 1. In **Devices** > **Manage devices** > **Configuration** > **Policies** tab, select an existing policy.
-
+ 
 2. **Device and user check-in status** shows the number of all users or devices that checked-in with the policy. If one device has multiple users, this report shows the status for each user. When the user or device checks in with Intune, they receive the settings in your policy.
 
     The following statuses are shown:

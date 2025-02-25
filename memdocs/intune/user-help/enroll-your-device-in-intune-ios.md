@@ -61,11 +61,11 @@ Maintain a Wi-Fi connection until all steps are complete. Pausing for more than 
 
 3. On the **Set up access** screen, select **Begin.**   
 
-    ![Example screenshot of Company Portal, "Set up access" screen.](./media/ios-enrollment-checklist-1909.PNG)  
+    ![Example screenshot of Company Portal, "Set up access" screen.](./media/enroll-your-device-in-intune-ios/ios-enrollment-checklist-1909.PNG)  
 
 4. Select your device and enrollment type.  
 
-    ![Example screenshot of Company Portal, "Select device and enrollment type" screen, device type options.](./media/ios-device-type-1909.PNG)  
+    ![Example screenshot of Company Portal, "Select device and enrollment type" screen, device type options.](./media/enroll-your-device-in-intune-ios/ios-device-type-1909.PNG)  
 
    Your options:  
 
@@ -77,7 +77,7 @@ Maintain a Wi-Fi connection until all steps are complete. Pausing for more than 
 
 6. Choose how to protect the data on your device once it's enrolled.  
 
-    ![Example screenshot of Company Portal, "Select device and enrollment type" screen, enrollment type options.](./media/ios-enrollment-type-1909.PNG)  
+    ![Example screenshot of Company Portal, "Select device and enrollment type" screen, enrollment type options.](./media/enroll-your-device-in-intune-ios/ios-enrollment-type-1909.PNG)  
 
     Your options:  
 
@@ -105,7 +105,7 @@ Maintain a Wi-Fi connection until all steps are complete. Pausing for more than 
 
 4. Go to the Settings app and tap **Enroll in < organization name >** or **Profile Downloaded**.  
 
-    ![Example screenshot of the Settings app, Enroll in organization option.](./media/enroll-in-organization-ios-1909.PNG)  
+    ![Example screenshot of the Settings app, Enroll in organization option.](./media/enroll-your-device-in-intune-ios/enroll-in-organization-ios-1909.PNG)  
 
    If neither options appear, go to **General** and select the VPN & device management option to view installed profiles. If you still don't see the profile, try downloading it again. 
 
@@ -132,7 +132,7 @@ Maintain a Wi-Fi connection until all steps are complete. Pausing for more than 
     
    After you install Microsoft Authenticator, you won't need to do anything else with the app. It just needs to be present on your device. 
 
-   ![Example screenshot of Company Portal, "Download Microsoft Authenticator" screen.](./media/download-ms-authenticator-1909.PNG)  
+   ![Example screenshot of Company Portal, "Download Microsoft Authenticator" screen.](./media/enroll-your-device-in-intune-ios/download-ms-authenticator-1909.PNG)  
 
 2. On the **Device management and privacy** screen, read through the list of device information your organization can and can't see. Then tap **Continue**.  
 
@@ -153,14 +153,14 @@ Maintain a Wi-Fi connection until all steps are complete. Pausing for more than 
 
 5. Go to the Settings app and tap **Enroll in < organization name >** or **Profile Downloaded**.  
 
-    ![Example screenshot of the Settings app, Enroll in organization option.](./media/enroll-in-organization-ios-1909.PNG)  
+    ![Example screenshot of the Settings app, Enroll in organization option.](./media/enroll-your-device-in-intune-ios/enroll-in-organization-ios-1909.PNG)  
 
    If neither options appear, go to **General** and select the VPN & device management option to view installed profiles. If you still don't see the profile, try downloading it again. 
 
 
 6. On the **User Enrollment** screen, tap **Enroll My iPhone**.  
 
-    ![Example screenshot of the Settings app, User Enrollment screen, highlighting the enroll button.](./media/user-enrollment-information-1909.PNG)  
+    ![Example screenshot of the Settings app, User Enrollment screen, highlighting the enroll button.](./media/enroll-your-device-in-intune-ios/user-enrollment-information-1909.PNG)  
 
 7. Enter the device password. Then tap **Install**.  
 
@@ -173,7 +173,7 @@ Maintain a Wi-Fi connection until all steps are complete. Pausing for more than 
 12. You'll know that setup is complete when all items in the list show a green checkmark. Tap **Done**.  
 
 ## IT administrator support  
-If you're an IT administrator and run in to problems while enrolling devices, see [Troubleshooting iOS device enrollment problems in Microsoft Intune](https://support.microsoft.com/en-us/help/4039809). This article lists common errors, their causes, and steps to resolve them.  
+If you're an IT administrator and run in to problems while enrolling devices, see [Troubleshooting iOS device enrollment problems in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors). This article lists common errors, their causes, and steps to resolve them.  
 
 ## Next steps  
 Find apps that will help you at work or school. Learn [how apps are made available](use-managed-apps-on-your-device-ios.md) to you through Company Portal.  

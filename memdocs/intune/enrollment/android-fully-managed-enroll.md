@@ -67,7 +67,7 @@ To create a new enrollment profile:
 1. Go to **Devices** > **Enrollment**.  
 1. Select the **Android** tab.  
 1. Under **Android Enterprise** > **Enrollment Profiles**, choose **Corporate-owned, fully managed user devices**. 
-1. Select **Create profile**.  
+1. Select **Create policy**.  
 1. Enter the basics for your profile:  
     - **Name**: Give the profile a name. Note the name down for later, because you need it when you set up the dynamic device group.   
 
@@ -113,7 +113,10 @@ Add these configurations to your group:
 
 You can't use dynamic groups with the default enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
 
-## Step 4: Enroll devices  
+## Step 4: Enroll devices
+> [!NOTE]
+> The Microsoft Authenticator app automatically installs on fully managed devices during enrollment. This app is required for this enrollment method and cannot be uninstalled.
+
 After you set up the enrollment profile, token, and dynamic group, you can use any of these provisioning methods to enroll devices as fully managed:  
 
 * Near Field Communication (NFC)

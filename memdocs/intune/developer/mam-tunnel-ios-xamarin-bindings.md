@@ -4,7 +4,7 @@ description: Use Xamarin Bindings to allow Microsoft Tunnel capabilities for iOS
 author: oluchic 
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/26/2023
+ms.date: 09/12/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -27,9 +27,15 @@ ms.collection:
 
 # Microsoft Tunnel for MAM iOS Xamarin Bindings
 
-> [!NOTE]
+> [!IMPORTANT]
 >
-> The current Xamarin bindings for IOS platform only support apps targeting iOS 15.0 and higher.
+> Xamarin support ended on May 1, 2024 for all Xamarin SDKs including Xamarin.Forms and Intune App SDK Xamarin Bindings. The information in this article is maintained as a reference for previously created Xamarin Bindings.
+>
+> Xamarin.Forms has evolved into .NET Multi-platform App UI (MAUI). Existing Xamarin projects should be migrated to .NET MAUI. For more information about upgrading Xamarin projects to .NET, see the [Upgrade from Xamarin to .NET & .NET MAUI](/dotnet/maui/migration/?WT.mc_id=dotnet-35129-website) documentation.
+>
+> For Intune support on Android and iOS platforms, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android) and [Microsoft Intune App SDK for MAUI.iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS).
+>
+> 
 
 > [!NOTE]
 >
@@ -40,6 +46,7 @@ ms.collection:
 The Microsoft Tunnel iOS SDK Xamarin Bindings facilitate the integration of Microsoft Tunnel for MAM functionality for MAM iOS applications developed with Xamarin. These bindings empower developers by providing a straightforward means to embed tunnel connectivity features directly into their Xamarin-based applications, ensuring seamless and secure connectivity for end users.
 
 ## How it works
+
 The Intune MAM Xamarin.iOS bindings are the native MAM Tunnel SDK with a  wrapper/bridge to its public APIs. Since Xamarin/.NET apps typically use ADAL or MSAL for .NET as their Microsoft Entra auth library, and the native Intune SDK doesn't know how to call into those libraries for its own enrollment/auth scenarios, the Xamarin bindings depend on the MAM SDK bindings that also contain Objective-C MSAL library, which can share a common token cache with ADAL/MSAL for .NET.
 
 These bindings are also available as a NuGet package which developers can pull into their Xamarin.iOS project directly via the Visual Studio UI.

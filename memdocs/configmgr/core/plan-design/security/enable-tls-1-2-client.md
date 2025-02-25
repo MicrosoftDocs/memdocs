@@ -2,7 +2,7 @@
 title: How to enable Transport Layer Security (TLS) 1.2 on clients
 titleSuffix: Configuration Manager
 description: Information about how to enable TLS 1.2 for Configuration Manager clients.
-ms.date: 05/04/2021
+ms.date: 10/18/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to

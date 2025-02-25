@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: davidbel
+ms.reviewer: davidbel, pratikshah
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,6 +28,8 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
+
+<!--ms.reviewer review required before publish-->
 
 # Windows 365 identity and authentication
 
@@ -102,7 +104,7 @@ To access the Windows 365 service, users must first authenticate to the service 
 
 #### Multifactor authentication
 
-Follow the instructions in [Set conditional access policies](set-conditional-access-policies.md) to learn how to enforce Microsoft Entra multifactor authentication for your Cloud PCs. That article also tells you how to configure how often your users are prompted to enter their credentials.
+Follow the instructions in [Set Conditional Access policies](set-conditional-access-policies.md) to learn how to enforce Microsoft Entra multifactor authentication for your Cloud PCs. That article also tells you how to configure how often your users are prompted to enter their credentials.
 
 #### Passwordless authentication
 

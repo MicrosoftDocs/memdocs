@@ -62,9 +62,9 @@ You’ll manage your Cloud PC devices by using the [Microsoft Intune admin cente
 
 ## Inventory your environment
 
-All users [connect to a Cloud PC](../end-user-access-cloud-pc.md) through a Remote Desktop Client or a supported browser. This connection lets users access their Cloud PC from a wide range of devices.
+All users [connect to a Cloud PC](../end-user-access-cloud-pc.md) through a Windows App client or a supported browser. This connection lets users access their Cloud PC from a wide range of devices.
 
-**Task**: For each use case, determine how your end users will connect to their Cloud PC. Determine which platforms they'll use to connect. Will they use a browser or a Remote Desktop Client to connect?
+**Task**: For each use case, determine how your end users will connect to their Cloud PC. Determine which platforms they'll use to connect. Will they use a browser or a Windows App client to connect?
 
 For information on connectivity requirements and supported configurations, see [Requirements](requirements.md).
 

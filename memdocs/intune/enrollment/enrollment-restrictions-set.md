@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2024
+ms.date: 12/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -47,7 +47,10 @@ ms.collection:
 Device enrollment restrictions let you restrict devices from enrolling in Intune based on certain device attributes. There are two types of device enrollment restrictions you can configure in Microsoft Intune:   
 
 * **Device platform restrictions**: Restrict devices based on device platform, version, manufacturer, or ownership type.     
-* **Device limit restrictions**: Restrict the number of devices a user can enroll in Intune.  
+* **Device limit restrictions**: Restrict the number of devices a user can enroll in Intune.
+
+> [!NOTE]
+> Enrollment restrictions are not security features. Compromised devices can misrepresent their character. These restrictions are a best-effort barrier for non-malicious users.
 
 Each restriction type comes with one default policy that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
 
@@ -79,7 +82,12 @@ Block devices running on a specific device platform. You can apply this restrict
 
 In groups where both Android platforms are allowed, devices that support work profile will enroll with a work profile. Devices that don't support work profile will enroll on the Android device administrator platform. Neither work profile nor device administrator enrollment will work until you complete all prerequisites for Android enrollment.   
 
-This restriction is in the admin center under **Enrollment device platform restrictions**.  
+
+This restriction is in the admin center under **Devices** > **Device onboarding** > **Enrollment** > **Device platform restriction**.  
+
+> [!NOTE]
+> Device platform enrollment restrictions use assignment filters. The update between Microsoft Entra and Intune that processes user, group, and filter assignments typically happens within 15 minutes. It's not instant. This amount of time can affect enrollment assignments. You should wait and enroll devices several minutes after adding the enrolling users to a group, not immediately after. 
+
 
 ### OS version 
 This restriction enforces your maximum and minimum OS version requirements. This type of restriction works with the following operating systems: 
@@ -91,10 +99,10 @@ This restriction enforces your maximum and minimum OS version requirements. This
 
 \* Version restrictions are supported on these operating systems for devices enrolled via Intune Company Portal only.    
 
-This restriction is in the admin center under **Enrollment device platform restrictions**.  
+This restriction is in the admin center under **Devices** > **Device onboarding** > **Enrollment** > **Device platform restriction**.  
 
 ### Device manufacturer  
-This restriction blocks devices made by specific manufacturers, and is applicable to Android devices only. It is in the admin center under **Enrollment device platform restrictions**.    
+This restriction blocks devices made by specific manufacturers, and is applicable to Android devices only. It is in the admin center under **Devices** > **Device onboarding** > **Enrollment** > **Device platform restriction**.    
 
 ### Personally owned devices  
 This restriction helps prevent device users from accidentally enrolling their personal devices, and applies to devices running:  
@@ -104,7 +112,7 @@ This restriction helps prevent device users from accidentally enrolling their pe
 * macOS
 * Windows 10/11 
 
-This restriction is in the admin center under **Enrollment device platform restrictions**.  
+This restriction is in the admin center under **Devices** > **Device onboarding** > **Enrollment** > **Device platform restriction**.  
 
 #### Blocking personal Android devices  
 By default, until you manually make changes in the admin center, your Android Enterprise work profile device settings and Android device administrator device settings are the same. 
@@ -153,7 +161,14 @@ Intune also blocks personal devices using these enrollment methods:
 
 ## Limitations  
 
-* Enrollment restrictions are applied to users. For enrollment scenarios that aren't user-driven, such as Windows Autopilot self-deploying mode and Autopilot for pre-provisioned deployment, bulk enrollment (WCD), Azure Virtual desktop, or userless Apple Automated device enrollment (ADE without user device affinity), Intune enforces the default policy.  
+* Enrollment restrictions are applied to enrollments that are user-driven. Intune enforces the default policy in enrollment scenarios that aren't user-driven, such as:  
+  
+  *  Windows Autopilot self-deploying mode and Autopilot for pre-provisioned deployment  
+  *  Bulk enrollment via Windows Configuration Designer
+  *  Co-managed enrollments  
+  *  Userless Apple automated device enrollment (without user-device affinity)  
+  *  Azure Virtual Desktop   
+  *  Windows 365   
 
 * Device limit restrictions can't be applied to devices in the following Windows enrollment scenarios, because these scenarios utilize shared device mode:  
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/27/2023
+ms.date: 09/26/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -41,6 +41,10 @@ Windows 365 is available in multiple editions:
 - **Windows 365 Frontline** helps organizations save costs by providing a single license to provision up to three Cloud PCs for non-concurrent use. These are meant for cases where the user needs Cloud PC access for a limited time per day. For more information, see [What is Windows 365 Frontline?](./enterprise/introduction-windows-365-frontline.md)
 
 To learn about the differences between the Business and Enterprise versions, see [Compare Windows 365 Business and Enterprise](business-enterprise-comparison.md).
+
+## Windows 365 Link
+
+Available now in preview in select markets, Microsoft also offers Windows 365 Link, the first Cloud PC device purpose-built to connect users directly to Windows 365. For more information, see [What is Windows 365 Link?](./link/overview.md).
 
 [!INCLUDE [What is a Cloud PC?](./includes/what-is-cloud-pc.md)]
 

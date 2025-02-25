@@ -85,7 +85,8 @@
         "Stacyrch140",
         "American-Dipper",
         "padmagit77",
-        "aditisrivastava07"
+        "aditisrivastava07",
+        "Ruchika-mittal01"
       ]          
     },
     "fileMetadata": {
@@ -125,7 +126,8 @@
       },
        "sensitive-language-wl":{
         "exclude": [
-          "intune/configuration/android-pulse-secure-per-app-vpn.md"
+          "intune/configuration/android-pulse-secure-per-app-vpn.md",
+          "memdocs/intune-service/configuration/android-pulse-secure-per-app-vpn.md"
           ]
       } 
       

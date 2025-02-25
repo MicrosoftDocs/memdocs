@@ -8,7 +8,7 @@ keywords:
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 02/13/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,7 +45,7 @@ Windows 10 or Windows 11 Enterprise multi-session is a new Remote Desktop Sessio
 You can manage **Windows 10** and **Windows 11 Enterprise multi-session** VMs created in Azure Government Cloud in US Government Community (GCC), GCC High, and DoD. 
 
 > [!IMPORTANT]
-> Microsoft Intune support for Azure Virtual Desktop multi-session is not currently available for Citrix DaaS and VMware Horizon Cloud.
+> Microsoft Intune support for Azure Virtual Desktop multi-session is not currently available for Citrix DaaS and VMware Horizon Cloud. Because Intune cannot offer support for Citrix DaaS, review the Citrix documentation, and be aware of Citrix support options for multi-session support. All questions, concerns or help should be directed to Citrix for multi-session support. See [Citrix support](https://docs.citrix.com/en-us/citrix-daas/install-configure/machine-identities/microsoft-intune ).
 
 ## Overview
 
@@ -139,7 +139,7 @@ Windows 10 or Windows 11 Administrative Templates are supported for Windows 10 o
 
 To list supported Administrative Templates, you'll need to use the filter in Settings catalog.
 
-## Compliance and Conditional access
+## Compliance and Conditional Access
 
 You can secure your Windows 10 or Windows 11 Enterprise multi-session VMs by configuring compliance policies and Conditional Access policies in the Microsoft Intune admin center. The following compliance policies are supported on Windows 10 or Windows 11 Enterprise multi-session VMs:
 
@@ -223,7 +223,10 @@ The following Windows 10 or Windows 11 desktop device remote actions aren't supp
 
 ## Retirement
 
-Deleting VMs from Azure will leave orphaned device records in the Microsoft Intune admin center. They'll be automatically cleaned up according to the cleanup rules configured for the tenant.
+Deleting VMs from Azure will leave orphaned device records in the Microsoft Intune admin center. AVD machines are deleted automatically after 30 days and removed permanently after 60 days. 
+For more information, see:
+- [Using Intune device cleanup rules](https://techcommunity.microsoft.com/t5/device-management-in-microsoft/using-intune-device-cleanup-rules-updated-version/ba-p/3760854).
+- [Automatically remove devices with cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules)
 
 ## Security baselines
 

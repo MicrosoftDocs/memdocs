@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/13/2024
+ms.date: 10/02/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,7 +45,7 @@ When you complete the signup process, you'll have a new tenant. A tenant is a de
 Before setting up Microsoft Intune, review the following requirements:
 
 - [Supported operating systems and browsers](supported-devices-browsers.md)
-- [Network configuration requirements and bandwidth](network-bandwidth-use.md)
+- [Network endpoints for Microsoft Intune](intune-endpoints.md)
 
 ## Sign up for a Microsoft Intune free trial
 
@@ -53,6 +53,8 @@ Trying out Intune is free for 30 days. If you already have a work or school acco
 
 > [!IMPORTANT]
 > You can't combine an existing work or school account after you sign up for a new account.
+
+[!INCLUDE [MFA requirement for admin center](../includes/mfa-console.md)]
 
 To sign up for the Microsoft Intune free trial, follow the steps below:
 

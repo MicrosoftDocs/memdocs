@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/07/2024
+ms.date: 02/05/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -39,6 +39,62 @@ This article describes known issues that can often be resolved with:
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
 ## Known issues
+
+## Exporting logs during the out-of-box experience (OOBE) doesn't show result
+
+Date added: *January 6, 2025*
+
+When a failure occurs during the provisioning process, an **Export logs** option is displayed to the user. When selected, it saves the file to the first USB drive on the device without displaying the browse dialog. The browse dialog isn't displayed for security reasons. Currently, users don't see failure or success messages to indicate the logs were saved. This issue will be fixed in the future.
+
+## Apps and scripts tabs don't display properly when editing the Windows Autopilot device preparation profile
+
+Date added: *December 18, 2024*
+
+During the editing flow of the Windows Autopilot device preparation policy, there's a known issue when displaying the **Applications** and **Scripts** tabs where the tabs might display incorrect information. For example, under the **Scripts** tab, a list of applications might be shown instead of a list of scripts. The issue is impacting only the view in Microsoft Intune and not the configuration being applied to the device. The issue is being investigated.
+
+As a workaround, select the table header **Allowed Applications** or **Allowed Scripts** to reload the table's contents.
+
+## Win32 and WinGet applications are skipped when Managed installer policy is enabled for the tenant
+
+Date added: *October 10, 2024*<br>
+Date updated: *February 5, 2025*
+
+When the [Managed installer policy](/mem/intune/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps and Microsoft Store apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
+
+> [!NOTE]
+>
+> Managed installer policy is always enabled automatically for Education customers due to the requirements for [Windows 11 SE](/education/windows/tutorial-deploy-apps-winse/).
+
+For more information, see [Known issue: Windows Autopilot device preparation with Win32 apps and managed installer policy](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-windows-autopilot-device-preparation-with-win32-apps/ba-p/4273286).
+
+## Security group membership update failures might lead to non-compliant devices
+
+Date added: *September 27, 2024*
+
+If security groups aren't properly configured in Microsoft Intune, devices might lose compliance and be left in an unsecured state. The following are potential reasons for security group membership failures:
+
+- **Retry failures**: Security group membership updates might not succeed during retry windows, leading to delays in group updates.
+
+- **Static to dynamic group changes**: After the Windows Autopilot device preparation profiles are configured, changing a security group from static to dynamic could cause failures.
+
+- **Owner removal**: If the **Intune Provisioning Client** service principal is removed as an owner of a configured security group, updates might fail.
+
+- **Group deletion**: If a configured security group is deleted and devices are deployed before Microsoft Intune detects the deletion, security configurations might fail to apply.
+
+To mitigate the issue, follow these steps:
+
+1. **Validate security group configuration before provisioning**:
+
+   - Ensure the correct security group is selected within the Microsoft Intune admin center or the Microsoft Entra admin center.
+   - The security group should be configured within the Windows Autopilot device preparation profile.
+   - The group shouldn't be assignable to other groups.
+   - The **Intune Provisioning Client** service principal should be an owner of the group.
+
+1. **Manually fix the provisioned devices**:
+
+   - If devices are already deployed or the security group isn't applicable, manually add the affected devices to the correct security group.
+
+Security group membership failures can be prevented by following these steps, ensuring devices remain compliant and secure.
 
 ## Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
 
@@ -92,9 +148,7 @@ The issue is being investigated. As a workaround, add the following additional r
 For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
 
 > [!NOTE]
->
 > The [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions) article doesn't list the **Device configurations** - **Assign** permission. This permission requirement is only temporary until the issue is resolved. However, the article can be used as a guide on how to properly add this permission.
-
 **This issue was resolved in July 2024.**
 
 ### Device is stuck at 100% during the out-of-box experience (OOBE)

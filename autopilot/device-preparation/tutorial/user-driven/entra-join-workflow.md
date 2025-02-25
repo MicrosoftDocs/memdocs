@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 01/14/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -23,7 +23,7 @@ This step by step tutorial guides through using Intune to perform a Windows Auto
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Windows Autopilot device preparation user-driven Microsoft Entra join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
-Before beginning, refer to the [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all prerequisites are met for joining devices to Microsoft Entra ID.
+Before beginning, refer to the [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all requirements are met for joining devices to Microsoft Entra ID.
 
 ## Windows Autopilot device preparation user-driven Microsoft Entra join overview
 
@@ -83,7 +83,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > - Step 4: [Create a user group](entra-join-user-group.md)
 > - Step 5: [Assign applications and PowerShell scripts to device group](entra-join-assign-apps-scripts.md)
 > - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
-> - Step 7: [Add Windows corporate identifier to device (optional)](entra-join-corporate-identifier.md)
+> - Step 7: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
 
 > [!NOTE]
 >

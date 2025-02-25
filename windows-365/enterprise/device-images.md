@@ -52,6 +52,10 @@ A custom image must also meet the following extra requirements:
 - Exist in an Azure subscription.
 - Is stored as a [managed image](/azure/virtual-machines/capture-image-resource) in Azure.
 
+> [!NOTE]
+>
+> Some editions of the Windows operating system, like N or long term service channel (LTSC) editions, aren't supported. For best results when you create a custom image, use one of the Cloud PC gallery images as a starting template.
+
 Storing a managed image on Azure incurs storage costs. However, customers can delete the managed image from Azure once they've successfully uploaded it as a Custom Image to Microsoft Intune.
 
 ## Gallery images
@@ -88,6 +92,8 @@ Each updated image includes:
 - [Microsoft Teams updates](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-d7092a6d-c896-424c-b362-a472d5f105de)
 - [WebRTC redirector service updates](/azure/virtual-desktop/teams-on-avd#install-the-teams-websocket-service)
 
+Applications that come pre-installed are the latest version that is available at the start of the second Tuesday of that month. Any app updates posted on that day are included in the image update of the subsequent month.
+
 Newly provisioned Cloud PCs are automatically created with the latest images. For existing Cloud PCs, you can receive the updates by reprovisioning.
 
 ## Custom images
@@ -99,7 +105,8 @@ For more information on creating such a custom image, see [Create a managed imag
 A custom image can be created using [any of the images mentioned previously as a starting point](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-ent-cpc). For example, you can start with one of those images and then install more applications and make more configuration changes.
 
 > [!NOTE]
-> For custom images with Teams application, follow the instructions detailed in [Create a Cloud PC custom image that supports Microsoft Teams](create-custom-image-support-teams.md) to configure optimizations that are needed.  
+> For custom images with Teams application, follow the instructions detailed in [Create a Cloud PC custom image that supports Microsoft Teams](create-custom-image-support-teams.md) to configure optimizations that are needed.
+> Images with disk encryption sets aren't supported.
 
 For more information about adding a device image to Windows 365, see [Add and delete custom device images](add-device-images.md).
 

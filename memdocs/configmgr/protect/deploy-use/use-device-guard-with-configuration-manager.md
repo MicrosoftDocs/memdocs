@@ -2,7 +2,7 @@
 title: Manage Windows Defender Application Control
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage Windows Defender Application Control.
-ms.date: 04/11/2022
+ms.date: 12/16/2024
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
@@ -66,7 +66,7 @@ To use Application Control with Configuration Manager, devices must be running s
 - Windows Server 2019 or later <!--7752243, 8581848-->
 
 > [!TIP]
-> Existing Application Control polices created with Configuration Manager version 2006 or earlier won't work with Windows Server. To support Windows Server, create new Application Control policies.
+> Existing Application Control policies created with Configuration Manager version 2006 or earlier won't work with Windows Server. To support Windows Server, create new Application Control policies.
 
 ## Before you start
 

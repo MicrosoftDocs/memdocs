@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/09/2024
+ms.date: 08/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -35,20 +35,9 @@ ms.collection:
 
 During Mobile Threat Defense (MTD) setup, you've configured a policy for classifying threats in your Mobile Threat Defense partner console and you've created the app protection policy in Intune. If you've already configured the Intune connector in the MTD partner console, you can now enable the MTD connection for MTD partner applications.
 
-> [!NOTE]
-> This article applies to all Mobile Threat Defense partners that support app protection policies:
->
-> - BlackBerry Mobile (Android, iOS/iPadOS)
-> - Better Mobile (Android,iOS/iPadOS)
-> - Check Point Harmony Mobile Protect (Android, iOS/iPadOS)
-> - Jamf (Android, iOS/iPadOS)
-> - Lookout for Work (Android, iOS/iPadOS)
-> - SentinelOne (Android,iOS/iPadOS)
-> - Symantec Endpoint Security (Android, iOS/iPadOS)
-> - Trellix Mobile Security (Android,iOS/iPadOS)
-> - Zimperium (Android,iOS/iPadOS)
+[!INCLUDE [mtd-mam-note](../../intune/protect/includes/mtd-mam-note.md)]
 
-## Classic conditional access policies for Mobile Threat Defense (MTD) apps
+## Classic Conditional Access policies for Mobile Threat Defense (MTD) apps
 
 When you integrate a new Mobile Threat Defense application with Intune and enable the connection to Intune, Intune creates a classic Conditional Access policy in Microsoft Entra ID. Each third-party MTD partner you integrate with creates a new classic Conditional Access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled. 
 
@@ -66,7 +55,7 @@ Classic Conditional Access policies for MTD apps:
 - Are distinct from Conditional Access policies you might create to help manage MTD.
 - By default, don't interact with other Condition
 
-To view classic conditional access policies, in [Azure](https://portal.azure.com/#home), go to **Microsoft Entra ID** > **Conditional Access** > **Classic policies**.
+To view classic Conditional Access policies, in [Azure](https://portal.azure.com/#home), go to **Microsoft Entra ID** > **Conditional Access** > **Classic policies**.
 
 ## To enable the Mobile Threat Defense connector
 

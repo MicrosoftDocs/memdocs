@@ -105,7 +105,7 @@ If you're looking for more control, including where the terms appear, consider c
 For more information, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).  
 
 ### Require multifactor authentication  
-Require users to authenticate via multi-factor authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a conditional access policy with an MFA policy. Microsoft Entra ID P1 or P2 is required.  
+Require users to authenticate via multi-factor authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a Conditional Access policy with an MFA policy. Microsoft Entra ID P1 or P2 is required.  
 
 For more information, see [Require multifactor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md).   
 
@@ -141,7 +141,7 @@ The following tabs describe the Intune-supported Android and AOSP enrollment opt
 * [Corporate-owned, userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md): Enroll devices that are built from the Android Open Source Project (AOSP) and absent of Google Mobile services as *corporate-owned, userless devices*. These devices don't have a user associated with them and are intended to be shared, like in a library or lab.  
 * [Corporate-owned, user associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md): Enroll devices that are built from AOSP and absent of Google Mobile services as *corporate-owned, user-associated devices*. These devices are associated with a single user and intended to be exclusively for work use.  
 
-* [Zero-touch enrollment](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch): We recommend using zero-touch enrollment for bulk enrollments and to simplify enrollment for remote workers. This method lets you prepare corporate-owned devices ahead of time so that they automatically provision and enroll as fully manged devices when users turn them on.     
+* [Zero-touch enrollment](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch): We recommend using zero-touch enrollment for bulk enrollments and to simplify enrollment for remote workers. This method lets you prepare corporate-owned devices ahead of time so that they automatically provision and enroll as fully managed devices when users turn them on.     
 
 # [User owned](#tab/user-owned-android)  
 

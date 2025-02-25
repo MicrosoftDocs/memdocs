@@ -9,8 +9,8 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: dansimp
-  ms.date: 01/09/2024
-  ms.collection: 
+  ms.date: 02/06/2025
+  ms.collection:
   - tier1
   - essentials-navigation
   ms.custom: intro-hub-or-landing
@@ -247,9 +247,6 @@ conceptualContent:
         - url: ./fundamentals/monitor-audit-logs.md
           itemType: how-to-guide
           text: Use audit logs to track and monitor events
-        - url: /mem/analytics/
-          itemType: concept
-          text: Endpoint analytics docs
       footerLink:
         text: Browse all reporting and monitoring articles
         url: ./fundamentals/reports.md
@@ -265,6 +262,18 @@ conceptualContent:
         - url: ./protect/microsoft-tunnel-mam.md
           itemType: how-to-guide
           text: Microsoft Tunnel for Mobile Application Management
+          
+    - title: Microsoft Endpoint analytics
+      links:
+        - url: ../analytics/overview.md
+          itemType: how-to-guide
+          text: Overview of Endpoint analytics
+        - url: ../analytics/scores.md
+          itemType: how-to-guide
+          text: Scores, baselines and insight
+        - url: ../analytics/startup-performance.md
+          itemType: how-to-guide
+          text: Reports in Endpoint analytics
 
     - title: Developer guidance
       links:

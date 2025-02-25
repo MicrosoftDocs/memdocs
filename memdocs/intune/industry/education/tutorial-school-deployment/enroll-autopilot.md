@@ -6,6 +6,8 @@ ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
 ms.manager: dougeby
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Windows Autopilot
@@ -161,7 +163,7 @@ With the devices joined to Microsoft Entra tenant and managed by Intune, you can
 
 [MSFT-1]: https://partner.microsoft.com/
 
-[INT-1]: /intune/network-bandwidth-use
+[INT-1]: /mem/intune/fundamentals/intune-endpoints
 
 [M365-1]: https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2
 

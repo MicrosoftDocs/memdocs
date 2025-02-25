@@ -60,12 +60,9 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 An [Intune administrator](../fundamentals/users-add.md#types-of-administrators) can use the following steps to add and deploy a Microsoft Store app. 
 
-> [!NOTE]
-> To ensure the Company Portal app is successfully installed on your end user's device, you may need to set the **Install behavior** to **User** and the deployment Entra ID group as **Only devices**. 
-
 ### Step 1: Add an app from the Microsoft Store
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Create**.
 2. In **Select app type** pane, select **Microsoft Store app (new)** under the **Store app** section.
 3. Choose **Select** at the bottom of the page to begin creating an app from the Microsoft Store.
     The app creation experience has three steps:
@@ -76,6 +73,9 @@ An [Intune administrator](../fundamentals/users-add.md#types-of-administrators) 
 ### Step 2: Search the Microsoft Store
 
 The Microsoft Store provides a large variety of apps designed to work on your Microsoft devices. Within Intune, you can search and add the apps you want to assign to your workforce at your organization.
+
+> [!IMPORTANT]
+> There is no age restriction when searching for apps in the Microsoft Store.
 
 1. Select **Search the Microsoft Store app** to display the search panel which features a search bar and includes the following columns:
 
@@ -90,9 +90,8 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
     > Specific Microsoft Store apps may not be displayed and available in Intune. Common reasons an app doesn't appear when searching within Intune include the following:
     >
     > - The app is not available in US region.
-    > - The app is not available if there is an age restriction.
     > - The app is a paid app, which is not supported.
-    > - The app is an Android app.
+    > - The app platform isn't supported in the Microsoft Store.
 
 3. Choose the app that you want to deploy and choose **Select**.
 
@@ -124,7 +123,7 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
 You can choose how you want to assign Microsoft Store apps to users and devices.
 
 > [!NOTE]
-> If you assign an app to a device that is located in a region where that app is not supported or where that app does not meet the age restrictions, the app will not install on the device. However, if the device is moved to a region that supports the app, the app will install on the device. 
+> If you assign an app to a device that is located in a region where that app is not supported, the app will not install on the device. However, if the device is moved to a region that supports the app, the app will install on the device. 
 
 The following table provides assignment type details:
 
