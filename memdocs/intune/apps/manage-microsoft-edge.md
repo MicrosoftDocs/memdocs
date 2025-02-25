@@ -44,10 +44,10 @@ This feature applies to:
 > [!NOTE]
 > Edge for iOS and Android doesn't consume settings that users set for the native browser on their devices, because Edge for iOS and Android can't access these settings.
 
-The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as Conditional Access. At a minimum, you'll want to deploy a Conditional Access policy that only allows connectivity to Edge for iOS and Android from mobile devices and an Intune app protection policy that ensures the browsing experience is protected.
+The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as Conditional Access. At a minimum, you want to deploy a Conditional Access policy that only allows connectivity to Edge for iOS and Android from mobile devices and an Intune app protection policy that ensures the browsing experience is protected.
 
 > [!NOTE]
-> New web clips (pinned web apps) on iOS devices will open in Edge for iOS and Android instead of the Intune Managed Browser when required to open in a protected browser. For older iOS web clips, you must re-target these web clips to ensure they open in Edge for iOS and Android rather than the Managed Browser.
+> New web clips (pinned web apps) on iOS devices open in Edge for iOS and Android instead of the Intune Managed Browser when required to open in a protected browser. For older iOS web clips, you must retarget these web clips to ensure they open in Edge for iOS and Android rather than the Managed Browser.
 
 ## Create Intune app protection policies
 
@@ -73,11 +73,11 @@ Regardless of whether the device is enrolled in a unified endpoint management (U
 
 > [!NOTE]
 > One of the settings related to browsers is 'Restrict web content transfer with other apps'. In **Enterprise enhanced data protection** (Level 2), the value of this setting is configured to Microsoft Edge.
-> When Outlook and Microsoft Teams are protected by App Protection Policies (APP), Microsoft Edge will be used to open links from these apps, ensuring that the links are secure and protected. 
+> When Outlook and Microsoft Teams are protected by App Protection Policies (APP), Microsoft Edge is used to open links from these apps, ensuring that the links are secure and protected. 
 > For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 > [!IMPORTANT]
-> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.  
+> To apply Intune app protection policies against apps on Android devices that aren't enrolled in Intune, the user must also install the Intune Company Portal.  
 
 ## Apply Conditional Access
 While it's important to protect Microsoft Edge with App Protection Policies (APP), it's also crucial to ensure Microsoft Edge is the mandatory browser for opening corporate applications. Users might otherwise use other unprotected browsers to access corporate applications, potentially leading to data leaks.
@@ -96,7 +96,7 @@ With Conditional Access, you can also target on-premises sites that you have exp
 
 ## Single sign-on to Microsoft Entra connected web apps in policy-protected browsers
 
-Edge for iOS and Android can take advantage of single sign-on (SSO) to all web apps (SaaS and on-premises) that are Microsoft Entra connected. SSO allows users to access Microsoft Entra connected web apps through Edge for iOS and Android, without having to re-enter their credentials.
+Edge for iOS and Android can take advantage of single sign-on (SSO) to all web apps (SaaS and on-premises) that are Microsoft Entra connected. SSO allows users to access Microsoft Entra connected web apps through Edge for iOS and Android, without having to reenter their credentials.
 
 SSO requires your device to be registered by either the Microsoft Authenticator app for iOS devices, or the Intune Company Portal on Android. When users have either of these, they're prompted to register their device when they go to a Microsoft Entra connected web app in a policy-protected browser (this is only true if their device hasn't already been registered). After the device is registered with the user's account managed by Intune, that account has SSO enabled for Microsoft Entra connected web apps.
 
@@ -134,7 +134,7 @@ You can learn more about configuring the org allowed accounts mode setting here:
 - [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps)
 - [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps)
 
-This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you are not using Microsoft Intune, you need to consult with your UEM documentation on how to deploy these configuration keys.
+This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you aren't using Microsoft Intune, you need to consult with your UEM documentation on how to deploy these configuration keys.
 
 ## General app configuration scenarios
 
@@ -156,10 +156,10 @@ The **inspirational** layout is the default one for the new tab page. It shows t
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** (Default) Inspirational is selected <br> **informational** Informational is selected <br> **custom** Custom is selected, top site shortcuts toggle is on, wallpaper toggle is on, and news feed toggle is on|
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** Turn on top site shortcuts <br> **wallpaper** Turn on wallpaper <br> **newsfeed** Turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|wallpaper|newsfeed|` |
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout settings <br> **false** Users cannot change the page layout settings. The page layout is determined by the values specified via the policy or default values will be used |
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout settings <br> **false** Users can't change the page layout settings. The page layout is determined by the values specified via the policy or default values will be used |
 
 > [!IMPORTANT]
-> **NewTabPageLayout** policy is intended to set the initial layout. Users can change page layout settings based on their reference. Therefore, **NewTabPageLayout** policy only takes effect if users do not change layout settings. You can enforce **NewTabPageLayout** policy by configuring **UserSelectable**=false.
+> **NewTabPageLayout** policy is intended to set the initial layout. Users can change page layout settings based on their reference. Therefore, **NewTabPageLayout** policy only takes effect if users don't change layout settings. You can enforce **NewTabPageLayout** policy by configuring **UserSelectable**=false.
 
 > [!NOTE]
 > As of version 129.0.2792.84, the default page layout is changed to **inspirational**.
@@ -330,7 +330,7 @@ Edge for iOS and Android can be enabled as locked view mode with MDM policy **[E
 It allows organizations to restrict various browser functionalities, providing a controlled and focused browsing experience.
 
 - The URL address bar becomes read-only, preventing users from making changes to the web address
-- Users are not allowed to create new tabs
+- Users aren't allowed to create new tabs
 - The contextual search feature on web pages is disabled
 - The following buttons under the overflow menu are disabled
 
@@ -342,10 +342,10 @@ It allows organizations to restrict various browser functionalities, providing a
 |Add to Phone (Android) |Disabled|
 |Download Page (Android) |Disabled|
 
-The locked view mode is often used together with MAM policy **com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL** or MDM policy    **EdgeNewTabPageCustomURL**, which allow organizations to configure a specific web page that is automatically launched when Edge is opened. Users are restricted to this web page and cannot navigate to other websites, providing a controlled environment for specific tasks or content consumption.
+The locked view mode is often used together with MAM policy **com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL** or MDM policy    **EdgeNewTabPageCustomURL**, which allow organizations to configure a specific web page that is automatically launched when Edge is opened. Users are restricted to this web page and can't navigate to other websites, providing a controlled environment for specific tasks or content consumption.
 
 > [!NOTE]
-> By default, users are not allowed to create new tabs in locked view mode. To allow tab creation, set the MDM policy **[EdgeLockedViewModeAllowedActions](/deployedge/microsoft-edge-mobile-policies#edgelockedviewmodeallowedactions)** to **newtabs**.
+> By default, users aren't allowed to create new tabs in locked view mode. To allow tab creation, set the MDM policy **[EdgeLockedViewModeAllowedActions](/deployedge/microsoft-edge-mobile-policies#edgelockedviewmodeallowedactions)** to **newtabs**.
 
 ### Switch network stack between Chromium and iOS 
 By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services, auto search suggestions and sending feedback. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
@@ -403,7 +403,7 @@ A json file example for network relays <br>
 
 ### Proxy for users to sign in to Edge in Android
 
-A Proxy Auto-Configuration (PAC) is typically configured in the VPN profile. However, due to platform limitation, the PAC cannot be recognized by Android WebView, which is used during Edge sign-in process. Users may not be able to sign in to Edge in Android. 
+A Proxy Auto-Configuration (PAC) is typically configured in the VPN profile. However, due to platform limitation, the PAC can't be recognized by Android WebView, which is used during Edge sign-in process. Users may not be able to sign in to Edge in Android. 
 
 Organizations can specify dedicated proxy via MDM policy for users to sign in to Edge in Android.
 
@@ -413,11 +413,11 @@ Organizations can specify dedicated proxy via MDM policy for users to sign in to
 
 ### iOS Website data store
 
-The website data store in Edge for iOS is essential for managing cookies, disk and memory caches, and various types of data. However, there is only one persistent website data store in Edge for iOS. By default, this data store is exclusively used by personal accounts, leading to a limitation where work or school accounts cannot utilize it. Consequently, browsing data, excluding cookies, is lost after each session for work or school accounts. To improve the user experience, organizations can configure the website data store for use by work or school accounts, ensuring the persistence of browsing data.
+The website data store in Edge for iOS is essential for managing cookies, disk and memory caches, and various types of data. However, there is only one persistent website data store in Edge for iOS. By default, this data store is exclusively used by personal accounts, leading to a limitation where work or school accounts can't utilize it. Consequently, browsing data, excluding cookies, is lost after each session for work or school accounts. To improve the user experience, organizations can configure the website data store for use by work or school accounts, ensuring the persistence of browsing data.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** The website data store is always used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** (Default) The website data store will be used by work or school account regardless of the sign-in order |
+|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** The website data store is always used only by personal account  <br>**1** The website data store is used by the first signed-in account <br>**2** (Default) The website data store is used by work or school account regardless of the sign-in order |
 
 > [!NOTE]
 > With the release of iOS 17, multiple persistent stores are now supported. Work and personal account have its own designated persistent store. Therefore, this policy is no longer valid from version 122.
@@ -506,8 +506,8 @@ You can manage the settings for Copilot.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users can see Copilot button in bottom bar. Setting **Show Copilot** is on by default and can be turned off by users <br>**false** Users cannot see Copilot button in bottom bar. Setting **Show Copilot** is disabled and cannot be turned on by users|
-|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) **Allow access to any web page or PDF** and **Quick access on text selection** can be turned on by users <br>**false** **Allow access to any web page or PDF** and **Quick access on text selection** will be disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users can see Copilot button in bottom bar. Setting **Show Copilot** is on by default and can be turned off by users <br>**false** Users can't see Copilot button in bottom bar. Setting **Show Copilot** is disabled and can't be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) **Allow access to any web page or PDF** and **Quick access on text selection** can be turned on by users <br>**false** **Allow access to any web page or PDF** and **Quick access on text selection** will be disabled and can't be turned on by users|
 
 ## Data protection app configuration scenarios
 
@@ -591,7 +591,7 @@ You can configure a policy to enhance users' experience. This policy is recommen
 |com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork |**1**: (Default) Switch to work profile even if the URL is blocked by Edge policy.<br> **2**: The blocked URLs will open under personal profile if personal profile is signed in. If personal profile is not signed in, the blocked URL will opened in InPrivate mode. |
 
 #### Manage Sub Resource Blocking
-By default, AllowListURLs and BlockListURLs apply only at the navigation level. When you embed blocked URLs (either URLs configured in BlockListURLs or URLs not configured in AllowListURLs) as sub resources within a web page, those sub resource URLs are not blocked. 
+By default, AllowListURLs and BlockListURLs apply only at the navigation level. When you embed blocked URLs (either URLs configured in BlockListURLs or URLs not configured in AllowListURLs) as sub resources within a web page, those sub resource URLs aren't blocked. 
 
 To further restrict these sub resources, you can configure a policy to block the sub resource URLs.
 
@@ -609,7 +609,7 @@ You can use various URL formats to build your allowed/blocked sites lists. These
 - Ensure that you prefix all URLs with **http://** or **https://** when entering them into the list.
 - You can use the wildcard symbol (\*) according to the rules in the following permitted patterns list.
 - A wildcard can only match a portion (e.g., `news-contoso.com`) or entire component of the hostname (e.g., `host.contoso.com`) or entire parts of the path when separated by forward slashes (`www.contoso.com/images`).
-- You can specify port numbers in the address. If you do not specify a port number, the values used are:
+- You can specify port numbers in the address. If you don't specify a port number, the values used are:
   - Port 80 for http
   - Port 443 for https
 - Using wildcards for the port number is supported in Edge for iOS only. For example, you can specify `http://www.contoso.com:*` and `http://www.contoso.com:*/`.
