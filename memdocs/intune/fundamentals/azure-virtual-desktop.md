@@ -8,7 +8,7 @@ keywords:
 author: Smritib17  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 02/13/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -68,9 +68,6 @@ Also, the following profiles aren't currently supported:
 
 Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-allowuserstoconnectremotely) isn't disabled.
 
-> [!NOTE]
-> Configuration and compliance policies for Secure Boot and features leveraging vTPM (Virtual Trusted Platform Module) are not supported at this time for Azure Virtual Desktop VMs.
-
 ### Cloning physical and virtual devices
 
 Intune does not support using a cloned image of a computer that is already enrolled. This includes both physical and virtual devices such as Azure Virtual Desktop (AVD). When device enrollment or identity tokens are replicated between devices, Intune device enrollment or synchronization failures will occur.
@@ -92,7 +89,7 @@ The following Windows 10 desktop device remote actions aren't supported/recommen
 
 ### Retirement
 
-Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
+Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
 
 ### Known issues
 

@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/12/2024
+ms.date: 02/20/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -98,7 +98,7 @@ The following list includes some common device actions:
 | [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) | Initiates a full scan of the device by Microsoft Defender Antivirus. | Windows |
 | [Locate device](device-locate.md) | Shows the approximate location of a device on a map. | - Android <br/>- iOS/iPadOS <br/>- Windows |
 | [Lost mode](device-lost-mode.md) | Locks a device with a custom message and disables sound and vibration. | iOS/iPadOS |
-| [Pause Config Refresh](pause-config-refresh.md)|Pause ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes.| (Windows 11 only)|
+| [Pause Config Refresh](pause-config-refresh.md)|Pause ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes.| Windows 11 |
 | [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) | Initiates a quick scan of the device by Microsoft Defender Antivirus. | Windows |
 | [Remote control with Team Viewer](teamviewer-support.md) | Allows you to remotely control a device using TeamViewer. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 | [Remote lock](device-remote-lock.md) | Locks a device and resets its password. | - Android <br/>- iOS/iPadOS <br/>- macOS  |
@@ -111,7 +111,6 @@ The following list includes some common device actions:
 | [Synchronize device](device-sync.md) | Syncs a device with Intune to apply the latest policies and configurations. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 | [Update cellular data plan](update-cellular-data-plan.md) | Updates the cellular data plan settings for a device that uses an eSIM profile. | iOS/iPadOS |
 | [Update Windows Defender Security Intelligence](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus) | Updates the security intelligence files for Microsoft Defender Antivirus. | Windows |
-| [Windows 10 PIN reset](device-windows-pin-reset.md) | Resets the PIN of a device that uses Microsoft Entra authentication. | Windows 10 Mobile |
 | [Wipe](devices-wipe.md#wipe) | This action restores a device to its factory settings and removes all data and settings. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 
 > [!NOTE]

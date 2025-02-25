@@ -2839,6 +2839,46 @@
       "source_path": "windows-365/enterprise/windows-365-switch-known-issues.md",
       "redirect_url": "/troubleshoot/windows-365/windows-365-switch-known-issues",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/whats-new-archive-classic.md",
+      "redirect_url": "mem/intune/fundamentals/whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/network-bandwidth-use.md",
+      "redirect_url": "/mem/intune/fundamentals/intune-endpoints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/apps/understand/introduction-to-application-management.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/introduction-to-application-management"
+    },
+    {
+      "source_path": "memdocs/configmgr/core/clients/deploy/plan/best-practices-for-client-deployment.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/best-practices-for-client-deployment"
+    },
+    {
+      "source_path": "memdocs/configmgr/core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point"
+    },
+    {
+      "source_path": "memdocs/configmgr/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/install-cloud-based-distribution-points-in-microsoft-azure"
+    },
+    {
+      "source_path": "memdocs/configmgr/mdm/get-started/install-site-system-roles-for-on-premises-mdm.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/install-site-system-roles-for-on-premises-mdm"
+    },
+    {
+      "source_path": "memdocs/configmgr/sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/manage-express-installation-files-for-windows-10-updates"
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/device-windows-pin-reset.md",
+      "redirect_url": "/windows/security/identity-protection/hello-for-business/pin-reset",
+      "redirect_document_id": false
     }
+
   ]
 }

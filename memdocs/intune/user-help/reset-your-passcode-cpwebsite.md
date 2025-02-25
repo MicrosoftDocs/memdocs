@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/29/2023
+ms.date: 02/04/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -34,7 +34,7 @@ ms.collection:
 * Android   
 * iOS/iPadOS  
 
-Remotely reset an enrolled device's PIN or passcode. Sign in to the [Company Portal website](https://portal.manage.microsoft.com) on any device to access the *reset passcode* option. The reset passcode option can't be used on all corporate-owned devices. Contact your support person for help if the option is missing and you need to reset a device.  
+Remotely reset an enrolled device's PIN or passcode. Sign in to the [Company Portal website](https://portal.manage.microsoft.com) on any device to access the *reset passcode* option. Contact your support person for help if the option is missing and you need to reset a device.  
 
 >[!NOTE]
 > Passcode reset doesn't work on these types of devices:  
