@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 02/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ Microsoft Tunnel, a VPN gateway solution for Microsoft Intune, periodically rece
 - When upgrades are available
 - How to control when upgrades happen.
 
-Intune handles the upgrade of servers assigned to each tunnel site for you. When upgrades for site begin, all servers in the site upgrade one at a time, which is referred to as an upgrade cycle. While a server is upgrading, the Microsoft Tunnel on the server isn't available for use. Upgrading a single server at a time helps minimize disruptions to users when the site includes multiple servers.
+Intune handles the upgrade of servers assigned to each tunnel site for you. When you start the upgrade for site, all servers in the site upgrade one at a time, which is referred to as an upgrade cycle. While a server is upgrading, the Microsoft Tunnel on that server isn't available for use. Upgrading a single server at a time helps minimize disruptions to users when the site includes multiple servers.
 
 During an upgrade cycle:
 
@@ -46,7 +46,7 @@ During an upgrade cycle:
 
 ## Use upgrade controls
 
-To help control when Intune begins the upgrade cycle, configure the following settings at each site. You can configure the settings when [creating a new site](../protect/microsoft-tunnel-configure.md#create-a-site), or by editing the properties of an existing site:
+To help control when Intune starts the upgrade cycle, configure the following settings at each site. You can configure the settings when [creating a new site](../protect/microsoft-tunnel-configure.md#create-a-site), or by editing the properties of an existing site:
 
 - **Automatically upgrade servers at this site**
 - **Limit server upgrades to maintenance window**
@@ -127,7 +127,23 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 
 > [!IMPORTANT]
 >
-> Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
+> Container releases take place in stages. If you notice that your container images aren't the most recent, please be assured that they will be updated and delivered within the following week.
+
+### February 6, 2025
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:4f4ffd280315d4d63e6d3b54a79f70a76a3f9e5c234d8dbc7c49f382c6cac413
+
+- **serverImageDigest**: sha256:03b0c6cf241806422d87be770d887023c06518b5e9aa57bdb4b876fb1a64f8e1
+
+Changes in this release:
+
+- Upgrade Azure Linux version to 2.0.20241230
+- Security updates
+- Localization fixes
+- Enhanced diagnostic in mstunnel_monitor service
+- Clear stale agent errors after successful upgrade
 
 ### December 2, 2024
 
@@ -184,7 +200,12 @@ Changes in this release:
 - Support customizing container creation options during installation
 - Security updates on the base image
 
-  
+## Related content
+
+[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
+
+<!-- Archive of past releases
+
 ### June 20, 2024
 
 Image hash values:
@@ -196,25 +217,6 @@ Image hash values:
 Changes in this release:
 - AL base image - Use Azure Linux as the base image for the Tunnel containers
 - Improvement on cert revocation check
-
-### May 16, 2024
-
-Image hash values:
-
-- **agentImageDigest**: sha256:50b62c1d7f81e2941fc73a09856583ea752fe821e9fef448114fe7e00f90f25a
-
-- **serverImageDigest**: sha256:f6249bc16f90abc9e6fb278c74e07b1c3e295cc0614d38ae20036cee50ff5c56
-
-Changes in this release:
-
-- Hardened containers by reducing the container capabilities to minimum
-- Security updates on the base image
-
-## Next steps
-
-[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
-
-<!-- Archive of past releases
 
 ### May 16, 2024
 

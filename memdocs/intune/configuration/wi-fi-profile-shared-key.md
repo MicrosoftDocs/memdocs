@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 02/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,7 +34,7 @@ ms.collection:
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless LANs. With Intune, you can create a WiFi device configuration policy using a preshared key.
+Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless local area networks (LANs). With Intune, you can create a WiFi device configuration policy using a preshared key.
 
 To create the profile, use the **Custom device profiles** feature within Intune.
 
@@ -51,7 +51,7 @@ This article shows you how to create the policy in Intune, and includes an XML e
 
 > [!IMPORTANT]
 >
-> - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this happens, the Wi-Fi profile is properly assigned to the device, and the profile does work as expected.
+> - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this error happens, the Wi-Fi profile is properly assigned to the device, and the profile does work as expected.
 > - If you export a Wi-Fi profile that includes a pre-shared key, be sure the file is protected. The key is in plain text. It's your responsibility to protect the key.
 
 ## Prerequisites
@@ -99,12 +99,12 @@ This article shows you how to create the policy in Intune, and includes an XML e
 
     4. **Data Type**: Select **String**.
 
-    5. **Value**: Paste your XML code. See the [examples](#android-or-windows-wi-fi-profile-example) in this article. Update each value to match your network settings. The comments section of the code includes some pointers.
+    5. **Value**: Paste your XML code. See the [Wi-Fi examples](#android-or-windows-wi-fi-profile-example) in this article. Update each value to match your network settings. The comments section of the code includes some pointers.
     6. Select **Add** to save your changes.
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -129,9 +129,9 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 
 - `<hex>53534944</hex>` should be set to the hexadecimal value of `<name><SSID of wifi profile></name>`. Windows 10/11 devices can return a false `x87D1FDE8 Remediation failed` error, but the device still contains the profile.
 
-- XML has special characters, such as the `&` (ampersand). Using special characters can prevent the XML from working as expected.
+- XML has special characters, like the `&` (ampersand). Using special characters can prevent the XML from working as expected.
 
-### Example
+### Example XML
 
 ``` xml
 <!--
@@ -296,4 +296,4 @@ After you have the XML file, copy and paste the XML syntax into OMA-URI settings
 
 ## Resources
 
-Be sure to [assign the profile](device-profile-assign.md), and [monitor](device-profile-monitor.md) its status.
+- Be sure to [assign the profile](device-profile-assign.md), and [monitor](device-profile-monitor.md) its status.

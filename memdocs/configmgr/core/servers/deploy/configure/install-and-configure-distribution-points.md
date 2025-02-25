@@ -11,7 +11,7 @@ ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart,aaroncz,frakroj
 ---
 
 # Install and configure distribution points in Configuration Manager
@@ -424,7 +424,7 @@ Select the option to **Enable PXE support for clients**, and then configure the 
     > [!NOTE]
     > When you enable a PXE responder on a distribution point without Windows Deployment Service, it can be on the same server as the DHCP service. <!--3734270-->
 
-- **Enable Preferred Management Point(s) for PXE requests**: Preferred Management Point (MP) option will now allow PXE clients to communicate to an initial lookup MP and receive the list of MP(s) to be used for further communication. When the option is enabled, it allows an MP to redirect the PXE client to another MP, based on the client location in the site boundaries. <!--2839966-->
+- **Enable Preferred Management Point(s) for PXE requests**: This option allows PXE clients to communicate to an initial lookup MP and receive the list of MP(s) to be used for further communication. The lookup MP then returns an MP from the site. <!--2839966-->
 
 - **Require a password when computers use PXE**: To provide more security for your PXE deployments, specify a strong password.
 

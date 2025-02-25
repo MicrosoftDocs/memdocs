@@ -37,7 +37,7 @@ This article answers common questions about using Microsoft Copilot in Intune. F
 
 ### How can I control access to Copilot in Intune?
 
-When you set up Security Copilot, you determine the Copilot role that your admins can have (owner or contributor), as described in [Roles and authentication in Microsoft Security Copilot](/security-copilot/authentication). There are also Microsoft Entra roles that can control access to Security Copilot.
+When you set up Security Copilot, you determine the Copilot role that your admins can have (owner or contributor), as described in [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication). There are also Microsoft Entra roles that can control access to Security Copilot.
 
 The Security Copilot roles or the Microsoft Entra roles that you configure control access to Copilot in Intune. There aren't any Intune-specific roles-based access controls (RBAC) for Copilot in Intune.
 
@@ -51,7 +51,7 @@ If you want access to Copilot in Intune, contact the Security Copilot workspace 
 
 ### Can I use Security Copilot if I'm not an Intune admin, and vice versa?
 
-Yes. Access to Security Copilot is managed by using Security Copilot or Microsoft Entra roles. For more information, see [Roles and authentication in Microsoft Security Copilot](/security-copilot/authentication).
+Yes. Access to Security Copilot is managed by using Security Copilot or Microsoft Entra roles. For more information, see [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication).
 
 If you're an Intune admin and have the correct Security Copilot or Microsoft Entra role assigned to you, you can use Security Copilot to get insights about your Intune data.
 
@@ -67,7 +67,7 @@ If you're a security admin, you can use [Copilot in Intune](copilot-intune-overv
 
 In the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989), select **Sources** (prompt bar > right corner), and enable the Microsoft Intune plug-in. This plug-in allows you to access your Intune data and use the Copilot features in the Intune admin center.
 
-For more information about managing plug-ins, see [Manage plug-ins in Security Copilot](/security-copilot/manage-plugins).
+For more information about managing plug-ins, see [Manage plug-ins in Security Copilot](/copilot/security/manage-plugins).
 
 ### Can I use capabilities for other Copilot services in the Intune admin center?
 
@@ -81,12 +81,12 @@ Copilot in Intune is included with Security Copilot. Security Copilot uses secur
 
 For more information about SCUs, see:
 
-- [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot)
-- [Manage capacity in Security Copilot](/security-copilot/manage-usage)
+- [Get started with Microsoft Copilot](/copilot/security/get-started-security-copilot)
+- [Manage capacity in Security Copilot](/copilot/security/manage-usage)
 
 ### Is there a limit on the prompt output?
 
-Copilot in Intune is bound by any token limits in Security Copilot. For more information, see [Security Copilot FAQ - Token limits](/security-copilot/faq-security-copilot#how-is-copilot-for-security-dealing-with-a-token-limit).
+Copilot in Intune is bound by any token limits in Security Copilot. For more information, see [Security Copilot FAQ - Token limits](/copilot/security/faq-security-copilot#how-is-copilot-for-security-dealing-with-a-token-limit).
 
 ## Security Copilot vs. Copilot in Intune
 
@@ -101,7 +101,7 @@ To use Copilot with your Intune data, you can use Copilot in Intune or Security 
 | Feature | Copilot in Intune | Security Copilot |
 |---|---|---|
 | **Access and data insights** |  This Copilot is embedded in the Intune admin center and is scoped to only show Intune data.<br/><br/> Intune admins should use Copilot in Intune for Intune-only tasks. | This Copilot is a standalone experience. It can access other embedded services, like Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and Microsoft Intune. <br/><br/>It accesses the same Intune capabilities as Copilot in Intune. |
-| **Open prompting** |  Intune provides a set of prompts you can use. There isn't an open prompt. There are plans to include an open prompt in the future (no ETA).| Can use open prompts or use [promptbooks](/security-copilot/using-promptbooks). |
+| **Open prompting** |  Intune provides a set of prompts you can use. There isn't an open prompt. There are plans to include an open prompt in the future (no ETA).| Can use open prompts or use [promptbooks](/copilot/security/using-promptbooks). |
 | **Prompt history** |  The prompt/response history isn't available in the Intune admin center. To view the prompt history, use Security Copilot.<br/><br/>The prompts can look different compared with the prompts shown in Intune, as Intune enters the prompt for you. | You can review the prompt/response history even when the prompt is submitted in the standalone or embedded experience. |
 | **Target audience** | Focus is the IT admin/IT Pro. | Focus is the Security Operations Center (SOC) and can be used by IT admins. |
 
@@ -126,5 +126,5 @@ Other things you can try:
 
 ## Related articles
 
-- [Microsoft Security Copilot FAQ](/security-copilot/faq-security-copilot)
+- [Microsoft Security Copilot FAQ](/copilot/security/faq-security-copilot)
 - [Microsoft Copilot in Intune](copilot-intune-overview.md)
