@@ -4,10 +4,10 @@
 title: High-level architecture for Microsoft Intune
 description: This reference architecture shows options for integrating Microsoft Intune in your Azure environment with Microsoft Entra ID.
 keywords:
-ms.author: erikre
 author: erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 05/03/2023
+ms.date: 02/25/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
