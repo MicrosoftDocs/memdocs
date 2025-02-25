@@ -8,13 +8,13 @@ items:
       displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/what-is-intune.md
       items:
-      - name: Manage and secure your identities
+      - name: Overview - Manage and secure identities
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-identities.md
-      - name: Manage devices and control features
+      - name: Overview - Manage and secure devices
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-devices.md
-      - name: Manage apps and protect their data
+      - name: Overview - Manage apps and protect their data
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-apps.md
       - name: Zero Trust with Microsoft Intune
@@ -34,7 +34,7 @@ items:
       - name: What's new in the app UI
         href: ./fundamentals/whats-new-app-ui.md
       - name: Features in development
-        href: ./fundamentals/in-development.md   
+        href: ./fundamentals/in-development.md
       - name: Important notices
         href: ./fundamentals/whats-new.md#notices
       - name: Public preview
@@ -44,7 +44,7 @@ items:
     items:
     - name: Walkthrough Intune admin center
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
-      displayName: trial, free      
+      displayName: trial, free
     - name: Try Intune tasks
       items:
       - name: Overview
@@ -55,40 +55,40 @@ items:
       - name: Step 2 - Create a user and assign a license
         href: ./fundamentals/quickstart-create-user.md
       - name: Step 3 - Create a group
-        href: ./fundamentals/quickstart-create-group.md   
+        href: ./fundamentals/quickstart-create-group.md
       - name: Step 4 - Set up automatic enrollment
         href: ./enrollment/quickstart-setup-auto-enrollment.md
       - name: Step 5 - Enroll your Windows device
         href: ./enrollment/quickstart-enroll-windows-device.md
       - name: Step 6 - Create a device compliance policy
-        href: ./protect/quickstart-set-password-length-android.md        
+        href: ./protect/quickstart-set-password-length-android.md
       - name: Step 7 - Send notifications to noncompliant devices
-        href: ./protect/quickstart-send-notification.md        
+        href: ./protect/quickstart-send-notification.md
       - name: Step 8 - Add and assign an app
-        href: ./apps/quickstart-add-assign-app.md        
+        href: ./apps/quickstart-add-assign-app.md
       - name: Step 9 - Create and assign an app protection policy
-        href: ./apps/quickstart-create-assign-app-policy.md        
+        href: ./apps/quickstart-create-assign-app-policy.md
       - name: Step 10 - Create and assign a custom role
-        href: ./fundamentals/quickstart-create-custom-role.md        
+        href: ./fundamentals/quickstart-create-custom-role.md
       - name: Step 11 - Create a device profile
-        href: ./configuration/quickstart-email-profile.md    
+        href: ./configuration/quickstart-email-profile.md
     - name: Try Intune scenarios
       items:
       - name: Protect email on managed devices
         href: ./protect/tutorial-protect-email-on-enrolled-devices.md
       - name: Protect email on unmanaged devices
         href: ./protect/tutorial-protect-email-on-unmanaged-devices.md
-      - name: Configure Slack to use Intune 
+      - name: Configure Slack to use Intune
         href: ./apps/tutorial-configure-slack-enterprise-grid.md
-      - name: Set up just in time (JIT) registration  
-        href: ./enrollment/set-up-just-in-time-registration.md  
+      - name: Set up just in time (JIT) registration
+        href: ./enrollment/set-up-just-in-time-registration.md
 
-      - name: Use automated device enrollment to enroll iOS/iPadOS devices 
+      - name: Use automated device enrollment to enroll iOS/iPadOS devices
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
 
       - name: Create an ADMX template
         href: ./configuration/tutorial-walkthrough-administrative-templates.md
-        displayName: admx, administrative template, gpo, windows 
+        displayName: admx, administrative template, gpo, windows
 
   - name: Plan
     items:
@@ -105,7 +105,7 @@ items:
         href: ./fundamentals/supported-devices-browsers.md
       - name: Android Open Source Project Supported Devices
         displayName: software updates, android open source project, supported devices
-        href: ./fundamentals/android-os-project-supported-devices.md    
+        href: ./fundamentals/android-os-project-supported-devices.md
     - name: Software updates planning guides
       items:
       - name: BYOD and personal devices
@@ -120,8 +120,6 @@ items:
       - name: macOS
         displayName: software updates
         href: ./protect/software-updates-guide-macos.md
-    - name: Network configuration
-      href: ./fundamentals/network-bandwidth-use.md
     - name: Using Windows 10 VMs with Intune
       href: ./fundamentals/windows-10-virtual-machines.md
     - name: Using Azure Virtual Desktop with Intune
@@ -136,17 +134,17 @@ items:
       href: ./fundamentals/china.md
 
   - name: Migrate to Intune
-    items: 
+    items:
     - name: Move to Intune
       displayName: help, get started, migrate, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/deployment-guide-intune-setup.md
     - name: Migrate from Basic Mobility and Security
-      items: 
+      items:
       - name: Move from Microsoft 365 device management
         displayName: migrate, mdm, office, windows
         href: ./fundamentals/migrate-to-intune.md
       - name: Policy mapping
-        items: 
+        items:
         - name: Access requirements policy mapping
           displayName: migrate, mdm, office, windows
           href: ./fundamentals/policy-map-access-requirements.md
@@ -182,13 +180,17 @@ items:
   - name: Microsoft Copilot + Intune
     items:
     - name: Copilot in Intune
+      displayName: ai, copilot
       href: ./copilot/copilot-intune-overview.md
     - name: Troubleshoot a device using Copilot
       href: ./copilot/copilot-devices.md
-    - name: FAQ
+    - name: Copilot in Intune FAQ
       href: ./copilot/copilot-intune-faq.md
     - name: Intune plugin in Security Copilot
       href: ./copilot/security-copilot.md
+    - name: Copilot in Surface Management Portal
+      displayName: ai, copilot, surface, models, fleet, warranty    
+      href: ./copilot/security-copilot-surface-portal.md    
 
   - name: Endpoint analytics
     items:
@@ -199,7 +201,7 @@ items:
     - name: Concepts
       items:
       - name: Scores, baselines, and insights
-        href: ../analytics/scores.md           
+        href: ../analytics/scores.md
     - name: How to guides
       items:
       - name: Enroll Intune devices
@@ -207,19 +209,19 @@ items:
       - name: Enroll Configuration Manager devices
         href: ../analytics/enroll-configmgr.md
       - name: Manage settings
-        href: ../analytics/settings.md  
+        href: ../analytics/settings.md
     - name: Reports
       items:
       - name: Startup performance
         href: ../analytics/startup-performance.md
       - name: Restart frequency
-        href: ../analytics/restart-frequency.md    
+        href: ../analytics/restart-frequency.md
       - name: Application reliability
         href: ../analytics/app-reliability.md
       - name: Work from anywhere
         href: ../analytics/work-from-anywhere.md
       - name: Endpoint analytics in Microsoft Adoption Score
-        href: ../analytics/adoption-score.md    
+        href: ../analytics/adoption-score.md
     - name: Intune Advanced Analytics
       items:
       - name: What is Advanced Analytics?
@@ -227,11 +229,13 @@ items:
       - name: Anomaly detection
         href: ../analytics/anomaly-detection.md
       - name: Enhanced device timeline
-        href: ../analytics/enhanced-device-timeline.md    
+        href: ../analytics/enhanced-device-timeline.md
       - name: Device scopes
-        href: ../analytics/device-scopes.md        
+        href: ../analytics/device-scopes.md
       - name: Device query
         href: ../analytics/device-query.md
+      - name: Device query for multiple devices
+        href: ../analytics/device-query-multiple-devices.md        
       - name: Data platform schema
         href: ../analytics/data-platform-schema.md
       - name: Battery health
@@ -258,18 +262,18 @@ items:
       - name: Add groups
         href: ./fundamentals/groups-add.md
       - name: Manage Intune licenses
-        items: 
+        items:
         - name: Determine license needs
           href: ./fundamentals/licenses.md
         - name: Assign licenses
           href: ./fundamentals/licenses-assign.md
         - name: Allow access to unlicensed admins
-          href: ./fundamentals/unlicensed-admins.md          
+          href: ./fundamentals/unlicensed-admins.md
       - name: Set the MDM authority
         href: ./fundamentals/mdm-authority-set.md
       - name: Configure multiple admin approvals
         href: ./fundamentals/multi-admin-approval.md
-        
+
       - name: Manage roles
         items:
         - name: Role-based access control
@@ -279,41 +283,41 @@ items:
         - name: Create a custom role
           href: ./fundamentals/create-custom-role.md
         - name: Use scope tags to determine what admins can see
-          href: ./fundamentals/scope-tags.md       
+          href: ./fundamentals/scope-tags.md
         - name: Distributed IT environment with many admins in the same Intune tenant
           href: ./fundamentals/intune-scale-guidelines.md
         - name: Built-in roles permissions reference
-          href: ./fundamentals/role-based-access-control-reference.md 
+          href: ./fundamentals/role-based-access-control-reference.md
 
     - name: Manage apps
       items:
         - name: App management overview
-          href: ./apps/app-management.md  
-        - name: MAM for unenrolled devices       
+          href: ./apps/app-management.md
+        - name: MAM for unenrolled devices
           href: ./fundamentals/deployment-guide-enrollment-mamwe.md
           displayName: mobile application management, mam-we, mamwe
 
         - name: App solutions
           items:
           - name: Purchase and add apps for Microsoft Intune
-            items: 
+            items:
             - name: Overview
               href: /microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               displayName: purchase, buy, app, license
             - name: Understand app types
               items:
-              - name: App types overview        
+              - name: App types overview
                 href: /microsoft-365/solutions/apps-type-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
-              - name: Understand store apps        
+              - name: Understand store apps
                 href: /microsoft-365/solutions/apps-type-store?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
-              - name: Understand line-of-business apps        
+              - name: Understand line-of-business apps
                 href: /microsoft-365/solutions/apps-type-lob?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
-              - name: Understand built-in apps        
-                href: /microsoft-365/solutions/apps-type-built-in?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json          
+              - name: Understand built-in apps
+                href: /microsoft-365/solutions/apps-type-built-in?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               - name: Understand web apps
                 href: /microsoft-365/solutions/apps-type-web?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               - name: Understand Microsoft apps
-                href: /microsoft-365/solutions/apps-type-microsoft?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json          
+                href: /microsoft-365/solutions/apps-type-microsoft?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
             - name: Understand app purchases
               items:
               - name: Purchase apps overview
@@ -341,10 +345,10 @@ items:
               - name: Step 4. Add apps to Intune
                 href: /microsoft-365/solutions/apps-add-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               - name: Step 5. Manage apps and licenses
-                href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
+                href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
           - name: Configure apps using Microsoft Intune
-            items: 
+            items:
             - name: Overview
               href: /microsoft-365/solutions/apps-config-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               displayName: configure, app, apps, channel
@@ -359,23 +363,23 @@ items:
             - name: Step 5. Configure Microsoft Teams
               href: /microsoft-365/solutions/apps-config-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
             - name: Step 6. Configure other apps
-              href: /microsoft-365/solutions/apps-config-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json                  
+              href: /microsoft-365/solutions/apps-config-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
             - name: Step 7. Verify app configuration
-              href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
+              href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
           - name: Secure and protect apps using Microsoft Intune
-            items: 
+            items:
             - name: Overview
               href: /microsoft-365/solutions/apps-protect-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               displayName: secure, protect, app, apps, conditional, launch, framework, basic, enhanced, high
             - name: Understand app data protection
               href: /microsoft-365/solutions/apps-protect-data-protection?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
             - name: Understand app protection access requirements
-              href: /microsoft-365/solutions/apps-protect-access-requirements?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+              href: /microsoft-365/solutions/apps-protect-access-requirements?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
             - name: Understand app protection conditional launch
-              href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+              href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
             - name: Understand app protection health checks
-              href: /microsoft-365/solutions/apps-protect-health-checks?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+              href: /microsoft-365/solutions/apps-protect-health-checks?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
             - name: Use the app protection framework
               items:
               - name: App protection framework overview
@@ -389,12 +393,12 @@ items:
               - name: Step 4. Understand app protection delivery
                 href: /microsoft-365/solutions/apps-protect-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               - name: Step 5. Verify and monitor app protection
-                href: /microsoft-365/solutions/apps-protect-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json     
+                href: /microsoft-365/solutions/apps-protect-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               - name: Step 6. Use app protection actions
                 href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
           - name: Assign and deploy apps using Microsoft Intune
-            items: 
+            items:
             - name: Overview
               href: /microsoft-365/solutions/apps-assign-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               displayName: assign, deploy, app, apps, monitor, troubleshoot
@@ -405,9 +409,9 @@ items:
             - name: Understand app deployment
               href: /microsoft-365/solutions/apps-assign-deployment?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
             - name: Assign apps to your organization
-              items: 
-              - name: Assign apps overview      
-                href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json     
+              items:
+              - name: Assign apps overview
+                href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               - name: Step 1. Confirm users, devices, or groups
                 href: /microsoft-365/solutions/apps-assign-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               - name: Step 2. Assign apps to users, devices, or groups
@@ -418,7 +422,7 @@ items:
                 href: /microsoft-365/solutions/apps-assign-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
           - name: Secure your corporate data using Edge for Business
-            items: 
+            items:
             - name: Overview
               href: ./apps/mamedge-overview.md
             - name: Step 1. Create Microsoft Entra Conditional Access
@@ -445,14 +449,14 @@ items:
             href: ./apps/manage-without-gms.md
           - name: Data protection for Windows MAM
             href: ./apps/protect-mam-windows.md
-            displayName: Windows MAM                  
+            displayName: Windows MAM
           - name: MAM FAQ
             href: ./apps/mam-faq.yml
-            displayName: MAM          
-           
+            displayName: MAM
+
         - name: How-to guides
           items:
-            - name: Add apps 
+            - name: Add apps
               items:
               - name: Add apps overview
                 href: ./apps/apps-add.md
@@ -497,7 +501,7 @@ items:
                   - name: Enterprise App Management overview
                     href: ./apps/apps-enterprise-app-management.md
                   - name: Add an Enterprise App Catalog app (Win32)
-                    href: ./apps/apps-add-enterprise-app.md                
+                    href: ./apps/apps-add-enterprise-app.md
                 - name: macOS LOB apps
                   href: ./apps/lob-apps-macos.md
                 - name: macOS app management
@@ -505,10 +509,10 @@ items:
                   - name: Intune management agent for macOS
                     href: ./apps/lob-apps-macos-agent.md
                   - name: Add a macOS DMG app
-                    href: ./apps/lob-apps-macos-dmg.md         
+                    href: ./apps/lob-apps-macos-dmg.md
                   - name: Add an unmanaged macOS PKG app
                     href: ./apps/macos-unmanaged-pkg.md
-                    displayName: unmanaged, pkg                                  
+                    displayName: unmanaged, pkg
                 - name: Win32 app management
                   items:
                   - name: Win32 app management overview
@@ -532,11 +536,11 @@ items:
                 - name: Company Portal app - Download
                   href: ./apps/store-apps-company-portal-app.md
                 - name: Company Portal app - macOS
-                  href: ./apps/apps-company-portal-macos.md          
+                  href: ./apps/apps-company-portal-macos.md
                 - name: Microsoft Edge for Windows 10
                   href: ./apps/apps-windows-edge.md
                 - name: Microsoft Edge for macOS
-                  href: ./apps/apps-edge-macos.md   
+                  href: ./apps/apps-edge-macos.md
                 - name: Microsoft Defender for Endpoint for macOS
                   href: ./apps/apps-advanced-threat-protection-macos.md
               - name: PowerShell scripts
@@ -544,7 +548,7 @@ items:
               - name: macOS shell scripts
                 href: ./apps/macos-shell-scripts.md
               - name: Get the app bundle ID
-                href: ./apps/get-app-bundle-id-intune-admin-center.md      
+                href: ./apps/get-app-bundle-id-intune-admin-center.md
             - name: Assign apps
               items:
               - name: Assign apps to groups
@@ -585,7 +589,7 @@ items:
                 - name: Configure Microsoft Edge for iOS/Android
                   href: ./apps/manage-microsoft-edge.md
                 - name: Configure Microsoft Edge for Windows
-                  href: ./apps/manage-microsoft-edge-windows.md                
+                  href: ./apps/manage-microsoft-edge-windows.md
                 - name: Configure Office
                   href: ./apps/manage-microsoft-office.md
                 - name: Configure Outlook
@@ -595,7 +599,7 @@ items:
                 - name: Configure Google Chrome for Android
                   href: ./apps/apps-configure-chrome-android.md
                 - name: VPN and per-app VPN on Android Enterprise
-                  href: ./apps/app-configuration-vpn-ae.md          
+                  href: ./apps/app-configuration-vpn-ae.md
               - name: Volume-purchased apps and books
                 items:
                 - name: Volume-purchased overview
@@ -626,7 +630,7 @@ items:
                   - name: iOS settings
                     href: ./apps/app-protection-policy-settings-ios.md
                   - name: Windows settings
-                    href: ./apps/app-protection-policy-settings-windows.md                    
+                    href: ./apps/app-protection-policy-settings-windows.md
                   - name: Conditional launch
                     href: ./apps/app-protection-policies-access-actions.md
                   - name: Data transfer exceptions
@@ -647,10 +651,10 @@ items:
                   href: ./apps/data-transfer-between-apps-manage-ios.md
               - name: Review app protection logs
                 href: ./apps/app-protection-policy-settings-log.md
-            - name: Policies for Office apps
+            - name: Policies for Microsoft 365 apps
               href: ./apps/app-office-policies.md 
             - name: Quiet time policies
-              href: ./apps/apps-quiet-time-policies.md                       
+              href: ./apps/apps-quiet-time-policies.md
             - name: Troubleshoot
               items:
               - name: Help users troubleshoot problems
@@ -670,46 +674,46 @@ items:
       items:
       - name: Device protection overview
         href: ./protect/device-protect.md
-        displayName: compliant; noncompliant; mfa  
+        displayName: compliant; noncompliant; mfa
 
-      - name: How-to guides  
+      - name: How-to guides
         items:
         - name: Use compliance rules to protect resources
           items:
           - name: Compliance overview
-            href: ./protect/device-compliance-get-started.md    
+            href: ./protect/device-compliance-get-started.md
           - name: Create a policy
             href: ./protect/create-compliance-policy.md
           - name: Custom compliance settings
-            href: ./protect/compliance-use-custom-settings.md 
-            items:   
+            href: ./protect/compliance-use-custom-settings.md
+            items:
             - name: JSON for custom settings
-              href: ./protect/compliance-custom-json.md    
+              href: ./protect/compliance-custom-json.md
             - name: PowerShell script for custom settings
-              href: ./protect/compliance-custom-script.md 
-            - name: Windows Subsystem for Linux 
-              href: ./protect/compliance-wsl.md   
+              href: ./protect/compliance-custom-script.md
+            - name: Windows Subsystem for Linux
+              href: ./protect/compliance-wsl.md
           - name: Actions for noncompliance
             href: ./protect/actions-for-noncompliance.md
           - name: Monitor device compliance
             href: ./protect/compliance-policy-monitor.md
           - name: Device compliance partners
-            href: ./protect/device-compliance-partners.md    
+            href: ./protect/device-compliance-partners.md
         - name: Endpoint security
           href: ./protect/endpoint-security.md
           items:
           - name: Manage devices
             href: ./protect/endpoint-security-manage-devices.md
           - name: Security baselines
-            items: 
+            items:
             - name: Security baselines overview
               href: ./protect/security-baselines.md
-            - name: Manage security baselines 
-              href: ./protect/security-baselines-configure.md  
+            - name: Manage security baselines
+              href: ./protect/security-baselines-configure.md
             - name: Monitor your baselines
               href: ./protect/security-baselines-monitor.md
           - name: Security tasks
-            href: ./protect/atp-manage-vulnerabilities.md 
+            href: ./protect/atp-manage-vulnerabilities.md
           - name: Security policy
             items:
               - name: Manage security policies
@@ -733,7 +737,7 @@ items:
           - name: Microsoft Defender for Endpoint
             items:
             - name: Microsoft Defender for Endpoint
-              href: ./protect/advanced-threat-protection.md  
+              href: ./protect/advanced-threat-protection.md
             - name: Configure Defender for Endpoint
               href: ./protect/advanced-threat-protection-configure.md
             - name: Android web protection
@@ -791,11 +795,11 @@ items:
           - name: Microsoft Tunnel for MAM
             items:
             - name: Microsoft Tunnel for MAM Overview
-              href: ./protect/microsoft-tunnel-mam.md     
+              href: ./protect/microsoft-tunnel-mam.md
             - name: MAM Tunnel for Android
-              href: ./protect/microsoft-tunnel-mam-android.md  
+              href: ./protect/microsoft-tunnel-mam-android.md
             - name: MAM Tunnel for iOS
-              href: ./protect/microsoft-tunnel-mam-ios.md  
+              href: ./protect/microsoft-tunnel-mam-ios.md
           - name: Monitor Microsoft Tunnel
             href: ./protect/microsoft-tunnel-monitor.md
           - name: Upgrade Microsoft Tunnel
@@ -858,14 +862,14 @@ items:
             - name: Enable MTD for enrolled devices
               href: ./protect/mtd-connector-enable.md
           - name: MTD apps
-            items: 
+            items:
             - name: Set up Better Mobile
               href: ./protect/better-mobile-threat-defense-connector.md
               items:
               - name: Better Mobile and Intune integration
                 href: ./protect/better-mobile-mtd-connector-integration.md
                 displayName: sso
-            - name: Set up BlackBerry Protect Mobile 
+            - name: Set up BlackBerry Protect Mobile
               href: ./protect/blackberry-mobile-threat-defense-connector.md
               items:
               - name: BlackBerry and Intune integration
@@ -894,7 +898,7 @@ items:
               href: ./protect/trellix-mobile-threat-defense-connector.md
               items:
               - name: Trellix Mobile Security and Intune integration
-                href: ./protect/trellix-mtd-connector-integration.md 
+                href: ./protect/trellix-mtd-connector-integration.md
             - name: Set up Pradeo
               href: ./protect/pradeo-mobile-threat-defense-connector.md
               items:
@@ -919,38 +923,38 @@ items:
               href: ./protect/trend-micro-mobile-threat-defense-connector.md
               items:
               - name: Trend Micro Mobile Security as a Service and Intune integration
-                href: ./protect/trend-micro-mtd-connector-integration.md 
+                href: ./protect/trend-micro-mtd-connector-integration.md
             - name: Set up Zimperium
               href: ./protect/zimperium-mobile-threat-defense-connector.md
               items:
               - name: Zimperium and Intune integration
-                href: ./protect/zimperium-mtd-connector-integration.md 
+                href: ./protect/zimperium-mtd-connector-integration.md
         - name: Network access control
           href: ./protect/network-access-control-integrate.md
-        - name: Microsoft Cloud PKI  
+        - name: Microsoft Cloud PKI
           items:
-          - name: Microsoft Cloud PKI overview     
+          - name: Microsoft Cloud PKI overview
             href: ./protect/microsoft-cloud-pki-overview.md
-            displayName: RBAC, requirements  
-          - name: PKI fundamentals  
-            href: ./protect/microsoft-cloud-pki-fundamentals.md              
-          - name: Configure and deploy      
-            items: 
-            - name: Deployment overview             
-              href: ./protect/microsoft-cloud-pki-deployment.md 
-            - name: Configure root and issuing CA for Cloud PKI     
-              href: ./protect/microsoft-cloud-pki-configure-ca.md   
+            displayName: RBAC, requirements
+          - name: PKI fundamentals
+            href: ./protect/microsoft-cloud-pki-fundamentals.md
+          - name: Configure and deploy
+            items:
+            - name: Deployment overview
+              href: ./protect/microsoft-cloud-pki-deployment.md
+            - name: Configure root and issuing CA for Cloud PKI
+              href: ./protect/microsoft-cloud-pki-configure-ca.md
               displayName: root, certification, authority, ca, issuing, BYO
-            - name: Configure bring your own CA for Cloud PKI     
-              href: ./protect/microsoft-cloud-pki-configure-byoca.md          
-          - name: Monitor issued certificates  
-            href: ./protect/microsoft-cloud-pki-monitor.md  
-          - name: Get audit logs  
-            href: ./protect/microsoft-cloud-pki-audit-logs.md 
-          - name: Pause, revoke, and delete CA    
-            href: ./protect/microsoft-cloud-pki-delete.md 
-        - name: Certificates 
-          items: 
+            - name: Configure bring your own CA for Cloud PKI
+              href: ./protect/microsoft-cloud-pki-configure-byoca.md
+          - name: Monitor issued certificates
+            href: ./protect/microsoft-cloud-pki-monitor.md
+          - name: Get audit logs
+            href: ./protect/microsoft-cloud-pki-audit-logs.md
+          - name: Pause, revoke, and delete CA
+            href: ./protect/microsoft-cloud-pki-delete.md
+        - name: Certificates
+          items:
           - name: Use certificates for authentication
             href: ./protect/certificates-configure.md
           - name: Trusted certificate profiles
@@ -963,11 +967,11 @@ items:
               href: ./protect/certificate-connector-prerequisites.md
             - name: Install the connector
               href: ./protect/certificate-connector-install.md
-          - name: SCEP  
+          - name: SCEP
             items:
             - name: SCEP infrastructure
               href: ./protect/certificates-scep-configure.md
-              displayName: ksp        
+              displayName: ksp
             - name: SCEP certificate profiles
               href: ./protect/certificates-profile-scep.md
             - name: Use third-party certificate authority with SCEP
@@ -986,7 +990,7 @@ items:
             href: ./protect/certificates-digicert-configure.md
             displayName: ca; pkcs; pki; ra; registration authority
           - name: Remove SCEP or PKCS certificates
-            href: ./protect/remove-certificates.md                           
+            href: ./protect/remove-certificates.md
         - name: Derived credentials
           href: ./protect/derived-credentials.md
         - name: Software updates
@@ -996,16 +1000,16 @@ items:
             - name: Android FOTA update
               href: ./protect/fota-updates-android.md
             - name: Zebra LG OTA Integration
-              href: ./protect/zebra-lifeguard-ota-integration.md    
+              href: ./protect/zebra-lifeguard-ota-integration.md
           - name: iOS/iPadOS & macOS updates
             items:
             - name: Managed software updates (DDM)
               displayName: ddm
-              href: ./protect/managed-software-updates-ios-macos.md    
+              href: ./protect/managed-software-updates-ios-macos.md
             - name: iOS/iPadOS update policies
               href: ./protect/software-updates-ios.md
             - name: macOS update policies
-              href: ./protect/software-updates-macos.md    
+              href: ./protect/software-updates-macos.md
           - name: Windows updates
             items:
             - name: Use Windows Update for Business
@@ -1017,7 +1021,7 @@ items:
             - name: Expedite updates policy
               href: ./protect/windows-10-expedite-updates.md
             - name: Windows driver updates
-              items: 
+              items:
               - name: Driver updates overview
                 href: ./protect/windows-driver-updates-overview.md
               - name: Driver updates policy
@@ -1027,7 +1031,7 @@ items:
             - name: Windows Update compatibility reports
               href: ./protect/windows-update-compatibility-reports.md
             - name: Windows Update reports
-              href: ./protect/windows-update-reports.md         
+              href: ./protect/windows-update-reports.md
         - name: Troubleshoot
           items:
           - name: Troubleshoot policies and profiles
@@ -1056,7 +1060,7 @@ items:
             items:
             - name: Troubleshoot Exchange connectors
               href: /troubleshoot/mem/intune/troubleshoot-exchange-connector
-            - name: Common errors   
+            - name: Common errors
               href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-errors
           - name: Troubleshoot BitLocker policies
             href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies
@@ -1069,8 +1073,8 @@ items:
         - name: Compliance policy settings
           items:
           - name: Compliance settings - Android device administrator
-            href: ./protect/compliance-policy-create-android.md  
-          - name: Compliance settings - Android (AOSP) 
+            href: ./protect/compliance-policy-create-android.md
+          - name: Compliance settings - Android (AOSP)
             href: ./protect/compliance-policy-create-android-aosp.md
           - name: Compliance settings - Android Enterprise
             href: ./protect/compliance-policy-create-android-for-work.md
@@ -1103,26 +1107,30 @@ items:
             displayName: AWA; Add Work Account
           - name: Firewall policy settings
             href: ./protect/endpoint-security-firewall-profile-settings.md
-          - name: Tenant attach Firewall settings    
+          - name: Tenant attach Firewall settings
             href: ./protect/endpoint-security-firewall-profile-settings-tenant-attach.md
           - name: Endpoint detection and response profile settings
-            href: ./protect/endpoint-security-edr-profile-settings.md 
+            href: ./protect/endpoint-security-edr-profile-settings.md
           - name: Attack surface reduction profile settings
             href: ./protect/endpoint-security-asr-profile-settings.md
           - name: Account protection profile settings
             href: ./protect/endpoint-security-account-protection-profile-settings.md
         - name: Security baseline settings
-          items: 
+          items:
           - name: Windows 10 MDM baseline settings
             href: ./protect/security-baseline-settings-mdm-all.md
-          - name: Microsoft Defender for Endpoint baseline settings 
+          - name: Microsoft Defender for Endpoint baseline settings
             href: ./protect/security-baseline-settings-defender.md
-          - name: Microsoft 365 Apps for Enterprise baseline settings (Office) 
+          - name: Microsoft 365 Apps for Enterprise baseline settings (Office)
             href: ./protect/security-baseline-v2-office-settings.md
           - name: Microsoft Edge baseline settings (version 112 and higher)
             href: ./protect/security-baseline-v2-edge-settings.md
           - name: Microsoft Edge baseline settings (version 85 and older)
             href: ./protect/security-baseline-settings-edge.md
+          - name: HoloLens 2 - Advanced security baseline settings
+            href: ./protect/security-baseline-hololens2-advanced.md
+          - name: HoloLens 2 - Standard security baseline settings
+            href: ./protect/security-baseline-hololens2-advanced.md
           - name: Windows 365 baseline settings
             href: ./protect/security-baseline-settings-windows-365.md
         - name: Microsoft Tunnel command-line tools
@@ -1134,8 +1142,8 @@ items:
           - name: Software update errors
             href: ./protect/software-update-agent-error-codes.md
         - name: Deprecated certificate connectors
-          href: ./protect/certificate-connectors.md 
-      - name: Scenario implementation guides 
+          href: ./protect/certificate-connectors.md
+      - name: Scenario implementation guides
         items:
         - name: Protect Exchange Online
           href: ./protect/exchange-online-protect.md
@@ -1231,7 +1239,7 @@ items:
           - name: Import custom ADMX and ADML
             displayName: gpo, windows
             href: ./configuration/administrative-templates-import-custom.md
-          - name: Update Office using ADMX
+          - name: Update Microsoft 365 using ADMX
             displayName: gpo, windows
             href: ./configuration/administrative-templates-update-office.md
           - name: Create Microsoft Edge policy using ADMX
@@ -1317,7 +1325,7 @@ items:
           displayName: trusted sites, ipv4, ipv6, range
         - name: Windows health monitoring
           href: ./configuration/windows-health-monitoring.md
-          displayName: endpoint analytics, microsoft productivity score 
+          displayName: endpoint analytics, microsoft productivity score
         - name: Education Take a Test app
           displayName: windows
           href: ./configuration/education-settings-configure.md
@@ -1338,7 +1346,7 @@ items:
       - name: Device Configuration template settings lists
         items:
         - name: Android device administrator
-          items: 
+          items:
           - name: Custom (OMA-URI)
             items:
             - name: Custom settings
@@ -1359,11 +1367,11 @@ items:
           - name: Wi-Fi
             displayName: wifi, wireless, android, device administrator, da
             href: ./configuration/wi-fi-settings-android.md
-        - name: Android (AOSP) 
-          items: 
+        - name: Android (AOSP)
+          items:
           - name: Device restrictions
             displayName: android, aosp
-            href: ./configuration/device-restrictions-android-aosp.md  
+            href: ./configuration/device-restrictions-android-aosp.md
           - name: Wi-Fi
             displayName: wifi, wireless, android, aosp
             href: ./configuration/wi-fi-settings-android-aosp.md
@@ -1499,7 +1507,7 @@ items:
             href: ./configuration/kiosk-settings-holographic.md
           - name: Shared multi-user device
             displayName: windows holographic, hololens
-            href: ./configuration/shared-user-device-settings-windows-holographic.md 
+            href: ./configuration/shared-user-device-settings-windows-holographic.md
         - name: Windows 8.1
           items:
           - name: Device restrictions
@@ -1510,7 +1518,7 @@ items:
             href: ./configuration/vpn-settings-windows-8-1.md
 
     - name: Assign and deploy policies
-      items: 
+      items:
       - name: Assign policies to users & groups
         displayName: deploy, push, android, ios, ipados, macos, windows
         href: ./configuration/device-profile-assign.md
@@ -1554,119 +1562,119 @@ items:
         displayName: android, ios, ipados, macos, windows
         href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
 
-    - name: Enroll devices in Microsoft Intune  
+    - name: Enroll devices in Microsoft Intune
       items:
-      - name: Device enrollment overview        
-        href: ./fundamentals/deployment-guide-enrollment.md  
+      - name: Device enrollment overview
+        href: ./fundamentals/deployment-guide-enrollment.md
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
-      - name: Configure enrollment features      
+      - name: Configure enrollment features
         items:
-        - name: Get Apple MDM push certificate   
+        - name: Get Apple MDM push certificate
           href: ./enrollment/apple-mdm-push-certificate-get.md
-          displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment  
-        - name: Configure Chrome Enterprise connector 
-          href: ./enrollment/chrome-enterprise-connector-configure.md 
-          displayName: chrome os; connector; device management; google admin       
+          displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment
+        - name: Configure Chrome Enterprise connector
+          href: ./enrollment/chrome-enterprise-connector-configure.md
+          displayName: chrome os; connector; device management; google admin
         - name: Add corporate identifiers
           href: ./enrollment/corporate-identifiers-add.md
-          displayName: COD; corporate owned; IMEI; device ownership; serial   
-        - name: Add device enrollment manager  
-          href: ./enrollment/device-enrollment-manager-enroll.md   
+          displayName: COD; corporate owned; IMEI; device ownership; serial
+        - name: Add device enrollment manager
+          href: ./enrollment/device-enrollment-manager-enroll.md
           displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
-        - name: Add device categories  
+        - name: Add device categories
           href: ./enrollment/device-group-mapping.md
-          displayName: group; category; categorize; security group;   
-        - name: Require multifactor authentication  
-          href: ./enrollment/multi-factor-authentication.md   
+          displayName: group; category; categorize; security group;
+        - name: Require multifactor authentication
+          href: ./enrollment/multi-factor-authentication.md
           displayName: multi-factor; enrollment; MFA; verification; Conditional Access
-        - name: Create terms and conditions policy  
+        - name: Create terms and conditions policy
           href: ./enrollment/terms-and-conditions-create.md
-          displayName: intune; enrollment; terms and conditions; policy 
-        - name: Set up enrollment notifications  
+          displayName: intune; enrollment; terms and conditions; policy
+        - name: Set up enrollment notifications
           href: ./enrollment/enrollment-notifications.md
-        - name: Set up enrollment time grouping  
+        - name: Set up enrollment time grouping
           href: ./enrollment/enrollment-time-grouping.md
-          displayName: enrollment time grouping; security groups; Entra 
+          displayName: enrollment time grouping; security groups; Entra
         - name: Configure device enrollment restrictions
-          items:  
-          - name: Overview  
-            href: ./enrollment/enrollment-restrictions-set.md  
-          - name: Intune device limits vs. Microsoft Entra device limits    
-            href: ./enrollment/device-limit-intune-azure.md   
-          - name: Create device platform restrictions 
-            href: ./enrollment/create-device-platform-restrictions.md  
-          - name: Create device limit restrictions  
-            href: ./enrollment/create-device-limit-restrictions.md  
-  
-      - name: Set up Windows enrollment
-        items:  
-        - name: Get started with Windows enrollment    
-          href: ./fundamentals/deployment-guide-enrollment-windows.md
-        - name: Enrollment solutions  
-          items:  
-          - name: Set up automatic enrollment  
-            href: ./enrollment/windows-enroll.md
-          - name: Set up bulk enrollment and workplace join             
-            href: ./enrollment/windows-bulk-enroll.md   
-        - name: Enrollment configurations    
           items:
-          - name: Create and validate CNAME records             
+          - name: Overview
+            href: ./enrollment/enrollment-restrictions-set.md
+          - name: Intune device limits vs. Microsoft Entra device limits
+            href: ./enrollment/device-limit-intune-azure.md
+          - name: Create device platform restrictions
+            href: ./enrollment/create-device-platform-restrictions.md
+          - name: Create device limit restrictions
+            href: ./enrollment/create-device-limit-restrictions.md
+
+      - name: Set up Windows enrollment
+        items:
+        - name: Get started with Windows enrollment
+          href: ./fundamentals/deployment-guide-enrollment-windows.md
+        - name: Enrollment solutions
+          items:
+          - name: Set up automatic enrollment
+            href: ./enrollment/windows-enroll.md
+          - name: Set up bulk enrollment and workplace join
+            href: ./enrollment/windows-bulk-enroll.md
+        - name: Enrollment configurations
+          items:
+          - name: Create and validate CNAME records
             href: ./enrollment/windows-enrollment-create-cname.md
-          - name: Set up Intune Connector for Active Directory  
-            href: ./enrollment/autopilot-hybrid-connector-proxy.md
+          - name: Set up Intune Connector for Active Directory
+            href: /autopilot/windows-autopilot-hybrid
           - name: Set up Enrollment Status Page
             href: ./enrollment/windows-enrollment-status.md
           - name: Set up Windows Enrollment Attestation
-            href: ./enrollment/windows-enrollment-attestation.md   
- 
+            href: ./enrollment/windows-enrollment-attestation.md
+
       - name: Set up Android enrollment
         items:
-        - name: Get started with Android enrollment 
+        - name: Get started with Android enrollment
           href: ./fundamentals/deployment-guide-enrollment-android.md
           displayName: COBO
-        - name: Android Enterprise enrollment solutions    
+        - name: Android Enterprise enrollment solutions
           items:
-          - name: Prerequisite - Connect Intune to Android Enterprise 
+          - name: Prerequisite - Connect Intune to Android Enterprise
             href: ./enrollment/connect-intune-android-enterprise.md
-          - name: Device staging overview          
+          - name: Device staging overview
             href: ./enrollment/device-staging-overview.md
-            displayName: COBO; staged enrollment 
+            displayName: COBO; staged enrollment
           - name: Set up work profile management
-            items: 
-            - name: Overview  
+            items:
+            - name: Overview
               href: ./enrollment/android-enterprise-overview.md
-            - name: Work profile for personal devices 
+            - name: Work profile for personal devices
               href: ./enrollment/android-work-profile-enroll.md
-            - name: Work profile for corporate-owned devices  
-              href: ./enrollment/android-corporate-owned-work-profile-enroll.md 
+            - name: Work profile for corporate-owned devices
+              href: ./enrollment/android-corporate-owned-work-profile-enroll.md
           - name: Set up enrollment for dedicated devices
             href: ./enrollment/android-kiosk-enroll.md
-          - name: Set up enrollment for fully managed devices  
+          - name: Set up enrollment for fully managed devices
             href: ./enrollment/android-fully-managed-enroll.md
-          - name: Enroll corporate-owned devices  
-            href: ./enrollment/android-dedicated-devices-fully-managed-enroll.md 
-        - name: AOSP enrollment solutions  
-          items: 
+          - name: Enroll corporate-owned devices
+            href: ./enrollment/android-dedicated-devices-fully-managed-enroll.md
+        - name: AOSP enrollment solutions
+          items:
           - name: Enroll corporate-owned, userless devices
-            href: ./enrollment/android-aosp-corporate-owned-userless-enroll.md    
+            href: ./enrollment/android-aosp-corporate-owned-userless-enroll.md
           - name: Enroll corporate-owned, user-associated devices
-            href: ./enrollment/android-aosp-corporate-owned-user-associated-enroll.md 
-        - name: Android device administrator solutions    
-          items: 
-          - name: Set up enrollment for Android device administrator 
+            href: ./enrollment/android-aosp-corporate-owned-user-associated-enroll.md
+        - name: Android device administrator solutions
+          items:
+          - name: Set up enrollment for Android device administrator
             href: ./enrollment/android-enroll-device-administrator.md
-          - name: Move to Android Enterprise work profile management 
-            href: ./enrollment/android-move-device-admin-work-profile.md  
-          - name: Move to mobile application management without enrollment    
-            href: ./enrollment/move-to-android-mobile-application-management.md 
-        - name: Samsung Knox enrollment solutions  
-          items: 
-          - name: Use Samsung Knox Mobile Enrollment 
-            href: ./enrollment/android-samsung-knox-mobile-enroll.md  
+          - name: Move to Android Enterprise work profile management
+            href: ./enrollment/android-move-device-admin-work-profile.md
+          - name: Move to mobile application management without enrollment
+            href: ./enrollment/move-to-android-mobile-application-management.md
+        - name: Samsung Knox enrollment solutions
+          items:
+          - name: Use Samsung Knox Mobile Enrollment
+            href: ./enrollment/android-samsung-knox-mobile-enroll.md
 
       - name: Set up iOS/iPadOS enrollment
         items:
-        - name: Get started with iOS/iPadOS enrollment 
+        - name: Get started with iOS/iPadOS enrollment
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
         - name: Enrollment solutions
           items:
@@ -1678,74 +1686,74 @@ items:
               href: ./enrollment/apple-corporate-owned-userless-enroll.md
           - name: Set up Apple Automated Device Enrollment
             items:
-            - name: Set up Automated Device Enrollment 
+            - name: Set up Automated Device Enrollment
               href: ./enrollment/device-enrollment-program-enroll-ios.md
-            - name: Choose enrollment authentication method   
+            - name: Choose enrollment authentication method
               href: ./enrollment/automated-device-enrollment-authentication.md
-            - name: Set up enrollment for shared device mode    
+            - name: Set up enrollment for shared device mode
               href: ./enrollment/automated-device-enrollment-shared-device-mode.md
-              displayName: devices, frontline worker, automated device enrollment 
-            - name: Walkthrough - Set up enrollment with Apple School Manager 
+              displayName: devices, frontline worker, automated device enrollment
+            - name: Walkthrough - Set up enrollment with Apple School Manager
               items:
               - name: Prerequisites
                 href: ./enrollment/apple-school-manager-set-up-ios.md
               - name: Step 1 - Get an Apple token and assign devices
                 href: ./enrollment/apple-school-manager-step-1.md
-              - name: Step 2 - Create an Apple enrollment profile 
+              - name: Step 2 - Create an Apple enrollment profile
                 href: ./enrollment/apple-school-manager-step-2.md
-              - name: Step 3 - Sync managed devices  
+              - name: Step 3 - Sync managed devices
                 href: ./enrollment/apple-school-manager-step-3.md
-      
+
           - name: Set up Apple device enrollment
-            items:              
-            - name: Overview    
-              href: ./enrollment/ios-device-enrollment.md 
-            - name: Set up web based device enrollment   
-              href: ./enrollment/web-based-device-enrollment-ios.md         
+            items:
+            - name: Overview
+              href: ./enrollment/ios-device-enrollment.md
+            - name: Set up web based device enrollment
+              href: ./enrollment/web-based-device-enrollment-ios.md
           - name: Set up Apple user enrollment
             items:
-            - name: Overview   
-              href: ./enrollment/ios-user-enrollment-supported-actions.md 
-            - name: Set up account driven user enrollment   
-              href: ./enrollment/apple-account-driven-user-enrollment.md  
-            - name: Set up user enrollment with Company Portal   
-              href: ./enrollment/apple-user-enrollment-with-company-portal.md 
-          - name: Set up Shared iPad      
+            - name: Overview
+              href: ./enrollment/ios-user-enrollment-supported-actions.md
+            - name: Set up account driven user enrollment
+              href: ./enrollment/apple-account-driven-user-enrollment.md
+            - name: Set up user enrollment with Company Portal
+              href: ./enrollment/apple-user-enrollment-with-company-portal.md
+          - name: Set up Shared iPad
             items:
             - name: Overview of shared device solutions
               href: ./enrollment/device-enrollment-shared-ios.md
             - name: Set up Shared iPad
-              href: ./enrollment/device-enrollment-shared-ipad.md 
-        - name: Enrollment configurations  
-          items: 
-          - name: Back up and restore for Automated Device Enrollment 
-            href: ./enrollment/backup-restore-ios.md 
-     
-     
-      - name: Set up Linux enrollment 
+              href: ./enrollment/device-enrollment-shared-ipad.md
+        - name: Enrollment configurations
+          items:
+          - name: Back up and restore for Automated Device Enrollment
+            href: ./enrollment/backup-restore-ios.md
+
+
+      - name: Set up Linux enrollment
         items:
-        - name: Get started with Linux enrollment    
+        - name: Get started with Linux enrollment
           href: ./fundamentals/deployment-guide-enrollment-linux.md
-        - name: Intune user help documentation  
-          href: ./user-help/enroll-device-linux.md  
+        - name: Intune user help documentation
+          href: ./user-help/enroll-device-linux.md
       - name: Set up macOS enrollment
         items:
-        - name: Get started with Mac enrollment  
+        - name: Get started with Mac enrollment
           href: ./fundamentals/deployment-guide-enrollment-macos.md
-        - name: Enrollment solutions  
-          items: 
+        - name: Enrollment solutions
+          items:
           - name: Set up automated device enrollment for macOS
             href: ./enrollment/device-enrollment-program-enroll-macos.md
-          - name: Set up Direct Enrollment for macOS 
-            href: ./enrollment/device-enrollment-direct-enroll-macos.md    
-        - name: Enrollment configurations  
-          items: 
-          - name: Configure enrollment settings    
-            href: ./enrollment/macos-enroll.md    
+          - name: Set up Direct Enrollment for macOS
+            href: ./enrollment/device-enrollment-direct-enroll-macos.md
+        - name: Enrollment configurations
+          items:
+          - name: Configure enrollment settings
+            href: ./enrollment/macos-enroll.md
       - name: Troubleshoot enrollment
         items:
         - name: Get incomplete user enrollment report
-          href: ./enrollment/enrollment-report-company-portal-abandon.md  
+          href: ./enrollment/enrollment-report-company-portal-abandon.md
         - name: Troubleshoot device enrollment
           href: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune
         - name: Troubleshoot iOS/iPadOS device enrollment
@@ -1755,7 +1763,7 @@ items:
         - name: Troubleshoot Windows auto-enrollment
           href: /troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment
         - name: Troubleshoot Android device enrollment
-          href: /troubleshoot/mem/intune/troubleshoot-android-enrollment  
+          href: /troubleshoot/mem/intune/troubleshoot-android-enrollment
 
     - name: Use Intune Suite add-ons
       href: ./fundamentals/intune-add-ons.md
@@ -1771,8 +1779,6 @@ items:
           href: ./remote-actions/device-remote-lock.md
         - name: Reset passcode
           href: ./remote-actions/device-passcode-reset.md
-        - name: Windows 10 PIN reset
-          href: ./remote-actions/device-windows-pin-reset.md
         - name: Self-service password reset
           href: ./remote-actions/password-reset.md
       - name: Remove and restart
@@ -1826,9 +1832,9 @@ items:
         - name: Collect diagnostics
           href: ./remote-actions/collect-diagnostics.md
         - name: Remove apps and configuration
-          href: ./remote-actions/remove-apps-config.md  
+          href: ./remote-actions/remove-apps-config.md
         - name: Pause config refresh
-          href: ./remote-actions/pause-config-refresh.md    
+          href: ./remote-actions/pause-config-refresh.md
       - name: Bulk device actions
         href: ./remote-actions/bulk-device-actions.md
       - name: Troubleshooting
@@ -1845,20 +1851,20 @@ items:
         - name: Export reports using Graph
           href: ./fundamentals/reports-export-graph-apis.md
         - name: Intune reports and properties using Graph
-          href: ./fundamentals/reports-export-graph-available-reports.md          
+          href: ./fundamentals/reports-export-graph-available-reports.md
         - name: Use the Intune Data Warehouse
-          href: ./developer/reports-nav-create-intune-reports.md    
-      - name: Monitor          
+          href: ./developer/reports-nav-create-intune-reports.md
+      - name: Monitor
         items:
         - name: Audit logs for Intune activities
           href: ./fundamentals/monitor-audit-logs.md
         - name: Review logs with Azure Monitor
           href: ./fundamentals/review-logs-using-azure-monitor.md
         - name: Device configuration profile status
-          href: ./configuration/device-profile-monitor.md                    
+          href: ./configuration/device-profile-monitor.md
 
   - name: Industry guides
-    items: 
+    items:
     - name: Education
       items:
       - name: What is Intune for Education
@@ -1887,9 +1893,9 @@ items:
           - name: Configure policies
             href: ./industry/education/tutorial-school-deployment/configure-device-settings.md
           - name: Configure applications
-            href: ./industry/education/tutorial-school-deployment/configure-device-apps.md        
+            href: ./industry/education/tutorial-school-deployment/configure-device-apps.md
         - name: 4. Deploy devices
-          items: 
+          items:
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/enroll-overview.md
           - name: Windows
@@ -1909,11 +1915,11 @@ items:
             - name: Bulk enrollment with Apple Configurator
               href: ./industry/education/tutorial-school-deployment/enroll-ios-apple-configurator.md
         - name: 5. Manage devices
-          items: 
+          items:
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/manage-overview.md
           - name: Management functionalities for Surface devices
-            href: ./industry/education/tutorial-school-deployment/manage-surface-devices.md       
+            href: ./industry/education/tutorial-school-deployment/manage-surface-devices.md
           - name: Reset and wipe devices
             href: ./industry/education/tutorial-school-deployment/reset-wipe.md
           - name: Avoid policy conflicts
@@ -1921,7 +1927,7 @@ items:
         - name: 6. Troubleshoot and get help
           href: ./industry/education/tutorial-school-deployment/troubleshoot-overview.md
         - name: 7. Common Education configuration
-          items: 
+          items:
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/common-config-overview.md
           - name: Intune policies for Windows in Education
@@ -1966,9 +1972,9 @@ items:
     - name: Windows platform guide
       href: ./fundamentals/deployment-guide-platform-windows.md
     - name: Android, Android Enterprise platform guide
-      href: ./fundamentals/deployment-guide-platform-android.md 
+      href: ./fundamentals/deployment-guide-platform-android.md
     - name: iOS/iPadOS platform guide
-      href: ./fundamentals/deployment-guide-platform-ios-ipados.md    
+      href: ./fundamentals/deployment-guide-platform-ios-ipados.md
     - name: macOS platform guide
       href: ./fundamentals/deployment-guide-platform-macos.md
     - name: Linux platform guide
@@ -1981,7 +1987,7 @@ items:
       href: ./fundamentals/surface-management-portal.md
 
   - name: Scenario-based guidance
-    items: 
+    items:
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
     - name: Frontline worker (FLW) device management
@@ -1999,13 +2005,13 @@ items:
         displayName: kiosk, multi-app, single-app
         href: ../solutions/frontline-worker/frontline-worker-overview-windows.md
     - name: Guided scenarios
-      items: 
+      items:
       - name: Guided scenarios overview
-        href: ./fundamentals/guided-scenarios-overview.md 
-      - name: Deploy Microsoft Edge for Mobile 
-        href: ./fundamentals/guided-scenarios-edge.md 
+        href: ./fundamentals/guided-scenarios-overview.md
+      - name: Deploy Microsoft Edge for Mobile
+        href: ./fundamentals/guided-scenarios-edge.md
       - name: Cloud-managed Modern Desktop
-        href: ./fundamentals/guided-scenarios-cloud-managed-pc.md   
+        href: ./fundamentals/guided-scenarios-cloud-managed-pc.md
       - name: Secure Microsoft Office mobile apps
         href: ./fundamentals/guided-scenarios-office-mobile.md
       - name: Windows 10/11 in cloud configuration
@@ -2049,24 +2055,24 @@ items:
     - name: App solutions
       items:
       - name: Purchase and add apps for Microsoft Intune
-        items: 
+        items:
         - name: Overview
           href: /microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           displayName: purchase, buy, app, license
         - name: Understand app types
           items:
-          - name: App types overview        
+          - name: App types overview
             href: /microsoft-365/solutions/apps-type-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
-          - name: Understand store apps        
+          - name: Understand store apps
             href: /microsoft-365/solutions/apps-type-store?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
-          - name: Understand line-of-business apps        
+          - name: Understand line-of-business apps
             href: /microsoft-365/solutions/apps-type-lob?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
-          - name: Understand built-in apps        
-            href: /microsoft-365/solutions/apps-type-built-in?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json          
+          - name: Understand built-in apps
+            href: /microsoft-365/solutions/apps-type-built-in?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           - name: Understand web apps
             href: /microsoft-365/solutions/apps-type-web?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           - name: Understand Microsoft apps
-            href: /microsoft-365/solutions/apps-type-microsoft?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json          
+            href: /microsoft-365/solutions/apps-type-microsoft?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
         - name: Understand app purchases
           items:
           - name: Purchase apps overview
@@ -2094,10 +2100,10 @@ items:
           - name: Step 4. Add apps to Intune
             href: /microsoft-365/solutions/apps-add-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           - name: Step 5. Manage apps and licenses
-            href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
+            href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
       - name: Configure apps using Microsoft Intune
-        items: 
+        items:
         - name: Overview
           href: /microsoft-365/solutions/apps-config-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           displayName: configure, app, apps, channel
@@ -2112,23 +2118,23 @@ items:
         - name: Step 5. Configure Microsoft Teams
           href: /microsoft-365/solutions/apps-config-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
         - name: Step 6. Configure other apps
-          href: /microsoft-365/solutions/apps-config-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json                  
+          href: /microsoft-365/solutions/apps-config-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
         - name: Step 7. Verify app configuration
-          href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
+          href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
       - name: Secure and protect apps using Microsoft Intune
-        items: 
+        items:
         - name: Overview
           href: /microsoft-365/solutions/apps-protect-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           displayName: secure, protect, app, apps, conditional, launch, framework, basic, enhanced, high
         - name: Understand app data protection
           href: /microsoft-365/solutions/apps-protect-data-protection?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
         - name: Understand app protection access requirements
-          href: /microsoft-365/solutions/apps-protect-access-requirements?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+          href: /microsoft-365/solutions/apps-protect-access-requirements?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
         - name: Understand app protection conditional launch
-          href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+          href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
         - name: Understand app protection health checks
-          href: /microsoft-365/solutions/apps-protect-health-checks?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+          href: /microsoft-365/solutions/apps-protect-health-checks?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
         - name: Use the app protection framework
           items:
           - name: App protection framework overview
@@ -2142,12 +2148,12 @@ items:
           - name: Step 4. Understand app protection delivery
             href: /microsoft-365/solutions/apps-protect-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           - name: Step 5. Verify and monitor app protection
-            href: /microsoft-365/solutions/apps-protect-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json     
+            href: /microsoft-365/solutions/apps-protect-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           - name: Step 6. Use app protection actions
             href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
       - name: Assign and deploy apps using Microsoft Intune
-        items: 
+        items:
         - name: Overview
           href: /microsoft-365/solutions/apps-assign-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           displayName: assign, deploy, app, apps, monitor, troubleshoot
@@ -2158,9 +2164,9 @@ items:
         - name: Understand app deployment
           href: /microsoft-365/solutions/apps-assign-deployment?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
         - name: Assign apps to your organization
-          items: 
-          - name: Assign apps overview      
-            href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json     
+          items:
+          - name: Assign apps overview
+            href: /microsoft-365/solutions/apps-assign-steps-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           - name: Step 1. Confirm users, devices, or groups
             href: /microsoft-365/solutions/apps-assign-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           - name: Step 2. Assign apps to users, devices, or groups
@@ -2169,9 +2175,9 @@ items:
             href: /microsoft-365/solutions/apps-assign-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
           - name: Step 4. Troubleshoot app deployment issues
             href: /microsoft-365/solutions/apps-assign-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
-            
+
       - name: Secure your corporate data using Edge for Business
-        items: 
+        items:
         - name: Overview
           href: ./apps/mamedge-overview.md
         - name: Step 1. Create Microsoft Entra Conditional Access
@@ -2196,7 +2202,7 @@ items:
       - name: Intune API reference
         href: /graph/api/resources/intune-graph-overview
       - name: Graph APIs used to configure devices
-        href: ./developer/graph-apis-used-by-intune-device-configuration-windows.md  
+        href: ./developer/graph-apis-used-by-intune-device-configuration-windows.md
     - name: Use PowerShell cmdlets to automate actions
       href: https://github.com/Microsoft/Intune-PowerShell-SDK/
     - name: Protect apps with Intune App SDK
@@ -2207,7 +2213,7 @@ items:
       - name: Prepare LOB apps for app protection
         href: ./developer/apps-prepare-mobile-application-management.md
       - name: LOB app versioning
-        href: ./developer/apps-lob-app-versioning.md      
+        href: ./developer/apps-lob-app-versioning.md
       - name: App Wrapping Tool for iOS
         href: ./developer/app-wrapper-prepare-ios.md
       - name: Intune App SDK for iOS
@@ -2251,9 +2257,9 @@ items:
           href: ./developer/app-sdk-android-appendix.md
       - name: Intune App SDK Xamarin Bindings
         href: ./developer/app-sdk-xamarin.md
-      - name: Microsoft Tunnel for MAM SDK 
+      - name: Microsoft Tunnel for MAM SDK
         items:
-        - name: Microsoft Tunnel for MAM iOS SDK 
+        - name: Microsoft Tunnel for MAM iOS SDK
           href: ./developer/tunnel-mam-ios-sdk.md
         - name: Microsoft Tunnel for MAM iOS Xamarin Bindings SDK
           href: ./developer/mam-tunnel-ios-xamarin-bindings.md
@@ -2274,14 +2280,14 @@ items:
       - name: Data Warehouse API endpoint
         href: ./developer/reports-api-url.md
       - name: Data Warehouse application-only authentication
-        href: ./developer/data-warehouse-app-only-auth.md      
+        href: ./developer/data-warehouse-app-only-auth.md
       - name: Data Warehouse data model
         href: ./developer/reports-ref-data-model.md
         items:
         - name: Data Warehouse collections
-          href: ./developer/intune-data-warehouse-collections.md 
+          href: ./developer/intune-data-warehouse-collections.md
         - name: Data Warehouse collections (beta)
-          items:  
+          items:
           - name: User lifetime representation in the Intune Data Warehouse
             href: ./developer/reports-ref-user-timeline.md
           - name: Reference for application entities
@@ -2328,7 +2334,7 @@ items:
         href: ./protect/data-intune-sends-to-google.md
       - name: Data Intune sends to Zebra
         href: ./protect/data-intune-sends-to-zebra.md
-      - name: Enable Windows diagnostic data 
+      - name: Enable Windows diagnostic data
         href: ./protect/data-enable-windows-data.md
       - name: Information shared from Jamf Pro to Intune
         href: ./protect/data-jamf-sends-to-intune.md
@@ -2356,11 +2362,11 @@ items:
       - name: Remote Help on macOS
         href: ./fundamentals/remote-help-macos.md
       - name: Remote Help Web App
-        href: ./fundamentals/remote-help-webapp.md    
+        href: ./fundamentals/remote-help-webapp.md
       - name: Remote Help on Android
-        href: ./fundamentals/remote-help-android.md  
+        href: ./fundamentals/remote-help-android.md
       - name: Troubleshooting Remote Help on Android
-        href: ./fundamentals/remote-help-android-troubleshoot.md   
+        href: ./fundamentals/remote-help-android-troubleshoot.md
     - name: Remediations
       items:
       - name: Use Remediations
