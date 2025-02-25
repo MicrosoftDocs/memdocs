@@ -581,6 +581,13 @@ When attempting to access blocked websites, users will be prompted to use either
 |:--|:----|
 |com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in.If personal account is not signed in, the behavior will be changed to value 2. <br>**2**:Automatically switch to InPrivate if InPrivate switch is allowed by com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true. |
 
+### Control the behavior of the post request when account switch
+When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites. You can choose preferences on how to handle the post request during the account switch. The MAM policy is only for iOS.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.IgnorePostRequestOnAutoTransition |**false**: (Default) Continue the post request when URL blocked switches to private mode or personal account.<br>**true**: Ignore the post request when URL blocked switches to private mode or personal account.|
+
 ### Control the behavior of switching personal profile to work profile 
 When Edge is under the personal profile and users are attempting to open a link from Outlook or Microsoft Teams which are under the work profile, by default, Intune will use the Edge work profile to open the link because both Edge, Outlook, and Microsoft Teams are managed by Intune. However, when the link is blocked, the user will be switched to the the personal profile. This causes a friction experience for users
 
