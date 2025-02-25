@@ -7,7 +7,7 @@ keywords: migrate from configuration manager to intune, move from airwatch to in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2023
+ms.date: 02/20/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -50,7 +50,7 @@ Use this guide to determine the best migration approach, and get some guidance &
 >
 > - As a companion to this article, the Microsoft 365 admin center also has some setup guidance. The guide customizes your experience based on your environment. To access this deployment guide, go to the [Microsoft Intune setup guide in the Microsoft 365 admin center](https://go.microsoft.com/fwlink/?linkid=2224812), and sign in with the **Global Reader** (at a minimum). For more information on these deployment guides and the roles needed, go to [Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365).
 >
->   To review best practices without signing in and activating the automated setup features, go to the [M365 Setup portal](https://go.microsoft.com/fwlink/?linkid=2223058).
+>   To review best practices without signing in and activating the automated setup features, go to the [Microsoft 365 Setup portal](https://go.microsoft.com/fwlink/?linkid=2223058).
 
 ## Before you begin
 
@@ -65,9 +65,8 @@ Use this guide to determine the best migration approach, and get some guidance &
 
 If you currently don't use any MDM or mobile application management (MAM) provider, then you have some options:
 
-- **Microsoft Intune**: If you want a cloud solution and ready for full device management, then go straight to Intune. You can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), which is a web-based console.
+- **Microsoft Intune**: If you want a cloud solution and are ready for full device management, then go straight to Intune. You can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), which is a web-based console.
 
-  - [App protection policies overview](../apps/app-protection-policy.md)
   - [Get started with Intune](get-started-with-intune.md)
   - [Step 1 - Set up Intune](deployment-plan-setup.md)
   - [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
@@ -168,7 +167,7 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 ### Option 1 - Add tenant attach
 
-Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, like sync machine and user policy. You can also see your on-premises servers, and get OS information.
+Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a **tenant**. After you attach your devices, you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, like sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
 Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premises Configuration Manager setup.
 
@@ -179,7 +178,7 @@ For more information, see [enable tenant attach](../../configmgr/tenant-attach/d
 This option uses Configuration Manager for some workloads, and uses Intune for other workloads.
 
 1. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
-2. [Set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
+2. In Intune, [set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
 
 Devices are ready to be enrolled in Intune, and receive your policies.
 
@@ -201,12 +200,12 @@ These steps are an overview, and are only included for those users who want a 10
 
 This option is more work for administrators, but can create a more seamless experience for existing Windows client devices. For new Windows client devices, we recommend you [start from scratch with Microsoft 365 and Intune](#option-4---start-from-scratch-with-microsoft-365-and-intune) (in this article).
 
-1. Set up [hybrid Active Directory and Microsoft Entra ID](/entra/identity/devices/hybrid-join-plan) for your devices. Microsoft Entra hybrid joined devices are joined to your on-premises Active Directory, and registered with your Microsoft Entra ID. When devices are in Microsoft Entra ID, they're also available to Intune.
+1. In Microsoft Entra, set up [hybrid Active Directory and Microsoft Entra ID](/entra/identity/devices/hybrid-join-plan) for your devices. Microsoft Entra hybrid joined devices are joined to your on-premises Active Directory, and registered with your Microsoft Entra ID. When devices are in Microsoft Entra ID, they're also available to Intune.
 
-    Hybrid Microsoft Entra ID support Windows devices. For other prerequisites, including sign-in requirements, see [Plan your Microsoft Entra hybrid join implementation](/entra/identity/devices/hybrid-join-plan).
+    Hybrid Microsoft Entra ID supports Windows devices. For other prerequisites, including sign-in requirements, see [Plan your Microsoft Entra hybrid join implementation](/entra/identity/devices/hybrid-join-plan).
 
 2. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
-3. [Set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
+3. In Intune, [set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
 4. In Configuration Manager, [slide all the workloads from Configuration Manager to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
 5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
@@ -236,7 +235,7 @@ To manage your Windows client devices:
     - Set up [Microsoft 365 Business](/microsoft-365/business/set-up)
 
 2. [Set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
-3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
+3. Uninstall the Configuration Manager client on existing devices. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
 Devices are ready to be enrolled in Intune, and receive your policies.
 
@@ -276,7 +275,7 @@ This section shows how to use the Microsoft Graph scripts for a tenant to tenant
 >
 > - These steps use the [Intune beta Graph samples](https://github.com/microsoftgraph/powershell-intune-samples) on GitHub. The sample scripts make changes to your tenant. They're available as-is, and should be validated using a non-production or "test" tenant account. Be sure the scripts meet your organization security guidelines.
 > - The scripts don't export and import every policy, such as certificate profiles. Expect to do more tasks than what's available in these scripts. You will have to recreate some policies.
-> - To migrate a user's device, the user must unenroll the device from the old tenant, and then re-enroll in the new tenant.
+> - Users must unenroll the device from the old tenant, and then re-enroll in the new tenant.
 
 ### Download the samples, and run the script
 
@@ -350,7 +349,7 @@ There are some policy types that can't be exported. There are some policy types 
 | **Endpoint Security** | &nbsp; |
 | Endpoint detection and response | ❌ Export <br/>❌ Import <br/><br/>This policy is linked to Microsoft Defender for Endpoint. In the new tenant, you configure Microsoft Defender for Endpoint, which automatically includes the **Endpoint detection and response** policy. |
 
-## Next steps
+## Related articles
 
 - [Get started with Intune](get-started-with-intune.md)
 - [Enrollment deployment guides](deployment-guide-enrollment.md)

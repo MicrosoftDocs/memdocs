@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 08/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,7 +50,7 @@ You can configure Conditional Access policies based on Pradeo risk assessment en
 - Microsoft Entra ID P1
 - Microsoft Intune Plan 1 subscription
 - Pradeo Security for Mobile Threat Defense subscription
-  - For more information, see the [Pradeo website](https://pradeo.com/en/solutions/mobile-device-security/mobile-threat-defense/).
+  - For more information, see the [Pradeo website](https://pradeo.com/en/use-cases/securing-mobile-applications/).
 
 ## How do Intune and Pradeo help protect your company resources?
 

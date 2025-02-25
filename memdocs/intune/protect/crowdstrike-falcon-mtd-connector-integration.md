@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 02/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,7 +37,7 @@ Complete the following steps to integrate the CrowdStrike Falcon for Mobile solu
 
 > [!NOTE]
 >
-> This Mobile Threat Defense vendor is not supported for unenrolled devices.
+> This Mobile Threat Defense vendor isn't supported for unenrolled devices.
 
 ## Before you begin
 
@@ -69,8 +69,8 @@ The CrowdStrike Falcon app authorization process consists of the following steps
 
 ## Set up CrowdStrike Falcon for Mobile integration
 
-The integration steps are documented by CrowdStrike at [Integrating Falcon for Mobile with Microsoft Intune for remediation actions](https://falcon.crowdstrike.com/documentation/page/odf8977b/integrating-falcon-for-mobile-with-microsoft-intune-for-remediation-actions) in the CrowdStrike documentation. You must sign in with your CrowdStrike credentials before you can access this content.
+CrowdStrike documents the integration steps at [Integrating Falcon for Mobile with Microsoft Intune for remediation actions](https://falcon.crowdstrike.com/documentation/page/odf8977b/integrating-falcon-for-mobile-with-microsoft-intune-for-remediation-actions). You must sign in with your CrowdStrike credentials before you can access this content.
 
-## Next steps
+## Related content
 
 - [Set up CrowdStrike Falcon apps](mtd-apps-ios-app-configuration-policy-add-assign.md)

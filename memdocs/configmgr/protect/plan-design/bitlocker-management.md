@@ -2,7 +2,7 @@
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
 description: Plan for managing BitLocker Drive Encryption with Configuration Manager.
-ms.date: 04/08/2022
+ms.date: 12/04/2024
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: conceptual
@@ -28,7 +28,7 @@ Use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-prem
 For more general information about BitLocker, see [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview). For a comparison of BitLocker deployments and requirements, see the [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
 
 > [!TIP]
-> To manage encryption on co-managed Windows 10 or later devices using the Microsoft Intune cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/intune/protect/endpoint-protection-windows-10#windows-encryption).
+> To manage encryption on co-managed Windows 10 or later devices using the Microsoft Intune cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/mem/intune/protect/endpoint-protection-windows-10#windows-encryption).
 
 ## Features
 
@@ -132,6 +132,8 @@ BitLocker management doesn't support all client types that are supported by Conf
 
 - BitLocker management isn't supported on virtual machines (VMs) or on server editions. For example, BitLocker management won't start the encryption on fixed drives of virtual machines. Additionally fixed drives in virtual machines may show as compliant even though they aren't encrypted.
 
+- Starting in version 2409, Configuration Manager now supports BitLocker task sequence steps for ARM devices. In BitLocker Management, policies that include OS drive encryption with a TPM protector and Fixed drive encryption with the Auto-Unlock option are now compatible with ARM devices. 
+  
 - In version 2010 and earlier, Microsoft Entra joined, workgroup clients, or clients in untrusted domains aren't supported. In these earlier versions of Configuration Manager, BitLocker management only supports devices that are joined to on-premises Active Directory including Microsoft Entra hybrid joined devices. This configuration is to authenticate with the recovery service to escrow keys.
 
   Starting in version 2103, Configuration Manager supports all client join types for BitLocker management. However, the client-side BitLocker user interface component is still only supported on Active Directory-joined and Microsoft Entra hybrid joined devices.

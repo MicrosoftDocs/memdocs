@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/17/2024
+ms.date: 12/11/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,7 +43,7 @@ For more information on AOSP, go to [Android Open Source Project](https://source
 
 ## Before you begin
 
-Create an [Android (AOSP) device configuration profile](wi-fi-settings-configure.md).
+- Create an [Android (AOSP) device configuration profile](wi-fi-settings-configure.md).
 
 ## Basic
 
@@ -55,7 +55,7 @@ Create an [Android (AOSP) device configuration profile](wi-fi-settings-configure
   When devices are connected to another preferred Wi-Fi connection, then they won't automatically connect to this Wi-Fi network. If devices fail to connect automatically when this setting is enabled, then disconnect the devices from any existing Wi-Fi connections.
 
 - **Hidden network**: Select **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Select **Disable** to show this network in the list of available networks on the device.
-- **Wi-Fi type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
+- **Security type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
 
   - **Open (no authentication)**: Only use this option if the network is unsecured.
   - **WEP-Pre-shared key**: Enter the password in **Pre-shared key** (PSK). When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
@@ -173,6 +173,6 @@ Create an [Android (AOSP) device configuration profile](wi-fi-settings-configure
 
 The profile is created, but might not be doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
 
-You can also create Wi-Fi profiles for [Android Enterprise](wi-fi-settings-android-enterprise.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows 10/11](wi-fi-settings-windows.md).
+You can also create Wi-Fi profiles for [Android Enterprise](wi-fi-settings-android-enterprise.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows](wi-fi-settings-windows.md).
 
 [Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).

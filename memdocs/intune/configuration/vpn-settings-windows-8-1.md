@@ -109,4 +109,4 @@ Depending on the settings you choose, not all values in the following list are c
 
 - [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-- Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md), and [Windows 10/11](vpn-settings-windows-10.md) devices.
+- Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md), and [Windows](vpn-settings-windows-10.md) devices.

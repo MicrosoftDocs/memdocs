@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2024
+ms.date: 09/18/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -40,10 +40,10 @@ Microsoft 365 (Office) for iOS and Android delivers several key benefits includi
 - Integrating Microsoft Lens technology to unlock the power of the camera with capabilities like converting images into editable Word and Excel documents, scanning PDFs, and capturing whiteboards with automatic digital enhancements to make the content easier to read.
 - Adding new functionality for common tasks people often encounter when working on a phone—things like making quick notes, signing PDFs, scanning QR codes, and transferring files between devices.
 
-The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as conditional access. At a minimum, you will want to deploy a conditional access policy that allows connectivity to Microsoft 365 (Office) for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
+The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as Conditional Access. At a minimum, you will want to deploy a Conditional Access policy that allows connectivity to Microsoft 365 (Office) for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
 
 ## Apply Conditional Access
-Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Microsoft 365 (Office) for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Microsoft 365 (Office) for iOS and Android. To do this, you will need a Conditional Access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
 1. Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Microsoft 365 (Office) for iOS and Android, but blocks third-party OAuth capable mobile device clients from connecting to Microsoft 365 endpoints.
 
@@ -51,7 +51,7 @@ Organizations can use Microsoft Entra Conditional Access policies to ensure that
    > This policy ensures mobile users can access all Microsoft 365 endpoints using the applicable apps.
 
 > [!NOTE]
-> To leverage app-based conditional access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
+> To leverage app-based Conditional Access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
 
 ## Create Intune app protection policies
 
@@ -192,7 +192,7 @@ To manage the Microsoft 365 Feed, you can use the following key:
 This key can be used by managed devices and managed apps.
 
 
-### Copilot with commercial data protection
+### Copilot with enterprise data protection
 
 Admins can now enable or disable Copilot in Microsoft 365 app by configuring the following setting in the Intune admin center. To deploy this app setting, use an [app configuration policy](app-configuration-policies-overview.md) in Intune.
 

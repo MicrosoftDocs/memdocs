@@ -2,12 +2,12 @@
 # required metadata
 
 title: Add custom settings to Android DA devices in Microsoft Intune
-description: Add or create a custom profile for Android devices in Microsoft Intune. Create a WiFi profile with a preshared key, create a per-app VPN profile, or allow/block apps for Samsung Knox Standard devices.
+description: Add or create a custom profile for Android device administrator (DA) devices in Microsoft Intune. Create a WiFi profile with a preshared key, create a per-app VPN profile, or allow/block apps for Samsung Knox Standard devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2023
+ms.date: 02/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,13 +27,13 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Use custom settings for Android devices in Microsoft Intune
+# Use custom settings for Android device administrator devices in Microsoft Intune
 
-Using Microsoft Intune, you can add or create custom settings for your Android devices using a custom profile. Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
+Using Microsoft Intune, you can add or create custom settings for your Android devices using a **custom profile**. Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
 This feature applies to:
 
-- Android device administrator
+- Android device administrator (DA)
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
@@ -41,15 +41,19 @@ Android custom profiles use Open Mobile Alliance Uniform Resource Identifier (OM
 
 Using a custom profile, you can configure and assign the following Android settings. The following settings aren't built in to Intune:
 
-- [Create a Wi-Fi profile with a pre-shared key](/intune/wi-fi-profile-shared-key)
-- [Create a per-app VPN profile](/intune/android-pulse-secure-per-app-vpn)
-- [Allow and block apps for Samsung Knox Standard devices](/intune/samsung-knox-apps-allow-block)
+- [Create a Wi-Fi profile with a pre-shared key](/mem/intune/configuration/wi-fi-profile-shared-key)
+- [Create a per-app VPN profile](/mem/intune/configuration/android-pulse-secure-per-app-vpn)
+- [Allow and block apps for Samsung Knox Standard devices](/mem/intune/configuration/samsung-knox-apps-allow-block)
 - [Configure web protection in Microsoft Defender for Endpoint for Android](../protect/advanced-threat-protection-manage-android.md)
 
 > [!IMPORTANT]
-> Only the settings listed can be configured by in a custom profile. Android devices don't expose a complete list of OMA-URI settings you can configure.<!-- 10948264 -->
+> Only the settings listed can be configured in a custom profile. Android devices don't expose a complete list of OMA-URI settings you can configure.<!-- 10948264 -->
 
-This article shows you how to create a custom profile for Android devices.
+This article shows you how to create a custom profile for Android DA devices.
+
+## Prerequisites
+
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Create the profile
 
@@ -88,7 +92,7 @@ This article shows you how to create a custom profile for Android devices.
 
     Select **Next**.
 
-9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -100,7 +104,7 @@ This article shows you how to create a custom profile for Android devices.
 
     You can also [monitor its status](device-profile-monitor.md).
 
-## Next steps
+## Related articles
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 - Create a [custom profile on Android Enterprise devices](custom-settings-android-for-work.md).

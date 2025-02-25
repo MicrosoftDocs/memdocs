@@ -7,7 +7,7 @@ keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/30/2023
+ms.date: 02/20/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,7 +34,7 @@ ms.collection:
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-On Windows 10/11 devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
+On Windows 10/11 devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode. To configure multi-app kiosk on Windows 11, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
 
 This article describes some of the settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to configure your Windows client devices to run in kiosk mode.
 
@@ -44,7 +44,7 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
 
 ## Before you begin
 
-- Create a [Windows 10/11 kiosk device configuration profile](kiosk-settings.md#create-the-profile).
+- Create a [Windows kiosk device configuration profile](kiosk-settings.md#create-the-profile).
 
 - This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older). To summarize:
 
@@ -100,7 +100,7 @@ Runs only one app on the device, such as a web browser or Store app.
 
     For more information on these options, see [Deploy Microsoft Edge kiosk mode](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
-  - **Add Kiosk browser**: Select **Kiosk browser settings**. These settings control a web browser app on the kiosk. Be sure you get the [Kiosk browser app](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) from the Store, add it to Intune as a [Client App](../apps/apps-add.md). Then, assign the app to the kiosk devices.
+  - **Add Kiosk browser**: Select **Kiosk browser settings**. These settings control a web browser app on the kiosk. Be sure you get the [Kiosk browser app](https://apps.microsoft.com/detail/9ngb5s5xg2kp?) from the Store, add it to Intune as a [Client App](../apps/apps-add.md). Then, assign the app to the kiosk devices.
 
     Enter the following settings:
 
@@ -148,7 +148,7 @@ Runs only one app on the device, such as a web browser or Store app.
 ## Multi-app kiosk
 
 > [!NOTE]
-> Currently, you can use Intune to configure a multi-app kiosk on Windows 10 devices. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
+> Currently, you can use Intune to configure a multi-app kiosk on Windows 10 devices. To configure multi-app kiosk on Windows 11, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
 
 Runs multiple apps on the device. Apps in this mode are available on the start menu. These apps are the only apps the user can open. If an app has a dependency on another app, then add both apps to the allowed apps list. For example, Internet Explorer 64-bit has a dependency on Internet Explorer 32-bit. So, you must allow `C:\Program Files\internet explorer\iexplore.exe` and `C:\Program Files (x86)\Internet Explorer\iexplore.exe`.
 

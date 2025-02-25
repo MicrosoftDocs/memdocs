@@ -7,12 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 01/14/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -31,7 +31,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 > - **Step 5: Assign applications and PowerShell scripts to device group**
 
 - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
-- Step 7: [Add Windows corporate identifier to device (optional)](entra-join-corporate-identifier.md)
+- Step 7: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
 
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 

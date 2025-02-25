@@ -53,6 +53,7 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
   - Windows 11 Enterprise + Microsoft 365 Apps 23H2 or later
 - Licensing options
   - Microsoft 365 E5
+  - Microsoft 365 E5 (no Teams)
   - Microsoft 365 E5 Compliance
   - Microsoft 365 E5 Insider Risk Management
 - Join type and network
@@ -124,7 +125,7 @@ After you create the policy, a user must sign in to their device before the poli
 
 ### Use a local script to deploy configuration package
 
-Follow the instructions in  [Onboard Windows 10 and Windows 11 devices using a local script](/purview/device-onboarding-script). This can be helpful when testing a subset of Cloud PCs before proceeding to onboard all your Cloud PCs.
+Follow the instructions in [Onboard Windows 10 and Windows 11 devices using a local script](/purview/device-onboarding-script). This script can be helpful when testing a subset of Cloud PCs before proceeding to onboard all your Cloud PCs.
 
 ## View onboarding devices list
 
@@ -139,3 +140,7 @@ Follow the instructions in  [Onboard Windows 10 and Windows 11 devices using a l
 ## Next steps
 
 For more information about Microsoft Purview, see [Learn about Microsoft Purview](/purview/purview).
+
+For more information about Microsoft Purview forensic evidence capturing options, see [Capturing options](/purview/insider-risk-management-forensic-evidence#capturing-options).
+
+For more information Microsoft Purview capacity and billing, see [Capacity and billing](/purview/insider-risk-management-forensic-evidence-manage?tabs=purview-portal#capacity-and-billing).

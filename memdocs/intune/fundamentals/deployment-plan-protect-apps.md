@@ -32,7 +32,7 @@ The next step when deploying Intune is to add and protect apps that access organ
 
 :::image type="content" source="./media/deployment-plan-protect-apps/deployment-plan-add-apps.png" alt-text="Diagram that shows getting started with Microsoft Intune with step 2, which is adding and protect apps using Microsoft Intune.":::
 
-Managing applications on devices in your organization is a central part to a secure and productive enterprise ecosystem. You can use Microsoft Intune to manage the apps that your company's workforce uses. By managing apps, you help control which apps your company uses, as well as the configuration and protection of the apps. This functionality is called mobile application management (MAM). MAM in Intune is designed to protect organization data at the application level, including custom apps and store apps. App management can be used on organization-owned devices and personal devices. When it is used with personal devices, only organization-related access and data is managed. This type of app management is called MAM without enrollment (MAM-WE), or from an end-user perspective, bring your own device (BYOD).
+Managing applications on devices in your organization is a central part to a secure and productive enterprise ecosystem. You can use Microsoft Intune to manage the apps that your company's workforce uses. By managing apps, you help control which apps your company uses, as well as the configuration and protection of the apps. This functionality is called mobile application management (MAM). MAM in Intune is designed to protect organization data at the application level, including custom apps and store apps. App management can be used on organization-owned devices and personal devices. When it is used with personal devices, only organization-related access and data is managed. This type of app management is called MAM without enrollment, or from an end-user perspective, bring your own device (BYOD).
 
 ## MAM configurations
 
@@ -45,7 +45,7 @@ Microsoft Intune supports two MAM configurations:
 
 ### MAM without device management
 
-This configuration allows your organization's apps to be managed by Intune, but doesn't enroll the devices to be managed by Intune. This configuration is commonly referred to as **MAM without device enrollment**, or **MAM-WE**. IT administrators can manage apps using MAM by using Intune configuration and protection policies on devices not enrolled with Intune mobile-device management (MDM).
+This configuration allows your organization's apps to be managed by Intune, but doesn't enroll the devices to be managed by Intune. This configuration is commonly referred to as **MAM without device enrollment**. IT administrators can manage apps using MAM by using Intune configuration and protection policies on devices not enrolled with Intune mobile-device management (MDM).
 
 > [!NOTE]
 > This configuration includes managing apps with Intune on devices enrolled with third-party enterprise mobility management (EMM) providers. You can use Intune app protection policies independent of any MDM solution. This independence helps you protect your company's data with or without enrolling devices in a device management solution. By implementing app-level policies, you can restrict access to company resources and keep data within the purview of your IT department.
@@ -187,7 +187,7 @@ For more information about app configuration, go to the following topics:
 
 The Outlook for iOS and Android app is designed to enable users in your organization to do more from their mobile devices, by bringing together email, calendar, contacts, and other files.
 
-The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as conditional access. At a minimum, you will want to deploy a conditional access policy that allows connectivity to Outlook for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
+The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as Conditional Access. At a minimum, you will want to deploy a Conditional Access policy that allows connectivity to Outlook for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
 
 For more information about configuring Microsoft Outlook, go to the following topic:
 

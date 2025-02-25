@@ -51,7 +51,7 @@ Sign in to the [Intune](https://aka.ms/intuneportal) as an [Intune administrator
 
 Use the following steps to create an app protection policy:
 
-1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **App protection policies** > **Create Policy** > **Windows 10**.
+1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **Protection** > **Create Policy** > **Windows 10**.
 2. Enter the following details:
 
     - **Name**: *Windows 10 content protection*

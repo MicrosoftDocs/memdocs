@@ -2,13 +2,13 @@
 title: Overview of Windows Autopilot device preparation
 description: Windows Autopilot device preparation is used to set up and configure new devices, getting them ready for productive use.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 02/04/2025
 ms.topic: overview
 ms.collection:
   - M365-modern-desktop
@@ -38,6 +38,7 @@ This article explores the capabilities of the Windows Autopilot device preparati
 
 ## Requirements
 
+- Windows 11, version 24H2 or later.
 - Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
 - Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
 
@@ -134,7 +135,9 @@ For more information, see [Enrollment time grouping in Microsoft Intune](/mem/in
 
 ### Corporate identifiers for Windows
 
-Windows Autopilot device preparation supports the Intune corporate identifier enrollment feature. Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted devices go through Windows Autopilot device preparation. Corporate identifiers for Windows is optional for Windows Autopilot device preparation. Corporate identifiers for Windows isn't required for a Windows Autopilot device preparation deployment to work. For more information, see:
+Windows Autopilot device preparation supports the Intune corporate identifier enrollment feature. Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted devices go through Windows Autopilot device preparation.
+
+Windows Autopilot device preparation only requires corporate identifiers for Windows if Intune enrollment restrictions are being used to block personal device enrollments. For more information, see:
 
 - [Identify devices as corporate-owned](/mem/intune/enrollment/corporate-identifiers-add).
 - [What are enrollment restrictions?](/mem/intune/enrollment/enrollment-restrictions-set).

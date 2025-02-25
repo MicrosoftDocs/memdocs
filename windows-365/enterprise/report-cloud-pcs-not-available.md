@@ -7,8 +7,8 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2023
-ms.topic: overview
+ms.date: 12/18/2024
+ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
@@ -31,15 +31,17 @@ ms.collection:
 
 # Cloud PCs that aren't available report
 
-The **Cloud PCs that aren't available** helps Windows 365 administrators identify Cloud PCs that might be currently unavailable.
+The **Cloud PCs that aren't available** report helps Windows 365 administrators identify Cloud PCs that might be currently unavailable.
 
 This report displays recent conditions up to 5 to 15 minutes ago. Therefore, Cloud PCs in the report might have already recovered since the condition was recorded. Also, Cloud PCs that recently became unavailable might not be in the report.
 
 ## Use the Cloud PCs that aren't available report
 
-To get to the **Cloud PCs that aren't available** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Overview** > **Cloud PC performance** > **View report** (under **Cloud PCs that aren't available**).
+To get to the **Cloud PCs that aren't available** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Cloud PC overview** > **Cloud PCs that aren't available**.
 
 ![Screenshot of getting to the Cloud PCs that aren't available report](./media/report-cloud-pcs-not-available/view-report-cloud-pcs-not-available.png)
+
+## Data table
 
 The device list shows the individual Cloud PCs with the following columns:
 
@@ -62,9 +64,22 @@ You can use the **Columns** and **Add filter** options to customize the report:
 
 You can use the **View details** link to see the recent history of the Cloud PC. You can then cross-reference multiple conditions and timelines to find potential root causes of Cloud PC unavailability.
 
-By using the various columns together, an experienced admin may draw clues to the state of the device and the underlying cause of any problems. For example, a user complains to your help desk that they can't access their Cloud PC. you check this report and see no data in the **Host health** or **System status** columns, the **Device status** is **Provisioned**, and the **Connection error** says **Client Disconnect**. Other Cloud PCs in the same region aren't in the list. This issue is probably specific to this user, possibly something to do with the physical client configuration, network configuration, or network infrastructure.
+By using the various columns together, an experienced admin may draw clues to the state of the device and the underlying cause of any problems. For example, a user complains to your help desk that they can't access their Cloud PC. You check this report and see no data in the **Host health** or **System status** columns, the **Device status** is **Provisioned**, and the **Connection error** says **Client Disconnect**. Other Cloud PCs in the same region aren't in the list. This issue is probably specific to this user, possibly something to do with the physical client configuration, network configuration, or network infrastructure.
+
+## Bulk device actions
+
+You can use **Bulk device actions** to perform device actions on multiple Cloud PCs at one time.
+
+1. Optional. Use **Add filters** to filter the table data to see the Cloud PCs that you want to manage.
+2. Select the Cloud PCs that you want to manage (maximum of 100,000 Cloud PCs).
+3. Select **Bulk device actions** > specific device action.
+4. Based on the specific action, complete the subsequent pages.
+
+The time it takes to complete the actions varies depending on the specific action.
 
 <!-- ########################## -->
 ## Next steps
 
 [Remoting connection report](report-remoting-connection.md)
+
+[Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md). 

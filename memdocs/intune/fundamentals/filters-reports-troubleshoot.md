@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2023
+ms.date: 11/20/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,7 +17,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: gokarthi
+ms.reviewer: gokarthi, abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -82,7 +82,7 @@ These reports show filter information for each device that's evaluated in an app
 To see these reports, use the following steps:
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > select an app > **Device install status**.
+2. Select **Apps** > **All Apps** > select an app > **Device install status**.
 3. Select the **Filter** column > **Filters evaluated**. The following information is shown:
 
     - The filters that were evaluated.
@@ -101,6 +101,7 @@ In the following example, you can see this information for the **Microsoft Word*
 > - In the **Device install status** report, apps deployed as "Available" aren't shown. To troubleshoot if a user/device is filtered in or out of an Available assignment, use the **Filter evaluation report for devices**. To generate filter evaluation results, the end user must go to the list of apps in the Company portal app or website.
 > - When assigning a policy, you can add devices to the "Excluded groups". These excluded devices aren't shown in the workload device status reports.
 > - In the **Apps** and **Settings Catalog** device status reports, there's a column that shows any filter evaluation. Currently, the filter evaluation information isn't available for all Intune workloads.
+> - If you use the `operatingSystemVersion` filter for available apps on any Android, AOSP, or iOS platforms the evaluation result is inconclusive. This behavior is a known issue and will be fixed in a future release. No ETA.
 
 ## Reports for managed apps  
 

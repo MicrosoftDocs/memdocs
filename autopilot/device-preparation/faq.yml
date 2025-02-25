@@ -3,13 +3,13 @@ metadata:
   title: Windows Autopilot device preparation FAQ
   description: This article provides OEMs, partners, administrators, and users with answers to some frequently asked questions about deploying Windows with Windows Autopilot device preparation.
   ms.service: windows-client
-  ms.subservice: itpro-deploy
+  ms.subservice: autopilot
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 07/29/2024
+  ms.date: 11/25/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -55,7 +55,7 @@ sections:
       - question: |
           Why is there a limit on the number of applications and PowerShell scripts in the Windows Autopilot device preparation policy?
         answer: |
-          We limited the number of applications that can be applied during the out-of-box experience (OOBE) to increase stability and achieve a higher success rate. Looking at our telemetry, almost 90% of all Autopilot deployments are deployed with 10 or less fewer apps. This limit is intended to improve the overall user experience so that users can become more productive quickly. We understand that there are outliers and companies that want to target more during setup. However, for the user-driven approach, we want to use the desktop experience for non-essential applications.
+          We limited the number of applications that can be applied during the out-of-box experience (OOBE) to increase stability and achieve a higher success rate. Looking at our telemetry, almost 90% of all Autopilot deployments are deployed with 10 or fewer apps. This limit is intended to improve the overall user experience so that users can become more productive quickly. We understand that there are outliers and companies that want to target more during setup. However, for the user-driven approach, we want to use the desktop experience for non-essential applications.
 
       - question: |
           Does Windows Autopilot device preparation support deploying both Win32 and line-of-business (LOB) applications in the same deployment?
@@ -74,7 +74,7 @@ sections:
       - question: |
           How do users know when the required setup is complete?
         answer: |
-          Many users aren't sure when the provisioning process is complete. To help mitigate confusion and calls to support, we added a completion page in OOBE. Administrators can configure the page to require a user to manually select **Continue** or set the page to auto-continue. This message lets the user know that OOBE setup is complete. However, additional installations that were assigned to the device group but not specified in the Windows Autopilot device preparation policy might still be occurring in the background.
+          Many users aren't sure when the provisioning process is complete. To help mitigate confusion and calls to support, we added a completion page in OOBE. The completion page lets the user know that OOBE setup is complete. However, additional installations that were assigned to the device group but not specified in the Windows Autopilot device preparation policy might still be occurring in the background.
 
       - question: |
           Can Windows Autopilot Device preparation be used by non-Microsoft mobile device management (MDM) providers?

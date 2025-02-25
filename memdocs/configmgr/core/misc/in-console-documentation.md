@@ -49,7 +49,7 @@ A curated list of important articles.  <!--URLs MUST BE ABSOLUTE LINKS-->
 - [Co-management for Windows devices](https://learn.microsoft.com/mem/configmgr/comanage/?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [CMPivot](https://learn.microsoft.com/mem/configmgr/core/servers/manage/cmpivot?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Plan for BitLocker management](https://learn.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
-- [Microsoft Edge management](https://learn.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?WT.mc_id=configmgr-console)
+- [Microsoft Edge management](/mem/configmgr/apps/deploy-use/deploy-edge?WT.mc_id=configmgr-console)
 - [Manage Microsoft 365 Apps updates](https://learn.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Fundamentals of Configuration Manager current branch and Windows as a service](https://learn.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Optimize Windows update delivery with Configuration Manager](https://learn.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->

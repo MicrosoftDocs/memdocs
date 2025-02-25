@@ -51,6 +51,9 @@ Your employees use mobile devices for both personal and work tasks. While making
 
 You can use Intune app protection policies **independent of any mobile-device management (MDM) solution**. This independence helps you protect your company's data with or without enrolling devices in a device management solution. By implementing **app-level policies**, you can restrict access to company resources and keep data within the purview of your IT department.
 
+  > [!NOTE]
+  > To ensure that policies are enforced, we recommend using Conditional Access together with Intune app protection policies.
+
 ### App protection policies on devices
 
 App protection policies can be configured for apps that run on devices that are:
@@ -60,12 +63,12 @@ App protection policies can be configured for apps that run on devices that are:
 - **Enrolled in a third-party Mobile device management (MDM) solution:** These  devices are typically corporate owned.
 
   > [!NOTE]
-  > Mobile app management policies should not be used with third-party mobile app management or secure container solutions.
+  > Mobile app management policies shouldn't be used with third-party mobile app management or secure container solutions.
 
 - **Not enrolled in any mobile device management solution:** These devices are typically employee owned devices that aren't managed or enrolled in Intune or other MDM solutions.
 
 > [!IMPORTANT]
-> You can create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. Before using this feature, make sure you meet the [Outlook for iOS/iPadOS and Android requirements](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019&preserve-view=true). App protection policies are not supported for other apps that connect to on-premises Exchange or SharePoint services.
+> You can create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. Before using this feature, make sure you meet the [Outlook for iOS/iPadOS and Android requirements](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019&preserve-view=true). App protection policies aren't supported for other apps that connect to on-premises Exchange or SharePoint services.
 
 ## Benefits of using App protection policies
 
@@ -84,7 +87,7 @@ The important benefits of using App protection policies are the following:
 
 There are additional benefits to using MDM with App protection policies, and companies can use App protection policies with and without MDM at the same time. For example, consider an employee that uses both a phone issued by the company, and their own personal tablet. The company phone is enrolled in MDM and protected by App protection policies while the personal device is protected by App protection policies only.
 
-If you apply a MAM policy to the user without setting the device state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply a MAM policy based on the managed state. So when you create an app protection policy, next to **Target to all app types**, you'd select **No**. Then do any of the following:
+If you apply a MAM policy to the user without setting the device state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply MAM policies based on the device management state. For more information see, [Target app protection policies based on device management state](../apps/app-protection-policies.md#target-app-protection-policies-based-on-device-management-state). When you create an app protection policy, select **No** next to **Target to all app types**. Then, do any of the following:
 
 - Apply a less strict MAM policy to Intune managed devices, and apply a more restrictive MAM policy to non MDM-enrolled devices.
 - Apply a MAM policy to unenrolled devices only.
@@ -164,7 +167,7 @@ However, there are some limitations to be aware of, such as:
 
 Any app that has been integrated with the [Intune SDK](../developer/app-sdk.md) or wrapped by the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md) can be managed using Intune app protection policies. See the official list of [Microsoft Intune protected apps](apps-supported-intune-apps.md) that have been built using these tools and are available for public use.
 
-The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms.
+The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we don't provide explicit guidance or plugins for app developers using anything other than our supported platforms.
 
 ## End-user requirements to use app protection policies
 
@@ -185,11 +188,11 @@ There are a few additional requirements that you want to be aware of when using 
 > [!IMPORTANT]
 > Intune mobile application management (MAM) on Android requires Microsoft Entra ID device registration for Microsoft 365 apps. To improve security, Android devices must be registered with Microsoft Entra ID to continue receiving MAM policy for Microsoft 365 apps. 
 >
-> When accessing Microsoft 365 apps that are targeted with a MAM policy, users might be prompted to authenticate if the device is not already registered with Entra ID. Users will need to complete the authentication and registration process to access their Microsoft 365 MAM-enabled applications.
+> When accessing Microsoft 365 apps that are targeted with a MAM policy, users might be prompted to authenticate if the device isn't already registered with Entra ID. Users will need to complete the authentication and registration process to access their Microsoft 365 MAM-enabled applications.
 > 
 > ![Screenshot of how to register device with Intune.](./media/app-protection-policy/register-device.png)
 >
-> If you have Conditional Access policies or multi-factor authentication enabled, devices should already be registered, and users will not notice any change.
+> If you have Conditional Access policies or multi-factor authentication enabled, devices should already be registered, and users won't notice any change.
 >
 > To view which devices are registered, navigate to the [Microsoft Entra admin center](https://entra.microsoft.com/) > **Devices** > **All devices** report, filter by **OS** and sort by **Registered**. For related information, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
 
@@ -201,13 +204,13 @@ The additional requirements to use the [Outlook mobile app](https://products.off
 - The end user must have an [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online) mailbox and license linked to their Microsoft Entra account.
 
   > [!NOTE]
-  > The Outlook mobile app currently only supports Intune App Protection for Microsoft Exchange Online and [Exchange Server with hybrid modern authentication](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019&preserve-view=true) and does not support Exchange in Office 365 Dedicated.
+  > The Outlook mobile app currently only supports Intune App Protection for Microsoft Exchange Online and [Exchange Server with hybrid modern authentication](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019&preserve-view=true) and doesn't support Exchange in Office 365 Dedicated.
 
 ### Word, Excel, and PowerPoint
 
 The additional requirements to use the [Word, Excel, and PowerPoint](https://products.office.com/business/office) apps include the following:
 
-- The end user must have a license for [Microsoft 365 Apps for business or enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to their Microsoft Entra account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Microsoft 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) following these [instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- The end user must have a license for [Microsoft 365 Apps for business or enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to their Microsoft Entra account. The subscription must include the Microsoft 365 apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Microsoft 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) following these [instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - The end user must have a managed location configured using the granular save as functionality under the "Save copies of org data" application protection policy setting. For example, if the managed location is OneDrive, the [OneDrive](https://onedrive.live.com/about/) app should be configured in the end user's Word, Excel, or PowerPoint app.
 
@@ -218,7 +221,7 @@ The additional requirements to use the [Word, Excel, and PowerPoint](https://pro
 
 ### Managed location needed for Office
 
-A managed location (i.e. OneDrive) is needed for Office. Intune marks all data in the app as either "corporate" or "personal". Data is considered "corporate" when it originates from a business location. For the Office apps, Intune considers the following as business locations: email (Exchange) or cloud storage (OneDrive app with a OneDrive for Business account).
+A managed location (i.e. OneDrive) is needed for Office. Intune marks all data in the app as either "corporate" or "personal". Data is considered "corporate" when it originates from a business location. For the Microsoft 365 apps, Intune considers the following as business locations: email (Exchange) or cloud storage (OneDrive app with a OneDrive for Business account).
 
 ### Skype for Business
 
@@ -248,7 +251,7 @@ Multi-identity support allows an app to support multiple audiences. These audien
 > [!IMPORTANT]
 > Regardless of whether an app supports multi-identity, only a single "corporate" identity can have an Intune App Protection Policy applied.
 
-For an example of "personal" context, consider a user who starts a new document in Word, this is considered personal context so Intune App Protection policies are not applied. Once the document is saved on the "corporate" OneDrive account, then it is considered "corporate" context and Intune App Protection policies are applied.
+For an example of "personal" context, consider a user who starts a new document in Word, this is considered personal context so Intune App Protection policies aren't applied. Once the document is saved on the "corporate" OneDrive account, then it's considered "corporate" context and Intune App Protection policies are applied.
 
 Consider the following examples for the work or "corporate" context:
 
@@ -273,18 +276,18 @@ The IT admin can define the Intune app protection policy setting **Recheck the a
 
 - **The PIN is shared among apps of the same publisher to improve usability:**<br> On iOS/iPadOS, one app PIN is shared amongst all apps **of the same app publisher**. For example, all Microsoft apps share the same PIN. On Android, one app PIN is shared amongst all apps.
 - **The *Recheck the access requirements after (minutes)* behavior after a device reboot:**<br> A timer tracks the number of minutes of inactivity that determine when to show the Intune app PIN, or corporate credential prompt next. On iOS/iPadOS, the timer is unaffected by device reboot. Thus, device reboot has no effect on the number of minutes the user has been inactive from an iOS/iPadOS app with Intune PIN (or corporate credential) policy targeted. On Android, the timer is reset on device reboot. As such, Android apps with Intune PIN (or corporate credential) policy will likely prompt for an app PIN, or corporate credential prompt, regardless of the 'Recheck the access requirements after (minutes)' setting value **after a device reboot**.  
-- **The rolling nature of the timer associated with the PIN:**<br> Once a PIN is entered to access an app (app A), and the app leaves the foreground (main input focus) on the device, the timer gets reset for that PIN. Any app (app B) that shares this PIN will not prompt the user for PIN entry because the timer has reset. The prompt will show up again once the 'Recheck the access requirements after (minutes)' value is met again.
+- **The rolling nature of the timer associated with the PIN:**<br> Once a PIN is entered to access an app (app A), and the app leaves the foreground (main input focus) on the device, the timer gets reset for that PIN. Any app (app B) that shares this PIN won't prompt the user for PIN entry because the timer has reset. The prompt will show up again once the 'Recheck the access requirements after (minutes)' value is met again.
 
-For iOS/iPadOS devices, even if the PIN is shared between apps from different publishers, the prompt will show up again when the **Recheck the access requirements after (minutes)** value is met again for the app that is not the main input focus. So, for example, a user has app *A* from publisher *X* and app *B* from publisher *Y*, and those two apps share the same PIN. The user is focused on app *A* (foreground), and app *B* is minimized. After the **Recheck the access requirements after (minutes)** value is met and the user switches to app *B*, the PIN would be required.
+For iOS/iPadOS devices, even if the PIN is shared between apps from different publishers, the prompt will show up again when the **Recheck the access requirements after (minutes)** value is met again for the app that isn't the main input focus. So, for example, a user has app *A* from publisher *X* and app *B* from publisher *Y*, and those two apps share the same PIN. The user is focused on app *A* (foreground), and app *B* is minimized. After the **Recheck the access requirements after (minutes)** value is met and the user switches to app *B*, the PIN would be required.
 
   > [!NOTE]
-  > In order to verify the user's access requirements more often (i.e. PIN prompt), especially for a frequently used app, it is recommended to reduce the value of the 'Recheck the access requirements after (minutes)' setting.
+  > In order to verify the user's access requirements more often (i.e. PIN prompt), especially for a frequently used app, it's recommended to reduce the value of the 'Recheck the access requirements after (minutes)' setting.
 
 **Built-in app PINs for Outlook and OneDrive**<br>
 The Intune PIN works based on an inactivity-based timer (the value of **Recheck the access requirements after (minutes)**). As such, Intune PIN prompts show up independently from the built-in app PIN prompts for Outlook and OneDrive which often are tied to app launch by default. If the user receives both PIN prompts at the same time, the expected behavior should be that the Intune PIN takes precedence.
 
 **Intune PIN security**<br>
-The PIN serves to allow only the correct user to access their organization's data in the app. Therefore, an end user must sign in with their work or school account before they can set or reset their Intune app PIN. This authentication is handled by Microsoft Entra ID via secure token exchange and is not transparent to the [Intune SDK](../developer/app-sdk.md). From a security perspective, the best way to protect work or school data is to encrypt it. Encryption is not related to the app PIN but is its own app protection policy.
+The PIN serves to allow only the correct user to access their organization's data in the app. Therefore, an end user must sign in with their work or school account before they can set or reset their Intune app PIN. This authentication is handled by Microsoft Entra ID via secure token exchange and isn't transparent to the [Intune SDK](../developer/app-sdk.md). From a security perspective, the best way to protect work or school data is to encrypt it. Encryption isn't related to the app PIN but is its own app protection policy.
 
 **Protecting against brute force attacks and the Intune PIN**<br>
 As part of the app PIN policy, the IT administrator can set the maximum number of times a user can try to authenticate their PIN before locking the app. After the number of attempts has been met, the [Intune SDK](../developer/app-sdk.md) can wipe the "corporate" data in the app.
@@ -292,18 +295,18 @@ As part of the app PIN policy, the IT administrator can set the maximum number o
 **Intune PIN and a selective wipe**<br>
 On iOS/iPadOS, the app level PIN information is stored in the keychain that is shared between apps with the same publisher, such as all first party Microsoft apps. This PIN information is also tied to an end user account. A selective wipe of one app shouldn't affect a different app.
 
-For example, a PIN set for Outlook for the signed in user is stored in a shared keychain. When the user signs into OneDrive (also published by Microsoft), they will see the same PIN as Outlook since it uses the same shared keychain. When signing out of Outlook or wiping the user data in Outlook, the Intune SDK does not clear that keychain because OneDrive might still be using that PIN. Because of this, selective wipes do not clear that shared keychain, including the PIN. This behavior remains the same even if only one app by a publisher exists on the device.
+For example, a PIN set for Outlook for the signed in user is stored in a shared keychain. When the user signs into OneDrive (also published by Microsoft), they'll see the same PIN as Outlook since it uses the same shared keychain. When signing out of Outlook or wiping the user data in Outlook, the Intune SDK doesn't clear that keychain because OneDrive might still be using that PIN. Because of this, selective wipes don't clear that shared keychain, including the PIN. This behavior remains the same even if only one app by a publisher exists on the device.
 
-Since the PIN is shared amongst apps with the same publisher, if the wipe goes to a single app, the Intune SDK does not know if there are any other apps on the device with the same publisher. Thus, the Intune SDK does not clear the PIN since it might still be used for other apps. The expectation is that the app PIN should be wiped when last app from that publisher will be removed eventually as part of some OS cleanup.
+Since the PIN is shared amongst apps with the same publisher, if the wipe goes to a single app, the Intune SDK doesn't know if there are any other apps on the device with the same publisher. Thus, the Intune SDK doesn't clear the PIN since it might still be used for other apps. The expectation is that the app PIN should be wiped when last app from that publisher will be removed eventually as part of some OS cleanup.
  
-If you observe the PIN being wiped on some devices, the following is likely happening: Since the PIN is tied to an identity, if the user signed in with a different account after a wipe, they will be prompted to enter a new PIN. However, if they sign in with a previously existing account, a PIN stored in the keychain already can be used to sign in.
+If you observe the PIN being wiped on some devices, the following is likely happening: Since the PIN is tied to an identity, if the user signed in with a different account after a wipe, they'll be prompted to enter a new PIN. However, if they sign in with a previously existing account, a PIN stored in the keychain already can be used to sign in.
 
 **Setting a PIN twice on apps from the same publisher?**<br>
-MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Viva Engage) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios-phase1.md). Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
+MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Viva Engage) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios-phase1.md). Without this, the passcode settings aren't properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
 
 In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Another change was introduced in the Intune SDK for iOS v 14.6.0 that causes all PINs in 14.6.0+ to be handled separately from any PINs in previous versions of the SDK.
 
-Therefore, if a device has applications with Intune SDK for iOS versions before 7.1.12 AND after 7.1.12 from the same publisher (or versions before 14.6.0 AND after 14.6.0), they will have to set up two PINs. The two PINs (for each app) are not related in any way (i.e. they must adhere to the app protection policy that's applied to the app). As such, *only* if apps A and B have the same policies applied (with respect to PIN), user may set up the same PIN twice.
+Therefore, if a device has applications with Intune SDK for iOS versions before 7.1.12 AND after 7.1.12 from the same publisher (or versions before 14.6.0 AND after 14.6.0), they'll have to set up two PINs. The two PINs (for each app) aren't related in any way (i.e. they must adhere to the app protection policy that's applied to the app). As such, *only* if apps A and B have the same policies applied (with respect to PIN), user may set up the same PIN twice.
 
 This behavior is specific to the PIN on iOS/iPadOS applications that are enabled with Intune Mobile App Management. Over time, as applications adopt later versions of the Intune SDK for iOS/iPadOS, having to set a PIN twice on apps from the same publisher becomes less of an issue. Please see the note below for an example.
 
@@ -324,7 +327,7 @@ IT administrators can deploy an app protection policy that requires app data to 
 See the [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md) for detailed information on the encryption app protection policy setting.
 
 **Data that is encrypted**<br>
-Only data marked as "corporate" is encrypted according to the IT administrator's app protection policy. Data is considered "corporate" when it originates from a business location. For the Office apps, Intune considers the following as business locations:
+Only data marked as "corporate" is encrypted according to the IT administrator's app protection policy. Data is considered "corporate" when it originates from a business location. For the Microsoft 365 apps, Intune considers the following as business locations:
 
 - Email (Exchange)
 - Cloud storage (OneDrive app with a OneDrive for Business account)
@@ -356,7 +359,7 @@ Selective wipe for MAM simply removes company app data from an app. The request 
 If the user is using the app when selective wipe is initiated, the [Intune SDK](../developer/app-sdk.md) checks every 30 minutes for a selective wipe request from the Intune MAM service. It also checks for selective wipe when the user launches the app for the first time and signs in with their work or school account.
 
 **When On-Premises (on-prem) services don't work with Intune protected apps**<br>
-Intune app protection depends on the identity of the user to be consistent between the application and the [Intune SDK](../developer/app-sdk.md). The only way to guarantee that is through modern authentication. There are scenarios in which apps may work with an on-prem configuration, but they are neither consistent nor guaranteed.
+Intune app protection depends on the identity of the user to be consistent between the application and the [Intune SDK](../developer/app-sdk.md). The only way to guarantee that is through modern authentication. There are scenarios in which apps may work with an on-prem configuration, but they're neither consistent nor guaranteed.
 
 **Secure way to open web links from managed apps**<br>
 The IT administrator can deploy and set app protection policy for [Microsoft Edge](manage-microsoft-edge.md), a web browser that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using a managed browser.
@@ -365,17 +368,17 @@ The IT administrator can deploy and set app protection policy for [Microsoft Edg
 
 ### Device fingerprint or face IDs
 
-Intune app protection policies allow control over app access to only the Intune licensed user. One of the ways to control access to the app is to require either Apple's Touch ID or Face ID on supported devices. Intune implements a behavior where if there is any change to the device's biometric database, Intune prompts the user for a PIN when the next inactivity timeout value is met. Changes to biometric data include the addition or removal of a fingerprint, or face. If the Intune user does not have a PIN set, they are led to set up an Intune PIN.
+Intune app protection policies allow control over app access to only the Intune licensed user. One of the ways to control access to the app is to require either Apple's Touch ID or Face ID on supported devices. Intune implements a behavior where if there's any change to the device's biometric database, Intune prompts the user for a PIN when the next inactivity timeout value is met. Changes to biometric data include the addition or removal of a fingerprint, or face. If the Intune user doesn't have a PIN set, they're led to set up an Intune PIN.
 
 The intent of this process is to continue keeping your organization's data within the app secure and protected at the app level. This feature is only available for iOS/iPadOS, and requires the participation of applications that integrate the Intune SDK for iOS/iPadOS, version 9.0.1 or later. Integration of the SDK is necessary so that the behavior can be enforced on the targeted applications. This integration happens on a rolling basis and is dependent on the specific application teams. Some apps that participate include WXP, Outlook, Managed Browser, and Viva Engage.
   
 ### iOS share extension
 
-You can use the iOS/iPadOS share extension to open work or school data in unmanaged apps, even with the data transfer policy set to **managed apps only** or **no apps**. Intune app protection policy cannot control the iOS/iPadOS share extension without managing the device. Therefore, Intune ***encrypts "corporate" data before it is shared outside the app***. You can validate this encryption behavior by attempting to open a "corporate" file outside of the managed app. The file should be encrypted and unable to be opened outside the managed app.
+You can use the iOS/iPadOS share extension to open work or school data in unmanaged apps, even with the data transfer policy set to **managed apps only** or **no apps**. Intune app protection policy can't control the iOS/iPadOS share extension without managing the device. Therefore, Intune ***encrypts "corporate" data before it is shared outside the app***. You can validate this encryption behavior by attempting to open a "corporate" file outside of the managed app. The file should be encrypted and unable to be opened outside the managed app.
 
 ### Universal Links support
 
-By default, Intune app protection policies will prevent access to unauthorized application content. In iOS/iPadOS, there is functionality to open specific content or applications using [Universal Links](https://developer.apple.com/ios/universal-links/).
+By default, Intune app protection policies will prevent access to unauthorized application content. In iOS/iPadOS, there's functionality to open specific content or applications using [Universal Links](https://developer.apple.com/ios/universal-links/).
 
 Users can disable an app's Universal Links by visiting them in Safari and selecting **Open in New Tab** or **Open**. In order to use Universal Links with Intune app protection policies, it's important to re-enable the universal links. The end user would need to do an **Open in** <***app name***> in Safari after long pressing a corresponding link. This should prompt any additional protected app to route all Universal Links to the protected application on the device.
 
@@ -388,11 +391,11 @@ When dealing with different types of settings, an Intune SDK version requirement
 ## App protection experience for Android devices
 
  > [!NOTE]
- > App protection policies (APP) are not supported on Intune managed Android Enterprise dedicated devices without [Shared device mode](/azure/active-directory/develop/msal-shared-devices). On these devices, Company Portal installation is needed for an APP block policy to take effect with no impact to the user. App protection policies are supported on Intune managed Android Enterprise dedicated devices with Shared device mode, as well as on AOSP userless devices that leverage Shared device mode.
+ > App protection policies (APP) aren't supported on Intune managed Android Enterprise dedicated devices without [Shared device mode](/azure/active-directory/develop/msal-shared-devices). On these devices, Company Portal installation is needed for an APP block policy to take effect with no impact to the user. App protection policies are supported on Intune managed Android Enterprise dedicated devices with Shared device mode, as well as on AOSP userless devices that leverage Shared device mode.
 
 ### Microsoft Teams Android devices
 
-The Teams app on [Microsoft Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) does not support APP (does not receive policy through the Company Portal app). This means that app protection policy settings will not be applied to Teams on Microsoft Teams Android devices. If you have app protection policies configured for these devices, consider creating a group of Teams device users and exclude that group from the related app protection policies. Additionally, consider modifying your Intune Enrollment Policy, Conditional Access Policies and Intune Compliance policies so they have supported settings. If you cannot change your existing policies, you must configure (exclusion) [Device Filters](/MicrosoftTeams/devices/authentication-best-practices-for-android-devices#using-filters-for-devices). Verify each setting against the existing Conditional Access configuration and Intune Compliance policy to know if you have unsupported settings. For related information see [Supported Conditional Access and Intune device compliance policies for Microsoft Teams Rooms and Teams Android Devices](/microsoftteams/rooms/supported-ca-and-compliance-policies?tabs=mtr-a). For information related to Microsoft Teams Rooms, see [Conditional Access and Intune compliance for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices).
+The Teams app on [Microsoft Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) doesn't support APP (doesn't receive policy through the Company Portal app). This means that app protection policy settings won't be applied to Teams on Microsoft Teams Android devices. If you have app protection policies configured for these devices, consider creating a group of Teams device users and exclude that group from the related app protection policies. Additionally, consider modifying your Intune Enrollment Policy, Conditional Access Policies and Intune Compliance policies so they have supported settings. If you can't change your existing policies, you must configure (exclusion) [Device Filters](/MicrosoftTeams/devices/authentication-best-practices-for-android-devices#using-filters-for-devices). Verify each setting against the existing Conditional Access configuration and Intune Compliance policy to know if you have unsupported settings. For related information see [Supported Conditional Access and Intune device compliance policies for Microsoft Teams Rooms and Teams Android Devices](/microsoftteams/rooms/supported-ca-and-compliance-policies?tabs=mtr-a). For information related to Microsoft Teams Rooms, see [Conditional Access and Intune compliance for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices).
 
 ### Device biometric authentication
 
@@ -400,7 +403,7 @@ For Android devices that support biometric authentication, you can allow end use
 
 ### Company Portal app and Intune app protection
 
-Much of app protection functionality is built into the Company Portal app. Device enrollment is *not required* even though the Company Portal app is always required. For Mobile Application Management (MAM), the end user just needs to have the Company Portal app installed on the device.
+Much of app protection functionality is built into the Company Portal app. Device enrollment isn't required* even though the Company Portal app is always required. For Mobile Application Management (MAM), the end user just needs to have the Company Portal app installed on the device.
 
 ### Multiple Intune app protection access settings for same set of apps and users
 
@@ -410,7 +413,7 @@ When dealing with different types of settings, an app version requirement would 
 
 ### Intune app protection policies and Google Play’s device integrity check for Android devices
 
-Intune app protection policies provide the capability for admins to require end-user devices to pass Google Play’s device integrity check for Android devices. A new Google Play service determination will be reported to the IT admin at an interval determined by the Intune service. How often the service call is made is throttled due to load, thus this value is maintained internally and is not configurable. Any IT admin configured action for the Google device integrity setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If there is no data, access will be allowed depending on no other conditional launch checks failing, and Google Play Service "roundtrip" for determining attestation results will begin in the backend and prompt the user asynchronously if the device has failed. If there is stale data, access will be blocked or allowed depending on the last reported result, and similarly, a Google Play Service "roundtrip" for determining attestation results will begin and prompt the user asynchronously if the device has failed.
+Intune app protection policies provide the capability for admins to require end-user devices to pass Google Play’s device integrity check for Android devices. A new Google Play service determination will be reported to the IT admin at an interval determined by the Intune service. How often the service call is made is throttled due to load, thus this value is maintained internally and isn't configurable. Any IT admin configured action for the Google device integrity setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If there's no data, access will be allowed depending on no other conditional launch checks failing, and Google Play Service "roundtrip" for determining attestation results will begin in the backend and prompt the user asynchronously if the device has failed. If there's stale data, access will be blocked or allowed depending on the last reported result, and similarly, a Google Play Service "roundtrip" for determining attestation results will begin and prompt the user asynchronously if the device has failed.
 
 ### Intune app protection policies and Google's Verify Apps API for Android devices
 
@@ -418,7 +421,7 @@ Intune App Protection Policies provide the capability for admins to require end-
 
 ### Google's Play Integrity API
 
-Intune leverages Google's Play Integrity APIs to add to our existing root detection checks for unenrolled devices. Google has developed and maintained this API set for Android apps to adopt if they do not want their apps to run on rooted devices. The Android Pay app has incorporated this, for example. While Google does not share publicly the entirety of the root detection checks that occur, we expect these APIs to detect users who have rooted their devices. These users can then be blocked from accessing, or their corporate accounts wiped from their policy enabled apps. **Check basic integrity** tells you about the general integrity of the device. Rooted devices, emulators, virtual devices, and devices with signs of tampering fail basic integrity. **Check basic integrity & certified devices** tells you about the compatibility of the device with Google's services. Only unmodified devices that have been certified by Google can pass this check. Devices that will fail include the following:
+Intune leverages Google's Play Integrity APIs to add to our existing root detection checks for unenrolled devices. Google has developed and maintained this API set for Android apps to adopt if they don't want their apps to run on rooted devices. The Android Pay app has incorporated this, for example. While Google doesn't share publicly the entirety of the root detection checks that occur, we expect these APIs to detect users who have rooted their devices. These users can then be blocked from accessing, or their corporate accounts wiped from their policy enabled apps. **Check basic integrity** tells you about the general integrity of the device. Rooted devices, emulators, virtual devices, and devices with signs of tampering fail basic integrity. **Check basic integrity & certified devices** tells you about the compatibility of the device with Google's services. Only unmodified devices that have been certified by Google can pass this check. Devices that will fail include the following:
 
 - Devices that fail basic integrity
 - Devices with an unlocked bootloader
@@ -435,7 +438,7 @@ Play integrity verdict requires the end user to be online, at least for the dura
 
 ### Google Play Protect APIs and Google Play Services
 
-The app protection policy settings that leverage Google Play Protect APIs require Google Play Services to function. Both the **Play integrity verdict**, and **Threat scan on apps** settings require Google determined version of Google Play Services to function correctly. Since these are settings that fall in the area of security, the end user will be blocked if they have been targeted with these settings and are not meeting the appropriate version of Google Play Services or have no access to Google Play Services.
+The app protection policy settings that leverage Google Play Protect APIs require Google Play Services to function. Both the **Play integrity verdict**, and **Threat scan on apps** settings require Google determined version of Google Play Services to function correctly. Since these are settings that fall in the area of security, the end user will be blocked if they have been targeted with these settings and aren't meeting the appropriate version of Google Play Services or have no access to Google Play Services.
 
 ## Preview: App protection experience for Windows devices
 
@@ -447,7 +450,7 @@ The **Data protection** settings impact the org data and context. As the admin, 
 
 ### Health Checks
 
-Health checks allow you to configure conditional launch capabilities. To do this, you must set the health check conditions for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to access your org data. Then select the **Action** you want to take if users do not meet your conditionals. In some cases, multiple actions can be configured for a single setting.
+Health checks allow you to configure conditional launch capabilities. To do this, you must set the health check conditions for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to access your org data. Then select the **Action** you want to take if users don't meet your conditionals. In some cases, multiple actions can be configured for a single setting.
 
 ## Next steps
 

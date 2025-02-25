@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/16/2024
+ms.date: 11/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -66,19 +66,22 @@ In the first stage, an Intune admin completes the following steps:
 
 1. Set the token's expiration date. 
 
-1. Optionally, in the admin center, create a dynamic device group or an assignment filter so you can assign policies and apps in the user stage. The dynamic device group feature isn't available to configure in the remaining stages. 
+1. Optionally, in the admin center, create a dynamic device group or an assignment filter. Then assign policies and apps, which reach the device after stage 3.
 
 In the second stage, an Intune admin or third-party vendor completes the following steps: 
  
 1. Unbox, assemble, and power on the new device you're enrolling.      
 
-1. With the device, scan the staging token's QR code or enter the token string.  
+2. With the device, scan the staging token's QR code or enter the token string.
 
-1. Complete the enrollment steps and setup wizard. When you get to the sign-in screen, stop. Don't sign in.
+> [!NOTE]
+> Manual token entry isn't supported on Android Enterprise corporate-owned work profile (also known as COPE) devices running Android 11 and later.  
 
-1. Turn off the device and distribute it to the end user.   
+3. Complete the enrollment steps and setup wizard. At the end of setup, you are on the device's home screen.  
 
-During stage 2, the Intune assignment filter is the only available option for targeting policies and apps. After the final stage ends, you can use other supported targeting options. Example: User security groups and dynamic groups 
+4. Turn off the device and distribute it to the end user.   
+
+During stage 2, the Intune assignment filter on the all devices group is the only available option for targeting policies and apps. After the final stage ends, you can use other supported targeting options. Example: User security groups and dynamic groups 
 
 In the third, and final stage, an end user completes the following steps: 
 
@@ -123,7 +126,6 @@ In the second, and final stage, an end user completes the following steps:
 For detailed steps, see:  
 
 - [Set up enrollment for Android Enterprise fully managed devices](android-fully-managed-enroll.md)  
-- 
 - [Set up enrollment for corporate-owned work profile devices](android-corporate-owned-work-profile-enroll.md)      
 
 ## Replace, remove, or export token  

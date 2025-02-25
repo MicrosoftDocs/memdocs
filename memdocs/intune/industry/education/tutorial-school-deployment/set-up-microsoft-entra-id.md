@@ -6,6 +6,8 @@ ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
 ms.manager: dougeby
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Set up Microsoft Entra ID
@@ -22,7 +24,7 @@ For more information, see [Create your Office 365 tenant][M365-1].
 
 ### Explore the Microsoft 365 admin center
 
-The **Microsoft 365 admin center** is the hub for all administrative consoles for the Microsoft 365 cloud. To access the [Microsoft 365 admin center](https://admin.microsoft.com), sign in with the same global administrator account when you [created the Microsoft 365 tenant](#create-a-microsoft-365-tenant).
+The **Microsoft 365 admin center** is the hub for all administrative consoles for the Microsoft 365 cloud. To access the [Microsoft 365 admin center](https://admin.microsoft.com), sign in with the same account when you [created the Microsoft 365 tenant](#create-a-microsoft-365-tenant).
 
 From the Microsoft 365 admin center, you can access different administrative dashboards: Microsoft Entra ID, Microsoft Intune, Intune for Education, and others:
 

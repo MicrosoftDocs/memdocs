@@ -56,7 +56,7 @@ Some of the key benefits of the optimizations are:
 
 Media optimization for Microsoft Teams is only available for the Windows and macOS endpoints. Media optimizations require:
 
-- [Windows 365 app for Windows](/azure/virtual-desktop/teams-on-avd) via the Microsoft Store (ideally the latest version).
+- [Windows App for Windows](/azure/virtual-desktop/teams-on-avd) via the Microsoft Store (ideally the latest version).
 - Remote Desktop client for Windows, version 1.2.1026.0 or later (ideally the latest version).
 - Remote Desktop client for macOS, version 10.7.7 or later ([beta client](https://aka.ms/rdmacbeta)). If you upgrade from versions earlier than 10.7.7, you'll also need to go to Microsoft **Remote Desktop Preferences** > **General** and turn on Teams optimizations. If you're using the client for the first time and already have version 10.7.7 or later installed, you won't need to turn that on. In that case, Teams optimizations are turned on by default.
 

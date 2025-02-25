@@ -2,12 +2,12 @@
 # required metadata
 
 title: Manage account protection settings with endpoint security policies in Microsoft Intune
-description: Deploy policies for endpoint security account protection policies to devices you manage with  in Microsoft Intune.
+description: Use Microsoft Intune endpoint security account protection policies to protect the identity and accounts of users.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/18/2024
+ms.date: 10/10/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,9 +57,13 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 ## Account protection profiles
 
-**Windows 10/11 profiles**:
+Platform:
 
-- **Account protection** – Settings for account protection policies help you protect user credentials. The account protection policy is focused on settings for Windows Hello for Business that include both *device-scoped* and *user-scoped* settings, and Credential Guard, which is part of Windows identity and access management.
+- **Windows**
+
+Profiles:
+
+- **Account protection** – Settings for account protection policies help you to protect user credentials. The account protection policy focuses on *device-scoped* and *user-scoped* settings for Windows Hello for Business, and on Credential Guard. Credential Guard is part of Windows identity and access management.
 
   - *Windows Hello for Business* replaces passwords with strong two-factor authentication on PCs and mobile devices.
   - *Credential Guard* helps protect credentials and secrets that you use with your devices.
@@ -133,7 +137,7 @@ As devices check in and apply the policy, the admin center displays the status o
 
 Because the policy can contain multiple rules, consider the following points:
 
-- When processing the policy for devices, the per-setting status view displays a status for the group of rules as if it’s a single setting.
+- When Intune processes the policy for devices, the per-setting status view displays a status for the group of rules as if it’s a single setting.
 - Each rule in the policy that results in an error is skipped, and not sent to devices.
 - Each rule that is successful is sent to devices to be applied.
 

@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -38,7 +38,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 ## Deploy the device
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15DG8]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=eee1be56-784d-48f2-932a-2274774d6263]
 
 Once all of the configurations for the Windows Autopilot user-driven Microsoft Entra join deployment are completed in Intune and in Microsoft Entra ID, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
 

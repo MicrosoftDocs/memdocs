@@ -3,13 +3,13 @@ metadata:
   title: Windows Autopilot troubleshooting FAQ
   description: Troubleshooting of common Windows Autopilot issues
   ms.service: windows-client
-  ms.subservice: itpro-deploy
+  ms.subservice: autopilot
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 08/08/2024
+  ms.date: 11/26/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -180,8 +180,23 @@ sections:
 
               To resolve and fix the issue in this scenario and redeploy the device using Windows Autopilot, follow these steps:
 
-              1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Intune admin center](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-admin-center).
+              1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+              1. In the **Home** screen, select **Devices** in the left hand pane.
+
+              1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+              1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+              1. In the **Windows | Enrollment** screen, under **Windows Autopilot**, select **Devices**.
+
+              1. Select the device that is experiencing the error, and then in the toolbar select **Unblock device**.
+
               1. Redeploy the Windows Autopilot deployment profile.
+              
+                  > [!NOTE]
+                  >
+                  > A success message might not display after selecting **Unblock device**, but the device is ready to be used again.
 
           1. Windows MDM enrollment is disabled in the Intune tenant.
 
@@ -367,6 +382,12 @@ sections:
 
   - name: Troubleshooting policy conflicts with Windows Autopilot
     questions:
+    
+      - question: |
+          Why is the web sign-in option missing at the Windows sign-in screen after Windows Autopilot pre-provisioning completes?
+        answer: |
+            The [Device password policies](/mem/intune/protect/security-baseline-settings-mdm-all#device-lock) in the Security Baseline causes issues after pre-provisioning. To resolve, change the password settings in Security Baseline to **Not Configured** or assign the baseline to a user group.
+
       - question: |
           Can policies conflict with Windows Autopilot working correctly?
         answer: |

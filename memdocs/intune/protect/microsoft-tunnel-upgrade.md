@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 02/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ Microsoft Tunnel, a VPN gateway solution for Microsoft Intune, periodically rece
 - When upgrades are available
 - How to control when upgrades happen.
 
-Intune handles the upgrade of servers assigned to each tunnel site for you. When upgrades for site begin, all servers in the site upgrade one at a time, which is referred to as an upgrade cycle. While a server is upgrading, the Microsoft Tunnel on the server isn't available for use. Upgrading a single server at a time helps minimize disruptions to users when the site includes multiple servers.
+Intune handles the upgrade of servers assigned to each tunnel site for you. When you start the upgrade for site, all servers in the site upgrade one at a time, which is referred to as an upgrade cycle. While a server is upgrading, the Microsoft Tunnel on that server isn't available for use. Upgrading a single server at a time helps minimize disruptions to users when the site includes multiple servers.
 
 During an upgrade cycle:
 
@@ -46,7 +46,7 @@ During an upgrade cycle:
 
 ## Use upgrade controls
 
-To help control when Intune begins the upgrade cycle, configure the following settings at each site. You can configure the settings when [creating a new site](../protect/microsoft-tunnel-configure.md#create-a-site), or by editing the properties of an existing site:
+To help control when Intune starts the upgrade cycle, configure the following settings at each site. You can configure the settings when [creating a new site](../protect/microsoft-tunnel-configure.md#create-a-site), or by editing the properties of an existing site:
 
 - **Automatically upgrade servers at this site**
 - **Limit server upgrades to maintenance window**
@@ -127,7 +127,84 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 
 > [!IMPORTANT]
 >
-> Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
+> Container releases take place in stages. If you notice that your container images aren't the most recent, please be assured that they will be updated and delivered within the following week.
+
+### February 6, 2025
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:4f4ffd280315d4d63e6d3b54a79f70a76a3f9e5c234d8dbc7c49f382c6cac413
+
+- **serverImageDigest**: sha256:03b0c6cf241806422d87be770d887023c06518b5e9aa57bdb4b876fb1a64f8e1
+
+Changes in this release:
+
+- Upgrade Azure Linux version to 2.0.20241230
+- Security updates
+- Localization fixes
+- Enhanced diagnostic in mstunnel_monitor service
+- Clear stale agent errors after successful upgrade
+
+### December 2, 2024
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:110b111d7f3fee3d13ac29da62560800c26d2a05bdc337c965b0ce1f2ec2756c
+
+- **serverImageDigest**: sha256:3a5844f4e7156c966a2d0f5affd8b15ac3b441bd301a5a0b7c9b7db2ae6f5ed3
+
+Changes in this release:
+
+- Diagnostic tool improvements
+- Bug fixes for rootless container mode in mst-cli
+- Localization improvements in mstunnel-setup
+- Improvement on error handling
+
+### October 2, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:7921c2e97217fa17de4ab69396d943e4975d323417b8b813211e2f8b639f64e1
+
+- **serverImageDigest**: sha256:0efab5013351bcd81f186973e75ed5d9f91bbe6271e3be481721500f946fc9ec
+
+Changes in this release:
+
+- Upgrade from .NET 6 to .NET 8
+- Upgrade ocserv to version 1.3.0
+- Fix rootless container bug in installer
+
+### September 12, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:17158c73750ff2c7157e979c2f4ff4e175318730c16aa8d0ee6526a969c37c59
+
+- **serverImageDigest**: sha256:6484d311d1bd6cbe55d71306595715bafa6a20a000be6fd6f9e530716cef6c16
+
+Changes in this release:  
+- Add diagnostic tools for host troubleshooting
+- Upgrade Azure Linux image to 2.0.20240829
+
+  
+### August 12, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:4d16b1f458c69c3423626906b0b577cb42c8d22f4240205299355c6217e08a6b
+
+- **serverImageDigest**: sha256:66559e142d489491ca8f090b50f4a444a3394f850a5ec09fb9f3e6f986d93c46
+
+Changes in this release:
+- Support customizing container registry during installation
+- Support customizing container creation options during installation
+- Security updates on the base image
+
+## Related content
+
+[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
+
+<!-- Archive of past releases
 
 ### June 20, 2024
 
@@ -235,8 +312,6 @@ Changes in this release:
 - Bug fix: add legacy NAT tables for the mstunnel-server container on Cent OS 7 and Red Hat 7 hosts
 - Bug fix: add SELinux policy to allow TCP DNS traffic for the containers on Red Hat hosts
 - Increase mstunnel-server container pid limit to 10000
-
-<!-- Archive of past releases
 
 ### October 2, 2023
 
@@ -533,7 +608,3 @@ Changes in this release:
 The initial public preview release of Microsoft Tunnel.
 
 End of archive -->
-
-## Next steps
-
-[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)

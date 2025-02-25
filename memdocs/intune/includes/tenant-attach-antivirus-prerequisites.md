@@ -4,7 +4,7 @@ description: include file
 author: brenduns  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 04/08/2022
+ms.date: 08/19/2024
 ms.author: brenduns
 ms.custom: include file
 ---
@@ -15,7 +15,7 @@ Manage [Antivirus settings for Configuration Manager devices](../protect/antivir
 
 **Policy path**:
 
-- Endpoint security > Antivirus > Windows 10, Windows 11, and Windows Server (ConfigMgr)
+- Endpoint security > Antivirus > Windows (ConfigMgr)
 
 **Profiles**:
 

@@ -50,13 +50,13 @@ You can use App protection policies to prevent users from saving work files in u
 - Data relocation policies like **Save copies of org data**, and **Restrict cut, copy, and paste**.
 - Access policy settings to require simple PIN for access, and block managed apps from running on jailbroken or rooted devices.
 
-App-based conditional access and client app management add a security layer by making sure only client apps that support Intune app protection policies can access Exchange online and other Microsoft 365 services.
+App-based Conditional Access and client app management add a security layer by making sure only client apps that support Intune app protection policies can access Exchange online and other Microsoft 365 services.
 
 You can block the built-in mail apps on iOS/iPadOS and Android when you allow only the Microsoft Outlook app to access Exchange Online. Additionally, you can block apps that don't have Intune app protection policies applied from accessing SharePoint Online.
 
-In this example, the admin has applied app protection policies to the Outlook app followed by a conditional access rule that adds the Outlook app to an approved list of apps that can be used when accessing corporate e-mail.
+In this example, the admin has applied app protection policies to the Outlook app followed by a Conditional Access rule that adds the Outlook app to an approved list of apps that can be used when accessing corporate e-mail.
 
-![Outlook app conditional access process flow](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-02.png)
+![Outlook app Conditional Access process flow](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-02.png)
 
 ## Prerequisites
 
@@ -120,7 +120,7 @@ The following settings are applied when using the **Enhanced data protection** s
 
 In this step, you can choose the user groups that you want to include to ensure that they have access to your corporate data. App protection is assigned to users, and not devices, so your corporate data will be secure regardless of the device used and its enrollment status.
 
-Users without app protection policies and conditional access settings assigned will be able to save data from their corporate profile to personal apps and nonmanaged local storage on their mobile devices. They could also connect to corporate data services, such as Microsoft Exchange, with personal apps.
+Users without app protection policies and Conditional Access settings assigned will be able to save data from their corporate profile to personal apps and nonmanaged local storage on their mobile devices. They could also connect to corporate data services, such as Microsoft Exchange, with personal apps.
 
 ## Step 6 - Review + create
 
@@ -131,4 +131,4 @@ The final step allows you to review a summary of the settings you configured. On
 
 ## Next steps
 
-- Enhance the security of work files by assigning users an App-based conditional access policy to protect cloud services from sending work files to unprotected apps. For more information, see [Set up app-based Conditional Access policies with Intune](../protect/app-based-conditional-access-intune-create.md).
+- Enhance the security of work files by assigning users an App-based Conditional Access policy to protect cloud services from sending work files to unprotected apps. For more information, see [Set up app-based Conditional Access policies with Intune](../protect/app-based-conditional-access-intune-create.md).

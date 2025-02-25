@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2024
+ms.date: 02/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,11 +40,19 @@ In Intune, you can create and assign the following policies:
 - App protection policies
 - App configuration policies
 - Compliance policies
-- Conditional access policies
+- Conditional Access policies
 - Device configuration profiles
 - Enrollment policies
 
 This article shows you how to assign a policy, includes some information on using scope tags, describes when to assign policies to user groups or device groups, and more.
+
+This feature applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Linux
+- Windows
 
 ## Before you begin
 
@@ -69,13 +77,13 @@ This article shows you how to assign a policy, includes some information on usin
 
        :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
 
-3. Under **Included groups** or **Excluded groups**, choose **Add groups** to select one or more Microsoft Entra groups. If you intend to deploy the policy broadly to all applicable devices, select **Add all users** or **Add all devices**.
+4. Under **Included groups** or **Excluded groups**, choose **Add groups** to select one or more Microsoft Entra groups. If you intend to deploy the policy broadly to all applicable devices, select **Add all users** or **Add all devices**.
 
     > [!NOTE]
     > If you select "All Devices" and "All Users", the option to add additional Microsoft Entra groups disables. 
 
-4. Select **Review + Save**. This step doesn't assign your policy.
-5. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
+5. Select **Review + Save**. This step doesn't assign your policy.
+6. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
 
 ## Assignment features you should know and use
 
@@ -98,7 +106,7 @@ This article shows you how to assign a policy, includes some information on usin
 
 - **[Scope tags](../fundamentals/scope-tags.md)** are a great way to filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-- On Windows 10/11 devices, you can add **[applicability rules](device-profile-create.md#applicability-rules)** so the policy only applies to a specific OS version or a specific Windows edition. For more information, go to [Applicability rules](device-profile-create.md#applicability-rules).
+- On Windows devices, you can add **[applicability rules](device-profile-create.md#applicability-rules)** so the policy only applies to a specific OS version or a specific Windows edition. For more information, go to [Applicability rules](device-profile-create.md#applicability-rules).
 
 ## User groups vs. device groups
 
@@ -110,7 +118,9 @@ If you want to apply settings on a device, regardless of who's signed in, then a
 
 For example:
 
-- Device groups are useful for managing devices that don't have a dedicated user. For example, you have devices that print tickets, scan inventory, are shared by shift workers, are assigned to a specific warehouse, and so on. Put these devices in a devices group, and assign your policies to this devices group.
+- Device groups are useful for managing devices that don't have a dedicated user. These devices can print tickets, scan inventory, be shared by shift workers & health workers, and so on. Put these devices in a devices group and assign your policies to this devices group.
+
+  For example, you can enroll userless iOS/iPadOS devices using [Shared iPad](../enrollment/device-enrollment-shared-ipad.md) or [Microsoft Entra Shared Device Mode](../enrollment/automated-device-enrollment-shared-device-mode.md). Then, add these devices to a devices group. When you're ready to assign policies, assign the policies to this devices group.
 
 - You create a [Device Firmware Configuration Interface (DFCI) Intune profile](device-firmware-configuration-interface-windows.md) that updates settings in the BIOS. For example, you configure this policy to disable the device camera, or lock down the boot options to prevent users from booting up another OS. This policy is a good scenario to assign to a devices group.
 

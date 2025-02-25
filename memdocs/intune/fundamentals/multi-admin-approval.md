@@ -41,16 +41,17 @@ Access policies are supported for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
 - Scripts – Applies to deploying scripts to devices that run [Windows](../apps/intune-management-extension.md).
+- Access Policies - Applies to creating or managing multiple administrative approval policies.
 
 ## Prerequisites for access policies and approvers
 
-To use multi administrative approval, your tenant must have at least two administrator accounts.
+To use multi administrative approval, your tenant must have at least two administrator accounts. One account will be used to perform a change in the tenant, the second account will be used approve the change.
 
-To create an access policy, your account must be assigned the [*Intune Service Administrator* or *Azure Global Administrator*](../fundamentals/role-based-access-control.md) role.
+To create an access policy, your account must be assigned the [*Intune Service Administrator* or *Azure Global Administrator*](../fundamentals/role-based-access-control.md) role, or be assigned the appropriate Multi Admin Approval permissions for an Intune role.  Administrators who manage the access policies specifically for multi-admin approval require the *Approval for Multi Admin Approval* permission.
 
-To be an approver, an account must be in the group that’s assigned to the access policy for a specific type of resource.
+To be an approver for access policies, an account must be in the approver group that’s assigned to the access policy for a specific type of resource.
 
-If your organization allows unlicensed administrators for Intune roles, all approver groups must also be a member group of one or more Intune role assignments. 
+All approver groups must also be a member group of one or more Intune role assignments. There is no specific requirement for which role assignment the approver group must be added to. If the approver group is not added to a role assignment this will result in approver group members being removed from the group periodically.
 
 ## How multi admin approval and Access policies work
 

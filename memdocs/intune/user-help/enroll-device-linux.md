@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/15/2024
+ms.date: 11/04/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -20,7 +20,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: ilwu
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -34,11 +34,12 @@ ms.collection:
 Enroll a Linux device in Microsoft Intune to get secure access to work or school resources in Microsoft Edge. This article describes how to enroll and register a work or school-provided device on your organization's network.   
 
 ## System requirements  
-Enrollment is supported on the following versions of Linux: 
 
-* Ubuntu Desktop 22.04 or 20.04 LTS (physical or Hyper-V machine with x86/64 CPUs)  
+Enrollment is supported on the following versions of Linux:
+
+* Ubuntu Desktop 24.04, 22.04 or 20.04 LTS (physical or Hyper-V machine with x86/64 CPUs)  
 * RedHat Enterprise Linux 8  
-* RedHat Enterprise Linux 9    
+* RedHat Enterprise Linux 9
 
 Devices must be configured with a GNOME graphical desktop environment, which is automatically included with Ubuntu Desktop 22.04 and 20.04 LTS.  
 

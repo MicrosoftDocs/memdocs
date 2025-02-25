@@ -80,16 +80,11 @@ Derived credentials are an implementation of the National Institute of Standards
 
     * Token: When you get to the Google sign-in screen, complete the steps in [Token enrollment](#token-enrollment).  
     * Google Zero Touch: After you connect to Wi-Fi, your device will be recognized by your organization. Continue to step 4 and follow the onscreen prompts until setup is complete.    
- 
-       ![Example image of Google terms screen that you see if you're using Google Zero Touch, highlighting Accept & Continue button.](./media/google-zero-touch-intune-app-01.png)   
+
    
-4. Review Google's terms. Then tap **ACCEPT & CONTINUE**.  
+4. Review the terms from Google. Then tap **ACCEPT & CONTINUE**.  
 
-      ![Example image of Google terms screen, highlighting Accept & Continue button.](./media/fully-managed-intune-app-04.png)   
-
-5. Review Chrome's Terms of Service. Then tap **ACCEPT & CONTINUE**.  
-
-   ![Example image of Chrome Terms of Service screen, highlighting Accept & Continue button.](./media/fully-managed-intune-app-06.png)  
+5. Review the terms from Chrome. Then tap **ACCEPT & CONTINUE**.  
 
 6. On the sign-in screen, tap **Sign-in options** and then **Sign in from another device**. 
 
@@ -100,7 +95,7 @@ Derived credentials are an implementation of the National Institute of Standards
 9. Enter the code you previously wrote down.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the Company Portal website "Enter code" prompt.](./media/enter-code-intercede.png)
+   > ![Screenshot of the Company Portal website "Enter code" prompt.](./media/enroll-android-device-disa-purebred/enter-code-intercede.png)
 
 10. Insert your smart card to sign in.  
 
@@ -108,20 +103,16 @@ Derived credentials are an implementation of the National Institute of Standards
 
 12. Depending on your organization's requirements, you might be prompted to update settings, such as screen lock or encryption. If you see these prompts, tap **SET** and follow the onscreen instructions.  
 
-       ![Example image of Set up your work phone screen, highlighting Set button.](./media/fully-managed-intune-app-10.png)   
+       ![Example image of Set up your work phone screen, highlighting Set button.](./media/enroll-android-device-disa-purebred/fully-managed-intune-app-10.png)   
 
 13. To install work apps on your device, tap **INSTALL**. After installation is complete, tap **NEXT**.  
 
-       ![Example image of Set up your work phone screen, highlighting Install button.](./media/fully-managed-intune-app-11.png)    
-
 14. Tap **START** to open the Microsoft Intune app. 
-
-    ![Example image of Set up your work phone screen, highlighting Start button.](./media/fully-managed-intune-app-17.png)   
  
 
 15. Return to the Intune app on your mobile device and follow the onscreen instructions until enrollment is done. 
 
-    ![Example image of Set up access, register your device screen, highlighting Done button.](./media/fully-managed-intune-app-19.png)   
+    ![Example image of Set up access, register your device screen, highlighting Done button.](./media/enroll-android-device-disa-purebred/fully-managed-intune-app-19.png)   
 
 16. Continue to the [set up your smart card](enroll-android-device-intercede.md#set-up-smart-card) section in this article to finish setting up your device.  
 
@@ -129,8 +120,6 @@ Derived credentials are an implementation of the National Institute of Standards
 In this section, you'll scan your company-provided QR code.  When you're done, we'll redirect you back to the device enrollment steps.     
   
 1. On the **Welcome** screen, tap the screen five times to start QR code setup.  
-
-   ![Example image of device setup Welcome screen, highlighting instructions to tap screen.](./media/qr-code-intune-app-01.png)  
 
 2. Follow any onscreen instructions to connect to Wi-Fi.  
 3. If your device doesn't have a QR code scanner, the setup screens will show the progress as a scanner is installed. Wait for installation to complete.  
@@ -142,17 +131,13 @@ In this section, you'll enter your company-provided token. When you're done, we'
 
 1. On the Google sign-in screen, in the **Email or phone** box, type **afw#setup**. Then tap **Next**. 
 
-   ![Example image of Google sign-in screen, showing that "afw#setup" is typed into field.](./media/token-intune-app-01.png)   
-
 2. Choose **Install** for the **Android Device Policy** app. Continue through the installation. Depending on your device, you might need to review and accept additional terms.    
 
 3. On the **Enroll this device** screen, select **Next**.  
 
 4. Select **Enter code**.  
 
-5. On the **Scan or enter code** screen, type in the code that your organization gave you.  Then click **Next**.  
-
-   ![Example image of Scan or enter code screen, highlighting Next button.](./media/token-intune-app-04.png)  
+5. On the **Scan or enter code** screen, type in the code that your organization gave you.  Then select **Next**.  
 
 6. Return to [Enroll device](#enroll-device), step 4 to continue setup.
 
@@ -161,7 +146,7 @@ In this section, you'll enter your company-provided token. When you're done, we'
 1. After enrollment is complete, the Intune app will notify you to set up your smart card. Tap the notification. If you don't get a notification, check your email.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the Company Portal push notification on device home screen.](./media/action-required-in-app-android.png)
+   > ![Example screenshot of the Company Portal push notification on device home screen.](./media/enroll-android-device-disa-purebred/action-required-in-app-android.png)
 
 2. On the **Set up smart card** screen:
 
@@ -170,7 +155,7 @@ In this section, you'll enter your company-provided token. When you're done, we'
    2. Tap **BEGIN**.  
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/smart-card-open-entrust-android.png)
+   > ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/enroll-android-device-entrust-datacard/smart-card-open-entrust-android.png)
 
 3. Switch to your smart card-enabled device or self-service kiosk and open the MyID app. Sign in with your work credentials.
 
@@ -181,7 +166,7 @@ In this section, you'll enter your company-provided token. When you're done, we'
 6. Return to your Android device. On the Company Portal > **Get QR code** screen, tap **NEXT**.
 
     > [!div class="mx-imgBorder"]
-    > ![Example screenshot of the Company Portal Get QR code screen.](./media/get-qr-code-entrust-android.png)
+    > ![Example screenshot of the Company Portal Get QR code screen.](./media/enroll-android-device-entrust-datacard/get-qr-code-entrust-android.png)
 
 7. If you're prompted to allow the Intune app to use your camera, tap **Allow**.
 
@@ -190,12 +175,12 @@ In this section, you'll enter your company-provided token. When you're done, we'
 9. The Intune app will start downloading and installing the certificates needed to access work or school resources. Depending on your internet connection, this process might take some time. Don't close the app during this time.
 
     > [!div class="mx-imgBorder"]
-    > ![Example screenshot of the Company Portal "Downloading and installing certificates" screen](./media/install-certificates-entrust-android.png)
+    > ![Example screenshot of the Company Portal "Downloading and installing certificates" screen](./media/enroll-android-device-entrust-datacard/install-certificates-entrust-android.png)
 
 10. Once all of the certificates are processed, wait for the Intune app to finish setting up your device. You'll know setup is complete when you see the **You're all set!** screen.
 
     > [!div class="mx-imgBorder"]
-    > ![Example screenshot of the "You're all set" screen](./media/all-set-android.png)
+    > ![Example screenshot of the "You're all set" screen](./media/enroll-android-device-disa-purebred/all-set-android.png)
 
 ## Next steps
 

@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/29/2023
+ms.date: 02/04/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -34,7 +34,7 @@ ms.collection:
 * Android   
 * iOS/iPadOS  
 
-Remotely reset an enrolled device's PIN or passcode. Sign in to the [Company Portal website](https://portal.manage.microsoft.com) on any device to access the *reset passcode* option. The reset passcode option can't be used on all corporate-owned devices. Contact your support person for help if the option is missing and you need to reset a device.  
+Remotely reset an enrolled device's PIN or passcode. Sign in to the [Company Portal website](https://portal.manage.microsoft.com) on any device to access the *reset passcode* option. Contact your support person for help if the option is missing and you need to reset a device.  
 
 >[!NOTE]
 > Passcode reset doesn't work on these types of devices:  
@@ -53,17 +53,17 @@ Remotely reset an enrolled device's PIN or passcode. Sign in to the [Company Por
 
 3. Select **Reset Passcode**. If the passcode option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. 
 
-   ![Device details page for a selected device on the Company Portal website, with a list of links at the top showing Rename, Remove, Reset Device, Reset Passcode, and Remote Lock. ](./media/rename-reset-device-1808.png)   
+   ![Device details page for a selected device on the Company Portal website, with a list of links at the top showing Rename, Remove, Reset Device, Reset Passcode, and Remote Lock. ](./media/reset-your-passcode-cpwebsite/rename-reset-device-1808.png)   
 
 4. When prompted, choose **Sign out**. When prompted again, sign back in. Sign back in to the Company Portal website within five minutes, or Company Portal won't reset the device passcode. You must sign back in to confirm your identity. This step prevents malicious attempts to reset your device passcode.  
 
-   ![Example screenshots showing a prompt to sign out of the Company Portal. The buttons for user input are Sign Out and Cancel.](./media/iwp-reset-passcode-popup-1808.png)
+   ![Example screenshots showing a prompt to sign out of the Company Portal. The buttons for user input are Sign Out and Cancel.](./media/reset-your-passcode-cpwebsite/iwp-reset-passcode-popup-1808.png)
 
 5. A message appears to warn you that the existing device passcode is about to be removed. Select **Reset passcode** to confirm.  
     > [!WARNING]
     > After you reset your passcode, anyone who has physical access to the device can access most personal and corporate information on it. If you don't currently have the device in your possession, don't reset the passcode.  
 
-   ![Example screenshot showing second reset passcode message. Includes link to learn more about setting a new passcode in the documentation, and individual buttons to reset passcode and cancel.](./media/iwp-reset-passcode-popup2-1808.png) 
+   ![Example screenshot showing second reset passcode message. Includes link to learn more about setting a new passcode in the documentation, and individual buttons to reset passcode and cancel.](./media/reset-your-passcode-cpwebsite/iwp-reset-passcode-popup2-1808.png) 
 
 6. If you're resetting the passcode for an iOS device, its existing passcode is removed. For Android devices, you are issued a temporary passcode to unlock the device and set a new passcode. 
 

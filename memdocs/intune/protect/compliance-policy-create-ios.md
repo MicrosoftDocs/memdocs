@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/15/2024
+ms.date: 01/29/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -80,9 +80,10 @@ For details about email profiles, see [configure access to organization email us
   - **Block** - Mark rooted (jailbroken) devices as not compliant.
 
 - **Require the device to be at or under the Device Threat Level**  
-  *Supported for iOS 8.0 and later*
+  *Supported for iOS 8.0 and later*  
 
-  Use this setting to take the risk assessment as a condition for compliance. Choose the allowed threat level:
+   Select the maximum allowed device threat level evaluated by your mobile threat defense service. 
+   Use this setting to take the risk assessment as a condition for compliance. Choose the allowed threat level:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Secured** - This option is the most secure, and means that the device can't have any threats. a device with any level of threats is evaluated as noncompliant.
   - **Low** - The device is evaluated as compliant if only low-level threats are present. Anything higher puts the device in a noncompliant status.
@@ -140,7 +141,7 @@ For details about email profiles, see [configure access to organization email us
   *Supported for iOS 8.0 and later*
 
   - **Not configured** (*default*) - Users can create simple passwords like **1234** or **1111**.
-  - **Block** - Users can't create simple passwords, such as **1234** or **1111**.
+  - **Block** - Users can't create simple passwords, such as **1234** or **1111**. 
 
 - **Minimum password length**  
   *Supported for iOS 8.0 and later*
@@ -150,30 +151,34 @@ For details about email profiles, see [configure access to organization email us
 - **Required password type**  
   *Supported for iOS 8.0 and later*
 
-  Choose if a password should have only **Numeric** characters, or if there should be a mix of numbers and other characters (**Alphanumeric**).
+  Choose the password type required on the device. When set to **Not configured**, which is the default choice, Intune doesn't change or update this setting. Your options:  
+  
+  - **Not configured**: The password is determined by the device's default settings. A user's OS might allow simple passwords, like *0000* and *1234*.  
+  - **Alphanumeric**: The password must contain a mix of uppercase letters, lowercase letters, and numeric characters.  
+  - **Numeric**: The password at minimum must be a set of numeric characters, such as *123456789*. Alphabetic passwords and alphanumeric passwords are also supported.  
 
 - **Number of non-alphanumeric characters in password**  
-  Enter the minimum number of special characters, such as `&`, `#`, `%`, `!`, and so on, that must be in the password.
+  Enter the minimum number of special characters, such as `&`, `#`, `%`, `!`, and so on, that must be in the password. 
 
   Setting a higher number requires the user to create a password that is more complex.
 
 - **Maximum minutes after screen lock before password is required**  
   *Supported for iOS 8.0 and later*
 
-  Specify how soon after the screen is locked before a user must enter a password to access the device. Options include the default of *Not configured*, *Immediately*, and from *1 Minute* to *4 hours*.
+  Select how much time is allowed to pass after the screen locks before users have to enter a password to access their device. Options include the default of **Not configured**, **Immediately**, and from **1 minute** to **4 hours**.  
 
 - **Maximum minutes of inactivity until screen locks**  
-  Enter the idle time before the device locks its screen. Options include the default of *Not configured*, *Immediately*, and from *1 Minute* to *15 Minutes*.
+  Select the amount of idle time allowed before the device locks its screen. Options include the default of **Not configured**, **Immediately**, and from **1 minute** to **15 minutes**.
 
 - **Password expiration (days)**  
   *Supported for iOS 8.0 and later*
 
-  Select the number of days before the password expires, and they must create a new one.
+  Enter how long, in days, a password is valid before the user must create a new one. 
 
 - **Number of previous passwords to prevent reuse**  
   *Supported for iOS 8.0 and later*
 
-  Enter the number of previously used passwords that can't be used.
+  Enter the number of previously used passwords that can't be used. For example, if you enter 5, users can't reuse their 5 most recent passwords.    
 
 ### Device Security
 
@@ -181,17 +186,17 @@ For details about email profiles, see [configure access to organization email us
   You can restrict apps by adding their bundle IDs to the policy. If a device has the app installed, the device is marked as noncompliant.
 
   - **App name** - Enter a user-friendly name to help you identify the bundle ID.
-  - **App Bundle ID** - Enter the unique bundle identifier assigned by the app provider.
+  - **App bundle ID** - Enter the unique bundle identifier assigned by the app provider.
 
     To get the app bundle ID:
 
-    - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
-    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
-    - For some examples, go to [Bundle IDs for built-in iOS/iPadOS apps](../configuration/bundle-ids-built-in-ios-apps.md).
+    - The Apple website has a list of [built-in Apple apps](https://support.apple.com/HT211833).  
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).  
+    - For examples, see [Bundle IDs for built-in iOS/iPadOS apps](../configuration/bundle-ids-built-in-ios-apps.md).  
 
   > [!NOTE]
   >
-  > The *Restricted apps* setting applies to un-managed applications that are installed outside of management context.
+  > The *Restricted apps* setting applies to un-managed apps that are installed outside of management context.
 
 ## Next steps
 

@@ -42,9 +42,9 @@ This feature applies to:
 As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).  
 
 > [!IMPORTANT]
-> Android compliance policies should only be targeted at groups of devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign-in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Microsoft Entra shared device mode*](../enrollment/android-kiosk-enroll.md).
+> It's important to target compliance policies for dedicated devices at groups of devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Microsoft Entra shared device mode*](../enrollment/android-kiosk-enroll.md). In scenarios with fully managed devices, or personal and corporate-owned work profiles, you can target compliance policies at groups of users or devices.  
 >
-> On Android Enterprise dedicated devices that are enrolled without Microsoft Entra shared device mode, users of the device will be unable to sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](/azure/active-directory/develop/msal-shared-devices) in the Microsoft Entra documentation.
+> Users on dedicated devices enrolled without Microsoft Entra shared device mode can't sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](/azure/active-directory/develop/msal-shared-devices) in the Microsoft Entra documentation.  
 
 <!-- Compliance policies also apply Android Enterprise dedicated devices. If a compliance policy is assigned to a dedicated device, the device may show as **Not compliant**. Conditional Access and enforcing compliance isn't available on dedicated devices. Be sure to complete any tasks or actions to get dedicated devices compliant with your assigned policies.  -->
 
@@ -322,11 +322,11 @@ When a device is using an OS version later than the version in the rule, access 
     - Is installed from a known source
 
 - **Block USB debugging on device**  
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  - **Block** - Prevent devices from using the USB debugging feature.  
+- **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
+- **Block** - Prevent devices from using the USB debugging feature.  
 
-  You don't have to configure this setting because USB debugging is already disabled on Android Enterprise devices.
-
+  You don't have to configure this setting for Android Enterprise fully managed devices, dedicated devices, and corporate-owned devices with work profiles, because USB debugging is already disabled.  
+  
 - **Minimum security patch level**  
   Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the YYYY-MM-DD format.
 

@@ -37,10 +37,6 @@ To access their Cloud PC, an end-user's hardware must meet certain requirements.
 
 For more information about the requirements of running and using Windows App, see [Get started with Windows App](/windows-app/get-started-connect-devices-desktops-apps).
 
-## Windows 365 app
-
-For information about the requirements for running the Windows 365 app, see the [Windows 365 end user documentation](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0 ).
-
 ## Microsoft Remote Desktop client for Windows
 
 Downloads available for:
@@ -91,7 +87,7 @@ You can access Windows 365 Cloud PCs from your Linux OS devices by using:
 
 - The web client available at windows365.microsoft.com.
 - Third-party clients to connect to Azure Virtual Desktop, including:
-  - [Dell](https://www.delltechnologies.com/asset/en-us/products/thin-clients/technical-support/dell-thinos-9-for-microsoft-wvd.pdf)
+  - [Dell](https://www.dell.com/en-us/lp/dell-thinos)
   - [HP](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07051097)
   - [IGEL](https://www.igel.com/igel-solution-family/)
 

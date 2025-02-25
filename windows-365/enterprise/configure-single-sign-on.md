@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/16/2023
+ms.date: 09/26/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -38,8 +38,9 @@ For information on using passwordless authentication within the session, see [In
 To get started, following the steps to [Configure single sign-on](/azure/virtual-desktop/configure-single-sign-on) for Azure Virtual Desktop with the following caveats:
 
 - If the Kerberos Server object isn't present for Microsoft Entra hybrid joined provisioning policies, a new error appears in your Azure Network Connection (ANC) [health check for single sign-on](health-checks.md#supported-checks).
-- If you have conditional access policies that apply when accessing Windows 365, review the recommendations to [set conditional access policies](set-conditional-access-policies.md) for Windows 365 to make sure users have the expected experience.
+- If you have Conditional Access policies that apply when accessing Windows 365, review the recommendations to [set Conditional Access policies](set-conditional-access-policies.md) for Windows 365 to make sure users have the expected experience.
 - SSO can be enabled on any provisioning policies. You can find the **Use Microsoft Entra single sign-on** option under the **Join type** on the **General** page. This can be done when [creating a new provisioning policy](create-provisioning-policy.md#continue-creating-a-provisioning-policy) or when [editing an existing provisioning policy](edit-provisioning-policy.md), with an option to apply SSO to existing Cloud PCs.
+- When provisioning Frontline Cloud PCs in shared mode, [hide the consent prompt](/azure/virtual-desktop/configure-single-sign-on#hide-the-consent-prompt-dialog) so that users don't see it with each shared device. You can use a dynamic device group based on the provisioning policy name to scope this configuration.
 
 ## Next steps
 

@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/08/2024
+ms.date: 09/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,16 +33,16 @@ The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/a
 When you add an app to Intune, you'll commonly want to use default installation, requirements, and detection settings. For apps within the Enterprise App Catalog, these default settings have been configured and confirmed by Microsoft. You must be careful if you modify the application properties as unexpected or harmful commands could be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
 
 > [!IMPORTANT]
-> Microsoft does not assert compliance or authorizations for non-Microsoft apps. Customers are responsible for ensuring that apps meet their requirements.
+> Microsoft does not assert compliance or authorizations for apps distributed via Intune. Customers are responsible for ensuring that apps meet their requirements.
 
-Once you add an Enterprise App Catalog app to Intune, you can assign that app to end-users or devices. Intune silently adds the app to your tenant.
+Once you add an Enterprise App Catalog app to Intune, you can assign that app to end-users or devices.
 
 ## Add a Windows catalog app (Win32) to Intune
 
 The following steps help you add a Windows App Catalog app to Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. Select **Enterprise App Catalog app** on the **Select app type** pane under the **Other** app types.
 4. Click **Select** to add the app type. 
    The **Add app** pane appear and shows the steps needed to add the app to Intune.
@@ -208,9 +208,9 @@ The **Rules format** provides the following options:
    The Intune agent checks the results from the script. It reads the values written by the script to the STDOUT stream, the standard error (STDERR) stream, and the exit code. If the script exits with a nonzero value, the script fails and the application detection status isn't installed. If the exit code is zero and STDOUT has data, the application detection status is installed. 
 
    > [!NOTE]
-   > We recommend encoding your script as UTF-8. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
+   > We recommend encoding your script as UTF-8 BOM. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
 
-When you add the app to Intune, the version of your Windows catalog app (Win32) is displayed in the Microsoft Intune admin center. The app version is provided in the **All apps** list, where you can filter by Windows catalog app (Win32) and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Columns** > **Version** to display the app version in the app list.
+When you add the app to Intune, the version of your Windows catalog app (Win32) is displayed in the Microsoft Intune admin center. The app version is provided in the **All Apps** list, where you can filter by Windows catalog app (Win32) and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Columns** > **Version** to display the app version in the app list.
 
 After you've added your rules, select **Next** to display the **Scope tags** step.
 
@@ -219,14 +219,33 @@ You can use scope tags to determine who can see client app information in Intune
 
 Click **Select scope tags** to optionally add scope tags for the app. Then select **Next** to display the **Review + create** step.
 
-## Step 6: Review and create
+## Step 6: Assignments
+
+You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+
+> [!IMPORTANT]
+> For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device doesn't have, the app will fail to install.
+
+1. For the specific app, select an assignment type:
+    - **Required**: The app is installed on devices in the selected groups.
+    - **Available for enrolled devices**: Users install the app from the company portal app or the company portal website.
+    - **Uninstall**: The app is uninstalled from devices in the selected groups.
+2. Select **Add group** and assign the groups that will use this app.
+3. On the **Select groups** pane, select groups to assign based on users or devices.
+4. After you select your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](apps-win32-app-management.md#set-win32-app-availability-and-notifications).
+5. If you don't want this app assignment to affect groups of users, select **Included** under the **MODE** column. In the **Edit assignment** pane, change the **mode** value from  **Included** to **Excluded**. Select **OK** to close the **Edit assignment** pane.
+6. In the **App settings** section, select the **Delivery optimization priority** value for the app. This setting will determine how the app content will be downloaded. You can choose to download the app content in background mode or foreground mode based on assignment. 
+
+After you finish setting the assignments for the apps, select **Next** to display the **Review + create** page.
+
+## Step 7: Review and create
 
 1. Review the values and settings that you entered for the app. Verify that you configured the app information correctly.
 2. Select **Create** to add the app to Intune.
 
     The **Overview** pane for the LOB app appears.
 
-At this point, you've completed steps to add a Windows catalog app (Win32) to Intune. The next step is to assign the app and set the installation properties, such as end-user notifications, restart grace periods, and delivery optimization priority. For information about app assignment and monitoring, see [Assign apps to groups with Microsoft Intune](apps-deploy.md) and [Monitor app information and assignments with Microsoft Intune](apps-monitor.md).
+At this point, you've completed steps to add a Windows catalog app (Win32) to Intune. 
 
 ## Next steps
 

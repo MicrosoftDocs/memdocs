@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/18/2024
+ms.date: 01/30/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #audience:
 params:
   siblings_only: true
-ms.reviewer: andreibiswas, anuragjain
+ms.reviewer: arnab, anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -137,7 +137,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 - **Locate device**: **Allow** lets admins locate lost or stolen devices using a remote action. When set to **Allow**, end users receive a one-time notification stating that Intune has location permissions. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow locating devices using geolocation.
 
-### Dedicated devices
+### Fully managed and Dedicated devices (kiosk mode only)
 
 - **Power button menu**: **Block** hides the power options when users hold down the power button when in kiosk mode. Hiding these options prevents users from accidentally or intentionally shutting down devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, when users hold down the power button on a device, they're shown power options, such as Restart and Power off.
 
@@ -166,6 +166,8 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the status bar, and disable notifications on the status bar.
   - **Show system information in device's status bar**: Users can see system information on the status bar. Users can't see or receive notifications from the status bar.
   - **Show system notifications and information in device's status bar**: Users can see the system information, and receive notifications from the status bar. To see notifications, enable the device home button using the **Enabled system navigation features** setting.
+ 
+    When a device is enrolled and using the Managed Home Screen app, enabling **System notifications** allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.   
 
   This setting applies to:
 
@@ -178,6 +180,8 @@ For corporate-owned devices with a work profile, some settings only apply in the
   This setting applies to:
 
   - Android 9.0 and newer  
+
+### Dedicated devices
 
 - **Locate device**: **Block** prevents admins from locating lost or stolen devices using a remote action. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow locating devices using geolocation.
 
@@ -232,12 +236,12 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 ## Device experience
 
-Use these settings to configure a kiosk-style experience on your dedicated devices, or to customize the home screen experiences on your fully managed devices.
+Use these settings to configure a kiosk-style experience on your dedicated or fully managed devices, or to customize the home screen experiences on your fully managed devices.  If you’re not sure which experience to configure, the diagram below can help you decide on the right option for your devices. If you’re still uncertain, see [Selecting a home screen experience for your Android Enterprise corporate-owned devices](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess). 
 
-**Enrollment profile type**: Select an enrollment profile type to start configuring Microsoft Launcher or the Microsoft Managed Home Screen on your devices. Your options:
+**Device experience type**: Select a device experience type to start configuring Microsoft Launcher or the Microsoft Managed Home Screen on your devices. Your options:
 
 - **Not configured**: Intune doesn't change or update this setting. By default, users might see the device's default home screen experience.
-- **Dedicated device**: Configure a kiosk-style experience on your dedicated devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available. Before you configure these settings, be sure to [add](../apps/apps-add-android-for-work.md), and [assign](../apps/apps-deploy.md) the apps you want on the devices.
+- **Kiosk mode (dedicated and fully managed)**: Configure a kiosk-style experience on your dedicated and fully managed devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available. Before you configure these settings, be sure to [add](../apps/apps-add-android-for-work.md), and [assign](../apps/apps-deploy.md) the apps you want on the devices.
 
   - **Kiosk mode**: Choose if the device runs one app or runs multiple apps.
 
@@ -247,7 +251,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     > - Device navigation buttons, like the home and overview buttons, are disabled and removed from view.
     > - The device's lock screen, like the keyguard, is disabled.
     >
-    > To use dialer & phone applications, or for your users to receive push notifications in kiosk mode, use the [Dedicated devices](#dedicated-devices) > **Enabled system navigation features** (with **Home button** options) and **System notifications and information** settings (in this article). These features are available on Android devices running 9.0 and newer.
+    > To use dialer & phone applications, or for your users to receive push notifications in kiosk mode, use the [Fully managed and Dedicated devices (kiosk mode only](#dedicated-devices) > **Enabled system navigation features** (with **Home button** options) and **System notifications and information** settings (in this article). These features are available on Android devices running 9.0 and newer.
     >
     > On OS 9 and newer, the [Device password](#device-password) > **Disable lock screen** (in this article) setting manages the device's lock screen behavior.
 
@@ -259,26 +263,29 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     - **Not configured**: Intune doesn't change or update this setting.
     - **Single app**: When users are on the devices, they can only access the app you selected. When the device starts, only the specific app starts. Users are restricted from changing the running app.
 
-      **Select an app to use for kiosk mode**: Select the Managed Google Play or Android Enterprise system app from the list. For single-app dedicated devices, the app you select **must be**:
+      **Select an app to use for kiosk mode**: Select the Managed Google Play or Android Enterprise system app from the list. For single-app dedicated and fully managed devices, the app you select **must be**:
 
       - [Added in Intune](../apps/apps-add-android-for-work.md).
-      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices.
+      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated or fully managed devices.
+
+          > [!NOTE]
+          > On fully managed devices, the only selected app that will apply is Managed Home Screen. All other apps will be treated as a required app instead.
   
     - **Multi-app**: Users can access a limited set of apps on the device. When the device starts, only the apps you add start. You can also add some web links that users can open. When the policy is applied, users see icons for the allowed apps on the home screen.
 
-      For multi-app dedicated devices, the **Managed Home Screen** app isn't required to be in the configuration profile, but the [Managed Home Screen app](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
+      For multi-app dedicated and fully managed devices, the **Managed Home Screen** app isn't required to be in the configuration profile, but the [Managed Home Screen app](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
 
       - [Added in Intune](../apps/apps-add-android-for-work.md).
-      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices.
+      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated or fully managed devices.
 
       Also, any packages you want launchable from Managed Home Screen **must be**:
 
       - [Added in Intune](../apps/apps-add-android-for-work.md).
-      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices.
+      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated or fully managed devices.
 
       When the **Managed Home Screen** app is added, any other installed apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
 
-      For more information on the Managed Home screen, see [setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
+      For more information on the Managed Home screen, see [Setup Microsoft Managed Home Screen on dedicated and fully managed devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
       > [!NOTE]
       > Not all **Managed Home Screen** settings are available from the device restrictions page. To view all settings available for **Managed Home Screen**, see [Configure the Microsoft Managed Home Screen app](../apps/app-configuration-managed-home-screen-app.md). 
@@ -294,9 +301,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
       - **Add**: Select your apps from the list.
 
-        If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../apps/apps-deploy.md) to the device group created for your dedicated devices.
+        If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../apps/apps-deploy.md) to the device group created for your dedicated or fully managed devices.
 
-        You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
+        You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated or fully managed devices](../apps/apps-deploy.md).
 
         > [!IMPORTANT]
         > When using multi-app mode, every app in the policy must be a required app, and must be assigned to the devices. If an app isn't required, or isn't assigned, then the devices can lock out users, and show a `Contact your IT admin. This phone will be erased.` message.
@@ -343,7 +350,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
       - **Leave kiosk mode code**: Enter a 4-6 digit numeric PIN. The administrator uses this PIN to temporarily pause kiosk mode.
 
-      - **Set custom URL background**: Enter a URL to customize the background screen on the dedicated device. For example, enter `http://contoso.com/backgroundimage.jpg`.
+      - **Set custom URL background**: Enter a URL to customize the background screen on the dedicated or fully managed device. For example, enter `http://contoso.com/backgroundimage.jpg`.
 
         > [!NOTE]
         > For most cases, we recommend starting with images of at least the following sizes:
@@ -355,11 +362,11 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         >
         > Modern displays have higher pixel densities and can display equivalent 2K/4K definition images.
 
-      - **Shortcut to settings menu**: **Disable** hides the Managed Settings shortcut on the Managed Home Screen. Users can still swipe down to access the settings. On the updated Managed Home Screen workflow, the **Managed Settings** menu is available from the top bar. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Managed Settings shortcut is shown on devices. Users can also swipe down to access these settings. On the updated Managed Home Screen workflow, users can select the settings icon to access settings.  
+      - **Shortcut to settings menu**: **Disable** hides the Managed Settings shortcut on the Managed Home Screen. Users can still access the **Managed Settings** menu from the top bar. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Managed Settings shortcut is shown on devices. Users can select the settings icon to access settings.  
 
       - **Quick access to debug menu**: This setting controls how users access the debug menu. Your options:
 
-        - **Enable**: Users can access the debug menu easier. Specifically, they can swipe down, or use the Managed Settings shortcut or Managed Settings menu on the updated Managed Home Screen workflow. As always, they can continue to select the back button 15 times.
+        - **Enable**: Users can access the debug menu easier. Specifically, they can access it from the Managed Settings menu. As always, they can continue to select the back button 15 times.
         - **Not configured** (default): Intune doesn't change or update this setting. By default, easy access to the debug menu is turned off. Users must select the back button 15 times to open the debug menu.
 
         In the debug menu, users can:
@@ -392,7 +399,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         >
         > - On Android 11 devices, when users connect to a network using the Managed Home Screen, they're prompted to consent. This prompt comes from Android, and isn't specific to the Managed Home Screen.
         >
-        > - On Android 10 devices, when users connect to a network using the Managed Home Screen, a notification prompts them to consent. So, users need access to the status bar and notifications to consent. To enable system notifications, see [General settings for dedicated devices](#dedicated-devices) (in this article).
+        > - On Android 10 devices, when users connect to a network using the Managed Home Screen, a notification prompts them to consent. So, users need access to the status bar and notifications to consent. To enable system notifications, see [General settings for fully managed and dedicated devices](#fully-managed-and-dedicated-devices) (in this article).
         >
         > - On Android 10 devices, when users connect to a password protected Wi-Fi network using the Managed Home Screen, they're prompted for the password. If the device is connected to an unstable network, then the Wi-Fi network changes. This behavaior happens even when users enter the correct password.
 
@@ -437,7 +444,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         >  - If the system's lock screen timeout is longer than the number of seconds for device to show the screensaver, then the screensaver shows until the lock screen appears.
         >  - If the system's lock screen timeout is shorter than the number of seconds the device is inactive, then the screensaver shows as soon as the device's lock screen appears.
 
-      - **MHS Sign-in screen**: **Enable** shows a sign-in screen on the Managed Home Screen. When set to **Not configured** (default), Intune doesn't change or update this setting. This sign-in screen and related settings are intended for use on dedicated devices enrolled with Microsoft Entra shared device mode.
+      - **MHS Sign-in screen** (*Dedicated devices only*): **Enable** shows a sign-in screen on the Managed Home Screen. When set to **Not configured** (default), Intune doesn't change or update this setting. This sign-in screen and related settings are intended for use on dedicated devices enrolled with Microsoft Entra shared device mode.
 
         When enabled, also configure:
 
@@ -456,7 +463,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
           - **Number of seconds device is inactive before automatically signing user out​**: Define the period of inactivity, in seconds, before user is automatically signed out from Managed Home Screen. By default, this value is set to 300 seconds. 
           - **Number of seconds to give user notice before automatically signing them out**: Define the amount of time, in seconds, for user to have option to resume their session before getting automatically signed out from Managed Home Screen. By default, this value is set to 60 seconds. 
 
-- **Fully managed**: Configures the Microsoft Launcher app on fully managed devices.
+- **Microsoft launcher (fully managed only)**: Configures the Microsoft Launcher app on fully managed devices. This option is best suited for devices which should provide the end user access to all applications and settings on the device.
 
   - **Make Microsoft Launcher the default launcher**: **Enable** sets Microsoft Launcher as the default launcher on the home screen. If you make Launcher the default, users can't use another launcher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Microsoft Launcher isn't forced as the default launcher.
   - **Configure custom wallpaper**: In the Microsoft Launcher app, **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.

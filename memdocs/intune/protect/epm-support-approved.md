@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/25/2024
+ms.date: 02/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,7 +16,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
  
-ms.reviewer: mattcall
+ms.reviewer: miked"
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -78,7 +78,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
     Once the request is approved, Intune notifies the device and initiates a sync. *This can take some time.* Intune uses a notification on the device to alert the user that they can now successfully run the file with the *Run with elevated* access right-click option.
 
-  - **For denials**: Intune does not notify the user. The administrator should manually notify the user that their request was denied.
+  - **For denials**: Intune doesn't notify the user. The administrator should manually notify the user that their request was denied.
 
 - **Auditing for elevation requests**
 
@@ -101,7 +101,7 @@ For more information about all the permissions for managing EPM, see [Role-based
 
 ## Create policy for support approved file elevations
 
-To create support-approved elevation policy, use the same workflow for creating other EPM elevation rule policies. See [Create a Windows elevation rules policy](../protect/epm-policies.md#create-a-windows-elevation-rules-policy) in *Configure policies for Endpoint Privilege Management*.
+To create support-approved elevation policy, use the same workflow for creating other EPM elevation rule policies. See [Windows elevation rules policy](../protect/epm-policies.md#windows-elevation-rules-policy) in *Configure policies for Endpoint Privilege Management*.
 
 ## Manage pending elevation requests
 
@@ -112,22 +112,24 @@ Use the following procedure as guidance for reviewing and managing elevation req
 1. The elevation request details include the following information:
 
     1. **General details**:
-        1. **File** - The name of the file that was requested for elevation.
-        1. **Publisher** - The name of the publisher that signed the file that was requested for elevation. The name of the publisher is a link that retrieves the certificate chain for the file for download.
-        1. **Device** - The device where the elevation was requested from. The device name is a link that opens the device object in the admin center.
-        1. **Intune compliant** - The Intune compliance state of the device.
+       - **File** - The name of the file that was requested for elevation.
+       - **Publisher** - The name of the publisher that signed the file that was requested for elevation. The name of the publisher is a link that retrieves the certificate chain for the file for download.
+       - **Device** - The device where the elevation was requested from. The device name is a link that opens the device object in the admin center.
+       - **Intune compliant** - The Intune compliance state of the device.
 
     1. **Request details**:
-        1. **Status** - Status of the request. Requests start as *Pending* and can be either *approved* or *denied* by an administrator.
-        1. **By** - The account of the administrator who *approved* or *denied* the request.
-        1. **Last modified** - The last time the request entry was modified.
-        1. **User's justification** - The justification provided by the user for the elevation request.
-        1. **Approval expiration** - The time that the approval expires. Until this expiry time is reached, elevation of the approved file is allowed.
-        1. **Admin's reason** - Justification provided by the admin when an *approval* or *denial* is completed.
+       - **Status** - Status of the request. Requests start as *Pending* and can be either *approved* or *denied* by an administrator.
+       - **By** - The account of the administrator who *approved* or *denied* the request.
+       - **Last modified** - The last time the request entry was modified.
+       - **User's justification** - The justification provided by the user for the elevation request.
+       - **Approval expiration** - The time that the approval expires. Until this expiry time is reached, elevation of the approved file is allowed.
+       - **Admin's reason** - Justification provided by the admin when an *approval* or *denial* is completed.
 
     1. **File information** - Specifics of the metadata for the file that was requested for approval.
 
-    :::image type="content" source="./media/epm-support-approved/sample-request-detail.png" alt-text="Image that displays the detail of an elevation request." lightbox="./media/epm-support-approved/sample-request-detail.png":::
+   :::image type="content" source="./media/epm-support-approved/sample-request-detail.png" alt-text="Image that displays the detail of an elevation request." lightbox="./media/epm-support-approved/sample-request-detail.png":::
+
+1. When your Tenant is licensed for [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot), you have access to use the [Analyze with Copilot](#use-microsoft-security-copilot-to-analyze-file-elevation-requests) option, which is at the upper right of the Elevation request properties pane. You can use this option to have Security Copilot work with Microsoft Defender for Endpoint to evaluate the file in the elevation request before you approve or deny it.
 
 1. After an admin reviews a request, they can select **Approve** or **Deny**. With either selection, they're presented with the **justification** dialog where they can provide a *Reason* with detail about their decision. Providing a reason is optional. The following displays the approval dialog:
 
@@ -145,9 +147,51 @@ Use the following procedure as guidance for reviewing and managing elevation req
 
 > [!NOTE]
 >
-> Elevation requests contains all the information needed to create an elevation rule if required, including the *complete* certificate chain. Support approved elevations also show in the elevation usage data like any other elevation requests.
+> An elevation request contains all the information needed to create an elevation rule, including the *complete* certificate chain. Support approved elevations also show in the elevation usage data like any other elevation requests.
 
-## Next steps
+## Use Microsoft Security Copilot to analyze file elevation requests
+
+With Endpoint Privilege Management (EPM) plus [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot), you can use Security Copilot to reduce the work required to identify and investigate the files in a file elevation request before you choose to approve or deny the request. The information Security Copilot uses to help you evaluate files and establish trust is collected and evaluated through [Microsoft Defender Threat Intelligence](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) (Defender TI).
+
+For example, when viewing the file properties for an elevation request, you can select the option to **Analyze with Copilot** to have Security Copilot provide details that are often not apparent, including:
+
+- The apps reputation 
+- Information about the trust of the publisher
+- The risk score for the user requesting the elevation
+- The Risk score of the device from which the elevation was submitted. 
+
+### Prerequisites for using Security Copilot with EPM
+
+To use Microsoft Security Copilot with Endpoint Privilege Management, your tenant must be licensed to use Security Copilot(/copilot/security/get-started-security-copilot#minimum-requirements). This requirement is in addition to the [prerequisites](../protect/epm-overview.md#prerequisites) for using Endpoint Privilege Management.
+
+If your Tenant is already licensed for EPM and for Security Copilot, no additional license or configuration is required.  
+
+### Workflow to analyze file requests
+
+You can have Microsoft Security Copilot analyze the properties of a file while you're reviewing a file elevation request:
+
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Endpoint Privilege Management** and select the **Elevation requests** tab*.
+
+2. On *Elevation requests*, select the name of an elevation request to open the *Elevation request properties* pane where you can then review that files details.
+
+3. To direct Security Copilot to take a closer look at the file, select **Analyze with Copilot** on the *Elevation request properties* pane. When selected, Intune creates a closed Copilot prompt based on the files hash. This prompt uses Microsoft Defender for Endpoint to investigate the file. Custom or open prompts for file analysis aren't supported.
+
+4. After the file is analyzed, the results are returned to the admin center where you can review the files details. You can use this detailed information to make a more informed decision to either approve or deny the elevation request.
+
+**Example**:
+The following images display the path and results of an admin using the Intune the admin center path to locate and select a file elevation request that was submitted by a user. The request is a file named *InstallPrinter.msi*. When the file is selected, its *Elevation request properties* open: 
+
+:::image type="content" source="./media/epm-support-approved/analyze-with-copilot.png" alt-text="Screen capture that displays the path and location of the Analyze with Copilot option." lightbox="./media/epm-support-approved/analyze-with-copilot.png":::
+
+When the admin reviews the file, they note that the file has an unknown publisher. To verify that this file is legitimate, they use the Analyze with Copilot option from the Elevation request properties to have Copilot take a closer look. 
+
+Copilot reviews the file and reports back the following details:
+
+:::image type="content" source="./media/epm-support-approved/malicious-file-results.png" alt-text="Screen capture that displays an example of results from use of the Analyze with Copilot option." lightbox="./media/epm-support-approved/malicious-file-results.png":::
+ 
+The preceding image shows a screen capture of the Copilot report on the reputation of that *InstallPrinter.msi* file. In this example, the file is identified as malicious and shouldn’t be approved to run in an elevated context. The results also include additional information and links to references for the malicious file that was identified.
+
+## Related content
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)

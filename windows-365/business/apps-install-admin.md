@@ -6,11 +6,11 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 10/18/2023
+ms.date: 09/26/2024
 audience: Admin
 ms.topic: how-to
 ms.service: windows-365
-ms.subservice:
+ms.subservice: windows-365-business
 ms.localizationpriority: high
 ms.assetid: 
 

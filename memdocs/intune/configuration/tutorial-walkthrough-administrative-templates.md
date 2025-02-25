@@ -32,7 +32,7 @@ ms.collection:
 #Customer intent: As an administrator, I want learn and use ADMX templates in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows 10/11 devices.
 ---
 
-# Walkthrough: Use the cloud to configure group policy on Windows 10/11 devices with ADMX templates and Microsoft Intune
+# Walkthrough: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune
 
 > [!NOTE]
 > This walkthrough was created as a technical workshop for Microsoft Ignite. It has more prerequisites than typical walkthroughs, as it compares using and configuring ADMX policies in Intune and on-premises.
@@ -40,7 +40,7 @@ ms.collection:
 Group policy administrative templates, also known as ADMX templates, include settings you can configure on Windows client devices, including PCs. The ADMX template settings are available by different services. These settings are used by Mobile Device Management (MDM) providers, including Microsoft Intune. For example, you can turn on Design Ideas in PowerPoint, set a home page in Microsoft Edge, and more.
 
 > [!TIP]
-> For an overview of ADMX templates in Intune, including the ADMX templates built-in to Intune, go to [Use Windows 10/11 ADMX templates in Microsoft Intune](administrative-templates-windows.md).
+> For an overview of ADMX templates in Intune, including the ADMX templates built-in to Intune, go to [Use Windows ADMX templates in Microsoft Intune](administrative-templates-windows.md).
 
 For more information on ADMX policies, go to [Understanding ADMX-backed policies](/windows/client-management/mdm/understanding-admx-backed-policies).
 
@@ -202,7 +202,7 @@ In these next steps, you create security groups, and add users to these groups. 
   - [Dynamic Group Membership in Microsoft Entra ID (Part 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
   - [Dynamic Group Membership in Microsoft Entra ID (Part 2)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Microsoft Entra ID P1 or P2 includes other services that are commonly used when managing apps and devices, including [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access](/azure/active-directory/conditional-access/overview).
+- Microsoft Entra ID P1 or P2 includes other services that are commonly used when managing apps and devices, including [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [Conditional Access](/azure/active-directory/conditional-access/overview).
 
 - Many administrators ask when to use user groups and when to use device groups. For some guidance, go to [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
 

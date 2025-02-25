@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/09/2024
+ms.date: 12/18/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -52,8 +52,253 @@ For more information about public preview items, see [Public preview in Windows 
 ### Scripts
 ### End user experience
 ### Windows 365 Government
-### Windows 365 app
+### Windows 365 app 
 -->
+
+<!-- ########################## -->
+## Week of December 17, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Restore, restart, and troubleshoot actions in the Cloud PCs that aren't available report<!--46873590-->
+
+You can now use the **Bulk device actions** command on the **Cloud PCs that aren't available** report to restore, restart, and troubleshoot actions directly from the report. For more information, see [Cloud PCs that aren't available report](report-cloud-pcs-not-available.md).
+
+<!-- ########################## -->
+## Week of December 9, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Move selected Cloud PCs to a new region<!--50290712-->
+
+You can now move selected Cloud PCs to a new region. This is instead of moving all Cloud PCs in a provisioning policy.
+
+<!-- ########################## -->
+## Week of December 2, 2024 (Service release 2411)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Intune scope tags are now generally available<!--51133268-->
+
+Windows 365 support for [Intune scope tags](/mem/intune/fundamentals/scope-tags) has moved out of preview and into general availability. For more information, see [Scope tags](role-based-access.md#scope-tags).
+
+#### Create and share restore points for up to 5,000 Cloud PCs<!--53500693-->
+
+You can now bulk create restore points for up to 5,000 Cloud PCs. You can then share the restore points to a specified Azure storage account. For more information, see [Create multiple manual restore points in bulk](create-manual-restore-point.md#create-multiple-manual-restore-points-in-bulk). 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Dedicated and shared data on Connected Frontline Cloud PCs report<!--54334437--> 
+
+The Connected Frontline Cloud PCs report now shows:
+
+- Separate data for dedicated versus shared Frontline Cloud PCs.
+- The user that is currently connected and their session length
+- Ability to restart Frontline Cloud PCs to disconnect user from their session and bring concurrency below threshold limits.
+
+For more information see [Connected Frontline Cloud PCs](report-connected-frontline-cloud-pcs.md).
+
+#### Cloud PC actions report support for moving Cloud PCs<!--53672561-->
+
+You can use the Cloud PC actions report to see the status of moving Cloud PCs to new regions.
+
+#### Windows 365 Government supports bulk Troubleshoot action<!--54758451-->
+
+The Troubleshoot remote action can now be used in bulk with Windows 365 Government. For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Azure network connection limit increased<!--54859923-->
+
+The Azure network connection limit for each tenant has been increased. For more information, see [Maximum azure network connections](azure-network-connections.md#maximum-azure-network-connections).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Windows 365 now supports Israel Central<!--54918015-->
+
+Windows 365 Enterprise now supports the Israel Central region in the Middle East geography. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- ########################## -->
+## Week of November 19, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Frontline
+
+#### Windows 365 Frontline in shared mode (preview)<!--52583422-->
+
+Windows 365 Frontline in shared mode gives you the ability to provision a collection of Cloud PCs that can be used across multiple users mapped to a Microsoft Entra ID group. One active Cloud PC is permitted per license. For more information, see [Windows 365 Frontline in shared mode](introduction-windows-365-frontline.md#windows-365-frontline-in-shared-mode-preview).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Configure client device redirection settings for Windows App on iOS/iPadOS/Android using Microsoft Intune<!--51893843-->
+
+You can now use Microsoft Intune Mobile Application Management to check for device posture and manage redirections for Windows App on iOS, iPadOS, and Android (preview). You can use Microsoft Intune on both corporate managed and personal devices.
+
+For more information, see [Configure client device redirection settings for Windows App and the Remote Desktop app using Microsoft Intune](/azure/virtual-desktop/client-device-redirection-intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Support for FIDO devices and passkeys on macOS and iOS<!--53495787-->
+
+Windows App and the Remote Desktop app for macOS and iOS now support FIDO devices and passkeys for Microsoft Entra ID sign in on brokered and unbrokered devices.
+For more information see [Support for FIDO2 authentication with Microsoft Entra ID](/entra/identity/authentication/concept-fido2-compatibility#native-application-support).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Use Citrix HDX Plus with Windows 365 Frontline<!--54445358-->
+
+You can now use Citrix HDX Plus with Windows 365 Frontline Cloud PCs.
+
+<!-- ########################## -->
+## Week of October 28, 2024 (Service release 2410)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Bulk Troubleshoot action now generally available<!--51893512-->
+
+The Troubleshoot action in bulk has moved out of preview and into general availability.
+
+For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+#### Microsoft Remote Desktop iOS client now supports Yubikey smart card redirection<!--49237449-->
+
+The Microsoft Remote Desktop iOS client now supports smart card redirection for YubiKeys using USB-C or Lightning connector. This enables in-session smart card usage.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+### Update to Cloud PC action status report<!--49451077-->
+
+The Cloud PC action status report now shows batches of devices on which actions were triggered. You can see the batch current progress. For more information, see [Cloud PC actions report ](report-cloud-pc-actions.md).
+
+### Azure network connections inactive state<!--52127015-->
+
+Azure network connections that meet either of the following conditions for more than four weeks are now marked as inactive:
+
+- ANCs that aren't associated with provisioning policies.
+- ANCs with provisioning policies that have no Cloud PCs associate with them.
+
+#### Cloud PC connection quality report now available for Windows 365 Government<!--46738280-->
+
+The Cloud PC connection quality report is now available for Windows 365 Government, both Government Community Cloud (GCC) and GCC-High. For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md). 
+
+<!-- ########################## -->
+## Week of October 21, 2024
+
+#### Windows 365 support for AVC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+
+AVC Mixed Mode is now available in the default graphics profile. When MMR isn't enabled, AVC/h.264 is used to encode detected image content instead of the RemoteFX image encoder. This improves performance when encoding images relative to bitrate and framerate in network-constrained scenarios.
+
+<!-- ########################## -->
+## Week of October 14, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New Windows 365 IP subnet for RDP connectivity<!--53404845-->
+
+Core TCP-based RDP traffic for Cloud PC connections uses the *.wvd.microsoft.com wildcard fully qualified domain name (FQDN). The FQDN remains unchanged, but the underlying IP addresses associated with it will shortly be changed to a single subnet. This will simplify optimization of this traffic and reduce the need for future change management.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Call redirection<!--53718424-->
+
+Windows 365 now supports multimedia redirection call redirection. For more information, see [Use multimedia redirection](/azure/virtual-desktop/multimedia-redirection).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### HP Anyware for Windows 365 is now generally available<!--51133111-->
+
+HP Anyware for Windows 365 has moved out of preview and into general availability.
+
+For more information, see [Set up HP Anyware for Windows 365 Enterprise](hp-anyware-set-up.md)
+
+
+<!-- ########################## -->
+## Week of September 30, 2024 (Service release 2409)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Unavailable Cloud PCs report added to Reporting overview page<!--53687085-->
+
+The **Cloud PCs that aren't available** report has been added to the **Reports** > **Cloud PC overview** page.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Windows 11 24H2 cloud PCs gallery images<!--53461426-->
+
+The latest Windows Enterprise 24H2 images are available for provisioning new devices. You can update your provisioning policies to use either of the following images:
+
+- Windows 11 Enterprise 24H2
+- Windows 11 Enterprise + Microsoft 365 Apps 24H2
+
+
+<!-- ########################## -->
+## Week of September 23, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 11 Cloud PCs now support EN-NZ<!--54032315-->
+
+Windows 365 Cloud PCs now support EN-NZ for Windows 11.
+
+<!-- ########################## -->
+## Week of September 16, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for symmetric NAT with RDP Shortpath<!--43602619-->
+
+RDP Shortpath in Windows 365 now supports establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT. TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+### Windows 365 support for HEVC video coding<!--51599459-->
+Windows 365 will support Hardware High Efficiency Video Coding (HEVC) h.265 4:2:0 on Compatible GPU-enabled Cloud PCs. For more information, see [Enable GPU acceleration for Azure Virtual Desktop](/azure/virtual-desktop/enable-gpu-acceleration?tabs=intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows App
+
+#### Windows App is now generally available<!--46667283-->
+
+Windows App has moved out of preview and into general availability.
+
+For more information, see [What is Windows App?](/windows-app/overview)
+
+<!-- ########################## -->
+## Week of August 26, 2024 (Service release 2408)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Azure Monitor support on Windows 365 Cloud PCs<!--53421756-->
+
+Azure Monitor Agent can now  be installed on Windows 365 Enterprise and Windows 365 Government Cloud PCs. For more information, see [Azure Monitor overview](/azure/azure-monitor/overview).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Session lock experience configuration for single sign-on<!--48440155-->
+
+You can now configure the remote session lock experience when single sign-on is enabled between the default disconnect behavior and showing the remote lock screen. For more information, see [Configure single sign-on for Windows 365 using Microsoft Entra authentication](configure-single-sign-on.md).
+
+#### Windows 365 support for Microsoft Purview Customer Key is now generally available<!--46980464-->
+
+Windows 365 support for encrypting Cloud PCs by setting up Microsoft Purview Customer Key has moved out of preview and into general availability. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
 
 <!-- ########################## -->
 ## Week of August 5, 2024
@@ -79,7 +324,7 @@ Uni-directional clipboard support for Cloud PCs has moved out of preview and is 
 
 To help secure your Windows 365 environment, the inbound port 3389 is now closed by default.
 
-#### Windows 365 support for FAC mixed mode when MMR isn't enabled (preview)<!--50205898-->
+#### Windows 365 support for AVC mixed mode when MMR isn't enabled (preview)<!--50205898-->
 
 Windows 365 now supports AVC mixed mode when MMR is not enabled.
 
@@ -116,9 +361,9 @@ New GPU offerings for Window 365 Enterprise Cloud PCs have moved out of preview 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Frontline
 
-#### Windows 365 Frontline sign in time and shift change buffer improvements are now generally available<!--50220027-->
+#### The Windows 365 Frontline concurrency buffer is now generally available<!--50220027-->
 
-Sign in time and shift change buffer improvements have moved out of preview and into general availability.
+The Windows 365 concurrency buffer has moved out of preview and into general availability.
 
 <!-- ########################## -->
 ## Week of July 23, 2024
@@ -181,7 +426,7 @@ Customers that have Modern Microsoft Cloud Agreements can upgrade their existing
 
 #### Single sign-on Windows 365 clients authentication change<!--49918010-->
 
-Single sign-on for Windows 365 is transitioning to use the Windows Cloud Login Entra ID cloud app for Windows authentication starting with the Windows and Web clients. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+Single sign-on for Windows 365 is transitioning to use the Windows Cloud Login Entra ID cloud app for Windows authentication starting with the Windows and Web clients. For more information, see [Set Conditional Access policies](set-conditional-access-policies.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -437,7 +682,7 @@ For more information, see [Microsoft Purview Customer Lockbox](/purview/customer
 
 #### New faster sign-in frequency option (preview)<!--48439987-->
 
-When single sign-on is enabled, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option provides a faster reauthentication period of 5-10 minutes depending on the client used. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+When single sign-on is enabled, selecting the **Conditional Access** > **Session** > **Sign-in frequency** > **Every time** option provides a faster reauthentication period of 5-10 minutes depending on the client used. For more information, see [Set Conditional Access policies](set-conditional-access-policies.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Boot
@@ -905,7 +1150,7 @@ Users now have two options when they select the **Open in browser** drop-down bu
 
 #### Windows 365 app update notifications for users<!--45206957-->
 
-Windows 365 app users will get a notification when an udpate is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
+Windows 365 app users will get a notification when an update is available. If users choose to update, the app closes and they'll get a Windows notification when the update is complete.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot

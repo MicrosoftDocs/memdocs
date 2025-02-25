@@ -2,7 +2,7 @@
 title: Overview of Windows Autopilot
 description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
 ms.service: windows-client
-ms.subservice: itpro-deploy
+ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -35,7 +35,7 @@ Windows Autopilot simplifies the Windows device lifecycle, for both IT and end u
 
 See the following video:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4C7G9?autoplay=false]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=af8941a0-1b9c-4bbd-8b75-9754d8badf56]
 
 > [!NOTE]
 >
@@ -84,5 +84,5 @@ For a tutorial with detailed instructions on configuring Windows Autopilot, see 
 
 ## Related content
 
-- [Enroll Windows devices in Intune by using Windows Autopilot](/intune/enrollment-autopilot).
+- [Enroll Windows devices in Intune by using Windows Autopilot](enrollment-autopilot.md).
 - [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md).

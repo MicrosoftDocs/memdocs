@@ -2,12 +2,12 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
-ms.date: 08/08/2024
+ms.date: 09/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
+author: BalaDelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -364,9 +364,12 @@ The site server uses the **Exchange Server connection account** to connect to th
 
 ### Management point connection account
 
-The management point uses the **Management point connection account** to connect to the Configuration Manager site database. It uses this connection to send and retrieve information for clients. The management point uses its computer account by default, but you can configure a user account instead. When the management point is in an untrusted domain from the site server, you must specify a user account.
+The management point uses the **Management point connection account** to connect to the Configuration Manager site database. It uses this connection to send and retrieve information for clients. The management point uses its computer account by default, but you can configure an alternate service account instead. When the management point is in an untrusted domain from the site server, you must specify an alternate service account.
 
-Create the account as a low-right local account on the computer that runs Microsoft SQL Server.
+  > [!NOTE]
+  > For enhanced security posture it is recommended to leverage alternate service account rather than Computer account for ‘Management point connection account’.
+
+Create the account as a low-right service account on the computer that runs Microsoft SQL Server.
 
 > [!IMPORTANT]
 > - Don't grant interactive sign-in rights to this account.
@@ -374,18 +377,25 @@ Create the account as a low-right local account on the computer that runs Micros
 
 ### Multicast connection account
 
-Multicast-enabled distribution points use the **Multicast connection account** to read information from the site database. The server uses its computer account by default, but you can configure a user account instead. When the site database is in an untrusted forest, you must specify a user account. For example, if your data center has a perimeter network in a forest other than the site server and site database, use this account to read the multicast information from the site database.
+Multicast-enabled distribution points use the **Multicast connection account** to read information from the site database. The server uses its computer account by default, but you can configure a service account instead. When the site database is in an untrusted forest, you must specify a service account. For example, if your data center has a perimeter network in a forest other than the site server and site database, use this account to read the multicast information from the site database.
 
-If you need this account, create it as a low-right local account on the computer that runs Microsoft SQL Server.
+If you need this account, create it as a low-right service account on the computer that runs Microsoft SQL Server.
+
+> [!NOTE]
+  > For enhanced security posture it is recommended to leverage service account rather than Computer account for ‘Multicast connection account’.
 
 > [!IMPORTANT]
-> Don't grant interactive sign-in rights to this account.
+> Don't grant interactive sign-in rights to this service account.
 
 For more information, see [Use multicast to deploy Windows over the network](../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).
 
 ### Network access account
 
-Client computers use the **network access account** when they can't use their local computer account to access content on distribution points. It mostly applies to workgroup clients and computers from untrusted domains. This account is also used during OS deployment, when the computer that's installing the OS doesn't yet have a computer account on the domain.
+Client computers use the **network access account** when they can't use their local computer account to access content on distribution points. It mostly applies to workgroup clients and computers from untrusted domains.
+This account is also used during OS deployment, when the computer that's installing the OS doesn't yet have a computer account on the domain.
+
+> [!NOTE]
+> Managing clients in untrusted domains and cross-forest scenarios allows for multiple network access accounts.
 
 > [!IMPORTANT]
 > The network access account is never used as the security context to run programs, install software updates, or run task sequences. It's used only for accessing resources on the network.
@@ -435,7 +445,6 @@ The network access account is still required for the following actions (includin
 
 - Task Sequence properties setting to **Run another program first**. This setting runs a package and program from a network share before the task sequence starts. For more information, see [Task sequences properties: Advanced tab](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#advanced-tab).
 
-- Managing clients in untrusted domains and cross-forest scenarios allows for multiple network access accounts.
 
 ### Package access account
 
@@ -523,7 +532,7 @@ This account requires local administrative permissions on the target site system
 > [!TIP]
 > If you have many domain controllers and these accounts are used across domains, before you set up the site system, check that Active Directory has replicated these accounts.
 >
-> When you specify a local account on each site system to be managed, this configuration is more secure than using domain accounts. It limits the damage that attackers can do if the account is compromised. However, domain accounts are easier to manage. Consider the trade-off between security and effective administration.
+> When you specify a service account on each site system to be managed, this configuration is more secure. It limits the damage that attackers can do. However, domain accounts are easier to manage. Consider the trade-off between security and effective administration.
 
 ### Site system proxy server account
 
@@ -740,7 +749,7 @@ Configuration Manager grants access to the account used for the reporting servic
 
 ## Elevated permissions
 
-Configuration Manager requires some accounts to have elevated permissions for on-going operations. For example, see [Prerequisites for installing a primary site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). The following list summarizes these permissions and the reasons why they're needed.
+Configuration Manager requires some accounts to have elevated permissions for ongoing operations. For example, see [Prerequisites for installing a primary site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). The following list summarizes these permissions and the reasons why they're needed.
 
 - The computer account of the primary site server and central administration site server requires:
 

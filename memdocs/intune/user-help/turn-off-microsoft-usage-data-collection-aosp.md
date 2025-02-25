@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/29/2023
+ms.date: 10/10/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -34,6 +34,8 @@ In-app performance and usage data is automatically anonymized and shared with Mi
 
 To turn off data collection:    
 
-1. Open the Intune app.  
-2. Select the menu button > **Settings**.
-3. Turn **Usage data** off.  
+1. Open the Intune app.
+  
+1. Select the menu button > **Settings**.
+   
+1. Turn **Usage data** off.  

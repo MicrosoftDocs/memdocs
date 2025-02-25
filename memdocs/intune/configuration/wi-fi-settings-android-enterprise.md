@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Wi-Fi settings for Android Enterprise and kiosk devices - Microsoft Intune | Microsoft Docs
+title: Add Wi-Fi settings for Android Enterprise devices in Microsoft Intune
 description: Create or add a WiFi device configuration profile for Android Enterprise and Android Kiosk. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune. For kiosk devices, also enter the Pre-shared key of your network.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/18/2024
+ms.date: 12/11/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,7 +28,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices in Microsoft Intune
+# Add Wi-Fi settings for Android Enterprise devices in Microsoft Intune
 
 You can create a profile with specific Wi-Fi settings, and then deploy this profile to your Android Enterprise fully managed and dedicated devices. Microsoft Intune offers many features, including authenticating to your network, using a pre-shared key, and more.
 
@@ -67,7 +67,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
   When devices are connected to another preferred Wi-Fi connection, then they don't automatically connect to this Wi-Fi network. If devices fail to connect automatically when this setting is enabled, then disconnect the devices from any existing Wi-Fi connections.
 
 - **Hidden network**: Select **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Select **Disable** to show this network in the list of available networks on the device.
-- **Wi-Fi type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
+- **Security type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
 
   - **Open (no authentication)**: Only use this option if the network is unsecured.
   - **WEP-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
@@ -258,6 +258,25 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 - **Wi-Fi type**: Select **Basic**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
 - **Hidden network**: Select **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Select **Disable** to show this network in the list of available networks on the device.
+- **Wi-Fi type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
+
+  - **Open (no authentication)**: Only use this option if the network is unsecured.
+  - **WEP-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
+
+    > [!WARNING]
+    > On Android 12 and later, Google deprecated support for WEP pre-shared keys (PSK) in Wi-Fi configuration profiles. It's possible WEP might still work. But, it's not recommended and is considered obsolete. Instead, use WPA pre-shared keys (PSK) in your Wi-Fi configuration profiles.
+    >
+    > For more information, go to the [Android developer reference - WifiConfiguration.GroupCipher](https://developer.android.com/reference/android/net/wifi/WifiConfiguration.GroupCipher#summary).
+
+  - **WPA-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
+
+- **Proxy settings**: Select a proxy configuration. Your options:
+
+  - **None**: No proxy settings are configured.
+
+  - **Automatic**: Use a file to configure the proxy server. Enter the **Proxy server URL** that contains the configuration file. For example, enter `http://proxy.contoso.com`, `10.0.0.11`, or `http://proxy.contoso.com/proxy.pac`.
+
+    For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
 ### Enterprise (personally owned work profile)
 
@@ -320,6 +339,6 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
 - The profile is created, but might not be doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows 10](wi-fi-settings-windows.md).
+- You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows](wi-fi-settings-windows.md).
 
 - [Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).

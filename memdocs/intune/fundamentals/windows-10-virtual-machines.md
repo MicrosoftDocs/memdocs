@@ -8,7 +8,7 @@ keywords:
 author: Smritib17  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 02/13/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,19 +31,19 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Using Windows 10 virtual machines with Intune
+# Using Windows 10/11 virtual machines with Intune
 
 Intune supports managing virtual machines running Windows 10 Enterprise with certain limitations. Intune management doesn't depend on, or interfere with Azure Virtual Desktop management of the same virtual machine.
 
 ## Enrollment
 
-- We recommend that you don't use Intune to manage on-demand, session-host virtual machines, also known as non-persistent virtual desktop infrastructure (VDI). Each VM must be enrolled when it's created. Also, regularly deleting VMs creates orphaned device records in Intune until they're [cleaned up](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules).
+- We recommend that you don't use Intune to manage on-demand, session-host virtual machines, also known as non-persistent virtual desktop infrastructure (VDI). Each VM must be enrolled when it's created. Also, regularly deleting VMs creates orphaned device records in Intune until they're [cleaned up](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
 
 - Windows Autopilot Self-deploying and pre-provisioning deployment types aren't supported because they require a physical Trusted Platform Module (TPM).
 
-- Out of Box Experience (OOBE) enrollment isn't supported on VMs that can only be accessed by using RDP (such as VMs that are hosted on Azure).
+- Out of Box Experience (OOBE) enrollment isn't supported on non-persistent VMs that can only be accessed by using RDP (such as VMs that are hosted on Azure).
 This restriction means:
-  - Windows Autopilot and Commercial OOBE aren't supported.
+- Windows Autopilot and Commercial OOBE aren't supported.
   - Enrollment Status Page isn't supported.
 
 ## Configuration

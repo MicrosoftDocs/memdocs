@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/17/2024
+ms.date: 08/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,8 +56,8 @@ Applies to:
   - Any supported version of macOS
   - For Intune to manage antivirus settings on a device, Microsoft Defender for Endpoint must be installed on that device. See. [Microsoft Defender for Endpoint for macOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (In the Microsoft Defender for Endpoint documentation)
 
-- **Windows 10, Windows 11, and Windows Server**
-  - No additional prerequisites are required.  
+- **Windows**
+  - No additional prerequisites are required.
 
 **Support for Configuration Manager clients**:
 
@@ -98,13 +98,13 @@ Prerequisites to support tamper protection for devices managed by Intune:
 
 Profiles for *Antivirus* policy that support tamper protection for [devices managed by Microsoft Intune](#devices-managed-by-microsoft-intune):
 
-- Platform: **Windows 10, Windows 11, and Windows Server**
+- Platform: **Windows**
   - Profile: **Windows Security experience**  
 
   > [!NOTE]  
-  > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
+  > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform that is now named more simply as *Windows*.
   >
-  > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Intune through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+  > The *Windows* platform supports devices communicating with Intune through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
   >
   > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
@@ -121,7 +121,7 @@ Prerequisites to support managing tamper protection with these profiles:
 
  Profiles for *Antivirus* policy that support tamper protection for [devices managed by Configuration Manager](#devices-managed-by-configuration-manager):
 
-- Platform: **Windows 10, Windows 11, and Windows Server (ConfigMgr)**
+- Platform: **Windows (ConfigMgr)**
   - Profile: **Windows Security experience (preview)**
 
 ## Antivirus profiles
@@ -140,13 +140,13 @@ The following profiles are supported for devices you manage with Intune:
 
 **Windows**:
 
-- Platform: **Windows 10, Windows 11, and Windows Server**  
+- Platform: **Windows**  
   Profiles for this platform can be used with devices enrolled with Intune, and devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
   > [!NOTE]  
-  > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
+  > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform that is now named more simply as *Windows*.
   >
-  > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Intune through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+  > The *Windows* platform supports devices communicating with Intune through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
   >
   > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
   
@@ -167,6 +167,11 @@ The following profiles are supported for devices you manage with Intune:
     - Defender/ExcludedProcesses
 
     These CSPs for antivirus exclusion are also managed by *Microsoft Defender Antivirus* policy, which includes identical settings for exclusions. Settings from both policy types  (*Antivirus* and *Antivirus exclusions*) are subject to [policy merge](#policy-merge-for-settings), and create a super set of exclusions for applicable devices and users.
+
+    > [!WARNING]  
+    > **Defining exclusions lowers the protection offered by Microsoft Defender Antivirus**. Always evaluate the risks that are associated with implementing exclusions. Only exclude files you know aren't malicious.
+    >
+    > For more information, see [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions) in the Microsoft Defender documentation.
 
   - Profile: **Windows Security experience** - Manage the Windows Security app settings that end users can view in the Microsoft Defender Security center and the notifications they receive.
 
@@ -242,7 +247,7 @@ The information for this report is based on details available from the following
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
 
-View details for the Windows settings in the deprecated profiles for the *Windows 10 and later* platform:
+View details for the Windows settings in the deprecated profiles for the deprecated *Windows 10 and later* platform:
 
 - [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md)
 - [Antivirus exclusions](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions)

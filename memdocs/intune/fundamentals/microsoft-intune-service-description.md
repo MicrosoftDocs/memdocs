@@ -49,6 +49,8 @@ You can start to use Intune with a 30-day free trial that includes 100 user lice
 > [!NOTE]
 > If your organization has a Microsoft Online Services work or school account, and you might continue with this Intune subscription in production after the trial period ends, then choose the **Sign in** option on that page and authenticate by using the Global Administrator account for your organization. This action ensures that your Intune trial links to your existing work or school account.
 
+Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to the initial set up or emergency scenarios when you can't use an existing role.
+
 <!--- For a list of settings that you can set up on mobile devices, see:
 
 - [Enrolled device management capabilities of Microsoft Intune](introduction-intune.md)
@@ -64,7 +66,7 @@ Because the mobile device management ecosystem changes frequently with operating
 
 * [What's new in Microsoft Intune](whats-new.md). This topic is updated with the monthly service update and weekly when, for example, apps such as the Company Portal app are released.
 
-* Important service updates are also announced in the [Microsoft 365 admin center](https://admin.microsoft.com/) Message Center. If you install the companion [Microsoft 365 Admin mobile app](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), you can receive notifications on your mobile device. Learn more about how to work with the [Microsoft 365 Message Center](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+* Important service updates are also announced in the [Microsoft 365 admin center](https://admin.microsoft.com/) Message Center. If you install the companion [Microsoft 365 Admin mobile app](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), you can receive notifications on your mobile device. Learn more about how to work with the [Microsoft 365 Message Center](/microsoft-365/admin/manage/message-center).
 
   A few helpful hints:
 
