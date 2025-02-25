@@ -69,6 +69,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
 1. Go to **Profiles** > **Create**.  
 1. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile. Users don't see these details. You can use the name to create a dynamic group in Microsoft Entra ID. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
+    
     :::image type="content" source="./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment profile pane with the Basics tab selected.":::
 
 1. Select **Next** to go to the **Settings** page.
@@ -154,6 +155,7 @@ You can take action on one device at a time. For more information about where to
 
 
 ### Troubleshooting + Support     
+
 Go to **Troubleshooting + Support** in the Microsoft Intune admin center to:
 
 * See a list of iOS/iPadOS devices enrolled by a user.
