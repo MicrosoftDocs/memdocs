@@ -40,12 +40,12 @@ sections:
       - question: |
           Is Windows Autopilot device preparation available in all sovereign clouds?
         answer: |
-          Windows Autopilot device preparation is available for Government Community Cloud (GCC) High and U.S. Department of Defense (DoD). It'll be available for Intune operated by 21Vianet in China later this year.
+          Windows Autopilot device preparation is available for Government Community Cloud (GCC) High, U.S. Department of Defense (DoD), and Intune operated by 21Vianet in China.
 
       - question: |
           What scenarios does Windows Autopilot device preparation support?
         answer: |
-          Currently Windows Autopilot device preparation only supports the user-driven scenario.
+          Currently Windows Autopilot device preparation supports the user-driven scenario for physical devices and automatic deployment for Windows 365 Frontline for shared devices.
 
       - question: |
           What about the other Windows Autopilot scenarios like pre-provisioning and self-deploying mode?
@@ -125,10 +125,15 @@ sections:
           If multiple Windows Autopilot device preparation policies are deployed to a user, the policy with the highest priority gets priority. Policy priorities are displayed at the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
 
       - question: |
-          What makes Windows Autopilot device preparation deployments faster and more efficient than Windows Autopilot?
+          What makes Windows Autopilot device preparation deployments more efficient than Windows Autopilot?
         answer: |
-          The key to making Windows Autopilot device preparation deployments faster and more efficient than Windows Autopilot is [Enrollment Time Grouping](overview.md#enrollment-time-grouping). With Enrollment Time Grouping, devices are automatically added to an assigned device group specified in the Windows Autopilot device preparation policy. Since the device group is assigned instead of dynamic as used in Windows Autopilot, anything assigned to the device group is processed faster and more efficiently. The assigned group eliminates the need to perform  queries that are required with dynamic groups.
+          The key to making Windows Autopilot device preparation deployments more efficient than Windows Autopilot is [Enrollment Time Grouping](overview.md#enrollment-time-grouping). With Enrollment Time Grouping, devices are automatically added to an assigned device group specified in the Windows Autopilot device preparation policy. Since the device group is assigned instead of dynamic as used in Windows Autopilot, anything assigned to the device group is processed faster and more efficiently. The assigned group eliminates the need to perform  queries that are required with dynamic groups.
 
+      - question: |
+          What makes Windows Autopilot device preparation deployments more consistent and reliable than Windows Autopilot?
+        answer: |
+          Windows Autopilot device preparation ensures configurations and apps are delivered in a serialized way, minimizing conflicts. This allows you to deliver Line-of-business and Win32 apps in the same deployment reliably.
+          
       - question: |
           How does a user know that a Windows Autopilot device preparation deployment is running on their device?
         answer: |
