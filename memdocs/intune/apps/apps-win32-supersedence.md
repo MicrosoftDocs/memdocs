@@ -206,7 +206,7 @@ When an app is targeted with available intent to a group that contains the user,
 
 1.	You remove the user from the Group membership of the targeted group in the Microsoft Entra admin center.
 2.	You removed the assignment to the targeted group.
-3.	You changed the intent of the app from **Available** to something else. For example, you could change the intent to **Unsintall** or **Exclude**. 
+3.	You changed the intent of the app from **Available** to something else. For example, you could change the intent to **Uninstall** or **Exclude**. 
 
 It’s important to note that even if you re-target the app with **Available** intent later, the auto-update supersedence won't occur because user consent has been removed. 
 
