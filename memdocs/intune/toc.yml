@@ -1670,8 +1670,12 @@ items:
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
         - name: Enrollment solutions
           items:
-          - name: Set up enrollment with Apple Configurator
-            href: ./enrollment/apple-configurator-enroll-ios.md
+          - name: Set up enrollment with Apple Configurator  
+            items:
+            - name: Enroll corporate-owned devices  
+              href: ./enrollment/apple-configurator-enroll-ios.md
+            - name: Enroll corporate-owned, userless devices  
+              href: ./enrollment/apple-corporate-owned-userless-enroll.md
           - name: Set up Apple Automated Device Enrollment
             items:
             - name: Set up Automated Device Enrollment 
