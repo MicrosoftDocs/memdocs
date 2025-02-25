@@ -2,7 +2,7 @@
 title: Work from anywhere report in Endpoint analytics
 titleSuffix: Microsoft Intune
 description: The Work from anywhere report in Endpoint analytics provides insights to help your end users be productive from anywhere.
-ms.date: 10/23/2023
+ms.date: 02/25/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -80,7 +80,7 @@ Cloud provisioning provides a simpler initial provisioning experience for Window
 
 > [!NOTE]
 > The **Autopilot profile assigned** metric indicates whether an Autopilot deployment profile is assigned to the device. If a device inherits a default Autopilot profile, it will not receive credit for having a deployment profile assigned.
-> The Autopilot Deployment profile becomes the default, when it is assigned to the All Devices security group.
+> The Autopilot Deployment profile becomes the default, when it is assigned to the All Devices security group. For more information, see [Autopilot profile priority](/autopilot/profiles#autopilot-profile-priority)
 
 The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](/autopilot/enrollment-autopilot).
 
