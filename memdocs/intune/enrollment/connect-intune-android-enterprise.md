@@ -64,7 +64,7 @@ This article describes how to link your accounts in the Microsoft Intune admin c
 Complete these steps to enable Android Enterprise management options in Microsoft Intune.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-2. Go to **Devices** > **Enrollment**.   
+2. Go to **Devices** > **Device onboarding** > **Enrollment**.   
 3. Select the **Android** tab. 
 4. Under **Prerequisites**, choose **Managed Google Play**.  If you're using a custom Intune role, access to this option requires organization *read* and *update* permissions.  
 5. Select **I agree** to grant Microsoft permission to [send user and device information to Google](../protect/data-intune-sends-to-google.md). 
