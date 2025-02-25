@@ -2483,6 +2483,11 @@
       "source_path": "memdocs/intune/remote-actions/device-windows-pin-reset.md",
       "redirect_url": "/windows/security/identity-protection/hello-for-business/pin-reset",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/data-outside-protect.md",
+      "redirect_url": "/information-protection/get-started/infoprotect-quick-start-tutorial",
+      "redirect_document_id": false
     }
   ]
 }
