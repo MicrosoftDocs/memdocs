@@ -104,7 +104,7 @@ Complete the following steps to create a dynamic Microsoft Entra device group fo
 
 ## Export the profile as .mobileconfig to iOS/iPadOS devices  
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** .
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
