@@ -96,7 +96,7 @@ Complete the following steps to create a dynamic Microsoft Entra device group fo
     - **Add dynamic membership rule**: Simple rule
     - **Add devices where**: enrollmentProfileName
     - In the middle box, choose **Equals**.
-    - In the last field, enter the enrollment profile name that you created in [Create an Apple Configurator profile for devices](#create-an-apple-configurator-profile-for-devices)  
+    - In the last field, enter the enrollment profile name that you created in [Create an Apple Configurator profile for devices](#create-an-apple-configurator-profile-for-devices).  
 
     For more information about dynamic membership rules, see [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Choose **Add query** > **Create**.  
@@ -125,8 +125,8 @@ Complete the following steps to create a dynamic Microsoft Entra device group fo
     1. Unlock the iOS/iPadOS device.
     2. In the **Install profile** dialog box for **Management profile**, choose **Install**.
     3. Provide the Device Passcode or Apple ID, if necessary.
-    4. Accept the **Warning**, and choose **Install**.
-    5. Accept the **Remote Warning**, and choose **Trust**.
+    4. Accept the **Warning** and choose **Install**.
+    5. Accept the **Remote Warning** and choose **Trust**.
     6. When the **Profile Installed** box confirms the profile as Installed, choose **Done**.
 
 1. On the iOS/iPadOS device, open **Settings** and go to **General** > **Device Management** > **Management Profile**. Confirm that the profile installation is listed, and check the iOS/iPadOS policy restrictions and installed apps. Policy restrictions and apps might take up to 10 minutes to appear on the device.
@@ -156,7 +156,7 @@ You can take action on one device at a time. For more information about where to
 ### Troubleshooting + Support     
 Go to **Troubleshooting + Support** in the Microsoft Intune admin center to:
 
-* See a list of iOS/iPadOS devices enrolled by a user
+* See a list of iOS/iPadOS devices enrolled by a user.
 * Enable troubleshooting of Apple devices the same way you can troubleshoot other user devices. 
 
 ## Known limitations  
