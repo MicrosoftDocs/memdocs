@@ -38,6 +38,11 @@ sections:
 
           - Verify that the admin creating the Autopilot device preparation policy has the **Enrollment time device membership assignment** RBAC permission. For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
 
+     - question: |
+          Priority column in the list of device preparation policies is grayed out.
+        answer: |
+          - Device preparation policies in automatic mode are do not honor priority as they are assigned directly within the Cloud PC provisioning policy. 
+          
       - question: |
           Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE).
         answer: |
