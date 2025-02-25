@@ -64,7 +64,7 @@ The .pkg file must satisfy the following requirements to successfully be deploye
 > The *.pkg* file must be signed using "Developer ID Installer" certificate, obtained from an Apple Developer account. Only *.pkg* files may be used to upload macOS LOB apps to Microsoft Intune. To deploy *.dmg* or *.app* files, see [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
 4. Click **Select**. The **Add app** steps are displayed.
 

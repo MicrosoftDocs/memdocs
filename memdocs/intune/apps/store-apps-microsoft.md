@@ -60,12 +60,9 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 An [Intune administrator](../fundamentals/users-add.md#types-of-administrators) can use the following steps to add and deploy a Microsoft Store app. 
 
-> [!NOTE]
-> To ensure the Company Portal app is successfully installed on your end user's device, you may need to set the **Install behavior** to **User** and the deployment Entra ID group as **Only devices**. 
-
 ### Step 1: Add an app from the Microsoft Store
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Create**.
 2. In **Select app type** pane, select **Microsoft Store app (new)** under the **Store app** section.
 3. Choose **Select** at the bottom of the page to begin creating an app from the Microsoft Store.
     The app creation experience has three steps:
