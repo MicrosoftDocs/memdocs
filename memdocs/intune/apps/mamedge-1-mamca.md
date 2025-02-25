@@ -58,7 +58,7 @@ In this scenario, you'll create a Conditional Access policy using Microsoft Intu
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** > **Conditional Access** > **New policy**.
+2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
 3. On the **Conditional Access policy** pane, set the following details:
 
@@ -85,7 +85,7 @@ In the previous steps, you implemented Conditional Access as a required app prot
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** > **Conditional Access** > **New policy**.
+2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
 4. On this new policy, you'll restrict access from desktop apps to managed devices only. You'll select target resources and select apps once they select **Office 365** to follow the example in this page.
 
