@@ -442,14 +442,14 @@ By default, Microsoft Edge for Android verifies server certificates using the bu
 > A use case for this policy is that you need to use system certificate verifier and system root certificates when using [Microsoft MAM Tunnel in Edge for Android](../protect/microsoft-tunnel-mam-android.md).
 
 #### SSL warning page control
-By default, users can click through warning pages shows when users navigate to sites that have SSL errors. Organizations can manage the behavior.
+By default, users can click through warning pages that show when users navigate to sites that have SSL errors. Organizations can manage the behavior.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed |**true** (default) Allow users to click through SSL warning pages <br>**false** Prevent users from clicking through SSL warning pages|
 
 ### Pop-ups settings
-By default, pop-ups is blocked. Organizations can manage the behavior.
+By default, pop-ups are blocked. Organizations can manage the behavior.
 
 |Key |Value |
 |:-----------|:-------------|
@@ -579,7 +579,7 @@ When attempting to access blocked websites, users will be prompted to use either
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in.If personal account is not signed in, the behavior will be changed to value 2. <br>**2**:Automatically switch to InPrivate if InPrivate switch is allowed by com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true. |
+|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in. If personal account is not signed in, the behavior will be changed to value 2. <br>**2**:Automatically switch to InPrivate if InPrivate switch is allowed by com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true. |
 
 ### Control the behavior of the post request when account switch
 When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites. You can choose preferences on how to handle the post request during the account switch. The MAM policy is only for iOS.
@@ -589,13 +589,13 @@ When attempting to access blocked websites, users will be prompted to use either
 |com.microsoft.intune.mam.managedbrowser.IgnorePostRequestOnAutoTransition |**false**: (Default) Continue the post request when URL blocked switches to private mode or personal account.<br>**true**: Ignore the post request when URL blocked switches to private mode or personal account.|
 
 ### Control the behavior of switching personal profile to work profile 
-When Edge is under the personal profile and users are attempting to open a link from Outlook or Microsoft Teams which are under the work profile, by default, Intune will use the Edge work profile to open the link because both Edge, Outlook, and Microsoft Teams are managed by Intune. However, when the link is blocked, the user will be switched to the the personal profile. This causes a friction experience for users
+When Edge is under the personal profile and users are attempting to open a link from Outlook or Microsoft Teams which are under the work profile, by default, Intune will use the Edge work profile to open the link because both Edge, Outlook, and Microsoft Teams are managed by Intune. However, when the link is blocked, the user will be switched to the personal profile. This causes a friction experience for users
 
 You can configure a policy to enhance users' experience. This policy is recommended to be used together with AutoTransitionModeOnBlock as it may switch users to the personal profile according to the policy value you configured.
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork |**1**: (Default) Switch to work profile even if the URL is blocked by Edge policy.<br> **2**: The blocked URLs will open under personal profile if personal profile is signed in. If personal profile is not signed in, the blocked URL will opened in InPrivate mode. |
+|com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork |**1**: (Default) Switch to work profile even if the URL is blocked by Edge policy.<br> **2**: The blocked URLs will open under personal profile if personal profile is signed in. If personal profile is not signed in, the blocked URL will open in InPrivate mode. |
 
 #### Manage Sub Resource Blocking
 By default, AllowListURLs and BlockListURLs apply only at the navigation level. When you embed blocked URLs (either URLs configured in BlockListURLs or URLs not configured in AllowListURLs) as sub resources within a web page, those sub resource URLs are not blocked. 
