@@ -96,7 +96,7 @@ With Conditional Access, you can also target on-premises sites that you have exp
 
 ## Single sign-on to Microsoft Entra connected web apps in policy-protected browsers
 
-Microsoft Edge for iOS and Android can take advantage of single sign-on (SSO) to all web apps (SaaS and on-premises) that are Microsoft Entra connected. SSO allows users to access Microsoft Entra connected web apps through Edge for iOS and Android, without having to re-enter their credentials.
+Microsoft Edge for iOS and Android can take advantage of single sign-on (SSO) to all web apps (SaaS and on-premises) that are Microsoft Entra–connected. SSO allows users to access Microsoft Entra–connected web apps through Edge for iOS and Android, without having to re-enter their credentials.
 
 SSO requires your device to be registered by either the Microsoft Authenticator app for iOS devices, or the Intune Company Portal on Android. When users have either of these, they're prompted to register their device when they go to a Microsoft Entra connected web app in a policy-protected browser (this is only true if their device hasn't already been registered). After the device is registered with the user's account managed by Intune, that account has SSO enabled for Microsoft Entra connected web apps.
 
@@ -403,7 +403,7 @@ A json file example for network relays <br>
 
 ### Proxy for users to sign in to Microsoft Edge in Android
 
-A Proxy Auto-Configuration (PAC) is typically configured in the VPN profile. However, due to platform limitation, the PAC can't be recognized by Android WebView, which is used during Microsoft Edge sign-in process. Users may not be able to sign in to Edge in Android. 
+A Proxy Auto-Configuration (PAC) is typically configured in the VPN profile. However, due to platform limitation, the PAC can't be recognized by Android WebView, which is used during the Microsoft Edge sign-in process. Users might not be able to sign in to Edge in Android. 
 
 Organizations can specify dedicated proxy via MDM policy for users to sign in to Microsoft Edge in Android.
 
@@ -540,7 +540,7 @@ Organizations have the capability to disable Edge sync on iOS and Android.
 
 Organizations can define which sites users can access within the work or school account context in Microsoft Edge for iOS and Android. If you use an allow list, your users are only able to access the sites explicitly listed. If you use a blocked list, users can access all sites except for those explicitly blocked. You should only impose either an allowed or a blocked list, not both. If you impose both, only the allowed list is honored.
 
-Organizations also define what happens when a user attempts to navigate to a restricted web site. By default, transitions are allowed. If the organization allows it, restricted web sites can be opened in the personal account context, the Microsoft Entra account’s InPrivate context, or whether the site is blocked entirely. For more information on the various scenarios that are supported, see [Restricted website transitions in Microsoft Edge mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). By allowing transitioning experiences, the organization's users stay protected, while keeping corporate resources safe.
+Organizations also define what happens when a user attempts to navigate to a restricted web site. By default, transitions are allowed. If the organization allows it, restricted web sites can be opened in the personal account context, the Microsoft Entra account's InPrivate context, or whether the site is blocked entirely. For more information on the various scenarios that are supported, see [Restricted website transitions in Microsoft Edge mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). By allowing transitioning experiences, the organization's users stay protected, while keeping corporate resources safe.
 
 To enhance the profile-switching experience by reducing the need for users to manually switch to personal profiles or InPrivate mode to open blocked URLs, we introduced two new policies:
 - `com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock`
