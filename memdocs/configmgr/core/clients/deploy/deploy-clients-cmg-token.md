@@ -152,7 +152,7 @@ This is a Self-Signed certificates created by Certificate Manager component usin
 While it's not usual the SMS Issuing or the SMS Token Signing Certificate needs to be renewed, There are some uncertaing scenarios that can require the certificate be renewed:
     - Certificate is corrupted
     - SMS issuing certificate is renewed
-    - Site Operating system Upgrade -where [SHA-1 hash algorithm]( https://learn.microsoft.com/en-us/azure/security/fundamentals/ocsp-sha-1-sunset) was used to sign the certificate.
+    - Site Operating system Upgrade -where [SHA-1 hash algorithm]( https://learn.microsoft.com/azure/security/fundamentals/ocsp-sha-1-sunset) was used to sign the certificate.
 
 > [!NOTE]
 > If the SMS Token Signing Certificate is renewed, clients using Configuration Manager-issued token wont be able to authenticate till new token, signed with the newer certificate, is provided.
