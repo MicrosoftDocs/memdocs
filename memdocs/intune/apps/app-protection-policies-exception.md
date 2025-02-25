@@ -21,7 +21,7 @@ ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 
 #audience:
 
-ms.reviewer: scottduf
+ms.reviewer: beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

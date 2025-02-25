@@ -19,7 +19,7 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 #ROBOTS:
 #audience:
 
-ms.reviewer: scottduf
+ms.reviewer: beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -51,6 +51,9 @@ To see the specific recommendations for each configuration level and the minimum
 If you're looking for a list of apps that have integrated the Intune SDK, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
 
 For information about adding your organization's line-of-business (LOB) apps to Microsoft Intune to prepare for app protection policies, see [Add apps to Microsoft Intune](apps-add.md).
+
+  > [!NOTE]
+  > To ensure that policies are enforced, we recommend using Conditional Access together with Intune app protection policies.
 
 ## App protection policies for iOS/iPadOS and Android apps
 
@@ -120,7 +123,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     > These policy settings are enforced only when using apps in the work context. When end users use the app to do a personal task, they aren't affected by these policies. Note that when you create a new file it is considered a personal file.
 
     > [!IMPORTANT]
-    > It can take time for app protection policies to apply to existing devices. End users will see a notification on the device when the app protection policy is applied. Apply your app protection policies to devices before applying condidtional access rules.
+    > It can take time for app protection policies to apply to existing devices. End users will see a notification on the device when the app protection policy is applied. Apply your app protection policies to devices before applying conditional access rules.
 
 End users can download the apps from the App store or Google Play. For more information, see:
 * [Where to find work or school apps for iOS/iPadOS](../user-help/use-managed-apps-on-your-device-ios.md) 
