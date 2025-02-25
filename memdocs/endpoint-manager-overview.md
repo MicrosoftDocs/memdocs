@@ -134,7 +134,7 @@ For more information, go to:
 
 ## Microsoft Copilot in Intune
 
-[Microsoft Copilot in Intune](./intune-service/copilot/copilot-intune-overview.md) is a **cloud-native service that uses AI to get information quickly**. Intune has capabilities that are powered by [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot). These capabilities access your Intune data, and can:
+[Microsoft Copilot in Intune](./intune-service/copilot/copilot-intune-overview.md) is a **cloud-native service that uses AI to get information quickly**. Intune has capabilities that are powered by [Microsoft Copilot for Security](/copilot/security/microsoft-security-copilot). These capabilities access your Intune data, and can:
 
 - Help you manage your policies and settings.
 - Understand your security posture.

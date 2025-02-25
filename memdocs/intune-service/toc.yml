@@ -180,13 +180,17 @@ items:
   - name: Microsoft Copilot + Intune
     items:
     - name: Copilot in Intune
+      displayName: ai, copilot
       href: ./copilot/copilot-intune-overview.md
     - name: Troubleshoot a device using Copilot
       href: ./copilot/copilot-devices.md
-    - name: FAQ
+    - name: Copilot in Intune FAQ
       href: ./copilot/copilot-intune-faq.md
     - name: Intune plugin in Security Copilot
       href: ./copilot/security-copilot.md
+    - name: Copilot in Surface Management Portal
+      displayName: ai, copilot, surface, models, fleet, warranty    
+      href: ./copilot/security-copilot-surface-portal.md    
 
   - name: Endpoint analytics
     items:

@@ -51,7 +51,7 @@ Before you can create Conditional Access policies from the Microsoft Intune admi
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 
-2. Select **Endpoint security** > **Conditional Access** > **New policy**.
+2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
 3. Enter a policy **Name**, and then under *Assignments*, select **Users or workload identities**, and apply the policy to *Users and groups*. Use the Include or Exclude options to add your groups for the policy.
 

@@ -88,29 +88,6 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
-### Additional device details for Managed Home Screen<!-- 27006536 -->
-
-Android **OS version**, **Security patch**, and **Last device reboot time** details will be available from the **Device Information** page of the Managed Home Screen app. For related information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
-
-Applies to:
-- Android Enterprise devices
-
-### Managed Home Screen authentication support in public preview<!-- 25348926 -->
-Managed Home Screen for Android devices will natively support authentication in Microsoft Entra ID with a QR code and PIN. This capability eliminates the need for users to enter and re-enter long UPNs and alphanumeric passwords.
-
-Applies to:
-
-- Android devices
-
-
-### Display ringtone selector for Managed Home Screen<!-- 26826233 -->
-
-In Intune, you can choose to expose a setting in the Managed Home Screen app to allow users to select a ringtone. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
-
-Applies to:
-
-- Android devices
-
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
 Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions. 
