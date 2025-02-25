@@ -94,13 +94,13 @@ Before you can configure Conditional Access, verify the following configurations
 
   5. Select **Android enterprise** in **Platform**, select **Email** in **Profile type**.
 
-  6. Configure the [email profile settings](/intune/configuration/email-settings-android-enterprise#android-enterprise).
+  6. Configure the [email profile settings](/mem/intune/configuration/email-settings-android-enterprise#android-enterprise).
 
   7. When you're done, select **OK** > **Create** to save your changes.
 
-  8. After you create the email profile, [assign it to groups](/intune/device-profile-assign).
+  8. After you create the email profile, [assign it to groups](/mem/intune/configuration/device-profile-assign).
 
-  9. Set up [device-based conditional access](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
+  9. Set up [device-based Conditional Access](/mem/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 > [!NOTE]
 > Microsoft Outlook for Android and iOS/iPadOS is not supported via the Exchange on-premises connector. If you want to leverage Microsoft Entra Conditional Access policies and Intune App Protection Policies with Outlook for iOS/iPadOS and Android for your on-premises mailboxes, please see [Using hybrid Modern Authentication with Outlook for iOS/iPadOS and Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
@@ -176,4 +176,4 @@ Before you can use the following procedure to set up Exchange on-premises access
 
 Next, create a compliance policy and assign it to the users for Intune to evaluate their mobile devices, See [Get started with device compliance](device-compliance-get-started.md).
 
-[Troubleshooting Intune on-premises Exchange connector in Microsoft Intune](https://support.microsoft.com/help/4471887)
+[Troubleshooting Intune on-premises Exchange connector in Microsoft Intune](/troubleshoot/mem/intune/device-protection/troubleshoot-exchange-connector)

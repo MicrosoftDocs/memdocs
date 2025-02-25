@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 03/28/2024
+ms.date: 10/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -27,10 +27,10 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2409](../../../plan-design/changes/whats-new-in-version-2409.md)
 - [What's new in version 2403](../../../plan-design/changes/whats-new-in-version-2403.md)
 - [What's new in version 2309](../../../plan-design/changes/whats-new-in-version-2309.md)
-- [What's new in version 2303](../../../plan-design/changes/whats-new-in-version-2303.md)
-- [What's new in version 2211](../../../plan-design/changes/whats-new-in-version-2211.md)
+
 
 
 > [!TIP]
@@ -39,7 +39,22 @@ For information about the new features introduced with different versions, see t
 <!-- > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://learn.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us` -->
 
-<!-- ## Client management -->
+## Client management
+
+### Clients are not able download content from CMG when branch cache is enabled
+_Applies to: version 2403_
+
+After enabling Branch Cache on primary sites, clients are unable to download apps and packages from the CMG. They typically manage to download only 20-30% of the content before the process gets stuck. In some cases, after downloading certain blocks of packages from the CMG, clients look for Branch Cache to retrieve the remaining content. However, none of the clients are able to download the complete content from the CMG, which prevents others from using Branch Cache to access it. The **CTM.log** on the client includes entries similar to the following:
+
+```log
+(CTM.log - CTMJob({63B4C4CE-2DC4-4062-93C7-E5019B3B6CE1}): CCTMJob::Start - State=DownloadingContentFromPeers)
+CTM.log _- CTMJob({D21758B0-D895-474E-9695-1023A25A1770}): CCTMJob::_PerformDownloadWithOutBranchCache - Download failure using branchcache, fallback to regular download
+```
+To work around this issue, disable branch cache.
+
+> [!NOTE]
+> Clients are able to download content from the on-premise DP when Branch Cache is enabled.
+
 ## Endpoint Protection
 ### Security configurations removed from Intune
 <!-- 27951696 -->
@@ -78,7 +93,18 @@ This failure happens because the service connection point can't communicate with
 
 For more information, see [internet access requirements](../../../plan-design/network/internet-endpoints.md#service-connection-point) for the service connection point.
 
-<!-- ## OS deployment -->
+## OS deployment
+
+### PXE Responder is not installed correctly after upgrading to 2403 in untrusted domain
+_Applies to: version 2403_
+
+After upgrading to 2403, site servers serving as a PXE responder might see failures due to incorrect configuration of the registry keys. We can observe the below failures in **distmgr.log** indicating that the registry keys were not configured correctly.
+ 
+```log
+Failed to get OS platform for server DP2.CONTOSO2.COM.Either a permissions issue or the server is not supported OS SMS_DISTRIBUTION_MANAGER
+CDistributionManager::SetDpRegistry failed; 0x80070005 SMS_DISTRIBUTION_MANAGER
+``` 
+This happened due to currently unexplained failures in platform architecture identification that were introduced during the addition of support for arm64 machines to serve as remote distribution points.
 
 ## Software updates
 

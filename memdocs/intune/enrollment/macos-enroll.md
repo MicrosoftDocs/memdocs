@@ -90,7 +90,7 @@ You can monitor the escrow status for any enrolled Mac in the admin center. The 
 2. Go to **Devices** > **By platform** > **macOS**.  
 3. Select a device from your list of macOS devices.  
 4. Select **Hardware**.  
-5. In your hardware details, scroll down to **Conditional access** > **Bootstrap token escrowed**.  
+5. In your hardware details, scroll down to **Conditional Access** > **Bootstrap token escrowed**.  
 
 ### Manage kernel extensions and software updates   
 

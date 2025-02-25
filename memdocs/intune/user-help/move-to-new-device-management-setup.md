@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/01/2024
+ms.date: 01/27/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -36,14 +36,14 @@ Complete the steps in this article to set up your work profile. For a more detai
 
  1. On the **Update device settings** screen, you'll see a message titled **Move to new device management setup**. Read over the information for a brief explanation of the required change and then tap **RESOLVE**. If you don't see the resolve button, go to Google Play and install the latest version of the Company Portal app.  
 
-    ![The **Update device setting** screen, highlighting the move to new device management setup message.](./media/intune-company-portal-update-settings.png)  
+    ![The **Update device setting** screen, highlighting the move to new device management setup message.](./media/move-to-new-device-management-setup/intune-company-portal-update-settings.png)  
 
 2. Read over the checklist of steps you'll take to add the work profile. Then tap **BEGIN**. 
 
-    ![The **Move to new device management setup** screen, highlighting the begin button.](./media/company-portal-unfinished-checklist-2003.png)  
+    ![The **Move to new device management setup** screen, highlighting the begin button.](./media/move-to-new-device-management-setup/company-portal-unfinished-checklist-2003.png)  
 
 3. Continue through the guided setup until all steps in the checklist are marked as complete.  
 
-    ![The **Move to new device management setup** screen, showing that all steps have been completed.](./media/company-portal-checklist-2003.png)  
+    ![The **Move to new device management setup** screen, showing that all steps have been completed.](./media/move-to-new-device-management-setup/company-portal-checklist-2003.png)  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

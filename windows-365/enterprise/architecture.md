@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: thhickli
+ms.reviewer: thhickli, mattsha, rikiran
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,6 +28,8 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
+
+<!--ms.reviewer review required before publish-->
 
 # Windows 365 architecture
 
@@ -105,7 +107,7 @@ Microsoft Entra ID provides user authentication and authorization for both the W
   - cookie persistence for the Windows 365 web portal
 - device compliance controls
 
-For more information on how to use Microsoft Entra Conditional Access with Windows 365, see [Set conditional access policies](set-conditional-access-policies.md).
+For more information on how to use Microsoft Entra Conditional Access with Windows 365, see [Set Conditional Access policies](set-conditional-access-policies.md).
 
 ### Active Directory Domain Services
 

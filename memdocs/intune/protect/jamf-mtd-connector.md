@@ -2,13 +2,12 @@
 # required metadata
 
 title: Set up Jamf Mobile Security with Intune
-titleSuffix: Intune on Azure
 description: How to set up Jamf Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/28/2024
+ms.date: 01/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,14 +32,14 @@ ms.collection:
 
 # Jamf Mobile Threat Defense connector with Intune
 
-Control mobile device access to corporate resources using conditional access based on risk assessment conducted by Jamf. Jamf is a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices by the Jamf service, including:
+Control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by Jamf. Jamf is a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices by the Jamf service, including:
 
 - Operating system vulnerabilities
 - Malicious apps installed
 - Malicious network profiles
 - Cryptojacking
 
-You can configure *conditional access* policies that are based on Jamf's risk assessment, enabled through Intune device compliance policies. Risk assessment policy can allow or block noncompliant devices from accessing corporate resources based on detected threats.
+You can configure *Conditional Access* policies that are based on Jamf's risk assessment, enabled through Intune device compliance policies. Risk assessment policy can allow or block noncompliant devices from accessing corporate resources based on detected threats.
 
 ## How do Intune and Jamf Mobile Threat Defense help protect your company resources?
 
@@ -54,7 +53,7 @@ Jamf updates Intune with each device’s latest threat level (Secure, Low, Mediu
 
 These categories and their associated threat levels are configurable in Jamf Security Cloud portal such that the total calculated threat level for each device is customizable per your organization’s security requirements. With threat level in hand, there are two Intune policy types that make use of this information to manage access to corporate data:
 
-- Using **Device Compliance Policies** with Conditional Access, administrators set policies to automatically mark a managed device as “out of compliance” based upon the Jamf-reported threat level. This compliance flag subsequently drives Conditional Access Policies to allow or deny access to applications that utilize modern authentication. See [Create Mobile Threat Defense (MTD) device compliance policy](../protect/mtd-device-compliance-policy-create.md) with Intune for configuration details.
+- Using **Device Compliance Policies** with Conditional Access, administrators set policies to automatically mark a managed device as “out of compliance” based upon the Jamf-reported threat level. This compliance flag empowers Conditional Access policies to allow or deny access to applications that utilize modern authentication. See [Create Mobile Threat Defense (MTD) device compliance policy](../protect/mtd-device-compliance-policy-create.md) with Intune for configuration details.
 
 - Using **App Protection Policies** with Conditional Launch, administrators can set policies that are enforced at the native app level (for example, Android and iOS/iPad OS apps like Outlook, OneDrive, etc.) based upon the Jamf-reported threat level. These policies can also be used for unenrolled devices with MAM managed applications to provide uniform policy across all device platforms and ownership modes. See [Create Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md) with Intune for configuration details.
 
@@ -129,7 +128,7 @@ When the Jamf Mobile Threat Defense solution considers a device to be infected:
 
 :::image type="content" source="./media/jamf-mtd-connector/jamf-mobile-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
 
-## Next steps
+## Related content
 
 - [Integrate Jamf with Intune](jamf-mtd-connector-integration.md)
 - [Set up Jamf apps](mtd-apps-ios-app-configuration-policy-add-assign.md)

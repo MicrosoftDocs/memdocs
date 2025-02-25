@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/03/2024
+ms.date: 01/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -162,6 +162,14 @@ This option:
 
 For more information, go to [Microsoft Entra certificate-based authentication on iOS and macOS](/entra/identity/authentication/concept-certificate-based-authentication-mobile-ios).
 
+#### Configure keyvault recovery (optional)
+
+When using password sync authentication you can enable keyvault recovery to ensure that data can be recovered in the event that a user forgets their password. IT Admins should review Apple's documentation and evaluate whether using Institutional FileVault Recovery Keys is a good option for them.
+
+- [Manage FileVault with mobile device management](https://support.apple.com/en-ie/guide/deployment/dep0a2cb7686/web)
+
+- [FileVault MDM payload settings for Apple devices](https://support.apple.com/en-ie/guide/deployment/dep32bf53500/1/web/1.0)
+- 
 ## Step 2 - Create the Platform SSO policy in Intune
 
 To configure the Platform SSO policy, use the following steps to create an [Intune settings catalog](settings-catalog.md) policy. The Microsoft Enterprise SSO plug-in requires the settings listed.
@@ -240,6 +248,12 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
     Select **Next**.
 
 11. In **Assignments**, select the user or device groups that receive your profile. For devices with user affinity, assign to users or user groups. For devices with multiple users that are enrolled without user affinity, assign to devices or device groups.
+
+    > [!IMPORTANT]
+    > For Platform SSO settings on devices with user affinity, it's not supported to assign to device groups or filters. When using device group assignment or user group assignment with filters on devices with user affinity, the user might be unable to access resources protected by Conditional Access. This issue can happen:
+    >
+    > - If the Platform SSO settings are applied incorrectly. Or,
+    > - If the Company Portal app bypasses Microsoft Entra device registration when Platform SSO isn't enabled.
 
     For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 

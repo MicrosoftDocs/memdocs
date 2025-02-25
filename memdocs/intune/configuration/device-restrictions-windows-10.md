@@ -1187,6 +1187,8 @@ You can exclude certain files from Microsoft Defender Antivirus scans by modifyi
 - **File extensions to exclude from scans and real-time protection**: Add one or more file extensions like **jpg** or **txt** to the exclusions list. Any files with these extensions aren't included in any real-time or scheduled scans.
 - **Processes to exclude from scans and real-time protection**: Add one or more processes of the type **.exe**, **.com**, or **.scr** to the exclusions list. These processes aren't included in any real-time, or scheduled scans.
 
+For more information, see [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions) in the Microsoft Defender documentation.
+
 ## Power settings
 
 These settings use the [power policy CSP](/windows/client-management/mdm/policy-csp-power), which also lists the supported Windows editions.

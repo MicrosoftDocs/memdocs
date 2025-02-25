@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,6 +31,9 @@ ms.collection:
 ---
 
 # Set up user enrollment with Company Portal  
+
+>[!NOTE]
+> Microsoft Intune doesn't support this enrollment profile type for newly enrolled devices. This article is only applicable to existing devices with this profile type. We recommend [account-driven user enrollment](apple-account-driven-user-enrollment.md) for new enrollments.  
 
 Set up user enrollment with Company Portal for iOS/iPadOS personal devices enrolling in Microsoft Intune. This Apple User Enrollment method gives you access to a limited but appropriate set of device management settings and actions, so you can protect work data without affecting the device user's personal data or apps. 
 
@@ -69,14 +72,7 @@ Complete these steps to create an enrollment profile for devices enrolling via u
 
 6. Select **Next**.
   
-7. On the **Settings** page, select **User enrollment with Company Portal**. 
-  
-   Alternatively, you can select **Determine based on user choice**, which lets assigned users select the enrollment type during enrollment. Their options:   
-
-   * **I own this device**: As a follow-up, the user must select whether they want to secure the entire device or only secure work-related apps and data. 
-   * **(Company) owns this device**: The device enrolls via Apple Device Enrollment. For more information about this enrollment method, see [Device Enrollment and MDM](https://support.apple.com/guide/deployment/device-enrollment-and-mdm-depd1c27dfe6/web) on the Apple Support website.   
-
-   The device user's selection determines which enrollment process is carried out. Their choice is also reflected in the device ownership attribute shown in Intune. To learn more about the user experience and what they see onscreen during enrollment, see [Set up iOS/iPadOS device access to your company resources](../user-help/enroll-your-device-in-intune-ios.md).  
+7. On the **Settings** page, select **User enrollment with Company Portal**.  
     
 8. Select **Next**.  
 

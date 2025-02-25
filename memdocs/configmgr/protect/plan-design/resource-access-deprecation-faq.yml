@@ -26,6 +26,10 @@ summary: |
   - Email profiles
   - The co-management resource access workload
 
+  > [!IMPORTANT]
+  > If above mentioned resource access profiles are configured in Intune, but the applicability to co-managed devices are controlled through the co-management Resource Access workload setting in Configuration Manager, post 2403 upgrade, the Resource Access workload is moved to Intune and hence all resource access profiles
+  configured in Intune are now applicable and enforced to co-managed devices.
+  
   This article answers your frequently asked questions about these deprecated features.
 
 sections:
@@ -80,8 +84,6 @@ sections:
         answer: |
           Starting in version 2211, the prerequisite checker will display a warning for co-managed clients if the resource access workload is on Configuration Manager. If the resource access slider is towards Configuration Manager, they aren't tested or supported in version 2203. Co-management behavior is the same as if you used Configuration Manager 2111 or earlier to switch the resource access workload to Intune. 
           This Workload slider will be disabled, and you can only use Microsoft Intune to deploy resource access profiles in upcoming Configuration Manager versions. 
-
-  
 
       - question: |
           What alternative options are available?

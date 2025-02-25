@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/19/2024
+ms.date: 11/05/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -108,6 +108,8 @@ The **Reprovision** action can also be used when a Cloud PC is in a **Failed pro
 When a Cloud PC is reprovisioned, the Cloud PC is deleted and recreated as a new Cloud PC. All user data, applications, customizations, and the like are deleted.
 
 The Cloud PC will be reprovisioned to the current configured settings in the provisioning policy that is targeting the user's Microsoft Entra group. If the image referenced by the policy has changed, or if any other changes to the policy have been made, the reprovisioned Cloud PC uses the new settings.
+
+[!INCLUDE [Reprovision a Frontline shared Cloud PC](../includes/reprovision-frontline-shared-cloud-pc.md)]
 
 For more information, see [Reprovision a Cloud PC](reprovision-cloud-pc.md).
 

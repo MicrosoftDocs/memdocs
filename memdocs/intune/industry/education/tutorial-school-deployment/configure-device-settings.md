@@ -7,6 +7,8 @@ author: scottbreenmsft
 ms.author: scbree
 ms.manager: dougeby
 ms.date: 5/2/2024
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Configure and secure devices with Microsoft Intune
@@ -251,6 +253,9 @@ It is critical to ensure that the devices you manage are secured using the diffe
 - [Account protection][MEM-7]
 - [Security Baselines](/mem/intune/protect/security-baselines)
 - [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
+- [Web Content Filtering on Edge](/deployedge/microsoft-edge-web-content-filtering)
+
+Microsoft recommmends phishing resistant credentials and using Windows Hello for Business on Windows devices where possible. For more information, and to find out how to do this for students, see [Passwordless for Students](/microsoft-365/education/deploy/protect-passwordless-students?tabs=windows).
 
 ### [Intune For Education](#tab/intune-for-education)
 
@@ -280,6 +285,7 @@ For more information, see [Security][INT-4].
 > - [Account protection][MEM-7]
 > - [Security Baselines](/mem/intune/protect/security-baselines)
 > - [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
+> - [Web Content Filtering on Edge](/deployedge/microsoft-edge-web-content-filtering)
 
 ::: zone-end
 

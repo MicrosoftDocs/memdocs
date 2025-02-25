@@ -33,7 +33,7 @@ When the Configuration Manager client detects that a third-party MDM service is 
 - Application management, including legacy packages
 - Software update scanning and installation
 - Endpoint protection, the Windows Defender suite of antimalware protection features
-- Compliance policy for conditional access
+- Compliance policy for Conditional Access
 - Device configuration
 - Office Click-to-Run management
 

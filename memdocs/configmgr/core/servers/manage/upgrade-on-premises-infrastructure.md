@@ -2,7 +2,7 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 04/04/2024
+ms.date: 12/19/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -32,6 +32,8 @@ Configuration Manager supports the in-place upgrade of the server OS that hosts 
 
 - In-place upgrade from:
 
+  - Windows Server 2022 to Windows Server 2025
+
   - Windows Server 2019 to Windows Server 2022<!-- 10200029 -->
 
   - Windows Server 2016 to Windows Server 2022
@@ -50,9 +52,11 @@ To upgrade a server, use the upgrade procedures provided by the OS you're upgrad
 
 - [Upgrade and conversion options for Windows Server 2016](/windows-server/get-started/supported-upgrade-paths)
 
-### Upgrade to Windows Server 2016, 2019, or 2022
+### Upgrade to Windows Server 2016, 2019, 2022 or 2025
 
 Use the steps in this section for any of the following upgrade scenarios:
+
+- Upgrade either Windows Server 2019 or Windows Server 2022 to Windows Server 2025
 
 - Upgrade either Windows Server 2016 or Windows Server 2019 to Windows Server 2022
 

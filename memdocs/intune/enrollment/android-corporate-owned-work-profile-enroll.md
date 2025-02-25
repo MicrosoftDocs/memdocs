@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/17/2024
+ms.date: 10/28/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -34,7 +34,7 @@ ms.collection:
 
 Android Enterprise corporate-owned devices with a work profile are single user devices intended for corporate and personal use.
 
-End users can keep their work and personal data separate and are guaranteed that  personal data and applications will remain private. Admins can control some settings and features for the entire device, including: 
+End users can keep their work and personal data separate and are guaranteed that personal data and applications remain private. Admins can control some settings and features for the entire device, including: 
 
 - Setting requirements for the device password
 - Controlling Bluetooth and data roaming
@@ -47,7 +47,8 @@ Intune helps you deploy apps and settings to Android Enterprise corporate-owned 
 Devices must meet these requirements to be managed as Android Enterprise corporate-owned work profile devices:
 
 - Android OS version 8.0 and above.
-- Devices must run a distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
+- Devices must run a distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.  
+
 
 ## Set up Android Enterprise corporate-owned work profile device management
 
@@ -62,7 +63,7 @@ To set up Android Enterprise corporate-owned work profile device management, fol
 ### Create an enrollment profile
 
 > [!NOTE]
-> - Tokens for corporate-owned devices with a work profile will not expire automatically. If an admin decides to revoke a token , the profile associated with it will not be displayed in **Devices** > **By platform** > **Android** > **Device onboarding** > **Enrollment** > **Corporate-owned devices with work profile**. To see all profiles associated with both active and inactive tokens, click on **Filter** and check the boxes for both "Active" and "Inactive" policy states.
+> - Tokens for corporate-owned devices with a work profile will not expire automatically. If an admin decides to revoke a token, the profile associated with it will not be displayed in **Devices** > **By platform** > **Android** > **Device onboarding** > **Enrollment** > **Corporate-owned devices with work profile**. To see all profiles associated with both active and inactive tokens, click on **Filter** and check the boxes for both "Active" and "Inactive" policy states.
 > - For corporate-owned work profile (COPE) devices, the `afw#setup` enrollment method and the Near Field Communication (NFC) enrollment method are only supported on devices running Android 8-10. They are not available on Android 11. For more information, see the Google developer docs [here](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).
 
 You must create an enrollment profile so that users can enroll corporate-owned work profile devices. When the profile is created, it provides you with an enrollment token (random string) and a QR code. Depending on the Android OS and version of the device, you can use either the token or QR code to [enroll the dedicated device](#enroll-the-corporate-owned-work-profile-devices).
@@ -92,14 +93,14 @@ You must create an enrollment profile so that users can enroll corporate-owned w
 
 8. Select **Next** to continue to **Scope tags**.  
 
-9. Optionally, apply one or more scope tags to limit restriction visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).     
+9. Optionally, apply one or more scope tags to limit restriction visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).     
 
 10. Choose **Next** to continue to **Create + review**.  
 
 11. Review your choices, and then select **Create** to finish creating the profile.  
 
 ### Access enrollment token  
-After you create a profile, Intune generates a token that's needed for enrollment.  
+After you create a profile, Intune generates the token you need for enrollment.  
 
 1. Return to **Devices** > **Enrollment**, and select the Android tab.   
 
@@ -160,14 +161,15 @@ You can target apps and policies to either assigned or dynamic device groups. Yo
 Users can now [enroll their corporate-owned work profile devices](android-dedicated-devices-fully-managed-enroll.md).
 
 > [!NOTE]
-> The Microsoft Intune app is automatically installed during enrollment. This app is required for enrollment and can't be uninstalled.  If you deploy the Intune Company Portal app to a device and the user attempts to launch the app, they will be redirected to the Microsoft Intune app, and the Company Portal app icon will be hidden.
+> The Microsoft Intune app automatically installs on corporate-owned work profile devices during enrollment. This app is required for enrollment and can't be uninstalled. If you deploy the Intune Company Portal app to a device and the user attempts to launch the app, they will be redirected to the Microsoft Intune app, and the Company Portal app icon will be hidden.
+> The Microsoft Authenticator app automatically installs on corporate-owned work profile devices during enrollment. This app is required for enrollment and can't be uninstalled. 
 
 ## Token types   
 When you create the enrollment profile in the admin center, you have to select a token type. There are two types of tokens. Each type enables a different enrollment flow.   
 
 The default token, *corporate-owned work profile*, enrolls devices into Microsoft Intune as standard Android Enterprise corporate-owned devices with work profiles. This token requires you to complete pre-provisioning steps before you distribute the devices. End users complete the remaining steps on the device when they sign in with their work or school account. 
 
-The device staging token, *Corporate-owned work profile, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a third party vendor can complete all pre-provisioning steps. End users complete the last step of provisioning by signing into the Microsoft Intune app with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 8 or later.  
+The device staging token, *Corporate-owned work profile, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a partner vendor can complete all pre-provisioning steps. End users complete the last step of provisioning by signing into the Microsoft Intune app with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 8 or later.  
 
 For more information, see [Device staging overview](device-staging-overview.md).  
 
@@ -180,6 +182,12 @@ Apps are automatically updated on managed devices when the app developer publish
 To remove an app from Android Enterprise corporate-owned work profile devices, you can either: 
 - Delete the Required app deployment.
 - Create an uninstall deployment for the app.  
+
+## Limitations 
+
+The limitations in this section apply to corporate-owned devices with a work profile.    
+
+Private space is a feature introduced with Android 15 that lets people create a space on their device for sensitive apps and data they want to keep hidden. The private space is considered a personal profile. Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.     
 
 ## Next steps
 - [Deploy Android apps](../apps/apps-deploy.md)

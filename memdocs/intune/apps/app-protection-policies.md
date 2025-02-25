@@ -1,14 +1,13 @@
 ---
 # required metadata
-
-title: Create and deploy app protection policies 
+title: Create and deploy app protection policies
 titleSuffix: Microsoft Intune
 description: This article describes how to create and assign Microsoft Intune app protection policies (APP).
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2024
+ms.date: 01/16/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -31,10 +30,7 @@ ms.collection:
 - highpri
 - FocusArea_Apps_Protect
 ---
-
 # How to create and assign app protection policies
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Learn how to create and assign Microsoft Intune app protection policies (APP) for users of your organization. This article also describes how to make changes to existing policies.
 
@@ -66,18 +62,19 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 ### Create an iOS/iPadOS or Android app protection policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App protection policies**. This selection opens the **App protection policies** details, where you create new policies and edit existing policies.
+2. Select **Apps** > **Protection**. This selection opens the **Protection** details, where you create new policies and edit existing policies.
 3. Select **Create policy** and select either **iOS/iPadOS** or **Android**. The **Create policy** pane is displayed.
 4. On the **Basics** page, add the following values:
 
- | Value | Description |
- |:-------------|:-----------------------------------------------|
- | Name | The name of this app protection policy. |
- | Description | [Optional] The description of this app protection policy. |
+     | Value | Description |
+     |:-------------|:-----------------------------------------------|
+     | Name | The name of this app protection policy. |
+     | Description | [Optional] The description of this app protection policy. |
+    
+    ![Screenshot of the Basics page of the Create policy pane](./media/app-protection-policies/app-protection-add-policies-01.png)
+    
+5. Click **Next** to display the **Apps** page.  
 
-![Screenshot of the Basics page of the Create policy pane](./media/app-protection-policies/app-protection-add-policies-01.png)
-
-5. Click **Next** to display the **Apps** page.  \
     The **Apps** page allows you to choose which apps should be targeted by this policy. You must add at least one app.
 
     | Value/Option | Description |
@@ -91,28 +88,31 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     > [!NOTE]
     > **Public apps** are supported are apps from Microsoft and partners that are commonly used with Microsoft Intune. These Intune protected apps are enabled with a rich set of support for mobile application protection policies. For more information, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md). Custom apps are LOB apps that have been integrated with the Intune SDK or wrapped by the Intune App Wrapping Tool. For more information see [Microsoft Intune App SDK Overview](../developer/app-sdk.md) and [Prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md).
 
-6. Click **Next** to display the **Data protection** page.  \
+6. Click **Next** to display the **Data protection** page. 
+
     This page provides settings for data loss prevention (DLP) controls, including cut, copy, paste, and save-as restrictions. These settings determine how users interact with data in the apps that this app protection policy applies.
 
     **Data protection settings**: 
     - **iOS/iPadOS data protection** - For information, see [iOS/iPadOS app protection policy settings - Data protection](app-protection-policy-settings-ios.md#data-protection).
     - **Android data protection** - For information, see [Android app protection policy settings - Data protection](app-protection-policy-settings-android.md#data-protection).
 
-7. Click **Next** to display the **Access requirements** page.  \
+7. Click **Next** to display the **Access requirements** page.  
+
     This page provides settings to allow you to configure the PIN and credential requirements that users must meet to access apps in a work context.
 
     **Access requirements settings**: 
     - **iOS/iPadOS access requirements** - For information, see [iOS/iPadOS app protection policy settings - Access requirements](app-protection-policy-settings-ios.md#access-requirements).
     - **Android access requirements** - For information, see [Android app protection policy settings - Access requirements](app-protection-policy-settings-android.md#access-requirements).
 
-8. Click **Next** to display the **Conditional launch** page.  \
+8. Click **Next** to display the **Conditional launch** page.  
+
     This page provides settings to set the sign-in security requirements for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to sign in to your company app. Then select the **Action** you want to take if users don't meet your requirements. In some cases, multiple actions can be configured for a single setting.
 
     **Conditional launch settings**: 
     - **iOS/iPadOS conditional launch** - For information, see [iOS/iPadOS app protection policy settings - Conditional launch](app-protection-policy-settings-ios.md#conditional-launch).
     - **Android conditional launch** - For information, see [Android app protection policy settings - Conditional launch](app-protection-policy-settings-android.md#conditional-launch).
 
-9. Click **Next** to display the **Assignments** page. \
+9. Click **Next** to display the **Assignments** page. 
    The **Assignments** page allows you to assign the app protection policy to groups of users. You must apply the policy to a group of users to have the policy take effect.
 
 10. Click **Next: Review + create** to review the values and settings you entered for this app protection policy.
@@ -135,7 +135,7 @@ You can edit an existing policy and apply it to the targeted users. For more inf
 
 ### To change the list of apps associated with the policy
 
-1. In the **App protection policies** pane, select the policy you want to change.
+1. In the **Protection** pane, select the policy you want to change.
 
 2. In the *Intune App Protection* pane, select **Properties**.
 
@@ -156,7 +156,7 @@ You can edit an existing policy and apply it to the targeted users. For more inf
  
 #### To change the list of user groups
 
-1. In the **App protection policies** pane, select the policy you want to change.
+1. In the **Protection** pane, select the policy you want to change.
 
 2. In the *Intune App Protection* pane, select **Properties**.
 
@@ -174,9 +174,9 @@ You can edit an existing policy and apply it to the targeted users. For more inf
 
 ### To change policy settings
 
-1. In the **App protection policies** pane, select the policy you want to change.
+1. In the **Protection** pane, select the policy you want to change.
 
-2. In the *Intune App Protection* pane, select **Properties**.
+2. Next, select **Properties**.
 
 3. Next to the section corresponding to the settings you want to change, select **Edit**. Then change the settings to new values.
 
@@ -189,10 +189,9 @@ In many organizations, it's common to allow end users to use both Intune Mobile 
 
 Because Intune app protection policies target a user's identity, the protection settings for a user can apply to both enrolled (MDM managed) and nonenrolled devices (no MDM). Therefore, you can target an Intune app protection policy to either Intune enrolled or unenrolled iOS/iPadOS and Android devices using filters. For more information on creating filters see, [Use filters when assigning policies](../fundamentals/filters.md) . You can have one protection policy for unmanaged devices in which strict data loss prevention (DLP) controls are in place, and a separate protection policy for MDM managed devices, where the DLP controls may be a little more relaxed. For more information how this works on personal Android Enterprise devices, see [App protection policies and work profiles](android-deployment-scenarios-app-protection-work-profiles.md).
 
-To use these filters when assigning policies, browse to **Apps** > **App protection policies** in the Intune admin center, and then select **Create policy**. You can also edit an existing app protection policy. Navigate to the **Assignments** page and select **Edit filter** to include or exclude filters for the assigned group. 
+To use these filters when assigning policies, browse to **Apps** > **Protection** in the Intune admin center, and then select **Create policy**. You can also edit an existing app protection policy. Navigate to the **Assignments** page and select **Edit filter** to include or exclude filters for the assigned group. 
 
 ### Device Management types
-
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
@@ -212,6 +211,11 @@ For iOS/iPadOS, for the Device Management type to be enforced to Intune managed 
 - **IntuneMAMDeviceID** must be configured for all third-party and line-of-business MDM managed applications. The **IntuneMAMDeviceID** should be configured to the device ID token. For example, `key=IntuneMAMDeviceID, value={{deviceID}}`. For more information, see [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 - If only the **IntuneMAMDeviceID** is configured, the Intune APP will consider the device as unmanaged.
 
+> [!IMPORTANT]
+> Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, **IntuneMAMOID**, and **IntuneMAMDeviceID** app configuration values will be automatically sent to managed applications on Intune enrolled iOS devices for the following apps: Microsoft Excel, Microsoft Outlook, Microsoft PowerPoint, Microsoft Teams and Microsoft Word. Intune will continue to expand this list to include additional managed apps. 
+> 
+> If these values aren't configured correctly for iOS devices, there is a possibility of either the policy not getting delivered to the app or the wrong policy is delivered. For more information, see [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335). 
+
 ## Policy settings
 To see a full list of the policy settings for iOS/iPadOS and Android, select one of the following links:
 
@@ -222,5 +226,5 @@ To see a full list of the policy settings for iOS/iPadOS and Android, select one
 [Monitor compliance and user status](app-protection-policies-monitor.md)
 
 ## See also
-* [Where to find work or school apps for Android (user help)](../user-help/use-managed-apps-on-your-device-android.md)
+- [Where to find work or school apps for Android (user help)](../user-help/use-managed-apps-on-your-device-android.md)
 - [Where to find work or school apps for iOS/iPadOS (user help)](../user-help/use-managed-apps-on-your-device-ios.md) 
