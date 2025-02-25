@@ -52,7 +52,8 @@ For additional detailed requirements, see [Windows Autopilot device preparation 
 
 When new Windows devices are initially deployed, Windows Autopilot device preparation uses the OEM-optimized version of Windows client. The OEM-optimized version of Windows client is preinstalled on the device, so custom images and drivers don't need to be maintained for every device model. Instead of re-imaging the device, with Windows Autopilot device preparation, the existing Windows installation can be transformed into a "business-ready" state that can:
 
-- Deliver Windows Autopilot device preparation configuration during user authentication during the out-of-box experience (OOBE).
+- Deliver Windows Autopilot device preparation configuration during device provisioning.
+
 - Automatically add devices to the device security group and receive selected applications and PowerShell scripts assigned to the group.
 
 ## Windows Autopilot device preparation improvements
@@ -68,22 +69,26 @@ New features in Windows Autopilot device preparation include:
 
 - **Utilizing enrollment time grouping in Intune** - Device is added to a device security group at enrollment time and configuration is delivered immediately. This feature provides a faster and more reliable setup. For more information, see [Enrollment Time Grouping](#enrollment-time-grouping).
 
-- **Out of the box granular reporting** - Improved monitoring and troubleshooting. Out of the box monitoring and reporting with near real-time status of deployments, including:
+- **Granular reporting** - Improved monitoring and troubleshooting. Monitoring and reporting with near real-time status of deployments, including:
+
   - Applications status
   - PowerShell scripts status
   - Deployment time.
-    For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
-
+  For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
+  
 - **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune/fundamentals/intune-govt-service-description) environments.
+
+> [!NOTE]
+> [Windows 365 Frontline in shared mode](/windows-365/enterprise/introduction-windows-365-frontline) is not supported for GCCH and DoD at this time.
 
 ## Capabilities
 
 Windows Autopilot device preparation capabilities include:
 
-- Set up user-driven deployment flow.
+- Set up user-driven or automatic deployment flow.
 - By default, making sure users are standard non-administrator users.
-- Select application and PowerShell script to be delivered during OOBE.
-- Simplified and clear OOBE user experience with percentage progress indicator.
+- Select application and PowerShell script to be delivered during device setup.
+- Simplified and clear OOBE user experience with percentage progress indicator for user-driven flows.
 - Deployment report for better troubleshooting.
 
 ## Improved experiences
