@@ -8,13 +8,13 @@ items:
       displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/what-is-intune.md
       items:
-      - name: Manage and secure your identities
+      - name: Overview - Manage and secure identities
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-identities.md
-      - name: Manage devices and control features
+      - name: Overview - Manage and secure devices
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-devices.md
-      - name: Manage apps and protect their data
+      - name: Overview - Manage apps and protect their data
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-apps.md
       - name: Zero Trust with Microsoft Intune
@@ -180,13 +180,17 @@ items:
   - name: Microsoft Copilot + Intune
     items:
     - name: Copilot in Intune
+      displayName: ai, copilot
       href: ./copilot/copilot-intune-overview.md
     - name: Troubleshoot a device using Copilot
       href: ./copilot/copilot-devices.md
-    - name: FAQ
+    - name: Copilot in Intune FAQ
       href: ./copilot/copilot-intune-faq.md
     - name: Intune plugin in Security Copilot
       href: ./copilot/security-copilot.md
+    - name: Copilot in Surface Management Portal
+      displayName: ai, copilot, surface, models, fleet, warranty    
+      href: ./copilot/security-copilot-surface-portal.md    
 
   - name: Endpoint analytics
     items:
@@ -230,6 +234,8 @@ items:
         href: ../analytics/device-scopes.md
       - name: Device query
         href: ../analytics/device-query.md
+      - name: Device query for multiple devices
+        href: ../analytics/device-query-multiple-devices.md        
       - name: Data platform schema
         href: ../analytics/data-platform-schema.md
       - name: Battery health
@@ -1672,8 +1678,12 @@ items:
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
         - name: Enrollment solutions
           items:
-          - name: Set up enrollment with Apple Configurator
-            href: ./enrollment/apple-configurator-enroll-ios.md
+          - name: Set up enrollment with Apple Configurator  
+            items:
+            - name: Enroll corporate-owned devices  
+              href: ./enrollment/apple-configurator-enroll-ios.md
+            - name: Enroll corporate-owned, userless devices  
+              href: ./enrollment/apple-corporate-owned-userless-enroll.md
           - name: Set up Apple Automated Device Enrollment
             items:
             - name: Set up Automated Device Enrollment
@@ -1769,8 +1779,6 @@ items:
           href: ./remote-actions/device-remote-lock.md
         - name: Reset passcode
           href: ./remote-actions/device-passcode-reset.md
-        - name: Windows 10 PIN reset
-          href: ./remote-actions/device-windows-pin-reset.md
         - name: Self-service password reset
           href: ./remote-actions/password-reset.md
       - name: Remove and restart

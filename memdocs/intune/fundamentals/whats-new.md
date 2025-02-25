@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/05/2025
+ms.date: 02/24/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,64 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of February 24, 2025
+
+### App management
+
+#### Managed Home Screen QR Code Authentication in public preview<!-- 25348926 -->
+Managed Home Screen for Android devices natively supports QR Code Authentication in Microsoft Entra ID. Authentication involves both a QR code and PIN. This capability eliminates the need for users to enter and re-enter long UPNs and alphanumeric passwords. For more information, see [Sign in to Microsoft Teams or Managed Home Screen (MHS) with QR code](/entra/identity/authentication/how-to-authentication-qr-code#sign-in-to-microsoft-teams-or-managed-home-screen-mhs-with-qr-code).  
+
+Applies to:
+- Android devices
+
+#### Additional device details for Managed Home Screen<!-- 27006536 -->
+Android **OS version**, **Security patch** and **Last device reboot time** details are now available from the **Device Information** page of the Managed Home Screen app. For related information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+Applies to:
+- Android Enterprise devices
+
+#### Display ringtone selector for Managed Home Screen<!-- 26826233 -->
+In Intune, you can choose to expose a setting in the Managed Home Screen app to allow users to select a ringtone. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+Applies to:
+- Android devices
+
+## Week of February 17, 2025
+
+### Monitor and troubleshoot
+
+#### Limited live chat support in Intune<!-- 30477421 -->
+
+Intune is introducing limited live chat support within the Intune admin console. Live chat will not be available for all tenants or inquiries at this time.
+
+## Week of February 10, 2025
+
+### Device security
+
+#### Updated security baseline for Windows version 24H2<!-- 29819143 -->
+
+You can now deploy the Intune security baseline for **Windows version 24H2** to your Windows 10 and Windows 11 devices. The new baseline version uses the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
+
+Use of [Intune security baselines](../protect/security-baselines.md) can help you maintain best-practice configurations for your Windows devices and can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft.
+
+As with all baselines, the default baseline represents the recommended configurations for each setting, which you can modify to meet the requirements of your organization.
+
+Applies to:
+
+- Windows
+
+### Monitor and troubleshoot
+
+#### Device Query for Multiple Devices<!--25234456 -->
+
+We've added Device query for multiple devices. This feature allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
+
+Device query for multiple devices is now supported for devices running Windows 10 or later. This feature is now included as part of Advanced Analytics.
+
+Applies to:
+
+- Windows
 
 ## Week of February 5, 2025  (Service release 2501)
 
@@ -192,7 +250,7 @@ For more information about customizing the Company Portal and Intune apps, see [
  
 > [!NOTE]
 >
-> *Rollout of this feature is delayed and now expected to be available in mid-February.*
+> *Rollout of this feature is delayed and now expected to be available in May 2025.*
 
 You can now manage the Microsoft Defender for Endpoint CSP setting for [tamper protection](/windows/client-management/mdm/defender-csp) on unenrolled devices you manage as part of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
  

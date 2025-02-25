@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/16/2024
+ms.date: 02/20/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -34,10 +34,10 @@ ms.collection:
 
 # Add an iOS/iPadOS line-of-business app to Microsoft Intune
 
-Use the information in this article to help you add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune. A line-of-business (LOB) app is an app that you add to Intune from an IPA app installation file. This kind of app is typically written in-house. You will first need to join the iOS Developer Enterprise Program.
+Use the information in this article to help you add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune. A line-of-business (LOB) app is an app that you add to Intune from an IPA app installation file. This kind of app is typically written in-house. You'll first need to join the iOS Developer Enterprise Program.
 
 > [!NOTE]
-> Users of iOS/iPadOS devices can remove some of the built-in iOS/iPadOS apps, like Stocks and Maps. You cannot use Intune to redeploy these apps. If users delete these apps, they must go to the app store and manually reinstall them.
+> Users of iOS/iPadOS devices can remove some of the built-in iOS/iPadOS apps, like Stocks and Maps. You can't use Intune to redeploy these apps. If users delete these apps, they must go to the app store and manually reinstall them.
 >
 > iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
 >
@@ -96,14 +96,14 @@ You can use scope tags to determine who can see client app information in Intune
 ## Step 4 - Review + create
 
 1. Review the values and settings you entered for the app.
-2. When you are done, click **Create** to add the app to Intune.
+2. When you're done, click **Create** to add the app to Intune.
 
     The **Overview** blade for the line-of-business app is displayed.
 
 The app that you created now appears in the list of apps. From the list, you can assign the apps to groups that you choose. For help, see [How to assign apps to groups](apps-deploy.md).
 
 > [!NOTE]
-> Provisioning profiles for iOS/iPadOS LOB apps have a 30 day notice before they will expire.
+> Provisioning profiles for iOS/iPadOS LOB apps have a 30 day notice before they'll expire.
 
 ## Step 5: Update a line-of-business app
 
@@ -112,14 +112,14 @@ The app that you created now appears in the list of apps. From the list, you can
 The update to the line-of-business app will be installed automatically.
 
 > [!NOTE]
-> For the Intune service to successfully deploy a new IPA file to the device, you must update the CFBundleVersion string in the Info.plist file in your IPA package. You are allowed to upgrade an app by increasing the value, or downgrade an app by decreasing the value, however you cannot upload a new version of CFBundleVersion if the new app is identical to the existing one.
+> For the Intune service to successfully deploy a new IPA file to the device, you must update the CFBundleVersion and CFBundleShortVersionString in the Info.plist file in your IPA package. You're allowed to upgrade an app by increasing the value, or downgrade an app by decreasing the value, however you can't upload a new version of CFBundleVersion and CFBundleShortVersionString of the new app is identical to the existing one.
 
-For an iOS LOB app targeted with available intent, auto-update of the application will happen as long as the following conditions are met:
+For an iOS LOB app targeted with available intent, autoupdate of the application will happen as long as the following conditions are met:
 
 - The end user must request the specific Intune app from the Company Portal and the app must be successfully installed, or the app is already installed on the device.
-- The targeting for the user has not changed (app assignment with available intent is not removed and user is not removed from the group membership in the life cycle of the app assignment).
-- If the previous version of the app is installed through required intent, then the available app update will not happen. The app will be updated automatically as long as the user/device is part of required intent group.
-- If the app has both available and required deployments targeted, the resolved intent becomes 'RequiredAndAvailable'. **Note:** You cannot create **Available** and **Required** deployments to the same Microsoft Entra group, but you can use different Microsoft Entra group with same members in it. If the app was installed automatically on devices after the **Required** deployment is created (not manually installed from Company Portal) and the required deployment is later removed, the **Available** app update won't happen automatically on those devices and the users have to request the app from Company Portal.
+- The targeting for the user hasn't changed (app assignment with available intent isn't removed and user isn't removed from the group membership in the life cycle of the app assignment).
+- If the previous version of the app is installed through required intent, then the available app update won't happen. The app will be updated automatically as long as the user/device is part of required intent group.
+- If the app has both available and required deployments targeted, the resolved intent becomes 'RequiredAndAvailable'. **Note:** You can't create **Available** and **Required** deployments to the same Microsoft Entra group, but you can use different Microsoft Entra group with same members in it. If the app was installed automatically on devices after the **Required** deployment is created (not manually installed from Company Portal) and the required deployment is later removed, the **Available** app update won't happen automatically on those devices and the users have to request the app from Company Portal.
 
 ## Next steps
 

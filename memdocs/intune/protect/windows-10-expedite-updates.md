@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/18/2024
+ms.date: 02/20/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high

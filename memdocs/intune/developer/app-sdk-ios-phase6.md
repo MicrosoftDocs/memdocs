@@ -129,7 +129,7 @@ func accountId(_ accountId: String, hasComplianceStatus status: IntuneMAMComplia
 Apps need to indicate support for App Protection CA by adding client capabilities variable to their MSAL/ADAL configuration.
 The following values are required:   claims = {"access_token":{"xms_cc":{"values":["protapp"]}}} 
 
-[MSALPublicClientApplicationConfig Class Reference (azuread.github.io)](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazuread.github.io%2Fmicrosoft-authentication-library-for-objc%2FClasses%2FMSALPublicClientApplicationConfig.html%23%2Fc%3Aobjc(cs)MSALPublicClientApplicationConfig(py)clientApplicationCapabilities&data=04%7C01%7CJamie.Silvestri%40microsoft.com%7C9b7fffa9a0e14b82cf1a08d8bcc1f11e%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637466888444795023%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=NNYF4cvojrG67BGNMPZdY2dGyATZHkVsYa5vzENWwHk%3D&reserved=0)
+[MSALPublicClientApplicationConfig Class Reference (azuread.github.io)](https://azuread.github.io/microsoft-authentication-library-for-objc/Classes/MSALPublicClientApplicationConfig.html#/c:objc(cs)MSALPublicClientApplicationConfig(py)clientApplicationCapabilities)
 
 ```objc
     MSALAADAuthority *authority = [[MSALAADAuthority alloc] initWithURL:[[NSURL alloc] initWithString:IntuneMAMSettings.aadAuthorityUriOverride] error:&msalError];
@@ -171,7 +171,7 @@ To fetch the Microsoft Entra object ID for the accountId parameter of the MAM SD
 #### Configuring a test user for App Protection CA
 
 1. Sign in with your administrator credentials to https://portal.azure.com.
-2. Select **Microsoft Entra ID** > **Security** > **Conditional Access** > **New policy**. Create a new Conditional Access policy.
+2. Select **Microsoft Entra ID** > **Conditional Access** > **Create new policy**. Create a new Conditional Access policy.
 3. Configure Conditional Access policy by setting the following items:
     - Filling in the **Name** field.
     - Enabling the policy.
