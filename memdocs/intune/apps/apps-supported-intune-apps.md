@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/10/2025
+ms.date: 02/24/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
