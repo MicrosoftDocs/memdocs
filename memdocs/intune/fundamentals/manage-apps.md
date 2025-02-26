@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Manage and secure apps in Intune
+title: Manage and secure apps overview
 titleSuffix: Microsoft Intune
-description: Learn more about the concepts and features you should know when managing apps that access organization resources in Microsoft Intune. You can deploy apps used by your organization, including Microsoft Edge and Microsoft 365. You can also configure apps, protect apps on organizations owned and BYOD personal devices, and update apps that you deploy.
+description: Get an overview of the concepts and features you should know when managing apps that access organization resources in Microsoft Intune. You can deploy apps used by your organization, including Microsoft Edge and Microsoft 365. You can also configure apps, protect apps on organizations owned and BYOD personal devices, and update apps that you deploy.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2023
+ms.date: 02/19/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
@@ -29,11 +29,11 @@ ms.collection:
 - highpri
 ---
 
-# Manage your apps and app data in Microsoft Intune
+# Learn about managing your apps and app data in Microsoft Intune
 
 Managing and protecting apps and their data is a significant part of any endpoint management strategy and solution. In most environments, users can install public retail apps and possibly access organization data from these apps. Many organizations also have their own private apps and line-of-business apps that need to be deployed & managed. They must make sure this app data stays within the organization.
 
-App management can be challenging and Intune can help. Microsoft Intune is a cloud-based service that can manage many apps types. Using Intune, admins can deploy, configure, protect, and update apps that access your organization resources. For more information on Intune and its benefits, go to [What is Microsoft Intune?](what-is-intune.md).
+App management can be challenging and Intune can help. [Microsoft Intune is a cloud-based service](what-is-intune.md) that can manage many apps types. Using Intune, admins can deploy, configure, protect, and update apps that access your organization resources.
 
 :::image type="content" source="./media/manage-apps/manage-apps-with-intune.png" alt-text="Diagram that shows app management in the Microsoft Intune admin center, including deploying apps, and using app configuration policies & app protection policies for managed apps & personal apps." lightbox="./media/manage-apps/manage-apps-with-intune.png":::
 
@@ -49,89 +49,95 @@ Organizations use many different types of apps, including store apps, line-of-bu
 
 The app features in the Intune admin center make it easier to deploy these different kinds of apps.
 
-- For **Android** devices, the Intune admin center automatically connects to the public Play Store and gives you the ability to search for apps. You can also sync with your Managed Google Play account to access your Android Enterprise apps, including private apps.
+### ✅ Android devices
 
-  On Android devices, you can deploy:
+The Intune admin center automatically connects to the public Play Store and gives you the ability to search for apps. You can also sync with your Managed Google Play account to access your Android Enterprise apps, including private apps.
 
-  - Public and retail apps from the public Play Store
-  - Managed Google Play apps to Android Enterprise devices
-  - Web links to web apps
-  - Built-in apps, which are apps automatically included and available in the Intune admin center
-  - Custom line-of-business apps your organization creates
-  - Android Enterprise system apps, which are apps typically included on Android devices
+On Android devices, you can deploy:
 
-  If you use [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site), you can purchase licenses to GMS, which typically happens when you purchase Android devices. GMS gives users access to the public Play Store and its public apps.
+- Public and retail apps from the public Play Store
+- Managed Google Play apps to Android Enterprise devices
+- Web links to web apps
+- Built-in apps, which are apps automatically included and available in the Intune admin center
+- Custom line-of-business apps your organization creates
+- Android Enterprise system apps, which are apps typically included on Android devices
 
-  If your organization doesn't use [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site), then Intune can also manage devices using the Android Open Source Project (AOSP) platform.
+If you use [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site), you can purchase licenses to GMS, which typically happens when you purchase Android devices. GMS gives users access to the public Play Store and its public apps.
 
-  For more specific information, go to:
+If your organization doesn't use [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site), then Intune can also manage devices using the Android Open Source Project (AOSP) platform.
 
-  - [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md)
-  - [Add Managed Google Play apps to Android Enterprise devices](../apps/apps-add-android-for-work.md)
-  - [Manage private Android apps in Google Play](https://support.google.com/a/answer/2494992) (opens Google's web site)
-  - [Add built-in apps](../apps/apps-add-built-in.md)
+For more specific information, go to:
 
-- For **iOS/iPadOS** devices, the Intune admin center automatically connects to the public App Store and gives you the ability to search for apps. You can also sync with your Apple Business Manager or Apple School Manager account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the admin center.
+- [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md)
+- [Add Managed Google Play apps to Android Enterprise devices](../apps/apps-add-android-for-work.md)
+- [Manage private Android apps in Google Play](https://support.google.com/a/answer/2494992) (opens Google's web site)
+- [Add built-in apps](../apps/apps-add-built-in.md)
 
-  On iOS/iPadOS devices, you can deploy:
+### ✅ iOS/iPadOS devices
 
-  - Public and retail apps from the public App Store
-  - Volume-licensed apps using Apple Business Manager or Apple School Manager
-  - Web clips, which are shortcuts to web site links that you can add to the home screen
-  - Web links to web apps
-  - Built-in apps, which are apps automatically included and available in the Intune admin center
-  - Custom line-of-business apps your organization creates
+The Intune admin center automatically connects to the public App Store and gives you the ability to search for apps. You can also sync with your Apple Business Manager or Apple School Manager account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the Intune admin center.
 
-  For more specific information, go to:
+On iOS/iPadOS devices, you can deploy:
 
-  - [Add iOS store apps](../apps/store-apps-ios.md)
-  - [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../apps/vpp-apps-ios.md)
-  - [Add iOS/iPadOS LOB apps](../apps/lob-apps-ios.md)
-  - [Add built-in apps](../apps/apps-add-built-in.md)
+- Public and retail apps from the public App Store
+- Volume-licensed apps using Apple Business Manager or Apple School Manager
+- Web clips, which are shortcuts to web site links that you can add to the home screen
+- Web links to web apps
+- Built-in apps, which are apps automatically included and available in the Intune admin center
+- Custom line-of-business apps your organization creates
 
-- For **macOS** devices, the Intune admin center has built-in features that include apps commonly deployed to macOS, including Microsoft Edge and Microsoft 365 apps. You can also sync with your Apple Business Manager or Apple School Manager account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the admin center.
+For more specific information, go to:
 
-  On macOS devices, you can deploy:
+- [Add iOS store apps](../apps/store-apps-ios.md)
+- [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../apps/vpp-apps-ios.md)
+- [Add iOS/iPadOS LOB apps](../apps/lob-apps-ios.md)
+- [Add built-in apps](../apps/apps-add-built-in.md)
 
-  - Volume-licensed apps using Apple Business Manager or Apple School Manager
-  - Microsoft 365 apps, which include Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive
-  - Microsoft Edge version 77 and newer, which is the modern chromium version
-  - Microsoft Defender for Endpoint, which is a cloud service that detects malicious intent and can help remediate security threats
-  - Web links to web apps
-  - Custom line-of-business apps your organization creates
-  - Apple disk image (DMG) apps, which is a file that includes one or more apps to deploy
-  - Unmanaged PKG Files (custom packages, unsigned packages, packages without a payload)
-    
-    For more specific information, go to:
+### ✅ macOS devices
 
-  - [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../apps/vpp-apps-ios.md)
-  - [Assign Microsoft 365 to macOS devices](../apps/apps-add-office365-macOS.md)
-  - [Add macOS LOB apps](../apps/lob-apps-macos.md)
-  - [Add macOS PKG apps](../apps/macos-unmanaged-pkg.md)
-    
-- For **Windows** devices, the Intune admin center automatically connects to the public Microsoft Store and gives you the ability to search for apps. You can also sync with your Microsoft Store for Business account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the admin center.
+The Intune admin center has built-in features that include apps commonly deployed to macOS, including Microsoft Edge and Microsoft 365 apps. You can also sync with your Apple Business Manager or Apple School Manager account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the Intune admin center.
 
-  On Windows devices, you can deploy:
-  
-  - Public and retail apps from the Microsoft Store
-  - Microsoft 365 apps, which include Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive
-  - Microsoft Edge version 77 and newer, which is the modern chromium version
-  - Web links to web apps
-  - Custom line-of-business apps your organization creates
-  - Win32 apps
-    
-  For more specific information, go to:
-  
-  - [Add Microsoft 365 apps to Windows client devices](../apps/apps-add-office365.md)
-  - [Win32 app management](../apps/apps-win32-app-management.md)
-    
-  > [!NOTE]
-  > Microsoft Store for Business is being retired. Starting with Windows 11, you have a new option for your private volume-licensed apps. For more information, go to [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11) and [Update to Microsoft Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077).
-  > To add Microsoft Store apps, see [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md). 
-  
+On macOS devices, you can deploy:
+
+- Volume-licensed apps using Apple Business Manager or Apple School Manager
+- Microsoft 365 apps, which include Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive
+- Microsoft Edge version 77 and newer, which is the modern chromium version
+- Microsoft Defender for Endpoint, which is a cloud service that detects malicious intent and can help remediate security threats
+- Web links to web apps
+- Custom line-of-business apps your organization creates
+- Apple disk image (DMG) apps, which is a file that includes one or more apps to deploy
+- Unmanaged PKG Files (custom packages, unsigned packages, packages without a payload)
+
+For more specific information, go to:
+
+- [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../apps/vpp-apps-ios.md)
+- [Assign Microsoft 365 to macOS devices](../apps/apps-add-office365-macOS.md)
+- [Add macOS LOB apps](../apps/lob-apps-macos.md)
+- [Add macOS PKG apps](../apps/macos-unmanaged-pkg.md)
+- [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md)
+
+### ✅ Windows devices
+
+The Intune admin center automatically connects to the public Microsoft Store and gives you the ability to search for apps.
+
+On Windows devices, you can deploy:
+
+- Public and retail apps from the Microsoft Store
+- Microsoft 365 apps, which include Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive
+- Microsoft Edge version 77 and newer, which is the modern chromium version
+- Web links to web apps
+- Custom line-of-business apps your organization creates
+- Win32 apps
+
+For more specific information, go to:
+
+- [Add Microsoft 365 apps to Windows client devices](../apps/apps-add-office365.md)
+- [Win32 app management](../apps/apps-win32-app-management.md)
+- [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md)
+
 ## Configure apps before they're installed
 
-When an app is deployed to your users and devices, your users can be prompted for configuration information. Users might not know what to enter or you might have organization settings you want configured a certain way.
+When an Android or iOS/iPadOS app is deployed to your users and devices, your users can be prompted for configuration information. Users might not know what to enter or you might have organization settings you want configured a certain way.
 
 App configuration policies give you these features. You can create app configuration policies that automatically configure apps. Depending on your policy settings, users might not need to enter any configuration information when they open the app.
 
@@ -169,8 +175,8 @@ For more information, go to:
 - [Wipe corporate data from Intune-managed apps](../apps/apps-selective-wipe.md)
 - [Selectively wipe data using app protection policy conditional launch actions](../apps/app-protection-policies-access-actions.md)
 
-## Next steps
+## Related articles
 
-- [Manage identities](manage-identities.md)
-- [Manage devices](manage-devices.md)
+- [Learn about managing identities in Intune](manage-identities.md)
+- [Learn about managing devices in Intune](manage-devices.md)
 - [Frequently asked questions about application management and app protection](../apps/mam-faq.yml)

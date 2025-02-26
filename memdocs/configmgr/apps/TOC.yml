@@ -1,10 +1,6 @@
 items:
 - name: App management documentation
   href: index.yml
-- name: Understand and explore
-  items:
-  - name: Introduction
-    href: understand/introduction-to-application-management.md
 - name: Get started
   items:
   - name: Create and deploy an application

@@ -36,7 +36,7 @@ ms.collection:
 
 This feature is in [public preview](../fundamentals/public-preview.md).
 
-[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) is a generative-AI security analysis tool. It can help you and your organization get information quickly and make decisions that affect security and risk.
+[Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) is a generative-AI security analysis tool. It can help you and your organization get information quickly and make decisions that affect security and risk.
 
 Intune has capabilities that are powered by Copilot. These capabilities access your Intune data and help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
 
@@ -60,10 +60,10 @@ To use Copilot in Intune, you should know the following information:
 
   For more information about SCUs, see:
 
-  - [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot)
-  - [Manage capacity in Security Copilot](/security-copilot/manage-usage)
+  - [Get started with Microsoft Copilot](/copilot/security/get-started-security-copilot)
+  - [Manage capacity in Security Copilot](/copilot/security/manage-usage)
 
-- **Copilot configuration**: Before you can use the Copilot features in Intune, Microsoft Security Copilot must be configured, and you must complete the first run tour in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989). For the setup tasks, see [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
+- **Copilot configuration**: Before you can use the Copilot features in Intune, Microsoft Security Copilot must be configured, and you must complete the first run tour in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989). For the setup tasks, see [Get started with Microsoft Copilot](/copilot/security/get-started-security-copilot).
 
   You can check the status in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Copilot**.
 
@@ -71,7 +71,7 @@ To use Copilot in Intune, you should know the following information:
 
 - **Copilot roles**: Access to Copilot in Intune is managed through Security Copilot or Microsoft Entra ID. To use Copilot in Intune, you or your admin team must be assigned the appropriate role in Security Copilot or Microsoft Entra ID. There isn't a built-in Intune role that has access to Copilot.
 
-  For more information, see [Roles and authentication in Microsoft Security Copilot](/security-copilot/authentication).
+  For more information, see [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication).
 
 - **Intune plug-in source**: To use Copilot in Intune, you need the Intune plug-in enabled in Security Copilot. This plug-in allows you to access your Intune data and use Copilot in the Intune admin center.
 
@@ -84,7 +84,7 @@ To use Copilot in Intune, you should know the following information:
   :::image type="content" source="./media/copilot-intune-overview/intune-plug-in-enabled.png" alt-text="Screenshot that shows the Microsoft Intune plug-in source is enabled in the Microsoft Security Copilot portal.":::
 
   > [!TIP]
-  > Some roles can enable or disable plug-ins. For more information, see [Manage plug-ins in Microsoft Security Copilot](/security-copilot/manage-plugins).
+  > Some roles can enable or disable plug-ins. For more information, see [Manage plug-ins in Microsoft Security Copilot](/copilot/security/manage-plugins).
 
 - **Your Intune data**: Copilot uses your Intune data. When an Intune admin submits a prompt, Copilot can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them.
 

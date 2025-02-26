@@ -8,7 +8,7 @@ keywords: 802.1x, wired network, macos, windows, microsoft intune, endpoint mana
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 02/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,9 +30,9 @@ ms.collection:
 
 # Add and use wired networks settings on your macOS and Windows devices in Microsoft Intune
 
-Microsoft Intune includes built-in settings to configure wired networks for your macOS and Windows devices. You can configure the network interface, accepted EAP types, enter server trust settings, and more.
+Organization use wired networks to give network access to desktop computers and devices that must use a network cable.
 
-Wired networks are used by many organizations to give network access to desktop computers and devices that must use a network cable.
+Microsoft Intune includes built-in settings to configure wired networks for your macOS and Windows devices. You can configure the network interface, accepted EAP types, enter server trust settings, and more.
 
 These built-in settings can be deployed to devices in your organization using policy. When the policy is ready, it can be assigned to different users and groups. Once assigned, your users get access to your organization's wired network without configuring it themselves.
 
@@ -89,6 +89,6 @@ This article lists the steps to create a wired network profile in Intune. It als
 > [!TIP]
 > If you use certificate based authentication for your wired network profile, then deploy the wired network profile, certificate profile, and trusted root profile to the same groups. This deployment makes sure that each device can recognize the legitimacy of your certificate authority. For more information, go to [configure certificates with Microsoft Intune](../protect/certificates-configure.md).
 
-## Resources
+## Related articles
 
-The profile is created, but may not be doing anything. Be sure to [assign this profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+The profile is created, but might not be doing anything. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
