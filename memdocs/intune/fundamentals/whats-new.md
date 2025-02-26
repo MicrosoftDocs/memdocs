@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/14/2025
+ms.date: 02/24/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,36 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of February 24, 2025
+
+### App management
+
+#### Managed Home Screen QR Code Authentication in public preview<!-- 25348926 -->
+Managed Home Screen for Android devices natively supports QR Code Authentication in Microsoft Entra ID. Authentication involves both a QR code and PIN. This capability eliminates the need for users to enter and re-enter long UPNs and alphanumeric passwords. For more information, see [Sign in to Microsoft Teams or Managed Home Screen (MHS) with QR code](/entra/identity/authentication/how-to-authentication-qr-code#sign-in-to-microsoft-teams-or-managed-home-screen-mhs-with-qr-code).  
+
+Applies to:
+- Android devices
+
+#### Additional device details for Managed Home Screen<!-- 27006536 -->
+Android **OS version**, **Security patch** and **Last device reboot time** details are now available from the **Device Information** page of the Managed Home Screen app. For related information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+Applies to:
+- Android Enterprise devices
+
+#### Display ringtone selector for Managed Home Screen<!-- 26826233 -->
+In Intune, you can choose to expose a setting in the Managed Home Screen app to allow users to select a ringtone. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+Applies to:
+- Android devices
+
+## Week of February 17, 2025
+
+### Monitor and troubleshoot
+
+#### Limited live chat support in Intune<!-- 30477421 -->
+
+Intune is introducing limited live chat support within the Intune admin console. Live chat will not be available for all tenants or inquiries at this time.
 
 ## Week of February 10, 2025
 

@@ -20,7 +20,7 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 #ROBOTS:
 #audience:
 
-ms.reviewer: scottduf
+ms.reviewer: beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -50,6 +50,9 @@ Many productivity apps, such as the Microsoft 365 (Office) apps, can be managed 
 Your employees use mobile devices for both personal and work tasks. While making sure your employees can be productive, you want to prevent data loss, intentional and unintentional. You'll also want to protect company data that is accessed from devices that aren't managed by you.
 
 You can use Intune app protection policies **independent of any mobile-device management (MDM) solution**. This independence helps you protect your company's data with or without enrolling devices in a device management solution. By implementing **app-level policies**, you can restrict access to company resources and keep data within the purview of your IT department.
+
+  > [!NOTE]
+  > To ensure that policies are enforced, we recommend using Conditional Access together with Intune app protection policies.
 
 ### App protection policies on devices
 
