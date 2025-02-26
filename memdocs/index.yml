@@ -9,7 +9,7 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: dansimp
-  ms.date: 05/02/2024
+  ms.date: 11/25/2024
   ms.localizationpriority: high
   ms.collection: 
   ms.custom: intro-hub-or-landing
@@ -24,7 +24,7 @@ highlightedContent:
       url: ./intune-service/fundamentals/whats-new.md
     - title: Intune Blog and Community
       itemType: overview
-      url: /mem/index#intune-blog-and-community
+      url: https://aka.ms/IntuneCommunity
     - title: Microsoft Intune Suite add-ons
       itemType: overview
       url: ./intune-service/fundamentals/intune-add-ons.md
@@ -154,13 +154,13 @@ conceptualContent:
             text: Microsoft Intune Tech Community blog
           - text: Intune Customer Success
             itemType: how-to-guide
-            url: https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess
+            url: https://aka.ms/IntuneCustomerSuccess
           - text: "#MSIntune on X (formerly Twitter)"
             itemType: overview
             url: https://twitter.com/hashtag/msintune
           - text: Feedback for Intune
             itemType: overview
-            url: https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472
+            url: https://aka.ms/IntuneFeedback
           - text: Microsoft Q & A - Microsoft Intune
             itemType: overview
             url: https://learn.microsoft.com/answers/tags/415/intune
