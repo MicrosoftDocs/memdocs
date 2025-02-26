@@ -44,7 +44,7 @@ Microsoft Intune is a **cloud-based endpoint management solution**. It manages u
 
 You can protect access and data on organization-owned and users personal devices. And, Intune has compliance and reporting features that support the [Zero Trust security model](zero-trust-with-microsoft-intune.md).
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWAoF9]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=dbd45acc-fa88-41aa-a9ac-7a751378d603]
 
 This article lists some features and benefits of Microsoft Intune.
 
@@ -85,7 +85,7 @@ For more information, go to [Manage apps using Microsoft Intune](manage-apps.md)
 
 ✅ **Automate policy deployment**
 
-You can create policies for apps, security, device configuration, compliance, conditional access, and more. When the policies are ready, you can deploy these policies to your user groups and device groups. To receive these policies, the devices only need internet access.
+You can create policies for apps, security, device configuration, compliance, Conditional Access, and more. When the policies are ready, you can deploy these policies to your user groups and device groups. To receive these policies, the devices only need internet access.
 
 For more information, go to [Assign policies in Microsoft Intune](../configuration/device-profile-assign.md).
 
@@ -169,7 +169,7 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
 - **[Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint)** to help enterprises prevent, detect, investigate, and respond to threats
 
-  In Intune, you can create a service-to-service connection between Intune and Microsoft Defender for Endpoint. When they're connected, you can create policies that scan files, detect threats, and report threat levels to Microsoft Defender for Endpoint. You can also create compliance policies that set an allowable level of risk. When combined with conditional access, you can block access to organization resources for devices that are noncompliant.
+  In Intune, you can create a service-to-service connection between Intune and Microsoft Defender for Endpoint. When they're connected, you can create policies that scan files, detect threats, and report threat levels to Microsoft Defender for Endpoint. You can also create compliance policies that set an allowable level of risk. When combined with Conditional Access, you can block access to organization resources for devices that are noncompliant.
 
   For more specific information, go to:
 
@@ -252,7 +252,7 @@ On devices enrolled in Intune, you can:
 - Create and deploy policies that configure security settings, set password requirements, deploy certificates, and more.
 - Use mobile threat defense services to scan devices, detect threats, and remediate threats.
 - View data and reports that measure compliance with your security settings and rules.
-- Use conditional access to only allow managed and compliant devices access to organization resources, apps, and data.
+- Use Conditional Access to only allow managed and compliant devices access to organization resources, apps, and data.
 - Remove organization data if a device is lost or stolen.
 
 For personal devices, users might not want their IT admins to have full control. To support a hybrid work environment, give users options. For example, users enroll their devices if they want full access to your organization's resources. Or, if these users only want access to Outlook or Microsoft Teams, then use app protection policies that require multifactor authentication (MFA).
@@ -262,7 +262,7 @@ On devices using application management, you can:
 - Use mobile threat defense services to protect app data. The service can scan devices, detect threats, and assess risk.
 - Prevent organization data from being copied and pasted into personal apps.
 - Use app protection policies on apps and on unmanaged devices enrolled in a third party or partner MDM.
-- Use conditional access to restrict the apps that can access organization email and files.
+- Use Conditional Access to restrict the apps that can access organization email and files.
 - Remove organization data within apps.
 
 For more information, go to:

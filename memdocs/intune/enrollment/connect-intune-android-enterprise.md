@@ -59,7 +59,7 @@ This article describes how to link your accounts in the Microsoft Intune admin c
 
 ## Connect accounts  
 > [!TIP]
-> Due to interaction between Google and Microsoft domains, you might need to adjust your browser settings to complete this process. Make sure that `portal.azure.com`, `play.google.com`, and `enterprise.google.com` are in the same security zone in your browser.  
+> Due to the interaction between Google and Microsoft domains, you might need to adjust your browser settings to complete this process. Make sure that portal.azure.com, play.google.com, and enterprise.google.com are in the same security zone in your browser. For instructions on how to perform these configurations in your browser, see [Per-site configuration by policy](/deployedge/per-site-configuration-by-policy).  
 
 Complete these steps to enable Android Enterprise management options in Microsoft Intune.  
 

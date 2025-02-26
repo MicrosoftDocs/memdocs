@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 01/06/2025
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
@@ -20,7 +20,7 @@ ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
 #ROBOTS:
 #audience:
 
-ms.reviewer: scottduf
+ms.reviewer: beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/05/2024
+ms.date: 01/14/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -47,8 +47,8 @@ This article shows you how to view all your devices, and their properties in the
       - [Remote lock](device-remote-lock.md)
       - [Sync](device-sync.md)
       - [Reset passcode](device-passcode-reset.md)
-      - [Restart](device-restart.md) 
-      - [Fresh Start](device-fresh-start.md) (Windows only)
+      - [Restart](device-restart.md)
+      - [Fresh Start](device-fresh-start.md) (Windows 10/11)
       - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows only)
       - [Quick scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
       - [Full scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
@@ -73,7 +73,7 @@ Depending on the carrier used by the devices, not all details might be collected
 > Hardware and Software inventory is refreshed in the Intune service every 7 days, starting from the date of enrolment.
 
 > [!NOTE]
-> Hardware device details are currently not supported for Linux devices. 
+> Hardware device details are currently not supported for Linux devices.
 
 |Detail|Description|Platform|
 |--------------|----------------------|----|  
@@ -81,7 +81,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Management name|An easily recognizable device name used only in the Intune admin center. Changing this name does not change the device name or the name in the Company Portal. For more information on how to change the device name, see [Rename a device with Microsoft Intune](device-rename.md).|Windows, macOS, iOS, Android <br/><br/> NOTE: Management names won't automatically populate for Android Enterprise dedicated, fully managed, and corporate-owned with work profile devices that were enrolled before November 2021. However, the admin may still edit the management name.|
 |UDID|The device's Unique Device identifier.|macOS, iOS|
 |Intune Device ID|A GUID that uniquely identifies the device.|Windows, macOS, iOS, Android|
-|Serial number|The device's serial number from the manufacturer.|Windows, macOS, iOS, iPadOS, Android <br/><br/> Intune doesn't display serial number for Android personally owned work profile devices running Android 12 and newer.|
+|Serial number|The device's serial number from the manufacturer.|Windows, macOS, iOS, iPadOS, Android <br/><br/> NOTE: Intune might not be able to display the serial number for personally owned work profile devices running Android 12 and newer due to platform limitations.|
 |Shared device|If **Yes**, the device is shared by more than one user.|Windows, iOS|
 |User approved enrollment|If **Yes**, then the device has user approved enrollment that lets admins manage certain security settings on the device.|Windows, iOS|
 |Operating system|The operating system used on the device.|Windows, macOS, iOS, Android|
@@ -96,8 +96,8 @@ Depending on the carrier used by the devices, not all details might be collected
 | PowerPrecision Battery Charge Cycles Consumed | Number of full charge cycles consumed as determined by Zebra (PowerPrecision batteries only). | Android |
 | Last Battery Check-in | Date of last check-in for battery last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
 | Battery Serial Number | Serial number of the battery pack last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
-|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune doesn't display IMEI for Android personally owned work profile devices running Android 12 and newer|
-|MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune doesn't display MEID for Android personally owned work profile devices running Android 12 and newer|
+|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune might not be able to display IMEI for personally owned work profile devices running Android 12 and newer due to platform limitations.|
+|MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune might not be able to display MEID for personally owned work profile devices running Android 12 and newer due to platform limitations.|
 |Manufacturer|The manufacturer of the device.|Windows, macOS, iOS/iPadOS, Android|
 |Model|The model of the device.|Windows, macOS, iOS/iPadOS, Android|
 |Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Reporting for phone number isn't supported for Android Enterprise corporate-owned work profile devices. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards won't write the data and therefore the phone number isn't reported in such cases.|
@@ -125,13 +125,13 @@ Depending on the carrier used by the devices, not all details might be collected
 
  > [!NOTE]
  > 
-- For Windows 10 devices that are registered with [Windows Autopilot service](/autopilot/add-devices), Enrolled date displays the time when devices were registered with Autopilot instead of the time when they were enrolled.
-- For Android Enterprise corporate-owned work profile devices, reporting for phone number is not supported. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases.
-- For multi-SIM iOS/iPadOS devices, Intune has no control over which SIM data is assigned to the Service Subscription slots on the device for the ICCID, IMEI, MEID, and Phone number values. Intune only reports the first available values received from the device in the following order:
-   - CT Subscription Slot One
-      - CT Subscription Slot Two
-         - Top-level ICCID, IMEI, MEID, and Phone number properties (deprecated)
-         
+ > - For Windows 10 devices that are registered with [Windows Autopilot service](/autopilot/add-devices), Enrolled date displays the time when devices were registered with Autopilot instead of the time when they were enrolled.
+ > - For Android Enterprise corporate-owned work profile devices, reporting for phone number is not supported. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases.
+ > - For multi-SIM iOS/iPadOS devices, Intune has no control over which SIM data is assigned to the Service Subscription slots on the device for the ICCID, IMEI, MEID, and Phone number values. Intune only reports the first available values received from the device in the following order:
+   > - CT Subscription Slot One
+     > - CT Subscription Slot Two
+       >  - Top-level ICCID, IMEI, MEID, and Phone number properties (deprecated)
+
 ## Next steps
 
 See what else you can do to [manage your devices](device-management.md) with Intune.

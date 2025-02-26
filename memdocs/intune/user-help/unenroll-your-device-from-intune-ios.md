@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 
-ms.date: 01/07/2020
+ms.date: 02/18/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -50,7 +50,7 @@ Follow these steps to remove a device you no longer need for work or school from
 
 2. Select the device you want to remove. If you only have one device, skip to step 3.  
 
-3. Next to **RENAME**, select the ellipses menu > **Remove Device** > **Remove**.  
+3. Next to **Rename**, select the ellipses menu. Then tap **Remove device** > **Remove**.  
 
     ![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove. Shows "Remove Device" button, "Factory Reset" button, and "Cancel" button.](./media/unenroll-your-device-from-intune-ios/cp_ios_unenroll_after_1804_001.png) 
 
@@ -63,9 +63,9 @@ There are three places the Company Portal app stores local data on your device.
 
 - **Information logs**: Standard app activity data that Microsoft collects, such as how long the app was open or if it crashed, is automatically erased when you remove the device from the Company Portal.  
 
-- **Apple analytics**: Standard app crash activity data that Apple collects. This information can only be removed by resetting your device back to factory settings. This will erase all personal information on your device. To do this, open **Settings** > **General** > **Reset** > **Erase All Content and Settings**.  
+- **Apple analytics**: Standard app crash activity data that Apple collects. This information can only be removed by resetting your device back to factory settings. This will erase all personal information on your device. To do this, open **Settings** > **General**. Tap the **Transfer or Reset** option, and then tap **Erase All Content and Settings**.  
 
-- **Keychain**: Your device stores your passwords and other information used for sign-ins in your Keychain. Microsoft apps share your sign-in information across any Microsoft-developed apps that you have on your device, including Microsoft Outlook and Microsoft Authenticator. Like Apple analytics, this information can only be removed by resetting your device back to factory settings. This will erase all personal information on your device. To do this, open **Settings** > **General** > **Reset** > **Erase All Content and Settings**.  
+- **Keychain**: Your device stores your passwords and other information used for sign-ins in your Keychain. Microsoft apps share your sign-in information across any Microsoft-developed apps that you have on your device, including Microsoft Outlook and Microsoft Authenticator. Like Apple analytics, this information can only be removed by resetting your device back to factory settings. This will erase all personal information on your device. To do this, open **Settings** > **General**. Tap the **Transfer or Reset** option, and then tap **Erase All Content and Settings**.  
 
 
 ##  Next steps 

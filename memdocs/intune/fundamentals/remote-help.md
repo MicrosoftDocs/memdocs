@@ -87,18 +87,17 @@ For specific prerequisites based on the platform that you're using, go to:
 
 Limitations:  
 
+- You cannot establish a Remote Help session from one tenant to a different tenant.
+- Remote Help might not be available in all markets or localizations.
 - Remote Help is supported in Government Community Cloud (GCC) environments on the following platforms:
 
   - Windows 10/11
   - Windows 10/11 on ARM64 devices
   - Windows 365
   - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
-  - macOS 12, 13, 14, and 15
+  - macOS 13, 14, and 15
 
     Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
-
-  - You cannot establish a Remote Help session from one tenant to a different tenant.
-  - Remote Help might not be available in all markets or localizations.
 
 ## Supported platforms and devices
 
@@ -109,7 +108,7 @@ This feature applies to:
 - Windows 10 on ARM64 devices
 - Windows 365
 - Android Enterprise Dedicated (Samsung and Zebra devices)
-- macOS 12, 13, 14, and 15
+- macOS 13, 14, and 15
 
 ## Data and privacy
 
@@ -192,8 +191,7 @@ After creating the custom roles that you can use to provide different users with
 5. On the **Scope (Groups)** page, choose a group containing the users/devices that a member is allowed to manage. You also can choose all users or all devices. Choose **Next** to continue.
 
    >[!IMPORTANT]
-   >If a sharer or a sharer's device isn't in the scope of a helper, that helper cannot provide assistance.
-
+   >If a sharer or a sharer's device isn't in the scope of a helper, that helper cannot provide assistance. When assisting an unenrolled device, the "All Devices" scope group will not include these devices. Instead, you should use the user scope group during the assignment process.
 6. On the **Review + Create** page, when you're done, choose **Create**. The new assignment is displayed in the list of assignments.
 
 ## Monitoring and reports

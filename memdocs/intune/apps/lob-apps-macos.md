@@ -40,9 +40,9 @@ ms.collection:
 Use the information in this article to help you add macOS line-of-business apps to Microsoft Intune. 
 
 > [!NOTE]
-> macOS LOB apps have a maximum size limit of 2 GB per app.
+> macOS LOB apps have a maximum size limit of 8 GB per app.
 >
-> macOS LOB apps need to have a logo. If they don't have a logo, they will not be displayed in the apps section.
+> macOS LOB apps need to have a logo. If they don't have a logo, they won't be displayed in the apps section.
 >
 > While users of macOS devices can remove some of the built-in macOS apps like Stocks, and Maps, you cannot use Intune to redeploy those apps. If end users delete these apps, they must go to the app store, and manually re install them.
 
@@ -53,7 +53,7 @@ The .pkg file must satisfy the following requirements to successfully be deploye
 1. The .pkg file is a component package or a package containing multiple packages.
 2. The .pkg file does not contain a bundle or disk image or .app file.
 3. The .pkg file is signed using a "Developer ID Installer" certificate, obtained from an Apple Developer account.
-4. The .pkg file contains a payload. Packages without a payload will attempt to re-install as long as the app remains assigned to the group.
+4. The .pkg file contains a payload. Packages without a payload attempt to re-install as long as the app remains assigned to the group.
 
 ## Select the app type
 
@@ -64,7 +64,7 @@ The .pkg file must satisfy the following requirements to successfully be deploye
 > The *.pkg* file must be signed using "Developer ID Installer" certificate, obtained from an Apple Developer account. Only *.pkg* files may be used to upload macOS LOB apps to Microsoft Intune. To deploy *.dmg* or *.app* files, see [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** > **Add**.
+2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
 4. Click **Select**. The **Add app** steps are displayed.
 
@@ -74,7 +74,7 @@ The .pkg file must satisfy the following requirements to successfully be deploye
 
 1. In the **Add app** pane, click **Select app package file**. 
 2. In the **App package file** pane, select the browse button. Then, select an macOS installation file with the extension *.pkg*.
-   The app details will be displayed.
+   The app details are displayed.
 3. When you're finished, select **OK** on the **App package file** pane to add the app.
 
 ### Set app information
@@ -83,10 +83,10 @@ The .pkg file must satisfy the following requirements to successfully be deploye
     - **Name**: Enter the name of the app as it appears in the company portal. Make sure all app names that you use are unique. If the same app name exists twice, only one of the apps appears in the company portal.
     - **Description**: Enter the description of the app. The description appears in the company portal.
     - **Publisher**: Enter the name of the publisher of the app.
-    - **Minimum Operating System**: From the list, choose the minimum operating system version on which the app can be installed. If you assign the app to a device with an earlier operating system, it will not be installed.
-    - **Ignore app version**: Select **Yes** to install the app if the app is not already installed on the device. Select **No** to only install the app when it is not already installed on the device, or if the deploying app's version number does not match the version that's already installed on the device.
-    - **Install as managed**: Select **Yes** to install the Mac LOB app as a managed app on supported devices (macOS 11 and higher). A macOS LOB app can only be installed as managed when the app distributable contains a single app without any nested packages and installs to the */Applications* directory. Managed line-of-business apps will be able to be removed using the **uninstall** assignment type on supported devices (macOS 11 and higher). In addition, removing the MDM profile removes all managed apps from the device. The default value is **No**.
-    - **Included apps**: Review and edit the apps that are contained in the uploaded file. Included app bundle IDs and build numbers are used for detecting and monitoring app installation status of the uploaded file. The app listed first is used as the primary app in app reporting. <br>Included apps list should only contain the application(s) installed by the uploaded file in **Applications** folder on Macs. Any other type of file that is not an application or an application that is not installed to **Applications** folder should be removed from the **Included apps** list. If **Included apps** list contains files that are not applications or if all the listed apps are not installed, app installation status does not report success.<br>Mac Terminal can be used to look up and confirm the included app details of an installed app.<br>For example, to look up the bundle ID and build number of a Company Portal, run the following:<br> *defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier*<br>Then, run the following:<br> *defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString*
+    - **Minimum Operating System**: From the list, choose the minimum operating system version on which the app can be installed. If you assign the app to a device with an earlier operating system, it won't be installed.
+    - **Ignore app version**: Select **Yes** to install the app if the app is not already installed on the device. Select **No** to only install the app when it isn't already installed on the device, or if the deploying app's version number does not match the version that's already installed on the device.
+    - **Install as managed**: Select **Yes** to install the Mac LOB app as a managed app on supported devices (macOS 11 and higher). A macOS LOB app can only be installed as managed when the app distributable contains a single app without any nested packages and installs to the */Applications* directory. Managed line-of-business apps are able to be removed using the **uninstall** assignment type on supported devices (macOS 11 and higher). In addition, removing the MDM profile removes all managed apps from the device. The default value is **No**.
+    - **Included apps**: Review and edit the apps that are contained in the uploaded file. Included app bundle IDs and build numbers are used for detecting and monitoring app installation status of the uploaded file. The app listed first is used as the primary app in app reporting. <br>Included apps list should only contain the application(s) installed by the uploaded file in **Applications** folder on Macs. Any other type of file that isn't an application or an application that is not installed to **Applications** folder should be removed from the **Included apps** list. If **Included apps** list contains files that are not applications or if all the listed apps are not installed, app installation status does not report success.<br>Mac Terminal can be used to look up and confirm the included app details of an installed app.<br>For example, to look up the bundle ID and build number of a Company Portal, run the following:<br> *defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier*<br>Then, run the following:<br> *defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString*
     - **Category**: Select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the company portal.
     - **Show this as a featured app in the Company Portal**: Display the app prominently on the main page of the company portal when users browse for apps.
     - **Information URL**: Optionally, enter the URL of a website that contains information about this app. The URL appears in the company portal.
@@ -109,7 +109,7 @@ You can use scope tags to determine who can see client app information in Intune
 1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
     > [!NOTE]
-    > The **uninstall** intent will only be displayed for LOB apps created with **Install as managed** set to **Yes**. For more information review **App information section** earlier on this article.
+    > The **uninstall** intent will only be displayed for LOB apps created with **Install as managed** set to **Yes**. For more information, review **App information section** earlier on this article.
 
 2. Click **Next** to display the **Review + create** page.
 
@@ -120,7 +120,7 @@ You can use scope tags to determine who can see client app information in Intune
 
     The **Overview** blade for the line-of-business app is displayed.
 
-The app you have created appears in the apps list where you can assign it to the groups you choose. For help, see [How to assign apps to groups](apps-deploy.md).
+The app you created appears in the apps list where you can assign it to the groups you choose. For help, see [How to assign apps to groups](apps-deploy.md).
 
 > [!NOTE]
 > If the *.pkg* file contains multiple apps or app installers, then Microsoft Intune will only report that the *app* is successfully installed when all installed apps are detected on the device.

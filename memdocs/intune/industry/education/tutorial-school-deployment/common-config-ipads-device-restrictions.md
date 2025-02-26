@@ -9,6 +9,8 @@ ms.manager: dougeby
 no-loc: [Microsoft, Apple]
 ms.collection: 
 - graph-interactive
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Common Education iPad device restrictions
@@ -97,7 +99,7 @@ To learn more, see:
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - iPads - Device restrictions**.
+This will create a policy in your tenant with the name **:::no-loc text="_MSLearn_Example_CommonEDU - iPads - Device restrictions":::**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
@@ -131,7 +133,7 @@ Content-Type: application/json
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - iPads - Device restrictions (require additional consideration)**.
+This will create a policy in your tenant with the name **:::no-loc text="_MSLearn_Example_CommonEDU - iPads - Device restrictions (require additional consideration)":::**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies

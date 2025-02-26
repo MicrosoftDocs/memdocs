@@ -43,7 +43,7 @@ Windows 10
 
 - To use Inventory, devices must be corporate owned, Intune managed (includes co-managed), and Microsoft Entra joined.
 
-- For a user to configure a policy to start collecting inventory data from devices, they must have the Device Configurations **Create** permission.
+- For a user to configure a policy to start collecting inventory data from devices, they must have the Device Configurations **Create** permission and the Organization **Read** permission.
 
 - For a user to view collected data about devices, they must have the Managed Devices **Read** permission.
 
@@ -131,6 +131,8 @@ The following properties are required:
 Collection of properties can only be stopped (deleted) at the category level. 
 
 To stop collecting properties, navigate to the **Properties catalog** profile, and remove collection for every property in a particular category.
+
+Even if a properties policy is deleted, you will still be able to see the last-collected data in Resource Explorer for up to 28 days.
 
 ## Supported Properties
 

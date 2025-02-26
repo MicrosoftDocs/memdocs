@@ -17,6 +17,14 @@ metadata:
   ms.localizationpriority: high
 
 landingContent:
+  - title: Configuration Manager 2409
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 30195272 Summary of changes in 2409
+            url: 2409/30195272.md
+          - text: KB 30833053 CMG installation update for 2409
+            url: 2409/30833053.md
   - title: Configuration Manager 2403
     linkLists:
       - linkListType: overview

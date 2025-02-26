@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/13/2024
+ms.date: 12/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -71,7 +71,7 @@ The following are requirements for Intune to support Windows LAPS in your tenant
 - **Intune subscription** - *Microsoft Intune Plan 1*, which is the basic Intune subscription. You can also use Windows LAPS with a free trial subscription for Intune.
 
 - **Microsoft Entra ID** – *Microsoft Entra ID Free*, which is the free version of Microsoft Entra ID that’s included when you subscribe to Intune. With Microsoft Entra ID Free, you can use all the features of LAPS.
-  
+
 ### Active Directory support
 
 Intune policy for Windows LAPS can configure a device to back up a local administrator account and password to one of the following Directory types:
@@ -116,13 +116,13 @@ Intune policy for Windows LAPS is supported for GCC High environments.
 
 To manage LAPS, an account must have sufficient role-based access control (RBAC) permissions to complete a desired task. The following are the available tasks with their required permissions:
 
-- **Create and access LAPS policy** – To work with and view LAPS policies, your account must be assigned sufficient permissions from the Intune RBAC category for **Security baselines**. By default, these are included in the built-in role **Endpoint Security Manager**.  To use custom roles, ensure the custom role includes the rights from the *Security baselines* category.
+- **Create and access LAPS policy** – To work with and view LAPS policies, your account must be assigned sufficient permissions from the Intune RBAC category for **Security baselines**. By default, these are included in the Intune built-in role **Endpoint Security Manager**. To use custom roles, ensure the custom role includes the rights from the *Security baselines* category.
 
 - **Rotate local Administrator password** – To use the Intune admin center to view or rotate a devices local admin account password, your account must be assigned the following Intune permissions:
 
   - Managed devices: **Read**
   - Organization: **Read**
-  - Remote tasks:  **Rotate Local Admin Password**
+  - Remote tasks: **Rotate Local Admin Password**
 
 - **Retrieve local Administrator password** – To view password details, your account must have one of the following Microsoft Entra permissions:
 
@@ -133,7 +133,7 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
   
 - **View Microsoft Entra audit logs and events** – To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
 
-For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
+For more information about Intune's built-in roles and custom roles, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## LAPS Architecture
 

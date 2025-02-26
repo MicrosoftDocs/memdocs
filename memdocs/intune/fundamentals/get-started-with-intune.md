@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2023
+ms.date: 02/19/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -39,7 +39,7 @@ Microsoft Intune is a cloud-based service that helps you manage your devices and
 
 This article provides an overview of the steps to start your Intune deployment.
 
-:::image type="content" source="./media/get-started-with-intune/get-started-overview.png" alt-text="Diagram that shows the different steps to get started with Microsoft Intune, including set up, adding apps, using compliance & conditional access, configuring device features, and then enrolling devices to be managed.":::
+:::image type="content" source="./media/get-started-with-intune/get-started-overview.png" alt-text="Diagram that shows the different steps to get started with Microsoft Intune, including set up, adding apps, using compliance & Conditional Access, configuring device features, and then enrolling devices to be managed.":::
 
 > [!TIP]
 > As a companion to this article, the Microsoft 365 admin center also has some setup guidance. The guide customizes your experience based on your environment. To access this deployment guide, go to the [Microsoft Intune setup guide in the Microsoft 365 admin center](https://go.microsoft.com/fwlink/?linkid=2224812), and sign in with the **Global Reader** (at a minimum). For more information on these deployment guides and the roles needed, go to [Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365).
@@ -55,7 +55,7 @@ This article provides an overview of the steps to start your Intune deployment.
   - [Move to cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
   - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
   - [Deployment guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
-  - [Microsoft Intune fundamentals online training](/training/paths/endpoint-manager-fundamentals/).
+  - [Microsoft Intune fundamentals online training](/training/paths/endpoint-manager-fundamentals/)
 
 - Determine your license needs and any other prerequisites for your Intune deployment. The following list provides some of the most common prerequisites:
 
@@ -72,10 +72,10 @@ This article provides an overview of the steps to start your Intune deployment.
 
     For more information, go to:
 
-    - [**Android** enrollment deployment guide](deployment-guide-enrollment-android.md)
-    - [**iOS/iPadOS** enrollment deployment guide](deployment-guide-enrollment-ios-ipados.md)
-    - [**macOS** enrollment deployment guide](deployment-guide-enrollment-macos.md)
-    - [**Windows** enrollment deployment guide](deployment-guide-enrollment-windows.md)
+    - [**Android** enrollment guide](deployment-guide-enrollment-android.md)
+    - [**iOS/iPadOS** enrollment guide](deployment-guide-enrollment-ios-ipados.md)
+    - [**macOS** enrollment guide](deployment-guide-enrollment-macos.md)
+    - [**Windows** enrollment guide](deployment-guide-enrollment-windows.md)
 
 ## Step 1 - Set up Intune
 
@@ -162,7 +162,7 @@ In this step:
 
 ✅ **Enroll your devices** in Intune.
 
-For more specific information, go to [Step 5 - Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+For more specific information, go to [Step 5 - Enrollment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 
 To fully manage devices, the devices must be enrolled in Intune to receive the compliance & Conditional Access policies, app policies, device configuration policies, and security policies you create. As an admin, you create enrollment policies for your users and devices. Each device platform (Android, iOS/iPadOS, Linux, macOS, and Windows) has different enrollment options. You choose what's best for your environment, your scenarios, and how your devices are used.
 
@@ -172,12 +172,12 @@ When a device enrolls, the device is issued a secure MDM certificate. This certi
 
 Different platforms have different enrollment requirements. The following articles can help you learn more about device enrollment, including platform-specific guidance:
 
-- [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
-  - [Deployment guide: Enroll Android devices](deployment-guide-enrollment-android.md)
-  - [Deployment guide: Enroll iOS/iPadOS devices](deployment-guide-enrollment-ios-ipados.md)
-  - [Deployment guide: Enroll Linux desktop devices](deployment-guide-enrollment-linux.md)
-  - [Deployment guide: Enroll macOS devices](deployment-guide-enrollment-macos.md)
-  - [Deployment guide: Enroll Windows devices](deployment-guide-enrollment-windows.md)
+- [Enrollment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
+  - [Enrollment guide: Enroll Android devices](deployment-guide-enrollment-android.md)
+  - [Enrollment guide: Enroll iOS/iPadOS devices](deployment-guide-enrollment-ios-ipados.md)
+  - [Enrollment guide: Enroll Linux desktop devices](deployment-guide-enrollment-linux.md)
+  - [Enrollment guide: Enroll macOS devices](deployment-guide-enrollment-macos.md)
+  - [Enrollment guide: Enroll Windows devices](deployment-guide-enrollment-windows.md)
 
 ## Cloud attach with Configuration Manager
 
@@ -187,7 +187,7 @@ If you use Configuration Manager, then there are two steps to cloud attach your 
 
 1. [Tenant attach](../../configmgr/tenant-attach/prerequisites.md): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based Intune admin center.
 
-2. [Co-management(../../configmgr/comanage/overview.md): Manage Windows client devices with Configuration Manager and Microsoft Intune. Configuration Manager manages some workloads, and Intune manages other workloads.
+2. [Co-management](../../configmgr/comanage/overview.md): Manage Windows client devices with Configuration Manager and Microsoft Intune. Configuration Manager manages some workloads, and Intune manages other workloads.
 
     For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage compliance & Conditional Access policies.
 
@@ -201,4 +201,4 @@ For guidance on the Microsoft Intune setup that's right for your organization, g
 - [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
 - [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md)
 - [Step 4 - Configure device features and settings to secure devices and access organization resources](deployment-plan-configuration-profile.md)
-- [Step 5 - Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
+- [Step 5 - Enrollment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)

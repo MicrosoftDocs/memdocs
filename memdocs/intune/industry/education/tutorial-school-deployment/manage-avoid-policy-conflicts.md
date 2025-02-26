@@ -5,6 +5,8 @@ ms.date: 7/11/2024
 ms.topic: tutorial
 ms.author: scbree
 author: scottbreenmsft
+ms.service: microsoft-intune
+ms.subservice: education
 ---
 
 # Avoiding policy conflicts
