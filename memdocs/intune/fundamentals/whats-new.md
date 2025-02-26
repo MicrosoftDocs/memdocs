@@ -109,26 +109,18 @@ Applies to:
 
 - Windows
 
-#### New Default Enforcement device control setting available in the Windows settings catalog<!-- 30253799 -->
+#### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
 
-The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
+We've updated the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will continue to work until deprecation in late May 2025.
 
-There are new settings in the Settings Catalog for Windows 24H2. To see these settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** > **Settings catalog** for profile type.
-
-This setting is available in both the settings catalog and the ASR device control template. The Default Enforcement device control setting enables a default enforcement to be applied if:
-
-- There are no policy rules present, or
-- At the end of the policy rules evaluation none were matched.
-
-Applies to:
-
-- Windows
+For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid).
 
 #### Managed Home Screen QR Code Authentication in public preview<!-- 25348926 -->
 
 Managed Home Screen for Android devices natively supports QR Code Authentication in Microsoft Entra ID. Authentication involves both a QR code and PIN. This capability eliminates the need for users to enter and re-enter long UPNs and alphanumeric passwords. For more information, see [Sign in to Microsoft Teams or Managed Home Screen (MHS) with QR code](/entra/identity/authentication/how-to-authentication-qr-code#sign-in-to-microsoft-teams-or-managed-home-screen-mhs-with-qr-code).  
 
 Applies to:
+
 - Android devices
 
 #### Additional device details for Managed Home Screen<!-- 27006536 -->
@@ -136,6 +128,7 @@ Applies to:
 Android **OS version**, **Security patch** and **Last device reboot time** details are now available from the **Device Information** page of the Managed Home Screen app. For related information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 Applies to:
+
 - Android Enterprise devices
 
 #### Display ringtone selector for Managed Home Screen<!-- 26826233 -->
@@ -143,7 +136,46 @@ Applies to:
 In Intune, you can choose to expose a setting in the Managed Home Screen app to allow users to select a ringtone. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 Applies to:
+
 - Android devices
+
+### Device security
+
+#### Manage the DeviceControlEnabled configuration for Microsoft Defender Device Control on Windows devices<!-- 31171641 -->
+
+You can now use Intune to manage the configuration of the Microsoft Defender CSP for [DeviceControlEnabled](windows/client-management/mdm/defender-csp#configurationdevicecontrolenabled) for Device Control. DeviceControlEnabled is used to enable or disable support for the Microsoft Defender Device Control feature on Windows devices.
+
+You can use the following two Microsoft Intune options to configure DeviceControlEnabled. With both options, the setting appears as **Device Control Enabled**, and is found in the *Defender* category:
+
+- Configure a [**Device Control** template](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy), which is a profile for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy.  
+- Configure a [**Settings Catalog** profile](../configuration/settings-catalog.md#create-the-policy) for Windows.
+
+Both the Device Control template and Settings Catalog support the following options for *Device Control Enabled*:
+
+- Device Control is enabled
+- Device Control is disabled (Default) 
+
+Applies to:
+
+- Windows
+
+#### Manage the DefaultEnforcement configuration for Microsoft Defender Device Control on Windows devices<!-- 30253799 -->
+
+You can now use Intune to manage the configuration of the Microsoft Defender CSP for  [DefaultEnforcement](/windows/client-management/mdm/defender-csp#configurationdefaultenforcement) for Device Control. DefaultEnforcement manages the configuration of Device Control on devices that don’t receive Device Control policies or for devices that receive and evaluate a policy for Device Control when no rules in the policy are matched.
+
+You can use the following two Microsoft Intune options to configure DefaultEnforcement. With both options, the setting appears as **Default Enforcement**, and is found in the *Defender* category:
+
+- Configure a [**Device Control** template](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy), which is a profile for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy.  
+- Configure a [**Settings Catalog** profile](../configuration/settings-catalog.md#create-the-policy) for Windows.
+
+Both the Device Control template and Settings Catalog support the following options for *Default Enforcement*:
+
+- Default Allow Enforcement (Default)
+- Default Deny Enforcement
+
+Applies to:
+
+- Windows
 
 ### Intune apps
 
