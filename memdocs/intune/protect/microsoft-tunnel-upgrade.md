@@ -135,7 +135,7 @@ Image hash values:
 
 - **agentImageDigest**:  sha256:f261af38af8644997bcb2681d265d9e9aa85c061849bdfafad7d412fd2ee963f
 
-- **serverImageDigest**: ha256:896beae896095e4247ae8a3f3c9617f48bd9140bbf9dea302d19570cccbb2494
+- **serverImageDigest**: sha256:896beae896095e4247ae8a3f3c9617f48bd9140bbf9dea302d19570cccbb2494
 
 Changes in this release:
 
