@@ -100,16 +100,14 @@ The app features in the Intune admin center make it easier to deploy these diffe
   - Web links to web apps
   - Custom line-of-business apps your organization creates
   - Apple disk image (DMG) apps, which is a file that includes one or more apps to deploy
-    
-  - Un-Managed PKG Files (Custom Packages, Unsigned Packages, Packages without a payload)
+  - Unmanaged PKG Files (custom packages, unsigned packages, packages without a payload)
     
     For more specific information, go to:
 
   - [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../apps/vpp-apps-ios.md)
   - [Assign Microsoft 365 to macOS devices](../apps/apps-add-office365-macOS.md)
   - [Add macOS LOB apps](../apps/lob-apps-macos.md)
-    
-  - [https://learn.microsoft.com/en-us/mem/intune/apps/macos-unmanaged-pkg](/mem/intune/apps/macos-unmanaged-pkg)
+  - [Add macOS PKG apps](../apps/macos-unmanaged-pkg.md)
     
 - For **Windows** devices, the Intune admin center automatically connects to the public Microsoft Store and gives you the ability to search for apps. You can also sync with your Microsoft Store for Business account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the admin center.
 
@@ -125,12 +123,11 @@ The app features in the Intune admin center make it easier to deploy these diffe
   For more specific information, go to:
   
   - [Add Microsoft 365 apps to Windows client devices](../apps/apps-add-office365.md)
-    
   - [Win32 app management](../apps/apps-win32-app-management.md)
     
   > [!NOTE]
   > Microsoft Store for Business is being retired. Starting with Windows 11, you have a new option for your private volume-licensed apps. For more information, go to [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11) and [Update to Microsoft Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077).
-  > For how to add New Store Windows Applications, follow this guide [https://learn.microsoft.com/en-us/mem/intune/apps/store-apps-microsoft](/mem/intune/apps/store-apps-microsoft) 
+  > To add Microsoft Store apps, see [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md). 
   
 ## Configure apps before they're installed
 
