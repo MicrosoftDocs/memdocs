@@ -113,7 +113,7 @@ Only update builds that are generally available are supported. Preview builds, i
 
 - Have the *Update Health Tools* installed, which are installed with [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a) or manually from [Microsoft Download - Update Health Tools](https://www.microsoft.com/en-us/download/details.aspx?id=103324).
 > [!NOTE]
-> Windows 11, version 24H2 and above cannot apply *KB 4023057*, this is applicable only to Windows 11, version 23H2 and below. Upgrading to 24H2 removes *KB 4023057*, so checkiong for KB installation is no longer needed.
+> Windows 11, version 24H2 and above cannot apply *KB 4023057*, this is applicable only to Windows 11, version 23H2 and below. Upgrading to 24H2 removes *KB 4023057*, so checking for KB installation is no longer needed.
 
 To confirm the presence of the Update Health Tools on a device:
   - Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Services* or *Add Remove Programs* for **Microsoft Update Health Tools**.
