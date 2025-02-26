@@ -2591,11 +2591,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "memdocs/intune/protect/data-outside-protect.md",
-      "redirect_url": "/mem/intune-service/protect/data-outside-protect",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "memdocs/intune/protect/derived-credentials.md",
       "redirect_url": "/mem/intune-service/protect/derived-credentials",
       "redirect_document_id": false
@@ -3358,11 +3353,6 @@
     {
       "source_path": "memdocs/intune/remote-actions/device-sync.md",
       "redirect_url": "/mem/intune-service/remote-actions/device-sync",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "memdocs/intune/remote-actions/device-windows-pin-reset.md",
-      "redirect_url": "/mem/intune-service/remote-actions/device-windows-pin-reset",
       "redirect_document_id": false
     },
     {
