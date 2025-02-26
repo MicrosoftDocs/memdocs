@@ -1147,8 +1147,6 @@ items:
         items:
         - name: Protect Exchange Online
           href: ./protect/exchange-online-protect.md
-        - name: Prevent unauthorized access
-          href: ./protect/data-outside-protect.md
         - name: Prevent data leaks on non-managed devices
           href: ./protect/data-leak-prevention.md
 
