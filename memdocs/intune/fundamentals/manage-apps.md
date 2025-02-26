@@ -106,12 +106,15 @@ On macOS devices, you can deploy:
 - Web links to web apps
 - Custom line-of-business apps your organization creates
 - Apple disk image (DMG) apps, which is a file that includes one or more apps to deploy
+- Unmanaged PKG Files (custom packages, unsigned packages, packages without a payload)
 
 For more specific information, go to:
 
 - [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../apps/vpp-apps-ios.md)
 - [Assign Microsoft 365 to macOS devices](../apps/apps-add-office365-macOS.md)
 - [Add macOS LOB apps](../apps/lob-apps-macos.md)
+- [Add macOS PKG apps](../apps/macos-unmanaged-pkg.md)
+- [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md)
 
 ### ✅ Windows devices
 
