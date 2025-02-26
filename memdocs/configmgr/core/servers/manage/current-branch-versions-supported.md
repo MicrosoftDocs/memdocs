@@ -34,7 +34,7 @@ Microsoft plans to release updates for Configuration Manager current branch a fe
 For example, version 2203 releases in April 2022. Microsoft provides security and critical updates to that version for four months, through July 2022. It then switches to only security updates for the remaining 14 months of its support lifecycle, through September 2023.
 
 > [!NOTE]
-> Please don't confuse the [update classification](https://learn.microsoft.com/mem/configmgr/sum/get-started/configure-classifications-and-products#to-configure-classifications-and-products-to-synchronize) 'critical' with the security update [severity](https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/standard-terminology-software-updates#security-update) 'critical'.
+> Review [update classification](/mem/configmgr/sum/get-started/configure-classifications-and-products#to-configure-classifications-and-products-to-synchronize) and [severity](/troubleshoot/windows-client/installing-updates-features-roles/standard-terminology-software-updates#security-update) to understand the differences for the 'critical' value.
 
 For a list of the current branch versions, see [Version details](updates.md#version-details).
 
