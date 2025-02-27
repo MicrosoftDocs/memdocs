@@ -285,6 +285,12 @@ Date added: *January 9, 2022*
 
 A device object is pre-created in Microsoft Entra ID once a device is registered in Autopilot. If a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
 
+### Issues with Deleting Pre-Created Device Records in Autopilot
+
+Date added: *February 27, 2025*
+
+Deleting pre-created device records associated with Autopilot Device Registration which is shown as Entra joined is not recommended because it can cause several issues. Intune has a background task that automatically re-creates these pre-created devices if they are deleted. However, if the device is reset before the background task re-creates the record, the device will not be provisioned correctly. Additionally, there is a risk of losing BitLocker Recovery keys for the device.
+
 ### TPM attestation failure on Windows 11 error code 0x81039024
 
 Date added: *December 8, 2021*
