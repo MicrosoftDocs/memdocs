@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/24/2025
+ms.date: 01/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -80,15 +80,15 @@ This dedicated group helps you organize devices and manage your cloud config res
 Use the following steps to create the group:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Groups** > **New group**.
-3. Enter the following values:
+2. Select **Groups** > **All groups** > **New group**.
+3. For **Group type**, select **Security**.
+4. Enter a **Group name**, like `Cloud config PCs`.
+5. For **Membership type**, select **Assigned**.
+6. If you want, you can add devices to your new group now. Select **No members selected** and add members to your group.
 
-    - **Group type**: Select **Security**.
-    - **Group name**: Enter a group name, like `Cloud config PCs`.
-    - **Membership type**: Select **Assigned**.
-    - **Members**: If you want, you can add devices to your new group now. Select **No members selected** and add members to your group. You can also start with an empty group and add devices later.
+    You can also start with an empty group and add devices later.
 
-4. Select **Create**.
+7. Select **Create**.
 
 > [!TIP]
 > When the group is created, you can add preregistered Windows Autopilot devices to this group.
@@ -107,14 +107,14 @@ These extra steps are recommended for existing devices because they provide a st
 
 In this step, you enable MDM automatic enrollment in Intune and configure how devices enroll in Intune.
 
-If you already use Windows Autopilot, then skip this step, and see [Step 3 - Deploy a script to configure Known Folder Move and remove built-in apps](#step-3---configure-onedrive-known-folder-move-and-deploy-a-script-to-remove-built-in-apps) (in this article).
+If you already use Windows Autopilot, then skip this step, and go to [Step 3 - Deploy a script to configure Known Folder Move and remove built-in apps](#step-3---configure-onedrive-known-folder-move-and-deploy-a-script-to-remove-built-in-apps) (in this article).
 
 ### ✅ 1 - Enable automatic enrollment
 
 Enable automatic enrollment for the organization users that you want to use cloud config. Automatic enrollment is required for cloud config. For more information on automatic enrollment, see [Enrollment guide -  Windows automatic enrollment](../fundamentals/deployment-guide-enrollment-windows.md#windows-automatic-enrollment).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Device onboarding** > **Enrollment** > **Windows** tab > **Automatic Enrollment**.
+2. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment** > **Automatic Enrollment**.
 3. Under **MDM user scope**, select one of the following:
 
     - Select **All** to apply the cloud configuration to all Windows devices that users in your organization use. In most cloud config scenarios, **All** is selected.
@@ -157,7 +157,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
 2. **Create and assign a Windows Autopilot deployment profile in Intune**.
 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-    2. Select **Devices** > **Device onboarding** > **Enrollment** > **Windows** tab > **Windows Autopilot** > **Deployment profiles**.
+    2. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment** > **Windows Autopilot Deployment Program** > **Deployment profiles**.
     3. Select **Create profile** > **Windows PC**. Enter a name for the profile.
     4. For the **Convert all targeted devices to Autopilot** setting, select **Yes**. Select **Next**.
 
@@ -184,8 +184,8 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
 3. **Create and assign an Enrollment Status Page in Intune**.
   
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-    2. Select **Devices** > **Device onboarding** > **Enrollment** > **Windows** tab > **Windows Autopilot** > **Enrollment Status Page**.
-    3. Select **Create** > enter a name for the **Enrollment Status Page** > **Next**.
+    2. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment** > **General** > **Enrollment Status Page**.
+    3. Select **Create** and enter a name for the **Enrollment Status Page**.
     4. In the **Settings** tab, enter the following values, and then select **Next**:
 
         | Setting |    Value |
@@ -234,7 +234,7 @@ With this enrollment option, you:
     > [!TIP]
     > In this custom profile, there's another setting that adds a group that can be local admins on the device. This local admin group should only include IT administrators in your environment.
 
-2. Assign the custom profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).  
+2. Assign the custom profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ---
 
@@ -242,39 +242,32 @@ With this enrollment option, you:
 
 When you configure OneDrive **Known Folder Move**, user files and data are automatically saved in OneDrive. When you remove built-in Windows apps and the Microsoft Store, the Start menu and device experience are simplified.
 
-This step helps simplify the Windows user experience.
+This step helps simplify the Windows user experience. 
 
-### ✅ 1 - Configure OneDrive Known Folder Move using the settings catalog
+### ✅ 1 - Configure OneDrive Known Folder Move with an Administrative Template
 
 With **Known Folder Move**, users data (files and folders) is saved to OneDrive. When users sign in to another device, OneDrive automatically synchronizes the data to the new device. Users don't have to manually move their files.
 
 > [!NOTE]  
 > Due to a sync issue with OneDrive **Known Folder Move** and SharedPC configuration, Microsoft doesn't recommend using Windows in cloud configuration with a device that has multiple users signing in and out.
 
-To configure **Known Folder Move**, create a settings catalog policy in Intune:
+To configure **Known Folder Move**, use an ADMX template in Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
-3. Enter the following properties:
+2. Select **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+3. Select **Windows 10 and later** for platform and select **Templates** for profile type.
+4. Select **Administrative Templates** and select **Create**.
+5. Enter a name for the profile and select **Next**.
+6. In **Configuration settings**, search for the settings in the following table and select their recommended values:
 
-    - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Settings catalog**.
-
-4. Select **Create**.
-5. In **Basics**, enter a name for the profile and select **Next**.
-6. In **Configuration settings**, select **Add settings**. Select and configure the following settings and recommended values:
-
-    ??I assume device settings, not user??
-
-    | Setting category | Setting | Value |
-    | --- | --- | --- |
-    | **OneDrive** | Prevent users from moving their Windows known folders to OneDrive | Enabled |
-    | &nbsp; | Prevent users from redirecting their Windows known folders to their PC | Enabled |
-    | &nbsp; | Silently move Windows known folders to OneDrive | Enabled <br/><br/> This setting is listed twice. Select the option that only has **Show notification to users after folders have been redirected (Device)** and **Tenant ID (Device)**. |
-    | &nbsp; | Show notification to users after folders have been redirected: (Device) | Yes. You can also choose to hide the notification. |
-    | &nbsp; | Tenant ID: (Device) | Enter your organization's tenant ID. <br/><br/>Your tenant ID is shown in Microsoft Entra admin center > [Properties page](https://go.microsoft.com/fwlink/?linkid=2155017) > **Tenant ID**. |
-    | &nbsp; | Silently sign in users to the OneDrive sync app with their Windows credentials | Enabled |
-    | &nbsp; | Use OneDrive Files On-Demand | Enabled |
+    | Setting name | Value |
+    | --- | --- |
+    | Silently move Windows known folders to OneDrive Enabled Tenant ID | Enter your organization's tenant ID. <br/><br/>Your tenant ID is shown in Microsoft Entra admin center > [Properties page](https://go.microsoft.com/fwlink/?linkid=2155017) > **Tenant ID**.|
+    | Show notification to users after folders have been redirected | Yes. You can also choose to hide the notification. |
+    | Silently sign in users to the OneDrive sync app with their Windows credentials | Enabled |
+    | Prevent users from moving their Windows known folders to OneDrive | Enabled |
+    | Prevent users from redirecting their Windows known folders to their PC | Enabled |
+    | Use OneDrive Files On-Demand | Enabled |
 
 7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
@@ -293,7 +286,7 @@ The script is deployed to devices using in Intune. To add and deploy the script,
     > If you want to keep the Microsoft Store app on devices, then you can use the [script that removes built-in apps but keeps the Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2157781) instead. To use this script, download it instead and follow the same steps. This script tries to remove built-in apps but might not remove all of them. You might need to modify the script to remove all built-in apps on your devices.
 
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices** > **Manage devices** > **Scripts and remediations** > **Platform scripts** tab > **Add** > **Windows 10 and later**.
+3. Select **Devices** > **By platform** > **Windows** > **Manage devices** > **Scripts and remediations** > **Platform scripts** tab > **Add**.
 4. In **Basics**, enter a name for your script policy and select **Next**.
 5. In **Script settings**, upload the script you downloaded. Leave the other settings unchanged and select **Next**.
 6. Assign the script to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
@@ -302,29 +295,24 @@ The script is deployed to devices using in Intune. To add and deploy the script,
 
 If you previously removed the Microsoft Store app, you can redeploy it using Microsoft Intune. To re-add the Microsoft Store app (or any other apps you want to re-add), add the Microsoft Store app to your private organization app repository. Then, deploy the app to devices using Intune. The Microsoft Store app helps keep apps updated.
 
-Your private organization app repository can be the [Intune Company Portal app or website](../apps/company-portal-app.md).  
+Your private organization app repository can be the [Intune Company Portal app or website](../apps/company-portal-app.md).
 
 Using Intune, on Windows 10/11 Enterprise and Education devices, you can block end users from installing Microsoft Store apps outside of your organization's private app repository.
 
 To prevent these outside apps, use the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
-3. Enter the following properties:
+2. Select **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+3. Select **Windows 10 and later** for platform and select **Settings catalog** for profile type. Select **Create**.
+4. In **Basics**, enter a name for your profile.
+5. In **Configuration settings**, select **Add settings**. Then:
 
-    - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Settings catalog**.
+    1. In the settings picker, search for `private store`. In the search results under the Microsoft App Store category, select **Require Private Store Only**.
+    2. Set the **Require Private Store Only** setting to **Only Private store is enabled**.
+    3. Select **Next**.
 
-4. Select **Create**.
-5. In **Basics**, enter a name for the profile and select **Next**.
-6. In **Configuration settings**, select **Add settings**. Select and configure the following settings with the recommended values:
-
-    | Setting category | Setting | Value |
-    | --- | --- | --- |
-    | **Microsoft App Store** | Require Private Store Only | Only Private store is enabled |
-
-7. In **Assignments**, assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
-8. In **Review + create**  review your profile and select **Create**.
+6. In **Assignments**, assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
+7. In **Review + create**  review your profile and select **Create**.
 
 ## Step 4 - Deploy apps
 
@@ -339,24 +327,35 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
 ### ✅ 2- Deploy Microsoft Teams
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **Platforms** > **Windows** > **Create**.
-3. In **App type**, see **Microsoft 365 Apps** > select **Windows 10 and later** > **Select**.
-4. In **App suite information**, enter a **Suite Name** > **Next**.
-5. In **Configure app suite**, configure the following settings:
+2. Select **Apps** > **Windows**.
+3. Select **Add** to create a new app.
+4. For **Microsoft 365 Apps**, select **Windows 10 and later** > **Select**.
+5. For **Suite Name**, enter a name or use the suggested name. Select **Next**.
+6. For **Configure app suite**, only select Teams.
+
+    If you want to deploy other Microsoft 365 apps, then select them from this list. Remember, only deploy what users need.
+
+    > [!TIP]  
+    > You don't need to choose OneDrive. OneDrive is built into Windows 10/11 Pro, Enterprise, and Education.
+
+7. For **App suite information**, configure the following settings:
 
     | Setting | Value |
     | --- | --- |
-    | Select Office apps | Teams <br/><br/>If you want to deploy other Microsoft 365 apps, then select them from this list. Remember, only deploy what users need. |
     | Architecture | 64-bit <br/><br/> Cloud config also works with 32-bit. Microsoft recommends choosing 64-bit. |
-    | Default file format | ?? **Office Open Document Format** or **Office Open XML Format** ??|
     | Update channel | Current channel |
     | Remove other versions | Yes |
     | Version to install | Latest |
+
+8. For **Properties**, configure the following settings:
+
+    | Setting | Value |
+    | --- | --- |
     | Use shared computer activation | Yes |
     | Accept the Microsoft Software License Terms on behalf of users | Yes|
   
-6. Select **Next**.
-7. Assign the suite to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
+9. Select **Next**.
+10. Assign the suite to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ## Step 5 - Deploy endpoint security settings
 
@@ -371,14 +370,14 @@ Configure the security baseline in Intune:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Security baselines** > **Security baseline for Windows 10 and later**.
 3. Select **Create profile** to create a new security baseline.
-4. In **Basics**, enter a name for your security baseline and select **Next**.
-5. In **Configuration settings**, accept the default configuration settings. Or, you can change the following settings based on your organization needs:
+4. Enter a name for your security baseline and select **Next**.
+5. Accept the default configuration settings. Or, you can change the following settings based on your organization needs:
 
     | Setting category | Setting | Reason for changing |
     | --- | --- | --- |
-    | **Browser** | Allow Password Manager | If you want to allow end users to use password managers, then allow this setting. |
-    | **Remote Assistance** ?? | Remote Assistance solicited | This setting allows your support staff to remotely connect to devices. Microsoft recommends disabling this setting unless your organization requires it. |
-    | **Firewall** | All Firewall settings | If you need to allow certain connections to devices based on your organization's needs, then change the default Firewall settings. |
+    | Browser | Block Password Manager | If you want to allow end users to use password managers, then disable this setting. |
+    | Remote Assistance | Remote Assistance solicited | This setting allows your support staff to remotely connect to devices. Microsoft recommends disabling this setting unless it's required. |
+    | Firewall | All Firewall settings | If you need to allow certain connections to devices based on your organization's needs, then change the default Firewall settings. |
 
     Select **Next**.
 
@@ -391,37 +390,31 @@ There are more BitLocker settings that help keep your devices secure. Configure 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
-3. Enter the following properties:
-
-    - **Platform**: Select **Windows**.
-    - **Profile type**: Select **BitLocker**.
-
-4. Select **Create**.
-5. In **Basics**, enter a name for the profile and select **Next**.
-6. In **Configuration settings**, select and configure the following settings and recommended values:
+3. For **Platform**, select **Windows 10 and later**.
+4. For **Profile**, select **BitLocker** > **Create**.
+5. In **Basics**, enter a name for your profile.
+6. In **Configuration settings**, select the following settings:
 
     | Setting category | Setting | Value |
     | --- | --- | --- |
-    | **BitLocker** | Require Device Encryption | Enabled |
+    | **BitLocker – Base settings** | Enable full disk encryption for OS and fixed data drives | Yes |
     | &nbsp; | &nbsp; | &nbsp; |
-    | **BitLocker Drive Encryption** | Choose drive encryption method and cipher strength | Enabled |
-    | &nbsp; | Select the encryption method for fixed data-drives | XTS-AES 128-bit |
-    | &nbsp; | Select the encryption method for operating system drives | XTS-AES 128-bit  |
-    | &nbsp; | Select the encryption method for removable data drives | AES-CBC 128-bit |
+    | **BitLocker – Fixed Drive Settings** | BitLocker fixed drive policy | Configure |
+    | &nbsp; | Block write access to fixed data drives not protected by BitLocker | Yes |
+    | &nbsp; | Configure encryption method for fixed data-drives | AES 128bit XTS |
     | &nbsp; | &nbsp; | &nbsp; |
-    | **Operating System Drives** | BitLocker system drive policy ?? | Configure |
-    | &nbsp; | Require additional authentication at startup | Enabled |
-    | &nbsp; | Allow BitLocker without a compatible TPM  | False |
-    | &nbsp; | Configure TPM startup key and PIN | Allow startup key and PIN with TPM |
-    | &nbsp; | Configure TPM startup key | Require startup key with TPM |
-    | &nbsp; | Configure TPM startup PIN | Allow startup PIN with TPM |
-    | &nbsp; | Configure TPM startup | Allow TPM |
+    | **BitLocker – OS Drive Settings** | BitLocker system drive policy | Configure |
+    | &nbsp; | Startup authentication required | Yes |
+    | &nbsp; | Compatible TPM startup | Allowed |
+    | &nbsp; | Compatible TPM startup PIN | Allowed |
+    | &nbsp; | Compatible TPM startup key | Required |
+    | &nbsp; | Compatible TPM startup key and PIN | Allowed |
+    | &nbsp; | Disable BitLocker on devices where TPM is incompatible | Yes |
+    | &nbsp; | Configure encryption method for Operating System drives | AES 128bit XTS |
     | &nbsp; | &nbsp; | &nbsp; |
-    | **Fixed Data Drives** | Choose how BitLocker-protected fixed drives can be recovered | Enabled |
-    | &nbsp; | Deny write access to fixed drives not protected by BitLocker | Enabled |
-    | &nbsp; | &nbsp; | &nbsp; |
-    | **Removable Drive Settings** | BitLocker removable drive policy ?? | Configure |
-    | &nbsp; | Deny write access to removable drives not protected by BitLocker | Enabled |
+    | **BitLocker – Removable Drive Settings** | BitLocker removable drive policy | Configure |
+    | &nbsp; | Configure encryption method for removable data-drives | AES 128bit CBC |
+    | &nbsp; | Block write access to removable data-drives not protected by BitLocker | Yes |
 
 7. In **Assignments**, assign the profile to the group that you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 8. Select **Create** to create and assign the profile.
@@ -433,32 +426,31 @@ This step uses a Windows Update Ring to keep devices automatically updated. The 
 Configure the Update ring in Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Manage updates** > **Windows updates** > **Update rings** tab > **Create profile**.
-3. In **Basics**, enter a name for the update ring. Select **Next**.
+2. Select **Devices** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > **Create profile**.
+3. In **Basics**, enter a name for the update ring.
 4. In **Update ring settings**, configure the following values and select **Next**:
 
-    | Setting category | Setting | Value |
-    | --- | --- | --- |
-    | **Update settings** | ?? Servicing channel | Semi-annual channel |
-    | &nbsp; | Microsoft product updates | Allow |
-    | &nbsp; | Windows drivers | Allow |
-    | &nbsp; | Quality update deferral period (days) | 0 |
-    | &nbsp; | Feature update deferral period (days) | 0 |
-    | &nbsp; | Set feature update uninstall period | 10 |
-    | &nbsp; | &nbsp; | &nbsp; |
-    | **User experience settings** | Automatic update behavior | Reset to default |
-    | &nbsp; | ?? Restart checks | Allow |
-    | &nbsp; | Option to pause Windows updates | Enable |
-    | &nbsp; | Option to check for Windows updates | Enable |
-    | &nbsp; | ?? Require user approval to dismiss restart notification | No |
-    | &nbsp; | ?? Remind user prior to required auto-restart with dismissible reminder (hours) | Leave this setting unconfigured |
-    | &nbsp; | ?? Remind user prior to required auto-restart with permanent reminder (minutes) | Leave this setting unconfigured |
-    | &nbsp; | Change notification update level | Use the default Windows Update notifications |
-    | &nbsp; | Use deadline settings | Allow |
-    | &nbsp; | Deadline for feature updates | 7 |
-    | &nbsp; | Deadline for quality updates | 2 |
-    | &nbsp; | Grace period | 2 |
-    | &nbsp; | Auto reboot before deadline | Yes |
+    | Setting | Value |
+    | --- | --- |
+    | Servicing channel | Semi-annual channel |
+    | Microsoft product updates | Allow |
+    | Windows drivers | Allow |
+    | Quality update deferral period (days) | 0 |
+    | Feature update deferral period (days) | 0 |
+    | Set feature update uninstall period | 10 |
+    | Automatic update behavior | Reset to default |
+    | Restart checks | Allow |
+    | Option to pause Windows updates | Enable |
+    | Option to check for Windows updates | Enable |
+    | Require user approval to dismiss restart notification | No |
+    | Remind user prior to required auto-restart with dismissible reminder (hours) | Leave this setting unconfigured |
+    | Remind user prior to required auto-restart with permanent reminder (minutes) | Leave this setting unconfigured |
+    | Change notification update level | Use the default Windows Update notifications |
+    | Use deadline settings | Allow |
+    | Deadline for feature updates | 7 |
+    | Deadline for quality updates | 2 |
+    | Grace period | 2 |
+    | Auto reboot before deadline | Yes |
 
 5. Assign the Update ring to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
@@ -469,43 +461,38 @@ Configure a compliance policy to help monitor device compliance and health. The 
 Create the compliance policy in Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Manage devices** > **Compliance** > **Create Policy**.
+2. Select **Devices** > **Compliance** > **Create Policy**.
 3. For **Platform**, select **Windows 10 and later** > **Create**.
 4. In **Basics**, enter a name for the compliance policy. Select **Next**.
-5. In **Compliance settings**, configure the following settings and values, and select **Next**:
+5. In **Compliance settings**, configure the following values, and select **Next**:
 
     | Setting category | Setting | Value |
     | --- | --- | --- |
-    | **Device Health** | BitLocker | Require |
-    | &nbsp; | Secure Boot | Require |
-    | &nbsp; | Code integrity | Require |
+    | **Device Health** | Require BitLocker | Require |
+    | &nbsp; | Require Secure Boot to be enabled on the device | Require |
+    | &nbsp; | Require code integrity | Require |
     | &nbsp; | &nbsp; | &nbsp; |
-    | **System Security** | Require a password to unlock mobile devices | Require |
+    | **System Security** | Firewall | Require |
+    | &nbsp; | Antivirus | Require |
+    | &nbsp; | Antispyware | Require |
+    | &nbsp; | Require a password to unlock mobile devices | Require |
     | &nbsp; | Simple passwords | Block |
     | &nbsp; | Password type | Alphanumeric |
-    | &nbsp; | ?? Password Complexity | ?? |
     | &nbsp; | Minimum password length | 8 |
     | &nbsp; | Maximum minutes of inactivity before password is required | 1 Minute |
     | &nbsp; | Password expiration (days) | 41 |
     | &nbsp; | Number of previous passwords to prevent reuse | 5 |
-    | &nbsp; | Firewall | Require |
-    | &nbsp; | Antivirus | Require |
-    | &nbsp; | Antispyware | Require |
-    | &nbsp; | Microsoft Defender Antimalware | Require |
+    | &nbsp; | &nbsp; | &nbsp; |
+    | **Defender** | Microsoft Defender Antimalware | Require |
     | &nbsp; | Microsoft Defender Antimalware security intelligence up-to-date | Require |
     | &nbsp; | Real-time protection | Require |
 
-6. In **Actions for noncompliance**:
+6. In **Actions for noncompliance**, for the **Marking device noncompliant** action, configure **Schedule (days after noncompliance)** to `1` day. You can configure a different grace period based on your organization preferences.
 
-    - **Marking device noncompliant** action: Set **Schedule (days after noncompliance)** to `1` day. You can configure a different grace period based on your organization preferences.
+    If you use Conditional Access policies in your organization, then we recommend you configure a grace period. Grace periods prevent noncompliant devices from immediately losing access to organization resources.
 
-      If you use Conditional Access policies in your organization, then we recommend you configure a grace period. Grace periods prevent noncompliant devices from immediately losing access to organization resources.
-
-    - (Optional) **Send email to end users** action: You can add an action to email users informing them of noncompliance with steps to get compliant.
-
-      To learn more about this feature, see [Configure actions for noncompliant devices in Intune](../protect/actions-for-noncompliance.md).
-
-7. Assign the compliance policy to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
+7. You can add an action to email users informing them of noncompliance with steps to get compliant.
+8. Assign the compliance policy to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ## Step 8 - Optional configurations
 
@@ -518,20 +505,11 @@ Configure devices to automatically use your tenant's domain name for user sign-i
 Add the tenant domain name in Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
-3. Enter the following properties:
-
-    - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Templates** > **Device restrictions**.
-
-4. Select **Create**.
-5. In **Basics**, enter a name for the profile and select **Next**.
-6. In **Configuration settings**, configure the following settings and values, and select **Next**:
-
-    | Setting category | Setting | Value |
-    | --- | --- | --- |
-    | **Password** | Preferred Microsoft Entra tenant domain | Enter the Microsoft Entra domain name that users should use to sign in to devices, like `contoso.com`. |
-
+2. Select **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+3. For platform, select **Windows 10 and later**.
+4. For Profile type, select **Templates** > **Device restrictions** > **Create**.
+5. Enter a name for the profile and select **Next**.
+6. In **Configuration settings**, for **Password**, configure the **Preferred Microsoft Entra tenant domain**. Enter the Microsoft Entra domain name that users should use to sign in to devices.
 7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ### ✅ Deploy other essential productivity and line of business (LOB) apps
@@ -563,26 +541,22 @@ There are some Microsoft Edge app settings that can be configured for a better u
 To configure these recommended settings, use Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
-3. Enter the following properties:
-
-    - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Settings catalog**.
-
-4. Select **Create**.
-5. In **Basics**, enter a name for the profile and select **Next**.
-6. In **Configuration settings**, select **Add settings**. Select and configure the following settings and recommended values:
+2. Select **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+3. Select **Windows 10 and later** for platform and **Templates** for profile type.
+4. Select **Administrative Templates** and select **Create**.
+5. Enter a name for the profile and select **Next**.
+6. In **Configuration settings**, search for the following settings and configure them to their recommended values:
 
     | Setting Category | Setting | Value |
     | --- | --- | --- |
-    | **Microsoft Edge** | Configure Internet Explorer integration ??User or device?? | Enabled, Internet Explorer mode |
-    | &nbsp; | &nbsp; | &nbsp; |
-    | **Microsoft Edge\SmartScreen settings** | Configure Microsoft Defender SmartScreen ??User or device??| Enabled |
-    | &nbsp; | Configure Microsoft Defender SmartScreen to block potentially unwanted apps ??User or device??| Enabled |
-    | &nbsp; | Force Microsoft Defender SmartScreen checks on downloads from trusted sources ??User or device??| Enabled |
+    | &nbsp; | Configure Internet Explorer integration | Enabled, Internet Explorer mode |
+    | &nbsp; | &nbsp; |
+    | **SmartScreen settings** | Configure Microsoft Defender SmartScreen | Enabled |
+    | &nbsp; | Force Microsoft Defender SmartScreen checks on downloads from trusted sources | Enabled |
+    | &nbsp; | Configure Microsoft Defender SmartScreen to block potentially unwanted apps | Enabled |
 
     > [!NOTE]
-    > Microsoft Defender also enforced the SmartScreen settings. When you configure the SmartScreen settings through the Microsoft Edge app, Microsoft Edge directly enforces the settings.
+    > The SmartScreen settings are also enforced by Microsoft Defender. When you configure the SmartScreen settings through the Microsoft Edge app, Microsoft Edge directly enforces the settings.
 
 7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
@@ -594,7 +568,7 @@ When you apply cloud config to your devices, you can use Intune to monitor the s
 
 You can monitor the installation status of your deployed scripts:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Devices** > **Manage devices** > **Scripts and remediations** > **Platform scripts** tab.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Devices** > **By platform** > **Windows** > **Scripts and remediations** > **Platform scripts**.
 2. Select the script you deployed.
 3. In the script details page, select **Device status**. The script installation details are shown.
 
@@ -602,7 +576,7 @@ You can monitor the installation status of your deployed scripts:
 
 You can monitor the installation status of your deployed apps:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Apps** > **Platforms** > **Windows**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Apps** > **Windows** > **Windows apps**.
 2. Select an app you deployed, like the Microsoft 365 App Suite.
 3. Select **Device install status** or **User install status**. The app installation details are shown.
 
@@ -618,7 +592,7 @@ In [Step 5 - Deploy endpoint security settings](#step-5---deploy-endpoint-securi
 
 You can monitor the status of this BitLocker profile:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Endpoint security** > **Manage** > **Disk encryption**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Endpoint security** > **Disk encryption**.
 2. Select the disk encryption profile you deployed in cloud config.
 3. Select **Device install status** or **User install status**. The profile details are shown.
 
@@ -626,7 +600,7 @@ You can monitor the status of this BitLocker profile:
 
 You can monitor the status of the Windows Update ring policy:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Devices** > **Manage updates** > **Windows updates** > **Update rings** tab.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Devices** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab.
 2. Select the update ring you deployed as part of cloud config.
 3. Select **Device status**, **User status**, or **End user update status**. The update ring settings details are shown.
 
@@ -636,7 +610,7 @@ For more information on reporting for Windows Update rings, see [Reports for Upd
 
 You can monitor the status of the compliance policy:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Devices** > **Manage devices** > **Compliance**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Devices** > **Compliance**.
 2. Select the compliance policy you deployed as part of cloud config.
 
 The device compliance monitoring view has detailed information on the assignment status and assignment failures of your compliance policies. It also has views to quickly find noncompliant devices and take action.

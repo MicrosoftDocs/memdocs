@@ -6,7 +6,7 @@ description: Learn more about what device management means and how it can help o
 author: MandiOhlinger
 ms.author: mandia 
 manager: dougeby 
-ms.date: 02/24/2025
+ms.date: 02/26/2025
 ms.topic: overview 
 audience: microsoft-business
 ms.service: microsoft-intune
