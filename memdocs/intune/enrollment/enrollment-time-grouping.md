@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/01/2024
+ms.date: 01/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -65,10 +65,11 @@ The enrollment time grouping feature only applies to new device enrollments. It 
 
 You can add one static Microsoft Entra security group per enrollment profile. As an Intune admin, you can only add Microsoft Entra groups that are authorized in the scope group for your Intune role. Make sure scope groups and group tags are assigned to the appropriate roles so that admins can see the security group during profile creation. 
 
-1. In the Microsoft Intune admin center, go to **Devices** >**Enrollment**.  
+1. In the Microsoft Intune admin center, go to **Devices**.  
+1. Expand **Device onboarding**, and then select **Enrollment**.  
 1. Select the type of enrollment you're configuring and create a profile. For more information about how to set up the profile, see [Create Windows Autopilot device preparation policy](/autopilot/device-preparation/tutorial/user-driven/entra-join-autopilot-policy).  
 
-After you save the profile, you can return to it at any time to edit group settings.  Updates you make to the group settings don't apply to devices already enrolled with the profile. If you remove a device from the group, Microsoft Intune reevaluates policy configurations and forces the device to check in to obtain new configurations. 
+After you save the profile, you can return to it at any time to edit group settings. Updates you make to the group settings don't apply to devices already enrolled with the profile. If you remove a device from the group, Microsoft Intune reevaluates policy configurations and forces the device to check in to obtain new configurations. 
 
 ## Step 3: Enroll devices  
 

@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 11/15/2023
+ms.date: 02/20/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -113,7 +113,7 @@ After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analy
 
     Select **Next**.
 
-7. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
+7. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use role-based access control (RBAC) roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 8. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, go to [Assign user and device profiles in Intune](device-profile-assign.md).
 
@@ -173,7 +173,7 @@ When you create the Settings Catalog profile, any settings that can be included 
   - The setting value is in an unexpected format.
   - A child setting is missing from the imported GPO and is required to configure the parent setting.
 
-## Next steps
+## Related articles
 
 - [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](group-policy-analytics.md)
 - [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md)

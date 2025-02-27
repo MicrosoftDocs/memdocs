@@ -47,7 +47,10 @@ ms.collection:
 Device enrollment restrictions let you restrict devices from enrolling in Intune based on certain device attributes. There are two types of device enrollment restrictions you can configure in Microsoft Intune:   
 
 * **Device platform restrictions**: Restrict devices based on device platform, version, manufacturer, or ownership type.     
-* **Device limit restrictions**: Restrict the number of devices a user can enroll in Intune.  
+* **Device limit restrictions**: Restrict the number of devices a user can enroll in Intune.
+
+> [!NOTE]
+> Enrollment restrictions are not security features. Compromised devices can misrepresent their character. These restrictions are a best-effort barrier for non-malicious users.
 
 Each restriction type comes with one default policy that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
 

@@ -52,6 +52,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Windows Autopilot and Business Store features aren't currently available. As part of the 2409 Intune service release, we announced support for Windows Autopilot Device Preparation policy in Intune operated by 21Vianet in China cloud. For  more information, see [(What's new in Windows Autopilot device preparation | Microsoft Learn](/autopilot/device-preparation/whats-new#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment)
 - Intune operated by 21Vianet supports the Company Portal for Windows app. Use WinGet to download the Company portal package and dependencies and then deploy as a Line-of-Business app via Intune. [Use the WinGet tool to install and manage applications](/windows/package-manager/winget/).
 - Microsoft Intune Endpoint Analytics and Log Analytics features aren't currently available.
+- Azure Virtual Desktop Windows 10 and Windows 11 multi-session isn't currently supported for 21Vianet.
 - Because Google Mobile Services isn't available in China, customers in Intune operated by 21Vianet can't use features that require Google Mobile Services. These features include:
   - Google Play Protect capabilities such as Play integrity verdict.
   - Managing apps from the Google Play Store.

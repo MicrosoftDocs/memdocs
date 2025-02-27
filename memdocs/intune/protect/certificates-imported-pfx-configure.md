@@ -225,7 +225,7 @@ For more information about other available commands, see the readme file at [PFX
 
 ## Create a PKCS imported certificate profile
 
-After importing the certificates to Intune, create a **PKCS imported certificate** profile, and assign it to Microsoft Entra groups.
+After importing the certificates to Intune, create a **PKCS imported certificate** profile, and assign it to Microsoft Entra groups. 
 
 > [!NOTE]
 > After you create a PKCS imported certificate profile, the **Intended Purpose** and **Key storage provider** (KSP) values in the profile are read-only and can't be edited. If you need a different value for either of these settings, create and deploy a new profile. 
@@ -248,7 +248,7 @@ After importing the certificates to Intune, create a **PKCS imported certificate
 
 7. In **Configuration settings**, enter the following properties:
 
-   - **Intended purpose**: Specify the intended purpose of the certificates that are imported for this profile. Administrators can import certificates with different intended purposes (like S/MIME signing or S/MIME encryption). The intended purpose selected in the certificate profile matches the certificate profile with the right imported certificates. Intended purpose is a tag to group imported certificates together and doesn't guarantee that certificates imported with that tag will meet the intended purpose.  
+   - **Intended purpose**: Specify the intended purpose of the certificates that are imported for this profile. Administrators can import certificates with different intended purposes (like S/MIME signing or S/MIME encryption). The intended purpose selected in the certificate profile matches the certificate profile with the right imported certificates. Intended purpose is a tag to group imported certificates together and doesn't guarantee that certificates imported with that tag will meet the intended purpose. When multiple certificates are imported for a single user, Intune selects the imported certificate that has the most recent certificate start date and time in case there is more than one certificate with the same intended purpose.
 
    - **Key storage provider (KSP)**: For Windows, select where to store the keys on the device.
 

@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #audience:
 params:
   siblings_only: true
-ms.reviewer: andreibiswas, anuragjain
+ms.reviewer: arnab, anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -66,7 +66,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
   - **Auto grant**
   - **Auto deny**
 
-  You can also use an app configuration policy to grant permissions for individual apps (**Apps** > **App configuration policies**).
+  You can also use an app configuration policy to grant permissions for individual apps (**Apps** > **Configuration**).
 
 - **Add and remove accounts**: This setting allows or prevents accounts from being added in the work profile, including Google accounts. Your options:
 
