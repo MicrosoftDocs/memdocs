@@ -51,6 +51,7 @@ Windows 10
 
 Inventory is currently only supported on devices running Windows 10 and later. Inventory is only supported on the following minimum Windows versions:
 
+- Windows 11, version 24H2
 - Windows 11, version 23H2 (22631.2506 or later) with KB5031455
 - Windows 11, version 22H2 (22621.2215 or later) with KB5029351
 - Windows 11, version 21H2 (22000.2713 or later) with KB5034121

@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2024
+ms.date: 02/20/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
@@ -31,9 +31,6 @@ ms.collection:
 
 # Cloud-native endpoints and on-premises resources
 
-> [!TIP]
-> [!INCLUDE [cloud-native-endpoints-definitions](../../includes/cloud-native-endpoints-definitions.md)]
-
 Cloud-native endpoints can access on-premises resources. This article goes into more detail, and answers some common questions.
 
 This feature applies to:
@@ -41,6 +38,9 @@ This feature applies to:
 - Windows cloud-native endpoints
 
 For an overview of cloud-native endpoints, and their benefits, go to [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
+
+> [!TIP]
+> [!INCLUDE [cloud-native-endpoints-definitions](../../includes/cloud-native-endpoints-definitions.md)]
 
 ## Prerequisites
 
@@ -86,7 +86,7 @@ The following steps are an overview. For more specific information, including de
 
 3. During Windows sign-in, the Microsoft Entra CloudAP plugin requests a Primary Refresh Token (PRT) from Microsoft Entra using the user credentials. It also caches the PRT, which enables cached sign-in when users don't have an internet connection. When users try to access applications, the Microsoft Entra WAM plugin uses the PRT to enable SSO.
 
-4. Microsoft Entra authenticates the user and device, and returns a PRT & an ID token. The ID token includes the following attributes about the user:
+4. Microsoft Entra authenticates the user and device, and returns a PRT and an ID token. The ID token includes the following attributes about the user:
 
     - `sAMAccountName`
     - `netBIOSDomainName`
