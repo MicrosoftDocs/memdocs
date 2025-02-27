@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 02/11/2025
+ms.date: 02/27/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -89,7 +89,7 @@ The Autopilot deployment report was updated to a new infrastructure that doesn't
 
 Date added: *August 21, 2024*
 
-The know issue of [Kiosk device profiles not auto logging in when auto logon was enabled](#kiosk-device-profile-not-auto-logging-in) was previously reported as fixed. However, there are scenarios where the issue might still occur when using autologon with Kiosks and [Assigned Access](/windows/configuration/assigned-access/overview). If multiple reboots or unexpected reboots occur during the Windows out-of-box experience (OOBE) when initially configuring the Kiosk, the autologon entries in the registry might be deleted. The issue is being investigated.
+The known issue of [Kiosk device profiles not auto logging in when auto logon was enabled](#kiosk-device-profile-not-auto-logging-in) was previously reported as fixed. However, there are scenarios where the issue might still occur when using autologon with Kiosks and [Assigned Access](/windows/configuration/assigned-access/overview). If multiple reboots or unexpected reboots occur during the Windows out-of-box experience (OOBE) when initially configuring the Kiosk, the autologon entries in the registry might be deleted. The issue is being investigated.
 
 The following workarounds are available until the issue is resolved:
 

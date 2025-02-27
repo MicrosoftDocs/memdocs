@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/23/2024
+ms.date: 02/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -175,7 +175,7 @@ When you use the schema settings in the **Knox Service Plugin** app, the Intune 
     When you create the Intune policy, you enter the following info:
 
     - **MHS Package Name**: `com.microsoft.launcher.enterprise`
-    - **MHS notification service package name**: `com.microsoft.launcher.enterprise/com.microsoft.launcher.next.model.notification.AppNotificationService`
+    - **MHS notification service package name**: `com.microsoft.launcher.enterprise/com.microsoft.launcher.homescreen.next.model.notification.AppNotificationService`
 
 8. Select **Next**, add any [optional scope tags](../fundamentals/scope-tags.md) > **Next**.
 

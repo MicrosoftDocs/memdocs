@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: rashok
+ms.reviewer: royork
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

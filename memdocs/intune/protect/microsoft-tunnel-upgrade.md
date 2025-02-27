@@ -133,9 +133,9 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:4f4ffd280315d4d63e6d3b54a79f70a76a3f9e5c234d8dbc7c49f382c6cac413
+- **agentImageDigest**:  sha256:f261af38af8644997bcb2681d265d9e9aa85c061849bdfafad7d412fd2ee963f
 
-- **serverImageDigest**: sha256:03b0c6cf241806422d87be770d887023c06518b5e9aa57bdb4b876fb1a64f8e1
+- **serverImageDigest**: sha256:896beae896095e4247ae8a3f3c9617f48bd9140bbf9dea302d19570cccbb2494
 
 Changes in this release:
 
