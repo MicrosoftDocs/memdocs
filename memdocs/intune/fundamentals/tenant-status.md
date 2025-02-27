@@ -37,7 +37,7 @@ The Microsoft Intune tenant status page is a centralized hub where you can view 
 - Licensed users and enrolled devices
 
 > [!IMPORTANT]
-> To access the Tenant administration page, you need to have the following Intune permissions: Organization.Read, ManagedDevice.Read, and ManagedApp.Read. These permissions are granted to the Intune Read Only Operator RBAC built-in role. You can create a custom role that contains those permissions (recommended for least-permission), or you can use one of the EntraID privileged roles: "Intune Administrator" or "Global Administrator". Use of Entra Identity Management (PIM) roles is supported when elevated prior to viewing the tenant status page.
+> To access the Tenant administration page, you need to have the following Intune permissions: Organization.Read, ManagedDevice.Read, and ManagedApp.Read. These permissions are granted to the **Intune Read Only Operator** RBAC built-in role. You can create a custom role that contains those permissions (recommended for least-permission), or you can use one of the EntraID privileged roles: "Intune Administrator" or "Global Administrator". Use of Entra Identity Management (PIM) roles is supported when elevated prior to viewing the tenant status page.
 
 You can also view the status of the Intune connectors you've configured, and health messages for the Intune service and general messages for Tenants.
 
