@@ -111,30 +111,97 @@ Only update builds that are generally available are supported. Preview builds, i
 
 - Be configured to get Quality Updates directly from the Windows Update service.
 
-- Have the *Update Health Tools* installed, which are installed with [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a).
+- Have the *Update Health Tools* installed, which are installed with [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a) or manually from [Microsoft Download - Update Health Tools](https://www.microsoft.com/en-us/download/details.aspx?id=103324).
 > [!NOTE]
-> Windows 11, version 24H2 and above do not require *Update Health Tools*, this is applicable only to Windows 11, version 22H2 and below.
+> Windows 11, version 24H2 and above cannot apply *KB 4023057*, this is applicable only to Windows 11, version 23H2 and below. Upgrading to 24H2 removes *KB 4023057*, so checking for KB installation is no longer needed.
 
 To confirm the presence of the Update Health Tools on a device:
-  - Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Add Remove Programs* for **Microsoft Update Health Tools**.
-  - As an Admin, run the following PowerShell script:
+  - Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Services* or *Add Remove Programs* for **Microsoft Update Health Tools**.
+  - As an Admin (or from Intune), run the following PowerShell script:
 
    ```PowerShell
-   $Session = New-Object -ComObject Microsoft.Update.Session
-   $Searcher = $Session.CreateUpdateSearcher()
-   $historyCount = $Searcher.GetTotalHistoryCount()
-   $list = $Searcher.QueryHistory(0, $historyCount) | Select-Object -Property "Title"
-   foreach ($update in $list)
-   {
-     if ($update.Title.Contains("4023057"))
-     {
-        return 1
-     }
-   }
-   return 0 
+# Check for the Microsoft Update Health Service; if found, no remediation is needed.
+if (Get-Service -Name "Microsoft Update Health Service" -ErrorAction SilentlyContinue) {
+    Write-Host "Microsoft Update Health Service is present."
+    Exit 0
+} else {
+    Write-Host "Microsoft Update Health Service is missing."
+    Exit 1
+}
    ```
+If the script returns a 1, the device has UHS client. If the script returns a 0, the device doesn't have UHS client.
 
-  If the script returns a 1, the device has UHS client. If the script returns a 0, the device doesn't have UHS client.
+To manually install **Microsoft Update Health Tools** ou can use the following PowerShell script (also as a remediation with the above check):
+```PowerShell
+# Download the Expedite packages
+$downloadUri = 'https://download.microsoft.com/download/d/7/e/d7e9fd79-e6fe-4036-85df-c60254f50d90/Expedite_packages.zip'
+$downloadDest = Join-Path $env:TEMP 'Expedite_packages.zip'
+$extractDest = Join-Path $env:TEMP 'Expedite_packages'
+
+try {
+    if (Test-Path $downloadDest) { Remove-Item $downloadDest -Force }
+    Write-Host "Downloading Expedite packages..."
+    Invoke-WebRequest -Uri $downloadUri -OutFile $downloadDest
+} catch {
+    Write-Host 'Failed to download installation media'
+    Exit 1
+}
+
+try {
+    if (Test-Path $extractDest) { Remove-Item $extractDest -Recurse -Force }
+    Write-Host "Expanding archive..."
+    Expand-Archive -Path $downloadDest -DestinationPath $env:TEMP
+}
+catch {
+    Write-Host 'Failed to expand archive'
+    Exit 1
+}
+
+# Uninstall any currently installed version of Microsoft Update Health Tools
+$AppName = "Microsoft Update Health Tools"
+$UninstallKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"
+
+$keys = Get-ChildItem $UninstallKey | Get-ItemProperty | Where-Object { $_.DisplayName -eq $AppName }
+foreach ($key in $keys) {
+    Write-Host "Uninstalling existing version ($($key.PSChildName)) of $AppName..."
+    Start-Process -FilePath "msiexec.exe" -ArgumentList "/x $($key.PSChildName) /quiet /norestart" -Wait
+}
+
+# Determine the installer to use based on build number
+$build = ([System.Environment]::OSVersion.Version).Build
+Write-Host "Detected OS Build: $build"
+
+if ($build -ge 22621) {
+    # Windows 11 22H2+
+    $path = Join-Path $extractDest 'Windows 11 22H2+\UpdHealthTools.msi'
+} elseif ($build -eq 22000) {
+    # Windows 11 21H2
+    $path = Join-Path $extractDest 'Windows 11 21H2\UpdHealthTools.msi'
+} elseif ($build -le 19045 ) {
+    # Windows 10
+    $path = Join-Path $extractDest 'Windows 10\UpdHealthTools.msi'
+} else {
+    Write-Host 'Flagrant system error: Unsupported OS Build'
+    Exit 1
+}
+
+Write-Host "Selected installer: $path"
+
+# Perform the installation
+$msiExitCode = (Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$path`" /quiet /norestart" -Wait -Passthru).ExitCode
+
+# Clean up temporary files
+Remove-Item -Path $extractDest -Recurse -Force
+Remove-Item -Path $downloadDest -Force
+
+# Report the outcome of the installation
+if ($msiExitCode -eq 0) {
+    Write-Host "Installation succeeded."
+} else {
+    Write-Host "Installation failed with exit code: $msiExitCode"
+}
+Exit $msiExitCode
+```
 
 **Device settings**:
 
