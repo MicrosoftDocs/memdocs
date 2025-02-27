@@ -35,6 +35,7 @@ For example, version 2203 releases in April 2022. Microsoft provides security an
 
 > [!NOTE]
 > A **Critical Update** specifies a widely released fix for a specific problem that addresses a critical, non-security-related bug. Security updates provide a severity rating for the updates, which includes the **Critical** rating.  To understand the different uses for the term **Critical** and for more information about each, see [update classifications](/mem/configmgr/sum/get-started/configure-classifications-and-products#to-configure-classifications-and-products-to-synchronize) and [Security update severity](/troubleshoot/windows-client/installing-updates-features-roles/standard-terminology-software-updates#security-update). 
+
 For a list of the current branch versions, see [Version details](updates.md#version-details).
 
 For more information about version numbers, and availability as an in-console update or as a baseline, see [Baseline and update versions](updates.md#bkmk_Baselines).
