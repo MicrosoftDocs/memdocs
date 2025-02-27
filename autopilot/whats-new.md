@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.reviewer: jubaptis
-ms.date: 01/06/2024
+ms.reviewer: madakeva
+ms.date: 02/27/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -31,6 +31,14 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+## Low privileged account for Intune Connector for Active Directory for Hybrid join Windows Autopilot flows
+<!--9544276-->
+Date added: *February 27, 2025*
+
+We've updated the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will continue to work until deprecation in late May 2025.
+
+For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](windows-autopilot-hybrid.md).
 
 ## Update to enrollmentProfileName property for devices deployed via Windows Autopilot for existing devices
 <!--9105086-->

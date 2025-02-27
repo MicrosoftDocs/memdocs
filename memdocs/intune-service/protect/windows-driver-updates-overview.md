@@ -195,6 +195,9 @@ For more information about planning deployments, see [Create a deployment plan](
 
 - No. Driver Updates aren't supported during autopilot at this time.
 
+> [!NOTE]
+> Windows applies critical updates during Autopilot. These updates may include critical driver updates that have not yet been approved by an admin. 
+
 ### Can I use policy to roll back a driver update?
 
 - No. WUfB doesn't currently support Driver rollback. While rollback could be scripted, there are too many potential variables to provide a useful sample script for doing so. If you must remove a driver, consider manual methods like PowerShell.

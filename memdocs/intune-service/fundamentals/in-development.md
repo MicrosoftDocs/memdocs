@@ -63,7 +63,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ### Endpoint Privilege Management support for Arm64<!-- 28313554 -->
 
-You'll soon be able to use [Endpoint Protection Management](/mem/intune-service/protect/epm-overview) (EPM) file elevations on devices that run on Arm64 architecture.
+You'll soon be able to use [Endpoint Privilege Management](/mem/intune-service/protect/epm-overview) (EPM) file elevations on devices that run on Arm64 architecture.
 
 Applies to:
 
