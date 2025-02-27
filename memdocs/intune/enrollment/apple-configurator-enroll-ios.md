@@ -87,7 +87,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 1. If you chose **Enroll with User Affinity**, you have the option to let users authenticate with Company Portal instead of the Apple Setup Assistant.
 
     > [!NOTE]
-    > If you want do any of the following, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
+    > If you want to do any of the following, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
     >    - use multifactor authentication
     >    - prompt users who need to change their password when they first sign in
     >    - prompt users to reset their expired passwords during enrollment
