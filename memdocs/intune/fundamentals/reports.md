@@ -305,7 +305,10 @@ You can view the **Enrollment failures** report using the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Enrollment failures**.
 
-### Incomplete user enrollments report (Operational)
+### Incomplete user enrollments report (Operational)  
+
+>[!IMPORTANT]
+> Starting in mid-August 2025, we are removing the incomplete user enrollment report from the Microsoft Intune admin center, along with the corresponding Graph APIs: getEnrollmentAbandonmentDetailsReport, getEnrollmentAbandonmentSummaryReport, and getEnrollmentFailureDetailsReport. If you use the incomplete user enrollment report, you will no longer be able to access the report within the admin center. Additionally, scripts and automation using the listed Graph APIs will stop working soon after the report is removed. We recommend using the *enrollment failures report* for details on enrollment failures, including those caused by abandonment. 
 
 You can identify where enrollments stop in the Company Portal enrollment flow.
 

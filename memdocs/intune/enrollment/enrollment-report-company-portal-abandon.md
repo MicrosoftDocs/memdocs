@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/20/2025
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -30,7 +30,10 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Incomplete user enrollments report
+# Incomplete user enrollments report  
+
+>[!IMPORTANT]
+> Starting in mid-August 2025, we are removing the incomplete user enrollment report from the Microsoft Intune admin center, along with the corresponding Graph APIs: getEnrollmentAbandonmentDetailsReport, getEnrollmentAbandonmentSummaryReport, and getEnrollmentFailureDetailsReport. If you use the incomplete user enrollment report, you will no longer be able to access the report within the admin center. Additionally, scripts and automation using the listed Graph APIs will stop working soon after the report is removed. We recommend using the [*enrollment failures report*](../enrollment/view-enrollment-reports.md#enrollment-failures-report) for details on enrollment failures, including those caused by abandonment. 
 
 This Microsoft Intune report tells you where in the Company Portal enrollment process users are abandoning enrollment. Use this information to improve onboarding efforts and support documents for users going through enrollment.  
 
