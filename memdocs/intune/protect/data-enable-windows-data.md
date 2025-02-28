@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/26/2023
+ms.date: 02/28/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ ms.collection:
 
 # Enable use of Windows diagnostic data by Intune
 
-Before you can use some Intune features, you must enable *Windows diagnostic data in processor configuration* for your tenant. This enables you as the [controller of Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration) collected from your devices to then allow its use by Intune when it's required by features that are dependent on that data.
+Before you can use some Intune features, you must enable *Windows diagnostic data in processor configuration* for your tenant. Doing so enables you as the [controller of Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration) collected from your devices to then allow its use by Intune when it's required by features that are dependent on that data.
 
 In addition, several of the features that require Windows diagnostic data also require you to have Windows E3 (or equivalent) licenses, and you must attest to having these licenses to enable use of those features.
 
