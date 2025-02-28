@@ -13,7 +13,7 @@ ms.collection:
   - M365-modern-desktop
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: article
 ms.custom:
   - CI 116757
   - CSSTroubleshooting
