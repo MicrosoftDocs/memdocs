@@ -3,7 +3,7 @@ title: Tenant attach - Deploy endpoint firewall from the Microsoft Intune admin 
 titleSuffix: Configuration Manager
 description: Create and deploy firewall policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 09/27/2021
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: core-infra
 ms.service: configuration-manager
 manager: apoorvseth
