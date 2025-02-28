@@ -73,7 +73,7 @@ To register an app to use Microsoft Graph API:
 
 2. In the admin center, exapand **Identity** > **Applications**, and then select **App registrations**.
    
-   :::image type="content" source="../media/intune-graph-apis/entra-app-reg.png" alt-text="Screen shot of Entra admin center app registrations menu location.":::
+   :::image type="content" source="./media/intune-graph-apis/entra-app-reg.png" alt-text="Screen shot of Entra admin center app registrations menu location.":::
 
 3. Either choose **New registration** to create a new application or choose an existing application.  (If you choose an existing application, skip the next step.)
 
@@ -86,7 +86,7 @@ To register an app to use Microsoft Graph API:
         > [!NOTE]
         > Azure AD Graph API is in its retirement phase. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
-        :::image type="content" source="../media/intune-graph-apis/entra-add-new-app.png" alt-text="Screen shot of the new app properties and value page.:::
+        :::image type="content" source="./media/intune-graph-apis/entra-add-new-app.png" alt-text="Screen shot of the new app properties and value page.":::
 
         To learn more, see [Authentication Scenarios for Microsoft Entra ID](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
