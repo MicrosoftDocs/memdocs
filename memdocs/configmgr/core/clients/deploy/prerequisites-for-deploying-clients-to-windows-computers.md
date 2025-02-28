@@ -5,7 +5,7 @@ description: Learn about the prerequisites for deploying the Configuration Manag
 ms.date: 03/28/2024
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: baladelli
 ms.author: baladell
 manager: apoorvseth
