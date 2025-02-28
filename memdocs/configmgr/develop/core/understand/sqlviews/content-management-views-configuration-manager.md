@@ -5,7 +5,7 @@ description: Provides the tools for you to manage content files for applications
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 80e86983-2e3b-4a10-9755-5f0d98688462
 author: Banreet
 ms.author: banreetkaur

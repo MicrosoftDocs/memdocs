@@ -7,8 +7,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/20/2024
 ms.topic: how-to
+ms.date: 02/28/2025
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
@@ -72,7 +72,7 @@ The below request contains the HTTP method used on the request to Microsoft Grap
 ```
 
 > [!NOTE]
-> To retrieve data, select specific columns, such as those specified in the above example. Do not build automation around default columns of any report export. You should build your automation to explicitly select relevant columns.
+> To retrieve data, select specific columns, such as those specified in the above example. Don't build automation around default columns of any report export. You should build your automation to explicitly select relevant columns.
 
 ### Response example
 
@@ -109,7 +109,7 @@ You can then use the `id` field to query the status of the export with a GET req
 For example:
 ```https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('Devices_05e62361-783b-4cec-b635-0aed0ecf14a3')``` or ```https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs/Devices_05e62361-783b-4cec-b635-0aed0ecf14a3``` 
 
-You'll need to continue calling this URL until you get a response with a `status: completed` attribute. It looks like the following example:
+You need to continue calling this URL until you get a response with a `status: completed` attribute. It looks like the following example:
 
 ```http
 { 
@@ -155,7 +155,7 @@ The `localizationType` parameter controls localization behavior for the report. 
 
 ### LocalizedValuesAsAdditionalColumn report value
 
-This value for the `localizationType` parameter is the default value. It is inserted automatically if the `localizationType` parameter isn't specified. This value specifies that Intune provides two columns for each localizable column.
+This value for the `localizationType` parameter is the default value. It's inserted automatically if the `localizationType` parameter isn't specified. This value specifies that Intune provides two columns for each localizable column.
 - *enum value*:  The *enum value* column contains either a raw string, or a set of numbers that don't change, regardless of locale. This column is under the original column name (see example).
 - *localized string value*: This column  is the original column name with _loc appended. It contains string values that are human readable, and locale conditional (see example).
 
@@ -189,7 +189,7 @@ ReplaceLocalizableValues report value will only return one column per localized 
 For columns without localized values, only a single column with the true column name and the true column values are returned.  
 
 > [!IMPORTANT]
-> The `localizationType` parameter is relevant for any export experience hosted by Intune's reporting infrastructure with a few exceptions. The`Devices` and `DevicesWithInventory` report types will not honor the `localizationType` parameter due to legacy compatibility requirements.
+> The `localizationType` parameter is relevant for any export experience hosted by Intune's reporting infrastructure with a few exceptions. The`Devices` and `DevicesWithInventory` report types won't honor the `localizationType` parameter due to legacy compatibility requirements.
 
 ## API throttling conditions
 

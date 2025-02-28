@@ -8,7 +8,6 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -32,7 +31,7 @@ ms.collection:
 
 # Try Microsoft Intune for free
 
-Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this topic, you will create a free subscription to try Intune in a test environment.
+Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this article, you'll create a free subscription to try Intune in a test environment.
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
@@ -63,7 +62,7 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
 2. Enter your email address and click **Next**.
 
    > [!NOTE]
-   > If you already have an account set up with another Microsoft service using your email address, you can choose to sign in to use the account with the Intune trial, or you can create a new account. These steps assume you are creating a new account.
+   > If you already have an account set up with another Microsoft service using your email address, you can choose to sign in to use the account with the Intune trial, or you can create a new account. These steps assume you're creating a new account.
 
    :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-01.png" alt-text="Screenshot of the Microsoft Intune set up account page - Enter email" border="true":::
 
@@ -107,7 +106,7 @@ If you're not already signed in to the admin center, complete the following step
 
     ![Image of the Intune admin center sign-in page](./media/free-trial-sign-up/azure-portal-signin.png)
 
-When you sign up for a trial, you will also receive an email message that contains your account information and the email address that you provided during the sign-up process. This email confirms your trial is active.
+When you sign up for a trial, you'll also receive an email message that contains your account information and the email address that you provided during the sign-up process. This email confirms your trial is active.
 
 > [!TIP]
 > When working with the Microsoft Intune, you may have better results working with a browser in regular mode, rather than private mode.
@@ -128,7 +127,7 @@ If after signing in to the Microsoft Intune admin center, you see an orange bann
 2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
 
     > [!NOTE]
-    > If you have set the MDM Authority, you will see the MDM authority value on the **Tenant administration** pane. The orange banner is only displayed if you haven't yet set the MDM authority.
+    > If you have set the MDM Authority, you'll see the MDM authority value on the **Tenant administration** pane. The orange banner is only displayed if you haven't yet set the MDM authority.
 
    ![Image of the Choose MDM Authority blade](./media/free-trial-sign-up/choose-mdm-authority.png)
 
@@ -155,9 +154,9 @@ As mentioned above, if your organization has its own custom domain that you want
 
    ![Screenshot of Microsoft 365 admin center - Add domain](./media/free-trial-sign-up/domain-custom-add.png)
 
-6. Verify that you are the owner of the domain that you entered in the previous step.
+6. Verify that you're the owner of the domain that you entered in the previous step.
 
-   Select the method that you will use to verify your domain.
+   Select the method that you'll use to verify your domain.
 
    ![Screenshot of Microsoft 365 admin center - Verify domain](./media/free-trial-sign-up/domain-custom-verify.png)
 
@@ -172,7 +171,7 @@ To confirm your Microsoft Entra ID P1 or P2 and Microsoft Intune, see [Confirm y
 
 ## Admin experiences
 
-There are two admin centers that you will use most often:
+There are two admin centers that you'll use most often:
 
 - The Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
 
