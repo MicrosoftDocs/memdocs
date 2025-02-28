@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/17/2024
-ms.topic: conceptual
+ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
