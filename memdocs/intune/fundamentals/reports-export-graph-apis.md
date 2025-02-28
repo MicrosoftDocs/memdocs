@@ -7,8 +7,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
+ms.topic: how-to
 ms.date: 02/28/2025
-ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
