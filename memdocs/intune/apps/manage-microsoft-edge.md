@@ -586,7 +586,7 @@ When attempting to access blocked websites, users are prompted to use either swi
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.IgnorePostRequestOnAutoTransition |**false**: (Default) Continue the post request when URL blocked switches to private mode or personal account.<br>**true**: Ignore the post request when URL blocked switches to private mode or personal account.|
+|com.microsoft.intune.mam.managedbrowser.IgnorePostRequestOnAutoTransition |**false**: (Default) Continue the post request when URL blocked switches to private mode or personal account.<br>**true**: Ignore the post request when URL blocked switches to private mode or personal account, and show the blocked message.|
 
 ### Control the behavior of switching personal profile to work profile 
 When Microsoft Edge is under the personal profile and users are attempting to open a link from Outlook or Microsoft Teams that are under the work profile, Intune by default uses the Edge work profile to open the link, because Microsoft Edge, Outlook, and Microsoft Teams are managed by Intune. However, when the link is blocked, the user is switched to a personal profile. This causes a friction experience for users.
