@@ -440,7 +440,7 @@ Play integrity verdict requires the end user to be online, at least for the dura
 
 The app protection policy settings that leverage Google Play Protect APIs require Google Play Services to function. Both the **Play integrity verdict**, and **Threat scan on apps** settings require Google determined version of Google Play Services to function correctly. Since these are settings that fall in the area of security, the end user will be blocked if they have been targeted with these settings and aren't meeting the appropriate version of Google Play Services or have no access to Google Play Services.
 
-## Preview: App protection experience for Windows devices
+## App protection experience for Windows devices
 
 There are two categories of policy settings: *Data protection* and *Health Checks*. The term ***policy-managed app*** refers to apps that are configured with app protection policies.
 
