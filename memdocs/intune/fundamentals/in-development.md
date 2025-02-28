@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/27/2025
+ms.date: 03/03/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -81,7 +81,7 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
-Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions. 
+Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This change allows you to update apps more easily without needing to update those profiles with the latest versions. 
 
 For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
 
@@ -111,7 +111,7 @@ In the Intune admin center, when you create a device configuration profile, you 
 
 This change:
 
-- Will be a UI change with no impact on your existing policies. Your existing policies won't change. You'll still be able to create, edit, and assign these policies the same way.
+- Will be a UI change with no impact on your existing policies. Your existing policies don't change. You'll still be able to create, edit, and assign these policies the same way.
 - Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
 
 To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
@@ -123,7 +123,17 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!--  ## Device enrollment  -->
+## Device enrollment
+
+### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 -->
+
+### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 iddraft idready idstaged --> 
+
+You'll soon be able to use a custom template for naming Android Enterprise corporate-owned devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
+
+Applies to:
+
+- Android
 
 <!-- *********************************************** -->
 
@@ -133,7 +143,7 @@ Applies to:
 
 We're updating Intunes policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) by adding new settings and updating some existing settings. Use of [LAPS](/windows-server/identity/laps/laps-overview) which is a Windows built-in solution can help you secure the built-in local administrator account that is present on each Windows device.
 
-The new settings will include the following:
+The following new settings will be available:
 
 - AutomaticAccountManagementEnabled
 - AutomaticAccountManagementTarget
@@ -219,7 +229,7 @@ We're updating the [Microsoft Tunnel readiness tool](../protect/microsoft-tunnel
 
 For more information on *auditd* and how to install it on your Microsoft Tunnel server, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#linux-system-auditing).
 
-### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
+### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!--   -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
 
@@ -244,7 +254,11 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-<!-- ## Tenant administration -->
+## Tenant administration
+
+### Updates to Intune admin center home page<!-- 25914324 -->
+
+Microsoft Intune admin center's home page will be updated to include additional links to interactive demos, documentation, and training.
 
 <!-- *********************************************** -->
 
