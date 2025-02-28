@@ -5,7 +5,7 @@ description: Learn how to convert a long-term servicing branch (LTSB) site to a 
 ms.date: 02/8/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

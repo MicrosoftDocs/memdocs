@@ -5,7 +5,7 @@ description: Learn which data you can migrate and which data you can't migrate t
 ms.date: 12/29/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
