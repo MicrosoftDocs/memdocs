@@ -2,7 +2,7 @@
 title: What is Endpoint analytics?
 titleSuffix: Microsoft Intune
 description: Overview for Endpoint analytics.
-ms.date: 10/23/2023
+ms.date: 02/28/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: overview

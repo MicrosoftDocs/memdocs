@@ -6,7 +6,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/19/2023
+ms.date: 02/27/2025
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -47,7 +47,7 @@ To get started, review the following steps:
 
 - You must have the Microsoft Entra Global Admin Role or Microsoft Entra Intune Admin role to make updates to the connector. To view the incidents, you must have the Microsoft Entra Global Admin Role or Microsoft Entra Intune Admin role or have an Intune Role with the Organization | Read permission. Admins that aren't assigned the Microsoft Entra roles, need one of these two permissions to either modify the connector or view incidents respectively; **Update Connector** and **View Incidents**. These permissions are part of the ServiceNow permission category. For information on  roles, see [Role-based administration control with Intune](role-based-access-control.md)
 
-- You must have ServiceNow permissions to view incidents when using the **Test connection** action. You can assign the *itil* role to grant appropriate permissions to view incidents.  A ServiceNow license needs to be assigned to admins who view incidents. 
+- You must have ServiceNow permissions to view incidents when using the **Test connection** action. You can assign the *itil* role to grant appropriate permissions to view incidents. A ServiceNow license needs to be assigned to admins who view incidents. 
 
 - You must have the Troubleshooting Preview enabled. To enable the Troubleshooting Preview, select **Preview upcoming changes to Troubleshooting and provide feedback** in the Troubleshooting pane. After reviewing the Troubleshooting preview information, select **Try it now** to enable the preview. 
 
@@ -63,7 +63,7 @@ To get started, review the following steps:
      | Field           | Description                                                                                                                         |
      |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
      | ServiceNow Instance Host             | A URL that points to your organization's ServiceNow instance. For example, 'https://contoso.service-now.com'   |
-     | ServiceNow Incident API URL         | The table in the ServiceNow database that contains incidents. Incidents are retrieved from this table.  For example, /api/now/table/incident                           |
+     | ServiceNow Incident API URL         | The table in the ServiceNow database that contains incidents. Incidents are retrieved from this table. For example, /api/now/table/incident                           |
      | ServiceNow Client appID     | The unique identifier assigned in ServiceNow to the application used to represent Intune. Provide the client ID of the app. You need to have a client app created in ServiceNow to copy over the appID and use it here to establish the connection. Go to [How to create a ServiceNow app](#how-to-create-a-servicenow-app).                                 |
 
 5. Select **Test connection** to verify if your settings are correct. You see a verification message to connect to your ServiceNow account. Select **Allow**.
@@ -87,7 +87,7 @@ To create a new OAuth application,
 
      | Field           | Description                                                                                                                         |
      |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-     | Client ID            | The ServiceNow OAuth server automatically generates the ClientID.  This value is used as an input in the **ServiceNow client appID** field for the ServiceNow connector configuration. |
+     | Client ID            | The ServiceNow OAuth server automatically generates the ClientID. This value is used as an input in the **ServiceNow client appID** field for the ServiceNow connector configuration. |
      | Client Secret         | Client Secret for the OAuth generation. Leave it empty for auto-generation.                            |
      | Redirect URL     | The authorization server redirects to this URL. They must be an absolute URL and comma separated. For example, you can set the URL to 'https://intune.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_Intune_DeviceSettings,https://intune.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_Intune_Workflows'                       |
      | Logo URL           | Provide the URL to the publicly hosted company logo, which is displayed when authenticating with ServiceNow. For example, you can set it to: 'https://photos.smugmug.com/photos/i-SJfnMq3/0/XL/i-SJfnMq3-XL.png'    |
@@ -95,7 +95,7 @@ To create a new OAuth application,
      | Accessible from    | By default, set to **All application scopes**.                       |
      | Active    | Select the checkbox.                       |
      | Refresh Token Lifespan    | Enter the max time for which the refresh token remains valid in seconds.                       |
-     | Access Token Lifespan    | Enter the max time for which the access token remains valid in seconds. The recommend setting is 15 minutes. A warning message appears If configured higher than 15 minutes.                       |
+     | Access Token Lifespan    | Enter the max time for which the access token remains valid in seconds. The recommended setting is 15 minutes. A warning message appears If configured higher than 15 minutes.                       |
 
 To create a new CORS rule,
 
@@ -115,17 +115,17 @@ To create a new CORS rule,
 
 ## ServiceNow incident view in Microsoft Intune
 
-With the ServiceNow connector verified and enabled, you are able to view a real time list of ServiceNow incidents for a worker from the Troubleshooting pane. The incident view with details helps you understand if there are other issues previously submitted by employees that may be related or have recurred.
+With the ServiceNow connector verified and enabled, you can view a real time list of ServiceNow incidents for a worker from the Troubleshooting pane. The incident view with details helps you understand if there are other issues previously submitted by employees that might be related or have recurred.
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshooting + support** > **Troubleshoot**. The **Troubleshooting** pane provides specific details for each Intune end-user.
 3. Find and select a **User** by entering a display name or email.
 4. In the **Summary** tab, scroll down and select **Authenticate ServiceNow**. Enter the credentials to authenticate you as a help-desk operator with ServiceNow. :::image type="content" source="./media/service-now-integration/troubleshoot-pane.png" alt-text="Screenshot that shows the Intune troubleshooting dashboard with the Summary tab and selected user details":::
 5. Choose **Allow**. You can now see the number of incidents associated with the user you selected.
-6. Alongside the **Summary** tab, find and select the **ServiceNow Incidents** tab. Selecting the tab brings up a list of associated incidents for the selected user. The incident view helps you understand if there are other issues previously submitted by employees that may be related or have recurred.
+6. Alongside the **Summary** tab, find and select the **ServiceNow Incidents** tab. Selecting the tab brings up a list of associated incidents for the selected user. The incident view helps you understand if there are other issues previously submitted by employees that might be related or have recurred.
      - The columns visible in the list view can be modified by selecting or deselecting the ones to show in the **Column** field.
-     - You can also add some filters for the incidents that you need to be displayed. For example, you may only want new incidents to appear in the list. To add a filter, select **Add Filters**, set **Status** to New and select **Apply**.
-7. The **Incident** column list in the **ServiceNow Incidents** tab includes a link to the source incident in ServiceNow. 
+     - You can also add some filters for the incidents that you need to be displayed. For example, you might only want new incidents to appear in the list. To add a filter, select **Add Filters**, set **Status** to New and select **Apply**.
+7. The **Incident** column list in the **ServiceNow Incidents** tab includes a link to the source incident in ServiceNow.
 :::image type="content" source="./media/service-now-integration/sn_incidents_tab.png" alt-text="Screenshot that shows Service Now incidents view with a list of all incidents for the selected user.":::
 8. Select the Incident link to launch the incident view in ServiceNow. Help-desk agents must be given the appropriate permissions in ServiceNow, to launch the incident view in ServiceNow and view the full incident details.
 9. Review the provided information to help troubleshoot end-user issues.

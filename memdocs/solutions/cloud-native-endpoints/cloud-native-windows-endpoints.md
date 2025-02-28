@@ -10,7 +10,7 @@ author: scottbreenmsft
 ms.author: brenduns
 manager: dougeby
 ms.date: 07/31/2024
-ms.topic: conceptual
+ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice:
 ms.localizationpriority: high

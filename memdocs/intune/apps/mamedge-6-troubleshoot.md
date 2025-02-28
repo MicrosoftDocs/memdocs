@@ -28,6 +28,7 @@ ms.collection:
 - highpri
 - highseo
 - FocusArea_Apps_AppManagement
+ms.topicc: troubleshooting-general
 ---
 
 # Step 6. Troubleshoot Microsoft Edge for Business data security
