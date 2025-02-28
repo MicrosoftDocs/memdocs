@@ -7,7 +7,7 @@ keywords: intune graphapi c# powershell permission roles
 author: dougeby
 manager: dougeby
 ms.author: dougeby
-ms.date: 02/23/2023
+ms.date: 02/28/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -71,9 +71,9 @@ To register an app to use Microsoft Graph API:
     - The tenant admin account.
     - A tenant user account with the **Users can register applications** setting enabled.
 
-2. Select **Applications** > **App registrations**.
-
-    <img src="../media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
+2. In the admin center, exapand **Identity** > **Applications**, and then select **App registrations**.
+   
+   :::image type="content" source="../media/intune-graph-apis/entra-app-reg.png" alt-text="Screen shot of Entra admin center app registrations menu location.":::
 
 3. Either choose **New registration** to create a new application or choose an existing application.  (If you choose an existing application, skip the next step.)
 
@@ -86,24 +86,27 @@ To register an app to use Microsoft Graph API:
         > [!NOTE]
         > Azure AD Graph API is in its retirement phase. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
-
-        <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
+        :::image type="content" source="../media/intune-graph-apis/entra-add-new-app.png" alt-text="Screen shot of the new app properties and value page.:::
 
         To learn more, see [Authentication Scenarios for Microsoft Entra ID](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
-5. Click Register to add your new applicaiton.
-By clicking register, you agree to the [Microsoft Platform Policies. (https://go.microsoft.com/fwlink/?linkid=2090497&clcid=0x409)]
-6. From the application pane:
+5. Seoect **Register** to add your new applicaiton.
+   
+   By selecting *Register*, you agree to the [Microsoft Platform Policies](https://go.microsoft.com/fwlink/?linkid=2090497&clcid=0x409).
+
+6. From the application pane for your app:
 
     1. Note the **Application (client) ID** value.
 
-    2. Select **API permissions** from the navigation menu.
+    2. Then, from the navigation menu, select **API permissions**.
 
-7. From the **API permissions** pane, choose **Add a permission** > **Microsoft APIs** >  **Microsoft Graph**.
-   Select the **Appliation permissions** option to show all of the available permissions.
-   Then, select the type of permissions your application requires. 
+7. From the **API permissions** pane:
 
-    Choose the roles required for your app by placing a checkmark to the left of the relevant names.  To learn about specific Intune permission scopes, see [Intune permission scopes](#intune-permission-scopes).  To learn about other Graph API permission scopes, see [Microsoft Graph permissions reference](/graph/permissions-reference).
+    1. Select **Add a permission**, and then on the **Microsoft APIs** tab, select the **Microsoft Graph** tile. 
+
+    2. Select the **Appliation permissions** option to show all of the available permissions, and then select the type of permissions your application requires. 
+
+    3. Choose the roles required for your app by placing a checkmark to the left of the relevant names.  To learn about specific Intune permission scopes, see [Intune permission scopes](#intune-permission-scopes).  To learn about other Graph API permission scopes, see [Microsoft Graph permissions reference](/graph/permissions-reference).
 
     For best results, choose the fewest roles needed to implement your application.
 
