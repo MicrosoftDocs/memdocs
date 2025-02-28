@@ -7,7 +7,7 @@ keywords: intune graphapi c# powershell permission roles
 author: dougeby
 manager: dougeby
 ms.author: dougeby
-ms.date: 02/23/2023
+ms.date: 02/28/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -65,15 +65,15 @@ To learn more, see:
 
 To register an app to use Microsoft Graph API:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) using administrative credentials.
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/) using administrative credentials.
 
     As appropriate, you may use:
     - The tenant admin account.
     - A tenant user account with the **Users can register applications** setting enabled.
 
-2. Select **All services** > **M365 Microsoft Entra ID** > **Microsoft Entra ID** > **App registrations**.
-
-    <img src="./media/intune-graph-apis/entra-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
+2. In the admin center, expand **Identity** > **Applications**, and then select **App registrations**.
+   
+   :::image type="content" source="./media/intune-graph-apis/entra-app-reg.png" alt-text="Screenshot of Entra admin center app registrations menu location.":::
 
 3. Either choose **New registration** to create a new application or choose an existing application.  (If you choose an existing application, skip the next step.)
 
@@ -81,25 +81,32 @@ To register an app to use Microsoft Graph API:
 
     - A **Name** for the application (displayed when users sign in).
     - The **Supported account type**.
-    - A **Redirect URI** value. *This value is option.*
+    - A **Redirect URI** value. *This value is optional.*
 
         > [!NOTE]
         > Azure AD Graph API is in its retirement phase. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
-
-        <img src="./media/intune-graph-apis/entra-add-new-app.png" width="209" height="140" alt="New app properties and values" />
+        :::image type="content" source="./media/intune-graph-apis/entra-add-new-app.png" alt-text="Screenshot of the new app properties and value page.":::
 
         To learn more, see [Authentication Scenarios for Microsoft Entra ID](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
-5. From the application pane:
+5. Select **Register** to add your new application.
+   
+   By selecting *Register*, you agree to the [Microsoft Platform Policies](https://go.microsoft.com/fwlink/?linkid=2090497&clcid=0x409).
+
+6. From the application pane for your app:
 
     1. Note the **Application (client) ID** value.
 
-    2. Select **API permissions**.
+    2. Then, from the navigation menu, select **API permissions**.
 
-6. From the **API permissions** pane, choose **Add a permission** > **Microsoft APIs** >  **Microsoft Graph**. Then, select the type of permissions your application requires. 
+7. From the **API permissions** pane:
 
-    Choose the roles required for your app by placing a checkmark to the left of the relevant names.  To learn about specific Intune permission scopes, see [Intune permission scopes](#intune-permission-scopes).  To learn about other Graph API permission scopes, see [Microsoft Graph permissions reference](/graph/permissions-reference).
+    1. Select **Add a permission**, and then on the **Microsoft APIs** tab, select the **Microsoft Graph** tile. 
+
+    2. Select the **Application permissions** option to show all of the available permissions, and then select the type of permissions your application requires. 
+
+    3. Choose the roles required for your app by placing a checkmark to the left of the relevant names.  To learn about specific Intune permission scopes, see [Intune permission scopes](#intune-permission-scopes).  To learn about other Graph API permission scopes, see [Microsoft Graph permissions reference](/graph/permissions-reference).
 
     For best results, choose the fewest roles needed to implement your application.
 
