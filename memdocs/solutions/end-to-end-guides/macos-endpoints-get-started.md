@@ -9,7 +9,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 06/13/2024
-ms.topic: conceptual
+ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice: 
 ms.localizationpriority: high
