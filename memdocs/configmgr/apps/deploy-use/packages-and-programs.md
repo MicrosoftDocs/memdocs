@@ -5,7 +5,7 @@ description: Support deployments that use legacy packages and programs with Conf
 ms.date: 04/08/2022
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: baladelli
 manager: apoorvseth
 ms.author: baladell
