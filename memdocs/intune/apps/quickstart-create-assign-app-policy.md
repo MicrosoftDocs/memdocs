@@ -3,12 +3,12 @@
 
 title: Create and assign an app protection policy
 titleSuffix: Microsoft Intune
-description: In this article, you'll use Microsoft Intune to create and assign and app protection policy.
+description: In this article, you use Microsoft Intune to create and assign and app protection policy.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/07/2024
+ms.date: 02/28/2025
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,7 +33,7 @@ ms.collection:
 
 # Step 9: Create and assign an app protection policy
 
-In this article, you'll use Intune to create and assign an app protection policy to a client app on an end user's device. Intune uses app protection policies to confirm that your apps are meeting your organization's data protection requirements.
+In this article, you use Intune to create and assign an app protection policy to a client app on an end user's device. Intune uses app protection policies to confirm that your apps are meeting your organization's data protection requirements.
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
@@ -55,7 +55,7 @@ Use the following steps to create an app protection policy:
 2. Enter the following details:
 
     - **Name**: *Windows 10 content protection*
-    - **Description**: *Users associated with this policy won't be able to cut, copy, or paste any content between the assigned app and other non-managed apps on the device.*
+    - **Description**: *Users associated with this policy won't be able to cut, copy, or paste any content between the assigned app and other nonmanaged apps on the device.*
     - **Enrollment state**: *With enrollment*
 
 3. Under **Protected apps**, select **Add**. The **Add apps** pane is displayed.
@@ -68,14 +68,14 @@ Use the following steps to create an app protection policy:
 10. Select **Next** to display the **Review + create** step.
 11. Select **Create** to create your policy.
 
-You'll see the app protection policy in Intune.
+You see the app protection policy in Intune.
 
 > [!NOTE]
-> App protection policies can only be applied to groups that contains users, not groups that contain devices.
+> App protection policies can only be applied to groups that contain users, not groups that contain devices.
 
 ## Next steps
 
-In this article, you created and assigned an app protection policy. Users of the app that have this policy assigned won't be able to cut, copy, or paste any content between the assigned app and other non-managed apps on the device. This type of protection helps protect your organization's data. For more information about app protection policies in Intune, see [What are app protection policies?](app-protection-policy.md)
+In this article, you created and assigned an app protection policy. Users of the app that have this policy assigned won't be able to cut, copy, or paste any content between the assigned app and other nonmanaged apps on the device. This type of protection helps protect your organization's data. For more information about app protection policies in Intune, see [What are app protection policies?](app-protection-policy.md)
 
 To continue to evaluate Microsoft Intune, go to the next step:
 
