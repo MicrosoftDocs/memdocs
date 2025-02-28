@@ -5,7 +5,7 @@ description: Learn about Intune Advanced Analytics
 ms.date: 08/01/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: concept-article
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
