@@ -5,7 +5,7 @@ description: Learn how to deploy Configuration Manager by using options that mai
 ms.date: 12/01/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
